@@ -12,7 +12,7 @@ The Console homepage and any static sub-pages.
 
 1. Install [Cloudflare
   Wrangler](https://developers.cloudflare.com/workers/cli-wrangler/install-update)
-  for deployment and managing the
+  for deployment and managing the\
   [static worker site](https://developers.cloudflare.com/workers/platform/sites).
 
 ## Site deployment
@@ -44,8 +44,13 @@ commit [using GitHub Actions](https://k6.io/blog/load-testing-using-github-actio
 but they can also be run locally after [installing k6](https://k6.io/docs/getting-started/installation):
 
 ```shell
+wrangler publish --env perftest
 k6 run tests/perf.js
 ```
+
+This tests against a live test environment at
+https://home-perftest.consoledev.workers.dev/ to simulate real-world
+performance on Cloudflare Workers.
 
 ## Secrets
 
