@@ -37,6 +37,16 @@ Manual deployment:
 
 `wrangler publish --env production`
 
+## Performance testing
+
+We use [k6](https://k6.io/) to define performance SLAs. These are run on every
+commit [using GitHub Actions](https://k6.io/blog/load-testing-using-github-actions)
+but they can also be run locally after [installing k6](https://k6.io/docs/getting-started/installation):
+
+```shell
+k6 run tests/perf.js
+```
+
 ## Secrets
 
 * `CF_API_TOKEN` - [Cloudflare API

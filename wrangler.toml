@@ -12,5 +12,9 @@ route = "https://console.dev/*"
 vars = { ENVIRONMENT = "test" }
 workers_dev = true
 
+[env.perftest]
+vars = { ENVIRONMENT = "test" }
+workers_dev = true
+
 [site]
 bucket = "./public"
