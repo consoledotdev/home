@@ -12,7 +12,7 @@ The Console homepage and any static sub-pages.
 
 1. Install [Cloudflare
   Wrangler](https://developers.cloudflare.com/workers/cli-wrangler/install-update)
-  for deployment and managing the\
+  for deployment and managing the
   [static worker site](https://developers.cloudflare.com/workers/platform/sites).
 
 ## Site deployment
