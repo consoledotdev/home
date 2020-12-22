@@ -2,7 +2,7 @@
 	--nc-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--nc-font-mono: Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
 
-	/* Light theme */
+	/* Light theme
 	--nc-tx-1: #000000;
 	--nc-tx-2: #1A1A1A;
 	--nc-bg-1: #FFFFFF;
@@ -15,31 +15,16 @@
 	--nc-ac-tx: #0C4047;
 
 	/* Dark theme */
-	--nc-d-tx-1: #ffffff;
-	--nc-d-tx-2: #eeeeee;
-	--nc-d-bg-1: #000000;
-	--nc-d-bg-2: #111111;
-	--nc-d-bg-3: #222222;
-	--nc-d-lk-1: #3291FF;
-	--nc-d-lk-2: #0070F3;
-	--nc-d-lk-tx: #FFFFFF;
-	--nc-d-ac-1: #7928CA;
-	--nc-d-ac-tx: #FFFFFF;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--nc-tx-1: var(--nc-d-tx-1);
-		--nc-tx-2: var(--nc-d-tx-2);
-		--nc-bg-1: var(--nc-d-bg-1);
-		--nc-bg-2: var(--nc-d-bg-2);
-		--nc-bg-3: var(--nc-d-bg-3);
-		--nc-lk-1: var(--nc-d-lk-1);
-		--nc-lk-2: var(--nc-d-lk-2);
-		--nc-lk-tx: var(--nc--dlk-tx);
-		--nc-ac-1: var(--nc-d-ac-1);
-		--nc-ac-tx: var(--nc--dac-tx);
-	}
+	--nc-tx-1: #ffffff;
+	--nc-tx-2: #eeeeee;
+	--nc-bg-1: #000000;
+	--nc-bg-2: #111111;
+	--nc-bg-3: #222222;
+	--nc-lk-1: #3291FF;
+	--nc-lk-2: #0070F3;
+	--nc-lk-tx: #FFFFFF;
+	--nc-ac-1: #7928CA;
+	--nc-ac-tx: #FFFFFF;
 }
 
 * {
@@ -227,14 +212,14 @@ input[type="reset"],
 input[type="button"] {
 	font-size: 1rem;
 	display: inline-block;
-	padding: 6px 12px;
+	padding: .375rem .75rem;
 	text-align: center;
 	text-decoration: none;
 	white-space: nowrap;
 	background: var(--nc-lk-1);
 	color: var(--nc-lk-tx);
 	border: 0;
-	border-radius: 4px;
+	border-radius: .25rem;
 	box-sizing: border-box;
 	cursor: pointer;
 	color: var(--nc-lk-tx);
@@ -432,14 +417,17 @@ mark {
 textarea,
 select,
 input {
-	padding: 6px 12px;
+	padding: .375rem .75rem;
 	margin-bottom: .5rem;
 	background: var(--nc-bg-2);
 	color: var(--nc-tx-2);
 	border: 1px solid var(--nc-bg-3);
-	border-radius: 4px;
+	border-radius: .25rem;
 	box-shadow: none;
 	box-sizing: border-box;
+    font-size: 1rem;
+    background-image: none;
+    -webkit-appearance: none;
 }
 
 img {
