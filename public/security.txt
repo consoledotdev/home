@@ -1,0 +1,2 @@
+Contact: mailto:security@console.dev
+Preferred-Languages: en
