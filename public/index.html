@@ -19,6 +19,7 @@
 
     <!-- Plausible Analytics: https://plausible.io -->
     <script async defer data-domain="console.dev" src="https://stats.console.dev/js/index.js"></script>
+    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
 </head>
 <body>
     <header>
@@ -35,7 +36,6 @@
               id="mc-embedded-subscribe-form"
               name="mc-embedded-subscribe-form"
               class="validate"
-              target="_blank"
               novalidate>
 
           <input type="email"
@@ -58,6 +58,25 @@
                  id="mc-subscribe"
                  class="button" />
         </form>
+        <!-- Plausible Analytics goal tracking for signups -->
+        <script>
+            var registerForm = document.querySelector("#mc-embedded-subscribe-form");
+            registerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                setTimeout(submitForm, 1000);
+                var formSubmitted = false;
+
+                function submitForm() {
+                    if (!formSubmitted) {
+                        formSubmitted = true;
+                        registerForm.submit();
+                    }
+                }
+
+                plausible('Newsletter Subscribe', {callback: submitForm});
+            })
+    </script>
+
 
     </main>
 </body>
