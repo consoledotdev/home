@@ -187,10 +187,6 @@ body.theme-dark {
 /* Footer
    ========================================================================== */
 
-.footer {
-    visibility: hidden;
-}
-
 .footer-nav ul {
     padding: 0;
     display: flex;
