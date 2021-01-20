@@ -19,6 +19,6 @@ jobs:
           environment: perftest
 
       - name: Run k6 test
-        uses: k6io/action@v0.1
+        uses: k6io/action@v0.2.0
         with:
           filename: tests/perf.js
