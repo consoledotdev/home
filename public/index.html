@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="canonical" href="https://console.dev/" />
 
-        <meta name="viewport" content="initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
 
         <meta property="og:site_name" content="Console" />
         <meta property="og:title" content="Console" />
@@ -275,19 +275,29 @@
                     </a>
                 </h1>
                 <nav class="main-nav">
-                    <button onclick="blur(); toggleMenu()" id="menu-toggle" class="menu-toggle">
+                    <button onclick="blur(); toggleMenuPopup()" id="menu-toggle" class="menu-toggle">
                         <div class="menu-toggle-shape-one"></div>
                         <div class="menu-toggle-shape-two"></div>
                     </button>
-                    <div class="menu-wrapper is-hidden">
-                        <ul>
-                            <li>
-                                <a onclick="blur()" href="https://blog.console.dev/welcome-to-console/">About</a>
-                            </li>
-                            <li>
-                                <a onclick="blur()" href="https://blog.console.dev/">Blog</a>
-                            </li>
-                        </ul>
+                    <ul>
+                        <li>
+                            <a onclick="blur()" href="https://blog.console.dev/welcome-to-console/">About</a>
+                        </li>
+                        <li>
+                            <a onclick="blur()" href="https://blog.console.dev/">Blog</a>
+                        </li>
+                    </ul>
+                    <div class="menu-popup-wrapper">
+                        <div id="menu-popup" class="popup popup-top-down">
+                            <ul>
+                                <li>
+                                    <a onclick="blur(); toggleMenuPopup()" href="https://blog.console.dev/welcome-to-console/">About</a>
+                                </li>
+                                <li>
+                                    <a onclick="blur(); toggleMenuPopup()" href="https://blog.console.dev/">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
             </header>
