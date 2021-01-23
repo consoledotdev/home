@@ -275,14 +275,20 @@
                     </a>
                 </h1>
                 <nav class="main-nav">
-                    <ul>
-                        <li>
-                            <a onclick="blur()" href="https://blog.console.dev/welcome-to-console/">About</a>
-                        </li>
-                        <li>
-                            <a onclick="blur()" href="https://blog.console.dev/">Blog</a>
-                        </li>
-                    </ul>
+                    <button onclick="blur(); toggleMenu()" id="menu-toggle" class="menu-toggle">
+                        <div class="menu-toggle-shape-one"></div>
+                        <div class="menu-toggle-shape-two"></div>
+                    </button>
+                    <div class="menu-wrapper is-hidden">
+                        <ul>
+                            <li>
+                                <a onclick="blur()" href="https://blog.console.dev/welcome-to-console/">About</a>
+                            </li>
+                            <li>
+                                <a onclick="blur()" href="https://blog.console.dev/">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
             </header>
             <main class="main">
