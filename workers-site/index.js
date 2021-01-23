@@ -68,7 +68,7 @@ async function handleEvent(event) {
     response.headers.set('X-XSS-Protection', '1; mode=block')
     response.headers.set('X-Content-Type-Options', 'nosniff')
     response.headers.set('X-Frame-Options', 'DENY')
-    response.headers.set('Referrer-Policy', 'unsafe-url')
+    response.headers.set('Referrer-Policy', 'strict-origin')
     response.headers.set('Feature-Policy', 'none')
 
     // Get the referrer from the URL string, false if not set
