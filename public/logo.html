@@ -1,0 +1,602 @@
+<style>
+    body {
+        background: #0a0a0a;
+    }
+
+    svg {
+        display: block;
+        margin-bottom: 50px;
+    }
+
+    /* svg {
+        width: 200px;
+        height: 200px;
+    } */
+</style>
+
+<svg class="logo logo-static" width="46" height="46" viewBox="0 0 46 46" fill="none" preserveAspectRatio="xMinYMin slice">
+    <path class="plane plane-one" d="M19.5432 11.6452L45.1876 11.6436L33.7235 34.3533L8.07913 34.3549L19.5432 11.6452Z" stroke="#5269FF" />
+    <path class="plane plane-two" d="M12.7717 15.7902L38.4161 15.7886L26.952 38.4983L1.30765 38.4999L12.7717 15.7902Z" stroke="#F561F5" />
+    <path class="plane plane-three" d="M0.812528 30.2113L12.2766 7.50167L37.921 7.50005L26.4569 30.2097L0.812528 30.2113Z" stroke="#01BC90" />
+    <path class="prompt" d="M17.2088 24.391L21.3925 22.4867L19.1321 20.5842L19.8385 19.186L24.2177 22.8719L16.1123 26.5612L17.2088 24.391Z" fill="white" />
+</svg>
+
+<style>
+    /* Enter Animation */
+    .logo-animated-enter .plane {
+        stroke-dasharray: 103;
+        stroke-dashoffset: 103;
+        animation: enter-plane 0.8s cubic-bezier(0.41, 0.14, 0.35, 0.99) forwards;
+    }
+    .logo-animated-enter .plane-one {
+        animation-delay: 0.3s;
+    }
+    .logo-animated-enter .plane-two {
+        animation-delay: 0.6s;
+    }
+    .logo-animated-enter .plane-three {
+        animation-delay: 0.9s;
+    }
+    @keyframes enter-plane {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+    .logo-animated-enter .prompt {
+        opacity: 0;
+        animation: enter-prompt 0.4s cubic-bezier(0.41, 0.14, 0.35, 0.99) forwards;
+        animation-delay: 1.6s;
+    }
+    @keyframes enter-prompt {
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+<svg class="logo logo-animated-enter" width="46" height="46" viewBox="0 0 46 46" fill="none" preserveAspectRatio="xMinYMin slice">
+    <path
+        class="plane plane-one"
+        d="
+            M
+            19.3432 11.6452
+            L
+            45.1876 11.6436
+            L
+            33.7235 34.3533
+            L
+            8.07913 34.3549
+            L
+            19.5432 11.4452
+        Z"
+        stroke="#5269FF"
+    />
+    <path
+        class="plane plane-two"
+        d="
+            M
+            27.152 38.4983
+            L
+            1.30765 38.4999
+            L
+            12.7717 15.7902
+            L
+            38.4161 15.7886
+            L
+            26.952 38.6983
+        Z"
+        stroke="#F561F5"
+    />
+    <path
+        class="plane plane-three"
+        d="
+            M
+            26.5169 30.2097
+            L
+            0.812528 30.2113
+            L
+            12.2766 7.50167
+            L
+            37.921 7.50005
+            L
+            26.4569 30.4897
+        Z"
+        stroke="#01BC90"
+    />
+    <path class="prompt" d="M17.2088 24.391L21.3925 22.4867L19.1321 20.5842L19.8385 19.186L24.2177 22.8719L16.1123 26.5612L17.2088 24.391Z" fill="white" />
+</svg>
+
+<style>
+    /* Looping Animation */
+    .logo-animated-loop .plane {
+        stroke-dasharray: 103;
+        stroke-dashoffset: 103;
+        animation: loop-plane 14.4s cubic-bezier(0.41, 0.14, 0.35, 0.99) infinite;
+    }
+    .logo-animated-loop .plane-one {
+        animation-delay: 0.3s;
+    }
+    .logo-animated-loop .plane-two {
+        animation-delay: 0.7s;
+    }
+    .logo-animated-loop .plane-three {
+        animation-delay: 1.1s;
+    }
+    @keyframes loop-plane {
+        5%,
+        28% {
+            stroke-dashoffset: 0;
+        }
+        33.33%,
+        100% {
+            stroke-dashoffset: -103;
+        }
+    }
+    .logo-animated-loop .prompt {
+        opacity: 0;
+        animation: loop-prompt 14.4s cubic-bezier(0.41, 0.14, 0.35, 0.99) infinite;
+        animation-delay: 1.6s;
+    }
+    @keyframes loop-prompt {
+        5%,
+        28% {
+            opacity: 1;
+        }
+        33.33%,
+        100% {
+            opacity: 0;
+        }
+    }
+</style>
+<svg class="logo logo-animated-loop" width="46" height="46" viewBox="0 0 46 46" fill="none" preserveAspectRatio="xMinYMin slice">
+    <path
+        class="plane plane-one"
+        d="
+            M
+            19.3432 11.6452
+            L
+            45.1876 11.6436
+            L
+            33.7235 34.3533
+            L
+            8.07913 34.3549
+            L
+            19.5432 11.4452
+        Z"
+        stroke="#5269FF"
+    />
+    <path
+        class="plane plane-two"
+        d="
+            M
+            27.152 38.4983
+            L
+            1.30765 38.4999
+            L
+            12.7717 15.7902
+            L
+            38.4161 15.7886
+            L
+            26.952 38.6983
+        Z"
+        stroke="#F561F5"
+    />
+    <path
+        class="plane plane-three"
+        d="
+            M
+            26.5169 30.2097
+            L
+            0.812528 30.2113
+            L
+            12.2766 7.50167
+            L
+            37.921 7.50005
+            L
+            26.4569 30.4897
+        Z"
+        stroke="#01BC90"
+    />
+    <path class="prompt" d="M17.2088 24.391L21.3925 22.4867L19.1321 20.5842L19.8385 19.186L24.2177 22.8719L16.1123 26.5612L17.2088 24.391Z" fill="white" />
+</svg>
+
+<style>
+    .logo-html-animated-enter {
+        position: relative;
+        left: 100px;
+        width: 136px;
+        height: 136px;
+        transform: scale(0.5) skewX(-26.56deg);
+
+        --c-white: #ffffff;
+        --c-blue-06-main: #5269ff;
+
+        --c-magenta: #f561f5;
+        --c-green: #01bc90;
+    }
+
+    .logo-html-animated-enter .logo-scale {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: scaleY(0.8945);
+    }
+
+    .logo-html-animated-enter .prompt {
+        position: absolute;
+        top: 49px;
+        left: 48px;
+        width: 28px;
+
+        opacity: 0;
+        animation: enter-prompt 0.4s cubic-bezier(0.41, 0.14, 0.35, 0.99) forwards;
+        animation-delay: 1.3s;
+    }
+    @keyframes enter-prompt {
+        to {
+            opacity: 1;
+        }
+    }
+
+    .logo-html-animated-enter .plane {
+        position: absolute;
+        box-sizing: border-box;
+        border: 1px solid;
+        width: 100px;
+        height: 100px;
+        top: 18px;
+        left: 18px;
+
+        --p-duration: 2s;
+    }
+
+    .logo-html-animated-enter .plane-one {
+        border-color: var(--c-white);
+        transform: translate(0, 0);
+        animation: p1-move var(--p-duration) cubic-bezier(0.41, 0.14, 0.35, 0.99) forwards;
+    }
+    @keyframes p1-move {
+        0% {
+            clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0);
+            animation-timing-function: linear;
+        }
+        15% {
+            clip-path: polygon(0 0, 100% 0, 100% 2%, 100% 2%, 100% 2%, 100% 2%, 100% 2%, 100% 2%, 100% 2%, 0 2%);
+            animation-timing-function: linear;
+        }
+        30% {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 98% 100%, 98% 2%, 98% 2%, 98% 2%, 98% 2%, 98% 2%, 0 2%);
+            animation-timing-function: linear;
+        }
+        45% {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 99%, 99% 99%, 99% 2%, 0 2%, 0 2%, 0 2%);
+            animation-timing-function: linear;
+        }
+        60% {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 1%, 1% 1%, 1% 99%, 99% 99%, 99% 1%, 0 1%);
+            animation-timing-function: cubic-bezier(0.41, 0.14, 0.35, 0.99);
+        }
+        65% {
+            transform: translate(0, 0);
+            border-color: var(--c-white);
+        }
+        100% {
+            transform: translate(17.48%, 0);
+            border-color: var(--c-blue-06-main);
+        }
+    }
+
+    .logo-html-animated-enter .plane-two {
+        border-color: var(--c-magenta);
+        animation: p2-move var(--p-duration) cubic-bezier(0.41, 0.14, 0.35, 0.99) forwards;
+    }
+    @keyframes p2-move {
+        0% {
+            clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0);
+            animation-timing-function: linear;
+        }
+        15% {
+            clip-path: polygon(0 0, 100% 0, 100% 2%, 100% 2%, 100% 2%, 100% 2%, 100% 2%, 100% 2%, 100% 2%, 0 2%);
+            animation-timing-function: linear;
+        }
+        30% {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 98% 100%, 98% 2%, 98% 2%, 98% 2%, 98% 2%, 98% 2%, 0 2%);
+            animation-timing-function: linear;
+        }
+        45% {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 99%, 99% 99%, 99% 2%, 0 2%, 0 2%, 0 2%);
+            animation-timing-function: linear;
+        }
+        60% {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 1%, 1% 1%, 1% 99%, 99% 99%, 99% 1%, 0 1%);
+            animation-timing-function: cubic-bezier(0.41, 0.14, 0.35, 0.99);
+        }
+        65% {
+            transform: translate(0, 0);
+            border-color: var(--c-white);
+        }
+        100% {
+            transform: translate(0, 17.48%);
+            border-color: var(--c-magenta);
+        }
+    }
+
+    .logo-html-animated-enter .plane-three {
+        border-color: var(--c-green);
+        animation: p3-move var(--p-duration) cubic-bezier(0.41, 0.14, 0.35, 0.99) forwards;
+    }
+    @keyframes p3-move {
+        0% {
+            clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0);
+            animation-timing-function: linear;
+        }
+        15% {
+            clip-path: polygon(0 0, 100% 0, 100% 2%, 100% 2%, 100% 2%, 100% 2%, 100% 2%, 100% 2%, 100% 2%, 0 2%);
+            animation-timing-function: linear;
+        }
+        30% {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 98% 100%, 98% 2%, 98% 2%, 98% 2%, 98% 2%, 98% 2%, 0 2%);
+            animation-timing-function: linear;
+        }
+        45% {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 99%, 99% 99%, 99% 2%, 0 2%, 0 2%, 0 2%);
+            animation-timing-function: linear;
+        }
+        60% {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 1%, 1% 1%, 1% 99%, 99% 99%, 99% 1%, 0 1%);
+            animation-timing-function: cubic-bezier(0.41, 0.14, 0.35, 0.99);
+        }
+        65% {
+            transform: translate(0, 0);
+            border-color: var(--c-white);
+        }
+        100% {
+            transform: translate(-17.48%, -17.48%);
+            border-color: var(--c-green);
+        }
+    }
+</style>
+<div class="logo logo-html-animated-enter">
+    <div class="logo-scale">
+        <div class="plane plane-one"></div>
+        <div class="plane plane-two"></div>
+        <div class="plane plane-three"></div>
+        <svg class="prompt" viewBox="0 0 100 134" fill="none" preserveAspectRatio="xMinYMin slice">
+            <path d="M0 36.0555V0L99.7689 66.5126L0 133.025V96.9697L45.6856 66.5126L0 36.0555Z" fill="white" />
+        </svg>
+    </div>
+</div>
+
+<style>
+    .logo-svg-animated-explode {
+        width: 400px;
+
+        --p1-duration: 1.6s;
+        --p1-delay: 2s;
+        --p2-duration: 0.8s;
+
+        --c-white: #ffffff;
+        --c-blue-06-main: #5269ff;
+
+        --c-magenta: #f561f5;
+        --c-green: #01bc90;
+    }
+    .logo-svg-animated-explode .plane {
+        stroke-width: 2;
+        stroke-dasharray: 379;
+        clip-path: rect(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .logo-svg-animated-explode .plane-one {
+        transform: skewX(-26.56deg) translate(17.53px, 0);
+
+        animation-name: p1-anim, exit;
+        animation-duration: var(--p1-duration), var(--p2-duration);
+        animation-delay: 0s, calc(var(--p1-duration) + var(--p1-delay) + 0.5s);
+        animation-timing-function: cubic-bezier(0.41, 0.14, 0.35, 0.99), cubic-bezier(0.41, 0.14, 0.35, 0.99);
+        animation-iteration-count: 1, 1;
+        animation-fill-mode: forwards, forwards;
+    }
+    @keyframes p1-anim {
+        0% {
+            stroke: var(--c-white);
+            transform: skewX(-26.56deg) translate(0, 0);
+            stroke-dashoffset: 379;
+        }
+        55% {
+            stroke-dashoffset: 0;
+        }
+        55.1% {
+            stroke-dasharray: 379;
+        }
+        55.101% {
+            stroke-dasharray: 0;
+        }
+        60% {
+            stroke: var(--c-white);
+            transform: skewX(-26.56deg) translate(0, 0);
+        }
+        100% {
+            stroke-dasharray: 0;
+            stroke: var(--c-blue-06-main);
+            transform: skewX(-26.56deg) translate(17.53px, 0);
+        }
+    }
+    .logo-svg-animated-explode .plane-two {
+        transform: skewX(-26.56deg) translate(0, 15.68px);
+
+        animation-name: p2-anim, exit;
+        animation-duration: var(--p1-duration), var(--p2-duration);
+        animation-delay: 0s, calc(var(--p1-duration) + var(--p1-delay) + 0.5s);
+        animation-timing-function: cubic-bezier(0.41, 0.14, 0.35, 0.99), cubic-bezier(0.41, 0.14, 0.35, 0.99);
+        animation-iteration-count: 1, 1;
+        animation-fill-mode: forwards, forwards;
+    }
+    @keyframes p2-anim {
+        0% {
+            stroke: var(--c-white);
+            transform: skewX(-26.56deg) translate(0, 0);
+            opacity: 0;
+            stroke-dashoffset: 379;
+        }
+        55% {
+            opacity: 0;
+            stroke-dashoffset: 0;
+        }
+        55.1% {
+            stroke-dasharray: 379;
+        }
+        55.101% {
+            stroke-dasharray: 0;
+        }
+        60% {
+            stroke: var(--c-white);
+            opacity: 1;
+            transform: skewX(-26.56deg) translate(0, 0);
+        }
+        100% {
+            stroke-dasharray: 0;
+            stroke: var(--c-magenta);
+            opacity: 1;
+            transform: skewX(-26.56deg) translate(0, 15.68px);
+        }
+    }
+    .logo-svg-animated-explode .plane-three {
+        transform: skewX(-26.56deg) translate(-17.53px, -15.68px);
+
+        animation-name: p3-anim, exit;
+        animation-duration: var(--p1-duration), var(--p2-duration);
+        animation-delay: 0s, calc(var(--p1-duration) + var(--p1-delay) + 0.9s);
+        animation-timing-function: cubic-bezier(0.41, 0.14, 0.35, 0.99), cubic-bezier(0.41, 0.14, 0.35, 0.99);
+        animation-iteration-count: 1, 1;
+        animation-fill-mode: forwards, forwards;
+    }
+    @keyframes p3-anim {
+        0% {
+            stroke: var(--c-white);
+            transform: skewX(-26.56deg) translate(0, 0);
+            opacity: 0;
+            stroke-dashoffset: 379;
+        }
+        55% {
+            opacity: 0;
+            stroke-dashoffset: 0;
+        }
+        55.1% {
+            stroke-dasharray: 379;
+        }
+        55.101% {
+            stroke-dasharray: 0;
+        }
+        60% {
+            stroke: var(--c-white);
+            opacity: 1;
+            transform: skewX(-26.56deg) translate(0, 0);
+        }
+        100% {
+            stroke-dasharray: 0;
+            stroke: var(--c-green);
+            opacity: 1;
+            transform: skewX(-26.56deg) translate(-17.53px, -15.68px);
+        }
+    }
+    @keyframes exit {
+        0% {
+            stroke-dasharray: 379;
+            stroke-dashoffset: 0;
+        }
+        100% {
+            stroke-dasharray: 379;
+            stroke-dashoffset: -379;
+        }
+    }
+    .logo-svg-animated-explode .prompt {
+        animation-name: prompt-hide, prompt-in, prompt-out;
+        animation-duration: calc(var(--p1-duration) - 0.2s), 0.25s, 0.4s;
+        animation-delay: 0s, calc(var(--p1-duration) - 0.2s), 4.8s;
+        animation-timing-function: cubic-bezier(0.41, 0.14, 0.35, 0.99), cubic-bezier(0.41, 0.14, 0.35, 0.99), cubic-bezier(0.41, 0.14, 0.35, 0.99);
+        animation-iteration-count: 1, 1, 1;
+        animation-fill-mode: forwards, forwards, forwards;
+    }
+    @keyframes prompt-hide {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    @keyframes prompt-in {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @keyframes prompt-out {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+</style>
+
+<svg class="logo logo-svg-animated-explode" viewBox="-84 -64 175 128" fill="none" preserveAspectRatio="xMinYMin slice">
+    <path
+        id="plane-one"
+        class="plane plane-one"
+        transform="skewX(-26.56) translate(17.53 0)"
+        d="
+            M
+            -50 -44.725
+            L
+            50 -44.725
+            L
+            50 44.725
+            L
+            -50 44.725
+            L
+            -50 -44.725
+        Z"
+        stroke="#5269FF"
+    />
+    <path
+        id="plane-two"
+        class="plane plane-two"
+        transform="skewX(-26.56) translate(0 17.53)"
+        d="
+            M
+            50 44.725
+            L
+            -50 44.725
+            L
+            -50 -44.725
+            L
+            50 -44.725
+            L
+            50 44.725
+        Z"
+        stroke="#F561F5"
+    />
+    <path
+        id="plane-three"
+        class="plane plane-three"
+        transform="skewX(-26.56) translate(-17.53 -17.53)"
+        d="
+            M
+            50 44.725
+            L
+            -50 44.725
+            L
+            -50 -44.725
+            L
+            50 -44.725
+            L
+            50 44.725
+        Z"
+        stroke="#01BC90"
+    />
+    <path class="prompt" transform="translate(-86 -63)" d="M65.3609 69.4288L81.14 62.17L72.6147 54.9183L75.2789 49.589L91.7954 63.6382L61.2256 77.701L65.3609 69.4288Z" fill="white" />
+</svg>
