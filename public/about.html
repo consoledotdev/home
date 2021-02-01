@@ -3,7 +3,7 @@
     <head>
         <title>Console</title>
         <meta charset="utf-8" />
-        <meta name="description" content="Console. The best tools for developers." />
+        <meta name="description" content="Console. The best tools for developers. | About" />
 
         <link rel="stylesheet" href="css/normalize.css" />
         <link rel="stylesheet" href="css/fonts.css" />
@@ -36,7 +36,7 @@
                 };
         </script>
     </head>
-    <body class="theme-dark page-home">
+    <body class="theme-dark page-about">
         <span class="log"></span>
         <div class="hero">
             <svg class="lines" width="1969" height="1206" viewBox="0 0 1969 1206" preserveAspectRatio="xMinYMin slice">
@@ -275,7 +275,7 @@
         <div class="content">
             <header class="header">
                 <h1 class="logo-wrapper">
-                    <a href="#">
+                    <a href="index.html">
                         <svg class="logo logo-svg-animated-explode" viewBox="-84 -64 175 128" fill="none" preserveAspectRatio="xMinYMin slice">
                             <path
                                 id="plane-one"
@@ -342,8 +342,8 @@
                         <div class="menu-toggle-shape-two"></div>
                     </button>
                     <ul>
-                        <li>
-                            <a onclick="blur()" href="about.html">About</a>
+                        <li class="is-selected">
+                            <a onclick="blur(); return false;" href="about.html">About</a>
                         </li>
                         <li>
                             <a onclick="blur()" href="https://blog.console.dev/">Blog</a>
@@ -352,8 +352,8 @@
                     <div class="menu-popup-wrapper">
                         <div id="menu-popup" class="popup popup-top-down">
                             <ul>
-                                <li>
-                                    <a onclick="blur(); toggleMenuPopup()" href="about.html">About</a>
+                        				<li class="is-selected">
+                                    <a onclick="blur(); return false;" toggleMenuPopup()" href="about.html">About</a>
                                 </li>
                                 <li>
                                     <a onclick="blur(); toggleMenuPopup()" href="https://blog.console.dev/">Blog</a>
@@ -363,43 +363,96 @@
                     </div>
                 </nav>
             </header>
-            <main class="main">
-                <h2 class="title title-1">Discover the best tools for developers</h2>
-                <p class="description">A free weekly email digest of the best tools and beta releases for developers.</p>
-                <form action="https://dev.us7.list-manage.com/subscribe/post?u=f8c3cd14ee8d63c53d0986a48&amp;id=267911a165" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="console-form">
-                    <input id="form-email" name="EMAIL" class="console-input-text" type="email" placeholder="Your email" required />
-                    <input type="hidden" value="direct" name="REFERRER" id="mc-referrer" />
-                    <div style="position: absolute; left: -5000px" aria-hidden="true"><input type="text" name="b_f8c3cd14ee8d63c53d0986a48_267911a165" tabindex="-1" value="" /><!-- Anti spam field --></div>
+            <main class="main-page">
+                <section class="page-section">
+                    <h2 class="title title-1">Welcome to Console</h2>
+                    <p class="description">Discover the best tools and beta releases for developers.</p>
+                    <p>Console aims to become the place developers go to find the best tools. Starting as a weekly newsletter, each week we will pick out the most interesting tools and new releases. <em>We keep track of everything - dev tools, devops, cloud, and APIs - so you don't have to.</em></p>
+                    <p>Whether it is a new CLI, cloud service, API, or even a new language, it is difficult to stay up to date with the latest tools and technologies. There is always something new to play with. but unless you constantly live on Twitter, Reddit, Hacker News, and developer forums, it is easy to miss the best things.</p>
+                    <div class="col-2">
+                        <div class="aspect-ratio aspect-ratio-1-1">
+                            <img class="portrait" src="img/david.jpg" alt="" />
+                        </div>
+                        <div class="aspect-ratio aspect-ratio-1-1">
+                            <img class="portrait" src="img/max.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="caption">
+                        <p>Founders David Mytton & Max Jennings. CEO of Console, David ... Max has nearly 20 yrs experience scaling start-ups leading product and growth marketing ...BIO'S TO FOLLOW</p>
+                    </div>
+                    <p>Our recommendations are made through years of experience and research, bringing a deep practical understanding of the needs of experienced developers. <em>We pride ourselves on being transparent in our editorial approach</em>. It’s our job to do the filtering, so you can stay up-to-date with the tools that matter, and focus on what you do best. Building.</p>
+                </section>
+                <section class="page-section">
+                    <h3 class="title title-2">Selection Criteria</h3>
+                    <p>Our selection criteria for the newsletter are explained below. The more of these questions we can answer positively, the more likely a tool is to be featured. We try to be objective but there is always a subjective element to deciding what we think is the best, most interesting set of tools each week:</p>
+                    <ul class="col-2-css">
+                        <li>Is this interesting and useful to developers?</li>
+                        <li>Is there a self-service signup?</li>
+                        <li>Would this form part of a daily-use set of developer tools?</li>
+                        <li>Does it make me a better developer?</li>
+                        <li>Does it solve a problem I have experienced? How well does it solve it?</li>
+                        <li>Would this be used by advanced, power-users?</li>
+                        <li>Is the tool high quality?</li>
+                        <li>Does it do the job it claims?</li>
+                        <li>Does it have a good graphical and/or command line interface? Shortcuts? Accessibility?</li>
+                        <li>Is it being actively maintained with regular bug fixes and updates?</li>
+                        <li>Does it have good documentation? Is it fast?</li>
+                        <li>Does it have any negative impact on security or privacy?</li>
+                        <li>How would I feel recommending this to my friends? Would I tweet a link to it?</li>
+                    </ul>
+                </section>
+                <section class="page-section">
+                    <h3 class="title title-2">Beyond the Newsletter</h3>
+                    <p>Over time our goal is to <em>build a community where developers can find the best tools</em>. This will include long form research, discussion, and exclusive early access to beta programs and new releases.</p>
+                    <p>We aim to support Console through this last one - partnering with vendors to provide extras to our audience, such as exclusive access to beta programs or bonus credits, and we may be paid a referral fee for these. Our editorial process is independent from our vendor partnerships. We do not accept payment for product inclusion.</p>
+                    <p>
+                        To learn more about Console, check out the Console blog where you can follow our progress. To start, we recommend reading our thoughts on the <a class="link" href="">'Age of the Developer'</a>. We aim to be open and transparent so everyone can see
+                        <a class="link" target="_blank" href="https://github.com/consoledotdev"
+                            >what we're building
+                            <svg class="inline-icon" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M63.8471 15C36.3242 15 14 37.3242 14 64.8471C14 86.8654 28.3731 105.52 47.945 112.248C50.3914 112.554 51.3089 111.024 51.3089 109.801C51.3089 108.578 51.3089 105.52 51.3089 101.239C37.5474 104.297 34.4893 94.5107 34.4893 94.5107C32.3486 88.7003 28.9847 87.1713 28.9847 87.1713C24.3976 84.1132 29.2905 84.1132 29.2905 84.1132C34.1835 84.419 36.9358 89.3119 36.9358 89.3119C41.5229 96.9572 48.5566 94.8165 51.3089 93.5933C51.6147 90.2294 53.1437 88.0887 54.367 86.8654C43.3578 85.6422 31.737 81.3609 31.737 62.0948C31.737 56.5902 33.5719 52.3089 36.9358 48.6391C36.63 47.7217 34.7951 42.5229 37.5474 35.7951C37.5474 35.7951 41.8287 34.5719 51.3089 40.9939C55.2844 39.7706 59.5657 39.4648 63.8471 39.4648C68.1284 39.4648 72.4098 40.0765 76.3853 40.9939C85.8654 34.5719 90.1468 35.7951 90.1468 35.7951C92.8991 42.5229 91.0642 47.7217 90.7584 48.945C93.8165 52.3089 95.9572 56.896 95.9572 62.4006C95.9572 81.6667 84.3364 85.6422 73.3272 86.8654C75.1621 88.3945 76.6911 91.4526 76.6911 96.0398C76.6911 102.768 76.6911 107.966 76.6911 109.801C76.6911 111.024 77.6086 112.554 80.055 112.248C99.9327 105.52 114 86.8654 114 64.8471C113.694 37.3242 91.37 15 63.8471 15Z"
+                                /></svg></a
+                        >.
+                    </p>
+                    <p>Interested? Subscribe to our weekly newsletter below! And if you spot (or are working on) something you think we should include, email us: <a class="link" href="mailto:hello@console.dev">hello@console.dev</a>.</p>
+                </section>
+                <section class="page-section page-section-cta">
+                    <h4 class="title title-3">Subscribe to the weekly Console newsletter</h4>
+										<p>An email digest of the best tools for developers.</p>
+										<form action="https://dev.us7.list-manage.com/subscribe/post?u=f8c3cd14ee8d63c53d0986a48&amp;id=267911a165" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="console-form">
+												<input id="form-email" name="EMAIL" class="console-input-text" type="email" placeholder="Your email" required />
+												<input type="hidden" value="direct" name="REFERRER" id="mc-referrer" />
+												<div style="position: absolute; left: -5000px" aria-hidden="true"><input type="text" name="b_f8c3cd14ee8d63c53d0986a48_267911a165" tabindex="-1" value="" /><!-- Anti spam field --></div>
 
-                    <button onclick="blur()" class="console-button" type="submit">
-                        <img width="20" class="inline-icon" src="svg/icon-send.svg" alt="Sign Up" />
-                        <span>Sign Up</span>
-                    </button>
-                </form>
-                <!-- Plausible Analytics goal tracking for signups -->
-                <script>
-                    var registerForm = document.querySelector("#mc-embedded-subscribe-form");
-                    registerForm.addEventListener("submit", function (e) {
-                        e.preventDefault();
-                        setTimeout(submitForm, 1000);
-                        var formSubmitted = false;
+												<button onclick="blur()" class="console-button" type="submit">
+														<img width="20" class="inline-icon" src="svg/icon-send.svg" alt="Sign Up" />
+														<span>Sign Up</span>
+												</button>
+										</form>
+										<!-- Plausible Analytics goal tracking for signups -->
+										<script>
+												var registerForm = document.querySelector("#mc-embedded-subscribe-form");
+												registerForm.addEventListener("submit", function (e) {
+														e.preventDefault();
+														setTimeout(submitForm, 1000);
+														var formSubmitted = false;
 
-                        function submitForm() {
-                            if (!formSubmitted) {
-                                formSubmitted = true;
-                                registerForm.submit();
-                            }
-                        }
+														function submitForm() {
+																if (!formSubmitted) {
+																		formSubmitted = true;
+																		registerForm.submit();
+																}
+														}
 
-                        plausible("Newsletter Subscribe", {
-                            callback: submitForm,
-                        });
-                    });
-                </script>
-                <p>
-                    Every Thursday.
-                    <a class="link" onclick="blur()" href="/latest/">See the latest email</a>
-                </p>
+														plausible("Newsletter Subscribe", {
+																callback: submitForm,
+														});
+												});
+										</script>
+                </section>
             </main>
             <footer class="footer">
                 <nav class="footer-nav">
