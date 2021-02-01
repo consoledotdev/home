@@ -749,6 +749,16 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
 /* Media Queries
    ========================================================================== */
 
+@media (prefers-reduced-motion) {
+    .logo-wrapper a span,
+    .logo-svg-animated-explode .plane-one,
+    .logo-svg-animated-explode .plane-two,
+    .logo-svg-animated-explode .plane-three,
+    .logo-svg-animated-explode .prompt {
+        animation: none;
+    }
+}
+
 @media (max-width: 768px) {
     .hero {
         min-height: 680px;
