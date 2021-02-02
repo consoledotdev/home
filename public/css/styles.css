@@ -3,6 +3,7 @@
 
 :root {
     --c-white: #ffffff;
+    --c-text: #babcc7;
 
     --c-black-00-absolute: #000000;
     --c-black-01: #040404;
@@ -20,6 +21,11 @@
     --c-red: #ff4600;
 
     --corners: 4px;
+
+    --border-1: 1px solid rgba(255, 255, 255, 0.03);
+
+    --shadow-3: 0 var(--space3) var(--space5) rgba(0, 0, 0, 0.8);
+    --shadow-2: 0 var(--space2) var(--space4) rgba(0, 0, 0, 0.8);
 
     --a-micro: all 0.08s ease-in-out;
     --a-micro-active: all 0.06s ease-in-out;
@@ -71,6 +77,7 @@ html,
 body {
     height: 100%;
     font-size: 16px;
+    line-height: 1.4em;
 }
 
 body {
@@ -143,6 +150,10 @@ body.theme-dark {
     z-index: 3;
 }
 
+.page-about .content {
+    height: auto;
+}
+
 .header {
     display: flex;
     flex-flow: row nowrap;
@@ -154,6 +165,82 @@ body.theme-dark {
 
 .header .main-nav {
     flex: 0 0 auto;
+}
+
+.main-page {
+    z-index: 20;
+}
+
+.page-section:not(:first-child) {
+    margin-top: calc(var(--space4) + var(--space3));
+}
+
+.page-section ul {
+    list-style: none;
+    padding: 0 0 0 var(--space2);
+}
+
+.page-section ul li {
+    padding-bottom: var(--space3);
+    list-style: none;
+    padding-left: calc(10px + var(--space2));
+    text-indent: calc(calc(10px + var(--space2)) * -1);
+    color: var(--c-white);
+    font-size: var(--t-size-1);
+    letter-spacing: 0.1em;
+}
+
+.page-section ul li:before {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath d='M44.9007 33.0044L114 33L83.0993 94.8051L14 94.8095L44.9007 33.0044Z' fill='%235269ff'/%3E%3C/svg%3E");
+    background-size: cover;
+    width: 10px;
+    height: 10px;
+    margin-right: var(--space2);
+    position: relative;
+    display: inline-block;
+}
+
+.page-section-cta form {
+    margin: var(--space4) 0 0;
+}
+
+.col-2 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+    margin-top: var(--space4);
+}
+
+.col-2 > * {
+    width: calc(50% - var(--space3));
+}
+
+.col-2-css {
+    columns: 1;
+    column-gap: 0;
+}
+
+.aspect-ratio {
+    position: relative;
+}
+.aspect-ratio::before {
+    content: "";
+    width: 1px;
+    margin-left: -1px;
+    float: left;
+    height: 0;
+}
+.aspect-ratio::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.aspect-ratio.aspect-ratio-1-1::before {
+    padding-top: 100%;
 }
 
 /* Main Nav
@@ -275,6 +362,11 @@ body.theme-dark {
     transition: var(--a-controls-active);
 }
 
+.main-nav li.is-selected a {
+    color: var(--c-blue-04);
+    cursor: default;
+}
+
 .main-nav .menu-popup-wrapper ul {
     flex-flow: column nowrap;
     align-items: flex-end;
@@ -354,6 +446,10 @@ body.theme-dark {
 .logo-wrapper a:active {
     text-decoration: none;
     color: var(--c-white);
+}
+
+.page-home .logo-wrapper a {
+    cursor: default;
 }
 
 .logo-wrapper a svg {
@@ -572,13 +668,56 @@ body.theme-dark {
     font-size: var(--t-size8);
 }
 
+.title.title-2 {
+    font-size: var(--t-size5);
+}
+
+.title.title-3 {
+    font-size: var(--t-size2);
+    font-weight: 500;
+}
+
 /* Text
    ========================================================================== */
 
+p {
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--c-text);
+}
+
+p em {
+    color: var(--c-white);
+    font-style: normal;
+}
+
+p:first-of-type {
+    margin-top: var(--space4);
+}
+
+p:not(:last-child) {
+    margin-bottom: 1em;
+}
+
 .description {
-    margin: var(--space4) 0 0;
+    color: var(--c-white);
     line-height: 1.3em;
     font-size: var(--t-size2);
+}
+
+.caption {
+    margin-top: var(--space4);
+    margin-bottom: var(--space4);
+    background-color: var(--c-black-03);
+    border: var(--border-1);
+    padding: var(--space2) var(--space3);
+}
+
+.caption p {
+    margin-top: 0;
+    color: var(--c-white);
+    font-size: var(--t-size-2);
+    letter-spacing: 0.1em;
 }
 
 /* Links
@@ -600,6 +739,20 @@ body.theme-dark {
 .link:active {
     color: var(--c-blue-06-main);
     text-decoration: none;
+    transition: var(--a-controls-active);
+}
+
+.link:link .inline-icon,
+.link:visited .inline-icon {
+    fill: var(--c-white);
+    transition: var(--a-controls);
+}
+.link:hover .inline-icon,
+.link:focus .inline-icon {
+    fill: var(--c-blue-04);
+}
+.link:active .inline-icon {
+    fill: var(--c-blue-06-main);
     transition: var(--a-controls-active);
 }
 
@@ -713,6 +866,10 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
     height: 20px;
 }
 
+a .inline-icon {
+    vertical-align: -0.3em;
+}
+
 /* Popup
    ========================================================================== */
 
@@ -724,7 +881,7 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
     flex-flow: row wrap;
     align-items: center;
     opacity: 0;
-    box-shadow: 0 var(--space3) var(--space5) var(--c-black-01);
+    box-shadow: var(--shadow-3);
     transition: var(--a-elements);
     overflow: hidden;
     pointer-events: none;
@@ -746,6 +903,19 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
     transform: translateY(var(--space4));
 }
 
+/* Media
+   ========================================================================== */
+
+.portrait {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: top;
+    border-radius: var(--space2);
+}
+
 /* Media Queries
    ========================================================================== */
 
@@ -764,6 +934,17 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
         min-height: 680px;
     }
 
+    .page-about .hero .grid {
+        display: none;
+    }
+
+    .hero .grid {
+        transform: translate(-24%, -36%);
+        margin-left: 30vw;
+        margin-top: max(80%, 50vh);
+        min-width: 1600px;
+    }
+
     .content {
         min-height: 680px;
     }
@@ -772,11 +953,13 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
         min-height: 60vh;
     }
 
-    .hero .grid {
-        transform: translate(-24%, -36%);
-        margin-left: 30vw;
-        margin-top: max(80%, 50vh);
-        min-width: 1600px;
+    .main-page {
+        margin: var(--space6) 0;
+    }
+
+    .page-section-cta {
+        border-top: 1px solid var(--c-blue-04);
+        padding-top: var(--space4);
     }
 
     @media (max-width: 540px) {
@@ -823,6 +1006,10 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
             font-size: var(--t-size7);
         }
 
+        .title.title-2 {
+            font-size: var(--t-size4);
+        }
+
         .description {
             margin: var(--space3) 0 0;
         }
@@ -833,6 +1020,11 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
 
         .main-nav .menu-popup-wrapper ul li {
             font-size: var(--t-size1);
+        }
+
+        .inline-icon {
+            width: 16px;
+            height: 16px;
         }
 
         .footer-nav ul li {
@@ -868,6 +1060,13 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
         min-height: 760px;
     }
 
+    .page-about .header {
+        position: fixed;
+        left: 6.25vw;
+        right: 6.25vw;
+        z-index: 10;
+    }
+
     .content {
         min-height: 760px;
     }
@@ -875,6 +1074,25 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
     .main {
         width: 440px;
         height: 60vh;
+    }
+
+    .main-page {
+        margin: max(calc(var(--space6) + var(--space3)), 16vh) 0 var(--space6);
+        width: min(600px, 55vw);
+        margin-left: -6.25vw;
+        padding: var(--space5) 6.25vw;
+        background: var(--c-black-01);
+        box-shadow: var(--shadow-2);
+        border-radius: 0 var(--space2) var(--space2) 0;
+        border: var(--border-1);
+        border-left: 0px;
+    }
+
+    .page-section-cta {
+        margin: calc(var(--space6) + var(--space5)) 0 0;
+        padding: var(--space4);
+        background: var(--c-black-02-main);
+        border: var(--border-1);
     }
 
     .hero .grid {
@@ -894,5 +1112,10 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
     .main {
         height: auto;
         min-height: 40vh;
+    }
+
+    .col-2-css {
+        columns: 2;
+        column-gap: 32px;
     }
 }
