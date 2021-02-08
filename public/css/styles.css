@@ -425,7 +425,14 @@ body.theme-dark {
     display: inline-block;
     margin: 0;
     text-transform: lowercase;
+    opacity: 0;
 }
+
+.logo-wrapper.is-static,
+.logo-wrapper.is-animated {
+    opacity: 1;
+}
+
 .logo-wrapper a {
     display: inline-flex;
     flex-flow: row nowrap;
@@ -462,7 +469,9 @@ body.theme-dark {
     display: inline-block;
     flex: 0 0 auto;
     margin-left: calc(var(--space1) + var(--space2));
+}
 
+.logo-wrapper.is-animated a span {
     animation-name: type-hide, type-anim;
     animation-duration: 1.4s, 0.5s;
     animation-delay: 0s, 1.4s;
@@ -501,7 +510,9 @@ body.theme-dark {
 
 .logo-svg-animated-explode .plane-one {
     transform: skewX(-26.56deg) translate(17.53px, 0);
+}
 
+.is-animated .logo-svg-animated-explode .plane-one {
     animation-name: p1-anim;
     animation-duration: var(--p1-duration);
     animation-delay: 0s;
@@ -509,6 +520,7 @@ body.theme-dark {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
+
 @keyframes p1-anim {
     0% {
         stroke: var(--c-white);
@@ -534,9 +546,12 @@ body.theme-dark {
         transform: skewX(-26.56deg) translate(17.53px, 0);
     }
 }
+
 .logo-svg-animated-explode .plane-two {
     transform: skewX(-26.56deg) translate(0, 15.68px);
+}
 
+.is-animated .logo-svg-animated-explode .plane-two {
     animation-name: p2-anim;
     animation-duration: var(--p1-duration);
     animation-delay: 0s;
@@ -544,6 +559,7 @@ body.theme-dark {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
+
 @keyframes p2-anim {
     0% {
         stroke: var(--c-white);
@@ -573,9 +589,12 @@ body.theme-dark {
         transform: skewX(-26.56deg) translate(0, 15.68px);
     }
 }
+
 .logo-svg-animated-explode .plane-three {
     transform: skewX(-26.56deg) translate(-17.53px, -15.68px);
+}
 
+.is-animated .logo-svg-animated-explode .plane-three {
     animation-name: p3-anim;
     animation-duration: var(--p1-duration);
     animation-delay: 0s;
@@ -583,6 +602,7 @@ body.theme-dark {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
+
 @keyframes p3-anim {
     0% {
         stroke: var(--c-white);
@@ -622,7 +642,8 @@ body.theme-dark {
         stroke-dashoffset: -379;
     }
 }
-.logo-svg-animated-explode .prompt {
+
+.is-animated .logo-svg-animated-explode .prompt {
     animation-name: prompt-hide, prompt-in;
     animation-duration: calc(var(--p1-duration) - 1s), 0.25s;
     animation-delay: 0s, calc(var(--p1-duration) - 1s);
@@ -630,6 +651,7 @@ body.theme-dark {
     animation-iteration-count: 1, 1;
     animation-fill-mode: forwards, forwards;
 }
+
 @keyframes prompt-hide {
     0% {
         opacity: 0;
@@ -920,11 +942,11 @@ a .inline-icon {
    ========================================================================== */
 
 @media (prefers-reduced-motion) {
-    .logo-wrapper a span,
-    .logo-svg-animated-explode .plane-one,
-    .logo-svg-animated-explode .plane-two,
-    .logo-svg-animated-explode .plane-three,
-    .logo-svg-animated-explode .prompt {
+    .logo-wrapper.is-animated a span,
+    .is-animated .logo-svg-animated-explode .plane-one,
+    .is-animated .logo-svg-animated-explode .plane-two,
+    .is-animated .logo-svg-animated-explode .plane-three,
+    .is-animated .logo-svg-animated-explode .prompt {
         animation: none;
     }
 }
