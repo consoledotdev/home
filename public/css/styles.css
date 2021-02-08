@@ -976,7 +976,7 @@ a .inline-icon {
     }
 
     .main-page {
-        margin: var(--space6) 0;
+        margin: calc(var(--space6) - var(--space4)) 0 var(--space6);
     }
 
     .page-section-cta {
@@ -1099,7 +1099,7 @@ a .inline-icon {
     }
 
     .main-page {
-        margin: max(calc(var(--space6) + var(--space3)), 16vh) 0 var(--space6);
+        margin: max(calc(var(--space6) - var(--space3)), 10vh) 0 calc(var(--space6) - var(--space2));
         width: min(600px, 55vw);
         margin-left: -6.25vw;
         padding: var(--space5) 6.25vw;
