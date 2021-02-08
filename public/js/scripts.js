@@ -15,3 +15,12 @@ let toggleMenuPopup = (e) => {
         pEl.classList.add(pState);
     }
 };
+
+let animateLogo = (() => {
+    let logoEl = document.getElementById("logo-wrapper");
+    if (document.referrer.indexOf(location.host) < 0) {
+        logoEl.classList.add("is-animated");
+    } else {
+        logoEl.classList.add("is-static");
+    }
+})();
