@@ -275,7 +275,7 @@
         <div class="content">
             <header class="header">
                 <h1 id="logo-wrapper" class="logo-wrapper">
-                    <a href="#">
+                    <a onclick="return false;" href="/">
                         <svg class="logo logo-svg-animated-explode" viewBox="-84 -64 175 128" fill="none" preserveAspectRatio="xMinYMin slice">
                             <path
                                 id="plane-one"
@@ -346,6 +346,9 @@
                             <a onclick="blur()" href="/about/">About</a>
                         </li>
                         <li>
+                            <a onclick="blur();" href="/Q&A/">Q&A</a>
+                        </li>
+                        <li>
                             <a onclick="blur()" href="https://blog.console.dev/">Blog</a>
                         </li>
                     </ul>
@@ -354,6 +357,9 @@
                             <ul>
                                 <li>
                                     <a onclick="blur(); toggleMenuPopup()" href="/about/">About</a>
+                                </li>
+                                <li>
+                                    <a onclick="blur(); toggleMenuPopup()" href="/Q&A/">Q&A</a>
                                 </li>
                                 <li>
                                     <a onclick="blur(); toggleMenuPopup()" href="https://blog.console.dev/">Blog</a>
