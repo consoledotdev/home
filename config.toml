@@ -4,6 +4,7 @@ title = "Console"
 theme = "console-home"
 enableRobotsTXT = true
 enableGitInfo = true
+disableHugoGeneratorInject = true
 
 disableKinds = ["RSS", "taxonomy", "term"]
 
