@@ -11,6 +11,9 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v1
 
+            - name: "hugo build"
+              uses: jakejarvis/hugo-build-action@v0.80.0
+
             - name: Deploy to Cloudflare
               uses: cloudflare/wrangler-action@1.3.0
               with:
