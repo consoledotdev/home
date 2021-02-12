@@ -161,6 +161,50 @@ a {
     --theme-pre-code-text: var(--c-blue-08);
 }
 
+@media (prefers-color-scheme: dark) {
+    .theme-user {
+        --theme-content-bg-1: var(--c-black-01);
+        --theme-content-bg-2: var(--c-black-02-main);
+        --theme-content-bg-3: var(--c-black-03);
+        --theme-input-bg: var(--c-white-absolute);
+
+        --theme-shadow-2: var(--shadow-dark-2);
+        --theme-shadow-3: var(--shadow-dark-3);
+
+        --theme-border-1: var(--border-dark-1);
+        --theme-border-2: var(--border-dark-2);
+        --theme-input-border: none;
+
+        --theme-text-1: var(--c-white-absolute);
+        --theme-text-2: var(--c-light-grey);
+        --theme-cta-text: var(--c-white-absolute);
+        --theme-input-text: var(--c-black-02-main);
+        --theme-pre-code-text: var(--c-blue-03);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .theme-user {
+        --theme-content-bg-1: var(--c-white-01);
+        --theme-content-bg-2: var(--c-white-02);
+        --theme-content-bg-3: var(--c-white-03);
+        --theme-input-bg: var(--c-white-absolute);
+
+        --theme-shadow-2: var(--shadow-light-2);
+        --theme-shadow-3: var(--shadow-light-3);
+
+        --theme-border-1: var(--border-light-1);
+        --theme-border-2: var(--border-light-2);
+        --theme-input-border: var(--border-light-2);
+
+        --theme-text-1: var(--c-black-02-main);
+        --theme-text-2: var(--c-black-03);
+        --theme-cta-text: var(--c-white-absolute);
+        --theme-input-text: var(--c-black-02-main);
+        --theme-pre-code-text: var(--c-blue-08);
+    }
+}
+
 /* Hero
    ========================================================================== */
 
