@@ -11,7 +11,8 @@
             <span>Sign Up</span>
         </button>
     </form>
-    <!-- Plausible Analytics goal tracking for signups -->
+
+    {{ `<!-- Plausible Analytics goal tracking for signups -->` | safeHTML }}
     <script>
         var registerForm = document.querySelector("#mc-embedded-subscribe-form");
         registerForm.addEventListener("submit", function (e) {
