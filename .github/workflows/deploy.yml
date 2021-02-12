@@ -1,19 +1,22 @@
 name: Deploy
 on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: 'Choose an environment to deploy to: <production|test>'
-        required: true
-        default: 'test'
+    workflow_dispatch:
+        inputs:
+            environment:
+                description: "Choose an environment to deploy to: <production|test>"
+                required: true
+                default: "test"
 
 jobs:
     deploy:
         name: Deploy
         runs-on: ubuntu-latest
         steps:
-            - name: 'Checkout GitHub Action'
+            - name: "Checkout GitHub Action"
               uses: actions/checkout@v2
+
+            - name: "hugo build"
+              uses: jakejarvis/hugo-build-action@v0.80.0
 
             - name: Deploy to Cloudflare
               uses: cloudflare/wrangler-action@1.3.0

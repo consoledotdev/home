@@ -1,0 +1,10 @@
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Console Home"
+license = "Copyright Console Ltd 2021"
+licenselink = ""
+description = "The console.dev website."
+homepage = "https//console.dev"
+tags = []
+features = []
+min_version = "0.80.0"

@@ -1,0 +1,44 @@
+<head>
+    {{- $title := print .Site.Title " - " .Title }} {{- if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+    <title>{{ $title }}</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="{{ .Summary }}" />
+
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <!-- favicon.ico in the root -->
+
+    <link rel="canonical" href="{{ .Permalink }}" />
+
+    {{ $iso8601 := "2006-01-02T15:04:05-07:00" -}}
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    {{ if not .PublishDate.IsZero -}}
+    <meta property="article:published_time" {{ .PublishDate.Format $iso8601 | printf "content=%q" | safeHTMLAttr }}>
+    {{ else if not .Date.IsZero -}}
+    <meta property="article:published_time" {{ .Date.Format $iso8601 | printf "content=%q" | safeHTMLAttr }}>
+    {{ end -}}
+    {{ if not .Lastmod.IsZero -}} <meta property="article:modified_time" {{ .Lastmod.Format $iso8601 | printf "content=%q" | safeHTMLAttr }}>
+    {{ end -}}
+    <meta property="og:site_name" content="Console" />
+    <meta property="og:title" content="{{ $title }}" />
+    <meta property="og:description" content="{{ .Summary }}" />
+    <meta property="og:image" itemprop="image" content="https://console.dev/img/console-mark-256.png" />
+    <meta property="og:image:secure_url" itemprop="image" content="https://console.dev/img/console-mark-256.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta name="twitter:site" content="@consoledotdev" />
+
+    <!-- Plausible Analytics: https://plausible.io -->
+    <script async defer data-domain="console.dev" src="https://stats.console.dev/js/index.js"></script>
+    <script>
+        window.plausible =
+            window.plausible ||
+            function () {
+                (window.plausible.q = window.plausible.q || []).push(arguments);
+            };
+    </script>
+</head>
