@@ -30,7 +30,7 @@ in templates:
 | Caption Div    | `{{< div-caption >}}Markdown formatted text to appear in the caption.{{< /div-caption >}}`          |
 | 2-column Image | `{{< img-2col src1="/img/david.jpg" alt1="David Mytton" src2="/img/max.jpg" alt2="Max Jennings">}}` |
 | 2-column ul    | Wrap the Markdown list in `{{< ul-2col >}}` and `{{< ul-2col >}}`                                   |
-| Description P  | `{{< p-description >}}Markdown formatted text to appear in thep.{{< /p-description >}}              |
+| Description P  | `{{< p-description >}}Markdown formatted text to appear in thep.{{< /p-description >}}`             |
 | Subscribe Box  | `{{< section-subscribe> }}`                                                                         |
 
 ## Cloudflare Workers setup
