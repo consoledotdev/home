@@ -24,3 +24,32 @@ let animateLogo = (() => {
         logoEl.classList.add("is-static");
     }
 })();
+
+let toggleTheme = () => {
+    let prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+    let prefersLight = window.matchMedia("(prefers-color-scheme: light)");
+    let localPref = localStorage.getItem("theme");
+
+    if (localPref) {
+        if (localPref == "dark") setTheme("light");
+        else if (localPref == "light") setTheme("dark");
+    } else {
+        if (prefersDark.matches) setTheme("light");
+        if (prefersLight.matches) setTheme("dark");
+    }
+};
+
+let setTheme = (theme) => {
+    let themedEls = document.getElementsByClassName("theme-user");
+    for (el of themedEls) {
+        el.classList.remove("theme-dark");
+        el.classList.remove("theme-light");
+        el.classList.add("theme-" + theme);
+    }
+    localStorage.setItem("theme", theme);
+};
+
+let initLocalThemePref = ((theme) => {
+    let localPref = localStorage.getItem("theme");
+    if (localPref) setTheme(localPref);
+})();
