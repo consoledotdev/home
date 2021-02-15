@@ -94,6 +94,7 @@ body {
     height: 100%;
     font-size: 16px;
     line-height: 1.4em;
+    min-width: 300px;
 }
 
 body {
@@ -527,6 +528,7 @@ body {
     position: absolute;
     right: 0;
     height: 0;
+    z-index: 30;
 }
 
 .main-nav .menu-popup-wrapper .popup {
@@ -1328,8 +1330,19 @@ a .inline-icon {
         min-height: 60vh;
     }
 
-    .main-page {
-        margin: calc(var(--space6) - var(--space4)) 0 var(--space6);
+    .theme-dark .main-page,
+    .theme-dark.main-page {
+        background: transparent;
+        margin-top: calc(var(--space6) - var(--space4));
+        margin-bottom: var(--space6);
+    }
+    .theme-light .main-page,
+    .theme-light.main-page {
+        background: var(--theme-content-bg-1);
+        margin-top: calc(var(--space2) + var(--space4));
+        margin-bottom: calc(var(--space2) + var(--space4));
+        padding-top: var(--space5);
+        padding-bottom: var(--space5);
     }
 
     .page-section-cta {
@@ -1377,6 +1390,13 @@ a .inline-icon {
             width: 76%;
         }
 
+        .main-page {
+            margin-left: -12vw;
+            margin-right: -12vw;
+            padding-left: 12vw;
+            padding-right: 12vw;
+        }
+
         .title.title-1 {
             font-size: var(--t-size7);
         }
@@ -1412,6 +1432,13 @@ a .inline-icon {
             width: 80%;
         }
 
+        .main-page {
+            margin-left: -10vw;
+            margin-right: -10vw;
+            padding-left: 10vw;
+            padding-right: 10vw;
+        }
+
         .console-button {
             margin-top: var(--space3);
         }
@@ -1421,11 +1448,25 @@ a .inline-icon {
         .content {
             width: 76%;
         }
+
+        .main-page {
+            margin-left: -12vw;
+            margin-right: -12vw;
+            padding-left: 12vw;
+            padding-right: 12vw;
+        }
     }
 
     @media (min-width: 601px) {
         .content {
             width: 72%;
+        }
+
+        .main-page {
+            margin-left: -14vw;
+            margin-right: -14vw;
+            padding-left: 14vw;
+            padding-right: 14vw;
         }
     }
 }
