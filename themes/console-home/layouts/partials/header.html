@@ -1,42 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Console - Discover the best tools for developers</title>
-        <meta charset="utf-8" />
-        <meta name="description" content="Console Newsletter. A free weekly email digest of the best tools and beta releases for developers." />
-
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="css/fonts.css" />
-        <link rel="stylesheet" href="css/styles.css" />
-
-        <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-        <link rel="icon" href="favicon.png" type="image/png" />
-        <!-- favicon.ico in the root -->
-
-        <link rel="canonical" href="https://console.dev/" />
-
-        <meta name="viewport" content="width=device-width, user-scalable=no" />
-
-        <meta property="og:site_name" content="Console" />
-        <meta property="og:title" content="Console" />
-        <meta property="og:description" content="A free weekly email digest of the best tools and beta releases for developers." />
-        <meta property="og:image" itemprop="image" content="https://console.dev/img/console-mark-256.png" />
-        <meta property="og:image:secure_url" itemprop="image" content="https://console.dev/img/console-mark-256.png" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://console.dev/" />
-        <meta name="twitter:site" content="@consoledotdev" />
-
-        <!-- Plausible Analytics: https://plausible.io -->
-        <script async defer data-domain="console.dev" src="https://stats.console.dev/js/index.js"></script>
-        <script>
-            window.plausible =
-                window.plausible ||
-                function () {
-                    (window.plausible.q = window.plausible.q || []).push(arguments);
-                };
-        </script>
-    </head>
-    <body class="theme-dark page-home">
         <span class="log"></span>
         <div class="hero">
             <svg class="lines" width="1969" height="1206" viewBox="0 0 1969 1206" preserveAspectRatio="xMinYMin slice">
@@ -275,7 +236,7 @@
         <div class="content">
             <header class="header">
                 <h1 id="logo-wrapper" class="logo-wrapper">
-                    <a href="#">
+                    <a href="/">
                         <svg class="logo logo-svg-animated-explode" viewBox="-84 -64 175 128" fill="none" preserveAspectRatio="xMinYMin slice">
                             <path
                                 id="plane-one"
@@ -342,8 +303,8 @@
                         <div class="menu-toggle-shape-two"></div>
                     </button>
                     <ul>
-                        <li>
-                            <a onclick="blur()" href="/about/">About</a>
+                        <li{{ if eq .Params.isSelected "about" }} class="is-selected"{{ end }}>
+                            <a onclick="blur();{{ if eq .Params.isSelected "about" }} return false;{{ end }}" href="/about/">About</a>
                         </li>
                         <li>
                             <a onclick="blur()" href="https://blog.console.dev/">Blog</a>
@@ -352,7 +313,7 @@
                     <div class="menu-popup-wrapper">
                         <div id="menu-popup" class="popup popup-top-down">
                             <ul>
-                                <li>
+                                <li{{ if eq .Params.isSelected "about" }} class="is-selected"{{ end }}>
                                     <a onclick="blur(); toggleMenuPopup()" href="/about/">About</a>
                                 </li>
                                 <li>
@@ -363,57 +324,3 @@
                     </div>
                 </nav>
             </header>
-            <main class="main">
-                <h2 class="title title-1">Discover the best tools for developers</h2>
-                <p class="description">A free weekly email digest of the best tools and beta releases for developers.</p>
-                <form action="https://dev.us7.list-manage.com/subscribe/post?u=f8c3cd14ee8d63c53d0986a48&amp;id=267911a165" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="console-form">
-                    <input id="form-email" name="EMAIL" class="console-input-text" type="email" placeholder="Your email" required />
-                    <input type="hidden" value="direct" name="REFERRER" id="mc-referrer" />
-                    <div style="position: absolute; left: -5000px" aria-hidden="true"><input type="text" name="b_f8c3cd14ee8d63c53d0986a48_267911a165" tabindex="-1" value="" /><!-- Anti spam field --></div>
-
-                    <button onclick="blur()" class="console-button" type="submit">
-                        <img width="20" class="inline-icon" src="svg/icon-send.svg" alt="Sign Up" />
-                        <span>Sign Up</span>
-                    </button>
-                </form>
-                <!-- Plausible Analytics goal tracking for signups -->
-                <script>
-                    var registerForm = document.querySelector("#mc-embedded-subscribe-form");
-                    registerForm.addEventListener("submit", function (e) {
-                        e.preventDefault();
-                        setTimeout(submitForm, 1000);
-                        var formSubmitted = false;
-
-                        function submitForm() {
-                            if (!formSubmitted) {
-                                formSubmitted = true;
-                                registerForm.submit();
-                            }
-                        }
-
-                        plausible("Newsletter Subscribe", {
-                            callback: submitForm,
-                        });
-                    });
-                </script>
-                <p>
-                    Every Thursday.
-                    <a class="link" onclick="blur()" href="/latest/">See the latest email</a>
-                </p>
-            </main>
-            <footer class="footer">
-                <nav class="footer-nav">
-                    <ul>
-                        <li>
-                            <a onclick="blur()" href="mailto:hello@console.dev">Contact</a>
-                        </li>
-                        <li>
-                            <a onclick="blur()" href="/privacy/">Privacy Policy</a>
-                        </li>
-                    </ul>
-                </nav>
-            </footer>
-        </div>
-        <script src="js/scripts.js"></script>
-    </body>
-</html>

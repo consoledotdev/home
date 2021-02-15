@@ -1,0 +1,5 @@
+<!--
+    markdownify doesn't support render-link, so we have to pipe it through
+    .RenderString instead. See https://github.com/gohugoio/hugo/issues/6650#issuecomment-568005693
+-->
+<div class="caption">{{ with .Inner }} {{ $.Page.RenderString . }} {{ end }}</div>

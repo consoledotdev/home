@@ -1,0 +1,17 @@
+baseURL = "https://console.dev"
+languageCode = "en-us"
+title = "Console"
+theme = "console-home"
+enableRobotsTXT = true
+enableGitInfo = true
+disableHugoGeneratorInject = true
+
+disableKinds = ["RSS", "taxonomy", "term"]
+
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+
+[frontmatter]
+date = ["date", "publishDate", "lastmod"]
+lastmod = [":git", "lastmod", "date", "publishDate"]

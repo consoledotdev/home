@@ -1,0 +1,12 @@
+{{ `<!-- Site source available at https://github.com/consoledotdev/home -->` | safeHTML }}
+
+<!DOCTYPE html>
+<html lang="en">
+    {{ partial "head.html" . }}
+    <body class="theme-dark page-{{ if not .Params.bodyClass -}}about{{ else }}{{ .Params.bodyClass }}{{ end }}">
+            {{ partial "header.html" . }}
+            <main class="main{{ if ne .Params.bodyClass "home" }}-page theme-user{{ end }}">{{- block "main" . }}{{- end }}</main>
+            {{ partial "footer.html" . }}
+        <script src="/js/scripts.js"></script>
+    </body>
+</html>

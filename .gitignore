@@ -6,3 +6,7 @@ dist
 
 # Visual Studio Code
 .vscode/
+
+# Hugo
+resources/
+public/
