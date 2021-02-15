@@ -129,8 +129,8 @@ a {
     --theme-content-bg-1: var(--c-black-01);
     --theme-content-bg-2: var(--c-black-02-main);
     --theme-content-bg-3: var(--c-black-03);
-    --theme-input-bg: var(--c-white-absolute);
 
+    --theme-input-bg: var(--c-white-absolute);
     --theme-control-bg: var(--c-mid-grey-dark);
     --theme-control-border: var(--c-white-03);
     --theme-control-active-text: var(--c-black-03);
@@ -180,8 +180,8 @@ a {
         --theme-content-bg-1: var(--c-black-01);
         --theme-content-bg-2: var(--c-black-02-main);
         --theme-content-bg-3: var(--c-black-03);
-        --theme-input-bg: var(--c-white-absolute);
 
+        --theme-input-bg: var(--c-white-absolute);
         --theme-control-bg: var(--c-mid-grey-dark);
         --theme-control-border: var(--c-white-03);
         --theme-control-active-text: var(--c-black-03);
@@ -207,8 +207,8 @@ a {
         --theme-content-bg-1: var(--c-white-01);
         --theme-content-bg-2: var(--c-white-02);
         --theme-content-bg-3: var(--c-white-03);
-        --theme-input-bg: var(--c-white-absolute);
 
+        --theme-input-bg: var(--c-white-absolute);
         --theme-control-bg: var(--c-mid-grey-light);
         --theme-control-border: var(--c-black-03);
         --theme-control-active-text: var(--c-white-absolute);
@@ -226,6 +226,43 @@ a {
         --theme-cta-text: var(--c-white-absolute);
         --theme-input-text: var(--c-black-02-main);
         --theme-pre-code-text: var(--c-blue-08);
+    }
+}
+
+@media (max-width: 768px) {
+    .theme-dark .main-page,
+    .theme-dark.main-page {
+        background: transparent;
+        margin-top: calc(var(--space6) - var(--space4));
+        margin-bottom: var(--space6);
+    }
+    .theme-light .main-page,
+    .theme-light.main-page {
+        background: var(--theme-content-bg-1);
+        margin-top: calc(var(--space2) + var(--space4));
+        margin-bottom: calc(var(--space2) + var(--space4));
+        padding-top: var(--space5);
+        padding-bottom: var(--space5);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .theme-user:not(.theme-dark):not(.theme-light) .main-page,
+        .theme-user:not(.theme-dark):not(.theme-light).main-page {
+            background: transparent;
+            margin-top: calc(var(--space6) - var(--space4));
+            margin-bottom: var(--space6);
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        .theme-user:not(.theme-dark):not(.theme-light) .main-page,
+        .theme-user:not(.theme-dark):not(.theme-light).main-page {
+            background: var(--theme-content-bg-1);
+            margin-top: calc(var(--space2) + var(--space4));
+            margin-bottom: calc(var(--space2) + var(--space4));
+            padding-top: var(--space5);
+            padding-bottom: var(--space5);
+        }
     }
 }
 
@@ -1328,21 +1365,6 @@ a .inline-icon {
 
     .main {
         min-height: 60vh;
-    }
-
-    .theme-dark .main-page,
-    .theme-dark.main-page {
-        background: transparent;
-        margin-top: calc(var(--space6) - var(--space4));
-        margin-bottom: var(--space6);
-    }
-    .theme-light .main-page,
-    .theme-light.main-page {
-        background: var(--theme-content-bg-1);
-        margin-top: calc(var(--space2) + var(--space4));
-        margin-bottom: calc(var(--space2) + var(--space4));
-        padding-top: var(--space5);
-        padding-bottom: var(--space5);
     }
 
     .page-section-cta {
