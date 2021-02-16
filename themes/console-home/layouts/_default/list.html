@@ -1,8 +1,9 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
+<section class="page-section">
+<h2 class="title title-1">{{ .Title }}</h2>
 {{ range .Pages.ByPublishDate.Reverse }}
-<h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-<a class="summary" href="{{ .RelPermalink }}">
-    <p>{{ .Summary }}</p>
-</a>
-{{ end }} {{ end }}
+<h3 class="title title-2"><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+<p>{{ .Summary }}</p>
+{{ end }}
+</section>
+{{ end }}
