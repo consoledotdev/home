@@ -31,7 +31,7 @@ ZAP](https://www.zaproxy.org/), and made it dead simple. And that’s
 (DAST) tool which tests a running app from the outside in like an attacker
 would.
 
-The goal is that it's minimal effort to get  the platform to do what it's
+The goal is that it's minimal effort to get the platform to do what it's
 supposed to do. Scans are highly repeatable because you implement the
 configuration as code using the practices of CI/CD so that build systems can
 run it. Anyone that pulls the repo down has the same configuration and can get
@@ -128,7 +128,7 @@ Then I went to SendGrid to focus on security leadership. Did a couple of years
 there. And then when I was all done at that job, Joni and I met. She was asking
 me about shifting application security left and my experience from a security
 leadership perspective. I just went on a rant about application security and
-how terrible it is.  Specifically, how hard it is to actually partner up with
+how terrible it is. Specifically, how hard it is to actually partner up with
 developer organizations because of how bad the tools are and how we feed
 information and all that stuff.
 
