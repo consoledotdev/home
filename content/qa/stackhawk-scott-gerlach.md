@@ -1,5 +1,7 @@
 ---
 title: Q&A with Scott Gerlach, StackHawk
+shortTitle: Scott Gerlach, StackHawk
+what: An application security testing tool built for developers.
 date: 2021-02-16T12:00:00Z
 draft: true
 summary: Q&A interview with Scott Gerlach, Co-founder & CSO, StackHawk.
