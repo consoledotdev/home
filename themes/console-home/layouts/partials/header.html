@@ -298,14 +298,17 @@
                     </a>
                 </h1>
                 <nav class="main-nav">
-                    <button onclick="blur(); toggleMenuPopup()" id="menu-toggle" class="menu-toggle">
+                    <button onclick="blur(); toggleMenuPopup()" id="menu-toggle" class="menu-toggle" title="Menu">
                         <div class="menu-toggle-shape-one"></div>
                         <div class="menu-toggle-shape-two"></div>
                     </button>
                     <ul>
                         <li{{ if eq .Params.isSelected "about" }} class="is-selected"{{ end }}>
-                            <a onclick="blur();{{ if eq .Params.isSelected "about" }} return false;{{ end }}" href="/about/">About</a>
+                            <a onclick="blur();" href="/about/">About</a>
                         </li>
+                        <!--<li{{ if eq .Params.isSelected "qa" }} class="is-selected"{{ end }}>
+                            <a onclick="blur();" href="/qa/">Q&amp;A</a>
+                        </li>-->
                         <li>
                             <a onclick="blur()" href="https://blog.console.dev/">Blog</a>
                         </li>
@@ -316,6 +319,9 @@
                                 <li{{ if eq .Params.isSelected "about" }} class="is-selected"{{ end }}>
                                     <a onclick="blur(); toggleMenuPopup()" href="/about/">About</a>
                                 </li>
+                                <!--<li{{ if eq .Params.isSelected "qa" }} class="is-selected"{{ end }}>
+                                    <a onclick="blur(); toggleMenuPopup()" href="/qa/">Q&amp;A</a>
+                                </li>-->
                                 <li>
                                     <a onclick="blur(); toggleMenuPopup()" href="https://blog.console.dev/">Blog</a>
                                 </li>

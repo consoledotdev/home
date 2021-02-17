@@ -2,6 +2,7 @@
 dist/*
 
 # Hugo
+public/*
 resources/*
 
 # Prettier has been manually run on these files and it tends to mess up the Go
