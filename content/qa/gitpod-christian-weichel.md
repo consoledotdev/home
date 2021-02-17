@@ -36,6 +36,13 @@ comes in, removing that friction, making it easier and less cumbersome to
 maintain, so everything is now in sync. The environment configuration and the
 instructions for setting it up are the same thing.
 
+{{< img-center
+src="/img/qa/gitpod-christian-weichel-product.png"
+alt="Gitpod product screenshot"
+width="100%"
+caption="Eclipse Theia IDE running in Chrome using Gitpod."
+>}}
+
 ### What does a "day in the life" look like?
 
 Starting in the morning, I have a look at what's happening in the Gitpod
