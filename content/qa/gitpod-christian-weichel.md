@@ -2,7 +2,7 @@
 title: Q&A with Christian Weichel, Gitpod
 shortTitle: Christian Weichel, Gitpod
 what: Dev environments as code and hosted in the cloud.
-date:  2021-02-17T12:12:09Z
+date: 2021-02-17T12:12:09Z
 draft: true
 summary: Q&A interview with Christian Weichel, Chief Architect / Head of Engineering, Gitpod.
 isSelected: qa
@@ -12,10 +12,10 @@ isSelected: qa
 /p-description >}}
 
 {{< img-2col
-    src1="/img/qa/gitpod-christian-weichel-profile.png"
-    alt1="Christian Weichel, Chief Architect / Head of Engineering, Gitpod"
-    src2="/img/qa/gitpod-christian-weichel-logo.svg"
-    alt2="Gitpod Logo"
+src1="/img/qa/gitpod-christian-weichel-profile.png"
+alt1="Christian Weichel, Chief Architect / Head of Engineering, Gitpod"
+src2="/img/qa/gitpod-christian-weichel-logo.svg"
+alt2="Gitpod Logo"
 >}}
 
 ### What is Gitpod? Why did you build it?
@@ -30,7 +30,7 @@ outdated document that you would follow and try to maintain.
 
 Even once you've set up your environment, the world moves on. If you want to
 work on a new feature, or go back to a previous state, then you're basically
-almost back to square one.  Even worse, the instructions may be out of date.
+almost back to square one. Even worse, the instructions may be out of date.
 We thought there has to be a better way to go about this. This is where Gitpod
 comes in, removing that friction, making it easier and less cumbersome to
 maintain, so everything is now in sync. The environment configuration and the
@@ -85,7 +85,7 @@ and that was mostly C, with Go for the backend systems.
 
 ### What is the most interesting development challenge you've faced working on Gitpod?
 
-Understanding Kubernetes and integrating with it.  When we started this
+Understanding Kubernetes and integrating with it. When we started this
 Kubernetes was still relatively new. None of us had any real experience with
 Kubernetes. We set up a [minikube](https://minikube.sigs.k8s.io/docs/), but
 that's a far cry from knowing how to properly integrate all the behaviors and
@@ -144,7 +144,7 @@ They are all [open source](https://github.com/gitpod-io), and this has been a
 massive step forward. In the past if someone were to ask a question, there
 would be this nagging thing in the back of your head: ‘Can you talk about
 this?’ Now, if someone has a question, I can point them to the commit. I can
-point them to the code.  This has been super helpful and we've been doing the
+point them to the code. This has been super helpful and we've been doing the
 same with all the tools that we built around Gitpod too, like [our build
 system](https://github.com/gitpod-io/leeway) and all the other experiments that
 we run alongside, all of that is open source.
@@ -205,11 +205,10 @@ exclusively)
 ### Describe your desk setup
 
 {{< img-center
-    src="/img/qa/gitpod-christian-weichel-desk.jpg"
-    alt="The desk of Christian Weichel, Gitpod"
-    width="100%"
+src="/img/qa/gitpod-christian-weichel-desk.jpg"
+alt="The desk of Christian Weichel, Gitpod"
+width="100%"
 >}}
-
 
 [Inverwk standing desk](https://www.inwerk-bueromoebel.de/buerotische/hoehenverstellbare-schreibtische/hoehenverstellbarer-schreibtisch-masterlift2-sw-chrom-bm56947.html). What's nice about it is that it connects via Bluetooth
 to my phone and laptop so every hour it tells me: ‘Hey, you might want to stand

@@ -2,7 +2,7 @@
 title: Q&A with NAME, ORG
 shortTitle: NAME, ORG
 what: DESCRIPTION
-date:  {{ .Date }}
+date: { { .Date } }
 draft: true
 summary: Q&A interview with NAME, TITLE, ORG.
 isSelected: qa
