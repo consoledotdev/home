@@ -11,7 +11,12 @@ isSelected: qa
 {{< p-description >}}Interview with Co-founder & CSO, StackHawk.{{<
 /p-description >}}
 
-{{< img-2col src1="/img/qa/stackhawk-scott-gerlach-profile.jpg" alt1="Scott Gerlach, Co-founder & CSO, StackHawk" src2="/img/qa/stackhawk-scott-gerlach-logo.png" alt2="StackHawk Logo">}}
+{{< img-2col
+    src1="/img/qa/stackhawk-scott-gerlach-profile.jpg"
+    alt1="Scott Gerlach, Co-founder & CSO, StackHawk"
+    src2="/img/qa/stackhawk-scott-gerlach-logo.png"
+    alt2="StackHawk Logo"
+>}}
 
 ### What is StackHawk? Why did you build it?
 
@@ -70,7 +75,12 @@ developer could go in there and say, "Oh yeah, I see exactly what's happening
 here. I know I can probably find it in code and then fix it, and get on with
 the business of doing engineering work instead of playing ticket shuffling”.
 
-{{< img-center src="/img/qa/stackhawk-scott-gerlach-product.png" alt="StackHawk product screenshot" width="100%" caption="The StackHawk vulnerability scanning dashboard." >}}
+{{< img-center
+    src="/img/qa/stackhawk-scott-gerlach-product.png"
+    alt="StackHawk product screenshot"
+    width="100%"
+    caption="The StackHawk vulnerability scanning dashboard."
+>}}
 
 ### What does a "day in the life" look like?
 
@@ -244,7 +254,11 @@ back to the web version every time.
 
 ### Describe your desk setup
 
-{{< img-center src="/img/qa/stackhawk-scott-gerlach-desk.jpg" alt="The desk of Scott Gerlach, StackHawk" width="100%">}}
+{{< img-center
+    src="/img/qa/stackhawk-scott-gerlach-desk.jpg"
+    alt="The desk of Scott Gerlach, StackHawk"
+    width="100%"
+>}}
 
 **Desk:** This is a very early version of the [Stand
 Desk](https://www.standdesk.co/). In fact, I ordered the memory controller, and
