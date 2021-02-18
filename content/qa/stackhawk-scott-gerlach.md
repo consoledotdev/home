@@ -17,7 +17,7 @@ src1="/img/qa/stackhawk-scott-gerlach-profile.jpg"
 alt1="Scott Gerlach, Co-founder & CSO, StackHawk"
 src2="/img/qa/stackhawk-scott-gerlach-logo.png"
 alt2="StackHawk Logo"
->}}agm
+>}}
 
 ### What is StackHawk? Why did you build it?
 
