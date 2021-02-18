@@ -6,6 +6,7 @@ date: 2021-02-11T12:00:00Z
 draft: false
 summary: Q&A interview with Christian Weichel, Chief Architect / Head of Engineering, Gitpod.
 isSelected: qa
+ogImg: /img/qa/gitpod-christian-weichel-desk.jpg
 ---
 
 {{< p-description >}}Interview with Chief Architect / Head of Engineering, Gitpod.{{<

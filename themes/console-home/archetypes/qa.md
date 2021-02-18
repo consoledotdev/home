@@ -6,6 +6,7 @@ date: { { .Date } }
 draft: true
 summary: Q&A interview with NAME, TITLE, ORG.
 isSelected: qa
+ogImg: /img/qa/DESK.jpg
 ---
 
 {{< p-description >}}Interview with TITLE, ORG.{{<
