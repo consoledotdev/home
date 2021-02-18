@@ -2,8 +2,8 @@
 title: Q&A with Scott Gerlach, StackHawk
 shortTitle: Scott Gerlach, StackHawk
 what: An application security testing tool built for developers.
-date: 2021-02-16T12:00:00Z
-draft: true
+date: 2021-02-09T12:00:00Z
+draft: false
 summary: Q&A interview with Scott Gerlach, Co-founder & CSO, StackHawk.
 isSelected: qa
 ---
@@ -16,7 +16,7 @@ src1="/img/qa/stackhawk-scott-gerlach-profile.jpg"
 alt1="Scott Gerlach, Co-founder & CSO, StackHawk"
 src2="/img/qa/stackhawk-scott-gerlach-logo.png"
 alt2="StackHawk Logo"
->}}
+>}}agm
 
 ### What is StackHawk? Why did you build it?
 
@@ -306,6 +306,6 @@ because doing mechanical work is always fun.
 
 [StackHawk](https://www.stackhawk.com) is an application security testing tool
 built for developers. It was featured as an "Interesting Tool" in the Console
-newsletter on 11 February 2021.
+newsletter on 11 Feb 2021. This interview was conducted on 9 Feb 2021.
 
 {{< section-subscribe >}}
