@@ -40,7 +40,9 @@ jobs:
             - name: Write tools to JSON file
               env:
                   RESULTS: ${{ steps.get_data_tools.outputs.results }}
-              run: echo "$RESULTS" > data/latesttools-raw.json
+              run: |
+                mkdir data
+                echo "$RESULTS" > data/latesttools-raw.json
 
             - id: 'get_data_beta'
               name: Get beta list from Google Sheets
@@ -64,7 +66,9 @@ jobs:
             - name: Write betas to JSON file
               env:
                   RESULTS: ${{ steps.get_data_beta.outputs.results }}
-              run: echo "$RESULTS" > data/latestbetas-raw.json
+              run: |
+                mkdir data
+                echo "$RESULTS" > data/latestbetas-raw.json
 
             - name: Setup Python
               uses: actions/setup-python@v2
