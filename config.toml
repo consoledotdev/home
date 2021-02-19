@@ -14,4 +14,4 @@ disableKinds = ["RSS", "taxonomy", "term"]
 
 [frontmatter]
 date = ["date", "publishDate", "lastmod"]
-lastmod = [":git", "lastmod", "date", "publishDate"]
+lastmod = ["lastmod", ":fileModTime", ":git", "date", "publishDate"]

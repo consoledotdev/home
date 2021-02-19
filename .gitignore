@@ -7,6 +7,9 @@ dist
 # Visual Studio Code
 .vscode/
 
+# Python
+.venv/
+
 # Hugo
 resources/
 public/
