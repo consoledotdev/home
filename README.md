@@ -34,6 +34,27 @@ in templates:
 | Description P  | `{{< p-description >}}Markdown formatted text to appear in thep.{{< /p-description >}}`                                                                                                             |
 | Subscribe Box  | `{{< section-subscribe> }}`                                                                                                                                                                         |
 
+### Parsing tools JSON for /latest/
+
+Set up a Python venv:
+
+```zsh
+python3 -m venv .venv
+source .venv/bin/activate
+pip3 install -r requirements.txt
+```
+
+For production builds, the JSON source is retrieved using the
+[gsheet.action](https://github.com/marketplace/actions/gsheet-action) GitHub
+Action. In development, example JSON files are provided in `/tests/` and
+pre-generated examples are already in `/themes/console-home/data/`.
+
+To generate new examples into `/data/`:
+
+```zsh
+python parseTools.py --tools-json tests/example-tools.json --beta-json tests/example-betas.json --ignore-date YES
+```
+
 ## Cloudflare Workers setup
 
 For testing how the site will be served live and/or for development with
@@ -46,8 +67,8 @@ Cloudflare Workers:
 
 ### Live testing
 
-```shell
-hugo -D
+```zsh
+hugo
 wrangler publish --env test
 ```
 
@@ -59,14 +80,18 @@ Automatic deployment: [run
 workflow](https://github.com/consoledotdev/home/actions?query=workflow%3ADeploy)
 and enter `production` as the deployment environment.
 
+The Github Action also gets the latest newsletter content and saves the files
+to the `/data/` directory. If no data files exist in that directory, the test
+files from `/themes/console-home/data/` will be used instead.
+
 ## Performance testing
 
 We use [k6](https://k6.io/) to define performance SLAs. These are run on every
 commit [using GitHub Actions](https://k6.io/blog/load-testing-using-github-actions)
 but they can also be run locally after [installing k6](https://k6.io/docs/getting-started/installation):
 
-```shell
-hugo -D
+```zsh
+hugo
 wrangler publish --env perftest
 k6 run tests/perf.js
 ```
@@ -75,7 +100,22 @@ This tests against a live test environment at
 https://home-perftest.consoledev.workers.dev/ to simulate real-world
 performance on Cloudflare Workers.
 
+## Authentication
+
+### Google Service Account
+
+The [Google Service
+Account](https://console.cloud.google.com/iam-admin/serviceaccounts/details/105013685991318651001?orgonly=true&project=console-home-latest&supportedpurview=project)
+is used by
+[gsheet.action](https://github.com/marketplace/actions/gsheet-action) to pull
+the contents of the beta programs source Google Sheet. The [Google Sheets
+API](https://console.cloud.google.com/apis/api/sheets.googleapis.com/credentials?project=console-home-latest)
+is enabled for the Service Account.
+
 ## Secrets
 
 -   `CF_API_TOKEN` - [Cloudflare API
     token](https://dash.cloudflare.com/profile/api-tokens) to deploy.
+-   `GSHEET_CLIENT_EMAIL` - email of the Google Service Account.
+-   `GSHEET_PRIVATE_KEY` - private key of the Google Service Account. Download
+    JSON then extract private key component.

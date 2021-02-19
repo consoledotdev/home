@@ -1,0 +1,65 @@
+{
+  "results": [
+    {
+      "command": {
+        "func": "getData",
+        "kwargs": [
+          {
+            "range": "'All Tools'!A:L",
+            "hasHeaderRow": true
+          },
+          null
+        ]
+      },
+      "result": {
+        "rawData": [
+          [
+            "Vantage",
+            "Vantage",
+            "2021-01-13",
+            "2021-01-14",
+            "https://www.vantage.sh/",
+            "2021-01-12",
+            "Cloud",
+            "SaaS",
+            "AWS Console designed for developers.",
+            "AWS Console UX is not great; Vantage is much cleaner and faster. It connects using a read-only CloudFormation IAM Role and they have detailed documentation about the read-only permissions it requests. \"Views\" nicely segment/group resources, even across accounts and regions, with global search for them all. Cost reporting by view and weekly email reports help you manage budgets better.",
+            "Does not support all AWS products, currently focused on a few key resources e.g. EC2 instances, VPC Subnets, Route53, etc. Currently read-only, which is good for security and because it's a new tool - plans to add more management features in the future. Also AWS-only, but they are working on other cloud providers.",
+            "@JoinVantage"
+          ]
+        ],
+        "formatted": [
+          {
+            "Company/Org": "Vantage",
+            "Tool/Product/Project": "Vantage",
+            "Initial review": "2021-01-13",
+            "Scheduled for": "2021-01-14",
+            "URL": "https://www.vantage.sh/",
+            "Announced": "2021-01-12",
+            "Category": "Cloud",
+            "Type": "SaaS",
+            "What is it?": "AWS Console designed for developers.",
+            "What we like": "AWS Console UX is not great; Vantage is much cleaner and faster. It connects using a read-only CloudFormation IAM Role and they have detailed documentation about the read-only permissions it requests. \"Views\" nicely segment/group resources, even across accounts and regions, with global search for them all. Cost reporting by view and weekly email reports help you manage budgets better.",
+            "What we dislike": "Does not support all AWS products, currently focused on a few key resources e.g. EC2 instances, VPC Subnets, Route53, etc. Currently read-only, which is good for security and because it's a new tool - plans to add more management features in the future. Also AWS-only, but they are working on other cloud providers.",
+            "Twitter": "@JoinVantage"
+          }
+        ],
+        "header": [
+          "Company/Org",
+          "Tool/Product/Project",
+          "Initial review",
+          "Scheduled for",
+          "URL",
+          "Announced",
+          "Category",
+          "Type",
+          "What is it?",
+          "What we like",
+          "What we dislike",
+          "Twitter"
+        ],
+        "range": "'All Tools'!A1:L1029"
+      }
+    }
+  ]
+}

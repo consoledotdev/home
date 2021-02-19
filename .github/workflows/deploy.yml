@@ -1,5 +1,8 @@
 name: Deploy
 on:
+    schedule:
+        - cron: '0 08 * * THU'
+
     workflow_dispatch:
         inputs:
             environment:
@@ -15,11 +18,85 @@ jobs:
             - name: "Checkout GitHub Action"
               uses: actions/checkout@v2
 
+            - id: 'get_data_tools'
+              name: Get tools list from Google Sheets
+              uses: jroehl/gsheet.action@v1.1.0
+              with:
+                  spreadsheetId: 1VGVFXtfOAhZqPdY30mrD_4towCj6lCdhuwr35vp4xgM
+                  commands: | # list of commands, specified as a valid JSON string
+                      [
+                          {
+                              "command": "getData",
+                              "args": {
+                                  "range": "'All Tools'!A:L",
+                                  "hasHeaderRow": true
+                              }
+                          }
+                      ]
+              env:
+                  GSHEET_CLIENT_EMAIL: ${{ secrets.GSHEET_CLIENT_EMAIL }}
+                  GSHEET_PRIVATE_KEY: ${{ secrets.GSHEET_PRIVATE_KEY }}
+
+            - name: Write tools to JSON file
+              env:
+                  RESULTS: ${{ steps.get_data_tools.outputs.results }}
+              run: echo "$RESULTS" > data/latesttools-raw.json
+
+            - id: 'get_data_beta'
+              name: Get beta list from Google Sheets
+              uses: jroehl/gsheet.action@v1.1.0
+              with:
+                  spreadsheetId: 10SJbUuMWgc-ACOzNydXL16vE_fDwJIP92G4_L8XUhrQ
+                  commands: | # list of commands, specified as a valid JSON string
+                      [
+                          {
+                              "command": "getData",
+                              "args": {
+                                  "range": "'All Programs'!A:M",
+                                  "hasHeaderRow": true
+                              }
+                          }
+                      ]
+              env:
+                  GSHEET_CLIENT_EMAIL: ${{ secrets.GSHEET_CLIENT_EMAIL }}
+                  GSHEET_PRIVATE_KEY: ${{ secrets.GSHEET_PRIVATE_KEY }}
+
+            - name: Write betas to JSON file
+              env:
+                  RESULTS: ${{ steps.get_data_beta.outputs.results }}
+              run: echo "$RESULTS" > data/latestbetas-raw.json
+
+            - name: Setup Python
+              uses: actions/setup-python@v2
+              with:
+                  python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+
+            - name: Install pip dependencies
+              shell: bash
+              run: |
+                  pip install --upgrade pip
+                  pip install -r requirements.txt
+            - name: Build static HTML
+              run: |
+                  python3 parseTools.py \
+                  --tools-json data/latesttools-raw.json \
+                  --beta-json data/latestbetas-raw.json
+
             - name: "hugo build"
               uses: jakejarvis/hugo-build-action@v0.80.0
 
-            - name: Deploy to Cloudflare
+            # If this is the automated build then deploy to prod
+            # otherwise deploy to wherever is specified
+            - name: Deploy to Cloudflare (cron)
               uses: cloudflare/wrangler-action@1.3.0
+              if: github.event_name == 'schedule'
+              with:
+                  apiToken: ${{ secrets.CF_API_TOKEN }}
+                  environment: production
+
+            - name: Deploy to Cloudflare (environment input)
+              uses: cloudflare/wrangler-action@1.3.0
+              if: github.event_name != 'schedule'
               with:
                   apiToken: ${{ secrets.CF_API_TOKEN }}
                   environment: ${{ github.event.inputs.environment }}

@@ -1,0 +1,68 @@
+{
+  "results": [
+    {
+      "command": {
+        "func": "getData",
+        "kwargs": [
+          {
+            "range": "'All Programs'!A:M",
+            "hasHeaderRow": true
+          },
+          null
+        ]
+      },
+      "result": {
+        "rawData": [
+          [
+            "Microsoft",
+            "Backup for Azure Managed Disk",
+            "2021-01-18",
+            "TRUE",
+            "FALSE",
+            "2021-01-01",
+            "https://azure.microsoft.com/en-us/updates/azure-disk-backup/",
+            "Backups for Azure VM Block Storage",
+            "2021-01-18",
+            "Cloud",
+            "SaaS",
+            "Closed",
+            "@azure"
+          ]
+        ],
+        "formatted": [
+          {
+            "Company/Org": "Microsoft",
+            "Tool/Product/Project": "Backup for Azure Managed Disk",
+            "Initial review": "2021-01-18",
+            "Meets our criteria?": "TRUE",
+            "GA?": "FALSE",
+            "Scheduled for": "2021-01-01",
+            "URL": "https://azure.microsoft.com/en-us/updates/azure-disk-backup/",
+            "What is it?": "Backups for Azure VM Block Storage",
+            "Announced": "2021-01-18",
+            "Category": "Cloud",
+            "Type": "SaaS",
+            "Access": "Closed",
+            "Twitter": "@azure"
+          }
+        ],
+        "header": [
+          "Company/Org",
+          "Tool/Product/Project",
+          "Initial review",
+          "Meets our criteria?",
+          "GA?",
+          "Scheduled for",
+          "URL",
+          "What is it?",
+          "Announced",
+          "Category",
+          "Type",
+          "Access",
+          "Twitter"
+        ],
+        "range": "'All Programs'!A1:M1026"
+      }
+    }
+  ]
+}
