@@ -67,8 +67,7 @@ jobs:
               env:
                   RESULTS: ${{ steps.get_data_beta.outputs.results }}
               run: |
-                mkdir data
-                echo "$RESULTS" > data/latestbetas-raw.json
+                  echo "$RESULTS" > data/latestbetas-raw.json
 
             - name: Setup Python
               uses: actions/setup-python@v2
