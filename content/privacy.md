@@ -74,7 +74,8 @@ We will never sell your personal data under any circumstances.
 
 ### Recipients of personal data
 
-We work with a number of third-party vendors to help us run Console.
+We work with a number of third-party vendors to help us run Console. We may
+transfer personal data to or through these services:
 
 -   [Cloudflare](https://www.cloudflare.com/): Where run our websites and
     infrastructure.
@@ -88,6 +89,9 @@ We work with a number of third-party vendors to help us run Console.
     Plausible Analytics [which does not use
     cookies](https://plausible.io/data-policy) and is designed
     [privacy-first](https://plausible.io/privacy-focused-web-analytics).
+-   [Zapier](https://zapier.com): Newsletter signups via [Product Hunt's email
+    lead generation ad unit](https://www.producthunt.com/sponsor) are pushed
+    (one way) through Zapier to automatically subscribe them in Mailchimp.
 
 We may transfer your personal data outside of the EU on the basis of an
 adequacy decision by the European Commission under Article 45 of the UK GDPR.
