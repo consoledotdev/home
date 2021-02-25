@@ -3,7 +3,7 @@ title: Q&A with Sam Scott, Oso
 shortTitle: Sam Scott, Oso
 what: A batteries-included library for authorization.
 date: 2021-02-23T12:00:00Z
-draft: true
+draft: false
 summary: Q&A interview with Sam Scott, CTO, Oso.
 isSelected: qa
 ogImg: /img/qa/oso-sam-scott-desk.jpg
