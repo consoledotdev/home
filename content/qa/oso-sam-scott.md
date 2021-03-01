@@ -316,8 +316,9 @@ enjoy indoor climbing and bouldering.
 
 ### Find out more
 
-[Oso](https://www.osohq.com) is a batteries-included library for
-authorization. It was featured as an "Interesting Tool" in the Console
-newsletter on 18 Feb 2021. This interview was conducted on 23 Feb 2021.
+[Oso](https://www.osohq.com) is a batteries-included library for authorization.
+It was featured as an "Interesting Tool" in the [Console
+newsletter](https://console.dev) on 18 Feb 2021. This interview was conducted
+on 23 Feb 2021.
 
 {{< section-subscribe >}}

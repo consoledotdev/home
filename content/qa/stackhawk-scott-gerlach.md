@@ -306,7 +306,8 @@ because doing mechanical work is always fun.
 ### Find out more
 
 [StackHawk](https://www.stackhawk.com) is an application security testing tool
-built for developers. It was featured as an "Interesting Tool" in the Console
-newsletter on 11 Feb 2021. This interview was conducted on 9 Feb 2021.
+built for developers. It was featured as an "Interesting Tool" in the [Console
+newsletter](https://console.dev) on 11 Feb 2021. This interview was conducted
+on 9 Feb 2021.
 
 {{< section-subscribe >}}

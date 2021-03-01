@@ -245,7 +245,7 @@ furniture which is fun.
 
 [Gitpod](https://www.gitpod.io) allows you to describe your dev environments as
 code and host them in the cloud. It was featured as an "Interesting Tool" in
-the Console newsletter on 11 Feb 2021. This interview was conducted on 11 Feb
-2021.
+the [Console newsletter](https://console.dev) on 11 Feb 2021. This interview
+was conducted on 11 Feb 2021.
 
 {{< section-subscribe >}}
