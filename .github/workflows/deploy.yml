@@ -86,7 +86,7 @@ jobs:
                   --beta-json data/latestbetas-raw.json
 
             - name: "hugo build"
-              uses: jakejarvis/hugo-build-action@v0.80.0
+              uses: jakejarvis/hugo-build-action@v0.81.0
 
             # If this is the automated build then deploy to prod
             # otherwise deploy to wherever is specified
