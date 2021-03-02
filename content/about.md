@@ -6,7 +6,8 @@ summary: Console aims to become the place developers go to find the best tools.
 isSelected: about
 ---
 
-{{< p-description >}}Discover the best tools and beta releases for developers.{{< /p-description >}}
+Discover the best tools and beta releases for developers.
+{.description}
 
 Console aims to become the place developers go to find the
 best tools. Starting as a weekly newsletter, each week we will pick out the
@@ -46,8 +47,6 @@ these questions we can answer positively, the more likely a tool is to be
 featured. We try to be objective but there is always a subjective element to
 deciding what we think is the best, most interesting set of tools each week:
 
-{{< ul-2col >}}
-
 -   Is this interesting and useful to developers?
 -   Is there a self-service signup?
 -   Would this form part of a daily-use set of developer tools?
@@ -61,8 +60,7 @@ deciding what we think is the best, most interesting set of tools each week:
 -   Does it have good documentation? Is it fast?
 -   Does it have any negative impact on security or privacy?
 -   How would I feel recommending this to my friends? Would I tweet a link to it?
-
-{{< /ul-2col >}}
+{.col-2-css}
 
 ### Beyond the newsletter
 

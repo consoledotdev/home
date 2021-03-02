@@ -9,8 +9,8 @@ isSelected: qa
 ogImg: /img/qa/gitpod-christian-weichel-desk.jpg
 ---
 
-{{< p-description >}}Interview with Chief Architect / Head of Engineering, Gitpod.{{<
-/p-description >}}
+Interview with Chief Architect / Head of Engineering, Gitpod.
+{.description}
 
 {{< img-2col
 src1="/img/qa/gitpod-christian-weichel-profile.png"

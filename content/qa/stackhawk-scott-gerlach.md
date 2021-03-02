@@ -9,8 +9,8 @@ isSelected: qa
 ogImg: /img/qa/stackhawk-scott-gerlach-desk.jpg
 ---
 
-{{< p-description >}}Interview with Co-founder & CSO, StackHawk.{{<
-/p-description >}}
+Interview with Co-founder & CSO, StackHawk.
+{.description}
 
 {{< img-2col
 src1="/img/qa/stackhawk-scott-gerlach-profile.jpg"

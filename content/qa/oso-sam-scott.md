@@ -9,7 +9,8 @@ isSelected: qa
 ogImg: /img/qa/oso-sam-scott-desk.jpg
 ---
 
-{{< p-description >}}Interview with the CTO, Oso.{{</p-description >}}
+Interview with the CTO, Oso.
+{.description}
 
 {{< img-2col src1="/img/qa/oso-sam-scott-profile.png" alt1="Sam Scott, CTO, Oso" src2="/img/qa/oso-sam-scott-logo.png" alt2="Oso Logo">}}
 

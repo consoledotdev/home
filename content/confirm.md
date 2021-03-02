@@ -6,6 +6,7 @@ summary: Subscription confirmed.
 ---
 
 You are now subscribed to the weekly Console newsletter.
+{.description}
 
 **Every Thursday** we will send you the most interesting developer tools and
 beta releases.
