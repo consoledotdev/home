@@ -202,6 +202,7 @@ simple - just a laptop and headphones, which means I can work from anywhere.
 {{< img-center
 src="/img/qa/infracost-ali-khajeh-hosseini-desk.jpg"
 alt="The desk of Ali Khajeh-Hosseini, Infracost"
+width="100%"
 >}}
 
 Due to COVID-19 we're not in the UK just now. We’re spending a few months in
