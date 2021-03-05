@@ -30,4 +30,4 @@ section = ["HTML", "RSS"]
 [outputFormats]
 [outputFormats.RSS]
     mediatype = "application/rss"
-    baseName = "feed"
+    baseName = "rss"
