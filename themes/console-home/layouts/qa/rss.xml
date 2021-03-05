@@ -1,0 +1,44 @@
+{{- $pctx := . -}}
+{{- if .IsHome -}}{{ $pctx = .Site }}{{- end -}}
+{{- $pages := slice -}}
+{{- if or $.IsHome $.IsSection -}}
+{{- $pages = $pctx.RegularPages -}}
+{{- else -}}
+{{- $pages = $pctx.Pages -}}
+{{- end -}}
+{{- $limit := .Site.Config.Services.RSS.Limit -}}
+{{- if ge $limit 1 -}}
+{{- $pages = $pages | first $limit -}}
+{{- end -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Console - Developer Q&amp;A interviews</title>
+        <link>{{ .Permalink }}</link>
+        <description>A series of Q&amp;As with the developers behind the tools we feature at Console.</description>{{ with .Site.LanguageCode }}
+        <image>
+            <title>Console - Developer Q&amp;A interviews</title>
+            <link>https://console.dev/qa/</link>
+            <url>https://console.dev/img/console-mark-256.png</url>
+        </image>
+        <language>{{.}}</language>{{end}}
+        <webMaster>hello@console.dev (console.dev)</webMaster>
+        <managingEditor>hello@console.dev (console.dev)</managingEditor>{{ if not .Date.IsZero }}
+        <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+        {{- with .OutputFormats.Get "RSS" }}
+            {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+        {{- end -}}
+        {{ range $pages }}
+        <item>
+            <title>{{ .Title }}</title>
+            <link>{{ .Permalink }}</link>
+            <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+            {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
+            <guid>{{ .Permalink }}</guid>
+            <description>{{ "<![CDATA[" | safeHTML }} {{ .Summary }}]]></description>
+            <content:encoded>{{ "<![CDATA[" | safeHTML }} {{ partial "rss.html" . | safeHTML }}]]></content:encoded>
+        </item>
+        {{ end }}
+    </channel>
+</rss>

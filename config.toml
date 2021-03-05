@@ -5,8 +5,9 @@ theme = "console-home"
 enableRobotsTXT = true
 enableGitInfo = true
 disableHugoGeneratorInject = true
+rssLimit = 10
 
-disableKinds = ["RSS", "taxonomy", "term"]
+disableKinds = ["taxonomy", "term"]
 
 [taxonomies]
     category = "categories"
@@ -21,3 +22,12 @@ lastmod = ["lastmod", ":fileModTime", ":git", "date", "publishDate"]
         [markup.goldmark.parser]
             [markup.goldmark.parser.attribute]
                 block = true
+
+[outputs]
+home = [ "HTML" ]
+section = ["HTML", "RSS"]
+
+[outputFormats]
+[outputFormats.RSS]
+    mediatype = "application/rss"
+    baseName = "feed"

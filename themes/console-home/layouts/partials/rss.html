@@ -1,0 +1,38 @@
+<!-- From https://www.yuriburger.net/2020/08/21/a-better-rss-for-hugo/ -->
+{{ $html := .Content | safeHTML }}
+
+{{ $hrefs := findRE "href=\"([^\"]*)\"" $html }}
+{{ range $href := $hrefs}}
+  {{ $absHref := strings.TrimPrefix "href=\"" $href  }}
+  {{ $absHref = strings.TrimSuffix "\"" $absHref  }}
+  {{ $absHref = printf "href=\"%s\"" ($absHref | absURL) }}
+  {{ $html = replace $html $href $absHref }}
+{{ end }}
+
+{{ $srcs := findRE "src=\"([^\"]*)\"" $html }}
+{{ range $src := $srcs}}
+  {{ $absSrc := strings.TrimPrefix "src=\"" $src  }}
+  {{ $absSrc = strings.TrimSuffix "\"" $absSrc  }}
+  {{ $absSrc = printf "src=\"%s\"" ($absSrc | absURL) }}
+  {{ $html = replace $html $src $absSrc }}
+{{ end }}
+
+{{ $srcset := findRE "srcset=\"([^\"]*)\"" $html }}
+{{ range $set := $srcset}}
+  {{ $parts := strings.TrimPrefix "srcset=\"" $set  }}
+  {{ $parts = strings.TrimSuffix "\"" $parts  }}
+  {{ $parts = split $parts "," }}
+  {{ $newSrcset := slice }}
+  {{ range $part := $parts }}
+    {{ $part = $part | replaceRE "^\\s*(.*)\\s*$" "$1" }}
+    {{ $lg := split $part " " }}
+    {{ $href := index $lg 0 | absURL }}
+    {{ $size := index $lg 1 }}
+    {{ $newSrcset = $newSrcset | append (printf "%s %s" $href $size) }}
+  {{ end }}
+  {{ $newSrcset = delimit $newSrcset ", " }}
+  {{ $newSrcset = printf "srcset=\"%s\"" $newSrcset }}
+  {{ $html = replace $html $set $newSrcset }}
+{{ end }}
+
+{{ return $html }}
