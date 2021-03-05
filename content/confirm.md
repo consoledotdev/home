@@ -3,6 +3,7 @@ title: "Thanks for joining!"
 date: 2021-03-01T12:00:00Z
 draft: false
 summary: Subscription confirmed.
+robotsDisallow: true
 ---
 
 You are now subscribed to the weekly Console newsletter.
