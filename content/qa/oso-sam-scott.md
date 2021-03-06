@@ -1,18 +1,17 @@
 ---
 title: Q&A with Sam Scott, Oso
-shortTitle: Sam Scott, Oso
-what: A batteries-included library for authorization.
+who: Sam Scott
+role: CTO
+org: Oso
+what: a batteries-included library for authorization.
 date: 2021-02-23T12:00:00Z
 draft: false
 summary: Q&A interview with Sam Scott, CTO, Oso.
 isSelected: qa
+topImg1Src: /img/qa/oso-sam-scott-profile.png
+topImg2Src: /img/qa/oso-sam-scott-logo.png
 ogImg: /img/qa/oso-sam-scott-desk.jpg
 ---
-
-Interview with the CTO, Oso.
-{.description}
-
-{{< img-2col src1="/img/qa/oso-sam-scott-profile.png" alt1="Sam Scott, CTO, Oso" src2="/img/qa/oso-sam-scott-logo.png" alt2="Oso Logo">}}
 
 ### What is Oso? Why did you build it?
 
@@ -254,7 +253,7 @@ an issue now.
 keyboard](https://www.logitech.com/product/k120), that is halfway between a
 laptop and a mechanical keyboard. It's a softer press, but it still has proper
 keys. I bounce between desktop and laptop a lot, and it acts as a good middle
-ground switching between the two. If you go from a proper mechanical keyboard
+ground switching between the twhttp://localhost:1313/qa/rss.xmlo. If you go from a proper mechanical keyboard
 to a laptop with no give at all, it's horrible. This kind of gives me a proper
 keyboard, but I'm not going to become useless on my laptop afterwards.
 
@@ -321,5 +320,3 @@ enjoy indoor climbing and bouldering.
 It was featured as an "Interesting Tool" in the [Console
 newsletter](https://console.dev) on 18 Feb 2021. This interview was conducted
 on 23 Feb 2021.
-
-{{< section-subscribe >}}

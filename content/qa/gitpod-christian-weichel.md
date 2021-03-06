@@ -1,23 +1,17 @@
 ---
 title: Q&A with Christian Weichel, Gitpod
-shortTitle: Christian Weichel, Gitpod
-what: Dev environments as code and hosted in the cloud.
+who: Christian Weichel
+role: Chief Architect / Head of Engineering
+org: Gitpod
+what: dev environments as code and hosted in the cloud.
 date: 2021-02-11T12:00:00Z
 draft: false
-summary: Q&A interview with Christian Weichel, Chief Architect / Head of Engineering, Gitpod.
+summary: Q&A interview with Christian Weichel, Chief Architect / Head of Engineering, Gitpod
 isSelected: qa
+topImg1Src: /img/qa/gitpod-christian-weichel-profile.png
+topImg2Src: /img/qa/gitpod-christian-weichel-logo.svg
 ogImg: /img/qa/gitpod-christian-weichel-desk.jpg
 ---
-
-Interview with Chief Architect / Head of Engineering, Gitpod.
-{.description}
-
-{{< img-2col
-src1="/img/qa/gitpod-christian-weichel-profile.png"
-alt1="Christian Weichel, Chief Architect / Head of Engineering, Gitpod"
-src2="/img/qa/gitpod-christian-weichel-logo.svg"
-alt2="Gitpod Logo"
->}}
 
 ### What is Gitpod? Why did you build it?
 
@@ -247,5 +241,3 @@ furniture which is fun.
 code and host them in the cloud. It was featured as an "Interesting Tool" in
 the [Console newsletter](https://console.dev) on 11 Feb 2021. This interview
 was conducted on 11 Feb 2021.
-
-{{< section-subscribe >}}

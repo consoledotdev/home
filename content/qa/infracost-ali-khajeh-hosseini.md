@@ -1,23 +1,17 @@
 ---
 title: Q&A with Ali Khajeh-Hosseini, Infracost
-shortTitle: Ali Khajeh-Hosseini, Infracost
-what: Cloud cost estimates for Terraform.
+who: Ali Khajeh-Hosseini
+role: Co-founder
+org: Infracost
+what: cloud cost estimates for Terraform.
 date: 2021-03-01T12:00:00Z
 draft: false
 summary: Q&A interview with Ali Khajeh-Hosseini, Co-Founder, Infracost.
 isSelected: qa
+topImg1Src: /img/qa/infracost-ali-khajeh-hosseini-profile.jpg
+topImg2Src: /img/qa/infracost-ali-khajeh-hosseini-logo.svg
 ogImg: /img/qa/infracost-ali-khajeh-hosseini-desk.jpg
 ---
-
-Interview with Co-Founder, Infracost.
-{.description}
-
-{{< img-2col
-src1="/img/qa/infracost-ali-khajeh-hosseini-profile.jpg"
-alt1="Ali Khajeh-Hosseini, Co-founder, Infracost"
-src2="/img/qa/infracost-ali-khajeh-hosseini-logo.svg"
-alt2="Infracost Logo"
->}}
 
 ### What is Infracost? Why did you build it?
 
@@ -193,6 +187,7 @@ simple - just a laptop and headphones, which means I can work from anywhere.
 
 **Email:** Gmail.
 
+
 **IDE:** VS Code.
 
 **Source control:** Git and GitHub
@@ -234,5 +229,3 @@ there and watch.
 for Terraform. It was featured as an “Interesting Tool” in the [Console
 newsletter](https://console.dev) on 28 Jan 2021. This interview was
 conducted on 1 Mar 2021.
-
-{{< section-subscribe >}}

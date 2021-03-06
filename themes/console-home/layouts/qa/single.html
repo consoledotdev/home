@@ -1,22 +1,20 @@
 {{ define "main" }}
 <section class="page-section">
-    <h2 class="title title-1">{{ .Title }}</h2>
-    {{.Content}}
-    <ul>
-        {{ range .Pages.ByPublishDate.Reverse }}
-        <li><a class="title" href="{{ .RelPermalink }}">{{.Params.who }}</a>
-            ({{.Date.Format "2006-01-02"}})<br />{{ .Params.role }},
-            {{ .Params.org }} - {{ .Params.what }}</li>
-        {{ end }}
-    </ul>
-</section>
+    <h2 class="title title-1">Q&A with {{ .Params.who }}</h2>
+    <p class="description">{{ .Params.role }}, {{ .Params.org }} - {{ .Params.what }}</p>
+    <div class="col-2">
+        <div class="aspect-ratio aspect-ratio-1-1"><img class="image" src="{{ .Params.topImg1Src }}" alt="{{ .Params.topImg1Alt }}" /></div>
+        <div class="aspect-ratio aspect-ratio-1-1"><img class="image" src="{{ .Params.topImg2Src }}" alt="{{ .Params.topImg2Alt }}" /></div>
+    </div>
 
+    {{ .Content }}
+</section>
 <section class="page-section page-section-cta">
     <h4 class="title title-3">Subscribe to the weekly Console newsletter</h4>
     <p>An email digest of the best tools for developers.</p>
     <form action="https://dev.us7.list-manage.com/subscribe/post?u=f8c3cd14ee8d63c53d0986a48&amp;id=267911a165" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="console-form">
         <input id="form-email" name="EMAIL" class="console-input-text" type="email" placeholder="Your email" required />
-        <input type="hidden" value="{{ $.Page.RelPermalink }}" name="REFERRER" id="mc-referrer" />
+        <input type="hidden" name="REFERRER" value="{{ $.Page.RelPermalink }}" id="mc-referrer" />
         <div style="position: absolute; left: -5000px" aria-hidden="true"><input type="text" name="b_f8c3cd14ee8d63c53d0986a48_267911a165" tabindex="-1" value="" /><!-- Anti spam field --></div>
 
         <button onclick="blur()" class="console-button" type="submit">
