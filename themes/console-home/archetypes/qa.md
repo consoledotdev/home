@@ -1,15 +1,5 @@
 ---
 title: Q&A with NAME, ORG
-shortTitle: NAME, ORG
-what: DESCRIPTION
-date: { { .Date } }
-draft: true
-summary: Q&A interview with NAME, TITLE, ORG.
-isSelected: qa
-ogImg: /img/qa/DESK.jpg
----
----
-title: Q&A with NAME, ORG
 who: NAME
 role: TITLE
 org: ORG
