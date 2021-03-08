@@ -18,5 +18,5 @@ ogImg: /img/qa/ORG-NAME-desk.EXT
 ### Find out more
 
 [ORG](https://www.example.com) is DESCRIPTION. It was featured as an
-"Interesting Tool" in the Console newsletter on DATE. This interview was
-conducted on DATE.
+"Interesting Tool" in the [Console newsletter](https://console.dev) on DATE.
+This interview was conducted on DATE.

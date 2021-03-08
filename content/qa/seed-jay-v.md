@@ -235,5 +235,5 @@ Toronto and the winters have spoiled what work I can do!
 ### Find out more
 
 [Seed](https://seed.run) is a deployment system for serverless. It was featured
-as an "Interesting Tool" in the Console newsletter on 21 Jan 2021. This
-interview was conducted on 5 Mar 2021.
+as an "Interesting Tool" in the [Console newsletter](https://console.dev) on 21
+Jan 2021. This interview was conducted on 5 Mar 2021.
