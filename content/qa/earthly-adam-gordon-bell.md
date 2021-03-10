@@ -1,5 +1,5 @@
 ---
-title: Q&A with Adam GordonBell, Earthly
+title: Q&A with Adam Gordon Bell, Earthly
 who: Adam Gordon Bell
 role: Software Engineer
 org: Earthly
