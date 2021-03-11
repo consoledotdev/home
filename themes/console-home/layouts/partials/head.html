@@ -24,6 +24,7 @@
     {{ end -}}
     {{ if not .Lastmod.IsZero -}} <meta property="article:modified_time" {{ .Lastmod.Format $iso8601 | printf "content=%q" | safeHTMLAttr }}>
     {{ end -}}
+    <!-- https://developer.yoast.com/features/opengraph/functional-specification -->
     <meta property="og:site_name" content="Console" />
     <meta property="og:title" content="{{ $title }}" />
     <meta property="og:description" content="{{ .Summary }}" />
@@ -33,7 +34,11 @@
     {{- end }}
     <meta property="og:image" itemprop="image" content="https://console.dev{{ $ogImg }}" />
     <meta property="og:image:secure_url" itemprop="image" content="https://console.dev{{ $ogImg }}" />
-    <meta property="og:type" content="website" />
+    {{- $ogType := "article" -}}
+    {{- if .Params.ogType }}
+    {{- $ogType = .Params.ogType -}}
+    {{- end }}
+    <meta property="og:type" content="{{ $ogType }}" />
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta name="twitter:site" content="@consoledotdev" />
     {{ range .Params.tags }}
