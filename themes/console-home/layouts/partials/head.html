@@ -36,6 +36,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta name="twitter:site" content="@consoledotdev" />
+    {{ range .Params.tags }}
+    <meta property="article:section" content="{{ . }}">{{ end }}
     {{ if .Params.robotsDisallow }}
     <meta name="robots" content="noindex,follow,noarchive">
     {{- end }}
