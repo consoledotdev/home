@@ -14,9 +14,11 @@
     <link rel="canonical" href="{{ .Permalink }}" />
     <link rel="alternate" type="application/rss+xml" title="Console - Blog" href="https://blog.console.dev/rss/" />
     <link rel="alternate" type="application/rss+xml" title="Console - Developer Q&amp;A interviews" href="https://console.dev/qa/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Console - Collections" href="https://console.dev/collections/rss.xml" />
 
     {{ $iso8601 := "2006-01-02T15:04:05-07:00" -}}
     <meta name="viewport" content="width=device-width, user-scalable=no" />
+
     {{ if not .PublishDate.IsZero -}}
     <meta property="article:published_time" {{ .PublishDate.Format $iso8601 | printf "content=%q" | safeHTMLAttr }}>
     {{ else if not .Date.IsZero -}}
@@ -24,6 +26,7 @@
     {{ end -}}
     {{ if not .Lastmod.IsZero -}} <meta property="article:modified_time" {{ .Lastmod.Format $iso8601 | printf "content=%q" | safeHTMLAttr }}>
     {{ end -}}
+    <!-- https://developer.yoast.com/features/opengraph/functional-specification -->
     <meta property="og:site_name" content="Console" />
     <meta property="og:title" content="{{ $title }}" />
     <meta property="og:description" content="{{ .Summary }}" />
@@ -33,12 +36,18 @@
     {{- end }}
     <meta property="og:image" itemprop="image" content="https://console.dev{{ $ogImg }}" />
     <meta property="og:image:secure_url" itemprop="image" content="https://console.dev{{ $ogImg }}" />
-    <meta property="og:type" content="website" />
+    {{- $ogType := "article" -}}
+    {{- if .Params.ogType }}
+    {{- $ogType = .Params.ogType -}}
+    {{- end }}
+    <meta property="og:type" content="{{ $ogType }}" />
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta name="twitter:site" content="@consoledotdev" />
+    {{ range .Params.tags }}
+    <meta property="article:section" content="{{ . }}">{{ end }}
     {{ if .Params.robotsDisallow }}
     <meta name="robots" content="noindex,follow,noarchive">
-    {{- end }}
+    {{end -}}
 
     {{ `<!-- Plausible Analytics: https://blog.console.dev/picking-privacy-first-analytics/ -->` | safeHTML }}
     <script async defer data-domain="console.dev" src="https://stats.console.dev/js/index.js"></script>
