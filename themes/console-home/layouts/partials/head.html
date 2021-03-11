@@ -17,6 +17,7 @@
 
     {{ $iso8601 := "2006-01-02T15:04:05-07:00" -}}
     <meta name="viewport" content="width=device-width, user-scalable=no" />
+
     {{ if not .PublishDate.IsZero -}}
     <meta property="article:published_time" {{ .PublishDate.Format $iso8601 | printf "content=%q" | safeHTMLAttr }}>
     {{ else if not .Date.IsZero -}}
@@ -45,7 +46,7 @@
     <meta property="article:section" content="{{ . }}">{{ end }}
     {{ if .Params.robotsDisallow }}
     <meta name="robots" content="noindex,follow,noarchive">
-    {{- end }}
+    {{end -}}
 
     {{ `<!-- Plausible Analytics: https://blog.console.dev/picking-privacy-first-analytics/ -->` | safeHTML }}
     <script async defer data-domain="console.dev" src="https://stats.console.dev/js/index.js"></script>
