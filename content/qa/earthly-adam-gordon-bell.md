@@ -248,4 +248,6 @@ Jeff VanderMeer and ‘The Soul of a New Machine’ by Tracy Kidder.
 ### Find out more
 
 [Earthly](https://earthly.dev/) is a system for containerized reproducable
-builds. This interview was conducted on 8 Mar 2021.
+builds. It was featured as an "Interesting Tool" in the [Console
+newsletter](https://console.dev) on 11 Mar 2021. This interview was conducted
+on 8 Mar 2021.
