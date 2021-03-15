@@ -362,6 +362,9 @@ body {
 
 .header .main-nav {
     flex: 0 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
 }
 
 .main-page {
@@ -528,14 +531,12 @@ body {
 
 .main-nav {
     position: relative;
-    margin-top: 21px; /* align to logo baseline */
 }
 
 .main-nav .menu-toggle {
     display: none;
-    position: absolute;
-    top: -18px;
-    right: -4px;
+    position: relative;
+    margin-top: 4px; /* align to logo baseline */
     bottom: 0;
     width: 44px;
     height: 44px;
@@ -579,6 +580,7 @@ body {
 
 .main-nav ul {
     padding: 0;
+    padding-top: 11px; /* align to logo baseline */
     display: flex;
     flex-flow: row wrap;
     margin: calc(var(--space2) * -1) calc(var(--space3) * -1);
