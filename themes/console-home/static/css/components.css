@@ -1,0 +1,118 @@
+/* Icons
+   ========================================================================== */
+
+.icon {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.icon-fill {
+    fill: var(--theme-text-1);
+}
+
+.icon-stroke {
+    fill: none;
+    stroke-width: 1px;
+    stroke: var(--theme-text-1);
+}
+
+/* .icon-menu
+    --------------------------------------------------------------- */
+[class^="icon-menu-shape-"],
+[class*=" icon-menu-shape-"] {
+    position: absolute;
+    height: 1px;
+    background: var(--theme-text-1);
+    width: 82%;
+    top: calc(50% - 1px);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: var(--a-micro-active);
+}
+
+.icon-menu-shape-one {
+    margin-top: -14%;
+}
+
+.icon-menu-shape-two {
+    margin-top: 14%;
+    width: 55%;
+    margin-left: 13.5%;
+}
+
+.is-active .icon-menu .icon-menu-shape-one {
+    margin-top: 0;
+    transform: translateX(-50%) rotate(45deg);
+    transition: var(--a-micro);
+}
+
+.is-active .icon-menu .icon-menu-shape-two {
+    margin-top: 0;
+    margin-left: 0;
+    width: 82%;
+    transform: translateX(-50%) rotate(-45deg);
+    transition: var(--a-micro);
+}
+
+/* .icon-filter
+    --------------------------------------------------------------- */
+[class^="icon-filter-shape-"],
+[class*=" icon-filter-shape-"] {
+    position: absolute;
+    height: 1px;
+    background: var(--theme-text-1);
+    width: 82%;
+    top: calc(50% - 1px);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: var(--a-micro-active);
+}
+
+.icon-filter-shape-one {
+    margin-top: -25%;
+}
+
+.icon-filter-shape-two {
+    width: 50%;
+}
+
+.icon-filter-shape-three {
+    margin-top: 25%;
+    width: 20%;
+}
+
+/* .icon-expand
+    --------------------------------------------------------------- */
+[class^="icon-expand-shape-"],
+[class*=" icon-expand-shape-"] {
+    position: absolute;
+    height: 1px;
+    background: var(--theme-text-1);
+    width: 41%;
+    top: calc(50% - 1px);
+    left: 50%;
+    transition: var(--a-micro-active);
+}
+
+.icon-expand-shape-one {
+    transform-origin: bottom right;
+    margin-top: calc(calc(41% / 1.414) / 2);
+    transform: translateX(-100%) rotate(45deg);
+}
+
+.icon-expand-shape-two {
+    transform-origin: top left;
+    margin-top: calc(calc(41% / 1.414) / 2);
+    transform: rotate(-45deg);
+}
+
+/* Media Queries
+   ========================================================================== */
+@media (max-width: 480px) {
+    .icon {
+        width: 16px;
+        height: 16px;
+    }
+}
