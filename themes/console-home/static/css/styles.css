@@ -538,7 +538,7 @@ body {
     right: -4px;
     bottom: 0;
     width: 44px;
-    height: 45px;
+    height: 44px;
     border: 0;
     padding: 0;
     outline: none;
@@ -548,51 +548,20 @@ body {
     z-index: 2;
 }
 
-[class^="menu-toggle-shape-"],
-[class*=" menu-toggle-shape-"] {
-    position: absolute;
-    height: 1px;
-    background: var(--theme-text-1);
-    width: 36px;
-    top: calc(50% - 1px);
-    left: 50%;
-    transform: translateX(-50%);
-    transition: var(--a-micro-active);
+.main-nav .menu-toggle .icon {
+    width: 100%;
+    height: 100%;
 }
 
-.menu-toggle-shape-one {
-    margin-top: -6px;
-}
-
-.menu-toggle-shape-two {
-    margin-top: 6px;
-    width: 24px;
-    margin-left: 6px;
-}
-
-.main-nav .menu-toggle.is-active .menu-toggle-shape-one {
-    margin-top: 0;
-    transform: translateX(-50%) rotate(45deg);
-    transition: var(--a-micro);
-}
-
-.main-nav .menu-toggle.is-active .menu-toggle-shape-two {
-    margin-top: 0;
-    margin-left: 0;
-    width: 36px;
-    transform: translateX(-50%) rotate(-45deg);
-    transition: var(--a-micro);
-}
-
-.main-nav .menu-toggle:hover [class^="menu-toggle-shape-"],
-.main-nav .menu-toggle:hover [class*=" menu-toggle-shape-"] {
+.main-nav .menu-toggle:hover [class^="icon-menu-shape-"],
+.main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
     background: var(--c-blue-04);
 }
 
-.main-nav .menu-toggle:active [class^="menu-toggle-shape-"],
-.main-nav .menu-toggle:active [class*=" menu-toggle-shape-"],
-.main-nav .menu-toggle:focus [class^="menu-toggle-shape-"],
-.main-nav .menu-toggle:focus [class*=" menu-toggle-shape-"] {
+.main-nav .menu-toggle:active [class^="icon-menu-shape-"],
+.main-nav .menu-toggle:active [class*=" icon-menu-shape-"],
+.main-nav .menu-toggle:focus [class^="icon-menu-shape-"],
+.main-nav .menu-toggle:focus [class*=" icon-menu-shape-"] {
     background: var(--c-blue-06-main);
 }
 
@@ -1102,16 +1071,16 @@ p:not(:last-child) {
     transition: var(--a-controls-active);
 }
 
-.link:link .inline-icon,
-.link:visited .inline-icon {
+.link:link .icon,
+.link:visited .icon {
     fill: var(--theme-text-1);
     transition: var(--a-controls);
 }
-.link:hover .inline-icon,
-.link:focus .inline-icon {
+.link:hover .icon,
+.link:focus .icon {
     fill: var(--c-blue-04);
 }
-.link:active .inline-icon {
+.link:active .icon {
     fill: var(--c-blue-06-main);
     transition: var(--a-controls-active);
 }
@@ -1218,8 +1187,16 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
     margin-left: calc(var(--space2) + var(--space1));
 }
 
-.console-button img {
+.console-button .icon {
     flex: 0 0 auto;
+}
+
+.console-button .icon-fill {
+    fill: var(--c-white-00-absolute);
+}
+
+.console-button .icon-stroke {
+    stroke: var(--c-white-00-absolute);
 }
 
 .console-control {
@@ -1311,12 +1288,7 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
 /* Icons
    ========================================================================== */
 
-.inline-icon {
-    width: 20px;
-    height: 20px;
-}
-
-a .inline-icon {
+a .icon {
     vertical-align: -0.3em;
 }
 
@@ -1562,11 +1534,6 @@ a .inline-icon {
 
         .main-nav .menu-popup-wrapper ul li {
             font-size: var(--t-size1);
-        }
-
-        .inline-icon {
-            width: 16px;
-            height: 16px;
         }
 
         .footer-nav ul li {
