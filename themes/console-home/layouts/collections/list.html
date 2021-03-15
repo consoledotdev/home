@@ -9,40 +9,5 @@
         {{ end }}
     </ul>
 </section>
-
-<section class="page-section page-section-cta">
-    <h4 class="title title-3">Subscribe to the weekly Console newsletter</h4>
-    <p>An email digest of the best tools for developers.</p>
-    <form action="https://dev.us7.list-manage.com/subscribe/post?u=f8c3cd14ee8d63c53d0986a48&amp;id=267911a165" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="console-form">
-        <input id="form-email" name="EMAIL" class="console-input-text" type="email" placeholder="Your email" required />
-        <input type="hidden" value="{{ $.Page.RelPermalink }}" name="REFERRER" id="mc-referrer" />
-        <div style="position: absolute; left: -5000px" aria-hidden="true"><input type="text" name="b_f8c3cd14ee8d63c53d0986a48_267911a165" tabindex="-1" value="" /><!-- Anti spam field --></div>
-
-        <button onclick="blur()" class="console-button" type="submit">
-            <img width="20" class="inline-icon" src="/svg/icon-send.svg" alt="Sign Up" />
-            <span>Sign Up</span>
-        </button>
-    </form>
-
-    {{ `<!-- Plausible Analytics goal tracking for signups -->` | safeHTML }}
-    <script>
-        var registerForm = document.querySelector("#mc-embedded-subscribe-form");
-        registerForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-            setTimeout(submitForm, 1000);
-            var formSubmitted = false;
-
-            function submitForm() {
-                if (!formSubmitted) {
-                    formSubmitted = true;
-                    registerForm.submit();
-                }
-            }
-
-            plausible("Newsletter Subscribe", {
-                callback: submitForm,
-            });
-        });
-    </script>
-</section>
+{{ partial "section-subscribe.html" }}
 {{ end }}
