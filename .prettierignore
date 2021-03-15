@@ -7,6 +7,4 @@ resources/*
 
 # Prettier has been manually run on these files and it tends to mess up the Go
 # template language, so we exclude them
-themes/console-home/layouts/_default/*
-themes/console-home/layouts/partials/*
-themes/console-home/layouts/shortcodes/*
+themes/console-home/layouts/*
