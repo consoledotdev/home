@@ -108,6 +108,12 @@ shader.
 
 ### Describe your computer hardware setup
 
+{{< img-center
+src="/img/qa/vmcli-frank-gu-desk.jpg"
+alt="The desk of Frank Gu, vmcli"
+width="100%"
+>}}
+
 **Keyboard:** A no-brand, blue-switched, mechanical keyboard.
 
 **Monitors:** A refurbished Dell monitor and an ultra wide
