@@ -1,16 +1,16 @@
 ---
-title: Q&A with Frank Gu, vmcli
-who: Frank Gu
+title: Q&A with Yifan Gu, vmcli
+who: Yifan Gu
 role: Creator
 org: vmcli
 what: a set of utilities to help you run Linux VMs on M1 Macs.
 date: 2021-03-02T12:00:00Z
 draft: false
-summary: Q&A interview with Frank Gu, Creator, vmcli.
+summary: Q&A interview with Yifan Gu, Creator, vmcli.
 isSelected: qa
-topImg1Src: /img/qa/vmcli-frank-gu-profile.jpg
-topImg2Src: /img/qa/vmcli-frank-gu-logo.png
-ogImg: /img/qa/vmcli-frank-gu-desk.jpg
+topImg1Src: /img/qa/vmcli-yifan-gu-profile.jpg
+topImg2Src: /img/qa/vmcli-yifan-gu-logo.png
+ogImg: /img/qa/vmcli-yifan-gu-desk.jpg
 ---
 
 ### What is vmcli? Why did you build it?
@@ -35,7 +35,7 @@ already been a few proof of concepts. This encouraged me to build my own
 solution over a weekend.
 
 {{< img-center
-src="/img/qa/vmcli-frank-gu-product.svg"
+src="/img/qa/vmcli-yifan-gu-product.svg"
 alt="vmcli product screenshot"
 width="100%"
 caption="Setting up a VM with vmcli."
@@ -109,8 +109,8 @@ shader.
 ### Describe your computer hardware setup
 
 {{< img-center
-src="/img/qa/vmcli-frank-gu-desk.jpg"
-alt="The desk of Frank Gu, vmcli"
+src="/img/qa/vmcli-yifan-gu-desk.jpg"
+alt="The desk of Yifan, vmcli"
 width="100%"
 >}}
 
