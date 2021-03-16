@@ -58,7 +58,6 @@ width="100%"
 caption="Example commands running with the Starship prompt."
 >}}
 
-
 ### How was your experience building Starship in Rust?
 
 I am loving developing in Rust. It is the language I would like to do more and
