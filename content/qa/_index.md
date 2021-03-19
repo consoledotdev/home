@@ -6,7 +6,5 @@ isSelected: qa
 summary: A series of Q&As with the developers behind the tools we feature at Console.
 ---
 
-Find out more about the people behind the tools we feature in our weekly
-newsletter in these Q&As. We are always on the lookout for interesting tools to
-feature, [let us know](mailto:hello@console.dev) if there's a company we should
-look at.
+Interviews with the people behind the tools we feature in our weekly
+newsletter. [See the latest email](/latest/), or get [just these Q&As via RSS](/qa/rss.xml).

@@ -2,6 +2,7 @@
 <section class="page-section">
     <h2 class="title title-1">{{ .Title }}</h2>
     {{.Content}}
+
     <ul>
         {{ range .Pages.ByPublishDate.Reverse }}
         <li><a class="title" href="{{ .RelPermalink }}">{{.Params.who }}</a>
@@ -9,6 +10,10 @@
             {{ .Params.org }} - {{ .Params.what }}</li>
         {{ end }}
     </ul>
+
+    <p>We are always on the lookout for interesting tools to feature, <a
+        href="mailto:hello@console.dev" class="link">let us know</a> if there's
+    a something we should look at.</p>
 </section>
 
 {{ partial "section-subscribe.html" . }}
