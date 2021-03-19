@@ -15,7 +15,7 @@
     <channel>
         <title>Console - Developer Q&amp;A interviews</title>
         <link>{{ .Permalink }}</link>
-        <description>A series of Q&amp;As with the developers behind the tools we feature at Console.</description>{{ with .Site.LanguageCode }}
+        <description>A series of Q&amp;As with the developers behind the tools we feature in the Console newsletter.</description>{{ with .Site.LanguageCode }}
         <image>
             <title>Console - Developer Q&amp;A interviews</title>
             <link>https://console.dev/qa/</link>
@@ -37,7 +37,7 @@
             <guid>{{ .Permalink }}</guid>
             <media:content url="https://console.dev{{ .Params.topImg1Src }}" medium="image" />
             <description>{{ "<![CDATA[" | safeHTML }} Q&amp;A interview with {{ .Params.who }}, {{ .Params.role }}, {{ .Params.org }} - {{ .Params.what }}]]></description>
-            <content:encoded>{{ "<![CDATA[" | safeHTML }} <p>This is a series of Q&amp;As with the developers behind the tools we feature at <a href="https://console.dev">Console</a>.</p><p>In this interview we speak with {{ .Params.who }}, {{ .Params.role }}, {{ .Params.org }} - {{ .Params.what }}</p> {{ partial "rss.html" . | safeHTML }}]]></content:encoded>
+            <content:encoded>{{ "<![CDATA[" | safeHTML }} <p>This is a series of Q&amp;As with the developers behind the tools we feature in the <a href="https://console.dev">Console</a> newsletter.</p><p>In this interview we speak with {{ .Params.who }}, {{ .Params.role }}, {{ .Params.org }} - {{ .Params.what }}</p> {{ partial "rss.html" . | safeHTML }}]]></content:encoded>
         </item>
         {{ end }}
     </channel>
