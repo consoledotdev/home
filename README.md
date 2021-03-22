@@ -5,9 +5,9 @@ Sites](https://developers.cloudflare.com/workers/platform/sites).
 
 ### Links
 
--   Production website: https://console.dev
--   Test environment: https://home-test.consoledev.workers.dev
--   [Deploy action](https://github.com/consoledotdev/home/actions?query=workflow%3ADeploy)
+- Production website: https://console.dev
+- Test environment: https://home-test.consoledev.workers.dev
+- [Deploy action](https://github.com/consoledotdev/home/actions?query=workflow%3ADeploy)
 
 ## Site development setup
 
@@ -17,6 +17,17 @@ code, you only need Hugo:
 1. [Install Hugo](https://gohugo.io/getting-started/installing/).
 2. Start the Hugo server: `hugo server -D` then launch the URL in your browser.
    It will watch for changes and auto refresh the browser.
+
+## Hugo options
+
+### Frontmatter variables
+
+- `pageType`: `feature` or `article` - Define feature pages like the Beta List
+  or article pages like About.
+- `headerType`: `fixed` or `false` - When fixed the header will show on top on
+  scroll.
+- `hideGrid`: `true` or `false` - Hides the visual grid (not the finer lines)
+  from the page.
 
 ### Custom Hugo Shortcodes
 
@@ -32,7 +43,7 @@ in templates:
 | 2-column Image | `{{< img-2col src1="/img/david.jpg" alt1="David Mytton" src2="/img/max.jpg" alt2="Max Jennings">}}`                                                                                                 |
 | Subscribe Box  | `{{< section-subscribe> }}`                                                                                                                                                                         |
 
-### Parsing tools JSON for /latest/
+## Parsing tools JSON for `/latest/`
 
 Set up a Python venv:
 
@@ -112,8 +123,8 @@ is enabled for the Service Account.
 
 ## Secrets
 
--   `CF_API_TOKEN` - [Cloudflare API
-    token](https://dash.cloudflare.com/profile/api-tokens) to deploy.
--   `GSHEET_CLIENT_EMAIL` - email of the Google Service Account.
--   `GSHEET_PRIVATE_KEY` - private key of the Google Service Account. Download
-    JSON then extract private key component.
+- `CF_API_TOKEN` - [Cloudflare API
+  token](https://dash.cloudflare.com/profile/api-tokens) to deploy.
+- `GSHEET_CLIENT_EMAIL` - email of the Google Service Account.
+- `GSHEET_PRIVATE_KEY` - private key of the Google Service Account. Download
+  JSON then extract private key component.
