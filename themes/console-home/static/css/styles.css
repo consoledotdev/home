@@ -347,7 +347,7 @@ body {
     z-index: 3;
 }
 
-.page-about .content {
+.page-article .content {
     height: auto;
 }
 
@@ -1447,7 +1447,7 @@ a .icon {
         min-height: 680px;
     }
 
-    .page-about .hero .grid {
+    .page-article .hero .grid {
         display: none;
     }
 
@@ -1592,7 +1592,7 @@ a .icon {
         min-height: 760px;
     }
 
-    .page-about .header {
+    .page-article .header {
         position: fixed;
         left: 6.25vw;
         right: 6.25vw;
