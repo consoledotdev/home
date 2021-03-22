@@ -15,8 +15,10 @@ For any site development that doesn't require modifying Cloudflare Workers
 code, you only need Hugo:
 
 1. [Install Hugo](https://gohugo.io/getting-started/installing/).
-2. Start the Hugo server: `hugo server -D` then launch the URL in your browser.
-   It will watch for changes and auto refresh the browser.
+2. Two options:
+   - Start the Hugo server: `hugo server -D`.
+   - Test from other devices on local network (such as iPhone) `hugo server --bind=IP --baseURL=http://IP:1313`, where `IP` is the local IP of the machine running the Hugo server.
+3. Launch the URL in your browser. It will watch for changes and auto refresh the browser.
 
 ### Custom Hugo Shortcodes
 
