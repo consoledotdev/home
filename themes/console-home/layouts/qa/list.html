@@ -2,6 +2,7 @@
 <section class="page-section">
     <h2 class="title title-1">{{ .Title }}</h2>
     {{.Content}}
+
     <ul>
         {{ range .Pages.ByPublishDate.Reverse }}
         <li><a class="title" href="{{ .RelPermalink }}">{{.Params.who }}</a>
@@ -9,41 +10,12 @@
             {{ .Params.org }} - {{ .Params.what }}</li>
         {{ end }}
     </ul>
+
+    <p>We are always on the lookout for interesting tools to feature, <a
+        href="mailto:hello@console.dev" class="link">let us know</a> if there's
+    a something we should look at.</p>
 </section>
 
-<section class="page-section page-section-cta">
-    <h4 class="title title-3">Subscribe to the weekly Console newsletter</h4>
-    <p>An email digest of the best tools for developers.</p>
-    <form action="https://dev.us7.list-manage.com/subscribe/post?u=f8c3cd14ee8d63c53d0986a48&amp;id=267911a165" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="console-form">
-        <input id="form-email" name="EMAIL" class="console-input-text" type="email" placeholder="Your email" required />
-        <input type="hidden" value="{{ $.Page.RelPermalink }}" name="REFERRER" id="mc-referrer" />
-        <div style="position: absolute; left: -5000px" aria-hidden="true"><input type="text" name="b_f8c3cd14ee8d63c53d0986a48_267911a165" tabindex="-1" value="" /><!-- Anti spam field --></div>
+{{ partial "section-subscribe.html" . }}
 
-        <button onclick="blur()" class="console-button" type="submit" title="Sign Up">
-            {{ partial "icons/send.html" }}
-            <span>Sign Up</span>
-        </button>
-    </form>
-
-    {{ `<!-- Plausible Analytics goal tracking for signups -->` | safeHTML }}
-    <script>
-        var registerForm = document.querySelector("#mc-embedded-subscribe-form");
-        registerForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-            setTimeout(submitForm, 1000);
-            var formSubmitted = false;
-
-            function submitForm() {
-                if (!formSubmitted) {
-                    formSubmitted = true;
-                    registerForm.submit();
-                }
-            }
-
-            plausible("Newsletter Subscribe", {
-                callback: submitForm,
-            });
-        });
-    </script>
-</section>
 {{ end }}
