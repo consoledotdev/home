@@ -1651,3 +1651,19 @@ a .icon {
         column-gap: 32px;
     }
 }
+
+/* 1600px + left & right margin (6.25vw) */
+@media (min-width: 1828px) {
+    .page-article .header {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .content {
+        max-width: 1600px;
+    }
+
+    .main-page {
+        border-radius: var(--space2);
+    }
+}
