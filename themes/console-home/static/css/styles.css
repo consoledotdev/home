@@ -65,9 +65,14 @@
 
     --shadow-dark-3: 0 var(--space3) var(--space5) rgba(0, 0, 0, 0.8);
     --shadow-dark-2: 0 var(--space2) var(--space4) rgba(0, 0, 0, 0.8);
+    --shadow-dark-1: 0 var(--space1) var(--space3) rgba(0, 0, 0, 0.6);
 
     --shadow-light-3: 0 var(--space3_5) var(--space5) rgba(0, 0, 0, 0.15);
     --shadow-light-2: 0 var(--space2_5) var(--space4) rgba(0, 0, 0, 0.2);
+    --shadow-light-1: 0 var(--space1) var(--space3) rgba(0, 0, 0, 0.2);
+
+    --translucent-dark: rgba(10, 10, 11, 0.6);
+    --translucent-light: rgba(233, 234, 239, 0.6);
 
     --corners: 4px;
 
@@ -166,6 +171,7 @@ a {
     --theme-control-active-text: var(--c-grey-09-black-03);
     --theme-control-text: var(--c-white-00-absolute);
 
+    --theme-shadow-1: var(--shadow-dark-1);
     --theme-shadow-2: var(--shadow-dark-2);
     --theme-shadow-3: var(--shadow-dark-3);
 
@@ -178,6 +184,8 @@ a {
     --theme-cta-text: var(--c-white-00-absolute);
     --theme-input-text: var(--c-black-02-main);
     --theme-pre-code-text: var(--c-blue-04);
+
+    --theme-translucent: var(--translucent-dark);
 }
 
 .theme-light {
@@ -191,6 +199,7 @@ a {
     --theme-control-active-text: var(--c-white-00-absolute);
     --theme-control-text: var(--c-grey-09-black-03);
 
+    --theme-shadow-1: var(--shadow-light-1);
     --theme-shadow-2: var(--shadow-light-2);
     --theme-shadow-3: var(--shadow-light-3);
 
@@ -203,6 +212,8 @@ a {
     --theme-cta-text: var(--c-white-00-absolute);
     --theme-input-text: var(--c-black-02-main);
     --theme-pre-code-text: var(--c-blue-08);
+
+    --theme-translucent: var(--translucent-light);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -217,6 +228,7 @@ a {
         --theme-control-active-text: var(--c-grey-09-black-03);
         --theme-control-text: var(--c-white-00-absolute);
 
+        --theme-shadow-1: var(--shadow-dark-1);
         --theme-shadow-2: var(--shadow-dark-2);
         --theme-shadow-3: var(--shadow-dark-3);
 
@@ -229,6 +241,8 @@ a {
         --theme-cta-text: var(--c-white-00-absolute);
         --theme-input-text: var(--c-black-02-main);
         --theme-pre-code-text: var(--c-blue-04);
+
+        --theme-translucent: var(--translucent-dark);
     }
 }
 
@@ -244,6 +258,7 @@ a {
         --theme-control-active-text: var(--c-white-00-absolute);
         --theme-control-text: var(--c-grey-09-black-03);
 
+        --theme-shadow-1: var(--shadow-light-1);
         --theme-shadow-2: var(--shadow-light-2);
         --theme-shadow-3: var(--shadow-light-3);
 
@@ -256,6 +271,8 @@ a {
         --theme-cta-text: var(--c-white-00-absolute);
         --theme-input-text: var(--c-black-02-main);
         --theme-pre-code-text: var(--c-blue-08);
+
+        --theme-translucent: var(--translucent-light);
     }
 }
 
@@ -266,6 +283,11 @@ a {
         margin-top: calc(var(--space6) - var(--space4));
         margin-bottom: var(--space6);
     }
+    .theme-dark .header-fixed + .main-page,
+    .header-fixed + .theme-dark.main-page {
+        margin-top: calc(var(--space6) - var(--space4) + 48px);
+    }
+
     .theme-light .main-page,
     .theme-light.main-page {
         background: var(--theme-content-bg-1);
@@ -274,6 +296,10 @@ a {
         padding-top: var(--space5);
         padding-bottom: var(--space5);
     }
+    .theme-light .header-fixed + .main-page,
+    .header-fixed + .theme-light.main-page {
+        margin-top: calc(var(--space2) + var(--space4) + 48px);
+    }
 
     @media (prefers-color-scheme: dark) {
         .theme-user:not(.theme-dark):not(.theme-light) .main-page,
@@ -281,6 +307,10 @@ a {
             background: transparent;
             margin-top: calc(var(--space6) - var(--space4));
             margin-bottom: var(--space6);
+        }
+        .theme-user:not(.theme-dark):not(.theme-light) .header-fixed + .main-page,
+        .header-fixed + .theme-user:not(.theme-dark):not(.theme-light).main-page {
+            margin-top: calc(var(--space6) - var(--space4) + 48px);
         }
     }
 
@@ -292,6 +322,10 @@ a {
             margin-bottom: calc(var(--space2) + var(--space4));
             padding-top: var(--space5);
             padding-bottom: var(--space5);
+        }
+        .theme-user:not(.theme-dark):not(.theme-light) .header-fixed + .main-page,
+        .header-fixed + .theme-user:not(.theme-dark):not(.theme-light).main-page {
+            margin-top: calc(var(--space2) + var(--space4) + 48px);
         }
     }
 }
@@ -326,6 +360,10 @@ a {
     margin-left: max(600px, 40vw);
 }
 
+.hero.hero-hide-grid .grid {
+    display: none;
+}
+
 /* Layout
    ========================================================================== */
 
@@ -347,7 +385,7 @@ body {
     z-index: 3;
 }
 
-.page-about .content {
+.page-article .content {
     height: auto;
 }
 
@@ -356,12 +394,35 @@ body {
     flex-flow: row nowrap;
 }
 
+.header.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: calc(var(--space2) + var(--space4)) 6.25vw;
+    z-index: 30;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    transition: var(--a-elements);
+}
+
+.is-scrolled .header.header-fixed {
+    padding: var(--space3) 6.25vw;
+    background: var(--theme-translucent);
+    -webkit-backdrop-filter: saturate(180%) blur(40px);
+    backdrop-filter: saturate(180%) blur(40px);
+    border-bottom: var(--theme-border-1);
+    transition: var(--a-elements-active);
+}
+
 .header .logo-wrapper {
     flex: 1 0 auto;
 }
 
 .header .main-nav {
     flex: 0 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
 }
 
 .main-page {
@@ -528,14 +589,12 @@ body {
 
 .main-nav {
     position: relative;
-    margin-top: 21px; /* align to logo baseline */
 }
 
 .main-nav .menu-toggle {
     display: none;
-    position: absolute;
-    top: -18px;
-    right: -4px;
+    position: relative;
+    margin-top: 4px; /* align to logo baseline */
     bottom: 0;
     width: 44px;
     height: 44px;
@@ -579,6 +638,7 @@ body {
 
 .main-nav ul {
     padding: 0;
+    padding-top: 11px; /* align to logo baseline */
     display: flex;
     flex-flow: row wrap;
     margin: calc(var(--space2) * -1) calc(var(--space3) * -1);
@@ -1445,7 +1505,7 @@ a .icon {
         min-height: 680px;
     }
 
-    .page-about .hero .grid {
+    .page-article .hero .grid {
         display: none;
     }
 
@@ -1464,6 +1524,15 @@ a .icon {
         min-height: 60vh;
     }
 
+    .main-nav > ul {
+        display: none;
+    }
+
+    .main-nav .menu-toggle,
+    .main-nav .menu-popup-wrapper {
+        display: block;
+    }
+
     .page-section-cta {
         border-top: 1px solid var(--c-blue-04);
         padding-top: var(--space4);
@@ -1477,15 +1546,6 @@ a .icon {
         .main {
             min-height: 0;
             margin-top: -4vh;
-        }
-
-        .main-nav > ul {
-            display: none;
-        }
-
-        .main-nav .menu-toggle,
-        .main-nav .menu-popup-wrapper {
-            display: block;
         }
 
         .console-form {
@@ -1507,6 +1567,12 @@ a .icon {
 
         .content {
             width: 76%;
+        }
+
+        .header.header-fixed,
+        .is-scrolled .header.header-fixed {
+            padding-left: 12vw;
+            padding-right: 12vw;
         }
 
         .main-page {
@@ -1546,6 +1612,12 @@ a .icon {
             width: 80%;
         }
 
+        .header.header-fixed,
+        .is-scrolled .header.header-fixed {
+            padding-left: 10vw;
+            padding-right: 10vw;
+        }
+
         .main-page {
             margin-left: -10vw;
             margin-right: -10vw;
@@ -1563,6 +1635,12 @@ a .icon {
             width: 76%;
         }
 
+        .header.header-fixed,
+        .is-scrolled .header.header-fixed {
+            padding-left: 12vw;
+            padding-right: 12vw;
+        }
+
         .main-page {
             margin-left: -12vw;
             margin-right: -12vw;
@@ -1574,6 +1652,12 @@ a .icon {
     @media (min-width: 601px) {
         .content {
             width: 72%;
+        }
+
+        .header.header-fixed,
+        .is-scrolled .header.header-fixed {
+            padding-left: 14vw;
+            padding-right: 14vw;
         }
 
         .main-page {
@@ -1590,7 +1674,7 @@ a .icon {
         min-height: 760px;
     }
 
-    .page-about .header {
+    .page-article .header:not(.header-fixed) {
         position: fixed;
         left: 6.25vw;
         right: 6.25vw;
@@ -1647,5 +1731,27 @@ a .icon {
     .col-2-css {
         columns: 2;
         column-gap: 32px;
+    }
+}
+
+/* 1600px + left & right margin (6.25vw) */
+@media (min-width: 1828px) {
+    .header.header-fixed,
+    .is-scrolled .header.header-fixed {
+        padding-left: calc(calc(100vw - 1600px) / 2);
+        padding-right: calc(calc(100vw - 1600px) / 2);
+    }
+
+    .page-article .header:not(.header-fixed) {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .content {
+        max-width: 1600px;
+    }
+
+    .main-page {
+        border-radius: var(--space2);
     }
 }

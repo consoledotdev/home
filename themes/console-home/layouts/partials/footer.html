@@ -9,7 +9,7 @@
                 </li>
             </ul>
         </nav>
-        {{- if ne .Params.bodyClass "home" }}
+        {{- if ne .Params.pageType "home" }}
             <button onclick="blur(); toggleTheme()" class="console-control">
                 {{ partial "icons/theme.html" }}
             </button>

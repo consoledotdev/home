@@ -16,15 +16,6 @@ let toggleMenuPopup = (e) => {
     }
 };
 
-let animateLogo = (() => {
-    let logoEl = document.getElementById("logo-wrapper");
-    if (document.referrer.indexOf(location.host) < 0) {
-        logoEl.classList.add("is-animated");
-    } else {
-        logoEl.classList.add("is-static");
-    }
-})();
-
 let toggleTheme = () => {
     let prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
     let prefersLight = window.matchMedia("(prefers-color-scheme: light)");
@@ -52,4 +43,25 @@ let setTheme = (theme) => {
 let initLocalThemePref = ((theme) => {
     let localPref = localStorage.getItem("theme");
     if (localPref) setTheme(localPref);
+})();
+
+let animateLogo = (() => {
+    let logoEl = document.getElementById("logo-wrapper");
+    if (document.referrer.indexOf(location.host) < 0) {
+        logoEl.classList.add("is-animated");
+    } else {
+        logoEl.classList.add("is-static");
+    }
+})();
+
+let watchScroll = (() => {
+    let setScrolled = function () {
+        if (window.scrollY > 60) {
+            document.body.classList.add("is-scrolled");
+        } else {
+            document.body.classList.remove("is-scrolled");
+        }
+    };
+    setScrolled();
+    document.addEventListener("scroll", setScrolled);
 })();

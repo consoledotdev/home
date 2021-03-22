@@ -1,5 +1,5 @@
         <span class="log"></span>
-        <div class="hero">
+        <div class="hero{{ with .hideGrid }} hero-hide-grid{{end}}">
             <svg class="lines" width="1969" height="1206" viewBox="0 0 1969 1206" preserveAspectRatio="xMinYMin slice">
                 <line y1="-0.5" x2="1348" y2="-0.5" transform="matrix(-0.447197 0.894436 -1 6.93446e-05 603.503 0.0947266)" stroke="white" />
                 <line y1="-0.5" x2="1348" y2="-0.5" transform="matrix(-0.447197 0.894436 -1 6.93077e-05 992.511 0.067749)" stroke="white" />
@@ -234,7 +234,7 @@
             </svg>
         </div>
         <div class="content">
-            <header class="header">
+            <header class="header{{ with .headerType }} header-{{ . }}{{end}}">
                 <h1 id="logo-wrapper" class="logo-wrapper">
                     <a href="/">
                         <svg class="logo logo-svg-animated-explode" viewBox="-84 -64 175 128" fill="none" preserveAspectRatio="xMinYMin slice">
@@ -300,13 +300,13 @@
                 <nav class="main-nav">
                     {{ partial "components/menu-toggle.html" }}
                     <ul>
-                        <li{{ if eq .Params.isSelected "about" }} class="is-selected"{{ end }}>
+                        <li{{ if eq .context.Params.isSelected "about" }} class="is-selected"{{ end }}>
                             <a onclick="blur();" href="/about/">About</a>
                         </li>
-                        <li{{ if eq .Params.isSelected "qa" }} class="is-selected"{{ end }}>
+                        <li{{ if eq .context.Params.isSelected "qa" }} class="is-selected"{{ end }}>
                             <a onclick="blur();" href="/qa/">Q&amp;A</a>
                         </li>
-                        <li{{ if eq .Params.isSelected "collections" }} class="is-selected"{{ end }}>
+                        <li{{ if eq .context.Params.isSelected "collections" }} class="is-selected"{{ end }}>
                             <a onclick="blur();" href="/collections/">Collections</a>
                         </li>
                         <li>
@@ -316,13 +316,13 @@
                     <div class="menu-popup-wrapper">
                         <div id="menu-popup" class="popup popup-top-down">
                             <ul>
-                                <li{{ if eq .Params.isSelected "about" }} class="is-selected"{{ end }}>
+                                <li{{ if eq .context.Params.isSelected "about" }} class="is-selected"{{ end }}>
                                     <a onclick="blur(); toggleMenuPopup()" href="/about/">About</a>
                                 </li>
-                                <li{{ if eq .Params.isSelected "qa" }} class="is-selected"{{ end }}>
+                                <li{{ if eq .context.Params.isSelected "qa" }} class="is-selected"{{ end }}>
                                     <a onclick="blur(); toggleMenuPopup()" href="/qa/">Q&amp;A</a>
                                 </li>
-                                <li{{ if eq .Params.isSelected "collections" }} class="is-selected"{{ end }}>
+                                <li{{ if eq .context.Params.isSelected "collections" }} class="is-selected"{{ end }}>
                                     <a onclick="blur(); toggleMenuPopup()" href="/collections/">Collections</a>
                                 </li>
                                 <li>
