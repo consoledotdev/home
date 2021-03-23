@@ -13,12 +13,12 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
     <channel>
-        <title>Console - Collections</title>
+        <title>Console - Reviews</title>
         <link>{{ .Permalink }}</link>
-        <description>A series of articles about topics of interest to developers.</description>{{ with .Site.LanguageCode }}
+        <description>Reviews of developer tools.</description>{{ with .Site.LanguageCode }}
         <image>
-            <title>Console - Collections</title>
-            <link>https://console.dev/collections/</link>
+            <title>Console - Reviews</title>
+            <link>https://console.dev/reviews/</link>
             <url>https://console.dev/img/console-mark-256.png</url>
         </image>
         <language>{{.}}</language>{{end}}

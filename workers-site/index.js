@@ -29,8 +29,15 @@ class ElementHandler {
     }
 
     // Rewrite the element attribute
+    // If ?ref is provided then it overrides all values
+    // Otherwise it will default to direct, which may be overriden by the page
+    // itself e.g. to provide details of which page the user signed up from
     element(element) {
-        element.setAttribute("value", this.referrer);
+        const currentValue = element.getAttribute("value");
+
+        if (currentValue == "" || this.referrer != "direct") {
+            element.setAttribute("value", this.referrer);
+        }
     }
 }
 
