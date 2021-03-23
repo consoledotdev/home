@@ -65,11 +65,11 @@
 
     --shadow-dark-3: 0 var(--space3) var(--space5) rgba(0, 0, 0, 0.8);
     --shadow-dark-2: 0 var(--space2) var(--space4) rgba(0, 0, 0, 0.8);
-    --shadow-dark-1: 0 var(--space1) var(--space3) rgba(0, 0, 0, 0.6);
+    --shadow-dark-1: 0 var(--space1) var(--space3) rgba(0, 0, 0, 0.4);
 
     --shadow-light-3: 0 var(--space3_5) var(--space5) rgba(0, 0, 0, 0.15);
     --shadow-light-2: 0 var(--space2_5) var(--space4) rgba(0, 0, 0, 0.2);
-    --shadow-light-1: 0 var(--space1) var(--space3) rgba(0, 0, 0, 0.2);
+    --shadow-light-1: 0 var(--space1) var(--space3) rgba(0, 0, 0, 0.15);
 
     --translucent-dark: rgba(10, 10, 11, 0.6);
     --translucent-light: rgba(233, 234, 239, 0.6);
@@ -92,6 +92,7 @@
     --space3: 16px;
     --space3_5: 24px;
     --space4: 32px;
+    --space4_5: 48px;
     --space5: 64px;
     --space6: 128px;
     --space7: 256px;
@@ -166,6 +167,8 @@ a {
     --theme-content-bg-2: var(--c-black-02-main);
     --theme-content-bg-3: var(--c-grey-09-black-03);
 
+    --theme-content-pick-bg-1: var(--c-green-11);
+
     --theme-input-bg: var(--c-white-00-absolute);
     --theme-control-bg: var(--c-grey-06-blacks-neutral);
     --theme-control-border: var(--c-grey-01-white-03);
@@ -182,6 +185,7 @@ a {
 
     --theme-text-1: var(--c-white-00-absolute);
     --theme-text-2: var(--c-grey-03);
+    --theme-text-3: var(--c-grey-05);
     --theme-cta-text: var(--c-white-00-absolute);
     --theme-input-text: var(--c-black-02-main);
     --theme-pre-code-text: var(--c-blue-04);
@@ -193,6 +197,8 @@ a {
     --theme-content-bg-1: var(--c-white-01-main);
     --theme-content-bg-2: var(--c-white-02);
     --theme-content-bg-3: var(--c-grey-01-white-03);
+
+    --theme-content-pick-bg-1: var(--c-green-03);
 
     --theme-input-bg: var(--c-white-00-absolute);
     --theme-control-bg: var(--c-grey-04-whites-neutral);
@@ -210,6 +216,7 @@ a {
 
     --theme-text-1: var(--c-black-02-main);
     --theme-text-2: var(--c-grey-09-black-03);
+    --theme-text-3: var(--c-grey-05);
     --theme-cta-text: var(--c-white-00-absolute);
     --theme-input-text: var(--c-black-02-main);
     --theme-pre-code-text: var(--c-blue-08);
@@ -222,6 +229,8 @@ a {
         --theme-content-bg-1: var(--c-black-01);
         --theme-content-bg-2: var(--c-black-02-main);
         --theme-content-bg-3: var(--c-grey-09-black-03);
+
+        --theme-content-pick-bg-1: var(--c-green-11);
 
         --theme-input-bg: var(--c-white-00-absolute);
         --theme-control-bg: var(--c-grey-06-blacks-neutral);
@@ -252,6 +261,8 @@ a {
         --theme-content-bg-1: var(--c-white-01-main);
         --theme-content-bg-2: var(--c-white-02);
         --theme-content-bg-3: var(--c-grey-01-white-03);
+
+        --theme-content-pick-bg-1: var(--c-green-03);
 
         --theme-input-bg: var(--c-white-00-absolute);
         --theme-control-bg: var(--c-grey-04-whites-neutral);
