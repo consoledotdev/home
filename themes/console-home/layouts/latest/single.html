@@ -6,7 +6,9 @@
     APIs - so you don’t have to. This is the content of the newsletter sent on
     {{ range first 1 $.Site.Data.latesttools.items }}{{ index . "Scheduled for" | dateFormat "2 Jan 2006" }}{{ end }}.</p>
 
-    {{ partial "section-subscribe.html" . }}
+    <section class="page-section">
+        {{ partial "subscribe.html" (dict "context" .) }}
+    </section>
 
     <h3 class="title title-2">Interesting tools</h3>
     {{ range $.Site.Data.latesttools.items }}
@@ -26,6 +28,8 @@
     {{ end }}
     </section>
 
-    {{ partial "section-subscribe.html" . }}
+    <section class="page-section">
+        {{ partial "subscribe.html" (dict "context" .) }}
+    </section>
 
 {{ end }}

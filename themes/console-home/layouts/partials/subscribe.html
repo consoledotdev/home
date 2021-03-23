@@ -1,9 +1,22 @@
-<section class="page-section page-section-cta">
-    <h4 class="title title-3">Subscribe to the weekly Console newsletter</h4>
-    <p>An email digest of the best tools and beta releases for developers. Every Thursday.{{ if ne $.Page.RelPermalink "/latest/" }} <a href="/latest/" class="link">See the latest email</a>.{{- end -}}</p>
+<div class="subscribe-cta{{ with .layout }} layout-{{ . }}{{ end }}{{ with .size }} size-{{ . }}{{else}} size-large{{ end }}">
+    <h4 class="title title-3">
+        {{- with .title -}}
+            {{ . }}
+        {{- else -}}
+            Subscribe to the weekly Console newsletter
+        {{- end -}}
+    </h4>
+    <p>
+        {{- with .description -}}
+            {{ . }}
+        {{- else -}}
+            An email digest of the best tools and beta releases for developers. Every Thursday.
+        {{- end -}}
+        {{ if ne .context.Page.RelPermalink "/latest/" }} <a href="/latest/" class="link">See the latest email</a>.{{- end -}}
+    </p>
     <form action="https://dev.us7.list-manage.com/subscribe/post?u=f8c3cd14ee8d63c53d0986a48&amp;id=267911a165" method="post" id="console-subscribe" name="console-subscribe" class="console-form">
         <input id="form-email" name="EMAIL" class="console-input-text" type="email" placeholder="Your email" required />
-        <input type="hidden" name="REFERRER" value="{{ .Page.RelPermalink }}" id="mc-referrer" />
+        <input type="hidden" name="REFERRER" value="{{ .context.Page.RelPermalink }}" id="mc-referrer" />
         <div style="position: absolute; left: -5000px" aria-hidden="true"><input type="text" name="b_f8c3cd14ee8d63c53d0986a48_267911a165" tabindex="-1" value="" /><!-- Anti spam field --></div>
 
         <button onclick="blur()" class="console-button" type="submit" title="Sign Up">
@@ -32,4 +45,4 @@
             });
         });
     </script>
-</section>
+</div>
