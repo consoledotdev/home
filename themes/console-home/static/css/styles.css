@@ -373,6 +373,10 @@ body {
     color: var(--theme-text-1);
 }
 
+.main .console-form {
+    margin: var(--space5) 0;
+}
+
 .content {
     position: relative;
     padding: calc(var(--space2) + var(--space4)) 0;
@@ -1145,22 +1149,52 @@ p:not(:last-child) {
 /* Subscribe CTA
    ========================================================================== */
 
-.subscribe-cta form {
-    margin: var(--space4) 0 0;
+.subscribe-cta:not(.flow-inline) {
+    padding: var(--space4);
+    background: var(--theme-content-bg-3);
+    border: var(--theme-border-1);
 }
 
 @media (max-width: 768px) {
-    .subscribe-cta {
-        border-top: 1px solid var(--c-blue-04);
-        padding-top: var(--space4);
+    .subscribe-cta .console-form {
+        margin: var(--space4) 0 0;
+    }
+    .subscribe-cta.flow-inline .console-form {
+        margin: var(--space3_5) 0 0;
     }
 }
 
 @media (min-width: 769px) {
-    .subscribe-cta {
-        padding: var(--space4);
+    .main-article .subscribe-cta:not(.flow-inline) {
         background: var(--theme-content-bg-2);
-        border: var(--theme-border-1);
+    }
+
+    .subscribe-cta.layout-wide {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    .subscribe-cta.layout-wide .subscribe-copy {
+        margin-right: calc(var(--space4) + var(--space2));
+        flex: 1 1 auto;
+    }
+
+    .subscribe-cta.layout-wide .console-form {
+        margin-top: 0;
+        flex: 0 0 auto;
+    }
+
+    .subscribe-cta.layout-wide:not(.flow-inline) .console-form {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: stretch;
+        width: 35%;
+    }
+
+    .subscribe-cta.layout-wide:not(.flow-inline) .console-form .console-button {
+        margin-left: 0;
+        margin-top: var(--space3);
     }
 }
 
@@ -1168,7 +1202,6 @@ p:not(:last-child) {
    ========================================================================== */
 
 .console-form {
-    margin: var(--space5) 0;
     font-size: var(--t-size0);
     line-height: 1.5em;
     display: flex;
@@ -1533,6 +1566,14 @@ a .icon {
         margin-left: 30vw;
         margin-top: max(80%, 50vh);
         min-width: 1600px;
+    }
+
+    .main-article .subscribe-cta {
+        border: none;
+        padding: 0;
+        background: transparent;
+        border-top: 1px solid var(--c-blue-04);
+        padding-top: var(--space4);
     }
 
     .content {

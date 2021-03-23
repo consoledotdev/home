@@ -1,25 +1,30 @@
-<div class="subscribe-cta{{ with .layout }} layout-{{ . }}{{ end }}{{ with .size }} size-{{ . }}{{else}} size-large{{ end }}">
-    <h4 class="title title-3">
-        {{- with .title -}}
-            {{ . }}
-        {{- else -}}
-            Subscribe to the weekly Console newsletter
-        {{- end -}}
-    </h4>
-    <p>
-        {{- with .description -}}
-            {{ . }}
-        {{- else -}}
-            An email digest of the best tools and beta releases for developers. Every Thursday.
-        {{- end -}}
-        {{ if ne .context.Page.RelPermalink "/latest/" }} <a href="/latest/" class="link">See the latest email</a>.{{- end -}}
-    </p>
+<div class="subscribe-cta{{ with .layout }} layout-{{ . }}{{ end }}{{ with .size }} size-{{ . }}{{else}} size-large{{ end }}{{ with .flow }} flow-{{ . }}{{ end }}">
+    <div class="subscribe-copy">
+        {{ if ne .flow "inline" }}
+            {{ if or (eq .size "medium") (eq .size "small") }}<h3 class="title title-4">{{ else }}<h4 class="title title-3">{{ end }}
+                {{- with .title -}}
+                    {{ . }}
+                {{- else -}}
+                    Subscribe to the weekly Console newsletter
+                {{- end -}}
+            {{ if or (eq .size "medium") (eq .size "small") }}</h4>{{ else }}</h3>{{ end }}
+        {{ end }}
+        <p{{ if or (eq .size "medium") (eq .size "small") }} class="small"{{ end }}>
+            {{- with .description -}}
+                {{ . }}
+            {{- else -}}
+                An email digest of the best tools and beta releases for developers. Every Thursday.
+            {{- end -}}
+            {{ if ne .context.Page.RelPermalink "/latest/" }} <a href="/latest/" class="link">See the latest email</a>.{{- end -}}
+        </p>
+    </div>
+
     <form action="https://dev.us7.list-manage.com/subscribe/post?u=f8c3cd14ee8d63c53d0986a48&amp;id=267911a165" method="post" id="console-subscribe" name="console-subscribe" class="console-form">
-        <input id="form-email" name="EMAIL" class="console-input-text" type="email" placeholder="Your email" required />
+        <input id="form-email" name="EMAIL" class="console-input-text{{ with .size}} console-input-{{ . }}{{ end }}" type="email" placeholder="Your email" required />
         <input type="hidden" name="REFERRER" value="{{ .context.Page.RelPermalink }}" id="mc-referrer" />
         <div style="position: absolute; left: -5000px" aria-hidden="true"><input type="text" name="b_f8c3cd14ee8d63c53d0986a48_267911a165" tabindex="-1" value="" /><!-- Anti spam field --></div>
 
-        <button onclick="blur()" class="console-button" type="submit" title="Sign Up">
+        <button onclick="blur()" class="console-button{{ with .size}} console-button-{{ . }}{{ end }}" type="submit" title="Sign Up">
             {{ partial "icons/send.html" }}
             <span>Sign Up</span>
         </button>
