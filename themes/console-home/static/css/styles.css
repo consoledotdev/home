@@ -1085,6 +1085,10 @@ p:not(:last-child) {
     font-size: var(--t-size2);
 }
 
+p.small {
+    font-size: var(--t-size-1);
+}
+
 .caption {
     margin-top: var(--space4);
     margin-bottom: var(--space4);
