@@ -1141,6 +1141,9 @@ p.small {
     font-weight: 400;
     transition: var(--a-controls);
     outline: none;
+    display: inline-flex;
+    flex-flow: row wrap;
+    align-items: center;
 }
 .link:hover,
 .link:focus {
@@ -1157,6 +1160,10 @@ p.small {
 .link:visited .icon {
     fill: var(--theme-text-1);
     transition: var(--a-controls);
+    vertical-align: middle;
+    margin-left: var(--space1);
+    width: 1em;
+    height: 1em;
 }
 .link:hover .icon,
 .link:focus .icon {
