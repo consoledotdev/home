@@ -1285,6 +1285,16 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
     opacity: 0.3;
 }
 
+.console-input-text.console-input-medium {
+    font-size: var(--t-size-1);
+    padding: calc(var(--space2) + calc(var(--space1) / 2)) calc(var(--space3) + calc(var(--space1) / 2));
+}
+
+.console-input-text.console-input-small {
+    font-size: var(--t-size-2);
+    padding: var(--space2) var(--space3);
+}
+
 /* Controls
    ========================================================================== */
 
@@ -1329,6 +1339,8 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
 
 .console-button .icon {
     flex: 0 0 auto;
+    width: 1.2em;
+    height: 1.2em;
 }
 
 .console-button .icon-fill {
@@ -1337,6 +1349,16 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
 
 .console-button .icon-stroke {
     stroke: var(--c-white-00-absolute);
+}
+
+.console-button.console-button-medium {
+    font-size: var(--t-size-1);
+    padding: calc(var(--space2) + calc(var(--space1) / 2)) calc(var(--space3) + calc(var(--space1) / 2));
+}
+
+.console-button.console-button-small {
+    font-size: var(--t-size-2);
+    padding: var(--space2) var(--space3);
 }
 
 .console-control {
@@ -1663,6 +1685,14 @@ a .icon {
         .console-button {
             margin-left: 0;
             margin-top: var(--space4);
+        }
+
+        .console-button.console-button-medium {
+            margin-top: var(--space3_5);
+        }
+
+        .console-button.console-button-small {
+            margin-top: var(--space3);
         }
     }
 
