@@ -1432,6 +1432,30 @@ a .icon {
     vertical-align: -0.3em;
 }
 
+/* Indicators
+   ========================================================================== */
+
+.tags {
+    color: var(--c-fuchsia-05-main);
+    font-size: var(--t-size-3);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.tags > *:not(:first-of-type) {
+    margin-left: var(--space1);
+    display: inline-block;
+}
+
+.tags .icon {
+    fill: var(--c-fuchsia-05-main);
+    width: var(--t-size-2);
+    height: var(--t-size-2);
+    flex: 0 0 auto;
+    margin-right: calc(var(--space2_5) / 2);
+}
+
 /* Popup
    ========================================================================== */
 
