@@ -17,7 +17,7 @@ code, you only need Hugo:
 1. [Install Hugo](https://gohugo.io/getting-started/installing/).
 2. Two options:
    - Start the Hugo server: `hugo server -D`.
-   - Test from other devices on local network (such as iPhone) `hugo server --bind=IP --baseURL=http://IP:1313`, where `IP` is the local IP of the machine running the Hugo server.
+   - Test from other devices on local network (such as iPhone) `hugo server -D --bind=IP --baseURL=http://IP:1313`, where `IP` is the local IP of the machine running the Hugo server.
 3. Launch the URL in your browser. It will watch for changes and auto refresh the browser.
 
 ## Hugo options
