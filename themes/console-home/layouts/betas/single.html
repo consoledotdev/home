@@ -1,0 +1,108 @@
+{{ define "main" }}
+	{{ $CTATitle := "Never miss a beta release again" }}
+	{{ $CTADescription := "Our free weekly newsletter features the latest betas and early access programs." }}
+	<section class="page-section">
+		<h2 class="title title-1">{{ .Title }}</h2>
+		<p class="small">Last Updated February 2021</p>
+	</section>
+	<div class="betas-split">
+		<aside class="betas-aside">
+			<div class="betas-filters"><p>Showing 27 results for: API, Cloud, Database, Developer Tool.</p></div>
+		</aside>
+		<div class="betas">
+			<section class="page-section">
+				{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription ) }}
+				<div class="betas-filters"><p>Showing 27 results for: API, Cloud, Database, Developer Tool.</p></div>
+			</section>
+			<section class="page-section">
+				<h3 class="title title-2">Latest Releases</h3>
+				<div class="beta-items">
+					{{ range $.Site.Data.latestbetas.items }}
+						<div class="beta-card{{ with index . "Weekly Pick" }} beta-card-pick{{ end }}">
+							{{ with index . "Weekly Pick" -}}
+								{{ partial "icons/console-mini-filled.html" }}
+							{{- end }}
+							<span class="date">{{ .Announced }}</span>
+							<div class="beta-card-content">
+								<div class="left">
+									<div class="beta-card-thumbnail aspect-ratio aspect-ratio-1-1"><img class="image" src="{{ .Image }}" alt="{{ index . "Company/Org" }}" /></div>
+									<p class="beta-card-name">{{ index . "Tool/Product/Project" }}</p>
+								</div>
+								<div class="right">
+									<p class="beta-card-name">{{ index . "Tool/Product/Project" }}</p>
+									<p class="beta-card-description">{{ index . "What is it?" }}</p>
+									<div class="tags">
+										{{ partial "icons/tag.html" }}
+										<span class="tag">{{ .Category }}</span>,
+										<span class="tag">{{ .Type }}</span>,
+										<span class="tag">{{ .Access }}</span>
+									</div>
+								</div>
+							</div>
+							<a href="{{ .URL }}" class="link" target="_blank" rel="noopener">Join Waitlist {{ partial "icons/external-link.html" }}</a>
+						</div>
+					{{ end }}
+					{{ partial "subscribe.html" (dict "context" . "layout" "wide" "flow" "inline" "size" "small" "title" $CTATitle "description" $CTADescription ) }}
+					{{ range $.Site.Data.latestbetas.items }}
+						<div class="beta-card{{ with index . "Weekly Pick" }} beta-card-pick{{ end }}">
+							{{ with index . "Weekly Pick" -}}
+								{{ partial "icons/console-mini-filled.html" }}
+							{{- end }}
+							<span class="date">{{ .Announced }}</span>
+							<div class="beta-card-content">
+								<div class="left">
+									<div class="beta-card-thumbnail aspect-ratio aspect-ratio-1-1"><img class="image" src="{{ .Image }}" alt="{{ index . "Company/Org" }}" /></div>
+									<p class="beta-card-name">{{ index . "Tool/Product/Project" }}</p>
+								</div>
+								<div class="right">
+									<p class="beta-card-name">{{ index . "Tool/Product/Project" }}</p>
+									<p class="beta-card-description">{{ index . "What is it?" }}</p>
+									<div class="tags">
+										{{ partial "icons/tag.html" }}
+										<span class="tag">{{ .Category }}</span>,
+										<span class="tag">{{ .Type }}</span>,
+										<span class="tag">{{ .Access }}</span>
+									</div>
+								</div>
+							</div>
+							<a href="{{ .URL }}" class="link" target="_blank" rel="noopener">Join Waitlist {{ partial "icons/external-link.html" }}</a>
+						</div>
+					{{ end }}
+				</div>
+			</section>
+			<section class="page-section">
+				<h3 class="title title-2">Recent Betas: Now in General Availability</h3>
+				<div class="beta-items">
+					{{ range $.Site.Data.latestbetas.items }}
+						<div class="beta-card{{ with index . "Weekly Pick" }} beta-card-pick{{ end }}">
+							{{ with index . "Weekly Pick" -}}
+								{{ partial "icons/console-mini-filled.html" }}
+							{{- end }}
+							<span class="date">{{ .Announced }}</span>
+							<div class="beta-card-content">
+								<div class="left">
+									<div class="beta-card-thumbnail aspect-ratio aspect-ratio-1-1"><img class="image" src="{{ .Image }}" alt="{{ index . "Company/Org" }}" /></div>
+									<p class="beta-card-name">{{ index . "Tool/Product/Project" }}</p>
+								</div>
+								<div class="right">
+									<p class="beta-card-name">{{ index . "Tool/Product/Project" }}</p>
+									<p class="beta-card-description">{{ index . "What is it?" }}</p>
+									<div class="tags">
+										{{ partial "icons/tag.html" }}
+										<span class="tag">{{ .Category }}</span>,
+										<span class="tag">{{ .Type }}</span>,
+										<span class="tag">{{ .Access }}</span>
+									</div>
+								</div>
+							</div>
+							<a href="{{ .URL }}" class="link" target="_blank" rel="noopener">Join Waitlist {{ partial "icons/external-link.html" }}</a>
+						</div>
+					{{ end }}
+				</div>
+			</section>
+			<section class="page-section">
+				{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
+			</section>
+		</div>
+	</div>
+{{ end }}

@@ -1532,6 +1532,222 @@ a .icon {
     border-radius: var(--mid-corners);
 }
 
+/* Console Betas
+   ========================================================================== */
+
+.betas-split {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    margin-top: calc(var(--space4) + var(--space3));
+}
+
+.betas-split .betas-aside {
+    display: none;
+    width: 22%;
+    flex: 0 0 auto;
+    margin-right: 5%;
+}
+
+.betas-split .betas {
+    width: 73%;
+    flex: 1 1 auto;
+}
+
+.beta-items > *:not(:last-child) {
+    margin-bottom: var(--space3);
+}
+
+.beta-items .subscribe-cta {
+    margin: var(--space4) 0;
+}
+
+.beta-card {
+    position: relative;
+    background-color: var(--theme-content-bg-1);
+    border: var(--theme-border-1);
+    box-shadow: var(--theme-shadow-1);
+    border-radius: var(--mid-corners);
+    padding: var(--space3) var(--space4);
+}
+
+.beta-card.beta-card-pick {
+    background-color: var(--theme-content-pick-bg-1);
+}
+
+.beta-card .icon-console-mini-filled {
+    position: absolute;
+    left: 0;
+    transform: translateX(-50%);
+    fill: var(--c-green-06);
+    width: var(--t-size3);
+    height: var(--t-size3);
+}
+
+.beta-card .icon-console-mini-filled .alt-prompt {
+    fill: var(--c-white-00-absolute);
+}
+
+.beta-card-content {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.beta-card-content .left {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.beta-card-content .left .beta-card-name {
+    display: none;
+}
+
+.beta-card-content .right {
+    flex-grow: 1;
+}
+
+.beta-card-thumbnail {
+    flex-shrink: 0;
+    width: calc(var(--space4) + var(--space2));
+    margin-right: var(--space3_5);
+}
+
+p.beta-card-name {
+    font-weight: 500;
+    color: var(--theme-text-1);
+    margin: 0;
+}
+
+p.beta-card-description {
+    font-size: var(--t-size-2);
+    color: var(--theme-text-1);
+    margin: 0;
+}
+
+.beta-card .link {
+    font-size: var(--t-size-1);
+}
+
+.beta-items .subscribe-cta {
+    margin: var(--space4_5) var(--space4);
+}
+
+@media (max-width: 768px) {
+    .beta-card > *:not(:last-child) {
+        margin-bottom: var(--space2_5);
+    }
+
+    .beta-card .icon-console-mini-filled {
+        top: calc(var(--space5) + var(--space2));
+        transform: translate(-50%, -50%);
+    }
+
+    .beta-card .date {
+        margin-left: calc(var(--space4) + var(--space2) + var(--space3_5));
+    }
+
+    .beta-card-content {
+        align-items: flex-start;
+    }
+
+    .beta-card-content > *:not(:last-child) {
+        margin-bottom: var(--space2_5);
+    }
+
+    p.beta-card-description {
+        margin-bottom: var(--space2_5);
+    }
+
+    .beta-card .link {
+        margin-left: calc(var(--space4) + var(--space2) + var(--space3_5));
+    }
+
+    @media (max-width: 480px) {
+        .beta-card .date {
+            margin-left: 0;
+        }
+
+        .beta-card-content {
+            flex-flow: column nowrap;
+        }
+
+        .beta-card-content .right > *:not(:last-child) {
+            margin-bottom: var(--space2_5);
+        }
+
+        .beta-card-thumbnail {
+            margin-right: var(--space3);
+        }
+
+        .beta-card-content .left .beta-card-name {
+            display: block;
+        }
+
+        .beta-card-content .right .beta-card-name {
+            display: none;
+        }
+
+        .beta-card .link {
+            margin-left: 0;
+        }
+    }
+
+    @media (min-width: 601px) {
+        .beta-card > *:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+        .beta-card .date {
+            margin-bottom: var(--space2_5);
+        }
+
+        .beta-card .link {
+            float: right;
+            transform: translateY(-100%);
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .beta-card {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    .beta-card > *:not(:last-child) {
+        margin-right: var(--space4);
+    }
+
+    .beta-card .date {
+        flex: 0 0 auto;
+    }
+
+    .beta-card-content {
+        align-items: center;
+        flex: 1 1 auto;
+    }
+
+    p.beta-card-description {
+        margin-bottom: var(--space1);
+    }
+
+    .beta-card .link {
+        flex: 0 0 auto;
+    }
+
+    @media (min-width: 1025px) {
+        .betas-split .betas-aside {
+            display: block;
+        }
+
+        .betas-split .betas .betas-filters {
+            display: none;
+        }
+    }
+}
+
 /* Design Library
    ========================================================================== */
 
