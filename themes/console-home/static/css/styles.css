@@ -1682,7 +1682,7 @@ a .icon {
     }
 
     .content {
-        min-height: 760px;
+        min-height: max(100vh, 760px);
     }
 
     .main {
