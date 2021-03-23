@@ -4,9 +4,11 @@ date: 2021-03-11T07:00:00Z
 draft: false
 summary: A review of the best code editors and IDEs - Neovim, VS Code, Atom,
          Kate, Nova, Onivim, and Sublime Text.
-isSelected: collections
-ogImg: /img/collections/neovim-best-code-editor-ide-for-developers-neovim.png
-tags: [Collections, Code Editors, IDE]
+isSelected: reviews
+ogImg: /img/reviews/neovim-best-code-editor-ide-for-developers-neovim.png
+tags: [Reviews, Code Editors, IDE]
+aliases:
+    - /collections/neovim-best-code-editor-ide-for-developers/
 ---
 
 There are a few apps that developers use all the time: a web browser, a
@@ -51,7 +53,7 @@ two with [Spacemacs](https://www.spacemacs.org/) or [Doom
 Emacs](https://github.com/hlissner/doom-emacs).
 
 {{< img-center
-src="/img/collections/neovim-best-code-editor-ide-for-developers-neovim.png"
+src="/img/reviews/neovim-best-code-editor-ide-for-developers-neovim.png"
 alt="Screenshot of my neovim setup."
 width="100%"
 caption="My neovim setup on Linux inside tmux using the Nord theme."
@@ -275,7 +277,7 @@ last 5 years and as of Mar 2021, sits at position #4 in the rankings, with
 developer Q&A interviews](/qa/).
 
 {{< img-center
-src="/img/collections/neovim-best-code-editor-ide-for-developers-ide-index.png"
+src="/img/reviews/neovim-best-code-editor-ide-for-developers-ide-index.png"
 alt="Graph of worldwide IDE popularity."
 width="100%"
 caption="A graph of IDE popularity showing Visual Studio vs Eclipse vs VS Code."
@@ -324,7 +326,7 @@ workspace. This makes it really easy to create multiple, isolated environments
 for all your projects, particularly if they're hosted on GitHub.
 
 {{< img-center
-src="/img/collections/neovim-best-code-editor-ide-for-developers-vscode.png"
+src="/img/reviews/neovim-best-code-editor-ide-for-developers-vscode.png"
 alt="Screenshot of my old VS Code setup."
 width="100%"
 caption="My VS Code setup on macOS using the Nord theme."
