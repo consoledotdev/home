@@ -278,54 +278,54 @@ a {
 }
 
 @media (max-width: 768px) {
-    .theme-dark .main-page,
-    .theme-dark.main-page {
+    .theme-dark .main-article,
+    .theme-dark.main-article {
         background: transparent;
         margin-top: calc(var(--space6) - var(--space4));
         margin-bottom: var(--space6);
     }
-    .theme-dark .header-fixed + .main-page,
-    .header-fixed + .theme-dark.main-page {
+    .theme-dark .header-fixed + .main-article,
+    .header-fixed + .theme-dark.main-article {
         margin-top: calc(var(--space6) - var(--space4) + 48px);
     }
 
-    .theme-light .main-page,
-    .theme-light.main-page {
+    .theme-light .main-article,
+    .theme-light.main-article {
         background: var(--theme-content-bg-1);
         margin-top: calc(var(--space2) + var(--space4));
         margin-bottom: calc(var(--space2) + var(--space4));
         padding-top: var(--space5);
         padding-bottom: var(--space5);
     }
-    .theme-light .header-fixed + .main-page,
-    .header-fixed + .theme-light.main-page {
+    .theme-light .header-fixed + .main-article,
+    .header-fixed + .theme-light.main-article {
         margin-top: calc(var(--space2) + var(--space4) + 48px);
     }
 
     @media (prefers-color-scheme: dark) {
-        .theme-user:not(.theme-dark):not(.theme-light) .main-page,
-        .theme-user:not(.theme-dark):not(.theme-light).main-page {
+        .theme-user:not(.theme-dark):not(.theme-light) .main-article,
+        .theme-user:not(.theme-dark):not(.theme-light).main-article {
             background: transparent;
             margin-top: calc(var(--space6) - var(--space4));
             margin-bottom: var(--space6);
         }
-        .theme-user:not(.theme-dark):not(.theme-light) .header-fixed + .main-page,
-        .header-fixed + .theme-user:not(.theme-dark):not(.theme-light).main-page {
+        .theme-user:not(.theme-dark):not(.theme-light) .header-fixed + .main-article,
+        .header-fixed + .theme-user:not(.theme-dark):not(.theme-light).main-article {
             margin-top: calc(var(--space6) - var(--space4) + 48px);
         }
     }
 
     @media (prefers-color-scheme: light) {
-        .theme-user:not(.theme-dark):not(.theme-light) .main-page,
-        .theme-user:not(.theme-dark):not(.theme-light).main-page {
+        .theme-user:not(.theme-dark):not(.theme-light) .main-article,
+        .theme-user:not(.theme-dark):not(.theme-light).main-article {
             background: var(--theme-content-bg-1);
             margin-top: calc(var(--space2) + var(--space4));
             margin-bottom: calc(var(--space2) + var(--space4));
             padding-top: var(--space5);
             padding-bottom: var(--space5);
         }
-        .theme-user:not(.theme-dark):not(.theme-light) .header-fixed + .main-page,
-        .header-fixed + .theme-user:not(.theme-dark):not(.theme-light).main-page {
+        .theme-user:not(.theme-dark):not(.theme-light) .header-fixed + .main-article,
+        .header-fixed + .theme-user:not(.theme-dark):not(.theme-light).main-article {
             margin-top: calc(var(--space2) + var(--space4) + 48px);
         }
     }
@@ -426,7 +426,7 @@ body {
     align-items: center;
 }
 
-.main-page {
+.main-article {
     z-index: 20;
 }
 
@@ -1576,7 +1576,7 @@ a .icon {
             padding-right: 12vw;
         }
 
-        .main-page {
+        .main-article {
             margin-left: -12vw;
             margin-right: -12vw;
             padding-left: 12vw;
@@ -1619,7 +1619,7 @@ a .icon {
             padding-right: 10vw;
         }
 
-        .main-page {
+        .main-article {
             margin-left: -10vw;
             margin-right: -10vw;
             padding-left: 10vw;
@@ -1642,7 +1642,7 @@ a .icon {
             padding-right: 12vw;
         }
 
-        .main-page {
+        .main-article {
             margin-left: -12vw;
             margin-right: -12vw;
             padding-left: 12vw;
@@ -1661,7 +1661,7 @@ a .icon {
             padding-right: 14vw;
         }
 
-        .main-page {
+        .main-article {
             margin-left: -14vw;
             margin-right: -14vw;
             padding-left: 14vw;
@@ -1691,7 +1691,7 @@ a .icon {
         height: 60vh;
     }
 
-    .main-page {
+    .main-article {
         margin: max(calc(var(--space6) - var(--space3)), 10vh) 0 calc(var(--space6) - var(--space2));
         width: min(600px, 55vw);
         margin-left: -6.25vw;
@@ -1752,7 +1752,7 @@ a .icon {
         max-width: 1600px;
     }
 
-    .main-page {
+    .main-article {
         border-radius: var(--mid-corners);
     }
 }
