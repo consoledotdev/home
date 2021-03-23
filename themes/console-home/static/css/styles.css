@@ -405,6 +405,10 @@ body {
     height: auto;
 }
 
+.page-feature .content {
+    height: auto;
+}
+
 .header {
     display: flex;
     flex-flow: row nowrap;
@@ -443,6 +447,10 @@ body {
 
 .main-article {
     z-index: 20;
+}
+
+.page-section {
+    position: relative;
 }
 
 .page-section:not(:first-child) {
@@ -1650,6 +1658,11 @@ a .icon {
         padding-top: var(--space4);
     }
 
+    .main-feature {
+        margin-top: calc(var(--space6) - var(--space4) + 48px);
+        margin-bottom: var(--space6);
+    }
+
     .content {
         min-height: 680px;
     }
@@ -1837,6 +1850,10 @@ a .icon {
         border-radius: 0 var(--mid-corners) var(--mid-corners) 0;
         border: var(--theme-border-1);
         border-left: 0px;
+    }
+
+    .main-feature {
+        margin: max(calc(var(--space6) - var(--space3)), 10vh) 0 calc(var(--space6) - var(--space2));
     }
 
     .hero .grid {
