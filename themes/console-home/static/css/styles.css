@@ -1125,6 +1125,12 @@ p.small {
     background: var(--theme-content-bg-2);
 }
 
+.date {
+    display: inline-block;
+    font-size: var(--t-size-2);
+    color: var(--theme-text-3);
+}
+
 /* Links
    ========================================================================== */
 
