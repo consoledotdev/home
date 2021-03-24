@@ -1,0 +1,10 @@
+
+<div class="console-checkbutton{{ with .context.color }} color-{{ . }}{{ end }}">
+	<input type="checkbox" name="{{ .context.name }}" id="{{ .context.name }}"{{ with .context.checked }} checked{{ end }} onclick="blur();">
+	<label for="{{ .context.name }}" onclick="blur();">
+		{{- partial "icons/plus.html" -}}
+		{{- partial "icons/checkmark.html" -}}
+		{{- with .context.icon }} {{ partial (print "icons/" . ".html") }} {{ end -}}
+		{{- .context.label -}}
+	</label>
+</div>

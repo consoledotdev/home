@@ -1,0 +1,47 @@
+{
+    "items": [
+        {
+            "name": "api",
+            "label": "Api",
+            "showsIcon": false,
+            "checked": true
+        },
+        {
+            "name": "cloud",
+            "label": "Cloud",
+            "showsIcon": false,
+            "checked": true
+        },
+        {
+            "name": "database",
+            "label": "Database",
+            "showsIcon": false,
+            "checked": true
+        },
+        {
+            "name": "developer-tool",
+            "label": "Developer Tool",
+            "showsIcon": false,
+            "checked": true
+        },
+        {
+            "name": "devops",
+            "label": "DevOps",
+            "showsIcon": false,
+            "checked": true
+        },
+        {
+            "name": "open-source",
+            "label": "Open Source",
+            "showsIcon": false,
+            "checked": true
+        },
+        {
+            "name": "weekly-pick",
+            "label": "Weekly Pick",
+            "showsIcon": false,
+            "checked": true,
+            "icon": "console-mini-filled"
+        }
+    ]
+}

@@ -71,6 +71,48 @@
     --shadow-light-2: 0 var(--space2_5) var(--space4) rgba(0, 0, 0, 0.2);
     --shadow-light-1: 0 var(--space1) var(--space3) rgba(0, 0, 0, 0.15);
 
+    --control-button-inactive-border-dark: 1px solid rgba(255, 255, 255, 0.1);
+    --control-button-inactive-border-hover-dark: 1px solid rgba(255, 255, 255, 0.2);
+    --control-button-inactive-text-dark: var(--c-grey-01-white-03);
+    --control-button-inactive-background-hover-dark: rgba(255, 255, 255, 0.05);
+    --control-button-inactive-text-hover-dark: var(--c-white-01-main);
+
+    --control-button-active-blue-background-dark: rgba(82, 105, 255, 0.15);
+    --control-button-active-blue-text-dark: var(--c-blue-05);
+    --control-button-active-blue-background-hover-dark: rgba(82, 105, 255, 0.25);
+    --control-button-active-blue-text-hover-dark: var(--c-blue-04);
+
+    --control-button-active-fuchsia-background-dark: rgba(245, 97, 245, 0.13);
+    --control-button-active-fuchsia-text-dark: var(--c-fuchsia-05-main);
+    --control-button-active-fuchsia-background-hover-dark: rgba(245, 97, 245, 0.23);
+    --control-button-active-fuchsia-text-hover-dark: var(--c-fuchsia-04);
+
+    --control-button-active-green-background-dark: rgba(1, 188, 144, 0.11);
+    --control-button-active-green-text-dark: var(--c-green-05-main);
+    --control-button-active-green-background-hover-dark: rgba(1, 188, 144, 0.21);
+    --control-button-active-green-text-hover-dark: var(--c-green-04);
+
+    --control-button-inactive-border-light: 1px solid rgba(0, 0, 0, 0.1);
+    --control-button-inactive-border-hover-light: 1px solid rgba(0, 0, 0, 0.2);
+    --control-button-inactive-background-hover-light: rgba(0, 0, 0, 0.03);
+    --control-button-inactive-text-light: var(--c-grey-07);
+    --control-button-inactive-text-hover-light: var(--c-grey-09-black-03);
+
+    --control-button-active-blue-background-light: rgba(82, 105, 255, 0.1);
+    --control-button-active-blue-text-light: var(--c-blue-07);
+    --control-button-active-blue-background-hover-light: rgba(82, 105, 255, 0.2);
+    --control-button-active-blue-text-hover-light: var(--c-blue-08);
+
+    --control-button-active-fuchsia-background-light: rgba(245, 97, 245, 0.1);
+    --control-button-active-fuchsia-text-light: var(--c-fuchsia-07);
+    --control-button-active-fuchsia-background-hover-light: rgba(245, 97, 245, 0.2);
+    --control-button-active-fuchsia-text-hover-light: var(--c-fuchsia-08);
+
+    --control-button-active-green-background-light: rgba(1, 188, 144, 0.11);
+    --control-button-active-green-text-light: var(--c-green-07);
+    --control-button-active-green-background-hover-light: rgba(1, 188, 144, 0.21);
+    --control-button-active-green-text-hover-light: var(--c-green-08);
+
     --translucent-dark: rgba(10, 10, 11, 0.6);
     --translucent-light: rgba(233, 234, 239, 0.6);
 
@@ -124,13 +166,18 @@
     --t-size14: 5.19rem; /* 83 */
     --t-size15: 5.875rem; /* 94 */
     --t-size16: 6.56rem; /* 105 */
+
+    --t-lH1: 1.2em;
+    --t-lH2: 1.3em;
+    --t-lH3: 1.4em;
+    --t-lH4: 1.5em;
 }
 
 html,
 body {
     height: 100%;
     font-size: 16px;
-    line-height: 1.4em;
+    line-height: var(--t-lH3);
     min-width: 300px;
 }
 
@@ -163,6 +210,7 @@ a {
    ========================================================================== */
 
 .theme-dark {
+    --theme-content-bg-0: var(--c-black-00-absolute);
     --theme-content-bg-1: var(--c-black-01);
     --theme-content-bg-2: var(--c-black-02-main);
     --theme-content-bg-3: var(--c-grey-09-black-03);
@@ -174,6 +222,24 @@ a {
     --theme-control-border: var(--c-grey-01-white-03);
     --theme-control-active-text: var(--c-grey-09-black-03);
     --theme-control-text: var(--c-white-00-absolute);
+
+    --theme-control-button-inactive-border: var(--control-button-inactive-border-dark);
+    --theme-control-button-inactive-border-hover: var(--control-button-inactive-border-hover-dark);
+    --theme-control-button-inactive-background-hover: var(--control-button-inactive-background-hover-dark);
+    --theme-control-button-inactive-text: var(--control-button-inactive-text-dark);
+    --theme-control-button-inactive-text-hover: var(--control-button-inactive-text-hover-dark);
+    --theme-control-button-active-blue-background: var(--control-button-active-blue-background-dark);
+    --theme-control-button-active-blue-text: var(--control-button-active-blue-text-dark);
+    --theme-control-button-active-blue-background-hover: var(--control-button-active-blue-background-hover-dark);
+    --theme-control-button-active-blue-text-hover: var(--control-button-active-blue-text-hover-dark);
+    --theme-control-button-active-fuchsia-background: var(--control-button-active-fuchsia-background-dark);
+    --theme-control-button-active-fuchsia-text: var(--control-button-active-fuchsia-text-dark);
+    --theme-control-button-active-fuchsia-background-hover: var(--control-button-active-fuchsia-background-hover-dark);
+    --theme-control-button-active-fuchsia-text-hover: var(--control-button-active-fuchsia-text-hover-dark);
+    --theme-control-button-active-green-background: var(--control-button-active-green-background-dark);
+    --theme-control-button-active-green-text: var(--control-button-active-green-text-dark);
+    --theme-control-button-active-green-background-hover: var(--control-button-active-green-background-hover-dark);
+    --theme-control-button-active-green-text-hover: var(--control-button-active-green-text-hover-dark);
 
     --theme-shadow-1: var(--shadow-dark-1);
     --theme-shadow-2: var(--shadow-dark-2);
@@ -194,6 +260,7 @@ a {
 }
 
 .theme-light {
+    --theme-content-bg-0: var(--c-white-00-absolute);
     --theme-content-bg-1: var(--c-white-01-main);
     --theme-content-bg-2: var(--c-white-02);
     --theme-content-bg-3: var(--c-grey-01-white-03);
@@ -205,6 +272,24 @@ a {
     --theme-control-border: var(--c-grey-09-black-03);
     --theme-control-active-text: var(--c-white-00-absolute);
     --theme-control-text: var(--c-grey-09-black-03);
+
+    --theme-control-button-inactive-border: var(--control-button-inactive-border-light);
+    --theme-control-button-inactive-border-hover: var(--control-button-inactive-border-hover-light);
+    --theme-control-button-inactive-background-hover: var(--control-button-inactive-background-hover-light);
+    --theme-control-button-inactive-text: var(--control-button-inactive-text-light);
+    --theme-control-button-inactive-text-hover: var(--control-button-inactive-text-hover-light);
+    --theme-control-button-active-blue-background: var(--control-button-active-blue-background-light);
+    --theme-control-button-active-blue-text: var(--control-button-active-blue-text-light);
+    --theme-control-button-active-blue-background-hover: var(--control-button-active-blue-background-hover-light);
+    --theme-control-button-active-blue-text-hover: var(--control-button-active-blue-text-hover-light);
+    --theme-control-button-active-fuchsia-background: var(--control-button-active-fuchsia-background-light);
+    --theme-control-button-active-fuchsia-text: var(--control-button-active-fuchsia-text-light);
+    --theme-control-button-active-fuchsia-background-hover: var(--control-button-active-fuchsia-background-hover-light);
+    --theme-control-button-active-fuchsia-text-hover: var(--control-button-active-fuchsia-text-hover-light);
+    --theme-control-button-active-green-background: var(--control-button-active-green-background-light);
+    --theme-control-button-active-green-text: var(--control-button-active-green-text-light);
+    --theme-control-button-active-green-background-hover: var(--control-button-active-green-background-hover-light);
+    --theme-control-button-active-green-text-hover: var(--control-button-active-green-text-hover-light);
 
     --theme-shadow-1: var(--shadow-light-1);
     --theme-shadow-2: var(--shadow-light-2);
@@ -226,6 +311,7 @@ a {
 
 @media (prefers-color-scheme: dark) {
     .theme-user:not(.theme-dark):not(.theme-light) {
+        --theme-content-bg-0: var(--c-black-00-absolute);
         --theme-content-bg-1: var(--c-black-01);
         --theme-content-bg-2: var(--c-black-02-main);
         --theme-content-bg-3: var(--c-grey-09-black-03);
@@ -237,6 +323,24 @@ a {
         --theme-control-border: var(--c-grey-01-white-03);
         --theme-control-active-text: var(--c-grey-09-black-03);
         --theme-control-text: var(--c-white-00-absolute);
+
+        --theme-control-button-inactive-border: var(--control-button-inactive-border-dark);
+        --theme-control-button-inactive-border-hover: var(--control-button-inactive-border-hover-dark);
+        --theme-control-button-inactive-background-hover: var(--control-button-inactive-background-hover-dark);
+        --theme-control-button-inactive-text: var(--control-button-inactive-text-dark);
+        --theme-control-button-inactive-text-hover: var(--control-button-inactive-text-hover-dark);
+        --theme-control-button-active-blue-background: var(--control-button-active-blue-background-dark);
+        --theme-control-button-active-blue-text: var(--control-button-active-blue-text-dark);
+        --theme-control-button-active-blue-background-hover: var(--control-button-active-blue-background-hover-dark);
+        --theme-control-button-active-blue-text-hover: var(--control-button-active-blue-text-hover-dark);
+        --theme-control-button-active-fuchsia-background: var(--control-button-active-fuchsia-background-dark);
+        --theme-control-button-active-fuchsia-text: var(--control-button-active-fuchsia-text-dark);
+        --theme-control-button-active-fuchsia-background-hover: var(--control-button-active-fuchsia-background-hover-dark);
+        --theme-control-button-active-fuchsia-text-hover: var(--control-button-active-fuchsia-text-hover-dark);
+        --theme-control-button-active-green-background: var(--control-button-active-green-background-dark);
+        --theme-control-button-active-green-text: var(--control-button-active-green-text-dark);
+        --theme-control-button-active-green-background-hover: var(--control-button-active-green-background-hover-dark);
+        --theme-control-button-active-green-text-hover: var(--control-button-active-green-text-hover-dark);
 
         --theme-shadow-1: var(--shadow-dark-1);
         --theme-shadow-2: var(--shadow-dark-2);
@@ -258,6 +362,7 @@ a {
 
 @media (prefers-color-scheme: light) {
     .theme-user:not(.theme-dark):not(.theme-light) {
+        --theme-content-bg-0: var(--c-white-00-absolute);
         --theme-content-bg-1: var(--c-white-01-main);
         --theme-content-bg-2: var(--c-white-02);
         --theme-content-bg-3: var(--c-grey-01-white-03);
@@ -269,6 +374,24 @@ a {
         --theme-control-border: var(--c-grey-09-black-03);
         --theme-control-active-text: var(--c-white-00-absolute);
         --theme-control-text: var(--c-grey-09-black-03);
+
+        --theme-control-button-inactive-border: var(--control-button-inactive-border-light);
+        --theme-control-button-inactive-border-hover: var(--control-button-inactive-border-hover-light);
+        --theme-control-button-inactive-background-hover: var(--control-button-inactive-background-hover-light);
+        --theme-control-button-inactive-text: var(--control-button-inactive-text-light);
+        --theme-control-button-inactive-text-hover: var(--control-button-inactive-text-hover-light);
+        --theme-control-button-active-blue-background: var(--control-button-active-blue-background-light);
+        --theme-control-button-active-blue-text: var(--control-button-active-blue-text-light);
+        --theme-control-button-active-blue-background-hover: var(--control-button-active-blue-background-hover-light);
+        --theme-control-button-active-blue-text-hover: var(--control-button-active-blue-text-hover-light);
+        --theme-control-button-active-fuchsia-background: var(--control-button-active-fuchsia-background-light);
+        --theme-control-button-active-fuchsia-text: var(--control-button-active-fuchsia-text-light);
+        --theme-control-button-active-fuchsia-background-hover: var(--control-button-active-fuchsia-background-hover-light);
+        --theme-control-button-active-fuchsia-text-hover: var(--control-button-active-fuchsia-text-hover-light);
+        --theme-control-button-active-green-background: var(--control-button-active-green-background-light);
+        --theme-control-button-active-green-text: var(--control-button-active-green-text-light);
+        --theme-control-button-active-green-background-hover: var(--control-button-active-green-background-hover-light);
+        --theme-control-button-active-green-text-hover: var(--control-button-active-green-text-hover-light);
 
         --theme-shadow-1: var(--shadow-light-1);
         --theme-shadow-2: var(--shadow-light-2);
@@ -386,6 +509,10 @@ body {
 
 .main .console-form {
     margin: var(--space5) 0;
+}
+
+.main-article .console-form {
+    margin: var(--space4) 0 0;
 }
 
 .content {
@@ -1020,7 +1147,7 @@ body {
 .title {
     font-weight: 300;
     margin: 0;
-    line-height: 1.2em;
+    line-height: var(--t-lH1);
     color: var(--theme-text-1);
 }
 
@@ -1069,7 +1196,7 @@ body {
    ========================================================================== */
 
 p {
-    line-height: 1.5em;
+    line-height: var(--t-lH4);
     margin: 0;
     color: var(--theme-text-2);
 }
@@ -1089,7 +1216,7 @@ p:not(:last-child) {
 
 .description {
     color: var(--theme-text-1);
-    line-height: 1.3em;
+    line-height: var(--t-lH2);
     font-size: var(--t-size2);
 }
 
@@ -1239,7 +1366,6 @@ p.small {
 
 .console-form {
     font-size: var(--t-size0);
-    line-height: 1.5em;
     display: flex;
     flex-flow: row nowrap;
     align-content: flex-start;
@@ -1257,7 +1383,7 @@ p.small {
     padding: calc(var(--space2) + var(--space1)) calc(var(--space3) + var(--space1));
     border-radius: var(--small-corners);
     font-size: var(--t-size0);
-    line-height: 1.5em;
+    line-height: var(--t-lH4);
     transition: var(--a-controls);
 }
 
@@ -1322,7 +1448,7 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
     padding: calc(var(--space2) + var(--space1)) calc(var(--space3) + var(--space1));
     border-radius: var(--small-corners);
     font-size: var(--t-size0);
-    line-height: 1.5em;
+    line-height: var(--t-lH4);
     vertical-align: top;
     cursor: pointer;
     font-weight: 500;
@@ -1372,8 +1498,7 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
 .console-control {
     --paddingV: calc(var(--space2) - 2px);
     --paddingH: calc(var(--space2) - 2px);
-    --lineHeight: 1.4em;
-    --lineHeightHalf: 0.7em;
+    --lineHeightHalf: calc(var(--t-lH3) / 2);
     position: relative;
     display: inline-block;
     margin: 0;
@@ -1390,7 +1515,7 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
     color: var(--theme-control-text);
     padding: var(--paddingV) var(--paddingH);
     font-size: var(--t-size-3);
-    line-height: var(--lineHeight);
+    line-height: var(--t-lH3);
     border-radius: calc(var(--paddingV) + var(--lineHeightHalf));
     vertical-align: top;
     cursor: pointer;
@@ -1453,6 +1578,132 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
 .console-control:focus svg {
     fill: var(--theme-control-active-text);
     transition: var(--a-controls-active);
+}
+
+.console-checkbutton {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.console-checkbutton input {
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+
+.console-checkbutton input + label {
+    position: relative;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: var(--small-corners);
+    border: var(--theme-control-button-inactive-border);
+    color: var(--theme-control-button-inactive-text);
+    margin: 0;
+    padding: calc(var(--space1) - 2px) var(--space2);
+    font-size: var(--t-size-2);
+    line-height: var(--t-lH4);
+    font-weight: 400;
+    transition: var(--a-elements);
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.console-checkbutton input + label:hover,
+.console-checkbutton input:focus + label {
+    border: var(--theme-control-button-inactive-border-hover);
+    background: var(--theme-control-button-inactive-background-hover);
+    color: var(--theme-control-button-inactive-text-hover);
+    transition: var(--a-elements-active);
+}
+
+.console-checkbutton input + label .icon {
+    flex: 0 0 auto;
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: var(--space1);
+    fill: var(--theme-control-button-inactive-text);
+    transition: var(--a-elements);
+}
+
+.console-checkbutton input + label:hover .icon,
+.console-checkbutton input:focus + label .icon {
+    fill: var(--theme-control-button-inactive-text-hover);
+    transition: var(--a-elements-active);
+}
+
+.console-checkbutton input + label .icon-plus,
+.console-checkbutton input + label .icon-checkmark {
+    margin-right: var(--space1);
+    width: 1em;
+    height: 1em;
+}
+
+.console-checkbutton input:not(:checked) + label .icon-checkmark {
+    display: none;
+}
+
+.console-checkbutton input:checked + label .icon-plus {
+    display: none;
+}
+
+.console-checkbutton.color-blue input:checked + label {
+    color: var(--theme-control-button-active-blue-text);
+    background: var(--theme-control-button-active-blue-background);
+    border: 1px solid transparent;
+}
+.console-checkbutton.color-blue input:checked + label .icon {
+    fill: var(--theme-control-button-active-blue-text);
+}
+.console-checkbutton.color-blue input:checked + label:hover,
+.console-checkbutton.color-blue input:checked:focus + label {
+    color: var(--theme-control-button-active-blue-text-hover);
+    background: var(--theme-control-button-active-blue-background-hover);
+}
+.console-checkbutton.color-blue input:checked + label:hover .icon,
+.console-checkbutton.color-blue input:checked:focus + label .icon {
+    fill: var(--theme-control-button-active-blue-text-hover);
+}
+
+.console-checkbutton.color-fuchsia input:checked + label {
+    color: var(--theme-control-button-active-fuchsia-text);
+    background: var(--theme-control-button-active-fuchsia-background);
+    border: 1px solid transparent;
+}
+.console-checkbutton.color-fuchsia input:checked + label .icon {
+    fill: var(--theme-control-button-active-fuchsia-text);
+}
+.console-checkbutton.color-fuchsia input:checked + label:hover,
+.console-checkbutton.color-fuchsia input:checked:focus + label {
+    color: var(--theme-control-button-active-fuchsia-text-hover);
+    background: var(--theme-control-button-active-fuchsia-background-hover);
+}
+.console-checkbutton.color-fuchsia input:checked + label:hover .icon,
+.console-checkbutton.color-fuchsia input:checked:focus + label .icon {
+    fill: var(--theme-control-button-active-fuchsia-text-hover);
+}
+
+.console-checkbutton.color-green input:checked + label {
+    color: var(--theme-control-button-active-green-text);
+    background: var(--theme-control-button-active-green-background);
+    border: 1px solid transparent;
+}
+.console-checkbutton.color-green input:checked + label .icon {
+    fill: var(--theme-control-button-active-green-text);
+}
+.console-checkbutton.color-green input:checked + label:hover,
+.console-checkbutton.color-green input:checked:focus + label {
+    color: var(--theme-control-button-active-green-text-hover);
+    background: var(--theme-control-button-active-green-background-hover);
+}
+.console-checkbutton.color-green input:checked + label:hover .icon,
+.console-checkbutton.color-green input:checked:focus + label .icon {
+    fill: var(--theme-control-button-active-green-text-hover);
 }
 
 /* Icons
@@ -1539,19 +1790,58 @@ a .icon {
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-start;
+    justify-content: space-between;
     margin-top: calc(var(--space4) + var(--space3));
 }
 
 .betas-split .betas-aside {
-    display: none;
-    width: 22%;
     flex: 0 0 auto;
-    margin-right: 5%;
+    width: 26vw;
+    max-width: 400px;
+}
+
+.betas-split .betas-aside.is-hidden {
+    display: none;
 }
 
 .betas-split .betas {
-    width: 73%;
     flex: 1 1 auto;
+}
+
+.betas-split .betas-aside .betas-filters {
+    margin-right: 20%;
+    width: 26vw;
+    max-width: 400px;
+}
+
+.betas-split .betas .console-filters {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.betas-split .console-filters > * {
+    margin-bottom: var(--space3);
+}
+
+.betas-split .betas .console-filters > *:not(:last-child) {
+    margin-right: var(--space3);
+}
+
+.console-filters .console-checkbutton.color-green input + [for="weekly-pick"] .icon-console-mini-filled,
+.console-filters .console-checkbutton.color-green input + [for="weekly-pick"]:hover .icon-console-mini-filled,
+.console-filters .console-checkbutton.color-green input:checked + [for="weekly-pick"] .icon-console-mini-filled,
+.console-filters .console-checkbutton.color-green input:checked + [for="weekly-pick"]:hover .icon-console-mini-filled {
+    fill: var(--c-green-06);
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.console-filters .console-checkbutton.color-green input + [for="weekly-pick"] .icon-console-mini-filled .alt-prompt,
+.console-filters .console-checkbutton.color-green input + [for="weekly-pick"]:hover .icon-console-mini-filled .alt-prompt,
+.console-filters .console-checkbutton.color-green input:checked + [for="weekly-pick"] .icon-console-mini-filled .alt-prompt,
+.console-filters .console-checkbutton.color-green input:checked + [for="weekly-pick"]:hover .icon-console-mini-filled .alt-prompt {
+    fill: var(--c-white-00-absolute);
 }
 
 .beta-items > *:not(:last-child) {
@@ -1564,7 +1854,7 @@ a .icon {
 
 .beta-card {
     position: relative;
-    background-color: var(--theme-content-bg-1);
+    background-color: var(--theme-content-bg-0);
     border: var(--theme-border-1);
     box-shadow: var(--theme-shadow-1);
     border-radius: var(--mid-corners);
@@ -1735,16 +2025,6 @@ p.beta-card-description {
 
     .beta-card .link {
         flex: 0 0 auto;
-    }
-
-    @media (min-width: 1025px) {
-        .betas-split .betas-aside {
-            display: block;
-        }
-
-        .betas-split .betas .betas-filters {
-            display: none;
-        }
     }
 }
 
@@ -2061,7 +2341,7 @@ p.beta-card-description {
         width: min(600px, 55vw);
         margin-left: -6.25vw;
         padding: var(--space5) 6.25vw;
-        background: var(--theme-content-bg-1);
+        background: var(--theme-content-bg-0);
         box-shadow: var(--theme-shadow-2);
         border-radius: 0 var(--mid-corners) var(--mid-corners) 0;
         border: var(--theme-border-1);

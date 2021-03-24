@@ -54,14 +54,14 @@ let animateLogo = (() => {
     }
 })();
 
-let watchScroll = (() => {
-    let setScrolled = function () {
+let manageHeaderFixing = (() => {
+    let setHeader = function () {
         if (window.scrollY > 60) {
             document.body.classList.add("is-scrolled");
         } else {
             document.body.classList.remove("is-scrolled");
         }
     };
-    setScrolled();
-    document.addEventListener("scroll", setScrolled);
+    setHeader();
+    document.addEventListener("scroll", setHeader);
 })();

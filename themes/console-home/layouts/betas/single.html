@@ -6,13 +6,14 @@
 		<p class="small">Last Updated February 2021</p>
 	</section>
 	<div class="betas-split">
-		<aside class="betas-aside">
-			<div class="betas-filters"><p>Showing 27 results for: API, Cloud, Database, Developer Tool.</p></div>
+		<aside id="aside-filters-wrapper" class="betas-aside">
 		</aside>
 		<div class="betas">
 			<section class="page-section">
 				{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription ) }}
-				<div class="betas-filters"><p>Showing 27 results for: API, Cloud, Database, Developer Tool.</p></div>
+			</section>
+			<section id="inline-filters-wrapper" class="page-section">
+				{{ partial "components/betas/filters.html" (dict "items" $.Site.Data.filters.items ) }}
 			</section>
 			<section class="page-section">
 				<h3 class="title title-2">Latest Releases</h3>
@@ -105,4 +106,5 @@
 			</section>
 		</div>
 	</div>
+	<script src="/js/betas.js"></script>
 {{ end }}
