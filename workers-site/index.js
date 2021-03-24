@@ -68,6 +68,18 @@ async function handleEvent(event) {
             };
         }
 
+        // Permanent redirects
+        const redirectMap = new Map([
+            ["/collections/neovim-best-code-editor-ide-for-developers", "https://console.dev/reviews/neovim-best-code-editor-ide-for-developers/"],
+            ["/collections/neovim-best-code-editor-ide-for-developers/", "https://console.dev/reviews/neovim-best-code-editor-ide-for-developers/"],
+        ])
+
+        const path = url.pathname;
+        const match = redirectMap.get(path);
+        if (match) {
+            return Response.redirect(match, 301);
+        }
+
         const page = await getAssetFromKV(event, options);
 
         // allow headers to be altered
