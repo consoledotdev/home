@@ -15,7 +15,7 @@ disableKinds = ["taxonomy", "term"]
 
 [frontmatter]
 date = ["date", "publishDate", "lastmod"]
-lastmod = ["lastmod", ":fileModTime", ":git", "date", "publishDate"]
+lastmod = ["lastmod", ":git", "date", "publishDate"]
 
 [markup]
     [markup.goldmark]

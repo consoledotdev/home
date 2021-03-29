@@ -25,7 +25,22 @@
     {{ else if not .Date.IsZero -}}
     <meta property="article:published_time" {{ .Date.Format $iso8601 | printf "content=%q" | safeHTMLAttr }}>
     {{ end -}}
-    {{ if not .Lastmod.IsZero -}} <meta property="article:modified_time" {{ .Lastmod.Format $iso8601 | printf "content=%q" | safeHTMLAttr }}>
+    <!--
+        If this is /latest/ then the modified_time needs to match the date of
+        the latest newsletter. Otherwise, it should match the lastmod param
+    -->
+    {{- $lastmod := false -}}
+    {{- if eq $.Page.RelPermalink "/latest/" -}}
+        {{- if $.Site.Data.latesttools.items -}}
+            {{- range first 1 $.Site.Data.latesttools.items -}}
+                {{- $lastmod = index . "Scheduled for" -}}
+                {{- $lastmod = dateFormat $iso8601 $lastmod -}}
+            {{- end -}}
+        {{- end -}}
+    {{- else if not .Lastmod.IsZero -}}
+        {{- $lastmod = .Lastmod.Format $iso8601 -}}
+    {{- end  -}}
+    {{ if $lastmod }}<meta property="article:modified_time" {{ $lastmod | printf "content=%q" | safeHTMLAttr }}>
     {{ end -}}
     <!-- https://developer.yoast.com/features/opengraph/functional-specification -->
     <meta property="og:site_name" content="Console" />

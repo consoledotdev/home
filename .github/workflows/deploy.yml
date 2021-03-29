@@ -17,6 +17,8 @@ jobs:
         steps:
             - name: "Checkout GitHub Action"
               uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0 # Required to get full history, so hugo :git lastmod works
 
             - id: 'get_data_tools'
               name: Get tools list from Google Sheets
