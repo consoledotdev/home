@@ -693,6 +693,13 @@ body {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer-nav {
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
     align-items: center;
 }
 
@@ -700,8 +707,12 @@ body {
     padding: 0;
     display: flex;
     flex-flow: row wrap;
-    margin: calc(var(--space2) * -1) calc(var(--space3) * -1);
+    margin: 0 calc(var(--space3) * -1);
     font-size: var(--t-size-1);
+}
+
+.footer-nav ul:first-child {
+    margin-right: var(--space3);
 }
 
 .footer-nav ul li {
@@ -1287,13 +1298,13 @@ input.console-input-text:-moz-placeholder /* Firefox 18- */ {
 }
 
 .console-control {
-    --paddingV: calc(var(--space2) - 2px);
-    --paddingH: calc(var(--space2) - 2px);
+    --paddingV: var(--space2);
+    --paddingH: var(--space2);
     --lineHeight: 1.4em;
     --lineHeightHalf: 0.7em;
     position: relative;
     display: inline-block;
-    margin: 0;
+    margin: 0 0 2px;
     padding: 0;
     border: 0;
     outline: none;
@@ -1583,6 +1594,16 @@ a .icon {
         .console-button {
             margin-left: 0;
             margin-top: var(--space4);
+        }
+
+        .footer-nav {
+            flex-flow: column nowrap;
+            align-items: flex-start;
+        }
+
+        .footer-nav ul:first-child {
+            margin-right: 0;
+            margin-bottom: var(--space2);
         }
     }
 
