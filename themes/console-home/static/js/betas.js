@@ -33,25 +33,39 @@ let manageFiltersPosition = (() => {
         if (window.innerWidth >= 1025) {
             asideWrapper.classList.remove("is-hidden");
             asideWrapper.appendChild(filtersEl);
+            filtersEl.classList.add("in-aside");
         } else {
             asideWrapper.classList.add("is-hidden");
             inlineWrapper.appendChild(filtersEl);
+            filtersEl.classList.remove("in-aside");
         }
     };
     setPos();
     window.addEventListener("resize", setPos);
 })();
 
-// let manageFiltersFixing = (() => {
-//     // still todo: only set element as fixed when scrolling and if it is in the aside
-//     let filtersEl = document.getElementById("betas-filters");
-//     offset = filtersEl.offsetTop;
-//     filtersEl.style.position = "fixed";
-//     filtersEl.style.top = offset + "px";
-//     let setScrolled = function () {
-//         filtersEl.style.top = offset - window.scrollY + "px";
-//         if (parseInt(filtersEl.style.top) < 128) filtersEl.style.top = "128px";
-//     };
-//     setScrolled();
-//     document.addEventListener("scroll", setScrolled);
-// })();
+let computeFixedFiltersPos = (() => {
+    let style = {};
+    let compute = function () {
+        if (window.scrollY > 0) {
+            style.position = "fixed";
+            style.top = document.getElementById("betas-split").offsetTop - window.scrollY + "px";
+            if (parseInt(style.top) < 128) style.top = "128px";
+        } else {
+            style.position = null;
+            style.top = null;
+        }
+
+        let filtersEl = document.getElementById("betas-filters");
+        if (filtersEl.classList.contains("in-aside")) {
+            filtersEl.style.top = style.top;
+            filtersEl.style.position = style.position;
+        } else {
+            filtersEl.style.top = null;
+            filtersEl.style.position = null;
+        }
+    };
+    compute();
+    window.addEventListener("scroll", compute);
+    window.addEventListener("resize", compute);
+})();
