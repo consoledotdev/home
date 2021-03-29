@@ -707,29 +707,55 @@ body {
 .footer-nav ul li {
     list-style: none;
     flex: 0 0 auto;
-    margin: var(--space2) var(--space3);
+    padding: var(--space2) var(--space3);
     letter-spacing: 0.08em;
     font-size: var(--t-size-1);
+    line-height: 1.4em;
 }
 
-.footer-nav a:link,
-.footer-nav a:visited {
-    color: var(--theme-text-1);
+.footer-nav ul li a {
+    vertical-align: top;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
     text-decoration: none;
     font-weight: 500;
     outline: none;
+}
+
+.footer-nav ul li a .icon {
+    width: 20px;
+    height: 20px;
+}
+
+.footer-nav ul li a:link,
+.footer-nav ul li a:link .icon-fill,
+.footer-nav ul li a:visited,
+.footer-nav ul li a:visited .icon-fill {
+    color: var(--theme-text-1);
+    fill: var(--theme-text-1);
     transition: var(--a-controls);
 }
 
-.footer-nav a:hover,
-.footer-nav a:focus {
+.footer-nav ul li a:hover,
+.footer-nav ul li a:hover .icon-fill,
+.footer-nav ul li a:focus,
+.footer-nav ul li a:focus .icon-fill {
     color: var(--c-blue-04);
-    text-decoration: none;
+    fill: var(--c-blue-04);
 }
-.footer-nav a:active {
+
+.footer-nav ul li a:active,
+.footer-nav ul li a:active .icon-fill {
     color: var(--c-blue-06-main);
-    text-decoration: none;
+    fill: var(--c-blue-06-main);
     transition: var(--a-controls-active);
+}
+
+.footer-nav ul li a span {
+    display: inline-block;
+    margin-left: var(--space2);
+    display: none;
 }
 
 /* Logo
