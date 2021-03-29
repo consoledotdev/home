@@ -246,4 +246,6 @@ that.
 ### Find out more
 
 [WayScript](https://wayscript.com/) is a rapid scripting platform for
-developers. This interview was conducted on 18 Mar 2021.
+developers. It was featured as an "Interesting Tool" in the [Console
+Newsletter](https://console.dev) on 25 Mar 2021. This interview was conducted
+on 18 Mar 2021.
