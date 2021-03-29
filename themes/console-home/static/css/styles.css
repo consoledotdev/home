@@ -707,10 +707,10 @@ body {
 .footer-nav ul li {
     list-style: none;
     flex: 0 0 auto;
-    padding: var(--space2) var(--space3);
     letter-spacing: 0.08em;
     font-size: var(--t-size-1);
     line-height: 1.4em;
+    padding: var(--space1) var(--space1);
 }
 
 .footer-nav ul li a {
@@ -721,6 +721,7 @@ body {
     text-decoration: none;
     font-weight: 500;
     outline: none;
+    padding: var(--space1) var(--space2_5);
 }
 
 .footer-nav ul li a .icon {
