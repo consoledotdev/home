@@ -1,3 +1,30 @@
+document.addEventListener("DOMContentLoaded", (event) => {
+    let adjustSelectWidth = (() => {
+        let adjust = (e, el) => {
+            let s = e?.target || el;
+            let selectedText = s.options[s.selectedIndex].text;
+            var canvas = document.createElement("canvas");
+            var context = canvas.getContext("2d");
+            context.font = "16px Rubik";
+            if (s.classList.contains("console-input-medium")) {
+                context.font = "14px Rubik";
+            }
+            if (s.classList.contains("console-input-small")) {
+                context.font = "13px Rubik";
+            }
+            var metrics = context.measureText(selectedText);
+            var pad = parseInt(getComputedStyle(s).paddingLeft) + parseInt(getComputedStyle(s).paddingRight);
+            s.style.width = pad + metrics.width + 8 + "px";
+        };
+
+        let selects = document.getElementsByClassName("console-select");
+        for (let s of selects) {
+            s.addEventListener("change", adjust);
+            adjust(null, s);
+        }
+    })();
+});
+
 let manageFiltersPosition = (() => {
     let filtersEl = document.getElementById("betas-filters");
     let asideWrapper = document.getElementById("aside-filters-wrapper");

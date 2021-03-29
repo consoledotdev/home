@@ -1,10 +1,12 @@
 <div id="betas-filters" class="betas-filters">
 	<form action="" class="console-filters">
-		<select name="" id="">
-			<option value="date">Date</option>
+		<label for="betas-sort" class="console-label console-label-small">Sort by</label>
+		<select class="console-select console-input-small" name="" id="betas-sort" onchange="blur();">
+			<option value="date" selected>Date</option>
 			<option value="date">Name</option>
 			<option value="date">Weekly Pick</option>
 		</select>
+		<label class="console-label console-label-small">Show</label>
 		{{ range .items }}
 			{{ $details := merge . (dict "color" "blue") }}
 			{{ if eq .name "weekly-pick" }}
