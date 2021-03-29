@@ -2333,7 +2333,7 @@ p.beta-card-description {
             margin: var(--space3) 0 0;
         }
 
-        .console-form {
+        .main .console-form {
             margin: var(--space4) 0;
         }
 
