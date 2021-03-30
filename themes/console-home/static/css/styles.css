@@ -58,20 +58,44 @@ a {
     transform: translateX(-10.1%);
     width: 153.7vw;
     height: 112vh;
-    opacity: 0.1;
+    opacity: 0.08;
     z-index: 1;
 }
 
+.hero .lines line {
+    stroke: var(--theme-lines-color);
+}
+
 .hero .planes {
+    position: relative;
     transform: translate(-24%, -48%);
     width: 219.8vw;
     height: auto;
     margin-top: 50vh;
     margin-left: max(600px, 40vw);
+    z-index: 2;
 }
 
 .hero.hero-hide-planes .planes {
     display: none;
+}
+
+.hero .planes > rect {
+    fill: var(--theme-planes-background);
+    fill-opacity: 0.25;
+}
+
+.hero .planes > rect[stroke] {
+    stroke: var(--theme-planes-off-stroke);
+    stroke-opacity: 0.13;
+}
+
+.hero .planes g rect {
+    fill: var(--theme-planes-background);
+}
+
+.hero .planes g rect[stroke] {
+    stroke-width: 1.5;
 }
 
 /* Layout

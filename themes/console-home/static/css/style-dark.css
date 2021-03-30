@@ -13,6 +13,7 @@
     --theme-content-pick-bg-1: var(--c-green-11);
 
     --theme-input-bg: var(--c-white-00-absolute);
+    --theme-input-border: rgba(0, 0, 0, 0);
     --theme-control-bg: var(--c-grey-06-blacks-neutral);
     --theme-control-border: var(--c-grey-01-white-03);
     --theme-control-active-text: var(--c-grey-09-black-03);
@@ -45,7 +46,6 @@
 
     --theme-border-1: 1px solid rgba(255, 255, 255, 0.03);
     --theme-border-2: 1px solid #151515;
-    --theme-input-border: none;
 
     --theme-text-1: var(--c-white-00-absolute);
     --theme-text-2: var(--c-grey-03);
@@ -59,6 +59,19 @@
     --theme-p1-stroke: var(--c-blue-06-main);
     --theme-p2-stroke: var(--c-fuchsia-05-main);
     --theme-p3-stroke: var(--c-green-05-main);
+
+    --theme-lines-color: var(--c-white-00-absolute);
+
+    --theme-planes-background: var(--c-grey-09-black-03);
+    --theme-planes-off-stroke: var(--c-white-00-absolute);
+}
+
+.theme .hero .lines {
+    opacity: 0.08;
+}
+
+.hero .planes .light {
+    display: none;
 }
 
 .theme .logo-svg-animated-explode .prompt-inverted {
