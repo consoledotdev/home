@@ -13,7 +13,7 @@
     --theme-content-pick-bg-1: var(--c-green-11);
 
     --theme-input-bg: var(--c-white-00-absolute);
-    --theme-input-border: rgba(0, 0, 0, 0);
+    --theme-input-border: transparent;
     --theme-control-bg: var(--c-grey-06-blacks-neutral);
     --theme-control-border: var(--c-grey-01-white-03);
     --theme-control-active-text: var(--c-grey-09-black-03);
@@ -44,6 +44,7 @@
     --theme-shadow-2: 0 var(--space2) var(--space4) rgba(0, 0, 0, 0.8);
     --theme-shadow-3: 0 var(--space3) var(--space5) rgba(0, 0, 0, 0.8);
 
+    --theme-border-0: 1px solid rgba(255, 255, 255, 0.03);
     --theme-border-1: 1px solid rgba(255, 255, 255, 0.03);
     --theme-border-2: 1px solid #151515;
 
@@ -70,7 +71,7 @@
     opacity: 0.08;
 }
 
-.hero .planes .light {
+.theme .hero .planes .light {
     display: none;
 }
 
@@ -84,7 +85,6 @@
 
 @media (max-width: 768px) {
     .main-article {
-        background: transparent;
         margin-top: calc(var(--space6) - var(--space4));
         margin-bottom: var(--space6);
     }

@@ -40,10 +40,11 @@
     --theme-control-button-active-green-background-hover: rgba(1, 188, 144, 0.21);
     --theme-control-button-active-green-text-hover: var(--c-green-08);
 
-    --theme-shadow-1: 0 var(--space1) var(--space3) rgba(0, 0, 0, 0.15);
-    --theme-shadow-2: 0 var(--space2_5) var(--space4) rgba(0, 0, 0, 0.2);
+    --theme-shadow-1: 0 var(--space1) var(--space3) rgba(0, 0, 0, 0.07);
+    --theme-shadow-2: 0 var(--space2_5) var(--space4) rgba(0, 0, 0, 0.1);
     --theme-shadow-3: 0 var(--space3_5) var(--space5) rgba(0, 0, 0, 0.15);
 
+    --theme-border-0: none;
     --theme-border-1: 1px solid rgba(0, 0, 0, 0.04);
     --theme-border-2: 1px solid rgba(0, 0, 0, 0.1);
 
@@ -54,7 +55,7 @@
     --theme-input-text: var(--c-black-02-main);
     --theme-pre-code-text: var(--c-blue-08);
 
-    --theme-translucent: rgba(233, 234, 239, 0.6);
+    --theme-translucent: rgba(245, 248, 251, 0.6);
 
     --theme-p1-stroke: var(--c-black-02-main);
     --theme-p2-stroke: var(--c-black-02-main);
@@ -70,15 +71,15 @@
     opacity: 0.06;
 }
 
-.hero .planes > rect {
+.theme .hero .planes > rect {
     fill-opacity: 0.35;
 }
 
-.hero .planes > rect[stroke] {
+.theme .hero .planes > rect[stroke] {
     stroke-opacity: 0.1;
 }
 
-.hero .planes .dark {
+.theme .hero .planes .dark {
     display: none;
 }
 
@@ -99,13 +100,14 @@
     animation-delay: 0s, var(--p1-duration);
 }
 
+.theme .popup {
+    background-color: var(--theme-content-bg-2);
+}
+
 @media (max-width: 768px) {
     .theme .main-article {
-        background: var(--theme-content-bg-1);
-        margin-top: calc(var(--space2) + var(--space4));
-        margin-bottom: calc(var(--space2) + var(--space4));
-        padding-top: var(--space5);
-        padding-bottom: var(--space5);
+        margin-top: calc(var(--space6) - var(--space4));
+        margin-bottom: var(--space6);
     }
     .theme .header-fixed + .main-article {
         margin-top: calc(var(--space2) + var(--space4) + 48px);

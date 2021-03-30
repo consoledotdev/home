@@ -862,7 +862,7 @@ p.small {
     margin-top: var(--space4);
     margin-bottom: var(--space4);
     background-color: var(--theme-content-bg-3);
-    border: var(--theme-border-1);
+    border: var(--theme-border-0);
     padding: var(--space2) var(--space3);
 }
 
@@ -1533,7 +1533,6 @@ a .icon {
 .beta-card {
     position: relative;
     background-color: var(--theme-content-bg-0);
-    border: var(--theme-border-1);
     box-shadow: var(--theme-shadow-1);
     border-radius: var(--mid-corners);
     padding: var(--space3) var(--space4);
@@ -1541,6 +1540,7 @@ a .icon {
 
 .beta-card.beta-card-pick {
     background-color: var(--theme-content-pick-bg-1);
+    border: var(--theme-border-0);
 }
 
 .beta-card .icon-console-mini-filled {
@@ -2030,7 +2030,7 @@ p.beta-card-description {
         background: var(--theme-content-bg-0);
         box-shadow: var(--theme-shadow-2);
         border-radius: 0 var(--mid-corners) var(--mid-corners) 0;
-        border: var(--theme-border-1);
+        border: var(--theme-border-0);
         border-left: 0px;
     }
 
