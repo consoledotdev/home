@@ -1020,6 +1020,7 @@ select.console-select {
     font-size: var(--t-size0);
     line-height: var(--t-lH4);
     transition: var(--a-controls);
+    box-shadow: 0 0 0 1px var(--theme-input-border);
 }
 
 input.console-input-text:hover,
@@ -1032,7 +1033,6 @@ input.console-input-text:focus,
 select.console-select:active,
 select.console-select:focus {
     box-shadow: 0 0 0 2px var(--c-blue-06-main);
-    border: none;
     transition: var(--a-controls-active);
 }
 
