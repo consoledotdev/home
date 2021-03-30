@@ -4,7 +4,7 @@
 <html lang="en">
     {{ partial "head.html" . }}
     <body class="theme page-{{ if not .Params.pageType -}}article{{ else }}{{ .Params.pageType }}{{ end }}">
-            {{ partial "header.html" (dict "context" . "headerType" .Params.headerType "hideGrid" .Params.hideGrid ) }}
+            {{ partial "header.html" (dict "context" . "headerType" .Params.headerType "hidePlanes" .Params.hidePlanes ) }}
             <main class="main
                 {{- if ne .Params.pageType "home" -}}
                     {{- if not .Params.pageType }}-article {{ end -}}

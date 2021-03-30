@@ -7,5 +7,5 @@ type: betas
 isSelected: betas
 pageType: feature
 headerType: fixed
-hideGrid: true
+hidePlanes: true
 ---

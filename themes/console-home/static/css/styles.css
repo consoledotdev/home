@@ -62,7 +62,7 @@ a {
     z-index: 1;
 }
 
-.hero .grid {
+.hero .planes {
     transform: translate(-24%, -48%);
     width: 219.8vw;
     height: auto;
@@ -70,7 +70,7 @@ a {
     margin-left: max(600px, 40vw);
 }
 
-.hero.hero-hide-grid .grid {
+.hero.hero-hide-planes .planes {
     display: none;
 }
 
@@ -1787,11 +1787,11 @@ p.beta-card-description {
         min-height: 680px;
     }
 
-    .page-article .hero .grid {
+    .page-article .hero .planes {
         display: none;
     }
 
-    .hero .grid {
+    .hero .planes {
         transform: translate(-24%, -36%);
         margin-left: 30vw;
         margin-top: max(80%, 50vh);
@@ -1829,7 +1829,7 @@ p.beta-card-description {
     }
 
     @media (max-width: 540px) {
-        .hero .grid {
+        .hero .planes {
             transform: translate(-28%, -32%);
         }
 
@@ -2014,12 +2014,12 @@ p.beta-card-description {
         margin: max(calc(var(--space6) - var(--space3)), 10vh) 0 calc(var(--space6) - var(--space2));
     }
 
-    .hero .grid {
+    .hero .planes {
         margin-left: max(550px, 40vw);
     }
 
     @media (max-aspect-ratio: 9/10) {
-        .hero .grid {
+        .hero .planes {
             transform: translate(-24%, -43%);
             margin-top: max(65%, 50vh);
             margin-left: 42vw;
