@@ -1,0 +1,116 @@
+/* Default Variables
+   ========================================================================== */
+
+:root {
+    --c-white-00-absolute: #ffffff;
+    --c-white-01-main: #f5f8fb;
+    --c-white-02: #f1f2f6;
+
+    --c-black-00-absolute: #000000;
+    --c-black-01: #040404;
+    --c-black-02-main: #0a0a0b;
+
+    --c-grey-01-white-03: #e9eaef;
+    --c-grey-02: #d1d3d9;
+    --c-grey-03: #b5b6bf;
+    --c-grey-04-whites-neutral: #95969f;
+    --c-grey-05: #6f7078;
+    --c-grey-06-blacks-neutral: #515158;
+    --c-grey-07: #323237;
+    --c-grey-08: #232327;
+    --c-grey-09-black-03: #151517;
+
+    --c-blue-01: #f4f8ff;
+    --c-blue-02: #e4edff;
+    --c-blue-03: #d4e2ff;
+    --c-blue-04: #b5c9ff;
+    --c-blue-05: #7e97ff;
+    --c-blue-06-main: #5269ff;
+    --c-blue-07: #3847f3;
+    --c-blue-08: #252dd9;
+    --c-blue-09: #14168b;
+    --c-blue-10: #0e0f5f;
+    --c-blue-11: #080833;
+
+    --c-fuchsia-01: #fdf4ff;
+    --c-fuchsia-02: #ffe1ff;
+    --c-fuchsia-03: #ffceff;
+    --c-fuchsia-04: #ffa6ff;
+    --c-fuchsia-05-main: #f561f5;
+    --c-fuchsia-06: #cd37ca;
+    --c-fuchsia-07: #a51fa1;
+    --c-fuchsia-08: #7d117a;
+    --c-fuchsia-09: #550a53;
+    --c-fuchsia-10: #3c083c;
+    --c-fuchsia-11: #240524;
+
+    --c-green-01: #dcfff7;
+    --c-green-02: #abf7e7;
+    --c-green-03: #7ceeda;
+    --c-green-04: #43dec1;
+    --c-green-05-main: #01bc90;
+    --c-green-06: #009a64;
+    --c-green-07: #007842;
+    --c-green-08: #005629;
+    --c-green-09: #003416;
+    --c-green-10: #03230f;
+    --c-green-11: #031208;
+
+    --c-red: #ff4600;
+
+    --small-corners: 4px;
+    --mid-corners: 8px;
+
+    --a-micro: all 0.08s ease-in-out;
+    --a-micro-active: all 0.06s ease-in-out;
+
+    --a-controls: all 0.15s ease-in-out;
+    --a-controls-active: all 0.05s ease-in-out;
+
+    --a-elements: all 0.2s cubic-bezier(0.09, 0.33, 0.12, 1.26);
+    --a-elements-active: all 0.2s cubic-bezier(0.09, 0.33, 0.12, 1.26);
+
+    --space1: 4px;
+    --space2: 8px;
+    --space2_5: 12px;
+    --space3: 16px;
+    --space3_5: 24px;
+    --space4: 32px;
+    --space4_5: 48px;
+    --space5: 64px;
+    --space6: 128px;
+    --space7: 256px;
+
+    /* Type Scale
+        Maj 2nd - 16px
+        9, 10, 11, 13, 14, 16, 18, 20, 23, 26, 29, 32, 36, 41, 46, 52, 58, 66, 74, 83, 94, 105
+    */
+
+    --t-size-5: 0.56rem; /* 9 */
+    --t-size-4: 0.625rem; /* 10 */
+    --t-size-3: 0.69rem; /* 11 */
+    --t-size-2: 0.81rem; /* 13 */
+    --t-size-1: 0.875rem; /* 14 */
+    --t-size0: 1rem; /* 16 */
+    --t-size1: 1.11rem; /* 18 */
+    --t-size2: 1.25rem; /* 20 */
+    --t-size3: 1.44rem; /* 23 */
+    --t-size4: 1.625rem; /* 26 */
+    --t-size5: 1.81rem; /* 29 */
+    --t-size6: 2rem; /* 32 */
+    --t-size7: 2.25rem; /* 36 */
+    --t-size8: 2.56rem; /* 41 */
+    --t-size9: 2.875rem; /* 46 */
+    --t-size10: 3.25rem; /* 52 */
+    --t-size11: 3.625rem; /* 58 */
+    --t-size12: 4.125rem; /* 66 */
+    --t-size13: 4.625rem; /* 74 */
+    --t-size14: 5.19rem; /* 83 */
+    --t-size15: 5.875rem; /* 94 */
+    --t-size16: 6.56rem; /* 105 */
+
+    --t-lH1: 1.2em;
+    --t-lH2: 1.3em;
+    --t-lH3: 1.4em;
+    --t-lH4: 1.5em;
+}

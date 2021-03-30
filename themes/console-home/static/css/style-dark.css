@@ -1,0 +1,81 @@
+/* Theme Dark
+	Use the .theme class to override regular styles from this theme file.
+	The class is assigned to body so using it as prefix in your rules
+	will always ensure the highest specificity.
+   ========================================================================== */
+
+:root {
+    --theme-content-bg-0: var(--c-black-00-absolute);
+    --theme-content-bg-1: var(--c-black-01);
+    --theme-content-bg-2: var(--c-black-02-main);
+    --theme-content-bg-3: var(--c-grey-09-black-03);
+
+    --theme-content-pick-bg-1: var(--c-green-11);
+
+    --theme-input-bg: var(--c-white-00-absolute);
+    --theme-control-bg: var(--c-grey-06-blacks-neutral);
+    --theme-control-border: var(--c-grey-01-white-03);
+    --theme-control-active-text: var(--c-grey-09-black-03);
+    --theme-control-text: var(--c-white-00-absolute);
+
+    --theme-control-button-inactive-border: 1px solid rgba(255, 255, 255, 0.1);
+    --theme-control-button-inactive-border-hover: 1px solid rgba(255, 255, 255, 0.2);
+    --theme-control-button-inactive-background-hover: rgba(255, 255, 255, 0.05);
+    --theme-control-button-inactive-text: var(--c-grey-01-white-03);
+    --theme-control-button-inactive-text-hover: var(--c-white-01-main);
+
+    --theme-control-button-active-blue-background: rgba(82, 105, 255, 0.15);
+    --theme-control-button-active-blue-text: var(--c-blue-05);
+    --theme-control-button-active-blue-background-hover: rgba(82, 105, 255, 0.25);
+    --theme-control-button-active-blue-text-hover: var(--c-blue-04);
+
+    --theme-control-button-active-fuchsia-background: rgba(245, 97, 245, 0.13);
+    --theme-control-button-active-fuchsia-text: var(--c-fuchsia-05-main);
+    --theme-control-button-active-fuchsia-background-hover: rgba(245, 97, 245, 0.23);
+    --theme-control-button-active-fuchsia-text-hover: var(--c-fuchsia-04);
+
+    --theme-control-button-active-green-background: rgba(1, 188, 144, 0.11);
+    --theme-control-button-active-green-text: var(--c-green-05-main);
+    --theme-control-button-active-green-background-hover: rgba(1, 188, 144, 0.21);
+    --theme-control-button-active-green-text-hover: var(--c-green-04);
+
+    --theme-shadow-1: 0 var(--space1) var(--space3) rgba(0, 0, 0, 0.4);
+    --theme-shadow-2: 0 var(--space2) var(--space4) rgba(0, 0, 0, 0.8);
+    --theme-shadow-3: 0 var(--space3) var(--space5) rgba(0, 0, 0, 0.8);
+
+    --theme-border-1: 1px solid rgba(255, 255, 255, 0.03);
+    --theme-border-2: 1px solid #151515;
+    --theme-input-border: none;
+
+    --theme-text-1: var(--c-white-00-absolute);
+    --theme-text-2: var(--c-grey-03);
+    --theme-text-3: var(--c-grey-05);
+    --theme-cta-text: var(--c-white-00-absolute);
+    --theme-input-text: var(--c-black-02-main);
+    --theme-pre-code-text: var(--c-blue-04);
+
+    --theme-translucent: rgba(10, 10, 11, 0.6);
+
+    --theme-p1-stroke: var(--c-blue-06-main);
+    --theme-p2-stroke: var(--c-fuchsia-05-main);
+    --theme-p3-stroke: var(--c-green-05-main);
+}
+
+.theme .logo-svg-animated-explode .prompt-inverted {
+    display: none;
+}
+
+.theme .logo-svg-animated-explode .prompt-normal {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .main-article {
+        background: transparent;
+        margin-top: calc(var(--space6) - var(--space4));
+        margin-bottom: var(--space6);
+    }
+    .header-fixed + .main-article {
+        margin-top: calc(var(--space6) - var(--space4) + 48px);
+    }
+}

@@ -3,13 +3,12 @@
 <!DOCTYPE html>
 <html lang="en">
     {{ partial "head.html" . }}
-    <body class="theme-dark page-{{ if not .Params.pageType -}}article{{ else }}{{ .Params.pageType }}{{ end }}">
+    <body class="theme page-{{ if not .Params.pageType -}}article{{ else }}{{ .Params.pageType }}{{ end }}">
             {{ partial "header.html" (dict "context" . "headerType" .Params.headerType "hideGrid" .Params.hideGrid ) }}
             <main class="main
                 {{- if ne .Params.pageType "home" -}}
                     {{- if not .Params.pageType }}-article {{ end -}}
                     {{- with .Params.pageType }}-{{ . }} {{ end -}}
-                    theme-user
                 {{- end }}">
                     {{- block "main" . }}{{- end }}
             </main>
