@@ -1039,6 +1039,9 @@ select.console-select {
     line-height: var(--t-lH4);
     transition: var(--a-controls);
     box-shadow: 0 0 0 1px var(--theme-input-border);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 input.console-input-text:hover,
@@ -1090,9 +1093,6 @@ select.console-select.console-input-small {
 select.console-select,
 select.console-select.console-input-medium,
 select.console-select.console-input-small {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128' fill='%2395969f'%3E%3Crect x='33.0944' y='81.1482' width='50' height='7' transform='rotate(45 33.0944 81.1482)' /%3E%3Crect x='93.9247' y='81.1674' width='7' height='50' transform='rotate(45 93.9247 81.1674)' /%3E%3Crect x='93.9056' y='46.8518' width='50' height='7' transform='rotate(-135 93.9056 46.8518)' /%3E%3Crect x='33.0753' y='46.8326' width='7' height='50' transform='rotate(-135 33.0753 46.8326)' /%3E%3C/svg%3E"), linear-gradient(to bottom, transparent 0%, transparent 100%);
     background-repeat: no-repeat, repeat;
     background-position: right var(--space2) top 50%, 0 0;
