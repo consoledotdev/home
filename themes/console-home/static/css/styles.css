@@ -363,14 +363,14 @@ body {
 }
 
 body:not(.mobile) .main-nav .menu-toggle:hover [class^="icon-menu-shape-"],
-.main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
+body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
     background: var(--c-blue-04);
 }
 
-body:not(.mobile) .main-nav .menu-toggle:active [class^="icon-menu-shape-"],
-body:not(.mobile) .main-nav .menu-toggle:active [class*=" icon-menu-shape-"],
-body:not(.mobile) .main-nav .menu-toggle:focus [class^="icon-menu-shape-"],
-body:not(.mobile) .main-nav .menu-toggle:focus [class*=" icon-menu-shape-"] {
+.main-nav .menu-toggle:active [class^="icon-menu-shape-"],
+.main-nav .menu-toggle:active [class*=" icon-menu-shape-"],
+.main-nav .menu-toggle:focus [class^="icon-menu-shape-"],
+.main-nav .menu-toggle:focus [class*=" icon-menu-shape-"] {
     background: var(--c-blue-06-main);
 }
 
@@ -801,6 +801,7 @@ body:not(.mobile) .main-nav .menu-toggle:focus [class*=" icon-menu-shape-"] {
     margin: 0;
     line-height: var(--t-lH1);
     color: var(--theme-text-1);
+    transition: var(--a-micro);
 }
 
 .title.title-1 {
@@ -851,6 +852,7 @@ p {
     line-height: var(--t-lH4);
     margin: 0;
     color: var(--theme-text-2);
+    transition: var(--a-micro);
 }
 
 p em {
@@ -1044,8 +1046,8 @@ select.console-select {
     appearance: none;
 }
 
-input.console-input-text:hover,
-select.console-select:hover {
+body:not(.mobile) input.console-input-text:hover,
+body:not(.mobile) select.console-select:hover {
     box-shadow: 0 0 0 2px var(--c-blue-04);
 }
 
@@ -1212,8 +1214,8 @@ body:not(.mobile) .console-control:hover {
     background: var(--theme-content-bg-4);
 }
 
-body:not(.mobile) .console-control:active,
-body:not(.mobile) .console-control:focus {
+.console-control:active,
+.console-control:focus {
     color: var(--theme-control-active-text);
     background: var(--theme-control-border);
     transition: var(--a-controls-active);
@@ -1236,8 +1238,8 @@ body:not(.mobile) .console-control:hover:before {
     border: 1px solid var(--theme-control-border);
 }
 
-body:not(.mobile) .console-control:active:before,
-body:not(.mobile) .console-control:focus:before {
+.console-control:active:before,
+.console-control:focus:before {
     transition: var(--a-controls-active);
 }
 
@@ -1268,8 +1270,8 @@ body:not(.mobile) .console-control:focus:before {
     transition: var(--a-controls);
 }
 
-body:not(.mobile) .console-control:active svg,
-body:not(.mobile) .console-control:focus svg {
+.console-control:active svg,
+.console-control:focus svg {
     fill: var(--theme-control-active-text);
     transition: var(--a-controls-active);
 }
