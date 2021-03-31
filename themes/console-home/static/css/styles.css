@@ -1536,19 +1536,19 @@ a .icon {
     margin-right: var(--space3);
 }
 
-.console-filters .console-checkbutton.color-green input + [for="weekly-pick"] .icon-console-mini-filled,
-.console-filters .console-checkbutton.color-green input + [for="weekly-pick"]:hover .icon-console-mini-filled,
-.console-filters .console-checkbutton.color-green input:checked + [for="weekly-pick"] .icon-console-mini-filled,
-.console-filters .console-checkbutton.color-green input:checked + [for="weekly-pick"]:hover .icon-console-mini-filled {
+.console-filters .console-checkbutton.color-green input + [for="weekly-pick-filter"] .icon-console-mini-filled,
+.console-filters .console-checkbutton.color-green input + [for="weekly-pick-filter"]:hover .icon-console-mini-filled,
+.console-filters .console-checkbutton.color-green input:checked + [for="weekly-pick-filter"] .icon-console-mini-filled,
+.console-filters .console-checkbutton.color-green input:checked + [for="weekly-pick-filter"]:hover .icon-console-mini-filled {
     fill: var(--c-green-06);
     width: 1.5em;
     height: 1.5em;
 }
 
-.console-filters .console-checkbutton.color-green input + [for="weekly-pick"] .icon-console-mini-filled .alt-prompt,
-.console-filters .console-checkbutton.color-green input + [for="weekly-pick"]:hover .icon-console-mini-filled .alt-prompt,
-.console-filters .console-checkbutton.color-green input:checked + [for="weekly-pick"] .icon-console-mini-filled .alt-prompt,
-.console-filters .console-checkbutton.color-green input:checked + [for="weekly-pick"]:hover .icon-console-mini-filled .alt-prompt {
+.console-filters .console-checkbutton.color-green input + [for="weekly-pick-filter"] .icon-console-mini-filled .alt-prompt,
+.console-filters .console-checkbutton.color-green input + [for="weekly-pick-filter"]:hover .icon-console-mini-filled .alt-prompt,
+.console-filters .console-checkbutton.color-green input:checked + [for="weekly-pick-filter"] .icon-console-mini-filled .alt-prompt,
+.console-filters .console-checkbutton.color-green input:checked + [for="weekly-pick-filter"]:hover .icon-console-mini-filled .alt-prompt {
     fill: var(--c-white-00-absolute);
 }
 
@@ -1575,6 +1575,10 @@ a .icon {
     box-shadow: var(--theme-shadow-1);
     border-radius: var(--mid-corners);
     padding: var(--space3) var(--space4);
+}
+
+.beta-card.is-hidden {
+    display: none;
 }
 
 .beta-card.beta-card-pick {

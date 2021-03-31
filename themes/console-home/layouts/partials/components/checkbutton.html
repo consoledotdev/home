@@ -1,7 +1,6 @@
-
 <div class="console-checkbutton{{ with .context.color }} color-{{ . }}{{ end }}">
-	<input type="checkbox" name="{{ .context.name }}" id="{{ .context.name }}"{{ with .context.checked }} checked{{ end }} onclick="blur();">
-	<label for="{{ .context.name }}" onclick="blur();">
+	<input type="checkbox" name="{{ .context.name }}-filter" id="{{ .context.name }}-filter" value="{{ .context.name }}"{{ with .context.checked }} checked{{ end }} onclick="blur(); {{ safeJS .action }}()">
+	<label for="{{ .context.name }}-filter" onclick="blur();">
 		{{- partial "icons/plus.html" -}}
 		{{- partial "icons/checkmark.html" -}}
 		{{- with .context.icon }} {{ partial (print "icons/" . ".html") }} {{ end -}}

@@ -1,10 +1,10 @@
 <div id="betas-filters" class="betas-filters">
-	<form action="" class="console-filters">
+	<form action="" class="console-filters" data-beta-filters>
 		<label for="betas-sort" class="console-label console-label-small">Sort by</label>
-		<select class="console-select console-input-small" name="" id="betas-sort" onchange="blur();">
+		<select class="console-select console-input-small" name="" id="betas-sort" data-sort-betas-select onchange="blur(); sortBetas()">
 			<option value="date" selected>Date</option>
-			<option value="date">Name</option>
-			<option value="date">Weekly Pick</option>
+			<option value="name">Name</option>
+			<option value="weekly-pick">Weekly Pick</option>
 		</select>
 		<label class="console-label console-label-small">Show</label>
 		{{ range .items }}
@@ -12,7 +12,7 @@
 			{{ if eq .name "weekly-pick" }}
 				{{ $details = merge . (dict "color" "green") }}
 			{{ end }}
-			{{ partial "components/checkbutton.html" (dict "context" $details ) }}
+			{{ partial "components/checkbutton.html" (dict "context" $details "action" "toggledCheck" ) }}
 		{{ end }}
 	</form>
 	<p class="small">Showing 27 results for: API, Cloud, Database, Developer Tool.</p>

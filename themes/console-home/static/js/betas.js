@@ -69,3 +69,106 @@ let computeFixedFiltersPos = (() => {
     window.addEventListener("scroll", compute);
     window.addEventListener("resize", compute);
 })();
+
+let toggledCheck = () => {
+    // gets all values for enabled checkboxes
+    let filters = document.querySelectorAll('[data-beta-filters] [type="checkbox"]');
+    activeFilterValues = [];
+    for (filter of filters) {
+        if (filter.checked) {
+            activeFilterValues.push(filter.value);
+        }
+    }
+    // sets card visbility
+    toggleCardVisibility(activeFilterValues);
+};
+
+let toggleCardVisibility = (activeFilterValues) => {
+    // for each beta card checks if its categories data attribute
+    // has any match for the active checkboxes values
+    // If there's no match it hides the card, otherwise it un-hides it
+    let cards = document.querySelectorAll("[data-card]");
+    for (let card of cards) {
+        let categories = card.dataset.categories;
+        let match = false;
+        for (value of activeFilterValues) {
+            match = categories.indexOf(value) >= 0 && true;
+            if (match) break;
+        }
+        if (match) {
+            card.classList.remove("is-hidden");
+        } else {
+            card.classList.add("is-hidden");
+        }
+    }
+};
+
+let sortBetas = () => {
+    // sorting method
+    let sortCards = (cards) => {
+        if (sortBy == "name") {
+            cards.sort(function (a, b) {
+                if (a.dataset.name < b.dataset.name) {
+                    return -1;
+                }
+                if (a.dataset.name > b.dataset.name) {
+                    return 1;
+                }
+                return 0;
+            });
+        }
+        if (sortBy == "date") {
+            cards.sort(function (a, b) {
+                if (a.dataset.date < b.dataset.date) {
+                    return 1;
+                }
+                if (a.dataset.date > b.dataset.date) {
+                    return -1;
+                }
+                return 0;
+            });
+        }
+        if (sortBy == "weekly-pick") {
+            cards.sort(function (a, b) {
+                if (a.dataset.pick < b.dataset.pick) {
+                    return 1;
+                }
+                if (a.dataset.pick > b.dataset.pick) {
+                    return -1;
+                }
+                return 0;
+            });
+        }
+    };
+
+    // dom manipulation method
+    let replaceCards = (cards, containerSelector) => {
+        let inlineCTA = document.querySelector("[data-inline-cta]");
+        let container = document.querySelector(containerSelector);
+        container.innerHTML = "";
+        cards.forEach((card) => {
+            container.appendChild(card);
+        });
+        // puts back inline CTA after the eight card
+        if (container.children[7]) container.children[7].insertAdjacentElement("afterEnd", inlineCTA);
+    };
+
+    // retrieves the value to sort by
+    // then finds the cards for each section (latest and general availability)
+    // sorts the cards and replace previous entries with sorted ones
+    let sortBy = document.querySelector("[data-sort-betas-select]").value;
+
+    let latestCards = document.querySelectorAll("[data-betas-latest] [data-card]");
+    latestCards = Array.prototype.slice.call(latestCards);
+    sortCards(latestCards);
+    replaceCards(latestCards, "[data-betas-latest]");
+
+    let gaCards = document.querySelectorAll("[data-betas-ga] [data-card]");
+    gaCards = Array.prototype.slice.call(gaCards);
+    sortCards(gaCards);
+    replaceCards(gaCards, "[data-betas-ga]");
+};
+
+// first sorting when the page is loaded
+sortBetas("name");
+sortBetas("date");

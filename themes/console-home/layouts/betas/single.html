@@ -17,9 +17,9 @@
 			</section>
 			<section class="page-section">
 				<h3 class="title title-2">Latest Releases</h3>
-				<div class="beta-items">
+				<div class="beta-items" data-betas-latest>
 					{{ range $.Site.Data.latestbetas.items }}
-						<div class="beta-card{{ with index . "Weekly Pick" }} beta-card-pick{{ end }}">
+						<div class="beta-card{{ with index . "Weekly Pick" }} beta-card-pick{{ end }}" data-card data-date="{{ .Announced }}" data-name="{{ index . "Tool/Product/Project" }}" data-pick="{{ index . "Weekly Pick" }}" data-categories="{{ index . "Filter Categories" }}">
 							{{ with index . "Weekly Pick" -}}
 								{{ partial "icons/console-mini-filled.html" }}
 							{{- end }}
@@ -43,9 +43,11 @@
 							<a href="{{ .URL }}" class="link" target="_blank" rel="noopener">Join Waitlist {{ partial "icons/external-link.html" }}</a>
 						</div>
 					{{ end }}
-					{{ partial "subscribe.html" (dict "context" . "layout" "wide" "flow" "inline" "size" "small" "title" $CTATitle "description" $CTADescription ) }}
+					<div data-inline-cta>
+						{{ partial "subscribe.html" (dict "context" . "layout" "wide" "flow" "inline" "size" "small" "title" $CTATitle "description" $CTADescription ) }}
+					</div>
 					{{ range $.Site.Data.latestbetas.items }}
-						<div class="beta-card{{ with index . "Weekly Pick" }} beta-card-pick{{ end }}">
+						<div class="beta-card{{ with index . "Weekly Pick" }} beta-card-pick{{ end }}" data-card data-date="{{ .Announced }}" data-name="{{ index . "Tool/Product/Project" }}" data-pick="{{ index . "Weekly Pick" }}" data-categories="{{ index . "Filter Categories" }}">
 							{{ with index . "Weekly Pick" -}}
 								{{ partial "icons/console-mini-filled.html" }}
 							{{- end }}
@@ -73,9 +75,9 @@
 			</section>
 			<section class="page-section">
 				<h3 class="title title-2">Recent Betas: Now in General Availability</h3>
-				<div class="beta-items">
+				<div class="beta-items" data-betas-ga>
 					{{ range $.Site.Data.latestbetas.items }}
-						<div class="beta-card{{ with index . "Weekly Pick" }} beta-card-pick{{ end }}">
+						<div class="beta-card{{ with index . "Weekly Pick" }} beta-card-pick{{ end }}" data-card data-date="{{ .Announced }}" data-name="{{ index . "Tool/Product/Project" }}" data-pick="{{ index . "Weekly Pick" }}" data-categories="{{ index . "Filter Categories" }}">
 							{{ with index . "Weekly Pick" -}}
 								{{ partial "icons/console-mini-filled.html" }}
 							{{- end }}
