@@ -17,7 +17,7 @@
     --theme-content-bg-2: var(--c-black-02-main);
     --theme-content-bg-3: var(--c-grey-09-black-03);
 
-    --theme-content-pick-bg-1: var(--c-green-11);
+    --theme-content-pick-bg-1: var(--c-green-10);
 
     --theme-translucent: rgba(10, 10, 11, 0.6);
 
@@ -28,6 +28,8 @@
     --theme-border-0: 1px solid rgba(255, 255, 255, 0.03);
     --theme-border-1: 1px solid rgba(255, 255, 255, 0.03);
     --theme-border-2: 1px solid #151515;
+
+    --theme-separator-1: var(--c-grey-06-blacks-neutral);
 
     --theme-input-bg: var(--c-white-00-absolute);
     --theme-input-border: transparent;
@@ -70,16 +72,39 @@
     --theme-lines-color: var(--c-white-00-absolute);
 
     --theme-planes-background: var(--c-grey-09-black-03);
+    --theme-planes-background-2: var(--c-black-02-main);
     --theme-planes-off-stroke: var(--c-white-00-absolute);
+}
+
+.theme.page-article,
+.theme.page-feature {
+    background: var(--theme-content-bg-3);
 }
 
 .theme .hero .lines {
     opacity: 0.08;
 }
 
+.page-article.theme .hero .lines,
+.page-feature.theme .hero .lines {
+    opacity: 0.06;
+}
+
 .theme .hero .planes .light {
     display: none;
 }
+
+.page-article.theme .hero .planes > rect:not([stroke]),
+.page-article.theme .hero .planes g rect:not([stroke]),
+.page-feature.theme .hero .planes > rect:not([stroke]),
+.page-feature.theme .hero .planes g rect:not([stroke]) {
+    fill: var(--theme-planes-background-2);
+}
+
+/* .page-article.theme .hero .planes g rect:not([stroke]),
+.page-feature.theme .hero .planes g rect:not([stroke]) {
+    fill-opacity: 0.8;
+} */
 
 .theme .logo-svg-animated-explode .prompt-inverted {
     display: none;

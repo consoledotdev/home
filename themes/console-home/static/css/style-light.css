@@ -29,6 +29,8 @@
     --theme-border-1: 1px solid rgba(0, 0, 0, 0.04);
     --theme-border-2: 1px solid rgba(0, 0, 0, 0.1);
 
+    --theme-separator-1: var(--c-grey-04-whites-neutral);
+
     --theme-input-bg: var(--c-white-00-absolute);
     --theme-input-border: rgba(0, 0, 0, 0.2);
 
@@ -70,15 +72,12 @@
     --theme-lines-color: var(--c-black-00-absolute);
 
     --theme-planes-background: var(--c-white-00-absolute);
+    --theme-planes-background-2: var(--c-white-01-main);
     --theme-planes-off-stroke: var(--c-black-00-absolute);
 }
 
 .theme .hero .lines {
     opacity: 0.06;
-}
-
-.theme .hero .planes > rect {
-    fill-opacity: 0.35;
 }
 
 .theme .hero .planes > rect[stroke] {
@@ -108,6 +107,10 @@
 
 .theme .popup {
     background-color: var(--theme-content-bg-2);
+}
+
+.theme .subscribe-cta:not(.flow-inline) {
+    background: var(--theme-content-bg-3);
 }
 
 @media (max-width: 768px) {

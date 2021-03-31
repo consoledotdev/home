@@ -1,8 +1,10 @@
 let getTheme = () => {
     let theme = localStorage.getItem("theme");
     if (!theme) {
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) theme = "dark";
-        if (window.matchMedia("(prefers-color-scheme: light)").matches) theme = "light";
+        theme = "dark";
+        // Ignore user OS theme prefs for initial release
+        // if (window.matchMedia("(prefers-color-scheme: dark)").matches) theme = "dark";
+        // if (window.matchMedia("(prefers-color-scheme: light)").matches) theme = "light";
     }
     return theme;
 };

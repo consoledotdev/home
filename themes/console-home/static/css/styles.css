@@ -80,9 +80,9 @@ a {
     display: none;
 }
 
-.hero .planes > rect {
+.hero .planes > rect:not([stroke]) {
     fill: var(--theme-planes-background);
-    fill-opacity: 0.25;
+    fill-opacity: 0.5;
 }
 
 .hero .planes > rect[stroke] {
@@ -90,8 +90,13 @@ a {
     stroke-opacity: 0.13;
 }
 
-.hero .planes g rect {
+.hero .planes g {
+    opacity: 0.7;
+}
+
+.hero .planes g rect:not([stroke]) {
     fill: var(--theme-planes-background);
+    fill-opacity: 0.8;
 }
 
 .hero .planes g rect[stroke] {
@@ -426,10 +431,22 @@ body {
 .main-nav .menu-popup-wrapper ul {
     flex-flow: column nowrap;
     align-items: flex-end;
+    padding-top: 0;
+    margin: 0;
 }
 
 .main-nav .menu-popup-wrapper ul li {
-    margin: var(--space3) var(--space4);
+    padding: var(--space1) var(--space1);
+    width: 100%;
+    text-align: right;
+}
+
+.main-nav .menu-popup-wrapper ul li:not(:last-child) {
+    margin-bottom: var(--space3);
+}
+
+.main-nav .menu-popup-wrapper .theme-switcher {
+    margin: var(--space3) var(--space2) 0;
 }
 
 /* Footer
@@ -862,7 +879,7 @@ p.small {
 .caption {
     margin-top: var(--space4);
     margin-bottom: var(--space4);
-    background-color: var(--theme-content-bg-3);
+    background-color: var(--theme-content-bg-4);
     border: var(--theme-border-0);
     padding: var(--space2) var(--space3);
 }
@@ -949,8 +966,7 @@ p.small {
 
 .subscribe-cta:not(.flow-inline) {
     padding: var(--space4);
-    background: var(--theme-content-bg-3);
-    border: var(--theme-border-1);
+    background: var(--theme-content-bg-2);
 }
 
 @media (max-width: 768px) {
@@ -965,6 +981,7 @@ p.small {
 @media (min-width: 769px) {
     .main-article .subscribe-cta:not(.flow-inline) {
         background: var(--theme-content-bg-2);
+        border: var(--theme-border-1);
     }
 
     .subscribe-cta.layout-wide {
@@ -1171,7 +1188,6 @@ select.console-select::-ms-expand {
     --lineHeightHalf: calc(var(--t-lH3) / 2);
     position: relative;
     display: inline-block;
-    margin: 0 0 2px;
     padding: 0;
     border: 0;
     outline: none;
@@ -1180,14 +1196,13 @@ select.console-select::-ms-expand {
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
-    margin-left: var(--space3);
+    white-space: nowrap;
     background: transparent;
     color: var(--theme-control-text);
     padding: var(--paddingV) var(--paddingH);
     font-size: var(--t-size-3);
     line-height: var(--t-lH3);
     border-radius: calc(var(--paddingV) + var(--lineHeightHalf));
-    vertical-align: top;
     cursor: pointer;
     font-weight: 500;
     transition: var(--a-controls);
@@ -1227,8 +1242,16 @@ select.console-select::-ms-expand {
 }
 
 .console-control span {
+    display: inline-block;
     flex: 0 0 auto;
+}
+
+.console-control.icon-left span {
     margin-left: calc(var(--space2) + var(--space1));
+}
+
+.console-control.icon-right span {
+    margin-right: calc(var(--space2) + var(--space1));
 }
 
 .console-control img,
@@ -1376,6 +1399,11 @@ select.console-select::-ms-expand {
     fill: var(--theme-control-button-active-green-text-hover);
 }
 
+.theme-switcher {
+    margin-left: var(--space4);
+    margin-top: 9px; /* align to logo baseline */
+}
+
 /* Icons
    ========================================================================== */
 
@@ -1407,16 +1435,22 @@ a .icon {
     margin-right: calc(var(--space2_5) / 2);
 }
 
+.separator {
+    display: block;
+    height: 1px;
+    margin: var(--space4) 0 var(--space3);
+    padding: 0;
+    background: var(--theme-separator-1);
+}
+
 /* Popup
    ========================================================================== */
 
 .popup {
-    background-color: var(--theme-content-bg-3);
+    background-color: var(--theme-content-bg-4);
     border-radius: var(--mid-corners);
     padding: var(--space4);
-    display: inline-flex;
-    flex-flow: row wrap;
-    align-items: center;
+    display: block;
     opacity: 0;
     box-shadow: var(--theme-shadow-3);
     transition: var(--a-elements);
@@ -1541,7 +1575,6 @@ a .icon {
 
 .beta-card.beta-card-pick {
     background-color: var(--theme-content-pick-bg-1);
-    border: var(--theme-border-0);
 }
 
 .beta-card .icon-console-mini-filled {
@@ -1844,7 +1877,8 @@ p.beta-card-description {
         min-height: 60vh;
     }
 
-    .main-nav > ul {
+    .main-nav > ul,
+    .main-nav > .theme-switcher {
         display: none;
     }
 
@@ -2031,7 +2065,6 @@ p.beta-card-description {
         background: var(--theme-content-bg-0);
         box-shadow: var(--theme-shadow-2);
         border-radius: 0 var(--mid-corners) var(--mid-corners) 0;
-        border: var(--theme-border-0);
         border-left: 0px;
     }
 
