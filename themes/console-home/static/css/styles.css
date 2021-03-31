@@ -362,15 +362,15 @@ body {
     height: 100%;
 }
 
-.main-nav .menu-toggle:hover [class^="icon-menu-shape-"],
+body:not(.mobile) .main-nav .menu-toggle:hover [class^="icon-menu-shape-"],
 .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
     background: var(--c-blue-04);
 }
 
-.main-nav .menu-toggle:active [class^="icon-menu-shape-"],
-.main-nav .menu-toggle:active [class*=" icon-menu-shape-"],
-.main-nav .menu-toggle:focus [class^="icon-menu-shape-"],
-.main-nav .menu-toggle:focus [class*=" icon-menu-shape-"] {
+body:not(.mobile) .main-nav .menu-toggle:active [class^="icon-menu-shape-"],
+body:not(.mobile) .main-nav .menu-toggle:active [class*=" icon-menu-shape-"],
+body:not(.mobile) .main-nav .menu-toggle:focus [class^="icon-menu-shape-"],
+body:not(.mobile) .main-nav .menu-toggle:focus [class*=" icon-menu-shape-"] {
     background: var(--c-blue-06-main);
 }
 
@@ -1208,12 +1208,12 @@ select.console-select::-ms-expand {
     transition: var(--a-controls);
 }
 
-.console-control:hover {
-    background: var(--theme-content-bg-3);
+body:not(.mobile) .console-control:hover {
+    background: var(--theme-content-bg-4);
 }
 
-.console-control:active,
-.console-control:focus {
+body:not(.mobile) .console-control:active,
+body:not(.mobile) .console-control:focus {
     color: var(--theme-control-active-text);
     background: var(--theme-control-border);
     transition: var(--a-controls-active);
@@ -1232,12 +1232,12 @@ select.console-select::-ms-expand {
     transition: var(--a-controls);
 }
 
-.console-control:hover:before {
+body:not(.mobile) .console-control:hover:before {
     border: 1px solid var(--theme-control-border);
 }
 
-.console-control:active:before,
-.console-control:focus:before {
+body:not(.mobile) .console-control:active:before,
+body:not(.mobile) .console-control:focus:before {
     transition: var(--a-controls-active);
 }
 
@@ -1266,8 +1266,8 @@ select.console-select::-ms-expand {
     transition: var(--a-controls);
 }
 
-.console-control:active svg,
-.console-control:focus svg {
+body:not(.mobile) .console-control:active svg,
+body:not(.mobile) .console-control:focus svg {
     fill: var(--theme-control-active-text);
     transition: var(--a-controls-active);
 }

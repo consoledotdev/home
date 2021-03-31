@@ -36,3 +36,7 @@ let manageHeaderFixing = (() => {
     setHeader();
     document.addEventListener("scroll", setHeader);
 })();
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    document.body.classList.add("mobile");
+}

@@ -16,6 +16,7 @@
     --theme-content-bg-1: var(--c-black-01);
     --theme-content-bg-2: var(--c-black-02-main);
     --theme-content-bg-3: var(--c-grey-09-black-03);
+    --theme-content-bg-4: var(--c-grey-08);
 
     --theme-content-pick-bg-1: var(--c-green-10);
 
@@ -100,11 +101,6 @@
 .page-feature.theme .hero .planes g rect:not([stroke]) {
     fill: var(--theme-planes-background-2);
 }
-
-/* .page-article.theme .hero .planes g rect:not([stroke]),
-.page-feature.theme .hero .planes g rect:not([stroke]) {
-    fill-opacity: 0.8;
-} */
 
 .theme .logo-svg-animated-explode .prompt-inverted {
     display: none;

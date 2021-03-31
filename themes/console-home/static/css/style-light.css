@@ -16,6 +16,7 @@
     --theme-content-bg-1: var(--c-white-02);
     --theme-content-bg-2: var(--c-white-01-main);
     --theme-content-bg-3: var(--c-grey-01-white-03);
+    --theme-content-bg-4: var(--c-grey-01-white-03);
 
     --theme-content-pick-bg-1: var(--c-green-03);
 
@@ -120,5 +121,9 @@
     }
     .theme .header-fixed + .main-article {
         margin-top: calc(var(--space2) + var(--space4) + 48px);
+    }
+
+    .theme .main-article .subscribe-cta:not(.flow-inline) {
+        background: transparent;
     }
 }
