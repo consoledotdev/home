@@ -1248,10 +1248,12 @@ body:not(.mobile) .console-control:focus:before {
 
 .console-control.icon-left span {
     margin-left: calc(var(--space2) + var(--space1));
+    margin-right: var(--space1);
 }
 
 .console-control.icon-right span {
     margin-right: calc(var(--space2) + var(--space1));
+    margin-left: var(--space1);
 }
 
 .console-control img,
