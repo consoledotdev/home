@@ -392,33 +392,34 @@ body {
 .main-nav ul li {
     list-style: none;
     flex: 0 0 auto;
-    margin: var(--space2) var(--space3);
     letter-spacing: 0.08em;
     font-size: var(--t-size0);
+    padding: var(--space1) var(--space1);
 }
 
 .main-nav a:link,
 .main-nav a:visited {
-    color: var(--theme-text-1);
+    color: var(--theme-nav-link-text-idle);
     text-decoration: none;
     font-weight: 500;
     outline: none;
     transition: var(--a-controls);
+    padding: var(--space1) var(--space2_5);
 }
 
 .main-nav a:hover,
 .main-nav a:focus {
-    color: var(--c-blue-04);
+    color: var(--theme-nav-link-text-focus);
     text-decoration: none;
 }
 .main-nav a:active {
-    color: var(--c-blue-06-main);
+    color: var(--theme-nav-link-text-active);
     text-decoration: none;
     transition: var(--a-controls-active);
 }
 
 .main-nav li.is-selected a {
-    color: var(--c-blue-04);
+    color: var(--theme-nav-link-text-selected);
     cursor: default;
 }
 
@@ -489,8 +490,8 @@ body {
 .footer-nav ul li a:link .icon-fill,
 .footer-nav ul li a:visited,
 .footer-nav ul li a:visited .icon-fill {
-    color: var(--theme-text-1);
-    fill: var(--theme-text-1);
+    color: var(--theme-nav-link-text-idle);
+    fill: var(--theme-nav-link-text-idle);
     transition: var(--a-controls);
 }
 
@@ -498,14 +499,14 @@ body {
 .footer-nav ul li a:hover .icon-fill,
 .footer-nav ul li a:focus,
 .footer-nav ul li a:focus .icon-fill {
-    color: var(--c-blue-04);
-    fill: var(--c-blue-04);
+    color: var(--theme-nav-link-text-focus);
+    fill: var(--theme-nav-link-text-focus);
 }
 
 .footer-nav ul li a:active,
 .footer-nav ul li a:active .icon-fill {
-    color: var(--c-blue-06-main);
-    fill: var(--c-blue-06-main);
+    color: var(--theme-nav-link-text-active);
+    fill: var(--theme-nav-link-text-active);
     transition: var(--a-controls-active);
 }
 
