@@ -92,23 +92,27 @@ with open(args.beta_json, 'r') as f:
                or scheduled_for.isocalendar() == last_thursday.isocalendar():
                 programs_latest['items'].append(program)
 
-        category = program['Category'].lower()
-        category = category.replace(' ', '-')
+        try:
+            category = program['Category'].lower()
+            category = category.replace(' ', '-')
 
-        # Aggregate filter categories
-        program['Filter Categories'] = '{0}, {1}, {2}'.format(
-            category,
-            program['Type'].lower(),
-            program['Access'].lower()
-        )
+            # Aggregate filter categories
+            program['Filter Categories'] = '{0}, {1}, {2}'.format(
+                category,
+                program['Type'].lower(),
+                program['Access'].lower()
+            )
 
-        if program['Weekly Pick']:
-            program['Filter Categories'] += ', weekly-pick'
+            if program['Weekly Pick']:
+                program['Filter Categories'] += ', weekly-pick'
 
-        if program['GA?'] == "TRUE":
-            programs_ga['items'].append(program)
-        else:
-            programs_live['items'].append(program)
+            if program['GA?'] == "TRUE":
+                programs_ga['items'].append(program)
+            else:
+                programs_live['items'].append(program)
+        except Exception as e:
+            print(e)
+            print(program)
 
     print('Parsed betas JSON')
 
