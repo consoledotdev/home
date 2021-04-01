@@ -25,14 +25,14 @@
 							{{- end }}
 							<span class="date">{{ .Announced }}</span>
 							<div class="beta-card-content">
-								<div class="left">
-									<div class="beta-card-thumbnail aspect-ratio aspect-ratio-1-1"><img class="image" src="{{ .Image }}" alt="{{ index . "Company/Org" }}" /></div>
+                                <div class="left">
+                                    <div class="beta-card-thumbnail aspect-ratio aspect-ratio-1-1">{{- if index . "favicon" -}}<img class="image" src="/{{ index . "favicon" }}" alt="{{ index . "Company/Org" }} Logo" />{{- end -}}</div>
 								</div>
 								<div class="right">
                                     <p class="beta-card-name">
                                     {{- $org := index . "Company/Org" -}}
                                     {{- $name := index . "Tool/Product/Project" -}}
-                                    {{- $name }}{{- if ne $name $org -}}, from {{ $org }}{{- end -}}
+                                    {{- if in $name $org -}}{{ $name }}{{- else -}}{{ $name }}, from {{ $org }}{{- end -}}
                                     </p>
 									<p class="beta-card-description">{{ index . "What is it?" }}</p>
 									<div class="tags">
@@ -57,12 +57,12 @@
 							{{- end }}
 							<span class="date">{{ index . "Beta ended" }}</span>
 							<div class="beta-card-content">
-								<div class="left">
-									<div class="beta-card-thumbnail aspect-ratio aspect-ratio-1-1"><img class="image" src="{{ .Image }}" alt="{{ index . "Company/Org" }}" /></div>
+                                <div class="left">
+                                    <div class="beta-card-thumbnail aspect-ratio aspect-ratio-1-1">{{- if index . "favicon" -}}<img class="image" src="/{{ index . "favicon" }}" alt="{{ index . "Company/Org" }} Logo" />{{- end -}}</div>
 									<p class="beta-card-name">
                                     {{- $org := index . "Company/Org" -}}
                                     {{- $name := index . "Tool/Product/Project" -}}
-                                    {{- $name }}{{- if ne $name $org -}}, from {{ $org }}{{- end -}}
+                                    {{- if in $name $org -}}{{ $name }}{{- else -}}{{ $name }}, from {{ $org }}{{- end -}}
                                     </p>
 
 								</div>

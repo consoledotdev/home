@@ -7,8 +7,12 @@
 
 import argparse
 import json
+import os
 from datetime import date
+from urllib.parse import urlparse
 
+import requests
+import favicon
 from dateutil.parser import parse
 from dateutil.relativedelta import relativedelta, TH
 
@@ -91,6 +95,42 @@ with open(args.beta_json, 'r') as f:
             if args.ignore_date \
                or scheduled_for.isocalendar() == last_thursday.isocalendar():
                 programs_latest['items'].append(program)
+
+        url = urlparse(program['URL'])
+        faviconPath = 'img/favicons/{0}'.format(url[1])
+
+        if os.path.isfile('static/' + faviconPath + '.png'):
+            program['favicon'] = faviconPath + '.png'
+        elif os.path.isfile('static/' + faviconPath + '.svg'):
+            program['favicon'] = faviconPath + '.svg'
+        elif os.path.isfile('static/' + faviconPath + '.jpg'):
+            program['favicon'] = faviconPath + '.jpg'
+        elif os.path.isfile('static/' + faviconPath + '.ico'):
+            program['favicon'] = faviconPath + '.ico'
+        else:
+            print('Retrieving favicon for: {0}'.format(program['URL']))
+
+            try:
+                icons = favicon.get('{0}://{1}'.format(url[0], url[1]))
+
+                if icons:
+                    icon = icons[0]
+                    response = requests.get(icon.url, stream=True)
+                    program['favicon'] = 'static/{0}.{1}'.format(
+                        faviconPath,
+                        icon.format)
+
+                    with open(program['favicon'], 'wb') as image:
+                        for chunk in response.iter_content(1024):
+                            image.write(chunk)
+
+                else:
+                    program['favicon'] = False
+
+            except Exception as e:
+                program['favicon'] = False
+                print(e)
+                continue
 
         try:
             # Transform format
