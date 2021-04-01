@@ -76,7 +76,7 @@ jobs:
               env:
                   RESULTS: ${{ steps.get_data_beta.outputs.results }}
               run: |
-                  echo "$RESULTS" > data/tools-all-raw.json
+                  echo "$RESULTS" > data/betas-all-raw.json
 
             - name: 'Upload Artifact'
               uses: actions/upload-artifact@v2
