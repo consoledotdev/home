@@ -93,13 +93,17 @@ with open(args.beta_json, 'r') as f:
                 programs_latest['items'].append(program)
 
         try:
+            # Transform format
             category = program['Category'].lower()
             category = category.replace(' ', '-')
+
+            programType = program['Type'].lower()
+            programType = programType.replace(' ', '-')
 
             # Aggregate filter categories
             program['Filter Categories'] = '{0}, {1}, {2}'.format(
                 category,
-                program['Type'].lower(),
+                programType,
                 program['Access'].lower()
             )
 

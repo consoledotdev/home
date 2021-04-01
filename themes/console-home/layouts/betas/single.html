@@ -27,7 +27,6 @@
 							<div class="beta-card-content">
 								<div class="left">
 									<div class="beta-card-thumbnail aspect-ratio aspect-ratio-1-1"><img class="image" src="{{ .Image }}" alt="{{ index . "Company/Org" }}" /></div>
-									<p class="beta-card-name">{{ index . "Tool/Product/Project" }}</p>
 								</div>
 								<div class="right">
                                     <p class="beta-card-name">
@@ -52,15 +51,20 @@
                 <h3 class="title title-2">Recent Betas: Now GA</h3>
 				<div class="beta-items" data-betas-ga>
 					{{ range $.Site.Data.betasga.items }}
-						<div class="beta-card{{ with index . "Weekly Pick" }} beta-card-pick{{ end }}" data-card data-date="{{ .Announced }}" data-name="{{ index . "Tool/Product/Project" }}" data-pick="{{ index . "Weekly Pick" }}" data-categories="{{ index . "Filter Categories" }}">
+						<div class="beta-card{{ with index . "Weekly Pick" }} beta-card-pick{{ end }}" data-card data-date="{{ index . "Beta ended" }}" data-name="{{ index . "Tool/Product/Project" }}" data-pick="{{ index . "Weekly Pick" }}" data-categories="{{ index . "Filter Categories" }}">
 							{{ with index . "Weekly Pick" -}}
 								{{ partial "icons/console-mini-filled.html" }}
 							{{- end }}
-							<span class="date">{{ .Announced }}</span>
+							<span class="date">{{ index . "Beta ended" }}</span>
 							<div class="beta-card-content">
 								<div class="left">
 									<div class="beta-card-thumbnail aspect-ratio aspect-ratio-1-1"><img class="image" src="{{ .Image }}" alt="{{ index . "Company/Org" }}" /></div>
-									<p class="beta-card-name">{{ index . "Tool/Product/Project" }}</p>
+									<p class="beta-card-name">
+                                    {{- $org := index . "Company/Org" -}}
+                                    {{- $name := index . "Tool/Product/Project" -}}
+                                    {{- $name }}{{- if ne $name $org -}}, from {{ $org }}{{- end -}}
+                                    </p>
+
 								</div>
 								<div class="right">
 									<p class="beta-card-name">{{ index . "Tool/Product/Project" }}</p>
@@ -68,8 +72,7 @@
 									<div class="tags">
 										{{ partial "icons/tag.html" }}
 										<span class="tag">{{ .Category }}</span>,
-										<span class="tag">{{ .Type }}</span>,
-										<span class="tag">{{ .Access }}</span>
+										<span class="tag">{{ .Type }}</span>
 									</div>
 								</div>
 							</div>
