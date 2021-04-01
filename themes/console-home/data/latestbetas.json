@@ -32,7 +32,7 @@
             "Image": "https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_ec8a425804cd6f37cf0abe690e3018bd/microsoft-azure-cdn.jpg",
             "Filter Categories": "api, weekly-pick",
             "Weekly Pick": true,
-            "Category": "Api",
+            "Category": "API",
             "Type": "SaaS",
             "Access": "Closed"
         },
@@ -122,7 +122,7 @@
             "Image": "https://docs.nzsystems.com/wp-content/uploads/2018/06/AzureLogo.jpg",
             "Filter Categories": "api, open-source, weekly-pick",
             "Weekly Pick": true,
-            "Category": "Api, Open Source",
+            "Category": "API, Open Source",
             "Type": "SaaS",
             "Access": "Closed"
         }
