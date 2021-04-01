@@ -2,7 +2,7 @@
     "items": [
         {
             "name": "api",
-            "label": "Api",
+            "label": "API",
             "showsIcon": false,
             "checked": true
         },
@@ -38,7 +38,7 @@
         },
         {
             "name": "weekly-pick",
-            "label": "Weekly Pick",
+            "label": "Console Newsletter Pick",
             "showsIcon": false,
             "checked": true,
             "icon": "console-mini-filled"
