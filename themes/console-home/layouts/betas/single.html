@@ -3,7 +3,8 @@
 	{{ $CTADescription := "Our free weekly newsletter features the latest betas and early access programs." }}
 	<section class="page-section">
 		<h2 class="title title-1">{{ .Title }}</h2>
-		<p class="small">Last Updated February 2021</p>
+		<p class="small">Console tracks all the beta releases and early access
+        programs for developers. <a href="mailto:hello@console.dev" class="link">Submit new betas to us</a>.</p>
 	</section>
 	<div id="betas-split" class="betas-split">
 		<aside id="aside-filters-wrapper" class="betas-aside">
@@ -12,8 +13,8 @@
 			<section class="page-section">
 				{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription ) }}
 			</section>
-			<section id="inline-filters-wrapper" class="page-section">
-				{{ partial "components/betas/filters.html" (dict "items" $.Site.Data.filters.items ) }}
+            <section id="inline-filters-wrapper" class="page-section">
+                {{ partial "components/betas/filters.html" (dict "items" $.Site.Data.filters.items "dot" . ) }}
 			</section>
 			<section class="page-section">
 				<h3 class="title title-2">Latest Releases</h3>
