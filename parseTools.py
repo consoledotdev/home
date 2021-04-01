@@ -42,6 +42,9 @@ with open(args.tools_json, 'r') as f:
     tools = json.load(f)
 
     for tool in tools['results'][0]['result']['formatted']:
+        if 'Company/Org' not in tool or tool['Company/Org'] == '':
+            continue
+
         if tool['Scheduled for'] == "":
             continue
 
@@ -63,28 +66,64 @@ print('Wrote tools - latest JSON')
 # Same for the betas
 print('Parsing betas JSON...')
 
-programs = {}
-programs['items'] = []
+programs_latest = {}
+programs_latest['items'] = []
+programs_live = {}
+programs_live['items'] = []
+programs_ga = {}
+programs_ga['items'] = []
 
 with open(args.beta_json, 'r') as f:
     betas = json.load(f)
 
     for program in betas['results'][0]['result']['formatted']:
-        if program['Scheduled for'] == '':
+        if 'Company/Org' not in program or program['Company/Org'] == '':
             continue
 
-        scheduled_for = parse(program['Scheduled for'])
+        # Separate programs scheduled for the latest newsletter
+        if program['Scheduled for'] == '':
+            program['Weekly Pick'] = False
+        else:
+            scheduled_for = parse(program['Scheduled for'])
+            program['Weekly Pick'] = True
 
-        # Only pull out things scheduled for the last newsletter
-        if args.ignore_date \
-                or scheduled_for.isocalendar() == last_thursday.isocalendar():
-            programs['items'].append(program)
+            # Only pull out things scheduled for the last newsletter
+            if args.ignore_date \
+               or scheduled_for.isocalendar() == last_thursday.isocalendar():
+                programs_latest['items'].append(program)
+
+        category = program['Category'].lower()
+        category = category.replace(' ', '-')
+
+        # Aggregate filter categories
+        program['Filter Categories'] = '{0}, {1}, {2}'.format(
+            category,
+            program['Type'].lower(),
+            program['Access'].lower()
+        )
+
+        if program['Weekly Pick']:
+            program['Filter Categories'] += ', weekly-pick'
+
+        if program['GA?'] == "TRUE":
+            programs_ga['items'].append(program)
+        else:
+            programs_live['items'].append(program)
 
     print('Parsed betas JSON')
 
 print('Write betas - latest JSON')
 with open('data/betaslatest.json', 'w') as outfile:
-    json.dump(programs, outfile)
-
+    json.dump(programs_latest, outfile)
 print('Wrote betas - latest JSON')
+
+print('Write betas - live JSON')
+with open('data/betaslive.json', 'w') as outfile:
+    json.dump(programs_live, outfile)
+print('Wrote betas - live JSON')
+
+print('Write betas - GA JSON')
+with open('data/betasga.json', 'w') as outfile:
+    json.dump(programs_ga, outfile)
+print('Wrote betas - GA JSON')
 print('Done')

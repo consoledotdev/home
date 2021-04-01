@@ -18,7 +18,7 @@
 			<section class="page-section">
 				<h3 class="title title-2">Latest Releases</h3>
 				<div class="beta-items" data-betas-latest>
-					{{ range $.Site.Data.betaslatest.items }}
+					{{ range $.Site.Data.betaslive.items }}
 						<div class="beta-card{{ with index . "Weekly Pick" }} beta-card-pick{{ end }}" data-card data-date="{{ .Announced }}" data-name="{{ index . "Tool/Product/Project" }}" data-pick="{{ index . "Weekly Pick" }}" data-categories="{{ index . "Filter Categories" }}">
 							{{ with index . "Weekly Pick" -}}
 								{{ partial "icons/console-mini-filled.html" }}
@@ -30,17 +30,20 @@
 									<p class="beta-card-name">{{ index . "Tool/Product/Project" }}</p>
 								</div>
 								<div class="right">
-									<p class="beta-card-name">{{ index . "Tool/Product/Project" }}</p>
+                                    <p class="beta-card-name">
+                                    {{- $org := index . "Company/Org" -}}
+                                    {{- $name := index . "Tool/Product/Project" -}}
+                                    {{- $name }}{{- if ne $name $org -}}, from {{ $org }}{{- end -}}
+                                    </p>
 									<p class="beta-card-description">{{ index . "What is it?" }}</p>
 									<div class="tags">
 										{{ partial "icons/tag.html" }}
 										<span class="tag">{{ .Category }}</span>,
-										<span class="tag">{{ .Type }}</span>,
-										<span class="tag">{{ .Access }}</span>
+										<span class="tag">{{ .Type }}</span>
 									</div>
 								</div>
 							</div>
-							<a href="{{ .URL }}" class="link" target="_blank" rel="noopener">Join Waitlist {{ partial "icons/external-link.html" }}</a>
+                            <a href="{{ .URL }}" class="link" target="_blank" rel="noopener">{{- if eq .Access "Open" -}}Details{{- else -}}Apply{{- end -}} {{ partial "icons/external-link.html" }}</a>
 						</div>
 					{{ end }}
 				</div>
@@ -48,7 +51,7 @@
 			<section class="page-section">
                 <h3 class="title title-2">Recent Betas: Now GA</h3>
 				<div class="beta-items" data-betas-ga>
-					{{ range $.Site.Data.betaslatest.items }}
+					{{ range $.Site.Data.betasga.items }}
 						<div class="beta-card{{ with index . "Weekly Pick" }} beta-card-pick{{ end }}" data-card data-date="{{ .Announced }}" data-name="{{ index . "Tool/Product/Project" }}" data-pick="{{ index . "Weekly Pick" }}" data-categories="{{ index . "Filter Categories" }}">
 							{{ with index . "Weekly Pick" -}}
 								{{ partial "icons/console-mini-filled.html" }}
@@ -70,7 +73,7 @@
 									</div>
 								</div>
 							</div>
-							<a href="{{ .URL }}" class="link" target="_blank" rel="noopener">Join Waitlist {{ partial "icons/external-link.html" }}</a>
+							<a href="{{ index . "GA URL" }}" class="link" target="_blank" rel="noopener">Details {{ partial "icons/external-link.html" }}</a>
 						</div>
 					{{ end }}
 				</div>

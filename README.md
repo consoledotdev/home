@@ -63,7 +63,7 @@ pre-generated examples are already in `/themes/console-home/data/`.
 To generate new examples into `/data/`:
 
 ```zsh
-python parseTools.py --tools-json tests/example-tools.json --beta-json tests/example-betas.json --ignore-date YES
+python parseTools.py --tools-json themes/console-home/data/toolsallraw.json --beta-json themes/console-home/data/betasallraw.json --ignore-date YES
 ```
 
 ## Cloudflare Workers setup

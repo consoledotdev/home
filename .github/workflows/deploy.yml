@@ -44,13 +44,13 @@ jobs:
                   RESULTS: ${{ steps.get_data_tools.outputs.results }}
               run: |
                 mkdir data
-                echo "$RESULTS" > data/tools-all-raw.json
+                echo "$RESULTS" > data/toolsallraw.json
 
             - name: 'Upload Artifact'
               uses: actions/upload-artifact@v2
               with:
                   name: tools-all-raw
-                  path: data/tools-all-raw.json
+                  path: data/toolsallraw.json
                   retention-days: 1
 
             - id: 'get_data_beta'
@@ -63,7 +63,7 @@ jobs:
                           {
                               "command": "getData",
                               "args": {
-                                  "range": "'All Programs'!A:M",
+                                  "range": "'All Programs'!A:P",
                                   "hasHeaderRow": true
                               }
                           }
@@ -76,13 +76,13 @@ jobs:
               env:
                   RESULTS: ${{ steps.get_data_beta.outputs.results }}
               run: |
-                  echo "$RESULTS" > data/betas-all-raw.json
+                  echo "$RESULTS" > data/betasallraw.json
 
             - name: 'Upload Artifact'
               uses: actions/upload-artifact@v2
               with:
                   name: betas-all-raw
-                  path: data/betas-all-raw.json
+                  path: data/betasallraw.json
                   retention-days: 1
 
             - name: Setup Python
@@ -98,8 +98,8 @@ jobs:
             - name: Build static HTML
               run: |
                   python3 parseTools.py \
-                  --tools-json data/tools-all-raw.json \
-                  --beta-json data/tools-all-raw.json
+                  --tools-json data/toolsallraw.json \
+                  --beta-json data/toolsallraw.json
 
             - name: "hugo build"
               uses: jakejarvis/hugo-build-action@v0.81.0
