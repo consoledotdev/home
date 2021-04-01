@@ -33,8 +33,8 @@
     -->
     {{- $lastmod := false -}}
     {{- if eq $.Page.RelPermalink "/latest/" -}}
-        {{- if $.Site.Data.latesttools.items -}}
-            {{- range first 1 $.Site.Data.latesttools.items -}}
+        {{- if $.Site.Data.toolslatest.items -}}
+            {{- range first 1 $.Site.Data.toolslatest.items -}}
                 {{- $lastmod = index . "Scheduled for" -}}
                 {{- $lastmod = dateFormat $iso8601 $lastmod -}}
             {{- end -}}

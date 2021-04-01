@@ -18,7 +18,7 @@
 			<section class="page-section">
 				<h3 class="title title-2">Latest Releases</h3>
 				<div class="beta-items" data-betas-latest>
-					{{ range $.Site.Data.latestbetas.items }}
+					{{ range $.Site.Data.betaslatest.items }}
 						<div class="beta-card{{ with index . "Weekly Pick" }} beta-card-pick{{ end }}" data-card data-date="{{ .Announced }}" data-name="{{ index . "Tool/Product/Project" }}" data-pick="{{ index . "Weekly Pick" }}" data-categories="{{ index . "Filter Categories" }}">
 							{{ with index . "Weekly Pick" -}}
 								{{ partial "icons/console-mini-filled.html" }}
@@ -48,7 +48,7 @@
 			<section class="page-section">
                 <h3 class="title title-2">Recent Betas: Now GA</h3>
 				<div class="beta-items" data-betas-ga>
-					{{ range $.Site.Data.latestbetas.items }}
+					{{ range $.Site.Data.betaslatest.items }}
 						<div class="beta-card{{ with index . "Weekly Pick" }} beta-card-pick{{ end }}" data-card data-date="{{ .Announced }}" data-name="{{ index . "Tool/Product/Project" }}" data-pick="{{ index . "Weekly Pick" }}" data-categories="{{ index . "Filter Categories" }}">
 							{{ with index . "Weekly Pick" -}}
 								{{ partial "icons/console-mini-filled.html" }}

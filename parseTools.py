@@ -54,11 +54,11 @@ with open(args.tools_json, 'r') as f:
 
     print('Parsed tools JSON')
 
-print('Write tools JSON')
-with open('data/latesttools.json', 'w') as outfile:
+print('Write tools - latest JSON')
+with open('data/toolslatest.json', 'w') as outfile:
     json.dump(interesting, outfile)
 
-print('Wrote tools JSON')
+print('Wrote tools - latest JSON')
 
 # Same for the betas
 print('Parsing betas JSON...')
@@ -82,9 +82,9 @@ with open(args.beta_json, 'r') as f:
 
     print('Parsed betas JSON')
 
-print('Write betas JSON')
-with open('data/latestbetas.json', 'w') as outfile:
+print('Write betas - latest JSON')
+with open('data/betaslatest.json', 'w') as outfile:
     json.dump(programs, outfile)
 
-print('Wrote betas JSON')
+print('Wrote betas - latest JSON')
 print('Done')
