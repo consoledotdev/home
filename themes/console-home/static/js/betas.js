@@ -128,17 +128,6 @@ let sortBetas = () => {
                 return 0;
             });
         }
-        if (sortBy == "weekly-pick") {
-            cards.sort(function (a, b) {
-                if (a.dataset.pick < b.dataset.pick) {
-                    return 1;
-                }
-                if (a.dataset.pick > b.dataset.pick) {
-                    return -1;
-                }
-                return 0;
-            });
-        }
     };
 
     // dom manipulation method
