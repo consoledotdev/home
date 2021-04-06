@@ -101,6 +101,34 @@ jobs:
                   --tools-json data/toolsallraw.json \
                   --beta-json data/toolsallraw.json
 
+            - name: 'Upload Artifact'
+              uses: actions/upload-artifact@v2
+              with:
+                  name: betas-ga
+                  path: data/betasga.json
+                  retention-days: 1
+
+            - name: 'Upload Artifact'
+              uses: actions/upload-artifact@v2
+              with:
+                  name: betas-latest
+                  path: data/betaslatest.json
+                  retention-days: 1
+            
+            - name: 'Upload Artifact'
+              uses: actions/upload-artifact@v2
+              with:
+                  name: betas-live
+                  path: data/betaslive.json
+                  retention-days: 1
+
+            - name: 'Upload Artifact'
+              uses: actions/upload-artifact@v2
+              with:
+                  name: tools-latest
+                  path: data/toolslatest.json
+                  retention-days: 1
+
             - name: "hugo build"
               uses: jakejarvis/hugo-build-action@v0.81.0
 
