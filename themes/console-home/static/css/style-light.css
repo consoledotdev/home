@@ -8,9 +8,12 @@
     --theme-text-1: var(--c-black-02-main);
     --theme-text-2: var(--c-grey-09-black-03);
     --theme-text-3: var(--c-grey-05);
-    --theme-cta-text: var(--c-white-00-absolute);
     --theme-input-text: var(--c-black-02-main);
     --theme-pre-code-text: var(--c-blue-08);
+    --theme-cta-text: var(--c-white-00-absolute);
+    --theme-cta-secondary-text-idle: var(--c-black-02-main);
+    --theme-cta-secondary-text-hover: var(--c-blue-06-main);
+    --theme-cta-secondary-text-active: var(--c-blue-08);
 
     --theme-content-bg-0: var(--c-white-00-absolute);
     --theme-content-bg-1: var(--c-white-02);
@@ -36,9 +39,9 @@
     --theme-input-border: rgba(0, 0, 0, 0.2);
 
     --theme-nav-link-text-idle: var(--c-black-02-main);
-    --theme-nav-link-text-focus: var(--c-blue-08);
-    --theme-nav-link-text-active: var(--c-blue-06-main);
-    --theme-nav-link-text-selected: var(--c-blue-08);
+    --theme-nav-link-text-focus: var(--c-blue-06-main);
+    --theme-nav-link-text-active: var(--c-blue-08);
+    --theme-nav-link-text-selected: var(--c-blue-06-main);
 
     --theme-control-bg: var(--c-grey-04-whites-neutral);
     --theme-control-border: var(--c-grey-09-black-03);

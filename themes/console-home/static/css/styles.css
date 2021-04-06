@@ -1122,27 +1122,90 @@ select.console-select::-ms-expand {
 /* Controls
    ========================================================================== */
 
-.console-button {
+.console-button,
+[class^="console-button"],
+[class*=" console-button"] {
     margin: 0;
     padding: 0;
     border: 0;
+    background: none;
     outline: none;
     flex: 0 0 auto;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
-    margin-left: var(--space3);
-    background: var(--c-blue-06-main);
-    color: var(--theme-cta-text);
-    padding: calc(var(--space2) + var(--space1)) calc(var(--space3) + var(--space1));
-    border-radius: var(--small-corners);
     font-size: var(--t-size0);
     line-height: var(--t-lH4);
     vertical-align: top;
     cursor: pointer;
     font-weight: 500;
     transition: var(--a-controls);
+}
+
+.console-button.console-button-medium,
+[class^="console-button"].console-button-medium,
+[class*=" console-button"].console-button-medium {
+    font-size: var(--t-size-1);
+}
+
+.console-button.console-button-small,
+[class^="console-button"].console-button-small,
+[class*=" console-button"].console-button-small {
+    font-size: var(--t-size-2);
+}
+
+.console-button:active,
+[class^="console-button"]:active,
+[class*=" console-button"]:active,
+.console-button:focus,
+[class^="console-button"]:focus,
+[class*=" console-button"]:focus {
+    transition: var(--a-controls-active);
+}
+
+.console-button span,
+[class^="console-button"] span,
+[class*=" console-button"] span {
+    flex: 0 0 auto;
+}
+
+.console-button.icon-left span,
+[class^="console-button"].icon-left span,
+[class*=" console-button"].icon-left span {
+    margin-left: 0.75em;
+}
+
+.console-button.icon-right span,
+[class^="console-button"].icon-right span,
+[class*=" console-button"].icon-right span {
+    margin-right: 0.75em;
+}
+
+.console-button .icon,
+[class^="console-button"] .icon,
+[class*=" console-button"] .icon {
+    flex: 0 0 auto;
+    width: 1.2em;
+    height: 1.2em;
+    transition: var(--a-controls);
+}
+
+.console-button:active .icon,
+[class^="console-button"]:active .icon,
+[class*=" console-button"]:active .icon,
+.console-button:focus .icon,
+[class^="console-button"]:focus .icon,
+[class*=" console-button"]:focus .icon {
+    transition: var(--a-controls-active);
+}
+
+.console-button {
+    margin-left: var(--space3);
+    background: var(--c-blue-06-main);
+    padding: calc(var(--space2) + var(--space1)) calc(var(--space3) + var(--space1));
+    border-radius: var(--small-corners);
+    color: var(--theme-cta-text);
 }
 
 .console-button:hover {
@@ -1152,36 +1215,63 @@ select.console-select::-ms-expand {
 .console-button:active,
 .console-button:focus {
     background: var(--c-blue-08);
-    transition: var(--a-controls-active);
-}
-
-.console-button span {
-    flex: 0 0 auto;
-    margin-left: calc(var(--space2) + var(--space1));
-}
-
-.console-button .icon {
-    flex: 0 0 auto;
-    width: 1.2em;
-    height: 1.2em;
 }
 
 .console-button .icon-fill {
-    fill: var(--c-white-00-absolute);
+    fill: var(--theme-cta-text);
 }
 
 .console-button .icon-stroke {
-    stroke: var(--c-white-00-absolute);
+    stroke: var(--theme-cta-text);
 }
 
 .console-button.console-button-medium {
-    font-size: var(--t-size-1);
     padding: calc(var(--space2) + calc(var(--space1) / 2)) calc(var(--space3) + calc(var(--space1) / 2));
 }
 
 .console-button.console-button-small {
-    font-size: var(--t-size-2);
     padding: var(--space2) var(--space3);
+}
+
+.console-button-text {
+    font-size: var(--t-size0);
+    line-height: var(--t-lH4);
+    color: var(--theme-cta-secondary-text-idle);
+}
+
+.console-button-text:hover {
+    color: var(--theme-cta-secondary-text-hover);
+}
+
+.console-button-text:active,
+.console-button-text:focus {
+    color: var(--theme-cta-secondary-text-active);
+}
+
+.console-button-text .icon-fill {
+    fill: var(--theme-cta-secondary-text-idle);
+}
+
+.console-button-text:hover .icon-fill {
+    fill: var(--theme-cta-secondary-text-hover);
+}
+
+.console-button-text:active .icon-fill,
+.console-button-text:focus .icon-fill {
+    fill: var(--theme-cta-secondary-text-active);
+}
+
+.console-button-text .icon-stroke {
+    stroke: var(--theme-cta-secondary-text-idle);
+}
+
+.console-button-text:hover .icon-stroke {
+    stroke: var(--theme-cta-secondary-text-hover);
+}
+
+.console-button-text:active .icon-stroke,
+.console-button-text:focus .icon-stroke {
+    stroke: var(--theme-cta-secondary-text-active);
 }
 
 .console-control {
