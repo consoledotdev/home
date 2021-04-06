@@ -11,6 +11,6 @@ dist
 .venv/
 
 # Hugo
-data/
+/data/
 resources/
 public/
