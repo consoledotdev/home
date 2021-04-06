@@ -132,14 +132,11 @@ let sortBetas = () => {
 
     // dom manipulation method
     let replaceCards = (cards, containerSelector) => {
-        let inlineCTA = document.querySelector("[data-inline-cta]");
         let container = document.querySelector(containerSelector);
         container.innerHTML = "";
         cards.forEach((card) => {
             container.appendChild(card);
         });
-        // puts back inline CTA after the eight card
-        if (container.children[7]) container.children[7].insertAdjacentElement("afterEnd", inlineCTA);
     };
 
     // retrieves the value to sort by
