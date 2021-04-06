@@ -99,7 +99,7 @@ jobs:
               run: |
                   python3 parseTools.py \
                   --tools-json data/toolsallraw.json \
-                  --beta-json data/toolsallraw.json
+                  --beta-json data/betasallraw.json
 
             - name: 'Upload Artifact'
               uses: actions/upload-artifact@v2
