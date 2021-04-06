@@ -25,6 +25,8 @@
 
     --theme-translucent: rgba(245, 248, 251, 0.6);
 
+    --theme-translucent-firefox: rgba(238, 241, 246, 0.95);
+
     --theme-shadow-1: 0 var(--space1) var(--space3) rgba(0, 0, 0, 0.07);
     --theme-shadow-2: 0 var(--space2_5) var(--space4) rgba(0, 0, 0, 0.1);
     --theme-shadow-3: 0 var(--space3_5) var(--space5) rgba(0, 0, 0, 0.15);

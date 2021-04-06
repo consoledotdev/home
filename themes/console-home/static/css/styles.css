@@ -163,6 +163,11 @@ body {
     border-bottom: var(--theme-border-1);
     transition: var(--a-elements-active);
 }
+@-moz-document url-prefix() {
+    .is-scrolled .header.header-fixed {
+        background: var(--theme-translucent-firefox);
+    }
+}
 
 .header .logo-wrapper {
     flex: 1 0 auto;
