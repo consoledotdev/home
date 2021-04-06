@@ -70,37 +70,64 @@ let computeFixedFiltersPos = (() => {
     window.addEventListener("resize", compute);
 })();
 
-let toggledCheck = () => {
-    // gets all values for enabled checkboxes
-    let filters = document.querySelectorAll('[data-beta-filters] [type="checkbox"]');
-    activeFilterValues = [];
-    for (filter of filters) {
-        if (filter.checked) {
-            activeFilterValues.push(filter.value);
+let filtering = {
+    _getFilters: () => {
+        return document.querySelectorAll('[data-beta-filters] [type="checkbox"]:not([value="select-all"])');
+    },
+    _getFilterValues: () => {
+        let filters = filtering._getFilters();
+        activeFilterValues = [];
+        for (filter of filters) {
+            if (filter.checked) {
+                activeFilterValues.push(filter.value);
+            }
         }
-    }
-    // sets card visbility
-    toggleCardVisibility(activeFilterValues);
-};
+        return activeFilterValues;
+    },
+    _setToggleAllActionsVisiblity: () => {
+        let parent = document.querySelectorAll("[data-beta-filters]")[0];
+        let activeFilterValues = filtering._getFilterValues();
+        let totalFilters = filtering._getFilters().length;
+        parent.classList.remove("is-showing-all");
 
-let toggleCardVisibility = (activeFilterValues) => {
-    // for each beta card checks if its categories data attribute
-    // has any match for the active checkboxes values
-    // If there's no match it hides the card, otherwise it un-hides it
-    let cards = document.querySelectorAll("[data-card]");
-    for (let card of cards) {
-        let categories = card.dataset.categories;
-        let match = false;
-        for (value of activeFilterValues) {
-            match = categories.indexOf(value) >= 0 && true;
-            if (match) break;
+        if (activeFilterValues.length == totalFilters) parent.classList.add("is-showing-all");
+    },
+    _toggleCardVisibility: () => {
+        let activeFilterValues = filtering._getFilterValues();
+        // for each beta card checks if its categories data attribute
+        // has any match for the active checkboxes values
+        // If there's no match it hides the card, otherwise it un-hides it
+        let cards = document.querySelectorAll("[data-card]");
+        for (let card of cards) {
+            let categories = card.dataset.categories;
+            let match = false;
+            for (value of activeFilterValues) {
+                match = categories.indexOf(value) >= 0 && true;
+                if (match) break;
+            }
+            if (match) {
+                card.classList.remove("is-hidden");
+            } else {
+                card.classList.add("is-hidden");
+            }
         }
-        if (match) {
-            card.classList.remove("is-hidden");
-        } else {
-            card.classList.add("is-hidden");
-        }
-    }
+    },
+    clearedAllChecks: (e) => {
+        let filters = filtering._getFilters();
+        for (filter of filters) filter.checked = false;
+        filtering._toggleCardVisibility();
+        filtering._setToggleAllActionsVisiblity();
+    },
+    selectedAllChecks: (e) => {
+        let filters = filtering._getFilters();
+        for (filter of filters) filter.checked = true;
+        filtering._toggleCardVisibility();
+        filtering._setToggleAllActionsVisiblity();
+    },
+    toggledCheck: () => {
+        filtering._toggleCardVisibility();
+        filtering._setToggleAllActionsVisiblity();
+    },
 };
 
 let sortBetas = () => {

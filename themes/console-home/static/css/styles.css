@@ -1675,6 +1675,11 @@ a .icon {
     fill: var(--c-white-00-absolute);
 }
 
+.betas-split .console-filters.is-showing-all .select-all,
+.betas-split .console-filters:not(.is-showing-all) .clear-all {
+    display: none;
+}
+
 .betas-split .betas-aside .console-filters .console-label {
     display: block;
     margin-bottom: var(--space1);
@@ -1698,6 +1703,7 @@ a .icon {
     box-shadow: var(--theme-shadow-1);
     border-radius: var(--mid-corners);
     padding: var(--space3) var(--space4);
+    border-left: 2px solid transparent;
 }
 
 .beta-card.is-hidden {
@@ -1854,6 +1860,7 @@ p.beta-card-description {
     }
 
     .beta-card .date {
+        width: 7em;
         flex: 0 0 auto;
     }
 
