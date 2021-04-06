@@ -1425,16 +1425,15 @@ body:not(.mobile) .console-control:hover:before {
 }
 
 .console-checkbutton input + label .icon-plus,
-.console-checkbutton input + label .icon-checkmark {
+.console-checkbutton input + label .icon-checkmark,
+.console-checkbutton input + label .icon-minus,
+.console-checkbutton input + label .icon-x {
     margin-right: var(--space1);
     width: 1em;
     height: 1em;
 }
 
-.console-checkbutton input:not(:checked) + label .icon-checkmark {
-    display: none;
-}
-
+.console-checkbutton input:not(:checked) + label .icon-checkmark,
 .console-checkbutton input:checked + label .icon-plus {
     display: none;
 }
@@ -1491,6 +1490,40 @@ body:not(.mobile) .console-control:hover:before {
 .console-checkbutton.color-green input:checked + label:hover .icon,
 .console-checkbutton.color-green input:checked:focus + label .icon {
     fill: var(--theme-control-button-active-green-text-hover);
+}
+
+.console-checkbutton-master input + label,
+.console-checkbutton-master.color-blue input:checked + label,
+.console-checkbutton-master.color-fuchsia input:checked + label,
+.console-checkbutton-master.color-green input:checked + label {
+    background: none;
+}
+
+.console-checkbutton-master input + label,
+.console-checkbutton-master input + label:hover,
+.console-checkbutton-master input:focus + label {
+    border: 1px solid transparent;
+}
+
+.console-checkbutton-master input:not(:checked):not(:indeterminate) + label .icon-minus,
+.console-checkbutton-master input:not(:checked):not(:indeterminate) + label .icon-x,
+.console-checkbutton-master input:checked:not(:indeterminate) + label .icon-minus,
+.console-checkbutton-master input:checked:not(:indeterminate) + label .icon-plus,
+.console-checkbutton-master input:not(:checked):indeterminate + label .icon-plus,
+.console-checkbutton-master input:not(:checked):indeterminate + label .icon-x {
+    display: none;
+}
+
+.console-checkbutton-master input:not(:checked):not(:indeterminate) + label .console-checkbutton-label-all,
+.console-checkbutton-master input:checked:not(:indeterminate) + label .console-checkbutton-label-none,
+.console-checkbutton-master input:not(:checked):indeterminate + label .console-checkbutton-label-all {
+    display: block;
+}
+
+.console-checkbutton-master input:not(:checked):not(:indeterminate) + label .console-checkbutton-label-none,
+.console-checkbutton-master input:checked:not(:indeterminate) + label .console-checkbutton-label-all,
+.console-checkbutton-master input:not(:checked):indeterminate + label .console-checkbutton-label-none {
+    display: none;
 }
 
 .theme-switcher {
