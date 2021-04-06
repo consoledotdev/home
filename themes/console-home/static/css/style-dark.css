@@ -18,7 +18,7 @@
     --theme-content-bg-3: var(--c-grey-09-black-03);
     --theme-content-bg-4: var(--c-grey-08);
 
-    --theme-content-pick-bg-1: var(--c-green-10);
+    --theme-content-pick-border-1: 2px solid rgba(1, 188, 144, 0.25);
 
     --theme-translucent: rgba(10, 10, 11, 0.6);
 

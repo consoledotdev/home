@@ -1582,12 +1582,12 @@ a .icon {
 }
 
 .beta-card.beta-card-pick {
-    background-color: var(--theme-content-pick-bg-1);
+    border-left: var(--theme-content-pick-border-1);
 }
 
 .beta-card .icon-console-mini-filled {
     position: absolute;
-    left: 0;
+    left: -1px;
     transform: translateX(-50%);
     fill: var(--c-green-06);
     width: var(--t-size3);
