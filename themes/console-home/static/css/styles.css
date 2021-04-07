@@ -2138,6 +2138,17 @@ p.beta-card-description {
         .console-button {
             margin-top: var(--space3);
         }
+
+        .footer-nav ul li {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    @media (max-width: 350px) {
+        .footer-nav ul li {
+            font-size: var(--t-size-1);
+        }
     }
 
     @media (min-width: 481px) {
