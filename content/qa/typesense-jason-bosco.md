@@ -10,7 +10,7 @@ summary: Q&A interview with Jason Bosco, Co-founder, Typesense.
 isSelected: qa
 topImg1Src: /img/qa/typesense-jason-bosco-profile.jpg
 topImg2Src: /img/qa/typesense-jason-bosco-logo.png
-ogImg: /img/qa/typesense-jason-bosco-logo.png
+ogImg: /img/qa/typesense-jason-bosco-desk.jpg
 ---
 
 ### What is Typesense? Why did you build it?
@@ -214,6 +214,12 @@ Pages](https://pages.cloudflare.com/).
 Anything that simplifies a developer's life is a net positive.
 
 ### Describe your computer hardware setup
+
+{{< img-center
+src="/img/qa/typesense-jason-bosco-desk.jpg"
+alt="The desk of Jason Bosco, Typesense."
+width="100%"
+>}}
 
 I use a Macbook Pro (16 gigabyte RAM machine with a one terabyte SSD) with an
 external 27" Dell monitor with the Apple keyboard. I still use the 2015 version
