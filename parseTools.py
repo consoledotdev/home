@@ -77,9 +77,6 @@ programs_live['items'] = []
 programs_ga = {}
 programs_ga['items'] = []
 
-if 'GITHUB_WORKSPACE' in os.environ:
-    print(os.environ['GITHUB_WORKSPACE'])
-
 with open(args.beta_json, 'r') as f:
     betas = json.load(f)
 
