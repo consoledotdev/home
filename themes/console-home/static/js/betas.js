@@ -33,10 +33,12 @@ let manageFiltersPosition = (() => {
         if (window.innerWidth >= 1025) {
             asideWrapper.classList.remove("is-hidden");
             asideWrapper.appendChild(filtersEl);
+            inlineWrapper.classList.add("is-hidden");
             filtersEl.classList.add("in-aside");
         } else {
             asideWrapper.classList.add("is-hidden");
             inlineWrapper.appendChild(filtersEl);
+            inlineWrapper.classList.remove("is-hidden");
             filtersEl.classList.remove("in-aside");
         }
     };
@@ -44,23 +46,27 @@ let manageFiltersPosition = (() => {
     window.addEventListener("resize", setPos);
 })();
 
-let computeFixedFiltersPos = (() => {
+let computeFixedFiltersPos2 = (() => {
     let style = {};
     let compute = function () {
         if (window.scrollY > 0) {
+            style.marginTop = 0;
             style.position = "fixed";
-            style.top = document.getElementById("betas-split").offsetTop - window.scrollY + "px";
+            style.top = document.querySelector("[data-aside-anchor]").getBoundingClientRect().top + "px";
             if (parseInt(style.top) < 128) style.top = "128px";
         } else {
+            style.marginTop = null;
             style.position = null;
             style.top = null;
         }
 
         let filtersEl = document.getElementById("betas-filters");
         if (filtersEl.classList.contains("in-aside")) {
+            filtersEl.style.marginTop = style.marginTop;
             filtersEl.style.top = style.top;
             filtersEl.style.position = style.position;
         } else {
+            filtersEl.style.marginTop = null;
             filtersEl.style.top = null;
             filtersEl.style.position = null;
         }

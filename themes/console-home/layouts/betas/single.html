@@ -1,23 +1,24 @@
 {{ define "main" }}
 	{{ $CTATitle := "Interesting betas by email" }}
 	{{ $CTADescription := "Our free weekly newsletter picks the most interesting new betas and early access programs." }}
-	<section class="page-section">
-		<h2 class="title title-1">Beta Console</h2>
-		<p class="small">A live list of every developer tool beta program and early access release, with the most interesting appearing in our weekly newsletter.</p>
-	</section>
-	<div id="betas-split" class="betas-split">
-		<aside id="aside-filters-wrapper" class="betas-aside">
-		</aside>
+	<div class="betas-top">
+		<section class="page-section">
+			<h2 class="title title-1">Beta Console</h2>
+			<p class="description">A live list of every developer tool beta program and early access release.
+			<p>The most interesting appear in our weekly newsletter, <a href="mailto:hello@console.dev" class="link">Submit a beta</a>.</p>
+		</section>
+		<section class="page-section">
+			{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription ) }}
+		</section>
+	</div>
+	<div class="betas-split">
 		<div class="betas">
-			<section class="page-section">
-				{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription ) }}
-			</section>
-            <section id="inline-filters-wrapper" class="page-section">
+            <section id="inline-filters-wrapper" class="page-section inline-filters-wrapper">
                 {{ partial "components/betas/filters.html" (dict "items" $.Site.Data.filters.items "dot" . ) }}
 			</section>
 			<section class="page-section">
 				<h3 class="title title-2">Latest Releases</h3>
-				<div class="beta-items" data-betas-latest>
+				<div class="beta-items" data-betas-latest data-aside-anchor>
 					{{ range $.Site.Data.betaslive.items }}
 						<div class="beta-card{{ with index . "Weekly Pick" }} beta-card-pick{{ end }}" data-card data-date="{{ .Announced }}" data-name="{{ index . "Tool/Product/Project" }}" data-pick="{{ index . "Weekly Pick" }}" data-categories="{{ index . "Filter Categories" }}">
 							{{ with index . "Weekly Pick" -}}
@@ -92,6 +93,8 @@
 				{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
 			</section>
 		</div>
+		<aside id="aside-filters-wrapper" class="betas-aside">
+		</aside>
 	</div>
 	<script src="/js/betas.js"></script>
 {{ end }}
