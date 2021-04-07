@@ -77,6 +77,9 @@ programs_live['items'] = []
 programs_ga = {}
 programs_ga['items'] = []
 
+if 'GITHUB_WORKSPACE' in os.environ:
+    print(os.environ['GITHUB_WORKSPACE'])
+
 with open(args.beta_json, 'r') as f:
     betas = json.load(f)
 
@@ -126,15 +129,17 @@ with open(args.beta_json, 'r') as f:
                 if icons:
                     icon = icons[0]
                     response = requests.get(icon.url, stream=True)
-                    program['favicon'] = 'static/{0}.{1}'.format(
+                    program['favicon'] = '{0}.{1}'.format(
                         faviconPath,
                         icon.format)
 
+                    downloadPath = 'static/{0}'.format(program['favicon'])
+
                     print('- Downloading: {0} to {1}'.format(
                         icon.url,
-                        program['favicon']))
+                        downloadPath))
 
-                    with open(program['favicon'], 'wb') as image:
+                    with open(downloadPath, 'wb') as image:
                         for chunk in response.iter_content(1024):
                             image.write(chunk)
 
