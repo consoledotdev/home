@@ -34,5 +34,5 @@
 			</div>
 		</div>
 	</div>
-	<a href="{{ .URL }}" class="link" target="_blank" rel="noopener">{{- if eq .Access "Open" -}}Details{{- else -}}Apply{{- end -}} {{ partial "icons/external-link.html" }}</a>
+    <a href="{{ .URL }}" class="link" target="_blank" rel="noopener">{{- if eq .Access "Open" -}}Details{{- else -}}{{- if index . "Beta ended" -}}Details{{- else -}}Apply{{- end -}}{{- end -}} {{ partial "icons/external-link.html" }}</a>
 </div>
