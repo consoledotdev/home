@@ -124,6 +124,17 @@ let filtering = {
                 card.classList.add("is-hidden");
             }
         }
+        let checkEmptyPlaceholderDisplay = (container) => {
+            let visibleCards = document.querySelector(container + " [data-card]:not(.is-hidden)");
+            let emptyPlaceholder = document.querySelector(container + " [data-beta-card-empty-placeholder]");
+            if (!visibleCards) {
+                emptyPlaceholder.classList.remove("is-hidden");
+            } else {
+                emptyPlaceholder.classList.add("is-hidden");
+            }
+        };
+        checkEmptyPlaceholderDisplay("[data-betas-latest]");
+        checkEmptyPlaceholderDisplay("[data-betas-ga]");
     },
     clearedAllChecks: (e) => {
         let filters = filtering._getFilters();
@@ -172,11 +183,14 @@ let sortBetas = () => {
 
     // dom manipulation method
     let replaceCards = (cards, containerSelector) => {
+        let emptyPlaceholder = document.querySelector(containerSelector + " [data-beta-card-empty-placeholder]");
         let container = document.querySelector(containerSelector);
         container.innerHTML = "";
         cards.forEach((card) => {
             container.appendChild(card);
         });
+        // add back empty placeholder dom
+        container.appendChild(emptyPlaceholder);
     };
 
     // retrieves the value to sort by

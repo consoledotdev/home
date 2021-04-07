@@ -1,15 +1,13 @@
 {{ define "main" }}
 	{{ $CTATitle := "Interesting betas by email" }}
 	{{ $CTADescription := "Our free weekly newsletter picks out the 2-3 most interesting new betas." }}
-	<div class="betas-top">
-		<section class="page-section">
-			<h2 class="title title-1">Beta Console</h2>
-            <p class="description">A live list of every developer tool beta &amp; early access release.</p>
-		</section>
-		<section class="page-section">
-			{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription ) }}
-		</section>
-	</div>
+	<section class="page-section page-section-betas-root">
+		<h2 class="title title-1">Beta Console</h2>
+		<p class="description">A live list of every developer tool beta &amp; early access release.</p>
+	</section>
+	<section class="page-section page-section-betas-root">
+		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription ) }}
+	</section>
 	<div class="betas-split">
 		<div class="betas">
             <section id="inline-filters-wrapper" class="page-section inline-filters-wrapper">
@@ -19,81 +17,26 @@
                 <h3 class="title title-2">Latest Releases</h3>
 				<div class="beta-items" data-betas-latest data-aside-anchor>
 					{{ range $.Site.Data.betaslive.items }}
-						<div class="beta-card{{ with index . "Weekly Pick" }} beta-card-pick{{ end }}" data-card data-date="{{ .Announced }}" data-name="{{ index . "Tool/Product/Project" }}" data-pick="{{ index . "Weekly Pick" }}" data-categories="{{ index . "Filter Categories" }}">
-							{{ with index . "Weekly Pick" -}}
-								{{ partial "icons/console-mini-filled.html" }}
-							{{- end }}
-							<span class="date">{{ .Announced }}</span>
-							<div class="beta-card-content">
-                                <div class="left">
-                                    {{- $favicon := index . "favicon" -}}
-                                    {{- $faviconStatic := print "static/" $favicon -}}
-                                    <div class="beta-card-thumbnail aspect-ratio aspect-ratio-1-1">{{- if $favicon -}}{{- if (fileExists $faviconStatic) -}}<img class="image" src="/{{ $favicon }}" alt="{{ index . "Company/Org" }} Logo" />{{- end -}}{{- end -}}</div>
-                                    <p class="beta-card-name">
-                                    {{- $org := index . "Company/Org" -}}
-                                    {{- $name := index . "Tool/Product/Project" -}}
-                                    {{- if in $name $org -}}{{ $name }}{{- else -}}{{ $name }}, from {{ $org }}{{- end -}}
-                                    </p>
-								</div>
-								<div class="right">
-                                    <p class="beta-card-name">
-                                    {{- $org := index . "Company/Org" -}}
-                                    {{- $name := index . "Tool/Product/Project" -}}
-                                    {{- if in $name $org -}}{{ $name }}{{- else -}}{{ $name }}, from {{ $org }}{{- end -}}
-                                    </p>
-									<p class="beta-card-description">{{ index . "What is it?" }}</p>
-									<div class="tags">
-										{{ partial "icons/tag.html" }}
-										<span class="tag">{{ .Category }}</span>,
-										<span class="tag">{{ .Type }}</span>
-									</div>
-								</div>
-							</div>
-                            <a href="{{ .URL }}" class="link" target="_blank" rel="noopener">{{- if eq .Access "Open" -}}Details{{- else -}}Apply{{- end -}} {{ partial "icons/external-link.html" }}</a>
-						</div>
+						{{ partial "components/betas/card.html" . }}
 					{{ end }}
+					{{ partial "components/betas/card-empty.html" . }}
 				</div>
 			</section>
 			<section class="page-section">
                 <h3 class="title title-2">Recent Betas: Now GA</h3>
 				<div class="beta-items" data-betas-ga>
 					{{ range $.Site.Data.betasga.items }}
-						<div class="beta-card{{ with index . "Weekly Pick" }} beta-card-pick{{ end }}" data-card data-date="{{ index . "Beta ended" }}" data-name="{{ index . "Tool/Product/Project" }}" data-pick="{{ index . "Weekly Pick" }}" data-categories="{{ index . "Filter Categories" }}">
-							{{ with index . "Weekly Pick" -}}
-								{{ partial "icons/console-mini-filled.html" }}
-							{{- end }}
-							<span class="date">{{ index . "Beta ended" }}</span>
-							<div class="beta-card-content">
-                                <div class="left">
-                                    <div class="beta-card-thumbnail aspect-ratio aspect-ratio-1-1">{{- if index . "favicon" -}}<img class="image" src="/{{ index . "favicon" }}" alt="{{ index . "Company/Org" }} Logo" />{{- end -}}</div>
-									<p class="beta-card-name">
-                                    {{- $org := index . "Company/Org" -}}
-                                    {{- $name := index . "Tool/Product/Project" -}}
-                                    {{- if in $name $org -}}{{ $name }}{{- else -}}{{ $name }}, from {{ $org }}{{- end -}}
-                                    </p>
-
-								</div>
-								<div class="right">
-									<p class="beta-card-name">{{ index . "Tool/Product/Project" }}</p>
-									<p class="beta-card-description">{{ index . "What is it?" }}</p>
-									<div class="tags">
-										{{ partial "icons/tag.html" }}
-										<span class="tag">{{ .Category }}</span>,
-										<span class="tag">{{ .Type }}</span>
-									</div>
-								</div>
-							</div>
-							<a href="{{ index . "GA URL" }}" class="link" target="_blank" rel="noopener">Details {{ partial "icons/external-link.html" }}</a>
-						</div>
+						{{ partial "components/betas/card.html" . }}
 					{{ end }}
+					{{ partial "components/betas/card-empty.html" . }}
 				</div>
-			</section>
-			<section class="page-section">
-				{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
 			</section>
 		</div>
 		<aside id="aside-filters-wrapper" class="betas-aside">
 		</aside>
 	</div>
+	<section class="page-section page-section-betas-root">
+		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
+	</section>
 	<script src="/js/betas.js"></script>
 {{ end }}

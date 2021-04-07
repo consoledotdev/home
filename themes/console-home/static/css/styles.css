@@ -1622,7 +1622,7 @@ a .icon {
 /* Console Betas
    ========================================================================== */
 
-.betas-top {
+.page-section-betas-root {
     margin-right: min(26vw, 400px);
 }
 
@@ -1660,6 +1660,7 @@ a .icon {
 }
 
 .betas-split .betas-filters .small {
+    margin-top: var(--space4);
     font-size: var(--t-size-2);
 }
 
@@ -1794,12 +1795,20 @@ p.beta-card-description {
     font-size: var(--t-size-1);
 }
 
-.beta-items .subscribe-cta {
-    margin: var(--space4_5) var(--space4);
+.beta-card-empty-placeholder {
+    position: relative;
+    background-color: var(--theme-content-bg-3);
+    border-radius: var(--mid-corners);
+    padding: var(--space3) var(--space4);
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23515158' stroke-width='2' stroke-dasharray='6%2c 6' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.beta-card-empty-placeholder.is-hidden {
+    display: none;
 }
 
 @media (max-width: 768px) {
-    .betas-top {
+    .page-section-betas-root {
         margin-right: 0;
     }
 
@@ -1908,7 +1917,7 @@ p.beta-card-description {
     }
 
     @media (max-width: 1024px) {
-        .betas-top {
+        .page-section-betas-root {
             margin-right: 0;
         }
     }

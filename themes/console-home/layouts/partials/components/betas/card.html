@@ -1,0 +1,33 @@
+
+<div class="beta-card{{ with index . "Weekly Pick" }} beta-card-pick{{ end }}" data-card data-date="{{ .Announced }}" data-name="{{ index . "Tool/Product/Project" }}" data-pick="{{ index . "Weekly Pick" }}" data-categories="{{ index . "Filter Categories" }}">
+	{{ with index . "Weekly Pick" -}}
+		{{ partial "icons/console-mini-filled.html" }}
+	{{- end }}
+	<span class="date">{{ .Announced }}</span>
+	<div class="beta-card-content">
+		<div class="left">
+			{{- $favicon := index . "favicon" -}}
+			{{- $faviconStatic := print "static/" $favicon -}}
+			<div class="beta-card-thumbnail aspect-ratio aspect-ratio-1-1">{{- if $favicon -}}{{- if (fileExists $faviconStatic) -}}<img class="image" src="/{{ $favicon }}" alt="{{ index . "Company/Org" }} Logo" />{{- end -}}{{- end -}}</div>
+			<p class="beta-card-name">
+				{{- $org := index . "Company/Org" -}}
+				{{- $name := index . "Tool/Product/Project" -}}
+				{{- if in $name $org -}}{{ $name }}{{- else -}}{{ $name }}, from {{ $org }}{{- end -}}
+			</p>
+		</div>
+		<div class="right">
+			<p class="beta-card-name">
+				{{- $org := index . "Company/Org" -}}
+				{{- $name := index . "Tool/Product/Project" -}}
+				{{- if in $name $org -}}{{ $name }}{{- else -}}{{ $name }}, from {{ $org }}{{- end -}}
+			</p>
+			<p class="beta-card-description">{{ index . "What is it?" }}</p>
+			<div class="tags">
+				{{ partial "icons/tag.html" }}
+				<span class="tag">{{ .Category }}</span>,
+				<span class="tag">{{ .Type }}</span>
+			</div>
+		</div>
+	</div>
+	<a href="{{ .URL }}" class="link" target="_blank" rel="noopener">{{- if eq .Access "Open" -}}Details{{- else -}}Apply{{- end -}} {{ partial "icons/external-link.html" }}</a>
+</div>
