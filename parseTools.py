@@ -18,26 +18,24 @@ from dateutil.relativedelta import relativedelta, TH
 
 # Parse args
 parser = argparse.ArgumentParser()
-parser.add_argument('--tools-json', help='Path to the file containing the'
+parser.add_argument('--tools-json', help='Path to the file containing the raw'
                     ' interesting tools list as a JSON object', required=True)
-parser.add_argument('--beta-json', help='Path to the file containing the beta'
-                    ' list as a JSON object', required=True)
+parser.add_argument('--beta-json', help='Path to the file containing the raw'
+                    ' beta list as a JSON object', required=True)
 parser.add_argument('--ignore-date', help='Output every item in the JSON'
                     ' regardless of the date. Used for testing',
                     type=bool, default=False, required=False)
 args = parser.parse_args()
-
-print('Starting build')
 
 # Get last Thursday
 today = date.today()
 last_thursday = today - relativedelta(weekday=TH(-1))
 
 # Open and parse the JSON file to get the list of interesting tools.
-# See example-tool-list.json for what this should look like.
+# See themes/console-home/data/toolsallraw.json for a sample file
 # It will be generated as part of the build steps using the GitHub
 # gsheet.action from the Interesting Tools Google Sheet (see README.md).
-print('Parse tools JSON...')
+print('Parsing tools JSON...')
 
 interesting = {}
 interesting['items'] = []
@@ -49,7 +47,7 @@ with open(args.tools_json, 'r') as f:
         if 'Company/Org' not in tool or tool['Company/Org'] == '':
             continue
 
-        if tool['Scheduled for'] == "":
+        if tool['Scheduled for'] == '':
             continue
 
         scheduled_for = parse(tool['Scheduled for'])
@@ -61,7 +59,7 @@ with open(args.tools_json, 'r') as f:
 
     print('Parsed tools JSON')
 
-print('Write tools - latest JSON')
+print('Writing tools - latest JSON')
 with open('data/toolslatest.json', 'w') as outfile:
     json.dump(interesting, outfile)
 
@@ -80,12 +78,15 @@ programs_ga['items'] = []
 with open(args.beta_json, 'r') as f:
     betas = json.load(f)
 
+    # Loop through every item
     for program in betas['results'][0]['result']['formatted']:
+        # Catch empty lines
         if 'Company/Org' not in program or program['Company/Org'] == '':
             print('Company/Org not found')
             print(program)
             continue
 
+        # Exclude items that have not yet been reviewed
         if 'Meets our criteria?' not in program \
                 or program['Meets our criteria?'] == '' \
                 or program['Meets our criteria?'] == 'FALSE' \
@@ -106,9 +107,15 @@ with open(args.beta_json, 'r') as f:
                or scheduled_for.isocalendar() == last_thursday.isocalendar():
                 programs_latest['items'].append(program)
 
+        # Set the icon path based on the URL
         url = urlparse(program['URL'])
         faviconPath = 'img/favicons/{0}'.format(url[1])
 
+        # Do we already have an icon saved?
+        # static/ is prepended because the file is saved there, but when Hugo
+        # builds it moves them up to the root under /img/favicons
+        # The path in the JSON needs to be the final build path without
+        # static/
         if os.path.isfile('static/' + faviconPath + '.png'):
             program['favicon'] = faviconPath + '.png'
         elif os.path.isfile('static/' + faviconPath + '.svg'):
@@ -120,21 +127,25 @@ with open(args.beta_json, 'r') as f:
         else:
             print('Retrieving favicon for: {0}'.format(program['URL']))
 
+            # Try to find icons
             try:
                 icons = favicon.get('{0}://{1}'.format(url[0], url[1]))
 
+                # Found some icons, so download the best (highest res)
                 if icons:
                     icon = icons[0]
                     response = requests.get(icon.url, stream=True)
-                    program['favicon'] = 'static/{0}.{1}'.format(
+                    program['favicon'] = '{0}.{1}'.format(
                         faviconPath,
                         icon.format)
 
+                    downloadPath = 'static/{0}'.format(program['favicon'])
+
                     print('- Downloading: {0} to {1}'.format(
                         icon.url,
-                        program['favicon']))
+                        downloadPath))
 
-                    with open(program['favicon'], 'wb') as image:
+                    with open(downloadPath, 'wb') as image:
                         for chunk in response.iter_content(1024):
                             image.write(chunk)
 
@@ -176,6 +187,7 @@ with open(args.beta_json, 'r') as f:
 
     print('Parsed betas JSON')
 
+# Now write the files to the data directory ready for Hugo to build
 print('Writing betas - latest JSON')
 with open('data/betaslatest.json', 'w') as outfile:
     json.dump(programs_latest, outfile)
