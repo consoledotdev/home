@@ -87,7 +87,9 @@ with open(args.beta_json, 'r') as f:
             continue
 
         if 'Meets our criteria?' not in program \
-                or program['Meets our criteria?'] == '':
+                or program['Meets our criteria?'] == '' \
+                or program['Meets our criteria?'] == 'FALSE' \
+                or not program['Meets our criteria?']:
             print('Does not meet criteria')
             print(program)
             continue
