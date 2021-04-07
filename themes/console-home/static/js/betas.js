@@ -100,6 +100,8 @@ let filtering = {
     },
     _toggleCardVisibility: () => {
         let activeFilterValues = filtering._getFilterValues();
+        let index = activeFilterValues.indexOf("weekly-pick");
+        let showsWeeklyPick = index > -1 ? activeFilterValues.splice(index, 1) && true : false;
         // for each beta card checks if its categories data attribute
         // has any match for the active checkboxes values
         // If there's no match it hides the card, otherwise it un-hides it
@@ -107,9 +109,14 @@ let filtering = {
         for (let card of cards) {
             let categories = card.dataset.categories;
             let match = false;
-            for (value of activeFilterValues) {
-                match = categories.indexOf(value) >= 0 && true;
-                if (match) break;
+            if (categories.indexOf("weekly-pick") < 0 || showsWeeklyPick) {
+                for (value of activeFilterValues) {
+                    match = categories.indexOf(value) >= 0 && true;
+                    if (match) break;
+                }
+            }
+            if (categories.indexOf("weekly-pick") >= 0 && showsWeeklyPick) {
+                if (activeFilterValues.length == 0) match = true;
             }
             if (match) {
                 card.classList.remove("is-hidden");
