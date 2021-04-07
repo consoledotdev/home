@@ -84,6 +84,10 @@ with open(args.beta_json, 'r') as f:
         if 'Company/Org' not in program or program['Company/Org'] == '':
             continue
 
+        if 'Meets our criteria?' not in program \
+                or program['Meets our criteria?'] == '':
+            continue
+
         # Separate programs scheduled for the latest newsletter
         if program['Scheduled for'] == '':
             program['Weekly Pick'] = False
