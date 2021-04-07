@@ -1814,6 +1814,7 @@ p.beta-card-description {
 
 .beta-card-empty-placeholder > * {
     opacity: 0.6;
+    text-align: center;
 }
 
 .beta-card-empty-placeholder .icon {
