@@ -6,7 +6,13 @@
 		<p class="description">A live list of every developer tool beta &amp; early access release.</p>
 	</section>
 	<section class="page-section page-section-betas-root">
-		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription ) }}
+		<div class="betas-collapsible-cta">
+			{{ $contentParams := (dict "layout" "wide") }}
+			{{ partial "components/box-collapsible.html" (dict "title" $CTATitle "style" "blue" "icon" "expand.html" "content" "subscribe.html" "contentParams" $contentParams) }}
+		</div>
+		<div class="betas-full-cta">
+			{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription ) }}
+		</div>
 	</section>
 	<div class="betas-split">
 		<div class="betas">

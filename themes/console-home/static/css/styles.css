@@ -1904,6 +1904,14 @@ p.beta-card-description {
         margin-right: 0;
     }
 
+    .betas-collapsible-cta {
+        display: block;
+    }
+
+    .betas-full-cta {
+        display: none;
+    }
+
     .beta-card > *:not(:last-child) {
         margin-bottom: var(--space2_5);
     }
@@ -1980,6 +1988,14 @@ p.beta-card-description {
 }
 
 @media (min-width: 769px) {
+    .betas-collapsible-cta {
+        display: none;
+    }
+
+    .betas-full-cta {
+        display: block;
+    }
+
     .beta-card {
         display: flex;
         flex-flow: row nowrap;
