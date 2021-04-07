@@ -1797,10 +1797,10 @@ p.beta-card-description {
 
 .beta-card-empty-placeholder {
     position: relative;
-    background-color: var(--theme-content-bg-3);
+    background-color: var(--theme-empty-bg-1);
     border-radius: var(--mid-corners);
     padding: var(--space3) var(--space4);
-    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23515158' stroke-width='2' stroke-dasharray='6%2c 6' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    background-image: var(--theme-empty-dashed-border);
     min-height: calc(var(--space7) - var(--space4));
     display: flex;
     flex-flow: column wrap;
