@@ -20,12 +20,16 @@
     {{ end }}
 
     <h3 class="title title-2">New betas &amp; early release programs</h3>
+    {{- if $.Site.Data.betaslatest.items -}}
     {{ range $.Site.Data.betaslatest.items }}
     <a href="{{ index . "URL" }}" class="link"><h4 class="title title-3">{{ index . "Tool/Product/Project" }}</h4></a>
     <p>{{ index . "What is it?" }}</p>
     <p>&bull; {{ index . "Category" }} &bull; {{ index . "Type" }} &bull; {{ index . "Access" }} access</p>
     <hr style="border: none; border-top: 1px solid #eaeaea; padding-top: 10px; padding-bottom:0px" />
     {{ end }}
+    {{- else -}}
+    <p>Nothing of note this week. We only feature the most interesting 2-3 beta releases you should actually check out.</p>
+    {{- end -}}
     </section>
 
     <section class="page-section">
