@@ -1,6 +1,5 @@
 <head>
-    {{- $title := print .Title " - " .Site.Title }} {{- if .IsHome }}{{ $title = .Title }}{{ end }}
-    <title>{{ $title }}</title>
+    <title>{{ .Title }}</title>
     <meta charset="utf-8" />
     <meta name="description" content="{{ .Summary }}" />
 
@@ -46,7 +45,7 @@
     {{ end -}}
     <!-- https://developer.yoast.com/features/opengraph/functional-specification -->
     <meta property="og:site_name" content="Console" />
-    <meta property="og:title" content="{{ $title }}" />
+    <meta property="og:title" content="{{ .Title }}" />
     <meta property="og:description" content="{{ .Summary }}" />
     {{- $ogImg := "/img/console-mark-256.png" -}}
     {{- if .Params.ogImg }}
