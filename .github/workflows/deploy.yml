@@ -95,7 +95,8 @@ jobs:
               run: |
                   pip install --upgrade pip
                   pip install -r requirements.txt
-            - name: Build static HTML
+
+            - name: Parse tools JSON
               run: |
                   python3 parseTools.py \
                   --tools-json data/toolsallraw.json \
