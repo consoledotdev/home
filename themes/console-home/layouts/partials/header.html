@@ -388,8 +388,8 @@
                         <li{{ if eq .context.Params.isSelected "qa" }} class="is-selected"{{ end }}>
                             <a onclick="blur();" href="/qa/">Q&amp;A</a>
                         </li>
-                        <li>
-                            <a onclick="blur()" href="https://blog.console.dev/">Blog</a>
+                        <li{{ if eq .context.Params.isSelected "newsletter" }} class="is-selected"{{ end }}>
+                            <a onclick="blur();" href="/latest/">Newsletter</a>
                         </li>
                     </ul>
                     <button onclick="blur(); toggleTheme()" class="console-control theme-switcher">
@@ -407,8 +407,8 @@
                                 <li{{ if eq .context.Params.isSelected "qa" }} class="is-selected"{{ end }}>
                                     <a onclick="blur(); toggleMenuPopup()" href="/qa/">Q&amp;A</a>
                                 </li>
-                                <li>
-                                    <a onclick="blur(); toggleMenuPopup()" href="https://blog.console.dev/">Blog</a>
+                                <li{{ if eq .context.Params.isSelected "newsletter" }} class="is-selected"{{ end }}>
+                                    <a onclick="blur();" href="/latest/">Newsletter</a>
                                 </li>
                             </ul>
                             <div class="separator"></div>
