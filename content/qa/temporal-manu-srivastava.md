@@ -197,5 +197,7 @@ or so. Swimming is something I do regularly too.
 
 ### Find out more
 
-[Temporal](https://temporal.io/) is a workflow orchestration platform. This
-interview was conducted on 24 Mar 2021.
+[Temporal](https://temporal.io/) is a workflow orchestration platform. It was
+featured as an "Interesting Tool" in the [Console
+Newsletter](https://console.dev) on 1 Apr 2021.  This interview was conducted
+on 24 Mar 2021.
