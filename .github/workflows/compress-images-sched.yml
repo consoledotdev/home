@@ -1,6 +1,6 @@
 # Compress images on demand (workflow_dispatch) and 4pm every day.
 # Open a Pull Request if any images can be compressed.
-name: Compress Images
+name: Compress images (cron/manual)
 on:
   workflow_dispatch:
   schedule:
