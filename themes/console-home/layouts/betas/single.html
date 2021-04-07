@@ -26,7 +26,9 @@
 							<span class="date">{{ .Announced }}</span>
 							<div class="beta-card-content">
                                 <div class="left">
-                                    <div class="beta-card-thumbnail aspect-ratio aspect-ratio-1-1">{{- if index . "favicon" -}}<img class="image" src="/{{ index . "favicon" }}" alt="{{ index . "Company/Org" }} Logo" />{{- end -}}</div>
+                                    {{- $favicon := index . "favicon" -}}
+                                    {{- $faviconStatic := print "static/" $favicon -}}
+                                    <div class="beta-card-thumbnail aspect-ratio aspect-ratio-1-1">{{- if $favicon -}}{{- if (fileExists $faviconStatic) -}}<img class="image" src="/{{ $favicon }}" alt="{{ index . "Company/Org" }} Logo" />{{- end -}}{{- end -}}</div>
                                     <p class="beta-card-name">
                                     {{- $org := index . "Company/Org" -}}
                                     {{- $name := index . "Tool/Product/Project" -}}
