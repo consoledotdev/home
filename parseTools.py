@@ -82,10 +82,14 @@ with open(args.beta_json, 'r') as f:
 
     for program in betas['results'][0]['result']['formatted']:
         if 'Company/Org' not in program or program['Company/Org'] == '':
+            print('Company/Org not found')
+            print(program)
             continue
 
         if 'Meets our criteria?' not in program \
                 or program['Meets our criteria?'] == '':
+            print('Does not meet criteria')
+            print(program)
             continue
 
         # Separate programs scheduled for the latest newsletter
@@ -124,16 +128,21 @@ with open(args.beta_json, 'r') as f:
                         faviconPath,
                         icon.format)
 
+                    print('- Downloading: {0} to {1}'.format(
+                        icon.url,
+                        program['favicon']))
+
                     with open(program['favicon'], 'wb') as image:
                         for chunk in response.iter_content(1024):
                             image.write(chunk)
 
                 else:
                     program['favicon'] = False
+                    print('- No favicon found')
 
             except Exception as e:
                 program['favicon'] = False
-                print(e)
+                print('- Error finding favicon: {0}'.format(e))
                 continue
 
         try:
@@ -159,22 +168,23 @@ with open(args.beta_json, 'r') as f:
             else:
                 programs_live['items'].append(program)
         except Exception as e:
+            print('Error transforming format')
             print(e)
             print(program)
 
     print('Parsed betas JSON')
 
-print('Write betas - latest JSON')
+print('Writing betas - latest JSON')
 with open('data/betaslatest.json', 'w') as outfile:
     json.dump(programs_latest, outfile)
 print('Wrote betas - latest JSON')
 
-print('Write betas - live JSON')
+print('Writing betas - live JSON')
 with open('data/betaslive.json', 'w') as outfile:
     json.dump(programs_live, outfile)
 print('Wrote betas - live JSON')
 
-print('Write betas - GA JSON')
+print('Writing betas - GA JSON')
 with open('data/betasga.json', 'w') as outfile:
     json.dump(programs_ga, outfile)
 print('Wrote betas - GA JSON')
