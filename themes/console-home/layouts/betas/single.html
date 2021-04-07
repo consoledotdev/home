@@ -16,8 +16,10 @@
 	</section>
 	<div class="betas-split">
 		<div class="betas">
-            <section id="inline-filters-wrapper" class="page-section inline-filters-wrapper">
-                {{ partial "components/betas/filters.html" (dict "items" $.Site.Data.filters.items "dot" . ) }}
+            <section class="page-section inline-filters-wrapper" data-inline-filters-wrapper>
+				{{ $contentParams := (dict "items" $.Site.Data.filters.items "dot" . ) }}
+				{{ partial "components/box-collapsible.html" (dict "title" "Filter" "icon" "filter.html" "content" "components/betas/filters.html" "contentParams" $contentParams) }}
+    			<p class="small">Last updated: {{ .Lastmod.Format "2006-01-02" }}</p>
 			</section>
 			<section class="page-section">
                 <h3 class="title title-2">Latest Releases</h3>

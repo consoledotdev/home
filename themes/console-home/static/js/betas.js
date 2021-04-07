@@ -28,7 +28,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 let manageFiltersPosition = (() => {
     let filtersEl = document.getElementById("betas-filters");
     let asideWrapper = document.getElementById("aside-filters-wrapper");
-    let inlineWrapper = document.getElementById("inline-filters-wrapper");
+    let inlineWrapper = document.querySelector("[data-inline-filters-wrapper]");
+    let inlineWrapperCollapsible = inlineWrapper.querySelector("[data-collapsible-content]");
     let setPos = () => {
         if (window.innerWidth >= 1025) {
             asideWrapper.classList.remove("is-hidden");
@@ -37,7 +38,11 @@ let manageFiltersPosition = (() => {
             filtersEl.classList.add("in-aside");
         } else {
             asideWrapper.classList.add("is-hidden");
-            inlineWrapper.appendChild(filtersEl);
+            if (window.innerWidth >= 769) {
+                inlineWrapper.prepend(filtersEl);
+            } else {
+                inlineWrapperCollapsible.appendChild(filtersEl);
+            }
             inlineWrapper.classList.remove("is-hidden");
             filtersEl.classList.remove("in-aside");
         }

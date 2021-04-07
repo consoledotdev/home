@@ -4,6 +4,7 @@
 		{{ partial (printf "%s%s" "icons/" .icon ) }}
 	</button>
 	<div class="box-collapsible-content" data-collapsible-content>
-		{{ partial (printf "%s" .content ) .contentParams }}
+		{{ $contentParams := .contentParams }}
+		{{ with .content }}{{ partial (printf "%s" . ) $contentParams }}{{ end }}
 	</div>
 </div>

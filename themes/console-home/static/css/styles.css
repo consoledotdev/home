@@ -402,6 +402,7 @@ body {
 
 .box-collapsible.is-expanded .box-collapsible-content {
     padding: var(--space3);
+    max-height: 200px;
     transition: var(--a-elements-active);
 }
 
@@ -1702,6 +1703,10 @@ a .icon {
     margin-right: min(26vw, 400px);
 }
 
+.betas-collapsible-cta .box-collapsible.is-expanded .box-collapsible-content {
+    max-height: 400px;
+}
+
 .betas-split {
     display: flex;
     flex-flow: row nowrap;
@@ -1728,6 +1733,10 @@ a .icon {
     flex: 1 1 auto;
 }
 
+.inline-filters-wrapper .box-collapsible.is-expanded .box-collapsible-content {
+    max-height: 400px;
+}
+
 .betas-split .betas-aside .betas-filters {
     padding-left: 5vw;
     width: 26vw;
@@ -1735,7 +1744,8 @@ a .icon {
     margin-top: 66px;
 }
 
-.betas-split .betas-filters .small {
+.betas-split .betas-filters .small,
+.inline-filters-wrapper .small {
     margin-top: var(--space4);
     font-size: var(--t-size-2);
 }
@@ -1912,6 +1922,14 @@ p.beta-card-description {
         display: none;
     }
 
+    .inline-filters-wrapper {
+        margin-top: calc(var(--space3) * -1);
+    }
+
+    .betas-split .betas-filters .small {
+        display: none;
+    }
+
     .beta-card > *:not(:last-child) {
         margin-bottom: var(--space2_5);
     }
@@ -1996,6 +2014,10 @@ p.beta-card-description {
         display: block;
     }
 
+    .inline-filters-wrapper .box-collapsible {
+        display: none;
+    }
+
     .beta-card {
         display: flex;
         flex-flow: row nowrap;
@@ -2027,6 +2049,10 @@ p.beta-card-description {
     @media (max-width: 1024px) {
         .page-section-betas-root {
             margin-right: 0;
+        }
+
+        .betas-split .betas-filters .small {
+            display: none;
         }
     }
 }

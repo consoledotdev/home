@@ -43,13 +43,9 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 let toggleCollapsible = (e) => {
     let parent = e.currentTarget.parentNode;
-    let contentWrapper = parent.querySelector("[data-collapsible-content]");
-    let content = contentWrapper.querySelector("*");
     if (parent.classList.contains("is-expanded")) {
         parent.classList.remove("is-expanded");
-        contentWrapper.style.maxHeight = "0";
     } else {
-        contentWrapper.style.maxHeight = content.offsetHeight + 50 + "px";
         parent.classList.add("is-expanded");
     }
 };
