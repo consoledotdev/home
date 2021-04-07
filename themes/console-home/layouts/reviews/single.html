@@ -2,12 +2,13 @@
 <section class="page-section">
     <h2 class="title title-1">{{ .Title }}</h2>
     <p class="description">{{ .Summary }}</p>
-    <p><small>By <a href="{{ .Params.authorURL }}" class="link" rel="me">{{ .Params.authorName }}</a>. Last updated: {{ .Lastmod.Format "2006-01-02"
-        }}.</small></p>
+    <p><small>By <a href="{{ .Params.authorURL }}" class="link" rel="me">{{ .Params.authorName }}</a>. Last updated: {{ .Lastmod.Format "2006-01-02" }}.</small></p>
     {{ .Content }}
 
     <h3 class="title title-2">About the author</h3>
     <p>{{ .Params.authorBio }}</p>
 </section>
-{{ partial "section-subscribe.html" . }}
+<section class="page-section">
+    {{ partial "subscribe.html" (dict "context" .) }}
+</section>
 {{ end }}

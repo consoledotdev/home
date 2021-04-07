@@ -16,35 +16,6 @@ let toggleMenuPopup = (e) => {
     }
 };
 
-let toggleTheme = () => {
-    let prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
-    let prefersLight = window.matchMedia("(prefers-color-scheme: light)");
-    let localPref = localStorage.getItem("theme");
-
-    if (localPref) {
-        if (localPref == "dark") setTheme("light");
-        else if (localPref == "light") setTheme("dark");
-    } else {
-        if (prefersDark.matches) setTheme("light");
-        if (prefersLight.matches) setTheme("dark");
-    }
-};
-
-let setTheme = (theme) => {
-    let themedEls = document.getElementsByClassName("theme-user");
-    for (el of themedEls) {
-        el.classList.remove("theme-dark");
-        el.classList.remove("theme-light");
-        el.classList.add("theme-" + theme);
-    }
-    localStorage.setItem("theme", theme);
-};
-
-let initLocalThemePref = ((theme) => {
-    let localPref = localStorage.getItem("theme");
-    if (localPref) setTheme(localPref);
-})();
-
 let animateLogo = (() => {
     let logoEl = document.getElementById("logo-wrapper");
     if (document.referrer.indexOf(location.host) < 0) {
@@ -54,14 +25,27 @@ let animateLogo = (() => {
     }
 })();
 
-let watchScroll = (() => {
-    let setScrolled = function () {
+let manageHeaderFixing = (() => {
+    let setHeader = function () {
         if (window.scrollY > 60) {
             document.body.classList.add("is-scrolled");
         } else {
             document.body.classList.remove("is-scrolled");
         }
     };
-    setScrolled();
-    document.addEventListener("scroll", setScrolled);
+    setHeader();
+    document.addEventListener("scroll", setHeader);
 })();
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    document.body.classList.add("mobile");
+}
+
+let toggleCollapsible = (e) => {
+    let parent = e.currentTarget.parentNode;
+    if (parent.classList.contains("is-expanded")) {
+        parent.classList.remove("is-expanded");
+    } else {
+        parent.classList.add("is-expanded");
+    }
+};

@@ -9,7 +9,9 @@
 
     {{ .Content }}
 </section>
+<section class="page-section">
+    {{ partial "subscribe.html" (dict "context" .) }}
+</section>
 
-{{ partial "section-subscribe.html" . }}
 
 {{ end }}

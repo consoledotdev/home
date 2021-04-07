@@ -1,0 +1,50 @@
+{{ define "main" }}
+	{{ $CTATitle := "Interesting betas by email" }}
+	{{ $CTADescription := "Our free weekly newsletter picks out the 2-3 most interesting new betas." }}
+	<section class="page-section page-section-betas-root">
+		<h2 class="title title-1">Beta Console</h2>
+		<p class="description">A live list of every developer tool beta &amp; early access release.</p>
+	</section>
+	<section class="page-section page-section-betas-root">
+		<div class="betas-collapsible-cta">
+			{{ $contentParams := (dict "layout" "wide") }}
+			{{ partial "components/box-collapsible.html" (dict "title" $CTATitle "style" "blue" "icon" "expand.html" "content" "subscribe.html" "contentParams" $contentParams) }}
+		</div>
+		<div class="betas-full-cta">
+			{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription ) }}
+		</div>
+	</section>
+	<div class="betas-split">
+		<div class="betas">
+            <section class="page-section inline-filters-wrapper" data-inline-filters-wrapper>
+				{{ $contentParams := (dict "items" $.Site.Data.filters.items "dot" . ) }}
+				{{ partial "components/box-collapsible.html" (dict "title" "Filter" "icon" "filter.html" "content" "components/betas/filters.html" "contentParams" $contentParams) }}
+    			<p class="small">Last updated: {{ .Lastmod.Format "2006-01-02" }}</p>
+			</section>
+			<section class="page-section">
+                <h3 class="title title-2">Latest Releases</h3>
+				<div class="beta-items" data-betas-latest data-aside-anchor>
+					{{ range $.Site.Data.betaslive.items }}
+						{{ partial "components/betas/card.html" . }}
+					{{ end }}
+					{{ partial "components/betas/card-empty.html" . }}
+				</div>
+			</section>
+			<section class="page-section">
+                <h3 class="title title-2">Recent Betas: Now GA</h3>
+				<div class="beta-items" data-betas-ga>
+					{{ range $.Site.Data.betasga.items }}
+						{{ partial "components/betas/card.html" . }}
+					{{ end }}
+					{{ partial "components/betas/card-empty.html" . }}
+				</div>
+			</section>
+		</div>
+		<aside id="aside-filters-wrapper" class="betas-aside">
+		</aside>
+	</div>
+	<section class="page-section page-section-betas-root">
+		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
+	</section>
+	<script src="/js/betas.js"></script>
+{{ end }}

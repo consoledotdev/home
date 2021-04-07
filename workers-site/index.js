@@ -29,14 +29,20 @@ class ElementHandler {
     }
 
     // Rewrite the element attribute
-    // If ?ref is provided then it overrides all values
-    // Otherwise it will default to direct, which may be overriden by the page
-    // itself e.g. to provide details of which page the user signed up from
+    // If current value is empty then set it to the referrer
+    // If current value is set, prepend the referrer, so we can track both
     element(element) {
         const currentValue = element.getAttribute("value");
 
-        if (currentValue == "" || this.referrer != "direct") {
+        // If empty, set it to the referrer
+        if (this.referrer == "direct"){
+            return; // Do nothing
+        } else if (currentValue == "") {
             element.setAttribute("value", this.referrer);
+        // If not empty, prepend the referrer to the existing value
+        } else {
+            const newValue = this.referrer + "_" + currentValue
+            element.setAttribute("value", newValue);
         }
     }
 }

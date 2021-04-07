@@ -1,0 +1,20 @@
+<div class="console-checkbutton{{ with .context.master }} console-checkbutton-master{{ end }}{{ with .context.color }} color-{{ . }}{{ end }}">
+	<input type="checkbox" name="{{ .context.name }}-filter" id="{{ .context.name }}-filter" value="{{ .context.name }}"{{ with .context.checked }} checked{{ end }} onclick="blur(); {{ safeJS .action }}()">
+	<label for="{{ .context.name }}-filter" onclick="blur();">
+		{{- with .context.master }}
+			{{- partial "icons/minus.html" -}}
+			{{- partial "icons/x.html" -}}
+			{{- partial "icons/plus.html" -}}
+		{{ else }}
+			{{- partial "icons/plus.html" -}}
+			{{- partial "icons/checkmark.html" -}}
+		{{ end -}}
+		{{- with .context.icon }} {{ partial (print "icons/" . ".html") }} {{ end -}}
+		{{- if .context.master }}
+			<span class="console-checkbutton-label-all">{{ .context.labelAll }}</span>
+			<span class="console-checkbutton-label-none">{{ .context.labelNone }}</span>
+		{{ else }}
+			{{- .context.label -}}
+		{{ end -}}
+	</label>
+</div>

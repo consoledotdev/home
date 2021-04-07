@@ -1,0 +1,24 @@
+<div id="betas-filters" class="betas-filters">
+	<form action="" class="console-filters is-showing-all" data-beta-filters>
+		<label for="betas-sort" class="console-label console-label-small">Sort by</label>
+		<select class="console-select console-input-small" name="" id="betas-sort" data-sort-betas-select onchange="blur(); sortBetas()">
+			<option value="date" selected>Date</option>
+			<option value="name">Name</option>
+		</select>
+		<label class="console-label console-label-small">Show</label>
+		{{ range .items }}
+			{{ $details := merge . (dict "color" "blue") }}
+			{{ if eq .name "weekly-pick" }}
+				{{ $details = merge . (dict "color" "green") }}
+			{{ end }}
+			{{ partial "components/checkbutton.html" (dict "context" $details "action" "filtering.toggledCheck" ) }}
+		{{ end }}
+		<button onclick="blur(); filtering.selectedAllChecks(); return false" class="console-button-text console-button-small select-all" title="Select all">
+            <span>Select all</span>
+        </button>
+		<button onclick="blur(); filtering.clearedAllChecks(); return false" class="console-button-text console-button-small clear-all" title="Clear all">
+            <span>Clear all</span>
+        </button>
+	</form>
+    <p class="small">Last updated: {{ .dot.Lastmod.Format "2006-01-02" }}</p>
+</div>

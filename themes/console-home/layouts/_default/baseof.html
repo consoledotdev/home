@@ -3,9 +3,15 @@
 <!DOCTYPE html>
 <html lang="en">
     {{ partial "head.html" . }}
-    <body class="theme-dark page-{{ if not .Params.pageType -}}article{{ else }}{{ .Params.pageType }}{{ end }}">
-            {{ partial "header.html" (dict "context" . "headerType" .Params.headerType "hideGrid" .Params.hideGrid ) }}
-            <main class="main{{ if ne .Params.pageType "home" }}-page theme-user{{ end }}">{{- block "main" . }}{{- end }}</main>
+    <body class="theme page-{{ if not .Params.pageType -}}article{{ else }}{{ .Params.pageType }}{{ end }}">
+            {{ partial "header.html" (dict "context" . "headerType" .Params.headerType "hidePlanes" .Params.hidePlanes ) }}
+            <main class="main
+                {{- if ne .Params.pageType "home" -}}
+                    {{- if not .Params.pageType }}-article{{ end -}}
+                    {{- with .Params.pageType }}-{{ . }}{{ end -}}
+                {{- end }}">
+                    {{- block "main" . }}{{- end }}
+            </main>
             {{ partial "footer.html" . }}
         <script src="/js/scripts.js"></script>
     </body>

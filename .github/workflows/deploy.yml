@@ -1,7 +1,7 @@
 name: Deploy
 on:
     schedule:
-        - cron: '0 08 * * THU'
+        - cron: '45 07 * * THU'
 
     workflow_dispatch:
         inputs:
@@ -44,7 +44,14 @@ jobs:
                   RESULTS: ${{ steps.get_data_tools.outputs.results }}
               run: |
                 mkdir data
-                echo "$RESULTS" > data/latesttools-raw.json
+                echo "$RESULTS" > data/toolsallraw.json
+
+            - name: 'Upload Artifact'
+              uses: actions/upload-artifact@v2
+              with:
+                  name: tools-all-raw
+                  path: data/toolsallraw.json
+                  retention-days: 1
 
             - id: 'get_data_beta'
               name: Get beta list from Google Sheets
@@ -56,7 +63,7 @@ jobs:
                           {
                               "command": "getData",
                               "args": {
-                                  "range": "'All Programs'!A:M",
+                                  "range": "'All Programs'!A:P",
                                   "hasHeaderRow": true
                               }
                           }
@@ -69,7 +76,14 @@ jobs:
               env:
                   RESULTS: ${{ steps.get_data_beta.outputs.results }}
               run: |
-                  echo "$RESULTS" > data/latestbetas-raw.json
+                  echo "$RESULTS" > data/betasallraw.json
+
+            - name: 'Upload Artifact'
+              uses: actions/upload-artifact@v2
+              with:
+                  name: betas-all-raw
+                  path: data/betasallraw.json
+                  retention-days: 1
 
             - name: Setup Python
               uses: actions/setup-python@v2
@@ -81,11 +95,40 @@ jobs:
               run: |
                   pip install --upgrade pip
                   pip install -r requirements.txt
-            - name: Build static HTML
+
+            - name: Parse tools JSON
               run: |
                   python3 parseTools.py \
-                  --tools-json data/latesttools-raw.json \
-                  --beta-json data/latestbetas-raw.json
+                  --tools-json data/toolsallraw.json \
+                  --beta-json data/betasallraw.json
+
+            - name: 'Upload Artifact'
+              uses: actions/upload-artifact@v2
+              with:
+                  name: betas-ga
+                  path: data/betasga.json
+                  retention-days: 1
+
+            - name: 'Upload Artifact'
+              uses: actions/upload-artifact@v2
+              with:
+                  name: betas-latest
+                  path: data/betaslatest.json
+                  retention-days: 1
+            
+            - name: 'Upload Artifact'
+              uses: actions/upload-artifact@v2
+              with:
+                  name: betas-live
+                  path: data/betaslive.json
+                  retention-days: 1
+
+            - name: 'Upload Artifact'
+              uses: actions/upload-artifact@v2
+              with:
+                  name: tools-latest
+                  path: data/toolslatest.json
+                  retention-days: 1
 
             - name: "hugo build"
               uses: jakejarvis/hugo-build-action@v0.81.0

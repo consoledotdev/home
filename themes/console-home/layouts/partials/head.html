@@ -1,11 +1,12 @@
 <head>
-    {{- $title := print .Title " - " .Site.Title }} {{- if .IsHome }}{{ $title = .Title }}{{ end }}
-    <title>{{ $title }}</title>
+    <title>{{ .Title }}</title>
     <meta charset="utf-8" />
     <meta name="description" content="{{ .Summary }}" />
 
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/vars.css" />
+    <script src="/js/head-scripts.js"></script>
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/components.css" />
 
@@ -31,8 +32,8 @@
     -->
     {{- $lastmod := false -}}
     {{- if eq $.Page.RelPermalink "/latest/" -}}
-        {{- if $.Site.Data.latesttools.items -}}
-            {{- range first 1 $.Site.Data.latesttools.items -}}
+        {{- if $.Site.Data.toolslatest.items -}}
+            {{- range first 1 $.Site.Data.toolslatest.items -}}
                 {{- $lastmod = index . "Scheduled for" -}}
                 {{- $lastmod = dateFormat $iso8601 $lastmod -}}
             {{- end -}}
@@ -44,7 +45,7 @@
     {{ end -}}
     <!-- https://developer.yoast.com/features/opengraph/functional-specification -->
     <meta property="og:site_name" content="Console" />
-    <meta property="og:title" content="{{ $title }}" />
+    <meta property="og:title" content="{{ .Title }}" />
     <meta property="og:description" content="{{ .Summary }}" />
     {{- $ogImg := "/img/console-mark-256.png" -}}
     {{- if .Params.ogImg }}

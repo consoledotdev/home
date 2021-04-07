@@ -5,9 +5,9 @@ Sites](https://developers.cloudflare.com/workers/platform/sites).
 
 ### Links
 
-- Production website: https://console.dev
-- Test environment: https://home-test.consoledev.workers.dev
-- [Deploy action](https://github.com/consoledotdev/home/actions?query=workflow%3ADeploy)
+-   Production website: https://console.dev
+-   Test environment: https://home-test.consoledev.workers.dev
+-   [Deploy action](https://github.com/consoledotdev/home/actions?query=workflow%3ADeploy)
 
 ## Site development setup
 
@@ -16,20 +16,20 @@ code, you only need Hugo:
 
 1. [Install Hugo](https://gohugo.io/getting-started/installing/).
 2. Two options:
-   - Start the Hugo server: `hugo server -D`.
-   - Test from other devices on local network (such as iPhone) `hugo server -D --bind=IP --baseURL=http://IP:1313`, where `IP` is the local IP of the machine running the Hugo server.
+    - Start the Hugo server: `hugo server -D`.
+    - Test from other devices on local network (such as iPhone) `hugo server -D --bind=IP --baseURL=http://IP:1313`, where `IP` is the local IP of the machine running the Hugo server.
 3. Launch the URL in your browser. It will watch for changes and auto refresh the browser.
 
 ## Hugo options
 
 ### Frontmatter variables
 
-- `pageType`: `feature` or `article` - Define feature pages like the Beta List
-  or article pages like About.
-- `headerType`: `fixed` or `false` - When fixed the header will show on top on
-  scroll.
-- `hideGrid`: `true` or `false` - Hides the visual grid (not the finer lines)
-  from the page.
+-   `pageType`: `feature` or `article` - Define feature pages like the Beta List
+    or article pages like About.
+-   `headerType`: `fixed` or `false` - When fixed the header will show on top on
+    scroll.
+-   `hidePlanes`: `true` or `false` - Hides the visual planes (not the finer lines)
+    from the page.
 
 ### Custom Hugo Shortcodes
 
@@ -63,7 +63,7 @@ pre-generated examples are already in `/themes/console-home/data/`.
 To generate new examples into `/data/`:
 
 ```zsh
-python parseTools.py --tools-json tests/example-tools.json --beta-json tests/example-betas.json --ignore-date YES
+python parseTools.py --tools-json themes/console-home/data/toolsallraw.json --beta-json themes/console-home/data/betasallraw.json --ignore-date YES
 ```
 
 ## Cloudflare Workers setup
@@ -125,8 +125,8 @@ is enabled for the Service Account.
 
 ## Secrets
 
-- `CF_API_TOKEN` - [Cloudflare API
-  token](https://dash.cloudflare.com/profile/api-tokens) to deploy.
-- `GSHEET_CLIENT_EMAIL` - email of the Google Service Account.
-- `GSHEET_PRIVATE_KEY` - private key of the Google Service Account. Download
-  JSON then extract private key component.
+-   `CF_API_TOKEN` - [Cloudflare API
+    token](https://dash.cloudflare.com/profile/api-tokens) to deploy.
+-   `GSHEET_CLIENT_EMAIL` - email of the Google Service Account.
+-   `GSHEET_PRIVATE_KEY` - private key of the Google Service Account. Download
+    JSON then extract private key component.

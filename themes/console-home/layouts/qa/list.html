@@ -16,6 +16,8 @@
     a something we should look at.</p>
 </section>
 
-{{ partial "section-subscribe.html" . }}
+<section class="page-section">
+    {{ partial "subscribe.html" (dict "context" .) }}
+</section>
 
 {{ end }}

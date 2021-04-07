@@ -1,0 +1,608 @@
+    
+    <!doctype html>
+
+    <html lang="en-US">
+
+    <head>
+
+
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+        
+
+
+        
+	<!-- This site is optimized with the Yoast SEO plugin v16.0.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Page not found - AlmaLinux OS - Forever-Free Enterprise-Grade Operating System</title>
+	<meta name="robots" content="noindex, follow" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:title" content="Page not found - AlmaLinux OS - Forever-Free Enterprise-Grade Operating System" />
+	<meta property="og:site_name" content="AlmaLinux OS - Forever-Free Enterprise-Grade Operating System" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://almalinux.org/#website","url":"https://almalinux.org/","name":"AlmaLinux OS - Forever-Free Enterprise-Grade Operating System","description":"","potentialAction":[{"@type":"SearchAction","target":"https://almalinux.org/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="AlmaLinux OS - Forever-Free Enterprise-Grade Operating System &raquo; Feed" href="https://almalinux.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="AlmaLinux OS - Forever-Free Enterprise-Grade Operating System &raquo; Comments Feed" href="https://almalinux.org/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/almalinux.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='bootstrap-css'  href='https://almalinux.org/wp-content/themes/satisfy/css/bootstrap/bootstrap.min.css?ver=1617200902' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://almalinux.org/wp-includes/css/dist/block-library/style.min.css?ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='satisfy-theme-style-css'  href='https://almalinux.org/wp-content/themes/satisfy/style.css?ver=1617200902' type='text/css' media='all' />
+<style id='satisfy-theme-style-inline-css' type='text/css'>
+body, .pagination li a, .comment-list .fn a, .comment-list .comment-meta a, caption{ color: #444444; font-size: 14px; font-family: "Open Sans", sans-serif; } h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, legend{ color: #082336; font-family: "Roboto Slab", serif; } .content-wrapper{ max-width: 1200px; } #site-hero{ font-size: 1.7em; } article .post-info, .section-line, #primary-sidebar li, #home-page-widgets li, #comments li, blockquote, #comments #submit, #comments .comment-body, #comments-below-nav, .no-comments, pre, .btn-default, h2.comments-title, .form-control, .children, iframe, #wp-calendar thead, body.single .category-and-tag-info, #comments #reply-title, #comments #comments-line, input, button, textarea, select, table tr, article .article-footer #satisfy-prev-and-next, #primary-sidebar #inner-content-sidebar, .wp-caption, legend, abbr{ border-color: #e8e8e8; } .read-more, .search-btn, .site-nav .current-menu-item > a, .site-nav .current_page_item > a{ background: #ba4444; color: #fcfcfc; border-color: transparent; } .meta-wrap a, .small-text{ color: #444444; } a, .meta-wrap .fa, .pagination li a{ color: #ba4444; border-color: #e8e8e8; } a:hover, a:focus, .meta-wrap a:hover .fa, .meta-wrap a:focus .fa, #site-hero .fa:hover{ color: #d16a57; border-color: #d16a57; background: none; cursor: pointer; } #site-header, .site-nav .sub-menu, .site-nav .children{ background: #082336; } .site-nav{ font-size: 1.1em; padding-right: 0 } .site-nav a, #site-header #site-logo a, #mobile-menu-btn a{ color: #fcfcfc; } .site-nav .search-field, .satisfy-to-top{ color: #fcfcfc; background: #082336; } @media (min-width:992px){ #site-hero .cover-img{ background-size:cover } } @media (max-width:991px){ #site-hero .cover-img{ background-size:cover } .site-nav{ background: #082336; } .site-nav .search-field, .site-nav .sub-menu, .site-nav .children{ background: transparent; border-bottom-color: #fcfcfc; box-shadow: none; } } .site-nav a:hover, .site-nav a:focus, body .read-more:hover, body .read-more:focus, .search-btn:hover, .search-btn:focus, .article-body-inner .read-more:active, .input-group-btn .search-btn:active, .satisfy-to-top:hover, #mobile-menu-btn a:hover, #mobile-menu-btn a:focus, .pagination li a:hover, .pagination li a:focus, .pagination li a:active{ color: #fcfcfc; background: #d16a57; border-color: #d16a57; } #site-hero h1, #site-hero p, #site-hero .hero-arrow{ color: #blank; } #site-hero .vertical-table{ background: rgba(0,0,0,0.3); } #footer-overlay{ background: rgba(0,0,0,0); } .pagination li span.current, .pagination li span.dots{ border-color: #e8e8e8; color: #444444; } #site-footer li, #site-footer input, #site-footer select, #site-footer tr, #site-footer #wp-calendar thead, #site-footer .wp-caption, #footer-top legend, #footer-top textarea, #footer-top button, #footer-top abbr{ border-color: #e8e8e8; } #site-footer .footer-nav li{ border-color: #e8e8e8; font-size: 14px; } #footer-top{ background-color: #ba4444; color: #fcfcfc;} #footer-top a, #footer-top #wp-calendar caption, #footer-top .small-text, #footer-top caption, #footer-top legend{ color: #fcfcfc; } #satisfy-prev-and-next{} .nav-search-icon{display: none;} .meta-wrap .fa, .read-more .fa{} .satisfy-widget-div-latest-posts img, #comments .avatar{ width: 50px; } .satisfy-widget-div-latest-posts .satisfy-latest-posts-text.-sfy-wid{ max-width: calc(100% - 65px); } #comments .reply{ font-size :1em; }h1{ font-size: 2.5em; }h2{ font-size: 2em; }h3{ font-size: 1.75em; }h4{ font-size: 1.5em; }h5{ font-size: 1.25em; }h6{ font-size: 1.1em; }
+</style>
+<link rel='stylesheet' id='font-awesome-css'  href='https://almalinux.org/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='satisfy-theme-google-fonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans%7CRoboto+Slab' type='text/css' media='all' />
+<script type='text/javascript' src='https://almalinux.org/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://almalinux.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="https://almalinux.org/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://almalinux.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://almalinux.org/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1C1KF63NYM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1C1KF63NYM');
+    </script>
+ 
+    <meta name="description" content="An open-source RHEL fork built by the team at CloudLinux, inspired by the community.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="https://almalinux.org/<?php echo esc_url( get_template_directory_uri() ); ?>../images/logo-thumb.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="400">
+    <link rel="shortcut icon" type="image/jpg" href="<?php echo esc_url( get_template_directory_uri() ); ?>/<?php echo esc_url( get_template_directory_uri() ); ?>../images/hero-img.png"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		<style type="text/css" id="wp-custom-css">
+			html body #nav-search-bar, html body #nav-search-bar * {display: none!important;}
+body.page-template.page-template-templates.page-template-blog-template.page-template-templatesblog-template-php a.post_comments,.single-post div#comments {
+    display: none;
+}
+.livestream_form_right .hs_firstname {
+	margin-bottom: -22px;
+}		</style>
+		    <link rel="shortcut icon" href="images/hero-img.ico">
+       <link rel="shortcut icon" type="image/jpg" href="https://almalinux.org/wp-content/themes/satisfy/images/hero-img.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800;900&display=swap" rel="stylesheet">
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5408110.js"></script>
+    <!-- End of HubSpot Embed Code -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1C1KF63NYM"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1C1KF63NYM');
+    </script>
+
+    </head>
+
+
+
+    <body class="error404 wp-custom-logo elementor-default elementor-kit-254">
+
+
+
+        <div id="site-wrapper" class="">
+
+
+
+
+
+                <header id="site-header">
+        <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-12">
+
+                            <div class="content-pad">
+
+
+
+                                <div id="site-logo">
+
+                                     <a href="https://almalinux.org/">
+
+                    <img src="https://almalinux.org/wp-content/uploads/2021/01/cropped-logo.png" alt="AlmaLinux OS - Forever-Free Enterprise-Grade Operating System" class="custom-logo">
+
+                </a>
+
+                                </div>
+
+
+
+                                <div id="mobile-menu-btn">
+
+                                    <a href="#"><span class="fa fa-bars" aria-hidden="true"></span></a>
+
+                                </div>
+
+
+
+                                <nav class="site-nav">
+
+
+
+                                    <div class="menu-primary-menu-container"><ul id="menu-primary-menu" class="menu"><li id="menu-item-109" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-109"><a href="https://repo.almalinux.org/almalinux/8/isos/x86_64/">Download ISOs</a></li>
+<li id="menu-item-158" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-158"><a href="https://github.com/AlmaLinux">GitHub</a></li>
+<li id="menu-item-108" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-108"><a href="https://almalinux.org/blog/">Blog</a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-10"><a href="https://almalinux.org#about">About</a></li>
+<li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-11"><a href="https://almalinux.org#faq">FAQ</a></li>
+<li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-12"><a href="https://almalinux.org#signup">Newsletter Sign Up</a></li>
+<li id="menu-item-323" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-323"><a href="https://shop.almalinux.org">Shop</a></li>
+</ul></div>
+
+
+                                    <div class="nav-search-icon">
+
+                                        <a href="#"><span class="fa fa-search" aria-hidden="true"></span></a>
+
+                                    </div>
+
+
+
+                                    <div id="nav-search-bar">
+
+                                        
+<form role="search" method="get" class="search-form" action="https://almalinux.org/">
+    <div class="input-group">
+        <input type="search" required="required" class="search-field form-control" placeholder="Search.." value="" name="s">
+        <span class="input-group-btn">
+            <button type="submit" class="search-btn btn btn-default">
+                <span class="fa fa-search" aria-hidden="true"></span>
+            </button>
+        </span>
+    </div>
+</form>
+
+                                    </div>
+
+
+
+                                </nav>
+
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </header><!-- site-header -->
+
+            </div>
+
+
+
+            <div id="site-hero" class="content-row">
+
+                
+            </div>
+
+
+
+            <div id="site-main">
+
+
+    <div id="primary-content">
+
+        <div id="main">
+       
+        
+<div class="container">
+ <div class="row blog-recent">
+				<div class=" col-lg-8"> 
+
+            
+                <h1 class="article-h1 entry-title site-h1">Oops! That page can&#039;t be found</h1>
+
+                
+                <div class="custom-content">
+
+                    
+                    <p>The page was not found (404).</p>
+        <p class="section-padding-sm">Maybe a search?</p>
+        <div>
+<form role="search" method="get" class="search-form" action="https://almalinux.org/">
+    <div class="input-group">
+        <input type="search" required="required" class="search-field form-control" placeholder="Search.." value="" name="s">
+        <span class="input-group-btn">
+            <button type="submit" class="search-btn btn btn-default">
+                <span class="fa fa-search" aria-hidden="true"></span>
+            </button>
+        </span>
+    </div>
+</form>
+</div>
+        <p class="section-padding">
+            <a href="https://almalinux.org/"><span class="fa fa-long-arrow-left"></span> Go back to homepage</a>
+        </p>
+                </div>
+
+            
+
+
+        </div>
+        
+         
+
+
+    <div id="primary-sidebar" class="col-lg-4">
+
+        <div class="sfy-pad-left">
+
+            <aside id="inner-content-sidebar">
+
+                			<div class="widget-div">			<div class="wpt_widget_content" id="wpt_widget-2_content" data-widget-number="2">
+				<ul class="wpt-tabs has-1-tabs">
+																													<li class="tab_title"><a href="#" id="recent-tab">Recent</a></li>
+																																					</ul> <!--end .tabs-->
+				<div class="clear"></div>
+				<div class="inside">
+																<div id="recent-tab-content" class="tab-content">
+						</div> <!--end #recent-tab-content-->
+																				<div class="clear"></div>
+				</div> <!--end .inside -->
+				<div class="clear"></div>
+			</div><!--end #tabber -->
+						<script type="text/javascript">
+				jQuery(function($) {
+					$('#wpt_widget-2_content').data('args', {"allow_pagination":"1","post_num":"5","title_length":"15","comment_num":"5","show_thumb":"1","thumb_size":"small","show_date":"1","show_excerpt":"","excerpt_length":"15","show_comment_num":"","show_avatar":"1"});
+				});
+			</script>
+			</div>			<div class="widget_text widget-div"><div class="textwidget custom-html-widget"><br>
+<h4>
+	Subscribe to the AlmaLinux Blog notifications
+</h4>
+
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+<script>
+hbspt.forms.create({
+portalId: "5408110",
+formId: "21536c12-aa80-4d2b-8f58-da5c2419b9d1"
+});
+</script></div></div>
+            </aside>
+
+        </div>
+
+    </div><!-- primary sidebar -->
+
+
+
+        
+        
+        </div>
+        
+        </div>
+        
+</div>
+    </div><!-- primary-content -->
+
+
+
+    
+       
+
+
+
+            <footer id="site-footer">
+
+             
+
+
+
+                                 
+
+
+    
+     
+     
+     
+<div class="footer_top">
+       <div class="container">
+       <div class="row">
+       <div class="col-md-12"> 
+<div class="widget_text widget-div"><div class="textwidget custom-html-widget"><h2 class="footer_top_titel1">Learn more about other CloudLinux products</h2>
+</div></div> 
+</div> </div> 
+
+<div class="row">
+
+<div class="col-md-4"> 
+<div class="footer_image_box"><div class="widget-div"><img width="300" height="69" src="https://almalinux.org/wp-content/uploads/2021/01/kernelcare_white_and_blue-300x69.png" class="image wp-image-29  attachment-medium size-medium" alt="" loading="lazy" style="max-width: 100%; height: auto;" srcset="https://almalinux.org/wp-content/uploads/2021/01/kernelcare_white_and_blue-300x69.png 300w, https://almalinux.org/wp-content/uploads/2021/01/kernelcare_white_and_blue-1024x237.png 1024w, https://almalinux.org/wp-content/uploads/2021/01/kernelcare_white_and_blue-768x177.png 768w, https://almalinux.org/wp-content/uploads/2021/01/kernelcare_white_and_blue.png 1026w" sizes="(max-width: 300px) 100vw, 300px" /></div><div class="widget_text widget-div"><div class="textwidget custom-html-widget"><p class="footer_text">Live patching for Linux kernels, Shared libraries and IoT devices</p></div></div><div class="widget_text widget-div"><div class="textwidget custom-html-widget"><div class="footer_more">
+                      <a href="https://www.kernelcare.com/" class="btn">LEARN MORE</a>
+                    </div></div></div> </div>
+</div> 
+<div class="col-md-4"> 
+<div class="footer_image_box"><div class="widget-div"><img width="300" height="94" src="https://almalinux.org/wp-content/uploads/2021/01/els-300x94.png" class="image wp-image-30  attachment-medium size-medium" alt="" loading="lazy" style="max-width: 100%; height: auto;" srcset="https://almalinux.org/wp-content/uploads/2021/01/els-300x94.png 300w, https://almalinux.org/wp-content/uploads/2021/01/els-1024x320.png 1024w, https://almalinux.org/wp-content/uploads/2021/01/els-768x240.png 768w, https://almalinux.org/wp-content/uploads/2021/01/els-1536x480.png 1536w, https://almalinux.org/wp-content/uploads/2021/01/els-2048x641.png 2048w" sizes="(max-width: 300px) 100vw, 300px" /></div><div class="widget_text widget-div"><div class="textwidget custom-html-widget"><p class="footer_text">
+                      Extended Lifecycle Support service provided by CloudLinux Inc. prolongs the life of the end-of-life Linux distributions by 4 years beyond the EOL date.
+                    </p></div></div><div class="widget_text widget-div"><div class="textwidget custom-html-widget"><div class="footer_more">
+                      <a href="https://elsportal.com" class="btn">LEARN MORE</a>
+                    </div></div></div> </div>
+</div> 
+
+<div class="col-md-4"> 
+ 
+</div> 
+</div>
+</div></div>
+<div class="footer_bottom">
+<div class="container">
+<div class="row">
+<div class="col-md-6"> 
+<div class="widgets_copyright_left">
+<div class="widget-div"><a href="https://almalinux.org/"><img width="300" height="58" src="https://almalinux.org/wp-content/uploads/2021/01/logo-300x58.png" class="image wp-image-5  attachment-medium size-medium" alt="" loading="lazy" style="max-width: 100%; height: auto;" srcset="https://almalinux.org/wp-content/uploads/2021/01/logo-300x58.png 300w, https://almalinux.org/wp-content/uploads/2021/01/logo-1024x198.png 1024w, https://almalinux.org/wp-content/uploads/2021/01/logo-768x149.png 768w, https://almalinux.org/wp-content/uploads/2021/01/logo.png 1135w" sizes="(max-width: 300px) 100vw, 300px" /></a></div><div class="widget_text widget-div"><div class="textwidget custom-html-widget">
+<ul class="footer_bottom_menu" style=" padding:15px 0 0 0;"><li style="float: left;padding: 0 20px 0 0;display: block;"><a style="color: #fff !important;" href="https://almalinux.org/terms-of-service/">Terms of Service</a></li><li style="float: left;padding: 0 20px 0 0;display: block;"><a style="color: #fff !important;" href="https://almalinux.org/privacy-policy/">Privacy Policy</a></li></ul>
+
+
+
+
+
+ </div></div> 
+</div></div>
+
+<div class="col-md-6">
+
+
+<div class="widgets_copyright_right">
+<div class="widget_text widget-div"><div class="textwidget custom-html-widget">© 2021 ALL RIGHTS RESERVED.</div></div> 
+</div>
+</div>
+
+</div>
+</div></div>
+      
+
+
+
+ 
+
+
+
+             <!--   <div id="footer-bottom" class="content-row">
+
+
+
+                    <p>Theme Satisfy</p>
+
+
+                </div> -->
+
+            </footer>
+
+        </div>
+
+
+
+        
+            <div class="satisfy-to-top">
+
+                <span class="fa fa-chevron-up"></span>
+
+            </div>
+
+        
+
+
+    </div><!-- site-wrapper -->
+
+
+
+    <link rel='stylesheet' id='wpt_widget-css'  href='https://almalinux.org/wp-content/plugins/wp-tab-widget/css/wp-tab-widget.css?ver=5.6' type='text/css' media='all' />
+<script type='text/javascript' src='https://almalinux.org/wp-includes/js/hoverintent-js.min.js?ver=2.2.1' id='hoverintent-js-js'></script>
+<script type='text/javascript' src='https://almalinux.org/wp-includes/js/admin-bar.min.js?ver=5.6' id='admin-bar-js'></script>
+<script type='text/javascript' id='ccfm-admin-bar-js-extra'>
+/* <![CDATA[ */
+var ccfm = {"ajax_url":"https:\/\/almalinux.org\/wp-admin\/admin-ajax.php","nonce":"4533e2143f"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://almalinux.org/wp-content/plugins/clear-cache-for-widgets/js/admin-bar.js?ver=1.5.1' id='ccfm-admin-bar-js'></script>
+<script type='text/javascript' src='https://almalinux.org/wp-content/themes/satisfy/js/satisfy-theme-script.js?ver=1617200902' id='satisfy-theme-script-js'></script>
+<script type='text/javascript' src='https://almalinux.org/wp-includes/js/wp-embed.min.js?ver=5.6' id='wp-embed-js'></script>
+<script type='text/javascript' id='wpt_widget-js-extra'>
+/* <![CDATA[ */
+var wpt = {"ajax_url":"https:\/\/almalinux.org\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://almalinux.org/wp-content/plugins/wp-tab-widget/js/wp-tab-widget.js?ver=5.6' id='wpt_widget-js'></script>
+
+ 
+
+<script>
+
+(function ( $ ) {
+ 
+$.fn.stickySidebar = function( options ) {
+ 
+var config = $.extend({
+headerSelector: 'header',
+navSelector: 'nav',
+contentSelector: '.blog-recent', 
+footerSelector: '.webinar_content_twitter',
+sidebarTopMargin: 90,
+footerThreshold: 1250
+}, options);
+ 
+var fixSidebr = function() {
+ 
+		var sidebarSelector = $(this);
+		var viewportHeight = $(window).height();
+		var viewportWidth = $(window).width();
+		var documentHeight = $(document).height();
+		var headerHeight = $(config.headerSelector).outerHeight();
+		var navHeight = $(config.navSelector).outerHeight();
+		var sidebarHeight = sidebarSelector.outerHeight();
+		var contentHeight = $(config.contentSelector).outerHeight();
+		var footerHeight = $(config.footerSelector).outerHeight();
+		var scroll_top = $(window).scrollTop();
+		var fixPosition = contentHeight - sidebarHeight;
+		var breakingPoint1 = headerHeight + navHeight;
+		var breakingPoint2 = documentHeight - (sidebarHeight + footerHeight + config.footerThreshold);
+ 
+		// calculate
+		if ( (contentHeight > sidebarHeight) && (viewportHeight > sidebarHeight) ) {
+		 
+				if (scroll_top < breakingPoint1) {
+				 
+				sidebarSelector.removeClass('sticky');
+		 
+		} else if ((scroll_top >= breakingPoint1) && (scroll_top < breakingPoint2)) {
+		 
+				sidebarSelector.addClass('sticky').css('top', config.sidebarTopMargin);
+		 
+		} else {
+		 
+		var negative = breakingPoint2 - scroll_top;
+		sidebarSelector.addClass('sticky').css('top',negative);
+		 
+		}
+ 
+	}
+};
+ 
+return this.each( function() {
+	$(window).on('scroll', $.proxy(fixSidebr, this));
+	$(window).on('resize', $.proxy(fixSidebr, this))
+	$.proxy(fixSidebr, this)();
+});
+ 
+};
+ 
+}( jQuery ));
+
+
+
+
+  
+</script>
+      <style>
+        .modal .btn {
+          /* position: absolute; */
+          /* left: 10%; */
+          /* bottom: 4%; */
+          background-color: #86DA2F;
+          padding: 4px 22px;
+          max-height: 70px;
+          color: #222527;
+          letter-spacing: 0.285em;
+          font-size: 14px;
+          font-family: 'Gilroy-Bold';
+          text-align: center;
+          cursor: pointer;
+          text-decoration: none;
+          border-radius: 5px;
+          letter-spacing: 1px;
+          margin: 0 auto;
+          margin-top: 10px;
+          display: block;
+          width: 90%;
+          box-sizing: border-box;
+        }
+        .modal img {
+          max-width: 100%;
+        }
+        .modal .close-modal {
+          top: 0;
+          right: 0;
+          width: 4%;
+          /* height: 7%; */
+          /* background: red; */
+          position: absolute;
+          text-align: center;
+          /* line-height: 151%; */
+          cursor: pointer;
+        }
+        .modal .modal-box {
+          /* min-width: 320px; */
+          background: white;
+          /* height: 1; */
+          /* margin: 0 auto; */
+          /* width: 60%; */
+          position: relative;    
+          padding-bottom: 10px;
+        }
+        .modal {
+          position: fixed;
+          width: 280px;
+          /* height: 150px; */
+          background: rgba(0,0,0,0.4);
+          bottom: 0;
+          display: block !important; 
+          /* justify-content: center; */
+          /* flex-direction: column; */
+          z-index: 100;
+          right: 0;
+          transition: right 1s;
+		  left: auto !important;
+		  top: auto !important;
+        }
+
+      </style>
+      <div class="modal" style="right: -1000px">
+        <div class="modal-box">
+          <a class="close-modal">✖</a>
+          <img src="/wp-content/uploads/modal.jpg">
+          <a href="https://hubs.ly/H0G8FJB0" class="btn">Sign up to join!</a>
+        </div>
+      </div>
+      <script>
+        setTimeout(function(){
+if (location.pathname.indexOf('webinars') !== -1) return true;
+    var flag = localStorage.getItem('modal_shown');
+
+          if (flag != "true") {
+            document.querySelector('.modal').style.right = '0';
+            localStorage.setItem('modal_shown', 'true');
+            document.querySelector('.modal').addEventListener('click',function(e){
+              if (e.target.classList.contains('close-modal')) {
+                document.querySelector('.modal').style.right = '-1000';
+              }
+              if (e.target.closest('.modal-box')) {
+                return true;
+              }
+              
+              document.querySelector('.modal').style.right = '-1000';
+            });
+          } 
+        }, 5000);
+      </script>
+
+    </body>
+
+</html>
+
