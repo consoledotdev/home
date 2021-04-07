@@ -1650,6 +1650,10 @@ a .icon {
     max-width: 400px;
 }
 
+.betas-split .betas-filters .small {
+    font-size: var(--t-size-2);
+}
+
 .betas-split .betas .console-filters {
     display: flex;
     flex-flow: row wrap;
