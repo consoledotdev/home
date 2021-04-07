@@ -7,8 +7,8 @@
             {{ partial "header.html" (dict "context" . "headerType" .Params.headerType "hidePlanes" .Params.hidePlanes ) }}
             <main class="main
                 {{- if ne .Params.pageType "home" -}}
-                    {{- if not .Params.pageType }}-article {{ end -}}
-                    {{- with .Params.pageType }}-{{ . }} {{ end -}}
+                    {{- if not .Params.pageType }}-article{{ end -}}
+                    {{- with .Params.pageType }}-{{ . }}{{ end -}}
                 {{- end }}">
                     {{- block "main" . }}{{- end }}
             </main>
