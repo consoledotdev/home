@@ -5,12 +5,12 @@ role: Co-founder
 org: Typesense
 what: a search engine optimized for performance and ease of use.
 date: 2021-03-29T12:00:00+00:00
-draft: true
+draft: false 
 summary: Q&A interview with Jason Bosco, Co-founder, Typesense.
 isSelected: qa
 topImg1Src: /img/qa/typesense-jason-bosco-profile.jpg
 topImg2Src: /img/qa/typesense-jason-bosco-logo.png
-ogImg: /img/qa/ORG-NAME-desk.EXT
+ogImg: /img/qa/typesense-jason-bosco-logo.png
 ---
 
 ### What is Typesense? Why did you build it?
