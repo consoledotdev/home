@@ -27,6 +27,11 @@
 							<div class="beta-card-content">
                                 <div class="left">
                                     <div class="beta-card-thumbnail aspect-ratio aspect-ratio-1-1">{{- if index . "favicon" -}}<img class="image" src="/{{ index . "favicon" }}" alt="{{ index . "Company/Org" }} Logo" />{{- end -}}</div>
+                                    <p class="beta-card-name">
+                                    {{- $org := index . "Company/Org" -}}
+                                    {{- $name := index . "Tool/Product/Project" -}}
+                                    {{- if in $name $org -}}{{ $name }}{{- else -}}{{ $name }}, from {{ $org }}{{- end -}}
+                                    </p>
 								</div>
 								<div class="right">
                                     <p class="beta-card-name">
