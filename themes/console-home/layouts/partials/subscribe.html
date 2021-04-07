@@ -7,7 +7,7 @@
                 {{- else -}}
                     Subscribe to the weekly Console newsletter
                 {{- end -}}
-            {{ if or (eq .size "medium") (eq .size "small") }}</h4>{{ else }}</h3>{{ end }}
+            {{ if or (eq .size "medium") (eq .size "small") }}</h3>{{ else }}</h4>{{ end }}
         {{ end }}
         <p{{ if or (eq .size "medium") (eq .size "small") }} class="small"{{ end }}>
             {{- with .description -}}
