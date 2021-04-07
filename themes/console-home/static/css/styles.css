@@ -339,6 +339,82 @@ body {
     gap: var(--space4) var(--space4);
 }
 
+.box-collapsible {
+    background: var(--theme-collapsible-bg-1);
+}
+
+.box-collapsible.color-blue {
+    background: var(--theme-collapsible-bg-blue-1);
+}
+
+.box-collapsible .title[class^="title-"],
+.box-collapsible .title[class*=" title-"] {
+    margin-bottom: 0;
+}
+
+.box-collapsible .box-collapsible-top {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    outline: none;
+    width: 100%;
+    padding: var(--space2) var(--space3);
+    text-align: left;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0);
+    transition: var(--a-controls);
+}
+
+.box-collapsible.is-expanded .box-collapsible-top {
+    padding: var(--space3) var(--space3);
+    transition: var(--a-controls-active);
+}
+
+.box-collapsible .box-collapsible-top:hover,
+.box-collapsible .box-collapsible-top:focus {
+    background: rgba(255, 255, 255, 0.02);
+    transition: var(--a-active);
+}
+
+.box-collapsible .box-collapsible-top:active {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.box-collapsible .box-collapsible-top .title {
+    flex: 1 1 auto;
+}
+
+.box-collapsible .box-collapsible-top .icon {
+    flex: 0 0 auto;
+    margin-left: var(--space3);
+}
+
+.box-collapsible .box-collapsible-content {
+    padding: 0 var(--space3);
+    max-height: 0;
+    transition: var(--a-elements);
+    overflow: hidden;
+}
+
+.box-collapsible.is-expanded .box-collapsible-content {
+    padding: var(--space3);
+    transition: var(--a-elements-active);
+}
+
+.box-collapsible .subscribe-cta:not(.flow-inline),
+.box-collapsible .subscribe-cta {
+    padding: 0;
+    background: transparent;
+}
+
+.box-collapsible .subscribe-cta .title {
+    display: none;
+}
+
 /* Main Nav
    ========================================================================== */
 
