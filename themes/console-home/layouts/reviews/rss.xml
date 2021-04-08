@@ -15,13 +15,13 @@
     <channel>
         <title>Console - Reviews</title>
         <link>{{ .Permalink }}</link>
-        <description>Reviews of developer tools.</description>{{ with .Site.LanguageCode }}
+        <description>Reviews of developer tools.</description>
         <image>
             <title>Console - Reviews</title>
             <link>https://console.dev/reviews/</link>
             <url>https://console.dev/img/console-mark-256.png</url>
         </image>
-        <language>{{.}}</language>{{end}}
+        {{ with .Site.LanguageCode }}<language>{{.}}</language>{{end}}
         <webMaster>hello@console.dev (console.dev)</webMaster>
         <managingEditor>hello@console.dev (console.dev)</managingEditor>{{ if not .Date.IsZero }}
         <lastBuildDate>{{ .Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
