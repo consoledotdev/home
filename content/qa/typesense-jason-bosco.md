@@ -133,14 +133,17 @@ the computer.
 
 Yep. It's just the two of us.
 
-We're not experts in every framework, so if there’s anyone using different web
-frameworks we’d love to partner to build an integration.
+Our goal is to democratize access to good instant-search technology and we
+could use all the help we can get. So if there’s anyone using different web/app
+frameworks and would like to use Typesense with it, we’d love to partner to
+build an integration.
 
-Similarly, more client libraries. We recently got asked for a Rust client
-library. The community has built a Go client, a PHP client, and a .Net
-client. Java is probably our next biggest thing, so if anyone has production
-level experience in these, then we’d value getting help from the community
-around client libraries.
+Similarly, we need more client libraries. We recently got asked for a Rust
+client library. The community has built like a Google client, a PHP client, and
+a .Net client. Java is probably our next biggest thing, so if anyone has
+production level experience in these, then we’d value getting help from the
+community around client libraries.
+
 
 ### How did you first get into software development
 
