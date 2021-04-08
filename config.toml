@@ -26,7 +26,6 @@ lastmod = ["lastmod", ":git", "date", "publishDate"]
 [outputs]
 home = [ "HTML" ]
 section = [ "HTML", "RSS" ]
-betas = [ "HTML", "RSS" ]
 
 [outputFormats]
 [outputFormats.RSS]
