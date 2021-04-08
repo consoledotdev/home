@@ -22,7 +22,7 @@ jobs:
 
             - id: 'get_data_tools'
               name: Get tools list from Google Sheets
-              uses: jroehl/gsheet.action@v1.1.0
+              uses: jroehl/gsheet.action@v1.1.1
               with:
                   spreadsheetId: 1VGVFXtfOAhZqPdY30mrD_4towCj6lCdhuwr35vp4xgM
                   commands: | # list of commands, specified as a valid JSON string
@@ -55,7 +55,7 @@ jobs:
 
             - id: 'get_data_beta'
               name: Get beta list from Google Sheets
-              uses: jroehl/gsheet.action@v1.1.0
+              uses: jroehl/gsheet.action@v1.1.1
               with:
                   spreadsheetId: 10SJbUuMWgc-ACOzNydXL16vE_fDwJIP92G4_L8XUhrQ
                   commands: | # list of commands, specified as a valid JSON string
