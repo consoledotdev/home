@@ -21,12 +21,12 @@ jobs:
                   environment: perftest
                   wranglerVersion: '1.15.0'
 
-            - name: k6 test: home 
+            - name: k6 test (home)
               uses: k6io/action@v0.2.0
               with:
                   filename: tests/home.js
 
-            - name: k6 test: betas 
+            - name: k6 test (betas)
               uses: k6io/action@v0.2.0
               with:
                   filename: tests/betas.js
