@@ -19,7 +19,7 @@ jobs:
               with:
                   apiToken: ${{ secrets.CF_API_TOKEN }}
                   environment: perftest
-                  wranglerVersion: '1.13.0' # Workaround for https://github.com/cloudflare/wrangler-action/issues/49
+                  wranglerVersion: '1.15.0'
 
             - name: k6 test: home 
               uses: k6io/action@v0.2.0
