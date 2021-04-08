@@ -29,7 +29,7 @@
 			{{- $faviconStatic := print "static/" $favicon -}}
 			{{- if $favicon -}}{{- if (fileExists $faviconStatic) -}}<media:content url="https://console.dev/{{ $favicon}}" medium="image" />{{- end -}}{{- end -}}
             <description>{{ index . "What is it?" }}</description>
-            <content:encoded>{{ "<![CDATA[" | safeHTML }}{{ index . "What is it?" }} ]]></content:encoded>
+            <content:encoded>{{ "<![CDATA[" | safeHTML }}{{ index . "What is it?" }}]]></content:encoded>
         </item>
         {{ end }}
     </channel>
