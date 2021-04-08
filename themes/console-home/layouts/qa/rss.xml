@@ -15,16 +15,16 @@
     <channel>
         <title>Console - Developer Q&amp;A interviews</title>
         <link>{{ .Permalink }}</link>
-        <description>A series of Q&amp;As with the developers behind the tools we feature in the Console newsletter.</description>{{ with .Site.LanguageCode }}
+        <description>A series of Q&amp;As with the developers behind the tools we feature in the Console newsletter.</description>
         <image>
             <title>Console - Developer Q&amp;A interviews</title>
             <link>https://console.dev/qa/</link>
             <url>https://console.dev/img/console-mark-256.png</url>
         </image>
-        <language>{{.}}</language>{{end}}
+        {{ with .Site.LanguageCode }}<language>{{.}}</language>{{end}}
         <webMaster>hello@console.dev (console.dev)</webMaster>
         <managingEditor>hello@console.dev (console.dev)</managingEditor>{{ if not .Date.IsZero }}
-        <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+        <lastBuildDate>{{ .Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
         {{- with .OutputFormats.Get "RSS" }}
             {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
         {{- end -}}
