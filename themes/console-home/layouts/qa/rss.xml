@@ -33,7 +33,8 @@
             <title>{{ .Title }}</title>
             <link>{{ .Permalink }}</link>
             <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-            {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
+            <dc:creator>{{ "<![CDATA[" | safeHTML }}console.dev]]></dc:creator>
+            <author>hello@console.dev (console.dev)</author>
             <guid>{{ .Permalink }}</guid>
             <media:content url="https://console.dev{{ .Params.topImg1Src }}" medium="image" />
             <description>{{ "<![CDATA[" | safeHTML }} Q&amp;A interview with {{ .Params.who }}, {{ .Params.role }}, {{ .Params.org }} - {{ .Params.what }}]]></description>

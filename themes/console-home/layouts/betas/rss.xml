@@ -18,16 +18,17 @@
         {{ range $.Site.Data.betaslive.items }}
         <item>
             {{- $org := index . "Company/Org" -}}
-            {{- $name := index . "Tool/Product/Project" -}}
-            <title>{{- if in $name $org -}}{{ $name }}{{- else -}}{{ $name }}, from {{ $org }}{{- end -}}</title>
+            {{ $name := index . "Tool/Product/Project" }}
+            <title>{{ if in $name $org }}{{ $name }}{{ else }}{{ $name }}, from {{ $org }}{{ end }}</title>
             <link>{{ index . "URL" }}</link>
-            {{- $pubDate := index . "Announced" -}}
+            {{ $pubDate := index . "Announced" -}}
             <pubDate>{{ dateFormat "Mon, 02 Jan 2006 15:04:05 -0700" $pubDate }}</pubDate>
-            {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
+            <dc:creator>{{ "<![CDATA[" | safeHTML }}console.dev]]></dc:creator>
+            <author>hello@console.dev (console.dev)</author>
             <guid>{{ index . "URL" }}</guid>
             {{- $favicon := index . "favicon" -}}
-			{{- $faviconStatic := print "static/" $favicon -}}
-			{{- if $favicon -}}{{- if (fileExists $faviconStatic) -}}<media:content url="https://console.dev/{{ $favicon}}" medium="image" />{{- end -}}{{- end -}}
+			{{ $faviconStatic := print "static/" $favicon }}
+			{{ if $favicon }}{{ if (fileExists $faviconStatic) }}<media:content url="https://console.dev/{{ $favicon}}" medium="image" />{{ end }}{{ end }}
             <description>{{ index . "What is it?" }}</description>
             <content:encoded>{{ "<![CDATA[" | safeHTML }}{{ index . "What is it?" }}]]></content:encoded>
         </item>
