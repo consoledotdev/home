@@ -7,9 +7,19 @@
 	</section>
 	<section class="page-section page-section-betas-root">
 		<div class="betas-collapsible-cta">
-			{{ $contentParams := (dict "layout" "wide") }}
-			{{ partial "components/box-collapsible.html" (dict "title" $CTATitle "style" "blue" "icon" "expand.html" "content" "subscribe.html" "contentParams" $contentParams) }}
-		</div>
+            <div class="box-collapsible color-blue">
+	            <button class="box-collapsible-top" onclick="blur(); toggleCollapsible(event)">
+	        	<div class="title title-4">Interesting betas by email</div>
+	        	<div class="icon icon-expand">
+	                <div class="icon-expand-shape-one"></div>
+	                <div class="icon-expand-shape-two"></div>
+                </div>
+                </button>
+                <div class="box-collapsible-content" data-collapsible-content>
+                {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
+                </div>
+            </div>
+        </div>
 		<div class="betas-full-cta">
 			{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription ) }}
 		</div>
@@ -17,9 +27,20 @@
 	<div class="betas-split">
 		<div class="betas">
             <section class="page-section inline-filters-wrapper" data-inline-filters-wrapper>
-				{{ $contentParams := (dict "items" $.Site.Data.filters.items "dot" . ) }}
-				{{ partial "components/box-collapsible.html" (dict "title" "Filter" "icon" "filter.html" "content" "components/betas/filters.html" "contentParams" $contentParams) }}
-    			<p class="small">Last updated: {{ .Lastmod.Format "2006-01-02" }}</p>
+                <div class="box-collapsible">
+	                <button class="box-collapsible-top" onclick="blur(); toggleCollapsible(event)">
+		            <div class="title title-4">Filter</div>
+	            	<div class="icon icon-filter">
+	                    <div class="icon-filter-shape-one"></div>
+	                    <div class="icon-filter-shape-two"></div>
+	                    <div class="icon-filter-shape-three"></div>
+                    </div>
+	                </button>
+	                <div class="box-collapsible-content" data-collapsible-content>
+                    {{ partial "components/betas/filters.html" (dict "items" $.Site.Data.filters.items "dot" . ) }}
+                    </div>
+                </div>
+                <p class="small">Last updated: {{ .Lastmod.Format "2006-01-02" }}</p>
 			</section>
 			<section class="page-section">
                 <h3 class="title title-2">Latest Releases</h3>
