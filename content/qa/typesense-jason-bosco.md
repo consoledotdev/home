@@ -9,7 +9,7 @@ draft: false
 summary: Q&A interview with Jason Bosco, Co-founder, Typesense.
 isSelected: qa
 topImg1Src: /img/qa/typesense-jason-bosco-profile.jpg
-topImg2Src: /img/qa/typesense-jason-bosco-logo.png
+topImg2Src: /img/qa/typesense-jason-bosco-logo.svg
 ogImg: /img/qa/typesense-jason-bosco-desk.jpg
 ---
 
