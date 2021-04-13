@@ -1,7 +1,7 @@
 name: Deploy
 on:
     schedule:
-        - cron: '45 07 * * THU'
+        - cron: '0 8 * * Mon-Fri'
 
     workflow_dispatch:
         inputs:
