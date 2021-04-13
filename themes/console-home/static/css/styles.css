@@ -1826,10 +1826,6 @@ a .icon {
     margin-bottom: var(--space3);
 }
 
-.beta-items .subscribe-cta {
-    margin: var(--space4) 0;
-}
-
 .beta-card {
     position: relative;
     background-color: var(--theme-content-bg-0);
