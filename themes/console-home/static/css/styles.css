@@ -477,6 +477,7 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
 }
 
 .main-nav ul li {
+    position: relative;
     list-style: none;
     flex: 0 0 auto;
     letter-spacing: 0.08em;
@@ -525,6 +526,10 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
 
 .main-nav .menu-popup-wrapper ul li:not(:last-child) {
     margin-bottom: var(--space3);
+}
+
+.main-nav ul li .badge {
+    margin-right: -4px;
 }
 
 .main-nav .menu-popup-wrapper .theme-switcher {
@@ -1652,6 +1657,23 @@ a .icon {
     background: var(--theme-separator-1);
 }
 
+.badge {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-100%);
+    background: var(--theme-badge-bg);
+    color: var(--theme-badge-text);
+    border-radius: var(--x-small-corners);
+    font-size: calc(var(--t-size-5) * 0.9);
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.2em;
+    padding: 0.1em 0.3em;
+}
+
 /* Popup
    ========================================================================== */
 
@@ -1698,6 +1720,10 @@ a .icon {
 
 /* Console Betas
    ========================================================================== */
+
+.page-betas .main-nav ul li.is-selected .badge {
+    display: none;
+}
 
 .page-section-betas-root {
     margin-right: min(26vw, 400px);

@@ -86,6 +86,9 @@
 
     --theme-collapsible-bg-1: var(--c-black-02-main);
     --theme-collapsible-bg-blue-1: var(--c-blue-10);
+
+    --theme-badge-text: var(--c-white-00-absolute);
+    --theme-badge-bg: var(--c-fuchsia-06);
 }
 
 .theme.page-article,
