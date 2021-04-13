@@ -1,4 +1,4 @@
-<div id="betas-filters" class="betas-filters">
+<div class="betas-filters">
 	<form action="" class="console-filters is-showing-all" data-beta-filters>
 		<label for="betas-sort" class="console-label console-label-small">Sort by</label>
 		<select class="console-select console-input-small" name="" id="betas-sort" data-sort-betas-select onchange="blur(); sortBetas()">
@@ -20,5 +20,4 @@
             <span>Clear all</span>
         </button>
 	</form>
-    <p class="small">Last updated: {{ .dot.Lastmod.Format "2006-01-02" }}</p>
 </div>

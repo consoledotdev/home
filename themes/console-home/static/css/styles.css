@@ -1737,17 +1737,30 @@ a .icon {
     max-height: 400px;
 }
 
-.betas-split .betas-aside .betas-filters {
+.betas-split .betas-aside .betas-aside-content {
+    margin-top: 66px;
     padding-left: 5vw;
     width: 26vw;
     max-width: 400px;
-    margin-top: 66px;
 }
 
-.betas-split .betas-filters .small,
-.inline-filters-wrapper .small {
-    margin-top: var(--space4);
+.betas-meta {
     font-size: var(--t-size-2);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+}
+
+.betas-meta > * {
+    flex: 0 0 auto;
+}
+
+.betas-meta .small {
+    margin-bottom: 0;
+}
+
+.betas-meta .submit-beta {
+    display: inline-flex;
 }
 
 .betas-split .betas .console-filters {
@@ -1845,17 +1858,17 @@ a .icon {
     flex-flow: row nowrap;
 }
 
-.beta-card-content .left {
+.beta-card-content > .left {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
 }
 
-.beta-card-content .left .beta-card-name {
+.beta-card-content > .left .beta-card-name {
     display: none;
 }
 
-.beta-card-content .right {
+.beta-card-content > .right {
     flex-grow: 1;
 }
 
@@ -1926,10 +1939,6 @@ p.beta-card-description {
         margin-top: calc(var(--space3) * -1);
     }
 
-    .betas-split .betas-filters .small {
-        display: none;
-    }
-
     .beta-card > *:not(:last-child) {
         margin-bottom: var(--space2_5);
     }
@@ -1968,7 +1977,7 @@ p.beta-card-description {
             flex-flow: column nowrap;
         }
 
-        .beta-card-content .right > *:not(:last-child) {
+        .beta-card-content > .right > *:not(:last-child) {
             margin-bottom: var(--space2_5);
         }
 
@@ -1976,11 +1985,11 @@ p.beta-card-description {
             margin-right: var(--space3);
         }
 
-        .beta-card-content .left .beta-card-name {
+        .beta-card-content > .left .beta-card-name {
             display: block;
         }
 
-        .beta-card-content .right .beta-card-name {
+        .beta-card-content > .right .beta-card-name {
             display: none;
         }
 
@@ -2050,9 +2059,30 @@ p.beta-card-description {
         .page-section-betas-root {
             margin-right: 0;
         }
+    }
 
-        .betas-split .betas-filters .small {
-            display: none;
+    @media (min-width: 1600px) {
+        .beta-card-content > .right {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .beta-card-content > .right > .left {
+            flex: 1 1 auto;
+            margin-right: var(--space4);
+            max-width: 60%;
+        }
+
+        .beta-card-content > .right > .tags {
+            flex: 0 0 auto;
+            max-width: 40%;
+            justify-content: flex-end;
+        }
+
+        .beta-card-content > .right > .tags > * {
+            text-align: right;
         }
     }
 }
