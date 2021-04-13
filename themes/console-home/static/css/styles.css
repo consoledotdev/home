@@ -1763,18 +1763,25 @@ a .icon {
     display: inline-flex;
 }
 
-.betas-split .betas .console-filters {
+.betas-split .betas .console-filters .show-by,
+.betas-split .betas .console-filters .sort-by {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
 }
 
-.betas-split .console-filters > * {
+.betas-split .console-filters .show-by > *,
+.betas-split .console-filters .sort-by > * {
     margin-bottom: var(--space3);
 }
 
-.betas-split .betas .console-filters > *:not(:last-child) {
+.betas-split .betas .console-filters .show-by > *:not(:last-child),
+.betas-split .betas .console-filters .sort-by > *:not(:last-child) {
     margin-right: var(--space3);
+}
+
+.betas-split .betas .console-filters .show-by {
+    margin-bottom: calc(var(--space3) * -1);
 }
 
 .console-filters .console-checkbutton.color-green input + [for="weekly-pick-filter"] .icon-console-mini-filled,
