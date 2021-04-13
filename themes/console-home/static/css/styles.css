@@ -1961,6 +1961,10 @@ a .icon {
     margin-bottom: 0;
 }
 
+.betas-meta .small:after {
+    content: "\00a0\00a0—\00a0\00a0";
+}
+
 .betas-meta .submit-beta {
     display: inline-flex;
 }
@@ -2171,6 +2175,20 @@ p.beta-card-description {
 
     .beta-card .link {
         margin-left: calc(var(--space4) + var(--space2) + var(--space3_5));
+    }
+
+    @media (max-width: 400px) {
+        .betas-meta {
+            flex-flow: column nowrap;
+        }
+
+        .betas-meta .small:after {
+            display: none;
+        }
+
+        .betas-meta .submit-beta {
+            margin-top: var(--space3);
+        }
     }
 
     @media (max-width: 480px) {
