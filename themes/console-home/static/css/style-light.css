@@ -115,7 +115,7 @@
     display: none;
 }
 
-.theme .is-animated .logo-svg-animated-explode .prompt {
+body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
     animation-duration: var(--p1-duration), 0.25s;
     animation-delay: 0s, var(--p1-duration);
 }

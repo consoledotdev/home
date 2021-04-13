@@ -17,11 +17,11 @@ let toggleMenuPopup = (e) => {
 };
 
 let animateLogo = (() => {
-    let logoEl = document.getElementById("logo-wrapper");
+    let body = document.querySelector("body");
     if (document.referrer.indexOf(location.host) < 0) {
-        logoEl.classList.add("is-animated");
+        body.classList.remove("is-same-origin");
     } else {
-        logoEl.classList.add("is-static");
+        body.classList.add("is-same-origin");
     }
 })();
 
