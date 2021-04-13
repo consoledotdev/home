@@ -4,6 +4,13 @@
 	<section class="page-section page-section-betas-root">
 		<h2 class="title title-1">Beta Console</h2>
 		<p class="description">A live list of every developer tool beta &amp; early access release.</p>
+		<div class="betas-meta">
+			<p class="small">Last updated: {{ .Lastmod.Format "2006-01-02" }}</p>
+			<a onclick="blur();" href="https://docs.google.com/forms/d/e/1FAIpQLSc671E1L7fEEz0WF5Vw58WakkRsvUgIzpgk3gafcgr5mp3gng/viewform" class="console-button-text console-button-small icon-left submit-beta" title="Submit Beta">
+				{{ partial "icons/beta.html" }}
+				<span>Submit Beta</span>
+			</a>
+		</div>
 	</section>
 	<section class="page-section page-section-betas-root">
 		<div class="betas-collapsible-cta">
@@ -16,7 +23,7 @@
                 </div>
                 </button>
                 <div class="box-collapsible-content" data-collapsible-content>
-                {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
+                	{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
                 </div>
             </div>
         </div>
@@ -37,10 +44,11 @@
                     </div>
 	                </button>
 	                <div class="box-collapsible-content" data-collapsible-content>
-                    {{ partial "components/betas/filters.html" (dict "items" $.Site.Data.filters.items "dot" . ) }}
+						<div class="betas-aside-content" data-betas-aside-content>
+                    		{{ partial "components/betas/filters.html" (dict "items" $.Site.Data.filters.items "dot" . ) }}
+						</div>
                     </div>
                 </div>
-                <p class="small">Last updated: {{ .Lastmod.Format "2006-01-02" }}</p>
 			</section>
 			<section class="page-section">
                 <h3 class="title title-2">Latest Releases</h3>
@@ -61,8 +69,7 @@
 				</div>
 			</section>
 		</div>
-		<aside id="aside-filters-wrapper" class="betas-aside">
-		</aside>
+		<aside id="aside-filters-wrapper" class="betas-aside"></aside>
 	</div>
 	<section class="page-section page-section-betas-root">
 		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}

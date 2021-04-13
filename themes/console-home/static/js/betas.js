@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 let manageFiltersPosition = (() => {
-    let filtersEl = document.getElementById("betas-filters");
+    let filtersEl = document.querySelector("[data-betas-aside-content]");
     let asideWrapper = document.getElementById("aside-filters-wrapper");
     let inlineWrapper = document.querySelector("[data-inline-filters-wrapper]");
     let inlineWrapperCollapsible = inlineWrapper.querySelector("[data-collapsible-content]");
@@ -65,7 +65,7 @@ let computeFixedFiltersPos2 = (() => {
             style.top = null;
         }
 
-        let filtersEl = document.getElementById("betas-filters");
+        let filtersEl = document.querySelector("[data-betas-aside-content]");
         if (filtersEl.classList.contains("in-aside")) {
             filtersEl.style.marginTop = style.marginTop;
             filtersEl.style.top = style.top;
