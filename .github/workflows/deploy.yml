@@ -1,7 +1,7 @@
 name: Deploy
 on:
     schedule:
-        - cron: '45 07 * * THU'
+        - cron: '0 8 * * Mon-Fri'
 
     workflow_dispatch:
         inputs:
@@ -131,7 +131,7 @@ jobs:
                   retention-days: 1
 
             - name: "hugo build"
-              uses: jakejarvis/hugo-build-action@v0.81.0
+              uses: jakejarvis/hugo-build-action@v0.82.0
 
             # If this is the automated build then deploy to prod
             # otherwise deploy to wherever is specified

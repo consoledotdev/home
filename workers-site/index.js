@@ -78,6 +78,8 @@ async function handleEvent(event) {
         const redirectMap = new Map([
             ["/collections/neovim-best-code-editor-ide-for-developers", "https://console.dev/reviews/neovim-best-code-editor-ide-for-developers/"],
             ["/collections/neovim-best-code-editor-ide-for-developers/", "https://console.dev/reviews/neovim-best-code-editor-ide-for-developers/"],
+            ["/beta", "https://console.dev/betas/"],
+            ["/beta/", "https://console.dev/betas/"],
         ])
 
         const path = url.pathname;
