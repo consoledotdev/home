@@ -19,6 +19,12 @@
             "checked": true
         },
         {
+            "name": "data-science",
+            "label": "Data Science",
+            "showsIcon": false,
+            "checked": true
+        },
+        {
             "name": "developer-tool",
             "label": "Developer Tool",
             "showsIcon": false,
