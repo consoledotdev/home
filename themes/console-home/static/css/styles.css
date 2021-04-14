@@ -1500,6 +1500,7 @@ select.console-select::-ms-expand {
     font-size: var(--t-size0);
     line-height: var(--t-lH4);
     color: var(--theme-cta-secondary-text-idle);
+    text-decoration: none;
 }
 
 .console-button-text:hover {
