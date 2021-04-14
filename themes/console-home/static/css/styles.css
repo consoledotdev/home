@@ -7,6 +7,7 @@ body {
     font-size: 16px;
     line-height: var(--t-lH3);
     min-width: 300px;
+    min-height: 800px;
 }
 
 body {
@@ -375,6 +376,7 @@ body {
 
 .page-section-heading .left {
     flex: 1 1 auto;
+    margin-right: var(--space3);
 }
 
 .page-section-heading .title.title-1,
