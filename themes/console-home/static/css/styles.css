@@ -257,10 +257,6 @@ body:not(.is-same-origin) .hero .planes {
     }
 }
 
-.hero.hero-hide-planes .planes {
-    display: none;
-}
-
 .hero .planes > rect:not([stroke]) {
     fill: var(--theme-planes-background);
     fill-opacity: 0.5;
