@@ -1927,6 +1927,13 @@ a .icon {
     margin-right: min(26vw, 400px);
 }
 
+.betas .page-section .count {
+    color: var(--theme-text-3);
+    font-style: italic;
+    font-size: var(--t-size0);
+    margin-left: calc(var(--space2) + var(--space1));
+}
+
 .betas-collapsible-cta .box-collapsible.is-expanded .box-collapsible-content {
     max-height: 400px;
 }
