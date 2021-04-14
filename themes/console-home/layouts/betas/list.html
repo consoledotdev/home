@@ -14,18 +14,22 @@
 	</section>
 	<section class="page-section page-section-betas-root">
 		<div class="betas-collapsible-cta">
-			{{ $contentParams := (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription) }}
-			{{ partial "components/box-collapsible.html" (dict "title" $CTATitle "style" "blue" "icon" "expand.html" "content" "subscribe.html" "contentParams" $contentParams) }}
+			{{ $subscribeData := (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription) }}
+			{{ $subscribe := partial "subscribe.html" $subscribeData }}
+			{{ partial "components/box-collapsible.html" (dict "title" $CTATitle "style" "blue" "icon" "expand.html" "content" $subscribe) }}
         </div>
 		<div class="betas-full-cta">
-			{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription ) }}
+			{{ partial "subscribe.html" $subscribeData }}
 		</div>
 	</section>
 	<div class="betas-split">
 		<div class="betas">
             <section class="page-section inline-filters-wrapper" data-inline-filters-wrapper>
-				{{ $contentParams := (dict "items" $.Site.Data.filters.items ) }}
-				{{ partial "components/box-collapsible.html" (dict "title" "Filter" "icon" "filter.html" "content" "components/betas/filters.html" "contentParams" $contentParams) }}
+				{{ $open := "<div class=\"betas-aside-content\" data-betas-aside-content>" }}
+				{{ $filters := partial "components/betas/filters.html" (dict "items" $.Site.Data.filters.items ) }}
+				{{ $close := "</div>" }}
+				{{ $content := printf "%s%s%s" $open $filters $close }}
+				{{ partial "components/box-collapsible.html" (dict "title" "Filter" "icon" "filter.html" "content" $content) }}
 			</section>
 			<section class="page-section">
                 <h3 class="title title-2">Latest Releases</h3>
