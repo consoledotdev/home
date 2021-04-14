@@ -369,6 +369,27 @@ body {
     position: relative;
 }
 
+.page-section-heading {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space4);
+}
+
+.page-section-heading .left {
+    flex: 1 1 auto;
+}
+
+.page-section-heading .title.title-1,
+.page-section-heading .title.title-2 {
+    margin-bottom: 0;
+}
+
+.page-section-heading .right {
+    flex: 0 0 auto;
+}
+
 .page-section:not(:first-child) {
     margin-top: calc(var(--space4) + var(--space3));
 }
@@ -2131,6 +2152,10 @@ p.beta-card-description {
     margin-bottom: var(--space3);
     width: var(--t-size14);
     height: var(--t-size14);
+}
+
+.betas .page-section:nth-child(2) .page-section-heading .right {
+    margin-top: 6px; /* Visual adjustment to baseline */
 }
 
 @media (max-width: 768px) {

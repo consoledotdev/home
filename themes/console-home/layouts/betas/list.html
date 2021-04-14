@@ -32,7 +32,17 @@
 				{{ partial "components/box-collapsible.html" (dict "title" "Filter" "icon" "filter.html" "content" $content) }}
 			</section>
 			<section class="page-section">
-                <h3 class="title title-2">Latest Releases</h3>
+				<div class="page-section-heading">
+					<div class="left">
+						<h3 class="title title-2">Latest Releases</h3>
+					</div>
+					<div class="right">
+						<a onclick="blur();" href="https://console.dev/betas/rss.xml" class="console-button-text console-button-small icon-left" title="RSS Feed">
+							{{ partial "icons/rss.html" }}
+							<span>Feed</span>
+						</a>
+					</div>
+				</div>
 				<div class="beta-items" data-betas-latest data-aside-anchor>
 					{{ range $.Site.Data.betaslive.items }}
 						{{ partial "components/betas/card.html" . }}
