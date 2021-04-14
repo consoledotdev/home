@@ -110,25 +110,42 @@ let filtering = {
         // for each beta card checks if its categories data attribute
         // has any match for the active checkboxes values
         // If there's no match it hides the card, otherwise it un-hides it
-        let cards = document.querySelectorAll("[data-card]");
-        for (let card of cards) {
-            let categories = card.dataset.categories;
-            let match = false;
-            if (categories.indexOf("weekly-pick") < 0 || showsWeeklyPick) {
-                for (value of activeFilterValues) {
-                    match = categories.indexOf(value) >= 0 && true;
-                    if (match) break;
+        let filter = (cards) => {
+            let count = 0;
+            for (let card of cards) {
+                let categories = card.dataset.categories;
+                let match = false;
+                if (categories.indexOf("weekly-pick") < 0 || showsWeeklyPick) {
+                    for (value of activeFilterValues) {
+                        match = categories.indexOf(value) >= 0 && true;
+                        if (match) break;
+                    }
+                }
+                if (categories.indexOf("weekly-pick") >= 0 && showsWeeklyPick) {
+                    if (activeFilterValues.length == 0) match = true;
+                }
+                if (match) {
+                    card.classList.remove("is-hidden");
+                    count++;
+                } else {
+                    card.classList.add("is-hidden");
                 }
             }
-            if (categories.indexOf("weekly-pick") >= 0 && showsWeeklyPick) {
-                if (activeFilterValues.length == 0) match = true;
-            }
-            if (match) {
-                card.classList.remove("is-hidden");
-            } else {
-                card.classList.add("is-hidden");
-            }
-        }
+            return count;
+        };
+        let latestCards = document.querySelectorAll("[data-betas-latest] [data-card]");
+        let gaCards = document.querySelectorAll("[data-betas-ga] [data-card]");
+        let countLatest = filter(latestCards);
+        let countGa = filter(gaCards);
+
+        let updateCount = (list, count) => {
+            let el = document.querySelector("[data-betas-count-" + list + "]");
+            if (count == 0) el.innerHTML = "";
+            else el.innerHTML = "(" + count + ")";
+        };
+        updateCount("latest", countLatest);
+        updateCount("ga", countGa);
+
         let checkEmptyPlaceholderDisplay = (container) => {
             let visibleCards = document.querySelector(container + " [data-card]:not(.is-hidden)");
             let emptyPlaceholder = document.querySelector(container + " [data-beta-card-empty-placeholder]");
@@ -158,6 +175,8 @@ let filtering = {
         filtering._setToggleAllActionsVisiblity();
     },
 };
+// first count when the page is loaded
+filtering.selectedAllChecks();
 
 let sortBetas = () => {
     // sorting method

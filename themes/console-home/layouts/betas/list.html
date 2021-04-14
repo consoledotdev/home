@@ -14,44 +14,35 @@
 	</section>
 	<section class="page-section page-section-betas-root">
 		<div class="betas-collapsible-cta">
-            <div class="box-collapsible color-blue">
-	            <button class="box-collapsible-top" onclick="blur(); toggleCollapsible(event)">
-	        	<div class="title title-4">Interesting betas by email</div>
-	        	<div class="icon icon-expand">
-	                <div class="icon-expand-shape-one"></div>
-	                <div class="icon-expand-shape-two"></div>
-                </div>
-                </button>
-                <div class="box-collapsible-content" data-collapsible-content>
-                	{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
-                </div>
-            </div>
+			{{ $subscribeData := (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription) }}
+			{{ $subscribe := partial "subscribe.html" $subscribeData }}
+			{{ partial "components/box-collapsible.html" (dict "title" $CTATitle "style" "blue" "icon" "expand.html" "content" $subscribe) }}
         </div>
 		<div class="betas-full-cta">
-			{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription ) }}
+			{{ partial "subscribe.html" $subscribeData }}
 		</div>
 	</section>
 	<div class="betas-split">
 		<div class="betas">
             <section class="page-section inline-filters-wrapper" data-inline-filters-wrapper>
-                <div class="box-collapsible">
-	                <button class="box-collapsible-top" onclick="blur(); toggleCollapsible(event)">
-		            <div class="title title-4">Filter</div>
-	            	<div class="icon icon-filter">
-	                    <div class="icon-filter-shape-one"></div>
-	                    <div class="icon-filter-shape-two"></div>
-	                    <div class="icon-filter-shape-three"></div>
-                    </div>
-	                </button>
-	                <div class="box-collapsible-content" data-collapsible-content>
-						<div class="betas-aside-content" data-betas-aside-content>
-                    		{{ partial "components/betas/filters.html" (dict "items" $.Site.Data.filters.items "dot" . ) }}
-						</div>
-                    </div>
-                </div>
+				{{ $open := "<div class=\"betas-aside-content\" data-betas-aside-content>" }}
+				{{ $filters := partial "components/betas/filters.html" (dict "items" $.Site.Data.filters.items ) }}
+				{{ $close := "</div>" }}
+				{{ $content := printf "%s%s%s" $open $filters $close }}
+				{{ partial "components/box-collapsible.html" (dict "title" "Filter" "icon" "filter.html" "content" $content) }}
 			</section>
 			<section class="page-section">
-                <h3 class="title title-2">Latest Releases</h3>
+				<div class="page-section-heading">
+					<div class="left">
+						<h3 class="title title-2">Latest Releases<span class="count" data-betas-count-latest></span></h3>
+					</div>
+					<div class="right">
+						<a onclick="blur();" href="https://console.dev/betas/rss.xml" class="console-button-text console-button-small icon-left" title="RSS Feed">
+							{{ partial "icons/rss.html" }}
+							<span>Feed</span>
+						</a>
+					</div>
+				</div>
 				<div class="beta-items" data-betas-latest data-aside-anchor>
 					{{ range $.Site.Data.betaslive.items }}
 						{{ partial "components/betas/card.html" . }}
@@ -60,7 +51,7 @@
 				</div>
 			</section>
 			<section class="page-section">
-                <h3 class="title title-2">Recent Betas: Now GA</h3>
+                <h3 class="title title-2">Recent Betas: Now GA<span class="count" data-betas-count-ga></span></h3>
 				<div class="beta-items" data-betas-ga>
 					{{ range $.Site.Data.betasga.items }}
 						{{ partial "components/betas/card.html" . }}

@@ -7,6 +7,7 @@ body {
     font-size: 16px;
     line-height: var(--t-lH3);
     min-width: 300px;
+    min-height: 800px;
 }
 
 body {
@@ -257,10 +258,6 @@ body:not(.is-same-origin) .hero .planes {
     }
 }
 
-.hero.hero-hide-planes .planes {
-    display: none;
-}
-
 .hero .planes > rect:not([stroke]) {
     fill: var(--theme-planes-background);
     fill-opacity: 0.5;
@@ -367,6 +364,28 @@ body {
 
 .page-section {
     position: relative;
+}
+
+.page-section-heading {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space4);
+}
+
+.page-section-heading .left {
+    flex: 1 1 auto;
+    margin-right: var(--space3);
+}
+
+.page-section-heading .title.title-1,
+.page-section-heading .title.title-2 {
+    margin-bottom: 0;
+}
+
+.page-section-heading .right {
+    flex: 0 0 auto;
 }
 
 .page-section:not(:first-child) {
@@ -1906,6 +1925,13 @@ a .icon {
     margin-right: min(26vw, 400px);
 }
 
+.betas .page-section .count {
+    color: var(--theme-text-3);
+    font-style: italic;
+    font-size: var(--t-size0);
+    margin-left: calc(var(--space2) + var(--space1));
+}
+
 .betas-collapsible-cta .box-collapsible.is-expanded .box-collapsible-content {
     max-height: 400px;
 }
@@ -2131,6 +2157,10 @@ p.beta-card-description {
     margin-bottom: var(--space3);
     width: var(--t-size14);
     height: var(--t-size14);
+}
+
+.betas .page-section:nth-child(2) .page-section-heading .right {
+    margin-top: 6px; /* Visual adjustment to baseline */
 }
 
 @media (max-width: 768px) {
