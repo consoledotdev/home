@@ -30,7 +30,7 @@ jobs:
                           {
                               "command": "getData",
                               "args": {
-                                  "range": "'All Tools'!A:L",
+                                  "range": "'All Tools'!A:N",
                                   "hasHeaderRow": true
                               }
                           }
@@ -63,7 +63,7 @@ jobs:
                           {
                               "command": "getData",
                               "args": {
-                                  "range": "'All Programs'!A:P",
+                                  "range": "'All Programs'!A:Q",
                                   "hasHeaderRow": true
                               }
                           }
