@@ -92,13 +92,16 @@ async function handleEvent(event) {
 
         // allow headers to be altered
         const response = new Response(page.body, page);
-
+    
+        // Security headers
         response.headers.set("X-XSS-Protection", "1; mode=block");
         response.headers.set("X-Content-Type-Options", "nosniff");
         response.headers.set("X-Frame-Options", "DENY");
         response.headers.set("Referrer-Policy", "strict-origin");
         response.headers.set("Feature-Policy", "none");
-
+        // Opt out of Google's FLoC
+        // https://amifloced.org/
+        response.headers.set("Permissions-Policy", "interest-cohort=()")
         // Get the referrer from the URL string, false if not set
         var referrer = url.searchParams.get("ref") || false;
 
