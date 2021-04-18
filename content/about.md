@@ -83,4 +83,11 @@ Interested? Subscribe to our weekly newsletter below! And if you spot (or are
 working on) something you think we should include, email us:
 [hello@console.dev](mailto:hello@console.dev).
 
+### Our company
+
+Console Ltd is registered in England and Wales at 28 Easton Street, Ink Rooms,
+Unit 207, London, WC1X 0DS, UK. Our company number is 13016709 and our UK Data
+Protection registration number is
+[ZA837052](https://ico.org.uk/ESDWebPages/Entry/ZA837052).
+
 {{< section-subscribe >}}
