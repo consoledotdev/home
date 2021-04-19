@@ -141,13 +141,3 @@
 .theme .logo-svg-animated-explode .prompt-normal {
     display: block;
 }
-
-@media (max-width: 768px) {
-    .main-article {
-        margin-top: calc(var(--space6) - var(--space4));
-        margin-bottom: var(--space6);
-    }
-    .header-fixed + .main-article {
-        margin-top: calc(var(--space6) - var(--space4) + 48px);
-    }
-}

@@ -1,4 +1,4 @@
-<div class="subscribe-cta{{ with .layout }} layout-{{ . }}{{ end }}{{ with .size }} size-{{ . }}{{else}} size-large{{ end }}{{ with .flow }} flow-{{ . }}{{ end }}">
+<div class="subscribe-cta{{ with .layout }} layout-{{ . }}{{ end }}{{ with .size }} size-{{ . }}{{else}} size-large{{ end }}">
     <div class="subscribe-copy">
         {{ if ne .flow "inline" }}
             {{ if or (eq .size "medium") (eq .size "small") }}<h3 class="title title-4">{{ else }}<h4 class="title title-3">{{ end }}

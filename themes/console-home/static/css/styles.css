@@ -631,7 +631,6 @@ body:not(.page-feature):after {
     transition: var(--a-elements-active);
 }
 
-.box-collapsible .subscribe-cta:not(.flow-inline),
 .box-collapsible .subscribe-cta {
     padding: 0;
     background: transparent;
@@ -1291,7 +1290,7 @@ p.small {
 /* Subscribe CTA
    ========================================================================== */
 
-.subscribe-cta:not(.flow-inline) {
+.subscribe-cta {
     padding: var(--space4);
     background: var(--theme-content-bg-2);
 }
@@ -1300,13 +1299,10 @@ p.small {
     .subscribe-cta .console-form {
         margin: var(--space4) 0 0;
     }
-    .subscribe-cta.flow-inline .console-form {
-        margin: var(--space3_5) 0 0;
-    }
 }
 
 @media (min-width: 769px) {
-    .main-article .subscribe-cta:not(.flow-inline) {
+    .main-article .subscribe-cta {
         background: var(--theme-content-bg-2);
         border: var(--theme-border-1);
     }
@@ -1327,14 +1323,14 @@ p.small {
         flex: 0 0 auto;
     }
 
-    .subscribe-cta.layout-wide:not(.flow-inline) .console-form {
+    .subscribe-cta.layout-wide .console-form {
         display: flex;
         flex-flow: column nowrap;
         align-items: stretch;
         width: 35%;
     }
 
-    .subscribe-cta.layout-wide:not(.flow-inline) .console-form .console-button {
+    .subscribe-cta.layout-wide .console-form .console-button {
         margin-left: 0;
         margin-top: var(--space3);
     }
@@ -2517,6 +2513,12 @@ p.beta-card-description {
         margin-left: 30vw;
         margin-top: max(80%, 50vh);
         min-width: 1600px;
+    }
+
+
+    .main-article {
+        margin-top: calc(var(--space6) - var(--space4));
+        margin-bottom: calc(var(--space6) - var(--space4));
     }
 
     .main-article .subscribe-cta {

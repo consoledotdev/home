@@ -131,21 +131,3 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
 .theme .popup {
     background-color: var(--theme-content-bg-2);
 }
-
-.theme .subscribe-cta:not(.flow-inline) {
-    background: var(--theme-content-bg-3);
-}
-
-@media (max-width: 768px) {
-    .theme .main-article {
-        margin-top: calc(var(--space6) - var(--space4));
-        margin-bottom: var(--space6);
-    }
-    .theme .header-fixed + .main-article {
-        margin-top: calc(var(--space2) + var(--space4) + 48px);
-    }
-
-    .theme .main-article .subscribe-cta:not(.flow-inline) {
-        background: transparent;
-    }
-}
