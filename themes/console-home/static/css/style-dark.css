@@ -21,6 +21,9 @@
     --theme-content-bg-3: var(--c-grey-09-black-03);
     --theme-content-bg-4: var(--c-grey-08);
 
+    --theme-hero-fade-top: linear-gradient(180deg, rgba(10, 10, 11, 0.4) 0%, rgba(10, 10, 11, 0) 100%);
+    --theme-hero-fade-bottom: linear-gradient(0deg, rgba(10, 10, 11, 0.4) 0%, rgba(10, 10, 11, 0) 100%);
+
     --theme-content-pick-border-1: 2px solid rgba(1, 188, 144, 0.25);
 
     --theme-translucent: rgba(10, 10, 11, 0.6);
@@ -40,10 +43,15 @@
     --theme-input-bg: var(--c-white-00-absolute);
     --theme-input-border: transparent;
 
-    --theme-nav-link-text-idle: var(--c-white-00-absolute);
-    --theme-nav-link-text-focus: var(--c-blue-04);
-    --theme-nav-link-text-active: var(--c-blue-06-main);
-    --theme-nav-link-text-selected: var(--c-blue-04);
+    --theme-nav-primary-link-text-idle: var(--c-grey-04-whites-neutral);
+    --theme-nav-primary-link-text-focus: var(--c-blue-04);
+    --theme-nav-primary-link-text-active: var(--c-blue-06-main);
+    --theme-nav-primary-link-text-selected: var(--c-blue-04);
+
+    --theme-nav-secondary-link-text-idle: var(--c-grey-04-whites-neutral);
+    --theme-nav-secondary-link-text-focus: var(--c-blue-04);
+    --theme-nav-secondary-link-text-active: var(--c-blue-06-main);
+    --theme-nav-secondary-link-text-selected: var(--c-blue-04);
 
     --theme-control-bg: var(--c-grey-06-blacks-neutral);
     --theme-control-border: var(--c-grey-01-white-03);
@@ -96,6 +104,16 @@
     background: var(--theme-content-bg-3);
 }
 
+.theme.page-article:before,
+.theme.page-feature:before {
+    background: linear-gradient(180deg, rgba(21, 21, 23, 0.4) 0%, rgba(21, 21, 23, 0) 100%);
+}
+
+.theme.page-article:after,
+.theme.page-feature:after {
+    background: linear-gradient(0deg, rgba(21, 21, 23, 0.4) 0%, rgba(21, 21, 23, 0) 100%);
+}
+
 .theme .hero .lines {
     opacity: 0.08;
 }
@@ -122,14 +140,4 @@
 
 .theme .logo-svg-animated-explode .prompt-normal {
     display: block;
-}
-
-@media (max-width: 768px) {
-    .main-article {
-        margin-top: calc(var(--space6) - var(--space4));
-        margin-bottom: var(--space6);
-    }
-    .header-fixed + .main-article {
-        margin-top: calc(var(--space6) - var(--space4) + 48px);
-    }
 }
