@@ -320,6 +320,7 @@ body {
 .header {
     display: flex;
     flex-flow: row nowrap;
+    z-index: 20;
 }
 
 .header.header-fixed {
@@ -328,7 +329,7 @@ body {
     left: 0;
     right: 0;
     padding: calc(var(--space2) + var(--space4)) 6.25vw;
-    z-index: 30;
+    z-index: 40;
     border-bottom: 1px solid rgba(0, 0, 0, 0);
     transition: var(--a-elements);
 }
@@ -358,8 +359,9 @@ body {
     align-items: center;
 }
 
-.main-article {
-    z-index: 20;
+.main-article,
+.main-feature {
+    z-index: 30;
 }
 
 .page-section {
@@ -744,6 +746,7 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-end;
+    z-index: 10;
 }
 
 .footer-nav {
