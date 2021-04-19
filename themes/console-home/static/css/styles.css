@@ -337,8 +337,8 @@ body {
 .is-scrolled .header.header-fixed {
     padding: var(--space3) 6.25vw;
     background: var(--theme-translucent);
-    -webkit-backdrop-filter: saturate(180%) blur(40px);
-    backdrop-filter: saturate(180%) blur(40px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
     border-bottom: var(--theme-border-1);
     transition: var(--a-elements-active);
 }
