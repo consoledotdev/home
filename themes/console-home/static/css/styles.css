@@ -687,7 +687,7 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
 
 .main-nav a:link,
 .main-nav a:visited {
-    color: var(--theme-nav-link-text-idle);
+    color: var(--theme-nav-primary-link-text-idle);
     text-decoration: none;
     font-weight: 500;
     outline: none;
@@ -697,17 +697,17 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
 
 .main-nav a:hover,
 .main-nav a:focus {
-    color: var(--theme-nav-link-text-focus);
+    color: var(--theme-nav-primary-link-text-focus);
     text-decoration: none;
 }
 .main-nav a:active {
-    color: var(--theme-nav-link-text-active);
+    color: var(--theme-nav-primary-link-text-active);
     text-decoration: none;
     transition: var(--a-controls-active);
 }
 
 .main-nav li.is-selected a {
-    color: var(--theme-nav-link-text-selected);
+    color: var(--theme-nav-primary-link-text-selected);
     cursor: default;
 }
 
@@ -753,25 +753,26 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
     align-items: center;
 }
 
-.footer-nav ul {
+.footer-nav .footer-social,
+.footer-nav .footer-locations,
+.footer-nav .footer-locations ul {
     padding: 0;
     display: flex;
     flex-flow: row wrap;
-    margin: 0 calc(var(--space3) * -1);
-    font-size: var(--t-size-1);
+    margin: 0;
 }
 
-.footer-nav ul:first-child {
-    margin-right: var(--space3);
+.footer-nav .footer-social {
+    margin-left: calc(var(--space3) * -1);
 }
 
 .footer-nav ul li {
     list-style: none;
     flex: 0 0 auto;
     letter-spacing: 0.08em;
-    font-size: var(--t-size-1);
     line-height: 1.4em;
     padding: var(--space1) var(--space1);
+    font-size: var(--t-size-1);
 }
 
 .footer-nav ul li a {
@@ -794,8 +795,8 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
 .footer-nav ul li a:link .icon-fill,
 .footer-nav ul li a:visited,
 .footer-nav ul li a:visited .icon-fill {
-    color: var(--theme-nav-link-text-idle);
-    fill: var(--theme-nav-link-text-idle);
+    color: var(--theme-nav-secondary-link-text-idle);
+    fill: var(--theme-nav-secondary-link-text-idle);
     transition: var(--a-controls);
 }
 
@@ -803,14 +804,14 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
 .footer-nav ul li a:hover .icon-fill,
 .footer-nav ul li a:focus,
 .footer-nav ul li a:focus .icon-fill {
-    color: var(--theme-nav-link-text-focus);
-    fill: var(--theme-nav-link-text-focus);
+    color: var(--theme-nav-secondary-link-text-focus);
+    fill: var(--theme-nav-secondary-link-text-focus);
 }
 
 .footer-nav ul li a:active,
 .footer-nav ul li a:active .icon-fill {
-    color: var(--theme-nav-link-text-active);
-    fill: var(--theme-nav-link-text-active);
+    color: var(--theme-nav-secondary-link-text-active);
+    fill: var(--theme-nav-secondary-link-text-active);
     transition: var(--a-controls-active);
 }
 
@@ -818,6 +819,22 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
     display: inline-block;
     margin-left: var(--space2);
     display: none;
+}
+
+@media (max-width: 750px) {
+    .footer-nav {
+        flex-flow: column nowrap;
+        align-items: flex-start;
+    }
+
+    .footer-nav .footer-social {
+        margin-right: 0;
+        margin-bottom: var(--space2);
+    }
+
+    .footer-nav .footer-locations {
+        margin-left: calc(var(--space3) * -1);
+    }
 }
 
 /* Logo
@@ -2534,16 +2551,6 @@ p.beta-card-description {
         .console-button.console-button-small {
             margin-top: var(--space3);
         }
-
-        .footer-nav {
-            flex-flow: column nowrap;
-            align-items: flex-start;
-        }
-
-        .footer-nav ul:first-child {
-            margin-right: 0;
-            margin-bottom: var(--space2);
-        }
     }
 
     @media (max-width: 480px) {
@@ -2614,17 +2621,6 @@ p.beta-card-description {
 
         .console-button {
             margin-top: var(--space3);
-        }
-
-        .footer-nav ul li {
-            padding-left: 0;
-            padding-right: 0;
-        }
-    }
-
-    @media (max-width: 350px) {
-        .footer-nav ul li {
-            font-size: var(--t-size-1);
         }
     }
 

@@ -1,6 +1,6 @@
     <footer class="footer">
         <nav class="footer-nav">
-            <ul>
+            <ul class="footer-social">
                 <li>
                     <a rel="me" onclick="blur()" href="https://twitter.com/consoledotdev">
                         {{- partial "icons/twitter.html" -}}<span>Twitter</span>
@@ -17,20 +17,24 @@
                     </a>
                 </li>
             </ul>
-            <ul>
-                <li>
-                    <a onclick="blur()" href="https://blog.console.dev/">Blog</a>
-                </li>
-                <li>
-                    <a onclick="blur()" href="/reviews/">Reviews</a>
-                </li>
-                <li>
-                    <a onclick="blur()" href="mailto:hello@console.dev">Contact</a>
-                </li>
-                <li>
-                    <a onclick="blur()" href="/privacy/">Privacy Policy</a>
-                </li>
-            </ul>
+            <div class="footer-locations">
+                <ul>
+                    <li>
+                        <a onclick="blur()" href="https://blog.console.dev/">Blog</a>
+                    </li>
+                    <li>
+                        <a onclick="blur()" href="/reviews/">Reviews</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a onclick="blur()" href="mailto:hello@console.dev">Contact</a>
+                    </li>
+                    <li>
+                        <a onclick="blur()" href="/privacy/">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </footer>
 </div> <!-- END .content -->

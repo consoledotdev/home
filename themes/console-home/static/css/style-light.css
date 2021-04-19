@@ -40,10 +40,15 @@
     --theme-input-bg: var(--c-white-00-absolute);
     --theme-input-border: rgba(0, 0, 0, 0.2);
 
-    --theme-nav-link-text-idle: var(--c-black-02-main);
-    --theme-nav-link-text-focus: var(--c-blue-06-main);
-    --theme-nav-link-text-active: var(--c-blue-08);
-    --theme-nav-link-text-selected: var(--c-blue-06-main);
+    --theme-nav-primary-link-text-idle: var(--c-black-02-main);
+    --theme-nav-primary-link-text-focus: var(--c-blue-06-main);
+    --theme-nav-primary-link-text-active: var(--c-blue-08);
+    --theme-nav-primary-link-text-selected: var(--c-blue-06-main);
+
+    --theme-nav-secondary-link-text-idle: var(--c-grey-05);
+    --theme-nav-secondary-link-text-focus: var(--c-blue-06-main);
+    --theme-nav-secondary-link-text-active: var(--c-blue-08);
+    --theme-nav-secondary-link-text-selected: var(--c-blue-06-main);
 
     --theme-control-bg: var(--c-grey-04-whites-neutral);
     --theme-control-border: var(--c-grey-09-black-03);
