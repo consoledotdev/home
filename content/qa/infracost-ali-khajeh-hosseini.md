@@ -181,7 +181,7 @@ simple - just a laptop and headphones, which means I can work from anywhere.
 
 ### Describe your software setup
 
-***OS:*** macOS.
+**OS:** macOS.
 
 **Browser:** Firefox.
 
