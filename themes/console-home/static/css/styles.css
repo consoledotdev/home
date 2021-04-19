@@ -2515,6 +2515,9 @@ p.beta-card-description {
         min-width: 1600px;
     }
 
+    .page-article .header {
+        z-index: 40;
+    }
 
     .main-article {
         margin-top: calc(var(--space6) - var(--space4));
@@ -2700,7 +2703,6 @@ p.beta-card-description {
         position: fixed;
         left: 6.25vw;
         right: 6.25vw;
-        z-index: 10;
     }
 
     .content {
