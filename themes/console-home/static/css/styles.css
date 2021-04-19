@@ -51,6 +51,7 @@ a {
     top: 0;
     left: 0;
     overflow: hidden;
+    z-index: 10;
 }
 
 .hero .lines {
@@ -289,6 +290,28 @@ body {
     color: var(--theme-text-1);
 }
 
+body:not(.page-feature):before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 30vh;
+    background: var(--theme-hero-fade-top);
+    z-index: 20;
+}
+
+body:not(.page-feature):after {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30vh;
+    background: var(--theme-hero-fade-bottom);
+    z-index: 20;
+}
+
 .main .console-form {
     margin: var(--space5) 0;
 }
@@ -306,7 +329,7 @@ body {
     height: 100%;
     flex-flow: column nowrap;
     justify-content: space-between;
-    z-index: 3;
+    z-index: 30;
 }
 
 .page-article .content {

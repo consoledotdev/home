@@ -21,6 +21,9 @@
     --theme-content-bg-3: var(--c-grey-09-black-03);
     --theme-content-bg-4: var(--c-grey-08);
 
+    --theme-hero-fade-top: linear-gradient(180deg, rgba(10, 10, 11, 0.4) 0%, rgba(10, 10, 11, 0) 100%);
+    --theme-hero-fade-bottom: linear-gradient(0deg, rgba(10, 10, 11, 0.4) 0%, rgba(10, 10, 11, 0) 100%);
+
     --theme-content-pick-border-1: 2px solid rgba(1, 188, 144, 0.25);
 
     --theme-translucent: rgba(10, 10, 11, 0.6);
@@ -99,6 +102,16 @@
 .theme.page-article,
 .theme.page-feature {
     background: var(--theme-content-bg-3);
+}
+
+.theme.page-article:before,
+.theme.page-feature:before {
+    background: linear-gradient(180deg, rgba(21, 21, 23, 0.4) 0%, rgba(21, 21, 23, 0) 100%);
+}
+
+.theme.page-article:after,
+.theme.page-feature:after {
+    background: linear-gradient(0deg, rgba(21, 21, 23, 0.4) 0%, rgba(21, 21, 23, 0) 100%);
 }
 
 .theme .hero .lines {

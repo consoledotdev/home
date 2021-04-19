@@ -21,6 +21,9 @@
     --theme-content-bg-3: var(--c-grey-01-white-03);
     --theme-content-bg-4: var(--c-grey-01-white-03);
 
+    --theme-hero-fade-top: linear-gradient(180deg, rgba(245, 248, 251, 0.4) 0%, rgba(245, 248, 251, 0) 100%);
+    --theme-hero-fade-bottom: linear-gradient(0deg, rgba(245, 248, 251, 0.4) 0%, rgba(245, 248, 251, 0) 100%);
+
     --theme-content-pick-border-1: 2px solid rgba(1, 188, 144, 0.4);
 
     --theme-translucent: rgba(245, 248, 251, 0.6);
