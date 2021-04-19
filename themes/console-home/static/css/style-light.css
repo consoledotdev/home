@@ -131,3 +131,13 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
 .theme .popup {
     background-color: var(--theme-content-bg-2);
 }
+
+.theme .subscribe-cta {
+    background: var(--theme-content-bg-3);
+}
+
+@media (max-width: 768px) {
+    .theme .main-article .subscribe-cta {
+        background: transparent;
+    }
+}
