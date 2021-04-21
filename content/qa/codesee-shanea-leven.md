@@ -95,7 +95,7 @@ will work one way, but then there’s some other thing that was built three year
 ago that’s not been documented or commented, and the original coder has left.
 That's when critical errors happen.
 
-### What does "a day in the life" look like for you?
+### What does "a day in the life" look like?
 
 I talk to developers every single day about the process of how they understand
 code, and then take that feedback back to the team. I get to try new things,
