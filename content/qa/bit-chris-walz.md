@@ -126,9 +126,11 @@ width="100%"
 
 **Computer:** MacBook Pro 2015.
 
-**Chair:** [Herman Miller Aeron](https://www.hermanmiller.com/products/seating/office-chairs/aeron-chairs/).
+**Chair:** [Herman Miller
+Aeron](https://www.hermanmiller.com/products/seating/office-chairs/aeron-chairs/).
 
-**Desk:** [WorkFit-TL Standing Desk](https://store.ergotron.com/stand-up-desks/workfit-tl-sit-stand-desktop-workstation.html).
+**Desk:** [WorkFit-TL Standing
+Desk](https://store.ergotron.com/stand-up-desks/workfit-tl-sit-stand-desktop-workstation.html).
 
 ### Describe your computer software setup
 
@@ -158,5 +160,6 @@ were seniors in high school!
 
 ### Find out more
 
-[bit](https://github.com/chriswalz/bit) is a modern git client. This interview
-was conducted on 4 Mar 2021.
+[bit](https://github.com/chriswalz/bit) is a modern git client. It was featured
+as an "Interesting Tool" in the [Console newsletter](https://console.dev) on 18
+Mar 2021. This interview was conducted on 4 Mar 2021.
