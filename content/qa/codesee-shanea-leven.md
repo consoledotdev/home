@@ -122,10 +122,10 @@ design, used to lead design at Medium and Pocket.
 [Julia Gilinets](https://twitter.com/JuliaSourceress) is our head of strategic
 accounts. [Jess Rose](https://twitter.com/jesslynnrose) and [Ramón
 Huidobro](https://twitter.com/hola_soy_milk) are our two developer advocates.
-Jess used to be the head of Dev Rel at Mozilla and Ramón used to be a part of
-the TechSpeakers at Mozilla. We also have a couple of part-time folks that help
-out as designers, and a CFO to help me with finance things. We also have Tommy
-(our dog) who is on his walk right now.
+Jess led developer programs at Mozilla and Ramón used to be a part of the
+TechSpeakers at Mozilla. We also have a couple of part-time folks that help out
+as designers, and a CFO to help me with finance things. We also have Tommy (our
+dog) who is on his walk right now.
 
 ### How did you first get into software development?
 
