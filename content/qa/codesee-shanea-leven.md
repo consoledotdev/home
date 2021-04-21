@@ -65,7 +65,7 @@ head as if you were stepping through the execution is visualised by CodeSee.
 It's basically like if you were to put a print statement everywhere.  
 
 {{< img-center
-src="/img/qa/codesee-shanea-level-product.png"
+src="/img/qa/codesee-shanea-leven-product.png"
 alt="CodeSee product screenshot"
 width="100%"
 caption="CodeSee Data Flow in action."
@@ -199,7 +199,7 @@ really love Sony with the double tap buttons!
 ### Describe your desk setup
 
 {{< img-center
-src="/img/qa/codesee-shanea-level-desk.jpg"
+src="/img/qa/codesee-shanea-leven-desk.jpg"
 alt="The desk of Shanea Leven, CodeSee"
 width="100%"
 >}}
