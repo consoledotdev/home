@@ -8,21 +8,21 @@ date: 2021-04-15T12:00:00Z
 draft: false
 summary: Q&A interview with John Sully, CEO, KeyDB.
 isSelected: qa
-topImg1Src: /img/qa/infracost-ali-khajeh-hosseini-profile.jpg
-topImg2Src: /img/qa/infracost-ali-khajeh-hosseini-logo.svg
-ogImg: /img/qa/infracost-ali-khajeh-hosseini-desk.jpg
+topImg1Src: /img/qa/keydb-john-sully-profile.png
+topImg2Src: /img/qa/keydb-john-sully-logo.jpg
+ogImg: /img/qa/keydb-john-sully-desk.png
 ---
 
 ### What is KeyDB? Why did you build it?
 
 [KeyDB](https://keydb.dev) started out as a fork of [Redis](https://redis.io/).
 After I left Microsoft, I wanted to start something new. One idea was a search
-engine where you could use regular expressions to search the Internet, which I
+engine where you could use regular expressions to search the Internet which I
 built using Redis. However, I couldn't understand why it was only using one of
 my eight CPU cores. I was annoyed that it was using only a small subset of the
 machine so I spent a month adding multithreading, and then I wrote a blog
-posting saying ["Redis should be
-multi-threaded"](https://medium.com/@john_63123/redis-should-be-multi-threaded-e28319cab744). 
+posting saying "[Redis should be
+multi-threaded](https://medium.com/@john_63123/redis-should-be-multi-threaded-e28319cab744)”.
 
 I was really surprised with the feedback I got from that post. On Hacker News,
 it did very well. We saw there is something there. We also saw that when you
@@ -32,12 +32,26 @@ suggested](http://antirez.com/news/126) that it was too complicated.
 My thought process was simply if they're not going to do it, well, we can do
 it. So we did - we made KeyDB as the database that we think we should have.
 
+We weren't looking to start a database company at that time, it was just an
+itch. But the response really surprised us. My thought process was simply that
+there is a big need here and Redis had for some reason decided not to serve it.
+If they won't then we will.
+
+Starting out this way posed some challenges. Investors didn't really know what
+to do with us. There were forks like MariaDB where parts of the main dev team
+split off, but not many examples of a completely independent team just saying
+"we'll go our own way here". It took two tries applying to [Y
+Combinator](https://www.ycombinator.com), but we were getting very clear
+traction and so they took us in. YC's main concern in that interview was
+whether we were truly building something distinct from Redis. Getting into YC
+really opened a lot of doors and I'm thankful they took a chance on us.
+
 Redis was a great base, and it’s founder Salvatore Sanfilippo did a very good
 job building it, but we wanted to take it in a different direction. He wanted
 to go with the simplicity aspect, we really wanted to go with performance.
 Redis is often used as a cache, so we felt it made most sense to focus on
 performance. Redis later changed course slightly with i/o threads, but our
-approach in KeyDB achieves better performance.
+approach at KeyDB achieves better performance.
 
 We also spend a lot of time ensuring we are always compatible with Redis. For
 instance, Redis has certain consistency guarantees: if you do this query,
@@ -85,8 +99,8 @@ In terms of the community at large, we have a number of touch points. [GitHub
 is a major one](https://github.com/EQ-Alpha/KeyDB). We’ve also used chat,
 though that became overwhelming and we stepped back from that for a while.
 We're now reintroducing chat again using Slack that will allow us to talk more
-directly with users. We also have [our message
-board](https://community.keydb.dev/) as well.
+directly with users. We also have [our message board as
+well](https://community.keydb.dev/).
 
 ### Do you have any advice on how to deal with all those different channels?
 
@@ -96,8 +110,8 @@ then don't do it. Make sure that you know what you're getting yourself into. It
 really does pay off because customers appreciate having a direct connection
 with the team, and you learn more. 
 
-With Github if you get an issue, you're really just talking about bugs, but
-through chat customers will tell you what they want to see. You get a freer
+With GitHub if you get an issue, you're really just talking about bugs, but
+through the chat customers will tell you what they want to see. You get a freer
 flow of information that really helps make the product better. It's worth it,
 but you really have to block off the time to make it successful.
 
@@ -111,11 +125,12 @@ and the computer would do it. It grew from there.
 As long as I can remember, I've always been playing around with computers. At
 high school I got more serious, and learned C and a little bit of C++.
 
-I took a different track from what I think most people take because I went
-right to Assembly, which I don't think is normal. I was fascinated with these
-old, 1970s 8-bit machines. It was simple because there was nothing in the way -
-it was just bytes and the raw hardware. I was programming emulators and making
-lights blink and stuff like that. 
+I took a different track than I think most people take because I went right to
+Assembly, which I don't think is normal. I was fascinated with these old, 1970s
+8-bit machines. It was simple because there was nothing in the way - it was
+just bytes and the raw hardware. I was programming emulators and making lights
+blink and stuff like that. I enjoyed this so much I went back and [ported KeyDB
+to a real 1970s 8-bit computer](https://github.com/JohnSully/KeyDB_Z80).
 
 For as long as I can remember, I've always been fascinated with coding. Once
 you're in Assembly, going to C is fairly natural. That was my progression. I
@@ -125,7 +140,7 @@ or Go. It was a little different for me.
 ### Is C the main language you're working in today?
 
 We do modern C++, not the old C++98. I think that's a bad language. Modern C++
-is nice because it's a subset of C, and Redis is still C. If we need to
+is nice because it's a superset of C, and Redis is still C. If we need to
 downstream any code from that, we can still do that, but having the extra
 features in there is nice. 
 
@@ -173,10 +188,10 @@ what it was, but questioned why would you want a whole separate copy of all the
 tools. When I started to look at how people are deploying it, and all the
 different Linux distros you want to support, Docker makes so much more sense.
 It makes life so much easier for everybody. Not just the user, but also us when
-we create our images. Docker has been kind of the coolest thing that I've
-really started to appreciate.
+we create our images. Docker has been the coolest thing that I've really
+started to appreciate.
 
-We've had users creating [Helm charts](https://helm.sh/) for Kubernetes. The
+We've had users creating [Helm](https://helm.sh/) charts for Kubernetes. The
 orchestration is interesting. There is a lot more depth there when it comes to
 how fast KeyDB is because introducing all of these different orchestration
 layers become bottlenecks for us. Trying to navigate best practices is
@@ -186,7 +201,7 @@ different types of systems our customers will deploy KeyDB on.
 ### How are you tackling on-premise vs cloud?
 
 Open source essentially is on-premises. Customers download the code or they use
-our Docker engine. We're in the early stages of [building the cloud
+our Docker container. We're in the early stages of [building the cloud
 version](https://keydb.dev/keydb-cloud/), which is in beta right now. 
 
 With on-prem deploys, there’s a lot of different things that can go wrong. Our
@@ -201,6 +216,12 @@ existing networks.
 
 ### Describe your hardware setup
 
+{{< img-center
+src="/img/qa/keydb-john-sully-desk.png"
+alt="The desk of John Sully, KeyDB"
+width="100%"
+>}}
+
 I do most of my software development on a desktop, I'm on an AMD 3900X (12
 core). That's been pretty good for software development. For meetings and
 stuff, I've started to use an M1 MacBook Air. We got it originally just to make
@@ -209,9 +230,9 @@ two right now.
 
 I use a Microsoft ergonomic keyboard and I recently switched to a trackball
 because my hand was spending so much time typing on the computer all the time.
-My hands got a little wonky. I found that it helped to have it in a different
-position than the mouse. I've been focusing a little bit more on ergonomics
-lately.
+My hands got a little wonky, and I got a bit of RSI. I found that it helped to
+have it in a different position than the mouse. I've been focusing a little bit
+more on ergonomics lately.
 
 My main desktop is Windows and I do some work in Windows Subsystem for Linux. I
 use two Dell 4k monitors. I like to have really crisp text. 
@@ -219,10 +240,10 @@ use two Dell 4k monitors. I like to have really crisp text.
 I also have a mini-lab of Dell rack servers in my basement so that we can do
 proper testing across differently configured machines. In the early days we
 used to test using my desktop but one of the things we found is that you can
-saturate a gigabit network connection really easily! You need gigabit ethernet
-and higher. The way that the CPUs are tuned are also different for the server
-compared to a desktop. The Dell servers allow us to replicate an environment so
-it is similar to where the code is going to run. 
+saturate a gigabit network connection really easily! You need 10 gigabit
+ethernet and higher. The way that the CPUs are tuned are also different for the
+server compared to a desktop. The Dell servers allow us to replicate an
+environment more similar to where the code is going to run. 
 
 And of course we run a lot of cloud instances, mainly for benchmarking so other
 people can quickly spin them up and replicate our tests.
@@ -234,7 +255,7 @@ we did a few early tests on that. However, ARM generally has lower single
 thread performance, so that can have some impacts. I like that ARM is really
 coming into its own in the data center and think it has a very strong future.
 There's some little software differences at the lower levels, but at a high
-level, I don't see a major challenge. The performance is there.
+level, I don't see a major challenge. The performance is there.  
 
 ### Describe your computer software setup
 
