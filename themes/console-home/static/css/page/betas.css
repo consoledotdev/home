@@ -57,29 +57,6 @@
     max-width: 400px;
 }
 
-.betas-meta {
-    font-size: var(--t-size-2);
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-start;
-}
-
-.betas-meta > * {
-    flex: 0 0 auto;
-}
-
-.betas-meta .small {
-    margin-bottom: 0;
-}
-
-.betas-meta .small:after {
-    content: "\00a0\00a0—\00a0\00a0";
-}
-
-.betas-meta .submit-beta {
-    display: inline-flex;
-}
-
 .betas-split .betas .console-filters .show-by,
 .betas-split .betas .console-filters .sort-by {
     display: flex;

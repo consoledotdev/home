@@ -18,6 +18,13 @@
     stroke: var(--theme-text-1);
 }
 
+@media (max-width: 480px) {
+    .icon {
+        width: 16px;
+        height: 16px;
+    }
+}
+
 /* .icon-menu
     --------------------------------------------------------------- */
 [class^="icon-menu-shape-"],
@@ -132,13 +139,22 @@
     width: 82%;
 }
 
-/* Media Queries
+/* Illustrations
    ================================================================================================================ */
-@media (max-width: 480px) {
-    .icon {
-        width: 16px;
-        height: 16px;
-    }
+
+.illustration {
+    position: relative;
+    display: inline-block;
+    width: 128px;
+    height: 128px;
+}
+
+.theme .illustration [fill="white"] {
+    fill: var(--theme-text-1);
+}
+
+.theme .illustration [stroke="white"] {
+    stroke: var(--theme-text-1);
 }
 
 /* Collapsible Box
@@ -817,4 +833,25 @@ body:not(.mobile) .console-control:hover:before {
 .popup.popup-top-down.is-visible,
 .popup.popup-bottom-up {
     transform: translateY(var(--space4));
+}
+
+/* Illustrated Text
+   ================================================================================================================ */
+
+.illustrated-text {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.illustrated-text .illustration {
+    width: 80px;
+    height: 80px;
+    flex: 0 0 auto;
+    margin-right: var(--space4);
+}
+
+.illustrated-text p {
+    flex: 1 1 auto;
+    display: inline-block;
 }

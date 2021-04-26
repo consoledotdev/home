@@ -1,0 +1,21 @@
+<div class="qa-card">
+    <a href="{{ .RelPermalink }}">click</a>
+    <div class="qa-card-combo"></div>
+    <div class="qa-card-content">
+        <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+        <div class="qa-card-middle">
+            <div class="qa-card-person">
+                <p class="qa-card-person-name">{{.Params.who }}</p>
+                <p class="qa-card-person-role">{{ .Params.role }}</p>
+            </div>
+            <div class="qa-card-company">
+                <p class="qa-card-company-name">{{ .Params.org }}</p>
+                <div class="tags">
+                    {{ partial "icons/tag.html" }}
+                    <span class="tag">tag</span>
+                </div>
+            </div>
+        </div>
+        <p class="small">{{ .Params.what }}</p>
+    </div>
+</div>

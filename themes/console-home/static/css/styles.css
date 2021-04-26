@@ -489,6 +489,25 @@ body:not(.page-feature):after {
     color: var(--c-blue-06-main);
 }
 
+.page-meta {
+    font-size: var(--t-size-2);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+}
+
+.page-meta > * {
+    flex: 0 0 auto;
+}
+
+.page-meta .small {
+    margin-bottom: 0;
+}
+
+.page-meta .console-button-text {
+    display: inline-flex;
+}
+
 .col-2 {
     display: flex;
     flex-flow: row nowrap;

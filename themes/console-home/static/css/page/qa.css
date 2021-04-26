@@ -1,0 +1,95 @@
+/* Q&A Index
+   ========================================================================== */
+
+.page-section-qa-root {
+    margin-right: min(26vw, 400px);
+}
+
+.qa-split {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: calc(var(--space4) + var(--space3));
+}
+
+.qa-split .qa {
+    flex: 1 1 auto;
+}
+
+.qa-items > *:not(:last-child) {
+    margin-bottom: var(--space3);
+}
+
+.qa-card {
+    position: relative;
+    background-color: var(--theme-content-bg-0);
+    box-shadow: var(--theme-shadow-1);
+    border-radius: var(--mid-corners);
+    padding: var(--space3) var(--space4);
+}
+
+.qa-card-content > :not(:last-child) {
+    margin-bottom: calc(var(--space1) + var(--space2));
+}
+
+.qa-card-middle > :not(:last-child) {
+    margin-bottom: calc(var(--space1) / 2);
+}
+
+.qa-card-person p,
+.qa-card-company p {
+    margin-bottom: 0;
+}
+
+.qa-card-person {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+}
+
+.qa-card-person-name {
+    flex: 0 0 auto;
+    margin-right: calc(var(--space2));
+    font-weight: 500;
+    font-size: var(--t-size0);
+    color: var(--theme-text-2);
+}
+
+.qa-card-person-role {
+    flex: 0 0 auto;
+    color: var(--theme-text-2);
+    font-size: var(--t-size-3);
+    font-style: italic;
+}
+
+.qa-card-company {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.qa-card-company-name {
+    flex: 0 0 auto;
+    margin-right: calc(var(--space1) + var(--space2));
+    font-weight: 500;
+    font-size: var(--t-size1);
+    color: var(--theme-text-1);
+}
+
+.qa-card-company .tags {
+    flex: 0 0 auto;
+}
+
+@media (max-width: 768px) {
+    .page-section-qa-root {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    @media (max-width: 1024px) {
+        .page-section-qa-root {
+            margin-right: 0;
+        }
+    }
+}
