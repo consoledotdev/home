@@ -1,5 +1,5 @@
 /* Icons
-   ========================================================================== */
+   ================================================================================================================ */
 
 .icon {
     position: relative;
@@ -133,10 +133,688 @@
 }
 
 /* Media Queries
-   ========================================================================== */
+   ================================================================================================================ */
 @media (max-width: 480px) {
     .icon {
         width: 16px;
         height: 16px;
     }
+}
+
+/* Collapsible Box
+   ================================================================================================================ */
+
+.box-collapsible {
+    background: var(--theme-collapsible-bg-1);
+}
+
+.box-collapsible.color-blue {
+    background: var(--theme-collapsible-bg-blue-1);
+}
+
+.box-collapsible .title[class^="title-"],
+.box-collapsible .title[class*=" title-"] {
+    margin-bottom: 0;
+}
+
+.box-collapsible .box-collapsible-top {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    outline: none;
+    width: 100%;
+    padding: var(--space2) var(--space3);
+    text-align: left;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0);
+    transition: var(--a-controls);
+}
+
+.box-collapsible.is-expanded .box-collapsible-top {
+    padding: var(--space3) var(--space3);
+    transition: var(--a-controls-active);
+}
+
+.box-collapsible .box-collapsible-top:hover,
+.box-collapsible .box-collapsible-top:focus {
+    background: rgba(255, 255, 255, 0.02);
+    transition: var(--a-active);
+}
+
+.box-collapsible .box-collapsible-top:active {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.box-collapsible .box-collapsible-top .title {
+    flex: 1 1 auto;
+}
+
+.box-collapsible .box-collapsible-top .icon {
+    flex: 0 0 auto;
+    margin-left: var(--space3);
+}
+
+.box-collapsible .box-collapsible-content {
+    padding: 0 var(--space3);
+    max-height: 0;
+    transition: var(--a-elements);
+    overflow: hidden;
+}
+
+.box-collapsible.is-expanded .box-collapsible-content {
+    padding: var(--space3);
+    max-height: 200px;
+    transition: var(--a-elements-active);
+}
+
+.box-collapsible .subscribe-cta {
+    padding: 0;
+    background: transparent;
+}
+
+.box-collapsible .subscribe-cta .title {
+    display: none;
+}
+
+/* Links
+   ================================================================================================================ */
+
+.link:link,
+.link:visited {
+    color: var(--theme-text-1);
+    text-decoration: underline;
+    font-weight: 400;
+    transition: var(--a-controls);
+    outline: none;
+    display: inline-flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.link:hover,
+.link:focus {
+    color: var(--c-blue-04);
+    text-decoration: none;
+}
+
+.link:active {
+    color: var(--c-blue-06-main);
+    text-decoration: none;
+    transition: var(--a-controls-active);
+}
+
+.link:link .icon,
+.link:visited .icon {
+    fill: var(--theme-text-1);
+    transition: var(--a-controls);
+    vertical-align: middle;
+    margin-left: var(--space1);
+    width: 1em;
+    height: 1em;
+}
+
+.link:hover .icon,
+.link:focus .icon {
+    fill: var(--c-blue-04);
+}
+
+.link:active .icon {
+    fill: var(--c-blue-06-main);
+    transition: var(--a-controls-active);
+}
+
+/* Subscribe CTA
+   ================================================================================================================ */
+
+.subscribe-cta {
+    padding: var(--space4);
+    background: var(--theme-content-bg-2);
+}
+
+@media (max-width: 768px) {
+    .subscribe-cta .console-form {
+        margin: var(--space4) 0 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .main-article .subscribe-cta {
+        background: var(--theme-content-bg-2);
+        border: var(--theme-border-1);
+    }
+
+    .subscribe-cta.layout-wide {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    .subscribe-cta.layout-wide .subscribe-copy {
+        margin-right: calc(var(--space4) + var(--space2));
+        flex: 1 1 auto;
+    }
+
+    .subscribe-cta.layout-wide .console-form {
+        margin-top: 0;
+        flex: 0 0 auto;
+    }
+
+    .subscribe-cta.layout-wide .console-form {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: stretch;
+        width: 35%;
+    }
+
+    .subscribe-cta.layout-wide .console-form .console-button {
+        margin-left: 0;
+        margin-top: var(--space3);
+    }
+}
+
+/* Button
+   ================================================================================================================ */
+
+.console-button,
+[class^="console-button"],
+[class*=" console-button"] {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    outline: none;
+    flex: 0 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--t-size0);
+    line-height: var(--t-lH4);
+    vertical-align: top;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--a-controls);
+}
+
+.console-button.console-button-medium,
+[class^="console-button"].console-button-medium,
+[class*=" console-button"].console-button-medium {
+    font-size: var(--t-size-1);
+}
+
+.console-button.console-button-small,
+[class^="console-button"].console-button-small,
+[class*=" console-button"].console-button-small {
+    font-size: var(--t-size-2);
+}
+
+.console-button:active,
+[class^="console-button"]:active,
+[class*=" console-button"]:active,
+.console-button:focus,
+[class^="console-button"]:focus,
+[class*=" console-button"]:focus {
+    transition: var(--a-controls-active);
+}
+
+.console-button span,
+[class^="console-button"] span,
+[class*=" console-button"] span {
+    flex: 0 0 auto;
+}
+
+.console-button.icon-left span,
+[class^="console-button"].icon-left span,
+[class*=" console-button"].icon-left span {
+    margin-left: 0.75em;
+}
+
+.console-button.icon-right span,
+[class^="console-button"].icon-right span,
+[class*=" console-button"].icon-right span {
+    margin-right: 0.75em;
+}
+
+.console-button .icon,
+[class^="console-button"] .icon,
+[class*=" console-button"] .icon {
+    flex: 0 0 auto;
+    width: 1.2em;
+    height: 1.2em;
+    transition: var(--a-controls);
+}
+
+.console-button:active .icon,
+[class^="console-button"]:active .icon,
+[class*=" console-button"]:active .icon,
+.console-button:focus .icon,
+[class^="console-button"]:focus .icon,
+[class*=" console-button"]:focus .icon {
+    transition: var(--a-controls-active);
+}
+
+.console-button {
+    margin-left: var(--space3);
+    background: var(--c-blue-06-main);
+    padding: calc(var(--space2) + var(--space1)) calc(var(--space3) + var(--space1));
+    border-radius: var(--small-corners);
+    color: var(--theme-cta-text);
+}
+
+.console-button:hover {
+    background: var(--c-blue-07);
+}
+
+.console-button:active,
+.console-button:focus {
+    background: var(--c-blue-08);
+}
+
+.console-button .icon-fill {
+    fill: var(--theme-cta-text);
+}
+
+.console-button .icon-stroke {
+    stroke: var(--theme-cta-text);
+}
+
+.console-button.console-button-medium {
+    padding: calc(var(--space2) + calc(var(--space1) / 2)) calc(var(--space3) + calc(var(--space1) / 2));
+}
+
+.console-button.console-button-small {
+    padding: var(--space2) var(--space3);
+}
+
+/* Text Button
+    --------------------------------------------------------------- */
+
+.console-button-text {
+    font-size: var(--t-size0);
+    line-height: var(--t-lH4);
+    color: var(--theme-cta-secondary-text-idle);
+    text-decoration: none;
+}
+
+.console-button-text:hover {
+    color: var(--theme-cta-secondary-text-hover);
+}
+
+.console-button-text:active,
+.console-button-text:focus {
+    color: var(--theme-cta-secondary-text-active);
+}
+
+.console-button-text .icon-fill {
+    fill: var(--theme-cta-secondary-text-idle);
+}
+
+.console-button-text:hover .icon-fill {
+    fill: var(--theme-cta-secondary-text-hover);
+}
+
+.console-button-text:active .icon-fill,
+.console-button-text:focus .icon-fill {
+    fill: var(--theme-cta-secondary-text-active);
+}
+
+.console-button-text .icon-stroke {
+    stroke: var(--theme-cta-secondary-text-idle);
+}
+
+.console-button-text:hover .icon-stroke {
+    stroke: var(--theme-cta-secondary-text-hover);
+}
+
+.console-button-text:active .icon-stroke,
+.console-button-text:focus .icon-stroke {
+    stroke: var(--theme-cta-secondary-text-active);
+}
+
+/* Control
+   ================================================================================================================ */
+
+.console-control {
+    --paddingV: var(--space2);
+    --paddingH: var(--space2);
+    --lineHeightHalf: calc(var(--t-lH3) / 2);
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    border: 0;
+    outline: none;
+    flex: 0 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    background: transparent;
+    color: var(--theme-control-text);
+    padding: var(--paddingV) var(--paddingH);
+    font-size: var(--t-size-3);
+    line-height: var(--t-lH3);
+    border-radius: calc(var(--paddingV) + var(--lineHeightHalf));
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--a-controls);
+}
+
+body:not(.mobile) .console-control:hover {
+    background: var(--theme-content-bg-4);
+}
+
+.console-control:active,
+.console-control:focus {
+    color: var(--theme-control-active-text);
+    background: var(--theme-control-border);
+    transition: var(--a-controls-active);
+}
+
+.console-control:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent;
+    border-radius: calc(var(--paddingV) + var(--lineHeightHalf));
+    transition: var(--a-controls);
+}
+
+body:not(.mobile) .console-control:hover:before {
+    border: 1px solid var(--theme-control-border);
+}
+
+.console-control:active:before,
+.console-control:focus:before {
+    transition: var(--a-controls-active);
+}
+
+.console-control span {
+    display: inline-block;
+    flex: 0 0 auto;
+}
+
+.console-control.icon-left span {
+    margin-left: calc(var(--space2) + var(--space1));
+    margin-right: var(--space1);
+}
+
+.console-control.icon-right span {
+    margin-right: calc(var(--space2) + var(--space1));
+    margin-left: var(--space1);
+}
+
+.console-control img,
+.console-control svg {
+    flex: 0 0 auto;
+}
+
+.console-control svg {
+    fill: var(--theme-control-text);
+    width: 16px;
+    height: 16px;
+    transition: var(--a-controls);
+}
+
+.console-control:active svg,
+.console-control:focus svg {
+    fill: var(--theme-control-active-text);
+    transition: var(--a-controls-active);
+}
+
+/* Checkbutton
+   ================================================================================================================ */
+
+.console-checkbutton {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.console-checkbutton input {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    position: absolute;
+    overflow: hidden;
+}
+
+.console-checkbutton input + label {
+    position: relative;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    cursor: pointer;
+    border-radius: var(--small-corners);
+    border: var(--theme-control-button-inactive-border);
+    color: var(--theme-control-button-inactive-text);
+    margin: 0;
+    padding: calc(var(--space1) - 2px) var(--space2);
+    font-size: var(--t-size-2);
+    line-height: var(--t-lH4);
+    font-weight: 400;
+    transition: var(--a-elements);
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.console-checkbutton input + label:hover,
+.console-checkbutton input:focus + label {
+    border: var(--theme-control-button-inactive-border-hover);
+    background: var(--theme-control-button-inactive-background-hover);
+    color: var(--theme-control-button-inactive-text-hover);
+    transition: var(--a-elements-active);
+}
+
+.console-checkbutton input + label .icon {
+    flex: 0 0 auto;
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: var(--space1);
+    fill: var(--theme-control-button-inactive-text);
+    transition: var(--a-elements);
+}
+
+.console-checkbutton input + label:hover .icon,
+.console-checkbutton input:focus + label .icon {
+    fill: var(--theme-control-button-inactive-text-hover);
+    transition: var(--a-elements-active);
+}
+
+.console-checkbutton input + label .icon-plus,
+.console-checkbutton input + label .icon-checkmark,
+.console-checkbutton input + label .icon-minus,
+.console-checkbutton input + label .icon-x {
+    margin-right: var(--space1);
+    width: 1em;
+    height: 1em;
+}
+
+.console-checkbutton input:not(:checked) + label .icon-checkmark,
+.console-checkbutton input:checked + label .icon-plus {
+    display: none;
+}
+
+.console-checkbutton.color-blue input:checked + label {
+    color: var(--theme-control-button-active-blue-text);
+    background: var(--theme-control-button-active-blue-background);
+    border: 1px solid transparent;
+}
+.console-checkbutton.color-blue input:checked + label .icon {
+    fill: var(--theme-control-button-active-blue-text);
+}
+.console-checkbutton.color-blue input:checked + label:hover,
+.console-checkbutton.color-blue input:checked:focus + label {
+    color: var(--theme-control-button-active-blue-text-hover);
+    background: var(--theme-control-button-active-blue-background-hover);
+}
+.console-checkbutton.color-blue input:checked + label:hover .icon,
+.console-checkbutton.color-blue input:checked:focus + label .icon {
+    fill: var(--theme-control-button-active-blue-text-hover);
+}
+
+.console-checkbutton.color-fuchsia input:checked + label {
+    color: var(--theme-control-button-active-fuchsia-text);
+    background: var(--theme-control-button-active-fuchsia-background);
+    border: 1px solid transparent;
+}
+.console-checkbutton.color-fuchsia input:checked + label .icon {
+    fill: var(--theme-control-button-active-fuchsia-text);
+}
+.console-checkbutton.color-fuchsia input:checked + label:hover,
+.console-checkbutton.color-fuchsia input:checked:focus + label {
+    color: var(--theme-control-button-active-fuchsia-text-hover);
+    background: var(--theme-control-button-active-fuchsia-background-hover);
+}
+.console-checkbutton.color-fuchsia input:checked + label:hover .icon,
+.console-checkbutton.color-fuchsia input:checked:focus + label .icon {
+    fill: var(--theme-control-button-active-fuchsia-text-hover);
+}
+
+.console-checkbutton.color-green input:checked + label {
+    color: var(--theme-control-button-active-green-text);
+    background: var(--theme-control-button-active-green-background);
+    border: 1px solid transparent;
+}
+.console-checkbutton.color-green input:checked + label .icon {
+    fill: var(--theme-control-button-active-green-text);
+}
+.console-checkbutton.color-green input:checked + label:hover,
+.console-checkbutton.color-green input:checked:focus + label {
+    color: var(--theme-control-button-active-green-text-hover);
+    background: var(--theme-control-button-active-green-background-hover);
+}
+.console-checkbutton.color-green input:checked + label:hover .icon,
+.console-checkbutton.color-green input:checked:focus + label .icon {
+    fill: var(--theme-control-button-active-green-text-hover);
+}
+
+.console-checkbutton-master input + label,
+.console-checkbutton-master.color-blue input:checked + label,
+.console-checkbutton-master.color-fuchsia input:checked + label,
+.console-checkbutton-master.color-green input:checked + label {
+    background: none;
+}
+
+.console-checkbutton-master input + label,
+.console-checkbutton-master input + label:hover,
+.console-checkbutton-master input:focus + label {
+    border: 1px solid transparent;
+}
+
+.console-checkbutton-master input:not(:checked):not(:indeterminate) + label .icon-minus,
+.console-checkbutton-master input:not(:checked):not(:indeterminate) + label .icon-x,
+.console-checkbutton-master input:checked:not(:indeterminate) + label .icon-minus,
+.console-checkbutton-master input:checked:not(:indeterminate) + label .icon-plus,
+.console-checkbutton-master input:not(:checked):indeterminate + label .icon-plus,
+.console-checkbutton-master input:not(:checked):indeterminate + label .icon-x {
+    display: none;
+}
+
+.console-checkbutton-master input:not(:checked):not(:indeterminate) + label .console-checkbutton-label-all,
+.console-checkbutton-master input:checked:not(:indeterminate) + label .console-checkbutton-label-none,
+.console-checkbutton-master input:not(:checked):indeterminate + label .console-checkbutton-label-all {
+    display: block;
+}
+
+.console-checkbutton-master input:not(:checked):not(:indeterminate) + label .console-checkbutton-label-none,
+.console-checkbutton-master input:checked:not(:indeterminate) + label .console-checkbutton-label-all,
+.console-checkbutton-master input:not(:checked):indeterminate + label .console-checkbutton-label-none {
+    display: none;
+}
+
+/* Tag
+   ================================================================================================================ */
+
+.tags {
+    color: var(--c-fuchsia-05-main);
+    font-size: var(--t-size-3);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.tags > *:not(:first-of-type) {
+    margin-left: var(--space1);
+    display: inline-block;
+}
+
+.tags .icon {
+    fill: var(--c-fuchsia-05-main);
+    width: var(--t-size-2);
+    height: var(--t-size-2);
+    flex: 0 0 auto;
+    margin-right: calc(var(--space2_5) / 2);
+}
+
+/* Separator
+   ================================================================================================================ */
+
+.separator {
+    display: block;
+    height: 1px;
+    margin: var(--space4) 0 var(--space3);
+    padding: 0;
+    background: var(--theme-separator-1);
+}
+
+/* Badge
+   ================================================================================================================ */
+
+.badge {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-100%);
+    background: var(--theme-badge-bg);
+    color: var(--theme-badge-text);
+    border-radius: var(--x-small-corners);
+    font-size: calc(var(--t-size-5) * 0.9);
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.2em;
+    padding: 0.1em 0.3em;
+}
+
+/* Popup
+   ================================================================================================================ */
+
+.popup {
+    background-color: var(--theme-content-bg-4);
+    border-radius: var(--mid-corners);
+    padding: var(--space4);
+    display: block;
+    opacity: 0;
+    box-shadow: var(--theme-shadow-3);
+    transition: var(--a-elements);
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.popup.is-visible {
+    pointer-events: all;
+    opacity: 1;
+    transition: var(--a-elements-active);
+}
+
+.popup.popup-top-down,
+.popup.popup-bottom-up.is-visible {
+    transform: translateY(0);
+}
+
+.popup.popup-top-down.is-visible,
+.popup.popup-bottom-up {
+    transform: translateY(var(--space4));
 }
