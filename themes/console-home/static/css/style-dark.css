@@ -36,7 +36,7 @@
 
     --theme-border-0: 1px solid rgba(255, 255, 255, 0.03);
     --theme-border-1: 1px solid rgba(255, 255, 255, 0.03);
-    --theme-border-2: 1px solid #151515;
+    --theme-border-1: 1px solid rgba(255, 255, 255, 0.06);
 
     --theme-separator-1: var(--c-grey-06-blacks-neutral);
 
