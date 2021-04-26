@@ -16,6 +16,7 @@
     <link rel="preload" href="/css/style-light.css" as="style" />
     <script src="/js/head-scripts.js"></script>
     <link rel="stylesheet" href="/css/styles.css" />
+    {{ with .Params.isSelected }}<link rel="stylesheet" href="/css/page/{{ . }}.css" />{{ end }}
     <link rel="stylesheet" href="/css/components.css" />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
