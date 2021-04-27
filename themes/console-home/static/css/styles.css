@@ -1218,7 +1218,7 @@ select.console-select {
     background: var(--theme-input-bg);
     color: var(--theme-input-text);
     padding: calc(var(--space2) + var(--space1)) calc(var(--space3) + var(--space1));
-    border-radius: var(--small-corners);
+    border-radius: var(--corners-small);
     font-size: var(--t-size0);
     line-height: var(--t-lH4);
     transition: var(--a-controls);
@@ -1313,7 +1313,7 @@ select.console-select::-ms-expand {
     height: 100%;
     object-fit: cover;
     vertical-align: top;
-    border-radius: var(--mid-corners);
+    border-radius: var(--corners-mid);
 }
 
 /* Media Queries
@@ -1569,7 +1569,7 @@ select.console-select::-ms-expand {
         padding: var(--space5) 6.25vw;
         background: var(--theme-content-bg-0);
         box-shadow: var(--theme-shadow-2);
-        border-radius: 0 var(--mid-corners) var(--mid-corners) 0;
+        border-radius: 0 var(--corners-mid) var(--corners-mid) 0;
         border-left: 0px;
     }
 
@@ -1620,6 +1620,6 @@ select.console-select::-ms-expand {
     }
 
     .main-article {
-        border-radius: var(--mid-corners);
+        border-radius: var(--corners-mid);
     }
 }
