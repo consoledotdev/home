@@ -79,6 +79,13 @@
     --theme-control-button-active-green-background-hover: rgba(1, 188, 144, 0.21);
     --theme-control-button-active-green-text-hover: var(--c-green-04);
 
+    --theme-actionable-box-border-focus: 1px solid var(--c-blue-07);
+    --theme-actionable-box-border-active: 1px solid var(--c-blue-08);
+    --theme-actionable-box-bg-focus: rgba(37, 45, 217, 0.04);
+    --theme-actionable-box-bg-active: rgba(37, 45, 217, 0.02);
+    --theme-actionable-box-label-bg-focus: var(--c-blue-07);
+    --theme-actionable-box-label-bg-active: var(--c-blue-08);
+
     --theme-p1-stroke: var(--c-blue-06-main);
     --theme-p2-stroke: var(--c-fuchsia-05-main);
     --theme-p3-stroke: var(--c-green-05-main);

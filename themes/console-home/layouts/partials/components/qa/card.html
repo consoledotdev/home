@@ -1,21 +1,33 @@
 <div class="qa-card">
-    <a href="{{ .RelPermalink }}">click</a>
-    <div class="qa-card-combo"></div>
-    <div class="qa-card-content">
-        <span class="date">{{ .Date.Format "2006-01-02" }}</span>
-        <div class="qa-card-middle">
-            <div class="qa-card-person">
-                <p class="qa-card-person-name">{{.Params.who }}</p>
-                <p class="qa-card-person-role">{{ .Params.role }}</p>
-            </div>
-            <div class="qa-card-company">
-                <p class="qa-card-company-name">{{ .Params.org }}</p>
-                <div class="tags">
-                    {{ partial "icons/tag.html" }}
-                    <span class="tag">tag</span>
+    <a onclick="blur();" class="qa-card-link" href="{{ .RelPermalink }}"><span>Read</span></a>
+    <div class="qa-card-inner">
+        <div class="qa-card-combo">
+            <div class="qa-card-company-logo">
+                <div class="logo aspect-ratio aspect-ratio-1-1">
+                    <img class="image" src="{{ .Params.topImg2Src }}" alt="{{ .Params.topImg2Alt }}" />
                 </div>
             </div>
+            <div class="qa-card-person-portrait">
+                <img class="ratio" src="/img/ratio-plane.png">
+                <img class="image" src="{{ .Params.topImg1Src }}" alt="{{ .Params.topImg1Alt }}" />
+            </div>
         </div>
-        <p class="small">{{ .Params.what }}</p>
+        <div class="qa-card-content">
+            <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+            <div class="qa-card-middle">
+                <div class="qa-card-person">
+                    <p class="qa-card-person-name">{{.Params.who }}</p>
+                    <p class="qa-card-person-role">{{ .Params.role }}</p>
+                </div>
+                <div class="qa-card-company">
+                    <p class="qa-card-company-name">{{ .Params.org }}</p>
+                    <div class="tags">
+                        {{ partial "icons/tag.html" }}
+                        <span class="tag">tag</span>
+                    </div>
+                </div>
+            </div>
+            <p class="small qa-card-description">{{ .Params.what }}</p>
+        </div>
     </div>
 </div>
