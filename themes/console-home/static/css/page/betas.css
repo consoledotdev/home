@@ -124,7 +124,7 @@
     position: relative;
     background-color: var(--theme-content-bg-0);
     box-shadow: var(--theme-shadow-1);
-    border-radius: var(--mid-corners);
+    border-radius: var(--corners-mid);
     padding: var(--space3) var(--space4);
     border-left: 2px solid transparent;
 }
@@ -195,7 +195,7 @@ p.beta-card-description {
 .beta-card-empty-placeholder {
     position: relative;
     background-color: var(--theme-empty-bg-1);
-    border-radius: var(--mid-corners);
+    border-radius: var(--corners-mid);
     padding: var(--space3) var(--space4);
     background-image: var(--theme-empty-dashed-border);
     min-height: calc(var(--space7) - var(--space4));

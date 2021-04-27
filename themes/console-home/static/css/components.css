@@ -417,7 +417,7 @@
     margin-left: var(--space3);
     background: var(--c-blue-06-main);
     padding: calc(var(--space2) + var(--space1)) calc(var(--space3) + var(--space1));
-    border-radius: var(--small-corners);
+    border-radius: var(--corners-small);
     color: var(--theme-cta-text);
 }
 
@@ -609,7 +609,7 @@ body:not(.mobile) .console-control:hover:before {
     flex-flow: row nowrap;
     align-items: center;
     cursor: pointer;
-    border-radius: var(--small-corners);
+    border-radius: var(--corners-small);
     border: var(--theme-control-button-inactive-border);
     color: var(--theme-control-button-inactive-text);
     margin: 0;
@@ -794,7 +794,7 @@ body:not(.mobile) .console-control:hover:before {
     transform: translateY(-100%);
     background: var(--theme-badge-bg);
     color: var(--theme-badge-text);
-    border-radius: var(--x-small-corners);
+    border-radius: var(--corners-x-small);
     font-size: calc(var(--t-size-5) * 0.9);
     text-transform: uppercase;
     font-style: italic;
@@ -809,7 +809,7 @@ body:not(.mobile) .console-control:hover:before {
 
 .popup {
     background-color: var(--theme-content-bg-4);
-    border-radius: var(--mid-corners);
+    border-radius: var(--corners-mid);
     padding: var(--space4);
     display: block;
     opacity: 0;
