@@ -16,8 +16,8 @@
     <link rel="preload" href="/css/style-light.css" as="style" />
     <script src="/js/head-scripts.js"></script>
     <link rel="stylesheet" href="/css/styles.css" />
-    {{ if and .Params.isSelected .Params.customStyle }}<link rel="stylesheet" href="/css/page/{{ .Params.isSelected }}.css" />{{ end }}
     <link rel="stylesheet" href="/css/components.css" />
+    {{ if and .Params.isSelected .Params.customStyle }}<link rel="stylesheet" href="/css/page/{{ .Params.isSelected }}.css" />{{ end }}
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.png" type="image/png" />
