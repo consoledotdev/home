@@ -421,12 +421,12 @@
     color: var(--theme-cta-text);
 }
 
-.console-button:hover {
+.console-button:hover,
+.console-button:focus {
     background: var(--c-blue-07);
 }
 
-.console-button:active,
-.console-button:focus {
+.console-button:active {
     background: var(--c-blue-08);
 }
 
