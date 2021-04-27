@@ -29,7 +29,7 @@
 					{{- $name := index . "Tool/Product/Project" -}}
 					{{- if in $name $org -}}{{ $name }}{{- else -}}{{ $name }}, from {{ $org }}{{- end -}}
 				</p>
-				<p class="beta-card-description">{{ index . "What is it?" }}</p>
+				<p class="small beta-card-description">{{ index . "What is it?" }}</p>
 			</div>
 			<div class="tags">
 				{{ partial "icons/tag.html" }}
