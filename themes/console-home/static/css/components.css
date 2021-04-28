@@ -1,6 +1,5 @@
 /* Icons
    ================================================================================================================ */
-
 .icon {
     position: relative;
     display: inline-block;
@@ -141,7 +140,6 @@
 
 /* Illustrations
    ================================================================================================================ */
-
 .illustration {
     position: relative;
     display: inline-block;
@@ -159,7 +157,6 @@
 
 /* Collapsible Box
    ================================================================================================================ */
-
 .box-collapsible {
     background: var(--theme-collapsible-bg-1);
 }
@@ -238,7 +235,6 @@
 
 /* Links
    ================================================================================================================ */
-
 .link:link,
 .link:visited {
     color: var(--theme-text-1);
@@ -285,7 +281,6 @@
 
 /* Subscribe CTA
    ================================================================================================================ */
-
 .subscribe-cta {
     padding: var(--space4);
     background: var(--theme-content-bg-2);
@@ -334,7 +329,6 @@
 
 /* Button
    ================================================================================================================ */
-
 .console-button,
 [class^="console-button"],
 [class*=" console-button"] {
@@ -448,7 +442,6 @@
 
 /* Text Button
     --------------------------------------------------------------- */
-
 .console-button-text {
     font-size: var(--t-size0);
     line-height: var(--t-lH4);
@@ -493,7 +486,6 @@
 
 /* Control
    ================================================================================================================ */
-
 .console-control {
     --paddingV: var(--space2);
     --paddingH: var(--space2);
@@ -588,7 +580,6 @@ body:not(.mobile) .console-control:hover:before {
 
 /* Checkbutton
    ================================================================================================================ */
-
 .console-checkbutton {
     display: flex;
     flex-flow: row nowrap;
@@ -751,7 +742,6 @@ body:not(.mobile) .console-control:hover:before {
 
 /* Tag
    ================================================================================================================ */
-
 .tags {
     color: var(--c-fuchsia-05-main);
     font-size: var(--t-size-3);
@@ -775,7 +765,6 @@ body:not(.mobile) .console-control:hover:before {
 
 /* Separator
    ================================================================================================================ */
-
 .separator {
     display: block;
     height: 1px;
@@ -786,7 +775,6 @@ body:not(.mobile) .console-control:hover:before {
 
 /* Badge
    ================================================================================================================ */
-
 .badge {
     position: absolute;
     right: 0;
@@ -806,7 +794,6 @@ body:not(.mobile) .console-control:hover:before {
 
 /* Popup
    ================================================================================================================ */
-
 .popup {
     background-color: var(--theme-content-bg-4);
     border-radius: var(--corners-mid);
@@ -835,9 +822,22 @@ body:not(.mobile) .console-control:hover:before {
     transform: translateY(var(--space4));
 }
 
+/* Empty Card
+   ================================================================================================================ */
+.card-empty-placeholder {
+    position: relative;
+    background-color: var(--theme-empty-bg-1);
+    border-radius: var(--corners-mid);
+    padding: var(--space3) var(--space4);
+    background-image: var(--theme-empty-dashed-border);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Illustrated Text
    ================================================================================================================ */
-
 .illustrated-text {
     display: flex;
     flex-flow: row nowrap;
@@ -845,8 +845,8 @@ body:not(.mobile) .console-control:hover:before {
 }
 
 .illustrated-text .illustration {
-    width: 80px;
-    height: 80px;
+    width: 128px;
+    height: 128px;
     flex: 0 0 auto;
     margin-right: var(--space4);
 }
@@ -854,4 +854,22 @@ body:not(.mobile) .console-control:hover:before {
 .illustrated-text p {
     flex: 1 1 auto;
     display: inline-block;
+}
+
+@media (max-width: 440px) {
+    .illustrated-text {
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+
+    .illustrated-text .illustration {
+        width: 60%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: var(--space4);
+    }
+
+    .illustrated-text p {
+        text-align: center;
+    }
 }

@@ -193,16 +193,7 @@ p.beta-card-description {
 }
 
 .beta-card-empty-placeholder {
-    position: relative;
-    background-color: var(--theme-empty-bg-1);
-    border-radius: var(--corners-mid);
-    padding: var(--space3) var(--space4);
-    background-image: var(--theme-empty-dashed-border);
     min-height: calc(var(--space7) - var(--space4));
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
 }
 
 .beta-card-empty-placeholder.is-hidden {

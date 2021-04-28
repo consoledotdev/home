@@ -2,7 +2,7 @@
    ========================================================================== */
 
 .page-section-qa-root {
-    /* margin-right: min(26vw, 400px); */ /* Uncomment with filters */
+    margin-right: min(26vw, 400px);
 }
 
 .qa-split {
@@ -200,11 +200,7 @@ p.qa-card-description {
     margin-top: calc(var(--space4) + var(--space3));
 }
 
-@media (max-width: 768px) {
-    .page-section-qa-root {
-        margin-right: 0;
-    }
-
+@media (max-width: 768px), (min-width: 1025px) and (max-width: 1280px) {
     .qa-card {
         --logoWidth: 47.33%;
     }
@@ -234,28 +230,30 @@ p.qa-card-description {
     }
 }
 
-@media (min-width: 769px) {
-    @media (max-width: 1024px) {
-        .page-section-qa-root {
-            margin-right: 0;
-        }
+@media (max-width: 1280px) {
+    .page-section-qa-root {
+        margin-right: 0;
     }
-    @media (min-width: 1280px) {
+}
+
+@media (min-width: 769px) {
+    @media (min-width: 1025px) {
         .qa-items {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0 calc(var(--space4) + var(--space2));
         }
 
-        .qa-split + .page-section-qa-root {
-            margin-right: 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0 calc(var(--space4) + var(--space2));
+        .qa-items > :nth-last-child(2):nth-child(odd),
+        .qa-items > :nth-last-child(1):nth-child(even),
+        .qa-items > :nth-last-child(1):nth-child(odd) {
+            margin-bottom: 0;
         }
+    }
 
-        .page-section-qa-root .illustrated-text {
-            margin-top: 0;
+    @media (min-width: 1280px) {
+        .qa-split + .page-section-qa-root {
+            margin-right: calc(50% + var(--space3) + var(--space1));
         }
     }
 }
