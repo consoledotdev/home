@@ -8,7 +8,7 @@ date: 2021-02-23T12:00:00Z
 draft: false
 summary: Q&A interview with Sam Scott, CTO, Oso.
 isSelected: qa
-topImg1Src: /img/qa/oso-sam-scott-profile.png
+topImg1Src: /img/qa/oso-sam-scott-profile.jpg
 topImg2Src: /img/qa/oso-sam-scott-logo.png
 ogImg: /img/qa/oso-sam-scott-desk.jpg
 ---

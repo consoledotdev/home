@@ -8,7 +8,7 @@ date: 2021-04-26T12:00:00Z
 draft: false
 summary: Q&A interview with Jean Yang, CEO, Akita
 isSelected: qa
-topImg1Src: /img/qa/akita-jean-yang-profile.png
+topImg1Src: /img/qa/akita-jean-yang-profile.jpg
 topImg2Src: /img/qa/akita-jean-yang-logo.png
 ogImg: /img/qa/akita-jean-yang-desk.jpeg
 ---
