@@ -6,7 +6,7 @@
 
 :root {
     --theme-text-1: var(--c-black-02-main);
-    --theme-text-2: var(--c-grey-09-black-03);
+    --theme-text-2: var(--c-grey-07);
     --theme-text-3: var(--c-grey-05);
     --theme-input-text: var(--c-black-02-main);
     --theme-pre-code-text: var(--c-blue-08);
