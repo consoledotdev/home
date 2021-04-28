@@ -9,7 +9,7 @@ draft: false
 summary: Q&A interview with James Little, Creator, Stork Search.
 isSelected: qa
 topImg1Src: /img/qa/stork-search-james-little-profile.jpg
-topImg2Src: /img/qa/stork-search-james-little-logo.png
+topImg2Src: /img/qa/stork-search-james-little-logo.jpg
 ogImg: /img/qa/stork-search-james-little-desk.jpg
 ---
 

@@ -9,7 +9,7 @@ draft: false
 summary: Q&A interview with John Kozubik, CEO, rsync.net.
 isSelected: qa
 topImg1Src: /img/qa/rsync-john-kozubik-profile.jpg
-topImg2Src: /img/qa/rsync-john-kozubik-logo.png
+topImg2Src: /img/qa/rsync-john-kozubik-logo.jpg
 ogImg: /img/qa/rsync-john-kozubik-desk.png
 ---
 
