@@ -168,6 +168,7 @@
     font-weight: 500;
     font-size: var(--t-size0);
     color: var(--theme-text-2);
+    flex: 0 1 auto;
 }
 
 .qa-card-person-role {
@@ -175,6 +176,7 @@
     color: var(--theme-text-2);
     font-size: var(--t-size-3);
     font-style: italic;
+    flex: 0 1 auto;
 }
 
 .qa-card-company {
@@ -188,6 +190,7 @@
     font-weight: 500;
     font-size: var(--t-size1);
     color: var(--theme-text-1);
+    flex: 0 1 auto;
 }
 
 .qa-card-company .tags {
