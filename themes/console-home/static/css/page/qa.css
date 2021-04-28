@@ -114,6 +114,10 @@
     overflow: hidden;
 }
 
+.qa-card-company-logo .logo .image {
+    object-fit: contain;
+}
+
 .qa-card-person-portrait {
     position: relative;
     height: 100%;
