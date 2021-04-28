@@ -4,6 +4,7 @@ who: Jay V
 role: CEO
 org: Seed
 what: A deployment system for serverless.
+tags: ['Serverless']
 date: 2021-03-05T12:00:00Z
 draft: false
 summary: Q&A interview with Jay V, CEO, Seed.

@@ -4,6 +4,7 @@ who: Scott Gerlach
 role: Co-founder & CSO
 org: StackHawk
 what: An application security testing tool built for developers.
+tags: ['Security']
 date: 2021-02-09T12:00:00Z
 draft: false
 summary: Q&A interview with Scott Gerlach, Co-founder & CSO, StackHawk.

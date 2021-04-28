@@ -4,6 +4,7 @@ who: Yifan Gu
 role: Creator
 org: vmcli
 what: A set of utilities to help you run Linux VMs on M1 Macs.
+tags: ['CLI']
 date: 2021-03-02T12:00:00Z
 draft: false
 summary: Q&A interview with Yifan Gu, Creator, vmcli.

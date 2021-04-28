@@ -4,6 +4,7 @@ who: Sam Scott
 role: CTO
 org: Oso
 what: A batteries-included library for authorization.
+tags: ['Security']
 date: 2021-02-23T12:00:00Z
 draft: false
 summary: Q&A interview with Sam Scott, CTO, Oso.

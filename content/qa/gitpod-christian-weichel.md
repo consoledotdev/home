@@ -4,6 +4,7 @@ who: Christian Weichel
 role: Chief Architect / Head of Engineering
 org: Gitpod
 what: Dev environments as code and hosted in the cloud.
+tags: ['IDE']
 date: 2021-02-11T12:00:00Z
 draft: false
 summary: Q&A interview with Christian Weichel, Chief Architect / Head of Engineering, Gitpod

@@ -4,6 +4,7 @@ who: Ben Schaechter
 role: Co-founder
 org: Vantage
 what: An alternative AWS console with a focus on cost transparency.
+tags: ['Cloud']
 date: 2021-03-12T12:00:00Z
 draft: false
 summary: Q&A interview with Ben Schaechter, Co-founder, Vantage.

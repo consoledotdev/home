@@ -4,6 +4,7 @@ who: James Little
 role: Creator
 org: Stork Search
 what: A full-text search tool for static websites.
+tags: ['Search']
 date: 2021-03-10T12:00:00Z
 draft: false
 summary: Q&A interview with James Little, Creator, Stork Search.
