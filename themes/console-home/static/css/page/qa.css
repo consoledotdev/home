@@ -37,59 +37,6 @@
     flex: 1 1 auto;
 }
 
-.qa-card-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 1px solid transparent;
-    border-radius: var(--corners-mid);
-    z-index: 10;
-    opacity: 0;
-    transition: var(--a-controls);
-    overflow: hidden;
-}
-
-.qa-card-link:hover,
-.qa-card-link:focus {
-    opacity: 1;
-    transition: var(--a-controls-active);
-    border: var(--theme-actionable-box-border-focus);
-    background: var(--theme-actionable-box-bg-focus);
-}
-
-.qa-card-link:active {
-    border: var(--theme-actionable-box-border-active);
-    background: var(--theme-actionable-box-bg-active);
-}
-
-.qa-card-link span {
-    display: block;
-    position: absolute;
-    right: -1px;
-    bottom: -1px;
-    color: var(--theme-cta-text);
-    font-size: var(--t-size-3);
-    line-height: var(--t-lH4);
-    font-weight: 500;
-    padding: calc(var(--space1) / 2) calc(var(--space2) + var(--space1));
-    border-top-left-radius: var(--corners-mid);
-    letter-spacing: normal;
-    transition: var(--a-controls);
-}
-
-.qa-card-link:hover span,
-.qa-card-link:focus span {
-    background: var(--theme-actionable-box-label-bg-focus);
-    transition: var(--a-controls-active);
-}
-
-.qa-card-link:active span {
-    background: var(--theme-actionable-box-label-bg-active);
-    transition: var(--a-controls-active);
-}
-
 .qa-card-combo {
     position: absolute;
     height: 100%;
