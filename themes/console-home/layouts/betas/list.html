@@ -16,11 +16,16 @@
         {{- range first 1 $.Site.Data.betasga.items -}}{{- $gaChecked = time (index . "Last checked") -}}{{- end -}}
         {{- $updated := "" -}}
         {{- if $gaChecked.After $liveChecked -}}{{- $updated = $gaChecked -}}{{- else -}}{{- $updated = $liveChecked -}}{{- end -}}
-            <p class="small">Last updated: {{ $updated.Format "2006-01-02" }}&nbsp;&nbsp;—&nbsp;&nbsp;</p>
-			<a onclick="blur();" href="https://docs.google.com/forms/d/e/1FAIpQLSc671E1L7fEEz0WF5Vw58WakkRsvUgIzpgk3gafcgr5mp3gng/viewform" class="console-button-text console-button-small icon-left submit-beta" title="Submit Beta">
-				{{ partial "icons/beta.html" }}
-				<span>Submit Beta</span>
-			</a>
+            <p class="small">
+				<span>Last updated: {{ $updated.Format "2006-01-02" }}</span>
+			</p>
+            <p class="small">
+                <span class="page-meta-separator">&mdash;</span>
+				<a onclick="blur();" href="https://docs.google.com/forms/d/e/1FAIpQLSc671E1L7fEEz0WF5Vw58WakkRsvUgIzpgk3gafcgr5mp3gng/viewform" class="console-button-text console-button-small icon-left submit-beta" title="Submit Beta">
+					{{ partial "icons/beta.html" }}
+					<span>Submit Beta</span>
+				</a>
+			</p>
 		</div>
 	</section>
 	<section class="page-section page-section-betas-root">

@@ -492,20 +492,41 @@ body:not(.page-feature):after {
 .page-meta {
     font-size: var(--t-size-2);
     display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-start;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-top: calc(var(--space2) * -1);
+    overflow: hidden;
 }
 
-.page-meta > * {
-    flex: 0 0 auto;
+.page-meta > p {
+    margin-top: var(--space2);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-left: calc(calc(var(--space3) + 0.75em) * -1);
+    margin-right: calc(var(--space3) + 0.75em);
 }
 
-.page-meta .small {
+.page-meta > p:first-child {
+    margin-left: 0;
+}
+
+.page-meta > p:not(:last-child) {
     margin-bottom: 0;
+}
+
+.page-meta p > * {
+    flex: 0 0 auto;
 }
 
 .page-meta .console-button-text {
     display: inline-flex;
+}
+
+.page-meta .page-meta-separator {
+    display: inline-block;
+    margin-left: var(--space2);
+    margin-right: var(--space2);
 }
 
 .col-2 {
