@@ -3,7 +3,7 @@ title: Q&A with Manu Srivastava, Temporal
 who: Manu Srivastava
 role: Engineer
 org: Temporal
-what: a workflow orchestration platform.
+what: A workflow orchestration platform.
 date: 2021-03-24T12:00:00+00:00
 draft: false
 summary: Q&A interview with Manu Srivastava, Engineer, Temporal

@@ -3,7 +3,7 @@ title: Q&A with Petr Nikolaev, Raycast
 who: Petr Nikolaev
 role: Co-founder
 org: Raycast
-what: a quicklauncher that lets you control your tools with a few keystrokes.
+what: A quicklauncher that lets you control your tools with a few keystrokes.
 date: 2021-03-17T12:00:00+00:00
 draft: false
 summary: Q&A interview with  Petr Nikolaev, Co-founder, Raycast.

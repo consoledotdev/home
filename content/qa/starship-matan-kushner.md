@@ -3,7 +3,7 @@ title: Q&A with Matan Kushner, Starship
 who: Matan Kushner
 role: Creator
 org: Starship
-what: a cross-shell prompt.
+what: A cross-shell prompt.
 date: 2021-03-09T12:00:00Z
 draft: false
 summary: Q&A interview with Matan Kushner, Creator, Starship.

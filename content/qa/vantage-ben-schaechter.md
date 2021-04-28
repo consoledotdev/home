@@ -3,7 +3,7 @@ title: Q&A with Ben Schaechter, Vantage
 who: Ben Schaechter
 role: Co-founder
 org: Vantage
-what: an alternative AWS console with a focus on cost transparency.
+what: An alternative AWS console with a focus on cost transparency.
 date: 2021-03-12T12:00:00Z
 draft: false
 summary: Q&A interview with Ben Schaechter, Co-founder, Vantage.

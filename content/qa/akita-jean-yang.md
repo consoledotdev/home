@@ -3,7 +3,7 @@ title: Q&A with Jean Yang, Akita
 who: Jean Yang
 role: CEO
 org: Akita
-what: a tool for API mapping and observability.
+what: A tool for API mapping and observability.
 date: 2021-04-26T12:00:00Z
 draft: false
 summary: Q&A interview with Jean Yang, CEO, Akita
