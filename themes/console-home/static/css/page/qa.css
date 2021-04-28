@@ -143,7 +143,7 @@
     margin-bottom: calc(var(--space1) + var(--space2));
 }
 
-.qa-card-middle > :not(:last-child) {
+.qa-card-heading > :not(:last-child) {
     margin-bottom: calc(var(--space1) / 2);
 }
 
@@ -203,6 +203,34 @@ p.qa-card-description {
 @media (max-width: 768px) {
     .page-section-qa-root {
         margin-right: 0;
+    }
+
+    .qa-card {
+        --logoWidth: 47.33%;
+    }
+
+    .qa-card-combo {
+        position: relative;
+        height: auto;
+        max-width: none;
+        width: 100%;
+        border-bottom: var(--theme-border-2);
+    }
+
+    .qa-card-person-portrait {
+        clip-path: polygon(30.9% 0%, 0% 100%, 100% 100%, 100% 0%);
+        margin: 0;
+        width: 76.33%;
+        margin-left: 23.67%;
+    }
+
+    .qa-card-person-portrait .ratio {
+        width: 100%;
+        height: auto;
+    }
+
+    .qa-card-content {
+        margin-left: 0;
     }
 }
 

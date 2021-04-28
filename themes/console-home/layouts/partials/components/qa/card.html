@@ -13,8 +13,7 @@
             </div>
         </div>
         <div class="qa-card-content">
-            <span class="date">{{ .Date.Format "2006-01-02" }}</span>
-            <div class="qa-card-middle">
+            <div class="qa-card-heading">
                 <div class="qa-card-person">
                     <p class="qa-card-person-name">{{.Params.who }}</p>
                     <p class="qa-card-person-role">{{ .Params.role }}</p>
@@ -28,6 +27,7 @@
                 </div>
             </div>
             <p class="small qa-card-description">{{ .Params.what }}</p>
+            <span class="date bottom">{{ .Date.Format "2006-01-02" }}</span>
         </div>
     </div>
 </div>
