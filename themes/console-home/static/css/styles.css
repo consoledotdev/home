@@ -1141,7 +1141,7 @@ p.description {
 }
 
 p:not(:last-child) {
-    margin-bottom: 1em;
+    margin-bottom: var(--space3);
 }
 
 .description {
