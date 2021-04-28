@@ -20,6 +20,27 @@ code, you only need Hugo:
     - Test from other devices on local network (such as iPhone) `hugo server -D --bind=IP --baseURL=http://IP:1313`, where `IP` is the local IP of the machine running the Hugo server.
 3. Launch the URL in your browser. It will watch for changes and auto refresh the browser.
 
+## Image specs
+
+### Q&As
+
+**Profile Pic**
+
+* .jpg
+* 1600x1600px
+* 300kb max
+* Centered subject, square ratio (if possible)
+
+**Logo**
+
+* .svg, .png, .jpg
+* 1600x1600px
+* 300kb max
+
+**Text (`what`)**
+
+* 70 characters max
+
 ## Hugo options
 
 ### Frontmatter variables
