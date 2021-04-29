@@ -6,7 +6,7 @@
 
 :root {
     --theme-text-1: var(--c-black-02-main);
-    --theme-text-2: var(--c-grey-09-black-03);
+    --theme-text-2: var(--c-grey-07);
     --theme-text-3: var(--c-grey-05);
     --theme-input-text: var(--c-black-02-main);
     --theme-pre-code-text: var(--c-blue-08);
@@ -36,7 +36,7 @@
 
     --theme-border-0: none;
     --theme-border-1: 1px solid rgba(0, 0, 0, 0.04);
-    --theme-border-2: 1px solid rgba(0, 0, 0, 0.1);
+    --theme-border-2: 1px solid rgba(0, 0, 0, 0.08);
 
     --theme-separator-1: var(--c-grey-04-whites-neutral);
 
@@ -79,6 +79,13 @@
     --theme-control-button-active-green-background-hover: rgba(1, 188, 144, 0.21);
     --theme-control-button-active-green-text-hover: var(--c-green-08);
 
+    --theme-actionable-box-border-focus: 1px solid var(--c-blue-06-main);
+    --theme-actionable-box-border-active: 1px solid var(--c-blue-07);
+    --theme-actionable-box-bg-focus: rgba(82, 105, 255, 0.03);
+    --theme-actionable-box-bg-active: rgba(82, 105, 255, 0.06);
+    --theme-actionable-box-label-bg-focus: var(--c-blue-06-main);
+    --theme-actionable-box-label-bg-active: var(--c-blue-07);
+
     --theme-p1-stroke: var(--c-black-02-main);
     --theme-p2-stroke: var(--c-black-02-main);
     --theme-p3-stroke: var(--c-black-02-main);
@@ -90,7 +97,7 @@
     --theme-planes-off-stroke: var(--c-black-00-absolute);
 
     --theme-empty-bg-1: var(--c-white-01-main);
-    --theme-empty-dashed-border: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%2395969f' stroke-width='2' stroke-dasharray='6%2c 6' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    --theme-empty-dashed-border: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23b5b6bf' stroke-width='2' stroke-dasharray='6%2c 6' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
 
     --theme-collapsible-bg-1: var(--c-grey-01-white-03);
     --theme-collapsible-bg-blue-1: var(--c-blue-03);
@@ -134,6 +141,10 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
 
 .theme .subscribe-cta {
     background: var(--theme-content-bg-3);
+}
+
+.theme .qa-card {
+    background-color: var(--theme-content-bg-0);
 }
 
 @media (max-width: 768px) {

@@ -1,23 +1,47 @@
 {{ define "main" }}
-<section class="page-section">
-    <h2 class="title title-1">{{ .Title }}</h2>
-    {{.Content}}
+	{{ $CTATitle := "Interesting betas by email" }}
+	{{ $CTADescription := "Our free weekly newsletter picks out the 2-3 most interesting new betas." }}
 
-    <ul>
-        {{ range .Pages.ByPublishDate.Reverse }}
-        <li><a class="title" href="{{ .RelPermalink }}">{{.Params.who }}</a>
-            ({{.Date.Format "2006-01-02"}})<br />{{ .Params.role }},
-            {{ .Params.org }} - {{ .Params.what }}</li>
-        {{ end }}
-    </ul>
-
-    <p>We are always on the lookout for interesting tools to feature, <a
-        href="mailto:hello@console.dev" class="link">let us know</a> if there's
-    a something we should look at.</p>
-</section>
-
-<section class="page-section">
-    {{ partial "subscribe.html" (dict "context" .) }}
-</section>
+    <section class="page-section page-section-qa-root">
+        <h2 class="title title-1">{{ .Title }}</h2>
+        <p class="description">
+            Interviews with the people behind the tools we feature in our weekly newsletter.
+        </p>
+        <div class="page-meta">
+            <p class="small">
+                <a onclick="blur();" href="/qa/rss.xml" class="console-button-text console-button-small icon-left submit-beta" title="Submit Beta">
+                    {{ partial "icons/rss.html" }}
+                    <span>Feed</span>
+                </a>
+            </p>
+            <p class="small">
+                <span class="page-meta-separator">&mdash;</span>
+                <a onclick="blur();" href="/latest/" class="console-button-text console-button-small icon-left submit-beta" title="Submit Beta">
+                    {{ partial "icons/email.html" }}
+                    <span>See latest newsletter</span>
+                </a>
+            </p>
+        </div>
+    </section>
+    <div class="qa-split">
+        <div class="qa">
+            <section class="page-section">
+                <div class="qa-items">
+                    {{ range .Pages.ByPublishDate.Reverse }}
+                        {{ partial "components/qa/card.html" . }}
+                    {{ end }}
+                    <div class="card-empty-placeholder">
+                        <div class="illustrated-text">
+                            {{ partial "illustrations/radar.html" }}
+                            <p>We are always on the lookout for interesting tools to feature. Is there a something we should look at? <a href="mailto:hello@console.dev" class="link">Let us know</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+	<section class="page-section page-section-qa-root">
+		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" ) }}
+	</section>
 
 {{ end }}

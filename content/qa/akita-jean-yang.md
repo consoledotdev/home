@@ -3,12 +3,13 @@ title: Q&A with Jean Yang, Akita
 who: Jean Yang
 role: CEO
 org: Akita
-what: a tool for API mapping and observability.
+what: A tool for API mapping and observability.
+tags: ['Observability']
 date: 2021-04-26T12:00:00Z
 draft: false
 summary: Q&A interview with Jean Yang, CEO, Akita
 isSelected: qa
-topImg1Src: /img/qa/akita-jean-yang-profile.png
+topImg1Src: /img/qa/akita-jean-yang-profile.jpg
 topImg2Src: /img/qa/akita-jean-yang-logo.png
 ogImg: /img/qa/akita-jean-yang-desk.jpeg
 ---
@@ -20,7 +21,7 @@ sits between testing tools and observability tools. We build solutions that
 watch API traffic and then build models of what's going on with your system.
 From the models you can generate API specs. You can ask questions, like: "What
 endpoints do I have?", "What data formats do I have?", "What data types do I
-have?" 
+have?"
 
 The models also let you track what changed. Instead of diffing source code, you
 can now diff your API models, which let you talk about things as fine-grained
@@ -32,7 +33,7 @@ there relationships between fields that used to exist, but don't exist now?
 I realized there was a big gap in where modern tools sit. I was a professor at
 Carnegie Mellon working on program analysis, static type systems, static
 verification, and everything at the application level. I realized things were
-increasingly not at the application level anymore. 
+increasingly not at the application level anymore.
 
 For my PhD, I had made a new programming language. I was really excited to try
 using it, and started building web apps as a prototype. The minute I called out
@@ -65,7 +66,7 @@ generate them.
 
 We're also building more and more integrations with frameworks like Django,
 Flask, FastAPI, Rails and middleware frameworks like Express. We have a daemon
-mode coming out soon to integrate with different middlewares. 
+mode coming out soon to integrate with different middlewares.
 
 Anywhere where there's traffic, we're trying to have a presence to passively
 listen to your API calls.
@@ -87,7 +88,7 @@ here's what we saw from watching your behaviors at the test stage.
 We also don't disagree that you have to do some of your analysis in production.
 Most of our users run us right now during CI stage, but we ultimately see
 ourselves as having a presence everywhere. This will allow us to feed in
-traffic across environments so you can diff how test differs from production. 
+traffic across environments so you can diff how test differs from production.
 
 We believe watching API traffic is a better way than diffing source code. Right
 now, there's no unified representation that takes your source code and says,
@@ -110,10 +111,10 @@ a variety of forms. I try to talk with a lot of developers. Some of them are
 our users, some of them aren't our users yet. I ask them, "what are your
 problems?" "What are your workflows?" I try to also workshop, "this is how
 we're telling our story right now. Is that resonating with you? Which parts?
-Why not?" Those kinds of questions. 
+Why not?" Those kinds of questions.
 
 I also spend a lot of time with our team. Planning things and talking about how
-our next feature should look. 
+our next feature should look.
 
 I consider all meetings similar where it's not deep thinking time. I try to
 keep those days a little bit separate. Then there are periods when other things
@@ -138,7 +139,7 @@ been a senior grad student to me and worked on very similar things. I was doing
 things at the application level, whereas he had been working at the distributed
 systems level in grad school. I thought this was pretty hardcore - applying
 guarantees to distributed systems. When that became what we were doing for
-Akita, I was really delighted to bring him on board. 
+Akita, I was really delighted to bring him on board.
 
 [Mark Gritter](https://twitter.com/markgritter) found us on the internet. He
 had started his career on networking work. One of our investors actually had
@@ -154,13 +155,13 @@ correctness right now. It was a really good fit.
 
 Both my parents were computer scientists. They were electrical engineers before
 computer science was a discipline. They both taught at university in China and
-got into computer science because they saw it was up and coming. 
+got into computer science because they saw it was up and coming.
 
 We had a terminal in our house when I was really little, then we got our first
 computer which was the [Gateway
 2000](https://en.wikipedia.org/wiki/Gateway,_Inc.). It's no Commodore64, but
 it's up there. My parents really valued teaching me things. They made me learn
-Basic. 
+Basic.
 
 My school also taught us Logo with the turtle. We used to go down into the
 basement room with our floppy disks. This was very progressive for a school in
@@ -184,7 +185,7 @@ HTML and Javascript were first. It's not something that a lot of people admit
 as a big starting language from that era! I also spent a lot of time in C, C++
 and Java. That's what we learned in school at the time. In college, I got
 introduced to the ML family. First [OCaml](https://ocaml.org/), then I taught
-myself Haskell. I did my senior thesis on [Haskell](https://www.haskell.org/). 
+myself Haskell. I did my senior thesis on [Haskell](https://www.haskell.org/).
 
 In grad school, I spent a lot of time with strongly-typed functional languages
 until I realized I was one of the few grad students at MIT that was working in
@@ -211,7 +212,7 @@ fuzzer. In the beginning, we were trying to track data flows, as that was my
 research at the time. We needed to do it in an opaque way because people said
 they didn't really want to install this across every service of their entire
 system just to watch API traffic. That created a set of tactical challenges. In
-order to understand data flows, you need to be at your points of ingress. 
+order to understand data flows, you need to be at your points of ingress.
 
 The only way we could think to do that was fuzzing. Even with the fuzzer, we
 had to come up with ways to insert into systems in a very lightweight way.
@@ -261,11 +262,11 @@ client with ours. We figure out how they're intercepting requests, or how
 they're handling requests and responses. Everything that gets handled by the
 test client, we add something that writes things to HAR files. For the
 developer this means it’s just a one-line code replacement to funnel stuff off
-to us now. 
+to us now.
 
 We found the same thing recently for the Rails middleware. We found that
 there's a way that you can add a listener to Ruby Controller where you can
-inject what you need in a very lightweight way. 
+inject what you need in a very lightweight way.
 
 What I've delighted in my work is finding very clean insertions into systems
 that are often quite technical. To get in there so the developer has to do as
@@ -304,7 +305,7 @@ I've liked it more than the Linux / Windows dual boot.
 **Email:** Gmail.
 
 **Chat:** Slack. A lot of my chat that used to be on Gchat or Facebook
-Messenger now happens on Signal or WhatsApp these days. 
+Messenger now happens on Signal or WhatsApp these days.
 
 **IDE:** Vim.
 
@@ -321,7 +322,7 @@ width="100%"
 My boyfriend is a graphics professor so I recently switched to his spare
 high-resolution monitor. I really didn't want to switch because he said, "once
 you switch, you can never go back." I said, "yeah, that's the point. I don't
-want to be ruined." 
+want to be ruined."
 
 Now when anybody sends me screenshots that they've taken on their monitor, the
 screenshots look blurry to me, which I hate. Even screenshots our designers

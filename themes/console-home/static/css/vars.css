@@ -58,9 +58,9 @@
 
     --c-red: #ff4600;
 
-    --x-small-corners: 2px;
-    --small-corners: 4px;
-    --mid-corners: 8px;
+    --corners-x-small: 2px;
+    --corners-small: 4px;
+    --corners-mid: 8px;
 
     --a-micro: all 0.08s ease-in-out;
     --a-micro-active: all 0.06s ease-in-out;

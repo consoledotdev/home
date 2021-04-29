@@ -3,7 +3,8 @@ title: Q&A with Chris Walz, bit
 who: Chris Walz
 role: Developer
 org: bit
-what: a modern git cli.
+what: A modern git cli.
+tags: ['git']
 date: 2021-03-04T12:00:00Z
 draft: false
 summary: Q&A interview with Chris Walz, Developer, bit.

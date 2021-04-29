@@ -1,0 +1,213 @@
+/* Q&A Index
+   ========================================================================== */
+
+.page-section-qa-root {
+    margin-right: min(26vw, 400px);
+}
+
+.qa-split {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: calc(var(--space4) + var(--space3));
+}
+
+.qa-split .qa {
+    flex: 1 1 auto;
+}
+
+.qa-items > *:not(:last-child) {
+    margin-bottom: var(--space4);
+}
+
+.qa-card {
+    --logoWidth: 56%;
+    position: relative;
+    background-color: var(--theme-content-bg-1);
+    box-shadow: var(--theme-shadow-1);
+    border-radius: var(--corners-mid);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.qa-card-inner {
+    flex: 1 1 auto;
+}
+
+.qa-card-combo {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    max-width: 252px;
+}
+
+.qa-card-company-logo {
+    position: absolute;
+    width: var(--logoWidth);
+    height: 100%;
+    background-color: var(--theme-content-bg-0);
+    top: 0;
+    left: 0;
+}
+
+.qa-card-company-logo .logo {
+    margin: 17.64% 0 0 17.64%;
+    width: 35.29%;
+    border-radius: var(--corners-small);
+    overflow: hidden;
+}
+
+.qa-card-company-logo .logo .image {
+    object-fit: contain;
+}
+
+.qa-card-person-portrait {
+    position: relative;
+    height: 100%;
+    margin-left: calc(var(--logoWidth) / 2);
+    margin-right: calc(var(--logoWidth) / 2 * -1);
+    clip-path: polygon(30.9% 0%, 0% 100%, 69.1% 100%, 100% 0%);
+}
+
+.qa-card-person-portrait .ratio {
+    height: 100%;
+    display: block;
+    visibility: hidden;
+}
+
+.qa-card-person-portrait .image {
+    border-radius: 0;
+    top: 0;
+    left: 0;
+}
+
+.qa-card-content {
+    padding: var(--space3) var(--space4);
+    margin-left: 320px;
+}
+
+.qa-card-content > :not(:last-child) {
+    margin-bottom: calc(var(--space1) + var(--space2));
+}
+
+.qa-card-heading > :not(:last-child) {
+    margin-bottom: calc(var(--space1) / 2);
+}
+
+.qa-card-person p,
+.qa-card-company p {
+    margin-bottom: 0;
+}
+
+.qa-card-person {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+}
+
+.qa-card-person-name {
+    flex: 0 0 auto;
+    margin-right: calc(var(--space2));
+    font-weight: 500;
+    font-size: var(--t-size0);
+    color: var(--theme-text-2);
+    flex: 0 1 auto;
+}
+
+.qa-card-person-role {
+    flex: 0 0 auto;
+    color: var(--theme-text-2);
+    font-size: var(--t-size-3);
+    font-style: italic;
+    flex: 0 1 auto;
+}
+
+.qa-card-company {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.qa-card-company-name {
+    flex: 0 0 auto;
+    margin-right: calc(var(--space1) + var(--space2));
+    font-weight: 500;
+    font-size: var(--t-size1);
+    color: var(--theme-text-1);
+    flex: 0 1 auto;
+}
+
+.qa-card-company .tags {
+    flex: 0 0 auto;
+}
+
+p.qa-card-description {
+    font-size: var(--t-size-2);
+    color: var(--theme-text-1);
+    margin: 0;
+}
+
+.page-section-qa-root .illustrated-text {
+    margin-top: calc(var(--space4) + var(--space3));
+}
+
+@media (max-width: 768px), (min-width: 1025px) and (max-width: 1280px) {
+    .qa-card {
+        --logoWidth: 47.33%;
+    }
+
+    .qa-card-combo {
+        position: relative;
+        height: auto;
+        max-width: none;
+        width: 100%;
+        border-bottom: var(--theme-border-2);
+    }
+
+    .qa-card-person-portrait {
+        clip-path: polygon(30.9% 0%, 0% 100%, 100% 100%, 100% 0%);
+        margin: 0;
+        width: 76.33%;
+        margin-left: 23.67%;
+    }
+
+    .qa-card-person-portrait .ratio {
+        width: 100%;
+        height: auto;
+    }
+
+    .qa-card-content {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 1280px) {
+    .page-section-qa-root {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    @media (min-width: 1025px) {
+        .qa-items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 calc(var(--space4) + var(--space2));
+        }
+
+        .qa-items > :nth-last-child(2):nth-child(odd),
+        .qa-items > :nth-last-child(1):nth-child(even),
+        .qa-items > :nth-last-child(1):nth-child(odd) {
+            margin-bottom: 0;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .qa-split + .page-section-qa-root {
+            margin-right: calc(50% + var(--space3) + var(--space1));
+        }
+    }
+}

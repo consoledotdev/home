@@ -3,7 +3,8 @@ title: Q&A with Shanea Leven, CodeSee
 who: Shanea Leven
 role: CEO
 org: CodeSee
-what: a tool for developers to visually map their codebase.
+what: A tool for developers to visually map their codebase.
+tags: ['Code']
 date: 2021-04-16T12:00:00Z
 draft: false
 summary: Q&A interview with Shanea Leven, CEO, CodeSee

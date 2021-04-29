@@ -1,10 +1,9 @@
 {{ define "main" }}
-	{{ $CTATitle := "Interesting betas by email" }}
-	{{ $CTADescription := "Our free weekly newsletter picks out the 2-3 most interesting new betas." }}
+    {{ $CTATitle := "Weekly devtools newsletter" }}
 	<section class="page-section page-section-betas-root">
 		<h2 class="title title-1">Beta Console</h2>
 		<p class="description">A live list of every developer tool beta &amp; early access release.</p>
-        <div class="betas-meta">
+        <div class="page-meta">
         <!--
             Pull out the "last checked" timestamp from the first live beta and
             GA beta. Compare the times, and pick the latest time as the "last
@@ -16,16 +15,21 @@
         {{- range first 1 $.Site.Data.betasga.items -}}{{- $gaChecked = time (index . "Last checked") -}}{{- end -}}
         {{- $updated := "" -}}
         {{- if $gaChecked.After $liveChecked -}}{{- $updated = $gaChecked -}}{{- else -}}{{- $updated = $liveChecked -}}{{- end -}}
-            <p class="small">Last updated: {{ $updated.Format "2006-01-02" }}</p>
-			<a onclick="blur();" href="https://docs.google.com/forms/d/e/1FAIpQLSc671E1L7fEEz0WF5Vw58WakkRsvUgIzpgk3gafcgr5mp3gng/viewform" class="console-button-text console-button-small icon-left submit-beta" title="Submit Beta">
-				{{ partial "icons/beta.html" }}
-				<span>Submit Beta</span>
-			</a>
+            <p class="small">
+				<span>Last updated: {{ $updated.Format "2006-01-02" }}</span>
+			</p>
+            <p class="small">
+                <span class="page-meta-separator">&mdash;</span>
+				<a onclick="blur();" href="https://docs.google.com/forms/d/e/1FAIpQLSc671E1L7fEEz0WF5Vw58WakkRsvUgIzpgk3gafcgr5mp3gng/viewform" class="console-button-text console-button-small icon-left submit-beta" title="Submit Beta">
+					{{ partial "icons/beta.html" }}
+					<span>Submit Beta</span>
+				</a>
+			</p>
 		</div>
 	</section>
 	<section class="page-section page-section-betas-root">
 		<div class="betas-collapsible-cta">
-			{{ $subscribeData := (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription) }}
+			{{ $subscribeData := (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle ) }}
 			{{ $subscribe := partial "subscribe.html" $subscribeData }}
 			{{ partial "components/box-collapsible.html" (dict "title" $CTATitle "style" "blue" "icon" "expand.html" "content" $subscribe) }}
         </div>
@@ -74,7 +78,7 @@
 		<aside id="aside-filters-wrapper" class="betas-aside"></aside>
 	</div>
 	<section class="page-section page-section-betas-root">
-		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
+		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle ) }}
 	</section>
 	<script src="/js/betas.js"></script>
 {{ end }}
