@@ -125,7 +125,7 @@ where I’d spend time programming, instead of learning trigonometry!
 
 I eventually ended up doing software quality assurance for games companies.
 This role progressed into dabbling with automation, and then going on to become
-an automation interviews engineer at [Shutterstock](https://www.shutterstock.com/),
+an automation QA engineer at [Shutterstock](https://www.shutterstock.com/),
 then [Autodesk](https://www.autodesk.com/), before finally becoming a full
 stack developer at [Auth0](https://auth0.com/).
 
