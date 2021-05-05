@@ -7,7 +7,7 @@ what: Cloud storage in the form of a UNIX filesystem available over SSH.
 tags: ['Cloud']
 date: 2021-03-12T12:00:00Z
 draft: false
-summary: Interview interview with John Kozubik, CEO, rsync.net.
+summary: Interview with John Kozubik, CEO, rsync.net.
 isSelected: interviews
 topImg1Src: /img/interviews/rsync-john-kozubik-profile.jpg
 topImg2Src: /img/interviews/rsync-john-kozubik-logo.jpg

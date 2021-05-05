@@ -7,7 +7,7 @@ what: Cloud cost estimates for Terraform.
 tags: ['DevOps']
 date: 2021-03-01T12:00:00Z
 draft: false
-summary: Interview interview with Ali Khajeh-Hosseini, Co-Founder, Infracost.
+summary: Interview with Ali Khajeh-Hosseini, Co-Founder, Infracost.
 isSelected: interviews
 topImg1Src: /img/interviews/infracost-ali-khajeh-hosseini-profile.jpg
 topImg2Src: /img/interviews/infracost-ali-khajeh-hosseini-logo.svg

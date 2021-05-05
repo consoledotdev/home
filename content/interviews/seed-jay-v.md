@@ -7,7 +7,7 @@ what: A deployment system for serverless.
 tags: ['Serverless']
 date: 2021-03-05T12:00:00Z
 draft: false
-summary: Interview interview with Jay V, CEO, Seed.
+summary: Interview with Jay V, CEO, Seed.
 isSelected: interviews
 topImg1Src: /img/interviews/seed-jay-v-profile.jpg
 topImg2Src: /img/interviews/seed-jay-v-logo.svg

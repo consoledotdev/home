@@ -7,7 +7,7 @@ what: Dev environments as code and hosted in the cloud.
 tags: ['IDE']
 date: 2021-02-11T12:00:00Z
 draft: false
-summary: Interview interview with Christian Weichel, Chief Architect / Head of Engineering, Gitpod
+summary: Interview with Christian Weichel, Chief Architect / Head of Engineering, Gitpod
 isSelected: interviews
 topImg1Src: /img/interviews/gitpod-christian-weichel-profile.jpg
 topImg2Src: /img/interviews/gitpod-christian-weichel-logo.svg

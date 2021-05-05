@@ -7,7 +7,7 @@ what: A workflow orchestration platform.
 tags: ['Workflow']
 date: 2021-03-24T12:00:00+00:00
 draft: false
-summary: Interview interview with Manu Srivastava, Engineer, Temporal
+summary: Interview with Manu Srivastava, Engineer, Temporal
 isSelected: interviews
 topImg1Src: /img/interviews/temporal-manu-srivastava-profile.jpg
 topImg2Src: /img/interviews/temporal-manu-srivastava-logo.jpg

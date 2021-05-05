@@ -7,7 +7,7 @@ what: A multi-threaded high-performance fork of Redis.
 tags: ['Database']
 date: 2021-04-20T12:00:00Z
 draft: false
-summary: Interview interview with John Sully, CEO, KeyDB.
+summary: Interview with John Sully, CEO, KeyDB.
 isSelected: interviews
 topImg1Src: /img/interviews/keydb-john-sully-profile.jpg
 topImg2Src: /img/interviews/keydb-john-sully-logo.jpg

@@ -7,7 +7,7 @@ what: A tool for API mapping and observability.
 tags: ['Observability']
 date: 2021-04-26T12:00:00Z
 draft: false
-summary: Interview interview with Jean Yang, CEO, Akita
+summary: Interview with Jean Yang, CEO, Akita
 isSelected: interviews
 topImg1Src: /img/interviews/akita-jean-yang-profile.jpg
 topImg2Src: /img/interviews/akita-jean-yang-logo.png

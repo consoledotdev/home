@@ -7,7 +7,7 @@ what: An application security testing tool built for developers.
 tags: ['Security']
 date: 2021-02-09T12:00:00Z
 draft: false
-summary: Interview interview with Scott Gerlach, Co-founder & CSO, StackHawk.
+summary: Interview with Scott Gerlach, Co-founder & CSO, StackHawk.
 isSelected: interviews
 topImg1Src: /img/interviews/stackhawk-scott-gerlach-profile.jpg
 topImg2Src: /img/interviews/stackhawk-scott-gerlach-logo.png
