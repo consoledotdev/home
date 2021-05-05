@@ -282,7 +282,7 @@ somebody's got something to work, talk about, then we'll do that. Otherwise,
 we'll just BS for a while and just be a team for a little bit." Specifically
 every day at the end of the day, schedule that connected time.
 
-### When coding:
+### When coding
 
 **Daytime or nighttime?** Daytime.
 

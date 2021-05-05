@@ -188,7 +188,6 @@ simple - just a laptop and headphones, which means I can work from anywhere.
 
 **Email:** Gmail.
 
-
 **IDE:** VS Code.
 
 **Source control:** Git and GitHub

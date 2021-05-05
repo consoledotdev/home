@@ -276,7 +276,7 @@ your data into Akita. We've been playing with a lot of frameworks to try to
 figure that out. Whatever we create a really lightweight way to do it, I'm
 always really excited.
 
-### Describe your computer software setup
+### Describe your computer hardware setup
 
 I use a Mac. I switched in 2017. I was proudly one of my last friends I knew to
 dual boot Windows and Linux. I don't know if you have ever done a Windows Linux

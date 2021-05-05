@@ -117,7 +117,6 @@ built. He taught me how to set up an HTML project on the Windows XP computer
 that my family had at the time. He bought me an HTML for kids book when I was
 around seven years old.
 
-
 It was a hobby that I quickly realized I wanted to keep spending more and more
 time doing. I learned about PHP when I wanted to make the sites I built a
 little bit more dynamic. Really, I didn't want to write the same navigation

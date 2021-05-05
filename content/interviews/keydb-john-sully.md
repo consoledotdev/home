@@ -79,12 +79,12 @@ code at night when things are a bit quieter.
 ### What does the team look like?
 
 My role has two aspects: the CEO element talking to investors, then time for
-developers as well. 
+developers as well.
 
 My co-founder, Ben, is focused a lot more on the deployment side of things,
 like DevOps. He makes sure that when people deploy things, there's packages and
 documentation and all the key items needed for developers to work with a
-project. 
+project.
 
 We’ve recently been focussed on expanding our developer team so we can continue
 to build out the core database product.
@@ -94,7 +94,7 @@ to build out the core database product.
 We've tried to keep in good contact with the Redis team and have upstreamed
 patches where it made sense. We have different philosophies and not everything
 we do in KeyDB makes sense to go into Redis. Before Salvatore stepped down from
-his various projects at Redis, I talked to him a number of times. 
+his various projects at Redis, I talked to him a number of times.
 
 In terms of the community at large, we have a number of touch points. [GitHub
 is a major one](https://github.com/EQ-Alpha/KeyDB). We’ve also used chat,
@@ -109,7 +109,7 @@ If you're going to do a chat, you have to invest the time in it. People expect
 you to respond in a reasonable amount of time. If you can't give that time,
 then don't do it. Make sure that you know what you're getting yourself into. It
 really does pay off because customers appreciate having a direct connection
-with the team, and you learn more. 
+with the team, and you learn more.
 
 With GitHub if you get an issue, you're really just talking about bugs, but
 through the chat customers will tell you what they want to see. You get a freer
@@ -121,7 +121,7 @@ but you really have to block off the time to make it successful.
 I've been programming as long as I can remember. Early on I was playing with
 DOS and Lotus 1-2-3. I have very early childhood memories doing little
 formulas. I was also fascinated with the DOS prompt. You could type things in
-and the computer would do it. It grew from there. 
+and the computer would do it. It grew from there.
 
 As long as I can remember, I've always been playing around with computers. At
 high school I got more serious, and learned C and a little bit of C++.
@@ -143,7 +143,7 @@ or Go. It was a little different for me.
 We do modern C++, not the old C++98. I think that's a bad language. Modern C++
 is nice because it's a superset of C, and Redis is still C. If we need to
 downstream any code from that, we can still do that, but having the extra
-features in there is nice. 
+features in there is nice.
 
 One of the downsides of C is people will often use suboptimal data structures
 because it's so hard to use the right ones. With C++, it's fairly easy to use
@@ -172,7 +172,7 @@ application.
 When we do our testing, we use third-party testing tools. We use
 [memtier](https://github.com/redislabs/memtier_benchmark) and [the benchmarking
 approach described by Redis](https://redis.io/topics/benchmarks) - nothing
-special. 
+special.
 
 There is also this idea of pipelining - you can send multiple commands in
 parallel or one time. Redis can get quite good numbers if you use this
@@ -203,7 +203,7 @@ different types of systems our customers will deploy KeyDB on.
 
 Open source essentially is on-premises. Customers download the code or they use
 our Docker container. We're in the early stages of [building the cloud
-version](https://keydb.dev/keydb-cloud/), which is in beta right now. 
+version](https://keydb.dev/keydb-cloud/), which is in beta right now.
 
 With on-prem deploys, there’s a lot of different things that can go wrong. Our
 hosted service allows us to make sure everything is optimally set up for
@@ -236,7 +236,7 @@ have it in a different position than the mouse. I've been focusing a little bit
 more on ergonomics lately.
 
 My main desktop is Windows and I do some work in Windows Subsystem for Linux. I
-use two Dell 4k monitors. I like to have really crisp text. 
+use two Dell 4k monitors. I like to have really crisp text.
 
 I also have a mini-lab of Dell rack servers in my basement so that we can do
 proper testing across differently configured machines. In the early days we
@@ -244,7 +244,7 @@ used to test using my desktop but one of the things we found is that you can
 saturate a gigabit network connection really easily! You need 10 gigabit
 ethernet and higher. The way that the CPUs are tuned are also different for the
 server compared to a desktop. The Dell servers allow us to replicate an
-environment more similar to where the code is going to run. 
+environment more similar to where the code is going to run.
 
 And of course we run a lot of cloud instances, mainly for benchmarking so other
 people can quickly spin them up and replicate our tests.

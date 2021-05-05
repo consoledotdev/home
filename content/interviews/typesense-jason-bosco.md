@@ -145,7 +145,6 @@ a .Net client. Java is probably our next biggest thing, so if anyone has
 production level experience in these, then we’d value getting help from the
 community around client libraries.
 
-
 ### How did you first get into software development
 
 I started programming when I was 11 years old. My dad is a software engineer,

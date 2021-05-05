@@ -214,7 +214,7 @@ to not look and sound terrible on Zoom.
 These days it's all from home. But before the pandemic, it used to be from
 other workspaces, so I preferred having a lighter setup.
 
-### When coding:
+### When coding
 
 **Daytime or nighttime?** I have a couple of sessions throughout the day. I try
 to focus on the harder stuff during the day but somehow it always bleeds into

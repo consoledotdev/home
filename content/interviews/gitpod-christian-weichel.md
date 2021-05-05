@@ -221,7 +221,7 @@ heights. With other standing tables, I always disliked that I had to dial them
 in every time. You stand up and you're like: ‘Is this right? Is it not?’ When
 you sit down, same problem. This really helped me to use it more.
 
-### When coding:
+### When coding
 
 **Daytime or nighttime?** Daytime towards morning.
 
