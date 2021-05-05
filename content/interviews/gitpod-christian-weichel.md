@@ -1,5 +1,5 @@
 ---
-title: Q&A with Christian Weichel, Gitpod
+title: Interview with Christian Weichel, Gitpod
 who: Christian Weichel
 role: Chief Architect / Head of Engineering
 org: Gitpod
@@ -7,11 +7,11 @@ what: Dev environments as code and hosted in the cloud.
 tags: ['IDE']
 date: 2021-02-11T12:00:00Z
 draft: false
-summary: Q&A interview with Christian Weichel, Chief Architect / Head of Engineering, Gitpod
-isSelected: qa
-topImg1Src: /img/qa/gitpod-christian-weichel-profile.jpg
-topImg2Src: /img/qa/gitpod-christian-weichel-logo.svg
-ogImg: /img/qa/gitpod-christian-weichel-desk.jpg
+summary: Interview with Christian Weichel, Chief Architect / Head of Engineering, Gitpod
+isSelected: interviews
+topImg1Src: /img/interviews/gitpod-christian-weichel-profile.jpg
+topImg2Src: /img/interviews/gitpod-christian-weichel-logo.svg
+ogImg: /img/interviews/gitpod-christian-weichel-desk.jpg
 ---
 
 ### What is Gitpod? Why did you build it?
@@ -33,7 +33,7 @@ maintain, so everything is now in sync. The environment configuration and the
 instructions for setting it up are the same thing.
 
 {{< img-center
-src="/img/qa/gitpod-christian-weichel-product.png"
+src="/img/interviews/gitpod-christian-weichel-product.png"
 alt="Gitpod product screenshot"
 width="100%"
 caption="Eclipse Theia IDE running in Chrome using Gitpod."
@@ -208,7 +208,7 @@ exclusively)
 ### Describe your desk setup
 
 {{< img-center
-src="/img/qa/gitpod-christian-weichel-desk.jpg"
+src="/img/interviews/gitpod-christian-weichel-desk.jpg"
 alt="The desk of Christian Weichel, Gitpod"
 width="100%"
 >}}
@@ -221,7 +221,7 @@ heights. With other standing tables, I always disliked that I had to dial them
 in every time. You stand up and you're like: ‘Is this right? Is it not?’ When
 you sit down, same problem. This really helped me to use it more.
 
-### When coding:
+### When coding
 
 **Daytime or nighttime?** Daytime towards morning.
 

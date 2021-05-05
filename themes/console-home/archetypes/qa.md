@@ -1,16 +1,16 @@
 ---
-title: Q&A with NAME, ORG
+title: Interview with NAME, ORG
 who: NAME
 role: TITLE
 org: ORG
 what: DESCRIPTION
 date: {{ .Date }}
 draft: true
-summary: Q&A interview with NAME, TITLE, ORG.
-isSelected: qa
-topImg1Src: /img/qa/ORG-NAME-profile.EXT
-topImg2Src: /img/qa/ORG-NAME-logo.EXT
-ogImg: /img/qa/ORG-NAME-desk.EXT
+summary: Interview interview with NAME, TITLE, ORG.
+isSelected: interviews
+topImg1Src: /img/interviews/ORG-NAME-profile.EXT
+topImg2Src: /img/interviews/ORG-NAME-logo.EXT
+ogImg: /img/interviews/ORG-NAME-desk.EXT
 ---
 
 ### FIRST QUESTION

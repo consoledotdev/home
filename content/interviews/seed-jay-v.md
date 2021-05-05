@@ -1,5 +1,5 @@
 ---
-title: Q&A with Jay V, Seed
+title: Interview with Jay V, Seed
 who: Jay V
 role: CEO
 org: Seed
@@ -7,11 +7,11 @@ what: A deployment system for serverless.
 tags: ['Serverless']
 date: 2021-03-05T12:00:00Z
 draft: false
-summary: Q&A interview with Jay V, CEO, Seed.
-isSelected: qa
-topImg1Src: /img/qa/seed-jay-v-profile.jpg
-topImg2Src: /img/qa/seed-jay-v-logo.svg
-ogImg: /img/qa/seed-jay-v-desk.jpg
+summary: Interview with Jay V, CEO, Seed.
+isSelected: interviews
+topImg1Src: /img/interviews/seed-jay-v-profile.jpg
+topImg2Src: /img/interviews/seed-jay-v-logo.svg
+ogImg: /img/interviews/seed-jay-v-desk.jpg
 ---
 
 ### What is Seed? Why did you build it?
@@ -62,7 +62,7 @@ that for you. That idea led to us creating [Serverless Stack
 (SST)](https://serverless-stack.com/).
 
 {{< img-center
-src="/img/qa/seed-jay-v-product.png"
+src="/img/interviews/seed-jay-v-product.png"
 alt="Seed product screenshot"
 width="100%"
 caption="Seed deployment pipeline dashboard."
@@ -198,7 +198,7 @@ the terminal.
 ### Describe your desk setup
 
 {{< img-center
-src="/img/qa/seed-jay-v-desk.jpg"
+src="/img/interviews/seed-jay-v-desk.jpg"
 alt="The desk of Jay V, Seed"
 width="100%"
 >}}
@@ -214,7 +214,7 @@ to not look and sound terrible on Zoom.
 These days it's all from home. But before the pandemic, it used to be from
 other workspaces, so I preferred having a lighter setup.
 
-### When coding:
+### When coding
 
 **Daytime or nighttime?** I have a couple of sessions throughout the day. I try
 to focus on the harder stuff during the day but somehow it always bleeds into

@@ -1,5 +1,5 @@
 ---
-title: Q&A with Ben Schaechter, Vantage
+title: Interview with Ben Schaechter, Vantage
 who: Ben Schaechter
 role: Co-founder
 org: Vantage
@@ -7,11 +7,11 @@ what: An alternative AWS console with a focus on cost transparency.
 tags: ['Cloud']
 date: 2021-03-12T12:00:00Z
 draft: false
-summary: Q&A interview with Ben Schaechter, Co-founder, Vantage.
-isSelected: qa
-topImg1Src: /img/qa/vantage-ben-schaechter-profile.jpeg
-topImg2Src: /img/qa/vantage-ben-schaechter-logo.png
-ogImg: /img/qa/vantage-ben-schaechter-desk.png
+summary: Interview with Ben Schaechter, Co-founder, Vantage.
+isSelected: interviews
+topImg1Src: /img/interviews/vantage-ben-schaechter-profile.jpeg
+topImg2Src: /img/interviews/vantage-ben-schaechter-logo.png
+ogImg: /img/interviews/vantage-ben-schaechter-desk.png
 ---
 
 ### What is Vantage and why did you build it?
@@ -30,7 +30,7 @@ infrastructure providers? However, as we received feedback from customers,
 we've placed more focus on cost transparency.
 
 {{< img-center
-src="/img/qa/vantage-ben-schaechter-product.png"
+src="/img/interviews/vantage-ben-schaechter-product.png"
 alt="Vantage product screenshot"
 width="100%"
 caption="The Vantage AWS console resource view."
@@ -163,7 +163,7 @@ faith that the community will add support to these things going forward.
 ### Describe your desk setup
 
 {{< img-center
-src="/img/qa/vantage-ben-schaechter-desk.png"
+src="/img/interviews/vantage-ben-schaechter-desk.png"
 alt="The desk of Ben Schaechter, Vantage"
 width="100%"
 >}}

@@ -1,5 +1,5 @@
 ---
-title: Q&A with Shanea Leven, CodeSee
+title: Interview with Shanea Leven, CodeSee
 who: Shanea Leven
 role: CEO
 org: CodeSee
@@ -7,11 +7,11 @@ what: A tool for developers to visually map their codebase.
 tags: ['Code']
 date: 2021-04-16T12:00:00Z
 draft: false
-summary: Q&A interview with Shanea Leven, CEO, CodeSee
-isSelected: qa
-topImg1Src: /img/qa/codesee-shanea-leven-profile.jpeg
-topImg2Src: /img/qa/codesee-shanea-leven-logo.png
-ogImg: /img/qa/codesee-shanea-leven-desk.jpg
+summary: Interview with Shanea Leven, CEO, CodeSee
+isSelected: interviews
+topImg1Src: /img/interviews/codesee-shanea-leven-profile.jpeg
+topImg2Src: /img/interviews/codesee-shanea-leven-logo.png
+ogImg: /img/interviews/codesee-shanea-leven-desk.jpg
 ---
 
 ### What is CodeSee and why did you build it?
@@ -27,7 +27,7 @@ security vulnerabilities in Docker images.
 
 When you download a Docker image, you want to know how many potential
 vulnerabilities you have. Two days before we were set to launch the feature, we
-discovered a bug, and we had no idea how to fix it! 
+discovered a bug, and we had no idea how to fix it!
 
 As we dug into it, we found the bug touched a part of the codebase that an
 engineer who had left the company had been working on. It would take a month to
@@ -66,13 +66,13 @@ head as if you were stepping through the execution is visualised by CodeSee.
 It's basically like if you were to put a print statement everywhere.  
 
 {{< img-center
-src="/img/qa/codesee-shanea-leven-product.png"
+src="/img/interviews/codesee-shanea-leven-product.png"
 alt="CodeSee product screenshot"
 width="100%"
 caption="CodeSee Data Flow in action."
 >}}
 
-### How have you found people solve this problem before they come to CodeSee? 
+### How have you found people solve this problem before they come to CodeSee?
 
 The problem is they are not solving it. Typically when I talk to developers
 there are only two ways to solve this problem today. You need to read the code
@@ -84,12 +84,12 @@ necessarily say that you have a good test. If you're trying to understand what
 you did, or what someone else did, and why someone else did it -  the only way
 is really to read the code. There's also documentation, but no one really
 trusts documentation. That's why we leave it out, because if you do use it, it
-could be totally out of date or wrong. 
+could be totally out of date or wrong.
 
 Code is changing so quickly that the old methods just don't work. We end up
 missing something. We think we understand, but in actuality, it doesn't work
 the way that we think, or there was something else that we didn't initially see
-because it's out of the scope of the task. 
+because it's out of the scope of the task.
 
 That's where CodeSee really shines. Critical errors occur when people think it
 will work one way, but then there’s some other thing that was built three years
@@ -153,7 +153,7 @@ I'm right back to where we started.
 JavaScript is...  everywhere. It's also incredibly fragmented. There's a new
 build system every week. We're still finding new build systems, which is crazy!
 So how do you make JavaScript easily accessible when there's all of these
-different build systems? 
+different build systems?
 
 We also show deep runtime data. That depth comes with its own technological
 challenges e.g. how do you send a 300MB recording over the wire? How do you
@@ -200,7 +200,7 @@ really love Sony with the double tap buttons!
 ### Describe your desk setup
 
 {{< img-center
-src="/img/qa/codesee-shanea-leven-desk.jpg"
+src="/img/interviews/codesee-shanea-leven-desk.jpg"
 alt="The desk of Shanea Leven, CodeSee"
 width="100%"
 >}}
@@ -230,7 +230,7 @@ emails. Then, I do another hour.
 
 I love eating ... I'm definitely a foodie. I love walking the dog, just going
 outside. I like sitting on beaches. That's an activity, right? The beach sounds
-really calm to me, which is where the white noise comes from, I guess. 
+really calm to me, which is where the white noise comes from, I guess.
 
 ### Find out more
 

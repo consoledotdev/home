@@ -1,5 +1,5 @@
 ---
-title: Q&A with Chris Walz, bit
+title: Interview with Chris Walz, bit
 who: Chris Walz
 role: Developer
 org: bit
@@ -7,11 +7,11 @@ what: A modern git cli.
 tags: ['git']
 date: 2021-03-04T12:00:00Z
 draft: false
-summary: Q&A interview with Chris Walz, Developer, bit.
-isSelected: qa
-topImg1Src: /img/qa/bit-chris-walz-profile.jpg
-topImg2Src: /img/qa/bit-chris-walz-logo.png
-ogImg: /img/qa/bit-chris-walz-desk.png
+summary: Interview with Chris Walz, Developer, bit.
+isSelected: interviews
+topImg1Src: /img/interviews/bit-chris-walz-profile.jpg
+topImg2Src: /img/interviews/bit-chris-walz-logo.png
+ogImg: /img/interviews/bit-chris-walz-desk.png
 ---
 
 ### What is bit and why did you build it?
@@ -34,7 +34,7 @@ something that sort of just pops out. The GIF in the readme shows the
 autocomplete commands which shows how bit is different right from the start.
 
 {{< img-center
-src="/img/qa/bit-chris-walz-product.gif"
+src="/img/interviews/bit-chris-walz-product.gif"
 alt="bit product screenshot"
 width="100%"
 caption="bit autocompletion of common git commands."
@@ -120,7 +120,7 @@ tool](https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life).
 ### Describe your computer hardware setup
 
 {{< img-center
-src="/img/qa/bit-chris-walz-desk.png"
+src="/img/interviews/bit-chris-walz-desk.png"
 alt="The desk of Chris Walz, bit"
 width="100%"
 >}}

@@ -103,7 +103,7 @@ available on all major platforms. This is how [GitHub
 Codespaces](https://github.com/features/codespaces) or
 [Gitpod](https://www.gitpod.io/) can access to the entire VS Code ecosystem.
 See [our interview with GitPod's Chief Architect / Head of
-Engineering](/qa/gitpod-christian-weichel/) about how important this has been.
+Engineering](/interviews/gitpod-christian-weichel/) about how important this has been.
 
 Running an editor in the browser is technically not as performant as native
 code, but that rarely shows up for most coding tasks. As low-power client
@@ -277,7 +277,7 @@ Until my recent switch to Neovim, I used VS Code. According to the [Top IDE
 Index](https://pypl.github.io/IDE.html), VS Code has grown the most over the
 last 5 years and as of Mar 2021, sits at position #4 in the rankings, with
 9.8% market share. It's easily the most popular editor in our [series of
-developer Q&A interviews](/qa/).
+developer Interview interviews](/interviews/).
 
 {{< img-center
 src="/img/reviews/neovim-best-code-editor-ide-for-developers-ide-index.png"
@@ -562,7 +562,7 @@ There are [so many choices for
 developers](https://github.com/collections/text-editors) looking for the best
 code editor or IDE! I had some specific criteria which excluded quite a lot of
 options, such as the very popular [JetBrains](https://www.jetbrains.com/) suite
-that often comes up in [our developer Q&A interviews](/qa/). It is clear that
+that often comes up in [our developer Interview interviews](/interviews/). It is clear that
 VS Code is shooting up the charts, but it is great to see a thriving ecosystem
 around the likes of vim, Emacs, and even new products like Nova.
 

@@ -1,5 +1,5 @@
 ---
-title: Q&A with Jean Yang, Akita
+title: Interview with Jean Yang, Akita
 who: Jean Yang
 role: CEO
 org: Akita
@@ -7,11 +7,11 @@ what: A tool for API mapping and observability.
 tags: ['Observability']
 date: 2021-04-26T12:00:00Z
 draft: false
-summary: Q&A interview with Jean Yang, CEO, Akita
-isSelected: qa
-topImg1Src: /img/qa/akita-jean-yang-profile.jpg
-topImg2Src: /img/qa/akita-jean-yang-logo.png
-ogImg: /img/qa/akita-jean-yang-desk.jpeg
+summary: Interview with Jean Yang, CEO, Akita
+isSelected: interviews
+topImg1Src: /img/interviews/akita-jean-yang-profile.jpg
+topImg2Src: /img/interviews/akita-jean-yang-logo.png
+ogImg: /img/interviews/akita-jean-yang-desk.jpeg
 ---
 
 ### What is Akita? Why did you build it?
@@ -48,7 +48,7 @@ a real gap where people don’t know what APIs they have or what they do.
 Ensuring the API behavior doesn’t change is pretty important to keep track of.
 
 {{< img-center
-src="/img/qa/akita-jean-yang-product.png"
+src="/img/interviews/akita-jean-yang-product.png"
 alt="Akita product screenshot"
 width="100%"
 caption="Akita API dashboard."
@@ -276,7 +276,7 @@ your data into Akita. We've been playing with a lot of frameworks to try to
 figure that out. Whatever we create a really lightweight way to do it, I'm
 always really excited.
 
-### Describe your computer software setup
+### Describe your computer hardware setup
 
 I use a Mac. I switched in 2017. I was proudly one of my last friends I knew to
 dual boot Windows and Linux. I don't know if you have ever done a Windows Linux
@@ -314,7 +314,7 @@ Messenger now happens on Signal or WhatsApp these days.
 ### Describe your desk setup
 
 {{< img-center
-src="/img/qa/akita-jean-yang-desk.jpeg"
+src="/img/interviews/akita-jean-yang-desk.jpeg"
 alt="The desk of Jean Yang, Akita"
 width="100%"
 >}}

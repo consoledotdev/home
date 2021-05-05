@@ -1,5 +1,5 @@
 ---
-title: Q&A with Scott Gerlach, StackHawk
+title: Interview with Scott Gerlach, StackHawk
 who: Scott Gerlach
 role: Co-founder & CSO
 org: StackHawk
@@ -7,11 +7,11 @@ what: An application security testing tool built for developers.
 tags: ['Security']
 date: 2021-02-09T12:00:00Z
 draft: false
-summary: Q&A interview with Scott Gerlach, Co-founder & CSO, StackHawk.
-isSelected: qa
-topImg1Src: /img/qa/stackhawk-scott-gerlach-profile.jpg
-topImg2Src: /img/qa/stackhawk-scott-gerlach-logo.png
-ogImg: /img/qa/stackhawk-scott-gerlach-desk.jpg
+summary: Interview with Scott Gerlach, Co-founder & CSO, StackHawk.
+isSelected: interviews
+topImg1Src: /img/interviews/stackhawk-scott-gerlach-profile.jpg
+topImg2Src: /img/interviews/stackhawk-scott-gerlach-logo.png
+ogImg: /img/interviews/stackhawk-scott-gerlach-desk.jpg
 ---
 
 ### What is StackHawk? Why did you build it?
@@ -72,7 +72,7 @@ here. I know I can probably find it in code and then fix it, and get on with
 the business of doing engineering work instead of playing ticket shuffling”.
 
 {{< img-center
-src="/img/qa/stackhawk-scott-gerlach-product.png"
+src="/img/interviews/stackhawk-scott-gerlach-product.png"
 alt="StackHawk product screenshot"
 width="100%"
 caption="The StackHawk vulnerability scanning dashboard."
@@ -251,7 +251,7 @@ back to the web version every time.
 ### Describe your desk setup
 
 {{< img-center
-src="/img/qa/stackhawk-scott-gerlach-desk.jpg"
+src="/img/interviews/stackhawk-scott-gerlach-desk.jpg"
 alt="The desk of Scott Gerlach, StackHawk"
 width="100%"
 >}}
@@ -282,7 +282,7 @@ somebody's got something to work, talk about, then we'll do that. Otherwise,
 we'll just BS for a while and just be a team for a little bit." Specifically
 every day at the end of the day, schedule that connected time.
 
-### When coding:
+### When coding
 
 **Daytime or nighttime?** Daytime.
 
