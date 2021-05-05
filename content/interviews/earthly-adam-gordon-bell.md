@@ -1,5 +1,5 @@
 ---
-title: Q&A with Adam Gordon Bell, Earthly
+title: Interview with Adam Gordon Bell, Earthly
 who: Adam Gordon Bell
 role: Software Engineer
 org: Earthly
@@ -7,11 +7,11 @@ what: Containerized reproducable builds.
 tags: ['Builds']
 date: 2021-03-08T12:00:00Z
 draft: false
-summary: Q&A interview with Adam Gordon Bell, Software Engineer, Earthly
-isSelected: qa
-topImg1Src: /img/qa/earthly-adam-gordon-bell-profile.jpg
-topImg2Src: /img/qa/earthly-adam-gordon-bell-logo.png
-ogImg: /img/qa/earthly-adam-gordon-bell-desk.jpg
+summary: Interview interview with Adam Gordon Bell, Software Engineer, Earthly
+isSelected: interviews
+topImg1Src: /img/interviews/earthly-adam-gordon-bell-profile.jpg
+topImg2Src: /img/interviews/earthly-adam-gordon-bell-logo.png
+ogImg: /img/interviews/earthly-adam-gordon-bell-desk.jpg
 ---
 
 ### What is Earthly? Why did you build it?
@@ -61,7 +61,7 @@ bag of technologies. We're trying to come up with methodology that can be used
 by everybody.
 
 {{< img-center
-src="/img/qa/earthly-adam-gordon-bell-product.png"
+src="/img/interviews/earthly-adam-gordon-bell-product.png"
 alt="Earthly stack diagram"
 width="100%"
 caption="Where Earthly fits into the stack."
@@ -222,7 +222,7 @@ reducing external noise.
 ### Describe your desk setup
 
 {{< img-center
-src="/img/qa/earthly-adam-gordon-bell-desk.jpg"
+src="/img/interviews/earthly-adam-gordon-bell-desk.jpg"
 alt="The desk of Adam Gordon Bell, Earthly"
 width="100%"
 >}}

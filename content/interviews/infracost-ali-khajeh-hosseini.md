@@ -1,5 +1,5 @@
 ---
-title: Q&A with Ali Khajeh-Hosseini, Infracost
+title: Interview with Ali Khajeh-Hosseini, Infracost
 who: Ali Khajeh-Hosseini
 role: Co-founder
 org: Infracost
@@ -7,11 +7,11 @@ what: Cloud cost estimates for Terraform.
 tags: ['DevOps']
 date: 2021-03-01T12:00:00Z
 draft: false
-summary: Q&A interview with Ali Khajeh-Hosseini, Co-Founder, Infracost.
-isSelected: qa
-topImg1Src: /img/qa/infracost-ali-khajeh-hosseini-profile.jpg
-topImg2Src: /img/qa/infracost-ali-khajeh-hosseini-logo.svg
-ogImg: /img/qa/infracost-ali-khajeh-hosseini-desk.jpg
+summary: Interview interview with Ali Khajeh-Hosseini, Co-Founder, Infracost.
+isSelected: interviews
+topImg1Src: /img/interviews/infracost-ali-khajeh-hosseini-profile.jpg
+topImg2Src: /img/interviews/infracost-ali-khajeh-hosseini-logo.svg
+ogImg: /img/interviews/infracost-ali-khajeh-hosseini-desk.jpg
 ---
 
 ### What is Infracost? Why did you build it?
@@ -62,7 +62,7 @@ next. Cost is an issue, and there will always be waste. We want to see if we
 can fix or improve the status quo.
 
 {{< img-center
-src="/img/qa/infracost-ali-khajeh-hosseini-product.png"
+src="/img/interviews/infracost-ali-khajeh-hosseini-product.png"
 alt="Infracost product screenshot"
 width="100%"
 caption="Infracost CLI cost estimate output."
@@ -196,7 +196,7 @@ simple - just a laptop and headphones, which means I can work from anywhere.
 ### Describe your desk setup
 
 {{< img-center
-src="/img/qa/infracost-ali-khajeh-hosseini-desk.jpg"
+src="/img/interviews/infracost-ali-khajeh-hosseini-desk.jpg"
 alt="The desk of Ali Khajeh-Hosseini, Infracost"
 width="100%"
 >}}

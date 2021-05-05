@@ -1,5 +1,5 @@
 ---
-title: Q&A with John Sully, KeyDB 
+title: Interview with John Sully, KeyDB 
 who: John Sully
 role: CEO
 org: KeyDB
@@ -7,11 +7,11 @@ what: A multi-threaded high-performance fork of Redis.
 tags: ['Database']
 date: 2021-04-20T12:00:00Z
 draft: false
-summary: Q&A interview with John Sully, CEO, KeyDB.
-isSelected: qa
-topImg1Src: /img/qa/keydb-john-sully-profile.jpg
-topImg2Src: /img/qa/keydb-john-sully-logo.jpg
-ogImg: /img/qa/keydb-john-sully-desk.png
+summary: Interview interview with John Sully, CEO, KeyDB.
+isSelected: interviews
+topImg1Src: /img/interviews/keydb-john-sully-profile.jpg
+topImg2Src: /img/interviews/keydb-john-sully-logo.jpg
+ogImg: /img/interviews/keydb-john-sully-desk.png
 ---
 
 ### What is KeyDB? Why did you build it?
@@ -218,7 +218,7 @@ existing networks.
 ### Describe your hardware setup
 
 {{< img-center
-src="/img/qa/keydb-john-sully-desk.png"
+src="/img/interviews/keydb-john-sully-desk.png"
 alt="The desk of John Sully, KeyDB"
 width="100%"
 >}}

@@ -1,5 +1,5 @@
 ---
-title: Q&A with Manu Srivastava, Temporal
+title: Interview with Manu Srivastava, Temporal
 who: Manu Srivastava
 role: Engineer
 org: Temporal
@@ -7,11 +7,11 @@ what: A workflow orchestration platform.
 tags: ['Workflow']
 date: 2021-03-24T12:00:00+00:00
 draft: false
-summary: Q&A interview with Manu Srivastava, Engineer, Temporal
-isSelected: qa
-topImg1Src: /img/qa/temporal-manu-srivastava-profile.jpg
-topImg2Src: /img/qa/temporal-manu-srivastava-logo.jpg
-ogImg: /img/qa/temporal-manu-srivastava-desk.jpg
+summary: Interview interview with Manu Srivastava, Engineer, Temporal
+isSelected: interviews
+topImg1Src: /img/interviews/temporal-manu-srivastava-profile.jpg
+topImg2Src: /img/interviews/temporal-manu-srivastava-logo.jpg
+ogImg: /img/interviews/temporal-manu-srivastava-desk.jpg
 ---
 
 ### What is Temporal? Why did you build it?
@@ -137,7 +137,7 @@ technology suited to the use cases:
 ### Describe your computer hardware setup
 
 {{< img-center
-src="/img/qa/temporal-manu-srivastava-desk.jpg"
+src="/img/interviews/temporal-manu-srivastava-desk.jpg"
 alt="The desk of Manu Srivastava, Temporal."
 width="100%"
 >}}

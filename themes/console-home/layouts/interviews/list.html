@@ -2,14 +2,14 @@
 	{{ $CTATitle := "Interesting betas by email" }}
 	{{ $CTADescription := "Our free weekly newsletter picks out the 2-3 most interesting new betas." }}
 
-    <section class="page-section page-section-qa-root">
+    <section class="page-section page-section-interviews-root">
         <h2 class="title title-1">{{ .Title }}</h2>
         <p class="description">
             Interviews with the people behind the tools we feature in our weekly newsletter.
         </p>
         <div class="page-meta">
             <p class="small">
-                <a onclick="blur();" href="/qa/rss.xml" class="console-button-text console-button-small icon-left submit-beta" title="Submit Beta">
+                <a onclick="blur();" href="/interviews/rss.xml" class="console-button-text console-button-small icon-left submit-beta" title="Submit Beta">
                     {{ partial "icons/rss.html" }}
                     <span>Feed</span>
                 </a>
@@ -23,12 +23,12 @@
             </p>
         </div>
     </section>
-    <div class="qa-split">
-        <div class="qa">
+    <div class="interviews-split">
+        <div class="interviews">
             <section class="page-section">
-                <div class="qa-items">
+                <div class="interviews-items">
                     {{ range .Pages.ByPublishDate.Reverse }}
-                        {{ partial "components/qa/card.html" . }}
+                        {{ partial "components/interviews/card.html" . }}
                     {{ end }}
                     <div class="card-empty-placeholder">
                         <div class="illustrated-text">
@@ -40,7 +40,7 @@
             </section>
         </div>
     </div>
-	<section class="page-section page-section-qa-root">
+	<section class="page-section page-section-interviews-root">
 		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" ) }}
 	</section>
 

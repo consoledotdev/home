@@ -1,5 +1,5 @@
 ---
-title: Q&A with Sam Scott, Oso
+title: Interview with Sam Scott, Oso
 who: Sam Scott
 role: CTO
 org: Oso
@@ -7,11 +7,11 @@ what: A batteries-included library for authorization.
 tags: ['Security']
 date: 2021-02-23T12:00:00Z
 draft: false
-summary: Q&A interview with Sam Scott, CTO, Oso.
-isSelected: qa
-topImg1Src: /img/qa/oso-sam-scott-profile.jpg
-topImg2Src: /img/qa/oso-sam-scott-logo.png
-ogImg: /img/qa/oso-sam-scott-desk.jpg
+summary: Interview interview with Sam Scott, CTO, Oso.
+isSelected: interviews
+topImg1Src: /img/interviews/oso-sam-scott-profile.jpg
+topImg2Src: /img/interviews/oso-sam-scott-logo.png
+ogImg: /img/interviews/oso-sam-scott-desk.jpg
 ---
 
 ### What is Oso? Why did you build it?
@@ -77,7 +77,7 @@ need anything that we don't support out of the box, we have the policy language
 there for flexibility.
 
 {{< img-center
-src="/img/qa/oso-sam-scott-product.png"
+src="/img/interviews/oso-sam-scott-product.png"
 alt="Oso product screenshot"
 width="100%"
 caption="Oso Polar policy language and an example denied request."
@@ -254,7 +254,7 @@ an issue now.
 keyboard](https://www.logitech.com/product/k120), that is halfway between a
 laptop and a mechanical keyboard. It's a softer press, but it still has proper
 keys. I bounce between desktop and laptop a lot, and it acts as a good middle
-ground switching between the twhttp://localhost:1313/qa/rss.xmlo. If you go from a proper mechanical keyboard
+ground switching between the two. If you go from a proper mechanical keyboard
 to a laptop with no give at all, it's horrible. This kind of gives me a proper
 keyboard, but I'm not going to become useless on my laptop afterwards.
 
@@ -288,7 +288,7 @@ get to build up what you want on top of it.
 ### Describe your desk setup
 
 {{< img-center
-src="/img/qa/oso-sam-scott-desk.jpg"
+src="/img/interviews/oso-sam-scott-desk.jpg"
 alt="The desk of Sam Scott, Oso"
 width="100%"
 >}}

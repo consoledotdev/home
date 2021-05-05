@@ -1,5 +1,5 @@
 ---
-title: Q&A with James Little, Stork Search
+title: Interview with James Little, Stork Search
 who: James Little
 role: Creator
 org: Stork Search
@@ -7,11 +7,11 @@ what: A full-text search tool for static websites.
 tags: ['Search']
 date: 2021-03-10T12:00:00Z
 draft: false
-summary: Q&A interview with James Little, Creator, Stork Search.
-isSelected: qa
-topImg1Src: /img/qa/stork-search-james-little-profile.jpg
-topImg2Src: /img/qa/stork-search-james-little-logo.jpg
-ogImg: /img/qa/stork-search-james-little-desk.jpg
+summary: Interview interview with James Little, Creator, Stork Search.
+isSelected: interviews
+topImg1Src: /img/interviews/stork-search-james-little-profile.jpg
+topImg2Src: /img/interviews/stork-search-james-little-logo.jpg
+ogImg: /img/interviews/stork-search-james-little-desk.jpg
 ---
 
 ### What is Stork Search? Why did you build it?
@@ -54,7 +54,7 @@ Stork to be a modern, forward-thinking search tool with the best interface and
 developer experience that I could design.
 
 {{< img-center
-src="/img/qa/stork-search-james-little-product.gif"
+src="/img/interviews/stork-search-james-little-product.gif"
 alt="Stork Search product screenshot"
 width="100%"
 caption="Stork Search demonstration."
@@ -198,7 +198,7 @@ so I can do the multi-finger gestures when I need to. And I have an iPhone 10S.
 ### Describe your desk setup
 
 {{< img-center
-src="/img/qa/stork-search-james-little-desk.jpg"
+src="/img/interviews/stork-search-james-little-desk.jpg"
 alt="The desk of James Little, Stork Search"
 width="100%"
 >}}

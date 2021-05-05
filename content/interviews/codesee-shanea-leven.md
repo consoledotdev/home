@@ -1,5 +1,5 @@
 ---
-title: Q&A with Shanea Leven, CodeSee
+title: Interview with Shanea Leven, CodeSee
 who: Shanea Leven
 role: CEO
 org: CodeSee
@@ -7,11 +7,11 @@ what: A tool for developers to visually map their codebase.
 tags: ['Code']
 date: 2021-04-16T12:00:00Z
 draft: false
-summary: Q&A interview with Shanea Leven, CEO, CodeSee
-isSelected: qa
-topImg1Src: /img/qa/codesee-shanea-leven-profile.jpeg
-topImg2Src: /img/qa/codesee-shanea-leven-logo.png
-ogImg: /img/qa/codesee-shanea-leven-desk.jpg
+summary: Interview interview with Shanea Leven, CEO, CodeSee
+isSelected: interviews
+topImg1Src: /img/interviews/codesee-shanea-leven-profile.jpeg
+topImg2Src: /img/interviews/codesee-shanea-leven-logo.png
+ogImg: /img/interviews/codesee-shanea-leven-desk.jpg
 ---
 
 ### What is CodeSee and why did you build it?
@@ -66,7 +66,7 @@ head as if you were stepping through the execution is visualised by CodeSee.
 It's basically like if you were to put a print statement everywhere.  
 
 {{< img-center
-src="/img/qa/codesee-shanea-leven-product.png"
+src="/img/interviews/codesee-shanea-leven-product.png"
 alt="CodeSee product screenshot"
 width="100%"
 caption="CodeSee Data Flow in action."
@@ -200,7 +200,7 @@ really love Sony with the double tap buttons!
 ### Describe your desk setup
 
 {{< img-center
-src="/img/qa/codesee-shanea-leven-desk.jpg"
+src="/img/interviews/codesee-shanea-leven-desk.jpg"
 alt="The desk of Shanea Leven, CodeSee"
 width="100%"
 >}}

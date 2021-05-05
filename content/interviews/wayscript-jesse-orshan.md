@@ -1,5 +1,5 @@
 ---
-title: Q&A with Jesse Orshan, WayScript
+title: Interview with Jesse Orshan, WayScript
 who: Jesse Orshan
 role: Co-founder
 org: WayScript
@@ -7,11 +7,11 @@ what: A rapid scripting platform for developers.
 tags: ['API']
 date: 2021-03-18T12:00:00Z
 draft: false
-summary: Q&A interview with Jesse Orshan, Co-founder, WayScript.
-isSelected: qa
-topImg1Src: /img/qa/wayscript-jesse-orshan-profile.jpg
-topImg2Src: /img/qa/wayscript-jesse-orshan-logo.png
-ogImg: /img/qa/wayscript-jesse-orshan-desk.jpg
+summary: Interview interview with Jesse Orshan, Co-founder, WayScript.
+isSelected: interviews
+topImg1Src: /img/interviews/wayscript-jesse-orshan-profile.jpg
+topImg2Src: /img/interviews/wayscript-jesse-orshan-logo.png
+ogImg: /img/interviews/wayscript-jesse-orshan-desk.jpg
 ---
 
 ### What is WayScript? Why did you build it?
@@ -66,7 +66,7 @@ The goal of WayScript is we can create uniformity and cohesiveness, no matter
 what the developer is actually doing.
 
 {{< img-center
-src="/img/qa/wayscript-jesse-orshan-product.png"
+src="/img/interviews/wayscript-jesse-orshan-product.png"
 alt="WayScript product screenshot"
 width="100%"
 caption="The WayScript visual programming interface."
@@ -195,7 +195,7 @@ environments, blurring the line between application and website.
 ### Describe your computer hardware setup
 
 {{< img-center
-src="/img/qa/wayscript-jesse-orshan-desk.jpg"
+src="/img/interviews/wayscript-jesse-orshan-desk.jpg"
 alt="The desk of Jesse Orshan, WayScript"
 width="100%"
 >}}

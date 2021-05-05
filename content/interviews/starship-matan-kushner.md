@@ -1,5 +1,5 @@
 ---
-title: Q&A with Matan Kushner, Starship
+title: Interview with Matan Kushner, Starship
 who: Matan Kushner
 role: Creator
 org: Starship
@@ -7,11 +7,11 @@ what: A cross-shell prompt.
 date: 2021-03-09T12:00:00Z
 tags: ['CLI', 'Shell']
 draft: false
-summary: Q&A interview with Matan Kushner, Creator, Starship.
-isSelected: qa
-topImg1Src: /img/qa/starship-matan-kushner-profile.jpg
-topImg2Src: /img/qa/starship-matan-kushner-logo.png
-ogImg: /img/qa/starship-matan-kushner-desk.jpg
+summary: Interview interview with Matan Kushner, Creator, Starship.
+isSelected: interviews
+topImg1Src: /img/interviews/starship-matan-kushner-profile.jpg
+topImg2Src: /img/interviews/starship-matan-kushner-logo.png
+ogImg: /img/interviews/starship-matan-kushner-desk.jpg
 ---
 
 ### What is Starship? Why did you build it?
@@ -53,7 +53,7 @@ stars](https://github.com/starship/starship). People are now looking to
 monetarily support us, which is very exciting.
 
 {{< img-center
-src="/img/qa/starship-matan-kushner-product.gif"
+src="/img/interviews/starship-matan-kushner-product.gif"
 alt="Starship product screenshot"
 width="100%"
 caption="Example commands running with the Starship prompt."
@@ -125,7 +125,7 @@ where I’d spend time programming, instead of learning trigonometry!
 
 I eventually ended up doing software quality assurance for games companies.
 This role progressed into dabbling with automation, and then going on to become
-an automation QA engineer at [Shutterstock](https://www.shutterstock.com/),
+an automation interviews engineer at [Shutterstock](https://www.shutterstock.com/),
 then [Autodesk](https://www.autodesk.com/), before finally becoming a full
 stack developer at [Auth0](https://auth0.com/).
 
@@ -222,7 +222,7 @@ ecosystem of VS Code.
 ### Describe your computer hardware setup
 
 {{< img-center
-src="/img/qa/starship-matan-kushner-desk.jpg"
+src="/img/interviews/starship-matan-kushner-desk.jpg"
 alt="The desk of Matan Kushner, Starship"
 width="100%"
 >}}

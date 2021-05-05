@@ -143,7 +143,7 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
     background: var(--theme-content-bg-3);
 }
 
-.theme .qa-card {
+.theme .interviews-card {
     background-color: var(--theme-content-bg-0);
 }
 

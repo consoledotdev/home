@@ -1,5 +1,5 @@
 ---
-title: Q&A with Petr Nikolaev, Raycast
+title: Interview with Petr Nikolaev, Raycast
 who: Petr Nikolaev
 role: Co-founder
 org: Raycast
@@ -7,11 +7,11 @@ what: A quicklauncher that lets you control your tools with a few keystrokes.
 tags: ['Desktop']
 date: 2021-03-17T12:00:00+00:00
 draft: false
-summary: Q&A interview with  Petr Nikolaev, Co-founder, Raycast.
-isSelected: qa
-topImg1Src: /img/qa/raycast-petr-nikolaev-profile.jpg
-topImg2Src: /img/qa/raycast-petr-nikolaev-logo.png
-ogImg: /img/qa/raycast-petr-nikolaev-desk.png
+summary: Interview interview with  Petr Nikolaev, Co-founder, Raycast.
+isSelected: interviews
+topImg1Src: /img/interviews/raycast-petr-nikolaev-profile.jpg
+topImg2Src: /img/interviews/raycast-petr-nikolaev-logo.png
+ogImg: /img/interviews/raycast-petr-nikolaev-desk.png
 ---
 
 ### What is Raycast? Why did you build it?
@@ -31,7 +31,7 @@ why we started thinking - what if we had some kind of a framework for this, an
 app where you can do these things. This is how it started.
 
 {{< img-center
-src="/img/qa/raycast-petr-nikolaev-product.png"
+src="/img/interviews/raycast-petr-nikolaev-product.png"
 alt="Raycast product screenshot"
 width="100%"
 caption="Raycast integration with Jira issue tracking."
@@ -174,7 +174,7 @@ something like that.
 ### Describe your computer software setup
 
 {{< img-center
-src="/img/qa/raycast-petr-nikolaev-desk.png"
+src="/img/interviews/raycast-petr-nikolaev-desk.png"
 alt="The desk of Petr Nikolaev, Raycast"
 width="100%"
 >}}

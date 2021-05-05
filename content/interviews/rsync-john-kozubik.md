@@ -1,5 +1,5 @@
 ---
-title: Q&A with John Kozubik, rsync.net
+title: Interview with John Kozubik, rsync.net
 who: John Kozubik
 role: CEO
 org: rsync.net
@@ -7,11 +7,11 @@ what: Cloud storage in the form of a UNIX filesystem available over SSH.
 tags: ['Cloud']
 date: 2021-03-12T12:00:00Z
 draft: false
-summary: Q&A interview with John Kozubik, CEO, rsync.net.
-isSelected: qa
-topImg1Src: /img/qa/rsync-john-kozubik-profile.jpg
-topImg2Src: /img/qa/rsync-john-kozubik-logo.jpg
-ogImg: /img/qa/rsync-john-kozubik-desk.png
+summary: Interview interview with John Kozubik, CEO, rsync.net.
+isSelected: interviews
+topImg1Src: /img/interviews/rsync-john-kozubik-profile.jpg
+topImg2Src: /img/interviews/rsync-john-kozubik-logo.jpg
+ogImg: /img/interviews/rsync-john-kozubik-desk.png
 ---
 
 ### What is rsync.net?
@@ -247,7 +247,7 @@ but not disastrous.
 ### Describe your desk setup
 
 {{< img-center
-src="/img/qa/rsync-john-kozubik-desk.png"
+src="/img/interviews/rsync-john-kozubik-desk.png"
 alt="The desk of John Kozubik, rsync.net"
 width="100%"
 >}}

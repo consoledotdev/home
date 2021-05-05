@@ -1,5 +1,5 @@
 ---
-title: Q&A with Jason Bosco, Typesense
+title: Interview with Jason Bosco, Typesense
 who: Jason Bosco
 role: Co-founder
 org: Typesense
@@ -7,11 +7,11 @@ what: A search engine optimized for performance and ease of use.
 tags: ['Search']
 date: 2021-03-29T12:00:00+00:00
 draft: false 
-summary: Q&A interview with Jason Bosco, Co-founder, Typesense.
-isSelected: qa
-topImg1Src: /img/qa/typesense-jason-bosco-profile.jpg
-topImg2Src: /img/qa/typesense-jason-bosco-logo.svg
-ogImg: /img/qa/typesense-jason-bosco-desk.jpg
+summary: Interview interview with Jason Bosco, Co-founder, Typesense.
+isSelected: interviews
+topImg1Src: /img/interviews/typesense-jason-bosco-profile.jpg
+topImg2Src: /img/interviews/typesense-jason-bosco-logo.svg
+ogImg: /img/interviews/typesense-jason-bosco-desk.jpg
 ---
 
 ### What is Typesense? Why did you build it?
@@ -47,7 +47,7 @@ and there's lots of things that you have to get it to do to make it production
 grade. We're trying to solve that piece as well.
 
 {{< img-center
-src="/img/qa/typesense-jason-bosco-product.gif"
+src="/img/interviews/typesense-jason-bosco-product.gif"
 alt="Typesense product screenshot"
 width="100%"
 caption="Search as you type interface with Typesense."
@@ -220,7 +220,7 @@ Anything that simplifies a developer's life is a net positive.
 ### Describe your computer hardware setup
 
 {{< img-center
-src="/img/qa/typesense-jason-bosco-desk.jpg"
+src="/img/interviews/typesense-jason-bosco-desk.jpg"
 alt="The desk of Jason Bosco, Typesense."
 width="100%"
 >}}
