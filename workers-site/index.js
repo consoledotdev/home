@@ -82,6 +82,7 @@ async function handleEvent(event) {
             ["/beta/", "https://console.dev/betas/"],
             ["/qa", "https://console.dev/interviews/"],
             ["/qa/", "https://console.dev/interviews/"],
+            ["/qa/rss.xml", "https://console.dev/interviews/rss.xml"],
             ["/qa/stackhawk-scott-gerlach", "https://console.dev/interviews/stackhawk-scott-gerlach/"],
             ["/qa/stackhawk-scott-gerlach/", "https://console.dev/interviews/stackhawk-scott-gerlach/"],
             ["/qa/gitpod-christian-weichel", "https://console.dev/interviews/gitpod-christian-weichel/"],
