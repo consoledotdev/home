@@ -37,9 +37,7 @@ last_thursday = today - relativedelta(weekday=TH(-1))
 # gsheet.action from the Interesting Tools Google Sheet (see README.md).
 print('Parsing tools JSON...')
 
-interesting = {}
-interesting['items'] = []
-
+interesting = {'items': []}
 with open(args.tools_json, 'r') as f:
     tools = json.load(f)
 
@@ -68,13 +66,9 @@ print('Wrote tools - latest JSON')
 # Same for the betas
 print('Parsing betas JSON...')
 
-programs_latest = {}
-programs_latest['items'] = []
-programs_live = {}
-programs_live['items'] = []
-programs_ga = {}
-programs_ga['items'] = []
-
+programs_latest = {'items': []}
+programs_live = {'items': []}
+programs_ga = {'items': []}
 with open(args.beta_json, 'r') as f:
     betas = json.load(f)
 
