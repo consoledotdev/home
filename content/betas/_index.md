@@ -8,4 +8,5 @@ customStyle: true
 pageType: feature
 headerType: fixed
 hidePlanes: true
+ogType: website
 ---
