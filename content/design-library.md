@@ -5,4 +5,5 @@ draft: true
 summary: Console Design Library — A showcase of available styles and components
 type: design-library
 isSelected: design-library
+customStyle: true
 ---
