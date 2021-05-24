@@ -9,6 +9,7 @@ customStyle: true
 pageType: feature-article
 headerType: fixed
 hidePlanes: true
+hideLines: true
 ---
 
 There are many challenges to building human settlements on Mars. The most
@@ -24,6 +25,8 @@ Once we have figured out how to get there and how to reliably support human life
 questions of quality of life become relevant. This includes producing water and
 food, staying fit and healthy, socialising and entertainment. Normal things
 humans like to do.
+
+{{< mars/habitat-distance >}}
 
 One of the resources we have come to take for granted is access to the internet.
 Whether to look up information, send email or watch a video, internet access is

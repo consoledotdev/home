@@ -1,2 +1,265 @@
 /* Mars Internet
-   ========================================================================== */
+   ================================================================================================================ */
+
+/* Illustrations
+   =================================================================================== */
+
+.mars-illustration {
+    padding: var(--space4) 0;
+}
+
+.mars-illustration-caption {
+}
+
+.mars-illustration-text {
+    display: inline-block;
+    color: var(--theme-text-1);
+    font-size: var(--t-size-2);
+    font-style: italic;
+    line-height: 1.5em;
+}
+
+.mars-illustration-text-large {
+    display: inline-block;
+    color: var(--theme-text-1);
+    font-size: var(--t-size5);
+    font-style: italic;
+    line-height: 1.5em;
+}
+
+.mars-illustration-text-small {
+    display: inline-block;
+    color: var(--theme-text-1);
+    font-size: var(--t-size-3);
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.5em;
+}
+
+.mars-illustration-text-emoji {
+    display: inline-block;
+    color: var(--theme-text-1);
+    font-size: var(--t-size2);
+    line-height: 1.5em;
+}
+
+.mars-illustration-icon-text {
+    display: inline-block;
+    display: inline-flex;
+    flex-flow: row wrap;
+    align-items: center;
+    line-height: 1.5em;
+}
+
+.mars-illustration-icon-text .icon {
+    margin-right: var(--space2);
+}
+
+.mars-illustration-link {
+    fill: none;
+    stroke-width: 2px;
+    stroke: var(--theme-text-1);
+}
+
+/* Artwork
+    --------------------------------------------------------------- */
+
+.page-mars .artwork {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-mars .artwork-story {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 auto;
+    width: 78%;
+}
+
+.mars-illustration-earth-large {
+    width: 39%;
+    height: auto;
+    margin-left: -8%;
+    flex: 0 0 auto;
+}
+
+.mars-illustration-mars-large {
+    width: 27.6%;
+    height: auto;
+    margin-right: -8%;
+    flex: 0 0 auto;
+}
+
+.mars-artwork-satellite {
+    position: relative;
+    width: 16.4%;
+    flex: 0 0 auto;
+}
+
+.mars-artwork-satellite img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.mars-artwork-satellite .front {
+    position: relative;
+    z-index: 30;
+}
+
+.mars-artwork-satellite .back1,
+.mars-artwork-satellite .back2 {
+    position: absolute;
+    z-index: 10;
+    opacity: 0.76;
+}
+
+.mars-artwork-satellite .back2 {
+    top: 1.4%;
+}
+
+.mars-artwork-satellite .back1 {
+    top: -1.4%;
+}
+
+.artwork-satellite-move {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    flex: 0 0 auto;
+    display: none;
+}
+
+.artwork-satellite-move img {
+    flex: 0 0 auto;
+}
+
+.artwork-satellite-move .move1 {
+    opacity: 0.15;
+    width: 8.6%;
+}
+
+.artwork-satellite-move .move2 {
+    opacity: 0.2;
+    width: 10.3%;
+    margin-left: -6.7%;
+}
+
+.artwork-satellite-move .move3 {
+    opacity: 0.3;
+    width: 12%;
+    margin-left: -7.9%;
+}
+
+.artwork-satellite-move .move4 {
+    opacity: 0.4;
+    width: 13.8%;
+    margin-left: -8.8%;
+}
+
+.artwork-satellite-move .move5 {
+    opacity: 0.45;
+    width: 14.6%;
+    margin-left: -8.8%;
+}
+
+/* Habitat+Distance
+    --------------------------------------------------------------- */
+
+.habitat-distance {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: top;
+    max-width: 600px;
+    margin-top: -25px;
+}
+
+.habitat-distance .mars-illustration-caption {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.habitat-distance .left,
+.habitat-distance .mid,
+.habitat-distance .right {
+    flex: 0 0 auto;
+}
+
+.habitat-distance .left,
+.habitat-distance .mid,
+.habitat-distance .right,
+.habitat-distance .link-1,
+.habitat-distance .link-2 {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.habitat-distance .mars-illustration-earth {
+    width: 150px;
+}
+
+.habitat-distance .mars-illustration-mars {
+    width: 100px;
+}
+
+.habitat-distance .link-1 {
+    flex: 4 1 auto;
+}
+
+.habitat-distance .link-2 {
+    flex: 1 4 auto;
+}
+
+.habitat-distance .mars-illustration-link {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.habitat-distance .link-1 .mars-illustration-link {
+    stroke: #00ff00;
+    stroke-dasharray: 3, 2;
+}
+
+.habitat-distance .link-2 .mars-illustration-link {
+    opacity: 0.3;
+}
+
+.habitat-distance .link-1 .mars-illustration-caption span {
+    margin-bottom: var(--space1);
+}
+
+.habitat-distance .left {
+    margin-left: -25px;
+}
+
+.habitat-distance .link-1 {
+    padding-top: 75px;
+}
+
+.habitat-distance .mid {
+    padding-top: 25px;
+}
+
+.habitat-distance .mid .mars-illustration-caption {
+    padding-top: 25px;
+}
+
+.habitat-distance .link-2 {
+    padding-top: 75px;
+}
+
+.habitat-distance .right {
+    padding-top: 45px;
+    padding-left: var(--space2_5);
+}
+
+.habitat-distance .right .mars-illustration-caption {
+    padding-top: 61px;
+}
