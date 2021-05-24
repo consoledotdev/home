@@ -49,8 +49,7 @@ code, you only need Hugo:
     or article pages like About.
 -   `headerType`: `fixed` or `false` - When fixed the header will show on top on
     scroll.
--   `hidePlanes`: `true` or `false` - Hides the visual planes (not the finer lines)
-    from the page.
+-   `hideLines`: `true` or `false` - Hides the finer lines from the page.
 
 ### Custom Hugo Shortcodes
 

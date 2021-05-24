@@ -9,3 +9,4 @@ resources/*
 # template language, so we exclude them
 themes/console-home/layouts/*
 
+README.md
