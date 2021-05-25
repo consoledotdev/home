@@ -364,7 +364,7 @@ and
 
 ### Find out more
 
-[Akita](https://www.akitasoftware.com) is tool for API mapping and
+[Akita](https://www.akitasoftware.com) is a tool for API mapping and
 observability. The beta release was featured in the [Console
 newsletter](https://console.dev) on 29 Apr 2021. This interview was conducted
 on 21 Apr 2021.

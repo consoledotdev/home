@@ -1,40 +1,45 @@
-    <footer class="footer">
-        <nav class="footer-nav">
-            <ul class="footer-social">
+<footer class="footer">
+    <nav class="footer-nav">
+        <ul class="footer-social">
+            <li>
+                <a rel="me" onclick="blur()" href="https://twitter.com/consoledotdev">
+                    {{- partial "icons/twitter.html" -}}<span>Twitter</span>
+                </a>
+            </li>
+            <li>
+                <a rel="me" onclick="blur()" href="https://github.com/consoledotdev">
+                    {{- partial "icons/github.html" -}}<span>GitHub</span>
+                </a>
+            </li>
+            <li>
+                <a rel="me" onclick="blur()" href="https://mastodon.online/@console">
+                    {{- partial "icons/mastodon.html" -}}<span>Mastodon</span>
+                </a>
+            </li>
+        </ul>
+        <div class="footer-locations">
+            <ul>
                 <li>
-                    <a rel="me" onclick="blur()" href="https://twitter.com/consoledotdev">
-                        {{- partial "icons/twitter.html" -}}<span>Twitter</span>
-                    </a>
+                    <a onclick="blur()" href="https://blog.console.dev/">Blog</a>
                 </li>
                 <li>
-                    <a rel="me" onclick="blur()" href="https://github.com/consoledotdev">
-                        {{- partial "icons/github.html" -}}<span>GitHub</span>
-                    </a>
-                </li>
-                <li>
-                    <a rel="me" onclick="blur()" href="https://mastodon.online/@console">
-                        {{- partial "icons/mastodon.html" -}}<span>Mastodon</span>
-                    </a>
+                    <a onclick="blur()" href="/reviews/">Reviews</a>
                 </li>
             </ul>
-            <div class="footer-locations">
-                <ul>
-                    <li>
-                        <a onclick="blur()" href="https://blog.console.dev/">Blog</a>
-                    </li>
-                    <li>
-                        <a onclick="blur()" href="/reviews/">Reviews</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a onclick="blur()" href="mailto:hello@console.dev">Contact</a>
-                    </li>
-                    <li>
-                        <a onclick="blur()" href="/privacy/">Privacy Policy</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </footer>
+            <ul>
+                <li>
+                    <a onclick="blur()" href="https://github.com/consoledotdev/careers">Careers</a>
+                </li>
+                <li>
+                    <a onclick="blur()" href="/privacy/">Privacy</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a onclick="blur()" href="mailto:hello@console.dev">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</footer>
 </div> <!-- END .content -->
