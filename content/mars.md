@@ -90,6 +90,8 @@ designed for such long response times. Packets must be acknowledged,
 otherwise they will be re-transmitted. For Earth/Mars communication, this is
 impossible.
 
+{{< mars/handshake >}}
+
 ### Separate Earth and Mars internet
 
 The obvious solution to the problem of long transmission times from Mars to
@@ -159,7 +161,10 @@ Peer communication - once one IPFS user on Mars has downloaded a copy of the
 file, it can serve it to other users locally. But how do the files get there in
 the first place?
 
-### Interplanetary networking
+{{< rich-title-3 icon="broadcast" id="interplanetary-networking" >}}
+Interplanetary networking {{</ rich-title-3 >}}
+
+{{< mars/space-networks >}}
 
 NASA already runs several communication networks in space:
 

@@ -1125,6 +1125,12 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
     transition: var(--a-micro);
 }
 
+.title.rich-title {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
 .title.title-1 {
     font-size: var(--t-size8);
     margin-bottom: var(--space4);
@@ -1132,6 +1138,12 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
 
 .title.title-1:not(:first-child) {
     margin-top: var(--space4);
+}
+
+.title-1.rich-title .icon {
+    width: var(--space4);
+    height: var(--space4);
+    margin-right: var(--space3);
 }
 
 .title.title-2 {
@@ -1145,6 +1157,12 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
 
 .page-feature-article .title.title-2:not(:first-child) {
     margin-top: var(--space5);
+}
+
+.title-2.rich-title .icon {
+    width: var(--space3_5);
+    height: var(--space3_5);
+    margin-right: var(--space3);
 }
 
 .title.title-3 {
@@ -1163,6 +1181,12 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
 
 .page-feature-article .title.title-3:not(:first-child) {
     margin-top: var(--space4_5);
+}
+
+.title-3.rich-title .icon {
+    width: var(--space3);
+    height: var(--space3);
+    margin-right: var(--space2);
 }
 
 .title.title-4 {
@@ -1184,6 +1208,12 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
 
 .page-feature-article .title.title-4:not(:first-child) {
     margin-top: var(--space4_5);
+}
+
+.title-4.rich-title .icon {
+    width: var(--space2);
+    height: var(--space2);
+    margin-right: var(--space2);
 }
 
 /* Text
