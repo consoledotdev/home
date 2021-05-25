@@ -72,25 +72,31 @@
 }
 
 .page-mars .artwork-story {
+    width: 78%;
+}
+
+.page-mars .mars-artwork-center {
+    position: relative;
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     flex: 0 0 auto;
-    width: 78%;
+    z-index: 20;
 }
 
 .mars-illustration-earth-large {
     width: 39%;
     height: auto;
-    margin-left: -8%;
+    margin: -8%;
     flex: 0 0 auto;
 }
 
 .mars-illustration-mars-large {
     width: 27.6%;
     height: auto;
-    margin-right: -8%;
+    margin: -8%;
     flex: 0 0 auto;
 }
 
@@ -98,6 +104,8 @@
     position: relative;
     width: 16.4%;
     flex: 0 0 auto;
+    margin-left: -7.4%;
+    margin-right: -6.7%;
 }
 
 .mars-artwork-satellite img {
@@ -126,45 +134,355 @@
     top: -1.4%;
 }
 
-.artwork-satellite-move {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    flex: 0 0 auto;
-    display: none;
-}
-
-.artwork-satellite-move img {
-    flex: 0 0 auto;
-}
-
-.artwork-satellite-move .move1 {
+.mars-artwork-satellite-move-1,
+.mars-artwork-satellite-move-10 {
     opacity: 0.15;
     width: 8.6%;
+    flex: 0 0 auto;
 }
 
-.artwork-satellite-move .move2 {
+.mars-artwork-satellite-move-2,
+.mars-artwork-satellite-move-9 {
     opacity: 0.2;
     width: 10.3%;
+    flex: 0 0 auto;
+}
+
+.mars-artwork-satellite-move-3,
+.mars-artwork-satellite-move-8 {
+    opacity: 0.3;
+    width: 12%;
+    flex: 0 0 auto;
+}
+
+.mars-artwork-satellite-move-4,
+.mars-artwork-satellite-move-7 {
+    opacity: 0.4;
+    width: 13.8%;
+    flex: 0 0 auto;
+}
+
+.mars-artwork-satellite-move-5,
+.mars-artwork-satellite-move-6 {
+    opacity: 0.45;
+    width: 14.6%;
+    flex: 0 0 auto;
+}
+
+.mars-artwork-satellite-move-1 {
+    margin-left: 3.2%;
+}
+
+.mars-artwork-satellite-move-2 {
     margin-left: -6.7%;
 }
 
-.artwork-satellite-move .move3 {
-    opacity: 0.3;
-    width: 12%;
+.mars-artwork-satellite-move-3 {
     margin-left: -7.9%;
 }
 
-.artwork-satellite-move .move4 {
-    opacity: 0.4;
-    width: 13.8%;
+.mars-artwork-satellite-move-4 {
     margin-left: -8.8%;
 }
 
-.artwork-satellite-move .move5 {
-    opacity: 0.45;
-    width: 14.6%;
+.mars-artwork-satellite-move-5 {
     margin-left: -8.8%;
+}
+
+.mars-artwork-satellite-move-6 {
+    margin-right: -8.8%;
+}
+
+.mars-artwork-satellite-move-7 {
+    margin-right: -8.8%;
+}
+
+.mars-artwork-satellite-move-8 {
+    margin-right: -7.9%;
+}
+
+.mars-artwork-satellite-move-9 {
+    margin-right: -6.7%;
+}
+
+.mars-artwork-satellite-move-10 {
+    margin-right: 5.1%;
+}
+
+.mars-artwork-satellite-move img {
+    width: 100%;
+    height: auto;
+}
+
+.mars-artwork-round-link-left {
+    width: 43%;
+    position: absolute;
+    left: 11.4%;
+    top: 50%;
+    transform: translateY(-100%);
+}
+
+.mars-artwork-round-link-right {
+    width: 39.8%;
+    position: absolute;
+    right: 5.7%;
+    top: 50%;
+}
+
+.mars-artwork-half-circle {
+    fill: none;
+    stroke-width: 2px;
+    stroke: var(--theme-text-1);
+    stroke-dasharray: 2, 7;
+    stroke-dashoffset: 0;
+    width: 100%;
+
+    animation-duration: 0.5s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.mars-artwork-round-link-left .mars-artwork-half-circle {
+    stroke: #c750ff;
+    transform: rotate(180deg);
+    animation-name: earth-half-circle;
+}
+
+@keyframes earth-half-circle {
+    0% {
+        stroke-dashoffset: -9;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.mars-artwork-round-link-right .mars-artwork-half-circle {
+    stroke: #ff7455;
+    animation-name: mars-half-circle;
+}
+
+@keyframes mars-half-circle {
+    0% {
+        stroke-dashoffset: 9;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.mars-artwork-data-bundle {
+    position: absolute;
+    width: 13.6%;
+    height: auto;
+}
+
+.mars-artwork-data-bundle-left {
+    left: 32.8%;
+    top: -44.3%;
+    transform: translate(-50%, -50%);
+}
+
+.mars-artwork-data-bundle-right {
+    right: 25.5%;
+    top: 137.1%;
+    transform: translate(50%, -50%);
+}
+
+.bundle-earth-rect {
+    animation-duration: 1s;
+    animation-timing-function: linear, cubic-bezier(0.41, 0.14, 0.35, 0.99);
+    animation-iteration-count: infinite, infinite;
+    animation-fill-mode: forwards, forwards;
+}
+
+.bundle-earth-rect5 {
+    animation-name: bundle-rect5;
+    transform-origin: 9px 100px;
+}
+
+@keyframes bundle-rect5 {
+    0% {
+        transform: scale(0.9);
+    }
+    12.5% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.bundle-earth-rect4 {
+    animation-name: bundle-rect4;
+    transform-origin: 28px 83px;
+}
+
+@keyframes bundle-rect4 {
+    0% {
+        transform: scale(0.9);
+    }
+    12.5% {
+        transform: scale(0.9);
+    }
+    25% {
+        transform: scale(1);
+    }
+    37.5% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.bundle-earth-rect2 {
+    animation-name: bundle-rect2;
+    transform-origin: 55px 55px;
+}
+
+@keyframes bundle-rect2 {
+    0% {
+        transform: scale(0.9);
+    }
+    25% {
+        transform: scale(0.9);
+    }
+    37.5% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.bundle-earth-rect1 {
+    animation-name: bundle-rect1-3;
+    transform-origin: 92px 18px;
+}
+
+.bundle-earth-rect3 {
+    animation-name: bundle-rect1-3;
+    transform-origin: 92px 92px;
+}
+
+@keyframes bundle-rect1-3 {
+    0% {
+        transform: scale(0.9);
+    }
+    37.5% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+    62.5% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.bundle-earth-rect8 {
+    animation-name: bundle-rect8;
+    transform-origin: 120px 64px;
+}
+
+@keyframes bundle-rect8 {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    62.5% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.bundle-earth-rect6 {
+    animation-name: bundle-rect6;
+    transform-origin: 138px 46px;
+}
+
+@keyframes bundle-rect6 {
+    0% {
+        transform: scale(0.9);
+    }
+    62.5% {
+        transform: scale(0.9);
+    }
+    75% {
+        transform: scale(1);
+    }
+    87.5% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.bundle-earth-rect7 {
+    animation-name: bundle-rect7;
+    transform-origin: 157px 64px;
+}
+
+@keyframes bundle-rect7 {
+    0% {
+        transform: scale(0.9);
+    }
+    75% {
+        transform: scale(0.9);
+    }
+    87.5% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.mars-artwork-orbit {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 1px solid var(--c-white-00-absolute);
+    opacity: 0.2;
+}
+
+.mars-artwork-orbit-earth {
+    width: 284.5%;
+    height: 1071.4%;
+    left: -273.1%;
+}
+
+.mars-artwork-orbit-satellite {
+    width: 434%;
+    height: 1628.6%;
+    left: -379.5%;
+}
+
+.mars-artwork-orbit-mars {
+    width: 571%;
+    height: 2142.8%;
+    left: -476.7%;
 }
 
 /* Habitat+Distance

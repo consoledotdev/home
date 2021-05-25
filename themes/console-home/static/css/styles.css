@@ -332,11 +332,9 @@ body:not(.page-feature, .page-feature-article):after {
     z-index: 30;
 }
 
-.page-article .content {
-    height: auto;
-}
-
-.page-feature .content {
+.page-article .content,
+.page-feature .content,
+.page-feature-article .content {
     height: auto;
 }
 
@@ -615,7 +613,6 @@ body:not(.page-feature, .page-feature-article):after {
     right: -6.25vw;
     top: 0;
     max-height: 800px;
-    background-color: blue;
     overflow: hidden;
 }
 
