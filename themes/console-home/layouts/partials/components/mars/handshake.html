@@ -1,6 +1,6 @@
 <div class="mars-illustration handshake">
     <div class="left">
-        {{ partial "components/mars/earth.html" }}
+        {{ partial "components/mars/shared/earth.html" }}
     </div>
     <div class="mid">
         <div class="mars-illustration-title">
@@ -9,15 +9,15 @@
         </div>
         <div class="handshake-packets">
             <div class="packet packet-1">
-                {{ partial "components/mars/link.html" }}
+                {{ partial "components/mars/shared/link.html" }}
                 <span class="mars-illustration-text">SYN</span>
             </div>
             <div class="packet packet-2">
-                {{ partial "components/mars/link.html" }}
+                {{ partial "components/mars/shared/link.html" }}
                 <span class="mars-illustration-text">SYN, ACK</span>
             </div>
             <div class="packet packet-3">
-                {{ partial "components/mars/link.html" }}
+                {{ partial "components/mars/shared/link.html" }}
                 <span class="mars-illustration-text">ACK</span>
             </div>
         </div>
@@ -31,6 +31,6 @@
         </div>
     </div>
     <div class="right">
-        {{ partial "components/mars/mars.html" }}
+        {{ partial "components/mars/shared/mars.html" }}
     </div>
 </div>
