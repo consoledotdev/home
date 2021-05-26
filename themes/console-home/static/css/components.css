@@ -914,6 +914,7 @@ body:not(.mobile) .console-control:hover:before {
 
 /* Illustrated Text
    ================================================================================================================ */
+
 .illustrated-text {
     display: flex;
     flex-flow: row nowrap;
@@ -948,4 +949,54 @@ body:not(.mobile) .console-control:hover:before {
     .illustrated-text p {
         text-align: center;
     }
+}
+
+/* Table of Contents
+   ================================================================================================================ */
+
+.toc {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+}
+
+.toc .title.title-4 {
+    margin-bottom: var(--space3);
+    color: var(--theme-text-4);
+}
+
+.toc ul {
+    margin: 0;
+    padding: 0;
+    padding-right: var(--space3);
+    border-right: 1px solid var(--c-grey-05);
+}
+
+.toc ul li {
+    list-style: none;
+}
+
+.toc-item:not(:first-child, .toc-item-sub) {
+    margin-top: var(--space3_5);
+}
+
+.toc-item.toc-item-sub {
+    margin-top: var(--space2_5);
+    margin-bottom: var(--space1);
+}
+
+.toc-link {
+    text-align: right;
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: var(--theme-text-4);
+    font-size: var(--t-size-2);
+    line-height: var(--t-lH4);
+}
+
+.toc-item-sub .toc-link {
+    color: var(--c-grey-05);
+    font-size: var(--t-size-3);
+    font-weight: 500;
 }

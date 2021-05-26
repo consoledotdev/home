@@ -612,7 +612,7 @@ body:not(.page-feature, .page-feature-article):after {
     left: -6.25vw;
     right: -6.25vw;
     top: 0;
-    max-height: 800px;
+    max-height: 600px;
     overflow: hidden;
 }
 
@@ -843,7 +843,7 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
     display: none;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
     .footer-nav {
         flex-flow: column nowrap;
         align-items: flex-start;
@@ -1470,12 +1470,22 @@ select.console-select::-ms-expand {
         z-index: 40;
     }
 
+    .artwork {
+        max-height: 800px;
+    }
+
+    .main-feature-article {
+        margin-top: min(100vh, 800px);
+        margin-bottom: calc(var(--space6) - var(--space4));
+    }
+
     .main-article {
         margin-top: calc(var(--space6) - var(--space4));
         margin-bottom: calc(var(--space6) - var(--space4));
     }
 
-    .main-article .subscribe-cta {
+    .main-article .subscribe-cta,
+    .main-feature-article .subscribe-cta {
         border: none;
         padding: 0;
         background: transparent;
@@ -1551,11 +1561,17 @@ select.console-select::-ms-expand {
             padding-right: 12vw;
         }
 
-        .main-article {
+        .main-article,
+        .main-feature-article {
             margin-left: -12vw;
             margin-right: -12vw;
             padding-left: 12vw;
             padding-right: 12vw;
+        }
+
+        .artwork {
+            left: -12vw;
+            right: -12vw;
         }
 
         .title.title-1 {
@@ -1594,11 +1610,17 @@ select.console-select::-ms-expand {
             padding-right: 10vw;
         }
 
-        .main-article {
+        .main-article,
+        .main-feature-article {
             margin-left: -10vw;
             margin-right: -10vw;
             padding-left: 10vw;
             padding-right: 10vw;
+        }
+
+        .artwork {
+            left: -10vw;
+            right: -10vw;
         }
 
         .console-form .console-button {
@@ -1617,11 +1639,17 @@ select.console-select::-ms-expand {
             padding-right: 12vw;
         }
 
-        .main-article {
+        .main-article,
+        .main-feature-article {
             margin-left: -12vw;
             margin-right: -12vw;
             padding-left: 12vw;
             padding-right: 12vw;
+        }
+
+        .artwork {
+            left: -12vw;
+            right: -12vw;
         }
     }
 
@@ -1636,11 +1664,21 @@ select.console-select::-ms-expand {
             padding-right: 14vw;
         }
 
-        .main-article {
+        .artwork {
+            max-height: 600px;
+        }
+
+        .main-article,
+        .main-feature-article {
             margin-left: -14vw;
             margin-right: -14vw;
             padding-left: 14vw;
             padding-right: 14vw;
+        }
+
+        .artwork {
+            left: -14vw;
+            right: -14vw;
         }
     }
 }
@@ -1665,6 +1703,10 @@ select.console-select::-ms-expand {
         height: 60vh;
     }
 
+    .artwork {
+        max-height: 650px;
+    }
+
     .main-article {
         margin: max(calc(var(--space6) - var(--space3)), 10vh) 0 calc(var(--space6) - var(--space2));
         width: min(calc(600px + 12.5vw), 80vw);
@@ -1677,9 +1719,7 @@ select.console-select::-ms-expand {
     }
 
     .main-feature-article {
-        width: 60%;
-        max-width: 600px;
-        margin: min(100%, 800px) 0 calc(var(--space6) - var(--space2));
+        margin: min(100vh, 700px) 0 calc(var(--space6) - var(--space2));
     }
 
     .main-feature {
@@ -1688,6 +1728,27 @@ select.console-select::-ms-expand {
 
     .hero .planes {
         margin-left: max(550px, 40vw);
+    }
+
+    .main-feature-article-content {
+        max-width: 600px;
+    }
+
+    .main-feature-article-content-split {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .main-feature-article-content-split > *:not(aside) {
+        flex: 1 1 auto;
+    }
+
+    .main-feature-article-content-split aside {
+        flex: 0 0 auto;
+        max-width: 220px;
+        margin-left: 10vw;
     }
 
     @media (max-aspect-ratio: 9/10) {
@@ -1705,9 +1766,48 @@ select.console-select::-ms-expand {
         min-height: 40vh;
     }
 
+    .artwork {
+        max-height: 700px;
+    }
+
+    .main-feature-article {
+        margin-top: min(100vh, 800px);
+    }
+
     .col-2-css {
         columns: 2;
         column-gap: 32px;
+    }
+}
+
+@media (min-width: 1152px) {
+    .artwork {
+        max-height: 750px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .artwork {
+        max-height: 800px;
+    }
+
+    .main-feature-article-content {
+        max-width: 760px;
+    }
+
+    .main-feature-article p,
+    .main-feature-article .quote {
+        font-size: var(--t-size1);
+    }
+
+    .main-feature-article p.description {
+        font-size: var(--t-size3);
+    }
+}
+
+@media (min-width: 1440px) {
+    .main-feature-article-content-split aside {
+        max-width: none;
     }
 }
 
