@@ -242,9 +242,7 @@
     font-weight: 400;
     transition: var(--a-controls);
     outline: none;
-    display: inline-flex;
-    flex-flow: row wrap;
-    align-items: center;
+    word-break: break-all;
 }
 
 .link:hover,
@@ -263,8 +261,7 @@
 .link:visited .icon {
     fill: var(--theme-text-1);
     transition: var(--a-controls);
-    vertical-align: middle;
-    margin-left: var(--space1);
+    vertical-align: -0.2em;
     width: 1em;
     height: 1em;
 }
