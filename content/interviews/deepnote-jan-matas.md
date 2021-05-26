@@ -6,7 +6,7 @@ org: Deepnote
 what: A platform for collaborative Jupyter notebooks.
 tags: ['Data Science']
 date: 2021-05-12T12:00:00Z
-draft: true
+draft: false
 summary: Interview with Jan Matas, CTO, Deepnote
 isSelected: interviews
 topImg1Src: /img/interviews/deepnote-jan-matas-profile.jpg
