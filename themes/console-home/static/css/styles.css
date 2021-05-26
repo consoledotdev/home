@@ -1277,7 +1277,7 @@ p.small {
 .page-feature-article .quote {
     background: transparent;
     font-size: var(--t-size0);
-    line-height: 1.5em;
+    line-height: var(--t-lH4);
     border-left: var(--theme-border-3);
 }
 

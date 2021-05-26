@@ -190,6 +190,8 @@ near-Earth components, but are not a complete, general purpose solution.
 
 #### Delay-Tolerant Networking
 
+{{< mars/dtn-table >}}
+
 Back in 2007, a new
 [Delay-Tolerant Networking Architecture](https://tools.ietf.org/html/rfc4838)
 was proposed by the IETF specifically designed for the Interplanetary Internet.
@@ -285,6 +287,8 @@ connected through nodes positioned in space. The
 [Mars Telecommunications Orbiter](https://en.wikipedia.org/wiki/Mars_Telecommunications_Orbiter)
 was one such node due to come online in 2010, but it was cancelled in 2005.
 
+{{< mars/dtn-networking >}}
+
 The sheer distance means that communication delays are unavoidable, but the
 protocols allow for time-sensitive communication between planets. However, where
 time is not especially important, local storage of data with periodic refreshes
@@ -326,6 +330,8 @@ a single Falcon Heavy could carry 746 AWS Snowball devices, or about 60PB.
 Transporting all of YouTube would therefore require at least 10 Falcon Heavy
 flights, at a launch cost of almost $1bn. That doesn’t include the cost of the
 Snowball devices themselves.
+
+{{< mars/ship-youtube >}}
 
 ### Internet access on Mars
 

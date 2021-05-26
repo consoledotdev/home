@@ -5,7 +5,7 @@
    =================================================================================== */
 
 .mars-illustration {
-    padding: var(--space4) 0;
+    padding: var(--space4) 0 calc(var(--space4) + var(--space3));
 }
 
 .mars-illustration-caption {
@@ -19,7 +19,7 @@
     color: var(--theme-text-1);
     font-size: var(--t-size-2);
     font-style: italic;
-    line-height: 1.5em;
+    line-height: var(--t-lH4);
 }
 
 .mars-illustration-text-large {
@@ -27,7 +27,7 @@
     color: var(--theme-text-1);
     font-size: var(--t-size5);
     font-style: italic;
-    line-height: 1.5em;
+    line-height: var(--t-lH4);
 }
 
 .mars-illustration-text-small {
@@ -36,14 +36,14 @@
     font-size: var(--t-size-3);
     font-weight: 500;
     font-style: italic;
-    line-height: 1.5em;
+    line-height: var(--t-lH4);
 }
 
 .mars-illustration-text-emoji {
     display: inline-block;
     color: var(--theme-text-1);
     font-size: var(--t-size2);
-    line-height: 1.5em;
+    line-height: var(--t-lH4);
 }
 
 .mars-illustration-icon-text {
@@ -51,7 +51,7 @@
     display: inline-flex;
     flex-flow: row wrap;
     align-items: center;
-    line-height: 1.5em;
+    line-height: var(--t-lH4);
 }
 
 .mars-illustration-icon-text .icon {
@@ -70,6 +70,10 @@
     align-items: center;
 }
 
+.mars-illustration-title .icon {
+    margin-right: var(--space2_5);
+}
+
 .mars-illustration-closing {
     display: flex;
     flex-flow: column nowrap;
@@ -81,6 +85,7 @@
     width: 100%;
     height: 28px;
     text-align: center;
+    margin-bottom: var(--space2_5);
 }
 
 .mars-illustration-closing-line {
@@ -112,6 +117,10 @@
     right: 0;
 }
 
+.mars-illustration-closing .mars-illustration-text {
+    margin-top: var(--space1);
+}
+
 .mars-illustration-closing .mars-illustration-text-emoji {
     position: relative;
     display: inline-block;
@@ -121,6 +130,14 @@
     line-height: 24px;
     background: var(--theme-content-bg-3);
     z-index: 20;
+}
+
+.mars-illustration-foreground {
+    stroke: var(--theme-text-1);
+}
+
+.mars-illustration-foreground-fill {
+    fill: var(--theme-text-1);
 }
 
 /* Artwork
@@ -693,6 +710,7 @@
 }
 
 .handshake .mars-illustration-title .icon {
+    margin-right: 0;
     width: 32px;
     height: 32px;
 }
@@ -849,10 +867,6 @@
     left: 4px;
 }
 
-.space-networks .space-networks-orbit {
-    stroke: var(--theme-text-1);
-}
-
 .space-networks .mars-illustration-caption {
     margin-top: calc(var(--space4) + var(--space2));
 }
@@ -886,4 +900,283 @@
     stroke: #c750ff;
     margin-top: 140px;
     margin-left: -103px;
+}
+
+/* DTN Table
+    --------------------------------------------------------------- */
+
+.dtn-table-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--space2) 0;
+}
+
+.dtn-table-grid .cell {
+    font-size: var(--t-size-2);
+    font-style: italic;
+    color: var(--theme-text-1);
+    line-height: var(--t-lH4);
+    padding-right: var(--space4);
+}
+
+.dtn-table-grid .cell-header {
+    font-weight: 500;
+    border-bottom: var(--theme-border-3);
+    padding-bottom: var(--space2);
+    margin-bottom: var(--space1);
+}
+
+.dtn-table-grid .cell-meta {
+    color: var(--theme-text-4);
+}
+
+/* DTN Networking
+    --------------------------------------------------------------- */
+
+.dtn-networking {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.dtn-networking > *:not(:first-child) {
+    margin-top: calc(var(--space4) + var(--space2));
+}
+
+.dtn-networking-main {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.dtn-networking .left,
+.dtn-networking .right {
+    position: relative;
+    flex: 0 0 auto;
+}
+.dtn-networking .right {
+    margin-top: 15px;
+}
+
+.dtn-networking .mid {
+    position: relative;
+    flex: 1 1 auto;
+    margin-top: 55px;
+}
+
+.dtn-networking-earth,
+.dtn-networking-mars {
+    display: inline-block;
+    vertical-align: top;
+    height: auto;
+}
+
+.dtn-networking-earth {
+    width: 168px;
+}
+
+.dtn-networking-mars {
+    width: 136px;
+}
+
+.dtn-networking .mars-illustration-earth,
+.dtn-networking .mars-illustration-mars {
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dtn-networking .mars-illustration-earth {
+    width: 90px;
+}
+
+.dtn-networking .mars-illustration-mars {
+    width: 60px;
+}
+
+.dtn-networking-mid-top {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+}
+
+.dtn-networking-mid-top > *:not(.mars-illustration-link) {
+    flex: 0 0 auto;
+}
+
+.dtn-networking-mid-top .mars-illustration-link {
+    flex: 1 1 auto;
+    stroke-dasharray: 2, 7;
+    margin-top: 14px;
+}
+
+.dtn-networking-mid-top .mars-illustration-satellite-small {
+    width: 29px;
+    height: auto;
+}
+
+.dtn-networking-bundle-small {
+    width: 9px;
+    height: 9px;
+    box-sizing: border-box;
+    border: 1px solid var(--theme-text-1);
+    border-radius: 3px;
+    margin: 10px 5px 0;
+}
+
+.dtn-networking-bundle-indicators {
+    width: 46.7%;
+    height: auto;
+    margin: var(--space1) 0 var(--space2_5);
+}
+
+.dtn-networking-filled-node {
+    width: 111px;
+    height: 111px;
+    margin-right: var(--space4);
+}
+
+.dtn-networking-bottom {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.dtn-networking-bottom .icon {
+    fill: var(--c-blue-06-main);
+}
+
+/* Ship YouTube
+    --------------------------------------------------------------- */
+
+.ship-youtube {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+}
+
+.ship-youtube > *:not(:first-child) {
+    margin-top: calc(var(--space4) + var(--space2));
+}
+
+.ship-youtube .mars-illustration-title {
+    align-self: center;
+}
+
+.ship-youtube-main {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+}
+
+.ship-youtube-main > *:not(.ship-youtube-link) {
+    flex: 0 0 auto;
+}
+
+.ship-youtube-main .ship-youtube-link {
+    position: relative;
+    flex: 1 1 auto;
+    margin: 141px var(--space3) 0;
+    height: 12px;
+    opacity: 0.3;
+}
+
+.ship-youtube-main .mars-illustration-link {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ship-youtube .ship-youtube-link:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid var(--theme-text-1);
+    border-right: 1px solid var(--theme-text-1);
+    transform-origin: 50% 50%;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.ship-youtube-step {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.ship-youtube-aws-snowball {
+    width: 33px;
+    height: auto;
+}
+
+.ship-youtube-payload-grid {
+    width: 53px;
+    height: auto;
+}
+
+.ship-youtube-falcon-heavy {
+    width: 40px;
+    height: auto;
+}
+
+.ship-youtube-falcon-heavy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: var(--space3_5) var(--space3);
+}
+
+.ship-youtube-falcon-heavy-grid .ship-youtube-falcon-heavy {
+    width: 14px;
+    height: auto;
+}
+
+.ship-youtube-step .mars-illustration-text {
+    text-align: center;
+}
+
+.ship-youtube-step-1 {
+    margin-top: 113px;
+}
+
+.ship-youtube-step-1 .mars-illustration-text {
+    margin-top: 65px;
+}
+
+.ship-youtube-step-2 {
+    margin-top: 56px;
+}
+
+.ship-youtube-step-2 .mars-illustration-text {
+    margin-top: 55px;
+}
+
+.ship-youtube-step-3 .mars-illustration-text {
+    margin-top: 24px;
+}
+
+.ship-youtube-step-4 {
+    margin-top: 39px;
+}
+
+.ship-youtube-step-4 .mars-illustration-text {
+    margin-top: 40px;
+}
+
+.ship-youtube .mars-illustration-closing .mars-illustration-text-large span {
+    color: var(--theme-text-4);
+}
+
+.ship-youtube .mars-illustration-closing-line:before,
+.ship-youtube .mars-illustration-closing-line:after {
+    display: none;
+}
+
+.ship-youtube .mars-illustration-closing .mars-illustration-text-emoji {
+    font-size: 24px;
+    width: 32px;
+    height: 32px;
 }
