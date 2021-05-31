@@ -1,6 +1,44 @@
 /* Mars Internet
    ================================================================================================================ */
 
+.page-mars:not(.is-scrolled) .header .logo-wrapper,
+.page-mars:not(.is-scrolled) .header .menu-toggle,
+.page-mars:not(.is-scrolled) .header ul.no-popup,
+.page-mars:not(.is-scrolled) .header .console-control-no-popup {
+    --theme-text-1: var(--c-white-00-absolute);
+    --theme-p1-stroke: var(--c-blue-06-main);
+    --theme-p2-stroke: var(--c-fuchsia-05-main);
+    --theme-p3-stroke: var(--c-green-05-main);
+
+    --theme-content-bg-4: var(--c-grey-08);
+
+    --theme-nav-primary-link-text-idle: var(--c-white-00-absolute);
+    --theme-nav-primary-link-text-focus: var(--c-blue-04);
+    --theme-nav-primary-link-text-active: var(--c-blue-06-main);
+    --theme-nav-primary-link-text-selected: var(--c-blue-04);
+
+    --theme-control-bg: var(--c-grey-06-blacks-neutral);
+    --theme-control-border: var(--c-grey-01-white-03);
+    --theme-control-active-text: var(--c-grey-09-black-03);
+    --theme-control-text-pressed: var(--c-grey-03);
+    --theme-control-text: var(--c-white-00-absolute);
+
+    --theme-badge-bg: var(--c-fuchsia-06);
+}
+
+.page-mars:not(.is-scrolled) .logo-svg-animated-explode .prompt-inverted {
+    display: none;
+}
+
+.page-mars:not(.is-scrolled) .logo-svg-animated-explode .prompt-normal {
+    display: block;
+}
+
+body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
+    animation-duration: 0s, 0.25s;
+    animation-delay: 0s, 0s;
+}
+
 /* Illustrations
    =================================================================================== */
 
@@ -56,9 +94,11 @@
 
 .mars-illustration-icon-text .icon {
     margin-right: var(--space2);
+    flex: 0 0 auto;
 }
 
-.mars-illustration-link {
+.mars-illustration-link,
+.mars-illustration-link-vertical {
     fill: none;
     stroke-width: 2px;
     stroke: var(--theme-text-1);
@@ -568,628 +608,7 @@
     left: -476.7%;
 }
 
-/* Habitat+Distance
-    --------------------------------------------------------------- */
-
-.habitat-distance {
-    display: flex;
-    flex-flow: row nowrap;
-    margin-top: -25px;
-}
-
-.habitat-distance .left,
-.habitat-distance .mid,
-.habitat-distance .right {
-    flex: 0 0 auto;
-}
-
-.habitat-distance .left,
-.habitat-distance .mid,
-.habitat-distance .right,
-.habitat-distance .link-1,
-.habitat-distance .link-2 {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-}
-
-.habitat-distance .mars-illustration-earth {
-    width: 150px;
-}
-
-.habitat-distance .mars-illustration-mars {
-    width: 100px;
-}
-
-.habitat-distance .link-1 {
-    flex: 4 1 auto;
-}
-
-.habitat-distance .link-2 {
-    flex: 1 4 auto;
-}
-
-.habitat-distance .mars-illustration-link {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.habitat-distance .link-1 .mars-illustration-link {
-    stroke: #00ff00;
-    stroke-dasharray: 3, 2;
-}
-
-.habitat-distance .link-2 .mars-illustration-link {
-    opacity: 0.3;
-}
-
-.habitat-distance .link-1 .mars-illustration-caption span {
-    margin-bottom: var(--space1);
-}
-
-.habitat-distance .left {
-    margin-left: -25px;
-}
-
-.habitat-distance .link-1 {
-    padding-top: 75px;
-}
-
-.habitat-distance .mid {
-    padding-top: 25px;
-}
-
-.habitat-distance .mid .mars-illustration-caption {
-    padding-top: 25px;
-}
-
-.habitat-distance .link-2 {
-    padding-top: 75px;
-}
-
-.habitat-distance .right {
-    padding-top: 45px;
-    padding-left: var(--space2_5);
-}
-
-.habitat-distance .right .mars-illustration-caption {
-    padding-top: 61px;
-}
-
-.habitat-distance .habitat-distance-nowifi {
-    fill: none;
-    width: 61px;
-    height: 60px;
-    stroke: var(--theme-text-1);
-}
-
-/* Handshake
-    --------------------------------------------------------------- */
-
-.handshake {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: top;
-}
-
-.handshake .left,
-.handshake .right {
-    flex: 0 0 auto;
-}
-
-.handshake .mid {
-    flex: 1 1 auto;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    margin: 0 calc(var(--space2) + var(--space1));
-}
-
-.handshake .mid > *:not(:first-child) {
-    margin-top: calc(var(--space4) + var(--space2));
-}
-
-.handshake .mars-illustration-earth {
-    width: 150px;
-}
-
-.handshake .mars-illustration-mars {
-    width: 100px;
-}
-
-.handshake .left {
-    margin-left: -25px;
-    padding-top: 87px;
-}
-
-.handshake .right {
-    padding-top: 25px;
-    padding-top: 112px;
-}
-
-.handshake .mars-illustration-title {
-    text-align: center;
-    display: block;
-}
-
-.handshake .mars-illustration-title .icon {
-    margin-right: 0;
-    width: 32px;
-    height: 32px;
-}
-
-.handshake .mars-illustration-closing {
-    align-self: stretch;
-}
-
-.handshake-packets {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: stretch;
-    align-self: stretch;
-}
-
-.handshake-packets .packet {
-    position: relative;
-    text-align: center;
-}
-
-.handshake-packets .packet:not(:first-child) {
-    margin-top: var(--space1);
-}
-
-.handshake-packets .packet .mars-illustration-link {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    stroke-dasharray: 2, 7;
-    transform: translateY(-0.5px);
-    z-index: 10;
-}
-
-.handshake-packets .packet .mars-illustration-text {
-    position: relative;
-    display: inline-block;
-    padding: var(--space1);
-    background: var(--theme-content-bg-3);
-    z-index: 20;
-}
-
-.handshake-packets .packet:before {
-    content: "";
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border-top: 1px solid var(--theme-text-1);
-    border-right: 1px solid var(--theme-text-1);
-    transform-origin: 50% 50%;
-    top: 50%;
-}
-
-.handshake-packets .packet-1:before,
-.handshake-packets .packet-3:before {
-    right: calc(var(--space1) * -1);
-    transform: translateY(-50%) rotate(45deg);
-}
-
-.handshake-packets .packet-2:before {
-    left: calc(var(--space2) * -1);
-    transform: translateY(-50%) rotate(-135deg);
-}
-
-/* Space Networks
-    --------------------------------------------------------------- */
-
-.space-networks {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-start;
-}
-
-.space-networks .left,
-.space-networks .right {
-    position: relative;
-    flex: 0 0 auto;
-    z-index: 10;
-}
-
-.space-networks .mid {
-    position: relative;
-    flex: 1 1 auto;
-    z-index: 20;
-}
-
-.space-networks .space-networks-earth-top {
-    position: relative;
-    display: block;
-    width: 280px;
-}
-
-.space-networks .space-networks-mars-top {
-    position: relative;
-    display: block;
-    width: 193px;
-    padding: 58px 0;
-}
-
-.space-networks .mars-illustration-earth {
-    position: absolute;
-    width: 150px;
-    height: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-}
-
-.space-networks .space-networks-earth {
-    position: relative;
-    z-index: 20;
-}
-
-.space-networks #mars-illustration-earth-land {
-    opacity: 0.18;
-}
-
-.space-networks .mars-illustration-mars {
-    position: absolute;
-    width: 100px;
-    height: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-}
-
-.space-networks .space-networks-mars {
-    position: relative;
-    z-index: 20;
-}
-
-.space-networks #mars-illustration-mars-land {
-    opacity: 0.22;
-}
-
-.space-networks .space-networks-earth .mars-illustration-text {
-    text-align: center;
-    font-size: var(--t-size-3);
-}
-
-.space-networks .space-networks-orbit-name {
-    position: absolute;
-}
-
-.space-networks .space-networks-orbit-name-leo {
-    top: 205px;
-    left: 45px;
-}
-
-.space-networks .space-networks-orbit-name-geo {
-    top: 240px;
-    left: 4px;
-}
-
-.space-networks .mars-illustration-caption {
-    margin-top: calc(var(--space4) + var(--space2));
-}
-
-.space-networks .mars-illustration-caption > *:not(:first-child) {
-    margin-top: var(--space2);
-}
-
-.space-networks .network-near-earth {
-    color: #16a650;
-}
-
-.space-networks .network-space {
-    color: #0d93f4;
-}
-
-.space-networks .network-deep-space {
-    color: #c750ff;
-}
-
-.space-networks .network-other {
-    color: var(--c-grey-05);
-}
-
-.space-networks .network-missions {
-    color: #ff7455;
-}
-
-.space-networks .mars-illustration-link {
-    stroke-dasharray: 2, 7;
-    stroke: #c750ff;
-    margin-top: 140px;
-    margin-left: -103px;
-}
-
-/* DTN Table
-    --------------------------------------------------------------- */
-
-.dtn-table-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: var(--space2) 0;
-}
-
-.dtn-table-grid .cell {
-    font-size: var(--t-size-2);
-    font-style: italic;
-    color: var(--theme-text-1);
-    line-height: var(--t-lH4);
-    padding-right: var(--space4);
-}
-
-.dtn-table-grid .cell-header {
-    font-weight: 500;
-    border-bottom: var(--theme-border-3);
-    padding-bottom: var(--space2);
-    margin-bottom: var(--space1);
-}
-
-.dtn-table-grid .cell-meta {
-    color: var(--theme-text-4);
-}
-
-/* DTN Networking
-    --------------------------------------------------------------- */
-
-.dtn-networking {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-}
-
-.dtn-networking > *:not(:first-child) {
-    margin-top: calc(var(--space4) + var(--space2));
-}
-
-.dtn-networking-main {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-start;
-    align-self: stretch;
-}
-
-.dtn-networking .left,
-.dtn-networking .right {
-    position: relative;
-    flex: 0 0 auto;
-}
-.dtn-networking .right {
-    margin-top: 15px;
-}
-
-.dtn-networking .mid {
-    position: relative;
-    flex: 1 1 auto;
-    margin-top: 55px;
-}
-
-.dtn-networking-earth,
-.dtn-networking-mars {
-    display: inline-block;
-    vertical-align: top;
-    height: auto;
-}
-
-.dtn-networking-earth {
-    width: 168px;
-}
-
-.dtn-networking-mars {
-    width: 136px;
-}
-
-.dtn-networking .mars-illustration-earth,
-.dtn-networking .mars-illustration-mars {
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.dtn-networking .mars-illustration-earth {
-    width: 90px;
-}
-
-.dtn-networking .mars-illustration-mars {
-    width: 60px;
-}
-
-.dtn-networking-mid-top {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-start;
-}
-
-.dtn-networking-mid-top > *:not(.mars-illustration-link) {
-    flex: 0 0 auto;
-}
-
-.dtn-networking-mid-top .mars-illustration-link {
-    flex: 1 1 auto;
-    stroke-dasharray: 2, 7;
-    margin-top: 14px;
-}
-
-.dtn-networking-mid-top .mars-illustration-satellite-small {
-    width: 29px;
-    height: auto;
-}
-
-.dtn-networking-bundle-small {
-    width: 9px;
-    height: 9px;
-    box-sizing: border-box;
-    border: 1px solid var(--theme-text-1);
-    border-radius: 3px;
-    margin: 10px 5px 0;
-}
-
-.dtn-networking-bundle-indicators {
-    width: 46.7%;
-    height: auto;
-    margin: var(--space1) 0 var(--space2_5);
-}
-
-.dtn-networking-filled-node {
-    width: 111px;
-    height: 111px;
-    margin-right: var(--space4);
-}
-
-.dtn-networking-bottom {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-}
-
-.dtn-networking-bottom .icon {
-    fill: var(--c-blue-06-main);
-}
-
-/* Ship YouTube
-    --------------------------------------------------------------- */
-
-.ship-youtube {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: stretch;
-}
-
-.ship-youtube > *:not(:first-child) {
-    margin-top: calc(var(--space4) + var(--space2));
-}
-
-.ship-youtube .mars-illustration-title {
-    align-self: center;
-}
-
-.ship-youtube-main {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-start;
-}
-
-.ship-youtube-main > *:not(.ship-youtube-link) {
-    flex: 0 0 auto;
-}
-
-.ship-youtube-main .ship-youtube-link {
-    position: relative;
-    flex: 1 1 auto;
-    margin: 141px var(--space3) 0;
-    height: 12px;
-    opacity: 0.3;
-}
-
-.ship-youtube-main .mars-illustration-link {
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.ship-youtube .ship-youtube-link:before {
-    content: "";
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border-top: 1px solid var(--theme-text-1);
-    border-right: 1px solid var(--theme-text-1);
-    transform-origin: 50% 50%;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%) rotate(45deg);
-}
-
-.ship-youtube-step {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-}
-
-.ship-youtube-aws-snowball {
-    width: 33px;
-    height: auto;
-}
-
-.ship-youtube-payload-grid {
-    width: 53px;
-    height: auto;
-}
-
-.ship-youtube-falcon-heavy {
-    width: 40px;
-    height: auto;
-}
-
-.ship-youtube-falcon-heavy-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: var(--space3_5) var(--space3);
-}
-
-.ship-youtube-falcon-heavy-grid .ship-youtube-falcon-heavy {
-    width: 14px;
-    height: auto;
-}
-
-.ship-youtube-step .mars-illustration-text {
-    text-align: center;
-}
-
-.ship-youtube-step-1 {
-    margin-top: 113px;
-}
-
-.ship-youtube-step-1 .mars-illustration-text {
-    margin-top: 65px;
-}
-
-.ship-youtube-step-2 {
-    margin-top: 56px;
-}
-
-.ship-youtube-step-2 .mars-illustration-text {
-    margin-top: 55px;
-}
-
-.ship-youtube-step-3 .mars-illustration-text {
-    margin-top: 24px;
-}
-
-.ship-youtube-step-4 {
-    margin-top: 39px;
-}
-
-.ship-youtube-step-4 .mars-illustration-text {
-    margin-top: 40px;
-}
-
-.ship-youtube .mars-illustration-closing .mars-illustration-text-large span {
-    color: var(--theme-text-4);
-}
-
-.ship-youtube .mars-illustration-closing-line:before,
-.ship-youtube .mars-illustration-closing-line:after {
-    display: none;
-}
-
-.ship-youtube .mars-illustration-closing .mars-illustration-text-emoji {
-    font-size: 24px;
-    width: 32px;
-    height: 32px;
-}
-
-@media (max-width: 800px) {
-    .artwork {
-        max-height: 1535px;
-    }
-
+@media (max-width: 600px) {
     .page-mars .artwork-story {
         width: 88%;
     }
@@ -1350,5 +769,1190 @@
     }
 
     .mars-artwork-orbit {
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .mars-artwork-orbit-earth {
+        width: 287.78%;
+        height: 264.32%;
+        top: -248.65%;
+    }
+
+    .mars-artwork-orbit-satellite {
+        display: none;
+        width: 441.48%;
+        height: 405.7%;
+        top: -348.43%;
+    }
+
+    .mars-artwork-orbit-mars {
+        width: 575.28%;
+        height: 528.64%;
+        top: -436.46%;
+    }
+}
+
+/* Habitat+Distance
+    --------------------------------------------------------------- */
+
+.habitat-distance {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.habitat-distance-whole {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: -25px;
+}
+
+.habitat-distance .left,
+.habitat-distance .mid,
+.habitat-distance .right {
+    flex: 0 0 auto;
+}
+
+.habitat-distance .left,
+.habitat-distance .mid,
+.habitat-distance .right,
+.habitat-distance .link-1,
+.habitat-distance .link-2 {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.habitat-distance .mars-illustration-earth {
+    width: 150px;
+}
+
+.habitat-distance .mars-illustration-mars {
+    width: 100px;
+}
+
+.habitat-distance .link-1 {
+    flex: 4 1 auto;
+}
+
+.habitat-distance .link-2 {
+    flex: 1 4 auto;
+}
+
+.habitat-distance .mars-illustration-link {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.habitat-distance .link-1 .mars-illustration-link {
+    stroke: #00ff00;
+    stroke-dasharray: 3, 2;
+}
+
+.habitat-distance .link-2 .mars-illustration-link {
+    opacity: 0.3;
+}
+
+.habitat-distance-distance-caption span {
+    margin-bottom: var(--space1);
+}
+
+.habitat-distance-distance-caption .mars-illustration-link {
+    display: none;
+    stroke: #00ff00;
+    stroke-dasharray: 3, 2;
+    width: var(--space3);
+    margin-right: var(--space2);
+    vertical-align: 0.55em;
+}
+
+.habitat-distance .left {
+    margin-left: -25px;
+}
+
+.habitat-distance .link-1 {
+    padding-top: 75px;
+}
+
+.habitat-distance .mid {
+    padding-top: 25px;
+}
+
+.habitat-distance .mid .mars-illustration-caption {
+    padding-top: 25px;
+}
+
+.habitat-distance .link-2 {
+    padding-top: 75px;
+}
+
+.habitat-distance .right {
+    padding-top: 45px;
+    padding-left: var(--space2_5);
+}
+
+.habitat-distance .right .mars-illustration-caption {
+    padding-top: 61px;
+}
+
+.habitat-distance .habitat-distance-nowifi {
+    fill: none;
+    width: 61px;
+    height: 60px;
+    stroke: var(--theme-text-1);
+}
+
+.habitat-distance-distance-only {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    opacity: 0;
+    height: 0;
+}
+
+.habitat-distance-distance-only .top {
+    position: relative;
+    width: 256px;
+}
+
+.habitat-distance-distance-only .mars-illustration-caption {
+    margin-top: var(--space4);
+}
+
+.habitat-distance-distance-only .habitat-distance-distance-caption .mars-illustration-link {
+    display: inline-block;
+}
+
+.habitat-distance-distance {
+    width: 215px;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.habitat-distance-distance-only .mars-illustration-earth,
+.habitat-distance-distance-only .mars-illustration-mars {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.habitat-distance-distance-only .mars-illustration-earth {
+    width: 24px;
+    height: auto;
+    left: 176px;
+    top: 98px;
+}
+
+.habitat-distance-distance-only .mars-illustration-mars {
+    width: 16px;
+    height: auto;
+    left: 212px;
+    top: 81px;
+}
+
+.habitat-distance-distance-only-text-earth,
+.habitat-distance-distance-only-text-mars {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.habitat-distance-distance-only-text-earth {
+    top: 91px;
+    left: 124px;
+}
+
+.habitat-distance-distance-only-text-mars {
+    top: 74px;
+    left: 226px;
+}
+
+@media (max-width: 640px) {
+    .habitat-distance-distance-only {
+        opacity: 1;
+        height: auto;
+        margin-bottom: var(--space4_5);
+    }
+
+    .habitat-distance-whole .link-1 {
+        display: none;
+    }
+
+    .habitat-distance-whole .left {
+        margin-right: 6%;
+    }
+}
+
+@media (max-width: 480px) {
+    .habitat-distance-whole .mars-illustration-earth {
+        width: 120px;
+    }
+
+    .habitat-distance-whole .mars-illustration-mars {
+        width: 80px;
+    }
+
+    .habitat-distance-whole .habitat-distance-nowifi {
+        width: 48px;
+        height: auto;
+    }
+
+    .habitat-distance-whole .mid .mars-illustration-caption {
+        padding-top: 15px;
+    }
+
+    .habitat-distance-whole .right .mars-illustration-caption {
+        padding-top: 41px;
+    }
+
+    .habitat-distance-whole .link-2 {
+        padding-top: 65px;
+    }
+}
+
+@media (max-width: 380px) {
+    .habitat-distance-whole .right {
+        padding-left: 0;
+    }
+    .habitat-distance-whole .mid {
+        margin-left: -20px;
+    }
+}
+
+/* Handshake
+    --------------------------------------------------------------- */
+
+.handshake {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-bottom: var(--space4);
+}
+
+.handshake-whole {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.handshake .left,
+.handshake .right {
+    flex: 0 0 auto;
+}
+
+.handshake .mid {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 0 calc(var(--space2) + var(--space1));
+}
+
+.handshake .mid > *:not(:first-child) {
+    margin-top: calc(var(--space4) + var(--space2));
+}
+
+.handshake .mars-illustration-earth {
+    width: 150px;
+}
+
+.handshake .mars-illustration-mars {
+    width: 100px;
+}
+
+.handshake .left {
+    padding-top: 87px;
+}
+
+.handshake .left .mars-illustration-earth {
+    margin-left: -25px;
+}
+
+.handshake .right {
+    padding-top: 112px;
+}
+
+.handshake .right .mars-illustration-mars {
+    margin-right: -25px;
+}
+
+.handshake > .mars-illustration-title {
+    display: none;
+}
+
+.handshake > .mars-illustration-title .icon {
+    margin-right: var(--space2_5);
+    width: 24px;
+    height: 24px;
+}
+
+.handshake-whole .mars-illustration-title {
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.handshake-whole .mars-illustration-title .icon {
+    margin-right: 0;
+    width: 32px;
+    height: 32px;
+}
+
+.handshake .mars-illustration-closing {
+    align-self: stretch;
+}
+
+.handshake-packets {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    align-self: stretch;
+}
+
+.handshake-packets .packet {
+    position: relative;
+    text-align: center;
+}
+
+.handshake-packets .packet:not(:first-child) {
+    margin-top: var(--space1);
+}
+
+.handshake-packets .packet .mars-illustration-link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    stroke-dasharray: 2, 7;
+    transform: translateY(-0.5px);
+    z-index: 10;
+}
+
+.handshake-packets .packet .mars-illustration-text {
+    position: relative;
+    display: inline-block;
+    padding: var(--space1);
+    background: var(--theme-content-bg-3);
+    z-index: 20;
+}
+
+.handshake-packets .packet:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid var(--theme-text-1);
+    border-right: 1px solid var(--theme-text-1);
+    transform-origin: 50% 50%;
+    top: 50%;
+}
+
+.handshake-packets .packet-1:before,
+.handshake-packets .packet-3:before {
+    right: calc(var(--space1) * -1);
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.handshake-packets .packet-2:before {
+    left: calc(var(--space2) * -1);
+    transform: translateY(-50%) rotate(-135deg);
+}
+
+@media (max-width: 480px) {
+    .handshake {
+        padding-bottom: var(--space3);
+    }
+
+    .handshake > .mars-illustration-title {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    .handshake-whole .mars-illustration-title {
+        display: none;
+    }
+
+    .handshake .mars-illustration-earth {
+        width: 70px;
+    }
+
+    .handshake .mars-illustration-mars {
+        width: 60px;
+    }
+
+    .handshake .left {
+        padding-top: 47px;
+    }
+
+    .handshake .left .mars-illustration-earth {
+        margin-left: -15px;
+    }
+
+    .handshake .right {
+        padding-top: 50px;
+    }
+
+    .handshake .right .mars-illustration-mars {
+        margin-right: -15px;
+    }
+}
+
+/* Space Networks
+    --------------------------------------------------------------- */
+
+.space-networks {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+}
+
+.space-networks .left,
+.space-networks .right {
+    position: relative;
+    flex: 0 0 auto;
+    z-index: 10;
+}
+
+.space-networks .top,
+.space-networks .bottom {
+    display: none;
+}
+
+.space-networks .mid {
+    position: relative;
+    flex: 1 1 auto;
+    z-index: 20;
+}
+
+.space-networks .space-networks-earth-top {
+    position: relative;
+    display: block;
+}
+
+.space-networks .left .space-networks-earth-top {
+    width: 280px;
+}
+
+.space-networks .space-networks-mars-top {
+    position: relative;
+    display: block;
+    width: 193px;
+    padding: 58px 0;
+}
+
+.space-networks .mars-illustration-earth {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.space-networks .space-networks-earth {
+    position: relative;
+    z-index: 20;
+    vertical-align: top;
+}
+
+.space-networks #mars-illustration-earth-land {
+    opacity: 0.18;
+}
+
+.space-networks .mars-illustration-mars {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.space-networks .space-networks-mars {
+    position: relative;
+    z-index: 20;
+    vertical-align: top;
+}
+
+.space-networks #mars-illustration-mars-land {
+    opacity: 0.22;
+}
+
+.space-networks .space-networks-earth .mars-illustration-text {
+    text-align: center;
+    font-size: var(--t-size-3);
+}
+
+.space-networks .space-networks-orbit-name {
+    position: absolute;
+}
+
+.space-networks .space-networks-orbit-name-leo {
+    top: 205px;
+    left: 45px;
+}
+
+.space-networks .space-networks-orbit-name-geo {
+    top: 240px;
+    left: 4px;
+}
+
+.space-networks .left .mars-illustration-caption,
+.space-networks .right .mars-illustration-caption {
+    margin-top: calc(var(--space4) + var(--space2));
+}
+
+.space-networks .mars-illustration-caption > *:not(:first-child) {
+    margin-top: var(--space2);
+}
+
+.space-networks .network-near-earth {
+    color: #16a650;
+}
+
+.space-networks .network-space {
+    color: #0d93f4;
+}
+
+.space-networks .network-deep-space {
+    color: #c750ff;
+}
+
+.space-networks .network-other {
+    color: var(--c-grey-05);
+}
+
+.space-networks .network-missions {
+    color: #ff7455;
+}
+
+.space-networks .mars-illustration-link {
+    stroke-dasharray: 2, 7;
+    stroke: #c750ff;
+    margin-top: 140px;
+    margin-left: -103px;
+}
+
+@media (max-width: 700px) {
+    .space-networks {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .space-networks .left,
+    .space-networks .right {
+        display: none;
+    }
+
+    .space-networks .top,
+    .space-networks .bottom {
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        z-index: 10;
+    }
+
+    .space-networks .top .mars-illustration-caption {
+        margin-bottom: calc(var(--space4) + var(--space2));
+    }
+
+    .space-networks .bottom .mars-illustration-caption {
+        margin-top: var(--space4);
+    }
+
+    .space-networks .top .space-networks-earth-top {
+        width: 280px;
+        height: auto;
+    }
+
+    .space-networks .bottom .space-networks-mars-top {
+        width: 184px;
+        height: auto;
+        padding: 0;
+    }
+
+    .space-networks .space-networks-earth-small {
+        position: relative;
+        z-index: 20;
+        vertical-align: top;
+    }
+
+    .space-networks .space-networks-mars-small {
+        position: relative;
+        z-index: 20;
+        vertical-align: top;
+    }
+
+    .space-networks .space-networks-orbit-name-geo {
+        left: 12px;
+    }
+
+    .space-networks .mid {
+        height: 56px;
+    }
+
+    .space-networks .mars-illustration-link {
+        position: absolute;
+        margin-top: -102px;
+        margin-left: 1px;
+        width: 162px;
+        transform-origin: top left;
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .space-networks {
+        padding-top: var(--space3);
+    }
+
+    .space-networks .top .space-networks-earth-top {
+        width: 250px;
+    }
+
+    .space-networks .bottom .space-networks-mars-top {
+        width: 164px;
+    }
+
+    .space-networks .space-networks-orbit-name-geo {
+        left: 48px;
+        top: 167px;
+    }
+
+    .space-networks .space-networks-orbit-name-leo {
+        left: 20px;
+        top: 200px;
+    }
+
+    .space-networks .mars-illustration-link {
+        margin-top: -89px;
+        width: 145px;
+    }
+}
+
+/* DTN Table
+    --------------------------------------------------------------- */
+
+.dtn-table-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--space2) 0;
+    min-width: 458px;
+}
+
+.dtn-table-grid .cell {
+    font-size: var(--t-size-2);
+    font-style: italic;
+    color: var(--theme-text-1);
+    line-height: var(--t-lH4);
+    padding-right: var(--space4);
+}
+
+.dtn-table-grid .cell-header {
+    font-weight: 500;
+    border-bottom: var(--theme-border-3);
+    padding-bottom: var(--space2);
+    margin-bottom: var(--space1);
+}
+
+.dtn-table-grid .cell-meta {
+    color: var(--theme-text-4);
+}
+
+@media (max-width: 600px) {
+    .dtn-table {
+        position: relative;
+        padding: 0;
+        margin: var(--space4) 0 calc(var(--space4) + var(--space3));
+        padding: var(--space3_5) 0 var(--space3_5);
+        overflow-x: scroll;
+        transition: var(--a-micro);
+        border-right: 1px solid transparent;
+        border-left: 1px solid transparent;
+    }
+
+    .dtn-table:not(.is-fully-scrolled) {
+        border-right: var(--theme-border-3);
+    }
+    .dtn-table.is-scrolled {
+        border-left: var(--theme-border-3);
+    }
+}
+
+/* DTN Networking
+    --------------------------------------------------------------- */
+
+.dtn-networking {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.dtn-networking > *:not(:first-child) {
+    margin-top: calc(var(--space4) + var(--space2));
+}
+
+.dtn-networking-main {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.dtn-networking .left,
+.dtn-networking .right {
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.dtn-networking .left {
+    margin-left: -13px;
+}
+
+.dtn-networking .right {
+    margin-top: 15px;
+    margin-right: -13px;
+}
+
+.dtn-networking .mid {
+    position: relative;
+    flex: 1 1 auto;
+    margin-top: 55px;
+}
+
+.dtn-networking-earth,
+.dtn-networking-mars {
+    display: inline-block;
+    vertical-align: top;
+    height: auto;
+}
+
+.dtn-networking-earth {
+    width: 166px;
+}
+
+.dtn-networking-mars {
+    width: 136px;
+}
+
+.dtn-networking-earth-small {
+    display: none;
+}
+
+.dtn-networking-mars-small {
+    display: none;
+}
+
+.dtn-networking .mars-illustration-earth,
+.dtn-networking .mars-illustration-mars {
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dtn-networking .mars-illustration-earth {
+    width: 90px;
+}
+
+.dtn-networking .mars-illustration-mars {
+    width: 60px;
+}
+
+.dtn-networking-mid-top {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+}
+
+.dtn-networking-mid-top > *:not(.mars-illustration-link) {
+    flex: 0 0 auto;
+}
+
+.dtn-networking-mid-top .mars-illustration-link {
+    flex: 1 1 auto;
+    stroke-dasharray: 2, 7;
+    margin-top: 14px;
+}
+
+.dtn-networking-mid-top .mars-illustration-link-vertical {
+    display: none;
+}
+
+.dtn-networking-mid-top .mars-illustration-satellite-small {
+    width: 29px;
+    height: auto;
+}
+
+.dtn-networking-bundle-small {
+    width: 9px;
+    height: 9px;
+    box-sizing: border-box;
+    border: 1px solid var(--theme-text-1);
+    border-radius: 3px;
+    margin: 10px 5px 0;
+}
+
+.dtn-networking-bundle-indicators {
+    width: 46.7%;
+    height: auto;
+    margin: var(--space1) 0 var(--space2_5);
+}
+
+.dtn-networking-bundle-indicators-vertical {
+    display: none;
+}
+
+.dtn-networking-filled-node {
+    width: 111px;
+    height: 111px;
+    margin-right: var(--space4);
+}
+
+.dtn-networking-bottom {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.dtn-networking-bottom .icon {
+    fill: var(--c-blue-06-main);
+}
+
+@media (max-width: 600px) {
+    .dtn-networking-main {
+        flex-flow: column nowrap;
+        align-self: center;
+        align-items: center;
+        width: 200px;
+    }
+
+    .dtn-networking .left {
+        margin-left: 0;
+    }
+
+    .dtn-networking .right {
+        margin-right: 0;
+    }
+
+    .dtn-networking-earth,
+    .dtn-networking-mars {
+        display: none;
+    }
+
+    .dtn-networking-earth-small {
+        display: block;
+        width: 140px;
+    }
+
+    .dtn-networking-mars-small {
+        display: block;
+        width: 110px;
+    }
+
+    .dtn-networking .right {
+        margin-top: 0;
+    }
+
+    .dtn-networking-main .mid {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        margin-top: 0;
+        align-self: stretch;
+        padding-left: 86px;
+    }
+
+    .dtn-networking-mid-top {
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .dtn-networking-mid-top .mars-illustration-link {
+        display: none;
+    }
+
+    .dtn-networking-mid-top .mars-illustration-link-vertical {
+        display: block;
+        flex: 1 1 auto;
+        stroke-dasharray: 2, 7;
+        height: 38px;
+        margin-left: 3px;
+    }
+
+    .dtn-networking-bundle-small {
+        margin: 5px 0 5px;
+    }
+
+    .dtn-networking-main .mid .mars-illustration-caption {
+        flex-flow: row nowrap;
+    }
+
+    .dtn-networking-main .mid .mars-illustration-caption span {
+        width: 50px;
+    }
+
+    .dtn-networking-bundle-indicators {
+        display: none;
+    }
+
+    .dtn-networking-bundle-indicators-vertical {
+        display: block;
+        height: 100px;
+        width: auto;
+        margin: 0 var(--space2_5) 0 var(--space1);
+    }
+
+    .dtn-networking-bottom .mars-illustration-icon-text {
+        flex-flow: row nowrap;
+        width: 70px;
+    }
+}
+
+/* Ship YouTube
+    --------------------------------------------------------------- */
+
+.ship-youtube {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+}
+
+.ship-youtube > *:not(:first-child) {
+    margin-top: calc(var(--space4) + var(--space2));
+}
+
+.ship-youtube .mars-illustration-title {
+    align-self: center;
+}
+
+.ship-youtube-main {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+}
+
+.ship-youtube-main > *:not(.ship-youtube-link) {
+    flex: 0 0 auto;
+}
+
+.ship-youtube-main .ship-youtube-link {
+    position: relative;
+    flex: 1 1 auto;
+    margin: 141px var(--space3) 0;
+    height: 12px;
+    opacity: 0.3;
+}
+
+.ship-youtube-main .mars-illustration-link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-0.5px);
+    z-index: 10;
+}
+
+.ship-youtube .ship-youtube-link:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid var(--theme-text-1);
+    border-right: 1px solid var(--theme-text-1);
+    transform-origin: 50% 50%;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.ship-youtube-step {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.ship-youtube-aws-snowball {
+    width: 33px;
+    height: auto;
+}
+
+.ship-youtube-payload-grid {
+    width: 53px;
+    height: auto;
+}
+
+.ship-youtube-falcon-heavy {
+    width: 40px;
+    height: auto;
+}
+
+.ship-youtube-falcon-heavy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: var(--space3_5) var(--space3);
+}
+
+.ship-youtube-falcon-heavy-grid .ship-youtube-falcon-heavy {
+    width: 14px;
+    height: auto;
+}
+
+.ship-youtube-step .mars-illustration-text {
+    text-align: center;
+}
+
+.ship-youtube-step-1 {
+    margin-top: 113px;
+}
+
+.ship-youtube-step-1 .mars-illustration-text {
+    margin-top: 65px;
+}
+
+.ship-youtube-step-2 {
+    margin-top: 56px;
+}
+
+.ship-youtube-step-2 .mars-illustration-text {
+    margin-top: 55px;
+}
+
+.ship-youtube-step-3 .mars-illustration-text {
+    margin-top: 24px;
+}
+
+.ship-youtube-step-4 {
+    margin-top: 39px;
+}
+
+.ship-youtube-step-4 .mars-illustration-text {
+    margin-top: 40px;
+}
+
+.ship-youtube .mars-illustration-closing .mars-illustration-text-large span {
+    color: var(--theme-text-4);
+}
+
+.ship-youtube .mars-illustration-closing-line:before,
+.ship-youtube .mars-illustration-closing-line:after {
+    display: none;
+}
+
+.ship-youtube .mars-illustration-closing .mars-illustration-text-emoji {
+    font-size: 24px;
+    width: 32px;
+    height: 32px;
+}
+
+@media (max-width: 650px) {
+    .ship-youtube {
+        align-items: stretch;
+        width: 256px;
+        margin: 0 auto;
+        padding-bottom: var(--space3);
+    }
+
+    .ship-youtube-main {
+        flex-flow: column nowrap;
+        align-items: stretch;
+    }
+
+    .ship-youtube-step {
+        margin-top: 0;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    .ship-youtube-step-1 {
+        padding-left: 53px;
+    }
+
+    .ship-youtube-step-2 {
+        padding-left: 43px;
+    }
+
+    .ship-youtube-step-3 {
+        padding-left: 49px;
+    }
+
+    .ship-youtube-step-4 {
+        padding-left: 0;
+    }
+
+    .ship-youtube-step .mars-illustration-text {
+        margin-top: 0;
+        width: 70px;
+        text-align: left;
+    }
+
+    .ship-youtube-main .ship-youtube-link {
+        margin: var(--space4) 0;
+        transform: rotate(90deg);
+        height: var(--space4);
+        width: var(--space4);
+        margin-left: 54px;
+    }
+}
+
+/* Globe Maps
+    --------------------------------------------------------------- */
+
+.globe-maps {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.globe-map {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    flex: 1 1 auto;
+    width: 238px;
+}
+
+.globe-map img {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+    margin-bottom: var(--space2);
+    border-radius: var(--corners-mid);
+}
+
+.globe-map:first-child {
+    margin-right: var(--space4);
+}
+
+.globe-map .mars-illustration-text,
+.globe-map .mars-illustration-text-small {
+    text-align: center;
+    font-weight: 300;
+}
+
+.globe-map .mars-illustration-text-small {
+    margin-top: var(--space1);
+}
+
+@media (max-width: 540px) {
+    .globe-maps {
+        flex-flow: column nowrap;
+    }
+
+    .globe-map:first-child {
+        margin-right: 0;
+        margin-bottom: var(--space4_5);
     }
 }

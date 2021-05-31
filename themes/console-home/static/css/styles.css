@@ -614,6 +614,7 @@ body:not(.page-feature, .page-feature-article):after {
     top: 0;
     max-height: 600px;
     overflow: hidden;
+    z-index: 10;
 }
 
 .artwork-background {
@@ -1470,12 +1471,7 @@ select.console-select::-ms-expand {
         z-index: 40;
     }
 
-    .artwork {
-        max-height: 800px;
-    }
-
     .main-feature-article {
-        margin-top: min(100vh, 800px);
         margin-bottom: calc(var(--space6) - var(--space4));
     }
 
@@ -1514,6 +1510,24 @@ select.console-select::-ms-expand {
     .main-nav .menu-toggle,
     .main-nav .menu-popup-wrapper {
         display: block;
+    }
+
+    @media (max-width: 600px) {
+        .artwork {
+            position: relative;
+            height: auto;
+            left: 0;
+            right: 0;
+            max-height: none;
+            padding: calc(var(--space6) + var(--space3)) 0 calc(var(--space5) + var(--space3_5));
+            margin-top: calc(calc(var(--space4) + var(--space2)) * -1);
+            margin-left: -12vw;
+            margin-right: -12vw;
+        }
+
+        .main-feature-article {
+            margin-top: var(--space5);
+        }
     }
 
     @media (max-width: 540px) {
@@ -1569,9 +1583,8 @@ select.console-select::-ms-expand {
             padding-right: 12vw;
         }
 
-        .artwork {
-            left: -12vw;
-            right: -12vw;
+        .main-feature-article {
+            margin-top: var(--space4_5);
         }
 
         .title.title-1 {
@@ -1619,8 +1632,8 @@ select.console-select::-ms-expand {
         }
 
         .artwork {
-            left: -10vw;
-            right: -10vw;
+            margin-left: -10vw;
+            margin-right: -10vw;
         }
 
         .console-form .console-button {
@@ -1646,11 +1659,6 @@ select.console-select::-ms-expand {
             padding-left: 12vw;
             padding-right: 12vw;
         }
-
-        .artwork {
-            left: -12vw;
-            right: -12vw;
-        }
     }
 
     @media (min-width: 601px) {
@@ -1666,6 +1674,10 @@ select.console-select::-ms-expand {
 
         .artwork {
             max-height: 600px;
+        }
+
+        .main-feature-article {
+            margin-top: min(100vh, 620px);
         }
 
         .main-article,
@@ -1719,7 +1731,8 @@ select.console-select::-ms-expand {
     }
 
     .main-feature-article {
-        margin: min(100vh, 700px) 0 calc(var(--space6) - var(--space2));
+        margin: min(100vh, 650px) 0 calc(var(--space6) - var(--space2));
+        z-index: 20;
     }
 
     .main-feature {
@@ -1747,8 +1760,12 @@ select.console-select::-ms-expand {
 
     .main-feature-article-content-split aside {
         flex: 0 0 auto;
-        max-width: 220px;
+        max-width: 100px;
         margin-left: 10vw;
+    }
+
+    .main-feature-article-content p:first-child {
+        margin-top: 0;
     }
 
     @media (max-aspect-ratio: 9/10) {
@@ -1757,6 +1774,13 @@ select.console-select::-ms-expand {
             margin-top: max(65%, 50vh);
             margin-left: 42vw;
         }
+    }
+}
+
+@media (min-width: 920px) {
+    .main-feature-article-content-split aside {
+        max-width: 160px;
+        margin-left: 14vw;
     }
 }
 
@@ -1774,6 +1798,11 @@ select.console-select::-ms-expand {
         margin-top: min(100vh, 800px);
     }
 
+    .main-feature-article-content-split aside {
+        max-width: 220px;
+        margin-left: 10vw;
+    }
+
     .col-2-css {
         columns: 2;
         column-gap: 32px;
@@ -1783,6 +1812,11 @@ select.console-select::-ms-expand {
 @media (min-width: 1152px) {
     .artwork {
         max-height: 750px;
+    }
+
+    .main-feature-article-content-split aside {
+        max-width: 320px;
+        margin-left: 12vw;
     }
 }
 
@@ -1803,9 +1837,27 @@ select.console-select::-ms-expand {
     .main-feature-article p.description {
         font-size: var(--t-size3);
     }
+
+    .main-feature-article ul li {
+        font-size: var(--t-size0);
+    }
 }
 
 @media (min-width: 1440px) {
+    .main-feature-article-content-split aside {
+        max-width: none;
+    }
+
+    .main-feature-article-content-split aside .toc-link {
+        font-size: var(--t-size-1);
+    }
+
+    .main-feature-article-content-split aside .toc-item-sub .toc-link {
+        font-size: var(--t-size-2);
+    }
+}
+
+@media (min-width: 1520px) {
     .main-feature-article-content-split aside {
         max-width: none;
     }

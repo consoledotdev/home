@@ -515,7 +515,7 @@ body:not(.mobile) .console-control:hover {
 
 .console-control:active,
 .console-control:focus {
-    color: var(--theme-control-active-text);
+    color: var(--theme-control-text-pressed);
     background: var(--theme-control-border);
     transition: var(--a-controls-active);
 }
@@ -571,7 +571,7 @@ body:not(.mobile) .console-control:hover:before {
 
 .console-control:active svg,
 .console-control:focus svg {
-    fill: var(--theme-control-active-text);
+    fill: var(--theme-control-text-pressed);
     transition: var(--a-controls-active);
 }
 

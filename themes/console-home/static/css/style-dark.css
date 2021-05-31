@@ -58,6 +58,7 @@
     --theme-control-bg: var(--c-grey-06-blacks-neutral);
     --theme-control-border: var(--c-grey-01-white-03);
     --theme-control-active-text: var(--c-grey-09-black-03);
+    --theme-control-text-pressed: var(--c-grey-03);
     --theme-control-text: var(--c-white-00-absolute);
 
     --theme-control-button-inactive-border: 1px solid rgba(255, 255, 255, 0.1);

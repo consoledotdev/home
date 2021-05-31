@@ -381,7 +381,7 @@
                 </h1>
                 <nav class="main-nav">
                     {{ partial "components/menu-toggle.html" }}
-                    <ul>
+                    <ul class="no-popup">
                         <li{{ if eq .context.Params.isSelected "about" }} class="is-selected"{{ end }}>
                             <a onclick="blur();" href="/about/">About</a>
                         </li>
@@ -396,7 +396,7 @@
                             <a onclick="blur();" href="/latest/">Newsletter</a>
                         </li>
                     </ul>
-                    <button onclick="blur(); toggleTheme()" class="console-control theme-switcher">
+                    <button onclick="blur(); toggleTheme()" class="console-control theme-switcher no-popup">
                         {{ partial "icons/theme.html" }}
                     </button>
                     <div class="menu-popup-wrapper">

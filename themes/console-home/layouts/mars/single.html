@@ -2,9 +2,9 @@
 	{{ $CTATitle := "Discover the best tools for developers" }}
 	{{ $CTADescription := "Our free weekly email features a digest of the best new tools and beta releases for developers. See the latest email." }}
 
+    <h2 class="title title-1">{{ .Params.title }}</h2>
     <div class="main-feature-article-content-split">
         <section class="page-section main-feature-article-content">
-            <h2 class="title title-1">{{ .Params.title }}</h2>
             <p class="description">{{ .Params.summary }}</p>
             {{ .Content }}
         </section>
@@ -29,4 +29,5 @@
 	<section class="page-section page-section-betas-root">
 		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
 	</section>
+	<script src="/js/mars.js"></script>
 {{ end }}

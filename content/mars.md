@@ -354,6 +354,8 @@ gives us a glimpse of an alternative approach: launch thousands of low-Mars
 orbit satellites and give customers hardware receivers for high-speed
 connectivity anywhere on the planet.
 
+{{< mars/globe-maps >}}
+
 Indeed, whether it is just a hidden marketing Easter-egg or not, the
 [current Starlink Terms of Service already cover Mars](https://www.starlink.com/legal/terms-of-service?regionCode=US):
 
