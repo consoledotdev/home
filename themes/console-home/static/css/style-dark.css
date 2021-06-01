@@ -118,7 +118,7 @@
     --theme-mars-mars-shading: inset 0.2em 0 0.34em rgba(255, 0, 0, 0.1), inset 0 0 0.04em rgba(255, 0, 0, 0.3);
     --theme-mars-mars-texture: url("/img/mars/mars-texture-dark.png");
 
-    --theme-connector-green: #00ff00;
+    --theme-mars-connector-green: #00ff00;
     --theme-mars-masking-bg: var(--c-grey-09-black-03);
     --theme-mars-snowball-color: var(--c-grey-02);
     --theme-mars-orbit-opacity: 0.3;
