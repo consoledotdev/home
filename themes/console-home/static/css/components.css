@@ -1000,3 +1000,26 @@ body:not(.mobile) .console-control:hover:before {
     font-size: var(--t-size-3);
     font-weight: 500;
 }
+
+/* Plane Picture
+    Only setting height is necessary, the width will be defined by the children ratio img  
+   ================================================================================================================ */
+
+.plane-picture {
+    position: relative;
+    display: inline-block;
+    height: 100px;
+    clip-path: polygon(30.9% 0%, 0% 100%, 69.1% 100%, 100% 0%);
+}
+
+.plane-picture .ratio {
+    height: 100%;
+    display: block;
+    visibility: hidden;
+}
+
+.plane-picture .image {
+    border-radius: 0;
+    top: 0;
+    left: 0;
+}
