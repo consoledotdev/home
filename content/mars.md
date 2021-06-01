@@ -10,6 +10,17 @@ pageType: feature-article
 headerType: fixed
 hidePlanes: true
 hideLines: true
+authorName: David Mytton
+authorURL: https://davidmytton.blog/start
+authorImg: /img/david.jpg
+authorBio:
+  is co-founder of Console. He previously co-founded server monitoring startup,
+  Server Density, where he built the original version of the product in Python
+  and grew the business to acquisition in 2018, at which point it was used by
+  hundreds of customers to collect billions of time series metrics from millions
+  of servers. More recently, he has been researching sustainable computing at
+  Imperial College London & Uptime Institute, which he continues to do alongside
+  running Console.
 ---
 
 There are many challenges to building human settlements on Mars. The most
@@ -36,6 +47,8 @@ longer be true if we want to offer the same experience to citizens of Mars.
 
 This article will examine those assumptions, discuss the challenges and consider
 possible solutions to setting up the internet on Mars.
+
+{{< nav-wrapper id="wrapper-1" anchor-name="a-earths-internet" >}}
 
 ### Earth’s internet
 
@@ -68,6 +81,10 @@ performance.
 This is a simplified description, but is sufficient to understand the challenges
 with establishing the internet on Mars.
 
+{{< nav-wrapper close="true" >}}
+
+{{< nav-wrapper id="wrapper-2" anchor-name="a-the-problem-with-connecting-mars--earth" >}}
+
 ### The problem with connecting Mars & Earth
 
 Whilst the average
@@ -91,6 +108,10 @@ otherwise they will be re-transmitted. For Earth/Mars communication, this is
 impossible.
 
 {{< mars/handshake >}}
+
+{{< nav-wrapper close="true" >}}
+
+{{< nav-wrapper id="wrapper-3" anchor-name="a-separate-earth-and-mars-internet" >}}
 
 ### Separate Earth and Mars internet
 
@@ -121,6 +142,10 @@ Users of relational databases like MySQL and PostgreSQL tend to make use of them
 for their [ACID](https://en.wikipedia.org/wiki/ACID) properties. Atomicity and
 Consistency are important for use cases like finance, but replicating
 transactions over high-latency connectivity would be a challenge.
+
+{{< nav-wrapper close="true" >}}
+
+{{< nav-wrapper id="wrapper-4" anchor-name="a-blockchain-crypto--eventual-consistency"  >}}
 
 #### Blockchain, crypto & eventual consistency
 
@@ -161,6 +186,10 @@ Peer communication - once one IPFS user on Mars has downloaded a copy of the
 file, it can serve it to other users locally. But how do the files get there in
 the first place?
 
+{{< nav-wrapper close="true" >}}
+
+{{< nav-wrapper id="wrapper-5" anchor-name="a-interplanetary-networking" >}}
+
 {{< rich-title-3 icon="broadcast" id="interplanetary-networking" >}}
 Interplanetary networking {{</ rich-title-3 >}}
 
@@ -187,6 +216,10 @@ most recently with the command and control
 [Mars Relay Network for the Perseverance Mars Rover](https://www.nasa.gov/feature/jpl/the-mars-relay-network-connects-us-to-nasa-s-martian-explorers).
 These networks may form part of an Interplanetary Network, especially the
 near-Earth components, but are not a complete, general purpose solution.
+
+{{< nav-wrapper close="true" >}}
+
+{{< nav-wrapper id="wrapper-6" anchor-name="a-delay-tolerant-networking" >}}
 
 #### Delay-Tolerant Networking
 
@@ -254,6 +287,10 @@ in draft, and has reference implementations in various languages including
 [C](https://upcn.eu), [Go](https://github.com/dtn7/dtn7-go) and
 [Rust](https://github.com/dtn7/dtn7-rs/).
 
+{{< nav-wrapper close="true" >}}
+
+{{< nav-wrapper id="wrapper-7" anchor-name="a-very-long-round-trip-times" >}}
+
 #### Very long round trip times
 
 Applications will also need to be refactored so they become delay-tolerant and
@@ -276,6 +313,10 @@ development or IP in live environments). LTP has several features, such as no
 handshake, options for reliable and unreliable transmission, and unidirectional
 communication to avoid contention by waiting for a response.
 
+{{< nav-wrapper close="true" >}}
+
+{{< nav-wrapper id="wrapper-8" anchor-name="a-overlay-network" >}}
+
 #### Overlay network
 
 The physical implementation of DTN and LTP is through the
@@ -293,6 +334,10 @@ The sheer distance means that communication delays are unavoidable, but the
 protocols allow for time-sensitive communication between planets. However, where
 time is not especially important, local storage of data with periodic refreshes
 could be an alternative.
+
+{{< nav-wrapper close="true" >}}
+
+{{< nav-wrapper id="wrapper-9" anchor-name="a-transporting-large-files-to-mars" >}}
 
 ### Transporting large files to Mars
 
@@ -333,6 +378,10 @@ Snowball devices themselves.
 
 {{< mars/ship-youtube >}}
 
+{{< nav-wrapper close="true" >}}
+
+{{< nav-wrapper id="wrapper-10" anchor-name="a-internet-access-on-mars" >}}
+
 ### Internet access on Mars
 
 How will we access the internet on Mars itself? Will the Mars pioneers follow
@@ -369,6 +418,8 @@ that no Earth-based government has authority or sovereignty over Martian
 activities. Accordingly, Disputes will be settled through self-governing
 principles, established in good faith, at the time of Martian settlement.
 {{< /quote >}}
+
+{{< nav-wrapper close="true" >}}
 
 ##### Links
 

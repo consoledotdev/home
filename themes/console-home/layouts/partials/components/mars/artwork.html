@@ -17,7 +17,7 @@
             {{ partial "components/mars/artwork/data-bundle-mars.html" }}
         </div>
         <div class="mars-artwork-center">
-            {{ partial "components/mars/artwork/earth-large.html" }}
+            {{ partial "components/mars/shared/the-earth.html" (dict "context" . "isLarge" "true") }}
             <div class="mars-artwork-satellite-vertical-layout">
                 <div class="mars-artwork-satellite-move mars-artwork-satellite-move-1">
                     <img class="move1" src="/img/mars/artwork-satellite-outline.png">
@@ -90,7 +90,7 @@
             <div class="mars-artwork-satellite-move mars-artwork-satellite-move-10">
                 <img class="move5" src="/img/mars/artwork-satellite-outline.png">
             </div>
-            {{ partial "components/mars/artwork/mars-large.html" }}
+            {{ partial "components/mars/shared/the-mars.html" (dict "context" . "isLarge" "true") }}
         </div>
     </div>
 </div>

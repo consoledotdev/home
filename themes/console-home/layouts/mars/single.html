@@ -2,27 +2,36 @@
 	{{ $CTATitle := "Discover the best tools for developers" }}
 	{{ $CTADescription := "Our free weekly email features a digest of the best new tools and beta releases for developers. See the latest email." }}
 
-    <h2 class="title title-1">{{ .Params.title }}</h2>
     <div class="main-feature-article-content-split">
         <section class="page-section main-feature-article-content">
+            <h2 class="title title-1">{{ .Params.title }}</h2>
             <p class="description">{{ .Params.summary }}</p>
+            <div class="page-meta">
+                <p class="small"><a href="{{ .Params.authorURL }}" class="link" rel="me">{{ .Params.authorName }}</a></p>
+                <p class="small">
+                    <span class="page-meta-separator">&mdash;</span>
+                    {{ .Lastmod.Format "2006-01-02" }}
+                </p>
+            </div>
             {{ .Content }}
+            {{ partial "components/author.html" (dict "context" . "bio" .Params.authorBio "img" .Params.authorImg "name" .Params.authorName ) }}
+            {{ partial "components/about-console.html" }}
 		    {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
         </section>
-        <aside class="main-feature-article-aside">
-            <div class="toc">
+        <aside class="main-feature-article-aside" data-aside>
+            <div class="toc" data-toc>
                 <h5 class="title title-4">Contents</h5>
                 <ul>
-                    <li class="toc-item"><a class="toc-link" href="#earths-internet">Earth's internet</a></li>
-                    <li class="toc-item"><a class="toc-link" href="#the-problem-with-connecting-mars--earth">The problem with connecting Mars & Earth</a></li></li>
-                    <li class="toc-item"><a class="toc-link" href="#separate-earth-and-mars-internet">Separate Earth and Mars internet</a></li>
-                    <li class="toc-item toc-item-sub"><a class="toc-link" href="#blockchain-crypto--eventual-consistency">Blockchain, crypto & eventual consistency</a></li>
-                    <li class="toc-item"><a class="toc-link" href="#interplanetary-networking">Interplanetary networking</a></li>
-                    <li class="toc-item toc-item-sub"><a class="toc-link" href="#delay-tolerant-networking">Delay-Tolerant Networking</a></li>
-                    <li class="toc-item toc-item-sub"><a class="toc-link" href="#very-long-round-trip-times">Very long round trip times</a></li>
-                    <li class="toc-item toc-item-sub"><a class="toc-link" href="#overlay-network">Overlay network</a></li>
-                    <li class="toc-item"><a class="toc-link" href="#transporting-large-files-to-mars">Transporting large files to Mars</a></li>
-                    <li class="toc-item"><a class="toc-link" href="#internet-access-on-mars">Internet access on Mars</a></li>
+                    <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-1" href="#a-earths-internet">Earth's internet</a></li>
+                    <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-2" href="#a-the-problem-with-connecting-mars--earth">The problem with connecting Mars & Earth</a></li></li>
+                    <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-3" href="#a-separate-earth-and-mars-internet">Separate Earth and Mars internet</a></li>
+                    <li class="toc-item toc-item-sub"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-4" href="#a-blockchain-crypto--eventual-consistency">Blockchain, crypto & eventual consistency</a></li>
+                    <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-5" href="#a-interplanetary-networking">Interplanetary networking</a></li>
+                    <li class="toc-item toc-item-sub"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-6" href="#a-delay-tolerant-networking">Delay-Tolerant Networking</a></li>
+                    <li class="toc-item toc-item-sub"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-7" href="#a-very-long-round-trip-times">Very long round trip times</a></li>
+                    <li class="toc-item toc-item-sub"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-8" href="#a-overlay-network">Overlay network</a></li>
+                    <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-9" href="#a-transporting-large-files-to-mars">Transporting large files to Mars</a></li>
+                    <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-10" href="#a-internet-access-on-mars">Internet access on Mars</a></li>
                 </ul>
             </div>
         </aside>

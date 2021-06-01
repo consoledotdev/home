@@ -4,7 +4,7 @@
 .page-mars:not(.is-scrolled) .header .logo-wrapper,
 .page-mars:not(.is-scrolled) .header .menu-toggle,
 .page-mars:not(.is-scrolled) .header ul.no-popup,
-.page-mars:not(.is-scrolled) .header .console-control-no-popup {
+.page-mars:not(.is-scrolled) .header .console-control.no-popup {
     --theme-text-1: var(--c-white-00-absolute);
     --theme-p1-stroke: var(--c-blue-06-main);
     --theme-p2-stroke: var(--c-fuchsia-05-main);
@@ -26,6 +26,16 @@
     --theme-badge-bg: var(--c-fuchsia-06);
 }
 
+.artwork {
+    --theme-mars-earth-halo: 0 0 0.25em rgba(0, 0, 255, 0.3);
+    --theme-mars-earth-shading: inset 0.2em 0 0.34em rgba(0, 0, 255, 0.1), inset 0 0 0.04em rgba(0, 0, 255, 0.3);
+    --theme-mars-earth-texture-opacity: 1;
+
+    --theme-mars-mars-halo: 0 0 0.25em rgba(255, 0, 0, 0.3);
+    --theme-mars-mars-shading: inset 0.2em 0 0.34em rgba(255, 0, 0, 0.1), inset 0 0 0.04em rgba(255, 0, 0, 0.3);
+    --theme-mars-mars-texture-opacity: 1;
+}
+
 .page-mars:not(.is-scrolled) .logo-svg-animated-explode .prompt-inverted {
     display: none;
 }
@@ -41,6 +51,18 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
 
 .page-mars .page-section .subscribe-cta {
     margin-top: calc(var(--space4) + var(--space3));
+}
+
+.page-mars .page-section .author-box {
+    margin-top: var(--space4_5);
+}
+
+.page-mars .page-section .about-console-box {
+    margin-top: var(--space4_5);
+}
+
+.page-mars .page-meta {
+    margin-bottom: calc(var(--space4) + var(--space3));
 }
 
 /* Illustrations
@@ -172,7 +194,7 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
     width: 28px;
     height: 28px;
     line-height: 24px;
-    background: var(--theme-content-bg-3);
+    background: var(--theme-mars-masking-bg);
     z-index: 20;
 }
 
@@ -182,6 +204,94 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
 
 .mars-illustration-foreground-fill {
     fill: var(--theme-text-1);
+}
+
+.mars-illustration-green-connector {
+    stroke: var(--theme-mars-connector-green);
+}
+
+.mars-illustration-orbit {
+    opacity: var(--theme-mars-orbit-opacity);
+}
+
+.mars-illustration-earth {
+    position: relative;
+    border-radius: 100%;
+    background: #c1edff;
+    box-shadow: var(--theme-mars-earth-halo);
+    font-size: 100px;
+    height: 1em;
+    width: 1em;
+}
+
+.mars-illustration-earth-inner-shading {
+    position: absolute;
+    border-radius: 100%;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: var(--theme-mars-earth-shading);
+    z-index: 20;
+}
+
+.mars-illustration-earth-texture {
+    position: absolute;
+    border-radius: 100%;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: var(--theme-mars-earth-texture);
+    background-size: auto 100%;
+    background-position: 41.42% 0;
+    z-index: 10;
+}
+
+.is-large .mars-illustration-earth-texture {
+    background-image: url("/img/mars/earth-texture-large.png");
+}
+
+.mars-illustration-mars {
+    position: relative;
+    border-radius: 100%;
+    background: #c1edff;
+    box-shadow: var(--theme-mars-mars-halo);
+    font-size: 50px;
+    height: 1em;
+    width: 1em;
+}
+
+.mars-illustration-mars-inner-shading {
+    position: absolute;
+    border-radius: 100%;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: var(--theme-mars-mars-shading);
+    z-index: 20;
+}
+
+.mars-illustration-mars-texture {
+    position: absolute;
+    border-radius: 100%;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: var(--theme-mars-mars-texture);
+    background-size: auto 100%;
+    background-position: 0 0;
+    z-index: 10;
+}
+
+.is-large .mars-illustration-mars-texture {
+    background-image: url("/img/mars/mars-texture-large.png");
 }
 
 /* Artwork
@@ -209,18 +319,22 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
     z-index: 20;
 }
 
-.mars-illustration-earth-large {
-    width: 39%;
-    height: auto;
-    margin: -8%;
+.artwork .mars-illustration-earth {
+    width: 22.84%;
+    padding-bottom: 22.84%;
+    margin: 0;
     flex: 0 0 auto;
+    font-size: 200px;
+    height: 0;
 }
 
-.mars-illustration-mars-large {
-    width: 27.6%;
-    height: auto;
-    margin: -8%;
+.artwork .mars-illustration-mars {
+    width: 11.42%;
+    padding-bottom: 11.42%;
+    height: 0;
     flex: 0 0 auto;
+    margin: 0;
+    font-size: 200px;
 }
 
 .mars-artwork-satellite-vertical-layout {
@@ -612,7 +726,21 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
     left: -476.7%;
 }
 
+@media (min-width: 601px) {
+    .page-mars .artwork {
+        padding: max(var(--space6), 8%) 0 10%;
+    }
+
+    .page-mars .artwork-story {
+        margin: 11.5% 0 10%;
+    }
+}
+
 @media (max-width: 600px) {
+    .page-mars .artwork {
+        padding: calc(var(--space6) + var(--space3)) 0 calc(var(--space5) + var(--space3_5));
+    }
+
     .page-mars .artwork-story {
         width: 88%;
     }
@@ -628,17 +756,18 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
         z-index: 20;
     }
 
-    .mars-illustration-earth-large {
-        width: 68.18%;
-        margin-left: 0;
-        margin: -14.2%;
+    .artwork .mars-illustration-earth {
+        width: 39.77%;
+        padding-bottom: 39.77%;
+        margin: 0;
     }
 
-    .mars-illustration-mars-large {
-        width: 48.29%;
-        margin-right: 0;
-        margin: -14.2%;
+    .artwork .mars-illustration-mars {
+        width: 19.89%;
+        padding-bottom: 19.89%;
+        margin: 0;
     }
+
     .mars-artwork-satellite {
         width: 28.69%;
         margin: 0;
@@ -810,7 +939,6 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
 .habitat-distance-whole {
     display: flex;
     flex-flow: row nowrap;
-    margin-top: -25px;
 }
 
 .habitat-distance .left,
@@ -830,19 +958,23 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
 }
 
 .habitat-distance .mars-illustration-earth {
-    width: 150px;
+    font-size: 100px;
 }
 
 .habitat-distance .mars-illustration-mars {
-    width: 100px;
+    font-size: 50px;
+}
+
+.habitat-distance .left {
+    padding-right: 4%;
 }
 
 .habitat-distance .link-1 {
-    flex: 4 1 auto;
+    flex: 2.5 1 auto;
 }
 
 .habitat-distance .link-2 {
-    flex: 1 4 auto;
+    flex: 1 2.5 auto;
 }
 
 .habitat-distance .mars-illustration-link {
@@ -852,7 +984,7 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
 }
 
 .habitat-distance .link-1 .mars-illustration-link {
-    stroke: #00ff00;
+    stroke: var(--theme-mars-connector-green);
     stroke-dasharray: 3, 2;
 }
 
@@ -866,35 +998,37 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
 
 .habitat-distance-distance-caption .mars-illustration-link {
     display: none;
-    stroke: #00ff00;
+    stroke: var(--theme-mars-connector-green);
     stroke-dasharray: 3, 2;
     width: var(--space3);
     margin-right: var(--space2);
     vertical-align: 0.55em;
 }
 
-.habitat-distance .left {
-    margin-left: -25px;
+.habitat-distance .left .mars-illustration-caption {
+    padding-top: var(--space3_5);
 }
 
 .habitat-distance .link-1 {
-    padding-top: 75px;
+    padding-top: 50px;
 }
 
 .habitat-distance .mid {
     padding-top: 25px;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 .habitat-distance .mid .mars-illustration-caption {
-    padding-top: 25px;
+    padding-top: calc(var(--space3_5) + 25px);
 }
 
 .habitat-distance .link-2 {
-    padding-top: 75px;
+    padding-top: 50px;
 }
 
 .habitat-distance .right {
-    padding-top: 45px;
+    padding-top: 20px;
     padding-left: var(--space2_5);
 }
 
@@ -944,16 +1078,14 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
 }
 
 .habitat-distance-distance-only .mars-illustration-earth {
-    width: 24px;
-    height: auto;
+    font-size: 16px;
     left: 176px;
     top: 98px;
 }
 
 .habitat-distance-distance-only .mars-illustration-mars {
-    width: 16px;
-    height: auto;
-    left: 212px;
+    font-size: 12px;
+    left: 213px;
     top: 81px;
 }
 
@@ -986,17 +1118,21 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
     }
 
     .habitat-distance-whole .left {
-        margin-right: 6%;
+        margin-right: 10%;
     }
 }
 
 @media (max-width: 480px) {
     .habitat-distance-whole .mars-illustration-earth {
-        width: 120px;
+        font-size: 80px;
     }
 
     .habitat-distance-whole .mars-illustration-mars {
-        width: 80px;
+        font-size: 40px;
+    }
+
+    .habitat-distance .habitat-distance-whole .mid {
+        padding-top: 20px;
     }
 
     .habitat-distance-whole .habitat-distance-nowifi {
@@ -1005,15 +1141,15 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
     }
 
     .habitat-distance-whole .mid .mars-illustration-caption {
-        padding-top: 15px;
+        padding-top: calc(var(--space3_5) + 20px);
     }
 
     .habitat-distance-whole .right .mars-illustration-caption {
-        padding-top: 41px;
+        padding-top: 51px;
     }
 
     .habitat-distance-whole .link-2 {
-        padding-top: 65px;
+        padding-top: 40px;
     }
 }
 
@@ -1021,8 +1157,8 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
     .habitat-distance-whole .right {
         padding-left: 0;
     }
-    .habitat-distance-whole .mid {
-        margin-left: -20px;
+    .habitat-distance .habitat-distance-whole .link-2 {
+        padding-left: 0;
     }
 }
 
@@ -1061,27 +1197,21 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
 }
 
 .handshake .mars-illustration-earth {
-    width: 150px;
+    font-size: 100px;
 }
 
 .handshake .mars-illustration-mars {
-    width: 100px;
+    font-size: 50px;
 }
 
 .handshake .left {
-    padding-top: 87px;
-}
-
-.handshake .left .mars-illustration-earth {
-    margin-left: -25px;
+    padding-top: 112px;
+    padding-right: 25px;
 }
 
 .handshake .right {
-    padding-top: 112px;
-}
-
-.handshake .right .mars-illustration-mars {
-    margin-right: -25px;
+    padding-top: 137px;
+    padding-left: 25px;
 }
 
 .handshake > .mars-illustration-title {
@@ -1140,7 +1270,7 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
     position: relative;
     display: inline-block;
     padding: var(--space1);
-    background: var(--theme-content-bg-3);
+    background: var(--theme-mars-masking-bg);
     z-index: 20;
 }
 
@@ -1182,27 +1312,21 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
     }
 
     .handshake .mars-illustration-earth {
-        width: 70px;
+        font-size: 47px;
     }
 
     .handshake .mars-illustration-mars {
-        width: 60px;
+        font-size: 30px;
     }
 
     .handshake .left {
-        padding-top: 47px;
-    }
-
-    .handshake .left .mars-illustration-earth {
-        margin-left: -15px;
+        padding-top: 58px;
+        padding-right: 15px;
     }
 
     .handshake .right {
-        padding-top: 50px;
-    }
-
-    .handshake .right .mars-illustration-mars {
-        margin-right: -15px;
+        padding-top: 65px;
+        padding-left: 10px;
     }
 }
 
@@ -1251,8 +1375,7 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
 
 .space-networks .mars-illustration-earth {
     position: absolute;
-    width: 150px;
-    height: auto;
+    font-size: 100px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1265,14 +1388,13 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
     vertical-align: top;
 }
 
-.space-networks #mars-illustration-earth-land {
-    opacity: 0.18;
+.space-networks .mars-illustration-earth-texture {
+    opacity: 0.22;
 }
 
 .space-networks .mars-illustration-mars {
     position: absolute;
-    width: 100px;
-    height: auto;
+    font-size: 50px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1285,8 +1407,8 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
     vertical-align: top;
 }
 
-.space-networks #mars-illustration-mars-land {
-    opacity: 0.22;
+.space-networks .mars-illustration-mars-texture {
+    opacity: 0.3;
 }
 
 .space-networks .space-networks-earth .mars-illustration-text {
@@ -1518,13 +1640,8 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
     flex: 0 0 auto;
 }
 
-.dtn-networking .left {
-    margin-left: -13px;
-}
-
 .dtn-networking .right {
     margin-top: 15px;
-    margin-right: -13px;
 }
 
 .dtn-networking .mid {
@@ -1558,7 +1675,6 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
 
 .dtn-networking .mars-illustration-earth,
 .dtn-networking .mars-illustration-mars {
-    height: auto;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1566,11 +1682,11 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
 }
 
 .dtn-networking .mars-illustration-earth {
-    width: 90px;
+    font-size: 60px;
 }
 
 .dtn-networking .mars-illustration-mars {
-    width: 60px;
+    font-size: 40px;
 }
 
 .dtn-networking-mid-top {
@@ -1794,6 +1910,10 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
 .ship-youtube-payload-grid {
     width: 53px;
     height: auto;
+}
+
+.ship-youtube-payload-grid rect {
+    fill: var(--theme-mars-snowball-color);
 }
 
 .ship-youtube-falcon-heavy {
