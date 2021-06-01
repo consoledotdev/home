@@ -39,6 +39,10 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
     animation-delay: 0s, 0s;
 }
 
+.page-mars .page-section .subscribe-cta {
+    margin-top: calc(var(--space4) + var(--space3));
+}
+
 /* Illustrations
    =================================================================================== */
 

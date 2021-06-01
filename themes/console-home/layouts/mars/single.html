@@ -7,6 +7,7 @@
         <section class="page-section main-feature-article-content">
             <p class="description">{{ .Params.summary }}</p>
             {{ .Content }}
+		    {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
         </section>
         <aside class="main-feature-article-aside">
             <div class="toc">
@@ -26,8 +27,5 @@
             </div>
         </aside>
     </div>
-	<section class="page-section page-section-betas-root">
-		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
-	</section>
 	<script src="/js/mars.js"></script>
 {{ end }}
