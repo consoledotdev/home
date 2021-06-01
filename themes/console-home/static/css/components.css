@@ -1108,6 +1108,12 @@ body:not(.mobile) .console-control:hover:before {
    ================================================================================================================ */
 
 .about-console-box {
+    --theme-p1-stroke: var(--c-blue-06-main);
+    --theme-p2-stroke: var(--c-fuchsia-05-main);
+    --theme-p3-stroke: var(--c-green-05-main);
+}
+
+.about-console-box {
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-start;
@@ -1127,4 +1133,12 @@ body:not(.mobile) .console-control:hover:before {
 .about-console-box .logo .plane-two,
 .about-console-box .logo .plane-three {
     stroke-width: 2;
+}
+
+.about-console-box .logo .prompt-inverted {
+    display: none;
+}
+
+.about-console-box .logo .prompt-normal {
+    display: block;
 }

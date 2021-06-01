@@ -257,7 +257,7 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
 .mars-illustration-mars {
     position: relative;
     border-radius: 100%;
-    background: #c1edff;
+    background: #ffebe1;
     box-shadow: var(--theme-mars-mars-halo);
     font-size: 50px;
     height: 1em;
