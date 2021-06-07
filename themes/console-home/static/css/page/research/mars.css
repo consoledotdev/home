@@ -5,31 +5,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.page-mars:not(.is-scrolled) .header .logo-wrapper,
-.page-mars:not(.is-scrolled) .header .menu-toggle,
-.page-mars:not(.is-scrolled) .header ul.no-popup,
-.page-mars:not(.is-scrolled) .header .console-control.no-popup {
-    --theme-text-1: var(--c-white-00-absolute);
-    --theme-p1-stroke: var(--c-blue-06-main);
-    --theme-p2-stroke: var(--c-fuchsia-05-main);
-    --theme-p3-stroke: var(--c-green-05-main);
-
-    --theme-content-bg-4: var(--c-grey-08);
-
-    --theme-nav-primary-link-text-idle: var(--c-white-00-absolute);
-    --theme-nav-primary-link-text-focus: var(--c-blue-04);
-    --theme-nav-primary-link-text-active: var(--c-blue-06-main);
-    --theme-nav-primary-link-text-selected: var(--c-blue-04);
-
-    --theme-control-bg: var(--c-grey-06-blacks-neutral);
-    --theme-control-border: var(--c-grey-01-white-03);
-    --theme-control-active-text: var(--c-grey-09-black-03);
-    --theme-control-text-pressed: var(--c-grey-03);
-    --theme-control-text: var(--c-white-00-absolute);
-
-    --theme-badge-bg: var(--c-fuchsia-06);
-}
-
 .artwork {
     --theme-mars-earth-halo: 0 0 0.25em rgba(0, 0, 255, 0.3);
     --theme-mars-earth-shading: inset 0.2em 0 0.34em rgba(0, 0, 255, 0.1), inset 0 0 0.04em rgba(0, 0, 255, 0.3);
@@ -38,19 +13,6 @@ html {
     --theme-mars-mars-halo: 0 0 0.25em rgba(255, 0, 0, 0.3);
     --theme-mars-mars-shading: inset 0.2em 0 0.34em rgba(255, 0, 0, 0.1), inset 0 0 0.04em rgba(255, 0, 0, 0.3);
     --theme-mars-mars-texture-opacity: 1;
-}
-
-.page-mars:not(.is-scrolled) .logo-svg-animated-explode .prompt-inverted {
-    display: none;
-}
-
-.page-mars:not(.is-scrolled) .logo-svg-animated-explode .prompt-normal {
-    display: block;
-}
-
-body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
-    animation-duration: 0s, 0.25s;
-    animation-delay: 0s, 0s;
 }
 
 .page-mars .page-section .subscribe-cta {
