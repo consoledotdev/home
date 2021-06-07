@@ -2,7 +2,7 @@
 title: "How will the internet work on Mars?"
 date: 2021-06-07T12:00:00+00:00
 draft: true
-summary: An exploration of interplanetary networking.
+summary: An exploration of interplanetary networking, how it costs $1bn to put YouTube on Mars, and why Ethereum is better than Bitcoin as a Mars currency.
 type: research
 isSelected: mars
 customStyle: true
@@ -23,11 +23,10 @@ authorBio:
 
 There are many challenges to building human settlements on Mars. The most
 efficient [launch opportunity
-windows](https://en.wikipedia.org/wiki/Exploration_of_Mars#Launch_windows) when
-Mars is closest to Earth only
+windows](https://en.wikipedia.org/wiki/Exploration_of_Mars#Launch_windows) only
 [arise](https://en.wikipedia.org/wiki/Orbital_period#Synodic_period) every 2.2
-years. Best journey times are 3-6 months. The atmosphere is primarily CO2, and
-it is very cold.
+years when Mars is closest to Earth. Best journey times are 3-6 months. The
+atmosphere is primarily CO2, and it is very cold.
 
 Once we have figured out how to get there and how to reliably support human
 life ([some are aiming for this
@@ -53,7 +52,7 @@ consider possible solutions to setting up the internet on Mars.
 ### Earth’s internet
 
 The internet is a large group of interconnected networks. Each network has one
-or many devices connected to it, each with its own unique address. When you
+or many devices connected to it, each with its own IP address. When you
 access a service hosted on the internet, such as a website, your local computer
 uses several protocols to figure out how to communicate with the destination,
 make a request to it, and get the response back to you. If the destination is
@@ -65,9 +64,8 @@ different organizations.
 On Earth, accessing websites primarily involves Transmission Control Protocol
 (TCP), Internet Protocol (IP) and Hypertext Transfer Protocol (HTTP). TCP/IP
 deals with connecting your device and the transmission of data to/from the
-destination. When you make a request to a website, TCP/IP deals with mapping a
-route to the destination network, opening a connection, and ensuring the data
-is transmitted correctly.
+destination. When you make a request to a website, TCP/IP deals with opening a
+connection, routing the data, and ensuring the data is transmitted correctly.
 
 Before any data is sent, the protocol must open a connection with the
 destination. Known as the SYN, SYN-ACK, ACK
@@ -87,19 +85,20 @@ challenges with establishing the internet on Mars.
 
 ### The problem with connecting Mars & Earth
 
-Whilst the average
-[distance between Earth and Mars](http://www.distancetomars.com/) is 225 million
-km / 140 million miles,
+Whilst the average [distance between Earth and
+Mars](http://www.distancetomars.com/) is 225 million km / 140 million miles,
 [it can range](https://en.wikipedia.org/wiki/Mars#Closest_approaches) from 54.6
 million km / 33.9 million miles to 401 million km / 249 million miles. Assuming
 that a link between the planets can transmit data at the speed of light, direct
 transmission of a single data packet could therefore take between 3-22 minutes
-to reach its destination.
+to reach its destination - ✍︎ [see our
+calculations](https://github.com/consoledotdev/mars-internet/blob/main/calculations.ipynb).
 
 If a person on Mars tried to access a service located on Earth, not only would
 they need to wait for the requested data to travel from Earth to Mars, but just
 completing the 3-step TCP handshake to establish the connection would take
-between 9-66 minutes.
+between 9-66 minutes - ✍︎ [see our
+calculations](https://github.com/consoledotdev/mars-internet/blob/main/calculations.ipynb).
 
 Further, TCP’s built in congestion control and packet loss detection is not
 designed for such long response times. Packets must be acknowledged,
@@ -120,6 +119,12 @@ Earth is to avoid such long-distance transmissions in the first place! This
 would mean setting up “the internet” from scratch on Mars and either
 replicating the same services or having Mars-specific services.
 
+The initial Mars missions will be about exploration and setting up the basic
+requirements for life, but over time it is reasonable to expect that people
+living on Mars would want to access the same internet services in the same way
+they are used to on Earth. Whether that is email, search, video streaming, or
+gaming, we have an expectation of what we can access online.
+
 Deploying these services on Mars could follow the same approach as on Earth:
 installing servers in at least one data center and using the standard Earth
 internet protocols to bootstrap the first network. The vast scale of Earth
@@ -128,20 +133,9 @@ demand on Mars internet services would grow gradually with the number of
 settlers.
 
 But what about all the content? It is easy to set up a few network switches and
-servers, install Nginx and PostgreSQL, launch some websites, but this would be
-like going back to the early 90s on Earth. Very few websites. You can only
+servers, install Nginx and PostgreSQL then launch some websites, but this would
+be like going back to the early 90s on Earth. Very few websites. You could only
 email other people on Mars. And of course no videos on MarsTube.
-
-The initial Mars missions will be about exploration and setting up the basic
-requirements for life, but over time it is reasonable to expect that people
-living on Mars would want to access the same internet services in the same way
-they are used to on Earth. Whether that is email, search, video streaming, or
-gaming, we have an expectation of what we can access online.
-
-Users of relational databases like MySQL and PostgreSQL tend to make use of
-them for their [ACID](https://en.wikipedia.org/wiki/ACID) properties. Atomicity
-and Consistency are important for use cases like finance, but replicating
-transactions over high-latency connectivity would be a challenge.
 
 {{< nav-wrapper close="true" >}}
 
@@ -149,12 +143,18 @@ transactions over high-latency connectivity would be a challenge.
 
 #### Blockchain, crypto & eventual consistency
 
+Users of relational databases like MySQL and PostgreSQL tend to make use of
+them for their [ACID](https://en.wikipedia.org/wiki/ACID) properties. Atomicity
+and Consistency are important for use cases like finance, but replicating
+transactions over high-latency connectivity would be a challenge.
+
 Dealing with transaction latency could be solved by blockchain currencies like
 Bitcoin and Ethereum. The design of the blockchain ledger is already
 distributed and it takes time for transactions to be confirmed by sufficient
 members of the network. This is supposed to be every ~10 minutes but [recent
 confirmation times](https://www.blockchain.com/charts/avg-confirmation-time)
-have averaged 100 minutes, sometimes spiking between multiple hours and a day.
+averaged 100 minutes until mid 2021 when they started spiking sometimes spiking
+to multiple hours and even half a day.
 
 If real-time transactions are important, [the scalability of blockchain
 transaction rates](https://en.wikipedia.org/wiki/Bitcoin_scalability_problem)
@@ -162,7 +162,10 @@ is a problem. However, the existing banking system is used to experiencing
 several days of settlement delay with cheques, transfers and other types of
 transaction. If settlement times of several hours are acceptable then deploying
 cryptocurrency nodes in a distributed network that covers both Earth and Mars
-could be how a Mars-based monetary system is established.
+could be how a Mars-based monetary system is established. The first steps have
+already been taken with [Ethereum nodes being launched into
+space](https://www.coindesk.com/spacechain-to-deploy-commercial-blockchain-tech-with-spacex-launches-in-june),
+although so far just as a secure location for wallet storage.
 
 [Energy consumption is also a major challenge for Bitcoin](https://cbeci.org)
 on Earth but if solar energy is the primary source of power on Mars, that
@@ -172,7 +175,9 @@ storms](https://en.wikipedia.org/wiki/Climate_of_Mars#Dust_storms) would be the
 primary concern rather than cloud cover. Batteries would be needed during
 storms, and at night. Moving to [proof of
 stake](https://en.wikipedia.org/wiki/Proof_of_stake) rather than proof of work
-would also help, so Ethereum may be a better option than Bitcoin.
+would also help, so [Ethereum may be a better
+option](https://blog.ethereum.org/2021/05/18/country-power-no-more/) than
+Bitcoin because of its significantly lower energy requirements.
 
 These types of real-time transactions tend only be necessary in a small number
 of situations. Watching videos, posting comments, reading blogs, sending
@@ -183,9 +188,9 @@ Databases such as [CouchDB](https://couchdb.apache.org/) were designed with
 specific [offline](http://www.offlinefirst.org/) use cases in mind. Distributed
 file storage such as [IPFS](https://ipfs.io) could also provide a solution
 because it offers not just eventually consistent replication but also Peer to
-Peer communication - once one IPFS user on Mars has downloaded a copy of the
-file, it can serve it to other users locally. But how do the files get there in
-the first place?
+Peer communication - once a single IPFS user on Mars has downloaded a copy of
+the file, it can be served to other users locally. But how do the files get
+there in the first place?
 
 {{< nav-wrapper close="true" >}}
 
@@ -241,7 +246,7 @@ formed of a number of relay nodes which have persistent storage, and are
 responsible for the reliable communication of data between nodes. Unlike
 TCP/IP, which requires successful acknowledgment to the source by the
 destination, acknowledgements in the DTN are optional. The focus of DTN is the
-store-and-forwarding of these bundles, where the storage can happen for long
+storage-and-forwarding of these bundles, where the storage can happen for long
 periods of time, rather than the routing of much smaller packets as is typical
 in IP networks.
 
@@ -259,14 +264,15 @@ different delivery options depending on the priority. For example, the sender
 might post two items into a post box on the street, where the items are held
 for a period of time before being collected. Once in the system, their priority
 determines how quickly they are routed to the next step, and ultimately the
-destination. The delivery option is similar to postal tracking options, where
-there is flexibility to choose between no tracking all the way through to
+destination. The DTN delivery option is similar to postal tracking options,
+where there is flexibility to choose between no tracking all the way through to
 high-reliability and acknowledgement of successful delivery.
 
 Congestion control remains a challenge for these types of network protocols.
 Data volumes are ever increasing, so very large persistent data storage will be
 required to maintain capacity to store bundles, and flow control is necessary
-to manage this properly. As described in the RFC:
+to manage this properly. [As described in the
+RFC](https://datatracker.ietf.org/doc/html/rfc4838):
 
 {{< quote >}} a DTN node receiving a bundle using TCP/IP might intentionally
 slow down its receiving rate by performing read operations less frequently in
@@ -280,10 +286,9 @@ Careful consideration of network security will be important because the obvious
 attack vector for DTN is flooding the system with very large bundles. Access
 control will be needed, and perhaps agreement as to the type of applications
 that may be permitted to use the network. For example, video streaming might
-not be an appropriate use of the network - a single user streaming at
-high-resolution could saturate the capacity - but many users browsing
-mostly-text would be allowed. For this reason, DTN features strong security as
-part of the protocol.
+not be an appropriate use - a single user streaming at high-resolution could
+saturate the capacity - but many users browsing mostly-text would be allowed.
+For this reason, DTN features strong security as part of the protocol.
 
 The latest version of the bundle protocol defined in [RFC
 5050](https://tools.ietf.org/html/rfc5050) - [Bundle Protocol
@@ -298,16 +303,16 @@ has reference implementations in various languages including
 
 #### Very long round trip times
 
-Applications will also need to be refactored so they become delay-tolerant and
-networks may need to become more application-aware, so that routing can happen
+Applications will also need to be refactored so they become delay-tolerant, and
+networks may need to become more application-aware so that routing can happen
 based on the type of data being requested.
 
-However, even with DTN storing and forwarding data operating perfectly, the
-application will experience very long round trip times. This could be due to
-the simple physics of speed of light transmission over long distances, but it
-could also be because the capacity and either (or both) ends is fully utilized.
-Such limits already exist with the Deep Space Network where resources are
-limited, and scheduled far into the future.
+However, even with DTN storing and forwarding data perfectly, the application
+will still experience very long round trip times. This could be due to the
+simple physics of speed of light transmission over long distances, but it could
+also be because the capacity at either end (or both) is fully utilized. Such
+limits already exist with the Deep Space Network where resources are limited,
+and scheduled far into the future.
 
 This is where the [Licklider Transmission Protocol
 (LTP)](https://tools.ietf.org/html/rfc5325) comes into play. [A reference
@@ -328,17 +333,18 @@ Overlay
 Network](https://www.nasa.gov/directorates/heo/scan/engineering/technology/disruption_tolerant_networking_software_options_ion).
 This might be a series of relay nodes operating in the physical space between
 the planets, with relay antennas on both planets. Just like how countries and
-continents on Earth and connected via under-sea cables, the planets would be
+continents on Earth are connected via under-sea cables, the planets would be
 connected through nodes positioned in space. The [Mars Telecommunications
 Orbiter](https://en.wikipedia.org/wiki/Mars_Telecommunications_Orbiter) was one
 such node due to come online in 2010, but it was cancelled in 2005.
 
 {{< research/mars/dtn-networking >}}
 
-The sheer distance means that communication delays are unavoidable, but the
-protocols allow for time-sensitive communication between planets. However,
-where time is not especially important, local storage of data with periodic
-refreshes could be an alternative.
+The sheer distance means that communication delays are unavoidable, so it will
+be necessary to use these types of protocols which at least allow for
+communication between planets over several hours. However, where time is not
+especially important, local storage of data with periodic refreshes could be an
+alternative.
 
 {{< nav-wrapper close="true" >}}
 
@@ -368,8 +374,8 @@ might mean using [AWS Snowball](https://aws.amazon.com/snowball/) devices
 instead, which in storage optimized mode can transport up to 80TB each. Such a
 launch would cost more than the $90m list price where stages can be recovered.
 No doubt AWS would also charge for the time taken to fill them on Earth, wait
-for the launch window, unload the data on Mars and then ship back (presumably
-now filled with content generated on Mars).
+for the launch window, unload the data on Mars and then ship them back
+(presumably now filled with content generated on Mars).
 
 Back in 2015, [YouTube was said to
 generate](https://www.quora.com/What-is-the-total-capacity-of-YouTube-storage/answer/Rasty-Turek)
@@ -382,6 +388,9 @@ Transporting all of YouTube would therefore require at least 10 Falcon Heavy
 flights, at a launch cost of almost $1bn. That doesn’t include the cost of the
 Snowball devices themselves.
 
+ ✍︎ [see our
+calculations](https://github.com/consoledotdev/mars-internet/blob/main/calculations.ipynb).
+
 {{< research/mars/ship-youtube >}}
 
 {{< nav-wrapper close="true" >}}
@@ -391,9 +400,9 @@ Snowball devices themselves.
 ### Internet access on Mars
 
 How will we access the internet on Mars itself? Will the Mars pioneers follow
-the same approach digging up the surface of the planet to bury cables? Maybe.
-There are no oceans so we can more efficiently connect regions with redundant
-connectivity, compared to [all those sub-sea
+the same approach of digging up the surface of the planet to bury cables?
+Maybe. There are no oceans so we can more efficiently connect regions with
+redundant connectivity, compared to [all those sub-sea
 connections](https://www.wired.com/story/yemen-internet-blackout-undersea-cable/)
 on Earth [which regularly
 break](https://www.wired.com/story/yemen-internet-blackout-undersea-cable/) and
@@ -410,12 +419,10 @@ infrastructure, satellite connectivity could be preferred.
 approach: launch thousands of low-Mars orbit satellites and give customers
 hardware receivers for high-speed connectivity anywhere on the planet.
 
-{{< research/mars/globe-maps >}}
-
 Indeed, whether it is just a hidden marketing Easter-egg or not, the current
 [Starlink Terms of
 Service](https://www.starlink.com/legal/terms-of-service?regionCode=US) already
-cover:
+cover this scenario:
 
 {{< quote >}} For Services provided to, on, or in orbit around the planet Earth
 or the Moon, these Terms and any disputes between us arising out of or related
@@ -428,10 +435,6 @@ Martian activities. Accordingly, Disputes will be settled through
 self-governing principles, established in good faith, at the time of Martian
 settlement. {{< /quote >}}
 
+{{< research/mars/globe-maps >}}
+
 {{< nav-wrapper close="true" >}}
-
-##### Links
-
-- [https://en.wikipedia.org/wiki/Delay-tolerant_networking](https://en.wikipedia.org/wiki/Delay-tolerant_networking)
-- [https://fleek.co/](https://fleek.co/)
-- [https://www.nasa.gov/pdf/694634main_Pres_Mars_Comm-Nav_Evolution-Mars_Society.pdf](https://www.nasa.gov/pdf/694634main_Pres_Mars_Comm-Nav_Evolution-Mars_Society.pdf)
