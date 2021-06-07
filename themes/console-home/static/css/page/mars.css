@@ -1,6 +1,10 @@
 /* Mars Internet
    ================================================================================================================ */
 
+html {
+    scroll-behavior: smooth;
+}
+
 .page-mars:not(.is-scrolled) .header .logo-wrapper,
 .page-mars:not(.is-scrolled) .header .menu-toggle,
 .page-mars:not(.is-scrolled) .header ul.no-popup,
