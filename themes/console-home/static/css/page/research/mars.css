@@ -896,7 +896,7 @@ html {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    border-radius: 50%;
+    border-radius: 4000px;
     border: 1px solid var(--c-white-00-absolute);
     opacity: 0.2;
 }
