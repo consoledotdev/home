@@ -242,7 +242,10 @@
     font-weight: 400;
     transition: var(--a-controls);
     outline: none;
-    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
 }
 
 .link:hover,
