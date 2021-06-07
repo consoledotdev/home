@@ -1,7 +1,7 @@
 ---
 title: "How will the internet work on Mars?"
 date: 2021-06-07T12:00:00+00:00
-draft: true
+draft: false
 summary:
   An exploration of interplanetary networking, how it costs $1bn to put YouTube
   on Mars, and why Ethereum is better than Bitcoin as a Mars currency.
