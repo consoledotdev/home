@@ -210,10 +210,27 @@ html {
     background-size: auto 100%;
     background-position: 41.42% 0;
     z-index: 10;
+
+    animation-name: rotate-earth;
+    animation-duration: 20s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotate-earth {
+    0% {
+        background-position: 41.42% 0;
+    }
+    100% {
+        background-position: -158.58% 0;
+    }
 }
 
 .is-large .mars-illustration-earth-texture {
     background-image: url("/img/research/mars/earth-texture-large.png");
+    animation-duration: 30s;
 }
 
 .mars-illustration-mars {
@@ -250,10 +267,27 @@ html {
     background-size: auto 100%;
     background-position: 0 0;
     z-index: 10;
+
+    animation-name: rotate-earth;
+    animation-duration: calc(20s * 1.026);
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotate-earth {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
 }
 
 .is-large .mars-illustration-mars-texture {
     background-image: url("/img/research/mars/mars-texture-large.png");
+    animation-duration: calc(30s * 1.026);
 }
 
 /* Artwork
@@ -413,6 +447,35 @@ html {
     margin-right: 5.1%;
 }
 
+.mars-artwork-satellite {
+    animation-duration: 1s, 3s;
+    animation-timing-function: cubic-bezier(0.41, 0.14, 0.35, 0.99), cubic-bezier(0.41, 0.14, 0.35, 0.99);
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards, forwards;
+    animation-name: satellite-oscillation-init, satellite-oscillation;
+}
+
+@keyframes satellite-oscillation-init {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(3%);
+    }
+}
+
+@keyframes satellite-oscillation {
+    0% {
+        transform: translateX(1%);
+    }
+    50% {
+        transform: translateX(-1%);
+    }
+    100% {
+        transform: translateX(1%);
+    }
+}
+
 .mars-artwork-satellite-move img {
     width: 100%;
     height: auto;
@@ -441,7 +504,7 @@ html {
     stroke-dashoffset: 0;
     width: 100%;
     vertical-align: top;
-    animation-duration: 0.5s;
+    animation-duration: 0.75s;
     animation-delay: 0s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -497,17 +560,17 @@ html {
 
 .bundle-earth-rect {
     animation-duration: 1s;
-    animation-timing-function: linear, cubic-bezier(0.41, 0.14, 0.35, 0.99);
-    animation-iteration-count: infinite, infinite;
-    animation-fill-mode: forwards, forwards;
+    animation-timing-function: cubic-bezier(0.41, 0.14, 0.35, 0.99);
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 }
 
 .bundle-earth-rect5 {
-    animation-name: bundle-rect5;
+    animation-name: bundle-earth-rect5;
     transform-origin: 9px 100px;
 }
 
-@keyframes bundle-rect5 {
+@keyframes bundle-earth-rect5 {
     0% {
         transform: scale(0.9);
     }
@@ -523,11 +586,11 @@ html {
 }
 
 .bundle-earth-rect4 {
-    animation-name: bundle-rect4;
+    animation-name: bundle-earth-rect4;
     transform-origin: 28px 83px;
 }
 
-@keyframes bundle-rect4 {
+@keyframes bundle-earth-rect4 {
     0% {
         transform: scale(0.9);
     }
@@ -546,11 +609,11 @@ html {
 }
 
 .bundle-earth-rect2 {
-    animation-name: bundle-rect2;
+    animation-name: bundle-earth-rect2;
     transform-origin: 55px 55px;
 }
 
-@keyframes bundle-rect2 {
+@keyframes bundle-earth-rect2 {
     0% {
         transform: scale(0.9);
     }
@@ -569,16 +632,16 @@ html {
 }
 
 .bundle-earth-rect1 {
-    animation-name: bundle-rect1-3;
+    animation-name: bundle-earth-rect1-3;
     transform-origin: 92px 18px;
 }
 
 .bundle-earth-rect3 {
-    animation-name: bundle-rect1-3;
+    animation-name: bundle-earth-rect1-3;
     transform-origin: 92px 92px;
 }
 
-@keyframes bundle-rect1-3 {
+@keyframes bundle-earth-rect1-3 {
     0% {
         transform: scale(0.9);
     }
@@ -597,11 +660,11 @@ html {
 }
 
 .bundle-earth-rect8 {
-    animation-name: bundle-rect8;
+    animation-name: bundle-earth-rect8;
     transform-origin: 120px 64px;
 }
 
-@keyframes bundle-rect8 {
+@keyframes bundle-earth-rect8 {
     0% {
         transform: scale(0.9);
     }
@@ -620,11 +683,11 @@ html {
 }
 
 .bundle-earth-rect6 {
-    animation-name: bundle-rect6;
+    animation-name: bundle-earth-rect6;
     transform-origin: 138px 46px;
 }
 
-@keyframes bundle-rect6 {
+@keyframes bundle-earth-rect6 {
     0% {
         transform: scale(0.9);
     }
@@ -643,11 +706,178 @@ html {
 }
 
 .bundle-earth-rect7 {
-    animation-name: bundle-rect7;
+    animation-name: bundle-earth-rect7;
     transform-origin: 157px 64px;
 }
 
-@keyframes bundle-rect7 {
+@keyframes bundle-earth-rect7 {
+    0% {
+        transform: scale(0.9);
+    }
+    75% {
+        transform: scale(0.9);
+    }
+    87.5% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.bundle-mars-rect {
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.41, 0.14, 0.35, 0.99);
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.bundle-mars-rect7 {
+    animation-name: bundle-mars-rect7;
+    transform-origin: 9px 48px;
+}
+
+@keyframes bundle-mars-rect7 {
+    0% {
+        transform: scale(0.9);
+    }
+    12.5% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.bundle-mars-rect8 {
+    animation-name: bundle-mars-rect8;
+    transform-origin: 27px 66px;
+}
+
+@keyframes bundle-mars-rect8 {
+    0% {
+        transform: scale(0.9);
+    }
+    12.5% {
+        transform: scale(0.9);
+    }
+    25% {
+        transform: scale(1);
+    }
+    37.5% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.bundle-mars-rect1 {
+    animation-name: bundle-mars-rect1-3;
+    transform-origin: 55px 18px;
+}
+
+.bundle-mars-rect3 {
+    animation-name: bundle-mars-rect1-3;
+    transform-origin: 55px 92px;
+}
+
+@keyframes bundle-mars-rect1-3 {
+    0% {
+        transform: scale(0.9);
+    }
+    25% {
+        transform: scale(0.9);
+    }
+    37.5% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.bundle-mars-rect2 {
+    animation-name: bundle-mars-rect2;
+    transform-origin: 92px 55px;
+}
+
+@keyframes bundle-mars-rect2 {
+    0% {
+        transform: scale(0.9);
+    }
+    37.5% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+    62.5% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.bundle-mars-rect6 {
+    animation-name: bundle-mars-rect6;
+    transform-origin: 120px 27px;
+}
+
+@keyframes bundle-mars-rect6 {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    62.5% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.bundle-mars-rect4 {
+    animation-name: bundle-mars-rect4;
+    transform-origin: 138px 9px;
+}
+
+@keyframes bundle-mars-rect4 {
+    0% {
+        transform: scale(0.9);
+    }
+    62.5% {
+        transform: scale(0.9);
+    }
+    75% {
+        transform: scale(1);
+    }
+    87.5% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.bundle-mars-rect5 {
+    animation-name: bundle-mars-rect5;
+    transform-origin: 156px 27px;
+}
+
+@keyframes bundle-mars-rect5 {
     0% {
         transform: scale(0.9);
     }
@@ -956,6 +1186,24 @@ html {
     opacity: 0.3;
 }
 
+.habitat-distance .link-1 {
+    animation-duration: 0.75s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-name: habitat-distance-link;
+}
+
+@keyframes habitat-distance-link {
+    0% {
+        stroke-dashoffset: 5;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
 .habitat-distance-distance-caption span {
     margin-bottom: var(--space1);
 }
@@ -1068,6 +1316,24 @@ html {
 .habitat-distance-distance-only-text-mars {
     top: 74px;
     left: 226px;
+}
+
+.habitat-distance-distance-only .mars-illustration-green-connector {
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-name: distance-only-link;
+}
+
+@keyframes distance-only-link {
+    0% {
+        stroke-dashoffset: 9;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
 }
 
 @media (max-width: 640px) {
@@ -1260,6 +1526,53 @@ html {
     transform: translateY(-50%) rotate(-135deg);
 }
 
+.handshake-packets .packet {
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.handshake-packets .packet-1 {
+    animation-name: handshake-packet-1;
+}
+
+@keyframes handshake-packet-1 {
+    0% {
+        stroke-dashoffset: 9;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.handshake-packets .packet-2 {
+    animation-name: handshake-packet-2;
+}
+
+@keyframes handshake-packet-2 {
+    0% {
+        stroke-dashoffset: -9;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.handshake-packets .packet-3 {
+    animation-name: handshake-packet-3;
+}
+
+@keyframes handshake-packet-3 {
+    0% {
+        stroke-dashoffset: 9;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
 @media (max-width: 480px) {
     .handshake {
         padding-bottom: var(--space3);
@@ -1354,6 +1667,7 @@ html {
 
 .space-networks .mars-illustration-earth-texture {
     opacity: 0.22;
+    animation: none;
 }
 
 .space-networks .mars-illustration-mars {
@@ -1371,8 +1685,46 @@ html {
     vertical-align: top;
 }
 
+.space-networks .space-networks-mars line,
+.space-networks .space-networks-mars-small line {
+    animation-duration: 0.75s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.space-networks .space-networks-mars .link-left,
+.space-networks .space-networks-mars-small .link-left {
+    animation-name: link-left;
+}
+
+@keyframes link-left {
+    0% {
+        stroke-dashoffset: 9;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.space-networks .space-networks-mars .link-right,
+.space-networks .space-networks-mars-small .link-right {
+    animation-name: link-right;
+}
+
+@keyframes link-right {
+    0% {
+        stroke-dashoffset: -9;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
 .space-networks .mars-illustration-mars-texture {
     opacity: 0.3;
+    animation: none;
 }
 
 .space-networks .space-networks-earth .mars-illustration-text {
@@ -1428,6 +1780,22 @@ html {
     stroke: #c750ff;
     margin-top: 140px;
     margin-left: -103px;
+
+    animation-duration: 0.75s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-name: space-net-link;
+}
+
+@keyframes space-net-link {
+    0% {
+        stroke-dashoffset: 9;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
 }
 
 @media (max-width: 700px) {
@@ -1667,6 +2035,29 @@ html {
     flex: 1 1 auto;
     stroke-dasharray: 2, 7;
     margin-top: 14px;
+}
+
+.dtn-networking-mid-top .mars-illustration-link,
+.dtn-networking-mid-top .mars-illustration-link-vertical,
+.dtn-networking-main .dtn-networking-earth line,
+.dtn-networking-main .dtn-networking-earth-small line,
+.dtn-networking-main .dtn-networking-mars line,
+.dtn-networking-main .dtn-networking-mars-small line {
+    animation-duration: 0.75s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-name: dtn-networking-link;
+}
+
+@keyframes dtn-networking-link {
+    0% {
+        stroke-dashoffset: 9;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
 }
 
 .dtn-networking-mid-top .mars-illustration-link-vertical {
