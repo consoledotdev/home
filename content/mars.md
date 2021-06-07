@@ -14,13 +14,11 @@ authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
 authorBio:
-  is co-founder of Console. He previously co-founded server monitoring startup,
-  Server Density, where he built the original version of the product in Python
-  and grew the business to acquisition in 2018, at which point it was used by
-  hundreds of customers to collect billions of time series metrics from 
-  millions of servers. More recently, he has been researching sustainable 
-  computing at Imperial College London & Uptime Institute, which he continues 
-  to do alongside running Console.
+  is co-founder of Console. He is also a researcher in sustainable computing 
+  at Uptime Institute and affiliated with Imperial College London. From 
+  2009-2018, David was co-founder at Server Density, a SaaS infrastructure 
+  monitoring startup used by hundreds of customers to collect billions of time 
+  series metrics from millions of servers.
 ---
 
 There are many challenges to building human settlements on Mars. The most
