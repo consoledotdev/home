@@ -1,10 +1,6 @@
 /* Console Betas
    ========================================================================== */
 
-.page-betas .main-nav ul li.is-selected .badge {
-    display: none;
-}
-
 .page-section-betas-root {
     margin-right: min(26vw, 400px);
 }
