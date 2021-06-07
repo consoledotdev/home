@@ -610,32 +610,6 @@ body:not(.page-feature, .page-feature-article):after {
     gap: var(--space4) var(--space4);
 }
 
-.artwork {
-    position: relative;
-    height: auto;
-    left: 0;
-    right: 0;
-    margin-top: calc(calc(var(--space4) + var(--space2)) * -1);
-    overflow: hidden;
-    z-index: 10;
-}
-
-.artwork-background {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 0;
-    height: 100%;
-    object-fit: cover;
-    transform: translateY(-50%);
-    z-index: 10;
-}
-
-.artwork-story {
-    position: relative;
-    z-index: 20;
-}
-
 .nav-wrapper {
     position: relative;
 }
@@ -1518,12 +1492,18 @@ select.console-select::-ms-expand {
         z-index: 40;
     }
 
-    .main-feature-article {
+    .main-article {
+        margin-top: calc(var(--space6) - var(--space4));
         margin-bottom: calc(var(--space6) - var(--space4));
     }
 
-    .main-article {
-        margin-top: calc(var(--space6) - var(--space4));
+    .main-feature {
+        margin-top: calc(var(--space6) - var(--space4) + 48px);
+        margin-bottom: var(--space6);
+    }
+
+    .main-feature-article {
+        margin-top: calc(var(--space6) - var(--space4) + 48px);
         margin-bottom: calc(var(--space6) - var(--space4));
     }
 
@@ -1534,11 +1514,6 @@ select.console-select::-ms-expand {
         background: transparent;
         border-top: 1px solid var(--c-blue-04);
         padding-top: var(--space4);
-    }
-
-    .main-feature {
-        margin-top: calc(var(--space6) - var(--space4) + 48px);
-        margin-bottom: var(--space6);
     }
 
     .main-feature-article-content-split aside {
@@ -1561,18 +1536,6 @@ select.console-select::-ms-expand {
     .main-nav .menu-toggle,
     .main-nav .menu-popup-wrapper {
         display: block;
-    }
-
-    @media (max-width: 600px) {
-        .artwork {
-            margin-top: calc(calc(var(--space4) + var(--space2)) * -1);
-            margin-left: -12vw;
-            margin-right: -12vw;
-        }
-
-        .main-feature-article {
-            margin-top: var(--space5);
-        }
     }
 
     @media (max-width: 540px) {
@@ -1628,10 +1591,6 @@ select.console-select::-ms-expand {
             padding-right: 12vw;
         }
 
-        .main-feature-article {
-            margin-top: var(--space4_5);
-        }
-
         .title.title-1 {
             font-size: var(--t-size7);
         }
@@ -1676,11 +1635,6 @@ select.console-select::-ms-expand {
             padding-right: 10vw;
         }
 
-        .artwork {
-            margin-left: -10vw;
-            margin-right: -10vw;
-        }
-
         .console-form .console-button {
             margin-top: var(--space3);
         }
@@ -1717,21 +1671,12 @@ select.console-select::-ms-expand {
             padding-right: 14vw;
         }
 
-        .main-feature-article {
-            margin-top: var(--space5);
-        }
-
         .main-article,
         .main-feature-article {
             margin-left: -14vw;
             margin-right: -14vw;
             padding-left: 14vw;
             padding-right: 14vw;
-        }
-
-        .artwork {
-            margin-left: -14vw;
-            margin-right: -14vw;
         }
     }
 }
@@ -1767,18 +1712,12 @@ select.console-select::-ms-expand {
         border-left: 0px;
     }
 
-    .main-feature-article {
-        margin: var(--space5) 0 calc(var(--space6) - var(--space2));
-        z-index: 20;
-    }
-
     .main-feature {
         margin: max(calc(var(--space6) - var(--space3)), 10vh) 0 calc(var(--space6) - var(--space2));
     }
 
-    .artwork {
-        margin-left: -6.25vw;
-        margin-right: -6.25vw;
+    .main-feature-article {
+        margin: max(calc(var(--space6) - var(--space3)), 10vh) 0 calc(var(--space6) - var(--space2));
     }
 
     .hero .planes {
@@ -1826,10 +1765,6 @@ select.console-select::-ms-expand {
     .main {
         height: auto;
         min-height: 40vh;
-    }
-
-    .main-feature-article {
-        margin-top: var(--space5);
     }
 
     .main-feature-article-content-split aside {
@@ -1892,15 +1827,6 @@ select.console-select::-ms-expand {
 
     .main-feature-article .title-5 {
         font-size: var(--t-size0);
-    }
-}
-
-@media (min-width: 1600px) {
-    .artwork {
-        margin-left: 0;
-        margin-right: 0;
-        width: 114%;
-        margin-left: -7%;
     }
 }
 

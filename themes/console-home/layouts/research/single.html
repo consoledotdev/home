@@ -2,10 +2,6 @@
 	{{ $CTATitle := "Discover the best tools for developers" }}
 	{{ $CTADescription := "Our free weekly email features a digest of the best new tools and beta releases for developers. See the latest email." }}
 
-    <div class="main-feature-article-content-split">
-        <aside class="main-feature-article-aside" data-aside>
-            {{ partial (print "components/research/" .Params.isSelected "/aside.html" ) }}
-        </aside>
         <section class="page-section main-feature-article-content">
             <h2 class="title title-1">{{ .Params.title }}</h2>
             <p class="description">{{ .Params.summary }}</p>
@@ -16,11 +12,18 @@
                     {{ .Lastmod.Format "2006-01-02" }}
                 </p>
             </div>
-            {{ .Content }}
-            {{ partial "components/author.html" (dict "context" . "bio" .Params.authorBio "img" .Params.authorImg "name" .Params.authorName ) }}
-            {{ partial "components/about-console.html" }}
-		    {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
         </section>
-    </div>
+        {{ partial (print "components/research/" .Params.isSelected "/artwork.html") }}
+        <div class="main-feature-article-content-split">
+            <aside class="main-feature-article-aside" data-aside>
+                {{ partial (print "components/research/" .Params.isSelected "/aside.html" ) }}
+            </aside>
+            <section class="page-section main-feature-article-content">
+                {{ .Content }}
+                {{ partial "components/author.html" (dict "context" . "bio" .Params.authorBio "img" .Params.authorImg "name" .Params.authorName ) }}
+                {{ partial "components/about-console.html" }}
+                {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
+            </section>
+        </div>
 	<script src="/js/research/{{ .Params.isSelected }}.js"></script>
 {{ end }}
