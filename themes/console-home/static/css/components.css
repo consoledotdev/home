@@ -857,6 +857,7 @@ body:not(.mobile) .console-control:hover:before {
     transition: var(--a-controls-active);
     border: var(--theme-actionable-box-border-focus);
     background: var(--theme-actionable-box-bg-focus);
+    outline: none;
 }
 
 .card-link:active {
