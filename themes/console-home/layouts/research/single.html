@@ -3,6 +3,9 @@
 	{{ $CTADescription := "Our free weekly email features a digest of the best new tools and beta releases for developers. See the latest email." }}
 
     <div class="main-feature-article-content-split">
+        <aside class="main-feature-article-aside" data-aside>
+            {{ partial (print "components/research/" .Params.isSelected "/aside.html" ) }}
+        </aside>
         <section class="page-section main-feature-article-content">
             <h2 class="title title-1">{{ .Params.title }}</h2>
             <p class="description">{{ .Params.summary }}</p>
@@ -18,9 +21,6 @@
             {{ partial "components/about-console.html" }}
 		    {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
         </section>
-        <aside class="main-feature-article-aside" data-aside>
-            {{ partial (print "components/research/" .Params.isSelected "/aside.html" ) }}
-        </aside>
     </div>
 	<script src="/js/research/{{ .Params.isSelected }}.js"></script>
 {{ end }}

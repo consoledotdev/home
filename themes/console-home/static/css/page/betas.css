@@ -26,6 +26,7 @@
     align-items: flex-start;
     justify-content: space-between;
     margin-top: calc(var(--space4) + var(--space3));
+    flex-direction: row-reverse;
 }
 
 .betas-split .betas .inline-filters-wrapper.is-hidden {

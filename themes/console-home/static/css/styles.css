@@ -415,6 +415,10 @@ body:not(.page-feature, .page-feature-article):after {
     margin-top: calc(var(--space4) + var(--space3));
 }
 
+.main-feature-article-aside + .page-section {
+    margin-top: 0;
+}
+
 .page-section ul {
     padding: 0 0 0 var(--space2);
     margin-top: var(--space3);
@@ -1790,6 +1794,7 @@ select.console-select::-ms-expand {
         flex-flow: row nowrap;
         align-items: flex-start;
         justify-content: space-between;
+        flex-direction: row-reverse;
     }
 
     .main-feature-article-content-split > *:not(aside) {
