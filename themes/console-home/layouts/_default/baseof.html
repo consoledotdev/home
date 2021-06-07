@@ -6,7 +6,7 @@
     <body class="theme page-{{ if not .Params.pageType -}}article{{ else }}{{ .Params.pageType }}{{ end }}{{ with .Params.isSelected}} page-{{ . }}{{ end }}">
             {{ partial "header.html" (dict "context" . "headerType" .Params.headerType "hidePlanes" .Params.hidePlanes "hideLines" .Params.hideLines ) }}
             {{ if eq .Params.pageType "feature-article" }}
-                {{ partial (print "components/" .Params.isSelected "/artwork.html") }}
+                {{ partial (print "components/research/" .Params.isSelected "/artwork.html") }}
             {{ end }}
             <main class="main
                 {{- if ne .Params.pageType "home" -}}

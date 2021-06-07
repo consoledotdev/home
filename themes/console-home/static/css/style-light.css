@@ -112,11 +112,11 @@
 
     --theme-mars-earth-halo: 0 0 0.25em rgba(0, 0, 255, 0.08);
     --theme-mars-earth-shading: inset 0.2em 0 0.34em rgba(0, 0, 255, 0.16), inset 0 0 0.04em rgba(0, 0, 255, 0.35);
-    --theme-mars-earth-texture: url("/img/mars/earth-texture-light.png");
+    --theme-mars-earth-texture: url("/img/research/mars/earth-texture-light.png");
 
     --theme-mars-mars-halo: 0 0 0.25em rgba(255, 0, 0, 0.12);
     --theme-mars-mars-shading: inset 0.2em 0 0.34em rgba(255, 0, 0, 0.16), inset 0 0 0.04em rgba(255, 0, 0, 0.35);
-    --theme-mars-mars-texture: url("/img/mars/mars-texture-light.png");
+    --theme-mars-mars-texture: url("/img/research/mars/mars-texture-light.png");
 
     --theme-mars-connector-green: #00cc00;
     --theme-mars-masking-bg: var(--c-white-01-main);

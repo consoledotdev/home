@@ -255,7 +255,7 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
 }
 
 .is-large .mars-illustration-earth-texture {
-    background-image: url("/img/mars/earth-texture-large.png");
+    background-image: url("/img/research/mars/earth-texture-large.png");
 }
 
 .mars-illustration-mars {
@@ -295,7 +295,7 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
 }
 
 .is-large .mars-illustration-mars-texture {
-    background-image: url("/img/mars/mars-texture-large.png");
+    background-image: url("/img/research/mars/mars-texture-large.png");
 }
 
 /* Artwork
