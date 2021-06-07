@@ -65,10 +65,6 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
     margin-top: var(--space4_5);
 }
 
-.page-mars .page-meta {
-    margin-bottom: calc(var(--space4) + var(--space3));
-}
-
 /* Illustrations
    =================================================================================== */
 

@@ -966,7 +966,7 @@ body:not(.mobile) .console-control:hover:before {
     margin-top: calc(calc(var(--space4) + var(--space2)) * -1);
     overflow: hidden;
     z-index: 10;
-    margin: var(--space4_5) 0;
+    margin: var(--space4_5) 0 var(--space5);
 }
 
 .artwork-background {
@@ -987,7 +987,6 @@ body:not(.mobile) .console-control:hover:before {
 
 @media (max-width: 600px) {
     .artwork {
-        margin-top: calc(calc(var(--space4) + var(--space2)) * -1);
         margin-left: -12vw;
         margin-right: -12vw;
     }
@@ -998,6 +997,12 @@ body:not(.mobile) .console-control:hover:before {
         .artwork {
             margin-left: -10vw;
             margin-right: -10vw;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .artwork {
+            margin-bottom: var(--space4_5);
         }
     }
 
@@ -1022,6 +1027,14 @@ body:not(.mobile) .console-control:hover:before {
         margin-right: 0;
         width: 114%;
         margin-left: -7%;
+    }
+}
+
+/* 1600px + left & right margin (6.25vw) */
+@media (min-width: 1828px) {
+    .artwork {
+        margin-left: 0;
+        width: 100%;
     }
 }
 
