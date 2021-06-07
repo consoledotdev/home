@@ -3,7 +3,7 @@ title: "How will the internet work on Mars?"
 date: 2021-06-07T12:00:00+00:00
 draft: true
 summary: An exploration of interplanetary networking.
-type: mars
+type: research
 isSelected: mars
 customStyle: true
 pageType: feature-article
@@ -36,7 +36,7 @@ quality of life become relevant. This includes producing water and food,
 staying fit and healthy, socialising and entertainment. Normal things humans
 like to do.
 
-{{< mars/habitat-distance >}}
+{{< research/mars/habitat-distance >}}
 
 One of the resources we have come to take for granted is access to the
 internet. Whether to look up information, send email or watch a video, internet
@@ -107,7 +107,7 @@ designed for such long response times. Packets must be acknowledged,
 otherwise they will be re-transmitted. For Earth/Mars communication, this is
 impossible.
 
-{{< mars/handshake >}}
+{{< research/mars/handshake >}}
 
 {{< nav-wrapper close="true" >}}
 
@@ -194,7 +194,7 @@ the first place?
 {{< rich-title-3 icon="broadcast" id="interplanetary-networking" >}}
 Interplanetary networking {{</ rich-title-3 >}}
 
-{{< mars/space-networks >}}
+{{< research/mars/space-networks >}}
 
 NASA already runs several communication networks in space:
 
@@ -227,7 +227,7 @@ near-Earth components, but are not a complete, general purpose solution.
 
 #### Delay-Tolerant Networking
 
-{{< mars/dtn-table >}}
+{{< research/mars/dtn-table >}}
 
 Back in 2007, a new [Delay-Tolerant Networking
 Architecture](https://tools.ietf.org/html/rfc4838) was proposed by the IETF
@@ -333,7 +333,7 @@ connected through nodes positioned in space. The [Mars Telecommunications
 Orbiter](https://en.wikipedia.org/wiki/Mars_Telecommunications_Orbiter) was one
 such node due to come online in 2010, but it was cancelled in 2005.
 
-{{< mars/dtn-networking >}}
+{{< research/mars/dtn-networking >}}
 
 The sheer distance means that communication delays are unavoidable, but the
 protocols allow for time-sensitive communication between planets. However,
@@ -382,7 +382,7 @@ Transporting all of YouTube would therefore require at least 10 Falcon Heavy
 flights, at a launch cost of almost $1bn. That doesn’t include the cost of the
 Snowball devices themselves.
 
-{{< mars/ship-youtube >}}
+{{< research/mars/ship-youtube >}}
 
 {{< nav-wrapper close="true" >}}
 
@@ -410,7 +410,7 @@ infrastructure, satellite connectivity could be preferred.
 approach: launch thousands of low-Mars orbit satellites and give customers
 hardware receivers for high-speed connectivity anywhere on the planet.
 
-{{< mars/globe-maps >}}
+{{< research/mars/globe-maps >}}
 
 Indeed, whether it is just a hidden marketing Easter-egg or not, the current
 [Starlink Terms of
