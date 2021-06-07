@@ -23,6 +23,7 @@ let computeTOCPos = (() => {
     let style = {};
     let reachedBottom = false;
     let compute = function () {
+        let lastBlock = document.querySelector("#wrapper-10");
         let handleIntersect = (intersections) => {
             intersections.forEach(function (i) {
                 if (i.isIntersecting) {
@@ -46,7 +47,6 @@ let computeTOCPos = (() => {
 
         let aside = document.querySelector("[data-aside]");
         let TOC = document.querySelector("[data-toc]");
-        let lastBlock = document.querySelector("#wrapper-10");
         let midPoint = parseInt(window.innerHeight / 2);
         let asidePos = aside.getBoundingClientRect().top;
         let TOCHeightHalf = parseInt(TOC.offsetHeight / 2);
