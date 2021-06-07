@@ -305,7 +305,8 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
 }
 
 .page-mars .artwork-story {
-    width: 78%;
+    width: 75%;
+    max-width: 1200px;
 }
 
 .page-mars .mars-artwork-center {
@@ -728,7 +729,8 @@ body:not(.is-same-origin).theme.page-mars .logo-svg-animated-explode .prompt {
 
 @media (min-width: 601px) {
     .page-mars .artwork {
-        padding: max(var(--space6), 8%) 0 10%;
+        --headerSafe: calc(var(--space6) - var(--space2));
+        padding: max(var(--headerSafe), 6%) 0 6%;
     }
 
     .page-mars .artwork-story {
