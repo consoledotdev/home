@@ -1798,8 +1798,8 @@ select.console-select::-ms-expand {
 
     .main-feature-article-content-split aside {
         flex: 0 0 auto;
-        max-width: 100px;
-        margin-left: 10vw;
+        width: 120px;
+        margin-left: 6vw;
     }
 
     @media (max-aspect-ratio: 9/10) {
@@ -1813,8 +1813,7 @@ select.console-select::-ms-expand {
 
 @media (min-width: 920px) {
     .main-feature-article-content-split aside {
-        max-width: 160px;
-        margin-left: 14vw;
+        width: 16vw;
     }
 }
 
@@ -1829,8 +1828,7 @@ select.console-select::-ms-expand {
     }
 
     .main-feature-article-content-split aside {
-        max-width: 220px;
-        margin-left: 10vw;
+        width: 20vw;
     }
 
     .col-2-css {
@@ -1841,12 +1839,15 @@ select.console-select::-ms-expand {
 
 @media (min-width: 1152px) {
     .main-feature-article-content-split aside {
-        max-width: 320px;
-        margin-left: 12vw;
+        width: 24vw;
     }
 }
 
 @media (min-width: 1280px) {
+    .main-feature-article-content-split aside {
+        width: 26vw;
+    }
+
     .main-feature-article-content {
         max-width: 760px;
     }
@@ -1886,18 +1887,6 @@ select.console-select::-ms-expand {
 
     .main-feature-article .title-5 {
         font-size: var(--t-size0);
-    }
-}
-
-@media (min-width: 1440px) {
-    .main-feature-article-content-split aside {
-        max-width: none;
-    }
-}
-
-@media (min-width: 1520px) {
-    .main-feature-article-content-split aside {
-        max-width: none;
     }
 }
 

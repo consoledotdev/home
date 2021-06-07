@@ -958,6 +958,7 @@ body:not(.mobile) .console-control:hover:before {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-end;
+    width: inherit;
 }
 
 .toc .title.title-4 {
