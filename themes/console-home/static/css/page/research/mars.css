@@ -1204,6 +1204,10 @@ html {
     }
 }
 
+.habitat-distance-whole .mars-illustration-caption .mars-illustration-text {
+    white-space: nowrap;
+}
+
 .habitat-distance-distance-caption span {
     margin-bottom: var(--space1);
 }
