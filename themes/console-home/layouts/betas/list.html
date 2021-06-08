@@ -38,6 +38,7 @@
 		</div>
 	</section>
 	<div class="betas-split">
+		<aside id="aside-filters-wrapper" class="betas-aside"></aside>
 		<div class="betas">
             <section class="page-section inline-filters-wrapper" data-inline-filters-wrapper>
 				{{ $open := "<div class=\"betas-aside-content\" data-betas-aside-content>" }}
@@ -75,7 +76,6 @@
 				</div>
 			</section>
 		</div>
-		<aside id="aside-filters-wrapper" class="betas-aside"></aside>
 	</div>
 	<section class="page-section page-section-betas-root">
 		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle ) }}

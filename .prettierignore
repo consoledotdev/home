@@ -9,5 +9,4 @@ resources/*
 # template language, so we exclude them
 themes/console-home/layouts/*
 
-# YAML frontmatter requires 2 spaces for indentation
-content/*
+README.md

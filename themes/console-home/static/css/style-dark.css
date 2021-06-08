@@ -8,6 +8,7 @@
     --theme-text-1: var(--c-white-00-absolute);
     --theme-text-2: var(--c-grey-03);
     --theme-text-3: var(--c-grey-05);
+    --theme-text-4: var(--c-grey-04-whites-neutral);
     --theme-input-text: var(--c-black-02-main);
     --theme-pre-code-text: var(--c-blue-04);
     --theme-cta-text: var(--c-white-00-absolute);
@@ -37,6 +38,7 @@
     --theme-border-0: 1px solid rgba(255, 255, 255, 0.03);
     --theme-border-1: 1px solid rgba(255, 255, 255, 0.03);
     --theme-border-2: 1px solid rgba(255, 255, 255, 0.06);
+    --theme-border-3: 1px solid rgba(255, 255, 255, 0.16);
 
     --theme-separator-1: var(--c-grey-06-blacks-neutral);
 
@@ -56,6 +58,7 @@
     --theme-control-bg: var(--c-grey-06-blacks-neutral);
     --theme-control-border: var(--c-grey-01-white-03);
     --theme-control-active-text: var(--c-grey-09-black-03);
+    --theme-control-text-pressed: var(--c-grey-03);
     --theme-control-text: var(--c-white-00-absolute);
 
     --theme-control-button-inactive-border: 1px solid rgba(255, 255, 255, 0.1);
@@ -104,10 +107,26 @@
 
     --theme-badge-text: var(--c-white-00-absolute);
     --theme-badge-bg: var(--c-fuchsia-06);
+
+    /* Mars Internet page specific */
+
+    --theme-mars-earth-halo: 0 0 0.25em rgba(0, 0, 255, 0.3);
+    --theme-mars-earth-shading: inset 0.2em 0 0.34em rgba(0, 0, 255, 0.1), inset 0 0 0.04em rgba(0, 0, 255, 0.3);
+    --theme-mars-earth-texture: url("/img/research/mars/earth-texture-dark.png");
+
+    --theme-mars-mars-halo: 0 0 0.25em rgba(255, 0, 0, 0.3);
+    --theme-mars-mars-shading: inset 0.2em 0 0.34em rgba(255, 0, 0, 0.1), inset 0 0 0.04em rgba(255, 0, 0, 0.3);
+    --theme-mars-mars-texture: url("/img/research/mars/mars-texture-dark.png");
+
+    --theme-mars-connector-green: #00ff00;
+    --theme-mars-masking-bg: var(--c-grey-09-black-03);
+    --theme-mars-snowball-color: var(--c-grey-02);
+    --theme-mars-orbit-opacity: 0.3;
 }
 
 .theme.page-article,
-.theme.page-feature {
+.theme.page-feature,
+.theme.page-feature-article {
     background: var(--theme-content-bg-3);
 }
 

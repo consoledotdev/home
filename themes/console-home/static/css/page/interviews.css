@@ -65,24 +65,11 @@
     object-fit: contain;
 }
 
-.interviews-card-person-portrait {
-    position: relative;
+.interviews-card-combo .plane-picture {
+    display: block;
     height: 100%;
     margin-left: calc(var(--logoWidth) / 2);
     margin-right: calc(var(--logoWidth) / 2 * -1);
-    clip-path: polygon(30.9% 0%, 0% 100%, 69.1% 100%, 100% 0%);
-}
-
-.interviews-card-person-portrait .ratio {
-    height: 100%;
-    display: block;
-    visibility: hidden;
-}
-
-.interviews-card-person-portrait .image {
-    border-radius: 0;
-    top: 0;
-    left: 0;
 }
 
 .interviews-card-content {
@@ -167,14 +154,14 @@ p.interviews-card-description {
         border-bottom: var(--theme-border-2);
     }
 
-    .interviews-card-person-portrait {
-        clip-path: polygon(30.9% 0%, 0% 100%, 100% 100%, 100% 0%);
+    .interviews-card-combo .plane-picture {
         margin: 0;
+        clip-path: polygon(30.9% 0%, 0% 100%, 100% 100%, 100% 0%);
         width: 76.33%;
         margin-left: 23.67%;
     }
 
-    .interviews-card-person-portrait .ratio {
+    .interviews-card-combo .plane-picture .ratio {
         width: 100%;
         height: auto;
     }

@@ -35,11 +35,11 @@ class ElementHandler {
         const currentValue = element.getAttribute("value");
 
         // If empty, set it to the referrer
-        if (this.referrer == "direct"){
+        if (this.referrer == "direct") {
             return; // Do nothing
         } else if (currentValue == "") {
             element.setAttribute("value", this.referrer);
-        // If not empty, prepend the referrer to the existing value
+            // If not empty, prepend the referrer to the existing value
         } else {
             const newValue = this.referrer + "_" + currentValue
             element.setAttribute("value", newValue);
@@ -80,6 +80,10 @@ async function handleEvent(event) {
             ["/collections/neovim-best-code-editor-ide-for-developers/", "https://console.dev/reviews/neovim-best-code-editor-ide-for-developers/"],
             ["/beta", "https://console.dev/betas/"],
             ["/beta/", "https://console.dev/betas/"],
+            ["/mars", "https://console.dev/research/mars/"],
+            ["/mars/", "https://console.dev/research/mars/"],
+            ["/research", "https://console.dev"],
+            ["/research/", "https://console.dev"],
             ["/qa", "https://console.dev/interviews/"],
             ["/qa/", "https://console.dev/interviews/"],
             ["/qa/rss.xml", "https://console.dev/interviews/rss.xml"],
@@ -133,7 +137,7 @@ async function handleEvent(event) {
 
         // allow headers to be altered
         const response = new Response(page.body, page);
-    
+
         // Security headers
         response.headers.set("X-XSS-Protection", "1; mode=block");
         response.headers.set("X-Content-Type-Options", "nosniff");
@@ -161,7 +165,7 @@ async function handleEvent(event) {
                     ...notFoundResponse,
                     status: 404,
                 });
-            } catch (e) {}
+            } catch (e) { }
         }
 
         return new Response(e.message || e.toString(), { status: 500 });

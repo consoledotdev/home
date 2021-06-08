@@ -1,0 +1,4 @@
+<h3 {{ with .Get "id"}}id="{{ . }}" {{ end }}class="title title-2 rich-title">
+    {{ with .Get "icon"}}{{ partial (print "icons/" . ".html") }}{{ end }}
+    <span class="rich-title-text"></span>{{ .Inner | .Page.RenderString }}</span>
+</h3>
