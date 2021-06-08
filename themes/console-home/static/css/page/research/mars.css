@@ -206,11 +206,17 @@ html {
     height: 100%;
     top: 0;
     left: 0;
-    background-image: var(--theme-mars-earth-texture);
-    background-size: auto 100%;
-    background-position: 41.42% 0;
+    overflow: hidden;
     z-index: 10;
+}
 
+.mars-illustration-earth-texture div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 100%;
+    transform: translateX(-60.4%);
     animation-name: rotate-earth;
     animation-duration: 20s;
     animation-delay: 0s;
@@ -221,16 +227,38 @@ html {
 
 @keyframes rotate-earth {
     0% {
-        background-position: 41.42% 0;
+        transform: translateX(-60.4%);
     }
     100% {
-        background-position: -158.58% 0;
+        transform: translateX(-10.4%);
     }
 }
 
-.is-large .mars-illustration-earth-texture {
-    background-image: url("/img/research/mars/earth-texture-large.png");
+.mars-illustration-earth-texture span:first-child,
+.mars-illustration-earth-texture span:last-child {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background-image: var(--theme-mars-earth-texture);
+    background-size: auto 100%;
+}
+
+.mars-illustration-earth-texture span:first-child {
+    left: 0;
+}
+
+.mars-illustration-earth-texture span:last-child {
+    left: 50%;
+}
+
+.is-large .mars-illustration-earth-texture div {
     animation-duration: 30s;
+}
+
+.is-large .mars-illustration-earth-texture span:first-child,
+.is-large .mars-illustration-earth-texture span:last-child {
+    background-image: url("/img/research/mars/earth-texture-large.png");
 }
 
 .mars-illustration-mars {
@@ -263,12 +291,18 @@ html {
     height: 100%;
     top: 0;
     left: 0;
-    background-image: var(--theme-mars-mars-texture);
-    background-size: auto 100%;
-    background-position: 0 0;
+    overflow: hidden;
     z-index: 10;
+}
 
-    animation-name: rotate-earth;
+.mars-illustration-mars-texture div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 100%;
+    transform: translateX(-50%);
+    animation-name: rotate-mars;
     animation-duration: calc(20s * 1.026);
     animation-delay: 0s;
     animation-timing-function: linear;
@@ -276,18 +310,40 @@ html {
     animation-fill-mode: forwards;
 }
 
-@keyframes rotate-earth {
+@keyframes rotate-mars {
     0% {
-        background-position: 0 0;
+        transform: translateX(-50%);
     }
     100% {
-        background-position: -200% 0;
+        transform: translateX(-0%);
     }
 }
 
-.is-large .mars-illustration-mars-texture {
-    background-image: url("/img/research/mars/mars-texture-large.png");
+.mars-illustration-mars-texture span:first-child,
+.mars-illustration-mars-texture span:last-child {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background-image: var(--theme-mars-mars-texture);
+    background-size: auto 100%;
+}
+
+.mars-illustration-mars-texture span:first-child {
+    left: 0;
+}
+
+.mars-illustration-mars-texture span:last-child {
+    left: 50%;
+}
+
+.is-large .mars-illustration-mars-texture div {
     animation-duration: calc(30s * 1.026);
+}
+
+.is-large .mars-illustration-mars-texture span:first-child,
+.is-large .mars-illustration-mars-texture span:last-child {
+    background-image: url("/img/research/mars/mars-texture-large.png");
 }
 
 /* Artwork
@@ -1671,6 +1727,9 @@ html {
 
 .space-networks .mars-illustration-earth-texture {
     opacity: 0.22;
+}
+
+.space-networks .mars-illustration-earth-texture div {
     animation: none;
 }
 
@@ -1728,6 +1787,9 @@ html {
 
 .space-networks .mars-illustration-mars-texture {
     opacity: 0.3;
+}
+
+.space-networks .mars-illustration-mars-texture div {
     animation: none;
 }
 
