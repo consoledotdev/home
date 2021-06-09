@@ -84,6 +84,7 @@ async function handleEvent(event) {
             ["/mars/", "https://console.dev/research/mars/"],
             ["/research", "https://console.dev"],
             ["/research/", "https://console.dev"],
+            ["/research/mars", "https://console.dev/research/mars/"],
             ["/qa", "https://console.dev/interviews/"],
             ["/qa/", "https://console.dev/interviews/"],
             ["/qa/rss.xml", "https://console.dev/interviews/rss.xml"],
