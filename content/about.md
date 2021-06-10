@@ -4,6 +4,7 @@ date: 2021-02-11T17:07:35Z
 draft: false
 summary: Console aims to become the place developers go to find the best tools.
 isSelected: about
+headerType: fixed
 ---
 
 Discover the best tools and beta releases for developers.

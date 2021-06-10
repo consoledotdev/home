@@ -3,6 +3,7 @@ title: "Privacy Policy"
 date: 2021-02-11T21:05:53Z
 draft: false
 summary: Our goal is to track as little as possible, only collecting what will help us improve Console.
+headerType: fixed
 ---
 
 Our goal is to track as little as possible, only collecting what will help us
