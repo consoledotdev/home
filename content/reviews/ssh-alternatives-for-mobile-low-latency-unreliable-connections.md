@@ -122,7 +122,7 @@ with TCP. The client shows when there is a delay in echoing the reply from the
 server, but only in high latency scenarios, which is fun to occasionally see
 show up in the UI.
 
-{{< img-center src="/img/reviews/ssh-alternatives-for-mobile-low-latency-unreliable-connections-responsetime.png" alt="A graph of keystroke response time: Mosh vs SSH." width="100%" caption="Cumulative distribution of keystroke response times: Mosh vs SSH." >}}
+{{< img-center src="/img/reviews/ssh-alternatives-for-mobile-low-latency-unreliable-connections-responsetime.png" alt="A graph of keystroke response time: Mosh vs SSH." width="100%" caption="Cumulative distribution of keystroke response times: Mosh vs SSH. From: mosh.org" >}}
 
 The main downside with Mosh is that it emulates the terminal remotely and only
 sends the visible state of the terminal back to the client. This means if you
