@@ -7,6 +7,7 @@ what: A modern git cli.
 tags: ['git']
 date: 2021-03-04T12:00:00Z
 draft: false
+headerType: fixed
 summary: Interview with Chris Walz, Developer, bit.
 isSelected: interviews
 topImg1Src: /img/interviews/bit-chris-walz-profile.jpg

@@ -7,6 +7,7 @@ what: An inbound webhook store and forward proxy.
 tags: ['DevOps']
 date: 2021-05-07T12:00:00Z
 draft: false
+headerType: fixed
 summary: Interview with Alex Bouchard, CEO, Hookdeck
 isSelected: interviews
 topImg1Src: /img/interviews/hookdeck-alex-bouchard-profile.png
@@ -27,7 +28,7 @@ about it.
 But with Shopify there's not much we could do when things went wrong with the
 webhooks. That left me with a very sour taste: "Why can't everybody be like
 Stripe?". I started brewing around this idea, why can't we make the webhooks
-independent to the platform sending them? 
+independent to the platform sending them?
 
 Once I started talking with other people in the field, I realized that what was
 really going on is that many teams were building around this problem. They
@@ -79,7 +80,7 @@ only gives you ephemeral URLs, so people are always spinning up new URLs to get
 requests proxied locally. As we started venturing into this we've decided to
 offer local development URLs completely free of charge. As of a few days ago
 everything that's development related can be used without a Hookdeck account.
-You can just generate a URL and receive your webhooks locally. 
+You can just generate a URL and receive your webhooks locally.
 
 In production, the most popular solution is [SQS](https://aws.amazon.com/sqs/).
 I often get asked, why can't I just use [Lambda](https://lambdaschool.com/),
@@ -119,7 +120,7 @@ the hills, ski like a madman for three hours, then have the rest of the day to
 work...which I'm super grateful for. I try to schedule my meetings and calls
 with customers and prospective customers in between my rock climbing sessions
 now. I've been extremely lucky to be able to do that.
- 
+
 Otherwise, I’m working on Hookdeck. I'd say about a third of my time is spent
 on the product design and user experience, a third of doing outreach, and a
 third one working specifically on the tech, architecting new features and
@@ -132,12 +133,12 @@ then my co-founder [Eric Bang-Tri Tran](https://ericbangtri-tran.com/), who is
 in charge of the business side of things like operations and business
 development. [Shawn Parent](https://www.linkedin.com/in/shawnparent/) and
 [Maurice Kherlakian](https://twitter.com/mkherlakian) are senior engineers -
-very experienced with large scale, high reliability and concurrency systems. 
+very experienced with large scale, high reliability and concurrency systems.
 
 I work on the product side of things. I started my career as a product
 designer. For me the development and technical side of things has always been a
 means to an end, building the vision for a product that I had. I'll spend more
-of my time and more of the effort on that side of things. 
+of my time and more of the effort on that side of things.
 
 But of course everybody does whatever is the most important at that time.
 Reliability is the most important thing on the engineering side, so this is
@@ -155,7 +156,7 @@ both.
 The way I really started was with video games. When I was about thirteen years
 old, I started working in Unity building games and so on. I remember writing
 game design documents that would be 20 or 30 pages long for games that I was
-sure I would release one day, but then obviously never did. 
+sure I would release one day, but then obviously never did.
 
 Then I moved into web-based technologies. I'm still self-taught in the sense
 that I didn't have formal studies in it. I've just been hacking away for a
@@ -262,7 +263,7 @@ We built our CLI fully in Go. That was my first time using it. I love it so
 far. One of the issues with Hookdeck is that we are indirectly competing with
 SQS and Pub/Sub on pricing, so working with more lower level languages may help
 us there. Maybe Go, but I’ve also been thinking that Scala and Rust will be
-really interesting to explore. 
+really interesting to explore.
 
 ### Describe your computer hardware setup
 
@@ -280,7 +281,7 @@ I've had the DeathAdder for the last 15 years, since it was released. Every two
 or three years, it gets just too dirty that I need to buy a new one. I'm
 possibly on my sixth or seventh DeathAdder. I do work a lot just from my laptop
 nowadays though, because my girlfriend and I basically have to share the
-monitor. So we have a rotation and a time allocation on it. 
+monitor. So we have a rotation and a time allocation on it.
 
 ### Describe your computer software setup
 

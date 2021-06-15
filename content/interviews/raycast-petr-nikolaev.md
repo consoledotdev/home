@@ -7,6 +7,7 @@ what: A quicklauncher that lets you control your tools with a few keystrokes.
 tags: ['Desktop']
 date: 2021-03-17T12:00:00+00:00
 draft: false
+headerType: fixed
 summary: Interview with Petr Nikolaev, Co-founder, Raycast.
 isSelected: interviews
 topImg1Src: /img/interviews/raycast-petr-nikolaev-profile.jpg

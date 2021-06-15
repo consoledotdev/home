@@ -7,6 +7,7 @@ what: Containerized reproducable builds.
 tags: ['Builds']
 date: 2021-03-08T12:00:00Z
 draft: false
+headerType: fixed
 summary: Interview with Adam Gordon Bell, Software Engineer, Earthly
 isSelected: interviews
 topImg1Src: /img/interviews/earthly-adam-gordon-bell-profile.jpg

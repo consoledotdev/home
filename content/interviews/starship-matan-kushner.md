@@ -7,6 +7,7 @@ what: A cross-shell prompt.
 date: 2021-03-09T12:00:00Z
 tags: ['CLI', 'Shell']
 draft: false
+headerType: fixed
 summary: Interview with Matan Kushner, Creator, Starship.
 isSelected: interviews
 topImg1Src: /img/interviews/starship-matan-kushner-profile.jpg

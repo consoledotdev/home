@@ -7,6 +7,7 @@ what: Webhooks sending-as-a-service.
 tags: ['API']
 date: 2021-05-27T12:00:00Z
 draft: false
+headerType: fixed
 summary: Interview with Tom Hacohen, CEO, Svix
 isSelected: interviews
 topImg1Src: /img/interviews/svix-tom-hacohen-profile.jpg

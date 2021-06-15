@@ -7,6 +7,7 @@ what: A full-text search tool for static websites.
 tags: ['Search']
 date: 2021-03-10T12:00:00Z
 draft: false
+headerType: fixed
 summary: Interview with James Little, Creator, Stork Search.
 isSelected: interviews
 topImg1Src: /img/interviews/stork-search-james-little-profile.jpg

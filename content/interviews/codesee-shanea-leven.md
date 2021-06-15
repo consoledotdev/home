@@ -7,6 +7,7 @@ what: A tool for developers to visually map their codebase.
 tags: ['Code']
 date: 2021-04-16T12:00:00Z
 draft: false
+headerType: fixed
 summary: Interview with Shanea Leven, CEO, CodeSee
 isSelected: interviews
 topImg1Src: /img/interviews/codesee-shanea-leven-profile.jpeg

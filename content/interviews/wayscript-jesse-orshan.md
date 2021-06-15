@@ -7,6 +7,7 @@ what: A rapid scripting platform for developers.
 tags: ['API']
 date: 2021-03-18T12:00:00Z
 draft: false
+headerType: fixed
 summary: Interview with Jesse Orshan, Co-founder, WayScript.
 isSelected: interviews
 topImg1Src: /img/interviews/wayscript-jesse-orshan-profile.jpg
