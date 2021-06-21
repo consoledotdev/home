@@ -1,4 +1,4 @@
-/* Console Betas
+/* Console Tools
    ========================================================================== */
 
 .feature-content-wrapper .page-section .count {
@@ -324,6 +324,14 @@ p.beta-card-description {
 
         .beta-card-content > .right > .tags > * {
             text-align: right;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    @media (max-width: 400px) {
+        .betas-meta .submit-beta {
+            margin-top: var(--space3);
         }
     }
 }

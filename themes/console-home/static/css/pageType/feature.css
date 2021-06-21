@@ -1,0 +1,40 @@
+/* Console Feature page type
+   ========================================================================== */
+
+.page-section-feature-root {
+    margin-right: min(26vw, 400px);
+}
+
+.feature-collapsible-cta .box-collapsible.is-expanded .box-collapsible-content {
+    max-height: 400px;
+}
+
+@media (max-width: 768px) {
+    .page-section-feature-root {
+        margin-right: 0;
+    }
+
+    .feature-collapsible-cta {
+        display: block;
+    }
+
+    .feature-full-cta {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .feature-collapsible-cta {
+        display: none;
+    }
+
+    .feature-full-cta {
+        display: block;
+    }
+
+    @media (max-width: 1024px) {
+        .page-section-feature-root {
+            margin-right: 0;
+        }
+    }
+}

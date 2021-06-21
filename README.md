@@ -52,6 +52,7 @@ code, you only need Hugo:
 -   `hidePlanes`: `true` or `false` - Hides the planes grid from the page.
 -   `isSelected`: a string defining the fragment used for the body css class, custom stylesheet definition, menu item activation and assets location. 
 -   `customStyle`: `true` or `false` - Will expect and load a custom style based on the `isSelected` string.
+-   `customPageStyle`: `true` or `false` - Will expect and load a custom style based on the `pageType` string.
 
 ### Custom Hugo Shortcodes
 

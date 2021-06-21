@@ -1,8 +1,9 @@
 {{ define "main" }}
-    {{ $CTATitle := "Weekly devtools newsletter" }}
+    {{ $CTATitle := "Interesting Tools by email" }}
+	{{ $CTADescription := "Our free weekly newsletter picks out the 2-3 most interesting tools. " }}
 	<section class="page-section page-section-feature-root">
-		<h2 class="title title-1">Beta Console</h2>
-		<p class="description">A live list of every developer tool beta &amp; early access release.</p>
+		<h2 class="title title-1">Tools</h2>
+		<p class="description">A live list of all the interesting tools reviewed by Console.</p>
         <div class="page-meta">
         <!--
             Pull out the "last checked" timestamp from the first live beta and
@@ -16,20 +17,20 @@
         {{- $updated := "" -}}
         {{- if $gaChecked.After $liveChecked -}}{{- $updated = $gaChecked -}}{{- else -}}{{- $updated = $liveChecked -}}{{- end -}}
             <p class="small">
-				<span>Last updated: {{ $updated.Format "2006-01-02" }}</span>
+				<span>Last updated: {{ $updated.Format "2006-01-02" }}</span>. Read our&nbsp;<a class="link" href="#">selection criteria</a>.
 			</p>
             <p class="small">
                 <span class="page-meta-separator">&mdash;</span>
-				<a onclick="blur();" href="https://docs.google.com/forms/d/e/1FAIpQLSc671E1L7fEEz0WF5Vw58WakkRsvUgIzpgk3gafcgr5mp3gng/viewform" class="console-button-text console-button-small icon-left submit-beta" title="Submit Beta">
-					{{ partial "icons/beta.html" }}
-					<span>Submit Beta</span>
+				<a onclick="blur();" href="" class="console-button-text console-button-small icon-left submit-tool" title="Submit Tool">
+					{{ partial "icons/tool.html" }}
+					<span>Submit Tool</span>
 				</a>
 			</p>
 		</div>
 	</section>
 	<section class="page-section page-section-feature-root">
 		<div class="feature-collapsible-cta">
-			{{ $subscribeData := (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle ) }}
+			{{ $subscribeData := (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription ) }}
 			{{ $subscribe := partial "subscribe.html" $subscribeData }}
 			{{ partial "components/box-collapsible.html" (dict "title" $CTATitle "style" "blue" "icon" "expand.html" "content" $subscribe) }}
         </div>
@@ -42,7 +43,7 @@
 		<div class="feature-content-wrapper">
             <section class="page-section inline-filters-wrapper" data-inline-filters-wrapper>
 				{{ $open := "<div class=\"feature-aside-content\" data-feature-aside-content>" }}
-				{{ $filters := partial "components/betas/filters.html" (dict "items" $.Site.Data.filters.items ) }}
+				{{ $filters := partial "components/tools/filters.html" (dict "items" $.Site.Data.filters.items ) }}
 				{{ $close := "</div>" }}
 				{{ $content := printf "%s%s%s" $open $filters $close }}
 				{{ partial "components/box-collapsible.html" (dict "title" "Filter" "icon" "filter.html" "content" $content) }}
@@ -50,12 +51,12 @@
 			<section class="page-section" data-feature-items-section>
 				<div class="page-section-heading">
 					<div class="left">
-						<h3 class="title title-2">Latest Releases<span class="count" data-feature-items-count></span></h3>
+						<h3 class="title title-2">Latest Tools<span class="count" data-feature-items-count></span></h3>
 					</div>
 					<div class="right">
-						<a onclick="blur();" href="https://console.dev/betas/rss.xml" class="console-button-text console-button-small icon-left" title="RSS Feed">
-							{{ partial "icons/rss.html" }}
-							<span>Feed</span>
+						<a onclick="blur();" href="" class="console-button-text console-button-small icon-right" title="View all in category">
+							<span>View all</span>
+							{{ partial "icons/arrow-right.html" }}
 						</a>
 					</div>
 				</div>
@@ -63,22 +64,13 @@
 					{{ range $.Site.Data.betaslive.items }}
 						{{ partial "components/betas/card.html" . }}
 					{{ end }}
-					{{ partial "components/feature/card-empty.html" (dict "context" . "itemName" "Betas" ) }}
-				</div>
-			</section>
-			<section class="page-section" data-feature-items-section>
-                <h3 class="title title-2">Recent Betas: Now GA<span class="count" data-feature-items-count></span></h3>
-				<div class="beta-items" data-betas-ga>
-					{{ range $.Site.Data.betasga.items }}
-						{{ partial "components/betas/card.html" . }}
-					{{ end }}
-					{{ partial "components/feature/card-empty.html" (dict "context" . "itemName" "Betas" ) }}
+					{{ partial "components/feature/card-empty.html" (dict "context" . "itemName" "Tools" ) }}
 				</div>
 			</section>
 		</div>
 	</div>
 	<section class="page-section page-section-feature-root">
-		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle ) }}
+		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
 	</section>
 	<script src="/js/betas.js"></script>
 {{ end }}

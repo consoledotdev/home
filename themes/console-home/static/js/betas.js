@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 let manageFiltersPosition = (() => {
-    let filtersEl = document.querySelector("[data-betas-aside-content]");
+    let filtersEl = document.querySelector("[data-feature-aside-content]");
     let asideWrapper = document.getElementById("aside-filters-wrapper");
     let inlineWrapper = document.querySelector("[data-inline-filters-wrapper]");
     let inlineWrapperCollapsible = inlineWrapper.querySelector("[data-collapsible-content]");
@@ -65,7 +65,7 @@ let computeFixedFiltersPos2 = (() => {
             style.top = null;
         }
 
-        let filtersEl = document.querySelector("[data-betas-aside-content]");
+        let filtersEl = document.querySelector("[data-feature-aside-content]");
         if (filtersEl.classList.contains("in-aside")) {
             filtersEl.style.marginTop = style.marginTop;
             filtersEl.style.top = style.top;
@@ -135,28 +135,27 @@ let filtering = {
         };
         let latestCards = document.querySelectorAll("[data-betas-latest] [data-card]");
         let gaCards = document.querySelectorAll("[data-betas-ga] [data-card]");
-        let countLatest = filter(latestCards);
-        let countGa = filter(gaCards);
+        filter(latestCards);
+        filter(gaCards);
 
-        let updateCount = (list, count) => {
-            let el = document.querySelector("[data-betas-count-" + list + "]");
-            if (count == 0) el.innerHTML = "";
-            else el.innerHTML = "(" + count + ")";
-        };
-        updateCount("latest", countLatest);
-        updateCount("ga", countGa);
+        let itemsSections = document.querySelectorAll("[data-feature-items-section]")
+        for (const [i, section] of itemsSections.entries()) {
+            let items = section.querySelectorAll("[data-card]:not(.is-hidden)")
+            let visibleCardsCount = items.length;
 
-        let checkEmptyPlaceholderDisplay = (container) => {
-            let visibleCards = document.querySelector(container + " [data-card]:not(.is-hidden)");
-            let emptyPlaceholder = document.querySelector(container + " [data-beta-card-empty-placeholder]");
-            if (!visibleCards) {
+            // update count
+            let el = section.querySelector("[data-feature-items-count]");
+            if (visibleCardsCount == 0) el.innerHTML = "";
+            else el.innerHTML = "(" + visibleCardsCount + ")";
+
+            // check empty placeholder display
+            let emptyPlaceholder = section.querySelector("[data-feature-card-empty-placeholder]");
+            if (visibleCardsCount <= 0) {
                 emptyPlaceholder.classList.remove("is-hidden");
             } else {
                 emptyPlaceholder.classList.add("is-hidden");
             }
-        };
-        checkEmptyPlaceholderDisplay("[data-betas-latest]");
-        checkEmptyPlaceholderDisplay("[data-betas-ga]");
+        }
     },
     clearedAllChecks: (e) => {
         let filters = filtering._getFilters();
@@ -207,7 +206,7 @@ let sortBetas = () => {
 
     // dom manipulation method
     let replaceCards = (cards, containerSelector) => {
-        let emptyPlaceholder = document.querySelector(containerSelector + " [data-beta-card-empty-placeholder]");
+        let emptyPlaceholder = document.querySelector(containerSelector + " [data-feature-card-empty-placeholder]");
         let container = document.querySelector(containerSelector);
         container.innerHTML = "";
         cards.forEach((card) => {
