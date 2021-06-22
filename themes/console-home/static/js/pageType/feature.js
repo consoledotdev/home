@@ -104,18 +104,18 @@ let filtering = {
         if (activeFilterValues.length == totalFilters) parent.classList.add("is-showing-all");
     },
     _filter: (cards, filterValues) => {
-        // for each card checks if its categories data attribute
+        // for each card checks if its taxonomy data attribute
         // has any match for the active checkboxes values
         // If there's no match it hides the card, otherwise it shows it
         // Weekly pick filter will show/hide all weekly pick records
-        // regardles if other categories are matched
+        // regardles if other taxonomies are matched
         let count = 0;
         for (let card of cards) {
-            let categories = card.dataset.categories;
+            let taxonomy = card.dataset.taxonomy;
             let match = false;
 
             for (value of filterValues) {
-                match = categories.indexOf(value) >= 0 && true;
+                match = taxonomy.indexOf(value) >= 0 && true;
                 if (match) break;
             }
 

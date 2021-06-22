@@ -115,8 +115,8 @@ with open(args.tools_json, 'r') as f:
             toolType = tool['Type'].lower()
             toolType = toolType.replace(' ', '-')
 
-            # Aggregate filter categories
-            tool['Filter Categories'] = '{0}, {1}'.format(
+            # Aggregate filter taxonomy
+            tool['Filter Taxonomy'] = '{0}, {1}'.format(
                 category,
                 toolType
             )
@@ -237,15 +237,15 @@ with open(args.beta_json, 'r') as f:
             programType = program['Type'].lower()
             programType = programType.replace(' ', '-')
 
-            # Aggregate filter categories
-            program['Filter Categories'] = '{0}, {1}, {2}'.format(
+            # Aggregate filter taxonomy
+            program['Filter Taxonomy'] = '{0}, {1}, {2}'.format(
                 category,
                 programType,
                 program['Access'].lower()
             )
 
             if program['Weekly Pick']:
-                program['Filter Categories'] += ', weekly-pick'
+                program['Filter Taxonomy'] += ', weekly-pick'
 
             if program['GA?'] == "TRUE":
                 programs_ga['items'].append(program)
