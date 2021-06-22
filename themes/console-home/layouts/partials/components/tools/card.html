@@ -4,18 +4,18 @@
 {{- $showDate = index . "Beta ended" -}}
 {{- $url = index . "GA URL" -}}
 {{- end -}}
-<div class="beta-card{{ with index . "Weekly Pick" }} beta-card-pick{{ end }}" data-card data-date="{{ $showDate }}" data-name="{{ index . "Tool/Product/Project" }}" data-pick="{{ index . "Weekly Pick" }}" data-categories="{{ index . "Filter Categories" }}">
+<div class="tool-card" data-card data-date="{{ $showDate }}" data-name="{{ index . "Tool/Product/Project" }}" data-pick="{{ index . "Weekly Pick" }}" data-categories="{{ index . "Filter Categories" }}">
 	<a onclick="blur();" class="card-link" href="{{ $url }}" target="_blank" rel="noopener"><span>{{- if eq .Access "Open" -}}Details{{- else -}}{{- if index . "Beta ended" -}}Details{{- else -}}Apply{{- end -}}{{- end -}} {{ partial "icons/external-link.html" }}</span></a>
     {{ with index . "Weekly Pick" -}}
 		{{ partial "icons/console-mini-filled.html" }}
 	{{- end }}
     <span class="date">{{ $showDate }}</span>
-	<div class="beta-card-content">
+	<div class="tool-card-content">
 		<div class="left">
 			{{- $favicon := index . "favicon" -}}
 			{{- $faviconStatic := print "static/" $favicon -}}
-			<div class="beta-card-thumbnail aspect-ratio aspect-ratio-1-1">{{- if $favicon -}}{{- if (fileExists $faviconStatic) -}}<img class="image" src="/{{ $favicon }}" alt="{{ index . "Company/Org" }} Logo" />{{- end -}}{{- end -}}</div>
-			<p class="beta-card-name">
+			<div class="tool-card-thumbnail aspect-ratio aspect-ratio-1-1">{{- if $favicon -}}{{- if (fileExists $faviconStatic) -}}<img class="image" src="/{{ $favicon }}" alt="{{ index . "Company/Org" }} Logo" />{{- end -}}{{- end -}}</div>
+			<p class="tool-card-name">
 				{{- $org := index . "Company/Org" -}}
 				{{- $name := index . "Tool/Product/Project" -}}
 				{{- if in $name $org -}}{{ $name }}{{- else -}}{{ $name }}, from {{ $org }}{{- end -}}
@@ -23,12 +23,12 @@
 		</div>
 		<div class="right">
 			<div class="left">
-				<p class="beta-card-name">
+				<p class="tool-card-name">
 					{{- $org := index . "Company/Org" -}}
 					{{- $name := index . "Tool/Product/Project" -}}
 					{{- if in $name $org -}}{{ $name }}{{- else -}}{{ $name }}, from {{ $org }}{{- end -}}
 				</p>
-				<p class="small beta-card-description">{{ index . "What is it?" }}</p>
+				<p class="small tool-card-description">{{ index . "What is it?" }}</p>
 			</div>
 			<div class="tags">
 				{{ partial "icons/tag.html" }}

@@ -62,7 +62,7 @@
 				</div>
 				<div class="feature-items" data-feature-items data-aside-anchor>
 					{{ range $.Site.Data.betaslive.items }}
-						{{ partial "components/betas/card.html" . }}
+						{{ partial "components/tools/card.html" . }}
 					{{ end }}
 					{{ partial "components/feature/card-empty.html" (dict "context" . "itemName" "Tools" ) }}
 				</div>
