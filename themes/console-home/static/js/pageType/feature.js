@@ -174,7 +174,7 @@ let filtering = {
 // first count when the page is loaded
 filtering.selectedAllChecks();
 
-let sortItems = () => {
+let sortItems = (sortBy) => {
     // sorting method
     let sortCards = (cards) => {
         if (sortBy == "name") {
@@ -215,7 +215,7 @@ let sortItems = () => {
     // retrieves the value to sort by
     // then finds the cards for each section (latest and general availability)
     // sorts the cards and replace previous entries with sorted ones
-    let sortBy = document.querySelector("[data-sort-feature-items-select]").value;
+    sortBy = document.querySelector("[data-sort-feature-items-select]").value;
     let itemsWrappers = document.querySelectorAll("[data-feature-items]")
     for (const wrapper of itemsWrappers) {
         let items = wrapper.querySelectorAll("[data-card]")
