@@ -59,7 +59,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="beta-items" data-betas-latest data-aside-anchor>
+				<div class="feature-items" data-feature-items data-aside-anchor>
 					{{ range $.Site.Data.betaslive.items }}
 						{{ partial "components/betas/card.html" . }}
 					{{ end }}
@@ -68,7 +68,7 @@
 			</section>
 			<section class="page-section" data-feature-items-section>
                 <h3 class="title title-2">Recent Betas: Now GA<span class="count" data-feature-items-count></span></h3>
-				<div class="beta-items" data-betas-ga>
+				<div class="feature-items" data-feature-items>
 					{{ range $.Site.Data.betasga.items }}
 						{{ partial "components/betas/card.html" . }}
 					{{ end }}
@@ -80,5 +80,6 @@
 	<section class="page-section page-section-feature-root">
 		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle ) }}
 	</section>
+	<script src="/js/pageType/feature.js"></script>
 	<script src="/js/betas.js"></script>
 {{ end }}

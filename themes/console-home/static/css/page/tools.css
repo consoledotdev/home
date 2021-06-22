@@ -105,7 +105,7 @@
     margin-top: 0;
 }
 
-.beta-items > *:not(:last-child) {
+.feature-items > *:not(:last-child) {
     margin-bottom: var(--space3);
 }
 
