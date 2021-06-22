@@ -154,21 +154,21 @@ let filtering = {
             }
         }
     },
-    clearedAllChecks: (e) => {
+    clearedAllChecks: () => {
         let filters = filtering._getFilters();
         for (filter of filters) filter.checked = false;
-        filtering._toggleCardVisibility();
         filtering._setToggleAllActionsVisiblity();
+        filtering._toggleCardVisibility();
     },
     selectedAllChecks: (e) => {
         let filters = filtering._getFilters();
         for (filter of filters) filter.checked = true;
-        filtering._toggleCardVisibility();
         filtering._setToggleAllActionsVisiblity();
+        filtering._toggleCardVisibility();
     },
     toggledCheck: () => {
-        filtering._toggleCardVisibility();
         filtering._setToggleAllActionsVisiblity();
+        filtering._toggleCardVisibility();
     },
 };
 // first count when the page is loaded

@@ -42,7 +42,7 @@
 		<div class="feature-content-wrapper">
             <section class="page-section inline-filters-wrapper" data-inline-filters-wrapper>
 				{{ $open := "<div class=\"feature-aside-content\" data-feature-aside-content>" }}
-				{{ $filters := partial "components/betas/filters.html" (dict "items" $.Site.Data.filters.items ) }}
+				{{ $filters := partial "components/betas/filters.html" (dict "items" $.Site.Data.betasfilters.items ) }}
 				{{ $close := "</div>" }}
 				{{ $content := printf "%s%s%s" $open $filters $close }}
 				{{ partial "components/box-collapsible.html" (dict "title" "Filter" "icon" "filter.html" "content" $content) }}

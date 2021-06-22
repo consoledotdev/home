@@ -10,12 +10,9 @@
             GA beta. Compare the times, and pick the latest time as the "last
             updated" timestamp.
         -->
-        {{- $liveChecked := false -}}
-        {{- $gaChecked := false -}}
-        {{- range first 1 $.Site.Data.betaslive.items -}}{{- $liveChecked = time (index . "Last checked") -}}{{- end -}}
-        {{- range first 1 $.Site.Data.betasga.items -}}{{- $gaChecked = time (index . "Last checked") -}}{{- end -}}
-        {{- $updated := "" -}}
-        {{- if $gaChecked.After $liveChecked -}}{{- $updated = $gaChecked -}}{{- else -}}{{- $updated = $liveChecked -}}{{- end -}}
+        {{- $reviewedChecked := false -}}
+        {{- range first 1 $.Site.Data.toolsreviewed.items -}}{{- $reviewedChecked = time (index . "Reviewed") -}}{{- end -}}
+        {{- $updated := $reviewedChecked -}}
             <p class="small">
 				<span>Last updated: {{ $updated.Format "2006-01-02" }}</span>. Read our&nbsp;<a class="link" href="#">selection criteria</a>.
 			</p>
@@ -43,7 +40,7 @@
 		<div class="feature-content-wrapper">
             <section class="page-section inline-filters-wrapper" data-inline-filters-wrapper>
 				{{ $open := "<div class=\"feature-aside-content\" data-feature-aside-content>" }}
-				{{ $filters := partial "components/tools/filters.html" (dict "items" $.Site.Data.filters.items ) }}
+				{{ $filters := partial "components/tools/filters.html" (dict "dot" $.Site.Data.toolsfilters ) }}
 				{{ $close := "</div>" }}
 				{{ $content := printf "%s%s%s" $open $filters $close }}
 				{{ partial "components/box-collapsible.html" (dict "title" "Filter" "icon" "filter.html" "content" $content) }}
@@ -61,7 +58,7 @@
 					</div>
 				</div>
 				<div class="feature-items" data-feature-items data-aside-anchor>
-					{{ range $.Site.Data.betaslive.items }}
+					{{ range $.Site.Data.toolsreviewed.items }}
 						{{ partial "components/tools/card.html" . }}
 					{{ end }}
 					{{ partial "components/feature/card-empty.html" (dict "context" . "itemName" "Tools" ) }}
