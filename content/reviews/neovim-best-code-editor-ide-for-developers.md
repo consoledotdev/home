@@ -168,7 +168,7 @@ uses GPU acceleration (OpenGL in Rust), and
 so performance is excellent.
 
 One of the great things is its customizability. All configuration is defined in
-[my vimrc file](https://github.com/davidmytton/dotfiles/blob/master/vimrc) that
+[my vimrc file](https://github.com//dotfiles/blob/main/dot_vimrc) that
 I keep in version control. I can drop this onto any system and with a single
 command all my plugins will be installed and set up exactly how I prefer things.
 As Neovim and Alacritty work cross-platform, it was easy to gradually transition
@@ -223,7 +223,7 @@ easier to get set up. Regardless, a text-based terminal life is the way forward.
 #### (Neo)Vim plugins I use
 
 At time of writing I am using 19 plugins.
-[My vimrc file](https://github.com/davidmytton/dotfiles/blob/master/vimrc) is
+[My vimrc file](https://github.com/davidmytton/dotfiles/blob/main/dot_vimrc) is
 public if you want to see the latest set, but here are a few crucial ones:
 
 - [Ale](https://github.com/dense-analysis/ale): Linting.
