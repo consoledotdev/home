@@ -51,8 +51,8 @@
             "checked": true
         },
         {
-            "name": "developer-tool",
-            "label": "Developer Tool",
+            "name": "developer-tools",
+            "label": "Developer Tools",
             "showsIcon": false,
             "checked": true
         },

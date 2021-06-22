@@ -17,6 +17,12 @@
     stroke: var(--theme-text-1);
 }
 
+.icon-fill-stroke {
+    fill: var(--theme-text-1);
+    stroke-width: 1px;
+    stroke: var(--theme-text-1);
+}
+
 @media (max-width: 480px) {
     .icon {
         width: 16px;
@@ -740,8 +746,9 @@ body:not(.mobile) .console-control:hover:before {
     display: none;
 }
 
-/* Tag
+/* Tag / Category
    ================================================================================================================ */
+.categories,
 .tags {
     color: var(--c-fuchsia-05-main);
     font-size: var(--t-size-3);
@@ -750,17 +757,34 @@ body:not(.mobile) .console-control:hover:before {
     align-items: center;
 }
 
+.categories {
+    color: var(--c-fuchsia-04);
+}
+
+.tags {
+    color: var(--c-fuchsia-05-main);
+}
+
+.categories > *:not(:first-of-type),
 .tags > *:not(:first-of-type) {
     margin-left: var(--space1);
     display: inline-block;
 }
 
+.categories .icon,
 .tags .icon {
-    fill: var(--c-fuchsia-05-main);
     width: var(--t-size-2);
     height: var(--t-size-2);
     flex: 0 0 auto;
     margin-right: calc(var(--space2_5) / 2);
+}
+
+.categories .icon {
+    fill: var(--c-fuchsia-04);
+}
+
+.tags .icon {
+    fill: var(--c-fuchsia-05-main);
 }
 
 /* Separator
