@@ -37,7 +37,8 @@ last_thursday = today - relativedelta(weekday=TH(-1))
 # gsheet.action from the Interesting Tools Google Sheet (see README.md).
 print('Parsing tools JSON...')
 
-interesting = {'items': []}
+interesting_latest = {'items': []}
+interesting_reviewed = {'items': []}
 with open(args.tools_json, 'r') as f:
     tools = json.load(f)
 
@@ -53,15 +54,91 @@ with open(args.tools_json, 'r') as f:
         # Only pull out things scheduled for the last newsletter
         if args.ignore_date \
                 or scheduled_for.isocalendar() == last_thursday.isocalendar():
-            interesting['items'].append(tool)
+            interesting_latest['items'].append(tool)
+
+        # Set the icon path based on the URL
+        url = urlparse(tool['URL'])
+        faviconPath = 'img/favicons/{0}'.format(url[1])
+
+        # Do we already have an icon saved?
+        # static/ is prepended because the file is saved there, but when Hugo
+        # builds it moves them up to the root under /img/favicons
+        # The path in the JSON needs to be the final build path without
+        # static/
+        if os.path.isfile('static/' + faviconPath + '.png'):
+            tool['favicon'] = faviconPath + '.png'
+        elif os.path.isfile('static/' + faviconPath + '.svg'):
+            tool['favicon'] = faviconPath + '.svg'
+        elif os.path.isfile('static/' + faviconPath + '.jpg'):
+            tool['favicon'] = faviconPath + '.jpg'
+        elif os.path.isfile('static/' + faviconPath + '.ico'):
+            tool['favicon'] = faviconPath + '.ico'
+        else:
+            print('Retrieving favicon for: {0}'.format(tool['URL']))
+
+            # Try to find icons
+            try:
+                icons = favicon.get('{0}://{1}'.format(url[0], url[1]))
+
+                # Found some icons, so download the best (highest res)
+                if icons:
+                    icon = icons[0]
+                    response = requests.get(icon.url, stream=True)
+                    tool['favicon'] = '{0}.{1}'.format(
+                        faviconPath,
+                        icon.format)
+
+                    downloadPath = 'static/{0}'.format(tool['favicon'])
+
+                    print('- Downloading: {0} to {1}'.format(
+                        icon.url,
+                        downloadPath))
+
+                    with open(downloadPath, 'wb') as image:
+                        for chunk in response.iter_content(1024):
+                            image.write(chunk)
+
+                else:
+                    tool['favicon'] = False
+                    print('- No favicon found')
+
+            except Exception as e:
+                tool['favicon'] = False
+                print('- Error finding favicon: {0}'.format(e))
+                continue
+
+        try:
+            # Transform format
+            category = tool['Category'].lower()
+            category = category.replace(' ', '-')
+
+            toolType = tool['Type'].lower()
+            toolType = toolType.replace(' ', '-')
+
+            # Aggregate filter categories
+            tool['Filter Categories'] = '{0}, {1}'.format(
+                category,
+                toolType
+            )
+            
+            interesting_reviewed['items'].append(tool)
+
+        except Exception as e:
+            print('Error transforming format')
+            print(e)
+            print(tool)
 
     print('Parsed tools JSON')
 
 print('Writing tools - latest JSON')
-with open('data/toolslatest.json', 'w') as outfile:
-    json.dump(interesting, outfile)
-
+with open('themes/console-home/data/toolslatest.json', 'w') as outfile:
+    json.dump(interesting_latest, outfile)
 print('Wrote tools - latest JSON')
+
+print('Writing tools - reviewed JSON')
+with open('themes/console-home/data/toolsreviewed.json', 'w') as outfile:
+    json.dump(interesting_reviewed, outfile)
+print('Wrote tools - reviewed JSON')
 
 # Same for the betas
 print('Parsing betas JSON...')
@@ -183,17 +260,17 @@ with open(args.beta_json, 'r') as f:
 
 # Now write the files to the data directory ready for Hugo to build
 print('Writing betas - latest JSON')
-with open('data/betaslatest.json', 'w') as outfile:
+with open('themes/console-home/data/betaslatest.json', 'w') as outfile:
     json.dump(programs_latest, outfile)
 print('Wrote betas - latest JSON')
 
 print('Writing betas - live JSON')
-with open('data/betaslive.json', 'w') as outfile:
+with open('themes/console-home/data/betaslive.json', 'w') as outfile:
     json.dump(programs_live, outfile)
 print('Wrote betas - live JSON')
 
 print('Writing betas - GA JSON')
-with open('data/betasga.json', 'w') as outfile:
+with open('themes/console-home/data/betasga.json', 'w') as outfile:
     json.dump(programs_ga, outfile)
 print('Wrote betas - GA JSON')
 print('Done')
