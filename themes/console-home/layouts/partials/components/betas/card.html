@@ -15,20 +15,20 @@
 			{{- $favicon := index . "favicon" -}}
 			{{- $faviconStatic := print "static/" $favicon -}}
 			<div class="beta-card-thumbnail aspect-ratio aspect-ratio-1-1">{{- if $favicon -}}{{- if (fileExists $faviconStatic) -}}<img class="image" src="/{{ $favicon }}" alt="{{ index . "Company/Org" }} Logo" />{{- end -}}{{- end -}}</div>
-			<p class="beta-card-name">
+			<h4 class="title title-3">
 				{{- $org := index . "Company/Org" -}}
 				{{- $name := index . "Tool/Product/Project" -}}
 				{{- if in $name $org -}}{{ $name }}{{- else -}}{{ $name }}, from {{ $org }}{{- end -}}
-			</p>
+			</h4>
 		</div>
 		<div class="right">
 			<div class="left">
-				<p class="beta-card-name">
+				<h4 class="title title-3">
 					{{- $org := index . "Company/Org" -}}
 					{{- $name := index . "Tool/Product/Project" -}}
 					{{- if in $name $org -}}{{ $name }}{{- else -}}{{ $name }}, from {{ $org }}{{- end -}}
-				</p>
-				<p class="small beta-card-description">{{ index . "What is it?" }}</p>
+				</h4>
+				<p class="beta-card-description">{{ index . "What is it?" }}</p>
 			</div>
 			<div class="tags">
 				{{ partial "icons/tag.html" }}
