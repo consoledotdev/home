@@ -131,12 +131,12 @@ with open(args.tools_json, 'r') as f:
     print('Parsed tools JSON')
 
 print('Writing tools - latest JSON')
-with open('themes/console-home/data/toolslatest.json', 'w') as outfile:
+with open('data/toolslatest.json', 'w') as outfile:
     json.dump(interesting_latest, outfile)
 print('Wrote tools - latest JSON')
 
 print('Writing tools - reviewed JSON')
-with open('themes/console-home/data/toolsreviewed.json', 'w') as outfile:
+with open('data/toolsreviewed.json', 'w') as outfile:
     json.dump(interesting_reviewed, outfile)
 print('Wrote tools - reviewed JSON')
 
@@ -260,17 +260,17 @@ with open(args.beta_json, 'r') as f:
 
 # Now write the files to the data directory ready for Hugo to build
 print('Writing betas - latest JSON')
-with open('themes/console-home/data/betaslatest.json', 'w') as outfile:
+with open('data/betaslatest.json', 'w') as outfile:
     json.dump(programs_latest, outfile)
 print('Wrote betas - latest JSON')
 
 print('Writing betas - live JSON')
-with open('themes/console-home/data/betaslive.json', 'w') as outfile:
+with open('data/betaslive.json', 'w') as outfile:
     json.dump(programs_live, outfile)
 print('Wrote betas - live JSON')
 
 print('Writing betas - GA JSON')
-with open('themes/console-home/data/betasga.json', 'w') as outfile:
+with open('data/betasga.json', 'w') as outfile:
     json.dump(programs_ga, outfile)
 print('Wrote betas - GA JSON')
 print('Done')
