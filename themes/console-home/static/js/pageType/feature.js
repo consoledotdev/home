@@ -81,6 +81,28 @@ let computeFixedFiltersPos2 = (() => {
     window.addEventListener("resize", compute);
 })();
 
+let shared = {
+    _setSectionsCount: (section) => {
+        let visibleItems = section.querySelectorAll("[data-card]:not(.is-hidden)");
+        let visibleCardsCount = visibleItems.length;
+
+        let el = section.querySelector("[data-feature-items-count]");
+        if (visibleCardsCount == 0) el.innerHTML = "";
+        else el.innerHTML = "(" + visibleCardsCount + ")";
+    },
+    _setSectionEmptyPlaceholderVisibility: (section) => {
+        let visibleItems = section.querySelectorAll("[data-card]:not(.is-hidden)");
+        let visibleCardsCount = visibleItems.length;
+
+        let emptyPlaceholder = section.querySelector("[data-feature-card-empty-placeholder]");
+        if (visibleCardsCount <= 0) {
+            emptyPlaceholder.classList.remove("is-hidden");
+        } else {
+            emptyPlaceholder.classList.add("is-hidden");
+        }
+    },
+};
+
 let filtering = {
     _getFilters: () => {
         return document.querySelectorAll('[data-feature-filters] [type="checkbox"]:not([value="select-all"])');
@@ -132,26 +154,13 @@ let filtering = {
         let activeFilterValues = filtering._getFilterValues();
         let itemsSections = document.querySelectorAll("[data-feature-items-section]");
 
-        for (const [i, section] of itemsSections.entries()) {
+        for (const section of itemsSections) {
             // filter cards
             let items = section.querySelectorAll("[data-card]");
             filtering._filter(items, activeFilterValues);
 
-            let visibleItems = section.querySelectorAll("[data-card]:not(.is-hidden)");
-            let visibleCardsCount = visibleItems.length;
-
-            // update count
-            let el = section.querySelector("[data-feature-items-count]");
-            if (visibleCardsCount == 0) el.innerHTML = "";
-            else el.innerHTML = "(" + visibleCardsCount + ")";
-
-            // check empty placeholder display
-            let emptyPlaceholder = section.querySelector("[data-feature-card-empty-placeholder]");
-            if (visibleCardsCount <= 0) {
-                emptyPlaceholder.classList.remove("is-hidden");
-            } else {
-                emptyPlaceholder.classList.add("is-hidden");
-            }
+            shared._setSectionsCount(section);
+            shared._setSectionEmptyPlaceholderVisibility(section);
         }
     },
     clearedAllChecks: () => {
@@ -171,8 +180,6 @@ let filtering = {
         filtering._toggleCardVisibility();
     },
 };
-// first count when the page is loaded
-filtering.selectedAllChecks();
 
 let sortItems = (sortBy) => {
     // sorting method
@@ -215,7 +222,7 @@ let sortItems = (sortBy) => {
     // retrieves the value to sort by
     // then finds the cards for each section (latest and general availability)
     // sorts the cards and replace previous entries with sorted ones
-    sortBy = document.querySelector("[data-sort-feature-items-select]").value;
+    sortBy = sortBy ?? document.querySelector("[data-sort-feature-items-select]").value;
     let itemsWrappers = document.querySelectorAll("[data-feature-items]");
     for (const wrapper of itemsWrappers) {
         let items = wrapper.querySelectorAll("[data-card]");
@@ -225,6 +232,92 @@ let sortItems = (sortBy) => {
     }
 };
 
-// first sorting when the page is loaded
+let groupItems = (groupBy) => {
+    // retrieves the value to group by
+    groupBy = groupBy ?? document.querySelector("[data-group-feature-items-select]").value;
+
+    // retrieves cards and categories
+    let cards = document.querySelectorAll("[data-card][data-category]");
+    let categories = document.querySelector("#feature-js").dataset.categories.split(",");
+    categories = categories.map((c) => {
+        let parts = c.split("|");
+        return { label: parts[0], name: parts[1] };
+    });
+
+    // creates sections and fills with cards based on selected option
+    let sectionsData = {};
+    if (groupBy == "none") {
+        sectionsData["Latest Tools"] = [];
+        for (let card of cards) {
+            sectionsData["Latest Tools"].push(card);
+        }
+    } else if (groupBy == "category") {
+        categories.map((c) => {
+            sectionsData[c.label] = [];
+        });
+        for (let card of cards) {
+            sectionsData[card.dataset.category].push(card);
+        }
+    }
+
+    // get containers and section template
+    let sectionsWrapper = document.querySelector("[data-feature-content-wrapper]");
+    let sectionTemplate = document.querySelector("[data-feature-items-section]");
+    for (let section of document.querySelectorAll("[data-feature-items-section]")) {
+        section.remove();
+    }
+
+    // rebuilds sections from section data using the section template
+    for (const [i, sectionData] of Object.entries(sectionsData)) {
+        let newSection = sectionTemplate.cloneNode(true);
+
+        // sets the section name
+        newSection.querySelector("[data-feature-section-name]").innerHTML = i;
+
+        // sets the View All link based on selection option
+        if (groupBy == "none") {
+            newSection.querySelector("[data-view-all-link]").classList.add("is-hidden");
+        }
+        if (groupBy == "category") {
+            let cat = categories.find((c) => {
+                return c.label == i;
+            });
+            let viewAllLink = newSection.querySelector("[data-view-all-link]");
+            viewAllLink.href = "/category/" + cat.name;
+            viewAllLink.classList.remove("is-hidden");
+        }
+
+        // empties section and fills back with new section cards
+        let itemsEl = newSection.querySelector("[data-feature-items]");
+        let emptyItem = newSection.querySelector("[data-feature-card-empty-placeholder]");
+        itemsEl.innerHTML = "";
+
+        for (let card of sectionData) {
+            itemsEl.appendChild(card);
+        }
+
+        // add back the empty slate
+        itemsEl.appendChild(emptyItem);
+
+        // reset section count and empty slate visibility
+        shared._setSectionsCount(newSection);
+        shared._setSectionEmptyPlaceholderVisibility(newSection);
+
+        // adds section to content
+        sectionsWrapper.appendChild(newSection);
+    }
+
+    // we need to sort after grouping else the groups order will remain
+    sortBy = document.querySelector("[data-sort-feature-items-select]").value;
+    sortItems(sortBy);
+};
+
+// first sorting when the page is loaded to order data from json
 sortItems("name");
 sortItems("date");
+
+// first grouping when the page is loaded
+groupItems();
+
+// first count when the page is loaded
+filtering.selectedAllChecks();

@@ -101,6 +101,10 @@ p.tool-card-description {
     margin-top: var(--space3);
 }
 
+.view-all-link.is-hidden {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .tool-card > *:not(:last-child):not(:first-child) {
         margin-bottom: var(--space2_5);
