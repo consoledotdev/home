@@ -9,6 +9,7 @@
     --theme-text-2: var(--c-grey-03);
     --theme-text-3: var(--c-grey-05);
     --theme-text-4: var(--c-grey-04-whites-neutral);
+    --theme-text-5: var(--c-grey-06-blacks-neutral);
     --theme-input-text: var(--c-black-02-main);
     --theme-pre-code-text: var(--c-blue-04);
     --theme-cta-text: var(--c-white-00-absolute);
