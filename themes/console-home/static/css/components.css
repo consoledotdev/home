@@ -760,11 +760,11 @@ body:not(.mobile) .console-control:hover:before {
 }
 
 .categories {
-    color: var(--c-fuchsia-04);
+    color: var(--theme-categories-color);
 }
 
 .tags {
-    color: var(--c-fuchsia-05-main);
+    color: var(--theme-tag-color);
 }
 
 .categories > *:not(:first-of-type),
@@ -782,11 +782,11 @@ body:not(.mobile) .console-control:hover:before {
 }
 
 .categories .icon {
-    fill: var(--c-fuchsia-04);
+    fill: var(--theme-categories-color);
 }
 
 .tags .icon {
-    fill: var(--c-fuchsia-05-main);
+    fill: var(--theme-tag-color);
 }
 
 /* Separator

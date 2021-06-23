@@ -10,7 +10,6 @@
     background-color: var(--theme-content-bg-0);
     box-shadow: var(--theme-shadow-1);
     border-radius: var(--corners-mid);
-    border-left: 2px solid transparent;
     transition: var(--a-micro);
 }
 
@@ -29,6 +28,7 @@
     flex-flow: row nowrap;
     align-items: flex-start;
     padding: var(--space3) var(--space4);
+    border-bottom: var(--theme-border-2);
 }
 
 .tool-card-content .top > .left {
@@ -82,11 +82,11 @@ p.tool-card-description {
 }
 
 .tool-card .like-dont-like .icon-like {
-    stroke: var(--c-signaling-positive);
+    stroke: var(--theme-signaling-positive);
 }
 
 .tool-card .like-dont-like .icon-dislike {
-    stroke: var(--c-signaling-warning);
+    stroke: var(--theme-signaling-warning);
 }
 
 .tool-card-content .top > .right > .taxonomy {

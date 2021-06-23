@@ -108,6 +108,13 @@
     --theme-badge-text: var(--c-white-00-absolute);
     --theme-badge-bg: var(--c-fuchsia-05-main);
 
+    --theme-categories-color: var(--c-fuchsia-06);
+    --theme-tag-color: var(--c-fuchsia-05-main);
+
+    --theme-signaling-positive: var(--c-signaling-positive-02);
+    --theme-signaling-warning: var(--c-signaling-warning-02);
+    --theme-signaling-error:: var(--c-signaling-error-02);
+
     /* Mars Internet page specific */
 
     --theme-mars-earth-halo: 0 0 0.25em rgba(0, 0, 255, 0.08);
@@ -162,6 +169,10 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
 }
 
 .theme .interviews-card {
+    background-color: var(--theme-content-bg-0);
+}
+
+.theme .tool-card .bottom {
     background-color: var(--theme-content-bg-0);
 }
 
