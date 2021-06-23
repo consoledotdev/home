@@ -16,6 +16,8 @@
 				{{ end }}
 				{{ partial "components/checkbutton.html" (dict "context" $details "action" "filtering.toggledCheck" ) }}
 			{{ end }}
+		</div>
+		<div>
 			<button onclick="blur(); filtering.selectedAllChecks(); return false" class="console-button-text console-button-small select-all" title="Select all">
 				<span>Select all</span>
 			</button>

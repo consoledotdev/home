@@ -38,11 +38,7 @@ let manageFiltersPosition = (() => {
             filtersEl.classList.add("in-aside");
         } else {
             asideWrapper.classList.add("is-hidden");
-            if (window.innerWidth >= 769) {
-                inlineWrapper.prepend(filtersEl);
-            } else {
-                inlineWrapperCollapsible.appendChild(filtersEl);
-            }
+            inlineWrapperCollapsible.appendChild(filtersEl);
             inlineWrapper.classList.remove("is-hidden");
             filtersEl.classList.remove("in-aside");
         }

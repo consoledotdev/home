@@ -28,11 +28,13 @@
 				{{ partial "components/checkbutton.html" (dict "context" $details "action" "filtering.toggledCheck" ) }}
 			{{ end }}
 		</div>
-		<button onclick="blur(); filtering.selectedAllChecks(); return false" class="console-button-text console-button-small select-all" title="Select all">
-			<span>Select all</span>
-		</button>
-		<button onclick="blur(); filtering.clearedAllChecks(); return false" class="console-button-text console-button-small clear-all" title="Clear all">
-			<span>Clear all</span>
-		</button>
+		<div>
+			<button onclick="blur(); filtering.selectedAllChecks(); return false" class="console-button-text console-button-small select-all" title="Select all">
+				<span>Select all</span>
+			</button>
+			<button onclick="blur(); filtering.clearedAllChecks(); return false" class="console-button-text console-button-small clear-all" title="Clear all">
+				<span>Clear all</span>
+			</button>
+		</div>
 	</form>
 </div>

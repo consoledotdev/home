@@ -1,6 +1,10 @@
 /* Console Tools
    ========================================================================== */
 
+.inline-filters-wrapper .box-collapsible.is-expanded .box-collapsible-content {
+    max-height: 540px;
+}
+
 .tool-card {
     position: relative;
     background-color: var(--theme-content-bg-0);
