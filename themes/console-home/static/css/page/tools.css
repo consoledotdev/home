@@ -119,7 +119,7 @@ p.tool-card-description {
         margin-bottom: var(--space2_5);
     }
 
-    .tool-card-content .top > *:not(:last-child) {
+    .tool-card-content .top > *:not(:last-child):not(.card-link) {
         margin-bottom: var(--space2_5);
     }
 
