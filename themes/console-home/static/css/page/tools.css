@@ -95,10 +95,15 @@ p.tool-card-description {
     flex-flow: row wrap;
     align-items: center;
     justify-content: flex-start;
+    margin-bottom: calc(var(--space2) * -1);
 }
 
-.tool-card-content .top > .right > .taxonomy > *:not(:first-child) {
-    margin-left: var(--space3);
+.tool-card-content .top > .right > .taxonomy > * {
+    margin-bottom: var(--space2);
+}
+
+.tool-card-content .top > .right > .taxonomy > *:not(:last-child) {
+    margin-right: var(--space3);
 }
 
 .tool-card .date {
@@ -201,6 +206,10 @@ p.tool-card-description {
             flex-flow: column nowrap;
             align-items: flex-end;
             justify-content: center;
+        }
+
+        .tool-card-content .top > .right > .taxonomy > *:not(:last-child) {
+            margin-right: 0;
         }
 
         .tool-card-content .top > .right > .taxonomy > *:not(:first-child) {
