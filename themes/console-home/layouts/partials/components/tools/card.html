@@ -23,13 +23,15 @@
 					</h4>
 					<p class="tool-card-description">{{ index . "What is it?" }}</p>
 				</div>
-				<div class="categories">
-					{{ partial (print "icons/" (replace (lower .Category) " " "-") ".html") }}
-					<span class="category">{{ .Category }}</span>
-				</div>
-				<div class="tags">
-					{{ partial "icons/tag.html" }}
-					<span class="tag">{{ .Type }}</span>
+				<div class="taxonomy">
+					<div class="categories">
+						{{ partial (print "icons/" (replace (lower .Category) " " "-") ".html") }}
+						<span class="category">{{ .Category }}</span>
+					</div>
+					<div class="tags">
+						{{ partial "icons/tag.html" }}
+						<span class="tag">{{ .Type }}</span>
+					</div>
 				</div>
 			</div>
 		</div>

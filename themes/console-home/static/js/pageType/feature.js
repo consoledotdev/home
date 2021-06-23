@@ -130,14 +130,14 @@ let filtering = {
     },
     _toggleCardVisibility: () => {
         let activeFilterValues = filtering._getFilterValues();
-        let itemsSections = document.querySelectorAll("[data-feature-items-section]")
+        let itemsSections = document.querySelectorAll("[data-feature-items-section]");
 
         for (const [i, section] of itemsSections.entries()) {
             // filter cards
-            let items = section.querySelectorAll("[data-card]")
+            let items = section.querySelectorAll("[data-card]");
             filtering._filter(items, activeFilterValues);
 
-            let visibleItems = section.querySelectorAll("[data-card]:not(.is-hidden)")
+            let visibleItems = section.querySelectorAll("[data-card]:not(.is-hidden)");
             let visibleCardsCount = visibleItems.length;
 
             // update count
@@ -216,12 +216,12 @@ let sortItems = (sortBy) => {
     // then finds the cards for each section (latest and general availability)
     // sorts the cards and replace previous entries with sorted ones
     sortBy = document.querySelector("[data-sort-feature-items-select]").value;
-    let itemsWrappers = document.querySelectorAll("[data-feature-items]")
+    let itemsWrappers = document.querySelectorAll("[data-feature-items]");
     for (const wrapper of itemsWrappers) {
-        let items = wrapper.querySelectorAll("[data-card]")
-        items = Array.prototype.slice.call(items)
-        sortCards(items)
-        replaceCards(items, wrapper)
+        let items = wrapper.querySelectorAll("[data-card]");
+        items = Array.prototype.slice.call(items);
+        sortCards(items);
+        replaceCards(items, wrapper);
     }
 };
 

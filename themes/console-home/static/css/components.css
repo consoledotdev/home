@@ -755,6 +755,8 @@ body:not(.mobile) .console-control:hover:before {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    line-height: var(--t-lH4);
+    white-space: nowrap;
 }
 
 .categories {

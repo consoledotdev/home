@@ -64,11 +64,23 @@
 }
 
 .beta-card .title {
-    margin-bottom: var(--space2);
+    margin-bottom: var(--space1);
 }
 
 p.beta-card-description {
     margin: 0;
+}
+
+.beta-card-content .right > .taxonomy {
+    display: flex;
+    margin-top: var(--space2);
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.beta-card-content .right > .taxonomy > *:not(:first-child) {
+    margin-left: var(--space3);
 }
 
 @media (max-width: 768px) {
@@ -82,7 +94,7 @@ p.beta-card-description {
     }
 
     .beta-card .date {
-        margin-left: calc(var(--space4) + var(--space2) + var(--space4));
+        margin-left: calc(var(--space4) + var(--space3) + var(--space4));
     }
 
     .beta-card-content {
@@ -95,6 +107,10 @@ p.beta-card-description {
 
     p.beta-card-description {
         margin-bottom: var(--space2_5);
+    }
+
+    .beta-card-thumbnail {
+        margin-top: calc(var(--space1) / 2);
     }
 
     @media (max-width: 480px) {
@@ -159,7 +175,7 @@ p.beta-card-description {
         margin-bottom: var(--space1);
     }
 
-    @media (min-width: 1500px) {
+    @media (min-width: 1360px) {
         .beta-card-content > .right {
             display: flex;
             flex-flow: row nowrap;
@@ -173,14 +189,20 @@ p.beta-card-description {
             max-width: 60%;
         }
 
-        .beta-card-content > .right > .tags {
+        .beta-card-content .right > .taxonomy {
             flex: 0 0 auto;
             max-width: 40%;
-            justify-content: flex-end;
+            flex-flow: column nowrap;
+            align-items: flex-end;
+            justify-content: center;
         }
 
-        .beta-card-content > .right > .tags > * {
-            text-align: right;
+        .beta-card-content .right > .taxonomy > *:not(:first-child) {
+            margin-top: var(--space1);
+        }
+
+        p.beta-card-description {
+            margin-bottom: 0;
         }
     }
 }
