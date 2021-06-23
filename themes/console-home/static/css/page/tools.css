@@ -26,7 +26,7 @@
     position: relative;
     display: flex;
     flex-flow: row nowrap;
-    align-items: flex-start;
+    align-items: center;
     padding: var(--space3) var(--space4);
     border-bottom: var(--theme-border-2);
 }
@@ -142,6 +142,7 @@ p.tool-card-description {
 
     .tool-card-content .top {
         flex-flow: column nowrap;
+        align-items: flex-start;
     }
 
     .tool-card-content .top > .right > *:not(:last-child) {
