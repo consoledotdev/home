@@ -382,6 +382,9 @@
                 <nav class="main-nav">
                     {{ partial "components/menu-toggle.html" }}
                     <ul class="no-popup">
+                        <li{{ if eq .context.Params.isSelected "tools" }} class="is-selected"{{ end }}>
+                            <a onclick="blur();" href="/tools/">Tools</a>
+                        </li>
                         <li{{ if eq .context.Params.isSelected "betas" }} class="is-selected"{{ end }}>
                             <a onclick="blur();" href="/betas/">Betas</a>
                         </li>
@@ -390,10 +393,7 @@
                         </li>
                         <li{{ if eq .context.Params.isSelected "newsletter" }} class="is-selected"{{ end }}>
                             <a onclick="blur();" href="/latest/">Newsletter</a>
-                        </li>
-                        <li{{ if eq .context.Params.isSelected "mars" }} class="is-selected"{{ end }}>
-                            <a onclick="blur();" href="/research/mars/">Mars</a>
-                        </li>
+                        </li>                    
                     </ul>
                     <button onclick="blur(); toggleTheme()" class="console-control theme-switcher no-popup">
                         {{ partial "icons/theme.html" }}
@@ -401,6 +401,9 @@
                     <div class="menu-popup-wrapper">
                         <div id="menu-popup" class="popup popup-top-down">
                             <ul>
+                                <li{{ if eq .context.Params.isSelected "tools" }} class="is-selected"{{ end }}>
+                                    <a onclick="blur(); toggleMenuPopup()" href="/tools/">Tools</a>
+                                </li>
                                 <li{{ if eq .context.Params.isSelected "betas" }} class="is-selected"{{ end }}>
                                     <a onclick="blur(); toggleMenuPopup()" href="/betas/">Betas</a>
                                 </li>
@@ -409,10 +412,7 @@
                                 </li>
                                 <li{{ if eq .context.Params.isSelected "newsletter" }} class="is-selected"{{ end }}>
                                     <a onclick="blur(); toggleMenuPopup()" href="/latest/">Newsletter</a>
-                                </li>
-                                <li{{ if eq .context.Params.isSelected "mars" }} class="is-selected"{{ end }}>
-                                    <a onclick="blur(); toggleMenuPopup()" href="/research/mars/">Mars</a>
-                                </li>
+                                </li>                                
                             </ul>
                             <div class="separator"></div>
                             <button onclick="blur(); toggleTheme(); toggleMenuPopup()" class="console-control icon-right theme-switcher">
