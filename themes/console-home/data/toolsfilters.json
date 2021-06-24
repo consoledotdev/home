@@ -19,8 +19,8 @@
             "checked": true
         },
         {
-            "name": "n/a",
-            "label": "N/A",
+            "name": "other",
+            "label": "Other",
             "showsIcon": false,
             "checked": true
         }
