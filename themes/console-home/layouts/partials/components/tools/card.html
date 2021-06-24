@@ -52,7 +52,15 @@
 				<div class="left"><p class="small"><span>{{ partial "icons/like.html" }} What we like:</span> {{ index . "What we like" }}</p></div>
 				<div class="right"><p class="small"><span>{{ partial "icons/dislike.html" }} What we don't like:</span> {{ index . "What we dislike" }}</p></div>
 			</div>
-			<span class="date">Reviewed: {{ $showDate }}</span>
+			<div class="details">
+				<span class="date">Reviewed: {{ $showDate }}</span>
+				{{ with .Interview -}}
+					<a onclick="blur();" href="{{ . }}" class="console-button-text console-button-small console-button-green icon-left interview-with-cto" title="Read the interview with the CTO">
+						{{ partial "icons/interview-console.html" }}
+						<span>Interview with the CTO</span>
+					</a>
+				{{- end }}
+			</div>
 		</div>
 	</div>
 </div>

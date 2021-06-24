@@ -448,17 +448,16 @@
 
 /* Text Button
     --------------------------------------------------------------- */
+/* Default */
 .console-button-text {
     font-size: var(--t-size0);
     line-height: var(--t-lH4);
     color: var(--theme-cta-secondary-text-idle);
     text-decoration: none;
 }
-
 .console-button-text:hover {
     color: var(--theme-cta-secondary-text-hover);
 }
-
 .console-button-text:active,
 .console-button-text:focus {
     color: var(--theme-cta-secondary-text-active);
@@ -467,11 +466,9 @@
 .console-button-text .icon-fill {
     fill: var(--theme-cta-secondary-text-idle);
 }
-
 .console-button-text:hover .icon-fill {
     fill: var(--theme-cta-secondary-text-hover);
 }
-
 .console-button-text:active .icon-fill,
 .console-button-text:focus .icon-fill {
     fill: var(--theme-cta-secondary-text-active);
@@ -480,14 +477,74 @@
 .console-button-text .icon-stroke {
     stroke: var(--theme-cta-secondary-text-idle);
 }
-
 .console-button-text:hover .icon-stroke {
     stroke: var(--theme-cta-secondary-text-hover);
 }
-
 .console-button-text:active .icon-stroke,
 .console-button-text:focus .icon-stroke {
     stroke: var(--theme-cta-secondary-text-active);
+}
+
+.console-button-text .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-text-idle);
+    fill: var(--theme-cta-secondary-text-idle);
+}
+.console-button-text:hover .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-text-hover);
+    fill: var(--theme-cta-secondary-text-hover);
+}
+.console-button-text:active .icon-fill-stroke,
+.console-button-text:focus .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-text-active);
+    fill: var(--theme-cta-secondary-text-active);
+}
+
+/* Green */
+.console-button-text.console-button-green {
+    color: var(--theme-cta-secondary-green-text-idle);
+}
+.console-button-text.console-button-green:hover {
+    color: var(--theme-cta-secondary-green-text-hover);
+}
+.console-button-text.console-button-green:active,
+.console-button-text.console-button-green:focus {
+    color: var(--theme-cta-secondary-green-text-active);
+}
+
+.console-button-text.console-button-green .icon-fill {
+    fill: var(--theme-cta-secondary-green-text-idle);
+}
+.console-button-text.console-button-green:hover .icon-fill {
+    fill: var(--theme-cta-secondary-green-text-hover);
+}
+.console-button-text.console-button-green:active .icon-fill,
+.console-button-text.console-button-green:focus .icon-fill {
+    fill: var(--theme-cta-secondary-green-text-active);
+}
+
+.console-button-text.console-button-green .icon-stroke {
+    stroke: var(--theme-cta-secondary-green-text-idle);
+}
+.console-button-text.console-button-green:hover .icon-stroke {
+    stroke: var(--theme-cta-secondary-green-text-hover);
+}
+.console-button-text.console-button-green:active .icon-stroke,
+.console-button-text.console-button-green:focus .icon-stroke {
+    stroke: var(--theme-cta-secondary-green-text-active);
+}
+
+.console-button-text.console-button-green .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-green-text-idle);
+    fill: var(--theme-cta-secondary-green-text-idle);
+}
+.console-button-text.console-button-green:hover .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-green-text-hover);
+    fill: var(--theme-cta-secondary-green-text-hover);
+}
+.console-button-text.console-button-green:active .icon-fill-stroke,
+.console-button-text.console-button-green:focus .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-green-text-active);
+    fill: var(--theme-cta-secondary-green-text-active);
 }
 
 /* Control

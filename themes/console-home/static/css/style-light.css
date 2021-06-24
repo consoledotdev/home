@@ -17,6 +17,10 @@
     --theme-cta-secondary-text-hover: var(--c-blue-06-main);
     --theme-cta-secondary-text-active: var(--c-blue-08);
 
+    --theme-cta-secondary-green-text-idle: var(--c-green-06);
+    --theme-cta-secondary-green-text-hover: var(--c-green-07);
+    --theme-cta-secondary-green-text-active: var(--c-green-08);
+
     --theme-content-bg-0: var(--c-white-00-absolute);
     --theme-content-bg-1: var(--c-white-02);
     --theme-content-bg-2: var(--c-white-01-main);

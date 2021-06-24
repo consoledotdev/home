@@ -106,12 +106,15 @@ p.tool-card-description {
     margin-right: var(--space3);
 }
 
-.tool-card .date {
-    margin-top: var(--space3);
-}
-
 .view-all-link.is-hidden {
     display: none;
+}
+
+.tool-card .bottom .details {
+    margin-top: var(--space3);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
 
 @media (max-width: 768px) {
