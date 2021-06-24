@@ -16,9 +16,26 @@
             "favicon": "img/favicons/tuple.app.png",
             "Top Category": "Developer Tools",
             "Sub Category": "Code collaboration",
-            "Filter Taxonomy": "developer-tools---code-collaboration, desktop"
+            "Filter Taxonomy": "developer-tools, desktop"
         },
-        { "Company/Org": "Polypane", "Tool/Product/Project": "Polypane", "Reviewed": "2021-06-18", "Scheduled for": "2021-07-15", "URL": "https://polypane.app/", "Category": "Developer Tools - Browser testing", "Type": "Desktop", "What is it?": "Browser testing tool.", "Len": "124", "What we like": "Multiple browser panes side-by-side to test various sizes. Inspect element works across panes simultaneously. Scroll sync helps comparison. Built on Chrome so devtools available. Shows Web Vitals scores. Can trigger media features e.g. prefers-color-scheme, reduced-motion. Debug tools like a11y, CSS injection, disable images, mobile reachability.", "What we dislike": "Signup/license key process is a bit fiddly. Quite CPU intensive. You need a very big screen to see all the windows properly.", "Interview": "", "favicon": "img/favicons/polypane.app.png", "Top Category": "Developer Tools", "Sub Category": "Browser testing", "Filter Taxonomy": "developer-tools---browser-testing, desktop" },
+        {
+            "Company/Org": "Polypane",
+            "Tool/Product/Project": "Polypane",
+            "Reviewed": "2021-06-18",
+            "Scheduled for": "2021-07-15",
+            "URL": "https://polypane.app/",
+            "Category": "Developer Tools - Browser testing",
+            "Type": "Desktop",
+            "What is it?": "Browser testing tool.",
+            "Len": "124",
+            "What we like": "Multiple browser panes side-by-side to test various sizes. Inspect element works across panes simultaneously. Scroll sync helps comparison. Built on Chrome so devtools available. Shows Web Vitals scores. Can trigger media features e.g. prefers-color-scheme, reduced-motion. Debug tools like a11y, CSS injection, disable images, mobile reachability.",
+            "What we dislike": "Signup/license key process is a bit fiddly. Quite CPU intensive. You need a very big screen to see all the windows properly.",
+            "Interview": "",
+            "favicon": "img/favicons/polypane.app.png",
+            "Top Category": "Developer Tools",
+            "Sub Category": "Browser testing",
+            "Filter Taxonomy": "developer-tools, desktop"
+        },
         {
             "Company/Org": "automerge",
             "Tool/Product/Project": "automerge",
@@ -35,7 +52,7 @@
             "favicon": "img/favicons/github.com.png",
             "Top Category": "Developer Tools",
             "Sub Category": "Backend framework",
-            "Filter Taxonomy": "developer-tools---backend-framework, open-source"
+            "Filter Taxonomy": "developer-tools, open-source"
         },
         {
             "Company/Org": "Hashicorp",
@@ -53,7 +70,7 @@
             "favicon": "img/favicons/www.waypointproject.io.ico",
             "Top Category": "DevOps",
             "Sub Category": "CI/CD",
-            "Filter Taxonomy": "devops---ci/cd, open-source"
+            "Filter Taxonomy": "devops, open-source"
         },
         {
             "Company/Org": "Zellij",
@@ -71,7 +88,7 @@
             "favicon": "img/favicons/zellij.dev.png",
             "Top Category": "Misc",
             "Sub Category": "Terminal emulators",
-            "Filter Taxonomy": "misc---terminal-emulators, open-source"
+            "Filter Taxonomy": "misc, open-source"
         },
         {
             "Company/Org": "Prestige",
@@ -89,7 +106,7 @@
             "favicon": "img/favicons/prestigemad.com.png",
             "Top Category": "Developer Tools",
             "Sub Category": "API Client",
-            "Filter Taxonomy": "developer-tools---api-client, open-source"
+            "Filter Taxonomy": "developer-tools, open-source"
         },
         {
             "Company/Org": "chezmoi",
@@ -107,10 +124,44 @@
             "favicon": "img/favicons/www.chezmoi.io.png",
             "Top Category": "Misc",
             "Sub Category": "Terminal utilities",
-            "Filter Taxonomy": "misc---terminal-utilities, open-source"
+            "Filter Taxonomy": "misc, open-source"
         },
-        { "Company/Org": "IPInfo", "Tool/Product/Project": "IPInfo", "Reviewed": "2021-06-07", "Scheduled for": "2021-06-24", "URL": "https://github.com/ipinfo/cli", "Category": "API - API", "Type": "SaaS", "What is it?": "CLI for IP address metadata lookup.", "Len": "108", "What we like": "Lookup IP details such as ASN, location, hostname, abuse contact, tor/VPN/hosting IP categorization. Cross-platform binaries. Colored output. Bulk summarize IPs from a file (or piped in). Bash, zsh, fish auto-completion. SDKs available for major languages.", "What we dislike": "Responses not cached. Available via Homebrew on Mac but not Linux or Windows package managers. No man pages.", "Interview": "", "favicon": "img/favicons/github.com.png", "Top Category": "API", "Sub Category": "API", "Filter Taxonomy": "api---api, saas" },
-        { "Company/Org": "gitui", "Tool/Product/Project": "gitui", "Reviewed": "2021-06-02", "Scheduled for": "2021-06-24", "URL": "https://github.com/extrawurst/gitui", "Category": "Developer Tools - Git tools", "Type": "Open Source", "What is it?": "Fast git TUI.", "Len": "91", "What we like": "Focus on high-performance repo parsing using async means the UI is responsive, low memory and low CPU even for the largest of repos. Keyboard control of common tasks e.g. stash, stage, diff review and commit with keybindings highlighted for newer users (or when you forget). Adopts terminal color scheme. Cross-platform packages (Arch, Fedora, Homebrew, Chocolatey, Nix).", "What we dislike": "No log search or file history log and does not yet support bare repos (all on the roadmap).", "Interview": "", "favicon": "img/favicons/github.com.png", "Top Category": "Developer Tools", "Sub Category": "Git tools", "Filter Taxonomy": "developer-tools---git-tools, open-source" },
+        {
+            "Company/Org": "IPInfo",
+            "Tool/Product/Project": "IPInfo",
+            "Reviewed": "2021-06-07",
+            "Scheduled for": "2021-06-24",
+            "URL": "https://github.com/ipinfo/cli",
+            "Category": "API - API",
+            "Type": "SaaS",
+            "What is it?": "CLI for IP address metadata lookup.",
+            "Len": "108",
+            "What we like": "Lookup IP details such as ASN, location, hostname, abuse contact, tor/VPN/hosting IP categorization. Cross-platform binaries. Colored output. Bulk summarize IPs from a file (or piped in). Bash, zsh, fish auto-completion. SDKs available for major languages.",
+            "What we dislike": "Responses not cached. Available via Homebrew on Mac but not Linux or Windows package managers. No man pages.",
+            "Interview": "",
+            "favicon": "img/favicons/github.com.png",
+            "Top Category": "API",
+            "Sub Category": "API",
+            "Filter Taxonomy": "api, saas"
+        },
+        {
+            "Company/Org": "gitui",
+            "Tool/Product/Project": "gitui",
+            "Reviewed": "2021-06-02",
+            "Scheduled for": "2021-06-24",
+            "URL": "https://github.com/extrawurst/gitui",
+            "Category": "Developer Tools - Git tools",
+            "Type": "Open Source",
+            "What is it?": "Fast git TUI.",
+            "Len": "91",
+            "What we like": "Focus on high-performance repo parsing using async means the UI is responsive, low memory and low CPU even for the largest of repos. Keyboard control of common tasks e.g. stash, stage, diff review and commit with keybindings highlighted for newer users (or when you forget). Adopts terminal color scheme. Cross-platform packages (Arch, Fedora, Homebrew, Chocolatey, Nix).",
+            "What we dislike": "No log search or file history log and does not yet support bare repos (all on the roadmap).",
+            "Interview": "",
+            "favicon": "img/favicons/github.com.png",
+            "Top Category": "Developer Tools",
+            "Sub Category": "Git tools",
+            "Filter Taxonomy": "developer-tools, open-source"
+        },
         {
             "Company/Org": "GitLive",
             "Tool/Product/Project": "GitLive",
@@ -127,7 +178,7 @@
             "favicon": "img/favicons/git.live.png",
             "Top Category": "Developer Tools",
             "Sub Category": "Code collaboration",
-            "Filter Taxonomy": "developer-tools---code-collaboration, desktop"
+            "Filter Taxonomy": "developer-tools, desktop"
         },
         {
             "Company/Org": "Runops",
@@ -145,7 +196,7 @@
             "favicon": "img/favicons/runops.io.ico",
             "Top Category": "DevOps",
             "Sub Category": "Infrastructure automation",
-            "Filter Taxonomy": "devops---infrastructure-automation, saas"
+            "Filter Taxonomy": "devops, saas"
         },
         {
             "Company/Org": "Filippo Valsorda",
@@ -163,9 +214,26 @@
             "favicon": "img/favicons/github.com.png",
             "Top Category": "Developer Tools",
             "Sub Category": "Local development",
-            "Filter Taxonomy": "developer-tools---local-development, open-source"
+            "Filter Taxonomy": "developer-tools, open-source"
         },
-        { "Company/Org": "Openbase", "Tool/Product/Project": "Openbase", "Reviewed": "2021-06-03", "Scheduled for": "2021-06-10", "URL": "https://openbase.com", "Category": "Developer Tools - Dependency management", "Type": "SaaS", "What is it?": "Database of open source packages.", "Len": "193", "What we like": "Packages ranked based on various criteria such as documentation, performance, popularity. Categories for common use cases to help find most used packages. Analyze dependencies and project activity e.g. release cadence, commit frequency.", "What we dislike": "Only supports searching JS packages - leaderboards available for Python, Rust, Go, Swift and Java libraries. Some criteria are more subjective than others e.g. are frequent commits good or bad?", "Interview": "", "favicon": "img/favicons/openbase.com.ico", "Top Category": "Developer Tools", "Sub Category": "Dependency management", "Filter Taxonomy": "developer-tools---dependency-management, saas" },
+        {
+            "Company/Org": "Openbase",
+            "Tool/Product/Project": "Openbase",
+            "Reviewed": "2021-06-03",
+            "Scheduled for": "2021-06-10",
+            "URL": "https://openbase.com",
+            "Category": "Developer Tools - Dependency management",
+            "Type": "SaaS",
+            "What is it?": "Database of open source packages.",
+            "Len": "193",
+            "What we like": "Packages ranked based on various criteria such as documentation, performance, popularity. Categories for common use cases to help find most used packages. Analyze dependencies and project activity e.g. release cadence, commit frequency.",
+            "What we dislike": "Only supports searching JS packages - leaderboards available for Python, Rust, Go, Swift and Java libraries. Some criteria are more subjective than others e.g. are frequent commits good or bad?",
+            "Interview": "",
+            "favicon": "img/favicons/openbase.com.ico",
+            "Top Category": "Developer Tools",
+            "Sub Category": "Dependency management",
+            "Filter Taxonomy": "developer-tools, saas"
+        },
         {
             "Company/Org": "gitmoji-cli",
             "Tool/Product/Project": "gitmoji-cli",
@@ -182,9 +250,26 @@
             "favicon": "img/favicons/github.com.png",
             "Top Category": "Developer Tools",
             "Sub Category": "Git tools",
-            "Filter Taxonomy": "developer-tools---git-tools, open-source"
+            "Filter Taxonomy": "developer-tools, open-source"
         },
-        { "Company/Org": "Xonsh", "Tool/Product/Project": "Xonsh", "Reviewed": "2021-03-26", "Scheduled for": "2021-06-03", "URL": "https://xon.sh/", "Category": "Developer Tools - Shells", "Type": "Open Source", "What is it?": "Python-powered shell.", "Len": "171", "What we like": "Can do arithmetic, import modules, use data types, loops, etc, because everything it receives is interpreted with Python. Tab completion based on man-pages. Community extensions e.g. Powerline, written in Python. Cross-platform.", "What we dislike": "Small community of extensions. Not bash compatible, so you have to relearn some syntax. Incompatible with Python virtual environments (has its own replacement called vox).", "Interview": "", "favicon": "img/favicons/xon.sh.png", "Top Category": "Developer Tools", "Sub Category": "Shells", "Filter Taxonomy": "developer-tools---shells, open-source" },
+        {
+            "Company/Org": "Xonsh",
+            "Tool/Product/Project": "Xonsh",
+            "Reviewed": "2021-03-26",
+            "Scheduled for": "2021-06-03",
+            "URL": "https://xon.sh/",
+            "Category": "Developer Tools - Shells",
+            "Type": "Open Source",
+            "What is it?": "Python-powered shell.",
+            "Len": "171",
+            "What we like": "Can do arithmetic, import modules, use data types, loops, etc, because everything it receives is interpreted with Python. Tab completion based on man-pages. Community extensions e.g. Powerline, written in Python. Cross-platform.",
+            "What we dislike": "Small community of extensions. Not bash compatible, so you have to relearn some syntax. Incompatible with Python virtual environments (has its own replacement called vox).",
+            "Interview": "",
+            "favicon": "img/favicons/xon.sh.png",
+            "Top Category": "Developer Tools",
+            "Sub Category": "Shells",
+            "Filter Taxonomy": "developer-tools, open-source"
+        },
         {
             "Company/Org": "Big Sky Software",
             "Tool/Product/Project": "htmx",
@@ -201,9 +286,26 @@
             "favicon": false,
             "Top Category": "Developer Tools",
             "Sub Category": "Frontend framework",
-            "Filter Taxonomy": "developer-tools---frontend-framework, open-source"
+            "Filter Taxonomy": "developer-tools, open-source"
         },
-        { "Company/Org": "Semgrep", "Tool/Product/Project": "Semgrep", "Reviewed": "2021-05-24", "Scheduled for": "2021-05-27", "URL": "https://semgrep.dev", "Category": "Developer Tools - Testing frameworks", "Type": "Open Source", "What is it?": "Static analysis tool.", "Len": "75", "What we like": "Open source, runs locally and/or in CI/CD. No DSL - write rules in the language you use and alongside the code they check. Plugins for as-you-code analysis in Vim, VS Code, IntelliJ. Lots of community rules for common languages and frameworks (Django, Flask, Java, Rails). Integrates with CI and can add comments to PRs. Cloud web UI is optional.", "What we dislike": "Experimental support for C, Rust, PHP, Lua, C#, Kotlin. No Windows support.", "Interview": "", "favicon": "img/favicons/semgrep.dev.ico", "Top Category": "Developer Tools", "Sub Category": "Testing frameworks", "Filter Taxonomy": "developer-tools---testing-frameworks, open-source" },
+        {
+            "Company/Org": "Semgrep",
+            "Tool/Product/Project": "Semgrep",
+            "Reviewed": "2021-05-24",
+            "Scheduled for": "2021-05-27",
+            "URL": "https://semgrep.dev",
+            "Category": "Developer Tools - Testing frameworks",
+            "Type": "Open Source",
+            "What is it?": "Static analysis tool.",
+            "Len": "75",
+            "What we like": "Open source, runs locally and/or in CI/CD. No DSL - write rules in the language you use and alongside the code they check. Plugins for as-you-code analysis in Vim, VS Code, IntelliJ. Lots of community rules for common languages and frameworks (Django, Flask, Java, Rails). Integrates with CI and can add comments to PRs. Cloud web UI is optional.",
+            "What we dislike": "Experimental support for C, Rust, PHP, Lua, C#, Kotlin. No Windows support.",
+            "Interview": "",
+            "favicon": "img/favicons/semgrep.dev.ico",
+            "Top Category": "Developer Tools",
+            "Sub Category": "Testing frameworks",
+            "Filter Taxonomy": "developer-tools, open-source"
+        },
         {
             "Company/Org": "QuestDB",
             "Tool/Product/Project": "QuestDB",
@@ -220,11 +322,62 @@
             "favicon": "img/favicons/questdb.io.png",
             "Top Category": "Database",
             "Sub Category": "Time series database",
-            "Filter Taxonomy": "database---time-series-database, open-source"
+            "Filter Taxonomy": "database, open-source"
         },
-        { "Company/Org": "atuin", "Tool/Product/Project": "atuin", "Reviewed": "2021-05-10", "Scheduled for": "2021-05-20", "URL": "https://github.com/ellie/atuin", "Category": "Misc - Terminal utilities", "Type": "Open Source", "What is it?": "Shell history search/sync with SQLite.", "Len": "140", "What we like": "Search shell history with CLI or interactive TUI (ctrl+r). Query by date, current directory, string terms. Encrypted sync across machines with log of exit code, session, command. Fun stats e.g. \u201cmost used command\u201d. Option to run your own sync server.", "What we dislike": "Can\u2019t delete entries from history. Default rebind on up-key takes some getting used to, or disable it in config. Only supports zsh and bash.", "Interview": "https://console.dev/interviews/atuin-ellie-huxtable/", "favicon": "img/favicons/github.com.png", "Top Category": "Misc", "Sub Category": "Terminal utilities", "Filter Taxonomy": "misc---terminal-utilities, open-source" },
-        { "Company/Org": "Deepnote", "Tool/Product/Project": "Deepnote", "Reviewed": "2021-05-08", "Scheduled for": "2021-05-13", "URL": "https://deepnote.com", "Category": "Data Science - Collaboration", "Type": "SaaS", "What is it?": "Collaborative Jupyter notebooks.", "Len": "149", "What we like": "Google Docs-style real-time sharing / editing. Detects dependencies, prompts for pip install and updates requirements.txt. Running the Jupyter environment in the cloud saves hassle installing kernels locally. Integrates with git. Public links. Supports Python & R.", "What we dislike": "Visualizations are custom HTML embeds when exported to Jupyter notebook format - better to embed something like Plotly in code to ensure portability.", "Interview": "https://console.dev/interviews/deepnote-jan-matas/", "favicon": "img/favicons/deepnote.com.png", "Top Category": "Data Science", "Sub Category": "Collaboration", "Filter Taxonomy": "data-science---collaboration, saas" },
-        { "Company/Org": "Skruv", "Tool/Product/Project": "Skruv", "Reviewed": "2021-04-08", "Scheduled for": "2021-05-13", "URL": "https://skruv.io/", "Category": "Developer Tools - Frontend framework", "Type": "Open Source", "What is it?": "No-build, small JS framework.", "Len": "169", "What we like": "No dependencies. No build step. Very small (~400 LoC vDOM, ~100 LoC state management, ~230 LoC HTML helpers). Works with async components. Web tutorial does a good job explaining how it works (built using itself).", "What we dislike": "No router. Great for very simple SPAs, but something like Mithril.js (or Vue. Or Svelte) probably needed for anything of significance (if you don\u2019t mind the build step).", "Interview": "", "favicon": "img/favicons/skruv.io.ico", "Top Category": "Developer Tools", "Sub Category": "Frontend framework", "Filter Taxonomy": "developer-tools---frontend-framework, open-source" },
+        {
+            "Company/Org": "atuin",
+            "Tool/Product/Project": "atuin",
+            "Reviewed": "2021-05-10",
+            "Scheduled for": "2021-05-20",
+            "URL": "https://github.com/ellie/atuin",
+            "Category": "Misc - Terminal utilities",
+            "Type": "Open Source",
+            "What is it?": "Shell history search/sync with SQLite.",
+            "Len": "140",
+            "What we like": "Search shell history with CLI or interactive TUI (ctrl+r). Query by date, current directory, string terms. Encrypted sync across machines with log of exit code, session, command. Fun stats e.g. \u201cmost used command\u201d. Option to run your own sync server.",
+            "What we dislike": "Can\u2019t delete entries from history. Default rebind on up-key takes some getting used to, or disable it in config. Only supports zsh and bash.",
+            "Interview": "https://console.dev/interviews/atuin-ellie-huxtable/",
+            "favicon": "img/favicons/github.com.png",
+            "Top Category": "Misc",
+            "Sub Category": "Terminal utilities",
+            "Filter Taxonomy": "misc, open-source"
+        },
+        {
+            "Company/Org": "Deepnote",
+            "Tool/Product/Project": "Deepnote",
+            "Reviewed": "2021-05-08",
+            "Scheduled for": "2021-05-13",
+            "URL": "https://deepnote.com",
+            "Category": "Data Science - Collaboration",
+            "Type": "SaaS",
+            "What is it?": "Collaborative Jupyter notebooks.",
+            "Len": "149",
+            "What we like": "Google Docs-style real-time sharing / editing. Detects dependencies, prompts for pip install and updates requirements.txt. Running the Jupyter environment in the cloud saves hassle installing kernels locally. Integrates with git. Public links. Supports Python & R.",
+            "What we dislike": "Visualizations are custom HTML embeds when exported to Jupyter notebook format - better to embed something like Plotly in code to ensure portability.",
+            "Interview": "https://console.dev/interviews/deepnote-jan-matas/",
+            "favicon": "img/favicons/deepnote.com.png",
+            "Top Category": "Data Science",
+            "Sub Category": "Collaboration",
+            "Filter Taxonomy": "data-science, saas"
+        },
+        {
+            "Company/Org": "Skruv",
+            "Tool/Product/Project": "Skruv",
+            "Reviewed": "2021-04-08",
+            "Scheduled for": "2021-05-13",
+            "URL": "https://skruv.io/",
+            "Category": "Developer Tools - Frontend framework",
+            "Type": "Open Source",
+            "What is it?": "No-build, small JS framework.",
+            "Len": "169",
+            "What we like": "No dependencies. No build step. Very small (~400 LoC vDOM, ~100 LoC state management, ~230 LoC HTML helpers). Works with async components. Web tutorial does a good job explaining how it works (built using itself).",
+            "What we dislike": "No router. Great for very simple SPAs, but something like Mithril.js (or Vue. Or Svelte) probably needed for anything of significance (if you don\u2019t mind the build step).",
+            "Interview": "",
+            "favicon": "img/favicons/skruv.io.ico",
+            "Top Category": "Developer Tools",
+            "Sub Category": "Frontend framework",
+            "Filter Taxonomy": "developer-tools, open-source"
+        },
         {
             "Company/Org": "Hookdeck",
             "Tool/Product/Project": "Hookdeck",
@@ -241,10 +394,44 @@
             "favicon": "img/favicons/hookdeck.com.png",
             "Top Category": "DevOps",
             "Sub Category": "API Management",
-            "Filter Taxonomy": "devops---api-management, saas"
+            "Filter Taxonomy": "devops, saas"
         },
-        { "Company/Org": "act", "Tool/Product/Project": "act", "Reviewed": "2021-03-24", "Scheduled for": "2021-05-06", "URL": "https://github.com/nektos/act", "Category": "Developer Tools - Local development", "Type": "Open Source", "What is it?": "Run your GitHub Actions locally.", "Len": "154", "What we like": "Local simulation of the GitHub Actions environment using Docker. Much faster than commit/push for testing changes. Supports environment variables and secrets. Can trigger specific events e.g. pull request, push, and jobs within workflows (including skipping steps).", "What we dislike": "Only supports Linux runners (host is multi-platform). Full Docker images are quite large (>20GB), but you can try slimmer images with fewer bundled tools.", "Interview": "", "favicon": "img/favicons/github.com.png", "Top Category": "Developer Tools", "Sub Category": "Local development", "Filter Taxonomy": "developer-tools---local-development, open-source" },
-        { "Company/Org": "fselect", "Tool/Product/Project": "fselect", "Reviewed": "2021-04-21", "Scheduled for": "2021-04-29", "URL": "https://github.com/jhspetersson/fselect", "Category": "Misc - Terminal utilities", "Type": "Open Source", "What is it?": "Find files with SQL-like queries.", "Len": "171", "What we like": "Packages for all platforms (+ Nix, AUR, musl). Uses relaxed SQL to support fields e.g. size, path; operators e.g. AND, gte, like; date queries e.g. created, modified; filename glob and regex. Can use .gitignore and search MP3, MIME and other file attributes. Output in CSV, JSON, HTML.", "What we dislike": "Requires the absolute path (~/path doesn\u2019t work), or searches current working directory if no path provided. Be careful to use quotes if you use shell characters such as >", "Interview": "", "favicon": "img/favicons/github.com.png", "Top Category": "Misc", "Sub Category": "Terminal utilities", "Filter Taxonomy": "misc---terminal-utilities, open-source" },
+        {
+            "Company/Org": "act",
+            "Tool/Product/Project": "act",
+            "Reviewed": "2021-03-24",
+            "Scheduled for": "2021-05-06",
+            "URL": "https://github.com/nektos/act",
+            "Category": "Developer Tools - Local development",
+            "Type": "Open Source",
+            "What is it?": "Run your GitHub Actions locally.",
+            "Len": "154",
+            "What we like": "Local simulation of the GitHub Actions environment using Docker. Much faster than commit/push for testing changes. Supports environment variables and secrets. Can trigger specific events e.g. pull request, push, and jobs within workflows (including skipping steps).",
+            "What we dislike": "Only supports Linux runners (host is multi-platform). Full Docker images are quite large (>20GB), but you can try slimmer images with fewer bundled tools.",
+            "Interview": "",
+            "favicon": "img/favicons/github.com.png",
+            "Top Category": "Developer Tools",
+            "Sub Category": "Local development",
+            "Filter Taxonomy": "developer-tools, open-source"
+        },
+        {
+            "Company/Org": "fselect",
+            "Tool/Product/Project": "fselect",
+            "Reviewed": "2021-04-21",
+            "Scheduled for": "2021-04-29",
+            "URL": "https://github.com/jhspetersson/fselect",
+            "Category": "Misc - Terminal utilities",
+            "Type": "Open Source",
+            "What is it?": "Find files with SQL-like queries.",
+            "Len": "171",
+            "What we like": "Packages for all platforms (+ Nix, AUR, musl). Uses relaxed SQL to support fields e.g. size, path; operators e.g. AND, gte, like; date queries e.g. created, modified; filename glob and regex. Can use .gitignore and search MP3, MIME and other file attributes. Output in CSV, JSON, HTML.",
+            "What we dislike": "Requires the absolute path (~/path doesn\u2019t work), or searches current working directory if no path provided. Be careful to use quotes if you use shell characters such as >",
+            "Interview": "",
+            "favicon": "img/favicons/github.com.png",
+            "Top Category": "Misc",
+            "Sub Category": "Terminal utilities",
+            "Filter Taxonomy": "misc, open-source"
+        },
         {
             "Company/Org": "Gruntwork",
             "Tool/Product/Project": "git-xargs",
@@ -261,12 +448,80 @@
             "favicon": "img/favicons/github.com.png",
             "Top Category": "Developer Tools",
             "Sub Category": "Git tools",
-            "Filter Taxonomy": "developer-tools---git-tools, open-source"
+            "Filter Taxonomy": "developer-tools, open-source"
         },
-        { "Company/Org": "KeyDB", "Tool/Product/Project": "KeyDB", "Reviewed": "2021-03-08", "Scheduled for": "2021-04-22", "URL": "https://keydb.dev/", "Category": "Database - KV store", "Type": "Open Source", "What is it?": "A multi-threaded high-performance fork of Redis.", "Len": "167", "What we like": "Drop-in replacement for Redis. Claims x5 speed boost from multi-threading. Adds some extra features like backup to S3 and active replication. Potentially reduces operational complexity by shifting scaling to CPU cores and network throughput rather than requiring clustering.", "What we dislike": "Runs the normal Redis event loop on multiple threads which requires locking (low contention, but work ongoing to improve). Expects exclusive use of assigned CPU cores.", "Interview": "https://console.dev/interviews/keydb-john-sully/", "favicon": "img/favicons/keydb.dev.png", "Top Category": "Database", "Sub Category": "KV store", "Filter Taxonomy": "database---kv-store, open-source" },
-        { "Company/Org": "Ranga Vadhineni", "Tool/Product/Project": "Thunder Client", "Reviewed": "2021-04-06", "Scheduled for": "2021-04-22", "URL": "https://www.thunderclient.io/", "Category": "Developer Tools - Local development", "Type": "Desktop", "What is it?": "An HTTP client for VS Code.", "Len": "106", "What we like": "Easily build HTTP requests with custom params, auth (basic, bearer, OAuth), headers and body (text, JSON, XML, form, GraphQL). Parses and syntax highlights response, headers and cookies. Can create automated tests with conditions such as response time, status codes, headers, etc.", "What we dislike": "All local - no config sync or dynamic loading from config files, but configs can be exported and imported.", "Interview": "", "favicon": "img/favicons/www.thunderclient.io.png", "Top Category": "Developer Tools", "Sub Category": "Local development", "Filter Taxonomy": "developer-tools---local-development, desktop" },
-        { "Company/Org": "Retool", "Tool/Product/Project": "REST API Generator", "Reviewed": "2021-04-09", "Scheduled for": "2021-04-15", "URL": "https://retool.com/api-generator/", "Category": "DevOps - API Management", "Type": "SaaS", "What is it?": "Build an API to develop against.", "Len": "116", "What we like": "Create a read/write REST API to start building against before your backend is ready. Supports all HTTP verbs. Lots of default field types with sample data e.g. location, emails, avatars, credit cards.", "What we dislike": "Limited to 150 rows. Hosted by a third party, so don\u2019t send anything sensitive. Deleted after 30 days of inactivity.", "Interview": "", "favicon": "img/favicons/retool.com.png", "Top Category": "DevOps", "Sub Category": "API Management", "Filter Taxonomy": "devops---api-management, saas" },
-        { "Company/Org": "Nelson Elhage", "Tool/Product/Project": "llama", "Reviewed": "2021-04-13", "Scheduled for": "2021-04-15", "URL": "https://github.com/nelhage/llama", "Category": "Cloud - Serverless", "Type": "Open Source", "What is it?": "CLI for parallelizing commands inside AWS Lambda.", "Len": "199", "What we like": "Makes it easy to burst parallelizable commands into Lambda. Uses Go template language for managing input and output. Supports Docker wrappers to bootstrap environments. Includes a drop-in GCC/clang replacement for outsourcing compilation.", "What we dislike": "Lambda is CPU and memory constrained, and the network is a bottleneck, so use cases are constrained to where parallelization makes a big difference (or there is a benefit to freeing local resources).", "Interview": "", "favicon": "img/favicons/github.com.png", "Top Category": "Cloud", "Sub Category": "Serverless", "Filter Taxonomy": "cloud---serverless, open-source" },
+        {
+            "Company/Org": "KeyDB",
+            "Tool/Product/Project": "KeyDB",
+            "Reviewed": "2021-03-08",
+            "Scheduled for": "2021-04-22",
+            "URL": "https://keydb.dev/",
+            "Category": "Database - KV store",
+            "Type": "Open Source",
+            "What is it?": "A multi-threaded high-performance fork of Redis.",
+            "Len": "167",
+            "What we like": "Drop-in replacement for Redis. Claims x5 speed boost from multi-threading. Adds some extra features like backup to S3 and active replication. Potentially reduces operational complexity by shifting scaling to CPU cores and network throughput rather than requiring clustering.",
+            "What we dislike": "Runs the normal Redis event loop on multiple threads which requires locking (low contention, but work ongoing to improve). Expects exclusive use of assigned CPU cores.",
+            "Interview": "https://console.dev/interviews/keydb-john-sully/",
+            "favicon": "img/favicons/keydb.dev.png",
+            "Top Category": "Database",
+            "Sub Category": "KV store",
+            "Filter Taxonomy": "database, open-source"
+        },
+        {
+            "Company/Org": "Ranga Vadhineni",
+            "Tool/Product/Project": "Thunder Client",
+            "Reviewed": "2021-04-06",
+            "Scheduled for": "2021-04-22",
+            "URL": "https://www.thunderclient.io/",
+            "Category": "Developer Tools - Local development",
+            "Type": "Desktop",
+            "What is it?": "An HTTP client for VS Code.",
+            "Len": "106",
+            "What we like": "Easily build HTTP requests with custom params, auth (basic, bearer, OAuth), headers and body (text, JSON, XML, form, GraphQL). Parses and syntax highlights response, headers and cookies. Can create automated tests with conditions such as response time, status codes, headers, etc.",
+            "What we dislike": "All local - no config sync or dynamic loading from config files, but configs can be exported and imported.",
+            "Interview": "",
+            "favicon": "img/favicons/www.thunderclient.io.png",
+            "Top Category": "Developer Tools",
+            "Sub Category": "Local development",
+            "Filter Taxonomy": "developer-tools, desktop"
+        },
+        {
+            "Company/Org": "Retool",
+            "Tool/Product/Project": "REST API Generator",
+            "Reviewed": "2021-04-09",
+            "Scheduled for": "2021-04-15",
+            "URL": "https://retool.com/api-generator/",
+            "Category": "DevOps - API Management",
+            "Type": "SaaS",
+            "What is it?": "Build an API to develop against.",
+            "Len": "116",
+            "What we like": "Create a read/write REST API to start building against before your backend is ready. Supports all HTTP verbs. Lots of default field types with sample data e.g. location, emails, avatars, credit cards.",
+            "What we dislike": "Limited to 150 rows. Hosted by a third party, so don\u2019t send anything sensitive. Deleted after 30 days of inactivity.",
+            "Interview": "",
+            "favicon": "img/favicons/retool.com.png",
+            "Top Category": "DevOps",
+            "Sub Category": "API Management",
+            "Filter Taxonomy": "devops, saas"
+        },
+        {
+            "Company/Org": "Nelson Elhage",
+            "Tool/Product/Project": "llama",
+            "Reviewed": "2021-04-13",
+            "Scheduled for": "2021-04-15",
+            "URL": "https://github.com/nelhage/llama",
+            "Category": "Cloud - Serverless",
+            "Type": "Open Source",
+            "What is it?": "CLI for parallelizing commands inside AWS Lambda.",
+            "Len": "199",
+            "What we like": "Makes it easy to burst parallelizable commands into Lambda. Uses Go template language for managing input and output. Supports Docker wrappers to bootstrap environments. Includes a drop-in GCC/clang replacement for outsourcing compilation.",
+            "What we dislike": "Lambda is CPU and memory constrained, and the network is a bottleneck, so use cases are constrained to where parallelization makes a big difference (or there is a benefit to freeing local resources).",
+            "Interview": "",
+            "favicon": "img/favicons/github.com.png",
+            "Top Category": "Cloud",
+            "Sub Category": "Serverless",
+            "Filter Taxonomy": "cloud, open-source"
+        },
         {
             "Company/Org": "Typesense",
             "Tool/Product/Project": "Typesense",
@@ -283,9 +538,26 @@
             "favicon": "img/favicons/typesense.org.png",
             "Top Category": "Developer Tools",
             "Sub Category": "Site Search",
-            "Filter Taxonomy": "developer-tools---site-search, open-source"
+            "Filter Taxonomy": "developer-tools, open-source"
         },
-        { "Company/Org": "Svix", "Tool/Product/Project": "Svix", "Reviewed": "2021-04-05", "Scheduled for": "2021-04-08", "URL": "https://www.svix.com/", "Category": "DevOps - API Management", "Type": "SaaS", "What is it?": "Webhook infrastructure as a service.", "Len": "119", "What we like": "Offering webhooks is actually more complex than you'd expect. Diahook deals with signing requests, queueing, retries, reliability, auth, E2E encryption, rate limiting, logs and debugging.", "What we dislike": "You need to send your events to Diahook, which means you still need to ensure they get there (retries, debugging, etc).", "Interview": "https://console.dev/interviews/svix-tom-hacohen/", "favicon": "img/favicons/www.svix.com.ico", "Top Category": "DevOps", "Sub Category": "API Management", "Filter Taxonomy": "devops---api-management, saas" },
+        {
+            "Company/Org": "Svix",
+            "Tool/Product/Project": "Svix",
+            "Reviewed": "2021-04-05",
+            "Scheduled for": "2021-04-08",
+            "URL": "https://www.svix.com/",
+            "Category": "DevOps - API Management",
+            "Type": "SaaS",
+            "What is it?": "Webhook infrastructure as a service.",
+            "Len": "119",
+            "What we like": "Offering webhooks is actually more complex than you'd expect. Diahook deals with signing requests, queueing, retries, reliability, auth, E2E encryption, rate limiting, logs and debugging.",
+            "What we dislike": "You need to send your events to Diahook, which means you still need to ensure they get there (retries, debugging, etc).",
+            "Interview": "https://console.dev/interviews/svix-tom-hacohen/",
+            "favicon": "img/favicons/www.svix.com.ico",
+            "Top Category": "DevOps",
+            "Sub Category": "API Management",
+            "Filter Taxonomy": "devops, saas"
+        },
         {
             "Company/Org": "Temporal",
             "Tool/Product/Project": "Temporal",
@@ -302,7 +574,7 @@
             "favicon": "img/favicons/temporal.io.png",
             "Top Category": "Developer Tools",
             "Sub Category": "Workflow management",
-            "Filter Taxonomy": "developer-tools---workflow-management, open-source"
+            "Filter Taxonomy": "developer-tools, open-source"
         },
         {
             "Company/Org": "Mirage JS",
@@ -320,7 +592,7 @@
             "favicon": "img/favicons/miragejs.com.png",
             "Top Category": "Developer Tools",
             "Sub Category": "Testing frameworks",
-            "Filter Taxonomy": "developer-tools---testing-frameworks, open-source"
+            "Filter Taxonomy": "developer-tools, open-source"
         },
         {
             "Company/Org": "git-plan",
@@ -338,7 +610,7 @@
             "favicon": "img/favicons/github.com.png",
             "Top Category": "Developer Tools",
             "Sub Category": "Git tools",
-            "Filter Taxonomy": "developer-tools---git-tools, open-source"
+            "Filter Taxonomy": "developer-tools, open-source"
         },
         {
             "Company/Org": "WayScript",
@@ -356,9 +628,26 @@
             "favicon": "img/favicons/wayscript.com.png",
             "Top Category": "Cloud",
             "Sub Category": "PaaS",
-            "Filter Taxonomy": "cloud---paas, saas"
+            "Filter Taxonomy": "cloud, saas"
         },
-        { "Company/Org": "Buddy", "Tool/Product/Project": "Buddy", "Reviewed": "2021-03-01", "Scheduled for": "2021-03-25", "URL": "https://buddy.works/", "Category": "DevOps - CI/CD", "Type": "SaaS", "What is it?": "CI/CD.", "Len": "135", "What we like": "Fast execution of steps due to caching. Can retry builds from specific steps and live-debug in a terminal which makes setting up pipelines easier. Can switch between UI or YAML config. Commenting/sharing helps team collaboration. UI has useful features, such as env var autocompletion.", "What we dislike": "Ecosystem of official build actions is small relative to GitHub Actions. UI is sometimes confusing due to the number of config options.", "Interview": "", "favicon": "img/favicons/buddy.works.png", "Top Category": "DevOps", "Sub Category": "CI/CD", "Filter Taxonomy": "devops---ci/cd, saas" },
+        {
+            "Company/Org": "Buddy",
+            "Tool/Product/Project": "Buddy",
+            "Reviewed": "2021-03-01",
+            "Scheduled for": "2021-03-25",
+            "URL": "https://buddy.works/",
+            "Category": "DevOps - CI/CD",
+            "Type": "SaaS",
+            "What is it?": "CI/CD.",
+            "Len": "135",
+            "What we like": "Fast execution of steps due to caching. Can retry builds from specific steps and live-debug in a terminal which makes setting up pipelines easier. Can switch between UI or YAML config. Commenting/sharing helps team collaboration. UI has useful features, such as env var autocompletion.",
+            "What we dislike": "Ecosystem of official build actions is small relative to GitHub Actions. UI is sometimes confusing due to the number of config options.",
+            "Interview": "",
+            "favicon": "img/favicons/buddy.works.png",
+            "Top Category": "DevOps",
+            "Sub Category": "CI/CD",
+            "Filter Taxonomy": "devops, saas"
+        },
         {
             "Company/Org": "ORY",
             "Tool/Product/Project": "Kratos",
@@ -375,11 +664,62 @@
             "favicon": "img/favicons/www.ory.sh.png",
             "Top Category": "Security",
             "Sub Category": "Authentication",
-            "Filter Taxonomy": "security---authentication, open-source"
+            "Filter Taxonomy": "security, open-source"
         },
-        { "Company/Org": "Chris Walz", "Tool/Product/Project": "bit", "Reviewed": "2021-03-01", "Scheduled for": "2021-03-18", "URL": "https://github.com/chriswalz/bit", "Category": "Developer Tools - Git tools", "Type": "Open Source", "What is it?": "git CLI.", "Len": "169", "What we like": "Autocomplete and flag suggestions. Commands such as release or sync combine several commands in one to speed up common tasks. Branch autocomplete for checkout. GitHub PR integration. Support for themes. Open source & cross platform.", "What we dislike": "Not what you might expect from a cli: you run the bit command, then it suggests subcommands and flags, rather than tab completion. Official OS packages missing on Linux.", "Interview": "https://console.dev/interviews/bit-chris-walz/", "favicon": "img/favicons/github.com.png", "Top Category": "Developer Tools", "Sub Category": "Git tools", "Filter Taxonomy": "developer-tools---git-tools, open-source" },
-        { "Company/Org": "Bird Eats Bug", "Tool/Product/Project": "Bird Eats Bug", "Reviewed": "2021-03-01", "Scheduled for": "2021-03-11", "URL": "https://birdeatsbug.com", "Category": "Developer Tools - Testing frameworks", "Type": "Desktop", "What is it?": "Screensharing with technical metadata.", "Len": "83", "What we like": "Captures screenshare and click journey with associated metadata like console and network logs. Local-first; uploadable for sharing (private or public). Quick submit to JIRA, Linear, Trello.", "What we dislike": "Chrome only (works on Microsoft Edge). More integrations needed e.g. GitHub Issues.", "Interview": "", "favicon": "img/favicons/birdeatsbug.com.png", "Top Category": "Developer Tools", "Sub Category": "Testing frameworks", "Filter Taxonomy": "developer-tools---testing-frameworks, desktop" },
-        { "Company/Org": "Earthly", "Tool/Product/Project": "Earthly", "Reviewed": "2021-03-04", "Scheduled for": "2021-03-11", "URL": "https://earthly.dev", "Category": "DevOps - Containers", "Type": "Open Source", "What is it?": "Containerized reproducible builds.", "Len": "102", "What we like": "Runs existing build steps inside a container using your existing CI system (Jenkins, CircleCI, GitHub Actions, etc). This makes builds reproducible locally so they run the same on your laptop as in remote CI. Steps can be parallelized. Dependency caching locally and across repos.", "What we dislike": "Assumes you are building an already containerized application. Multi-platform builds are experimental.", "Interview": "https://console.dev/interviews/earthly-adam-gordon-bell/", "favicon": "img/favicons/earthly.dev.png", "Top Category": "DevOps", "Sub Category": "Containers", "Filter Taxonomy": "devops---containers, open-source" },
+        {
+            "Company/Org": "Chris Walz",
+            "Tool/Product/Project": "bit",
+            "Reviewed": "2021-03-01",
+            "Scheduled for": "2021-03-18",
+            "URL": "https://github.com/chriswalz/bit",
+            "Category": "Developer Tools - Git tools",
+            "Type": "Open Source",
+            "What is it?": "git CLI.",
+            "Len": "169",
+            "What we like": "Autocomplete and flag suggestions. Commands such as release or sync combine several commands in one to speed up common tasks. Branch autocomplete for checkout. GitHub PR integration. Support for themes. Open source & cross platform.",
+            "What we dislike": "Not what you might expect from a cli: you run the bit command, then it suggests subcommands and flags, rather than tab completion. Official OS packages missing on Linux.",
+            "Interview": "https://console.dev/interviews/bit-chris-walz/",
+            "favicon": "img/favicons/github.com.png",
+            "Top Category": "Developer Tools",
+            "Sub Category": "Git tools",
+            "Filter Taxonomy": "developer-tools, open-source"
+        },
+        {
+            "Company/Org": "Bird Eats Bug",
+            "Tool/Product/Project": "Bird Eats Bug",
+            "Reviewed": "2021-03-01",
+            "Scheduled for": "2021-03-11",
+            "URL": "https://birdeatsbug.com",
+            "Category": "Developer Tools - Testing frameworks",
+            "Type": "Desktop",
+            "What is it?": "Screensharing with technical metadata.",
+            "Len": "83",
+            "What we like": "Captures screenshare and click journey with associated metadata like console and network logs. Local-first; uploadable for sharing (private or public). Quick submit to JIRA, Linear, Trello.",
+            "What we dislike": "Chrome only (works on Microsoft Edge). More integrations needed e.g. GitHub Issues.",
+            "Interview": "",
+            "favicon": "img/favicons/birdeatsbug.com.png",
+            "Top Category": "Developer Tools",
+            "Sub Category": "Testing frameworks",
+            "Filter Taxonomy": "developer-tools, desktop"
+        },
+        {
+            "Company/Org": "Earthly",
+            "Tool/Product/Project": "Earthly",
+            "Reviewed": "2021-03-04",
+            "Scheduled for": "2021-03-11",
+            "URL": "https://earthly.dev",
+            "Category": "DevOps - Containers",
+            "Type": "Open Source",
+            "What is it?": "Containerized reproducible builds.",
+            "Len": "102",
+            "What we like": "Runs existing build steps inside a container using your existing CI system (Jenkins, CircleCI, GitHub Actions, etc). This makes builds reproducible locally so they run the same on your laptop as in remote CI. Steps can be parallelized. Dependency caching locally and across repos.",
+            "What we dislike": "Assumes you are building an already containerized application. Multi-platform builds are experimental.",
+            "Interview": "https://console.dev/interviews/earthly-adam-gordon-bell/",
+            "favicon": "img/favicons/earthly.dev.png",
+            "Top Category": "DevOps",
+            "Sub Category": "Containers",
+            "Filter Taxonomy": "devops, open-source"
+        },
         {
             "Company/Org": "Microsoft",
             "Tool/Product/Project": "Playwright",
@@ -396,13 +736,98 @@
             "favicon": "img/favicons/playwright.dev.svg",
             "Top Category": "Developer Tools",
             "Sub Category": "Testing frameworks",
-            "Filter Taxonomy": "developer-tools---testing-frameworks, open-source"
+            "Filter Taxonomy": "developer-tools, open-source"
         },
-        { "Company/Org": "Stoplight", "Tool/Product/Project": "Stoplight", "Reviewed": "2021-03-02", "Scheduled for": "2021-03-04", "URL": "https://stoplight.io", "Category": "DevOps - API Management", "Type": "SaaS", "What is it?": "API design and development platform.", "Len": "186", "What we like": "Build OpenAPI (v2 Swagger or v3) compliant APIs with auto-generated docs, example code, and mocking. Write docs in Markdown. Save everything (and load existing APIs) from Git. Offline/local dev support with desktop API studio app.", "What we dislike": "Limited ability to customize doc output to fit into your own design/brand. Some editor/docs UI bugs in Firefox. It does work without using OpenAPI specs, but most features assume you do.", "Interview": "", "favicon": "img/favicons/stoplight.io.png", "Top Category": "DevOps", "Sub Category": "API Management", "Filter Taxonomy": "devops---api-management, saas" },
-        { "Company/Org": "Raycast", "Tool/Product/Project": "Raycast", "Reviewed": "2021-02-22", "Scheduled for": "2021-02-25", "URL": "https://raycast.com", "Category": "Misc - OS", "Type": "Desktop", "What is it?": "Quick-launcher for developers.", "Len": "124", "What we like": "Search cloud and local documents. Clipboard history. Manage GitHub PRs, JIRA issues, join Zoom calls, schedule calendar blocks. API and scripting to create your own commands. Tiling window management. Connects directly to remote services to avoid privacy issues.", "What we dislike": "macOS only. Shortcuts for sub-commands are difficult to find. File search requires scoping rather than searching everywhere.", "Interview": "https://console.dev/interviews/raycast-petr-nikolaev/", "favicon": "img/favicons/raycast.com.png", "Top Category": "Misc", "Sub Category": "OS", "Filter Taxonomy": "misc---os, desktop" },
-        { "Company/Org": "DBCLI", "Tool/Product/Project": "DBCLI", "Reviewed": "2021-02-22", "Scheduled for": "2021-02-25", "URL": "https://www.dbcli.com", "Category": "Database - Management", "Type": "Desktop", "What is it?": "CLIs for databases.", "Len": "224", "What we like": "Autocomplete and syntax highlighted output. Support for Postgres, MySQL, SQLite, MSSQL, Redis, AWS Athena. History, search, vi/Emacs keybindings, saved queries. Open source & cross-platform.", "What we dislike": "Only available via pip or brew - official OS packages would make installation easier to integrate with native package management. Installation on Windows is a hassle due to needing Python. Large results don't line-wrap well.", "Interview": "", "favicon": "img/favicons/www.dbcli.com.png", "Top Category": "Database", "Sub Category": "Management", "Filter Taxonomy": "database---management, desktop" },
-        { "Company/Org": "Accurics", "Tool/Product/Project": "Terrascan", "Reviewed": "2021-02-16", "Scheduled for": "2021-02-18", "URL": "https://github.com/accurics/terrascan", "Category": "Developer Tools - Testing frameworks", "Type": "Open Source", "What is it?": "Static code analyzer for Infrastructure as Code.", "Len": "153", "What we like": "Scans Terraform, k8s, and Helm configs for security and compliance. Supports AWS, Azure, GCP, Kubernetes, GitHub and has lots of sensible policy defaults which can be extended using the Open Policy Agent Rego language. Can be run in CI/CD.", "What we dislike": "Docs need work: quickstart didn't work smoothly and default policies are not well explained. Explanations of how to rectify policy violations would help.", "Interview": "", "favicon": "img/favicons/github.com.png", "Top Category": "Developer Tools", "Sub Category": "Testing frameworks", "Filter Taxonomy": "developer-tools---testing-frameworks, open-source" },
-        { "Company/Org": "Oso", "Tool/Product/Project": "Oso", "Reviewed": "2021-02-15", "Scheduled for": "2021-02-18", "URL": "https://www.osohq.com/", "Category": "Security - Authentication", "Type": "Open Source", "What is it?": "A system for building application authorization.", "Len": "114", "What we like": "Flexible, declarative language for describing simple or complex access control rules in code. Easy to test policies. Native libraries for NodeJS, Java, Python, Ruby, Go, Rust. Useful tooling: debugger, tracer, and VS Code integration.", "What we dislike": "Focused only on authorization, so you need to build your own authentication (signup, login, forgot password, etc).", "Interview": "https://console.dev/interviews/oso-sam-scott/", "favicon": "img/favicons/www.osohq.com.png", "Top Category": "Security", "Sub Category": "Authentication", "Filter Taxonomy": "security---authentication, open-source" },
+        {
+            "Company/Org": "Stoplight",
+            "Tool/Product/Project": "Stoplight",
+            "Reviewed": "2021-03-02",
+            "Scheduled for": "2021-03-04",
+            "URL": "https://stoplight.io",
+            "Category": "DevOps - API Management",
+            "Type": "SaaS",
+            "What is it?": "API design and development platform.",
+            "Len": "186",
+            "What we like": "Build OpenAPI (v2 Swagger or v3) compliant APIs with auto-generated docs, example code, and mocking. Write docs in Markdown. Save everything (and load existing APIs) from Git. Offline/local dev support with desktop API studio app.",
+            "What we dislike": "Limited ability to customize doc output to fit into your own design/brand. Some editor/docs UI bugs in Firefox. It does work without using OpenAPI specs, but most features assume you do.",
+            "Interview": "",
+            "favicon": "img/favicons/stoplight.io.png",
+            "Top Category": "DevOps",
+            "Sub Category": "API Management",
+            "Filter Taxonomy": "devops, saas"
+        },
+        {
+            "Company/Org": "Raycast",
+            "Tool/Product/Project": "Raycast",
+            "Reviewed": "2021-02-22",
+            "Scheduled for": "2021-02-25",
+            "URL": "https://raycast.com",
+            "Category": "Misc - OS",
+            "Type": "Desktop",
+            "What is it?": "Quick-launcher for developers.",
+            "Len": "124",
+            "What we like": "Search cloud and local documents. Clipboard history. Manage GitHub PRs, JIRA issues, join Zoom calls, schedule calendar blocks. API and scripting to create your own commands. Tiling window management. Connects directly to remote services to avoid privacy issues.",
+            "What we dislike": "macOS only. Shortcuts for sub-commands are difficult to find. File search requires scoping rather than searching everywhere.",
+            "Interview": "https://console.dev/interviews/raycast-petr-nikolaev/",
+            "favicon": "img/favicons/raycast.com.png",
+            "Top Category": "Misc",
+            "Sub Category": "OS",
+            "Filter Taxonomy": "misc, desktop"
+        },
+        {
+            "Company/Org": "DBCLI",
+            "Tool/Product/Project": "DBCLI",
+            "Reviewed": "2021-02-22",
+            "Scheduled for": "2021-02-25",
+            "URL": "https://www.dbcli.com",
+            "Category": "Database - Management",
+            "Type": "Desktop",
+            "What is it?": "CLIs for databases.",
+            "Len": "224",
+            "What we like": "Autocomplete and syntax highlighted output. Support for Postgres, MySQL, SQLite, MSSQL, Redis, AWS Athena. History, search, vi/Emacs keybindings, saved queries. Open source & cross-platform.",
+            "What we dislike": "Only available via pip or brew - official OS packages would make installation easier to integrate with native package management. Installation on Windows is a hassle due to needing Python. Large results don't line-wrap well.",
+            "Interview": "",
+            "favicon": "img/favicons/www.dbcli.com.png",
+            "Top Category": "Database",
+            "Sub Category": "Management",
+            "Filter Taxonomy": "database, desktop"
+        },
+        {
+            "Company/Org": "Accurics",
+            "Tool/Product/Project": "Terrascan",
+            "Reviewed": "2021-02-16",
+            "Scheduled for": "2021-02-18",
+            "URL": "https://github.com/accurics/terrascan",
+            "Category": "Developer Tools - Testing frameworks",
+            "Type": "Open Source",
+            "What is it?": "Static code analyzer for Infrastructure as Code.",
+            "Len": "153",
+            "What we like": "Scans Terraform, k8s, and Helm configs for security and compliance. Supports AWS, Azure, GCP, Kubernetes, GitHub and has lots of sensible policy defaults which can be extended using the Open Policy Agent Rego language. Can be run in CI/CD.",
+            "What we dislike": "Docs need work: quickstart didn't work smoothly and default policies are not well explained. Explanations of how to rectify policy violations would help.",
+            "Interview": "",
+            "favicon": "img/favicons/github.com.png",
+            "Top Category": "Developer Tools",
+            "Sub Category": "Testing frameworks",
+            "Filter Taxonomy": "developer-tools, open-source"
+        },
+        {
+            "Company/Org": "Oso",
+            "Tool/Product/Project": "Oso",
+            "Reviewed": "2021-02-15",
+            "Scheduled for": "2021-02-18",
+            "URL": "https://www.osohq.com/",
+            "Category": "Security - Authentication",
+            "Type": "Open Source",
+            "What is it?": "A system for building application authorization.",
+            "Len": "114",
+            "What we like": "Flexible, declarative language for describing simple or complex access control rules in code. Easy to test policies. Native libraries for NodeJS, Java, Python, Ruby, Go, Rust. Useful tooling: debugger, tracer, and VS Code integration.",
+            "What we dislike": "Focused only on authorization, so you need to build your own authentication (signup, login, forgot password, etc).",
+            "Interview": "https://console.dev/interviews/oso-sam-scott/",
+            "favicon": "img/favicons/www.osohq.com.png",
+            "Top Category": "Security",
+            "Sub Category": "Authentication",
+            "Filter Taxonomy": "security, open-source"
+        },
         {
             "Company/Org": "GitPod",
             "Tool/Product/Project": "GitPod",
@@ -419,7 +844,7 @@
             "favicon": "img/favicons/www.gitpod.io.png",
             "Top Category": "Developer Tools",
             "Sub Category": "IDE",
-            "Filter Taxonomy": "developer-tools---ide, saas"
+            "Filter Taxonomy": "developer-tools, saas"
         },
         {
             "Company/Org": "asdf",
@@ -437,7 +862,7 @@
             "favicon": false,
             "Top Category": "Developer Tools",
             "Sub Category": "Dependency management",
-            "Filter Taxonomy": "developer-tools---dependency-management, open-source"
+            "Filter Taxonomy": "developer-tools, open-source"
         },
         {
             "Company/Org": "StackHawk",
@@ -455,7 +880,7 @@
             "favicon": "img/favicons/www.stackhawk.com.png",
             "Top Category": "Developer Tools",
             "Sub Category": "Dependency management",
-            "Filter Taxonomy": "developer-tools---dependency-management, saas"
+            "Filter Taxonomy": "developer-tools, saas"
         },
         {
             "Company/Org": "Opstrace",
@@ -473,7 +898,7 @@
             "favicon": "img/favicons/opstrace.com.png",
             "Top Category": "DevOps",
             "Sub Category": "Observability",
-            "Filter Taxonomy": "devops---observability, open-source"
+            "Filter Taxonomy": "devops, open-source"
         },
         {
             "Company/Org": "Nushell",
@@ -491,7 +916,7 @@
             "favicon": "img/favicons/www.nushell.sh.png",
             "Top Category": "Developer Tools",
             "Sub Category": "Shells",
-            "Filter Taxonomy": "developer-tools---shells, open-source"
+            "Filter Taxonomy": "developer-tools, open-source"
         },
         {
             "Company/Org": "EteSync",
@@ -509,10 +934,44 @@
             "favicon": "img/favicons/www.etebase.com.png",
             "Top Category": "Developer Tools",
             "Sub Category": "Backend framework",
-            "Filter Taxonomy": "developer-tools---backend-framework, open-source"
+            "Filter Taxonomy": "developer-tools, open-source"
         },
-        { "Company/Org": "Infracost", "Tool/Product/Project": "Infracost", "Reviewed": "2021-01-27", "Scheduled for": "2021-01-28", "URL": "https://github.com/infracost/infracost", "Category": "DevOps - Infrastructure automation", "Type": "Open Source", "What is it?": "Cloud cost estimates for Terraform.", "Len": "209", "What we like": "Integrates with CI (GitHub, GitLab, CircleCI, Bitbucket) to provide cost diffs for pull requests. Supports AWS and Google Cloud.", "What we dislike": "Uses a Cloud Pricing API provided (for free) by the Infracost project so it requires sending data to it (you can self-host). May be out of date. Only supports AWS and Google Cloud. Other cloud vendors planned.", "Interview": "https://console.dev/interviews/infracost-ali-khajeh-hosseini/", "favicon": "img/favicons/github.com.png", "Top Category": "DevOps", "Sub Category": "Infrastructure automation", "Filter Taxonomy": "devops---infrastructure-automation, open-source" },
-        { "Company/Org": "LocalStack", "Tool/Product/Project": "LocalStack", "Reviewed": "2021-01-27", "Scheduled for": "2021-01-28", "URL": "https://localstack.cloud/", "Category": "Developer Tools - Local development", "Type": "Other", "What is it?": "Test/mocking framework replicating AWS APIs locally.", "Len": "217", "What we like": "Deploy a full AWS stack in a local Docker container. Avoid paying for AWS environments for test/dev. Supports key AWS services like DynamoDB, EC2, Kinesis, Lambda, Route53, SNS, SQS. Allows you to inject errors.", "What we dislike": "Some APIs require the paid version e.g. CloudFront, Cognito, ElastiCache, Glacier, RDS. Not built by AWS so will always lag behind the real thing. Good for dev but testing probably better done against the actual APIs.", "Interview": "", "favicon": "img/favicons/localstack.cloud.png", "Top Category": "Developer Tools", "Sub Category": "Local development", "Filter Taxonomy": "developer-tools---local-development, other" },
+        {
+            "Company/Org": "Infracost",
+            "Tool/Product/Project": "Infracost",
+            "Reviewed": "2021-01-27",
+            "Scheduled for": "2021-01-28",
+            "URL": "https://github.com/infracost/infracost",
+            "Category": "DevOps - Infrastructure automation",
+            "Type": "Open Source",
+            "What is it?": "Cloud cost estimates for Terraform.",
+            "Len": "209",
+            "What we like": "Integrates with CI (GitHub, GitLab, CircleCI, Bitbucket) to provide cost diffs for pull requests. Supports AWS and Google Cloud.",
+            "What we dislike": "Uses a Cloud Pricing API provided (for free) by the Infracost project so it requires sending data to it (you can self-host). May be out of date. Only supports AWS and Google Cloud. Other cloud vendors planned.",
+            "Interview": "https://console.dev/interviews/infracost-ali-khajeh-hosseini/",
+            "favicon": "img/favicons/github.com.png",
+            "Top Category": "DevOps",
+            "Sub Category": "Infrastructure automation",
+            "Filter Taxonomy": "devops, open-source"
+        },
+        {
+            "Company/Org": "LocalStack",
+            "Tool/Product/Project": "LocalStack",
+            "Reviewed": "2021-01-27",
+            "Scheduled for": "2021-01-28",
+            "URL": "https://localstack.cloud/",
+            "Category": "Developer Tools - Local development",
+            "Type": "Other",
+            "What is it?": "Test/mocking framework replicating AWS APIs locally.",
+            "Len": "217",
+            "What we like": "Deploy a full AWS stack in a local Docker container. Avoid paying for AWS environments for test/dev. Supports key AWS services like DynamoDB, EC2, Kinesis, Lambda, Route53, SNS, SQS. Allows you to inject errors.",
+            "What we dislike": "Some APIs require the paid version e.g. CloudFront, Cognito, ElastiCache, Glacier, RDS. Not built by AWS so will always lag behind the real thing. Good for dev but testing probably better done against the actual APIs.",
+            "Interview": "",
+            "favicon": "img/favicons/localstack.cloud.png",
+            "Top Category": "Developer Tools",
+            "Sub Category": "Local development",
+            "Filter Taxonomy": "developer-tools, other"
+        },
         {
             "Company/Org": "rsync.net",
             "Tool/Product/Project": "rclone on rsync.net",
@@ -529,9 +988,26 @@
             "favicon": "img/favicons/www.rsync.net.ico",
             "Top Category": "Cloud",
             "Sub Category": "Storage",
-            "Filter Taxonomy": "cloud---storage, other"
+            "Filter Taxonomy": "cloud, other"
         },
-        { "Company/Org": "laktak", "Tool/Product/Project": "extrakto for tmux", "Reviewed": "2021-01-22", "Scheduled for": "2021-01-28", "URL": "https://github.com/laktak/extrakto", "Category": "Misc - Terminal utilities", "Type": "Open Source", "What is it?": "Quickly select, copy/paste, complete text without a mouse.", "Len": "91", "What we like": "The whole idea behind using the command line is to make things faster, usually using the keyboard. This helps with that goal by improving select, copy and paste inside tmux. It works everywhere, even in SSH sessions. Works with clipboards on Linux, macOS, and Windows.", "What we dislike": "tmux beta release is required for popups, otherwise this currently uses a new split window.", "Interview": "", "favicon": "img/favicons/github.com.png", "Top Category": "Misc", "Sub Category": "Terminal utilities", "Filter Taxonomy": "misc---terminal-utilities, open-source" },
+        {
+            "Company/Org": "laktak",
+            "Tool/Product/Project": "extrakto for tmux",
+            "Reviewed": "2021-01-22",
+            "Scheduled for": "2021-01-28",
+            "URL": "https://github.com/laktak/extrakto",
+            "Category": "Misc - Terminal utilities",
+            "Type": "Open Source",
+            "What is it?": "Quickly select, copy/paste, complete text without a mouse.",
+            "Len": "91",
+            "What we like": "The whole idea behind using the command line is to make things faster, usually using the keyboard. This helps with that goal by improving select, copy and paste inside tmux. It works everywhere, even in SSH sessions. Works with clipboards on Linux, macOS, and Windows.",
+            "What we dislike": "tmux beta release is required for popups, otherwise this currently uses a new split window.",
+            "Interview": "",
+            "favicon": "img/favicons/github.com.png",
+            "Top Category": "Misc",
+            "Sub Category": "Terminal utilities",
+            "Filter Taxonomy": "misc, open-source"
+        },
         {
             "Company/Org": "Seed",
             "Tool/Product/Project": "Seed",
@@ -548,7 +1024,7 @@
             "favicon": "img/favicons/seed.run.png",
             "Top Category": "DevOps",
             "Sub Category": "CI/CD",
-            "Filter Taxonomy": "devops---ci/cd, saas"
+            "Filter Taxonomy": "devops, saas"
         },
         {
             "Company/Org": "Brave",
@@ -566,9 +1042,26 @@
             "favicon": "img/favicons/brave.com.png",
             "Top Category": "Misc",
             "Sub Category": "OS",
-            "Filter Taxonomy": "misc---os, open-source"
+            "Filter Taxonomy": "misc, open-source"
         },
-        { "Company/Org": "Yifan Gu", "Tool/Product/Project": "VMCLI", "Reviewed": "2021-01-15", "Scheduled for": "2021-01-21", "URL": "https://github.com/gyf304/vmcli", "Category": "Misc - OS", "Type": "Open Source", "What is it?": "Utilities for managing VMs on macOS.", "Len": "92", "What we like": "macOS Big Sur includes a new framework for managing VMs. This CLI makes it easy to run VMs without additional software i.e. using the new Virtualization.framework. Means you don't need Virtual Box, VMWare, etc for simple VM tasks.", "What we dislike": "Obviously macOS-only. Only basic functionality for using VMs (probably fine for developers).", "Interview": "https://console.dev/interviews/vmcli-yifan-gu/", "favicon": "img/favicons/github.com.png", "Top Category": "Misc", "Sub Category": "OS", "Filter Taxonomy": "misc---os, open-source" },
+        {
+            "Company/Org": "Yifan Gu",
+            "Tool/Product/Project": "VMCLI",
+            "Reviewed": "2021-01-15",
+            "Scheduled for": "2021-01-21",
+            "URL": "https://github.com/gyf304/vmcli",
+            "Category": "Misc - OS",
+            "Type": "Open Source",
+            "What is it?": "Utilities for managing VMs on macOS.",
+            "Len": "92",
+            "What we like": "macOS Big Sur includes a new framework for managing VMs. This CLI makes it easy to run VMs without additional software i.e. using the new Virtualization.framework. Means you don't need Virtual Box, VMWare, etc for simple VM tasks.",
+            "What we dislike": "Obviously macOS-only. Only basic functionality for using VMs (probably fine for developers).",
+            "Interview": "https://console.dev/interviews/vmcli-yifan-gu/",
+            "favicon": "img/favicons/github.com.png",
+            "Top Category": "Misc",
+            "Sub Category": "OS",
+            "Filter Taxonomy": "misc, open-source"
+        },
         {
             "Company/Org": "Vantage",
             "Tool/Product/Project": "Vantage",
@@ -585,11 +1078,62 @@
             "favicon": "img/favicons/www.vantage.sh.png",
             "Top Category": "DevOps",
             "Sub Category": "Infrastructure automation",
-            "Filter Taxonomy": "devops---infrastructure-automation, saas"
+            "Filter Taxonomy": "devops, saas"
         },
-        { "Company/Org": "Skynet", "Tool/Product/Project": "Skynet", "Reviewed": "2021-01-13", "Scheduled for": "2021-01-14", "URL": "https://siasky.net/", "Category": "Cloud - Storage", "Type": "Open Source", "What is it?": "Decentralized file storage and CDN.", "Len": "180", "What we like": "Web UI and SDKs for uploading files to a decentralized CDN. Uses a blockchain and rewards users who run nodes with coins which can be exchanged for money. Current average cost = $4.16/TB stored + $1.25/TB transferred.", "What we dislike": "Time to first byte 300-500ms may be prohibitatively slow for some use cases. Streaming \"up to 1Gbps\" but what does \"up to\" really mean? Files must be public. Why call it \"Skynet\"?!", "Interview": "", "favicon": "img/favicons/siasky.net.png", "Top Category": "Cloud", "Sub Category": "Storage", "Filter Taxonomy": "cloud---storage, open-source" },
-        { "Company/Org": "James Little", "Tool/Product/Project": "Stork Search", "Reviewed": "2021-01-13", "Scheduled for": "2021-01-14", "URL": "https://stork-search.net/", "Category": "Developer Tools - Site Search", "Type": "Open Source", "What is it?": "Fast search for static sites.", "Len": "192", "What we like": "Generate the index of your content, which is then downloaded by the visitor's browser and searched using the JS/WASM library \"locally\" - this is what makes it so fast.", "What we dislike": "Index must be generated manually. It is specifically designed for static sites, so it would need to be hooked into a build process. Would need extra work if you wanted to index a dynamic site.", "Interview": "https://console.dev/interviews/stork-search-james-little/", "favicon": "img/favicons/stork-search.net.png", "Top Category": "Developer Tools", "Sub Category": "Site Search", "Filter Taxonomy": "developer-tools---site-search, open-source" },
-        { "Company/Org": "Starship", "Tool/Product/Project": "Starship", "Reviewed": "2021-01-06", "Scheduled for": "2021-01-07", "URL": "https://starship.rs", "Category": "Misc - Terminal utilities", "Type": "Open Source", "What is it?": "High-performance, customizable, shell prompt.", "Len": "139", "What we like": "Works with any shell (bash, zsh, fish, PowerShell). Context-sensitive e.g. auto-complete, shows Git info, lots of language specific configs. Written in Rust, which is trendy, and probably fast.", "What we dislike": "Another layer on your shell to mess around with. If you use ZSH then Oh My ZSH already does a lot of this, and has lots of good ZSH tweaks.", "Interview": "https://console.dev/interviews/starship-matan-kushner/", "favicon": "img/favicons/starship.rs.png", "Top Category": "Misc", "Sub Category": "Terminal utilities", "Filter Taxonomy": "misc---terminal-utilities, open-source" },
+        {
+            "Company/Org": "Skynet",
+            "Tool/Product/Project": "Skynet",
+            "Reviewed": "2021-01-13",
+            "Scheduled for": "2021-01-14",
+            "URL": "https://siasky.net/",
+            "Category": "Cloud - Storage",
+            "Type": "Open Source",
+            "What is it?": "Decentralized file storage and CDN.",
+            "Len": "180",
+            "What we like": "Web UI and SDKs for uploading files to a decentralized CDN. Uses a blockchain and rewards users who run nodes with coins which can be exchanged for money. Current average cost = $4.16/TB stored + $1.25/TB transferred.",
+            "What we dislike": "Time to first byte 300-500ms may be prohibitatively slow for some use cases. Streaming \"up to 1Gbps\" but what does \"up to\" really mean? Files must be public. Why call it \"Skynet\"?!",
+            "Interview": "",
+            "favicon": "img/favicons/siasky.net.png",
+            "Top Category": "Cloud",
+            "Sub Category": "Storage",
+            "Filter Taxonomy": "cloud, open-source"
+        },
+        {
+            "Company/Org": "James Little",
+            "Tool/Product/Project": "Stork Search",
+            "Reviewed": "2021-01-13",
+            "Scheduled for": "2021-01-14",
+            "URL": "https://stork-search.net/",
+            "Category": "Developer Tools - Site Search",
+            "Type": "Open Source",
+            "What is it?": "Fast search for static sites.",
+            "Len": "192",
+            "What we like": "Generate the index of your content, which is then downloaded by the visitor's browser and searched using the JS/WASM library \"locally\" - this is what makes it so fast.",
+            "What we dislike": "Index must be generated manually. It is specifically designed for static sites, so it would need to be hooked into a build process. Would need extra work if you wanted to index a dynamic site.",
+            "Interview": "https://console.dev/interviews/stork-search-james-little/",
+            "favicon": "img/favicons/stork-search.net.png",
+            "Top Category": "Developer Tools",
+            "Sub Category": "Site Search",
+            "Filter Taxonomy": "developer-tools, open-source"
+        },
+        {
+            "Company/Org": "Starship",
+            "Tool/Product/Project": "Starship",
+            "Reviewed": "2021-01-06",
+            "Scheduled for": "2021-01-07",
+            "URL": "https://starship.rs",
+            "Category": "Misc - Terminal utilities",
+            "Type": "Open Source",
+            "What is it?": "High-performance, customizable, shell prompt.",
+            "Len": "139",
+            "What we like": "Works with any shell (bash, zsh, fish, PowerShell). Context-sensitive e.g. auto-complete, shows Git info, lots of language specific configs. Written in Rust, which is trendy, and probably fast.",
+            "What we dislike": "Another layer on your shell to mess around with. If you use ZSH then Oh My ZSH already does a lot of this, and has lots of good ZSH tweaks.",
+            "Interview": "https://console.dev/interviews/starship-matan-kushner/",
+            "favicon": "img/favicons/starship.rs.png",
+            "Top Category": "Misc",
+            "Sub Category": "Terminal utilities",
+            "Filter Taxonomy": "misc, open-source"
+        },
         {
             "Company/Org": "Wasmer",
             "Tool/Product/Project": "Wasmer 1.0",
@@ -606,7 +1150,7 @@
             "favicon": "img/favicons/wasmer.io.png",
             "Top Category": "Developer Tools",
             "Sub Category": "Backend framework",
-            "Filter Taxonomy": "developer-tools---backend-framework, open-source"
+            "Filter Taxonomy": "developer-tools, open-source"
         }
     ]
 }

@@ -114,7 +114,7 @@ with open(args.tools_json, 'r') as f:
 
         # Generate filtering taxonomy
         try:
-            category = tool['Category'].lower()
+            category = tool['Top Category'].lower()
             category = category.replace(' ', '-')
 
             toolType = tool['Type'].lower()
