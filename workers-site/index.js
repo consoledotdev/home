@@ -126,6 +126,7 @@ async function handleEvent(event) {
             ["/qa/keydb-john-sully/", "https://console.dev/interviews/keydb-john-sully/"],
             ["/qa/akita-jean-yang", "https://console.dev/interviews/akita-jean-yang/"],
             ["/qa/akita-jean-yang/", "https://console.dev/interviews/akita-jean-yang/"],
+            ["/tools", "https://console.dev/tools/"],
         ])
 
         const path = url.pathname;

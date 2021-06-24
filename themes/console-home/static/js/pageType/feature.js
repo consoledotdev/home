@@ -279,7 +279,7 @@ let groupItems = (groupBy) => {
                 return c.label == i;
             });
             let viewAllLink = newSection.querySelector("[data-view-all-link]");
-            viewAllLink.href = "/category/" + cat.name;
+            viewAllLink.href = "/category/" + cat.name + "/";
             viewAllLink.classList.remove("is-hidden");
         }
 
