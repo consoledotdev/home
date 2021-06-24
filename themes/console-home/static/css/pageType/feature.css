@@ -51,6 +51,10 @@
     padding-left: 5vw;
     width: 26vw;
     max-width: 400px;
+    transform: translateY(-48px);
+    margin-bottom: -48px;
+    padding-top: 48px;
+    padding-bottom: var(--space3);
 }
 
 .feature-split .feature-content-wrapper .console-filters .show-by,

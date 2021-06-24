@@ -54,11 +54,19 @@ let computeFixedFiltersPos2 = (() => {
             style.marginTop = 0;
             style.position = "fixed";
             style.top = document.querySelector("[data-aside-anchor]").getBoundingClientRect().top + "px";
-            if (parseInt(style.top) < 128) style.top = "128px";
+            style.bottom = null;
+            style.overflow = null;
+            if (parseInt(style.top) < 128) {
+                style.top = "128px";
+                style.bottom = 0;
+                style.overflow = "auto";
+            }
         } else {
             style.marginTop = null;
             style.position = null;
             style.top = null;
+            style.bottom = null;
+            style.overflow = null;
         }
 
         let filtersEl = document.querySelector("[data-feature-aside-content]");
@@ -66,10 +74,14 @@ let computeFixedFiltersPos2 = (() => {
             filtersEl.style.marginTop = style.marginTop;
             filtersEl.style.top = style.top;
             filtersEl.style.position = style.position;
+            filtersEl.style.bottom = style.bottom;
+            filtersEl.style.overflow = style.overflow;
         } else {
             filtersEl.style.marginTop = null;
             filtersEl.style.top = null;
             filtersEl.style.position = null;
+            filtersEl.style.bottom = null;
+            filtersEl.style.overflow = null;
         }
     };
     compute();
