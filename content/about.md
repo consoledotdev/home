@@ -41,10 +41,10 @@ installed by over 1.5 million families. {{< /div-caption >}}
 
 ### Selection Criteria
 
-Our selection criteria for the newsletter are explained below. The more of these
-questions we can answer positively, the more likely a tool is to be featured. We
-try to be objective but there is always a subjective element to deciding what we
-think is the best, most interesting set of tools each week:
+Our selection criteria are explained below. The more of these questions we can
+answer positively, the more likely a tool is to be featured. We try to be
+objective but there is always a subjective element to deciding what we think is
+the best, most interesting set of tools each week:
 
 - Is this interesting and useful to developers?
 - Is there a self-service signup?
@@ -65,14 +65,15 @@ think is the best, most interesting set of tools each week:
 ### Beyond the newsletter
 
 Over time our goal is to **build a community where developers can find the best
-tools**. This will include long form research, discussion, and exclusive early
-access to beta programs and new releases.
+tools**. This will include long form research, discussion, and exclusive deals
+and/or early access to beta programs and new releases.
 
 We aim to support Console through this last one - partnering with vendors to
 provide extras to our audience, such as exclusive access to beta programs or
 bonus credits, and we may be paid a referral fee for these. Our editorial
 process is independent from our vendor partnerships. We do not accept payment
-for product inclusion.
+for product inclusion. Where we feature exclusive deals from partners, they
+must first fit our selection criteria before we consider working with them.
 
 To learn more about Console, check out the Console blog where you can follow our
 progress. To start, we recommend reading our thoughts on the
