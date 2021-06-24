@@ -373,7 +373,7 @@
             "What we like": "No dependencies. No build step. Very small (~400 LoC vDOM, ~100 LoC state management, ~230 LoC HTML helpers). Works with async components. Web tutorial does a good job explaining how it works (built using itself).",
             "What we dislike": "No router. Great for very simple SPAs, but something like Mithril.js (or Vue. Or Svelte) probably needed for anything of significance (if you don\u2019t mind the build step).",
             "Interview": "",
-            "favicon": "img/favicons/skruv.io.ico",
+            "favicon": "img/favicons/skruv.io.png",
             "Top Category": "Developer Tools",
             "Sub Category": "Frontend framework",
             "Filter Taxonomy": "developer-tools, open-source"
@@ -751,7 +751,7 @@
             "What we like": "Build OpenAPI (v2 Swagger or v3) compliant APIs with auto-generated docs, example code, and mocking. Write docs in Markdown. Save everything (and load existing APIs) from Git. Offline/local dev support with desktop API studio app.",
             "What we dislike": "Limited ability to customize doc output to fit into your own design/brand. Some editor/docs UI bugs in Firefox. It does work without using OpenAPI specs, but most features assume you do.",
             "Interview": "",
-            "favicon": "img/favicons/stoplight.io.png",
+            "favicon": "img/favicons/stoplight.io.jpg",
             "Top Category": "DevOps",
             "Sub Category": "API Management",
             "Filter Taxonomy": "devops, saas"
@@ -985,7 +985,7 @@
             "What we like": "rsync.net is a Unix (ZFS) filesystem over SSH but also supports commands like borg, git, rsync, s3cmd, and now rclone. rclone is a separate open source project that exposes many cloud accounts as filesystems e.g. Google Photos, Dropbox, Azure Blob storage. rsync.net connects directly so you can copy from one to the other without downloading/uploading.",
             "What we dislike": "This is truly a filesystem over SSH so you need to know your way around the command line. Documentation is limited and the account manager UI is dated. No support for scheduling execution so you need to handle that yourself e.g. cron, systemd.",
             "Interview": "/interviews/rsync-john-kozubik/",
-            "favicon": "img/favicons/www.rsync.net.ico",
+            "favicon": "img/favicons/www.rsync.net.jpg",
             "Top Category": "Cloud",
             "Sub Category": "Storage",
             "Filter Taxonomy": "cloud, other"
