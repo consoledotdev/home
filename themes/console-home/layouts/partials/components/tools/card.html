@@ -1,0 +1,66 @@
+{{- $showDate := .Reviewed -}}
+{{- $url := .URL }}
+{{- $topcategory := index . "Top Category" -}}
+{{- $subcategory := index . "Sub Category" -}}
+<div class="tool-card" data-card data-date="{{ $showDate }}" data-name="{{ index . "Tool/Product/Project" }}" data-taxonomy="{{ index . "Filter Taxonomy" }}" data-category="{{ $topcategory }}">
+	<div class="tool-card-content">
+		<div class="top">
+			<a onclick="blur();" class="card-link" href="{{ $url }}" target="_blank" rel="noopener"><span>Visit {{ partial "icons/external-link.html" }}</span></a>
+			<div class="left">
+				{{- $favicon := index . "favicon" -}}
+				{{- $faviconStatic := print "static/" $favicon -}}
+				<div class="tool-card-thumbnail aspect-ratio aspect-ratio-1-1">
+					{{- if $favicon -}}
+						{{- if (fileExists $faviconStatic) -}}
+							<img class="image" src="/{{ $favicon }}" alt="{{ index . "Company/Org" }} Logo" />
+						{{- else -}}
+							<div class="card-thumbnail-generic">{{ partial (print "icons/" (replace (lower $topcategory) " " "-") ".html") }}</div>
+						{{- end -}}
+					{{- else -}}
+						<div class="card-thumbnail-generic">{{ partial (print "icons/" (replace (lower $topcategory) " " "-") ".html") }}</div>
+					{{- end -}}
+				</div>
+				<h4 class="title title-3">
+					{{- $org := index . "Company/Org" -}}
+					{{- $name := index . "Tool/Product/Project" -}}
+					{{- if in $name $org -}}{{ $name }}{{- else -}}{{ $name }}, from {{ $org }}{{- end -}}
+				</h4>
+			</div>
+			<div class="right">
+				<div class="left">
+					<h4 class="title title-3">
+						{{- $org := index . "Company/Org" -}}
+						{{- $name := index . "Tool/Product/Project" -}}
+						{{- if in $name $org -}}{{ $name }}{{- else -}}{{ $name }}, from {{ $org }}{{- end -}}
+					</h4>
+					<p class="tool-card-description">{{ index . "What is it?" }}</p>
+				</div>
+				<div class="taxonomy">
+					<div class="categories">
+						{{ partial (print "icons/" (replace (lower $topcategory) " " "-") ".html") }}
+						<span class="category">{{ $subcategory }}</span>
+					</div>
+					<div class="tags">
+						{{ partial "icons/tag.html" }}
+						<span class="tag">{{ .Type }}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="like-dont-like col-2">
+				<div class="left"><p class="small"><span>{{ partial "icons/like.html" }} What we like:</span> {{ index . "What we like" }}</p></div>
+				<div class="right"><p class="small"><span>{{ partial "icons/dislike.html" }} What we don't like:</span> {{ index . "What we dislike" }}</p></div>
+			</div>
+			<div class="details">
+				<span class="date">Reviewed: {{ $showDate }}</span>
+				{{ with .Interview -}}
+					<a onclick="blur();" href="{{ . }}" class="console-button-text console-button-small console-button-green icon-left interview-with-cto" title="Read the Console interview with {{ $org }}">
+						{{ partial "icons/interview-console.html" }}
+						<span>Console interview</span>
+					</a>
+				{{- end }}
+			</div>
+		</div>
+	</div>
+</div>

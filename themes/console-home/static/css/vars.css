@@ -56,7 +56,14 @@
     --c-green-10: #03230f;
     --c-green-11: #031208;
 
-    --c-red: #ff4600;
+    --c-signaling-positive-01: #00cc55;
+    --c-signaling-positive-02: #00ab47;
+
+    --c-signaling-warning-01: #ff8833;
+    --c-signaling-warning-02: #ff7614;
+
+    --c-signaling-error-01: #ff4600;
+    --c-signaling-error-02: #de4300;
 
     --corners-x-small: 2px;
     --corners-small: 4px;

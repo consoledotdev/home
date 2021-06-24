@@ -9,12 +9,17 @@
     --theme-text-2: var(--c-grey-03);
     --theme-text-3: var(--c-grey-05);
     --theme-text-4: var(--c-grey-04-whites-neutral);
+    --theme-text-5: var(--c-grey-06-blacks-neutral);
     --theme-input-text: var(--c-black-02-main);
     --theme-pre-code-text: var(--c-blue-04);
     --theme-cta-text: var(--c-white-00-absolute);
     --theme-cta-secondary-text-idle: var(--c-white-00-absolute);
     --theme-cta-secondary-text-hover: var(--c-blue-04);
     --theme-cta-secondary-text-active: var(--c-blue-06-main);
+
+    --theme-cta-secondary-green-text-idle: var(--c-green-05-main);
+    --theme-cta-secondary-green-text-hover: var(--c-green-06);
+    --theme-cta-secondary-green-text-active: var(--c-green-07);
 
     --theme-content-bg-0: var(--c-black-00-absolute);
     --theme-content-bg-1: var(--c-black-01);
@@ -107,6 +112,13 @@
 
     --theme-badge-text: var(--c-white-00-absolute);
     --theme-badge-bg: var(--c-fuchsia-06);
+
+    --theme-categories-color: var(--c-fuchsia-04);
+    --theme-tag-color: var(--c-fuchsia-05-main);
+
+    --theme-signaling-positive: var(--c-signaling-positive-01);
+    --theme-signaling-warning: var(--c-signaling-warning-01);
+    --theme-signaling-error:: var(--c-signaling-error-01);
 
     /* Mars Internet page specific */
 

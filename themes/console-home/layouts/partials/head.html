@@ -17,6 +17,7 @@
     <script src="/js/head-scripts.js"></script>
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/components.css" />
+    {{ if and .Params.pageType .Params.customPageStyle }}<link rel="stylesheet" href="/css/pageType/{{ .Params.pageType }}.css" />{{ end }}
     {{ if and .Params.isSelected .Params.customStyle }}<link rel="stylesheet" href="/css/page/{{ with .Params.type }}{{ . }}/{{ end }}{{ .Params.isSelected }}.css" />{{ end }}
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -48,6 +49,15 @@
                 {{- $lastmod = index . "Scheduled for" -}}
                 {{- $lastmod = dateFormat $iso8601 $lastmod -}}
             {{- end -}}
+        {{- end -}}
+    <!--
+        If this is /tools/
+        Pull out the "Scheduled for" timestamp from the latest item
+    -->
+    {{- else if eq $.Page.RelPermalink "/tools/" -}}
+        {{- range first 1 $.Site.Data.toolslatest.items -}}
+            {{- $lastmod = index . "Scheduled for" -}}
+            {{- $lastmod = dateFormat $iso8601 $lastmod -}}
         {{- end -}}
     {{- else if eq $.Page.RelPermalink "/betas/" -}}
     <!--
@@ -102,4 +112,55 @@
                 (window.plausible.q = window.plausible.q || []).push(arguments);
             };
     </script>
+    <!--
+        Structured markup for Google to pick up the reviews
+        on the /tools/ page. Ref:
+        https://developers.google.com/search/docs/guides/intro-structured-data
+        https://developers.google.com/search/docs/data-types/review-snippet
+        https://developers.google.com/search/docs/data-types/software-app
+    -->
+    {{- if eq $.Page.RelPermalink "/tools/" -}}
+    {{ $reviewCount := len $.Site.Data.toolsreviewed.items }}
+    {{ $reviewCount = sub $reviewCount 1 }}
+    <script type="application/ld+json">
+        [
+        {{ range $index, $review := $.Site.Data.toolsreviewed.items }}
+        {
+            "@context": "https://schema.org/",
+            "@type": "Review",
+            "itemReviewed": {
+                "@type": "SoftwareApplication",
+                "applicationCategory": "DeveloperApplication",
+                "name": "{{ index . "Tool/Product/Project" }}",
+                "url": "{{ index . "URL" }}",
+                "description": "{{ index . "What is it?" }}",
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "5",
+                    "ratingCount": "1"
+                }                
+            },
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5"
+            },
+            "name": "Console review of {{ index . "Tool/Product/Project" }}",
+            "author": {
+                "@type": "Organization",
+                "name": "Console",
+                "url": "https://console.dev"
+            },
+            "reviewBody": "What we like: {{ index . "What we like" }} What we don't like: {{ index . "What we dislike" }}",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Console",
+                "url": "https://console.dev"
+            },
+            {{- $reviewDate := index . "Reviewed" -}}
+            {{- $reviewDate = dateFormat $iso8601 $reviewDate -}}
+            "datePublished": "{{ $reviewDate | safeHTML }}"   
+        }{{ if lt $index $reviewCount }},{{end}}{{ end }}
+        ]  
+    </script>
+    {{- end }}
 </head>

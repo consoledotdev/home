@@ -1,0 +1,236 @@
+/* Console Tools
+   ========================================================================== */
+
+.inline-filters-wrapper .box-collapsible.is-expanded .box-collapsible-content {
+    max-height: 540px;
+}
+
+.tool-card {
+    position: relative;
+    background-color: var(--theme-content-bg-0);
+    box-shadow: var(--theme-shadow-1);
+    border-radius: var(--corners-mid);
+    transition: var(--a-micro);
+}
+
+.tool-card.is-hidden {
+    display: none;
+}
+
+.tool-card .card-link {
+    left: -2px;
+    margin-right: 0;
+}
+
+.tool-card-content .top {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: var(--space3) var(--space4);
+    border-bottom: var(--theme-border-2);
+}
+
+.tool-card-content .top > .left {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.tool-card-content .top > .left .title {
+    display: none;
+}
+
+.tool-card-content .top > .right {
+    flex-grow: 1;
+}
+
+.tool-card-thumbnail {
+    flex-shrink: 0;
+    width: calc(var(--space4) + var(--space3));
+    margin-right: var(--space3_5);
+    margin-top: calc(var(--space) / 2);
+}
+
+.tool-card .title {
+    margin-bottom: var(--space1);
+}
+
+p.tool-card-description {
+    margin: 0;
+}
+
+.tool-card .like-dont-like p span {
+    color: var(--theme-text-1);
+    font-weight: 500;
+}
+
+.tool-card .bottom {
+    background: var(--theme-content-bg-1);
+    padding: var(--space3) var(--space4);
+}
+
+.tool-card .bottom .col-2 {
+    margin-top: 0;
+}
+
+.tool-card .like-dont-like .icon {
+    display: inline-block;
+    width: var(--t-size-2);
+    height: var(--t-size-1);
+    vertical-align: -0.1em;
+}
+
+.tool-card .like-dont-like .icon-like {
+    stroke: var(--theme-signaling-positive);
+}
+
+.tool-card .like-dont-like .icon-dislike {
+    stroke: var(--theme-signaling-warning);
+}
+
+.tool-card-content .top > .right > .taxonomy {
+    display: flex;
+    margin-top: var(--space2);
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: calc(var(--space2) * -1);
+}
+
+.tool-card-content .top > .right > .taxonomy > * {
+    margin-bottom: var(--space2);
+}
+
+.tool-card-content .top > .right > .taxonomy > *:not(:last-child) {
+    margin-right: var(--space3);
+}
+
+.view-all-link {
+    display: none;
+}
+
+.view-all-link.is-hidden {
+    display: none;
+}
+
+.tool-card .bottom .details {
+    margin-top: var(--space3);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .tool-card > *:not(:last-child):not(:first-child) {
+        margin-bottom: var(--space2_5);
+    }
+
+    .tool-card-content .top > *:not(:last-child):not(.card-link) {
+        margin-bottom: var(--space2_5);
+    }
+
+    p.tool-card-description {
+        margin-bottom: var(--space2_5);
+    }
+
+    .tool-card .bottom .col-2 {
+        flex-flow: column nowrap;
+    }
+
+    .tool-card .bottom .col-2 > *:not(:first-child) {
+        margin-top: var(--space3);
+    }
+
+    .tool-card .bottom .col-2 .left,
+    .tool-card .bottom .col-2 .right {
+        width: auto;
+    }
+
+    .tool-card-content .top {
+        flex-flow: column nowrap;
+        align-items: flex-start;
+    }
+
+    .tool-card-content .top > .right > *:not(:last-child) {
+        margin-bottom: var(--space2_5);
+    }
+
+    .tool-card-thumbnail {
+        margin-right: var(--space3);
+    }
+
+    .tool-card-content .top > .left .title {
+        display: block;
+    }
+
+    .tool-card-content .top > .right .title {
+        display: none;
+    }
+
+    @media (min-width: 601px) {
+        .tool-card > *:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .tool-card {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    .tool-card > *:not(:last-child):not(:first-child) {
+        margin-right: var(--space4);
+    }
+
+    .tool-card-content .top {
+        flex: 1 1 auto;
+    }
+
+    p.tool-card-description {
+        margin-bottom: var(--space1);
+    }
+
+    @media (min-width: 1360px) {
+        .tool-card-content .top > .right {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tool-card-content .top > .right > .left {
+            flex: 1 1 auto;
+            margin-right: var(--space4);
+            max-width: 60%;
+        }
+
+        .tool-card-content .top > .right > .taxonomy {
+            flex: 0 0 auto;
+            max-width: 40%;
+            flex-flow: column nowrap;
+            align-items: flex-end;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+
+        .tool-card-content .top > .right > .taxonomy > * {
+            margin-bottom: 0;
+        }
+
+        .tool-card-content .top > .right > .taxonomy > *:not(:last-child) {
+            margin-right: 0;
+        }
+
+        .tool-card-content .top > .right > .taxonomy > *:not(:first-child) {
+            margin-top: var(--space1);
+        }
+
+        p.tool-card-description {
+            margin-bottom: 0;
+        }
+    }
+}

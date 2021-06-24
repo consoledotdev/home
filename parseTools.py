@@ -37,7 +37,8 @@ last_thursday = today - relativedelta(weekday=TH(-1))
 # gsheet.action from the Interesting Tools Google Sheet (see README.md).
 print('Parsing tools JSON...')
 
-interesting = {'items': []}
+interesting_latest = {'items': []}
+interesting_reviewed = {'items': []}
 with open(args.tools_json, 'r') as f:
     tools = json.load(f)
 
@@ -53,15 +54,99 @@ with open(args.tools_json, 'r') as f:
         # Only pull out things scheduled for the last newsletter
         if args.ignore_date \
                 or scheduled_for.isocalendar() == last_thursday.isocalendar():
-            interesting['items'].append(tool)
+            interesting_latest['items'].append(tool)
+
+        # Set the icon path based on the URL
+        url = urlparse(tool['URL'])
+        faviconPath = 'img/favicons/{0}'.format(url[1])
+
+        # Do we already have an icon saved?
+        # static/ is prepended because the file is saved there, but when Hugo
+        # builds it moves them up to the root under /img/favicons
+        # The path in the JSON needs to be the final build path without
+        # static/
+        if os.path.isfile('static/' + faviconPath + '.png'):
+            tool['favicon'] = faviconPath + '.png'
+        elif os.path.isfile('static/' + faviconPath + '.svg'):
+            tool['favicon'] = faviconPath + '.svg'
+        elif os.path.isfile('static/' + faviconPath + '.jpg'):
+            tool['favicon'] = faviconPath + '.jpg'
+        elif os.path.isfile('static/' + faviconPath + '.ico'):
+            tool['favicon'] = faviconPath + '.ico'
+        else:
+            print('Retrieving favicon for: {0}'.format(tool['URL']))
+
+            # Try to find icons
+            try:
+                icons = favicon.get('{0}://{1}'.format(url[0], url[1]))
+
+                # Found some icons, so download the best (highest res)
+                if icons:
+                    icon = icons[0]
+                    response = requests.get(icon.url, stream=True)
+                    tool['favicon'] = '{0}.{1}'.format(
+                        faviconPath,
+                        icon.format)
+
+                    downloadPath = 'static/{0}'.format(tool['favicon'])
+
+                    print('- Downloading: {0} to {1}'.format(
+                        icon.url,
+                        downloadPath))
+
+                    with open(downloadPath, 'wb') as image:
+                        for chunk in response.iter_content(1024):
+                            image.write(chunk)
+
+                else:
+                    tool['favicon'] = False
+                    print('- No favicon found')
+
+            except Exception as e:
+                tool['favicon'] = False
+                print('- Error finding favicon: {0}'.format(e))
+                continue
+
+        # Split category
+        category_split = tool['Category'].split(' - ')
+        tool['Top Category'] = category_split[0]
+        tool['Sub Category'] = category_split[1]
+
+        # Generate filtering taxonomy
+        try:
+            category = tool['Top Category'].lower()
+            category = category.replace(' ', '-')
+
+            toolType = tool['Type'].lower()
+            toolType = toolType.replace(' ', '-')
+
+            # Aggregate filter taxonomy
+            tool['Filter Taxonomy'] = '{0}, {1}'.format(
+                category,
+                toolType
+            )
+
+        except Exception as e:
+            print('Error transforming format')
+            print(e)
+            print(tool)
+
+        # Only pull out things scheduled before today
+        if args.ignore_date \
+                or scheduled_for.isocalendar() <= today.isocalendar():
+            interesting_reviewed['items'].append(tool)
 
     print('Parsed tools JSON')
 
 print('Writing tools - latest JSON')
 with open('data/toolslatest.json', 'w') as outfile:
-    json.dump(interesting, outfile)
-
+    json.dump(interesting_latest, outfile)
 print('Wrote tools - latest JSON')
+
+print('Writing tools - reviewed JSON')
+with open('data/toolsreviewed.json', 'w') as outfile:
+    json.dump(interesting_reviewed, outfile)
+print('Wrote tools - reviewed JSON')
 
 # Same for the betas
 print('Parsing betas JSON...')
@@ -152,23 +237,23 @@ with open(args.beta_json, 'r') as f:
                 print('- Error finding favicon: {0}'.format(e))
                 continue
 
+        # Generate filtering taxonomy
         try:
-            # Transform format
             category = program['Category'].lower()
             category = category.replace(' ', '-')
 
             programType = program['Type'].lower()
             programType = programType.replace(' ', '-')
 
-            # Aggregate filter categories
-            program['Filter Categories'] = '{0}, {1}, {2}'.format(
+            # Aggregate filter taxonomy
+            program['Filter Taxonomy'] = '{0}, {1}, {2}'.format(
                 category,
                 programType,
                 program['Access'].lower()
             )
 
             if program['Weekly Pick']:
-                program['Filter Categories'] += ', weekly-pick'
+                program['Filter Taxonomy'] += ', weekly-pick'
 
             if program['GA?'] == "TRUE":
                 programs_ga['items'].append(program)

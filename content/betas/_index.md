@@ -6,6 +6,7 @@ summary: A live list of every developer tool beta and early access release.
 isSelected: betas
 customStyle: true
 pageType: feature
+customPageStyle: true
 headerType: fixed
 hidePlanes: true
 ogType: website

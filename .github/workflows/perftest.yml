@@ -19,7 +19,7 @@ jobs:
               with:
                   apiToken: ${{ secrets.CF_API_TOKEN }}
                   environment: perftest
-                  wranglerVersion: '1.15.0'
+                  wranglerVersion: "1.15.0"
 
             - name: k6 test (home)
               uses: k6io/action@v0.2.0
@@ -30,3 +30,8 @@ jobs:
               uses: k6io/action@v0.2.0
               with:
                   filename: tests/betas.js
+
+            - name: k6 test (tools)
+              uses: k6io/action@v0.2.0
+              with:
+                  filename: tests/tools.js
