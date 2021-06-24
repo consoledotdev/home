@@ -1,9 +1,7 @@
 {{ define "main" }}
 <section class="page-section">
     <h2 class="title title-1">{{ .Title }}</h2>
-    <p>Each week we pick out the most interesting tools for
-    developers. We keep track of everything - dev tools, devops, cloud, and
-    APIs - so you don’t have to. This is the content of the newsletter sent on
+    <p>A weekly digest of the best developer tools. We keep track of everything - dev tools, devops, cloud, and APIs - so you don't have to. This is the content of the newsletter sent on
     {{ range first 1 $.Site.Data.toolslatest.items }}{{ index . "Scheduled for" | dateFormat "2 Jan 2006" }}{{ end }}.</p>
 
     <section class="page-section">
@@ -11,24 +9,30 @@
     </section>
 
     <h3 class="title title-2">Interesting tools</h3>
-    {{ range $.Site.Data.toolslatest.items }}
+    <p>Each week we review 2-3 of the most interesting developer tools. Here's what we featured this week. <a href="/tools/" class="link">View the full archive</a>.</p>
+    {{ $toolsCount := len $.Site.Data.toolslatest.items }}
+    {{ $toolsCount = sub $toolsCount 1 }}
+    {{ range $index, $tool := $.Site.Data.toolslatest.items }}
     <a href="{{ index . "URL" }}" class="link"><h4 class="title title-3">{{ index . "Tool/Product/Project" }}</h4></a>
     <p>{{ index . "What is it?" }}</p>
     <p><strong>What we like:</strong> {{ index . "What we like" }}</p>
     <p><strong>What we don&apos;t like:</strong> {{ index . "What we dislike" }}
-    <hr style="border: none; border-top: 1px solid #eaeaea; padding-top: 10px; padding-bottom:0px" />
+    {{ if lt $index $toolsCount }}<hr style="border: none; border-top: 1px solid #eaeaea; padding-top: 10px; padding-bottom:0px" />{{ end }}
     {{ end }}
 
     <h3 class="title title-2">New betas &amp; early release programs</h3>
     {{- if $.Site.Data.betaslatest.items -}}
-    {{ range $.Site.Data.betaslatest.items }}
+    <p>We also include some of the more interesting beta and early access releases. Here's the ones we featured this week. View the live list on <a href="/betas/" class="link">Beta Console</a>.</p>
+    {{ $betaCount := len $.Site.Data.betaslatest.items }}
+    {{ $betaCount = sub $betaCount 1 }}
+    {{ range $index, $beta := $.Site.Data.betaslatest.items }}
     <a href="{{ index . "URL" }}" class="link"><h4 class="title title-3">{{ index . "Tool/Product/Project" }}</h4></a>
     <p>{{ index . "What is it?" }}</p>
     <p>&bull; {{ index . "Category" }} &bull; {{ index . "Type" }} &bull; {{ index . "Access" }} access</p>
-    <hr style="border: none; border-top: 1px solid #eaeaea; padding-top: 10px; padding-bottom:0px" />
+    {{ if lt $index $betaCount }}<hr style="border: none; border-top: 1px solid #eaeaea; padding-top: 10px; padding-bottom:0px" />{{ end }}
     {{ end }}
     {{- else -}}
-    <p>Nothing of note this week. We only feature the most interesting 2-3 beta
+    <p>Nothing of note this week. We only feature the most interesting beta
     releases you should actually check out. In the meantime, have a look at <a href="/betas/" class="link">Beta Console</a>, our live list of every developer tool and early access release.</p>
     {{- end -}}
     </section>
