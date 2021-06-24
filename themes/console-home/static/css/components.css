@@ -781,12 +781,30 @@ body:not(.mobile) .console-control:hover:before {
     margin-right: calc(var(--space2_5) / 2);
 }
 
-.categories .icon {
+.categories .icon-fill {
     fill: var(--theme-categories-color);
 }
 
-.tags .icon {
+.categories .icon-stroke {
+    stroke: var(--theme-categories-color);
+}
+
+.categories .icon-fill-stroke {
+    fill: var(--theme-categories-color);
+    stroke: var(--theme-categories-color);
+}
+
+.tags .icon-fill {
     fill: var(--theme-tag-color);
+}
+
+.tags .icon-stroke {
+    stroke: var(--theme-tag-color);
+}
+
+.tags .icon-fill-stroke {
+    fill: var(--theme-tag-color);
+    stroke: var(--theme-tag-color);
 }
 
 /* Separator
