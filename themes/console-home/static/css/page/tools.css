@@ -106,6 +106,10 @@ p.tool-card-description {
     margin-right: var(--space3);
 }
 
+.view-all-link {
+    display: none;
+}
+
 .view-all-link.is-hidden {
     display: none;
 }
