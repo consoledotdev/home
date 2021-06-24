@@ -5,7 +5,7 @@
 <div class="tool-card" data-card data-date="{{ $showDate }}" data-name="{{ index . "Tool/Product/Project" }}" data-taxonomy="{{ index . "Filter Taxonomy" }}" data-category="{{ $topcategory }}">
 	<div class="tool-card-content">
 		<div class="top">
-			<a onclick="blur();" class="card-link" href="{{ $url }}" target="_blank" rel="noopener"><span>Details {{ partial "icons/external-link.html" }}</span></a>
+			<a onclick="blur();" class="card-link" href="{{ $url }}" target="_blank" rel="noopener"><span>Visit {{ partial "icons/external-link.html" }}</span></a>
 			<div class="left">
 				{{- $favicon := index . "favicon" -}}
 				{{- $faviconStatic := print "static/" $favicon -}}
