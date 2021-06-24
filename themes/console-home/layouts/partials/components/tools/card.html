@@ -55,9 +55,9 @@
 			<div class="details">
 				<span class="date">Reviewed: {{ $showDate }}</span>
 				{{ with .Interview -}}
-					<a onclick="blur();" href="{{ . }}" class="console-button-text console-button-small console-button-green icon-left interview-with-cto" title="Read the interview with the CTO">
+					<a onclick="blur();" href="{{ . }}" class="console-button-text console-button-small console-button-green icon-left interview-with-cto" title="Read the Console interview with {{ $org }}">
 						{{ partial "icons/interview-console.html" }}
-						<span>Interview with the CTO</span>
+						<span>Console interview</span>
 					</a>
 				{{- end }}
 			</div>
