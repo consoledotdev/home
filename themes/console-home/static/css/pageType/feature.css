@@ -23,6 +23,7 @@
     justify-content: space-between;
     margin-top: calc(var(--space4) + var(--space3));
     flex-direction: row-reverse;
+    min-height: 520px;
 }
 
 .feature-split .feature-content-wrapper .inline-filters-wrapper.is-hidden {
