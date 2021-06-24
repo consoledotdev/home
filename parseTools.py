@@ -107,8 +107,13 @@ with open(args.tools_json, 'r') as f:
                 print('- Error finding favicon: {0}'.format(e))
                 continue
 
+        # Split category
+        category_split = tool['Category'].split(' - ')
+        tool['Top Category'] = category_split[0]
+        tool['Sub Category'] = category_split[1]
+
+        # Generate filtering taxonomy
         try:
-            # Transform format
             category = tool['Category'].lower()
             category = category.replace(' ', '-')
 
@@ -120,7 +125,7 @@ with open(args.tools_json, 'r') as f:
                 category,
                 toolType
             )
-            
+
             interesting_reviewed['items'].append(tool)
 
         except Exception as e:
@@ -229,8 +234,8 @@ with open(args.beta_json, 'r') as f:
                 print('- Error finding favicon: {0}'.format(e))
                 continue
 
+        # Generate filtering taxonomy
         try:
-            # Transform format
             category = program['Category'].lower()
             category = category.replace(' ', '-')
 

@@ -1,6 +1,8 @@
 {{- $showDate := .Reviewed -}}
 {{- $url := .URL }}
-<div class="tool-card" data-card data-date="{{ $showDate }}" data-name="{{ index . "Tool/Product/Project" }}" data-taxonomy="{{ index . "Filter Taxonomy" }}" data-category="{{ .Category }}">
+{{- $topcategory := index . "Top Category" -}}
+{{- $subcategory := index . "Sub Category" -}}
+<div class="tool-card" data-card data-date="{{ $showDate }}" data-name="{{ index . "Tool/Product/Project" }}" data-taxonomy="{{ index . "Filter Taxonomy" }}" data-category="{{ $topcategory }}">
 	<div class="tool-card-content">
 		<div class="top">
 			<a onclick="blur();" class="card-link" href="{{ $url }}" target="_blank" rel="noopener"><span>Details {{ partial "icons/external-link.html" }}</span></a>
@@ -12,10 +14,10 @@
 						{{- if (fileExists $faviconStatic) -}}
 							<img class="image" src="/{{ $favicon }}" alt="{{ index . "Company/Org" }} Logo" />
 						{{- else -}}
-							<div class="card-thumbnail-generic">{{ partial (print "icons/" (replace (lower .Category) " " "-") ".html") }}</div>
+							<div class="card-thumbnail-generic">{{ partial (print "icons/" (replace (lower $topcategory) " " "-") ".html") }}</div>
 						{{- end -}}
 					{{- else -}}
-						<div class="card-thumbnail-generic">{{ partial (print "icons/" (replace (lower .Category) " " "-") ".html") }}</div>
+						<div class="card-thumbnail-generic">{{ partial (print "icons/" (replace (lower $topcategory) " " "-") ".html") }}</div>
 					{{- end -}}
 				</div>
 				<h4 class="title title-3">
@@ -35,8 +37,8 @@
 				</div>
 				<div class="taxonomy">
 					<div class="categories">
-						{{ partial (print "icons/" (replace (lower .Category) " " "-") ".html") }}
-						<span class="category">{{ .Category }}</span>
+						{{ partial (print "icons/" (replace (lower $topcategory) " " "-") ".html") }}
+						<span class="category">{{ $topcategory }}</span>
 					</div>
 					<div class="tags">
 						{{ partial "icons/tag.html" }}
