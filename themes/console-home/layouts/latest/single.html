@@ -10,22 +10,26 @@
 
     <h3 class="title title-2">Interesting tools</h3>
     <p>Each week we review 2-3 of the most interesting developer tools. Here's what we featured this week. <a href="/tools/" class="link">View the full archive</a>.</p>
-    {{ range $.Site.Data.toolslatest.items }}
+    {{ $toolsCount := len $.Site.Data.toolslatest.items }}
+    {{ $toolsCount = sub $toolsCount 1 }}
+    {{ range $index, $tool := $.Site.Data.toolslatest.items }}
     <a href="{{ index . "URL" }}" class="link"><h4 class="title title-3">{{ index . "Tool/Product/Project" }}</h4></a>
     <p>{{ index . "What is it?" }}</p>
     <p><strong>What we like:</strong> {{ index . "What we like" }}</p>
     <p><strong>What we don&apos;t like:</strong> {{ index . "What we dislike" }}
-    <hr style="border: none; border-top: 1px solid #eaeaea; padding-top: 10px; padding-bottom:0px" />
+    {{ if lt $index $toolsCount }}<hr style="border: none; border-top: 1px solid #eaeaea; padding-top: 10px; padding-bottom:0px" />{{ end }}
     {{ end }}
 
     <h3 class="title title-2">New betas &amp; early release programs</h3>
     {{- if $.Site.Data.betaslatest.items -}}
-    <p>We also include some of the more interesting beta and early access releases. Here's the ones we featured this week, and everything is tracked on <a href="/betas/" class="link">Beta Console</a>.</p>
-    {{ range $.Site.Data.betaslatest.items }}
+    <p>We also include some of the more interesting beta and early access releases. Here's the ones we featured this week. View the live list on <a href="/betas/" class="link">Beta Console</a>.</p>
+    {{ $betaCount := len $.Site.Data.betaslatest.items }}
+    {{ $betaCount = sub $betaCount 1 }}
+    {{ range $index, $beta := $.Site.Data.betaslatest.items }}
     <a href="{{ index . "URL" }}" class="link"><h4 class="title title-3">{{ index . "Tool/Product/Project" }}</h4></a>
     <p>{{ index . "What is it?" }}</p>
     <p>&bull; {{ index . "Category" }} &bull; {{ index . "Type" }} &bull; {{ index . "Access" }} access</p>
-    <hr style="border: none; border-top: 1px solid #eaeaea; padding-top: 10px; padding-bottom:0px" />
+    {{ if lt $index $betaCount }}<hr style="border: none; border-top: 1px solid #eaeaea; padding-top: 10px; padding-bottom:0px" />{{ end }}
     {{ end }}
     {{- else -}}
     <p>Nothing of note this week. We only feature the most interesting beta
