@@ -207,6 +207,11 @@ p.tool-card-description {
             flex-flow: column nowrap;
             align-items: flex-end;
             justify-content: center;
+            margin-bottom: 0;
+        }
+
+        .tool-card-content .top > .right > .taxonomy > * {
+            margin-bottom: 0;
         }
 
         .tool-card-content .top > .right > .taxonomy > *:not(:last-child) {
