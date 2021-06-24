@@ -7,7 +7,8 @@ Sites](https://developers.cloudflare.com/workers/platform/sites).
 
 - Production website: <https://console.dev>
 - Test environment: <https://home-test.consoledev.workers.dev>
-- [Deploy action](https://github.com/consoledotdev/home/actions?query=workflow%3ADeploy)
+- [Deploy
+  action](https://github.com/consoledotdev/home/actions?query=workflow%3ADeploy)
 
 ## Site development setup
 
@@ -17,8 +18,11 @@ code, you only need Hugo:
 1. [Install Hugo](https://gohugo.io/getting-started/installing/).
 2. Two options:
     - Start the Hugo server: `hugo server -D`.
-    - Test from other devices on local network (such as iPhone) `hugo server -D --bind=IP --baseURL=http://IP:1313`, where `IP` is the local IP of the machine running the Hugo server.
-3. Launch the URL in your browser. It will watch for changes and auto refresh the browser.
+    - Test from other devices on local network (such as iPhone) `hugo server -D
+      --bind=IP --baseURL=http://IP:1313`, where `IP` is the local IP of the
+      machine running the Hugo server.
+3. Launch the URL in your browser. It will watch for changes and auto refresh
+   the browser.
 
 ## Image specs
 
@@ -45,14 +49,19 @@ code, you only need Hugo:
 
 ### Frontmatter variables
 
-- `pageType`: `feature`, `article` or `feature-article` - Define the page type as feature page (eg: Beta List), article page (eg: About, Interview) or long form article (eg: Mars Internet).
+- `pageType`: `feature`, `article` or `feature-article` - Define the page type
+  as feature page (eg: Beta List), article page (eg: About, Interview) or long
+  form article (eg: Mars Internet).
 - `headerType`: `fixed` or `false` - When fixed the header will show on top on
     scroll.
 - `hideLines`: `true` or `false` - Hides the finer lines from the page.
 - `hidePlanes`: `true` or `false` - Hides the planes grid from the page.
-- `isSelected`: a string defining the fragment used for the body css class, custom stylesheet definition, menu item activation and assets location.
-- `customStyle`: `true` or `false` - Will expect and load a custom style based on the `isSelected` string.
-- `customPageStyle`: `true` or `false` - Will expect and load a custom style based on the `pageType` string.
+- `isSelected`: a string defining the fragment used for the body css class,
+  custom stylesheet definition, menu item activation and assets location.
+- `customStyle`: `true` or `false` - Will expect and load a custom style based
+  on the `isSelected` string.
+- `customPageStyle`: `true` or `false` - Will expect and load a custom style
+  based on the `pageType` string.
 
 ### Custom Hugo Shortcodes
 
@@ -121,8 +130,10 @@ files from `/themes/console-home/data/` will be used instead.
 ## Performance testing
 
 We use [k6](https://k6.io/) to define performance SLAs. These are run on every
-commit [using GitHub Actions](https://k6.io/blog/load-testing-using-github-actions)
-but they can also be run locally after [installing k6](https://k6.io/docs/getting-started/installation):
+commit [using GitHub
+Actions](https://k6.io/blog/load-testing-using-github-actions) but they can
+also be run locally after [installing
+k6](https://k6.io/docs/getting-started/installation):
 
 ```zsh
 hugo
