@@ -3,11 +3,11 @@
 Generated using [Hugo](https://gohugo.io) and deployed to [Cloudflare Workers
 Sites](https://developers.cloudflare.com/workers/platform/sites).
 
-### Links
+**Links**
 
--   Production website: https://console.dev
--   Test environment: https://home-test.consoledev.workers.dev
--   [Deploy action](https://github.com/consoledotdev/home/actions?query=workflow%3ADeploy)
+- Production website: <https://console.dev>
+- Test environment: <https://home-test.consoledev.workers.dev>
+- [Deploy action](https://github.com/consoledotdev/home/actions?query=workflow%3ADeploy)
 
 ## Site development setup
 
@@ -26,33 +26,33 @@ code, you only need Hugo:
 
 **Profile Pic**
 
-* .jpg
-* 1600x1600px
-* 300kb max
-* Centered subject, square ratio (if possible)
+- .jpg
+- 1600x1600px
+- 300kb max
+- Centered subject, square ratio (if possible)
 
 **Logo**
 
-* .svg, .png, .jpg
-* 1600x1600px
-* 300kb max
+- .svg, .png, .jpg
+- 1600x1600px
+- 300kb max
 
 **Text (`what`)**
 
-* 70 characters max
+- 70 characters max
 
 ## Hugo options
 
 ### Frontmatter variables
 
--   `pageType`: `feature`, `article` or `feature-article` - Define the page type as feature page (eg: Beta List), article page (eg: About, Interview) or long form article (eg: Mars Internet).
--   `headerType`: `fixed` or `false` - When fixed the header will show on top on
+- `pageType`: `feature`, `article` or `feature-article` - Define the page type as feature page (eg: Beta List), article page (eg: About, Interview) or long form article (eg: Mars Internet).
+- `headerType`: `fixed` or `false` - When fixed the header will show on top on
     scroll.
--   `hideLines`: `true` or `false` - Hides the finer lines from the page.
--   `hidePlanes`: `true` or `false` - Hides the planes grid from the page.
--   `isSelected`: a string defining the fragment used for the body css class, custom stylesheet definition, menu item activation and assets location. 
--   `customStyle`: `true` or `false` - Will expect and load a custom style based on the `isSelected` string.
--   `customPageStyle`: `true` or `false` - Will expect and load a custom style based on the `pageType` string.
+- `hideLines`: `true` or `false` - Hides the finer lines from the page.
+- `hidePlanes`: `true` or `false` - Hides the planes grid from the page.
+- `isSelected`: a string defining the fragment used for the body css class, custom stylesheet definition, menu item activation and assets location.
+- `customStyle`: `true` or `false` - Will expect and load a custom style based on the `isSelected` string.
+- `customPageStyle`: `true` or `false` - Will expect and load a custom style based on the `pageType` string.
 
 ### Custom Hugo Shortcodes
 
@@ -106,7 +106,7 @@ hugo
 wrangler publish --env test
 ```
 
-Available at: https://home-test.consoledev.workers.dev
+Available at: <https://home-test.consoledev.workers.dev>
 
 ### Production
 
@@ -131,7 +131,7 @@ k6 run tests/perf.js
 ```
 
 This tests against a live test environment at
-https://home-perftest.consoledev.workers.dev/ to simulate real-world
+<https://home-perftest.consoledev.workers.dev/> to simulate real-world
 performance on Cloudflare Workers.
 
 ## Authentication
@@ -148,8 +148,8 @@ is enabled for the Service Account.
 
 ## Secrets
 
--   `CF_API_TOKEN` - [Cloudflare API
+- `CF_API_TOKEN` - [Cloudflare API
     token](https://dash.cloudflare.com/profile/api-tokens) to deploy.
--   `GSHEET_CLIENT_EMAIL` - email of the Google Service Account.
--   `GSHEET_PRIVATE_KEY` - private key of the Google Service Account. Download
+- `GSHEET_CLIENT_EMAIL` - email of the Google Service Account.
+- `GSHEET_PRIVATE_KEY` - private key of the Google Service Account. Download
     JSON then extract private key component.
