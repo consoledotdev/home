@@ -307,13 +307,3 @@ let groupItems = (groupBy) => {
     sortBy = document.querySelector("[data-sort-feature-items-select]").value;
     sortItems(sortBy);
 };
-
-// first sorting when the page is loaded to order data from json
-sortItems("name");
-sortItems("date");
-
-// first grouping when the page is loaded
-groupItems();
-
-// first count when the page is loaded
-filtering.selectedAllChecks();
