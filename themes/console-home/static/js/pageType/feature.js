@@ -182,10 +182,10 @@ let sortItems = (sortBy) => {
     let sortCards = (cards) => {
         if (sortBy == "name") {
             cards.sort(function (a, b) {
-                if (a.dataset.name < b.dataset.name) {
+                if (a.dataset.name.toLowerCase() < b.dataset.name.toLowerCase()) {
                     return -1;
                 }
-                if (a.dataset.name > b.dataset.name) {
+                if (a.dataset.name.toLowerCase() > b.dataset.name.toLowerCase()) {
                     return 1;
                 }
                 return 0;
