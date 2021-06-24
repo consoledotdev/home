@@ -126,12 +126,15 @@ with open(args.tools_json, 'r') as f:
                 toolType
             )
 
-            interesting_reviewed['items'].append(tool)
-
         except Exception as e:
             print('Error transforming format')
             print(e)
             print(tool)
+
+        # Only pull out things scheduled before today
+        if args.ignore_date \
+                or scheduled_for.isocalendar() <= today.isocalendar():
+            interesting_reviewed['items'].append(tool)
 
     print('Parsed tools JSON')
 
