@@ -5,13 +5,8 @@
 		<h2 class="title title-1">Developer tools reviews</h2>
 		<p class="description">Console reviews and features the best tools for developers.</p>
         <div class="page-meta">
-        <!--
-            Pull out the "last checked" timestamp from the first live beta and
-            GA beta. Compare the times, and pick the latest time as the "last
-            updated" timestamp.
-        -->
         {{- $reviewedChecked := false -}}
-        {{- range first 1 $.Site.Data.toolsreviewed.items -}}{{- $reviewedChecked = time (index . "Reviewed") -}}{{- end -}}
+        {{- range first 1 $.Site.Data.toolsreviewed.items -}}{{- $reviewedChecked = time (index . "Scheduled for") -}}{{- end -}}
         {{- $updated := $reviewedChecked -}}
             <p class="small">
 				<span>Last updated: {{ $updated.Format "2006-01-02" }}</span>. Read our&nbsp;<a class="link" href="/about/#selection-criteria">selection criteria</a>.

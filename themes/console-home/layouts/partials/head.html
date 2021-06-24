@@ -52,11 +52,11 @@
         {{- end -}}
     <!--
         If this is /tools/
-        Pull out the "reviewed" timestamp from the latest item
+        Pull out the "Scheduled for" timestamp from the latest item
     -->
     {{- else if eq $.Page.RelPermalink "/tools/" -}}
         {{- range first 1 $.Site.Data.toolslatest.items -}}
-            {{- $lastmod = index . "Reviewed" -}}
+            {{- $lastmod = index . "Scheduled for" -}}
             {{- $lastmod = dateFormat $iso8601 $lastmod -}}
         {{- end -}}
     {{- else if eq $.Page.RelPermalink "/betas/" -}}
