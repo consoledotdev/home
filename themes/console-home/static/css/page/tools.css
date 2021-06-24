@@ -168,6 +168,17 @@ p.tool-card-description {
         display: none;
     }
 
+    @media (max-width: 560px) {
+        .tool-card .bottom .details {
+            flex-flow: column nowrap;
+            align-items: flex-start;
+        }
+
+        .tool-card .bottom .details > *:not(:first-child) {
+            margin-top: var(--space3);
+        }
+    }
+
     @media (min-width: 601px) {
         .tool-card > *:not(:last-child) {
             margin-bottom: 0;
