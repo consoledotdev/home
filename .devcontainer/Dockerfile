@@ -4,11 +4,17 @@
 ARG VARIANT="3.9"
 FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 
+# [Option] Install Node.js
+ARG INSTALL_NODE="true"
+ARG NODE_VERSION="lts/*"
+RUN if [ "${INSTALL_NODE}" = "true" ]; then su vscode -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
+
+# [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
 COPY requirements.txt /tmp/pip-tmp/
 RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
-   && rm -rf /tmp/pip-tmp
+    && rm -rf /tmp/pip-tmp
 
-# Install additional OS packages.
+# [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends curl
 
@@ -16,3 +22,6 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 # Version in OS repos is out of date
 RUN curl -L https://github.com/gohugoio/hugo/releases/download/v0.83.1/hugo_0.83.1_Linux-64bit.deb -o hugo.deb
 RUN apt-get -y install ./hugo.deb
+
+# [Optional] Uncomment this line to install global node packages.
+RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g @cloudflare/wrangler" 2>&1
