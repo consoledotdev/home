@@ -39,8 +39,12 @@
     <meta property="article:published_time" {{ .Date.Format $iso8601 | printf "content=%q" | safeHTMLAttr }}>
     {{ end -}}
     <!--
+        Set the $lastmod value based on the data files
+
+        ARE YOU UPDATING THIS BLOCK? DONT FORGET layouts/sitemap.xml
+
         If this is /latest/ 
-        The modified_time needs to match the date of he latest newsletter.
+        The modified_time needs to match the date of the latest newsletter.
     -->
     {{- $lastmod := false -}}
     {{- if eq $.Page.RelPermalink "/latest/" -}}

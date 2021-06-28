@@ -6,6 +6,4 @@ summary:
   A free weekly email digest of the best tools and beta releases for developers.
 pageType: home
 ogType: website
-aliases:
-  - /research/
 ---

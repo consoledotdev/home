@@ -8,4 +8,6 @@ summary:
 type: latest
 isSelected: newsletter
 headerType: fixed
+sitemap:
+  changefreq: weekly
 ---
