@@ -5,7 +5,7 @@
             "Tool/Product/Project": "IPInfo",
             "Reviewed": "2021-06-07",
             "Scheduled for": "2021-06-24",
-            "URL": "https://github.com/ipinfo/cli",
+            "URL": "https://ipinfo.io",
             "Category": "API - API",
             "Type": "SaaS",
             "What is it?": "CLI for IP address metadata lookup.",
@@ -13,7 +13,7 @@
             "What we like": "Lookup IP details such as ASN, location, hostname, abuse contact, tor/VPN/hosting IP categorization. Cross-platform binaries. Colored output. Bulk summarize IPs from a file (or piped in). Bash, zsh, fish auto-completion. SDKs available for major languages.",
             "What we dislike": "Responses not cached. Available via Homebrew on Mac but not Linux or Windows package managers. No man pages.",
             "Interview": "",
-            "favicon": "img/favicons/github.com.png",
+            "favicon": "img/favicons/ipinfo.io.png",
             "Top Category": "API",
             "Sub Category": "API",
             "Filter Taxonomy": "api, saas"
