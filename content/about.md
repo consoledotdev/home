@@ -7,7 +7,8 @@ isSelected: about
 headerType: fixed
 ---
 
-Discover the best tools and beta releases for developers. {.description}
+Discover the best tools and beta releases for developers.
+{.description}
 
 Console aims to become the place developers go to find the best tools. Starting
 as a weekly newsletter, each week we will pick out the most interesting tools
@@ -72,8 +73,8 @@ We aim to support Console through this last one - partnering with vendors to
 provide extras to our audience, such as exclusive access to beta programs or
 bonus credits, and we may be paid a referral fee for these. Our editorial
 process is independent from our vendor partnerships. We do not accept payment
-for product inclusion. Where we feature exclusive deals from partners, they
-must first fit our selection criteria before we consider working with them.
+for product inclusion. Where we feature exclusive deals from partners, they must
+first fit our selection criteria before we consider working with them.
 
 To learn more about Console, check out the Console blog where you can follow our
 progress. To start, we recommend reading our thoughts on the
