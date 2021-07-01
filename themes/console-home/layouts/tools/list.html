@@ -9,7 +9,7 @@
         {{- range first 1 $.Site.Data.toolsreviewed.items -}}{{- $reviewedChecked = time (index . "Scheduled for") -}}{{- end -}}
         {{- $updated := $reviewedChecked -}}
             <p class="small">
-				<span>Last updated: {{ $updated.Format "2006-01-02" }}</span>. Read our&nbsp;<a class="link" href="/about/#selection-criteria">selection criteria</a>.
+				<span>Last updated: {{ $updated.Format "2006-01-02" }}</span>. Read our&nbsp;<a class="link" href="/about/#selection-criteria">selection criteria</a>
 			</p>
             <p class="small">
                 <span class="page-meta-separator">&mdash;</span>
