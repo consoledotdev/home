@@ -160,7 +160,7 @@
                 "name": "Console",
                 "url": "https://console.dev"
             },
-            {{- $reviewDate := index . "Reviewed" -}}
+            {{- $reviewDate := index . "Scheduled for" -}}
             {{- $reviewDate = dateFormat $iso8601 $reviewDate -}}
             "datePublished": "{{ $reviewDate | safeHTML }}"   
         }{{ if lt $index $reviewCount }},{{end}}{{ end }}

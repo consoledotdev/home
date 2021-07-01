@@ -1,4 +1,4 @@
-{{- $showDate := .Reviewed -}}
+{{- $showDate := index . "Scheduled for" -}}
 {{- $url := .URL }}
 {{- $topcategory := index . "Top Category" -}}
 {{- $subcategory := index . "Sub Category" -}}
