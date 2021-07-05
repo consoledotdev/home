@@ -42,7 +42,7 @@ def process_item(item):
 
     # Set the icon path based on the URL
     url = urlparse(item['URL'])
-    favicon_path = 'img/favicons/{0}'.format(url[1])
+    favicon_path = f'img/favicons/{url[1]}'
 
     # Check if there is already an icon at that path in priority order for
     # .png, .svg, .jpg, .ico
@@ -60,21 +60,17 @@ def process_item(item):
         print(f'- No local favicon at {favicon_path}, attempting to download')
 
         try:
-            icons = favicon.get('{0}://{1}'.format(url[0], url[1]))
+            icons = favicon.get(f'{url[0]}://{url[1]}')
 
             # Found some icons, so download the best (highest res)
             if icons:
                 icon = icons[0]
                 response = requests.get(icon.url, stream=True)
-                item['favicon'] = '{0}.{1}'.format(
-                    favicon_path,
-                    icon.format)
+                item['favicon'] = f'{favicon_path}.{icon.format}'
 
-                downloadPath = 'static/{0}'.format(item['favicon'])
+                downloadPath = f'static/{item["favicon"]}'
 
-                print('- Downloading: {0} to {1}'.format(
-                    icon.url,
-                    downloadPath))
+                print(f'- Downloading: {icon.url} to {downloadPath}')
 
                 with open(downloadPath, 'wb') as image:
                     for chunk in response.iter_content(1024):
@@ -86,7 +82,7 @@ def process_item(item):
 
         except Exception as e:
             item['favicon'] = False
-            print('- Error finding favicon: {0}'.format(e))
+            print(f'- Error finding favicon: {e}')
             return None
     else:
         print(f'- Found {item["favicon"]}')
@@ -115,16 +111,13 @@ def process_item(item):
         tool_type = tool_type.replace(' ', '-')
 
         # Aggregate filter taxonomy
-        item['Filter Taxonomy'] = '{0}, {1}'.format(
-            category,
-            tool_type
-        )
+        item['Filter Taxonomy'] = f'{category}, {tool_type}'
 
         if 'Weekly Pick' in item:
             item['Filter Taxonomy'] += ', weekly-pick'
 
     except Exception as e:
-        print('- Error generating filter taxonomy: {0}'.format(e))
+        print(f'- Error generating filter taxonomy: {e}')
 
     return item
 
