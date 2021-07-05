@@ -27,258 +27,216 @@ parser.add_argument('--ignore-date', help='Output every item in the JSON'
                     type=bool, default=False, required=False)
 args = parser.parse_args()
 
+
+def process_item(item):
+    """Process an individual item (tool or beta)
+
+    Parameters:
+    item (dict): The item for processing
+
+    Returns:
+    dict: The processed item ready for output.
+    """
+
+    print(f'Processing {item["URL"]}')
+
+    # Set the icon path based on the URL
+    url = urlparse(item['URL'])
+    favicon_path = 'img/favicons/{0}'.format(url[1])
+
+    # Check if there is already an icon at that path in priority order for
+    # .png, .svg, .jpg, .ico
+    if os.path.isfile('static/' + favicon_path + '.png'):
+        item['favicon'] = favicon_path + '.png'
+    elif os.path.isfile('static/' + favicon_path + '.svg'):
+        item['favicon'] = favicon_path + '.svg'
+    elif os.path.isfile('static/' + favicon_path + '.jpg'):
+        item['favicon'] = favicon_path + '.jpg'
+    elif os.path.isfile('static/' + favicon_path + '.ico'):
+        item['favicon'] = favicon_path + '.ico'
+
+    # If no icon exists, we need to download it
+    if 'favicon' not in item or not item['favicon']:
+        print(f'- No local favicon at {favicon_path}, attempting to download')
+
+        try:
+            icons = favicon.get('{0}://{1}'.format(url[0], url[1]))
+
+            # Found some icons, so download the best (highest res)
+            if icons:
+                icon = icons[0]
+                response = requests.get(icon.url, stream=True)
+                item['favicon'] = '{0}.{1}'.format(
+                    favicon_path,
+                    icon.format)
+
+                downloadPath = 'static/{0}'.format(item['favicon'])
+
+                print('- Downloading: {0} to {1}'.format(
+                    icon.url,
+                    downloadPath))
+
+                with open(downloadPath, 'wb') as image:
+                    for chunk in response.iter_content(1024):
+                        image.write(chunk)
+
+            else:
+                item['favicon'] = False
+                print('- No favicon found')
+
+        except Exception as e:
+            item['favicon'] = False
+            print('- Error finding favicon: {0}'.format(e))
+            return None
+    else:
+        print(f'- Found {item["favicon"]}')
+
+    # Split category by - to get the top and sub categories
+    category_split = item['Category'].split(' - ')
+
+    if 'Reviewed' in item:  #  Tools have a "Reviewed" date
+        item['Top Category'] = category_split[0]
+        item['Sub Category'] = category_split[1]
+    else:  # Betas only have 1 top level category
+        item['Top Category'] = item['Category']
+
+        # Betas: Is this a weekly pick?
+        if not item['Scheduled for']:
+            item['Weekly Pick'] = False
+        else:
+            item['Weekly Pick'] = True
+
+    # Generate filtering taxonomy
+    try:
+        category = item['Top Category'].lower()
+        category = category.replace(' ', '-')
+
+        tool_type = item['Type'].lower()
+        tool_type = tool_type.replace(' ', '-')
+
+        # Aggregate filter taxonomy
+        item['Filter Taxonomy'] = '{0}, {1}'.format(
+            category,
+            tool_type
+        )
+
+        if 'Weekly Pick' in item:
+            item['Filter Taxonomy'] += ', weekly-pick'
+
+    except Exception as e:
+        print('- Error generating filter taxonomy: {0}'.format(e))
+
+    return item
+
+
 # Get last Thursday
 today = date.today()
 last_thursday = today - relativedelta(weekday=TH(-1))
 
-# Open and parse the JSON file to get the list of interesting tools.
-# See themes/console-home/data/toolsallraw.json for a sample file
-# It will be generated as part of the build steps using the GitHub
-# gsheet.action from the Interesting Tools Google Sheet (see README.md).
-print('Parsing tools JSON...')
-
-interesting_latest = {'items': []}
-interesting_reviewed = {'items': []}
+# Parse the tools JSON to get:
+# - The latest tools for /latest/
+# - All the tools that have been in a newsletter for /tools/
+tools_all = {'items': []}
+tools_latest = {'items': []}
 with open(args.tools_json, 'r') as f:
     tools = json.load(f)
 
     for tool in tools['results'][0]['result']['formatted']:
-        if 'Company/Org' not in tool or tool['Company/Org'] == '':
+        # Skip if 'Company/Org' or 'Scheduled for' are not set
+        if not tool['Company/Org'] or not tool['Scheduled for']:
             continue
 
-        if tool['Scheduled for'] == '':
-            continue
-
+        # Parse 'Scheduled for' date
         scheduled_for = parse(tool['Scheduled for'])
 
-        # Only pull out things scheduled for the last newsletter
+        processed_tool = process_item(tool)
+
+        # The latest tools for /latest/
+        # i.e. 'Scheduled for' == last thursday
         if args.ignore_date \
                 or scheduled_for.isocalendar() == last_thursday.isocalendar():
-            interesting_latest['items'].append(tool)
 
-        # Set the icon path based on the URL
-        url = urlparse(tool['URL'])
-        faviconPath = 'img/favicons/{0}'.format(url[1])
+            if processed_tool:
+                tools_latest['items'].append(processed_tool)
 
-        # Do we already have an icon saved?
-        # static/ is prepended because the file is saved there, but when Hugo
-        # builds it moves them up to the root under /img/favicons
-        # The path in the JSON needs to be the final build path without
-        # static/
-        if os.path.isfile('static/' + faviconPath + '.png'):
-            tool['favicon'] = faviconPath + '.png'
-        elif os.path.isfile('static/' + faviconPath + '.svg'):
-            tool['favicon'] = faviconPath + '.svg'
-        elif os.path.isfile('static/' + faviconPath + '.jpg'):
-            tool['favicon'] = faviconPath + '.jpg'
-        elif os.path.isfile('static/' + faviconPath + '.ico'):
-            tool['favicon'] = faviconPath + '.ico'
-        else:
-            print('Retrieving favicon for: {0}'.format(tool['URL']))
-
-            # Try to find icons
-            try:
-                icons = favicon.get('{0}://{1}'.format(url[0], url[1]))
-
-                # Found some icons, so download the best (highest res)
-                if icons:
-                    icon = icons[0]
-                    response = requests.get(icon.url, stream=True)
-                    tool['favicon'] = '{0}.{1}'.format(
-                        faviconPath,
-                        icon.format)
-
-                    downloadPath = 'static/{0}'.format(tool['favicon'])
-
-                    print('- Downloading: {0} to {1}'.format(
-                        icon.url,
-                        downloadPath))
-
-                    with open(downloadPath, 'wb') as image:
-                        for chunk in response.iter_content(1024):
-                            image.write(chunk)
-
-                else:
-                    tool['favicon'] = False
-                    print('- No favicon found')
-
-            except Exception as e:
-                tool['favicon'] = False
-                print('- Error finding favicon: {0}'.format(e))
-                continue
-
-        # Split category
-        category_split = tool['Category'].split(' - ')
-        tool['Top Category'] = category_split[0]
-        tool['Sub Category'] = category_split[1]
-
-        # Generate filtering taxonomy
-        try:
-            category = tool['Top Category'].lower()
-            category = category.replace(' ', '-')
-
-            toolType = tool['Type'].lower()
-            toolType = toolType.replace(' ', '-')
-
-            # Aggregate filter taxonomy
-            tool['Filter Taxonomy'] = '{0}, {1}'.format(
-                category,
-                toolType
-            )
-
-        except Exception as e:
-            print('Error transforming format')
-            print(e)
-            print(tool)
-
-        # Only pull out things scheduled before today
+        # The tools that have been in a newsletter for /tools/
         if args.ignore_date \
                 or scheduled_for.isocalendar() <= today.isocalendar():
-            interesting_reviewed['items'].append(tool)
 
-    print('Parsed tools JSON')
+            if processed_tool:
+                tools_all['items'].append(processed_tool)
 
 print('Writing tools - latest JSON')
 with open('data/toolslatest.json', 'w') as outfile:
-    json.dump(interesting_latest, outfile)
+    json.dump(tools_latest, outfile)
 print('Wrote tools - latest JSON')
 
-print('Writing tools - reviewed JSON')
+print('Writing tools - all JSON')
 with open('data/toolsreviewed.json', 'w') as outfile:
-    json.dump(interesting_reviewed, outfile)
-print('Wrote tools - reviewed JSON')
+    json.dump(tools_all, outfile)
+print('Wrote tools - all JSON')
 
-# Same for the betas
+# Parse the betas JSON to get:
+# - The latest betas for /latest/
+# - All the live betas for /betas/
+# - All the GA betas for /betas/
 print('Parsing betas JSON...')
 
-programs_latest = {'items': []}
-programs_live = {'items': []}
-programs_ga = {'items': []}
+betas_latest = {'items': []}
+betas_live = {'items': []}
+betas_ga = {'items': []}
+
 with open(args.beta_json, 'r') as f:
     betas = json.load(f)
 
     # Loop through every item
-    for program in betas['results'][0]['result']['formatted']:
-        # Catch empty lines
-        if 'Company/Org' not in program or program['Company/Org'] == '':
-            print('Company/Org not found')
-            print(program)
+    for beta in betas['results'][0]['result']['formatted']:
+        # Skip if 'Company/Org' not set
+        if not beta['Company/Org']:
             continue
 
         # Exclude items that have not yet been reviewed
-        if 'Meets our criteria?' not in program \
-                or program['Meets our criteria?'] == '' \
-                or program['Meets our criteria?'] == 'FALSE' \
-                or not program['Meets our criteria?']:
+        if 'Meets our criteria?' not in beta \
+                or beta['Meets our criteria?'] == '' \
+                or beta['Meets our criteria?'] == 'FALSE' \
+                or not beta['Meets our criteria?']:
             print('Does not meet criteria')
-            print(program)
             continue
 
-        # Separate programs scheduled for the latest newsletter
-        if program['Scheduled for'] == '':
-            program['Weekly Pick'] = False
-        else:
-            scheduled_for = parse(program['Scheduled for'])
-            program['Weekly Pick'] = True
+        # Parse 'Scheduled for' date
+        if beta['Scheduled for']:
+            scheduled_for = parse(beta['Scheduled for'])
 
-            # Only pull out things scheduled for the last newsletter
-            if args.ignore_date \
-               or scheduled_for.isocalendar() == last_thursday.isocalendar():
-                programs_latest['items'].append(program)
+        processed_beta = process_item(beta)
 
-        # Set the icon path based on the URL
-        url = urlparse(program['URL'])
-        faviconPath = 'img/favicons/{0}'.format(url[1])
+        # The latest betas for /latest/
+        # i.e. 'Scheduled for' == last thursday
+        if args.ignore_date or (beta['Scheduled for']
+                                and scheduled_for.isocalendar() == last_thursday.isocalendar()):
 
-        # Do we already have an icon saved?
-        # static/ is prepended because the file is saved there, but when Hugo
-        # builds it moves them up to the root under /img/favicons
-        # The path in the JSON needs to be the final build path without
-        # static/
-        if os.path.isfile('static/' + faviconPath + '.png'):
-            program['favicon'] = faviconPath + '.png'
-        elif os.path.isfile('static/' + faviconPath + '.svg'):
-            program['favicon'] = faviconPath + '.svg'
-        elif os.path.isfile('static/' + faviconPath + '.jpg'):
-            program['favicon'] = faviconPath + '.jpg'
-        elif os.path.isfile('static/' + faviconPath + '.ico'):
-            program['favicon'] = faviconPath + '.ico'
-        else:
-            print('Retrieving favicon for: {0}'.format(program['URL']))
+            if processed_beta:
+                betas_latest['items'].append(processed_beta)
 
-            # Try to find icons
-            try:
-                icons = favicon.get('{0}://{1}'.format(url[0], url[1]))
-
-                # Found some icons, so download the best (highest res)
-                if icons:
-                    icon = icons[0]
-                    response = requests.get(icon.url, stream=True)
-                    program['favicon'] = '{0}.{1}'.format(
-                        faviconPath,
-                        icon.format)
-
-                    downloadPath = 'static/{0}'.format(program['favicon'])
-
-                    print('- Downloading: {0} to {1}'.format(
-                        icon.url,
-                        downloadPath))
-
-                    with open(downloadPath, 'wb') as image:
-                        for chunk in response.iter_content(1024):
-                            image.write(chunk)
-
-                else:
-                    program['favicon'] = False
-                    print('- No favicon found')
-
-            except Exception as e:
-                program['favicon'] = False
-                print('- Error finding favicon: {0}'.format(e))
-                continue
-
-        # Generate filtering taxonomy
-        try:
-            category = program['Category'].lower()
-            category = category.replace(' ', '-')
-
-            programType = program['Type'].lower()
-            programType = programType.replace(' ', '-')
-
-            # Aggregate filter taxonomy
-            program['Filter Taxonomy'] = '{0}, {1}, {2}'.format(
-                category,
-                programType,
-                program['Access'].lower()
-            )
-
-            if program['Weekly Pick']:
-                program['Filter Taxonomy'] += ', weekly-pick'
-
-            if program['GA?'] == "TRUE":
-                programs_ga['items'].append(program)
+        if processed_beta:
+            # Split by live or GA
+            if processed_beta['GA?'] == "TRUE":
+                betas_ga['items'].append(processed_beta)
             else:
-                programs_live['items'].append(program)
-        except Exception as e:
-            print('Error transforming format')
-            print(e)
-            print(program)
-
-    print('Parsed betas JSON')
+                betas_live['items'].append(processed_beta)
 
 # Now write the files to the data directory ready for Hugo to build
 print('Writing betas - latest JSON')
 with open('data/betaslatest.json', 'w') as outfile:
-    json.dump(programs_latest, outfile)
+    json.dump(betas_latest, outfile)
 print('Wrote betas - latest JSON')
 
 print('Writing betas - live JSON')
 with open('data/betaslive.json', 'w') as outfile:
-    json.dump(programs_live, outfile)
+    json.dump(betas_live, outfile)
 print('Wrote betas - live JSON')
 
 print('Writing betas - GA JSON')
 with open('data/betasga.json', 'w') as outfile:
-    json.dump(programs_ga, outfile)
+    json.dump(betas_ga, outfile)
 print('Wrote betas - GA JSON')
 print('Done')
