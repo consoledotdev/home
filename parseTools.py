@@ -2,8 +2,7 @@
 #
 # Parses the raw JSON output from the
 # https://github.com/marketplace/actions/gsheet-action GitHub action, then
-# rewrites the JSON to only include the items we want to build for the current
-# /latest/ page.
+# rewrites the JSON for Hugo to build the various pages with.
 
 import argparse
 import json
@@ -212,7 +211,7 @@ with open(args.beta_json, 'r') as f:
 
         if processed_beta:
             # Split by live or GA
-            if processed_beta['GA?'] == "TRUE":
+            if processed_beta['GA?'] == "TRUE":  # String as output by GSheets
                 betas_ga['items'].append(processed_beta)
             else:
                 betas_live['items'].append(processed_beta)
