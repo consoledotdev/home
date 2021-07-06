@@ -44,9 +44,9 @@ On that basis, this is our Privacy Policy:
 
 ### Who are we?
 
-Console Ltd is registered in England and Wales at 28 Easton Street, Ink Rooms,
-Unit 207, London, WC1X 0DS, UK. Our company number is 13016709 and our UK Data
-Protection registration number is
+Console Ltd is registered in England and Wales at RH 115 The Record Hall, 16-16A
+Baldwins Gardens, London, EC1N 7RJ, UK. Our company number is 13016709 and our
+UK Data Protection registration number is
 [ZA837052](https://ico.org.uk/ESDWebPages/Entry/ZA837052).
 
 ### How do I contact you?
