@@ -92,10 +92,6 @@ transfer personal data to or through these services:
   Plausible Analytics
   [which does not use cookies](https://plausible.io/data-policy) and is designed
   [privacy-first](https://plausible.io/privacy-focused-web-analytics).
-- [Zapier](https://zapier.com): Newsletter signups via
-  [Product Hunt's email lead generation ad unit](https://www.producthunt.com/sponsor)
-  are pushed (one way) through Zapier to automatically subscribe them in
-  Mailchimp.
 
 We may transfer your personal data outside of the EU on the basis of an adequacy
 decision by the European Commission under Article 45 of the UK GDPR.
