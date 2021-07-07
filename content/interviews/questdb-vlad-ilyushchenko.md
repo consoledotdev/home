@@ -12,7 +12,7 @@ summary: Interview with Vlad Ilyushchenko, CTO, QuestDB
 isSelected: interviews
 topImg1Src: /img/interviews/questdb-vlad-ilyushchenko-profile.jpeg
 topImg2Src: /img/interviews/questdb-vlad-ilyushchenko-logo.jpg
-ogImg: /img/interviews/questdb-vlad-ilyushchenko-desk.jpeg
+ogImg: /img/interviews/questdb-vlad-ilyushchenko-desk.jpg
 ---
 
 ### What is QuestDB? Why did you build it?
@@ -181,7 +181,7 @@ Linux and in various cloud and bare metal environments.
 
 ### Describe your desk setup
 
-{{< img-center src="/img/interviews/questdb-vlad-ilyushchenko-desk.jpeg" alt="The desk of Vlad Ilyushchenko, QuestDB" width="100%" >}}
+{{< img-center src="/img/interviews/questdb-vlad-ilyushchenko-desk.jpg" alt="The desk of Vlad Ilyushchenko, QuestDB" width="100%" >}}
 
 I am always in the office, but the team is not always here. They work from home.
 I enjoy coming into the office when I commute on the electric scooter. It clears
