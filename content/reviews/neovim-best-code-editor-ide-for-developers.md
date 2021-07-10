@@ -23,37 +23,44 @@ aliases:
   - /collections/neovim-best-code-editor-ide-for-developers/
 ---
 
+Over the last year I have been exploring switching from macOS to Linux as my
+daily driver. I have used macOS for over a decade, but recently became
+frustrated with the decreasing software quality and growing monopolistic
+behavior from Apple. Part of this involved evaluating all my tools.
+
+I have used many code editors over the past two decades, from the old days of
+Dreamweaver and FrontPage, to Coda, Sublime Editor and Xcode. Most recently I've
+been using Visual Studio Code (VS Code).
+
 There are a few apps that developers use all the time: a web browser, a terminal
 (console), and a code editor or Integrated Development Environment (IDE).
 Choosing the right one is like selecting a good chair or mattress - the amount
 of time you spend using it (sitting on it/sleeping on it) justifies the time you
 spend picking it.
 
-I have used many editors over the past two decades, from Dreamweaver and
-FrontPage to Coda and Xcode, and from Sublime Editor to Atom. Most recently I've
-been using Visual Studio Code (VS Code). It's a great time to be a developer
-because there are no many options to choose from. A large number are actively
-developed with regular refinements and feature releases. Occasionally there is
-even something brand new.
+Every developer has their own requirements. Some people are happy with a simple,
+lightweight text editor. Others want a fully integrated environment that has
+built-in debugging, collaboration, and extensive language server support. I've
+always leaned more towards a minimalist text editor with syntax highlighting,
+linting, and code completion, but a new requirement this time was portability
+across operating systems.
 
-Every developer has their own requirements. Some people are happy with a simple
-text editor because they prefer to keep things lightweight. Others want a full
-environment that has built-in debugging, collaboration, and extensive language
-server support. I've always leaned more towards a minimalist text editor with
-syntax highlighting. Linting and code completion are a nice bonus.
+It's a great time to be a developer because there are no many options to choose
+from. A large number are actively developed with regular refinements and feature
+releases. Occasionally there is even something brand new. Unlike a chair or a
+mattress, it's easy to try all the possibilities!
 
-I recently switched from macOS to Linux and as I went through a process of
-de-Apple-ifying my tools, I had to decide whether to stay with VS Code or pick
-something entirely different. Unlike a chair or a mattress, it's easy to try all
-the possibilities!
+This article is my writeup of the code editors I tried, and why I think neovim
+is the best code editor for developers.
 
-This article has my notes about the options I tried.
+**Updated July 2021:** Refreshed notes on all the tools and modified plugins for
+the new release of Neovim 0.5.
 
-### Summary
+### tldr; Neovim is the best code editor for developers
 
-My conclusion is that [Neovim](https://neovim.io/) is the best code editor
-because of its speed, ease of customization, and text config I can store in Git.
-I switched from [VS Code](https://code.visualstudio.com/).
+[Neovim](https://neovim.io/) is the best code editor because of its speed, ease
+of customization, and text config I can store in Git. I switched from
+[VS Code](https://code.visualstudio.com/).
 
 I also considered [Atom](https://atom.io/), [Kate](https://kate-editor.org/),
 [Nova](https://nova.app/), [Onivim](https://onivim.io/), and
@@ -110,20 +117,24 @@ about how important this has been.
 
 Running an editor in the browser is technically not as performant as native
 code, but that rarely shows up for most coding tasks. As low-power client
-devices with 5G become more widesapread (or the availability of
+devices with 5G become more widespread (or the availability of
 [Starlink](https://www.starlink.com/) expands), if it can run a browser then the
 heavy lifting can be offloaded to the cloud. GitHub Codespaces and Gitpod are as
-customizable as the native version, and have benefits like environment isolation
-and the ability to move between systems without loss of continuity.
+customizable as the native versions, and have benefits like environment
+isolation and the ability to move between systems without loss of continuity.
+There are also an increasing number of options for remote development where your
+editor is running locally but all the files are on a remote server. VS Code
+supports this through remote connections to your own servers, or through the
+Codespaces plugin.
 
-I did look at a few platform specific editors to see if there was a final reason
-to stay on macOS. Native code has a styling advantage because it can adopt
-platform-specific UX concepts. This used to be an advantage of macOS software
-built using Apple's frameworks, but with the increased popularity of web /
-Electron, it seems fewer and fewer people care about this any more. I try to be
-pragmatic so I understand why building using web technologies and Electron is
-beneficial, but for an app I use for hours a day I want to have the best
-experience possible. Unfortunately, I just don't like most Electron apps!
+I did look at a few platform specific editors. Native code has a styling
+advantage because it can adopt platform-specific UX concepts. This used to be an
+advantage of macOS software built using Apple's frameworks, but with the
+increased popularity of web / Electron, it seems fewer and fewer people care
+about this any more. I try to be pragmatic because I understand why building
+using web technologies and Electron is beneficial, but for an app I use for
+hours a day I want to have the best experience possible. Unfortunately, I just
+don't like most Electron apps!
 
 #### Everything else
 
@@ -142,16 +153,24 @@ you're developing for.
 - **Cost:** Free (open source).
 - **Performance:** 🚀 Very fast.
 - **Customizable:** ✅ Large ecosystem of plugins and themes.
-- **Syntax highlighting:** 🛠 Requies plugins.
+- **Syntax highlighting:** ✅ Built in with
+  [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) and
+  [LSP](https://github.com/neovim/nvim-lspconfig), but still requires some
+  config.
 - **Cross-platform:** Linux ✅ Windows ✅ macOS ✅
-- **Everything else:** ✅ Install language plugins for linting and debugging; ✅
-  Git plugins available.
+- **Everything else:** Git plugins available.
 
 #### Pros
 
-Compatible with Vim plugins; configuration in a text file so it can be easily
-stored in version control and sync'd; very fast, especially combined with
-Alacritty.
+Configuration in a text file so it can be easily stored in version control and
+sync'd; very fast, especially combined with a performance-focused terminal
+emulator like [Alacritty](https://github.com/alacritty/alacritty).
+
+Neovim 0.5 now includes
+[Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) and supports
+Language Server Protocol (LSP). These reduce the number of required plugins to
+get syntax highlighting, definition search, hover, completion, rename, format
+and refactoring functions.
 
 #### Cons
 
@@ -162,26 +181,31 @@ Requires upfront investment to customize themes, plugins, and learn shortcuts.
 Neovim is an implementation of Vim, but focused on extensibility and usability.
 The key feature is asynchronous plugins (mostly) compatible with Vim, which
 significantly improves performance for things like code-completion and linting.
+And as of Neovim 0.5, the new support for LSP and the official Treesitter plugin
+mean that code editor related features benefit from native integration and
+performance.
+
 I use [Alacritty](https://github.com/alacritty/alacritty) for my terminal, which
 uses GPU acceleration (OpenGL in Rust), and
 [was specifically written to correctly render applications like Vim](https://jwilm.io/blog/announcing-alacritty/),
-so performance is excellent.
+so performance really is excellent.
 
 One of the great things is its customizability. All configuration is defined in
-[my vimrc file](https://github.com//dotfiles/blob/main/dot_vimrc) that
-I keep in version control. I can drop this onto any system and with a single
-command all my plugins will be installed and set up exactly how I prefer things.
-As Neovim and Alacritty work cross-platform, it was easy to gradually transition
-from macOS to Linux because I could use them on both OSs.
+[my vimrc file](https://github.com/dotfiles/blob/main/dot_vimrc) that I keep in
+version control. I can drop this onto any system and with a single command all
+my plugins will be installed and set up exactly how I prefer things. As Neovim
+and Alacritty work cross-platform, I can easily switch between Linux and macOS,
+where I use [iTerm 2](https://iterm2.com/).
 
 There are lots of plugins. In recent months I have used Neovim to write code in
 Python, Rust, Go, JS, and HTML,
 [written an academic article using LaTeX](https://github.com/davidmytton/paper-data-centre-water-consumption)
-with proper reference support, and managed my personal notes using Markdown.
-Each of these activities has a couple of plugins that enable features like
-syntax highlighting, linting, version control integration, reference management,
-and compiling. All within the same interface, using the same set of commands,
-and the same theme.
+with proper reference support, and managed my personal notes using Markdown and
+the [fuzzy file finder plugin](https://github.com/junegunn/fzf.vim). Each of
+these activities has a couple of plugins that enable features like syntax
+highlighting, linting, version control integration, reference management, and
+compiling. All within the same interface, using the same set of commands, and
+the same theme.
 
 That said, Vim requires time to learn. It's been around since 1991 (Neovim
 since 2014) so it has its own way of doing things. There is always a way,
@@ -200,13 +224,20 @@ writing about their setup which often results in a small tweak that makes my
 config better.
 
 I run neovim through [tmux](https://github.com/tmux/tmux) which gives me
-powerful window management. I already use a tiling window manager on Linux
-([sway](https://swaywm.org/)) but being able to attach and detach sessions is
-incredibly freeing. I can just keep the session running in the background so
-whenever I want to come back to the project, the windows are all already
-configured. [They can also be scripted](https://superuser.com/a/440082). My next
-step will be to investigate running sessions remotely so that I can connect from
-any system.
+powerful window management. I already use a tiling window manager
+([sway](https://swaywm.org/) on Linux and
+[Amethyst](https://ianyh.com/amethyst/) on macOS) but being able to attach and
+detach sessions is incredibly freeing. I can just keep the session running in
+the background so whenever I want to come back to the project, the windows are
+all already configured.
+[They can also be scripted](https://superuser.com/a/440082).
+
+I have also been playing with [Zellij](https://zellij.dev/), a full terminal
+workspace manager that combines the best of tmux with native tabs and
+scrollback. We recently
+[reviewed it in the Console newsletter](https://console.dev/tools/) and
+discussed it on
+[the first episode of the Console DevTools Podcast](https://podcast.console.dev/episodes/ep1-waypoint-zellij).
 
 I did try [Emacs](https://www.gnu.org/software/emacs/), but it wasn't for me. If
 you don't yet have [a strong opinion](https://en.wikipedia.org/wiki/Editor_war)
@@ -222,16 +253,13 @@ easier to get set up. Regardless, a text-based terminal life is the way forward.
 
 #### (Neo)Vim plugins I use
 
-At time of writing I am using 19 plugins.
-[My vimrc file](https://github.com/davidmytton/dotfiles/blob/main/dot_vimrc) is
-public if you want to see the latest set, but here are a few crucial ones:
+With the release of Neovim 0.5 I was able to remove most of my language plugins
+and just use Treesitter + LSP. I followed
+[Takuya Matsuyama's guide](https://blog.inkdrop.info/how-to-set-up-neovim-0-5-modern-plugins-lsp-treesitter-etc-542c3d9c9887)
+for most of it and you can see the result in
+[my vimrc file](https://github.com/davidmytton/dotfiles/blob/main/dot_vimrc).
+Here are a few crucial ones:
 
-- [Ale](https://github.com/dense-analysis/ale): Linting.
-- [deoplete](https://github.com/Shougo/deoplete.nvim): Asynchronous code
-  completion framework (needs extra plugins for the languages you use. I use
-  [jedi](https://github.com/davidhalter/jedi-vim) and
-  [deoplete-jedi](https://github.com/deoplete-plugins/deoplete-jedi) for
-  Python).
 - [vim-gitgutter](https://github.com/airblade/vim-gitgutter): Shows git diff in
   the left column as you edit.
 - [lightline.vim](https://github.com/itchyny/lightline.vim): Makes the
@@ -244,7 +272,7 @@ public if you want to see the latest set, but here are a few crucial ones:
   when you know the filename you're looking for, but this helps with the
   transition to vim and if you have a lot of projects you move between.
 
-### The editor I used to use: VS Code
+### Second place: VS Code
 
 [VS Code](https://code.visualstudio.com) is a modern IDE with a huge ecosystem
 of plugins and themes.
@@ -265,25 +293,30 @@ of plugins and themes.
 
 Actively developed by Microsoft with built-in code completion and syntax
 highlighting, debugging, Git, and lots of plugins. Good plugins from Azure and
-AWS for their cloud products.
+AWS for their cloud products. It is well integrated into GitHub and has support
+for remote connections as well as connecting to
+[GitHub Codespaces](https://github.com/features/codespaces) instances for
+isolated development environments.
 
 #### Cons
 
 Built on Electron. The VS Code binary release is not open source (Microsoft
-License) but the codebase is (MIT license).
+License) but the codebase is (MIT license). There is a non-Microsoft version
+called [VS Codium](https://github.com/VSCodium/vscodium), but it is missing some
+features like setting sync.
 
 #### Notes
 
 Until my recent switch to Neovim, I used VS Code. According to the
 [Top IDE Index](https://pypl.github.io/IDE.html), VS Code has grown the most
-over the last 5 years and as of Mar 2021, sits at position #4 in the rankings,
-with 9.8% market share. It's easily the most popular editor in our
+over the last 5 years and as of July 2021, sits at position #3 in the rankings,
+with 10.94% market share. It's easily the most popular editor in our
 [series of developer Interview interviews](/interviews/).
 
 {{< img-center src="/img/reviews/neovim-best-code-editor-ide-for-developers-ide-index.png" alt="Graph of worldwide IDE popularity." width="100%" caption="A graph of IDE popularity showing Visual Studio vs Eclipse vs VS Code." >}}
 
-Although it's based on Electron - and I usually find Electron apps to be slow
-and have a weird
+Although it's based on Electron - I usually find Electron apps to be slow and
+have a weird
 [uncanny valley effect](https://en.wikipedia.org/wiki/Uncanny_valley) due to not
 using native UI components - VS Code is the best of them. I understand why
 development teams want to use Electron to rapidly deliver apps to users on
@@ -295,7 +328,7 @@ Maybe those are just badly built?
 If you use Azure for your cloud then VS Code provides the best development
 experience because of the
 [official plugins](https://code.visualstudio.com/docs/azure/extensions). These
-plugins were valuable when I was working our
+plugins were valuable when I was working on our
 [Campfire Bot](https://blog.console.dev/porting-a-python-azure-serverless-function-to-rust/)
 and
 [LED Metric display](https://blog.console.dev/live-subscriber-count-using-a-lametric-led-device/),
@@ -317,7 +350,8 @@ Unfortunately, they lack some features, like
 
 Not only is VS Code a good editor you can run locally, it's also available as in
 the browser with [GitHub Codespaces](https://github.com/features/codespaces) or
-[Gitpod](https://www.gitpod.io). This is a major advantage of using web
+[Gitpod](https://www.gitpod.io). VS Coded running locally can also connect to
+remote servers or Codespaces instances. This is a major advantage of using web
 technologies in Electron because they can then support most VS Code plugins,
 themes, and settings sync. It can even download dotfiles to configure the
 workspace. This makes it really easy to create multiple, isolated environments
@@ -528,7 +562,7 @@ build high quality commercial software as an independent company.
 [Built by a small team in Australia](https://www.sublimehq.com/), they only
 recently released their second product - a Git UI app. Having been around since
 2008, it was one of the first editors I used after outgrowing Frontpage and
-Dreamweaver I'd learned web dev with in the early 2000s.
+Dreamweaver in the early 2000s.
 
 Sublime Text has very few features out of the box, which is a good thing. It's
 focused on doing the core job of code editing very well, allowing a community to
