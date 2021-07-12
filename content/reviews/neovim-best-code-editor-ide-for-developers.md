@@ -5,7 +5,7 @@ draft: false
 summary:
   A review of the best code editors and IDEs - Neovim, VS Code, Atom, Kate,
   Nova, Onivim, and Sublime Text.
-isSelected: reviews
+isPage: reviews
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorBio:

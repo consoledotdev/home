@@ -382,16 +382,16 @@
                 <nav class="main-nav">
                     {{ partial "components/menu-toggle.html" }}
                     <ul class="no-popup">
-                        <li{{ if eq .context.Params.isSelected "tools" }} class="is-selected"{{ end }}>
+                        <li{{ if eq .context.Params.isPage "tools" }} class="is-selected"{{ end }}>
                             <a onclick="blur();" href="/tools/">Tools</a>
                         </li>
-                        <li{{ if eq .context.Params.isSelected "betas" }} class="is-selected"{{ end }}>
+                        <li{{ if eq .context.Params.isPage "betas" }} class="is-selected"{{ end }}>
                             <a onclick="blur();" href="/betas/">Betas</a>
                         </li>
-                        <li{{ if eq .context.Params.isSelected "interviews" }} class="is-selected"{{ end }}>
+                        <li{{ if eq .context.Params.isPage "interviews" }} class="is-selected"{{ end }}>
                             <a onclick="blur();" href="/interviews/">Interviews</a>
                         </li>
-                        <li{{ if eq .context.Params.isSelected "newsletter" }} class="is-selected"{{ end }}>
+                        <li{{ if eq .context.Params.isPage "newsletter" }} class="is-selected"{{ end }}>
                             <a onclick="blur();" href="/latest/">Newsletter</a>
                         </li>                    
                     </ul>
@@ -401,16 +401,16 @@
                     <div class="menu-popup-wrapper">
                         <div id="menu-popup" class="popup popup-top-down">
                             <ul>
-                                <li{{ if eq .context.Params.isSelected "tools" }} class="is-selected"{{ end }}>
+                                <li{{ if eq .context.Params.isPage "tools" }} class="is-selected"{{ end }}>
                                     <a onclick="blur(); toggleMenuPopup()" href="/tools/">Tools</a>
                                 </li>
-                                <li{{ if eq .context.Params.isSelected "betas" }} class="is-selected"{{ end }}>
+                                <li{{ if eq .context.Params.isPage "betas" }} class="is-selected"{{ end }}>
                                     <a onclick="blur(); toggleMenuPopup()" href="/betas/">Betas</a>
                                 </li>
-                                <li{{ if eq .context.Params.isSelected "interviews" }} class="is-selected"{{ end }}>
+                                <li{{ if eq .context.Params.isPage "interviews" }} class="is-selected"{{ end }}>
                                     <a onclick="blur(); toggleMenuPopup()" href="/interviews/">Interviews</a>
                                 </li>
-                                <li{{ if eq .context.Params.isSelected "newsletter" }} class="is-selected"{{ end }}>
+                                <li{{ if eq .context.Params.isPage "newsletter" }} class="is-selected"{{ end }}>
                                     <a onclick="blur(); toggleMenuPopup()" href="/latest/">Newsletter</a>
                                 </li>                                
                             </ul>

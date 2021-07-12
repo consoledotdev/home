@@ -9,7 +9,7 @@ date: 2021-03-10T12:00:00Z
 draft: false
 headerType: fixed
 summary: Interview with James Little, Creator, Stork Search.
-isSelected: interviews
+isPage: interviews
 topImg1Src: /img/interviews/stork-search-james-little-profile.jpg
 topImg2Src: /img/interviews/stork-search-james-little-logo.jpg
 ogImg: /img/interviews/stork-search-james-little-desk.jpg

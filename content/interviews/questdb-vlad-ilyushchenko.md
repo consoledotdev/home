@@ -9,7 +9,7 @@ date: 2021-06-15T12:00:00Z
 draft: false
 headerType: fixed
 summary: Interview with Vlad Ilyushchenko, CTO, QuestDB
-isSelected: interviews
+isPage: interviews
 topImg1Src: /img/interviews/questdb-vlad-ilyushchenko-profile.jpeg
 topImg2Src: /img/interviews/questdb-vlad-ilyushchenko-logo.jpg
 ogImg: /img/interviews/questdb-vlad-ilyushchenko-desk.jpg

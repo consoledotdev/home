@@ -9,7 +9,7 @@ date: 2021-03-01T12:00:00Z
 draft: false
 headerType: fixed
 summary: Interview with Ali Khajeh-Hosseini, Co-Founder, Infracost.
-isSelected: interviews
+isPage: interviews
 topImg1Src: /img/interviews/infracost-ali-khajeh-hosseini-profile.jpg
 topImg2Src: /img/interviews/infracost-ali-khajeh-hosseini-logo.svg
 ogImg: /img/interviews/infracost-ali-khajeh-hosseini-desk.jpg

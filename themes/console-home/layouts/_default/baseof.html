@@ -3,7 +3,14 @@
 <!DOCTYPE html>
 <html lang="en">
     {{ partial "head.html" . }}
-    <body class="theme page-{{ if not .Params.pageType -}}article{{ else }}{{ .Params.pageType }}{{ end }}{{ with .Params.isSelected}} page-{{ . }}{{ end }}">
+    <body class="theme page-
+        {{- if not .Params.pageType }}article
+        {{- else }}{{ .Params.pageType }}
+        {{- end }}
+        {{- with .Params.isSubpage}} page-{{ . }}
+        {{- else }}
+            {{- with .Params.isPage}} page-{{ . }}{{- end }}
+        {{ end }}">
             {{ partial "header.html" (dict "context" . "headerType" .Params.headerType "hidePlanes" .Params.hidePlanes "hideLines" .Params.hideLines ) }}
             <main class="main
                 {{- if ne .Params.pageType "home" -}}

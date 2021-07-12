@@ -9,7 +9,7 @@ date: 2021-03-17T12:00:00+00:00
 draft: false
 headerType: fixed
 summary: Interview with Petr Nikolaev, Co-founder, Raycast.
-isSelected: interviews
+isPage: interviews
 topImg1Src: /img/interviews/raycast-petr-nikolaev-profile.jpg
 topImg2Src: /img/interviews/raycast-petr-nikolaev-logo.png
 ogImg: /img/interviews/raycast-petr-nikolaev-desk.png

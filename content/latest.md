@@ -6,7 +6,8 @@ summary:
   The latest edition of the Console Newsletter. A free weekly email digest of
   the best tools and beta releases for developers.
 type: latest
-isSelected: newsletter
+isPage: newsletter
+isSubpage: latest
 headerType: fixed
 sitemap:
   changefreq: weekly

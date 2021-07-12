@@ -6,9 +6,10 @@ summary:
   An exploration of interplanetary networking, how it costs $1bn to put YouTube
   on Mars, and why Ethereum is better than Bitcoin as a Mars currency.
 type: research
-isSelected: mars
-customStyle: true
+isPage: research
+isSubpage: mars
 pageType: feature-article
+customStyle: true
 headerType: fixed
 hidePlanes: true
 hideLines: true

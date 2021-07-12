@@ -7,7 +7,7 @@ what: DESCRIPTION
 date: {{ .Date }}
 draft: true
 summary: Interview interview with NAME, TITLE, ORG.
-isSelected: interviews
+isPage: interviews
 topImg1Src: /img/interviews/ORG-NAME-profile.EXT
 topImg2Src: /img/interviews/ORG-NAME-logo.EXT
 ogImg: /img/interviews/ORG-NAME-desk.EXT

@@ -9,7 +9,7 @@ date: 2021-06-08T12:00:00Z
 draft: false
 headerType: fixed
 summary: Interview with Nick Bransby-Williams, GitLive
-isSelected: interviews
+isPage: interviews
 topImg1Src: /img/interviews/gitlive-nick-bransby-williams-profile.png
 topImg2Src: /img/interviews/gitlive-nick-bransby-williams-logo.png
 ogImg: /img/interviews/gitlive-nick-bransby-williams-desk.jpg

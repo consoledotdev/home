@@ -5,7 +5,7 @@ draft: false
 summary:
   Developer tools reviews. Console reviews and features the best tools for
   developers.
-isSelected: tools
+isPage: tools
 customStyle: true
 pageType: feature
 customPageStyle: true

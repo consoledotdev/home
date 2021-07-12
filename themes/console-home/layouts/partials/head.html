@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/components.css" />
     {{ if and .Params.pageType .Params.customPageStyle }}<link rel="stylesheet" href="/css/pageType/{{ .Params.pageType }}.css" />{{ end }}
-    {{ if and .Params.isSelected .Params.customStyle }}<link rel="stylesheet" href="/css/page/{{ with .Params.type }}{{ . }}/{{ end }}{{ .Params.isSelected }}.css" />{{ end }}
+    {{ if and .Params.isPage .Params.customStyle }}<link rel="stylesheet" href="/css/page/{{ .Params.isPage }}{{ with .Params.isSubpage }}/{{ . }}{{ end }}.css" />{{ end }}
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.png" type="image/png" />

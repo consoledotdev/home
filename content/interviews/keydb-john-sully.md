@@ -9,7 +9,7 @@ date: 2021-04-20T12:00:00Z
 draft: false
 headerType: fixed
 summary: Interview with John Sully, CEO, KeyDB.
-isSelected: interviews
+isPage: interviews
 topImg1Src: /img/interviews/keydb-john-sully-profile.jpg
 topImg2Src: /img/interviews/keydb-john-sully-logo.jpg
 ogImg: /img/interviews/keydb-john-sully-desk.png

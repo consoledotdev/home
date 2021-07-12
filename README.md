@@ -56,10 +56,10 @@ code, you only need Hugo:
     scroll.
 - `hideLines`: `true` or `false` - Hides the finer lines from the page.
 - `hidePlanes`: `true` or `false` - Hides the planes grid from the page.
-- `isSelected`: a string defining the fragment used for the body css class,
+- `isPage`: a string defining the fragment used for the body css class,
   custom stylesheet definition, menu item activation and assets location.
 - `customStyle`: `true` or `false` - Will expect and load a custom style based
-  on the `isSelected` string.
+  on the `isPage` string.
 - `customPageStyle`: `true` or `false` - Will expect and load a custom style
   based on the `pageType` string.
 

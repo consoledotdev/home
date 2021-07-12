@@ -9,7 +9,7 @@ date: 2021-03-29T12:00:00+00:00
 draft: false 
 headerType: fixed
 summary: Interview with Jason Bosco, Co-founder, Typesense.
-isSelected: interviews
+isPage: interviews
 topImg1Src: /img/interviews/typesense-jason-bosco-profile.jpg
 topImg2Src: /img/interviews/typesense-jason-bosco-logo.svg
 ogImg: /img/interviews/typesense-jason-bosco-desk.jpg
