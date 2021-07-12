@@ -74,6 +74,6 @@
 			{{ $.Scratch.Set "categories" (print ($.Scratch.Get "categories") "," $element.label "|" $element.name ) }}
 		{{ end }}
     {{ end }}
-	<script id="feature-js" src="/js/pageType/feature.js" data-categories="{{ $.Scratch.Get "categories" }}"></script>
+	<script id="feature-js" src="/js/page-type/feature.js" data-categories="{{ $.Scratch.Get "categories" }}"></script>
 	<script src="/js/tools.js"></script>
 {{ end }}

@@ -17,7 +17,7 @@
     <script src="/js/head-scripts.js"></script>
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/components.css" />
-    {{ if and .Params.pageType .Params.customPageStyle }}<link rel="stylesheet" href="/css/pageType/{{ .Params.pageType }}.css" />{{ end }}
+    {{ if and .Params.pageType .Params.customPageStyle }}<link rel="stylesheet" href="/css/page-type/{{ .Params.pageType }}.css" />{{ end }}
     {{ if and .Params.isPage .Params.customStyle }}<link rel="stylesheet" href="/css/page/{{ .Params.isPage }}{{ with .Params.isSubpage }}/{{ . }}{{ end }}.css" />{{ end }}
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
