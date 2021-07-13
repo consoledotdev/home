@@ -1,0 +1,8 @@
+<img src="{{ .Get "thumbnail" }}" alt="{{ .Get "name" }}">
+<span>{{ .Get "name" }}</span>
+<span>{{ .Get "score" }}</span>
+<meter value="{{ .Get "score" }}" min="0" max="5">{{ .Get "score" }}/5</meter>
+<a class="console-button-text" href="#{{ .Get "anchor" }}-review">Read review</a>
+<a class="console-button-text icon-right" href="{{ .Get "url" }}" title="{{ .Get "url" }}" target="_blank"
+    rel="noopener"><span>Visit</span>
+    {{ partial "icons/external-link.html" }}</a>

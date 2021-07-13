@@ -1,0 +1,9 @@
+<div class="tool-card-heading">
+    <img src="{{ .Get "thumbnail" }}" alt="{{ .Get "name" }}">
+    <h4 class="title title-3">{{ .Get "name" }}</h4>
+    <span>{{ .Get "score" }}</span>
+    <meter value="{{ .Get "score" }}" min="0" max="5">{{ .Get "score" }}/5</meter>
+    <a class="console-button icon-right" href="{{ .Get "url" }}" title="{{ .Get "url" }}" target="_blank"
+        rel="noopener"><span>Visit</span>
+        {{ partial "icons/external-link.html" }}</a>
+</div>
