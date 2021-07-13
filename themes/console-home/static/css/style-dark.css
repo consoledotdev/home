@@ -120,6 +120,11 @@
     --theme-signaling-warning: var(--c-signaling-warning-01);
     --theme-signaling-error:: var(--c-signaling-error-01);
 
+    --theme-framed-section-default-border: 1px solid var(--c-grey-06-blacks-neutral);
+    --theme-framed-section-default-bg: #17171A;
+    --theme-framed-section-warning-border: 1px solid #735E2E;
+    --theme-framed-section-warning-bg: #161514;
+
     /* Mars Internet page specific */
 
     --theme-mars-earth-halo: 0 0 0.25em rgba(0, 0, 255, 0.3);
@@ -138,7 +143,8 @@
 
 .theme.page-article,
 .theme.page-feature,
-.theme.page-feature-article {
+.theme.page-feature-article,
+.theme.page-tools-category-review {
     background: var(--theme-content-bg-3);
 }
 

@@ -1334,3 +1334,29 @@ body:not(.mobile) .console-control:hover:before {
 .about-console-box .logo .prompt-normal {
     display: block;
 }
+
+/* Framed Section
+   ================================================================================================================ */
+
+.framed-section {
+    border-radius: var(--corners-mid);
+    padding: var(--space4) 0;
+}
+
+.framed-section h3,
+.framed-section h4,
+.framed-section h5,
+.framed-section p,
+.framed-section ul {
+    margin: 0 var(--space4);
+}
+
+.framed-section.framed-section-default {
+    border: var(--theme-framed-section-default-border);
+    background: var(--theme-framed-section-default-bg);
+}
+
+.framed-section.framed-section-warning {
+    border: var(--theme-framed-section-warning-border);
+    background: var(--theme-framed-section-warning-bg);
+}

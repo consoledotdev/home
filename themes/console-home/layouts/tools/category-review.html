@@ -2,7 +2,7 @@
 	{{ $CTATitle := "Interesting Betas by email" }}
 	{{ $CTADescription := "Our free weekly newsletter features the latest betas and early access programs. " }}
 
-        <section class="page-section main-feature-article-content">
+        <section class="page-section main-tools-category-review-content">
             <h2 class="title title-1">{{ .Params.title }}</h2>
             <p class="description">{{ .Params.summary }}</p>
             <div class="page-meta">
@@ -13,12 +13,12 @@
                 </p>
             </div>
         </section>
-        {{ partial (print "components/tools/artwork.html") }}
-        <div class="main-feature-article-content-split">
-            <aside class="main-feature-article-aside" data-aside>
-                {{ partial (print "components/tools/" .Params.isSubpage "/aside.html" ) }}
+        {{ partial (print "components/tools/category-review/artwork.html") }}
+        <div class="main-tools-category-review-content-split">
+            <aside class="main-tools-category-review-aside" data-aside>
+                {{ partial (print "components/tools/category-review/" .Params.isSubpage "/aside.html" ) }}
             </aside>
-            <section class="page-section main-feature-article-content">
+            <section class="page-section main-tools-category-review-content">
                 {{ .Content }}
                 {{ partial "components/author.html" (dict "context" . "bio" .Params.authorBio "img" .Params.authorImg "name" .Params.authorName ) }}
                 {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
