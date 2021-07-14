@@ -536,6 +536,15 @@ body:not(.page-feature, .page-feature-article):after {
     margin-right: var(--space2);
 }
 
+.page-meta-detail {
+    margin-top: var(--space2);
+}
+
+.page-meta-detail p {
+    font-size: var(--t-size-2);
+    font-style: italic;
+}
+
 .col-2 {
     display: flex;
     flex-flow: row nowrap;
