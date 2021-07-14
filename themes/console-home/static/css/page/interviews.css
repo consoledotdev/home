@@ -57,7 +57,7 @@
 .interviews-card-company-logo .logo {
     margin: 17.64% 0 0 17.64%;
     width: 35.29%;
-    border-radius: var(--corners-small);
+    border-radius: var(--corners-x-small);
     overflow: hidden;
 }
 

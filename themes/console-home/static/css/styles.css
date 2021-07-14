@@ -1357,7 +1357,7 @@ select.console-select {
     background: var(--theme-input-bg);
     color: var(--theme-input-text);
     padding: calc(var(--space2) + var(--space1)) calc(var(--space3) + var(--space1));
-    border-radius: var(--corners-small);
+    border-radius: var(--corners-x-small);
     font-size: var(--t-size0);
     line-height: var(--t-lH4);
     transition: var(--a-controls);

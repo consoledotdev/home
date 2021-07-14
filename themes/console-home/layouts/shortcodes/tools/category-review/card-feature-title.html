@@ -1,5 +1,15 @@
 <div class="tool-card-feature-title">
     <h6>{{ .Get "text" }}</h6>
-    <span>{{ .Get "score" }}</span>
-    <meter value="{{ .Get "score" }}" min="0" max="5">{{ .Get "score" }}/5</meter>
+    <span class="console-score">
+        {{if not (eq (.Get "score") "none" )}}
+            {{ .Get "score" }}/5
+            <span class="score-bar">
+                <meter value="{{ .Get "score" }}" min="0" max="5" title="{{ .Get "score" }} out of 5"></meter>
+                <span class="score-bar-foreground" style="width: {{ mul (div (float (.Get "score")) 5.0) 100 }}%"></span>
+                {{ partial "components/score-mask.html" }}</a>
+            </span>
+        {{ else}}
+            No rating
+        {{ end }}
+    </span>
 </div>

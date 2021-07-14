@@ -121,9 +121,14 @@
     --theme-signaling-error:: var(--c-signaling-error-01);
 
     --theme-framed-section-default-border: 1px solid var(--c-grey-06-blacks-neutral);
+    --theme-framed-section-default-item-border: 1px solid var(--c-grey-07);
     --theme-framed-section-default-bg: #17171A;
     --theme-framed-section-warning-border: 1px solid #735E2E;
+    --theme-framed-section-warning-item-border: 1px solid #2D271A;
     --theme-framed-section-warning-bg: #161514;
+
+    --theme-score-background: var(--c-grey-07);
+    --theme-score-foreground: var(--c-white-00-absolute);
 
     /* Mars Internet page specific */
 
