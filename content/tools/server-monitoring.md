@@ -271,7 +271,7 @@ from $15-27/server/month depending on features and monthly vs annual commitment.
 
 {{< framed-section-open classes="framed-section-warning" >}}
 
-{{< tools/category-review/card-features-open >}}
+##### Key features
 
 {{< framed-section-item-open >}}
 
@@ -308,8 +308,6 @@ Datadog also supports alerting on anomalies, events, forecast behavior, outlier
 detection, process monitoring and composites of all these types. Notifications
 are built into Datadog’s team collaboration system which can notify via email,
 Jira, PagerDuty, Slack, webhooks and others.
-
-{{< close-div >}}
 
 {{< close-div >}}
 
@@ -403,7 +401,7 @@ frequency.
 
 {{< framed-section-open classes="framed-section-warning" >}}
 
-{{< tools/category-review/card-features-open >}}
+##### Key features
 
 {{< framed-section-item-open >}}
 
@@ -446,8 +444,6 @@ defined using NRQL but there are some templates provided for server monitoring.
 You can attach runbooks to notifications and configure channels such as email,
 PagerDuty, Slack and webhooks. Alerting is powerful, but not quite as flexible
 as Datadog.
-
-{{< close-div >}}
 
 {{< close-div >}}
 
@@ -701,7 +697,7 @@ the primary data source.
 
 {{< framed-section-open classes="framed-section-warning" >}}
 
-{{< tools/category-review/card-features-open >}}
+##### Key features
 
 {{< framed-section-item-open >}}
 
@@ -756,8 +752,6 @@ data sources with separate alert conditions set on averages, sums, and whether
 the threshold is met across multiple series and custom time ranges. Grafana
 supports multiple notification channels such as email, Slack, PagerDuty,
 OpsGenie and webhooks.
-
-{{< close-div >}}
 
 {{< close-div >}}
 
@@ -873,7 +867,7 @@ monitoring agent from the same developers.
 
 {{< framed-section-open classes="framed-section-warning" >}}
 
-{{< tools/category-review/card-features-open >}}
+##### Key features
 
 {{< framed-section-item-open >}}
 
@@ -930,8 +924,6 @@ offer [Kapacitor](https://docs.influxdata.com/kapacitor/v1.5/), another open
 source project from Influxdata specifically designed for importing time series
 data from InfluxDB and triggering alerts. This has
 [more integrations for notifications](https://docs.influxdata.com/kapacitor/v1.5/working/alerts/#list-of-handlers).
-
-{{< close-div >}}
 
 {{< close-div >}}
 

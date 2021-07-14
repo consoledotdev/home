@@ -1252,6 +1252,32 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
     margin-right: var(--space2);
 }
 
+.title.title-6 {
+    font-size: var(--t-size0);
+    font-weight: 500;
+    margin-bottom: var(--space2_5);
+}
+
+.title.title-6:not(:first-child),
+.nav-wrapper .title.title-6 {
+    margin-top: var(--space2_5);
+}
+
+.page-feature-article .title.title-6 {
+    margin-bottom: var(--space3);
+}
+
+.page-feature-article .title.title-6:not(:first-child),
+.page-feature-article .nav-wrapper .title.title-6 {
+    margin-top: var(--space4);
+}
+
+.title-6.rich-title .icon {
+    width: var(--space2);
+    height: var(--space2);
+    margin-right: var(--space2);
+}
+
 /* Text
    ================================================================================================================ */
 
@@ -1840,6 +1866,10 @@ select.console-select::-ms-expand {
     }
 
     .main-feature-article .title-5 {
+        font-size: var(--t-size0);
+    }
+
+    .main-feature-article .title-6 {
         font-size: var(--t-size0);
     }
 }

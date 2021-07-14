@@ -1381,12 +1381,18 @@ body:not(.mobile) .console-control:hover:before {
     padding: var(--space4) 0;
 }
 
-.framed-section h3,
-.framed-section h4,
-.framed-section h5,
-.framed-section p,
-.framed-section ul {
-    margin: 0 var(--space4);
+.framed-section > *:not(.framed-section-item) {
+    margin-left: var(--space4);
+    margin-right: var(--space4);
+}
+
+.framed-section-item > * {
+    margin-left: var(--space4);
+    margin-right: var(--space4);
+}
+
+.framed-section > .title {
+    margin-bottom: var(--space4);
 }
 
 .framed-section.framed-section-default {
@@ -1421,6 +1427,10 @@ body:not(.mobile) .console-control:hover:before {
 
 .framed-section-item .title.title-3 {
     margin-bottom: var(--space3);
+}
+
+.framed-section-item p {
+    font-size: var(--t-size-1);
 }
 
 /* Console Score
