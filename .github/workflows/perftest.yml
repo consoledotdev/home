@@ -21,6 +21,11 @@ jobs:
                   environment: perftest
                   wranglerVersion: "1.15.0"
 
+            # Allows Cloudflare deploy to propagate
+            - name: Sleep for 10 seconds
+              run: sleep 10s
+              shell: bash
+
             - name: k6 test (home)
               uses: k6io/action@v0.2.0
               with:
