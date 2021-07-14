@@ -500,7 +500,7 @@ body:not(.page-feature, .page-feature-article):after {
     overflow: hidden;
 }
 
-.page-meta > p {
+.page-meta p {
     margin-top: var(--space2);
     display: flex;
     flex-flow: row wrap;
@@ -509,11 +509,11 @@ body:not(.page-feature, .page-feature-article):after {
     margin-right: calc(var(--space3) + 0.75em);
 }
 
-.page-meta > p:first-child {
+.page-meta p:first-child {
     margin-left: 0;
 }
 
-.page-meta > p:not(:last-child) {
+.page-meta p:not(:last-child) {
     margin-bottom: 0;
 }
 
@@ -528,6 +528,11 @@ body:not(.page-feature, .page-feature-article):after {
 .page-meta .page-meta-separator {
     display: inline-block;
     margin-left: var(--space2);
+    margin-right: var(--space2);
+}
+
+.page-meta .plane-picture {
+    height: 16px;
     margin-right: var(--space2);
 }
 
