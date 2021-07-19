@@ -1,6 +1,10 @@
 /* Console Tools Category Review page
    ========================================================================== */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body:not(.page-tools-category-review):before {
     content: "";
     position: fixed;
@@ -31,8 +35,7 @@ body:not(.page-tools-category-review):after {
     margin-top: 0;
 }
 
-.page-tools-category-review .title.title-2:not(:first-child),
-.page-tools-category-review .nav-wrapper .title.title-2 {
+.page-tools-category-review .title.title-2:not(:first-child) {
     margin-top: var(--space5);
 }
 
@@ -40,8 +43,7 @@ body:not(.page-tools-category-review):after {
     margin-bottom: var(--space3_5);
 }
 
-.page-tools-category-review .title.title-3:not(:first-child),
-.page-tools-category-review .nav-wrapper .title.title-3 {
+.page-tools-category-review .title.title-3:not(:first-child) {
     margin-top: var(--space4_5);
 }
 
@@ -49,8 +51,7 @@ body:not(.page-tools-category-review):after {
     margin-bottom: var(--space3_5);
 }
 
-.page-tools-category-review .title.title-4:not(:first-child),
-.page-tools-category-review .nav-wrapper .title.title-4 {
+.page-tools-category-review .title.title-4:not(:first-child) {
     margin-top: var(--space4_5);
 }
 
@@ -58,8 +59,7 @@ body:not(.page-tools-category-review):after {
     margin-bottom: var(--space3);
 }
 
-.page-tools-category-review .title.title-5:not(:first-child),
-.page-tools-category-review .nav-wrapper .title.title-5 {
+.page-tools-category-review .title.title-5:not(:first-child) {
     margin-top: var(--space4);
 }
 
@@ -234,7 +234,7 @@ body:not(.page-tools-category-review):after {
     margin-bottom: var(--space3);
 }
 
-.page-section > .tool-card-heading {
+.page-section .nav-wrapper > .tool-card-heading {
     border-top: var(--theme-border-2);
     padding-top: var(--space4);
     margin-top: var(--space4);
@@ -255,6 +255,10 @@ body:not(.page-tools-category-review):after {
 
 .main-tools-category-review .framed-section-attention .flat-lists ul li strong {
     color: var(--theme-text-1);
+}
+
+.main-tools-category-review .framed-section-attention .flat-lists ul li:last-child {
+    padding-bottom: 0;
 }
 
 .main-tools-category-review .related-categories {

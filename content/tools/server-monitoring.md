@@ -113,6 +113,8 @@ where it starts.
 Console is proud to be editorially independent. Learn about
 [our selection criteria and editorial policy](/about/#selection-criteria).
 
+{{< nav-wrapper id="wrapper-1" anchor-name="requirements" >}}
+
 {{< framed-section-open classes="framed-section-attention" >}}
 
 {{< rich-title-3 icon="checklist" id="requirements" >}} Requirements
@@ -204,6 +206,10 @@ out of scope for this article.
 
 {{< close-div >}}
 
+{{< nav-wrapper close="true" >}}
+
+{{< nav-wrapper id="wrapper-2" anchor-name="hosted-saas-monitoring-tools" >}}
+
 ### Hosted SaaS monitoring tools
 
 We reviewed 6 hosted SaaS monitoring tools. The best two are: [Datadog]() and
@@ -280,7 +286,11 @@ What are the pros and cons of hosted SaaS monitoring?
 
 {{< close-div >}}
 
+{{< nav-wrapper close="true" >}}
+
 ### Best hosted SaaS monitoring tools
+
+{{< nav-wrapper id="wrapper-3" anchor-name="datadog" >}}
 
 {{< tools/category-review/card-open >}}
 
@@ -404,6 +414,10 @@ small environments that only need basic monitoring.
 {{< close-div >}}
 
 {{< close-div >}}
+
+{{< nav-wrapper close="true" >}}
+
+{{< nav-wrapper id="wrapper-4" anchor-name="new-relic" >}}
 
 {{< tools/category-review/card-open >}}
 
@@ -554,6 +568,10 @@ it?
 
 {{< close-div >}}
 
+{{< nav-wrapper close="true" >}}
+
+{{< nav-wrapper id="wrapper-5" anchor-name="hosted-saas-also-considered" >}}
+
 #### Also considered
 
 {{< tools/category-review/card-heading name="AppOptics" thumbnail="/img/favicons/www.appoptics.com.png" url="https://www.appoptics.com" score="2" >}}
@@ -641,6 +659,10 @@ Datadog, Prometheus, AWS, Google Cloud or OpenTelemetry. As such, we decided not
 to review it as part of this article on server monitoring. It will be covered in
 a future Console review of tracing and observability tools.
 
+{{< nav-wrapper close="true" >}}
+
+{{< nav-wrapper id="wrapper-6" anchor-name="self-hosted-monitoring-tools" >}}
+
 ### Self-hosted monitoring tools
 
 We reviewed 12 self-hosted monitoring tools. The best option is:
@@ -722,7 +744,11 @@ What are the pros and cons of self-hosted on premises monitoring?
 
 {{< close-div >}}
 
+{{< nav-wrapper close="true" >}}
+
 ### Best self-hosted monitoring tools
+
+{{< nav-wrapper id="wrapper-7" anchor-name="grafana-prometheus" >}}
 
 {{< tools/category-review/card-open >}}
 
@@ -894,6 +920,10 @@ alert on multiple metric sources.
 
 {{< close-div >}}
 
+{{< nav-wrapper close="true" >}}
+
+{{< nav-wrapper id="wrapper-8" anchor-name="influxdb-telegraf" >}}
+
 {{< tools/category-review/card-open >}}
 
 {{< tools/category-review/card-top-open >}}
@@ -1042,6 +1072,10 @@ major limitation.
 {{< close-div >}}
 
 {{< close-div >}}
+
+{{< nav-wrapper close="true" >}}
+
+{{< nav-wrapper id="wrapper-9" anchor-name="self-hosted-also-considered" >}}
 
 #### Also considered
 
@@ -1240,6 +1274,8 @@ compared to more modern options like Grafana and InfluxDB. We like its open
 source philosophy and it covers most of what you would expect in a server
 monitoring tool in 2021, but doesn’t quite get our recommendation compared to
 our two finalists above.
+
+{{< nav-wrapper close="true" >}}
 
 ### FAQ
 

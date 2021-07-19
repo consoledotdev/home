@@ -1137,8 +1137,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
     margin-bottom: var(--space4);
 }
 
-.title.title-1:not(:first-child),
-.nav-wrapper .title.title-1 {
+.title.title-1:not(:first-child) {
     margin-top: var(--space4);
 }
 
@@ -1153,8 +1152,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
     margin-bottom: var(--space4);
 }
 
-.title.title-2:not(:first-child),
-.nav-wrapper .title.title-2 {
+.title.title-2:not(:first-child) {
     margin-top: var(--space4);
 }
 
@@ -1180,8 +1178,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
     margin-bottom: var(--space3);
 }
 
-.title.title-3:not(:first-child),
-.nav-wrapper .title.title-3 {
+.title.title-3:not(:first-child) {
     margin-top: var(--space3);
 }
 
@@ -1209,8 +1206,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
     letter-spacing: 0.15em;
 }
 
-.title.title-4:not(:first-child),
-.nav-wrapper .title.title-4 {
+.title.title-4:not(:first-child) {
     margin-top: var(--space3);
 }
 
@@ -1237,8 +1233,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
     margin-bottom: var(--space2_5);
 }
 
-.title.title-5:not(:first-child),
-.nav-wrapper .title.title-5 {
+.title.title-5:not(:first-child) {
     margin-top: var(--space2_5);
 }
 
@@ -1263,8 +1258,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
     margin-bottom: var(--space2_5);
 }
 
-.title.title-6:not(:first-child),
-.nav-wrapper .title.title-6 {
+.title.title-6:not(:first-child) {
     margin-top: var(--space2_5);
 }
 
