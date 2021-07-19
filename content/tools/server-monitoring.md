@@ -1269,7 +1269,8 @@ blandit sagittis.
 
 {{< tools/category-review/related-categories >}}
 
-### Our editorial Policy
+{{< rich-title-3 icon="logo" id="requirements" >}} Our editorial Policy
+{{</ rich-title-3 >}}
 
 #### Why you can trust us
 

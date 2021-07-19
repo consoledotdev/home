@@ -1169,6 +1169,11 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
     margin-right: var(--space3);
 }
 
+.title-2.rich-title .logo {
+    width: calc(var(--space4) + var(--space2_5));
+    margin-right: var(--space3);
+}
+
 .title.title-3 {
     font-size: var(--t-size2);
     font-weight: 500;
