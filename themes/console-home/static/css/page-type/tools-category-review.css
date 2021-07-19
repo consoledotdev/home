@@ -233,6 +233,23 @@ body:not(.page-tools-category-review):after {
     margin-bottom: var(--space3_5);
 }
 
+
+.main-tools-category-review .related-categories {
+    gap: var(--space3) var(--space4);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 14em);
+}
+
+.main-tools-category-review .related-categories .categories {
+    font-size: var(--t-size-1);
+}
+
+.main-tools-category-review .related-categories .categories .icon {
+    width: var(--space3);
+    height: var(--space3);
+    margin-right: calc(var(--space2) + 2px);
+}
+
 @media (max-width: 768px) {
     .main-tools-category-review {
         margin-top: calc(var(--space6) - var(--space4) + 48px);

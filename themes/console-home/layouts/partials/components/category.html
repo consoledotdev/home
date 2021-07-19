@@ -1,0 +1,4 @@
+<div class="categories">
+    {{ partial (print "icons/" (replace (lower .categoryData.category ) " " "-") ".html") }}
+    <span class="category">{{ .categoryData.subcategory }}</span>
+</div>

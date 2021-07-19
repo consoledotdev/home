@@ -25,6 +25,41 @@ authorBio:
   David was co-founder at Server Density, a SaaS infrastructure monitoring
   startup used by hundreds of customers to collect billions of time series
   metrics from millions of servers.
+relatedCategories:
+  - category: devops
+    subcategory: Log management
+  - category: devops
+    subcategory: Containers
+  - category: devops
+    subcategory: Network monitoring
+  - category: devops
+    subcategory: Website monitoring
+  - category: developer-tools
+    subcategory: App distribution
+  - category: developer-tools
+    subcategory: Backend framework
+  - category: developer-tools
+    subcategory: Browser testing
+  - category: developer-tools
+    subcategory: Frontend framework
+  - category: developer-tools
+    subcategory: Package managers
+  - category: api
+    subcategory: API
+  - category: cloud
+    subcategory: Storage
+  - category: cloud
+    subcategory: Serverless
+  - category: cloud
+    subcategory: Compute
+  - category: database
+    subcategory: Time series database
+  - category: database
+    subcategory: Graph database
+  - category: security
+    subcategory: Authentication
+  - category: security
+    subcategory: Vulnerability management
 ---
 
 ### tldr; the best monitoring tools
@@ -1221,7 +1256,7 @@ blandit sagittis.
 
 ### Related categories
 
-category, category, category, category, category, category
+{{< tools/category-review/related-categories >}}
 
 ### Our editorial Policy
 
