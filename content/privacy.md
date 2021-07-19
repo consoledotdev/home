@@ -17,7 +17,7 @@ improve Console. To do that, we want to understand the following metrics:
 - What browser are they using, and whether it is mobile or desktop.
 - How that is trending over time.
 - How many email subscribers we have.
-- Whether the tools we include in our weekly newsletter are interesting.
+- Whether the tools we feature are interesting by tracking link clicks.
 
 Using these simple metrics, we can analyse how many people sign up to our
 newsletter, which website pages are the most popular (so we can invest more in
@@ -33,7 +33,8 @@ Pixel, etc.
 If you sign up to our newsletter then we collect your email, and may link a
 referrer reference to help us track our marketing efforts. We don't track
 whether our emails are opened, but are interested in which links get clicked so
-we can improve our selection criteria.
+we can improve our selection criteria. We also track which links are clicked on
+our website.
 
 Our newsletter and website contains links to websites and third-parties. If you
 follow a link to any of these websites, please note that these websites have
