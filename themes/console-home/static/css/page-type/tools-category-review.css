@@ -206,6 +206,14 @@ body:not(.page-tools-category-review):after {
     margin-top: var(--space4);
 }
 
+.tools-category-review-tool-card .tool-card-like > .title .icon {
+    stroke: var(--theme-signaling-positive);
+}
+
+.tools-category-review-tool-card .tool-card-dislike > .title .icon {
+    stroke: var(--theme-signaling-warning);
+}
+
 .tools-category-review-tool-card .tool-card-feature-title {
     display: flex;
     flex-flow: row nowrap;
@@ -233,6 +241,21 @@ body:not(.page-tools-category-review):after {
     margin-bottom: var(--space3_5);
 }
 
+.main-tools-category-review .pros-cons ul li:last-child {
+    padding-bottom: 0;
+}
+
+.main-tools-category-review .pros-cons.pros ul li strong {
+    color: var(--theme-signaling-positive);
+}
+
+.main-tools-category-review .pros-cons.cons ul li strong {
+    color: var(--theme-signaling-warning);
+}
+
+.main-tools-category-review .framed-section-attention .flat-lists ul li strong {
+    color: var(--theme-text-1);
+}
 
 .main-tools-category-review .related-categories {
     gap: var(--space3) var(--space4);

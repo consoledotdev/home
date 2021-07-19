@@ -1406,9 +1406,25 @@ body:not(.mobile) .console-control:hover:before {
     background: var(--theme-framed-section-default-bg);
 }
 
-.framed-section.framed-section-warning {
-    border: var(--theme-framed-section-warning-border);
-    background: var(--theme-framed-section-warning-bg);
+.framed-section.framed-section-attention {
+    border: var(--theme-framed-section-attention-border);
+    background: var(--theme-framed-section-attention-bg);
+}
+
+.framed-section.framed-section-attention > .title {
+    color: var(--theme-framed-section-attention-title);
+}
+
+.framed-section.framed-section-attention > .title .icon-fill {
+    fill: var(--theme-framed-section-attention-title);
+}
+
+.framed-section.framed-section-attention > .title .icon-stroke {
+    stroke: var(--theme-framed-section-attention-title);
+}
+
+.framed-section.framed-section-attention > p {
+    color: var(--theme-framed-section-attention-text);
 }
 
 .framed-section-item {
@@ -1427,8 +1443,8 @@ body:not(.mobile) .console-control:hover:before {
     border-top: var(--theme-framed-section-default-item-border);
 }
 
-.framed-section.framed-section-warning .framed-section-item {
-    border-top: var(--theme-framed-section-warning-item-border);
+.framed-section.framed-section-attention .framed-section-item {
+    border-top: var(--theme-framed-section-attention-item-border);
 }
 
 .framed-section-item .title.title-3 {
@@ -1437,6 +1453,20 @@ body:not(.mobile) .console-control:hover:before {
 
 .framed-section-item p {
     font-size: var(--t-size-1);
+}
+
+.framed-section-item.flat-lists ul {
+    padding: 0;
+}
+
+.framed-section-item.flat-lists ul li {
+    text-indent: 0;
+    padding-left: 0;
+    color: var(--theme-text-2);
+}
+
+.framed-section-item.flat-lists ul li:before {
+    content: none;
 }
 
 /* Console Score

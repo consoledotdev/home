@@ -123,9 +123,11 @@
     --theme-framed-section-default-border: 1px solid var(--c-grey-06-blacks-neutral);
     --theme-framed-section-default-item-border: 1px solid var(--c-grey-07);
     --theme-framed-section-default-bg: #17171A;
-    --theme-framed-section-warning-border: 1px solid #735E2E;
-    --theme-framed-section-warning-item-border: 1px solid #2D271A;
-    --theme-framed-section-warning-bg: #161514;
+    --theme-framed-section-attention-border: 1px solid #735E2E;
+    --theme-framed-section-attention-item-border: 1px solid #2D271A;
+    --theme-framed-section-attention-bg: #161514;
+    --theme-framed-section-attention-title: #ffcc55;
+    --theme-framed-section-attention-text: #FFE5A8;
 
     --theme-score-background: var(--c-grey-07);
     --theme-score-foreground: var(--c-white-00-absolute);

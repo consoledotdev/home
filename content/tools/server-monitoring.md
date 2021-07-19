@@ -113,10 +113,10 @@ where it starts.
 Console is proud to be editorially independent. Learn about
 [our selection criteria and editorial policy](/about/#selection-criteria).
 
-{{< framed-section-open classes="framed-section-warning" >}}
+{{< framed-section-open classes="framed-section-attention" >}}
 
-{{< rich-title-3 icon="broadcast" id="interplanetary-networking" >}}
-Requirements {{</ rich-title-3 >}}
+{{< rich-title-3 icon="checklist" id="requirements" >}} Requirements
+{{</ rich-title-3 >}}
 
 Deciding whether you want your monitoring to be a hosted SaaS product or
 self-hosted on premises is the key decision (see each section, below). Once you
@@ -153,7 +153,7 @@ if you can’t visualize it.
 
 {{< close-div >}}
 
-{{< framed-section-item-open >}}
+{{< framed-section-item-open classes="flat-lists" >}}
 
 #### Alerts
 
@@ -229,9 +229,10 @@ appropriate - most tools are one or the other.
 
 What are the pros and cons of hosted SaaS monitoring?
 
-{{< framed-section-item-open >}}
+{{< framed-section-item-open classes="flat-lists pros-cons pros" >}}
 
-##### Pros
+{{< rich-title-5 icon="checkmark" id="pros-hosted" >}} Pros
+{{</ rich-title-5 >}}
 
 - **Let someone else deal with it.** Is monitoring part of your core business?
   If not, investing in differentiation is a better use of time and money. Let
@@ -254,9 +255,9 @@ What are the pros and cons of hosted SaaS monitoring?
 
 {{< close-div >}}
 
-{{< framed-section-item-open >}}
+{{< framed-section-item-open classes="flat-lists pros-cons cons" >}}
 
-##### Cons
+{{< rich-title-5 icon="minus" id="cons-hosted" >}} Cons {{</ rich-title-5 >}}
 
 - **Expensive licensing.** If you are operating at large scale, you probably
   have hundreds or thousands of servers, millions of metrics, and many TBs of
@@ -304,9 +305,9 @@ from $15-27/server/month depending on features and monthly vs annual commitment.
 
 {{< close-div >}}
 
-{{< framed-section-open classes="framed-section-warning" >}}
+{{< framed-section-open classes="framed-section-attention" >}}
 
-##### Key features
+{{< rich-title-5 icon="checklist" >}}Key features {{</ rich-title-5 >}}
 
 {{< framed-section-item-open >}}
 
@@ -434,9 +435,9 @@ frequency.
 
 {{< close-div >}}
 
-{{< framed-section-open classes="framed-section-warning" >}}
+{{< framed-section-open classes="framed-section-attention" >}}
 
-##### Key features
+{{< rich-title-5 icon="checklist" >}}Key features {{</ rich-title-5 >}}
 
 {{< framed-section-item-open >}}
 
@@ -664,7 +665,10 @@ problem. Is this really a good use of your engineering team?
 
 What are the pros and cons of self-hosted on premises monitoring?
 
-##### Pros
+{{< framed-section-item-open classes="flat-lists pros-cons pros" >}}
+
+{{< rich-title-5 icon="checkmark" id="pros-self-hosted" >}} Pros
+{{</ rich-title-5 >}}
 
 - **You have complete control.** You can choose which software you prefer, how
   it is deployed and integrated, how long you keep data for and where that data
@@ -686,7 +690,12 @@ What are the pros and cons of self-hosted on premises monitoring?
   although there are still some legacy on-premises enterprise monitoring
   products.
 
-##### Cons
+{{< close-div >}}
+
+{{< framed-section-item-open classes="flat-lists pros-cons cons" >}}
+
+{{< rich-title-5 icon="minus" id="cons-self-hosted" >}} Cons
+{{</ rich-title-5 >}}
 
 - **Monitoring your monitoring.** Deploying your own monitoring means you need
   to consider reliability, redundancy and backups. It’s not very useful If your
@@ -711,6 +720,8 @@ What are the pros and cons of self-hosted on premises monitoring?
 
 {{< close-div >}}
 
+{{< close-div >}}
+
 ### Best self-hosted monitoring tools
 
 {{< tools/category-review/card-open >}}
@@ -730,9 +741,9 @@ the primary data source.
 
 {{< tools/category-review/card-bottom-open >}}
 
-{{< framed-section-open classes="framed-section-warning" >}}
+{{< framed-section-open classes="framed-section-attention" >}}
 
-##### Key features
+{{< rich-title-5 icon="checklist" >}}Key features {{</ rich-title-5 >}}
 
 {{< framed-section-item-open >}}
 
@@ -900,9 +911,9 @@ monitoring agent from the same developers.
 
 {{< tools/category-review/card-bottom-open >}}
 
-{{< framed-section-open classes="framed-section-warning" >}}
+{{< framed-section-open classes="framed-section-attention" >}}
 
-##### Key features
+{{< rich-title-5 icon="checklist" >}}Key features {{</ rich-title-5 >}}
 
 {{< framed-section-item-open >}}
 

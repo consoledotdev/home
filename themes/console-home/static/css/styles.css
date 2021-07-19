@@ -1192,7 +1192,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
 .title-3.rich-title .icon {
     width: var(--space3);
     height: var(--space3);
-    margin-right: var(--space2);
+    margin-right: var(--space3);
 }
 
 .title.title-4 {
@@ -1219,9 +1219,9 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
 }
 
 .title-4.rich-title .icon {
-    width: var(--space2);
-    height: var(--space2);
-    margin-right: var(--space2);
+    width: var(--space3);
+    height: var(--space3);
+    margin-right: var(--space3);
 }
 
 .title.title-5 {
@@ -1247,9 +1247,9 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
 }
 
 .title-5.rich-title .icon {
-    width: var(--space2);
-    height: var(--space2);
-    margin-right: var(--space2);
+    width: var(--space3);
+    height: var(--space3);
+    margin-right: var(--space2_5);
 }
 
 .title.title-6 {
@@ -1273,9 +1273,9 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
 }
 
 .title-6.rich-title .icon {
-    width: var(--space2);
-    height: var(--space2);
-    margin-right: var(--space2);
+    width: var(--space3);
+    height: var(--space3);
+    margin-right: var(--space2_5);
 }
 
 /* Text
