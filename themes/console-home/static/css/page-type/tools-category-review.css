@@ -74,8 +74,13 @@ body:not(.page-tools-category-review):after {
     margin-bottom: calc(var(--space5) + var(--space4));
 }
 
-.main-tools-category-review .framed-section:not(:first-child) {
+.main-tools-category-review .framed-section {
     margin-top: var(--space4_5);
+}
+
+.main-tools-category-review .nav-wrapper > .framed-section {
+    margin-left: calc(var(--space4) * -1);
+    margin-right: calc(var(--space4) * -1);
 }
 
 .main-tools-category-review .author-box {
@@ -129,7 +134,7 @@ body:not(.page-tools-category-review):after {
 }
 
 .tools-category-review-tool-card {
-    margin: var(--space4_5) 0 var(--space4_5);
+    margin: var(--space4_5) calc(var(--space4) * -1) var(--space4_5);
     padding: 0;
 }
 
@@ -179,6 +184,15 @@ body:not(.page-tools-category-review):after {
 
 .tools-category-review-tool-card .framed-section {
     padding-top: var(--space3);
+    margin-top: var(--space4);
+}
+
+.tools-category-review-tool-card .framed-section:first-child {
+    margin-top: 0;
+}
+
+.tools-category-review-tool-card .framed-section-attention {
+    background: var(--theme-framed-section-attention-bg-2);
 }
 
 .page-tools-category-review .framed-section > .title {

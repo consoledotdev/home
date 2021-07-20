@@ -120,14 +120,16 @@
     --theme-signaling-warning: var(--c-signaling-warning-02);
     --theme-signaling-error:: var(--c-signaling-error-02);
 
-    --theme-framed-section-default-border: 1px solid var(--c-grey-06-blacks-neutral);
-    --theme-framed-section-default-item-border: 1px solid var(--c-grey-07);
-    --theme-framed-section-default-bg: #17171A;
-    --theme-framed-section-attention-border: 1px solid #735E2E;
-    --theme-framed-section-attention-item-border: 1px solid #2D271A;
-    --theme-framed-section-attention-bg: #161514;
-    --theme-framed-section-attention-title: #ffcc55;
-    --theme-framed-section-attention-text: #FFE5A8;
+    --theme-framed-section-default-border: 1px solid var(--c-grey-03);
+    --theme-framed-section-default-item-border: 1px solid var(--c-grey-02);
+    --theme-framed-section-default-bg: rgba(111, 112, 120, 0.03);
+    --theme-framed-section-attention-border: 1px solid var(--c-yellow-05);
+    --theme-framed-section-attention-item-border: 1px solid rgba(255, 204, 85, 0.6);
+    --theme-framed-section-attention-bg: rgba(255, 204, 85, 0.07);
+    --theme-framed-section-attention-bg-2: rgba(255, 204, 85, 0.05);
+    --theme-framed-section-attention-bg-blend: normal;
+    --theme-framed-section-attention-title: var(--c-yellow-06);
+    --theme-framed-section-attention-text: var(--c-yellow-08);
 
     --theme-score-background: var(--c-grey-03);
     --theme-score-foreground: var(--c-black-02-main);

@@ -122,12 +122,14 @@
 
     --theme-framed-section-default-border: 1px solid var(--c-grey-06-blacks-neutral);
     --theme-framed-section-default-item-border: 1px solid var(--c-grey-07);
-    --theme-framed-section-default-bg: #17171A;
-    --theme-framed-section-attention-border: 1px solid #735E2E;
-    --theme-framed-section-attention-item-border: 1px solid #2D271A;
-    --theme-framed-section-attention-bg: #161514;
-    --theme-framed-section-attention-title: #ffcc55;
-    --theme-framed-section-attention-text: #FFE5A8;
+    --theme-framed-section-default-bg: rgba(111, 112, 120, 0.05);
+    --theme-framed-section-attention-border: 1px solid rgba(255, 204, 85, 0.4);
+    --theme-framed-section-attention-item-border: 1px solid rgba(255, 204, 85, 0.1);
+    --theme-framed-section-attention-bg: linear-gradient(90deg, rgba(255, 204, 85, 0.15) 0%, rgba(255, 204, 85, 0.15) 100%), var(--theme-content-bg-3);
+    --theme-framed-section-attention-bg-2: linear-gradient(90deg, rgba(255, 204, 85, 1) 0%, rgba(255, 204, 85, 1) 100%), var(--theme-content-bg-2);
+    --theme-framed-section-attention-bg-blend: color;
+    --theme-framed-section-attention-title: var(--c-yellow-04-main);
+    --theme-framed-section-attention-text: var(--c-yellow-03);
 
     --theme-score-background: var(--c-grey-07);
     --theme-score-foreground: var(--c-white-00-absolute);
