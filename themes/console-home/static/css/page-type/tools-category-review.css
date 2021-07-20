@@ -406,7 +406,8 @@ body:not(.page-tools-category-review):after {
     }
 
     .tools-category-review-tool-card {
-        margin: var(--space4_5) 0 var(--space5);
+        margin-top: var(--space4_5)
+        margin-bottom: var(--space5)
     }
 
     .tools-category-review-tool-card .tool-card-top > p {
