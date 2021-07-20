@@ -195,6 +195,14 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
     background-color: var(--theme-content-bg-0);
 }
 
+.theme .tools-category-review-artwork.light {
+    display: initial;
+}
+
+.theme .tools-category-review-artwork.dark {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .theme .main-article .subscribe-cta {
         background: transparent;

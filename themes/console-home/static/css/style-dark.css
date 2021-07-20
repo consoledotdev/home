@@ -194,3 +194,11 @@
 .theme .logo-svg-animated-explode .prompt-normal {
     display: block;
 }
+
+.theme .tools-category-review-artwork.light {
+    display: none;
+}
+
+.theme .tools-category-review-artwork.dark {
+    display: initial;
+}

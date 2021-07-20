@@ -31,6 +31,25 @@ body:not(.page-tools-category-review):after {
     height: auto;
 }
 
+.main-tools-category-review > .main-tools-category-review-content {
+    max-width: 39%;
+}
+
+.tools-category-review-artwork {
+    position: absolute;
+    top: 50%;
+    left: calc(100% * 2.56);
+    width: 78vw;
+    transform: translate(-90%, -50%);
+    z-index: 0;
+    max-width: 1200px;
+}
+
+.main-tools-category-review > .main-tools-category-review-content > *:not(.tools-category-review-artwork) {
+    position: relative;
+    z-index: 2;
+}
+
 .main-tools-category-review-aside + .page-section {
     margin-top: 0;
 }
