@@ -291,6 +291,10 @@ body:not(.page-tools-category-review):after {
     margin-right: calc(var(--space2) + 2px);
 }
 
+.main-tools-category-review .main-tools-category-review-aside {
+    margin-top: 440px;
+}
+
 @media (max-width: 768px) {
     .main-tools-category-review {
         margin-top: calc(var(--space6) - var(--space4) + 48px);

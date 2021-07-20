@@ -2,7 +2,7 @@ let computeTOCPos = (() => {
     let style = {};
     let reachedBottom = false;
     let compute = function () {
-        let lastBlock = document.querySelector("#wrapper-9");
+        let lastBlock = document.querySelector("#wrapper-10");
         let handleIntersect = (intersections) => {
             intersections.forEach(function (i) {
                 if (i.isIntersecting) {
