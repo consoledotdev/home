@@ -4,20 +4,21 @@ titleCategory: "server monitoring"
 titleSuffix: "tools for engineers"
 date: 2021-07-12T16:08:27+02:00
 draft: true
-headerType: fixed
 summary:
   A review of the best server monitoring tools for developers and devops
   engineers.
+headerType: fixed
+hideLines: true
+hidePlanes: true
 type: tools
 layout: category-review
 isPage: tools
 isSubpage: server-monitoring
-category: devops
 customStyle: true
 pageType: tools-category-review
 customPageStyle: true
-hideLines: true
-hidePlanes: true
+category: devops
+subcategory: server-monitoring
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
