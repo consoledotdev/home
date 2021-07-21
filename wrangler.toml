@@ -10,7 +10,7 @@ route = "https://console.dev/*"
 
 [env.test]
 vars = { ENVIRONMENT = "test" }
-workers_dev = true
+route = "https://test.console.dev/*"
 
 [env.perftest]
 vars = { ENVIRONMENT = "test" }
