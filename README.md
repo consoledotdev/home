@@ -6,7 +6,7 @@ Sites](https://developers.cloudflare.com/workers/platform/sites).
 **Links**
 
 - Production website: <https://console.dev>
-- Test environment: <https://home-test.consoledev.workers.dev>
+- Test environment: <https://test.console.dev> (behind Cloudflare Access)
 - [Deploy
   action](https://github.com/consoledotdev/home/actions?query=workflow%3ADeploy)
 
@@ -115,7 +115,7 @@ hugo
 wrangler publish --env test
 ```
 
-Available at: <https://home-test.consoledev.workers.dev>
+Available at: <https://test.console.dev>
 
 ### Production
 
