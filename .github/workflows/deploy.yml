@@ -143,14 +143,14 @@ jobs:
             # If this is the automated build then deploy to prod
             # otherwise deploy to wherever is specified
             - name: Deploy to Cloudflare (cron)
-              uses: cloudflare/wrangler-action@v1
+              uses: cloudflare/wrangler-action@1.3.0
               if: github.event_name == 'schedule'
               with:
                   apiToken: ${{ secrets.CF_API_TOKEN }}
                   environment: production
 
             - name: Deploy to Cloudflare (environment input)
-              uses: cloudflare/wrangler-action@v1
+              uses: cloudflare/wrangler-action@1.3.0
               if: github.event_name != 'schedule'
               with:
                   apiToken: ${{ secrets.CF_API_TOKEN }}
