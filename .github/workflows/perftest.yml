@@ -18,8 +18,7 @@ jobs:
               uses: cloudflare/wrangler-action@1.3.0
               with:
                   apiToken: ${{ secrets.CF_API_TOKEN }}
-                  environment: perftest
-                  wranglerVersion: "1.15.0"
+                  environment: test
 
             # Allows Cloudflare deploy to propagate
             - name: Sleep for 10 seconds
@@ -30,13 +29,6 @@ jobs:
               uses: k6io/action@v0.2.0
               with:
                   filename: tests/home.js
-
-            - name: k6 test (betas)
-              uses: k6io/action@v0.2.0
-              with:
-                  filename: tests/betas.js
-
-            - name: k6 test (tools)
-              uses: k6io/action@v0.2.0
-              with:
-                  filename: tests/tools.js
+              env:
+                  CF_CLIENT_ID: ${{ secrets.CF_CLIENT_ID }}
+                  CF_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET }}
