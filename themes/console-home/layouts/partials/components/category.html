@@ -1,4 +1,6 @@
-<div class="categories">
-    {{ partial (print "icons/" (replace (lower .categoryData.category ) " " "-") ".html") }}
-    <span class="category">{{ .categoryData.subcategory }}</span>
+<div class="categories{{ with .clickable }} clickable{{ end }}">
+    {{ if .clickable }}<a href="/tools/{{ lower .categoryData.subcategory.name }}">{{ end }}
+        {{ partial (print "icons/" (replace (lower .categoryData.category ) " " "-") ".html") }}
+        <span class="category">{{ .categoryData.subcategory.label }}</span>
+    {{ with .clickable }}</a>{{ end }}
 </div>

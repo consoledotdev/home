@@ -808,7 +808,6 @@ body:not(.mobile) .console-control:hover:before {
    ================================================================================================================ */
 .categories,
 .tags {
-    color: var(--c-fuchsia-05-main);
     font-size: var(--t-size-3);
     display: flex;
     flex-flow: row nowrap;
@@ -818,14 +817,13 @@ body:not(.mobile) .console-control:hover:before {
 }
 
 .categories {
-    color: var(--theme-categories-color);
+    color: var(--theme-categories-color-idle);
 }
 
 .tags {
     color: var(--theme-tag-color);
 }
 
-.categories > *:not(:first-of-type),
 .tags > *:not(:first-of-type) {
     margin-left: var(--space1);
     display: inline-block;
@@ -841,16 +839,16 @@ body:not(.mobile) .console-control:hover:before {
 }
 
 .categories .icon-fill {
-    fill: var(--theme-categories-color);
+    fill: var(--theme-categories-color-idle);
 }
 
 .categories .icon-stroke {
-    stroke: var(--theme-categories-color);
+    stroke: var(--theme-categories-color-idle);
 }
 
 .categories .icon-fill-stroke {
-    fill: var(--theme-categories-color);
-    stroke: var(--theme-categories-color);
+    fill: var(--theme-categories-color-idle);
+    stroke: var(--theme-categories-color-idle);
 }
 
 .tags .icon-fill {
@@ -869,6 +867,72 @@ body:not(.mobile) .console-control:hover:before {
 .categories .category,
 .tags .tag {
     white-space: normal;
+}
+
+.categories.clickable a:link,
+.categories.clickable a:visited {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    line-height: var(--t-lH4);
+    white-space: nowrap;
+    color: var(--theme-categories-color-idle);
+    text-decoration: none;
+}
+
+.categories.clickable a:hover,
+.categories.clickable a:focus {
+    color: var(--theme-categories-color-hover);
+    outline: none;
+}
+
+.categories.clickable a:active {
+    color: var(--theme-categories-color-active);
+}
+
+.categories.clickable a:link .icon-fill,
+.categories.clickable a:visited .icon-fill {
+    fill: var(--theme-categories-color-idle);
+}
+
+.categories.clickable a:hover .icon-fill,
+.categories.clickable a:focus .icon-fill {
+    fill: var(--theme-categories-color-hover);
+}
+
+.categories.clickable a:active .icon-fill {
+    fill: var(--theme-categories-color-active);
+}
+
+.categories.clickable a:link .icon-stroke,
+.categories.clickable a:visited .icon-stroke {
+    stroke: var(--theme-categories-color-idle);
+}
+
+.categories.clickable a:hover .icon-stroke,
+.categories.clickable a:focus .icon-stroke {
+    stroke: var(--theme-categories-color-hover);
+}
+
+.categories.clickable a:active .icon-stroke {
+    stroke: var(--theme-categories-color-active);
+}
+
+.categories.clickable a:link .icon-fill-stroke,
+.categories.clickable a:visited .icon-fill-stroke {
+    fill: var(--theme-categories-color-idle);
+    stroke: var(--theme-categories-color-idle);
+}
+
+.categories.clickable a:hover .icon-fill-stroke,
+.categories.clickable a:focus .icon-fill-stroke {
+    fill: var(--theme-categories-color-hover);
+    stroke: var(--theme-categories-color-hover);
+}
+
+.categories.clickable a:active .icon-fill-stroke {
+    fill: var(--theme-categories-color-active);
+    stroke: var(--theme-categories-color-active);
 }
 
 /* Separator

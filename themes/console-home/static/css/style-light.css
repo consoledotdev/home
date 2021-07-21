@@ -113,7 +113,9 @@
     --theme-badge-text: var(--c-white-00-absolute);
     --theme-badge-bg: var(--c-fuchsia-05-main);
 
-    --theme-categories-color: var(--c-fuchsia-06);
+    --theme-categories-color-idle: var(--c-fuchsia-06);
+    --theme-categories-color-hover: var(--c-fuchsia-05-main);
+    --theme-categories-color-active: var(--c-fuchsia-07);
     --theme-tag-color: var(--c-fuchsia-05-main);
 
     --theme-signaling-positive: var(--c-signaling-positive-02);

@@ -30,39 +30,73 @@ authorBio:
   metrics from millions of servers.
 relatedCategories:
   - category: devops
-    subcategory: Log management
+    subcategory:
+      label: Log management
+      name: log-management
   - category: devops
-    subcategory: Containers
+    subcategory:
+      label: Containers
+      name: containers
   - category: devops
-    subcategory: Network monitoring
+    subcategory:
+      label: Network monitoring
+      name: network-monitoring
   - category: devops
-    subcategory: Website monitoring
+    subcategory:
+      label: Website monitoring
+      name: website-monitoring
   - category: developer-tools
-    subcategory: App distribution
+    subcategory:
+      label: App distribution
+      name: app-distribution
   - category: developer-tools
-    subcategory: Backend framework
+    subcategory:
+      label: Backend framework
+      name: backend-framework
   - category: developer-tools
-    subcategory: Browser testing
+    subcategory:
+      label: Browser testing
+      name: browser-testing
   - category: developer-tools
-    subcategory: Frontend framework
+    subcategory:
+      label: Frontend framework
+      name: frontend-framework
   - category: developer-tools
-    subcategory: Package managers
+    subcategory:
+      label: Package managers
+      name: package-managers
   - category: api
-    subcategory: API
+    subcategory:
+      label: API
+      name: api
   - category: cloud
-    subcategory: Storage
+    subcategory:
+      label: Storage
+      name: storage
   - category: cloud
-    subcategory: Serverless
+    subcategory:
+      label: Serverless
+      name: serverless
   - category: cloud
-    subcategory: Compute
+    subcategory:
+      label: Compute
+      name: compute
   - category: database
-    subcategory: Time series database
+    subcategory:
+      label: Time series database
+      name: time-series-database
   - category: database
-    subcategory: Graph database
+    subcategory:
+      label: Graph database
+      name: graph-database
   - category: security
-    subcategory: Authentication
+    subcategory:
+      label: Authentication
+      name: authentication
   - category: security
-    subcategory: Vulnerability management
+    subcategory:
+      label: Vulnerability management
+      name: vulnerability-management
 ---
 
 ### tldr; the best monitoring tools

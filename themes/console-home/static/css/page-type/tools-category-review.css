@@ -55,7 +55,7 @@ body:not(.page-tools-category-review):after {
 }
 
 .page-tools-category-review .title-1 span {
-    color: var(--theme-categories-color);
+    color: var(--theme-categories-color-idle);
 }
 
 .page-tools-category-review .title.title-2:not(:first-child) {
