@@ -1,31 +1,49 @@
 <div class="tool-card-heading">
     {{- $favicon := .Get "thumbnail" -}}
     {{- $faviconStatic := print "static/" $favicon -}}
-    <div class="tool-card-thumbnail aspect-ratio aspect-ratio-1-1">
-        {{- if $favicon -}}
-            {{- if (fileExists $faviconStatic) -}}
-                <img class="image" src="{{ $favicon }}" alt="{{ .Get "name" }} Logo" />
+    <div class="left">
+        <div class="tool-card-thumbnail aspect-ratio aspect-ratio-1-1">
+            {{- if $favicon -}}
+                {{- if (fileExists $faviconStatic) -}}
+                    <img class="image" src="{{ $favicon }}" alt="{{ .Get "name" }} Logo" />
+                {{- else -}}
+                    <div class="card-thumbnail-generic">{{ partial (print "icons/" .Page.Params.category ".html") }}</div>
+                {{- end -}}
             {{- else -}}
                 <div class="card-thumbnail-generic">{{ partial (print "icons/" .Page.Params.category ".html") }}</div>
             {{- end -}}
-        {{- else -}}
-            <div class="card-thumbnail-generic">{{ partial (print "icons/" .Page.Params.category ".html") }}</div>
-        {{- end -}}
-    </div>
-    <h4 class="title title-3">{{ .Get "name" }}</h4>
-    <span class="console-score">
-        {{if not (eq (.Get "score") "none" )}}
-            {{ .Get "score" }}/5
-            <span class="score-bar">
-                <meter value="{{ .Get "score" }}" min="0" max="5" title="{{ .Get "score" }} out of 5"></meter>
-                <span class="score-bar-foreground" style="width: {{ mul (div (float (.Get "score")) 5.0) 100 }}%"></span>
-                {{ partial "components/score-mask.html" }}</a>
+        </div>
+        <div class="title-score">
+            <h4 class="title title-3">{{ .Get "name" }}</h4>
+            <span class="console-score">
+                {{if not (eq (.Get "score") "none" )}}
+                    {{ .Get "score" }}/5
+                    <span class="score-bar">
+                        <meter value="{{ .Get "score" }}" min="0" max="5" title="{{ .Get "score" }} out of 5"></meter>
+                        <span class="score-bar-foreground" style="width: {{ mul (div (float (.Get "score")) 5.0) 100 }}%"></span>
+                        {{ partial "components/score-mask.html" }}</a>
+                    </span>
+                {{ else}}
+                    No rating
+                {{ end }}
             </span>
-        {{ else}}
-            No rating
-        {{ end }}
-    </span>
-    <a class="console-button console-button-small icon-right" href="{{ .Get "url" }}" title="{{ .Get "url" }}" target="_blank"
-        rel="noopener"><span>Visit</span>
-        {{ partial "icons/external-link.html" }}</a>
+        </div>
+    </div>
+    <div class="right">
+        <span class="console-score">
+            {{if not (eq (.Get "score") "none" )}}
+                {{ .Get "score" }}/5
+                <span class="score-bar">
+                    <meter value="{{ .Get "score" }}" min="0" max="5" title="{{ .Get "score" }} out of 5"></meter>
+                    <span class="score-bar-foreground" style="width: {{ mul (div (float (.Get "score")) 5.0) 100 }}%"></span>
+                    {{ partial "components/score-mask.html" }}</a>
+                </span>
+            {{ else}}
+                No rating
+            {{ end }}
+        </span>
+        <a class="console-button console-button-small icon-right" href="{{ .Get "url" }}" title="{{ .Get "url" }}" target="_blank"
+            rel="noopener"><span>Visit</span>
+            {{ partial "icons/external-link.html" }}</a>
+    </div>
 </div>
