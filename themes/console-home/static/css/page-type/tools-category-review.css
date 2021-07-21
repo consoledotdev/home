@@ -467,7 +467,7 @@ body:not(.page-tools-category-review):after {
         font-size: var(--t-size0);
     }
 
-    .main-tools-category-review ul li {
+    .main-tools-category-review-content ul li {
         font-size: var(--t-size0);
     }
 

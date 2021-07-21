@@ -1844,7 +1844,7 @@ select.console-select::-ms-expand {
         font-size: var(--t-size0);
     }
 
-    .main-feature-article ul li {
+    .main-feature-article-content ul li {
         font-size: var(--t-size0);
     }
 

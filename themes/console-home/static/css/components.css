@@ -1339,7 +1339,7 @@ body:not(.mobile) .console-control:hover:before {
     color: var(--theme-text-1);
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1280px) {
     .toc-item {
         font-size: var(--t-size-1);
     }
