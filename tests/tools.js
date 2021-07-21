@@ -1,7 +1,7 @@
-// ./test.js
 import http from "k6/http";
 import { check, sleep } from "k6";
 import { Rate } from "k6/metrics";
+import { parseHTML } from 'k6/html';
 
 export let errorRate = new Rate("errors");
 export const options = {
@@ -13,9 +13,23 @@ export const options = {
     },
 };
 export default function () {
-    const res = http.get("https://home-perftest.consoledev.workers.dev/tools/");
+    // Use service tokens to access the test URL behind Cloudflare
+    // https://developers.cloudflare.com/cloudflare-one/identity/service-auth/service-tokens
+    const res = http.get("https://test.console.dev/tools/", {
+        headers: {
+            "CF-Access-Client-Id": `${__ENV.CF_CLIENT_ID}`,
+            "CF-Access-Client-Secret": `${__ENV.CF_CLIENT_SECRET}`
+        }
+    });
+
+    // Basic HTML parsing
+    // https://k6.io/docs/examples/parse-html/
+    const doc = parseHTML(res.body); // equivalent to res.html()
+    const pageTitle = doc.find("head title").text();
+
     const result = check(res, {
         "status is 200": (r) => r.status == 200,
+        "page title is correct": (r) => pageTitle == "Developer tools reviews by Console",
     });
 
     errorRate.add(!result);
