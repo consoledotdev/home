@@ -49,17 +49,19 @@ code, you only need Hugo:
 
 ### Frontmatter variables
 
-- `pageType`: `feature`, `article` or `feature-article` - Define the page type
-  as feature page (eg: Beta List), article page (eg: About, Interview) or long
-  form article (eg: Mars Internet).
 - `headerType`: `fixed` or `false` - When fixed the header will show on top on
     scroll.
 - `hideLines`: `true` or `false` - Hides the finer lines from the page.
 - `hidePlanes`: `true` or `false` - Hides the planes grid from the page.
-- `isPage`: a string defining the fragment used for the body css class,
+- `isPage`: a string defining the page fragment used for the body css class,
+  custom stylesheet definition, menu item activation and assets location.
+- `isSubpage`: a string defining the subpage fragment used for the body css class,
   custom stylesheet definition, menu item activation and assets location.
 - `customStyle`: `true` or `false` - Will expect and load a custom style based
   on the `isPage` string.
+- `pageType`: `feature`, `article` or `feature-article` - Define the page type
+  as feature page (eg: Beta List), article page (eg: About, Interview) or long
+  form article (eg: Mars Internet).
 - `customPageStyle`: `true` or `false` - Will expect and load a custom style
   based on the `pageType` string.
 
