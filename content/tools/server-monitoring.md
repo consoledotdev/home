@@ -1,5 +1,7 @@
 ---
-title: "The best server monitoring tools for engineers"
+titlePrefix: "The best"
+titleCategory: "server monitoring"
+titleSuffix: "tools for engineers"
 date: 2021-07-12T16:08:27+02:00
 draft: true
 headerType: fixed
