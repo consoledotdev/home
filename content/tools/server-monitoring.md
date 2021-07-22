@@ -2,7 +2,7 @@
 titlePrefix: "The best"
 titleCategory: "server monitoring"
 titleSuffix: "tools for engineers"
-date: 2021-07-12T16:08:27+02:00
+date: 2021-07-22T12:00:00+00:00
 draft: true
 summary:
   A review of the best server monitoring tools for developers and devops
@@ -22,12 +22,15 @@ subcategory: server-monitoring
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
+authorBioBrief:
+  From 2009-2018, David was CEO at Server Density, a SaaS infrastructure
+  monitoring startup. He is now co-founder at Console.
 authorBio:
   is co-founder of Console. He is also a researcher in sustainable computing at
   Uptime Institute and affiliated with Imperial College London. From 2009-2018,
-  David was co-founder at Server Density, a SaaS infrastructure monitoring
-  startup used by hundreds of customers to collect billions of time series
-  metrics from millions of servers.
+  David was CEO at Server Density, a SaaS infrastructure monitoring startup used
+  by hundreds of customers to collect billions of time series metrics from
+  millions of servers.
 relatedCategories:
   - category: devops
     subcategory:
