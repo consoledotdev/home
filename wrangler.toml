@@ -10,11 +10,7 @@ route = "https://console.dev/*"
 
 [env.test]
 vars = { ENVIRONMENT = "test" }
-workers_dev = true
-
-[env.perftest]
-vars = { ENVIRONMENT = "test" }
-workers_dev = true
+route = "https://test.console.dev/*"
 
 [site]
 bucket = "./public"
