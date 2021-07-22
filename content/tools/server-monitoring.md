@@ -109,7 +109,7 @@ The best hosted (SaaS) monitoring tools:
 
 {{< tools/category-review/tldr-list-open >}}
 {{< tools/category-review/miniature-card name="Datadog" thumbnail="/img/favicons/www.datadoghq.com.png" url="https://www.datadoghq.com/" anchor="datadog" score="5" >}}
-{{< tools/category-review/miniature-card name="New Relic" thumbnail="/img/favicons/newrelic.com.png" url="https://newrelic.com/" anchor="newrelic" score="4.5" >}}
+{{< tools/category-review/miniature-card name="New Relic" thumbnail="/img/favicons/newrelic.com.png" url="https://newrelic.com/" anchor="new-relic" score="4.5" >}}
 {{< close-ul >}}
 
 The best self-hosted, on premises monitoring tool:
