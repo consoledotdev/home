@@ -1,4 +1,5 @@
 ---
+title: "The best server monitoring tools for engineers"
 titlePrefix: "The best"
 titleCategory: "server monitoring"
 titleSuffix: "tools for engineers"
@@ -111,7 +112,7 @@ The best hosted (SaaS) monitoring tools:
 {{< tools/category-review/miniature-card name="New Relic" thumbnail="/img/favicons/newrelic.com.png" url="https://newrelic.com/" anchor="newrelic" score="4.5" >}}
 {{< close-ul >}}
 
-The best self-hosted, on premises monitoring tools:
+The best self-hosted, on premises monitoring tool:
 
 {{< tools/category-review/tldr-list-open >}}
 {{< tools/category-review/miniature-card name="Grafana + Prometheus" thumbnail="/img/favicons/grafana.com.png" url="https://grafana.com/" anchor="grafana-prometheus" score="4.3" >}}
