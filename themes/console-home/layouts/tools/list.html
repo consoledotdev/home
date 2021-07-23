@@ -3,7 +3,7 @@
 	{{ $CTADescription := "Our free weekly newsletter picks out the 2-3 most interesting tools. " }}
 	<section class="page-section page-section-feature-root">
 		<h2 class="title title-1">Developer tools reviews</h2>
-		<p class="description">Console reviews and features the best tools for developers.</p>
+		<p class="description">Each week Console reviews the best tools for developers.</p>
         <div class="page-meta">
         {{- $reviewedChecked := false -}}
         {{- range first 1 $.Site.Data.toolsreviewed.items -}}{{- $reviewedChecked = time (index . "Scheduled for") -}}{{- end -}}
