@@ -138,12 +138,12 @@ jobs:
                   retention-days: 1
 
             # No drafts in prod
-            - name: "hugo build"
+            - name: "hugo build (no drafts)"
               uses: jakejarvis/hugo-build-action@v0.85.0
               if: github.event.inputs.environment == 'production'
 
             # Build drafts in the test environment
-            - name: "hugo build"
+            - name: "hugo build (inc drafts)"
               uses: jakejarvis/hugo-build-action@v0.85.0
               if: github.event.inputs.environment == 'test'
               with:
