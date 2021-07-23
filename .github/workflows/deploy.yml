@@ -137,8 +137,17 @@ jobs:
                   path: data/toolsreviewed.json
                   retention-days: 1
 
+            # No drafts in prod
             - name: "hugo build"
               uses: jakejarvis/hugo-build-action@v0.85.0
+              if: github.event.inputs.environment == 'production'
+
+            # Build drafts in the test environment
+            - name: "hugo build"
+              uses: jakejarvis/hugo-build-action@v0.85.0
+              if: github.event.inputs.environment == 'test'
+              with:
+                  args: --buildDrafts
 
             # If this is the automated build then deploy to prod
             # otherwise deploy to wherever is specified
