@@ -10,7 +10,7 @@
         {{- with .Params.isSubpage}} page-{{ . }}
         {{- else }}
             {{- with .Params.isPage}} page-{{ . }}{{- end }}
-        {{ end }}">
+        {{- end -}}">
             {{ partial "header.html" (dict "context" . "headerType" .Params.headerType "hidePlanes" .Params.hidePlanes "hideLines" .Params.hideLines ) }}
             <main class="main
                 {{- if ne .Params.pageType "home" -}}
