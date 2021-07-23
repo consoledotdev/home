@@ -1,8 +1,8 @@
 ---
-title: "The best server monitoring tools for engineers"
+title: "The best server monitoring tools for developers"
 titlePrefix: "The best"
 titleCategory: "server monitoring"
-titleSuffix: "tools for engineers"
+titleSuffix: "tools for developers"
 date: 2021-07-22T12:00:00+00:00
 draft: true
 summary:
