@@ -261,8 +261,8 @@ We reviewed 6 hosted SaaS monitoring tools. The best two are:
 #### Do you need Hosted SaaS monitoring?
 
 Back in the old days there was no choice - you had to run your own monitoring on
-premises, either using an open source product like Nagios, Zabbix or Munin, or
-by paying to license a big, enterprise monitoring solution.
+premises, either using an open source product like Nagios and Zabbix, or by
+paying to license a big, enterprise monitoring solution.
 
 Today, there is a much greater choice between whether you self-host your
 monitoring or you pay to use a hosted SaaS cloud monitoring system. Not only is
