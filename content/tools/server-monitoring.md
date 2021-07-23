@@ -193,7 +193,7 @@ integrations, but do they work well?
 #### Graphs
 
 Modern monitoring tools must graph and visualize the monitoring data. Simple
-graphs may be all that is needed, but the best server monitoring tools have
+graphs may be all that is needed, but the best server monitoring services have
 sophisticated graphing capabilities such as filtering, different types of
 graphs, percentile breakdowns, trend analysis, annotations, etc. Graphs should
 be customizable and load quickly. Collecting lots of monitoring data is no good
@@ -207,7 +207,7 @@ if you can't visualize it.
 
 Monitoring has two purposes - helping you debug problems that have already
 occurred, and alerting you when something is going wrong (ideally before it
-causes an outage). Alerts are a key feature in all server monitoring tools.
+causes an outage). Alerts are a key feature in all server monitoring systems.
 
 Alerting is broken down into two parts:
 
@@ -242,8 +242,8 @@ You should expect to find monitoring vendors offering other products like
 application performance monitoring (APM), log search, security monitoring, real
 user monitoring (RUM), profiling and tracing.
 
-In this review we are only reviewing server monitoring. We'll comment on
-complementary features if they are present, but other monitoring products are
+In this review we are only reviewing server monitoring products. We'll comment
+on complementary features if they are present, but other monitoring products are
 out of scope.
 
 {{< close-div >}}
@@ -317,7 +317,7 @@ What are the pros and cons of hosted SaaS monitoring?
   scale you may be able to set up a peering or interconnection relationship but
   most of the time your monitoring traffic will egress over the public internet.
   This can become expensive.
-- **Data protection.** The best SaaS server monitoring tools have lots of
+- **Data protection.** The best SaaS server monitoring services have lots of
   certifications to ensure compliance with data protection regulations, but
   there is still a nervousness about sending sensitive monitoring data to third
   parties. In reality, most monitoring data is numerical and lacks the context
@@ -613,8 +613,8 @@ it?
 
 #### Also considered
 
-These are the other hosted SaaS server monitoring tools we tested. They are not
-as highly rated as the two options above, but may be worth considering.
+These are the other hosted SaaS server monitoring services we tested. They are
+not as highly rated as the two options above, but may be worth considering.
 
 {{< tools/category-review/card-heading name="AppOptics" thumbnail="/img/favicons/www.appoptics.com.png" url="https://www.appoptics.com" score="2" >}}
 
@@ -707,7 +707,7 @@ a future Console review of tracing and observability tools.
 
 ### Self-hosted server monitoring tools
 
-We reviewed 12 self-hosted server monitoring tools. The best option is:
+We reviewed 12 self-hosted server monitoring products. The best option is:
 [Grafana + Prometheus](#grafana-prometheus) but we also liked
 [InfluxDB + Telegraf](#influxdb-telegraf).
 
@@ -872,10 +872,10 @@ OpsGenie and webhooks.
 
 {{< tools/category-review/card-like-open >}}
 
-Grafana + Prometheus are the best open source server monitoring tools. These two
-tools excel at their particular specialisms. Grafana is the most powerful
-graphing and metric visualization tool available, and Prometheus is the best
-time series backend.
+Grafana + Prometheus are the best free and open source server monitoring tools.
+These two tools excel at their particular specialisms. Grafana is the most
+powerful graphing and metric visualization tool available, and Prometheus is the
+best time series backend.
 
 The power of these tools is in their flexibility and customizability. Both have
 an active developer community which means that you are likely to be able to
