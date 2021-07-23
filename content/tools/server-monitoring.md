@@ -175,7 +175,8 @@ have chosen, there are 3 requirements that we will assess for each review.
 #### Integrations / plugins
 
 Every monitoring tool should collect basic system stats like CPU usage, process
-lists and disk space, usually via a monitoring agent. However, monitoring is
+lists and disk space, usually via a monitoring agent that works on Linux,
+Windows, and other platforms or operating systems. However, monitoring is
 useless without integration into everything in your tech stack. Can it monitor
 your database, web servers, load balancers, network, and the application itself?
 The list of integrations is the most important factor in picking a server
@@ -256,8 +257,8 @@ out of scope.
 
 ### Hosted SaaS server monitoring tools
 
-We reviewed 6 hosted SaaS monitoring tools. The best two are:
-[Datadog](#datadog) and [New Relic](#new-relic).
+We reviewed 6 hosted SaaS monitoring tools. The best are: [Datadog](#datadog)
+and [New Relic](#new-relic).
 
 {{< framed-section-open classes="framed-section-default" >}}
 
@@ -310,8 +311,8 @@ What are the pros and cons of hosted SaaS monitoring?
 
 - **Expensive licensing.** If you are operating at large scale, you probably
   have hundreds or thousands of servers, millions of metrics, and many TBs of
-  logs. This makes SaaS monitoring very expensive and can be difficult to
-  predict.
+  logs. This makes SaaS monitoring very expensive because it is not free and
+  open source, so the cost can be difficult to predict.
 - **High network traffic egress.** Hosted SaaS monitoring is outside your
   network so you have to pay for all the outbound network traffic. At large
   scale you may be able to set up a peering or interconnection relationship but
@@ -369,7 +370,8 @@ Datadog has
 [more than 450 integrations](https://www.datadoghq.com/product/platform/integrations/#all)
 covering every tech stack, cloud products and open source. Plugins are kept up
 to date by Datadog's engineering teams and new integrations will often be
-launched on the day of release due to partnerships with major vendors.
+launched on the day of release due to partnerships with major vendors. The agent
+is open source so you can easily write your own plugins.
 
 {{< close-div >}}
 
@@ -476,15 +478,15 @@ limited alerting capabilities.
 
 {{< tools/category-review/card-bottom-open >}}
 
-{{< tools/category-review/card-cost-open highlight="$99 user/month + 100GB free then $0.25 GB/month" >}}
+{{< tools/category-review/card-cost-open highlight="100GB free then $0.25 GB/month" >}}
 
 New Relic has a reputation for being very expensive but it now includes a
 generous free quota. A single user can get 100GB/month worth of ingested data
-with 8 days of retention and unlimited alerting. Additional users start at
-$99/user/month and extra data is $0.25/GB/month. This means you can try all the
-features and monitor reasonably sized infrastructure for free. However, it can
-be difficult to predict costs priced on a GB basis for server monitoring - data
-volume depends on things like log volume, metrics reported, and reporting
+with 8 days of retention and unlimited alerting for free. Additional users start
+at $99/user/month and extra data is $0.25/GB/month. This means you can try all
+the features and monitor reasonably sized infrastructure for free. However, it
+can be difficult to predict costs priced on a GB basis for server monitoring -
+data volume depends on things like log volume, metrics reported, and reporting
 frequency.
 
 {{< close-div >}}
@@ -746,7 +748,7 @@ What are the pros and cons of self-hosted on premises monitoring?
   encrypted links. It also means traffic remains internal - monitoring software
   can generate large volumes of network traffic, which can be costly if it has
   to egress your network to a hosted SaaS monitoring product.
-- **Lower licensing costs.** Hosted SaaS monitoring is usually billed on a usage
+- **No licensing costs.** Hosted SaaS monitoring is usually billed on a usage
   basis - per server, per GB of log storage or per metric. This starts out cheap
   but as you scale, monitoring can become a significant expense. For volume or
   metric based pricing this provides a negative incentive - the more you monitor
