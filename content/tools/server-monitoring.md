@@ -24,7 +24,7 @@ authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
 authorBioBrief:
-  From 2009-2018, David was CEO at Server Density, a SaaS infrastructure
+  From 2009-2018 David was CEO at Server Density, a SaaS infrastructure
   monitoring startup. He is now co-founder at Console.
 authorBio:
   is co-founder of Console. He is also a researcher in sustainable computing at
@@ -105,17 +105,18 @@ relatedCategories:
 
 ### tldr; the best monitoring tools
 
-The best hosted (SaaS) monitoring tools:
+The best hosted SaaS monitoring tools:
 
 {{< tools/category-review/tldr-list-open >}}
 {{< tools/category-review/miniature-card name="Datadog" thumbnail="/img/favicons/www.datadoghq.com.png" url="https://www.datadoghq.com/" anchor="datadog" score="5" >}}
 {{< tools/category-review/miniature-card name="New Relic" thumbnail="/img/favicons/newrelic.com.png" url="https://newrelic.com/" anchor="new-relic" score="4.5" >}}
 {{< close-ul >}}
 
-The best self-hosted, on premises monitoring tool:
+The best self-hosted on premises monitoring tools:
 
 {{< tools/category-review/tldr-list-open >}}
 {{< tools/category-review/miniature-card name="Grafana + Prometheus" thumbnail="/img/favicons/grafana.com.png" url="https://grafana.com/" anchor="grafana-prometheus" score="4.3" >}}
+{{< tools/category-review/miniature-card name="InfluxDB + Telegraf" thumbnail="/img/favicons/www.influxdata.com.png" url="https://www.influxdata.com/" anchor="influxdb-telegraf" score="4.0" >}}
 {{< close-ul >}}
 
 In this article we review the best server monitoring tools for developers and
@@ -169,12 +170,12 @@ have chosen, there are 3 requirements that we will assess for each review.
 
 #### Integrations / plugins
 
-Every monitoring system should collect basic system stats like CPU usage,
-process lists and disk space, usually via a monitoring agent installed on each
-system. However, monitoring is useless without integration into all the products
-in your tech stack. Can it monitor your database, web servers, load balancers,
-network, and the application itself? The list of integrations is therefore the
-most important factor in picking a server monitoring tool.
+Every monitoring tool should collect basic system stats like CPU usage, process
+lists and disk space, usually via a monitoring agent. However, monitoring is
+useless without integration into everything in your tech stack. Can it monitor
+your database, web servers, load balancers, network, and the application itself?
+The list of integrations is the most important factor in picking a server
+monitoring tool.
 
 The number of integrations is important, but so is the quality. The advantage of
 plugin systems is that anyone can build integrations, but that is not helpful if
@@ -187,7 +188,7 @@ integrations, but do they work well?
 
 #### Graphs
 
-Good monitoring tools should graph and visualize the monitoring data. Simple
+Modern monitoring tools must graph and visualize the monitoring data. Simple
 graphs may be all that is needed, but the best monitoring tools have
 sophisticated graphing capabilities such as filtering, different types of
 graphs, percentile breakdowns, trend analysis, annotations, etc. Graphs should
@@ -202,26 +203,25 @@ if you can't visualize it.
 
 Monitoring has two purposes - helping you debug problems that have already
 occurred, and alerting you when something is going wrong (ideally before it
-causes an outage). This means alerts are a key feature in all monitoring
-products.
+causes an outage). Alerts are a key feature in all monitoring tools.
 
-Alerting is often broken down into two parts:
+Alerting is broken down into two parts:
 
 - **Triggers:** Metrics cause alerts to trigger. This can be based on simple
   thresholds e.g. is CPU load over 1.5? It can also be much more complex.
   Different values can trigger at different thresholds e.g. warning vs error. It
-  can be based on relative values, or % change (delta) over a specified time
-  period. Alerts could trigger based on anomalies, or as composites of multiple
-  metrics with conditions that must all exist before an alert is triggered. This
-  can get complicated so it is important to have flexibility to define what you
-  care about.
-- **Notifications:** Once an alert is triggered, you need to be notified about
+  can be based on relative values or % change over a specified time period
+  (delta alerts). Alerts could trigger based on anomalies, or as composites of
+  multiple metrics with conditions that must all exist before an alert is
+  triggered. This can get complicated so it is important to have flexibility to
+  define what you care about.
+- **Notifications:** Once an alert is triggered you need to be notified about
   it. Email notifications are fine if you are in your inbox and/or the alert
   isn't time-critical, but you need rules to define when, how, and who is
-  notified. Perhaps you want text messages, or push notifications to a mobile
+  notified. Perhaps you want text messages or push notifications to a mobile
   app. Maybe Slack notifications that someone has to acknowledge are better. Or
-  integrations into incident management systems like PagerDuty and ServiceNow.
-  The ability to customize notification configurations is important.
+  integrations into incident management tools like PagerDuty and ServiceNow. The
+  ability to customize notification configurations is important.
 
 {{< close-div >}}
 
@@ -229,19 +229,18 @@ Alerting is often broken down into two parts:
 
 #### Everything else
 
-The best monitoring tools in 2021 don't just monitor servers. As monitoring is
-an important part of running infrastructure, good monitoring tools have lots of
-other features to help you do the job. These include incident management,
-runbooks, team collaboration, machine learning for anomaly detection and
-suggested remediations, error tracking, and many other complementary features.
+The best monitoring tools in 2021 don't just monitor servers they also have lots
+of other features. These include incident management, runbooks, team
+collaboration, machine learning for anomaly detection and suggested
+remediations, error tracking, and many other complementary features.
 
-You should also expect to find monitoring vendors providing other products
-around application performance monitoring (APM), log search, security
-monitoring, real user monitoring (RUM), profiling and tracing.
+You should expect to find monitoring vendors offering other products like
+application performance monitoring (APM), log search, security monitoring, real
+user monitoring (RUM), profiling and tracing.
 
-However, here we are reviewing only server monitoring. We'll comment on
+In this review we are only reviewing server monitoring. We'll comment on
 complementary features if they are present, but other monitoring products are
-out of scope for this article.
+out of scope.
 
 {{< close-div >}}
 
@@ -258,16 +257,16 @@ We reviewed 6 hosted SaaS monitoring tools. The best two are:
 
 {{< framed-section-open classes="framed-section-default" >}}
 
-#### Do you need Hosted SaaS monitoring?
+#### Pros & cons of hosted SaaS monitoring
 
 Back in the old days there was no choice - you had to run your own monitoring on
 premises, either using an open source product like Nagios and Zabbix, or by
-paying to license a big, enterprise monitoring solution.
+paying to license an enterprise monitoring solution.
 
 Today, there is a much greater choice between whether you self-host your
-monitoring or you pay to use a hosted SaaS cloud monitoring system. Not only is
+monitoring or you pay to use a hosted SaaS cloud monitoring tool. Not only is
 there a choice between these two deployment models, but there are now lots of
-products in each category.
+tools in each category.
 
 The key difference is whether you want to manage your own monitoring, or whether
 you want to pay someone to do it for you. Deciding whether you self-host or buy
@@ -282,23 +281,22 @@ What are the pros and cons of hosted SaaS monitoring?
 {{</ rich-title-5 >}}
 
 - **Let someone else deal with it.** Is monitoring part of your core business?
-  If not, investing in differentiation is a better use of time and money. Let
-  someone else deal with ensuring the monitoring is working, scaling, and
-  continuing to add new functionality.
+  If not, investing in your product is a better use of time and money. Let
+  someone else deal with ensuring the monitoring is working, scaling, and under
+  active development.
 - **Keeping up with integrations.** One of the reasons we created Console is to
   help developers stay up to date with the high velocity of releases in the tech
-  industry. This means new software versions, new cloud services, new APIs.
-  Keeping up to date with that is difficult, but when you pick a product to use
-  you want to be sure you can monitor it. The best monitoring products are
-  always up to date with the latest releases and will integrate with new
-  services as they are announced. Keeping self-hosted on-premises monitoring up
-  to date is a challenge.
+  industry. There are always new software releases, new cloud services, new
+  APIs. Keeping up to date is difficult, but when you pick your tech stack you
+  want to be sure you can monitor it. The best monitoring products are always up
+  to date with the latest releases and will integrate with new services as they
+  are announced. Keeping self-hosted on-premises monitoring up to date is a
+  challenge.
 - **Saving engineering time.** Deploying hosted SaaS monitoring still needs time
-  from your engineers but it is focused on integration with your software,
-  deploying the agent, and connecting up your existing services. These are
-  specific to your environment rather than the undifferentiated heavy lifting of
-  ensuring reliable alert delivery or managing a time series database that you
-  would need to do with self-hosted monitoring.
+  from your engineers but it is mostly integration work. These are specific to
+  your environment rather than the undifferentiated heavy lifting of ensuring
+  reliable alert delivery or managing a time series database. SaaS monitoring
+  tools handle all that for you.
 
 {{< close-div >}}
 
@@ -308,18 +306,18 @@ What are the pros and cons of hosted SaaS monitoring?
 
 - **Expensive licensing.** If you are operating at large scale, you probably
   have hundreds or thousands of servers, millions of metrics, and many TBs of
-  logs. This will cause monitoring costs to increase and can be difficult to
+  logs. This makes SaaS monitoring very expensive and can be difficult to
   predict.
 - **High network traffic egress.** Hosted SaaS monitoring is outside your
   network so you have to pay for all the outbound network traffic. At large
   scale you may be able to set up a peering or interconnection relationship but
   most of the time your monitoring traffic will egress over the public internet.
   This can become expensive.
-- **Data protection.** The best monitoring providers have all the certifications
-  you need to ensure compliance with data protection regulations, but there is
-  still a nervousness about sending sensitive monitoring data to third parties.
-  In reality, most monitoring data is numerical and lacks the context needed to
-  infer what's going on by itself, however there is the potential for
+- **Data protection.** The best SaaS monitoring tools have lots of
+  certifications to ensure compliance with data protection regulations, but
+  there is still a nervousness about sending sensitive monitoring data to third
+  parties. In reality, most monitoring data is numerical and lacks the context
+  needed to infer what's going on by itself, however there is the potential for
   accidentally leaking data into the monitoring environment. This is more
   relevant for log monitoring than server monitoring.
 
@@ -339,9 +337,8 @@ What are the pros and cons of hosted SaaS monitoring?
 
 {{< tools/category-review/card-heading name="Datadog" thumbnail="/img/favicons/www.datadoghq.com.png" url="https://www.datadoghq.com/" score="5" >}}
 
-Datadog is the industry leading monitoring product with the most comprehensive
-set of integrations that are regularly maintained, however with such a broad
-range of features also comes a more complex UI.
+Datadog is the industry leader with the most comprehensive and up to date set of
+integrations, however this also means it has a more complex UI.
 
 {{< youtube-video url="https://www.youtube.com/embed/YmJcbAI_OCg" title="Datadog Product Tour" >}}
 
@@ -351,8 +348,8 @@ range of features also comes a more complex UI.
 
 {{< tools/category-review/card-cost-open highlight="$15-27 server/month" >}}
 
-Starts cheap but gets expensive very quickly. Server monitoring pricing ranges
-from $15-27/server/month depending on features and monthly vs annual commitment.
+Datadog gets expensive very quickly. Server monitoring pricing ranges from
+$15-27/server/month depending on features and monthly vs annual commitment.
 
 {{< close-div >}}
 
@@ -364,12 +361,11 @@ from $15-27/server/month depending on features and monthly vs annual commitment.
 
 {{< tools/category-review/card-feature-title text="Integrations / plugins" score="5" >}}
 
-[Datadog has more than 450 integrations](https://www.datadoghq.com/product/platform/integrations/#all)
-with every product and service you can think of. This includes cloud services
-from Azure, AWS and Google where the agent can't be installed as well as tools
-and systems you run yourself. Plugins are kept up to date by Datadog's
-engineering teams and new integrations will often be launched on the day of
-release due to partnerships with major vendors.
+Datadog has
+[more than 450 integrations](https://www.datadoghq.com/product/platform/integrations/#all)
+covering every tech stack, cloud products and open source. Plugins are kept up
+to date by Datadog's engineering teams and new integrations will often be
+launched on the day of release due to partnerships with major vendors.
 
 {{< close-div >}}
 
@@ -381,7 +377,7 @@ Datadog uses its own query language to generate graphs so you can easily
 customize what is displayed, or just pick from the UI. Various chart types are
 supported and data can be visualized based on tags, aggregation functions,
 metric attributes and time ranges. All graphs can be shared on dashboards or in
-Datadog's built-in incident management system.
+Datadog's built-in incident management product.
 
 {{< close-div >}}
 
@@ -389,12 +385,12 @@ Datadog's built-in incident management system.
 
 {{< tools/category-review/card-feature-title text="Alerts" score="5" >}}
 
-Datadog has a powerful alert system based around triggers from its various
-monitoring products. These can be simple host or metric based triggers but
-Datadog also supports alerting on anomalies, events, forecast behavior, outlier
-detection, process monitoring and composites of all these types. Notifications
-are built into Datadog's team collaboration system which can notify via email,
-Jira, PagerDuty, Slack, webhooks and others.
+Datadog has a powerful alert system based around different data sources. These
+can be simple host or metric based triggers but Datadog also supports alerting
+on anomalies, events, forecast behavior, outlier detection, process monitoring
+and composites of all these types. Notifications are built into Datadog's team
+collaboration features which can notify via email, Jira, PagerDuty, Slack,
+webhooks and others.
 
 {{< close-div >}}
 
@@ -408,10 +404,10 @@ wide range of tools which means anything you want to monitor is supported.
 
 Datadog can also ingest data from custom sources. This includes through
 OpenMetrics endpoints, allowing you to connect to Prometheus, for example, as
-well posting data using open standards like
+well as using open standards like
 [StatsD](https://docs.datadoghq.com/integrations/statsd/), SNMP, OpenTelemetry
 and OpenTracing. However, these are considered “custom” metrics for billing
-purposes and are limited to 100 per host.
+purposes and are limited to 100 per host before you have to pay more.
 [These are complex](https://docs.datadoghq.com/account_management/billing/custom_metrics/)
 and get expensive very quickly - pricing is only available by speaking to sales,
 which is a bad sign. As an engineer this is always frustrating. I don't want to
@@ -426,8 +422,8 @@ Datadog is also highly customizable. This means you can create custom dashboards
 with metrics visualized in context with events, logs, and CI/CD status, all tied
 into a devops flow that includes runbooks, infrastructure notebooks and incident
 management. Collaborating with your engineering, devops and security teams in a
-single system means you have access to all the data you need to maintain
-reliable infrastructure and debug problems.
+single tool means you have access to all the data you need to maintain reliable
+infrastructure and debug problems.
 
 {{< close-div >}}
 
@@ -440,15 +436,15 @@ be difficult to find what you're looking for. This is particularly the case if
 you just need basic monitoring. For example, although the alerting functionality
 is very sophisticated there is no top level concept of an alert - these exist as
 “Monitors” and are dependent on the trigger source e.g. a server metric or
-synthetic check status.
+synthetic check status. This means it is flexible for large environments but is
+cumbersome for smaller use cases.
 
 Datadog is also very expensive. The free version is limited to 5 hosts and only
 1 day of data retention, plus no alerting, custom metrics or support for
-containers. Unless you're just collecting a few metrics in a development
-environment that doesn't require alerts, you will need to pay. Costs escalate
+containers. Monitoring without alerting is not very useful. Costs escalate
 quickly and unexpectedly, especially with usage based pricing on log monitoring
-or custom metrics that you have limited control over. It's not designed for
-small environments that only need basic monitoring.
+or custom metrics that you have limited control over. Datadog is not designed
+for small environments that only need basic monitoring.
 
 {{< close-div >}}
 
@@ -466,9 +462,9 @@ small environments that only need basic monitoring.
 
 {{< tools/category-review/card-heading name="New Relic" thumbnail="/img/favicons/newrelic.com.png" url="https://newrelic.com/" score="4.5" >}}
 
-New Relic was one of the first SaaS application performance monitoring (APM)
-products and has expanded to cover a wide range of monitoring requirements. It
-has a clean UI but has more limited alerting capabilities.
+New Relic is best known for application performance monitoring (APM) but can now
+monitor everything, including server monitoring. It has a clean UI but has more
+limited alerting capabilities.
 
 {{< youtube-video url="https://www.youtube.com/embed/JQC-cMre5gI" title="Level Up Data Nerds" >}}
 
@@ -476,10 +472,9 @@ has a clean UI but has more limited alerting capabilities.
 
 {{< tools/category-review/card-bottom-open >}}
 
-{{< tools/category-review/card-cost-open highlight="$99 user/month — $0.25 GB/month" >}}
+{{< tools/category-review/card-cost-open highlight="$99 user/month + 100GB free then $0.25 GB/month" >}}
 
-New Relic has a reputation for being very expensive. This may still be the case
-if you are processing a huge volume of metrics or logs, but it now includes a
+New Relic has a reputation for being very expensive but it now includes a
 generous free quota. A single user can get 100GB/month worth of ingested data
 with 8 days of retention and unlimited alerting. Additional users start at
 $99/user/month and extra data is $0.25/GB/month. This means you can try all the
@@ -498,7 +493,7 @@ frequency.
 
 {{< tools/category-review/card-feature-title text="Integrations / plugins" score="4.5" >}}
 
-[New Relic has 360+ integrations](https://newrelic.com/integrations) so
+New Relic has [360+ integrations](https://newrelic.com/integrations) so
 everything you might want to use is covered. Some of these are implemented
 through the monitoring agent which has to be installed into your environment and
 then automatically configures common integrations. Agentless monitoring is
@@ -512,15 +507,14 @@ regularly releases integrations on the day new products are announced.
 
 {{< tools/category-review/card-feature-title text="Graphs" score="5" >}}
 
-Graphs in New Relic are based on queries which can be viewed for each graph in
-the UI. This takes you to a query builder so you can easily customize what is
-visualized with different chart types, filters, limits, sorting and aggregation
-functions. This is a powerful way to build graphs, especially when you can
-choose between New Relic's custom dialect of SQL
-([NRQL](https://docs.newrelic.com/docs/query-your-data/nrql-new-relic-query-language/get-started/introduction-nrql-new-relics-query-language/))
-or switch to
-[PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/)-style
-syntax.
+New Relic's graphs are based on their own
+[NRQL](https://docs.newrelic.com/docs/query-your-data/nrql-new-relic-query-language/get-started/introduction-nrql-new-relics-query-language/)
+query language, a custom dialect of SQL. Being able to inspect the query for
+each graph is a powerful feature because the query builder allows you to easily
+customize what is visualized - different chart types, filters, limits, sorting
+and aggregation functions. You can also use
+[PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/) instead,
+which is a nice touch.
 
 {{< close-div >}}
 
@@ -530,11 +524,11 @@ syntax.
 
 Alerting in New Relic is based around “policies” that have trigger conditions. A
 “Golden Signals” policy is auto-created on installing the monitoring agent which
-sets up some basic email alerts on server CPU %. Conditions are most flexible if
-defined using NRQL but there are some templates provided for server monitoring.
-You can attach runbooks to notifications and configure channels such as email,
-PagerDuty, Slack and webhooks. Alerting is powerful, but not quite as flexible
-as Datadog.
+sets up some basic email alerts on server CPU %. Trigger conditions are most
+flexible if defined using NRQL but there are some templates provided for server
+monitoring. You can attach runbooks to notifications and configure channels such
+as email, PagerDuty, Slack and webhooks. Alerting is powerful, but not quite as
+flexible as Datadog.
 
 {{< close-div >}}
 
@@ -542,13 +536,13 @@ as Datadog.
 
 {{< tools/category-review/card-like-open >}}
 
-The real power of New Relic comes from considering everything as a metric and
-building a UI on top of that through its custom query language -
+The real power of New Relic comes from everything existing as a metric and
+building their UI through its custom query language -
 [NRQL](https://docs.newrelic.com/docs/query-your-data/nrql-new-relic-query-language/get-started/introduction-nrql-new-relics-query-language/).
 You can get along just by using the clean and easy to use UI (which supports
 dark mode!) but NRQL is a powerful concept that allows you to query, manipulate,
 analyze and visualize all of your monitoring data. Even your New Relic account
-uota data can be queried and graphed.
+quota data can be queried and graphed.
 
 Being able to use
 [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/)-style
@@ -563,36 +557,36 @@ include OpenTelemetry, Istio and OpenCensus.
 
 Deploying New Relic is easy and it automatically collects the basic data you
 would expect from a server monitoring tool - CPU, memory, disk, etc. The agent
-auto detects the environment so in our tests using Azure Virtual Machines, New
+auto detects the environment. In our tests using Azure Virtual Machines, New
 Relic automatically tagged the host configuration (e.g. hostname, CPU cores,
 memory) and cloud environment (region, OS, Linux distribution, etc).
 
 New Relic used to be known for being very expensive, particularly if you used
 lots of its different monitoring products (server monitoring, APM, logs, traces,
 synthetics, etc). Although out of scope of this review, the nice thing about
-having a relatively high free quota (100GB per month) means you can take
-advantage of these other important observability features like APM for your code
-and search for your logs. Now they have switched to a bundled model where all
-the products are included and priced on data volume it is much easier to try out
-all the features and start pushing data in. This is a clever sales tool!
+having a relatively high free quota (100GB per month) means you can try the
+other monitoring features, like APM and log search. Now New Relic have switched
+to a bundled model where all the products are included and priced on data volume
+it is much easier to try out all the features and start pushing data in. This is
+a clever sales trick!
 
 {{< close-div >}}
 
 {{< tools/category-review/card-dislike-open >}}
 
-Although the power of NRQL is available for defining alert triggers, the
-notification options are not as powerful as Datadog. You can define thresholds
-such as deviation from baselines, outlier detection, aggregation windows,
-critical vs warning thresholds and customized runbook or alert descriptions with
-variables. These feed into notification channels such as email or Slack
-notifications but are missing Datadog's advanced features like forecasting,
-composite metrics and incident management.
+Although the power of NRQL is used for defining alert triggers, the notification
+options are not as powerful as Datadog. You can define thresholds such as
+deviation from baselines, outlier detection, aggregation windows, critical vs
+warning thresholds and customized runbook or alert descriptions with variables.
+These feed into notification channels such as email or Slack notifications but
+are missing Datadog's advanced features like forecasting, composite metrics and
+incident management.
 
-Although the pricing model with a generous free quota means it's easy to deploy
-and try all the features of New Relic, it is also more challenging to predict
-how much data you need. 100GB/m sounds like a lot but can you intuitively guess
-how much data a monitoring agent on a single server would report each month?
-What about if you then add APM, logs, and synthetic monitoring?
+The pricing model with a generous free quota means it's easy to deploy and try
+all the features of New Relic, but it is more challenging to predict how much
+data you need. 100GB/m sounds like a lot but can you intuitively estimate how
+much data a monitoring agent on a single server would report each month? What
+about if you then add APM, logs, and synthetic monitoring?
 
 There are also some strange
 [documented limits around how much data can be ingested at once](https://docs.newrelic.com/docs/licenses/license-information/general-usage-licenses/new-relic-data-usage-limits-policies/).
@@ -615,10 +609,13 @@ it?
 
 #### Also considered
 
+These are the other hosted SaaS monitoring tools we tested. They are not as
+highly rated as the two options above, but may be worth considering.
+
 {{< tools/category-review/card-heading name="AppOptics" thumbnail="/img/favicons/www.appoptics.com.png" url="https://www.appoptics.com" score="2" >}}
 
-AppOptics is part of the Solarwinds cloud monitoring suite and so integrates
-into their APM and log management tools. On the surface it has many of the same
+AppOptics is part of the Solarwinds cloud monitoring suite and integrates into
+their APM and log management tools. On the surface it has many of the same
 features as Datadog and New Relic - integrations into cloud and open source
 infrastructure software, configurable dashboards, and alerting on metrics with
 thresholds based around trigger conditions and aggregations.
@@ -627,10 +624,10 @@ However, when you start using the product you discover that it lacks depth.
 AppOptics is missing the same degree of flexibility as Datadog's alerting and
 there is nothing similar to the power of New Relic's query language. All the
 major integrations are there - they state 150+ on the website - but if you have
-anything new or unusual in your stack you can bet it's probably not supported.
+anything new or unusual in your stack it may not be supported.
 
 With pricing ranging from $10-$13/server/month depending on annual or monthly
-contract, it's definitely cheaper but if you're going to spend $10/server/month
+contract it's definitely cheaper, but if you're going to spend $10/server/month
 then you may as well pay a bit more for Datadog or New Relic.
 
 {{< tools/category-review/card-heading name="Dynatrace" thumbnail="/img/favicons/www.dynatrace.com.png" url="https://www.dynatrace.com" score="2" >}}
@@ -647,8 +644,8 @@ alert configuration is confusing - there is no “alerts” section in the main 
 for example. Instead, Dynatrace uses “Problems” that are detected based around
 anomalies, either from automated baselines or built in static thresholds.
 Evaluation happens on sliding 5 or 15 minute time intervals. These are
-configured in a separate “Settings” section of the UI which lacks flexibility
-and tries to be too clever.
+configured in a separate “Settings” section of the UI which is an unsual
+approach.
 
 Unfortunately, Dynatrace has the most complicated pricing structure we've ever
 seen. For example, although the Dynatrace website lists 400+ integrations,
@@ -684,11 +681,11 @@ complex pricing, we do not recommend Dynatrace for server monitoring.
 Logic Monitor tricks you into thinking you are signing up for a trial but you
 can't actually test the product without speaking to someone - you are actually
 “requesting” a trial, not signing up. Coupling this with the fact that they do
-not list their pricing anywhere makes for a frustrating experience for the
+not list their pricing anywhere makes for a frustrating experience for a
 developer who just wants to try the product themselves.
 
-Our selection criteria require self-service signup so we were unable to evaluate
-Logic Monitor.
+[Our selection criteria](/about/#selection-criteria) require self-service signup
+so we were unable to evaluate Logic Monitor.
 
 {{< tools/category-review/card-heading name="Lightstep" thumbnail="/img/favicons/lightstep.com.png" url="https://lightstep.com/" score="none" >}}
 
@@ -707,24 +704,25 @@ a future Console review of tracing and observability tools.
 ### Self-hosted monitoring tools
 
 We reviewed 12 self-hosted monitoring tools. The best option is:
-[Grafana + Prometheus](#grafana-prometheus).
+[Grafana + Prometheus](#grafana-prometheus) but we also liked
+[InfluxDB + Telegraf](#influxdb-telegraf).
 
 {{< framed-section-open classes="framed-section-default" >}}
 
-#### Do you need self-hosted on premises monitoring?
+#### Pros & cons of self-hosted on premises monitoring
 
 Self-hosted monitoring is different from SaaS monitoring where everything is
 done for you in a single product. Although there are all-in-one self-hosted
 server monitoring tools, for the best setup you really need to deploy several
-products integrated together. This is more operationally challenging -
+product and integrate them. This is more operationally challenging -
 demonstrating the value of SaaS monitoring - but allows each tool to focus on
 what it does best.
 
 Once you have everything set up, running your own self-hosted monitoring means
 you have more control, you can keep network egress costs low and you don't have
-to pay monthly fees. However, you have to ensure your monitoring is reliable and
-scaling the data storage as you collect more and more data is a difficult
-problem. Is this really a good use of your engineering team?
+to pay monthly fees. However, you have to ensure your monitoring is reliable,
+and scaling data storage as you collect more data is a difficult problem. Is
+this really a good use of your engineering team?
 
 What are the pros and cons of self-hosted on premises monitoring?
 
@@ -740,7 +738,7 @@ What are the pros and cons of self-hosted on premises monitoring?
   is stored in.
 - **Traffic stays in your network.** You can manage the security of your
   monitoring by ensuring that monitoring data is only transmitted over specific
-  network infrastructure such as specific monitoring subnet, VPC, and/or
+  network infrastructure such as a dedicated monitoring subnet, VPC, and/or
   encrypted links. It also means traffic remains internal - monitoring software
   can generate large volumes of network traffic, which can be costly if it has
   to egress your network to a hosted SaaS monitoring product.
@@ -761,22 +759,20 @@ What are the pros and cons of self-hosted on premises monitoring?
 {{</ rich-title-5 >}}
 
 - **Monitoring your monitoring.** Deploying your own monitoring means you need
-  to consider reliability, redundancy and backups. It's not very useful If your
-  monitoring also goes down when your production network goes down! This means
-  deploying in entirely separate infrastructure, setting up monitoring for your
-  monitoring, and regularly reviewing things like whether alerts are being
-  delivered.
-- **Scaling time series is hard.** Storing time series data monitoring so that
-  it is always available and has low retrieval latency is a difficult problem.
-  This is why hosted monitoring tools include data retention as a key pricing
-  variable - it's expensive to keep large volumes of data for fast querying.
-  Running your own monitoring means you need to deal with storing the monitoring
-  data.
+  to consider reliability, redundancy and backups. It's not very useful if your
+  monitoring also goes down when production goes down! This means deploying in
+  entirely separate infrastructure, setting up monitoring for your monitoring,
+  and regularly testing things like whether alerts are being delivered.
+- **Scaling time series is hard.** Storing time series data with high
+  availability and low retrieval latency is a difficult problem. This is why
+  hosted SaaS monitoring is more expensive the longer you want to retain your
+  data - it's expensive to keep large volumes of data for fast querying. Running
+  your own monitoring means you need to deal with storing everything.
 - **Higher engineering costs.** You might not pay for a software license but you
   will pay for the engineering time to deploy and maintain the software. With
   modern monitoring tools focusing on a single component, you will have to
-  install and maintain several separate systems e.g. Grafana for visualization
-  and Prometheus for storing the time series data. Maintaining and scaling
+  install and maintain several separate tools e.g. Grafana for visualization and
+  Prometheus for storing the time series data. Maintaining and scaling
   independent monitoring infrastructure is only a trivial problem if you've
   never done it before, especially at scale. Is this something you want to
   dedicate your engineering teams to?
@@ -797,10 +793,10 @@ What are the pros and cons of self-hosted on premises monitoring?
 
 {{< tools/category-review/card-heading name="Grafana + Prometheus" thumbnail="/img/favicons/grafana.com.png" url="https://grafana.com" score="4.3" >}}
 
-Grafana is an open source metrics visualization and dashboarding tool that can
-connect to various data source backends and has built-in alerting. We recommend
-using the open source metrics system, [Prometheus](https://prometheus.io/), as
-the primary data source.
+Grafana is the best open source metrics visualization and dashboarding tool. It
+can connect to various data source backends and has built-in alerting. We
+recommend using the open source metrics backend,
+[Prometheus](https://prometheus.io/), as the primary data source.
 
 {{< youtube-video url="https://www.youtube.com/embed/0n2UNzk2OaI" title="Getting Started with Grafana Webinar" >}}
 
@@ -816,7 +812,7 @@ the primary data source.
 
 {{< tools/category-review/card-feature-title text="Integrations / plugins" score="4" >}}
 
-Metrics are pushed into Prometheus which is then used by Grafana for generating
+Metrics are first pushed into Prometheus which Grafana queries for generating
 dashboards, graphs, and triggering alerts. This is achieved either through
 instrumenting your code with one of the many
 [client libraries](https://prometheus.io/docs/instrumenting/clientlibs/), or by
@@ -827,9 +823,9 @@ HAProxy, and system metrics - are officially supported. All the others are
 community built. Exporters are also run as a separate binary which you must
 download, configure and run, but for simple server monitoring the officially
 supported [node_exporter](https://github.com/prometheus/node_exporter) is easy
-to get up and running. However, this may not be the case for all exporters. The
-quality of unofficial third-party integrations is always a problem for any
-monitoring product, especially as the integration becomes more obscure.
+to get up and running. This may not be the case for all exporters. The quality
+of unofficial third-party integrations is always a problem for any monitoring
+product, especially as the integration becomes more obscure.
 
 {{< close-div >}}
 
@@ -844,9 +840,9 @@ which allow you to query data sources using their native query language -
 case of Prometheus, but it could be other source specific languages like SQL.
 There are multiple graph types from histograms to dials and bar charts, you can
 transform data through filters, joins, grouping and other aggregation functions,
-and configure how the legend and labels are displayed. Grafana is particularly
-powerful by being able to plot metrics from different sources on the same graph.
-A dashboard can be built from one or more panels.
+and configure how the legend and labels are displayed. Grafana can even plot
+metrics from different sources on the same graph and dashboards are built from
+one or more panels.
 
 {{< close-div >}}
 
@@ -874,8 +870,8 @@ OpsGenie and webhooks.
 
 Grafana + Prometheus are the best open source monitoring tools. These two tools
 excel at their particular specialisms. Grafana is the most powerful graphing and
-metric visualization tool available, and Prometheus is the industry standard for
-time series data metrics backend.
+metric visualization tool available, and Prometheus is the best time series
+backend.
 
 The power of these tools is in their flexibility and customizability. Both have
 an active developer community which means that you are likely to be able to
@@ -885,13 +881,14 @@ Prometheus exposes metrics through its own query language,
 [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/), which
 means metrics from any source are easily accessible through a standardized
 interface. Grafana connects to this to build dashboards and visualizations.
-These can be as simple as a single time series or as complex as multiple-JOIN
-queries with aggregation functions over complex time ranges and multiple series.
+These can be as simple as a single time series or as sophisticated as
+multiple-JOIN queries with aggregation functions over complex time ranges and
+multiple series.
 
 Grafana is going through a transition from its legacy alerts to the new
-centralized system-wide mechanism introduced in Grafana 8.0. A benefit of the
-new approach is that it makes it easier to define alerts across your
-infrastructure and manage them independently of their visualization.
+centralized system-wide mechanism introduced in Grafana 8.0. The new approach
+makes it easier to define alerts across your infrastructure and manage them
+independently of their visualization.
 
 Another new feature in Grafana 8.0 is the ability to
 [stream metrics in real time to the UI](https://grafana.com/docs/grafana/latest/live/live-feature-overview/).
@@ -904,7 +901,7 @@ for something else.
 [Grafana supports many different data sources](https://grafana.com/docs/grafana/latest/datasources/)
 from AWS CloudWatch to MySQL and Microsoft SQL Server, all of which can be
 enabled together. Equally, you can connect Prometheus to other visualization
-systems such as
+tools such as
 [its own basic metrics interface](https://prometheus.io/docs/visualization/browser/)
 or SaaS tools like
 [New Relic](https://docs.newrelic.com/docs/integrations/prometheus-integrations/get-started/send-prometheus-metric-data-new-relic/)
@@ -944,7 +941,7 @@ also supports Alertmanager (in alpha testing), unifying those components, but
 you still need to configure notification mechanisms like providing it with an
 SMTP server to send emails.
 
-Although using Grafana's built-in alerting means one less system to manage, it
+Although using Grafana's built-in alerting means one less tool to manage, it
 only has limited
 [support for high availability](https://grafana.com/docs/grafana/latest/administration/set-up-for-high-availability/) -
 notifications are deduplicated if you use a load balancer to run multiple
@@ -974,7 +971,8 @@ alert on multiple metric sources.
 InfluxDB is an open source time series database with a visualization and
 alerting layer. It combines well with
 [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/), a
-monitoring agent from the same developers.
+monitoring agent from the same developers, but the alerting features are
+limited.
 
 {{< youtube-video url="https://www.youtube.com/embed/GRDJpoiCKtg" title="Intro to InfluxDB & Telegraf" >}}
 
@@ -1009,14 +1007,15 @@ monitoring cloud services, such as AWS Cloudwatch or Google Pub/Sub.
 
 {{< tools/category-review/card-feature-title text="Graphs" score="4" >}}
 
-InfluxDB is queried using Flux, a data scripting language for analyzing time
-series data. You can execute queries from the CLI or a web GUI. The GUI has a
-graph builder based on selecting metrics as the graph series, aggregation
-functions such as mean, count and max, and advanced customizations such as hover
-dimensions, interpolation, X and Y axis options and time formats. This builds a
-Flux query behind the scenes which you can edit to directly configure the
-executed query. InfluxDB does not have as many graph types as Grafana but it
-supports the main choices you'd expect: gauge, heatmap, scatter, table, etc.
+InfluxDB is queried using [Flux](https://www.influxdata.com/products/flux/), a
+data scripting language for analyzing time series data. You can execute queries
+from a CLI or a web GUI. The GUI has a graph builder based on selecting metrics
+as the graph series, aggregation functions such as mean, count and max, and
+advanced customizations such as hover dimensions, interpolation, X and Y axis
+options and time formats. This builds a Flux query behind the scenes which you
+can edit to directly configure the executed query. InfluxDB does not have as
+many graph types as Grafana but it supports the main choices you'd expect:
+gauge, heatmap, scatter, table, etc.
 
 {{< close-div >}}
 
@@ -1061,13 +1060,14 @@ debugging tricky across time zones!). Graphs are also customizable, whether that
 is choosing a range of color options through to changing X-axis tick mark
 intervals. A lot of thought has been put into the user experience but if you
 prefer, everything is also
-[available via a CLI tool](https://docs.influxdata.com/influxdb/v2.0/reference/cli/influx/).
+[available via a CLI](https://docs.influxdata.com/influxdb/v2.0/reference/cli/influx/).
 
-The company behind InfluxDB also develops Telegraf, a monitoring agent written
-in Go. Although InfluxDB can be used as a generic time series database (which
-can also be a data source for Grafana), it is likely you will want to collect
-metrics from your systems, databases, cloud services and other components in
-your tech stack. That's what Telegraf is for.
+The company behind InfluxDB also develops
+[Telegraf](https://www.influxdata.com/time-series-platform/telegraf/), a
+monitoring agent written in Go. Although InfluxDB can be used as a generic time
+series database (which can also be a data source for Grafana), it is likely you
+will want to collect metrics from your systems, databases, cloud services and
+other components in your tech stack. That's what Telegraf is for.
 
 The fact that the datastore, UI, and monitoring agent are from the same people
 provides a level of polish and consistency that can sometimes be missing from
@@ -1102,7 +1102,7 @@ which is a red flag. There is an InfluxDB Cloud offering, available on
 [Google Cloud](https://console.cloud.google.com/marketplace/details/influxdata-public/cloud2-gcp-marketplace-prod)
 or
 [Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/influxdata.influxdb-cloud).
-This is billed based on data ingest, storage, query count and data out.
+This is billed based on data transfer, storage and query count.
 
 Even if you're happy with the alerting constraints, the inability to deploy a
 reliable production monitoring setup without buying an enterprise version is a
@@ -1183,16 +1183,16 @@ released in 2002. Its age shows, and although it is based around an open source
 core it is really just a lead generation tool for the enterprise version -
 Nagios XI. This is a UI on top of the Nagios Core backend.
 
-Nagios comes from an era of individual servers that sit around for a long time.
+Nagios comes from the era of individual servers that sit around for a long time.
 It's architecture is based on a pull model where a central Nagios server
 connects to agents running on each node, triggering a check cycle and then
 returning the results. This model struggles in modern cloud environments where
 instances are ephemeral, especially with containers.
 
-Everything is defined on a check level in config files, including alerts, which
-limits the flexibility over simple threshold-based monitoring. As such, it's
-difficult to recommend Nagios for modern deployments given the sophistication of
-the alternatives like Grafana, Prometheus and InfluxDB.
+Everything is defined in agent config files, including alerts, which limits the
+flexibility if you need anything more than simple threshold-based monitoring. As
+such, it's difficult to recommend Nagios for modern deployments given the
+sophistication of the alternatives like Grafana, Prometheus and InfluxDB.
 
 {{< tools/category-review/card-heading name="Netdata" thumbnail="/img/favicons/www.netdata.cloud.png" url="https://www.netdata.cloud" score="3" >}}
 
@@ -1226,7 +1226,7 @@ few days.
 
 OpenTSDB is a time series database built on top of Hadoop and HBase. It's a good
 option if you need to store a huge volume of time series data but it's not a
-monitoring system by itself.
+monitoring tool by itself.
 
 Running HBase/Hadoop can also be a huge operational challenge, so if you are
 interested in OpenTSDB then you may want to consider
@@ -1245,8 +1245,7 @@ version. We'll reevaluate Opstrace in the future.
 
 {{< tools/category-review/card-heading name="Sensu" thumbnail="/img/favicons/sensu.io.png" url="https://sensu.io" score="none" >}}
 
-Sensu is an open source monitoring tool but it is only available via its open
-source license if you
+Sensu is an open source monitoring tool but it is only open source if you
 [compile it from source code yourself](https://github.com/sensu/sensu-go), then
 combine it with [the web UI project](https://github.com/sensu/web). This is not
 obvious because when you download Sensu from their website, you are actually
@@ -1255,7 +1254,7 @@ hosts but then costs $3-5/host/month.
 [The open source version is also missing features](https://sensu.io/features/compare)
 such as dashboards and many third-party integrations.
 
-As this section only covers open source options, we did not evaluate Sensu Go.
+This section only covers open source options so we did not evaluate Sensu Go.
 
 {{< tools/category-review/card-heading name="SigNoz" thumbnail="/img/favicons/signoz.io.png" url="https://signoz.io" score="none" >}}
 
@@ -1272,8 +1271,8 @@ early in development and not on par with our main recommendations above.
 
 {{< tools/category-review/card-heading name="Zabbix" thumbnail="/img/favicons/www.zabbix.com.png" url="https://www.zabbix.com" score="3" >}}
 
-Zabbix is an monolithic monitoring system written in PHP with Apache or Nginx as
-the frontend and supports several databases as the backend (MySQL, PostgreSQL,
+Zabbix is an monolithic monitoring tool written in PHP with Apache or Nginx as
+the frontend and several options for the database backend (MySQL, PostgreSQL,
 TimescaleDB, Oracle). It's actively developed and supported by a commercial
 organization but remains an open source project anyone can install without any
 limits.
@@ -1296,9 +1295,9 @@ where each agent runs independently, posting data back to the central server.
 The Zabbix Proxy sits in the middle, requesting checks from its connected agents
 so that the Zabbix Server only needs to deal with a smaller number of Proxies.
 
-Zabbix supports collecting data at 1 second granularity and supports a range of
+Zabbix supports collecting data at 1 second granularity and has a range of
 [built-in monitoring metrics](https://www.zabbix.com/documentation/current/manual/config/items/itemtypes/zabbix_agent),
-which Zabbix calls items. Using the newest version of the Zabbix agent brings
+which Zabbix calls "items". Using the newest version of the Zabbix agent brings
 [built-in plugins](https://www.zabbix.com/documentation/current/manual/config/items/plugins#plugins_supplied_out-of-the-box)
 written in Go for products like Ceph, MongoDB, MySQL, Docker and Redis. However,
 these are limited in number so you need to rely on
