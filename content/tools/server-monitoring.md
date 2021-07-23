@@ -107,16 +107,16 @@ relatedCategories:
       name: vulnerability-management
 ---
 
-### tldr; the best monitoring tools
+### tldr; the best server monitoring tools
 
-The best hosted SaaS monitoring tools:
+The best hosted SaaS server monitoring tools:
 
 {{< tools/category-review/tldr-list-open >}}
 {{< tools/category-review/miniature-card name="Datadog" thumbnail="/img/favicons/www.datadoghq.com.png" url="https://www.datadoghq.com/" anchor="datadog" score="5" >}}
 {{< tools/category-review/miniature-card name="New Relic" thumbnail="/img/favicons/newrelic.com.png" url="https://newrelic.com/" anchor="new-relic" score="4.5" >}}
 {{< close-ul >}}
 
-The best self-hosted on premises monitoring tools:
+The best self-hosted on premises server monitoring tools:
 
 {{< tools/category-review/tldr-list-open >}}
 {{< tools/category-review/miniature-card name="Grafana + Prometheus" thumbnail="/img/favicons/grafana.com.png" url="https://grafana.com/" anchor="grafana-prometheus" score="4.3" >}}
@@ -127,11 +127,11 @@ In this article we review the best server monitoring tools for developers and
 engineers. We review both hosted SaaS and self-hosted on-premises monitoring
 tools to give you the widest view of current server monitoring solutions.
 
-Researching 18 different server monitoring tools, we detail core functionality
-and assess key requirements including integrations / plugins, graphs and alerts.
-We also considered features like dashboards, events, incident management,
-runbooks (usually part of alerts) and team collaboration. We'll comment on these
-as useful bonus features if they are present.
+Researching 18 different server monitoring services, we detail core
+functionality and assess key requirements including integrations / plugins,
+graphs and alerts. We also considered features like dashboards, events, incident
+management, runbooks (usually part of alerts) and team collaboration. We'll
+comment on these as useful bonus features if they are present.
 
 But do you still need server monitoring? New applications might be serverless
 and cloud-first, but servers still exist! Whether you are running a Kubernetes
@@ -193,7 +193,7 @@ integrations, but do they work well?
 #### Graphs
 
 Modern monitoring tools must graph and visualize the monitoring data. Simple
-graphs may be all that is needed, but the best monitoring tools have
+graphs may be all that is needed, but the best server monitoring tools have
 sophisticated graphing capabilities such as filtering, different types of
 graphs, percentile breakdowns, trend analysis, annotations, etc. Graphs should
 be customizable and load quickly. Collecting lots of monitoring data is no good
@@ -207,7 +207,7 @@ if you can't visualize it.
 
 Monitoring has two purposes - helping you debug problems that have already
 occurred, and alerting you when something is going wrong (ideally before it
-causes an outage). Alerts are a key feature in all monitoring tools.
+causes an outage). Alerts are a key feature in all server monitoring tools.
 
 Alerting is broken down into two parts:
 
@@ -254,14 +254,14 @@ out of scope.
 
 {{< nav-wrapper id="wrapper-2" anchor-name="hosted-saas-monitoring-tools" >}}
 
-### Hosted SaaS monitoring tools
+### Hosted SaaS server monitoring tools
 
 We reviewed 6 hosted SaaS monitoring tools. The best two are:
 [Datadog](#datadog) and [New Relic](#new-relic).
 
 {{< framed-section-open classes="framed-section-default" >}}
 
-#### Pros & cons of hosted SaaS monitoring
+#### Pros & cons of hosted SaaS server monitoring
 
 Back in the old days there was no choice - you had to run your own monitoring on
 premises, either using an open source product like Nagios and Zabbix, or by
@@ -317,7 +317,7 @@ What are the pros and cons of hosted SaaS monitoring?
   scale you may be able to set up a peering or interconnection relationship but
   most of the time your monitoring traffic will egress over the public internet.
   This can become expensive.
-- **Data protection.** The best SaaS monitoring tools have lots of
+- **Data protection.** The best SaaS server monitoring tools have lots of
   certifications to ensure compliance with data protection regulations, but
   there is still a nervousness about sending sensitive monitoring data to third
   parties. In reality, most monitoring data is numerical and lacks the context
@@ -331,7 +331,7 @@ What are the pros and cons of hosted SaaS monitoring?
 
 {{< nav-wrapper close="true" >}}
 
-### Best hosted SaaS monitoring tools
+### Best hosted SaaS server monitoring tools
 
 {{< nav-wrapper id="wrapper-3" anchor-name="datadog" >}}
 
@@ -613,8 +613,8 @@ it?
 
 #### Also considered
 
-These are the other hosted SaaS monitoring tools we tested. They are not as
-highly rated as the two options above, but may be worth considering.
+These are the other hosted SaaS server monitoring tools we tested. They are not
+as highly rated as the two options above, but may be worth considering.
 
 {{< tools/category-review/card-heading name="AppOptics" thumbnail="/img/favicons/www.appoptics.com.png" url="https://www.appoptics.com" score="2" >}}
 
@@ -705,9 +705,9 @@ a future Console review of tracing and observability tools.
 
 {{< nav-wrapper id="wrapper-6" anchor-name="self-hosted-monitoring-tools" >}}
 
-### Self-hosted monitoring tools
+### Self-hosted server monitoring tools
 
-We reviewed 12 self-hosted monitoring tools. The best option is:
+We reviewed 12 self-hosted server monitoring tools. The best option is:
 [Grafana + Prometheus](#grafana-prometheus) but we also liked
 [InfluxDB + Telegraf](#influxdb-telegraf).
 
@@ -787,7 +787,7 @@ What are the pros and cons of self-hosted on premises monitoring?
 
 {{< nav-wrapper close="true" >}}
 
-### Best self-hosted monitoring tools
+### Best self-hosted server monitoring tools
 
 {{< nav-wrapper id="wrapper-7" anchor-name="grafana-prometheus" >}}
 
@@ -872,10 +872,10 @@ OpsGenie and webhooks.
 
 {{< tools/category-review/card-like-open >}}
 
-Grafana + Prometheus are the best open source monitoring tools. These two tools
-excel at their particular specialisms. Grafana is the most powerful graphing and
-metric visualization tool available, and Prometheus is the best time series
-backend.
+Grafana + Prometheus are the best open source server monitoring tools. These two
+tools excel at their particular specialisms. Grafana is the most powerful
+graphing and metric visualization tool available, and Prometheus is the best
+time series backend.
 
 The power of these tools is in their flexibility and customizability. Both have
 an active developer community which means that you are likely to be able to
