@@ -1,7 +1,11 @@
 <head>
     <title>{{ .Title }}</title>
     <meta charset="utf-8" />
+    {{ if not .Params.metaDescription -}}
     <meta name="description" content="{{ .Summary }}" />
+    {{- else -}}
+    <meta name="description" content="{{ .Params.metaDescription }}" />
+    {{- end }}
 
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="preload" href="/fonts/rubik-v12-latin-regular.woff2" as="font" crossorigin="anonymous">
@@ -87,7 +91,11 @@
     <!-- https://developer.yoast.com/features/opengraph/functional-specification -->
     <meta property="og:site_name" content="Console" />
     <meta property="og:title" content="{{ .Title }}" />
+    {{ if not .Params.metaDescription -}}
     <meta property="og:description" content="{{ .Summary }}" />
+    {{- else -}}
+    <meta property="og:description" content="{{ .Params.metaDescription }}" />
+    {{- end }}
     {{- $ogImg := "/img/console-mark-256.png" -}}
     {{- if .Params.ogImg }}
     {{- $ogImg = .Params.ogImg -}}

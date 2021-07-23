@@ -8,6 +8,10 @@ draft: true
 summary:
   A review of the best server monitoring tools for developers and devops
   engineers.
+metaDescription:
+  A review of the best server monitoring tools for developers and devops
+  engineers. Comparing Datadog, New Relic, Grafana, Prometheus, InfluxDB and
+  Telegraf.
 headerType: fixed
 hideLines: true
 hidePlanes: true
