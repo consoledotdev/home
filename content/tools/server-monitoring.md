@@ -613,7 +613,7 @@ it?
 
 {{< nav-wrapper id="wrapper-5" anchor-name="hosted-saas-also-considered" >}}
 
-#### Also considered
+#### Also considered: Dynatrace, Logic Monitor + 2 more
 
 These are the other hosted SaaS server monitoring services we tested. They are
 not as highly rated as the two options above, but may be worth considering.
@@ -1124,7 +1124,7 @@ major limitation.
 
 {{< nav-wrapper id="wrapper-9" anchor-name="self-hosted-also-considered" >}}
 
-#### Also considered
+#### Also considered: Nagios, Zabbix + 8 more
 
 These are the other server monitoring tools we tested. They are not as highly
 rated as the two options above, but may be worth considering.
