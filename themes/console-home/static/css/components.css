@@ -1145,6 +1145,10 @@ body:not(.mobile) .console-control:hover:before {
     stroke: var(--theme-text-5);
 }
 
+.console-card .title .link {
+    text-decoration: none;
+}
+
 /* Illustrated Text
    ================================================================================================================ */
 .illustrated-text {
