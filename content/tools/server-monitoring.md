@@ -109,6 +109,16 @@ relatedCategories:
 
 ### tldr; the best server monitoring tools
 
+In this article we review the best server monitoring tools for developers and
+engineers. We review both hosted SaaS and self-hosted on-premises monitoring
+tools to give you the widest view of current server monitoring solutions.
+
+Researching 18 different server monitoring services, we detail core
+functionality and assess key requirements including integrations / plugins,
+graphs and alerts. We also considered features like dashboards, events, incident
+management, runbooks (usually part of alerts) and team collaboration. We'll
+comment on these as useful bonus features if they are present.
+
 The best hosted SaaS server monitoring tools:
 
 {{< tools/category-review/tldr-list-open >}}
@@ -122,16 +132,6 @@ The best self-hosted on premises server monitoring tools:
 {{< tools/category-review/miniature-card name="Grafana + Prometheus" thumbnail="/img/favicons/grafana.com.png" url="https://grafana.com/" anchor="grafana-prometheus" score="4.3" >}}
 {{< tools/category-review/miniature-card name="InfluxDB + Telegraf" thumbnail="/img/favicons/www.influxdata.com.png" url="https://www.influxdata.com/" anchor="influxdb-telegraf" score="4.0" >}}
 {{< close-ul >}}
-
-In this article we review the best server monitoring tools for developers and
-engineers. We review both hosted SaaS and self-hosted on-premises monitoring
-tools to give you the widest view of current server monitoring solutions.
-
-Researching 18 different server monitoring services, we detail core
-functionality and assess key requirements including integrations / plugins,
-graphs and alerts. We also considered features like dashboards, events, incident
-management, runbooks (usually part of alerts) and team collaboration. We'll
-comment on these as useful bonus features if they are present.
 
 But do you still need server monitoring? New applications might be serverless
 and cloud-first, but servers still exist! Whether you are running a Kubernetes

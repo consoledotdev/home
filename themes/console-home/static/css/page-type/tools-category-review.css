@@ -478,7 +478,7 @@ body.page-tools-category-review {
         --leftMove: calc(calc(768px - 100vw) * -0.72);
         --topMove: calc(calc(768px - 100vw) * -0.26);
         width: calc(780px - var(--shrink));
-        transform: translate(-86%, -56%);
+        transform: translate(-86%, -54%);
         margin-left: var(--leftMove);
         margin-top: var(--topMove);
     }
@@ -570,7 +570,7 @@ body.page-tools-category-review {
             --topMove: calc(480px - 100vw) * 1.05;
             --leftMove: calc(480px - 100vw) * 0.83;
             width: 720px;
-            transform: translate(-86%, -56%);
+            transform: translate(-86%, -50%);
             margin-left: calc(-207px - var(--leftMove));
             margin-top: calc(-75px + var(--topMove));
         }
