@@ -290,7 +290,7 @@ body {
     color: var(--theme-text-1);
 }
 
-body:not(.page-feature, .page-feature-article):before {
+body.show-planes:before {
     content: "";
     position: fixed;
     left: 0;
@@ -301,7 +301,7 @@ body:not(.page-feature, .page-feature-article):before {
     z-index: 20;
 }
 
-body:not(.page-feature, .page-feature-article):after {
+body.show-planes:after {
     content: "";
     position: fixed;
     left: 0;
