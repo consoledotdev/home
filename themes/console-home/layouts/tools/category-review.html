@@ -3,8 +3,6 @@
 	{{ $CTADescription := "Our free weekly newsletter picks out the 2-3 most interesting tools." }}
 
     <section class="page-section main-tools-category-review-content">
-        {{ partial "components/tools/category-review/artwork-dark.html" . }}
-        {{ partial "components/tools/category-review/artwork-light.html" . }}
         <h2 class="title title-1">
             {{ partial "icons/devops-slanted.html" }}
             {{ .Params.titlePrefix }} <span>{{ .Params.titleCategory }}</span> {{ .Params.titleSuffix }}
@@ -28,6 +26,8 @@
                 {{ .Params.authorBioBrief }}
             </p>
         </div>
+        {{ partial "components/tools/category-review/artwork-dark.html" . }}
+        {{ partial "components/tools/category-review/artwork-light.html" . }}
     </section>
     <div class="main-tools-category-review-content-split">
         <aside class="main-tools-category-review-aside" data-aside>
