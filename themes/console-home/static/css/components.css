@@ -964,6 +964,14 @@ body:not(.mobile) .console-control:hover:before {
     padding: 0.1em 0.3em;
 }
 
+.badge.inline {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    font-size: inherit;
+}
+
 /* Popup
    ================================================================================================================ */
 .popup {
