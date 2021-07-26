@@ -121,6 +121,20 @@ p.tool-card-description {
     justify-content: space-between;
 }
 
+.page-tools .category-reviews .categories {
+    font-size: var(--t-size-1);
+}
+
+.page-tools .category-reviews .categories .icon {
+    width: var(--space3);
+    height: var(--space3);
+    margin-right: calc(var(--space2) + 2px);
+}
+
+.page-tools .category-reviews-item .categories {
+    margin-bottom: var(--space3);
+}
+
 @media (max-width: 768px) {
     .tool-card > *:not(:last-child):not(:first-child) {
         margin-bottom: var(--space2_5);
