@@ -1473,7 +1473,6 @@ body:not(.mobile) .console-control:hover:before {
 .framed-section.framed-section-attention {
     border: var(--theme-framed-section-attention-border);
     background: var(--theme-framed-section-attention-bg);
-    background-blend-mode: var(--theme-framed-section-attention-bg-blend);
 }
 
 .framed-section.framed-section-attention > .title {

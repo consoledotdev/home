@@ -127,9 +127,8 @@
     --theme-framed-section-default-bg: rgba(111, 112, 120, 0.05);
     --theme-framed-section-attention-border: 1px solid rgba(255, 204, 85, 0.4);
     --theme-framed-section-attention-item-border: 1px solid rgba(255, 204, 85, 0.1);
-    --theme-framed-section-attention-bg: linear-gradient(90deg, rgba(255, 204, 85, 0.15) 0%, rgba(255, 204, 85, 0.15) 100%), var(--theme-content-bg-3);
-    --theme-framed-section-attention-bg-2: linear-gradient(90deg, rgba(255, 204, 85, 1) 0%, rgba(255, 204, 85, 1) 100%), var(--theme-content-bg-2);
-    --theme-framed-section-attention-bg-blend: color;
+    --theme-framed-section-attention-bg: #161514;
+    --theme-framed-section-attention-bg-2: #0E0C07;
     --theme-framed-section-attention-title: var(--c-yellow-04-main);
     --theme-framed-section-attention-text: var(--c-yellow-03);
 

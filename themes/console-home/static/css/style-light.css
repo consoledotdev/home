@@ -129,7 +129,6 @@
     --theme-framed-section-attention-item-border: 1px solid rgba(255, 204, 85, 0.6);
     --theme-framed-section-attention-bg: rgba(255, 204, 85, 0.07);
     --theme-framed-section-attention-bg-2: rgba(255, 204, 85, 0.05);
-    --theme-framed-section-attention-bg-blend: normal;
     --theme-framed-section-attention-title: var(--c-yellow-06);
     --theme-framed-section-attention-text: var(--c-yellow-08);
 
