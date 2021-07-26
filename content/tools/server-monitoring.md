@@ -1271,10 +1271,6 @@ source alternative to Datadog and New Relic, but currently doesn't come close to
 their functionality. This is an interesting project to follow, but is still very
 early in development and not on par with our main recommendations above.
 
-{{< nav-wrapper close="true" >}}
-
-{{< nav-wrapper id="wrapper-10" >}}
-
 {{< tools/category-review/card-heading name="Zabbix" thumbnail="/img/favicons/www.zabbix.com.png" url="https://www.zabbix.com" score="3" >}}
 
 Zabbix is an monolithic monitoring tool written in PHP with Apache or Nginx as
@@ -1355,7 +1351,9 @@ blandit sagittis.
 
 {{< tools/category-review/related-categories >}}
 
-{{< rich-title-3 icon="logo" id="requirements" >}} Our editorial Policy
+{{< nav-wrapper id="wrapper-10" anchor-name="our-editorial-policy" >}}
+
+{{< rich-title-3 icon="logo" id="our-editorial-policy" >}} Our editorial policy
 {{</ rich-title-3 >}}
 
 #### Why you can trust us
@@ -1379,3 +1377,5 @@ Donec feugiat finibus sem, porta porta sem congue in. Lorem ipsum dolor sit
 amet, consectetur adipiscing elit. Maecenas feugiat facilisis rhoncus. Cras
 lobortis ut purus vitae tempor. Nam quis eros eu tellus sollicitudin vulputate
 vel eu sapien. Integer accumsan, mauris non blandit sagittis.
+
+{{< nav-wrapper close="true" >}}
