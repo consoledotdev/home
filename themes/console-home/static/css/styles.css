@@ -1560,7 +1560,7 @@ select.console-select::-ms-expand {
     }
 
     .content {
-        min-height: 680px;
+        min-height: 900px;
     }
 
     .main {
@@ -1584,7 +1584,7 @@ select.console-select::-ms-expand {
 
         .main {
             min-height: 0;
-            margin-top: -4vh;
+            margin-top: 0;
         }
 
         .console-form {
