@@ -816,6 +816,11 @@ body:not(.mobile) .console-control:hover:before {
     white-space: nowrap;
 }
 
+.categories.inline,
+.tags.inline {
+    display: inline-flex;
+}
+
 .categories {
     color: var(--theme-categories-color-idle);
 }
