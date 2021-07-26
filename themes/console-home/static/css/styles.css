@@ -320,6 +320,11 @@ body.show-planes:after {
     margin: var(--space4) 0 0;
 }
 
+.overflow-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 .content {
     position: relative;
     padding: calc(var(--space2) + var(--space4)) 0;

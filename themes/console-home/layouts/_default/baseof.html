@@ -12,6 +12,7 @@
             {{- with .Params.isPage}} page-{{ . }}{{- end }}
         {{- end -}}
         {{- if (not .Params.hidePlanes) }} show-planes{{ end -}}">
+        <div class="overflow-wrapper">
             {{ partial "header.html" (dict "context" . "headerType" .Params.headerType "hidePlanes" .Params.hidePlanes "hideLines" .Params.hideLines ) }}
             <main class="main
                 {{- if ne .Params.pageType "home" -}}
@@ -21,6 +22,7 @@
                     {{- block "main" . }}{{- end }}
             </main>
             {{ partial "footer.html" . }}
+        </div>
         <script src="/js/scripts.js"></script>
     </body>
 </html>

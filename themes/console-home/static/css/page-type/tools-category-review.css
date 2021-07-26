@@ -27,10 +27,6 @@ body:not(.page-tools-category-review):after {
     z-index: 20;
 }
 
-body.page-tools-category-review {
-    overflow-x: hidden;
-}
-
 .page-tools-category-review .content {
     height: auto;
 }
