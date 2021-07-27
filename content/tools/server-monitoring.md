@@ -107,6 +107,8 @@ relatedCategories:
       name: vulnerability-management
 ---
 
+{{< nav-wrapper id="wrapper-0" anchor-name="tldr" >}}
+
 ### tldr; the best server monitoring tools
 
 In this article we review the best server monitoring tools for developers and
