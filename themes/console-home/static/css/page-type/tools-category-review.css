@@ -531,6 +531,7 @@ body:not(.page-tools-category-review):after {
         .tools-category-review-tool-card .tool-card-feature-title {
             flex-flow: column nowrap;
             align-items: flex-start;
+            margin-bottom: var(--space3);
         }
 
         .tools-category-review-tool-card .tool-card-feature-title .console-score {
