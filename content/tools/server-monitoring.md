@@ -257,8 +257,8 @@ out of scope.
 
 ### Hosted SaaS server monitoring tools
 
-We reviewed 6 hosted SaaS monitoring tools. The best are: [Datadog](#datadog)
-and [New Relic](#new-relic).
+We reviewed 6 hosted SaaS monitoring tools. The best is: [Datadog](#datadog). We
+also like: [New Relic](#new-relic).
 
 {{< framed-section-open classes="framed-section-default" >}}
 
@@ -709,8 +709,8 @@ a future Console review of tracing and observability tools.
 
 ### Self-hosted server monitoring tools
 
-We reviewed 12 self-hosted server monitoring products. The best option is:
-[Grafana + Prometheus](#grafana-prometheus) but we also liked
+We reviewed 12 self-hosted server monitoring products. The best is:
+[Grafana + Prometheus](#grafana-prometheus). We also like:
 [InfluxDB + Telegraf](#influxdb-telegraf).
 
 {{< framed-section-open classes="framed-section-default" >}}
