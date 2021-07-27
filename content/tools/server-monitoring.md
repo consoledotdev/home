@@ -36,75 +36,6 @@ authorBio:
   billions of time series metrics from millions of servers. He is also a
   researcher in sustainable computing at Uptime Institute and affiliated with
   Imperial College London. David has been a developer for over 15 years.
-relatedCategories:
-  - category: devops
-    subcategory:
-      label: Log management
-      name: log-management
-  - category: devops
-    subcategory:
-      label: Containers
-      name: containers
-  - category: devops
-    subcategory:
-      label: Network monitoring
-      name: network-monitoring
-  - category: devops
-    subcategory:
-      label: Website monitoring
-      name: website-monitoring
-  - category: developer-tools
-    subcategory:
-      label: App distribution
-      name: app-distribution
-  - category: developer-tools
-    subcategory:
-      label: Backend framework
-      name: backend-framework
-  - category: developer-tools
-    subcategory:
-      label: Browser testing
-      name: browser-testing
-  - category: developer-tools
-    subcategory:
-      label: Frontend framework
-      name: frontend-framework
-  - category: developer-tools
-    subcategory:
-      label: Package managers
-      name: package-managers
-  - category: api
-    subcategory:
-      label: API
-      name: api
-  - category: cloud
-    subcategory:
-      label: Storage
-      name: storage
-  - category: cloud
-    subcategory:
-      label: Serverless
-      name: serverless
-  - category: cloud
-    subcategory:
-      label: Compute
-      name: compute
-  - category: database
-    subcategory:
-      label: Time series database
-      name: time-series-database
-  - category: database
-    subcategory:
-      label: Graph database
-      name: graph-database
-  - category: security
-    subcategory:
-      label: Authentication
-      name: authentication
-  - category: security
-    subcategory:
-      label: Vulnerability management
-      name: vulnerability-management
 ---
 
 In this article we review 18 server monitoring services to find the best server
@@ -1328,10 +1259,6 @@ our two finalists above.
 ### FAQ
 
 {{< tools/category-review/faq category="server-monitoring" >}}
-
-### Related categories
-
-{{< tools/category-review/related-categories >}}
 
 {{< nav-wrapper--open id="wrapper-10" anchor-name="our-editorial-policy" >}}
 
