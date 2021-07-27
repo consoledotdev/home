@@ -517,7 +517,7 @@ body:not(.page-tools-category-review):after {
         }
 
         .page-tools-category-review .tool-card-heading .title-score .console-score {
-            display: block;
+            display: flex;
         }
 
         .page-tools-category-review .tool-card-heading .right .console-score {

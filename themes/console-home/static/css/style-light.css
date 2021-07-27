@@ -132,7 +132,7 @@
     --theme-framed-section-attention-title: var(--c-yellow-06);
     --theme-framed-section-attention-text: var(--c-yellow-08);
 
-    --theme-score-background: var(--c-grey-03);
+    --theme-score-background: var(--c-grey-02);
     --theme-score-foreground: var(--c-black-02-main);
 
     /* Mars Internet page specific */

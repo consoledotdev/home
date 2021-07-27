@@ -1559,40 +1559,55 @@ body:not(.mobile) .console-control:hover:before {
     flex-flow: row nowrap;
     align-items: center;
 }
+.console-score .console-score-text {
+    line-height: var(--t-lH4);
+    vertical-align: top;
+}
 
 .console-score .score-bar {
     position: relative;
     display: inline-block;
     margin-left: var(--space2);
     height: 5px;
-    width: 40px;
+    width: 38px;
 }
 
-.console-score meter {
+/* Score Bar
+   ================================================================================================================ */
+.score-bar {
+    transform: skewX(-26.56deg);
+}
+
+.score-bar meter {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 0;
     height: 100%;
-    background: var(--theme-score-background);
+    background: none;
 }
 
-.console-score .score-bar-foreground {
+.score-bar .score-bar-background {
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
-    background: var(--theme-score-foreground);
+    background: var(--theme-score-background);
+    width: 100%;
+    height: 100%;
+    clip-path: path("M0 0H6V5H0V0Z M8 0H14V5H8V0Z M16 0H22V5H16V0Z M24 0H30V5H24V0Z M32 0H38V5H32V0Z");
 }
 
-.console-score .score-bar-mask {
+.score-bar .score-bar-foreground {
     position: absolute;
-    top: -1px;
-    left: -1px;
-    fill: var(--theme-content-bg-0);
+    top: 0;
+    left: 0;
+    background: var(--theme-score-foreground);
+    width: 100%;
+    height: 100%;
+    clip-path: path("M0 0H6V5H0V0Z M8 0H14V5H8V0Z M16 0H22V5H16V0Z M24 0H30V5H24V0Z M32 0H38V5H32V0Z");
 }
 
 /* Media

@@ -16,30 +16,28 @@
         <div class="title-score">
             <h4 class="title title-3"><label for="card-meter-{{ lower (.Get "name") }}">{{ .Get "name" }}</label></h4>
             <span class="console-score">
-                {{if not (eq (.Get "score") "none" )}}
-                    {{ .Get "score" }}/5
-                    <span class="score-bar">
-                        <meter value="{{ .Get "score" }}" min="0" max="5" title="{{ .Get "score" }} out of 5"></meter>
-                        <span class="score-bar-foreground" style="width: {{ mul (div (float (.Get "score")) 5.0) 100 }}%"></span>
-                        {{ partial "components/score-mask.html" }}</a>
-                    </span>
-                {{ else}}
+                {{ if eq (.Get "score") "none" }}
                     No rating
+                {{ else}}
+                    {{ $score := (float (.Get "score")) }}
+                    {{ $min := (float 0) }}
+                    {{ $max := (float 5) }}
+                    <span class="console-score-text">{{ $score }}/{{ $max }}</span>
+                    {{ partial "components/score-bar.html" (dict "min" $min "max" $max "score" $score) }}
                 {{ end }}
             </span>
         </div>
     </div>
     <div class="right">
         <span class="console-score">
-            {{if not (eq (.Get "score") "none" )}}
-                {{ .Get "score" }}/5
-                <span class="score-bar">
-                    <meter id="card-meter-{{ lower (.Get "name") }}" value="{{ .Get "score" }}" min="0" max="5" title="{{ .Get "score" }} out of 5"></meter>
-                    <span class="score-bar-foreground" style="width: {{ mul (div (float (.Get "score")) 5.0) 100 }}%"></span>
-                    {{ partial "components/score-mask.html" }}</a>
-                </span>
-            {{ else}}
+            {{ if eq (.Get "score") "none" }}
                 No rating
+            {{ else}}
+                {{ $score := (float (.Get "score")) }}
+                {{ $min := (float 0) }}
+                {{ $max := (float 5) }}
+                    <span class="console-score-text">{{ $score }}/{{ $max }}</span>
+                {{ partial "components/score-bar.html" (dict "min" $min "max" $max "score" $score) }}
             {{ end }}
         </span>
         <a class="console-button console-button-small icon-right" href="{{ .Get "url" }}" title="{{ .Get "url" }}" target="_blank"

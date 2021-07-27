@@ -16,23 +16,31 @@
         <div class="title-score">
             <h4 class="title title-3"><label for="cardmin-meter-{{ lower (.Get "name") }}"><a class="link" href="#{{ .Get "anchor" }}">{{ .Get "name" }}</a></label></h4>
             <span class="console-score">
-                {{ .Get "score" }}/5
-                <span class="score-bar">
-                    <meter value="{{ .Get "score" }}" min="0" max="5" title="{{ .Get "score" }} out of 5"></meter>
-                    <span class="score-bar-foreground" style="width: {{ mul (div (float (.Get "score")) 5.0) 100 }}%"></span>
-                    {{ partial "components/score-mask.html" }}</a>
-                </span>
+                {{ if eq (.Get "score") "none" }}
+                    No rating
+                {{ else}}
+                    {{ $score := (float (.Get "score")) }}
+                    {{ $min := (float 0) }}
+                    {{ $max := (float 5) }}
+                    {{ $id := (print "cardmin-meter-" (lower (.Get "name")))}}
+                    <span class="console-score-text">{{ $score }}/{{ $max }}</span>
+                    {{ partial "components/score-bar.html" (dict "min" $min "max" $max "score" $score) }}
+                {{ end }}
             </span>
         </div>
     </div>
     <div class="right">
         <span class="console-score">
-            {{ .Get "score" }}/5
-            <span class="score-bar">
-                <meter id="cardmin-meter-{{ lower (.Get "name") }}" value="{{ .Get "score" }}" min="0" max="5" title="{{ .Get "score" }} out of 5"></meter>
-                <span class="score-bar-foreground" style="width: {{ mul (div (float (.Get "score")) 5.0) 100 }}%"></span>
-                {{ partial "components/score-mask.html" }}</a>
-            </span>
+            {{ if eq (.Get "score") "none" }}
+                No rating
+            {{ else}}
+                {{ $score := (float (.Get "score")) }}
+                {{ $min := (float 0) }}
+                {{ $max := (float 5) }}
+                {{ $id := (print "cardmin-meter-" (lower (.Get "name")))}}
+                    <span class="console-score-text">{{ $score }}/{{ $max }}</span>
+                {{ partial "components/score-bar.html" (dict "min" $min "max" $max "score" $score "id" $id) }}
+            {{ end }}
         </span>
         <span class="actions">
             <a class="console-button-text console-button-small" href="#{{ .Get "anchor" }}">Read review</a>
