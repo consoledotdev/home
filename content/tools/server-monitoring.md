@@ -217,7 +217,7 @@ Alerting is broken down into two parts:
   thresholds e.g. is CPU load over 1.5? It can also be much more complex.
   Different values can trigger at different thresholds e.g. warning vs error. It
   can be based on relative values or % change over a specified time period
-  (delta alerts). Alerts could trigger based on anomalies, or as composites of
+  (delta alerts). Alerts could trigger for anomalies, or as composites of
   multiple metrics with conditions that must all exist before an alert is
   triggered. This can get complicated so it is important to have flexibility to
   define what you care about.
@@ -235,8 +235,8 @@ Alerting is broken down into two parts:
 
 #### Everything else
 
-The best monitoring tools in 2021 don't just monitor servers they also have lots
-of other features. These include incident management, runbooks, team
+The best monitoring tools in 2021 don't just monitor servers, they also have
+lots of other features. These include incident management, runbooks, team
 collaboration, machine learning for anomaly detection and suggested
 remediations, error tracking, and many other complementary features.
 
@@ -413,7 +413,7 @@ Datadog can also ingest data from custom sources. This includes through
 OpenMetrics endpoints, allowing you to connect to Prometheus, for example, as
 well as using open standards like
 [StatsD](https://docs.datadoghq.com/integrations/statsd/), SNMP, OpenTelemetry
-and OpenTracing. However, these are considered “custom” metrics for billing
+and OpenTracing. However, these are considered "custom" metrics for billing
 purposes and are limited to 100 per host before you have to pay more.
 [These are complex](https://docs.datadoghq.com/account_management/billing/custom_metrics/)
 and get expensive very quickly - pricing is only available by speaking to sales,
@@ -442,7 +442,7 @@ of tools like Nagios, but because the UI crams in so much functionality it can
 be difficult to find what you're looking for. This is particularly the case if
 you just need basic monitoring. For example, although the alerting functionality
 is very sophisticated there is no top level concept of an alert - these exist as
-“Monitors” and are dependent on the trigger source e.g. a server metric or
+"Monitors" and are dependent on the trigger source e.g. a server metric or
 synthetic check status. This means it is flexible for large environments but is
 cumbersome for smaller use cases.
 
@@ -529,8 +529,8 @@ which is a nice touch.
 
 {{< tools/category-review/card-feature-title text="Alerts" score="4" >}}
 
-Alerting in New Relic is based around “policies” that have trigger conditions. A
-“Golden Signals” policy is auto-created on installing the monitoring agent which
+Alerting in New Relic is based around "policies" that have trigger conditions. A
+"Golden Signals" policy is auto-created on installing the monitoring agent which
 sets up some basic email alerts on server CPU %. Trigger conditions are most
 flexible if defined using NRQL but there are some templates provided for server
 monitoring. You can attach runbooks to notifications and configure channels such
@@ -642,16 +642,16 @@ then you may as well pay a bit more for Datadog or New Relic.
 Dynatrace has been around in various forms since 2006, starting as an
 application performance monitoring tool and then expanding to cover all aspects
 of monitoring, now including server monitoring. It has a specific focus on full
-stack “platform” monitoring which covers your entire infrastructure, from logs
+stack "platform" monitoring which covers your entire infrastructure, from logs
 to APM as well as code level analytics.
 
 Dynatrace can do the job - the server monitoring agent installation went
 smoothly and it reports the standard system metrics you would expect. However,
-alert configuration is confusing - there is no “alerts” section in the main UI,
-for example. Instead, Dynatrace uses “Problems” that are detected based around
+alert configuration is confusing - there is no "alerts" section in the main UI,
+for example. Instead, Dynatrace uses "Problems" that are detected based on
 anomalies, either from automated baselines or built in static thresholds.
 Evaluation happens on sliding 5 or 15 minute time intervals. These are
-configured in a separate “Settings” section of the UI which is an unsual
+configured in a separate "Settings" section of the UI which is an unusual
 approach.
 
 Unfortunately, Dynatrace has the most complicated pricing structure we've ever
@@ -661,7 +661,7 @@ and these consume a billing metric called
 [Davis Data Units](https://www.dynatrace.com/support/help/monitoring-consumption/davis-data-units/)
 (DDU). Each data point consists of 0.001 DDUs but is weighted depending on the
 amount of RAM a server has, with different weights depending on whether the
-monitoring agent is in “Full Stack” or “Infrastructure Mode”. The former gets
+monitoring agent is in "Full Stack" or "Infrastructure Mode". The former gets
 1000 custom metrics per host and the latter gets 200 custom metrics, which don't
 consume DDUs. Integrations into cloud APIs and serverless products also consume
 DDUs.
@@ -687,7 +687,7 @@ complex pricing, we do not recommend Dynatrace for server monitoring.
 
 Logic Monitor tricks you into thinking you are signing up for a trial but you
 can't actually test the product without speaking to someone - you are actually
-“requesting” a trial, not signing up. Coupling this with the fact that they do
+"requesting" a trial, not signing up. Coupling this with the fact that they do
 not list their pricing anywhere makes for a frustrating experience for a
 developer who just wants to try the product themselves.
 
@@ -721,7 +721,7 @@ We reviewed 12 self-hosted server monitoring products. The best is:
 Self-hosted monitoring is different from SaaS monitoring where everything is
 done for you in a single product. Although there are all-in-one self-hosted
 server monitoring tools, for the best setup you really need to deploy several
-product and integrate them. This is more operationally challenging -
+products and integrate them. This is more operationally challenging -
 demonstrating the value of SaaS monitoring - but allows each tool to focus on
 what it does best.
 
@@ -860,7 +860,7 @@ one or more panels.
 Grafana 8.0 introduced a new alerting mechanism where alerts are centralized
 with a single system-wide alerting view, but it is still
 [opt-in](https://grafana.com/docs/grafana/latest/alerting/unified-alerting/opt-in/)
-for early testing. In the meantime, Grafana's “legacy” alerts are configured
+for early testing. In the meantime, Grafana's "legacy" alerts are configured
 when creating a new graph panel for supported data sources. Not every data
 source supports alerts. Alerts are triggered based on configured thresholds from
 the data returned by queries. This gives you all the power of querying across
@@ -1031,12 +1031,12 @@ gauge, heatmap, scatter, table, etc.
 {{< tools/category-review/card-feature-title text="Alerts" score="3" >}}
 
 Alerting in InfluxDB is based around checks that define urgency levels - crit,
-warn, info, ok. Checks can be triggered based on thresholds or “deadman”, which
+warn, info, ok. Checks can be triggered based on thresholds or "deadman", which
 is when a particular value is not being reported for a period of time.
 Notification rules are set up to trigger when a check returns a particular
 status, which then triggers a notification endpoint. Check conditions are
-currently quite limited - you can only set thresholds such as “value is above
-x”, although you can use the Flux query language to do more advanced
+currently quite limited - you can only set thresholds such as "value is above
+x", although you can use the Flux query language to do more advanced
 manipulation of metrics before they are evaluated by the check. Notification
 endpoints only support Slack, HTTP, or Pagerduty but InfluxDB includes the
 concept of
@@ -1132,8 +1132,8 @@ rated as the two options above, but may be worth considering.
 
 {{< tools/category-review/card-heading name="checkmk" thumbnail="/img/favicons/checkmk.com.png" url="https://checkmk.com" score="none" >}}
 
-checkmk is an unusual project because its free open source edition (checkmk Raw)
-is based on Nagios but the other “Enterprise” editions (available in Free,
+checkmk is an unusual project because the free open source edition (checkmk Raw)
+is based on Nagios but the other "Enterprise" editions (available in Free,
 Standard and Managed Services variants) are unrelated to Nagios.
 
 The Nagios-based Raw edition is in maintenance mode but does have an active
@@ -1150,7 +1150,7 @@ limits (because of the Nagios core).
 Checkmk enterprise has improved scalability and adds support for container
 monitoring, high availability deployments, 1 second time series granularity and
 more visualization options. The free version of the Enterprise edition supports
-up to 25 hosts. Above that, it is priced based on the number of “services”
+up to 25 hosts. Above that, it is priced based on the number of "services"
 monitored - the average host will report 30 services. A license for 3000
 services (~100 hosts) costs $720/year.
 
@@ -1207,7 +1207,7 @@ Netdata is an open source monitoring product that has an installable agent which
 defaults to local storage of metrics on a single host. Users connect to the
 monitoring UI running on each host, but it supports streaming data to a cloud UI
 hosted by Netdata themselves. This is unusual because Netdata does not store any
-metrics, instead pitching their cloud service as a “war room” that can be used
+metrics, instead pitching their cloud service as a "war room" that can be used
 by multiple users for incident management. It is also provided free of charge,
 with a paid service planned for the future.
 
