@@ -158,6 +158,8 @@ and you may not need to build your own data centers
 VMs, or deploying code on Digital Ocean droplets, is still common. Servers are
 where it starts.
 
+{{< nav-wrapper close="true" >}}
+
 {{< nav-wrapper id="wrapper-1" anchor-name="requirements" >}}
 
 {{< framed-section-open classes="framed-section-attention" >}}

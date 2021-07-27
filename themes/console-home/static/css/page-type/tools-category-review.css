@@ -79,8 +79,12 @@ body:not(.page-tools-category-review):after {
     stroke: var(--theme-categories-color-idle);
 }
 
-.page-tools-category-review .title.title-2:not(:first-child) {
+.page-tools-category-review .title.title-2 {
     margin-top: var(--space5);
+}
+
+.page-tools-category-review .nav-wrapper:first-child .title.title-2 {
+    margin-top: 0;
 }
 
 .page-tools-category-review .title.title-3 {
