@@ -1,0 +1,165 @@
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "The best server monitoring tools for developers",
+    "numberOfItems": 4,
+    "itemListOrder": "Ascending",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Datadog",
+            "item": {
+                "@type": "Product",
+                "name": "Datadog",
+                "description": "Hosted SaaS server monitoring.",
+                "url": "https://www.datadoghq.com/",
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "Datadog is the industry leader with the most comprehensive and up to date set of integrations, however this also means it has a more complex UI.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "David Mytton",
+                        "email": "david@console.dev",
+                        "url": "https://davidmytton.blog/start",
+                        "description": "From 2009-2018 David was CEO at Server Density, a SaaS server monitoring startup. He is now co-founder at Console.",
+                        "image": "https://console.dev/img/david.jpg",
+                        "sameAs": [
+                            "https://twitter.com/davidmytton",
+                            "https://www.linkedin.com/in/davidmytton/"
+                        ]
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "date"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "New Relic",
+            "item": {
+                "@type": "Product",
+                "name": "New Relic",
+                "description": "Hosted SaaS server monitoring.",
+                "url": "https://newrelic.com/",
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "New Relic is best known for application performance monitoring (APM) but can now monitor everything, including server monitoring. It has a clean UI but has more limited alerting capabilities.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4.5",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "David Mytton",
+                        "email": "david@console.dev",
+                        "url": "https://davidmytton.blog/start",
+                        "description": "From 2009-2018 David was CEO at Server Density, a SaaS server monitoring startup. He is now co-founder at Console.",
+                        "image": "https://console.dev/img/david.jpg",
+                        "sameAs": [
+                            "https://twitter.com/davidmytton",
+                            "https://www.linkedin.com/in/davidmytton/"
+                        ]
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "date"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Grafana + Prometheus",
+            "item": {
+                "@type": "Product",
+                "name": "Grafana + Prometheus",
+                "description": "Self-hosted server monitoring.",
+                "url": "https://grafana.com/",
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "Grafana is the best open source metrics visualization and dashboarding tool. It can connect to various data source backends and has built-in alerting. We recommend using the open source metrics backend, Prometheus, as the primary data source.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4.3",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "David Mytton",
+                        "email": "david@console.dev",
+                        "url": "https://davidmytton.blog/start",
+                        "description": "From 2009-2018 David was CEO at Server Density, a SaaS server monitoring startup. He is now co-founder at Console.",
+                        "image": "https://console.dev/img/david.jpg",
+                        "sameAs": [
+                            "https://twitter.com/davidmytton",
+                            "https://www.linkedin.com/in/davidmytton/"
+                        ]
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "date"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "InfluxDB + Telegraf",
+            "item": {
+                "@type": "Product",
+                "name": "InfluxDB + Telegraf",
+                "description": "Self-hosted server monitoring.",
+                "url": "https://www.influxdata.com/products/influxdb/",
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "InfluxDB is an open source time series database with a visualization and alerting layer. It combines well with Telegraf, a monitoring agent from the same developers, but the alerting features are limited.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "David Mytton",
+                        "email": "david@console.dev",
+                        "url": "https://davidmytton.blog/start",
+                        "description": "From 2009-2018 David was CEO at Server Density, a SaaS server monitoring startup. He is now co-founder at Console.",
+                        "image": "https://console.dev/img/david.jpg",
+                        "sameAs": [
+                            "https://twitter.com/davidmytton",
+                            "https://www.linkedin.com/in/davidmytton/"
+                        ]
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "date"
+                }
+            }
+        }
+    ]
+}
