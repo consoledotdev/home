@@ -3,6 +3,11 @@
 	{{ $CTADescription := "Our free weekly newsletter picks out the 2-3 most interesting tools." }}
 
     <section class="page-section main-tools-category-review-content">
+
+        <script type="application/ld+json">
+            {{ readFile "/content/tools/server-monitoring.json" | safeJS }}
+        </script>
+        
         <h2 class="title title-1">
             {{ partial "icons/devops-slanted.html" }}
             {{ .Params.titlePrefix }} <span>{{ .Params.titleCategory }}</span> {{ .Params.titleSuffix }}
