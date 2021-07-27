@@ -107,15 +107,10 @@ relatedCategories:
       name: vulnerability-management
 ---
 
-In this article we review the best server monitoring tools for developers and
-engineers. We review both hosted SaaS and self-hosted on-premises monitoring
-tools to give you the widest view of current server monitoring solutions.
-
-Researching 18 different server monitoring services, we detail core
-functionality and assess key requirements including integrations / plugins,
-graphs and alerts. We also considered features like dashboards, events, incident
-management, runbooks (usually part of alerts) and team collaboration. We'll
-comment on these as useful bonus features if they are present.
+In this article we review 18 server monitoring services to find the best server
+monitoring tools for developers. We review both hosted SaaS and self-hosted
+on-premises monitoring tools and assess integrations / plugins, graphs and
+alerts.
 
 {{< nav-wrapper--open id="wrapper-0" anchor-name="tldr" >}}
 
@@ -157,6 +152,12 @@ and you may not need to build your own data centers
 [like Apple](https://9to5mac.com/guides/apple-data-center/), but spinning up EC2
 VMs, or deploying code on Digital Ocean droplets, is still common. Servers are
 where it starts.
+
+For this article, we tried 18 different server monitoring services and reviewed
+key requirements including integrations / plugins, graphs and alerts. We also
+considered features like dashboards, events, incident management, runbooks
+(usually part of alerts) and team collaboration. We'll comment on these as
+useful bonus features if they are present.
 
 {{< div--close >}}
 
