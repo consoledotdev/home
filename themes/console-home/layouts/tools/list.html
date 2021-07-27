@@ -1,4 +1,61 @@
 {{ define "main" }}
+	<!--
+        Structured markup for Google to pick up the reviews
+        on the /tools/ page. Ref:
+        https://developers.google.com/search/docs/guides/intro-structured-data
+        https://developers.google.com/search/docs/data-types/review-snippet
+        https://developers.google.com/search/docs/data-types/software-app
+    -->
+	{{ $iso8601 := "2006-01-02T15:04:05-07:00" -}}
+    {{ $reviewCount := len $.Site.Data.toolsreviewed.items }}
+    {{ $reviewCount = sub $reviewCount 1 }}
+    <script type="application/ld+json">
+        {
+            "@context":"https://schema.org",
+            "@type":"ItemList",
+            "name": "The best tools for developers",
+            "numberOfItems": {{- $reviewCount -}},
+			"itemListOrder": "Unordered",
+            "itemListElement":[
+                {{ range $index, $review := $.Site.Data.toolsreviewed.items }}
+                {
+                    "@type":"ListItem",
+                    "position": {{ $index }},
+                    "name": "{{ index . "Tool/Product/Project" }}",
+                    "item":  { 
+                        "@type": "Product",
+                        "name": "{{ index . "Tool/Product/Project" }}",
+                        "description": "{{ index . "Tool/Product/Project" }}",
+                        "url": "{{ index . "URL" }}",
+                        "review":   {
+                            "@type": "Review",
+                            "reviewBody": "What we like: {{ index . "What we like" }} What we don't like: {{ index . "What we dislike" }}",
+                            "reviewRating":  {
+                                "@type": "Rating",
+                                "ratingValue": "5",
+                                "bestRating": "5",
+                                "worstRating": "0"
+                            },
+                            "author": {
+                                "@type": "Organization",
+                                "name": "Console",
+                                "url": "https://console.dev"
+                           },
+                           "publisher": {
+                               "@type": "Organization",
+                               "name": "Console",
+                               "url": "https://console.dev"
+                            },
+                            {{ $reviewDate := index . "Scheduled for" -}}
+                            {{- $reviewDate = dateFormat $iso8601 $reviewDate -}}
+                            "datePublished": "{{ $reviewDate | safeHTML }}"
+                        }
+                    }
+                }{{ if lt $index $reviewCount }},{{end}}{{ end }}
+            ]
+        }
+    </script>
+
     {{ $CTATitle := "Interesting Tools by email" }}
 	{{ $CTADescription := "Our free weekly newsletter picks out the 2-3 most interesting tools. " }}
 	<section class="page-section page-section-feature-root">
