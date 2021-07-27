@@ -132,7 +132,11 @@ body:not(.page-tools-category-review):after {
 }
 
 .main-tools-category-review .author-box {
-    margin: var(--space5) 0;
+    margin: var(--space5) 0 var(--space4_5);
+}
+
+.main-tools-category-review .about-console-box {
+    margin: var(--space4_5) 0 var(--space5);
 }
 
 .main-tools-category-review .tools-category-review-tldr-list {
