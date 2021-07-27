@@ -1334,8 +1334,7 @@ our two finalists above.
 
 {{< nav-wrapper--open id="wrapper-10" anchor-name="our-editorial-policy" >}}
 
-{{< rich-title-3 icon="logo" id="our-editorial-policy" >}} Our editorial policy
-{{</ rich-title-3 >}}
+### Our editorial policy
 
 #### Why you can trust us
 
