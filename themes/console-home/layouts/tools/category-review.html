@@ -41,6 +41,7 @@
         <section class="page-section main-tools-category-review-content">
             {{ .Content }}
             {{ partial "components/author.html" (dict "context" . "bio" .Params.authorBio "img" .Params.authorImg "name" .Params.authorName ) }}
+            {{ partial "components/about-console.html" }}
             {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
         </section>
     </div>

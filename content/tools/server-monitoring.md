@@ -1339,24 +1339,18 @@ our two finalists above.
 
 #### Why you can trust us
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet
-sagittis augue, ac euismod dui auctor ut. Donec feugiat finibus sem, porta porta
-sem congue in.
+Console is written by developers for developers. Using our decades of experience
+building software at scale, we apply strict
+[selection criteria](/about/#selection-criteria) to decide which tools we
+feature.
 
-#### About Console
+This includes asking questions like "Would this form part of a daily-use set of
+developer tools?", "Would this be used by advanced, power-users?" and "Does it
+have a good graphical and/or command line interface? Shortcuts? Accessibility?".
+The more of these questions we can answer positively, the more likely a tool is
+to be featured.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet
-sagittis augue, ac euismod dui auctor ut. Donec feugiat finibus sem, porta porta
-sem congue in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-feugiat facilisis rhoncus. Cras lobortis ut purus vitae tempor. Nam quis eros eu
-tellus sollicitudin vulputate vel eu sapien. Integer accumsan, mauris non
-blandit sagittis.
-
-#### How we make money
-
-Donec feugiat finibus sem, porta porta sem congue in. Lorem ipsum dolor sit
-amet, consectetur adipiscing elit. Maecenas feugiat facilisis rhoncus. Cras
-lobortis ut purus vitae tempor. Nam quis eros eu tellus sollicitudin vulputate
-vel eu sapien. Integer accumsan, mauris non blandit sagittis.
+We **do not** accept payment for inclusion and where we work with partners, they
+must fit our selection criteria before we consider working with them.
 
 {{< div--close >}}
