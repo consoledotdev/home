@@ -107,7 +107,7 @@ relatedCategories:
       name: vulnerability-management
 ---
 
-{{< nav-wrapper id="wrapper-0" anchor-name="tldr" >}}
+{{< nav-wrapper--open id="wrapper-0" anchor-name="tldr" >}}
 
 ### tldr; the best server monitoring tools
 
@@ -123,17 +123,17 @@ comment on these as useful bonus features if they are present.
 
 The best hosted SaaS server monitoring tools:
 
-{{< tools/category-review/tldr-list-open >}}
+{{< tools/category-review/tldr-list--open >}}
 {{< tools/category-review/miniature-card name="Datadog" thumbnail="/img/favicons/www.datadoghq.com.png" url="https://www.datadoghq.com/" anchor="datadog" score="5" >}}
 {{< tools/category-review/miniature-card name="New Relic" thumbnail="/img/favicons/newrelic.com.png" url="https://newrelic.com/" anchor="new-relic" score="4.5" >}}
-{{< close-ul >}}
+{{< ul--close >}}
 
 The best self-hosted on premises server monitoring tools:
 
-{{< tools/category-review/tldr-list-open >}}
+{{< tools/category-review/tldr-list--open >}}
 {{< tools/category-review/miniature-card name="Grafana + Prometheus" thumbnail="/img/favicons/grafana.com.png" url="https://grafana.com/" anchor="grafana-prometheus" score="4.3" >}}
 {{< tools/category-review/miniature-card name="InfluxDB + Telegraf" thumbnail="/img/favicons/www.influxdata.com.png" url="https://www.influxdata.com/" anchor="influxdb-telegraf" score="4.0" >}}
-{{< close-ul >}}
+{{< ul--close >}}
 
 But do you still need server monitoring? New applications might be serverless
 and cloud-first, but servers still exist! Whether you are running a Kubernetes
@@ -158,11 +158,11 @@ and you may not need to build your own data centers
 VMs, or deploying code on Digital Ocean droplets, is still common. Servers are
 where it starts.
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}
 
-{{< nav-wrapper id="wrapper-1" anchor-name="requirements" >}}
+{{< nav-wrapper--open id="wrapper-1" anchor-name="requirements" >}}
 
-{{< framed-section-open classes="framed-section-attention" >}}
+{{< framed-section--open classes="framed-section-attention" >}}
 
 {{< rich-title-3 icon="checklist" id="requirements" >}} Requirements
 {{</ rich-title-3 >}}
@@ -171,7 +171,7 @@ Deciding whether you want your monitoring to be a hosted SaaS product or
 self-hosted on premises is the key decision (see each section, below). Once you
 have chosen, there are 3 requirements that we will assess for each review.
 
-{{< framed-section-item-open >}}
+{{< framed-section-item--open >}}
 
 #### Integrations / plugins
 
@@ -188,9 +188,9 @@ plugin systems is that anyone can build integrations, but that is not helpful if
 they are later abandoned or not kept up to date. There might be a long list of
 integrations, but do they work well?
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< framed-section-item-open >}}
+{{< framed-section-item--open >}}
 
 #### Graphs
 
@@ -201,9 +201,9 @@ graphs, percentile breakdowns, trend analysis, annotations, etc. Graphs should
 be customizable and load quickly. Collecting lots of monitoring data is no good
 if you can't visualize it.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< framed-section-item-open classes="flat-lists" >}}
+{{< framed-section-item--open classes="flat-lists" >}}
 
 #### Alerts
 
@@ -229,9 +229,9 @@ Alerting is broken down into two parts:
   integrations into incident management tools like PagerDuty and ServiceNow. The
   ability to customize notification configurations is important.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< framed-section-item-open >}}
+{{< framed-section-item--open >}}
 
 #### Everything else
 
@@ -248,20 +248,20 @@ In this review we are only reviewing server monitoring products. We'll comment
 on complementary features if they are present, but other monitoring products are
 out of scope.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}
 
-{{< nav-wrapper id="wrapper-2" anchor-name="hosted-saas-monitoring-tools" >}}
+{{< nav-wrapper--open id="wrapper-2" anchor-name="hosted-saas-monitoring-tools" >}}
 
 ### Hosted SaaS server monitoring tools
 
 We reviewed 6 hosted SaaS monitoring tools. The best is: [Datadog](#datadog). We
 also like: [New Relic](#new-relic).
 
-{{< framed-section-open classes="framed-section-default" >}}
+{{< framed-section--open classes="framed-section-default" >}}
 
 #### Pros & cons of hosted SaaS server monitoring
 
@@ -281,7 +281,7 @@ appropriate - most tools are one or the other.
 
 What are the pros and cons of hosted SaaS monitoring?
 
-{{< framed-section-item-open classes="flat-lists pros-cons pros" >}}
+{{< framed-section-item--open classes="flat-lists pros-cons pros" >}}
 
 {{< rich-title-5 icon="checkmark" id="pros-hosted" >}} Pros
 {{</ rich-title-5 >}}
@@ -304,9 +304,9 @@ What are the pros and cons of hosted SaaS monitoring?
   reliable alert delivery or managing a time series database. SaaS monitoring
   tools handle all that for you.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< framed-section-item-open classes="flat-lists pros-cons cons" >}}
+{{< framed-section-item--open classes="flat-lists pros-cons cons" >}}
 
 {{< rich-title-5 icon="minus" id="cons-hosted" >}} Cons {{</ rich-title-5 >}}
 
@@ -327,19 +327,19 @@ What are the pros and cons of hosted SaaS monitoring?
   accidentally leaking data into the monitoring environment. This is more
   relevant for log monitoring than server monitoring.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}
 
 ### Best hosted SaaS server monitoring tools
 
-{{< nav-wrapper id="wrapper-3" anchor-name="datadog" >}}
+{{< nav-wrapper--open id="wrapper-3" anchor-name="datadog" >}}
 
-{{< tools/category-review/card-open >}}
+{{< tools/category-review/card--open >}}
 
-{{< tools/category-review/card-top-open >}}
+{{< tools/category-review/card-top--open >}}
 
 {{< tools/category-review/card-heading name="Datadog" thumbnail="/img/favicons/www.datadoghq.com.png" url="https://www.datadoghq.com/" score="5" >}}
 
@@ -348,22 +348,22 @@ integrations, however this also means it has a more complex UI.
 
 {{< youtube-video url="https://www.youtube.com/embed/YmJcbAI_OCg" title="Datadog Product Tour" >}}
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< tools/category-review/card-bottom-open >}}
+{{< tools/category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost-open highlight="$15-27 server/month" >}}
+{{< tools/category-review/card-cost--open highlight="$15-27 server/month" >}}
 
 Datadog gets expensive very quickly. Server monitoring pricing ranges from
 $15-27/server/month depending on features and monthly vs annual commitment.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< framed-section-open classes="framed-section-attention" >}}
+{{< framed-section--open classes="framed-section-attention" >}}
 
 {{< rich-title-5 icon="checklist" >}}Key features {{</ rich-title-5 >}}
 
-{{< framed-section-item-open >}}
+{{< framed-section-item--open >}}
 
 {{< tools/category-review/card-feature-title text="Integrations / plugins" score="5" >}}
 
@@ -374,9 +374,9 @@ to date by Datadog's engineering teams and new integrations will often be
 launched on the day of release due to partnerships with major vendors. The agent
 is open source so you can easily write your own plugins.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< framed-section-item-open >}}
+{{< framed-section-item--open >}}
 
 {{< tools/category-review/card-feature-title text="Graphs" score="5" >}}
 
@@ -386,9 +386,9 @@ supported and data can be visualized based on tags, aggregation functions,
 metric attributes and time ranges. All graphs can be shared on dashboards or in
 Datadog's built-in incident management product.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< framed-section-item-open >}}
+{{< framed-section-item--open >}}
 
 {{< tools/category-review/card-feature-title text="Alerts" score="5" >}}
 
@@ -399,11 +399,11 @@ and composites of all these types. Notifications are built into Datadog's team
 collaboration features which can notify via email, Jira, PagerDuty, Slack,
 webhooks and others.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< tools/category-review/card-like-open >}}
+{{< tools/category-review/card-like--open >}}
 
 The deciding factor for any monitoring tool is whether it can monitor your tech
 stack. Datadog excels here. It has the most up to date integrations across a
@@ -432,9 +432,9 @@ management. Collaborating with your engineering, devops and security teams in a
 single tool means you have access to all the data you need to maintain reliable
 infrastructure and debug problems.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< tools/category-review/card-dislike-open >}}
+{{< tools/category-review/card-dislike--open >}}
 
 All this customizability and flexibility across multiple monitoring products
 means that Datadog is not easy to use. It is better than the previous generation
@@ -453,19 +453,19 @@ quickly and unexpectedly, especially with usage based pricing on log monitoring
 or custom metrics that you have limited control over. Datadog is not designed
 for small environments that only need basic monitoring.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}
 
-{{< nav-wrapper id="wrapper-4" anchor-name="new-relic" >}}
+{{< nav-wrapper--open id="wrapper-4" anchor-name="new-relic" >}}
 
-{{< tools/category-review/card-open >}}
+{{< tools/category-review/card--open >}}
 
-{{< tools/category-review/card-top-open >}}
+{{< tools/category-review/card-top--open >}}
 
 {{< tools/category-review/card-heading name="New Relic" thumbnail="/img/favicons/newrelic.com.png" url="https://newrelic.com/" score="4.5" >}}
 
@@ -475,11 +475,11 @@ limited alerting capabilities.
 
 {{< youtube-video url="https://www.youtube.com/embed/JQC-cMre5gI" title="Level Up Data Nerds" >}}
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< tools/category-review/card-bottom-open >}}
+{{< tools/category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost-open highlight="100GB free then $0.25 GB/month" >}}
+{{< tools/category-review/card-cost--open highlight="100GB free then $0.25 GB/month" >}}
 
 New Relic has a reputation for being very expensive but it now includes a
 generous free quota. A single user can get 100GB/month worth of ingested data
@@ -490,13 +490,13 @@ can be difficult to predict costs priced on a GB basis for server monitoring -
 data volume depends on things like log volume, metrics reported, and reporting
 frequency.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< framed-section-open classes="framed-section-attention" >}}
+{{< framed-section--open classes="framed-section-attention" >}}
 
 {{< rich-title-5 icon="checklist" >}}Key features {{</ rich-title-5 >}}
 
-{{< framed-section-item-open >}}
+{{< framed-section-item--open >}}
 
 {{< tools/category-review/card-feature-title text="Integrations / plugins" score="4.5" >}}
 
@@ -508,9 +508,9 @@ available for cloud services such as AWS Lambda. Like Datadog, New Relic is
 often one of the first monitoring companies to support new services and
 regularly releases integrations on the day new products are announced.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< framed-section-item-open >}}
+{{< framed-section-item--open >}}
 
 {{< tools/category-review/card-feature-title text="Graphs" score="5" >}}
 
@@ -523,9 +523,9 @@ and aggregation functions. You can also use
 [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/) instead,
 which is a nice touch.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< framed-section-item-open >}}
+{{< framed-section-item--open >}}
 
 {{< tools/category-review/card-feature-title text="Alerts" score="4" >}}
 
@@ -537,11 +537,11 @@ monitoring. You can attach runbooks to notifications and configure channels such
 as email, PagerDuty, Slack and webhooks. Alerting is powerful, but not quite as
 flexible as Datadog.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< tools/category-review/card-like-open >}}
+{{< tools/category-review/card-like--open >}}
 
 The real power of New Relic comes from everything existing as a metric and
 building their UI through its custom query language -
@@ -577,9 +577,9 @@ to a bundled model where all the products are included and priced on data volume
 it is much easier to try out all the features and start pushing data in. This is
 a clever sales trick!
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< tools/category-review/card-dislike-open >}}
+{{< tools/category-review/card-dislike--open >}}
 
 Although the power of NRQL is used for defining alert triggers, the notification
 options are not as powerful as Datadog. You can define thresholds such as
@@ -604,15 +604,15 @@ high as you might think. Isn't the purpose of SaaS monitoring to be able to grow
 without having to think about how to deal with scaling the infrastructure behind
 it?
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}
 
-{{< nav-wrapper id="wrapper-5" anchor-name="hosted-saas-also-considered" >}}
+{{< nav-wrapper--open id="wrapper-5" anchor-name="hosted-saas-also-considered" >}}
 
 #### Also considered: Dynatrace, Logic Monitor + 2 more
 
@@ -704,9 +704,9 @@ Datadog, Prometheus, AWS, Google Cloud or OpenTelemetry. As such, we decided not
 to review it as part of this article on server monitoring. It will be covered in
 a future Console review of tracing and observability tools.
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}
 
-{{< nav-wrapper id="wrapper-6" anchor-name="self-hosted-monitoring-tools" >}}
+{{< nav-wrapper--open id="wrapper-6" anchor-name="self-hosted-monitoring-tools" >}}
 
 ### Self-hosted server monitoring tools
 
@@ -714,7 +714,7 @@ We reviewed 12 self-hosted server monitoring products. The best is:
 [Grafana + Prometheus](#grafana-prometheus). We also like:
 [InfluxDB + Telegraf](#influxdb-telegraf).
 
-{{< framed-section-open classes="framed-section-default" >}}
+{{< framed-section--open classes="framed-section-default" >}}
 
 #### Pros & cons of self-hosted on premises monitoring
 
@@ -733,7 +733,7 @@ this really a good use of your engineering team?
 
 What are the pros and cons of self-hosted on premises monitoring?
 
-{{< framed-section-item-open classes="flat-lists pros-cons pros" >}}
+{{< framed-section-item--open classes="flat-lists pros-cons pros" >}}
 
 {{< rich-title-5 icon="checkmark" id="pros-self-hosted" >}} Pros
 {{</ rich-title-5 >}}
@@ -758,9 +758,9 @@ What are the pros and cons of self-hosted on premises monitoring?
   although there are still some legacy on-premises enterprise monitoring
   products.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< framed-section-item-open classes="flat-lists pros-cons cons" >}}
+{{< framed-section-item--open classes="flat-lists pros-cons cons" >}}
 
 {{< rich-title-5 icon="minus" id="cons-self-hosted" >}} Cons
 {{</ rich-title-5 >}}
@@ -784,19 +784,19 @@ What are the pros and cons of self-hosted on premises monitoring?
   never done it before, especially at scale. Is this something you want to
   dedicate your engineering teams to?
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}
 
 ### Best self-hosted server monitoring tools
 
-{{< nav-wrapper id="wrapper-7" anchor-name="grafana-prometheus" >}}
+{{< nav-wrapper--open id="wrapper-7" anchor-name="grafana-prometheus" >}}
 
-{{< tools/category-review/card-open >}}
+{{< tools/category-review/card--open >}}
 
-{{< tools/category-review/card-top-open >}}
+{{< tools/category-review/card-top--open >}}
 
 {{< tools/category-review/card-heading name="Grafana + Prometheus" thumbnail="/img/favicons/grafana.com.png" url="https://grafana.com" score="4.3" >}}
 
@@ -807,15 +807,15 @@ recommend using the open source metrics backend,
 
 {{< youtube-video url="https://www.youtube.com/embed/0n2UNzk2OaI" title="Getting Started with Grafana Webinar" >}}
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< tools/category-review/card-bottom-open >}}
+{{< tools/category-review/card-bottom--open >}}
 
-{{< framed-section-open classes="framed-section-attention" >}}
+{{< framed-section--open classes="framed-section-attention" >}}
 
 {{< rich-title-5 icon="checklist" >}}Key features {{</ rich-title-5 >}}
 
-{{< framed-section-item-open >}}
+{{< framed-section-item--open >}}
 
 {{< tools/category-review/card-feature-title text="Integrations / plugins" score="4" >}}
 
@@ -834,9 +834,9 @@ to get up and running. This may not be the case for all exporters. The quality
 of unofficial third-party integrations is always a problem for any monitoring
 product, especially as the integration becomes more obscure.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< framed-section-item-open >}}
+{{< framed-section-item--open >}}
 
 {{< tools/category-review/card-feature-title text="Graphs" score="5" >}}
 
@@ -851,9 +851,9 @@ and configure how the legend and labels are displayed. Grafana can even plot
 metrics from different sources on the same graph and dashboards are built from
 one or more panels.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< framed-section-item-open >}}
+{{< framed-section-item--open >}}
 
 {{< tools/category-review/card-feature-title text="Alerts" score="4" >}}
 
@@ -869,11 +869,11 @@ the threshold is met across multiple series and custom time ranges. Grafana
 supports multiple notification channels such as email, Slack, PagerDuty,
 OpsGenie and webhooks.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< tools/category-review/card-like-open >}}
+{{< tools/category-review/card-like--open >}}
 
 Grafana + Prometheus are the best free and open source server monitoring tools.
 These two tools excel at their particular specialisms. Grafana is the most
@@ -921,9 +921,9 @@ SaaS version of Grafana + Prometheus, plus you get logging and tracing all in
 one service.
 [AWS also offers a managed Prometheus service](https://aws.amazon.com/prometheus/features/).
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< tools/category-review/card-dislike-open >}}
+{{< tools/category-review/card-dislike--open >}}
 
 With flexibility comes complexity. Prometheus is not designed for long term
 metrics storage and provides no durability guarantees because it runs on a
@@ -959,19 +959,19 @@ to all users on all servers. Given how important it is for alerts to be
 delivered, you may prefer to rely on Alertmanager at the cost of being able to
 alert on multiple metric sources.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}
 
-{{< nav-wrapper id="wrapper-8" anchor-name="influxdb-telegraf" >}}
+{{< nav-wrapper--open id="wrapper-8" anchor-name="influxdb-telegraf" >}}
 
-{{< tools/category-review/card-open >}}
+{{< tools/category-review/card--open >}}
 
-{{< tools/category-review/card-top-open >}}
+{{< tools/category-review/card-top--open >}}
 
 {{< tools/category-review/card-heading name="InfluxDB + Telegraf" thumbnail="/img/favicons/www.influxdata.com.png" url="https://www.influxdata.com/products/influxdb/" score="4" >}}
 
@@ -983,15 +983,15 @@ limited.
 
 {{< youtube-video url="https://www.youtube.com/embed/GRDJpoiCKtg" title="Intro to InfluxDB & Telegraf" >}}
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< tools/category-review/card-bottom-open >}}
+{{< tools/category-review/card-bottom--open >}}
 
-{{< framed-section-open classes="framed-section-attention" >}}
+{{< framed-section--open classes="framed-section-attention" >}}
 
 {{< rich-title-5 icon="checklist" >}}Key features {{</ rich-title-5 >}}
 
-{{< framed-section-item-open >}}
+{{< framed-section-item--open >}}
 
 {{< tools/category-review/card-feature-title text="Integrations / plugins" score="4.5" >}}
 
@@ -1008,9 +1008,9 @@ agent. The agent is distributed as a single binary and is easy to install, with
 plugins enabled and configured in the agent's config TOML file. This includes
 monitoring cloud services, such as AWS Cloudwatch or Google Pub/Sub.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< framed-section-item-open >}}
+{{< framed-section-item--open >}}
 
 {{< tools/category-review/card-feature-title text="Graphs" score="4" >}}
 
@@ -1024,9 +1024,9 @@ can edit to directly configure the executed query. InfluxDB does not have as
 many graph types as Grafana but it supports the main choices you'd expect:
 gauge, heatmap, scatter, table, etc.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< framed-section-item-open >}}
+{{< framed-section-item--open >}}
 
 {{< tools/category-review/card-feature-title text="Alerts" score="3" >}}
 
@@ -1048,11 +1048,11 @@ source project from Influxdata specifically designed for importing time series
 data from InfluxDB and triggering alerts. This has
 [more integrations for notifications](https://docs.influxdata.com/kapacitor/v1.5/working/alerts/#list-of-handlers).
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< tools/category-review/card-like-open >}}
+{{< tools/category-review/card-like--open >}}
 
 InfluxDB has a great installation and onboarding flow and the UI and color
 choices really appeal as a developer! The UI is intuitive and it is easy to
@@ -1082,9 +1082,9 @@ other projects. Combining InfluxDB + Telegraf gives you a powerful time series
 datastore that can ingest metrics from an ecosystem of plugins and language
 client libraries, all presented in a polished and good-looking web UI.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< tools/category-review/card-dislike-open >}}
+{{< tools/category-review/card-dislike--open >}}
 
 Alerting is the main limitation you will face if you use InfluxDB. Although
 values are extracted through the sophisticated Flux query language, there are
@@ -1115,15 +1115,15 @@ Even if you're happy with the alerting constraints, the inability to deploy a
 reliable production monitoring setup without buying an enterprise version is a
 major limitation.
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< close-div >}}
+{{< div--close >}}
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}
 
-{{< nav-wrapper id="wrapper-9" anchor-name="self-hosted-also-considered" >}}
+{{< nav-wrapper--open id="wrapper-9" anchor-name="self-hosted-also-considered" >}}
 
 #### Also considered: Nagios, Zabbix + 8 more
 
@@ -1322,7 +1322,7 @@ source philosophy and it covers most of what you would expect in a server
 monitoring tool in 2021, but doesn't quite get our recommendation compared to
 our two finalists above.
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}
 
 ### FAQ
 
@@ -1352,7 +1352,7 @@ blandit sagittis.
 
 {{< tools/category-review/related-categories >}}
 
-{{< nav-wrapper id="wrapper-10" anchor-name="our-editorial-policy" >}}
+{{< nav-wrapper--open id="wrapper-10" anchor-name="our-editorial-policy" >}}
 
 {{< rich-title-3 icon="logo" id="our-editorial-policy" >}} Our editorial policy
 {{</ rich-title-3 >}}
@@ -1379,4 +1379,4 @@ amet, consectetur adipiscing elit. Maecenas feugiat facilisis rhoncus. Cras
 lobortis ut purus vitae tempor. Nam quis eros eu tellus sollicitudin vulputate
 vel eu sapien. Integer accumsan, mauris non blandit sagittis.
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}
