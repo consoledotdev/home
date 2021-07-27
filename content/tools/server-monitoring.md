@@ -107,10 +107,6 @@ relatedCategories:
       name: vulnerability-management
 ---
 
-{{< nav-wrapper--open id="wrapper-0" anchor-name="tldr" >}}
-
-### tldr; the best server monitoring tools
-
 In this article we review the best server monitoring tools for developers and
 engineers. We review both hosted SaaS and self-hosted on-premises monitoring
 tools to give you the widest view of current server monitoring solutions.
@@ -120,6 +116,10 @@ functionality and assess key requirements including integrations / plugins,
 graphs and alerts. We also considered features like dashboards, events, incident
 management, runbooks (usually part of alerts) and team collaboration. We'll
 comment on these as useful bonus features if they are present.
+
+{{< nav-wrapper--open id="wrapper-0" anchor-name="tldr" >}}
+
+### tldr; the best server monitoring tools
 
 The best hosted SaaS server monitoring tools:
 
