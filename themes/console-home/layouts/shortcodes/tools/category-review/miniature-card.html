@@ -14,7 +14,7 @@
             {{- end -}}
         </div>
         <div class="title-score">
-            <h4 class="title title-3"><a class="link" href="#{{ .Get "anchor" }}">{{ .Get "name" }}</a></h4>
+            <h4 class="title title-3"><label for="cardmin-meter-{{ lower (.Get "name") }}"><a class="link" href="#{{ .Get "anchor" }}">{{ .Get "name" }}</a></label></h4>
             <span class="console-score">
                 {{ .Get "score" }}/5
                 <span class="score-bar">
@@ -29,7 +29,7 @@
         <span class="console-score">
             {{ .Get "score" }}/5
             <span class="score-bar">
-                <meter value="{{ .Get "score" }}" min="0" max="5" title="{{ .Get "score" }} out of 5"></meter>
+                <meter id="cardmin-meter-{{ lower (.Get "name") }}" value="{{ .Get "score" }}" min="0" max="5" title="{{ .Get "score" }} out of 5"></meter>
                 <span class="score-bar-foreground" style="width: {{ mul (div (float (.Get "score")) 5.0) 100 }}%"></span>
                 {{ partial "components/score-mask.html" }}</a>
             </span>

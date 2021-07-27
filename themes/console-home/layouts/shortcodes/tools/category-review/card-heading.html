@@ -14,7 +14,7 @@
             {{- end -}}
         </div>
         <div class="title-score">
-            <h4 class="title title-3">{{ .Get "name" }}</h4>
+            <h4 class="title title-3"><label for="card-meter-{{ lower (.Get "name") }}">{{ .Get "name" }}</label></h4>
             <span class="console-score">
                 {{if not (eq (.Get "score") "none" )}}
                     {{ .Get "score" }}/5
@@ -34,7 +34,7 @@
             {{if not (eq (.Get "score") "none" )}}
                 {{ .Get "score" }}/5
                 <span class="score-bar">
-                    <meter value="{{ .Get "score" }}" min="0" max="5" title="{{ .Get "score" }} out of 5"></meter>
+                    <meter id="card-meter-{{ lower (.Get "name") }}" value="{{ .Get "score" }}" min="0" max="5" title="{{ .Get "score" }} out of 5"></meter>
                     <span class="score-bar-foreground" style="width: {{ mul (div (float (.Get "score")) 5.0) 100 }}%"></span>
                     {{ partial "components/score-mask.html" }}</a>
                 </span>
