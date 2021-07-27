@@ -156,9 +156,6 @@ and you may not need to build your own data centers
 VMs, or deploying code on Digital Ocean droplets, is still common. Servers are
 where it starts.
 
-Console is proud to be editorially independent. Learn about
-[our selection criteria and editorial policy](/about/#selection-criteria).
-
 {{< nav-wrapper id="wrapper-1" anchor-name="requirements" >}}
 
 {{< framed-section-open classes="framed-section-attention" >}}
