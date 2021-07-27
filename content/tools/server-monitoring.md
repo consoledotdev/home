@@ -1326,27 +1326,7 @@ our two finalists above.
 
 ### FAQ
 
-#### Lorem ipsum dolor sit amet, consectetur adipiscing?
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet
-sagittis augue, ac euismod dui auctor ut. Donec feugiat finibus sem, porta porta
-sem congue in.
-
-#### Lorem ipsum dolor sit amet?
-
-Donec feugiat finibus sem, porta porta sem congue in. Lorem ipsum dolor sit
-amet, consectetur adipiscing elit. Maecenas feugiat facilisis rhoncus. Cras
-lobortis ut purus vitae tempor. Nam quis eros eu tellus sollicitudin vulputate
-vel eu sapien. Integer accumsan, mauris non blandit sagittis.
-
-#### Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut fermentum tellus. Quisque sit amet mollis?
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet
-sagittis augue, ac euismod dui auctor ut. Donec feugiat finibus sem, porta porta
-sem congue in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-feugiat facilisis rhoncus. Cras lobortis ut purus vitae tempor. Nam quis eros eu
-tellus sollicitudin vulputate vel eu sapien. Integer accumsan, mauris non
-blandit sagittis.
+{{< tools/category-review/faq category="server-monitoring" >}}
 
 ### Related categories
 

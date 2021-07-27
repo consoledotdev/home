@@ -1,0 +1,38 @@
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is server monitoring?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "<p>Server monitoring is a type of computer system monitoring that focuses on collecting metrics from servers and the applications running on them. This is usually by installing a software agent onto the server which then collects server metrics like CPU usage, disk space, memory usage, and network traffic. The agent integrates into other software in the tech stack, such as databases, web servers, mail servers, queues, etc, so every aspect of your infrastructure can be monitored.</p>"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How does server monitoring work?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "<p>Server monitoring works by installing a software agent onto the server that can then collect system metrics like CPU usage and network traffic. The agent usually works on different operating systems such as Windows, Linux and macOS, integrating into the full tech stack to allow you to monitor databases, web servers, application servers, etc. Data is reported back to the monitoring tool which then saves the metrics in a time series database so that you can visualize the data on graphs. Alerts are triggered based on the reported data to notify you when there are problems.</p>"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does server monitoring need an agent?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "<p>Most server monitoring products have options to use both an agent and agentless monitoring. An agent must be installed onto an operating system such as Linux or Windows, or inside a container, but this is not always possible such as for cloud products like load balancers and managed databases. Agentless monitoring connects to the APIs offered by the software or cloud vendor so that data can be collected even without a monitoring agent.</p>"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Why do we need server monitoring?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "<p>Server monitoring is essential for any production infrastructure so that you know when things are going wrong, what happened, and how to fix problems. Without server monitoring, you will not know whether your servers are running, how they are performing, and what is causing issues.</p>"
+            }
+        }
+    ]
+}
