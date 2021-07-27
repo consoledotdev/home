@@ -5,7 +5,8 @@
     <section class="page-section main-tools-category-review-content">
 
         <script type="application/ld+json">
-            {{ readFile "/content/tools/server-monitoring.json" | safeJS }}
+            {{- $schemaFile := print "/content/tools/" .Params.subcategory ".json" }}
+            {{ readFile $schemaFile | safeJS }}
         </script>
         
         <h2 class="title title-1">
