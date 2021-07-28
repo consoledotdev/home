@@ -1468,6 +1468,11 @@ body:not(.mobile) .console-control:hover:before {
     padding: var(--space4) 0;
 }
 
+.framed-section.mid {
+    border-radius: var(--corners-small);
+    padding: var(--space3) 0;
+}
+
 .framed-section > *:not(.framed-section-item) {
     margin-left: var(--space4);
     margin-right: var(--space4);
@@ -1476,6 +1481,16 @@ body:not(.mobile) .console-control:hover:before {
 .framed-section-item > * {
     margin-left: var(--space4);
     margin-right: var(--space4);
+}
+
+.framed-section.mid > *:not(.framed-section-item) {
+    margin-left: var(--space3);
+    margin-right: var(--space3);
+}
+
+.framed-section.mid .framed-section-item > * {
+    margin-left: var(--space3);
+    margin-right: var(--space3);
 }
 
 .framed-section > .title {
@@ -1490,6 +1505,10 @@ body:not(.mobile) .console-control:hover:before {
 .framed-section.framed-section-attention {
     border: var(--theme-framed-section-attention-border);
     background: var(--theme-framed-section-attention-bg);
+}
+
+.framed-section.framed-section-overlay {
+    background: var(--theme-framed-section-overlay-bg);
 }
 
 .framed-section.framed-section-attention > .title {
