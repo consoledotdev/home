@@ -29,7 +29,7 @@ export default function () {
 
     const result = check(res, {
         "status is 200": (r) => r.status == 200,
-        "page title is correct": (r) => pageTitle == "Developer tools reviews by Console",
+        "page title is correct": (r) => pageTitle == "The best developer tools - Console",
     });
 
     errorRate.add(!result);
