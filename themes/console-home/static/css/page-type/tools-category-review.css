@@ -801,6 +801,10 @@ body:not(.page-tools-category-review):after {
         font-size: var(--t-size1);
     }
 
+    .page-tools-category-review .page-meta-detail p {
+        font-size: var(--t-size-1);
+    }
+
     .main-tools-category-review p,
     .main-tools-category-review .quote {
         font-size: var(--t-size1);
