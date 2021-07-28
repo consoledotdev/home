@@ -9,7 +9,7 @@ date: 2021-05-18T12:00:00Z
 draft: false
 headerType: fixed
 summary: Interview with Ellie Huxtable, Atuin
-isSelected: interviews
+isPage: interviews
 topImg1Src: /img/interviews/atuin-ellie-huxtable-profile.jpeg
 topImg2Src: /img/interviews/atuin-ellie-huxtable-logo.png
 ogImg: /img/interviews/atuin-ellie-huxtable-desk.jpeg

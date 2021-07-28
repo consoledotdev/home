@@ -6,9 +6,10 @@ summary:
   An exploration of interplanetary networking, how it costs $1bn to put YouTube
   on Mars, and why Ethereum is better than Bitcoin as a Mars currency.
 type: research
-isSelected: mars
-customStyle: true
+isPage: research
+isSubpage: mars
 pageType: feature-article
+customStyle: true
 headerType: fixed
 hidePlanes: true
 hideLines: true
@@ -17,11 +18,11 @@ authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
 authorBio:
-  is co-founder of Console. He is also a researcher in sustainable computing at
-  Uptime Institute and affiliated with Imperial College London. From 2009-2018,
-  David was co-founder at Server Density, a SaaS infrastructure monitoring
-  startup used by hundreds of customers to collect billions of time series
-  metrics from millions of servers.
+  is co-founder of Console. From 2009-2018, David was CEO at Server Density, a
+  SaaS server monitoring startup used by hundreds of customers to collect
+  billions of time series metrics from millions of servers. He is also a
+  researcher in sustainable computing at Uptime Institute and affiliated with
+  Imperial College London. David has been a developer for over 15 years.
 ---
 
 There are many challenges to building human settlements on Mars. The most
@@ -48,7 +49,7 @@ longer be true if we want to offer the same experience to citizens of Mars.
 This article will examine those assumptions, discuss the challenges and consider
 possible solutions to setting up the internet on Mars.
 
-{{< nav-wrapper id="wrapper-1" anchor-name="a-earths-internet" >}}
+{{< nav-wrapper--open id="wrapper-1" anchor-name="a-earths-internet" >}}
 
 ### Earth’s internet
 
@@ -80,9 +81,9 @@ performance.
 This is a simplified description, but is sufficient to understand the challenges
 with establishing the internet on Mars.
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}
 
-{{< nav-wrapper id="wrapper-2" anchor-name="a-the-problem-with-connecting-mars--earth" >}}
+{{< nav-wrapper--open id="wrapper-2" anchor-name="a-the-problem-with-connecting-mars--earth" >}}
 
 ### The problem with connecting Mars & Earth
 
@@ -110,9 +111,9 @@ impossible.
 
 {{< research/mars/handshake >}}
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}
 
-{{< nav-wrapper id="wrapper-3" anchor-name="a-separate-earth-and-mars-internet" >}}
+{{< nav-wrapper--open id="wrapper-3" anchor-name="a-separate-earth-and-mars-internet" >}}
 
 ### Separate Earth and Mars internet
 
@@ -139,9 +140,9 @@ servers, install Nginx and PostgreSQL then launch some websites, but this would
 be like going back to the early 90s on Earth. Very few websites. You could only
 email other people on Mars. And of course no videos on MarsTube.
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}
 
-{{< nav-wrapper id="wrapper-4" anchor-name="a-blockchain-crypto--eventual-consistency"  >}}
+{{< nav-wrapper--open id="wrapper-4" anchor-name="a-blockchain-crypto--eventual-consistency"  >}}
 
 #### Blockchain, crypto & eventual consistency
 
@@ -193,9 +194,9 @@ Peer communication - once a single IPFS user on Mars has downloaded a copy of
 the file, it can be served to other users locally. But how do the files get
 there in the first place?
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}
 
-{{< nav-wrapper id="wrapper-5" anchor-name="a-interplanetary-networking" >}}
+{{< nav-wrapper--open id="wrapper-5" anchor-name="a-interplanetary-networking" >}}
 
 {{< rich-title-3 icon="broadcast" id="interplanetary-networking" >}}
 Interplanetary networking {{</ rich-title-3 >}}
@@ -224,9 +225,9 @@ most recently with the command and control
 These networks may form part of an Interplanetary Network, especially the
 near-Earth components, but are not a complete, general purpose solution.
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}
 
-{{< nav-wrapper id="wrapper-6" anchor-name="a-delay-tolerant-networking" >}}
+{{< nav-wrapper--open id="wrapper-6" anchor-name="a-delay-tolerant-networking" >}}
 
 #### Delay-Tolerant Networking
 
@@ -294,9 +295,9 @@ in draft, and has reference implementations in various languages including
 [C](https://upcn.eu), [Go](https://github.com/dtn7/dtn7-go) and
 [Rust](https://github.com/dtn7/dtn7-rs/).
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}
 
-{{< nav-wrapper id="wrapper-7" anchor-name="a-very-long-round-trip-times" >}}
+{{< nav-wrapper--open id="wrapper-7" anchor-name="a-very-long-round-trip-times" >}}
 
 #### Very long round trip times
 
@@ -320,9 +321,9 @@ development or IP in live environments). LTP has several features, such as no
 handshake, options for reliable and unreliable transmission, and unidirectional
 communication to avoid contention by waiting for a response.
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}
 
-{{< nav-wrapper id="wrapper-8" anchor-name="a-overlay-network" >}}
+{{< nav-wrapper--open id="wrapper-8" anchor-name="a-overlay-network" >}}
 
 #### Overlay network
 
@@ -343,9 +344,9 @@ communication between planets over several hours. However, where time is not
 especially important, local storage of data with periodic refreshes could be an
 alternative.
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}
 
-{{< nav-wrapper id="wrapper-9" anchor-name="a-transporting-large-files-to-mars" >}}
+{{< nav-wrapper--open id="wrapper-9" anchor-name="a-transporting-large-files-to-mars" >}}
 
 ### Transporting large files to Mars
 
@@ -389,9 +390,9 @@ Snowball devices themselves.
 
 {{< research/mars/ship-youtube >}}
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}
 
-{{< nav-wrapper id="wrapper-10" anchor-name="a-internet-access-on-mars" >}}
+{{< nav-wrapper--open id="wrapper-10" anchor-name="a-internet-access-on-mars" >}}
 
 ### Internet access on Mars
 
@@ -431,4 +432,4 @@ principles, established in good faith, at the time of Martian settlement.
 
 {{< research/mars/globe-maps >}}
 
-{{< nav-wrapper close="true" >}}
+{{< div--close >}}

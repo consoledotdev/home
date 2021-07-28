@@ -9,7 +9,7 @@ date: 2021-03-04T12:00:00Z
 draft: false
 headerType: fixed
 summary: Interview with Chris Walz, Developer, bit.
-isSelected: interviews
+isPage: interviews
 topImg1Src: /img/interviews/bit-chris-walz-profile.jpg
 topImg2Src: /img/interviews/bit-chris-walz-logo.png
 ogImg: /img/interviews/bit-chris-walz-desk.png

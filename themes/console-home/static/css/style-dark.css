@@ -113,12 +113,27 @@
     --theme-badge-text: var(--c-white-00-absolute);
     --theme-badge-bg: var(--c-fuchsia-06);
 
-    --theme-categories-color: var(--c-fuchsia-04);
+    --theme-categories-color-idle: var(--c-fuchsia-04);
+    --theme-categories-color-hover: var(--c-fuchsia-03);
+    --theme-categories-color-active: var(--c-fuchsia-05-main);
     --theme-tag-color: var(--c-fuchsia-05-main);
 
     --theme-signaling-positive: var(--c-signaling-positive-01);
     --theme-signaling-warning: var(--c-signaling-warning-01);
     --theme-signaling-error:: var(--c-signaling-error-01);
+
+    --theme-framed-section-default-border: 1px solid var(--c-grey-06-blacks-neutral);
+    --theme-framed-section-default-item-border: 1px solid var(--c-grey-07);
+    --theme-framed-section-default-bg: rgba(111, 112, 120, 0.05);
+    --theme-framed-section-attention-border: 1px solid rgba(255, 204, 85, 0.4);
+    --theme-framed-section-attention-item-border: 1px solid rgba(255, 204, 85, 0.1);
+    --theme-framed-section-attention-bg: #161514;
+    --theme-framed-section-attention-bg-2: #0E0C07;
+    --theme-framed-section-attention-title: var(--c-yellow-04-main);
+    --theme-framed-section-attention-text: var(--c-yellow-03);
+
+    --theme-score-background: var(--c-grey-07);
+    --theme-score-foreground: var(--c-white-00-absolute);
 
     /* Mars Internet page specific */
 
@@ -138,7 +153,8 @@
 
 .theme.page-article,
 .theme.page-feature,
-.theme.page-feature-article {
+.theme.page-feature-article,
+.theme.page-tools-category-review {
     background: var(--theme-content-bg-3);
 }
 
@@ -178,4 +194,12 @@
 
 .theme .logo-svg-animated-explode .prompt-normal {
     display: block;
+}
+
+.theme .tools-category-review-artwork.light {
+    display: none;
+}
+
+.theme .tools-category-review-artwork.dark {
+    display: initial;
 }

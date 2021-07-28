@@ -1,0 +1,14 @@
+{{ if .inline }}
+    <span class="categories inline{{ with .clickable }} clickable{{ end }}">
+{{ else }}
+    <div class="categories{{ with .clickable }} clickable{{ end }}">
+{{ end }}
+        {{ if .clickable }}<a href="/tools/{{ lower .categoryData.subcategory.name }}">{{ end }}
+            {{ partial (print "icons/" (replace (lower .categoryData.category ) " " "-") ".html") }}
+            <span class="category">{{ .categoryData.subcategory.label }}</span>
+        {{ with .clickable }}</a>{{ end }}
+{{ if .inline }}
+    </span>
+{{ else }}
+    </div>
+{{ end }}

@@ -1,0 +1,14 @@
+<div class="tool-card-feature-title">
+    <h6 class="title title-6">{{ .Get "text" }}</h6>
+    <span class="console-score">
+        {{ if eq (.Get "score") "none" }}
+            No rating
+        {{ else}}
+            {{ $score := (float (.Get "score")) }}
+            {{ $min := (float 0) }}
+            {{ $max := (float 5) }}
+            <span class="console-score-text">{{ $score }}/{{ $max }}</span>
+            {{ partial "components/score-bar.html" (dict "min" $min "max" $max "score" $score) }}
+        {{ end }}
+    </span>
+</div>

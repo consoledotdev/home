@@ -1,0 +1,10 @@
+<span class="score-bar">
+    <meter
+        value="{{ .score }}"
+        min="{{ .min }}"
+        max="{{ .max }}"
+        title="{{ .score }} out of {{ .max }}"
+        {{- with .id}} id="{{ . }}"{{ end }}></meter>
+    <span class="score-bar-background"></span>
+    <span class="score-bar-foreground" style="width: {{ mul (div .score .max) 102 }}%"></span>
+</span>

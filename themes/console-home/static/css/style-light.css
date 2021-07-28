@@ -113,12 +113,27 @@
     --theme-badge-text: var(--c-white-00-absolute);
     --theme-badge-bg: var(--c-fuchsia-05-main);
 
-    --theme-categories-color: var(--c-fuchsia-06);
+    --theme-categories-color-idle: var(--c-fuchsia-06);
+    --theme-categories-color-hover: var(--c-fuchsia-05-main);
+    --theme-categories-color-active: var(--c-fuchsia-07);
     --theme-tag-color: var(--c-fuchsia-05-main);
 
     --theme-signaling-positive: var(--c-signaling-positive-02);
     --theme-signaling-warning: var(--c-signaling-warning-02);
     --theme-signaling-error:: var(--c-signaling-error-02);
+
+    --theme-framed-section-default-border: 1px solid var(--c-grey-03);
+    --theme-framed-section-default-item-border: 1px solid var(--c-grey-02);
+    --theme-framed-section-default-bg: rgba(111, 112, 120, 0.03);
+    --theme-framed-section-attention-border: 1px solid var(--c-yellow-05);
+    --theme-framed-section-attention-item-border: 1px solid rgba(255, 204, 85, 0.6);
+    --theme-framed-section-attention-bg: rgba(255, 204, 85, 0.07);
+    --theme-framed-section-attention-bg-2: rgba(255, 204, 85, 0.05);
+    --theme-framed-section-attention-title: var(--c-yellow-06);
+    --theme-framed-section-attention-text: var(--c-yellow-08);
+
+    --theme-score-background: var(--c-grey-02);
+    --theme-score-foreground: var(--c-black-02-main);
 
     /* Mars Internet page specific */
 
@@ -179,6 +194,14 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
 
 .theme .tool-card .bottom {
     background-color: var(--theme-content-bg-0);
+}
+
+.theme .tools-category-review-artwork.light {
+    display: initial;
+}
+
+.theme .tools-category-review-artwork.dark {
+    display: none;
 }
 
 @media (max-width: 768px) {

@@ -1,4 +1,8 @@
 <h3 {{ with .Get "id"}}id="{{ . }}" {{ end }}class="title title-2 rich-title">
+    {{ if eq ( .Get "icon") "logo" }}
+    {{ partial "components/logo.html" }}
+    {{ else }}
     {{ with .Get "icon"}}{{ partial (print "icons/" . ".html") }}{{ end }}
-    <span class="rich-title-text"></span>{{ .Inner | .Page.RenderString }}</span>
+    {{ end }}
+    <span class="rich-title-text">{{ .Inner | .Page.RenderString }}</span>
 </h3>

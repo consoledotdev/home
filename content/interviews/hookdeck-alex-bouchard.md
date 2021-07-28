@@ -9,7 +9,7 @@ date: 2021-05-07T12:00:00Z
 draft: false
 headerType: fixed
 summary: Interview with Alex Bouchard, CEO, Hookdeck
-isSelected: interviews
+isPage: interviews
 topImg1Src: /img/interviews/hookdeck-alex-bouchard-profile.png
 topImg2Src: /img/interviews/hookdeck-alex-bouchard-logo.jpg
 ogImg: /img/interviews/hookdeck-alex-bouchard-desk.jpg

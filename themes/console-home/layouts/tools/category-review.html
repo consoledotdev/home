@@ -1,0 +1,50 @@
+{{ define "main" }}
+	{{ $CTATitle := "Interesting tools by email" }}
+	{{ $CTADescription := "Our free weekly newsletter picks out the 2-3 most interesting tools." }}
+
+    <section class="page-section main-tools-category-review-content">
+
+        <script type="application/ld+json">
+            {{- $schemaFile := print "/content/tools/" .Params.subcategory "-schema.json" }}
+            {{ readFile $schemaFile | safeJS }}
+        </script>
+        
+        <h2 class="title title-1">
+            {{ partial "icons/devops-slanted.html" }}
+            {{ .Params.titlePrefix }} <span>{{ .Params.titleCategory }}</span> {{ .Params.titleSuffix }}
+        </h2>
+        <div class="page-meta">
+            <p class="small">
+                <span class="plane-picture">
+                    <img class="ratio" src="/img/ratio-plane.png">
+                    <img class="image" src="{{ .Params.authorImg }}" alt="Photo of {{ .Params.authorName }}">
+                </span>
+                <a href="#author" class="link" rel="me">{{ .Params.authorName }}</a>
+            </p>
+            <p class="small">
+                <span class="page-meta-separator">&mdash;</span>
+                Last updated: {{ .Lastmod.Format "2006-01-02" }}
+            </p>
+        </div>
+        <div class="page-meta-detail">
+            <p>
+                {{ .Params.authorBioBrief }}
+            </p>
+        </div>
+        {{ partial "components/tools/category-review/artwork-dark.html" . }}
+        {{ partial "components/tools/category-review/artwork-light.html" . }}
+    </section>
+    <div class="main-tools-category-review-content-split">
+        <aside class="main-tools-category-review-aside" data-aside>
+            {{ partial (print "components/tools/category-review/" .Params.isSubpage "/aside.html" ) }}
+        </aside>
+        <section class="page-section main-tools-category-review-content">
+            {{ .Content }}
+            {{ partial "components/author.html" (dict "context" . "bio" .Params.authorBio "img" .Params.authorImg "name" .Params.authorName ) }}
+            {{ partial "components/about-console.html" }}
+            {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
+        </section>
+    </div>
+
+	<script src="/js/tools/category-review.js"></script>
+{{ end }}

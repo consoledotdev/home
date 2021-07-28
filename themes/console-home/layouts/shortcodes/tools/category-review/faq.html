@@ -1,0 +1,10 @@
+<script type="application/ld+json">
+    {{- $schemaFile := print "/content/tools/" $.Page.Params.subcategory "-faq.json" -}}
+    {{- $faq := getJSON $schemaFile }}
+    {{ $faq }}
+</script>
+
+{{ range $faq.mainEntity }}
+<h4 id="faq-{{ index . "name" | urlize }}" class="title title-3">{{ index . "name" }}</h4>
+{{ index . "acceptedAnswer" "text" | safeHTML }}
+{{ end }}

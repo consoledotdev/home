@@ -9,7 +9,7 @@ date: 2021-07-09T12:00:00Z
 draft: false
 headerType: fixed
 summary: Interview with Ben Orenstein, Tuple
-isSelected: interviews
+isPage: interviews
 topImg1Src: /img/interviews/tuple-ben-orenstein-profile.jpg
 topImg2Src: /img/interviews/tuple-ben-orenstein-logo.jpg
 ogImg: /img/interviews/tuple-ben-orenstein-desk.jpg
@@ -221,11 +221,8 @@ backpack.
 
 ### Describe your desk setup
 
-{{< img-center
-src="/img/interviews/tuple-ben-orenstein-desk.jpg"
-alt="The desk of Ben Orenstein, Tuple."
-width="100%"
->}}
+{{< img-center src="/img/interviews/tuple-ben-orenstein-desk.jpg"
+alt="The desk of Ben Orenstein, Tuple." width="100%" >}}
 
 I have an
 [Aeron chair](https://www.hermanmiller.com/en_us/products/seating/office-chairs/aeron-chairs/)
@@ -252,6 +249,6 @@ chorus.
 ### Find out more
 
 [Tuple](https://tuple.app) is a screen sharing tool optimized for developers. It
-was featured as an "interesting tool" in the [Console
-newsletter](https://console.dev) on 15 Jul 2021. This interview was conducted on
-9 Jul 2021.
+was featured as an "interesting tool" in the
+[Console newsletter](https://console.dev) on 15 Jul 2021. This interview was
+conducted on 9 Jul 2021.

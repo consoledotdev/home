@@ -9,7 +9,7 @@ date: 2021-03-02T12:00:00Z
 draft: false
 headerType: fixed
 summary: Interview with Yifan Gu, Creator, vmcli.
-isSelected: interviews
+isPage: interviews
 topImg1Src: /img/interviews/vmcli-yifan-gu-profile.jpg
 topImg2Src: /img/interviews/vmcli-yifan-gu-logo.png
 ogImg: /img/interviews/vmcli-yifan-gu-desk.jpg

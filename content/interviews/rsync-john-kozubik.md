@@ -9,7 +9,7 @@ date: 2021-03-12T12:00:00Z
 draft: false
 headerType: fixed
 summary: Interview with John Kozubik, CEO, rsync.net.
-isSelected: interviews
+isPage: interviews
 topImg1Src: /img/interviews/rsync-john-kozubik-profile.jpg
 topImg2Src: /img/interviews/rsync-john-kozubik-logo.jpg
 ogImg: /img/interviews/rsync-john-kozubik-desk.png

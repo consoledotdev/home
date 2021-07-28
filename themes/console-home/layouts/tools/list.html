@@ -1,9 +1,66 @@
 {{ define "main" }}
+	<!--
+        Structured markup for Google to pick up the reviews
+        on the /tools/ page. Ref:
+        https://developers.google.com/search/docs/guides/intro-structured-data
+        https://developers.google.com/search/docs/data-types/review-snippet
+        https://developers.google.com/search/docs/data-types/software-app
+    -->
+	{{ $iso8601 := "2006-01-02T15:04:05-07:00" -}}
+    {{ $reviewCount := len $.Site.Data.toolsreviewed.items }}
+    {{ $reviewCount = sub $reviewCount 1 }}
+    <script type="application/ld+json">
+        {
+            "@context":"https://schema.org",
+            "@type":"ItemList",
+            "name": "The best tools for developers",
+            "numberOfItems": {{- $reviewCount -}},
+			"itemListOrder": "Unordered",
+            "itemListElement":[
+                {{ range $index, $review := $.Site.Data.toolsreviewed.items }}
+                {
+                    "@type":"ListItem",
+                    "position": {{ $index }},
+                    "name": "{{ index . "Tool/Product/Project" }}",
+                    "item":  { 
+                        "@type": "Product",
+                        "name": "{{ index . "Tool/Product/Project" }}",
+                        "description": "{{ index . "Tool/Product/Project" }}",
+                        "url": "{{ index . "URL" }}",
+                        "review":   {
+                            "@type": "Review",
+                            "reviewBody": "What we like: {{ index . "What we like" }} What we don't like: {{ index . "What we dislike" }}",
+                            "reviewRating":  {
+                                "@type": "Rating",
+                                "ratingValue": "5",
+                                "bestRating": "5",
+                                "worstRating": "0"
+                            },
+                            "author": {
+                                "@type": "Organization",
+                                "name": "Console",
+                                "url": "https://console.dev"
+                           },
+                           "publisher": {
+                               "@type": "Organization",
+                               "name": "Console",
+                               "url": "https://console.dev"
+                            },
+                            {{ $reviewDate := index . "Scheduled for" -}}
+                            {{- $reviewDate = dateFormat $iso8601 $reviewDate -}}
+                            "datePublished": "{{ $reviewDate | safeHTML }}"
+                        }
+                    }
+                }{{ if lt $index $reviewCount }},{{end}}{{ end }}
+            ]
+        }
+    </script>
+
     {{ $CTATitle := "Interesting Tools by email" }}
 	{{ $CTADescription := "Our free weekly newsletter picks out the 2-3 most interesting tools. " }}
 	<section class="page-section page-section-feature-root">
 		<h2 class="title title-1">Developer tools reviews</h2>
-		<p class="description">Console reviews and features the best tools for developers.</p>
+		<p class="description">Each week Console reviews the best tools for developers.</p>
         <div class="page-meta">
         {{- $reviewedChecked := false -}}
         {{- range first 1 $.Site.Data.toolsreviewed.items -}}{{- $reviewedChecked = time (index . "Scheduled for") -}}{{- end -}}
@@ -28,6 +85,20 @@
         </div>
 		<div class="feature-full-cta">
 			{{ partial "subscribe.html" $subscribeData }}
+		</div>
+	</section>
+	<section class="page-section page-section-feature-root">
+		<div class="page-section-heading">
+			<div class="left">
+				<h3 class="title title-2"><span data-feature-section-name>Category reviews</span></h3>
+			</div>
+		</div>
+		<div class="category-reviews">
+			<div class="category-reviews-item">
+				{{ $categoryData := (dict "category" "devops" "subcategory" (dict "label" "Server monitoring" "name" "server-monitoring")) }}
+				{{ partial "components/category.html" (dict "categoryData" $categoryData "clickable" "true" )  }}
+				<p class="small">Our review of the best server monitoring tools for developers.</p>
+			</div>
 		</div>
 	</section>
 	<div class="feature-split">
@@ -74,6 +145,6 @@
 			{{ $.Scratch.Set "categories" (print ($.Scratch.Get "categories") "," $element.label "|" $element.name ) }}
 		{{ end }}
     {{ end }}
-	<script id="feature-js" src="/js/pageType/feature.js" data-categories="{{ $.Scratch.Get "categories" }}"></script>
+	<script id="feature-js" src="/js/page-type/feature.js" data-categories="{{ $.Scratch.Get "categories" }}"></script>
 	<script src="/js/tools.js"></script>
 {{ end }}

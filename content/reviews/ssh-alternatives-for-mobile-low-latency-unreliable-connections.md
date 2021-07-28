@@ -5,7 +5,7 @@ draft: false
 summary:
   A review of the best SSH alternatives for connecting to servers over poor
   connections.
-isSelected: reviews
+isPage: reviews
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorBio:
