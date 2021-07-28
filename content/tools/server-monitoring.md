@@ -39,9 +39,15 @@ authorBio:
 ---
 
 In this article we review 18 server monitoring services to find the best server
-monitoring tools for developers. We review both hosted SaaS and self-hosted
-on-premises monitoring tools and assess integrations / plugins, graphs and
-alerts.
+monitoring tools for developers and devops engineers. We review both hosted SaaS
+and self-hosted on-premises monitoring tools and assess integrations / plugins,
+graphs and alerts.
+
+We tried 18 different server monitoring services and reviewed key requirements
+including integrations / plugins, graphs and alerts. We also considered features
+like dashboards, events, incident management, runbooks (usually part of alerts)
+and team collaboration. We'll comment on these as useful bonus features if they
+are present.
 
 {{< nav-wrapper--open id="wrapper-0" anchor-name="tldr" >}}
 
@@ -83,12 +89,6 @@ and you may not need to build your own data centers
 [like Apple](https://9to5mac.com/guides/apple-data-center/), but spinning up EC2
 VMs, or deploying code on Digital Ocean droplets, is still common. Servers are
 where it starts.
-
-For this article, we tried 18 different server monitoring services and reviewed
-key requirements including integrations / plugins, graphs and alerts. We also
-considered features like dashboards, events, incident management, runbooks
-(usually part of alerts) and team collaboration. We'll comment on these as
-useful bonus features if they are present.
 
 {{< div--close >}}
 
@@ -278,7 +278,7 @@ What are the pros and cons of hosted SaaS monitoring?
 Datadog is the industry leader with the most comprehensive and up to date set of
 integrations, however this also means it has a more complex UI.
 
-{{< youtube-video url="https://www.youtube.com/embed/YmJcbAI_OCg" title="Datadog Product Tour" >}}
+{{< img-center src="/img/tools/server-monitoring-datadog.png" alt="Datadog product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -405,7 +405,7 @@ New Relic is best known for application performance monitoring (APM) but can now
 monitor everything, including server monitoring. It has a clean UI but has more
 limited alerting capabilities.
 
-{{< youtube-video url="https://www.youtube.com/embed/JQC-cMre5gI" title="Level Up Data Nerds" >}}
+{{< img-center src="/img/tools/server-monitoring-newrelic.png" alt="New Relic product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -737,7 +737,7 @@ can connect to various data source backends and has built-in alerting. We
 recommend using the open source metrics backend,
 [Prometheus](https://prometheus.io/), as the primary data source.
 
-{{< youtube-video url="https://www.youtube.com/embed/0n2UNzk2OaI" title="Getting Started with Grafana Webinar" >}}
+{{< img-center src="/img/tools/server-monitoring-grafana.png" alt="Grafana product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -864,8 +864,6 @@ single node. This means you need to connect it to remote storage options such as
 which are open source and provide horizontal scalability, high availability,
 multi-tenancy and long term storage.
 
-[arch screenshot]
-
 Alerting is another thing you have to manage through the
 [Alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager/)
 component of the Prometheus project. This is deployed independently (ideally in
@@ -913,7 +911,7 @@ alerting layer. It combines well with
 monitoring agent from the same developers, but the alerting features are
 limited.
 
-{{< youtube-video url="https://www.youtube.com/embed/GRDJpoiCKtg" title="Intro to InfluxDB & Telegraf" >}}
+{{< img-center src="/img/tools/server-monitoring-influxdb.png" alt="InfluxDB product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
