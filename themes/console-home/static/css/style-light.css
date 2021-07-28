@@ -131,6 +131,7 @@
     --theme-framed-section-attention-bg-2: rgba(255, 204, 85, 0.05);
     --theme-framed-section-attention-title: var(--c-yellow-06);
     --theme-framed-section-attention-text: var(--c-yellow-08);
+    --theme-framed-section-overlay-bg: var(--c-grey-01-white-03);
 
     --theme-score-background: var(--c-grey-02);
     --theme-score-foreground: var(--c-black-02-main);
@@ -201,6 +202,10 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
 }
 
 .theme .tools-category-review-artwork.dark {
+    display: none;
+}
+
+.theme .framed-section.podcast iframe.dark {
     display: none;
 }
 

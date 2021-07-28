@@ -131,6 +131,7 @@
     --theme-framed-section-attention-bg-2: #0E0C07;
     --theme-framed-section-attention-title: var(--c-yellow-04-main);
     --theme-framed-section-attention-text: var(--c-yellow-03);
+    --theme-framed-section-overlay-bg: var(--c-grey-08);
 
     --theme-score-background: var(--c-grey-07);
     --theme-score-foreground: var(--c-white-00-absolute);
@@ -202,4 +203,8 @@
 
 .theme .tools-category-review-artwork.dark {
     display: initial;
+}
+
+.theme .framed-section.podcast iframe.light {
+    display: none;
 }
