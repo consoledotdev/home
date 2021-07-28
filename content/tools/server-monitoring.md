@@ -3,8 +3,8 @@ title: "The best server monitoring tools for developers"
 titlePrefix: "The best"
 titleCategory: "server monitoring"
 titleSuffix: "tools for developers"
-date: 2021-07-22T12:00:00+00:00
-draft: true
+date: 2021-07-28T12:00:00+00:00
+draft: false
 summary:
   A review of the best server monitoring tools for developers and devops
   engineers.
