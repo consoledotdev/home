@@ -782,6 +782,7 @@ body:not(.page-tools-category-review):after {
 
     .tools-category-review-tool-card .tool-card-top > p {
         font-size: var(--t-size2);
+        line-height: var(--t-lH2);
     }
 
     .main-tools-category-review-content .nav-wrapper > .tool-card-heading {
