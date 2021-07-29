@@ -29,13 +29,14 @@ authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
 authorBioBrief:
   From 2009-2018 David was CEO at Server Density, a SaaS server monitoring
-  startup. He is now co-founder at Console.
+  startup. He has been a developer for 15+ years and is now co-founder of
+  Console.
 authorBio:
   is co-founder of Console. From 2009-2018, David was CEO at Server Density, a
   SaaS server monitoring startup used by hundreds of customers to collect
   billions of time series metrics from millions of servers. He is also a
   researcher in sustainable computing at Uptime Institute and affiliated with
-  Imperial College London. David has been a developer for over 15 years.
+  Imperial College London. David has been a developer for 15+ years.
 ---
 
 In this article we review 18 server monitoring services to find the best server
