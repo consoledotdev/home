@@ -1,5 +1,5 @@
 ---
-title: "The best server monitoring tools for developers"
+title: "The Best Server Monitoring Tools For Developers"
 titlePrefix: "The best"
 titleCategory: "server monitoring"
 titleSuffix: "tools for developers"
