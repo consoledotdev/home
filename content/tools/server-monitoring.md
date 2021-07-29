@@ -40,9 +40,9 @@ authorBio:
 ---
 
 In this article we review 18 server monitoring services to find the best server
-monitoring tools for developers and devops engineers. We review both hosted SaaS
-and self-hosted on-premises monitoring tools and assess integrations / plugins,
-graphs and alerts.
+monitoring tools for developers and devops engineers. With our 15+ years of
+development experience, we review both hosted SaaS and self-hosted on-premises
+monitoring tools and assess integrations / plugins, graphs and alerts.
 
 We tried 18 different server monitoring services and reviewed key requirements
 including integrations / plugins, graphs and alerts. We also considered features
