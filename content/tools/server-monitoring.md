@@ -52,7 +52,7 @@ are present.
 
 {{< nav-wrapper--open id="wrapper-0" anchor-name="tldr" >}}
 
-### tldr; the best server monitoring tools
+### tl;dr the best server monitoring tools
 
 The best hosted SaaS server monitoring tools:
 
