@@ -20,7 +20,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 
 # Install Hugo
 # Version in OS repos is out of date
-RUN curl -L https://github.com/gohugoio/hugo/releases/download/v0.85.0/hugo_0.85.0_Linux-64bit.deb -o hugo.deb
+RUN curl -L https://github.com/gohugoio/hugo/releases/download/v0.87.0/hugo_0.87.0_Linux-64bit.deb -o hugo.deb
 RUN apt-get -y install ./hugo.deb
 
 # [Optional] Uncomment this line to install global node packages.
