@@ -133,7 +133,7 @@
             "Beta ended": "",
             "GA URL": "",
             "Last checked": "2021-07-21",
-            "favicon": "img/favicons/spreadprivacy.com.ico",
+            "favicon": "img/favicons/spreadprivacy.com.png",
             "Top Category": "Security",
             "Weekly Pick": true,
             "Filter Taxonomy": "security, saas, weekly-pick"
@@ -1214,7 +1214,7 @@
             "Beta ended": "",
             "GA URL": "",
             "Last checked": "2021-07-21",
-            "favicon": "img/favicons/developer.apple.com.ico",
+            "favicon": "img/favicons/developer.apple.com.png",
             "Top Category": "Developer Tools",
             "Weekly Pick": false,
             "Filter Taxonomy": "developer-tools, saas, weekly-pick"
