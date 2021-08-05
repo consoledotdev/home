@@ -1,1 +1,40 @@
-{"items": [{"Company/Org": "Prestige", "Tool/Product/Project": "Prestige", "Reviewed": "2021-06-17", "Scheduled for": "2021-07-01", "URL": "https://prestigemad.com/", "Category": "Developer Tools - API Client", "Type": "Open Source", "What is it?": "Browser- and text-based HTTP client.", "Len": "135", "What we like": "Really simple way to execute HTTP commands but can also send more complex requests e.g. headers, file uploads, cookies, JSON. Can write commands in plain text, JS, or define variables in templates. Prettified and syntax-highlighted response parsing. Can save to local browser storage (GitHub and others on roadmap). Open source codebase.", "What we dislike": "Requests run through a proxy rather than your browser (due to CORS), but localhost URLs are routed directly. No support for OAuth APIs.", "Interview": "", "favicon": "img/favicons/prestigemad.com.png", "Top Category": "Developer Tools", "Sub Category": "API Client", "Filter Taxonomy": "developer-tools, open-source"}, {"Company/Org": "chezmoi", "Tool/Product/Project": "chezmoi", "Reviewed": "2021-06-17", "Scheduled for": "2021-07-01", "URL": "https://www.chezmoi.io/", "Category": "Misc - Terminal utilities", "Type": "Open Source", "What is it?": "dotfile manager.", "Len": "266", "What we like": "Single compiled binary. No bootstrap requirements - supports many platforms. Can query password manager for secrets and supports encrypted files. Configs can be templated for differences across environments. Can run scripts, including run-once (ideal for cloud IDEs or ephemeral environments). File edit flow similar to git (which is used for versioning).", "What we dislike": "You can edit files directly but using the edit flow ensures changes/conflicts are handled properly, which may require retraining muscle memory. Doesn\u2019t handle git subdirectories e.g. Oh My Zsh particularly well (better to use a script to install outside of chezmoi).", "Interview": "", "favicon": "img/favicons/www.chezmoi.io.png", "Top Category": "Misc", "Sub Category": "Terminal utilities", "Filter Taxonomy": "misc, open-source"}]}
+{
+    "items": [
+        {
+            "Company/Org": "Liveblocks",
+            "Tool/Product/Project": "Liveblocks",
+            "Reviewed": "2021-07-16",
+            "Scheduled for": "2021-07-29",
+            "URL": "https://liveblocks.io/",
+            "Category": "Developer Tools - Frontend framework",
+            "Type": "SaaS",
+            "What is it?": "Real-time collaboration API.",
+            "Len": "193",
+            "What we like": "Components to easily add live presence (live cursors, chat and reactions). Abstracts away the backend implementation challenges - networking, performance, presence detection, multi-browser support. Vendored as React / Node packages. Auth hooks to validate user permissions. Examples for raw JS, Next.js, Nuxt.js and React + Firebase.",
+            "What we dislike": "Assumes you\u2019re building with web technologies i.e. JS. No mobile support. Still requires implementing authentication. Classic build vs buy - is it a good use of your time to try and build this?",
+            "Interview": "/interviews/liveblocks-guillaume-salles/",
+            "favicon": "img/favicons/liveblocks.io.png",
+            "Top Category": "Developer Tools",
+            "Sub Category": "Frontend framework",
+            "Filter Taxonomy": "developer-tools, saas"
+        },
+        {
+            "Company/Org": "Livekit",
+            "Tool/Product/Project": "Livekit",
+            "Reviewed": "2021-07-19",
+            "Scheduled for": "2021-07-29",
+            "URL": "https://livekit.io/",
+            "Category": "API - Communication",
+            "Type": "Open Source",
+            "What is it?": "Open source live video and audio API.",
+            "Len": "217",
+            "What we like": "SDKs for React, JS, iOS and Android to build video / audio without needing to understand WebRTC. Selective Forwarding Unit server makes it easy to scale from P2P to supporting large numbers of participants. Server scales horizontally using Redis as the backend. Automatically supports different connection types (UDP, TCP, TURN) and simulcasting.",
+            "What we dislike": "Still need to set up SSL + load balancers. Using a server component defeats the idea of P2P. Your code still needs to deal with issuing access tokens to each participant. Simulcasting only works in the browser/JS SDK.",
+            "Interview": "",
+            "favicon": "img/favicons/livekit.io.ico",
+            "Top Category": "API",
+            "Sub Category": "Communication",
+            "Filter Taxonomy": "api, open-source"
+        }
+    ]
+}
