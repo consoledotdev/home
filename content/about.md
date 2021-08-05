@@ -70,11 +70,12 @@ tools**. This will include long form research, discussion, and exclusive deals
 and/or early access to beta programs and new releases.
 
 We aim to support Console through this last one - partnering with vendors to
-provide extras to our audience, such as exclusive access to beta programs or
-bonus credits, and we may be paid a referral fee for these. Our editorial
-process is independent from our vendor partnerships. We do not accept payment
-for product inclusion. Where we feature exclusive deals from partners, they must
-first fit our selection criteria before we consider working with them.
+connect with our audience, such as by syncing reviews with new releases or
+offering exclusives such as access to beta programs or bonus credits. We may be
+paid for these. However, our editorial process is independent from our vendor
+partnerships. We do not accept payment for product inclusion. Where we feature
+exclusive deals from partners, they must first fit our selection criteria before
+we consider working with them.
 
 To learn more about Console, check out the Console blog where you can follow our
 progress. To start, we recommend reading our thoughts on the
