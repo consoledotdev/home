@@ -11,7 +11,7 @@ Console is the place developers go to find the best tools.
 Our weekly newsletter picks out the most interesting tools and new releases and
 is read by experienced developers at organizations around the world. Whether big
 public companies, government agencies, startups or small businesses, developers
-subscribe our [newsletter](/latest/), listen our
+subscribe to our [newsletter](/latest/), listen to our
 [podcast](https://podcast.console.dev/) and read our [category reviews](/tools/)
 to find out which new and interesting tools they should try.
 
@@ -25,5 +25,4 @@ partners, they must first fit our
 [selection criteria](/about/#selection-criteria) before we consider working with
 them.
 
-If you are interested in working with us, please
-[get in touch](mailto:hello@console.dev).
+If you are interested, please [get in touch](mailto:hello@console.dev).
