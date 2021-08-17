@@ -49,3 +49,62 @@ let toggleCollapsible = (e) => {
         parent.classList.add("is-expanded");
     }
 };
+
+let animateDynamicPlanes = (() => {
+    let animate = () => {
+        let columns = document.querySelectorAll("[data-dynamic-planes-column]");
+        if (columns) {
+            let animateColumn = (n) => {
+                let classes = ["triad-01", "triad-02", "triad-03"];
+                let col = columns[n];
+                let items = col.querySelectorAll("[data-dynamic-planes-item]");
+                let visibleItems = [];
+                items.forEach((item) => {
+                    let idle = true;
+                    if (item.classList.contains("selected")) {
+                        idle = false;
+                        item.classList.remove("selected");
+                    }
+                    if (idle) {
+                        let rect = item.getBoundingClientRect();
+                        // let visible = rect.x > 0 && rect.y > 0 && rect.x + rect.width < window.innerWidth && rect.y + rect.height < window.innerHeight;
+                        let visible = rect.x > 0 && rect.x < window.innerWidth && rect.y > 0 && rect.y + rect.height < window.innerHeight;
+                        if (visible) visibleItems.push(item);
+                    }
+                });
+                if (visibleItems.length > 0) {
+                    let rand = Math.floor(Math.random() * visibleItems.length);
+                    let selectedItem = visibleItems[rand];
+                    selectedItem.classList.add("selected");
+                }
+            };
+            setInterval(() => {
+                animateColumn(0);
+            }, 5000);
+            setInterval(() => {
+                animateColumn(1);
+            }, 8000);
+            setInterval(() => {
+                animateColumn(2);
+            }, 6000);
+            setInterval(() => {
+                animateColumn(3);
+            }, 7000);
+            setInterval(() => {
+                animateColumn(4);
+            }, 4000);
+            setInterval(() => {
+                animateColumn(5);
+            }, 6500);
+        }
+    };
+
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (mediaQuery) {
+        if (!mediaQuery.matches) animate();
+
+        mediaQuery.addEventListener("change", () => {
+            if (!mediaQuery.matches) animate();
+        });
+    }
+})();
