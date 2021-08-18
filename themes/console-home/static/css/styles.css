@@ -1668,7 +1668,7 @@ select.console-select::-ms-expand {
     }
 
     .content {
-        min-height: 1240px;
+        min-height: 1180px;
     }
 
     .main-nav > ul,
@@ -1788,6 +1788,18 @@ select.console-select::-ms-expand {
             width: 76%;
         }
 
+        @media (max-width: 540px) {
+            .content {
+                min-height: 1300px;
+            }
+        }
+
+        @media (max-width: 495px) {
+            .content {
+                min-height: 1340px;
+            }
+        }
+
         .header.header-fixed,
         .is-scrolled .header.header-fixed {
             padding-left: 12vw;
@@ -1836,7 +1848,7 @@ select.console-select::-ms-expand {
     }
 
     .content {
-        min-height: max(100vh, 1240px);
+        min-height: max(100vh, 1040px);
     }
 
     .main {
