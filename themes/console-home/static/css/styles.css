@@ -661,7 +661,7 @@ body.show-planes:after {
     overflow: hidden;
 }
 
-.podcast-embed-content iframe {
+.podcast-embed-frame iframe {
     position: absolute;
     min-width: 0; /* https://css-tricks.com/flexbox-truncated-text/ */
     left: -8px;
@@ -669,11 +669,31 @@ body.show-planes:after {
     width: calc(100% + 14px);
 }
 
-.podcast-embed-content a {
+.podcast-links {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.podcast-links .link {
     display: inline-block;
 }
 
-.podcast-embed-content a img {
+.podcast-links .link:hover,
+.podcast-links .link:focus {
+    opacity: 0.75;
+}
+
+.podcast-links .link:active {
+    opacity: 0.9;
+}
+
+.podcast-links .link:not(:first-child) {
+    margin-left: var(--space3);
+}
+
+.podcast-links .link img {
     display: inline-block;
     vertical-align: top;
 }
@@ -689,7 +709,7 @@ body.show-planes:after {
         flex: 1 1 auto;
     }
 
-    .podcast-embed-content a {
+    .podcast-links .link {
         flex: 0 0 auto;
         margin-left: var(--space3);
     }
@@ -702,7 +722,7 @@ body.show-planes:after {
         justify-content: flex-start;
     }
 
-    .podcast-embed-content a {
+    .podcast-links .link {
         margin-top: var(--space3);
     }
 }
