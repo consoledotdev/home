@@ -230,58 +230,6 @@ body:not(.is-same-origin) #line-10 {
     stroke: var(--theme-lines-color);
 }
 
-.hero .planes {
-    position: relative;
-    transform: translate(-24%, -48%);
-    width: 219.8vw;
-    height: auto;
-    margin-top: 50vh;
-    margin-left: max(600px, 40vw);
-    z-index: 2;
-}
-
-body:not(.is-same-origin) .hero .planes {
-    animation-name: planes-fade-in;
-    animation-duration: 0.5s;
-    animation-delay: 1.8s;
-    animation-timing-function: cubic-bezier(0.41, 0.14, 0.35, 0.99);
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    opacity: 0;
-}
-
-@keyframes planes-fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.hero .planes > rect:not([stroke]) {
-    fill: var(--theme-planes-background);
-    fill-opacity: 0.5;
-}
-
-.hero .planes > rect[stroke] {
-    stroke: var(--theme-planes-off-stroke);
-    stroke-opacity: 0.13;
-}
-
-.hero .planes g {
-    opacity: 0.7;
-}
-
-.hero .planes g rect:not([stroke]) {
-    fill: var(--theme-planes-background);
-    fill-opacity: 0.8;
-}
-
-.hero .planes g rect[stroke] {
-    stroke-width: 1.5;
-}
-
 .hero .dynamic-planes-wrapper {
     position: relative;
     width: 111vw;
@@ -1586,7 +1534,6 @@ select.console-select::-ms-expand {
     body:not(.is-same-origin) .logo-svg-animated-explode .plane-three,
     body:not(.is-same-origin) .logo-svg-animated-explode .prompt,
     body:not(.is-same-origin) [id^="line-"],
-    body:not(.is-same-origin) .hero .planes,
     body:not(.is-same-origin) .hero .dynamic-planes-wrapper {
         animation: none;
     }
@@ -1603,7 +1550,6 @@ select.console-select::-ms-expand {
         stroke-dasharray: 0;
         stroke-dashoffset: 0;
     }
-    body:not(.is-same-origin) .hero .planes,
     body:not(.is-same-origin) .hero .dynamic-planes-wrapper {
         opacity: 1;
     }
@@ -1618,16 +1564,8 @@ select.console-select::-ms-expand {
         min-height: 680px;
     }
 
-    .page-article .hero .planes,
     .page-article .hero .dynamic-planes-wrapper {
         display: none;
-    }
-
-    .hero .planes {
-        transform: translate(-24%, -36%);
-        margin-left: 30vw;
-        margin-top: max(80%, 50vh);
-        min-width: 1600px;
     }
 
     .page-article .header {
@@ -1677,10 +1615,6 @@ select.console-select::-ms-expand {
     }
 
     @media (max-width: 540px) {
-        .hero .planes {
-            transform: translate(-28%, -32%);
-        }
-
         .main {
             min-height: 0;
             margin-top: 0;
@@ -1868,10 +1802,6 @@ select.console-select::-ms-expand {
         margin: max(calc(var(--space6) - var(--space3)), 10vh) 0 calc(var(--space6) - var(--space2));
     }
 
-    .hero .planes {
-        margin-left: max(550px, 40vw);
-    }
-
     .main-feature-article-content {
         max-width: 600px;
     }
@@ -1892,14 +1822,6 @@ select.console-select::-ms-expand {
         flex: 0 0 auto;
         width: 120px;
         margin-left: 6vw;
-    }
-
-    @media (max-aspect-ratio: 9/10) {
-        .hero .planes {
-            transform: translate(-24%, -43%);
-            margin-top: max(65%, 50vh);
-            margin-left: 42vw;
-        }
     }
 }
 

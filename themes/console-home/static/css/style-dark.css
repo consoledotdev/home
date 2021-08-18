@@ -181,17 +181,6 @@
     opacity: 0.06;
 }
 
-.theme .hero .planes .light {
-    display: none;
-}
-
-.page-article.theme .hero .planes > rect:not([stroke]),
-.page-article.theme .hero .planes g rect:not([stroke]),
-.page-feature.theme .hero .planes > rect:not([stroke]),
-.page-feature.theme .hero .planes g rect:not([stroke]) {
-    fill: var(--theme-planes-background-2);
-}
-
 .page-article.theme .hero .dynamic-planes .dynamic-planes-item .dynamic-planes-item-bg,
 .page-feature.theme .hero .dynamic-planes .dynamic-planes-item .dynamic-planes-item-bg {
     background: var(--theme-planes-background-2);

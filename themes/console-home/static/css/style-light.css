@@ -159,14 +159,6 @@
     opacity: 0.06;
 }
 
-.theme .hero .planes > rect[stroke] {
-    stroke-opacity: 0.1;
-}
-
-.theme .hero .planes .dark {
-    display: none;
-}
-
 .theme .logo-svg-animated-explode .plane {
     stroke-width: 3;
 }
