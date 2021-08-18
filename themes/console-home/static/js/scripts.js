@@ -50,10 +50,10 @@ let toggleCollapsible = (e) => {
     }
 };
 
-let animateDynamicPlanes = (() => {
-    let animate = () => {
-        let columns = document.querySelectorAll("[data-dynamic-planes-column]");
-        if (columns) {
+if (document.body.classList.contains("show-planes")) {
+    let animateDynamicPlanes = (() => {
+        let animate = () => {
+            let columns = document.querySelectorAll("[data-dynamic-planes-column]");
             let animateColumn = (n) => {
                 let classes = ["triad-01", "triad-02", "triad-03"];
                 let col = columns[n];
@@ -96,15 +96,15 @@ let animateDynamicPlanes = (() => {
             setInterval(() => {
                 animateColumn(5);
             }, 6500);
-        }
-    };
+        };
 
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (mediaQuery) {
-        if (!mediaQuery.matches) animate();
-
-        mediaQuery.addEventListener("change", () => {
+        const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+        if (mediaQuery) {
             if (!mediaQuery.matches) animate();
-        });
-    }
-})();
+
+            mediaQuery.addEventListener("change", () => {
+                if (!mediaQuery.matches) animate();
+            });
+        }
+    })();
+}
