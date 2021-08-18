@@ -678,15 +678,16 @@ body.show-planes:after {
 
 .podcast-links .link {
     display: inline-block;
+    filter: grayscale(1);
 }
 
 .podcast-links .link:hover,
 .podcast-links .link:focus {
-    opacity: 0.75;
+    filter: grayscale(0);
 }
 
 .podcast-links .link:active {
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .podcast-links .link:not(:first-child) {
