@@ -52,6 +52,7 @@ let toggleCollapsible = (e) => {
 
 if (document.body.classList.contains("show-planes")) {
     let animateDynamicPlanes = (() => {
+        let i1, i2, i3, i4, i5, i6;
         let animate = () => {
             let columns = document.querySelectorAll("[data-dynamic-planes-column]");
             let animateColumn = (n) => {
@@ -78,32 +79,42 @@ if (document.body.classList.contains("show-planes")) {
                     selectedItem.classList.add("selected");
                 }
             };
-            setInterval(() => {
+            i1 = setInterval(() => {
                 animateColumn(0);
             }, 5000);
-            setInterval(() => {
+            i2 = setInterval(() => {
                 animateColumn(1);
             }, 8000);
-            setInterval(() => {
+            i3 = setInterval(() => {
                 animateColumn(2);
             }, 6000);
-            setInterval(() => {
+            i4 = setInterval(() => {
                 animateColumn(3);
             }, 7000);
-            setInterval(() => {
+            i5 = setInterval(() => {
                 animateColumn(4);
             }, 4000);
-            setInterval(() => {
+            i6 = setInterval(() => {
                 animateColumn(5);
             }, 6500);
         };
+        let stopAnimation = () => {
+            clearInterval(i1);
+            clearInterval(i2);
+            clearInterval(i3);
+            clearInterval(i4);
+            clearInterval(i5);
+            clearInterval(i6);
+        };
 
-        const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+        let mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
         if (mediaQuery) {
             if (!mediaQuery.matches) animate();
 
             mediaQuery.addEventListener("change", () => {
+                mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
                 if (!mediaQuery.matches) animate();
+                else stopAnimation();
             });
         }
     })();
