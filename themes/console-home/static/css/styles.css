@@ -324,10 +324,6 @@ body.show-planes:after {
     margin: var(--space4) 0;
 }
 
-.main .framed-section iframe {
-    width: calc(100% - var(--space4));
-}
-
 .main-article .console-form {
     margin: var(--space4) 0 0;
 }
@@ -650,6 +646,88 @@ body.show-planes:after {
     margin-top: calc(var(--space6) * -1);
 }
 
+.podcast-embed .title.title-4 {
+    margin-bottom: var(--space3);
+}
+
+.podcast-embed-content {
+    display: flex;
+}
+
+.podcast-embed-frame {
+    position: relative;
+    border-radius: var(--corners-x-small);
+    height: var(--space4_5);
+    overflow: hidden;
+}
+
+.podcast-embed-frame iframe {
+    position: absolute;
+    min-width: 0; /* https://css-tricks.com/flexbox-truncated-text/ */
+    left: -8px;
+    top: -2px;
+    width: calc(100% + 14px);
+}
+
+.podcast-links {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.podcast-links .link {
+    display: inline-block;
+    filter: grayscale(0.6);
+}
+
+.podcast-links .link:hover,
+.podcast-links .link:focus {
+    filter: grayscale(0);
+}
+
+.podcast-links .link:active {
+    opacity: 0.8;
+}
+
+.podcast-links .link:not(:first-child) {
+    margin-left: var(--space3);
+}
+
+.podcast-links .link img {
+    display: inline-block;
+    vertical-align: top;
+}
+
+@media (min-width: 512px) {
+    .podcast-embed-content {
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .podcast-embed-content .podcast-embed-frame {
+        flex: 1 1 auto;
+    }
+
+    .podcast-links .link {
+        flex: 0 0 auto;
+        margin-left: var(--space3);
+    }
+}
+
+@media (max-width: 511px) {
+    .podcast-embed-content {
+        flex-flow: column nowrap;
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+
+    .podcast-links .link {
+        margin-top: var(--space3);
+    }
+}
+
 /* Main Nav
    ================================================================================================================ */
 
@@ -780,10 +858,18 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
 
 .footer {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: stretch;
     z-index: 10;
+}
+
+.footer .framed-section {
+    margin-bottom: var(--space3);
+}
+
+.footer .framed-section:last-of-type {
+    margin-bottom: var(--space4);
 }
 
 .footer-nav {
@@ -874,6 +960,12 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
 
     .footer-nav .footer-locations {
         margin-left: calc(var(--space3) * -1);
+    }
+}
+
+@media (min-width: 769px) {
+    .footer .framed-section {
+        width: 440px;
     }
 }
 
@@ -1577,7 +1669,7 @@ select.console-select::-ms-expand {
     }
 
     .content {
-        min-height: 1240px;
+        min-height: 1180px;
     }
 
     .main-nav > ul,
@@ -1668,17 +1760,6 @@ select.console-select::-ms-expand {
         }
     }
 
-    @media (max-width: 430px) {
-        .main .framed-section.podcast {
-            background: none;
-        }
-        .main .framed-section.podcast iframe {
-            margin-left: calc(var(--space3) * -1);
-            margin-right: 0;
-            width: calc(100% + calc(var(--space3) * 2));
-        }
-    }
-
     @media (max-width: 400px) {
         .content {
             width: 80%;
@@ -1706,6 +1787,18 @@ select.console-select::-ms-expand {
     @media (min-width: 481px) {
         .content {
             width: 76%;
+        }
+
+        @media (max-width: 540px) {
+            .content {
+                min-height: 1300px;
+            }
+        }
+
+        @media (max-width: 495px) {
+            .content {
+                min-height: 1340px;
+            }
         }
 
         .header.header-fixed,
@@ -1756,7 +1849,7 @@ select.console-select::-ms-expand {
     }
 
     .content {
-        min-height: max(100vh, 1240px);
+        min-height: max(100vh, 1040px);
     }
 
     .main {

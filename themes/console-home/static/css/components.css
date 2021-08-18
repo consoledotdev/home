@@ -1478,6 +1478,10 @@ body:not(.mobile) .console-control:hover:before {
     margin-right: var(--space4);
 }
 
+.framed-section > iframe {
+    width: calc(100% - var(--space5));
+}
+
 .framed-section-item > * {
     margin-left: var(--space4);
     margin-right: var(--space4);
@@ -1486,6 +1490,10 @@ body:not(.mobile) .console-control:hover:before {
 .framed-section.mid > *:not(.framed-section-item) {
     margin-left: var(--space3);
     margin-right: var(--space3);
+}
+
+.framed-section.mid > iframe {
+    width: calc(100% - var(--space4));
 }
 
 .framed-section.mid .framed-section-item > * {
