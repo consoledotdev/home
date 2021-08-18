@@ -127,8 +127,8 @@ body:not(.page-tools-category-review):after {
 }
 
 .main-tools-category-review .nav-wrapper > .framed-section {
-    margin-left: calc(var(--space4) * -1);
-    margin-right: calc(var(--space4) * -1);
+    margin-left: calc(var(--space3_5) * -1);
+    margin-right: calc(var(--space3_5) * -1);
 }
 
 .main-tools-category-review .author-box {
@@ -224,13 +224,13 @@ body:not(.page-tools-category-review):after {
 }
 
 .tools-category-review-tool-card {
-    margin: var(--space4_5) calc(var(--space4) * -1) var(--space4_5);
+    margin: var(--space4_5) calc(var(--space3_5) * -1) var(--space4_5);
     padding: 0;
 }
 
 .tools-category-review-tool-card .tool-card-top {
     border-bottom: var(--theme-border-2);
-    padding: var(--space3) var(--space4);
+    padding: var(--space3) var(--space3_5);
 }
 
 .tools-category-review-tool-card .tool-card-top > p {
@@ -289,7 +289,7 @@ body:not(.page-tools-category-review):after {
 }
 
 .tools-category-review-tool-card .tool-card-bottom {
-    padding: var(--space3) var(--space4);
+    padding: var(--space3) var(--space3_5);
 }
 
 .tools-category-review-tool-card .tool-card-cost > p:not(.tool-card-cost-highlight) {

@@ -1786,7 +1786,7 @@ select.console-select::-ms-expand {
 
     @media (min-width: 481px) {
         .content {
-            width: 76%;
+            width: 84%;
         }
 
         @media (max-width: 540px) {
@@ -1803,16 +1803,16 @@ select.console-select::-ms-expand {
 
         .header.header-fixed,
         .is-scrolled .header.header-fixed {
-            padding-left: 12vw;
-            padding-right: 12vw;
+            padding-left: 8vw;
+            padding-right: 8vw;
         }
 
         .main-article,
         .main-feature-article {
-            margin-left: -12vw;
-            margin-right: -12vw;
-            padding-left: 12vw;
-            padding-right: 12vw;
+            margin-left: -8vw;
+            margin-right: -8vw;
+            padding-left: 8vw;
+            padding-right: 8vw;
         }
     }
 

@@ -1474,8 +1474,8 @@ body:not(.mobile) .console-control:hover:before {
 }
 
 .framed-section > *:not(.framed-section-item) {
-    margin-left: var(--space4);
-    margin-right: var(--space4);
+    margin-left: var(--space3_5);
+    margin-right: var(--space3_5);
 }
 
 .framed-section > iframe {
@@ -1483,8 +1483,8 @@ body:not(.mobile) .console-control:hover:before {
 }
 
 .framed-section-item > * {
-    margin-left: var(--space4);
-    margin-right: var(--space4);
+    margin-left: var(--space3_5);
+    margin-right: var(--space3_5);
 }
 
 .framed-section.mid > *:not(.framed-section-item) {
