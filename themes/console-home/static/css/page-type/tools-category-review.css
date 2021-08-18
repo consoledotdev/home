@@ -54,6 +54,10 @@ body:not(.page-tools-category-review):after {
     margin-top: 0;
 }
 
+.page-tools-category-review .title.title-1 {
+    margin-top: 0;
+}
+
 .page-tools-category-review .title-1 span {
     color: var(--theme-categories-color-idle);
 }
@@ -447,7 +451,7 @@ body:not(.page-tools-category-review):after {
 
 @media (max-width: 768px) {
     .main-tools-category-review {
-        margin-top: calc(var(--space6) - var(--space4) + 48px);
+        margin-top: var(--space6);
         margin-bottom: calc(var(--space6) - var(--space4));
     }
 

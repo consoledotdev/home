@@ -428,6 +428,10 @@ body.show-planes:after {
     margin-top: calc(var(--space4) + var(--space3));
 }
 
+.page-section:first-of-type {
+    margin-top: 0;
+}
+
 .main-feature-article-aside + .page-section {
     margin-top: 0;
 }
@@ -1641,17 +1645,17 @@ select.console-select::-ms-expand {
     }
 
     .main-article {
-        margin-top: calc(var(--space6) - var(--space4));
+        margin-top: var(--space6);
         margin-bottom: calc(var(--space6) - var(--space4));
     }
 
     .main-feature {
-        margin-top: calc(var(--space6) - var(--space4) + 48px);
+        margin-top: var(--space6);
         margin-bottom: var(--space6);
     }
 
     .main-feature-article {
-        margin-top: calc(var(--space6) - var(--space4) + 48px);
+        margin-top: var(--space6);
         margin-bottom: calc(var(--space6) - var(--space4));
     }
 
