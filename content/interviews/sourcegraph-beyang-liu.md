@@ -3,9 +3,9 @@ title: Interview with Beyang Liu, Sourcegraph
 who: Beyang Liu
 role: CTO
 org: Sourcegraph
-what: Code search.
+what: Code search engine.
 tags: ["Code search"]
-date: 2021-08-16T12:00:00Z
+date: 2021-08-17T12:00:00Z
 draft: false
 headerType: fixed
 summary: Interview with Beyang Liu, CTO, Sourcegraph.
@@ -257,9 +257,10 @@ into customer environments has gotten a lot easier with Docker and Kubernetes.
 
 We want to index code in a way that works across repository dependency
 boundaries without any sort of manual setup, so we're growing our search index
-this year. The Cloud version of Sourcegraph launches in public beta on 19th Aug
-where we’ll have 1 million open source repos indexed - any public, open source
-repos with 1 or more stars - and then 5 million by the end of the year.
+this year. [The cloud version of Sourcegraph](https://sourcegraph.com/search)
+launches in public beta on 19th Aug where we’ll have 1 million open source repos
+indexed - any public, open source repos with 1 or more stars - and then 5
+million by the end of the year.
 
 Ultimately, we want to be able to cover all of the open source universe. We want
 to build a global graph of code, essentially the hyperlink network for the world
@@ -375,7 +376,7 @@ mental state and ability to focus.
 
 ### Find out more
 
-[Sourcegraph](https://about.sourcegraph.com/) is a code search tool. It was
+[Sourcegraph](https://about.sourcegraph.com/) is a code search engine. It was
 featured as an "Interesting Tool" in the
 [Console newsletter](https://console.dev) on 19 Aug 2021. This interview was
 conducted on 17 Aug 2021.
