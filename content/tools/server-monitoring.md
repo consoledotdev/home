@@ -41,6 +41,15 @@ authorBio:
 In this article we review 18 server monitoring services to find the best server
 monitoring tools for developers and devops engineers in {{< year >}}.
 
+We reviewed [Datadog](#datadog), [New Relic](#new-relic),
+[AppOptics](#appoptics), [Dynatrace](#dynatrace),
+[Logic Monitor](#logic-monitor), [Lightstep](#lightstep),
+[Grafana + Prometheus](#grafana-prometheus),
+[InfluxDB + Telegraf](#influxdb-telegraf), [checkmk](#checkmk),
+[Graphite](#graphite), [Icinga](#icinga), [Nagios](#nagios),
+[Netdata](#netdata), [OpenTSDB](#opentsdb), [Opstrace](#opstrace),
+[Sensu](#sensu), [SigNoz](#signoz), and [Zabbix](#zabbix).
+
 With our 15+ years of development experience, we assesed the key features all
 server monitoring tools should have: integrations / plugins, graphs and alerts.
 We also considered features like dashboards, events, incident management,
@@ -561,6 +570,8 @@ it?
 These are the other hosted SaaS server monitoring services we tested. They are
 not as highly rated as the two options above, but may be worth considering.
 
+{{< nav-wrapper--open anchor-name="appoptics" >}}
+
 {{< tools/category-review/card-heading name="AppOptics" thumbnail="/img/favicons/www.appoptics.com.png" url="https://www.appoptics.com" score="2" >}}
 
 AppOptics is part of the Solarwinds cloud monitoring suite and integrates into
@@ -578,6 +589,10 @@ anything new or unusual in your stack it may not be supported.
 With pricing ranging from $10-$13/server/month depending on annual or monthly
 contract it's definitely cheaper, but if you're going to spend $10/server/month
 then you may as well pay a bit more for Datadog or New Relic.
+
+{{< div--close >}}
+
+{{< nav-wrapper--open anchor-name="dynatrace" >}}
 
 {{< tools/category-review/card-heading name="Dynatrace" thumbnail="/img/favicons/www.dynatrace.com.png" url="https://www.dynatrace.com" score="2" >}}
 
@@ -625,6 +640,10 @@ $69/server/month is high relative to the competition.
 Given the limited number of integrations, unusual approach to alerting, and
 complex pricing, we do not recommend Dynatrace for server monitoring.
 
+{{< div--close >}}
+
+{{< nav-wrapper--open anchor-name="logic-monitor" >}}
+
 {{< tools/category-review/card-heading name="Logic Monitor" thumbnail="/img/favicons/www.logicmonitor.com.png" url="https://www.logicmonitor.com" score="none" >}}
 
 Logic Monitor tricks you into thinking you are signing up for a trial but you
@@ -636,6 +655,10 @@ developer who just wants to try the product themselves.
 [Our selection criteria](/about/#selection-criteria) require self-service signup
 so we were unable to evaluate Logic Monitor.
 
+{{< div--close >}}
+
+{{< nav-wrapper--open anchor-name="lightstep" >}}
+
 {{< tools/category-review/card-heading name="Lightstep" thumbnail="/img/favicons/lightstep.com.png" url="https://lightstep.com/" score="none" >}}
 
 Lightstep is designed primarily as a tracing tool that also supports
@@ -645,6 +668,8 @@ you to
 Datadog, Prometheus, AWS, Google Cloud or OpenTelemetry. As such, we decided not
 to review it as part of this article on server monitoring. It will be covered in
 a future Console review of tracing and observability tools.
+
+{{< div--close >}}
 
 {{< div--close >}}
 
@@ -1070,6 +1095,8 @@ major limitation.
 These are the other server monitoring tools we tested. They are not as highly
 rated as the two options above, but may be worth considering.
 
+{{< nav-wrapper--open anchor-name="checkmk" >}}
+
 {{< tools/category-review/card-heading name="checkmk" thumbnail="/img/favicons/checkmk.com.png" url="https://checkmk.com" score="none" >}}
 
 checkmk is an unusual project because the free open source edition (checkmk Raw)
@@ -1099,6 +1126,10 @@ source software. We don't recommend Checkmk Raw because it is based on Nagios
 Core and is only receiving bug fix updates. There are more powerful options to
 choose from.
 
+{{< div--close >}}
+
+{{< nav-wrapper--open anchor-name="graphite" >}}
+
 {{< tools/category-review/card-heading name="Graphite" url="https://graphite.readthedocs.io/en/latest/" score="none" >}}
 
 Graphite is a time series datastore that can generate graphs. It was originally
@@ -1112,6 +1143,10 @@ If you have very simple requirements for graphical monitoring it will do the
 job, but if you need more sophisticated visualizations or alerting then there
 are better options.
 
+{{< div--close >}}
+
+{{< nav-wrapper--open anchor-name="icinga" >}}
+
 {{< tools/category-review/card-heading name="Icinga" thumbnail="/img/favicons/icinga.com.png" url="https://icinga.com" score="1" >}}
 
 Icinga was originally a fork of Nagios and continues to maintain compatibility.
@@ -1122,6 +1157,10 @@ much host-based.
 The biggest omission is the lack of any meaningful visualizations. It represents
 data through single, static numbers and color associations such as red = bad. If
 you think server monitoring should include graphs then Icinga isn't for you.
+
+{{< div--close >}}
+
+{{< nav-wrapper--open anchor-name="nagios" >}}
 
 {{< tools/category-review/card-heading name="Nagios" thumbnail="/img/favicons/www.nagios.org.png" url="https://www.nagios.org/" score="1" >}}
 
@@ -1140,6 +1179,10 @@ Everything is defined in agent config files, including alerts, which limits the
 flexibility if you need anything more than simple threshold-based monitoring. As
 such, it's difficult to recommend Nagios for modern deployments given the
 sophistication of the alternatives like Grafana, Prometheus and InfluxDB.
+
+{{< div--close >}}
+
+{{< nav-wrapper--open anchor-name="netdata" >}}
 
 {{< tools/category-review/card-heading name="Netdata" thumbnail="/img/favicons/www.netdata.cloud.png" url="https://www.netdata.cloud" score="3" >}}
 
@@ -1169,6 +1212,10 @@ interested in live streaming metrics, but can get complicated quickly as you
 scale or if you need consistent alerting and want to store data for more than a
 few days.
 
+{{< div--close >}}
+
+{{< nav-wrapper--open anchor-name="opentsdb" >}}
+
 {{< tools/category-review/card-heading name="OpenTSDB" thumbnail="/img/favicons/opentsdb.net.png" url="http://opentsdb.net/" score="none" >}}
 
 OpenTSDB is a time series database built on top of Hadoop and HBase. It's a good
@@ -1178,6 +1225,10 @@ monitoring tool by itself.
 Running HBase/Hadoop can also be a huge operational challenge, so if you are
 interested in OpenTSDB then you may want to consider
 [Google Cloud Bigtable which is compatible with the HBase API](https://cloud.google.com/bigtable/docs/hbase-bigtable).
+
+{{< div--close >}}
+
+{{< nav-wrapper--open anchor-name="opstrace" >}}
 
 {{< tools/category-review/card-heading name="Opstrace" thumbnail="/img/favicons/opstrace.com.png" url="https://opstrace.com/" score="none" >}}
 
@@ -1189,6 +1240,10 @@ not evaluate it, and there are some limitations such as
 [needing](https://opstrace.com/docs/references/faq#how-do-i-use-my-own-domain)
 to use a `*.opstrace.io` domain unless you contact them about a commercial
 version. We'll reevaluate Opstrace in the future.
+
+{{< div--close >}}
+
+{{< nav-wrapper--open anchor-name="sensu" >}}
 
 {{< tools/category-review/card-heading name="Sensu" thumbnail="/img/favicons/sensu.io.png" url="https://sensu.io" score="none" >}}
 
@@ -1203,6 +1258,10 @@ such as dashboards and many third-party integrations.
 
 This section only covers open source options so we did not evaluate Sensu Go.
 
+{{< div--close >}}
+
+{{< nav-wrapper--open anchor-name="signoz" >}}
+
 {{< tools/category-review/card-heading name="SigNoz" thumbnail="/img/favicons/signoz.io.png" url="https://signoz.io" score="none" >}}
 
 SigNoz is a metrics monitoring tool built around
@@ -1211,6 +1270,10 @@ for its backend (you can choose which one you prefer). It is marketed as an open
 source alternative to Datadog and New Relic, but currently doesn't come close to
 their functionality. This is an interesting project to follow, but is still very
 early in development and not on par with our main recommendations above.
+
+{{< div--close >}}
+
+{{< nav-wrapper--open anchor-name="zabbix" >}}
 
 {{< tools/category-review/card-heading name="Zabbix" thumbnail="/img/favicons/www.zabbix.com.png" url="https://www.zabbix.com" score="3" >}}
 
@@ -1261,6 +1324,8 @@ compared to more modern options like Grafana and InfluxDB. We like its open
 source philosophy and it covers most of what you would expect in a server
 monitoring tool in 2021, but doesn't quite get our recommendation compared to
 our two finalists above.
+
+{{< div--close >}}
 
 {{< div--close >}}
 
