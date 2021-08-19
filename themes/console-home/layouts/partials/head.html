@@ -100,8 +100,8 @@
     {{- if .Params.ogImg }}
     {{- $ogImg = .Params.ogImg -}}
     {{- end }}
-    <meta property="og:image" itemprop="image" content="https://console.dev{{ $ogImg }}" />
-    <meta property="og:image:secure_url" itemprop="image" content="https://console.dev{{ $ogImg }}" />
+    <meta property="og:image" content="https://console.dev{{ $ogImg }}" />
+    <meta property="og:image:secure_url" content="https://console.dev{{ $ogImg }}" />
     {{- $ogType := "article" -}}
     {{- if .Params.ogType }}
     {{- $ogType = .Params.ogType -}}
