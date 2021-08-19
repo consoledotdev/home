@@ -106,7 +106,7 @@ product is the best in each category.
 
 {{< div--close >}}
 
-{{< nav-wrapper--open id="wrapper-1" anchor-name="requirements" >}}
+{{< nav-wrapper--open id="wrapper-1" anchor-name="requirements-above" >}}
 
 {{< framed-section--open classes="framed-section-attention" >}}
 
