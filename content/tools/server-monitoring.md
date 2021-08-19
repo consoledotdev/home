@@ -1333,7 +1333,7 @@ our two finalists above.
 
 {{< tools/category-review/faq category="server-monitoring" >}}
 
-{{< nav-wrapper--open id="wrapper-10" anchor-name="our-editorial-policy" >}}
+{{< nav-wrapper--open id="wrapper-10" anchor-name="editorial-policy" >}}
 
 ### Our editorial policy
 
