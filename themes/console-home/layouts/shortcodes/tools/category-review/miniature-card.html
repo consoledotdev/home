@@ -22,7 +22,6 @@
                     {{ $score := (float (.Get "score")) }}
                     {{ $min := (float 0) }}
                     {{ $max := (float 5) }}
-                    {{ $id := (print "cardmin-meter-" (lower (.Get "anchor")))}}
                     {{ $name := (.Get "name") }}
                     <span class="console-score-text">{{ $score }}/{{ $max }}</span>
                     {{ partial "components/score-bar.html" (dict "min" $min "max" $max "score" $score "name" $name) }}
