@@ -205,7 +205,7 @@ out of scope.
 
 {{< div--close >}}
 
-{{< nav-wrapper--open id="wrapper-2" anchor-name="hosted-saas-monitoring-tools" >}}
+{{< nav-wrapper--open anchor-name="hosted-saas-monitoring-tools" >}}
 
 ### Hosted SaaS server monitoring tools
 
@@ -673,7 +673,7 @@ a future Console review of tracing and observability tools.
 
 {{< div--close >}}
 
-{{< nav-wrapper--open id="wrapper-6" anchor-name="self-hosted-monitoring-tools" >}}
+{{< nav-wrapper--open anchor-name="self-hosted-monitoring-tools" >}}
 
 ### Self-hosted server monitoring tools
 
