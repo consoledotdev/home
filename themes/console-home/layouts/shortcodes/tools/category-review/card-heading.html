@@ -14,7 +14,7 @@
             {{- end -}}
         </div>
         <div class="title-score">
-            <h4 class="title title-3"><label for="score-meter-{{ lower (.Get "anchor") }}">{{ .Get "name" }}</label></h4>
+            <h4 class="title title-3">{{ if ne (.Get "score") "none" }}<label for="score-meter-{{ lower (.Get "anchor") }}">{{ end }}{{ .Get "name" }}{{ if ne (.Get "score") "none" }}</label>{{ end }}</h4>
             <span class="console-score">
                 {{ if eq (.Get "score") "none" }}
                     No rating
