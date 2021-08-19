@@ -1,17 +1,16 @@
 ---
-title: "The Best Server Monitoring Tools For Developers"
+title: "The Best Server Monitoring Tools For Developers - Console"
 titlePrefix: "The best"
 titleCategory: "server monitoring"
 titleSuffix: "tools for developers"
 date: 2021-07-28T12:00:00+00:00
 draft: false
 summary:
-  A review of the best server monitoring tools for developers and devops
-  engineers.
+  "The best server monitoring tools for developers: Datadog, New Relic, Grafana,
+  Prometheus, InfluxDB, Telegraf. 18 server monitoring tools reviewed."
 metaDescription:
-  A review of the best server monitoring tools for developers and devops
-  engineers. Comparing Datadog, New Relic, Grafana, Prometheus, InfluxDB and
-  Telegraf.
+  "The best server monitoring tools for developers: Datadog, New Relic, Grafana,
+  Prometheus, InfluxDB, Telegraf. 18 server monitoring tools reviewed."
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -40,15 +39,16 @@ authorBio:
 ---
 
 In this article we review 18 server monitoring services to find the best server
-monitoring tools for developers and devops engineers. With our 15+ years of
-development experience, we review both hosted SaaS and self-hosted on-premises
-monitoring tools and assess integrations / plugins, graphs and alerts.
+monitoring tools for developers and devops engineers in {{< year >}}.
 
-We tried 18 different server monitoring services and reviewed key requirements
-including integrations / plugins, graphs and alerts. We also considered features
-like dashboards, events, incident management, runbooks (usually part of alerts)
-and team collaboration. We'll comment on these as useful bonus features if they
-are present.
+With our 15+ years of development experience, we assesed the key features all
+server monitoring tools should have: integrations / plugins, graphs and alerts.
+We also considered features like dashboards, events, incident management,
+runbooks (usually part of alerts) and team collaboration. We'll comment on these
+as useful bonus features if they are present.
+
+Console is editorially independent - see our
+[selection criteria](/about#selection-criteria).
 
 {{< nav-wrapper--open id="wrapper-0" anchor-name="tldr" >}}
 
@@ -91,6 +91,10 @@ and you may not need to build your own data centers
 VMs, or deploying code on Digital Ocean droplets, is still common. Servers are
 where it starts.
 
+In this review we will help you decide whether to pick hosted SaaS server
+monitoring or self-hosted monitoring, and then recommend which monitoring
+product is the best in each category.
+
 {{< div--close >}}
 
 {{< nav-wrapper--open id="wrapper-1" anchor-name="requirements" >}}
@@ -100,9 +104,14 @@ where it starts.
 {{< rich-title-3 icon="checklist" id="requirements" >}} Requirements
 {{</ rich-title-3 >}}
 
-Deciding whether you want your monitoring to be a hosted SaaS product or
-self-hosted on premises is the key decision (see each section, below). Once you
-have chosen, there are 3 requirements that we will assess for each review.
+The three most important features every server monitoring tool must have are:
+integrations / plugins, graphs, and alerts. Other features might be useful to
+improve the product experience, but modern server monitoring tools in
+{{< year >}} must have these three.
+
+For each of our server monitoring tool reviews we will assess functionality
+based on our [standard selection criteria](/about/#selection-criteria) and these
+three requirements:
 
 {{< framed-section-item--open >}}
 
@@ -127,9 +136,9 @@ integrations, but do they work well?
 
 #### Graphs
 
-Modern monitoring tools must graph and visualize the monitoring data. Simple
-graphs may be all that is needed, but the best server monitoring services have
-sophisticated graphing capabilities such as filtering, different types of
+Modern monitoring software tools must graph and visualize the monitoring data.
+Simple graphs may be all that is needed, but the best server monitoring services
+have sophisticated graphing capabilities such as filtering, different types of
 graphs, percentile breakdowns, trend analysis, annotations, etc. Graphs should
 be customizable and load quickly. Collecting lots of monitoring data is no good
 if you can't visualize it.
@@ -653,8 +662,8 @@ We reviewed 12 self-hosted server monitoring products. The best is:
 
 Self-hosted monitoring is different from SaaS monitoring where everything is
 done for you in a single product. Although there are all-in-one self-hosted
-server monitoring tools, for the best setup you really need to deploy several
-products and integrate them. This is more operationally challenging -
+server monitoring software tools, for the best setup you really need to deploy
+several products and integrate them. This is more operationally challenging -
 demonstrating the value of SaaS monitoring - but allows each tool to focus on
 what it does best.
 
@@ -1178,12 +1187,12 @@ Opstrace packages several open source monitoring tools
 deployment and management easier. This is still an early-stage project so we did
 not evaluate it, and there are some limitations such as
 [needing](https://opstrace.com/docs/references/faq#how-do-i-use-my-own-domain)
-to use a \*.opstrace.io domain unless you contact them about a commercial
+to use a `*.opstrace.io` domain unless you contact them about a commercial
 version. We'll reevaluate Opstrace in the future.
 
 {{< tools/category-review/card-heading name="Sensu" thumbnail="/img/favicons/sensu.io.png" url="https://sensu.io" score="none" >}}
 
-Sensu is an open source monitoring tool but it is only open source if you
+Sensu is open source monitoring software, but only if you
 [compile it from source code yourself](https://github.com/sensu/sensu-go), then
 combine it with [the web UI project](https://github.com/sensu/web). This is not
 obvious because when you download Sensu from their website, you are actually

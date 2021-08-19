@@ -33,6 +33,22 @@
                 "@type": "Answer",
                 "text": "<p>Server monitoring is essential for any production infrastructure so that you know when things are going wrong, what happened, and how to fix problems. Without server monitoring, you will not know whether your servers are running, how they are performing, and what is causing issues.</p>"
             }
+        },
+        {
+            "@type": "Question",
+            "name": "What are the best open source server monitoring tools?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "<p>Open source monitoring tools are usually self-hosted because you get access to the source code to deploy it yourself. In our review above, the best open server monitoring tool is: <a href=\"#grafana-prometheus\" class=\"link\">Grafana + Prometheus</a>. We also like: <a href=\"#influxdb-telegraf\" class=\"link\">InfluxDB + Telegraf</a>.</p><p>The main benefit of open source server monitoring is that you can write your own plugins and integrations. Most developers will not want to modify the core product, which is why SaaS monitoring tools usually have an open source agent - so that their users can contribute new integrations. For example, the <a href=\"#datadog\" class=\"link\">Datadog</a> monitoring agent is open source and the source code is available on GitHub. The Datadog service itself - the dashboards, alerts, web UI, etc - is closed source.</p>"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How much network traffic do server monitoring tools generate?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "<p>How much bandwidth server monitoring tools use is important if you have a lot of servers. It can be a problem when using a <a href=\"#hosted-saas-monitoring-tools\" class=\"link\">hosted SaaS monitoring service</a> because you have to pay for outbound traffic. In cloud environments, data egress fees can be expensive so you end up paying not just for the monitoring product but also for sending data into it.</p><p>The amount of data used will depend on how many metrics you are collecting, but starting at tens of megabytes per month per server for basic system monitoring. More plugins generate more metrics which generates more network traffic.</p><p>In most cases, this will not be a problem until you have thousands of servers, but this can change if you are also using log monitoring. Logs can easily reach hundreds of gigabytes per month per server, especially if the server is doing a lot of work. The trick is to tweak the log verbosity settings and then ensure that the monitoring agent can filter out the unimportant logs on the server before they are sent back to the SaaS monitoring service.</p><p>Alternatively, you can use <a href=\"#self-hosted-monitoring-tools\" class=\"link\">self-hosted monitoring</a> to keep all the traffic within your internal network. For most cloud providers, zone-based traffic is free or very cheap.</p>"
+            }
         }
     ]
 }
