@@ -1,16 +1,12 @@
 {
     "ignorePatterns": [
         {
-            "pattern": "/.png$/"
+            "pattern": "^.*\.(png)$"
         }
     ],
     "replacementPatterns": [
         {
-            "pattern": "/&quot;$/",
-            "replacement": ""
-        },
-        {
-            "pattern": "/\"$/",
+            "pattern": "^.(\&quot\;)$",
             "replacement": ""
         },
         {
