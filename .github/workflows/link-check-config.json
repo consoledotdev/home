@@ -10,6 +10,10 @@
             "replacement": ""
         },
         {
+            "pattern": "/\"$/",
+            "replacement": ""
+        },
+        {
             "pattern": "^/",
             "replacement": "https://console.dev/"
         }
