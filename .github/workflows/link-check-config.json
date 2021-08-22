@@ -1,0 +1,24 @@
+{
+    "ignorePatterns": [
+        {
+            "pattern": "^.png"
+        }
+    ],
+    "replacementPatterns": [
+        {
+            "pattern": "^&quot;",
+            "replacement": ""
+        },
+        {
+            "pattern": "^/",
+            "replacement": "https://console.dev/"
+        }
+    ],
+    "retryOn429": true,
+    "aliveStatusCodes": [
+        200,
+        206,
+        403,
+        999
+    ]
+}
