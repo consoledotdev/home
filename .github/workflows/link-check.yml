@@ -8,7 +8,8 @@ jobs:
     check-links:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@master
+            - name: Checkout
+              uses: actions/checkout@v2
             - uses: gaurav-nelson/github-action-markdown-link-check@v1
               with:
                   use-quiet-mode: "no"

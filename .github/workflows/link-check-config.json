@@ -1,7 +1,7 @@
 {
     "ignorePatterns": [
         {
-            "pattern": "/\.png$/"
+            "pattern": "/png$/"
         }
     ],
     "replacementPatterns": [
