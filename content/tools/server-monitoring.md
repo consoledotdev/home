@@ -286,7 +286,7 @@ What are the pros and cons of hosted SaaS monitoring?
 
 ### Best hosted SaaS server monitoring tools
 
-{{< nav-wrapper--open id="wrapper-3" anchor-name="datadog" >}}
+{{< nav-wrapper--open id="wrapper-2" anchor-name="datadog" >}}
 
 {{< tools/category-review/card--open >}}
 
@@ -412,7 +412,7 @@ for small environments that only need basic monitoring.
 
 {{< div--close >}}
 
-{{< nav-wrapper--open id="wrapper-4" anchor-name="new-relic" >}}
+{{< nav-wrapper--open id="wrapper-3" anchor-name="new-relic" >}}
 
 {{< tools/category-review/card--open >}}
 
@@ -563,14 +563,14 @@ it?
 
 {{< div--close >}}
 
-{{< nav-wrapper--open id="wrapper-5" anchor-name="hosted-saas-also-considered" >}}
+{{< nav-wrapper--open anchor-name="hosted-saas-also-considered" >}}
 
 #### Also considered: Dynatrace, Logic Monitor + 2 more
 
 These are the other hosted SaaS server monitoring services we tested. They are
 not as highly rated as the two options above, but may be worth considering.
 
-{{< nav-wrapper--open anchor-name="appoptics" >}}
+{{< nav-wrapper--open id="wrapper-4" anchor-name="appoptics" >}}
 
 {{< tools/category-review/card-heading name="AppOptics" anchor="appoptics" thumbnail="/img/favicons/www.appoptics.com.png" url="https://www.appoptics.com" score="2" >}}
 
@@ -592,7 +592,7 @@ then you may as well pay a bit more for Datadog or New Relic.
 
 {{< div--close >}}
 
-{{< nav-wrapper--open anchor-name="dynatrace" >}}
+{{< nav-wrapper--open id="wrapper-5" anchor-name="dynatrace" >}}
 
 {{< tools/category-review/card-heading name="Dynatrace" anchor="dynatrace" thumbnail="/img/favicons/www.dynatrace.com.png" url="https://www.dynatrace.com" score="2" >}}
 
@@ -759,7 +759,7 @@ What are the pros and cons of self-hosted on premises monitoring?
 
 ### Best self-hosted server monitoring tools
 
-{{< nav-wrapper--open id="wrapper-7" anchor-name="grafana-prometheus" >}}
+{{< nav-wrapper--open id="wrapper-6" anchor-name="grafana-prometheus" >}}
 
 {{< tools/category-review/card--open >}}
 
@@ -932,7 +932,7 @@ alert on multiple metric sources.
 
 {{< div--close >}}
 
-{{< nav-wrapper--open id="wrapper-8" anchor-name="influxdb-telegraf" >}}
+{{< nav-wrapper--open id="wrapper-7" anchor-name="influxdb-telegraf" >}}
 
 {{< tools/category-review/card--open >}}
 
@@ -1088,9 +1088,9 @@ major limitation.
 
 {{< div--close >}}
 
-{{< nav-wrapper--open id="wrapper-9" anchor-name="self-hosted-also-considered" >}}
+{{< nav-wrapper--open anchor-name="self-hosted-also-considered" >}}
 
-#### Also considered: Nagios, Zabbix + 8 more
+#### Also considered: 8 more
 
 These are the other server monitoring tools we tested. They are not as highly
 rated as the two options above, but may be worth considering.
@@ -1160,7 +1160,7 @@ you think server monitoring should include graphs then Icinga isn't for you.
 
 {{< div--close >}}
 
-{{< nav-wrapper--open anchor-name="nagios" >}}
+{{< nav-wrapper--open id="wrapper-8" anchor-name="nagios" >}}
 
 {{< tools/category-review/card-heading name="Nagios" anchor="nagios" thumbnail="/img/favicons/www.nagios.org.png" url="https://www.nagios.org/" score="1" >}}
 
@@ -1273,7 +1273,7 @@ early in development and not on par with our main recommendations above.
 
 {{< div--close >}}
 
-{{< nav-wrapper--open anchor-name="zabbix" >}}
+{{< nav-wrapper--open id="wrapper-9" anchor-name="zabbix" >}}
 
 {{< tools/category-review/card-heading name="Zabbix" anchor="zabbix" thumbnail="/img/favicons/www.zabbix.com.png" url="https://www.zabbix.com" score="3" >}}
 
