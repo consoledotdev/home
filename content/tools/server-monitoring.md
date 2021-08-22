@@ -38,26 +38,28 @@ authorBio:
   Imperial College London. David has been a developer for 15+ years.
 ---
 
-In this article we review 18 server monitoring services to find the best server
-monitoring tools for developers and devops engineers in {{< year >}}.
+The best server monitoring tools have lots of high quality integrations and
+plugins, have highly flexible graphs, and provide advanced alerting
+functionality so you can be notified when things go wrong.
 
-We reviewed [Datadog](#datadog), [New Relic](#new-relic),
-[AppOptics](#appoptics), [Dynatrace](#dynatrace),
-[Logic Monitor](#logic-monitor), [Lightstep](#lightstep),
-[Grafana + Prometheus](#grafana-prometheus),
-[InfluxDB + Telegraf](#influxdb-telegraf), [checkmk](#checkmk),
-[Graphite](#graphite), [Icinga](#icinga), [Nagios](#nagios),
-[Netdata](#netdata), [OpenTSDB](#opentsdb), [Opstrace](#opstrace),
-[Sensu](#sensu), [SigNoz](#signoz), and [Zabbix](#zabbix).
+We tested 18 server monitoring services using our independent
+[selection criteria](/about#selection-criteria) and the requirements described
+below. The best server monitoring tools for developers and devops engineers in
+{{< year >}} are:
 
-With our 15+ years of development experience, we assesed the key features all
-server monitoring tools should have: integrations / plugins, graphs and alerts.
-We also considered features like dashboards, events, incident management,
-runbooks (usually part of alerts) and team collaboration. We'll comment on these
-as useful bonus features if they are present.
+1. [Datadog](#datadog)
+2. [New Relic](#new-relic)
+3. [Grafana + Prometheus](#grafana-prometheus)
+4. [InfluxDB + Telegraf](#influxdb-telegraf)
 
-Console is editorially independent - see our
-[selection criteria](/about#selection-criteria).
+In this article, we explain why. We assessed the key features all server
+monitoring tools should have - plugins, graphs and alerts - and also considered
+features like dashboards, events, incident management, runbooks (usually part of
+alerts) and team collaboration.
+
+This review will help you decide whether to pick hosted SaaS server monitoring
+or self-hosted monitoring, and then recommend which monitoring product is the
+best based on our 15+ years of development experience.
 
 {{< nav-wrapper--open id="wrapper-0" anchor-name="tldr" >}}
 
@@ -99,10 +101,6 @@ and you may not need to build your own data centers
 [like Apple](https://9to5mac.com/guides/apple-data-center/), but spinning up EC2
 VMs, or deploying code on Digital Ocean droplets, is still common. Servers are
 where it starts.
-
-In this review we will help you decide whether to pick hosted SaaS server
-monitoring or self-hosted monitoring, and then recommend which monitoring
-product is the best in each category.
 
 {{< div--close >}}
 
