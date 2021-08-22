@@ -1,4 +1,4 @@
-name: Markdown Links Check
+name: Link check
 on:
     workflow_dispatch:
     schedule:
@@ -13,5 +13,5 @@ jobs:
               with:
                   use-quiet-mode: "yes"
                   use-verbose-mode: "yes"
-                  config-file: link-check-config.json
+                  config-file: .github/workflows/link-check-config.json
                   folder-path: "content/"
