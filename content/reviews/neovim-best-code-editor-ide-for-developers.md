@@ -191,11 +191,11 @@ uses GPU acceleration (OpenGL in Rust), and
 so performance really is excellent.
 
 One of the great things is its customizability. All configuration is defined in
-[my vimrc file](https://github.com/dotfiles/blob/main/dot_vimrc) that I keep in
-version control. I can drop this onto any system and with a single command all
-my plugins will be installed and set up exactly how I prefer things. As Neovim
-and Alacritty work cross-platform, I can easily switch between Linux and macOS,
-where I use [iTerm 2](https://iterm2.com/).
+[my vimrc file](https://github.com/davidmytton/dotfiles/blob/559f849d8d1f7aa7547c19ed432b16b8514687f2/dot_vimrc)
+that I keep in version control. I can drop this onto any system and with a
+single command all my plugins will be installed and set up exactly how I prefer
+things. As Neovim and Alacritty work cross-platform, I can easily switch between
+Linux and macOS, where I use [iTerm 2](https://iterm2.com/).
 
 There are lots of plugins. In recent months I have used Neovim to write code in
 Python, Rust, Go, JS, and HTML,
@@ -431,10 +431,10 @@ editing config files, source code, and other text documents.
 - **Cost:** Free (open source).
 - **Performance:** ✅ Fast. Written in C++.
 - **Customizable:** ⛔ Plugins can be written in C++ or Python.
-  [Comes bundled with a number of options](https://docs.kde.org/stable5/en/applications/kate/plugins.html)
+  [Comes bundled with a number of options](https://docs.kde.org/stable5/en/kate/kate/plugins.html#kate-application-plugins)
   but there is no real ecosystem outside of the editor in the same way as the
   editors considered.
-  [Scriptable with JS](https://docs.kde.org/stable5/en/applications/katepart/dev-scripting.html).
+  [Scriptable with JS](https://docs.kde.org/stable5/en/kate/katepart/dev-scripting.html).
 - **Syntax highlighting:** ✅
 - **Cross-platform:** Linux ✅ Windows ✅ macOS ✅
 - **Everything else:** ⛔ No support for Git
