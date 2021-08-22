@@ -80,6 +80,15 @@
         {{- range first 1 $.Site.Data.betasga.items -}}{{- $gaChecked = time (index . "Last checked") -}}{{- end -}}
         {{- $updated := "" -}}
         {{- if $gaChecked.After $liveChecked -}}{{- $lastmod = $gaChecked.Format $iso8601 -}}{{- else -}}{{- $lastmod = $liveChecked.Format $iso8601 -}}{{- end -}}
+    <!--
+        If this is /interviews/
+        Use the date of the latest interview
+    -->
+    {{- else if eq .RelPermalink "/interviews/" -}}
+        {{ range last 1 (where .Site.RegularPages.ByDate "Section" "interviews" ) }}
+            {{- $lastmod = .Date -}}
+            {{- $lastmod = dateFormat $iso8601 $lastmod -}}
+        {{- end -}}
     {{- else if not .Lastmod.IsZero -}}
     <!--
         Otherwise, every other page use the last mod attribute
