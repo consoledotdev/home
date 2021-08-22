@@ -1,0 +1,16 @@
+name: Markdown Links Check
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: "00 16 * * WED"
+
+jobs:
+    check-links:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@master
+            - uses: gaurav-nelson/github-action-markdown-link-check@v1
+              with:
+                  use-quiet-mode: "yes"
+                  use-verbose-mode: "yes"
+                  folder-path: "content/"
