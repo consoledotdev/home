@@ -118,6 +118,13 @@ p.beta-card-description {
         margin-top: calc(var(--space1) / 2);
     }
 
+    @media (max-width: 600px) {
+        .beta-card {
+            padding-left: var(--space3_5);
+            padding-right: var(--space3_5);
+        }
+    }
+
     @media (max-width: 480px) {
         .beta-card .date {
             margin-left: 0;
