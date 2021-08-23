@@ -3,11 +3,26 @@
 
 html,
 body {
-    height: 100%;
     font-size: 16px;
     line-height: var(--t-lH3);
     min-width: 300px;
-    min-height: 800px;
+    min-height: 960px;
+}
+
+html {
+    height: 100%;
+}
+
+body.page-home {
+    height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    html,
+    body {
+        height: auto;
+        min-height: auto;
+    }
 }
 
 body {
@@ -330,6 +345,7 @@ body.show-planes:after {
 
 .overflow-wrapper {
     width: 100%;
+    height: 100%;
     overflow-x: hidden;
 }
 
@@ -1625,10 +1641,6 @@ select.console-select::-ms-expand {
 }
 
 @media (max-width: 768px) {
-    .hero {
-        min-height: 680px;
-    }
-
     .page-article .hero .planes {
         display: none;
     }
@@ -1672,10 +1684,6 @@ select.console-select::-ms-expand {
         display: none;
     }
 
-    .content {
-        min-height: 1180px;
-    }
-
     .main-nav > ul,
     .main-nav > .theme-switcher {
         display: none;
@@ -1689,11 +1697,6 @@ select.console-select::-ms-expand {
     @media (max-width: 540px) {
         .hero .planes {
             transform: translate(-28%, -32%);
-        }
-
-        .main {
-            min-height: 0;
-            margin-top: 0;
         }
 
         .console-form {
@@ -1793,18 +1796,6 @@ select.console-select::-ms-expand {
             width: 84%;
         }
 
-        @media (max-width: 540px) {
-            .content {
-                min-height: 1300px;
-            }
-        }
-
-        @media (max-width: 495px) {
-            .content {
-                min-height: 1340px;
-            }
-        }
-
         .header.header-fixed,
         .is-scrolled .header.header-fixed {
             padding-left: 8vw;
@@ -1842,18 +1833,10 @@ select.console-select::-ms-expand {
 }
 
 @media (min-width: 769px) {
-    .hero {
-        min-height: 760px;
-    }
-
     .page-article .header:not(.header-fixed) {
         position: fixed;
         left: 6.25vw;
         right: 6.25vw;
-    }
-
-    .content {
-        min-height: max(100vh, 1040px);
     }
 
     .main {
@@ -1921,11 +1904,6 @@ select.console-select::-ms-expand {
 }
 
 @media (min-width: 1025px) {
-    .main {
-        height: auto;
-        min-height: 40vh;
-    }
-
     .main-feature-article-content-split aside {
         width: 20vw;
     }
