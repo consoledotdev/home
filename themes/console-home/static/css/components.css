@@ -243,7 +243,7 @@
    ================================================================================================================ */
 .link:link,
 .link:visited {
-    color: var(--theme-text-1);
+    color: var(--theme-link-text-idle);
     text-decoration: underline;
     font-weight: 400;
     transition: var(--a-controls);
@@ -256,19 +256,19 @@
 
 .link:hover,
 .link:focus {
-    color: var(--c-blue-04);
+    color: var(--theme-link-text-focus);
     text-decoration: none;
 }
 
 .link:active {
-    color: var(--c-blue-06-main);
+    color: var(--theme-link-text-active);
     text-decoration: none;
     transition: var(--a-controls-active);
 }
 
 .link:link .icon,
 .link:visited .icon {
-    fill: var(--theme-text-1);
+    fill: var(--theme-link-text-idle);
     transition: var(--a-controls);
     vertical-align: -0.2em;
     width: 1em;
@@ -277,11 +277,11 @@
 
 .link:hover .icon,
 .link:focus .icon {
-    fill: var(--c-blue-04);
+    fill: var(--theme-link-text-focus);
 }
 
 .link:active .icon {
-    fill: var(--c-blue-06-main);
+    fill: var(--theme-link-text-active);
     transition: var(--a-controls-active);
 }
 
