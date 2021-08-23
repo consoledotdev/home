@@ -588,34 +588,34 @@ body:not(.page-tools-category-review):after {
         }
 
         .main-tools-category-review .nav-wrapper > .framed-section {
-            margin-left: calc(calc(var(--space3) + var(--space1)) * -1);
-            margin-right: calc(calc(var(--space3) + var(--space1)) * -1);
+            margin-left: calc(calc(var(--space2_5) + var(--space1)) * -1);
+            margin-right: calc(calc(var(--space2_5) + var(--space1)) * -1);
         }
 
         .main-tools-category-review .tools-category-review-tool-card .framed-section {
-            margin-left: calc(var(--space2) * -1);
-            margin-right: calc(var(--space2) * -1);
+            margin-left: calc(var(--space1) * -1);
+            margin-right: calc(var(--space1) * -1);
         }
 
         .tools-category-review-tool-card {
-            margin-left: calc(calc(var(--space3) + var(--space1)) * -1);
-            margin-right: calc(calc(var(--space3) + var(--space1)) * -1);
+            margin-left: calc(calc(var(--space2_5) + var(--space1)) * -1);
+            margin-right: calc(calc(var(--space2_5) + var(--space1)) * -1);
         }
 
-        .tools-category-review-tool-card .tool-card-top, 
+        .tools-category-review-tool-card .tool-card-top,
         .tools-category-review-tool-card .tool-card-bottom {
-            padding-left: calc(var(--space3) + var(--space1));
-            padding-right: calc(var(--space3) + var(--space1));
+            padding-left: calc(var(--space2_5) + var(--space1));
+            padding-right: calc(var(--space2_5) + var(--space1));
         }
-        
+
         .framed-section > *:not(.framed-section-item) {
-            margin-left: calc(var(--space3) + var(--space1));
-            margin-right: calc(var(--space3) + var(--space1));
+            margin-left: calc(var(--space2_5) + var(--space1));
+            margin-right: calc(var(--space2_5) + var(--space1));
         }
 
         .framed-section-item > * {
-            margin-left: calc(var(--space3) + var(--space1));
-            margin-right: calc(var(--space3) + var(--space1));
+            margin-left: calc(var(--space2_5) + var(--space1));
+            margin-right: calc(var(--space2_5) + var(--space1));
         }
 
         .tools-category-review-tldr-list .console-card .console-score,
@@ -686,6 +686,15 @@ body:not(.page-tools-category-review):after {
     }
 
     @media (max-width: 400px) {
+        .main-tools-category-review .nav-wrapper > .framed-section {
+            margin-left: calc(calc(var(--space2) + var(--space1)) * -1);
+            margin-right: calc(calc(var(--space2) + var(--space1)) * -1);
+        }
+
+        .tools-category-review-tool-card {
+            margin-left: calc(calc(var(--space2) + var(--space1)) * -1);
+            margin-right: calc(calc(var(--space2) + var(--space1)) * -1);
+        }
     }
 }
 
