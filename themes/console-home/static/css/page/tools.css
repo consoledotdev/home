@@ -11,15 +11,11 @@
     box-shadow: var(--theme-shadow-1);
     border-radius: var(--corners-mid);
     transition: var(--a-micro);
+    overflow: hidden;
 }
 
 .tool-card.is-hidden {
     display: none;
-}
-
-.tool-card .card-link {
-    left: -2px;
-    margin-right: 0;
 }
 
 .tool-card-content .top {
