@@ -1719,10 +1719,6 @@ select.console-select::-ms-expand {
     }
 
     @media (max-width: 480px) {
-        html,
-        body {
-            font-size: 14px;
-        }
         .title.title-1 {
             font-size: var(--t-size7);
         }
