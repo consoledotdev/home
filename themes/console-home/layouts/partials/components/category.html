@@ -1,7 +1,7 @@
 {{ if .inline }}
-    <span class="categories inline{{ with .clickable }} clickable{{ end }}">
+    <span class="categories inline{{ with .clickable }} clickable{{ end }}{{ with .large }} large{{ end }}">
 {{ else }}
-    <div class="categories{{ with .clickable }} clickable{{ end }}">
+    <div class="categories{{ with .clickable }} clickable{{ end }}{{ with .large }} large{{ end }}">
 {{ end }}
         {{ if .clickable }}<a href="/tools/{{ lower .categoryData.subcategory.name }}">{{ end }}
             {{ partial (print "icons/" (replace (lower .categoryData.category ) " " "-") ".html") }}

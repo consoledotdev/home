@@ -96,7 +96,7 @@
 		<div class="category-reviews">
 			<div class="category-reviews-item">
 				{{ $categoryData := (dict "category" "devops" "subcategory" (dict "label" "Server monitoring" "name" "server-monitoring")) }}
-				{{ partial "components/category.html" (dict "categoryData" $categoryData "clickable" "true" )  }}
+				{{ partial "components/category.html" (dict "categoryData" $categoryData "clickable" "true" "large" "true" )  }}
 				<p class="small">Our review of the best server monitoring tools for developers.</p>
 			</div>
 		</div>
