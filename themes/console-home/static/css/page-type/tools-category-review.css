@@ -533,16 +533,6 @@ body:not(.page-tools-category-review):after {
         .page-tools-category-review .tool-card-heading .right .console-score {
             display: none;
         }
-
-        .tools-category-review-tool-card .tool-card-feature-title {
-            flex-flow: column nowrap;
-            align-items: flex-start;
-            margin-bottom: var(--space3);
-        }
-
-        .tools-category-review-tool-card .tool-card-feature-title .console-score {
-            margin-top: var(--space2);
-        }
     }
 
     @media (max-width: 500px) {
@@ -626,22 +616,6 @@ body:not(.page-tools-category-review):after {
         }
     }
 
-    @media (max-width: 440px) {
-        .page-tools-category-review .tool-card-heading,
-        .page-tools-category-review .tool-card-heading {
-            flex-flow: column nowrap;
-            align-items: flex-start;
-        }
-
-        .page-tools-category-review .tool-card-heading .right {
-            margin-top: var(--space3);
-        }
-
-        .page-tools-category-review .tool-card-heading .right .console-button {
-            margin-left: 0;
-        }
-    }
-
     @media (max-width: 430px) {
         .page-tools-category-review .title-1 .icon {
             display: inline-block;
@@ -699,6 +673,32 @@ body:not(.page-tools-category-review):after {
         .tools-category-review-tool-card {
             margin-left: calc(var(--space2_5) * -1);
             margin-right: calc(var(--space2_5) * -1);
+        }
+    }
+
+    @media (max-width: 380px) {
+        .page-tools-category-review .tool-card-heading,
+        .page-tools-category-review .tool-card-heading {
+            flex-flow: column nowrap;
+            align-items: flex-start;
+        }
+
+        .page-tools-category-review .tool-card-heading .right {
+            margin-top: var(--space3);
+        }
+
+        .page-tools-category-review .tool-card-heading .right .console-button {
+            margin-left: 0;
+        }
+
+        .tools-category-review-tool-card .tool-card-feature-title {
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            margin-bottom: var(--space3);
+        }
+
+        .tools-category-review-tool-card .tool-card-feature-title .console-score {
+            margin-top: var(--space2);
         }
     }
 }
