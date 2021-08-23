@@ -409,6 +409,13 @@ body.show-planes:after {
     align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+    .page-home .main {
+        margin-top: calc(var(--space6) - var(--space4_5));
+        margin-bottom: calc(var(--space6) - var(--space4_5));
+    }
+}
+
 .main-article,
 .main-feature {
     z-index: 30;
