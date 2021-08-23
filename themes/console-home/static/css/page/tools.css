@@ -179,6 +179,12 @@ p.tool-card-description {
         display: none;
     }
 
+    @media (max-width: 480px) {
+        .beta-card-content > .left .title {
+            word-break: break-word;
+        }
+    }
+
     @media (max-width: 560px) {
         .tool-card .bottom .details {
             flex-flow: column nowrap;
