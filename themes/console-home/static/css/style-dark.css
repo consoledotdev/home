@@ -50,6 +50,10 @@
     --theme-input-bg: var(--c-white-00-absolute);
     --theme-input-border: transparent;
 
+    --theme-link-text-idle: var(--theme-text-1);
+    --theme-link-text-focus: var(--c-blue-04);
+    --theme-link-text-active: var(--c-blue-06-main);
+
     --theme-nav-primary-link-text-idle: var(--c-white-00-absolute);
     --theme-nav-primary-link-text-focus: var(--c-blue-04);
     --theme-nav-primary-link-text-active: var(--c-blue-06-main);
