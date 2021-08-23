@@ -132,6 +132,7 @@ p.beta-card-description {
 
         .beta-card-content > .left .title {
             display: block;
+            margin: 0;
         }
 
         .beta-card-content > .right .title {

@@ -172,6 +172,7 @@ p.tool-card-description {
 
     .tool-card-content .top > .left .title {
         display: block;
+        margin: 0;
     }
 
     .tool-card-content .top > .right .title {
