@@ -1764,26 +1764,6 @@ select.console-select::-ms-expand {
             padding-right: 8vw;
         }
     }
-
-    @media (min-width: 601px) {
-        .content {
-            width: 72%;
-        }
-
-        .header.header-fixed,
-        .is-scrolled .header.header-fixed {
-            padding-left: 14vw;
-            padding-right: 14vw;
-        }
-
-        .main-article,
-        .main-feature-article {
-            margin-left: -14vw;
-            margin-right: -14vw;
-            padding-left: 14vw;
-            padding-right: 14vw;
-        }
-    }
 }
 
 @media (min-width: 769px) {
