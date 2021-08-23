@@ -116,6 +116,7 @@
 .interviews-card-company {
     display: flex;
     flex-flow: row wrap;
+    align-items: center;
 }
 
 .interviews-card-company-name {
