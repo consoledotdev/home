@@ -13,16 +13,15 @@ html {
     height: 100%;
 }
 
-body.page-home {
-    height: 100%;
-}
-
 @media screen and (max-width: 768px) {
-    html,
-    body {
+    html:not(.page-home) {
         height: auto;
         min-height: auto;
     }
+}
+
+body.page-home {
+    height: 100%;
 }
 
 body {
