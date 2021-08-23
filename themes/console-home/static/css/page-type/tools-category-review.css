@@ -66,7 +66,7 @@ body:not(.page-tools-category-review):after {
     display: none;
     width: var(--space4);
     height: var(--space4);
-    vertical-align: -0.15em;
+    vertical-align: -0.07em;
     margin-right: var(--space2);
 }
 
@@ -486,9 +486,9 @@ body:not(.page-tools-category-review):after {
     .tools-category-review-artwork {
         --shrink: calc(calc(768px - 100vw) / 4.8);
         --leftMove: calc(calc(768px - 100vw) * -0.72);
-        --topMove: calc(calc(768px - 100vw) * -0.26);
+        --topMove: calc(calc(768px - 100vw) * -0.22);
         width: calc(780px - var(--shrink));
-        transform: translate(-86%, -54%);
+        transform: translate(-86%, -58%);
         margin-left: var(--leftMove);
         margin-top: var(--topMove);
     }
@@ -549,7 +549,7 @@ body:not(.page-tools-category-review):after {
         }
 
         .main-tools-category-review > .main-tools-category-review-content .title-1 {
-            --grow: calc(calc(480px - 100vw) * 2.35);
+            --grow: calc(calc(480px - 100vw) * 4);
             width: calc(210px + var(--grow));
             max-width: 100%;
         }
@@ -561,10 +561,10 @@ body:not(.page-tools-category-review):after {
         }
 
         .tools-category-review-artwork {
-            --topMove: calc(480px - 100vw) * 1.05;
+            --topMove: calc(480px - 100vw) * 0.8;
             --leftMove: calc(480px - 100vw) * 0.83;
             width: 720px;
-            transform: translate(-86%, -50%);
+            transform: translate(-97%, -49%);
             margin-left: calc(-207px - var(--leftMove));
             margin-top: calc(-75px + var(--topMove));
         }
