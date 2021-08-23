@@ -1225,19 +1225,10 @@ body:not(.mobile) .console-control:hover:before {
     z-index: 20;
 }
 
-@media (max-width: 600px) {
-    .artwork {
-        margin-left: -12vw;
-        margin-right: -12vw;
-    }
-}
-
 @media (max-width: 768px) {
-    @media (max-width: 400px) {
-        .artwork {
-            margin-left: -10vw;
-            margin-right: -10vw;
-        }
+    .artwork {
+        margin-left: -6.25vw;
+        margin-right: -6.25vw;
     }
 
     @media (max-width: 480px) {
@@ -1246,10 +1237,10 @@ body:not(.mobile) .console-control:hover:before {
         }
     }
 
-    @media (min-width: 601px) {
+    @media (min-width: 481px) {
         .artwork {
-            margin-left: -14vw;
-            margin-right: -14vw;
+            margin-left: -8vw;
+            margin-right: -8vw;
         }
     }
 }
