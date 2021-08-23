@@ -152,6 +152,8 @@ body:not(.page-tools-category-review):after {
     list-style: none;
     text-indent: initial;
     padding-left: var(--space3);
+    margin-left: calc(var(--space3) * -1);
+    margin-right: calc(var(--space3) * -1);
 }
 
 .tools-category-review-tldr-list li.console-card:not(:first-child) {
@@ -588,8 +590,8 @@ body:not(.page-tools-category-review):after {
         }
 
         .main-tools-category-review .nav-wrapper > .framed-section {
-            margin-left: calc(calc(var(--space2_5) + var(--space1)) * -1);
-            margin-right: calc(calc(var(--space2_5) + var(--space1)) * -1);
+            margin-left: calc(var(--space3) * -1);
+            margin-right: calc(var(--space3) * -1);
         }
 
         .main-tools-category-review .tools-category-review-tool-card .framed-section {
@@ -598,43 +600,29 @@ body:not(.page-tools-category-review):after {
         }
 
         .tools-category-review-tool-card {
-            margin-left: calc(calc(var(--space2_5) + var(--space1)) * -1);
-            margin-right: calc(calc(var(--space2_5) + var(--space1)) * -1);
+            margin-left: calc(var(--space3) * -1);
+            margin-right: calc(var(--space3) * -1);
         }
 
         .tools-category-review-tool-card .tool-card-top,
         .tools-category-review-tool-card .tool-card-bottom {
-            padding-left: calc(var(--space2_5) + var(--space1));
-            padding-right: calc(var(--space2_5) + var(--space1));
+            padding-left: var(--space3);
+            padding-right: var(--space3);
         }
 
         .framed-section > *:not(.framed-section-item) {
-            margin-left: calc(var(--space2_5) + var(--space1));
-            margin-right: calc(var(--space2_5) + var(--space1));
+            margin-left: var(--space3);
+            margin-right: var(--space3);
         }
 
         .framed-section-item > * {
-            margin-left: calc(var(--space2_5) + var(--space1));
-            margin-right: calc(var(--space2_5) + var(--space1));
+            margin-left: var(--space3);
+            margin-right: var(--space3);
         }
 
         .tools-category-review-tldr-list .console-card .console-score,
         .tools-category-review-tldr-list .console-card .console-button-text:not(:last-child) {
             margin-right: var(--space3_5);
-        }
-    }
-
-    @media (max-width: 460px) {
-        .tools-category-review-tldr-list .console-card .title-score .console-score {
-            display: block;
-        }
-
-        .tools-category-review-tldr-list .console-card .right .console-score {
-            display: none;
-        }
-
-        .tools-category-review-tldr-list .console-card .right {
-            margin-top: var(--space3);
         }
     }
 
@@ -686,14 +674,31 @@ body:not(.page-tools-category-review):after {
     }
 
     @media (max-width: 400px) {
+        .tools-category-review-tldr-list li.console-card {
+            margin-left: calc(var(--space2_5) * -1);
+            margin-right: calc(var(--space2_5) * -1);
+        }
+
+        .tools-category-review-tldr-list .console-card .title-score .console-score {
+            display: block;
+        }
+
+        .tools-category-review-tldr-list .console-card .right .console-score {
+            display: none;
+        }
+
+        .tools-category-review-tldr-list .console-card .right {
+            margin-top: var(--space3);
+        }
+
         .main-tools-category-review .nav-wrapper > .framed-section {
-            margin-left: calc(calc(var(--space2) + var(--space1)) * -1);
-            margin-right: calc(calc(var(--space2) + var(--space1)) * -1);
+            margin-left: calc(var(--space2_5) * -1);
+            margin-right: calc(var(--space2_5) * -1);
         }
 
         .tools-category-review-tool-card {
-            margin-left: calc(calc(var(--space2) + var(--space1)) * -1);
-            margin-right: calc(calc(var(--space2) + var(--space1)) * -1);
+            margin-left: calc(var(--space2_5) * -1);
+            margin-right: calc(var(--space2_5) * -1);
         }
     }
 }
