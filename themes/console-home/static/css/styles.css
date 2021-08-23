@@ -1726,18 +1726,6 @@ select.console-select::-ms-expand {
     }
 
     @media (max-width: 480px) {
-        .title.title-1 {
-            font-size: var(--t-size7);
-        }
-
-        .title.title-2 {
-            font-size: var(--t-size4);
-        }
-
-        .description {
-            margin: var(--space3) 0 0;
-        }
-
         .main .console-form {
             margin: var(--space4) 0;
         }
