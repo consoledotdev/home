@@ -77,10 +77,15 @@ p.beta-card-description {
     flex-flow: row wrap;
     align-items: center;
     justify-content: flex-start;
+    margin-bottom: calc(var(--space2) * -1);
 }
 
-.beta-card-content .right > .taxonomy > *:not(:first-child) {
-    margin-left: var(--space3);
+.beta-card-content .right > .taxonomy > * {
+    margin-bottom: var(--space2);
+}
+
+.beta-card-content .right > .taxonomy > *:not(:last-child) {
+    margin-right: var(--space3);
 }
 
 @media (max-width: 768px) {
