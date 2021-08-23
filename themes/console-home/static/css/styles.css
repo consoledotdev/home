@@ -1723,25 +1723,6 @@ select.console-select::-ms-expand {
         body {
             font-size: 14px;
         }
-
-        .content {
-            width: 76%;
-        }
-
-        .header.header-fixed,
-        .is-scrolled .header.header-fixed {
-            padding-left: 12vw;
-            padding-right: 12vw;
-        }
-
-        .main-article,
-        .main-feature-article {
-            margin-left: -12vw;
-            margin-right: -12vw;
-            padding-left: 12vw;
-            padding-right: 12vw;
-        }
-
         .title.title-1 {
             font-size: var(--t-size7);
         }
@@ -1768,24 +1749,6 @@ select.console-select::-ms-expand {
     }
 
     @media (max-width: 400px) {
-        .content {
-            width: 80%;
-        }
-
-        .header.header-fixed,
-        .is-scrolled .header.header-fixed {
-            padding-left: 10vw;
-            padding-right: 10vw;
-        }
-
-        .main-article,
-        .main-feature-article {
-            margin-left: -10vw;
-            margin-right: -10vw;
-            padding-left: 10vw;
-            padding-right: 10vw;
-        }
-
         .console-form .console-button {
             margin-top: var(--space3);
         }
