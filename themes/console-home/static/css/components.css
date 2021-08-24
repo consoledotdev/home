@@ -1669,11 +1669,12 @@ body:not(.mobile) .console-control:hover:before {
 
 .dynamic-planes-column:nth-child(2) {
     width: 8.5%;
+    margin-top: 12%;
 }
 
 .dynamic-planes-column:nth-child(3) {
     width: 17%;
-    margin-top: 30%;
+    margin-top: 26%;
 }
 
 .dynamic-planes-column:nth-child(4) {

@@ -235,7 +235,7 @@ body:not(.is-same-origin) #line-10 {
     z-index: 2;
     top: 50vh;
     left: 50%;
-    transform: translate(-7.5%, -48%);
+    transform: translate(-6.5%, -49%);
 }
 
 body:not(.is-same-origin) .hero .dynamic-planes-wrapper {
