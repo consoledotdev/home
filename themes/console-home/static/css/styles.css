@@ -560,11 +560,15 @@ body.show-planes:after {
     flex: 0 0 auto;
 }
 
+.page-meta p > *:not(:last-child) {
+    margin-right: 0.3em;
+}
+
 .page-meta .console-button-text {
     display: inline-flex;
 }
 
-.page-meta .page-meta-separator {
+.page-meta p > .page-meta-separator {
     display: inline-block;
     margin-left: var(--space2);
     margin-right: var(--space2);
