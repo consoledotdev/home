@@ -37,6 +37,19 @@ let manageHeaderFixing = (() => {
     document.addEventListener("scroll", setHeader);
 })();
 
+let manageContentHeight = (() => {
+    let scrollWrapper = document.querySelector("[data-scroll-wrapper]");
+    let contentWrapper = document.querySelector("[data-content-wrapper]");
+    let setContent = function () {
+        scrollWrapper.classList.remove("full-height");
+        if (contentWrapper.offsetHeight < scrollWrapper.offsetHeight) {
+            scrollWrapper.classList.add("full-height");
+        }
+    };
+    setContent();
+    window.addEventListener("resize", setContent);
+})();
+
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     document.body.classList.add("mobile");
 }

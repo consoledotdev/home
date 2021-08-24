@@ -226,11 +226,11 @@ alt="The desk of Ben Orenstein, Tuple." width="100%" >}}
 
 I have an
 [Aeron chair](https://www.hermanmiller.com/en_us/products/seating/office-chairs/aeron-chairs/)
-in tall. My desk is a [Fully](https://www.fully.com/en-us/) desk that I try to
-stand in most of the time. At home, I have another standing desk and I don't
-even have a chair next to it so I'm forced to stand, especially as I game.
-That's my trade off with myself. I can play as many video games as I want, but I
-have to stand the whole time.
+in tall. My desk is a [Fully](https://www.fully.com/) desk that I try to stand
+in most of the time. At home, I have another standing desk and I don't even have
+a chair next to it so I'm forced to stand, especially as I game. That's my trade
+off with myself. I can play as many video games as I want, but I have to stand
+the whole time.
 
 ### When coding
 

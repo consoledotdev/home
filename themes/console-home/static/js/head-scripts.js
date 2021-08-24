@@ -15,6 +15,8 @@ let toggleTheme = () => {
     localStorage.setItem("theme", newTheme);
     let stylesheet = document.getElementById("theme-style");
     stylesheet.href = stylesheet.href.replace(theme, newTheme);
+    const themeChangeEvent = new CustomEvent("themeChange", { detail: { theme: newTheme } });
+    document.body.dispatchEvent(themeChangeEvent);
 };
 
 document.write('<link id="theme-style" rel="stylesheet" type="text/css" href="/css/style-' + getTheme() + '.css" />');

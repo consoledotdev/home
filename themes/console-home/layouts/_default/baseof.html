@@ -1,18 +1,26 @@
+
+{{ $.Scratch.Set "pageClasses" "page-" }}
+{{- if not .Params.pageType }}
+    {{ $.Scratch.Set "pageClasses" (print ($.Scratch.Get "pageClasses") "article" ) }}
+{{- else }}
+    {{ $.Scratch.Set "pageClasses" (print ($.Scratch.Get "pageClasses") .Params.pageType ) }}
+{{- end }}
+{{- if .Params.isSubpage }}
+    {{ $.Scratch.Set "pageClasses" (print ($.Scratch.Get "pageClasses") " page-" .Params.isSubpage ) }}
+{{- else }}
+    {{- if .Params.isPage }}
+        {{ $.Scratch.Set "pageClasses" (print ($.Scratch.Get "pageClasses") " page-" .Params.isPage ) }}
+    {{- end }}
+{{- end }}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="{{ $.Scratch.Get "pageClasses" }}">
     {{ `<!-- Site source available at https://github.com/consoledotdev/home -->` | safeHTML }}
     
     {{ partial "head.html" . }}
-    <body class="theme page-
-        {{- if not .Params.pageType }}article
-        {{- else }}{{ .Params.pageType }}
-        {{- end }}
-        {{- with .Params.isSubpage}} page-{{ . }}
-        {{- else }}
-            {{- with .Params.isPage}} page-{{ . }}{{- end }}
-        {{- end -}}
+    <body class="theme {{ $.Scratch.Get "pageClasses" -}}
         {{- if (not .Params.hidePlanes) }} show-planes{{ end -}}">
-        <div class="overflow-wrapper">
+        <div class="overflow-wrapper" data-scroll-wrapper>
             {{ partial "header.html" (dict "context" . "headerType" .Params.headerType "hidePlanes" .Params.hidePlanes "hideLines" .Params.hideLines ) }}
             <main class="main
                 {{- if ne .Params.pageType "home" -}}

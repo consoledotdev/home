@@ -116,6 +116,7 @@
 .interviews-card-company {
     display: flex;
     flex-flow: row wrap;
+    align-items: center;
 }
 
 .interviews-card-company-name {
@@ -139,6 +140,19 @@ p.interviews-card-description {
 
 .page-section-interviews-root .illustrated-text {
     margin-top: calc(var(--space4) + var(--space3));
+}
+
+@media (max-width: 768px) {
+    @media (max-width: 600px) {
+        .interviews-card-company-logo .logo {
+            margin: 14% 0 0 14%;
+        }
+
+        .interviews-card-content {
+            padding-left: var(--space3_5);
+            padding-right: var(--space3_5);
+        }
+    }
 }
 
 @media (max-width: 768px), (min-width: 1025px) and (max-width: 1280px) {

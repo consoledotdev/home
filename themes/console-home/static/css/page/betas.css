@@ -77,10 +77,15 @@ p.beta-card-description {
     flex-flow: row wrap;
     align-items: center;
     justify-content: flex-start;
+    margin-bottom: calc(var(--space2) * -1);
 }
 
-.beta-card-content .right > .taxonomy > *:not(:first-child) {
-    margin-left: var(--space3);
+.beta-card-content .right > .taxonomy > * {
+    margin-bottom: var(--space2);
+}
+
+.beta-card-content .right > .taxonomy > *:not(:last-child) {
+    margin-right: var(--space3);
 }
 
 @media (max-width: 768px) {
@@ -113,6 +118,13 @@ p.beta-card-description {
         margin-top: calc(var(--space1) / 2);
     }
 
+    @media (max-width: 600px) {
+        .beta-card {
+            padding-left: var(--space3_5);
+            padding-right: var(--space3_5);
+        }
+    }
+
     @media (max-width: 480px) {
         .beta-card .date {
             margin-left: 0;
@@ -132,6 +144,8 @@ p.beta-card-description {
 
         .beta-card-content > .left .title {
             display: block;
+            margin: 0;
+            word-break: break-word;
         }
 
         .beta-card-content > .right .title {

@@ -14,7 +14,7 @@
             {{- end -}}
         </div>
         <div class="title-score">
-            <h4 class="title title-3"><label for="cardmin-meter-{{ lower (.Get "name") }}"><a class="link" href="#{{ .Get "anchor" }}">{{ .Get "name" }}</a></label></h4>
+            <h4 class="title title-3"><label for="cardmin-meter-{{ lower (.Get "anchor") }}"><a class="link" href="#{{ .Get "anchor" }}">{{ .Get "name" }}</a></label></h4>
             <span class="console-score">
                 {{ if eq (.Get "score") "none" }}
                     No rating
@@ -22,9 +22,9 @@
                     {{ $score := (float (.Get "score")) }}
                     {{ $min := (float 0) }}
                     {{ $max := (float 5) }}
-                    {{ $id := (print "cardmin-meter-" (lower (.Get "name")))}}
+                    {{ $name := (.Get "name") }}
                     <span class="console-score-text">{{ $score }}/{{ $max }}</span>
-                    {{ partial "components/score-bar.html" (dict "min" $min "max" $max "score" $score) }}
+                    {{ partial "components/score-bar.html" (dict "min" $min "max" $max "score" $score "name" $name) }}
                 {{ end }}
             </span>
         </div>
@@ -37,9 +37,10 @@
                 {{ $score := (float (.Get "score")) }}
                 {{ $min := (float 0) }}
                 {{ $max := (float 5) }}
-                {{ $id := (print "cardmin-meter-" (lower (.Get "name")))}}
+                {{ $id := (print "cardmin-meter-" (lower (.Get "anchor")))}}
+                {{ $name := (.Get "name") }}
                     <span class="console-score-text">{{ $score }}/{{ $max }}</span>
-                {{ partial "components/score-bar.html" (dict "min" $min "max" $max "score" $score "id" $id) }}
+                {{ partial "components/score-bar.html" (dict "min" $min "max" $max "score" $score "id" $id "name" $name) }}
             {{ end }}
         </span>
         <span class="actions">
