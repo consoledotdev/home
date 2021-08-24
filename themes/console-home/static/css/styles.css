@@ -1645,8 +1645,7 @@ select.console-select::-ms-expand {
     body:not(.is-same-origin) .logo-svg-animated-explode .plane-two,
     body:not(.is-same-origin) .logo-svg-animated-explode .plane-three,
     body:not(.is-same-origin) .logo-svg-animated-explode .prompt,
-    body:not(.is-same-origin) [id^="line-"],
-    body:not(.is-same-origin) .hero .dynamic-planes-wrapper {
+    body:not(.is-same-origin) [id^="line-"] {
         animation: none;
     }
     body:not(.is-same-origin) #line-01,
