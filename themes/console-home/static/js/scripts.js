@@ -63,7 +63,7 @@ let toggleCollapsible = (e) => {
     }
 };
 
-if (document.body.classList.contains("show-planes")) {
+if (document.body.classList.contains("page-home")) {
     let animateDynamicPlanes = (() => {
         let i1, i2, i3, i4, i5, i6;
         let animate = () => {
