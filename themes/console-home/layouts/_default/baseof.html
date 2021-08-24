@@ -20,7 +20,7 @@
     {{ partial "head.html" . }}
     <body class="theme {{ $.Scratch.Get "pageClasses" -}}
         {{- if (not .Params.hidePlanes) }} show-planes{{ end -}}">
-        <div class="overflow-wrapper">
+        <div class="overflow-wrapper" data-scroll-wrapper>
             {{ partial "header.html" (dict "context" . "headerType" .Params.headerType "hidePlanes" .Params.hidePlanes "hideLines" .Params.hideLines ) }}
             <main class="main
                 {{- if ne .Params.pageType "home" -}}
