@@ -1,18 +1,17 @@
 
-{{ $.Scratch.Set "pageClasses" "page-" }}
-{{- if not .Params.pageType }}
+{{- $.Scratch.Set "pageClasses" "page-" -}}
+{{- if not .Params.pageType -}}
     {{ $.Scratch.Set "pageClasses" (print ($.Scratch.Get "pageClasses") "article" ) }}
-{{- else }}
+{{- else -}}
     {{ $.Scratch.Set "pageClasses" (print ($.Scratch.Get "pageClasses") .Params.pageType ) }}
-{{- end }}
-{{- if .Params.isSubpage }}
+{{- end -}}
+{{- if .Params.isSubpage -}}
     {{ $.Scratch.Set "pageClasses" (print ($.Scratch.Get "pageClasses") " page-" .Params.isSubpage ) }}
-{{- else }}
+{{- else -}}
     {{- if .Params.isPage }}
         {{ $.Scratch.Set "pageClasses" (print ($.Scratch.Get "pageClasses") " page-" .Params.isPage ) }}
     {{- end }}
-{{- end }}
-
+{{- end -}}
 <!DOCTYPE html>
 <html lang="en" class="{{ $.Scratch.Get "pageClasses" }}">
     {{ `<!-- Site source available at https://github.com/consoledotdev/home -->` | safeHTML }}
