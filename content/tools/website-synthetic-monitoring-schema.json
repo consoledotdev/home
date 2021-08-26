@@ -1,0 +1,282 @@
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "The best website / synthetic monitoring tools for developers",
+    "numberOfItems": 7,
+    "itemListOrder": "Ascending",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Datadog",
+            "item": {
+                "@type": "Product",
+                "name": "Datadog",
+                "description": "Website / synthetic monitoring.",
+                "url": "https://www.datadoghq.com/",
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "Datadog has a powerful synthetic monitoring product with an advanced editor for defining the execution steps and detailed test reporting, screenshots and request traces. It also has sophisticated alerting and incident management functionality, especially if you’re using their other monitoring products. However, it has a small number of check locations and gets expensive very quickly.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4.6",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "David Mytton",
+                        "email": "david@console.dev",
+                        "url": "https://davidmytton.blog/start",
+                        "description": "From 2009-2018 David was CEO at Server Density, a SaaS monitoring startup. He is now co-founder at Console.",
+                        "image": "https://console.dev/img/david.jpg",
+                        "sameAs": [
+                            "https://twitter.com/davidmytton",
+                            "https://www.linkedin.com/in/davidmytton/"
+                        ]
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-08-26T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Uptrends",
+            "item": {
+                "@type": "Product",
+                "name": "Uptrends",
+                "description": "Website / synthetic monitoring.",
+                "url": "https://www.uptrends.com/",
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "Uptrends is more expensive at the entry level to get access to uptime and multi-step request monitoring, but it has features like support for running tests using Chrome, Firefox and Internet Explorer, plus over 200 check locations.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4.5",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "David Mytton",
+                        "email": "david@console.dev",
+                        "url": "https://davidmytton.blog/start",
+                        "description": "From 2009-2018 David was CEO at Server Density, a SaaS monitoring startup. He is now co-founder at Console.",
+                        "image": "https://console.dev/img/david.jpg",
+                        "sameAs": [
+                            "https://twitter.com/davidmytton",
+                            "https://www.linkedin.com/in/davidmytton/"
+                        ]
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-08-26T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Checkly",
+            "item": {
+                "@type": "Product",
+                "name": "Checkly",
+                "description": "Website / synthetic monitoring.",
+                "url": "https://www.checklyhq.com/",
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "It’s clear that Checkly has been built for developers because it has powerful API monitoring and scripted browser transaction monitoring functionality. Being able to use Node.js scripts through the Playwright and Puppeteer frameworks, all defined in Terraform, is great for developers. However, it is missing some features of competitors, such as more check types, private monitoring locations and more flexible alerting.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4.4",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "David Mytton",
+                        "email": "david@console.dev",
+                        "url": "https://davidmytton.blog/start",
+                        "description": "From 2009-2018 David was CEO at Server Density, a SaaS monitoring startup. He is now co-founder at Console.",
+                        "image": "https://console.dev/img/david.jpg",
+                        "sameAs": [
+                            "https://twitter.com/davidmytton",
+                            "https://www.linkedin.com/in/davidmytton/"
+                        ]
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-08-26T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Site24x7",
+            "item": {
+                "@type": "Product",
+                "name": "Site24x7",
+                "description": "Website / synthetic monitoring.",
+                "url": "https://www.site24x7.com/",
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "Site24x7 has a lot of functionality and covers basic availability checks, transaction monitoring as well as browser performance testing and step-by-step API monitoring. However, it has a cramped UI as well as some unusual technical implementation details for its private check locations (such as a graphical installer for Linux systems).",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4.3",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "David Mytton",
+                        "email": "david@console.dev",
+                        "url": "https://davidmytton.blog/start",
+                        "description": "From 2009-2018 David was CEO at Server Density, a SaaS monitoring startup. He is now co-founder at Console.",
+                        "image": "https://console.dev/img/david.jpg",
+                        "sameAs": [
+                            "https://twitter.com/davidmytton",
+                            "https://www.linkedin.com/in/davidmytton/"
+                        ]
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-08-26T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "New Relic",
+            "item": {
+                "@type": "Product",
+                "name": "New Relic",
+                "description": "Website / synthetic monitoring.",
+                "url": "https://newrelic.com/",
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "New Relic Synthetic Monitoring has options to test APIs, script browser interactions, check for broken links or just ping specific endpoints. It includes a generous free package and you can set up private locations for no extra cost, but it has limited alerting capabilities.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4.1",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "David Mytton",
+                        "email": "david@console.dev",
+                        "url": "https://davidmytton.blog/start",
+                        "description": "From 2009-2018 David was CEO at Server Density, a SaaS monitoring startup. He is now co-founder at Console.",
+                        "image": "https://console.dev/img/david.jpg",
+                        "sameAs": [
+                            "https://twitter.com/davidmytton",
+                            "https://www.linkedin.com/in/davidmytton/"
+                        ]
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-08-26T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Uptime",
+            "item": {
+                "@type": "Product",
+                "name": "Uptime",
+                "description": "Website / synthetic monitoring.",
+                "url": "https://uptime.com/",
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "Uptime supports multiple check types and allows you to build multi-step transaction monitoring using XPath or JSON selectors. However, it is let down by limited alerting options and fewer check locations than competitors, which are also limited by the pricing plan you choose.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "3.8",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "David Mytton",
+                        "email": "david@console.dev",
+                        "url": "https://davidmytton.blog/start",
+                        "description": "From 2009-2018 David was CEO at Server Density, a SaaS monitoring startup. He is now co-founder at Console.",
+                        "image": "https://console.dev/img/david.jpg",
+                        "sameAs": [
+                            "https://twitter.com/davidmytton",
+                            "https://www.linkedin.com/in/davidmytton/"
+                        ]
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-08-26T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "RapidSpike",
+            "item": {
+                "@type": "Product",
+                "name": "RapidSpike",
+                "description": "Website / synthetic monitoring.",
+                "url": "https://www.rapidspike.com/",
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "RapidSpike takes an innovative approach to domain, page and transaction monitoring with automatic insights about domain expiry, page accessibility, and performance. Although multi-step requests can be scripted in JSON, the focus on HTTP(S) website monitoring means it is more suited to non-technical users than developers.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "3.8",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "David Mytton",
+                        "email": "david@console.dev",
+                        "url": "https://davidmytton.blog/start",
+                        "description": "From 2009-2018 David was CEO at Server Density, a SaaS monitoring startup. He is now co-founder at Console.",
+                        "image": "https://console.dev/img/david.jpg",
+                        "sameAs": [
+                            "https://twitter.com/davidmytton",
+                            "https://www.linkedin.com/in/davidmytton/"
+                        ]
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-08-26T12:00:00+00:00"
+                }
+            }
+        }
+    ]
+}
