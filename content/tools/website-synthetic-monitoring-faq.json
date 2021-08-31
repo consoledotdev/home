@@ -1,0 +1,30 @@
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How do I monitor a website?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "<p>Monitoring a website requires executing requests to a URL on a regular basis to ensure that it is operating correctly. This means you need a way of automating those requests and ideally running them from different locations around the world. You could write your own system using cURL to issue requests and then executing them with a cron job running on servers around the world, however most people pay to use a website monitoring service.</p>"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is the difference between website monitoring and synthetic monitoring?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "<p>Website monitoring is a simple connectivity and performance check against an HTTP(S) service available via a URL. A request is successful if the page loads within a specified time.</p><p>Synthetic monitoring is a more advanced version of website monitoring where a browser session is simulated as if it was a real user. It is used to check that important workflows are working properly, such as user registration, APIs, shopping cart checkout, or submitting a form. This may be a single request to the page to check that it responds as expected and loads in one or multiple browsers (usually Google Chrome), but it usually means multiple steps as part of a transaction e.g., browsing a website, filling out a form or logging into an account.</p><p>For API tests, synthetic monitoring will involve executing a chain of requests and then using the response to fill variables that can be used for the next request.</p>"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How does transaction monitoring work?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "<p>Multi-step transaction monitoring works by defining steps which are then executed by a synthetic browser session. This simulates a user visiting a website and then performing the defined steps. The best synthetic monitoring tools provide both a web editor where you can drag and drop steps as part of a flow, as well as the ability to edit the steps in code.</p><p>The most common method of defining transaction steps is using Node.js or JavaScript based on JSON, XPath and/or HTML selectors. This means pinpointing specific elements on the page (or API response) and then performing an action against them, such as clicking a link or filling out a form field.</p><p>Some synthetic monitoring tools also provide recorder apps or browser extensions so you can run through the steps yourself and they will be automatically converted into the correct test script. Popular frameworks such as <a href=\"https://github.com/microsoft/playwright\" class=\"link\">Playwright</a>, <a href=\"https://github.com/puppeteer/puppeteer\" class=\"link\">Puppeteer</a> or <a href=\"https://www.selenium.dev/documentation/webdriver/\" class=\"link\">Selenium WebDriver</a> may be used to standardize the test steps.</p>"
+            }
+        }
+    ]
+}

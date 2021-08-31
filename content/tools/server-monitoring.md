@@ -36,6 +36,11 @@ authorBio:
   billions of time series metrics from millions of servers. He is also a
   researcher in sustainable computing at Uptime Institute and affiliated with
   Imperial College London. David has been a developer for 15+ years.
+relatedCategories:
+  - category: devops
+    subcategory:
+      label: Website / synthetic monitoring
+      name: website-synthetic-monitoring
 ---
 
 The best server monitoring tools have lots of high quality integrations and
@@ -1332,6 +1337,10 @@ our two finalists above.
 {{< tools/category-review/faq category="server-monitoring" >}}
 
 {{< nav-wrapper--open id="wrapper-10" anchor-name="editorial-policy" >}}
+
+### Related categories
+
+{{< tools/category-review/related-categories >}}
 
 ### Our editorial policy
 
