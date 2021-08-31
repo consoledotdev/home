@@ -6,7 +6,7 @@ org: Snyk
 what: Security monitoring.
 tags: ["Security"]
 date: 2021-08-26T12:00:00Z
-draft: true
+draft: false
 headerType: fixed
 summary: Interview with Guy Podjarny, Founder & President, Snyk
 isPage: interviews
@@ -53,7 +53,6 @@ your users trust you to do so.
 
 There's a need for developers to embrace this new responsibility. The end result
 is a safer digital world for all of us.
-
 
 {{< img-center
 src="/img/interviews/snyk-guy-podjarny-product.jpeg"
