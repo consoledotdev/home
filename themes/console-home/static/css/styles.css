@@ -229,18 +229,17 @@ body:not(.is-same-origin) #line-10 {
     stroke: var(--theme-lines-color);
 }
 
-.hero .planes {
+.hero .dynamic-planes-wrapper {
     position: relative;
-    transform: translate(-24%, -48%);
-    width: 219.8vw;
-    height: auto;
-    margin-top: 50vh;
-    margin-left: max(600px, 40vw);
+    width: 111vw;
     z-index: 2;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-6.5%, -49%);
 }
 
-body:not(.is-same-origin) .hero .planes {
-    animation-name: planes-fade-in;
+body:not(.is-same-origin) .hero .dynamic-planes-wrapper {
+    animation-name: dynamic-planes-fade-in;
     animation-duration: 0.5s;
     animation-delay: 1.8s;
     animation-timing-function: cubic-bezier(0.41, 0.14, 0.35, 0.99);
@@ -249,7 +248,7 @@ body:not(.is-same-origin) .hero .planes {
     opacity: 0;
 }
 
-@keyframes planes-fade-in {
+@keyframes dynamic-planes-fade-in {
     0% {
         opacity: 0;
     }
@@ -258,27 +257,55 @@ body:not(.is-same-origin) .hero .planes {
     }
 }
 
-.hero .planes > rect:not([stroke]) {
-    fill: var(--theme-planes-background);
-    fill-opacity: 0.5;
+@media (max-width: 768px) {
+    .hero .dynamic-planes-wrapper {
+        min-width: 820px;
+    }
 }
 
-.hero .planes > rect[stroke] {
-    stroke: var(--theme-planes-off-stroke);
-    stroke-opacity: 0.13;
+@media (max-height: 1300px) {
+    .hero .dynamic-planes-wrapper {
+        --totVDist: calc(1300 - 600);
+        --currVDist: calc(1300px - 100vh);
+    }
+
+    @media (max-width: 768px) {
+        .hero .dynamic-planes-wrapper {
+            --totVMove: 400;
+            --vMoveRatio: calc(var(--totVMove) / var(--totVDist));
+            margin-top: calc(var(--currVDist) * var(--vMoveRatio));
+
+            --totHMoveAdd: -250;
+            --hMoveAddRatio: calc(var(--totHMoveAdd) / var(--totVDist));
+            --hMoveAdd: calc(var(--currVDist) * var(--hMoveAddRatio));
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .hero .dynamic-planes-wrapper {
+            --totHMoveAdd: 250;
+            --hMoveAddRatio: calc(var(--totHMoveAdd) / var(--totVDist));
+            --hMoveAdd: calc(var(--currVDist) * var(--hMoveAddRatio));
+        }
+    }
 }
 
-.hero .planes g {
-    opacity: 0.7;
+@media (min-height: 1301px) {
+    @media (min-width: 1025px) {
+        .hero .dynamic-planes-wrapper {
+            --hMoveAdd: 0;
+        }
+    }
 }
 
-.hero .planes g rect:not([stroke]) {
-    fill: var(--theme-planes-background);
-    fill-opacity: 0.8;
-}
-
-.hero .planes g rect[stroke] {
-    stroke-width: 1.5;
+@media (max-width: 1280px) {
+    .hero .dynamic-planes-wrapper {
+        --totHDist: calc(1280 - 320);
+        --currHDist: calc(1280px - 100vw);
+        --totHMove: 100;
+        --hMoveRatio: calc(var(--totHMove) / var(--totHDist));
+        margin-left: calc(calc(var(--currHDist) * var(--hMoveRatio)) + var(--hMoveAdd));
+    }
 }
 
 /* Layout
@@ -1612,14 +1639,13 @@ select.console-select::-ms-expand {
 /* Media Queries
    ================================================================================================================ */
 
-@media (prefers-reduced-motion) {
+@media (prefers-reduced-motion: reduce) {
     body:not(.is-same-origin) .logo-wrapper a span,
     body:not(.is-same-origin) .logo-svg-animated-explode .plane-one,
     body:not(.is-same-origin) .logo-svg-animated-explode .plane-two,
     body:not(.is-same-origin) .logo-svg-animated-explode .plane-three,
     body:not(.is-same-origin) .logo-svg-animated-explode .prompt,
-    body:not(.is-same-origin) [id^="line-"],
-    body:not(.is-same-origin) .hero .planes {
+    body:not(.is-same-origin) [id^="line-"] {
         animation: none;
     }
     body:not(.is-same-origin) #line-01,
@@ -1635,21 +1661,22 @@ select.console-select::-ms-expand {
         stroke-dasharray: 0;
         stroke-dashoffset: 0;
     }
-    body:not(.is-same-origin) .hero .planes {
+    body:not(.is-same-origin) .hero .dynamic-planes-wrapper {
         opacity: 1;
+    }
+
+    body .hero .dynamic-planes-column {
+        animation: none;
     }
 }
 
 @media (max-width: 768px) {
-    .page-article .hero .planes {
-        display: none;
+    .hero {
+        min-height: 680px;
     }
 
-    .hero .planes {
-        transform: translate(-24%, -36%);
-        margin-left: 30vw;
-        margin-top: max(80%, 50vh);
-        min-width: 1600px;
+    .page-article .hero .dynamic-planes-wrapper {
+        display: none;
     }
 
     .page-article .header {
@@ -1695,8 +1722,9 @@ select.console-select::-ms-expand {
     }
 
     @media (max-width: 540px) {
-        .hero .planes {
-            transform: translate(-28%, -32%);
+        .main {
+            min-height: 0;
+            margin-top: 0;
         }
 
         .console-form {
@@ -1789,10 +1817,6 @@ select.console-select::-ms-expand {
         margin: max(calc(var(--space6) - var(--space3)), 10vh) 0 calc(var(--space6) - var(--space2));
     }
 
-    .hero .planes {
-        margin-left: max(550px, 40vw);
-    }
-
     .main-feature-article-content {
         max-width: 600px;
     }
@@ -1813,14 +1837,6 @@ select.console-select::-ms-expand {
         flex: 0 0 auto;
         width: 120px;
         margin-left: 6vw;
-    }
-
-    @media (max-aspect-ratio: 9/10) {
-        .hero .planes {
-            transform: translate(-24%, -43%);
-            margin-top: max(65%, 50vh);
-            margin-left: 42vw;
-        }
     }
 }
 
