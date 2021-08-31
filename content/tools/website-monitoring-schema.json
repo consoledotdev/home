@@ -1,7 +1,7 @@
 {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "The best website / synthetic monitoring tools for developers",
+    "name": "The best website monitoring tools for developers",
     "numberOfItems": 7,
     "itemListOrder": "Ascending",
     "itemListElement": [
@@ -12,7 +12,7 @@
             "item": {
                 "@type": "Product",
                 "name": "Datadog",
-                "description": "Website / synthetic monitoring.",
+                "description": "Website monitoring.",
                 "url": "https://www.datadoghq.com/",
                 "review": {
                     "@type": "Review",
@@ -40,7 +40,7 @@
                         "name": "Console",
                         "url": "https://console.dev"
                     },
-                    "datePublished": "2021-08-26T12:00:00+00:00"
+                    "datePublished": "2021-08-31T12:00:00+00:00"
                 }
             }
         },
@@ -51,7 +51,7 @@
             "item": {
                 "@type": "Product",
                 "name": "Uptrends",
-                "description": "Website / synthetic monitoring.",
+                "description": "Website monitoring.",
                 "url": "https://www.uptrends.com/",
                 "review": {
                     "@type": "Review",
@@ -79,7 +79,7 @@
                         "name": "Console",
                         "url": "https://console.dev"
                     },
-                    "datePublished": "2021-08-26T12:00:00+00:00"
+                    "datePublished": "2021-08-31T12:00:00+00:00"
                 }
             }
         },
@@ -90,7 +90,7 @@
             "item": {
                 "@type": "Product",
                 "name": "Checkly",
-                "description": "Website / synthetic monitoring.",
+                "description": "Website monitoring.",
                 "url": "https://www.checklyhq.com/",
                 "review": {
                     "@type": "Review",
@@ -118,7 +118,7 @@
                         "name": "Console",
                         "url": "https://console.dev"
                     },
-                    "datePublished": "2021-08-26T12:00:00+00:00"
+                    "datePublished": "2021-08-31T12:00:00+00:00"
                 }
             }
         },
@@ -129,7 +129,7 @@
             "item": {
                 "@type": "Product",
                 "name": "Site24x7",
-                "description": "Website / synthetic monitoring.",
+                "description": "Website monitoring.",
                 "url": "https://www.site24x7.com/",
                 "review": {
                     "@type": "Review",
@@ -157,7 +157,7 @@
                         "name": "Console",
                         "url": "https://console.dev"
                     },
-                    "datePublished": "2021-08-26T12:00:00+00:00"
+                    "datePublished": "2021-08-31T12:00:00+00:00"
                 }
             }
         },
@@ -168,7 +168,7 @@
             "item": {
                 "@type": "Product",
                 "name": "New Relic",
-                "description": "Website / synthetic monitoring.",
+                "description": "Website monitoring.",
                 "url": "https://newrelic.com/",
                 "review": {
                     "@type": "Review",
@@ -196,7 +196,7 @@
                         "name": "Console",
                         "url": "https://console.dev"
                     },
-                    "datePublished": "2021-08-26T12:00:00+00:00"
+                    "datePublished": "2021-08-31T12:00:00+00:00"
                 }
             }
         },
@@ -207,7 +207,7 @@
             "item": {
                 "@type": "Product",
                 "name": "Uptime",
-                "description": "Website / synthetic monitoring.",
+                "description": "Website monitoring.",
                 "url": "https://uptime.com/",
                 "review": {
                     "@type": "Review",
@@ -235,7 +235,7 @@
                         "name": "Console",
                         "url": "https://console.dev"
                     },
-                    "datePublished": "2021-08-26T12:00:00+00:00"
+                    "datePublished": "2021-08-31T12:00:00+00:00"
                 }
             }
         },
@@ -246,7 +246,7 @@
             "item": {
                 "@type": "Product",
                 "name": "RapidSpike",
-                "description": "Website / synthetic monitoring.",
+                "description": "Website monitoring.",
                 "url": "https://www.rapidspike.com/",
                 "review": {
                     "@type": "Review",
@@ -274,7 +274,7 @@
                         "name": "Console",
                         "url": "https://console.dev"
                     },
-                    "datePublished": "2021-08-26T12:00:00+00:00"
+                    "datePublished": "2021-08-31T12:00:00+00:00"
                 }
             }
         }

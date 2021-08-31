@@ -39,8 +39,8 @@ authorBio:
 relatedCategories:
   - category: devops
     subcategory:
-      label: Website / synthetic monitoring
-      name: website-synthetic-monitoring
+      label: Website monitoring
+      name: website-monitoring
 ---
 
 The best server monitoring tools have lots of high quality integrations and

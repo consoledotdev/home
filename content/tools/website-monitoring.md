@@ -1,28 +1,28 @@
 ---
-title: "The Best Website / Synthetic Monitoring Tools For Developers - Console"
+title: "The Best Website Monitoring Tools For Developers - Console"
 titlePrefix: "The best"
-titleCategory: "website synthetic monitoring"
+titleCategory: "website monitoring"
 titleSuffix: "tools for developers"
-date: 2021-08-25T12:00:00+00:00
+date: 2021-08-31T12:00:00+00:00
 draft: false
 summary:
-  "The best website / synthetic monitoring tools for developers: Datadog,
-  Uptrends, Checkly, Site24x7. 13 website / synthetic monitoring tools reviewed."
+  "The best website monitoring tools for developers: Datadog, Uptrends, Checkly,
+  Site24x7. 13 website monitoring tools reviewed."
 metaDescription:
-  "The best website / synthetic monitoring tools for developers: Datadog,
-  Uptrends, Checkly, Site24x7. 13 website / synthetic monitoring tools reviewed."
+  "The best website monitoring tools for developers: Datadog, Uptrends, Checkly,
+  Site24x7. 13 website monitoring tools reviewed."
 headerType: fixed
 hideLines: true
 hidePlanes: true
 type: tools
 layout: category-review
 isPage: tools
-isSubpage: website-synthetic-monitoring
+isSubpage: website-monitoring
 customStyle: true
 pageType: tools-category-review
 customPageStyle: true
 category: devops
-subcategory: website-synthetic-monitoring
+subcategory: website-monitoring
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
@@ -42,15 +42,15 @@ relatedCategories:
       name: server-monitoring
 ---
 
-The best website / synthetic monitoring tools have multiple check types such as
-HTTP(S), DNS, TCP and SMTP, configurable check frequency, check locations around
-the world, the ability to build multi-step transaction monitoring tests, and
+The best website monitoring tools have multiple check types such as HTTP(S),
+DNS, TCP and SMTP, configurable check frequency, check locations around the
+world, the ability to build multi-step transaction monitoring tests, and
 advanced alerting so you can be notified via different channels when your
 website or API goes down.
 
 We tested 13 website monitoring services using our independent selection
-criteria. The best synthetic monitoring tools for developers and devops
-engineers in {{< year >}} are:
+criteria. The best website monitoring tools for developers and devops engineers
+in {{< year >}} are:
 
 1. [Datadog](#datadog)
 2. [Uptrends](#uptrends)
@@ -72,7 +72,7 @@ middle of the night! Some services even support configuration in Terraform.
 
 {{< nav-wrapper--open id="wrapper-0" anchor-name="tldr" >}}
 
-### tl;dr the best website / synthetic monitoring tools
+### tl;dr the best website monitoring tools
 
 {{< tools/category-review/tldr-list--open >}}
 {{< tools/category-review/miniature-card name="Datadog" thumbnail="/img/favicons/www.datadoghq.com.png" url="https://www.datadoghq.com/" anchor="datadog" score="4.6" >}}
@@ -93,17 +93,15 @@ middle of the night! Some services even support configuration in Terraform.
 {{< rich-title-3 icon="checklist" id="requirements" >}} Requirements
 {{</ rich-title-3 >}}
 
-The four most important features every website / synthetic monitoring tool must
-have are: multiple check types & configurable check frequency, multiple check
-locations, multi-step requests (transaction monitoring), and alerts. Other
-features are useful to improve the product experience (like dark mode) and a
-good API, but modern website / synthetic monitoring tools in {{< year >}} must
-have these four.
+The four most important features every website monitoring tool must have are:
+multiple check types & configurable check frequency, multiple check locations,
+multi-step requests (transaction monitoring), and alerts. Other features are
+useful to improve the product experience (like dark mode) and a good API, but
+modern website monitoring tools in {{< year >}} must have these four.
 
-For each of our website / synthetic monitoring tool reviews we will assess
-functionality based on our
-[standard selection criteria](/about/#selection-criteria) plus these four
-requirements:
+For each of our website monitoring tool reviews we will assess functionality
+based on our [standard selection criteria](/about/#selection-criteria) plus
+these four requirements:
 
 {{< framed-section-item--open >}}
 
@@ -114,15 +112,14 @@ port 80 and 443. However, modern website monitoring products also execute checks
 against other services running on different ports. This is what is meant by
 “synthetic monitoring” - executing checks that replicate a request being made,
 whether that is a user browsing a website or a request to some other endpoint
-such as an API or database. This means all website / synthetic monitoring
-services should support multiple check types such as DNS, Mail, Ping (ICMP),
-TCP, and UDP.
+such as an API or database. This means all website monitoring services should
+support multiple check types such as DNS, Mail, Ping (ICMP), TCP, and UDP.
 
-Website / synthetic monitoring that infrequently executes checks is useless. For
-example, if a check only executes every 5 minutes, your service could be down
-for 4 minutes 59 seconds before it gets detected. However, more frequent checks
-usually mean a higher cost because of the overhead required for the monitoring
-service to execute those checks so often.
+Website monitoring that infrequently executes checks is useless. For example, if
+a check only executes every 5 minutes, your service could be down for 4 minutes
+59 seconds before it gets detected. However, more frequent checks usually mean a
+higher cost because of the overhead required for the monitoring service to
+execute those checks so often.
 
 For most services, checking every minute is sufficient. This means you will be
 aware of any downtime within a few minutes and balances the cost of monitoring.
@@ -167,8 +164,8 @@ tools. We are assessing products from the perspective of experienced software
 developers who will want these more advanced features.
 
 This means we consider multi-step requests (transactions) to be a crucial part
-of good website / synthetic monitoring tools in 2021. We will not review
-services that don’t support it.
+of good website monitoring tools in 2021. We will not review services that don’t
+support it.
 
 #### Alerts
 
@@ -176,12 +173,12 @@ Alerting is a crucial feature for all monitoring tools because you need to be
 informed when something goes wrong. This means alerting functionality is broken
 into two components:
 
-- **Triggers:** For website / synthetic monitoring, the trigger will be some
-  type of failure condition. This could be a timeout, HTTP status code error or
-  DNS resolution failure. However, it is also possible for a website to be fully
-  responsive with an HTTP 200 status code but still be considered down - the
-  ability to check the response headers and body is important so errors or
-  incorrect responses can be detected.
+- **Triggers:** For website monitoring, the trigger will be some type of failure
+  condition. This could be a timeout, HTTP status code error or DNS resolution
+  failure. However, it is also possible for a website to be fully responsive
+  with an HTTP 200 status code but still be considered down - the ability to
+  check the response headers and body is important so errors or incorrect
+  responses can be detected.
 - **Notifications:** When an alert has triggered, you need to be notified about
   it. This could be an email alert, but for critical checks you also want the
   option to be notified via more urgent channels such as SMS, phone, Slack, or
@@ -194,10 +191,10 @@ into two components:
 
 {{< div--close >}}
 
-### Best website / synthetic monitoring tools
+### Best website monitoring tools
 
-We reviewed 13 website / synthetic monitoring tools. The best is: Datadog. We
-also liked [Uptrends](#uptrends) and [Checkly](#checkly).
+We reviewed 13 website monitoring tools. The best is: Datadog. We also liked
+[Uptrends](#uptrends) and [Checkly](#checkly).
 
 {{< nav-wrapper--open id="wrapper-2" anchor-name="datadog" >}}
 
@@ -213,7 +210,7 @@ traces. It also has sophisticated alerting and incident management
 functionality, especially if you’re using their other monitoring products.
 However, it has a small number of check locations and can get expensive.
 
-{{< img-center src="/img/tools/website-synthetic-monitoring-datadog.png" alt="Datadog product screenshot" width="100%" >}}
+{{< img-center src="/img/tools/website-monitoring-datadog.png" alt="Datadog product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -328,9 +325,9 @@ product. We covered the server monitoring features in
 
 {{< tools/category-review/card-dislike--open >}}
 
-Datadog’s website / synthetic monitoring is let down by the limited number of
-check locations. Until recently, it relied only on AWS for check locations which
-is not ideal because it is important to be able to execute checks from different
+Datadog’s website monitoring is let down by the limited number of check
+locations. Until recently, it relied only on AWS for check locations which is
+not ideal because it is important to be able to execute checks from different
 network operators. A new Azure-based location is now available but only in one
 US location.
 
@@ -365,7 +362,7 @@ multi-step request monitoring, but it has features like support for running
 tests using Chrome, Firefox and Internet Explorer, plus over 200 check
 locations.
 
-{{< img-center src="/img/tools/website-synthetic-monitoring-uptrends.png" alt="Uptrends product screenshot" width="100%" >}}
+{{< img-center src="/img/tools/website-monitoring-uptrends.png" alt="Uptrends product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -497,7 +494,7 @@ defined in Terraform, is great for developers. However, it is missing some
 features of competitors, such as more check types, private monitoring locations
 and more flexible alerting.
 
-{{< img-center src="/img/tools/website-synthetic-monitoring-checkly.png" alt="Checkly product screenshot" width="100%" >}}
+{{< img-center src="/img/tools/website-monitoring-checkly.png" alt="Checkly product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -624,7 +621,7 @@ API monitoring. However, it has a cramped UI as well as some unusual technical
 implementation details for its private check locations (such as a graphical
 installer for Linux systems).
 
-{{< img-center src="/img/tools/website-synthetic-monitoring-site24x7.png" alt="Site24x7 product screenshot" width="100%" >}}
+{{< img-center src="/img/tools/website-monitoring-site24x7.png" alt="Site24x7 product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -751,7 +748,7 @@ interactions, check for broken links or just ping specific endpoints. It
 includes a generous free package and you can set up private locations for no
 extra cost, but it has limited alerting capabilities.
 
-{{< img-center src="/img/tools/website-synthetic-monitoring-newrelic.png" alt="New Relic product screenshot" width="100%" >}}
+{{< img-center src="/img/tools/website-monitoring-newrelic.png" alt="New Relic product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -761,8 +758,8 @@ extra cost, but it has limited alerting capabilities.
 
 New Relic’s pricing is based on the total amount of data ingested per month.
 This works well for log monitoring or tracing, but becomes difficult to
-understand when applied to website / synthetic monitoring. New Relic solves this
-by indicating how many checks can be executed as part of your quota when
+understand when applied to website monitoring. New Relic solves this by
+indicating how many checks can be executed as part of your quota when
 configuring a check. 100GB allows 100,000,000 checks, which works out to be a
 very generous free quota.
 
@@ -899,7 +896,7 @@ transaction monitoring using XPath or JSON selectors. However, it is let down by
 limited alerting options and fewer check locations than competitors, which are
 also limited by the pricing plan you choose.
 
-{{< img-center src="/img/tools/website-synthetic-monitoring-uptime.png" alt="Uptime product screenshot" width="100%" >}}
+{{< img-center src="/img/tools/website-monitoring-uptime.png" alt="Uptime product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -982,9 +979,9 @@ certificate, virus & malware and HTTPS checks. The Uptime UI is straightforward
 and it is easy to understand the status of all your checks at a glance.
 
 The inclusion of different check types like Whois/domain results and malware
-scanning is a useful addition to standard website / synthetic monitoring
-options. These are the types of checks that are often forgotten, but are as
-important as ensuring your services stay online.
+scanning is a useful addition to standard website monitoring options. These are
+the types of checks that are often forgotten, but are as important as ensuring
+your services stay online.
 
 For simple website monitoring, Uptime does a good job. It is not too expensive
 and includes key features you’d need for a basic website. The transaction
@@ -995,11 +992,11 @@ sufficient for most websites.
 
 {{< tools/category-review/card-dislike--open >}}
 
-Uptime will do the job for most website / synthetic monitoring, but it lacks
-more advanced features that developers would appreciate. For example, alerting
-is limited to simple up/down status and the options for defining what is
-considered “down” are relatively simple. Further, the check locations are mostly
-focused on the US and Europe with limited coverage elsewhere.
+Uptime will do the job for most website monitoring, but it lacks more advanced
+features that developers would appreciate. For example, alerting is limited to
+simple up/down status and the options for defining what is considered “down” are
+relatively simple. Further, the check locations are mostly focused on the US and
+Europe with limited coverage elsewhere.
 
 The UI does not support dark mode and although there is an API with an OpenAPI
 schema, it is limited to 500 queries per hour and 60 queries per minute which
@@ -1033,7 +1030,7 @@ performance. Although multi-step requests can be scripted in JSON, the focus on
 HTTP(S) website monitoring means it is more suited to non-technical users than
 developers.
 
-{{< img-center src="/img/tools/website-synthetic-monitoring-rapidspike.png" alt="RapidSpike product screenshot" width="100%" >}}
+{{< img-center src="/img/tools/website-monitoring-rapidspike.png" alt="RapidSpike product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1117,12 +1114,12 @@ missing string, load time, etc) and whether steps are failing or not.
 
 {{< tools/category-review/card-like--open >}}
 
-RapidSpike provides a unique approach to website / synthetic monitoring by
-introducing a hierarchy into how it executes checks. You first define your
-website as a top level domain so that basic uptime checks can be performed.
-RapidSpike sets up automated “Insights” against this domain, such as SSL
-certificate validation, domain expiry checks and SEO related metrics such as
-domain authority and Alexa Rank.
+RapidSpike provides a unique approach to website monitoring by introducing a
+hierarchy into how it executes checks. You first define your website as a top
+level domain so that basic uptime checks can be performed. RapidSpike sets up
+automated “Insights” against this domain, such as SSL certificate validation,
+domain expiry checks and SEO related metrics such as domain authority and Alexa
+Rank.
 
 Then, individual site pages are configured for those pages that are most
 important. These tests can be executed from different locations and offer more
@@ -1195,7 +1192,7 @@ $9.95.
 Alertra might be appropriate for very basic requirements, but we think other
 tools in this review are much better.
 
-{{< img-center src="/img/tools/website-synthetic-monitoring-alertra.png" alt="Alertra product screenshot" width="100%" >}}
+{{< img-center src="/img/tools/website-monitoring-alertra.png" alt="Alertra product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1214,7 +1211,7 @@ limited.
 Given that pricing starts at $110/month, there are better tools for lower prices
 with more functionality.
 
-{{< img-center src="/img/tools/website-synthetic-monitoring-alertbot.png" alt="AlertBot product screenshot" width="100%" >}}
+{{< img-center src="/img/tools/website-monitoring-alertbot.png" alt="AlertBot product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1229,7 +1226,7 @@ which significantly limits the usefulness of the monitoring. There is no support
 for multi-step transaction monitoring, which means it does not meet the minimum
 requirements for our review criteria.
 
-{{< img-center src="/img/tools/website-synthetic-monitoring-freshping.png" alt="FreshPing product screenshot" width="100%" >}}
+{{< img-center src="/img/tools/website-monitoring-freshping.png" alt="FreshPing product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1237,10 +1234,10 @@ requirements for our review criteria.
 
 {{< tools/category-review/card-heading name="Pingdom" anchor="pingdom" thumbnail="/img/favicons/www.pingdom.com.png" url="https://www.pingdom.com/" score="none" >}}
 
-Pingdom is one of the oldest website / synthetic monitoring tools - I remember
-using it more than a decade ago when there were not many options, and it did a
-great job! Since then, it has been acquired by Solarwinds and brought into their
-cloud monitoring portfolio.
+Pingdom is one of the oldest website monitoring tools - I remember using it more
+than a decade ago when there were not many options, and it did a great job!
+Since then, it has been acquired by Solarwinds and brought into their cloud
+monitoring portfolio.
 
 If you used Pingdom in the past, you can still see some of the old UI elements,
 some of which appear in the documentation and in-product videos/graphics.
@@ -1275,7 +1272,7 @@ Pingdom’s pricing is attractive - starting at around $15/m for 10 uptime check
 1 transaction check and some SMS - but the product is limited compared to the
 competition. You can get a much more powerful product for free from New Relic.
 
-{{< img-center src="/img/tools/website-synthetic-monitoring-pingdom.png" alt="Pingdom product screenshot" width="100%" >}}
+{{< img-center src="/img/tools/website-monitoring-pingdom.png" alt="Pingdom product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1294,7 +1291,7 @@ However, StatusCake does not support multi-step transaction monitoring and has
 very limited alerting capabilities. It is therefore excluded by our review
 criteria.
 
-{{< img-center src="/img/tools/website-synthetic-monitoring-statuscake.png" alt="StatusCake product screenshot" width="100%" >}}
+{{< img-center src="/img/tools/website-monitoring-statuscake.png" alt="StatusCake product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1313,13 +1310,13 @@ The UI is not well designed and there is no dark mode.
 
 As such, we do not recommend UptimeRobot for developers.
 
-{{< img-center src="/img/tools/website-synthetic-monitoring-uptimerobot.png" alt="UptimeRobot product screenshot" width="100%" >}}
+{{< img-center src="/img/tools/website-monitoring-uptimerobot.png" alt="UptimeRobot product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
 ### FAQ
 
-{{< tools/category-review/faq category="website-synthetic-monitoring" >}}
+{{< tools/category-review/faq category="website-monitoring" >}}
 
 {{< nav-wrapper--open id="wrapper-10" anchor-name="editorial-policy" >}}
 
