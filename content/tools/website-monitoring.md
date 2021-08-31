@@ -48,9 +48,9 @@ world, the ability to build multi-step transaction monitoring tests, and
 advanced alerting so you can be notified via different channels when your
 website or API goes down.
 
-We tested 13 website monitoring services using our independent selection
-criteria. The best website monitoring tools for developers and devops engineers
-in {{< year >}} are:
+We tested 13 website monitoring services using our
+[independent selection criteria](/about/#selection-criteria). The best website
+monitoring tools for developers and devops engineers in {{< year >}} are:
 
 1. [Datadog](#datadog)
 2. [Uptrends](#uptrends)
