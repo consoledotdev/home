@@ -65,6 +65,13 @@ tools should have from the perspective of an experienced developer or devops
 engineer. This means focusing on sophisticated alerting, multiple check types
 and the ability to execute checks frequently (every 5 minutes is too slow!).
 
+We think that website monitoring products must include some form of transaction
+monitoring, also called synthetic monitoring. This is because most websites and
+applications include multi-step flows that are critical to the operation of the
+service and they cannot be tested with just basic website monitoring. Synthetic
+monitoring allows tests to simulate a real user clicking on items, filling out
+forms and performing other steps in the flow.
+
 We also reviewed product APIs and checked to see if the web UI has dark mode! As
 a developer I would expect dark mode in all the tools I use, especially a
 monitoring service I could potentially need to access when it alerts me in the
@@ -159,9 +166,9 @@ issuing requests so they replicate the steps that would happen if a real user
 transaction monitoring.
 
 There are lots of website monitoring services but the ability to execute these
-multi-step requests or transactions is what sets apart the best monitoring
-tools. We are assessing products from the perspective of experienced software
-developers who will want these more advanced features.
+multi-step requests or transactions (synthetic monitors) is what sets apart the
+best monitoring tools. We are assessing products from the perspective of
+experienced software developers who will want these more advanced features.
 
 This means we consider multi-step requests (transactions) to be a crucial part
 of good website monitoring tools in 2021. We will not review services that don’t
