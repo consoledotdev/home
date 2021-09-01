@@ -44,9 +44,9 @@ relatedCategories:
 
 The best website monitoring tools have multiple check types such as HTTP(S),
 DNS, TCP and SMTP, configurable check frequency, check locations around the
-world, the ability to build multi-step transaction monitoring tests, and
-advanced alerting so you can be notified via different channels when your
-website or API goes down.
+world, the ability to build multi-step transaction monitoring tests (also known
+as synthetic monitoring), and advanced alerting so you can be notified via
+different channels when your website or API goes down.
 
 We tested 13 website monitoring services using our
 [independent selection criteria](/about/#selection-criteria). The best website
