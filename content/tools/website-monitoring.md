@@ -106,7 +106,7 @@ multi-step requests (transaction monitoring), and alerts. Other features are
 useful to improve the product experience (like dark mode) and a good API, but
 modern website monitoring tools in {{< year >}} must have these four.
 
-For each of our website monitoring tool reviews we will assess functionality
+For each of our website monitoring software reviews we will assess functionality
 based on our [standard selection criteria](/about/#selection-criteria) plus
 these four requirements:
 
@@ -171,8 +171,8 @@ best monitoring tools. We are assessing products from the perspective of
 experienced software developers who will want these more advanced features.
 
 This means we consider multi-step requests (transactions) to be a crucial part
-of good website monitoring tools in 2021. We will not review services that don’t
-support it.
+of good website monitoring services in 2021. We will not review services that
+don’t support it.
 
 #### Alerts
 
@@ -1068,7 +1068,7 @@ checks. These range from domain expiry and SSL certificate validation to SSL
 Cipher grading, security header analysis, virus/malware, domain authority and
 Alexa Traffic Rank. These are useful to give an overall picture of the website
 health but are more of a bonus than the kind of functionality developers might
-normally be looking for in a monitoring tool.
+normally be looking for in a monitoring service.
 
 {{< div--close >}}
 
@@ -1337,7 +1337,7 @@ As such, we do not recommend UptimeRobot for developers.
 
 Console is written by developers for developers. Using our decades of experience
 building software at scale, we apply strict
-[selection criteria](/about/#selection-criteria) to decide which tools we
+[selection criteria](/about/#selection-criteria) to decide which software we
 feature.
 
 This includes asking questions like "Would this form part of a daily-use set of
