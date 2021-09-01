@@ -398,7 +398,9 @@ you just need basic monitoring. For example, although the alerting functionality
 is very sophisticated there is no top level concept of an alert - these exist as
 "Monitors" and are dependent on the trigger source e.g. a server metric or
 synthetic check status. This means it is flexible for large environments but is
-cumbersome for smaller use cases.
+cumbersome for smaller use cases. See
+[our review of Datadog's Synthetic Monitoring](/tools/website-monitoring/#datadog)
+for more details.
 
 Datadog is also very expensive. The free version is limited to 5 hosts and only
 1 day of data retention, plus no alerting, custom metrics or support for
@@ -547,7 +549,9 @@ The pricing model with a generous free quota means it's easy to deploy and try
 all the features of New Relic, but it is more challenging to predict how much
 data you need. 100GB/m sounds like a lot but can you intuitively estimate how
 much data a monitoring agent on a single server would report each month? What
-about if you then add APM, logs, and synthetic monitoring?
+about if you then add APM, logs, and synthetic monitoring? See our
+[review of New Relic's Synthetic Monitoring](/tools/website-monitoring/#newrelic)
+for more details.
 
 There are also some strange
 [documented limits around how much data can be ingested at once](https://docs.newrelic.com/docs/licenses/license-information/general-usage-licenses/new-relic-data-usage-limits-policies/).
