@@ -12,6 +12,14 @@
         },
         {
             "@type": "Question",
+            "name": "How do I monitor an API?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "<p>An API can be monitored using any website or synthetic monitoring tool that can issue requests to the API, most commonly via HTTP. APIs process programmatic requests and responses which means the monitoring tool needs to be able to handle API protocols such as REST, XML, JSON, gRPC, and GraphQL. Supporting authentication methods such as OAuth, JWT and authorization headers is important.</p><p>Some tools also support the ability to parse the response and examine the content for specific fields and values. These can be defined as test assertions that query the GraphQL or JSON response based on specified keys.</p><p>Multi-step chained requests are important if you want to check whether an API is accepting and processing write requests correctly, or if there is the concept of a login session that persists across multiple requests.</p>"
+            }
+        },
+        {
+            "@type": "Question",
             "name": "What is the difference between website monitoring and synthetic monitoring?",
             "acceptedAnswer": {
                 "@type": "Answer",
