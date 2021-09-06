@@ -12,7 +12,7 @@ summary: Interview with Guy Podjarny, Founder & President, Snyk
 isPage: interviews
 topImg1Src: /img/interviews/snyk-guy-podjarny-profile.jpg
 topImg2Src: /img/favicons/snyk.io.jpg
-ogImg: /img/favicons/snyk.io.jpg
+ogImg: /img/interviews/snyk-guy-podjarny-desk.jpg
 ---
 
 ### What is Snyk and why did you build it?
@@ -285,6 +285,13 @@ world, and also for my podcast.
 
 I use an Apple wireless keyboard. I like touch pads, not mouse, so I have a
 Bluetooth trackpad.
+
+{{< img-center
+src="/img/interviews/snyk-guy-podjarny-desk.jpg"
+alt="The desk of Guy Podjarny, Snyk"
+width="100%"
+caption="iMac 27 inch, Samsung 34 inch curved screen (21:9 ratio), Bluetooth keyboard & trackpad, Shure SM7B Microphone with a Focusrite Scarlett 2i2 box and a Fethead booster (seen in the connection to the Focusrite box), Sony Alpha 6500 Mirrorless camera, iPad Pro, used typically for social or secondary things, Vitra standing electric desk, a piano stool behind the desk to lift my feet, whiteboard hung in the background, for ideation and highlighting notes, an eraseable rocketbook with a Pilot Frixion pen for analog note taking."
+>}}
 
 ### Describe your computer software setup
 
