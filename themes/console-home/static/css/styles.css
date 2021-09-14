@@ -1466,6 +1466,10 @@ p.small {
     font-size: var(--t-size-1);
 }
 
+p.x-small {
+    font-size: var(--t-size-2);
+}
+
 .caption {
     margin-top: var(--space4);
     margin-bottom: var(--space4);
@@ -1883,6 +1887,10 @@ select.console-select::-ms-expand {
 
     .main-feature-article p.small {
         font-size: var(--t-size0);
+    }
+
+    .main-feature-article p.x-small {
+        font-size: var(--t-size-1);
     }
 
     .main-feature-article-content ul li {
