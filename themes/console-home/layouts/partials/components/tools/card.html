@@ -53,7 +53,21 @@
 				<div class="right"><p class="small"><span>{{ partial "icons/dislike.html" }} What we don't like:</span> {{ index . "What we dislike" }}</p></div>
 			</div>
 			<div class="details">
-				<span class="date">Reviewed: {{ $showDate }}</span>
+				<div class="left">
+					<span class="date">Reviewed: {{ $showDate }}</span>
+					{{ if (index . "Sponsored")}}
+						<div class="item-disclosure">
+							<div class="item-disclosure-indicator" data-tooltip-handle>✦ Sponsored</div>
+							<div class="tooltip-hook tooltip-top-down tooltip-small">
+								<div data-tooltip class="tooltip">
+									<div class="tooltip-content">
+										<p class="x-small">We don’t take payment for inclusion. We work with some vendors to provide higher visibility to their tools.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					{{ end }}
+				</div>
 				{{ with .Interview -}}
 					<a onclick="blur();" href="{{ . }}" class="console-button-text console-button-small console-button-green icon-left interview-with-cto" title="Read the Console interview with {{ $org }}">
 						{{ partial "icons/interview-console.html" }}

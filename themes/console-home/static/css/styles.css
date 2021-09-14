@@ -765,6 +765,7 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
     display: none;
     position: absolute;
     right: 0;
+    bottom: 0;
     height: 0;
     z-index: 30;
 }

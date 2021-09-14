@@ -1008,12 +1008,78 @@ body:not(.mobile) .console-control:hover:before {
 
 .popup.popup-top-down,
 .popup.popup-bottom-up.is-visible {
-    transform: translateY(0);
+    transform: translateY(calc(var(--space4) * -1));
 }
 
 .popup.popup-top-down.is-visible,
 .popup.popup-bottom-up {
+    transform: translateY(0);
+}
+
+/* Tooltip
+   ================================================================================================================ */
+.tooltip-hook {
+    position: absolute;
+    left: 0;
+    height: 0;
+    z-index: 30;
+}
+
+.tooltip-hook.tooltip-top-down {
+    bottom: 0;
+}
+
+.tooltip-hook.tooltip-bottom-up {
+    top: 0;
+}
+
+.tooltip {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--a-elements);
+    width: 320px;
+}
+
+.tooltip.is-visible {
+    pointer-events: all;
+    opacity: 1;
+    transition: transform var(--a-elements-time) var(--a-elements-easing);
+}
+
+.tooltip-hook.tooltip-top-down .tooltip {
+    padding-top: var(--space1);
+}
+
+.tooltip-hook.tooltip-bottom-up .tooltip {
+    padding-bottom: var(--space1);
+    bottom: 0;
+}
+
+.tooltip-hook.tooltip-top-down .tooltip {
+    transform: translateY(calc(var(--space4) * -1));
+}
+
+.tooltip-hook.tooltip-bottom-up .tooltip {
     transform: translateY(var(--space4));
+}
+
+.tooltip-hook.tooltip-top-down .tooltip.is-visible,
+.tooltip-hook.tooltip-bottom-up .tooltip.is-visible {
+    transform: translateY(0);
+}
+
+.tooltip-content {
+    display: block;
+    background-color: var(--theme-content-bg-4);
+    border-radius: var(--corners-mid);
+    padding: var(--space4);
+    box-shadow: var(--theme-shadow-3);
+    width: 100%;
+}
+
+.tooltip-hook.tooltip-small .tooltip-content {
+    padding: var(--space3);
 }
 
 /* Empty Card
@@ -1940,11 +2006,28 @@ body:not(.mobile) .console-control:hover:before {
    ================================================================================================================ */
 
 .disclosure-notice p span {
-    color: var(--theme-text-1);
     font-weight: 400;
-    color: var(--theme-brand-accent-text);
+    color: var(--theme-brand-accent-text-idle);
 }
 
 .disclosure-notice p {
     color: var(--theme-text-4);
+}
+
+/* Item Disclosure
+   ================================================================================================================ */
+.item-disclosure {
+    position: relative;
+}
+
+.item-disclosure-indicator {
+    font-size: var(--t-size-3);
+    font-weight: 400;
+    color: var(--theme-brand-accent-text-idle);
+    cursor: default;
+}
+
+.item-disclosure-indicator:hover,
+.item-disclosure-indicator:focus {
+    color: var(--theme-brand-accent-text-hover);
 }

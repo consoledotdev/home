@@ -7,11 +7,9 @@
 
 .tool-card {
     position: relative;
-    background-color: var(--theme-content-bg-0);
     box-shadow: var(--theme-shadow-1);
-    border-radius: var(--corners-mid);
     transition: var(--a-micro);
-    overflow: hidden;
+    border-radius: var(--corners-mid);
 }
 
 .tool-card.is-hidden {
@@ -25,6 +23,9 @@
     align-items: center;
     padding: var(--space3) var(--space4);
     border-bottom: var(--theme-border-2);
+    background-color: var(--theme-content-bg-0);
+    border-top-left-radius: var(--corners-mid);
+    border-top-right-radius: var(--corners-mid);
 }
 
 .tool-card .top > .left {
@@ -64,6 +65,8 @@ p.tool-card-description {
 .tool-card .bottom {
     background: var(--theme-content-bg-1);
     padding: var(--space3) var(--space4);
+    border-bottom-left-radius: var(--corners-mid);
+    border-bottom-right-radius: var(--corners-mid);
 }
 
 .tool-card .bottom .col-2 {
@@ -115,6 +118,15 @@ p.tool-card-description {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+}
+
+.tool-card .bottom .details .left {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.tool-card .bottom .details .left .date {
+    margin-right: var(--space2_5);
 }
 
 .page-tools .category-reviews .categories {
