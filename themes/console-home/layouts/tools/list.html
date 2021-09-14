@@ -66,8 +66,7 @@
         {{- range first 1 $.Site.Data.toolsreviewed.items -}}{{- $reviewedChecked = time (index . "Scheduled for") -}}{{- end -}}
         {{- $updated := $reviewedChecked -}}
             <p class="small">
-				<span>Last updated: {{ $updated.Format "2006-01-02" }}.</span>
-				<span>Read our <a class="link" href="/about/#selection-criteria">selection criteria</a>.</span>
+				<span>Last updated: {{ $updated.Format "2006-01-02" }}</span>
 			</p>
             <p class="small">
                 <span class="page-meta-separator">&mdash;</span>
@@ -77,6 +76,7 @@
 				</a>
 			</p>
 		</div>
+		{{ partial "components/disclosure-notice.html" }}
 	</section>
 	<section class="page-section page-section-feature-root">
 		<div class="feature-collapsible-cta">

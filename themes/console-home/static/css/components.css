@@ -1936,3 +1936,15 @@ body:not(.mobile) .console-control:hover:before {
     font-style: italic;
 }
 
+/* Disclosure Notice
+   ================================================================================================================ */
+
+.disclosure-notice p span {
+    color: var(--theme-text-1);
+    font-weight: 400;
+    color: var(--theme-brand-accent-text);
+}
+
+.disclosure-notice p {
+    color: var(--theme-text-4);
+}

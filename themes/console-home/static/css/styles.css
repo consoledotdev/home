@@ -547,6 +547,10 @@ body.show-planes:after {
     color: var(--c-blue-06-main);
 }
 
+.page-section .disclosure-notice:not(:first-child) {
+    margin-top: var(--space3);
+}
+
 .col-2 {
     display: flex;
     flex-flow: row nowrap;
