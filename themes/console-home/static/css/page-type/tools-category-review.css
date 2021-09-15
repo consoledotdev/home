@@ -416,7 +416,7 @@ body:not(.page-tools-category-review):after {
 }
 
 .main-tools-category-review .main-tools-category-review-aside {
-    margin-top: 500px;
+    margin-top: 0;
 }
 
 @media (max-width: 1024px) {
@@ -754,10 +754,6 @@ body:not(.page-tools-category-review):after {
         width: 26vw;
     }
 
-    .main-tools-category-review .main-tools-category-review-aside {
-        margin-top: 510px;
-    }
-
     .main-tools-category-review-content {
         max-width: 760px;
     }
@@ -804,6 +800,10 @@ body:not(.page-tools-category-review):after {
 
     .main-tools-category-review p.small {
         font-size: var(--t-size0);
+    }
+
+    .main-tools-category-review p.x-small {
+        font-size: var(--t-size-1);
     }
 
     .main-tools-category-review-content ul li {

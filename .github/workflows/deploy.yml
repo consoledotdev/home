@@ -30,7 +30,7 @@ jobs:
                           {
                               "command": "getData",
                               "args": {
-                                  "range": "'All Tools'!A:N",
+                                  "range": "'All Tools'!A:O",
                                   "hasHeaderRow": true
                               }
                           }

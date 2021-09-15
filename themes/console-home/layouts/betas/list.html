@@ -26,26 +26,24 @@
 				</a>
 			</p>
 		</div>
+		<!--{{ partial "components/disclosure-notice.html" }}-->
 	</section>
-	<section class="page-section page-section-feature-root">
-		<div class="feature-collapsible-cta">
-			{{ $subscribeData := (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle ) }}
+	<section class="page-section page-section-feature-root inline-cta-wrapper" data-inline-cta-wrapper>
+		<div class="feature-collapsible-cta" data-feature-cta>
+			{{ $subscribeCopyAfter := "Join 10k+ developers" }}
+			{{ $subscribeData := (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "copyAfter" $subscribeCopyAfter ) }}
 			{{ $subscribe := partial "subscribe.html" $subscribeData }}
 			{{ partial "components/box-collapsible.html" (dict "title" $CTATitle "style" "blue" "icon" "expand.html" "content" $subscribe) }}
         </div>
-		<div class="feature-full-cta">
-			{{ partial "subscribe.html" $subscribeData }}
-		</div>
 	</section>
 	<div class="feature-split">
-		<aside id="aside-filters-wrapper" class="feature-aside"></aside>
+		<aside data-aside-wrapper class="feature-aside">
+			<div class="feature-aside-content" data-feature-aside-content></div>
+		</aside>
 		<div class="feature-content-wrapper" data-aside-anchor>
             <section class="page-section inline-filters-wrapper" data-inline-filters-wrapper>
-				{{ $open := "<div class=\"feature-aside-content\" data-feature-aside-content>" }}
 				{{ $filters := partial "components/betas/filters.html" (dict "items" $.Site.Data.betasfilters.items ) }}
-				{{ $close := "</div>" }}
-				{{ $content := printf "%s%s%s" $open $filters $close }}
-				{{ partial "components/box-collapsible.html" (dict "title" "Filter" "icon" "filter.html" "content" $content) }}
+				{{ partial "components/box-collapsible.html" (dict "title" "Filter" "icon" "filter.html" "content" $filters) }}
 			</section>
 			<section class="page-section" data-feature-items-section>
 				<div class="page-section-heading">

@@ -16,6 +16,72 @@ let toggleMenuPopup = (e) => {
     }
 };
 
+let bindTooltips = (() => {
+    let handles = document.querySelectorAll("[data-tooltip-handle]");
+
+    let keepInView = (tooltip, handle, reset) => {
+        if (reset) {
+            tooltip.style.width = null;
+            tooltip.style.left = 0;
+        } else {
+            let offset = handle.getBoundingClientRect();
+            let rect = tooltip.getBoundingClientRect();
+            let w = rect.width;
+            let vW = window.innerWidth || document.documentElement.clientWidth;
+            if (vW * 0.9 < 320) {
+                w = vW * 0.9;
+                tooltip.style.width = w + "px";
+                rect = tooltip.getBoundingClientRect();
+            } else {
+                w = 320;
+                tooltip.style.width = w + "px";
+            }
+            let r = offset.x + w;
+            let rMove = r - vW > 0 ? r - vW : 0;
+            if (rMove) tooltip.style.left = (rMove + vW * 0.05) * -1 + "px";
+        }
+    };
+
+    handles.forEach((handle) => {
+        let parent = handle.parentNode;
+        let tooltip = parent.querySelector("[data-tooltip]");
+        let handleHover = false;
+        let tooltipHover = false;
+
+        let checkVisible = (handleHover, tooltipHover) => {
+            if (handleHover || tooltipHover) {
+                if (!tooltip.classList.contains("is-visible")) {
+                    keepInView(tooltip, handle);
+                    tooltip.classList.add("is-visible");
+                }
+            } else if (!handleHover && !tooltipHover) {
+                if (tooltip.classList.contains("is-visible")) {
+                    tooltip.classList.remove("is-visible");
+                    keepInView(tooltip, handle, true);
+                }
+            }
+        };
+
+        handle.addEventListener("mouseenter", (e) => {
+            handleHover = true;
+            checkVisible(handleHover, tooltipHover);
+        });
+        handle.addEventListener("mouseleave", (e) => {
+            handleHover = false;
+            checkVisible(handleHover, tooltipHover);
+        });
+
+        tooltip.addEventListener("mouseenter", (e) => {
+            tooltipHover = true;
+            checkVisible(handleHover, tooltipHover);
+        });
+        tooltip.addEventListener("mouseleave", (e) => {
+            tooltipHover = false;
+            checkVisible(handleHover, tooltipHover);
+        });
+    });
+})();
+
 let animateLogo = (() => {
     let body = document.querySelector("body");
     if (document.referrer.indexOf(location.host) < 0) {

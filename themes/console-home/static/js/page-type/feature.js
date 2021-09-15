@@ -25,29 +25,75 @@ document.addEventListener("DOMContentLoaded", (event) => {
     })();
 });
 
-let manageFiltersPosition = (() => {
-    let filtersEl = document.querySelector("[data-feature-aside-content]");
-    let asideWrapper = document.getElementById("aside-filters-wrapper");
-    let inlineWrapper = document.querySelector("[data-inline-filters-wrapper]");
-    let inlineWrapperCollapsible = inlineWrapper.querySelector("[data-collapsible-content]");
+let manageAsideContentPosition = (() => {
+    let asideWrapper = document.querySelector("[data-aside-wrapper]");
     let setPos = () => {
         if (window.innerWidth >= 1025) {
             asideWrapper.classList.remove("is-hidden");
-            asideWrapper.appendChild(filtersEl);
-            inlineWrapper.classList.add("is-hidden");
-            filtersEl.classList.add("in-aside");
         } else {
             asideWrapper.classList.add("is-hidden");
-            inlineWrapperCollapsible.appendChild(filtersEl);
-            inlineWrapper.classList.remove("is-hidden");
-            filtersEl.classList.remove("in-aside");
         }
     };
     setPos();
     window.addEventListener("resize", setPos);
+
+    let manageCTAPosition = (() => {
+        let ctaEl = document.querySelector("[data-feature-cta]").querySelector(".subscribe-cta");
+        let asideContentWrapper = document.querySelector("[data-feature-aside-content]");
+        let inlineWrapper = document.querySelector("[data-inline-cta-wrapper]");
+        let inlineWrapperCollapsible = inlineWrapper.querySelector("[data-collapsible-content]");
+        let setPos = () => {
+            let title = ctaEl.querySelector(".title");
+            let input = ctaEl.querySelector(".console-input-text");
+            let button = ctaEl.querySelector(".console-button");
+            if (window.innerWidth >= 1025) {
+                ctaEl.classList.remove("layout-wide", "size-medium");
+                ctaEl.classList.add("layout-small", "size-small", "sidebar");
+                title.classList.remove("title-4");
+                title.classList.add("title-5");
+                input.classList.remove("console-input-medium");
+                input.classList.add("console-input-small");
+                button.classList.remove("console-button-medium");
+                button.classList.add("console-button-small");
+                asideContentWrapper.insertBefore(ctaEl, asideContentWrapper.firstChild);
+                inlineWrapper.classList.add("is-hidden");
+            } else {
+                ctaEl.classList.remove("layout-small", "size-small", "sidebar");
+                ctaEl.classList.add("layout-wide", "size-medium");
+                title.classList.remove("title-5");
+                title.classList.add("title-4");
+                input.classList.remove("console-input-small");
+                input.classList.add("console-input-medium");
+                button.classList.remove("console-button-small");
+                button.classList.add("console-button-medium");
+                inlineWrapperCollapsible.appendChild(ctaEl);
+                inlineWrapper.classList.remove("is-hidden");
+            }
+        };
+        setPos();
+        window.addEventListener("resize", setPos);
+    })();
+
+    let manageFiltersPosition = (() => {
+        let filtersEl = document.querySelector("[data-feature-filters]");
+        let asideContentWrapper = document.querySelector("[data-feature-aside-content]");
+        let inlineWrapper = document.querySelector("[data-inline-filters-wrapper]");
+        let inlineWrapperCollapsible = inlineWrapper.querySelector("[data-collapsible-content]");
+        let setPos = () => {
+            if (window.innerWidth >= 1025) {
+                asideContentWrapper.appendChild(filtersEl);
+                inlineWrapper.classList.add("is-hidden");
+            } else {
+                inlineWrapperCollapsible.appendChild(filtersEl);
+                inlineWrapper.classList.remove("is-hidden");
+            }
+        };
+        setPos();
+        window.addEventListener("resize", setPos);
+    })();
 })();
 
-let computeFixedFiltersPos2 = (() => {
+let computeAsideContentPos = (() => {
     let style = {};
     let compute = function () {
         if (window.scrollY > 0) {
@@ -69,20 +115,12 @@ let computeFixedFiltersPos2 = (() => {
             style.overflow = null;
         }
 
-        let filtersEl = document.querySelector("[data-feature-aside-content]");
-        if (filtersEl.classList.contains("in-aside")) {
-            filtersEl.style.marginTop = style.marginTop;
-            filtersEl.style.top = style.top;
-            filtersEl.style.position = style.position;
-            filtersEl.style.bottom = style.bottom;
-            filtersEl.style.overflow = style.overflow;
-        } else {
-            filtersEl.style.marginTop = null;
-            filtersEl.style.top = null;
-            filtersEl.style.position = null;
-            filtersEl.style.bottom = null;
-            filtersEl.style.overflow = null;
-        }
+        let asideContent = document.querySelector("[data-feature-aside-content]");
+        asideContent.style.marginTop = style.marginTop;
+        asideContent.style.top = style.top;
+        asideContent.style.position = style.position;
+        asideContent.style.bottom = style.bottom;
+        asideContent.style.overflow = style.overflow;
     };
     compute();
     window.addEventListener("scroll", compute);
@@ -113,7 +151,7 @@ let shared = {
 
 let filtering = {
     _getFilters: () => {
-        return document.querySelectorAll('[data-feature-filters] [type="checkbox"]:not([value="select-all"])');
+        return document.querySelectorAll('[data-feature-filters-form] [type="checkbox"]:not([value="select-all"])');
     },
     _getFilterValues: () => {
         let filters = filtering._getFilters();
@@ -126,7 +164,7 @@ let filtering = {
         return activeFilterValues;
     },
     _setToggleAllActionsVisiblity: () => {
-        let parent = document.querySelectorAll("[data-feature-filters]")[0];
+        let parent = document.querySelectorAll("[data-feature-filters-form]")[0];
         let activeFilterValues = filtering._getFilterValues();
         let totalFilters = filtering._getFilters().length;
         parent.classList.remove("is-showing-all");

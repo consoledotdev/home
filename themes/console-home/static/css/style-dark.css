@@ -11,6 +11,8 @@
     --theme-text-4: var(--c-grey-04-whites-neutral);
     --theme-text-5: var(--c-grey-06-blacks-neutral);
     --theme-input-text: var(--c-black-02-main);
+    --theme-brand-accent-text-idle: var(--c-blue-04);
+    --theme-brand-accent-text-hover: var(--c-blue-05);
     --theme-pre-code-text: var(--c-blue-04);
     --theme-cta-text: var(--c-white-00-absolute);
     --theme-cta-secondary-text-idle: var(--c-white-00-absolute);

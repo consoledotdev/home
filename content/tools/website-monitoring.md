@@ -18,6 +18,7 @@ type: tools
 layout: category-review
 isPage: tools
 isSubpage: website-monitoring
+customStyle: true
 pageType: tools-category-review
 customPageStyle: true
 category: devops
