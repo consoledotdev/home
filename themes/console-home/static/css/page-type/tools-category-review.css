@@ -416,7 +416,7 @@ body:not(.page-tools-category-review):after {
 }
 
 .main-tools-category-review .main-tools-category-review-aside {
-    margin-top: 500px;
+    margin-top: 0;
 }
 
 @media (max-width: 1024px) {
@@ -752,10 +752,6 @@ body:not(.page-tools-category-review):after {
 @media (min-width: 1280px) {
     .main-tools-category-review-content-split aside {
         width: 26vw;
-    }
-
-    .main-tools-category-review .main-tools-category-review-aside {
-        margin-top: 510px;
     }
 
     .main-tools-category-review-content {
