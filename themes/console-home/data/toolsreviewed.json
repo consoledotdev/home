@@ -128,7 +128,7 @@
             "What we dislike": "No custom theme support for the web UI. Can\u2019t search issue trackers.",
             "Interview": "/interviews/sourcegraph-beyang-liu/",
             "Sponsored": "TRUE",
-            "favicon": "img/favicons/sourcegraph.com.ico",
+            "favicon": "img/favicons/sourcegraph.com.png",
             "Top Category": "Developer Tools",
             "Sub Category": "Code collaboration",
             "Filter Taxonomy": "developer-tools, other"
@@ -147,7 +147,7 @@
             "What we dislike": "Can\u2019t automate a chain of requests - have to manually set up each request. Can\u2019t support cookie headers due to browser security limitations.",
             "Interview": "",
             "Sponsored": "FALSE",
-            "favicon": "img/favicons/hoppscotch.io.png",
+            "favicon": "img/favicons/hoppscotch.io.jpg",
             "Top Category": "Developer Tools",
             "Sub Category": "Code collaboration",
             "Filter Taxonomy": "developer-tools, open-source"

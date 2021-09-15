@@ -64,7 +64,7 @@
             "Beta ended": "",
             "GA URL": "",
             "Last checked": "2021-09-15",
-            "favicon": "img/favicons/www.cloudflare.com.png",
+            "favicon": "img/favicons/www.cloudflare.com.jpg",
             "Top Category": "Cloud",
             "Weekly Pick": false,
             "Filter Taxonomy": "cloud, saas, weekly-pick"
@@ -87,7 +87,7 @@
             "Beta ended": "",
             "GA URL": "",
             "Last checked": "2021-09-15",
-            "favicon": "img/favicons/datasette.io.ico",
+            "favicon": "img/favicons/datasette.io.png",
             "Top Category": "Data Science",
             "Weekly Pick": true,
             "Filter Taxonomy": "data-science, desktop, weekly-pick"
