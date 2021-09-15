@@ -201,9 +201,7 @@ p.tool-card-description {
             padding-left: var(--space3_5);
             padding-right: var(--space3_5);
         }
-    }
 
-    @media (max-width: 560px) {
         .tool-card .bottom .details {
             flex-flow: column nowrap;
             align-items: flex-start;
