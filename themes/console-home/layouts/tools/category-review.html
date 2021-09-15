@@ -10,7 +10,7 @@
         </script>
         
         <h2 class="title title-1">
-            {{ partial "icons/devops-slanted.html" }}
+            {{ partial (print "icons/" .Params.category "-slanted.html" ) }}
             {{ .Params.titlePrefix }} <span>{{ .Params.titleCategory }}</span> {{ .Params.titleSuffix }}
         </h2>
         <div class="page-meta">

@@ -231,6 +231,12 @@ team made fun of me, and called me a dinosaur, so I adopted
 
 ### Describe your desk setup
 
+{{< img-center
+src="/img/interviews/retool-snir-kodesh-desk.jpg"
+alt="The desk of Snir Kodesh, Retool"
+width="100%"
+>}}
+
 I just got a sit-stand desk. For two decades, I was using the same IKEA sheet of
 glass held by two planks, so I got a grown-up desk for a change. That's about
 it.
