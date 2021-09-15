@@ -55,13 +55,13 @@
 			<div class="details">
 				<div class="left">
 					<span class="date">Reviewed: {{ $showDate }}</span>
-					{{ with .Sponsored -}}
+					{{ if eq .Sponsored "TRUE" -}}
 						<div class="item-disclosure">
 							<div class="item-disclosure-indicator" data-tooltip-handle>✦ Sponsored</div>
 							<div class="tooltip-hook tooltip-top-down tooltip-small">
 								<div data-tooltip class="tooltip">
 									<div class="tooltip-content">
-										<p class="x-small">We don’t take payment for inclusion. We work with some vendors to provide higher visibility to their tools.</p>
+										<p class="x-small">All reviews are editorially independent. Where indicated, we work with some partners to provide extras to our audience, but do not accept payment for reviews.</p>
 									</div>
 								</div>
 							</div>
