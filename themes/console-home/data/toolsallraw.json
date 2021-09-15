@@ -5,7 +5,7 @@
                 "func": "getData",
                 "kwargs": [
                     {
-                        "range": "'All Tools'!A:N",
+                        "range": "'All Tools'!A:O",
                         "hasHeaderRow": true
                     },
                     null
@@ -13,6 +13,210 @@
             },
             "result": {
                 "rawData": [
+                    [
+                        "Slim.AI",
+                        "Slim.AI",
+                        "2021-09-15",
+                        "2021-09-16",
+                        "https://slim.ai",
+                        "DevOps - Containers",
+                        "SaaS",
+                        "Container analysis and comparison.",
+                        "34",
+                        "Quickly examine or search the full contents of any container - files, layers, Dockerfile. Visual diff of file system, image metadata, and Dockerfile between container versions makes it easy to see what has changed. Examine popular public images and connect private registries (Docker Hub, GCR, AWS ECR).",
+                        "303",
+                        "Does not yet support GitHub Container Registry. Would like to see saved searches or suggested alerts to monitor for common issues with new versions.",
+                        "148",
+                        "/interviews/slimai-john-amaral/",
+                        "TRUE"
+                    ],
+                    [
+                        "Oso",
+                        "Oso",
+                        "2021-09-15",
+                        "2021-09-16",
+                        "https://www.osohq.com",
+                        "Security - Authentication",
+                        "Open Source",
+                        "Declarative application authorization framework.",
+                        "48",
+                        "Methods for enforcement at request and field level. Relations allow hierarchical access control. Data filtering converts policy expressions into DB query plans to efficiently retrieve only the data that matches the filter. Generic policy language is evaluated locally by language-SDKs (NodeJS, Java, Python, Ruby, Go, Rust).",
+                        "324",
+                        "Provides the hooks for framework / ORE integrations but you still need to build them. Currently focused on backend auth - anything frontend you need to figure out yourself.",
+                        "172",
+                        "/interviews/oso-sam-scott/",
+                        "TRUE"
+                    ],
+                    [
+                        "Cue",
+                        "Cue",
+                        "2021-09-08",
+                        "2021-09-09",
+                        "https://cuelang.org/",
+                        "Developer Tools - Testing frameworks",
+                        "Open Source",
+                        "Data validation language.",
+                        "25",
+                        "Helps validate files, APIs and configs e.g. k8s files. Definitions start broad e.g. types then narrow down e.g. values, so it is easy to get started, but still supports specific validations. Language is a JSON superset. Supports comments (unlike JSON!). Can extract existing definitions from Go and Protobufs.",
+                        "309",
+                        "Documentation explains the concepts well but is missing a “from zero” getting started tutorial (the k8s tutorial is good, though).",
+                        "130",
+                        "",
+                        "FALSE"
+                    ],
+                    [
+                        "Leapp",
+                        "Leapp",
+                        "2021-09-08",
+                        "2021-09-09",
+                        "https://www.leapp.cloud/",
+                        "Security - Authentication",
+                        "Desktop",
+                        "Manage cloud access credentials.",
+                        "32",
+                        "Stores access credentials in native OS storage e.g. Windows Credential Vault, macOS Keychain. Easy to switch between credentials e.g. AWS IAM, Azure User. Session credentials are temporary, minimizing risk of leaks and making them easy to rotate. Open source.",
+                        "259",
+                        "Only supports AWS and Azure. No U2F support. Supports some federated identity providers e.g. Okta, GSuite, AWS SSO, but only to AWS and Azure.",
+                        "142",
+                        "",
+                        "FALSE"
+                    ],
+                    [
+                        "Tyk",
+                        "Tyk",
+                        "2021-09-01",
+                        "2021-09-02",
+                        "https://tyk.io/",
+                        "DevOps - API Management",
+                        "Open Source",
+                        "API gateway.",
+                        "12",
+                        "Supports all API protocols (REST, GraphQL, TCP, gRPC). Handles API versioning and deprecation. Hot-reload without dropping requests. Minimal dependencies (Redis for distributed rate limits and tokens). Drop-in products for developer portal + docs, analytics, social auth, management dashboard. Open source or cloud options.",
+                        "323",
+                        "Architecture gets complex once you start to add the extra components, which are also not open source. Historical performance issues in older versions due to overhead of some features enabled by default (reportedly now fixed).",
+                        "225",
+                        "",
+                        "FALSE"
+                    ],
+                    [
+                        "DeepSource",
+                        "DeepSource",
+                        "2021-09-01",
+                        "2021-09-02",
+                        "https://deepsource.io/",
+                        "Developer Tools - Source control",
+                        "SaaS",
+                        "Automated code reviews.",
+                        "23",
+                        "Catches common issues which can either be fixed as part of a PR and/or blocked by CI. Can open “Autofix” PRs for code issues as well as linting errors. Examines docs and code coverage and reports metrics for both. Image badges for readme files. Can configure analysis via a config file in the repo or via the UI. Self-hosted version available.",
+                        "343",
+                        "Doesn’t explain “why?” you should make the suggested changes or follow its rules - good to fix errors but better to understand how to avoid them in the future. Autofix can’t solve everything (yet?).",
+                        "198",
+                        "",
+                        "FALSE"
+                    ],
+                    [
+                        "Fission",
+                        "Fission",
+                        "2021-08-25",
+                        "2021-08-26",
+                        "https://fission.codes/",
+                        "Developer Tools - Backend framework",
+                        "Open Source",
+                        "Decentralized app backend for storage and identity.",
+                        "51",
+                        "Abstracts auth and storage so you can use P2P decentralized tech like IPFS without worrying about the underlying protocol. Web Native File System works across platforms and has a POSIX-style interface. Supports storage/execution of WebAssembly modules which are then available on every platform. Open source.",
+                        "308",
+                        "Auth tokens live in browser storage so you could lose access if you clear the data. Risky to rely on such an early new backend tech that is not yet standardized and built by a new startup (everything is open source so you can run it yourself).",
+                        "243",
+                        "/interviews/fission-brooklyn-zelenka/",
+                        "FALSE"
+                    ],
+                    [
+                        "AskGit",
+                        "AskGit",
+                        "2021-08-25",
+                        "2021-08-26",
+                        "https://github.com/askgitdev/askgit",
+                        "Developer Tools - Git tools",
+                        "Open Source",
+                        "Query git repos with SQL.",
+                        "25",
+                        "Web demo allows you to query any public repo (+ GitHub issues), or download the CLI. Can do complex queries like commits by email domain, most frequently changed files, filter by branch. Supports querying GitHub API e.g. query stars, repo language stats, issues/PRs. Outputs as an ASCII table, JSON, CSV or SQLite file for other tools to query the results.",
+                        "356",
+                        "Queries can be slow - several seconds. Read-only queries. Only integrated with GitHub Issues (for now).",
+                        "103",
+                        "",
+                        "FALSE"
+                    ],
+                    [
+                        "Sourcegraph",
+                        "Sourcegraph",
+                        "2021-08-18",
+                        "2021-08-19",
+                        "https://sourcegraph.com/search",
+                        "Developer Tools - Code collaboration",
+                        "Other",
+                        "Code search engine.",
+                        "19",
+                        "Code structure search on syntax e.g. function arguments, multi-line blocks, JSON structures. Can scope to repos (public / private), commit diffs/dates, languages. Option for self-hosted indexer for private code. Browser & IDE extensions for quick search and overlay on top of existing tools e.g. GitHub/GitLab PRs. CLI or web UI (with dark mode).",
+                        "346",
+                        "No custom theme support for the web UI. Can’t search issue trackers.",
+                        "68",
+                        "/interviews/sourcegraph-beyang-liu/",
+                        "TRUE"
+                    ],
+                    [
+                        "Hoppscotch",
+                        "Hoppscotch",
+                        "2021-08-18",
+                        "2021-08-19",
+                        "https://hoppscotch.io/",
+                        "Developer Tools - Code collaboration",
+                        "Open Source",
+                        "Test UI for API requests.",
+                        "25",
+                        "Build & execute HTTP, GraphQL & WebSocket requests. Syntax highlighted response parsing. Generate code to execute requests via curl, Go, Python, and other languages. Save config to local storage or GitHub Gist. Also available as a Chrome or Firefox extension. CLI in beta. Open source.",
+                        "285",
+                        "Can’t automate a chain of requests - have to manually set up each request. Can’t support cookie headers due to browser security limitations.",
+                        "140",
+                        "",
+                        "FALSE"
+                    ],
+                    [
+                        "Appsmith",
+                        "Appsmith",
+                        "2021-08-11",
+                        "2021-08-12",
+                        "https://www.appsmith.com/",
+                        "Developer Tools - UI Builder",
+                        "Open Source",
+                        "Open source internal tool builder.",
+                        "34",
+                        "Quickly build interfaces to existing databases. Proxies queries to the data source so results are not stored. Easy form construction with validation and data binding. Can use JS to write data transformations (both read and write). If the GUI concepts are too restrictive, you can always fall back to JS to customize widgets. Open source so you can host it all inside your own network.",
+                        "384",
+                        "No user collaboration in the UI editor so others editing the same project can overwrite each other. Your UI config is stored inside Appsmith’s database (MongoDB) so you can’t use version control (can be exported to JSON).",
+                        "221",
+                        "/interviews/appsmith-arpit-mohan/",
+                        "FALSE"
+                    ],
+                    [
+                        "Retool",
+                        "Retool",
+                        "2021-08-11",
+                        "2021-08-12",
+                        "https://retool.com/",
+                        "Developer Tools - UI Builder",
+                        "SaaS",
+                        "Internal tool builder.",
+                        "22",
+                        "Supports staging / non-staging environments. Datasources can be databases like MySQL and Postgres or APIs like Stripe, S3 or GraphQL. Can query all sources with SQL even if they aren’t databases. Everything is a JS object you can manipulate. You can build your own custom React components. Can configure your own Redis/Memcached cache.",
+                        "335",
+                        "Not open source, but there is a self-hosted option. Ability to sync to Git is enterprise-only. Doesn’t support complex logic e.g. multiple API calls.",
+                        "149",
+                        "/interviews/retool-snir-kodesh/",
+                        "FALSE"
+                    ],
                     [
                         "Snyk",
                         "Snyk Open Source",
@@ -27,7 +231,8 @@
                         "360",
                         "Showing vulnerabilities in dependency dependencies is interesting, but what are you going to do about them? CLI to apply fixes still in beta (Python only).",
                         "155",
-                        ""
+                        "/interviews/snyk-guy-podjarny/",
+                        "FALSE"
                     ],
                     [
                         "OSSF",
@@ -43,7 +248,8 @@
                         "340",
                         "Some assessment criteria (such as looking for commits from >1 GitHub organizations) may be onerous for small, one-person projects. No easy way to integrate into CI/CD yet (on the roadmap).",
                         "188",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Liveblocks",
@@ -59,7 +265,8 @@
                         "333",
                         "Assumes you’re building with web technologies i.e. JS. No mobile support. Still requires implementing authentication. Classic build vs buy - is it a good use of your time to try and build this?",
                         "193",
-                        "/interviews/liveblocks-guillaume-salles/"
+                        "/interviews/liveblocks-guillaume-salles/",
+                        "TRUE"
                     ],
                     [
                         "Livekit",
@@ -75,7 +282,8 @@
                         "346",
                         "Still need to set up SSL + load balancers. Using a server component defeats the idea of P2P. Your code still needs to deal with issuing access tokens to each participant. Simulcasting only works in the browser/JS SDK.",
                         "217",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Polypane",
@@ -91,7 +299,8 @@
                         "348",
                         "Signup/license key process is a bit fiddly. Quite CPU intensive. You need a very big screen to see all the windows properly.",
                         "124",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "automerge",
@@ -107,7 +316,8 @@
                         "328",
                         "Documents are not actually immutable by default - you just code as if they are. Enforcing this can be turned on but has a major performance hit. Implementation is only in JS but versions in Rust, Swift, Python in various stages of development.\n",
                         "244",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Tuple",
@@ -123,7 +333,8 @@
                         "344",
                         "Really needs a high quality connection otherwise you can’t reach the higher resolutions and the mouse/keyboard sharing is laggy. macOS only - Linux client on the roadmap for 2021.",
                         "179",
-                        "/interviews/tuple-ben-orenstein/"
+                        "/interviews/tuple-ben-orenstein/",
+                        "FALSE"
                     ],
                     [
                         "GitHub",
@@ -139,7 +350,8 @@
                         "334",
                         "Not clear if it’s thinking or not - sometimes you wait for nothing to happen. Licensing questions remain unanswered - is the code a derivative of copyrighted material? Doesn’t understand project context.",
                         "203",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Hashicorp",
@@ -155,7 +367,8 @@
                         "312",
                         "Assumes your app is containerized. Need to run / maintain your own Waypoint server - still early so not entirely prod-ready. Preview URLs are public so you must set up authorization or disable them (self-hosting URL service is an option, but complex).",
                         "251",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Zellij",
@@ -171,7 +384,8 @@
                         "345",
                         "Colors not inherited from existing shell config. Docs are still very limited. Some core shortcuts used by other tools e.g. Ctrl + r in bash (use Zellij lock mode to pass these through). Slightly laggy over remote connections (compared to tmux).",
                         "244",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Prestige",
@@ -187,7 +401,8 @@
                         "337",
                         "Requests run through a proxy rather than your browser (due to CORS), but localhost URLs are routed directly. No support for OAuth APIs.",
                         "135",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "chezmoi",
@@ -203,7 +418,8 @@
                         "355",
                         "You can edit files directly but using the edit flow ensures changes/conflicts are handled properly, which may require retraining muscle memory. Doesn’t handle git subdirectories e.g. Oh My Zsh particularly well (better to use a script to install outside of chezmoi).",
                         "266",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "IPInfo",
@@ -219,7 +435,8 @@
                         "256",
                         "Responses not cached. Available via Homebrew on Mac but not Linux or Windows package managers. No man pages.",
                         "108",
-                        ""
+                        "",
+                        "TRUE"
                     ],
                     [
                         "gitui",
@@ -235,7 +452,8 @@
                         "371",
                         "No log search or file history log and does not yet support bare repos (all on the roadmap).",
                         "91",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "GitLive",
@@ -251,7 +469,8 @@
                         "318",
                         "Requires everyone to use GitLive and one of the supported editors. Uploads code diffs (not the full source) to GitLive servers while changes are uncommitted, deleted once pushed.",
                         "178",
-                        "/interviews/gitlive-nick-bransby-williams/"
+                        "/interviews/gitlive-nick-bransby-williams/",
+                        "FALSE"
                     ],
                     [
                         "Runops",
@@ -267,7 +486,8 @@
                         "362",
                         "Cloud version requires public access to resources e.g. database connection URL, and doesn’t support IP allowlists - self-hosted runner allows private network access. Reliant on Slack for approvals, team management, etc.",
                         "219",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Filippo Valsorda",
@@ -283,7 +503,8 @@
                         "295",
                         "You still need to configure your server to use the certs. GitHub binaries built with a slightly older version of Go (1.13) so no Apple Silicon support - use the homebrew version which does have Apple Silicon binaries.",
                         "217",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Openbase",
@@ -299,7 +520,8 @@
                         "236",
                         "Only supports searching JS packages - leaderboards available for Python, Rust, Go, Swift and Java libraries. Some criteria are more subjective than others e.g. are frequent commits good or bad?",
                         "193",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "gitmoji-cli",
@@ -315,7 +537,8 @@
                         "249",
                         "By default only renders on GitHub, but you can configure it to use actual emoji characters. Some may consider this polluting the git log, especially if you write your commits properly and use git shortlog in your release notes.",
                         "227",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Xonsh",
@@ -331,7 +554,8 @@
                         "228",
                         "Small community of extensions. Not bash compatible, so you have to relearn some syntax. Incompatible with Python virtual environments (has its own replacement called vox).",
                         "171",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Big Sky Software",
@@ -347,7 +571,8 @@
                         "247",
                         "Injecting remote responses is a potential security issue: JS can still be executed even with a restrictive CSP, and user-generated content must be escaped. Execution must be denied within specific areas of the DOM. Violates separation of concerns principle.\n",
                         "258",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Semgrep",
@@ -363,7 +588,8 @@
                         "346",
                         "Experimental support for C, Rust, PHP, Lua, C#, Kotlin. No Windows support.",
                         "75",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "QuestDB",
@@ -379,7 +605,8 @@
                         "307",
                         "No built-in replication/clustering. Partitioning is only supported by timestamp (day, month, year) which means you tradeoff easier retention policies and faster calculations/seek times with the potential for hotspots if reads are mostly on recent data.",
                         "252",
-                        "/interviews/questdb-vlad-ilyushchenko/"
+                        "/interviews/questdb-vlad-ilyushchenko/",
+                        "FALSE"
                     ],
                     [
                         "atuin",
@@ -395,7 +622,8 @@
                         "250",
                         "Can’t delete entries from history. Default rebind on up-key takes some getting used to, or disable it in config. Only supports zsh and bash.",
                         "140",
-                        "/interviews/atuin-ellie-huxtable/"
+                        "/interviews/atuin-ellie-huxtable/",
+                        "FALSE"
                     ],
                     [
                         "Deepnote",
@@ -411,7 +639,8 @@
                         "264",
                         "Visualizations are custom HTML embeds when exported to Jupyter notebook format - better to embed something like Plotly in code to ensure portability.",
                         "149",
-                        "/interviews/deepnote-jan-matas/"
+                        "/interviews/deepnote-jan-matas/",
+                        "FALSE"
                     ],
                     [
                         "Skruv",
@@ -427,7 +656,8 @@
                         "213",
                         "No router. Great for very simple SPAs, but something like Mithril.js (or Vue. Or Svelte) probably needed for anything of significance (if you don’t mind the build step).",
                         "169",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Hookdeck",
@@ -443,7 +673,8 @@
                         "294",
                         "Assumes your webhook destinations are idempotent with “at least once” delivery. No support for signature verification - will forward all requests (you can configure schema filters), so you need to implement this yourself. No support for custom webhook URL domains.",
                         "264",
-                        "/interviews/hookdeck-alex-bouchard/"
+                        "/interviews/hookdeck-alex-bouchard/",
+                        "FALSE"
                     ],
                     [
                         "act",
@@ -459,7 +690,8 @@
                         "265",
                         "Only supports Linux runners (host is multi-platform). Full Docker images are quite large (>20GB), but you can try slimmer images with fewer bundled tools.",
                         "154",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "fselect",
@@ -475,7 +707,8 @@
                         "285",
                         "Requires the absolute path (~/path doesn’t work), or searches current working directory if no path provided. Be careful to use quotes if you use shell characters such as >",
                         "171",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Gruntwork",
@@ -491,7 +724,8 @@
                         "301",
                         "Only supports GitHub PRs, but can push remote branches. Releases only available as binaries, no packages (you can use go get). Sometimes scripting these things actually takes longer than doing it manually.",
                         "205",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "KeyDB",
@@ -507,7 +741,8 @@
                         "274",
                         "Runs the normal Redis event loop on multiple threads which requires locking (low contention, but work ongoing to improve). Expects exclusive use of assigned CPU cores.",
                         "167",
-                        "/interviews/keydb-john-sully/"
+                        "/interviews/keydb-john-sully/",
+                        "FALSE"
                     ],
                     [
                         "Ranga Vadhineni",
@@ -523,7 +758,8 @@
                         "280",
                         "All local - no config sync or dynamic loading from config files, but configs can be exported and imported.",
                         "106",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Retool",
@@ -539,7 +775,8 @@
                         "200",
                         "Limited to 150 rows. Hosted by a third party, so don’t send anything sensitive. Deleted after 30 days of inactivity.",
                         "116",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Nelson Elhage",
@@ -555,7 +792,8 @@
                         "238",
                         "Lambda is CPU and memory constrained, and the network is a bottleneck, so use cases are constrained to where parallelization makes a big difference (or there is a benefit to freeing local resources).",
                         "199",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Typesense",
@@ -571,7 +809,8 @@
                         "268",
                         "Need to build your own index updater mechanism to process new data. API-only means you need to build your own UI/admin. Only supports Latin-based languages.",
                         "156",
-                        "/interviews/typesense-jason-bosco/"
+                        "/interviews/typesense-jason-bosco/",
+                        "FALSE"
                     ],
                     [
                         "Svix",
@@ -587,7 +826,8 @@
                         "187",
                         "You need to send your events to Diahook, which means you still need to ensure they get there (retries, debugging, etc).",
                         "119",
-                        "/interviews/svix-tom-hacohen/"
+                        "/interviews/svix-tom-hacohen/",
+                        "FALSE"
                     ],
                     [
                         "Temporal",
@@ -603,7 +843,8 @@
                         "302",
                         "SDKs are still being built out (currently available for Go, Java, PHP, Ruby). You still need to run / scale your own database (Cassandra, MySQL, or PostgreSQL). ",
                         "161",
-                        "/interviews/temporal-manu-srivastava/"
+                        "/interviews/temporal-manu-srivastava/",
+                        "FALSE"
                     ],
                     [
                         "Mirage JS",
@@ -619,7 +860,8 @@
                         "266",
                         "Only supports REST APIs out of the box - GraphQL available as an optional plugin (still in development). Runs in the browser, not as a server, so it cannot be used to mock server-side APIs.",
                         "189",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "git-plan",
@@ -635,7 +877,8 @@
                         "296",
                         "Unintuitive to begin with, but makes sense once you try it (see blog posts linked in the project readme for guidance). Interactive rebasing is an alternative that doesn’t force you to reverse your workflow.",
                         "206",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "WayScript",
@@ -651,7 +894,8 @@
                         "330",
                         "Can be slow to execute (many seconds) especially with lots of steps. Have to use their browser editor - can’t develop and run code locally (this is on the roadmap).",
                         "164",
-                        "/interviews/wayscript-jesse-orshan/"
+                        "/interviews/wayscript-jesse-orshan/",
+                        "FALSE"
                     ],
                     [
                         "Buddy",
@@ -667,7 +911,8 @@
                         "285",
                         "Ecosystem of official build actions is small relative to GitHub Actions. UI is sometimes confusing due to the number of config options.",
                         "135",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "ORY",
@@ -683,7 +928,8 @@
                         "316",
                         "Focus on APIs means there is no admin UI. Federation (OAuth2, OpenID) requires a separate project (ORY Hydra). \"Scale horizontally\" still means you need to scale your own RDBMS. Pre-1.0, targeting \"stable\" in 2022.",
                         "214",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Chris Walz",
@@ -699,7 +945,8 @@
                         "232",
                         "Not what you might expect from a cli: you run the bit command, then it suggests subcommands and flags, rather than tab completion. Official OS packages missing on Linux.",
                         "169",
-                        "/interviews/bit-chris-walz/"
+                        "/interviews/bit-chris-walz/",
+                        "FALSE"
                     ],
                     [
                         "Bird Eats Bug",
@@ -715,7 +962,8 @@
                         "196",
                         "Chrome only (works on Microsoft Edge). More integrations needed.",
                         "64",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Earthly",
@@ -731,7 +979,8 @@
                         "280",
                         "Assumes you are building an already containerized application. Multi-platform builds are experimental.",
                         "102",
-                        "/interviews/earthly-adam-gordon-bell/"
+                        "/interviews/earthly-adam-gordon-bell/",
+                        "FALSE"
                     ],
                     [
                         "Microsoft",
@@ -747,7 +996,8 @@
                         "269",
                         "Only supports latest browser versions - can’t pick older versions to test against. Browser binaries are quite large so may slow down CI/CD (cache is configurable).",
                         "163",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Stoplight",
@@ -763,7 +1013,8 @@
                         "230",
                         "Limited ability to customize doc output to fit into your own design/brand. Some editor/docs UI bugs in Firefox. It does work without using OpenAPI specs, but most features assume you do.",
                         "186",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Raycast",
@@ -779,7 +1030,8 @@
                         "262",
                         "macOS only. Shortcuts for sub-commands are difficult to find. File search requires scoping rather than searching everywhere.",
                         "124",
-                        "/interviews/raycast-petr-nikolaev/"
+                        "/interviews/raycast-petr-nikolaev/",
+                        "FALSE"
                     ],
                     [
                         "DBCLI",
@@ -795,7 +1047,8 @@
                         "190",
                         "Only available via pip or brew - official OS packages would make installation easier to integrate with native package management. Installation on Windows is a hassle due to needing Python. Large results don't line-wrap well.",
                         "224",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Accurics",
@@ -811,23 +1064,8 @@
                         "239",
                         "Docs need work: quickstart didn't work smoothly and default policies are not well explained. Explanations of how to rectify policy violations would help.",
                         "153",
-                        ""
-                    ],
-                    [
-                        "Oso",
-                        "Oso",
-                        "2021-02-15",
-                        "2021-02-18",
-                        "https://www.osohq.com/",
-                        "Security - Authentication",
-                        "Open Source",
-                        "A system for building application authorization.",
-                        "48",
-                        "Flexible, declarative language for describing simple or complex access control rules in code. Easy to test policies. Native libraries for NodeJS, Java, Python, Ruby, Go, Rust. Useful tooling: debugger, tracer, and VS Code integration.",
-                        "234",
-                        "Focused only on authorization, so you need to build your own authentication (signup, login, forgot password, etc).",
-                        "114",
-                        "/interviews/oso-sam-scott/"
+                        "",
+                        "FALSE"
                     ],
                     [
                         "GitPod",
@@ -843,7 +1081,8 @@
                         "462",
                         "Limited IDE support - VS Code or Theia (based on VS Code) means you have to code in the browser so you can't use your own IDE/editor (support for other IDEs in development). Requires you to be online with good connectivity because everything is remote.",
                         "252",
-                        "/interviews/gitpod-christian-weichel/"
+                        "/interviews/gitpod-christian-weichel/",
+                        "FALSE"
                     ],
                     [
                         "asdf",
@@ -859,7 +1098,8 @@
                         "391",
                         "Language support is via community plugins so quality is variable. Windows support still in development.",
                         "103",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "StackHawk",
@@ -867,7 +1107,7 @@
                         "2021-02-05",
                         "2021-02-11",
                         "https://www.stackhawk.com/",
-                        "Developer Tools - Dependency management",
+                        "Security - Vulnerability management",
                         "SaaS",
                         "Black box security scanning for developers.",
                         "43",
@@ -875,7 +1115,8 @@
                         "452",
                         "Assumes you know about OWASP and how to resolve highlighted issues. The nature of black box testing means some OWASP issues are false positives and are not comprehensive e.g. no detection of dependency vulnerabilities. Large example app takes >25min to scan (although our own simple app took <1 min).",
                         "300",
-                        "/interviews/stackhawk-scott-gerlach/"
+                        "/interviews/stackhawk-scott-gerlach/",
+                        "FALSE"
                     ],
                     [
                         "Opstrace",
@@ -891,7 +1132,8 @@
                         "365",
                         "Installation and cluster management are the main differentiator - otherwise it's just packaging open source projects. API uses an Opstrace managed endpoint - custom domains supported only in the commercial version which is hidden behind \"contact us\". If you already have Prometheus, you could just set up Cortex yourself. Only supports AWS and GCP. No Windows support.",
                         "368",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Nushell",
@@ -907,7 +1149,8 @@
                         "345",
                         "Although it can be run as a command, it is designed to replace your existing shell. It is still in development so may not be stable. You will have to reconfigure everything if you have heavily customized your shell.",
                         "215",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "EteSync",
@@ -923,7 +1166,8 @@
                         "301",
                         "A cloud service by default but you can run their open source server component. No pricing yet for the commercial cloud version. Large files not supported (on the roadmap). Local cache but no offline storage.",
                         "207",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Infracost",
@@ -939,7 +1183,8 @@
                         "128",
                         "Uses a Cloud Pricing API provided (for free) by the Infracost project so it requires sending data to it (you can self-host). May be out of date. Only supports AWS and Google Cloud. Other cloud vendors planned.",
                         "209",
-                        "/interviews/infracost-ali-khajeh-hosseini/"
+                        "/interviews/infracost-ali-khajeh-hosseini/",
+                        "FALSE"
                     ],
                     [
                         "LocalStack",
@@ -955,7 +1200,8 @@
                         "211",
                         "Some APIs require the paid version e.g. CloudFront, Cognito, ElastiCache, Glacier, RDS. Not built by AWS so will always lag behind the real thing. Good for dev but testing probably better done against the actual APIs.",
                         "217",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "rsync.net",
@@ -971,7 +1217,8 @@
                         "353",
                         "This is truly a filesystem over SSH so you need to know your way around the command line. Documentation is limited and the account manager UI is dated. No support for scheduling execution so you need to handle that yourself e.g. cron, systemd.",
                         "243",
-                        "/interviews/rsync-john-kozubik/"
+                        "/interviews/rsync-john-kozubik/",
+                        "FALSE"
                     ],
                     [
                         "laktak",
@@ -987,7 +1234,8 @@
                         "268",
                         "tmux beta release is required for popups, otherwise this currently uses a new split window.",
                         "91",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Seed",
@@ -1003,7 +1251,8 @@
                         "370",
                         "Only supports AWS Serverless i.e. Lambda, so unless you are 100% Lambda then this will be a separate CD pipeline to manage. Doesn't support other tech like containers, or other platforms like Azure/Google. Those with just a few, simple Lambdas may find it overkill.",
                         "265",
-                        "/interviews/seed-jay-v/"
+                        "/interviews/seed-jay-v/",
+                        "FALSE"
                     ],
                     [
                         "Brave",
@@ -1019,7 +1268,8 @@
                         "382",
                         "Brave is still a niche browser, and IPFS is still very early. How much content is hosted on it? Site owners need to upload (pin) their content to IPFS, which isn't necessarily straightforward. Still requires the use of ipfs:// URLs, although DNSLink support for using DNS TXT records is planned.",
                         "295",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "Yifan Gu",
@@ -1035,7 +1285,8 @@
                         "230",
                         "Obviously macOS-only. Only basic functionality for using VMs (probably fine for developers).",
                         "92",
-                        "/interviews/vmcli-yifan-gu/"
+                        "/interviews/vmcli-yifan-gu/",
+                        "FALSE"
                     ],
                     [
                         "Vantage",
@@ -1051,7 +1302,8 @@
                         "387",
                         "Does not support all AWS products, currently focused on a few key resources e.g. EC2 instances, VPC Subnets, Route53, etc. Currently read-only, which is good for security and because it's a new tool - plans to add more management features in the future. Also AWS-only, but they are working on other cloud providers.",
                         "315",
-                        "/interviews/vantage-ben-schaechter/"
+                        "/interviews/vantage-ben-schaechter/",
+                        "FALSE"
                     ],
                     [
                         "Skynet",
@@ -1067,7 +1319,8 @@
                         "217",
                         "Time to first byte 300-500ms may be prohibitatively slow for some use cases. Streaming \"up to 1Gbps\" but what does \"up to\" really mean? Files must be public. Why call it \"Skynet\"?!",
                         "180",
-                        ""
+                        "",
+                        "FALSE"
                     ],
                     [
                         "James Little",
@@ -1083,7 +1336,8 @@
                         "167",
                         "Index must be generated manually. It is specifically designed for static sites, so it would need to be hooked into a build process. Would need extra work if you wanted to index a dynamic site.",
                         "192",
-                        "/interviews/stork-search-james-little/"
+                        "/interviews/stork-search-james-little/",
+                        "FALSE"
                     ],
                     [
                         "Starship",
@@ -1099,7 +1353,8 @@
                         "193",
                         "Another layer on your shell to mess around with. If you use ZSH then Oh My ZSH already does a lot of this, and has lots of good ZSH tweaks.",
                         "139",
-                        "/interviews/starship-matan-kushner/"
+                        "/interviews/starship-matan-kushner/",
+                        "FALSE"
                     ],
                     [
                         "Wasmer",
@@ -1115,10 +1370,191 @@
                         "256",
                         "The use cases seem limited to untrusted, shared code. If you need cross-platform, native binaries with good performance then why not just use a compiled language like Go or Rust in the first place?",
                         "197",
-                        ""
+                        "",
+                        "FALSE"
                     ]
                 ],
                 "formatted": [
+                    {
+                        "Company/Org": "Slim.AI",
+                        "Tool/Product/Project": "Slim.AI",
+                        "Reviewed": "2021-09-15",
+                        "Scheduled for": "2021-09-16",
+                        "URL": "https://slim.ai",
+                        "Category": "DevOps - Containers",
+                        "Type": "SaaS",
+                        "What is it?": "Container analysis and comparison.",
+                        "Len": "148",
+                        "What we like": "Quickly examine or search the full contents of any container - files, layers, Dockerfile. Visual diff of file system, image metadata, and Dockerfile between container versions makes it easy to see what has changed. Examine popular public images and connect private registries (Docker Hub, GCR, AWS ECR).",
+                        "What we dislike": "Does not yet support GitHub Container Registry. Would like to see saved searches or suggested alerts to monitor for common issues with new versions.",
+                        "Interview": "/interviews/slimai-john-amaral/",
+                        "Sponsored": "TRUE"
+                    },
+                    {
+                        "Company/Org": "Oso",
+                        "Tool/Product/Project": "Oso",
+                        "Reviewed": "2021-09-15",
+                        "Scheduled for": "2021-09-16",
+                        "URL": "https://www.osohq.com",
+                        "Category": "Security - Authentication",
+                        "Type": "Open Source",
+                        "What is it?": "Declarative application authorization framework.",
+                        "Len": "172",
+                        "What we like": "Methods for enforcement at request and field level. Relations allow hierarchical access control. Data filtering converts policy expressions into DB query plans to efficiently retrieve only the data that matches the filter. Generic policy language is evaluated locally by language-SDKs (NodeJS, Java, Python, Ruby, Go, Rust).",
+                        "What we dislike": "Provides the hooks for framework / ORE integrations but you still need to build them. Currently focused on backend auth - anything frontend you need to figure out yourself.",
+                        "Interview": "/interviews/oso-sam-scott/",
+                        "Sponsored": "TRUE"
+                    },
+                    {
+                        "Company/Org": "Cue",
+                        "Tool/Product/Project": "Cue",
+                        "Reviewed": "2021-09-08",
+                        "Scheduled for": "2021-09-09",
+                        "URL": "https://cuelang.org/",
+                        "Category": "Developer Tools - Testing frameworks",
+                        "Type": "Open Source",
+                        "What is it?": "Data validation language.",
+                        "Len": "130",
+                        "What we like": "Helps validate files, APIs and configs e.g. k8s files. Definitions start broad e.g. types then narrow down e.g. values, so it is easy to get started, but still supports specific validations. Language is a JSON superset. Supports comments (unlike JSON!). Can extract existing definitions from Go and Protobufs.",
+                        "What we dislike": "Documentation explains the concepts well but is missing a “from zero” getting started tutorial (the k8s tutorial is good, though).",
+                        "Interview": "",
+                        "Sponsored": "FALSE"
+                    },
+                    {
+                        "Company/Org": "Leapp",
+                        "Tool/Product/Project": "Leapp",
+                        "Reviewed": "2021-09-08",
+                        "Scheduled for": "2021-09-09",
+                        "URL": "https://www.leapp.cloud/",
+                        "Category": "Security - Authentication",
+                        "Type": "Desktop",
+                        "What is it?": "Manage cloud access credentials.",
+                        "Len": "142",
+                        "What we like": "Stores access credentials in native OS storage e.g. Windows Credential Vault, macOS Keychain. Easy to switch between credentials e.g. AWS IAM, Azure User. Session credentials are temporary, minimizing risk of leaks and making them easy to rotate. Open source.",
+                        "What we dislike": "Only supports AWS and Azure. No U2F support. Supports some federated identity providers e.g. Okta, GSuite, AWS SSO, but only to AWS and Azure.",
+                        "Interview": "",
+                        "Sponsored": "FALSE"
+                    },
+                    {
+                        "Company/Org": "Tyk",
+                        "Tool/Product/Project": "Tyk",
+                        "Reviewed": "2021-09-01",
+                        "Scheduled for": "2021-09-02",
+                        "URL": "https://tyk.io/",
+                        "Category": "DevOps - API Management",
+                        "Type": "Open Source",
+                        "What is it?": "API gateway.",
+                        "Len": "225",
+                        "What we like": "Supports all API protocols (REST, GraphQL, TCP, gRPC). Handles API versioning and deprecation. Hot-reload without dropping requests. Minimal dependencies (Redis for distributed rate limits and tokens). Drop-in products for developer portal + docs, analytics, social auth, management dashboard. Open source or cloud options.",
+                        "What we dislike": "Architecture gets complex once you start to add the extra components, which are also not open source. Historical performance issues in older versions due to overhead of some features enabled by default (reportedly now fixed).",
+                        "Interview": "",
+                        "Sponsored": "FALSE"
+                    },
+                    {
+                        "Company/Org": "DeepSource",
+                        "Tool/Product/Project": "DeepSource",
+                        "Reviewed": "2021-09-01",
+                        "Scheduled for": "2021-09-02",
+                        "URL": "https://deepsource.io/",
+                        "Category": "Developer Tools - Source control",
+                        "Type": "SaaS",
+                        "What is it?": "Automated code reviews.",
+                        "Len": "198",
+                        "What we like": "Catches common issues which can either be fixed as part of a PR and/or blocked by CI. Can open “Autofix” PRs for code issues as well as linting errors. Examines docs and code coverage and reports metrics for both. Image badges for readme files. Can configure analysis via a config file in the repo or via the UI. Self-hosted version available.",
+                        "What we dislike": "Doesn’t explain “why?” you should make the suggested changes or follow its rules - good to fix errors but better to understand how to avoid them in the future. Autofix can’t solve everything (yet?).",
+                        "Interview": "",
+                        "Sponsored": "FALSE"
+                    },
+                    {
+                        "Company/Org": "Fission",
+                        "Tool/Product/Project": "Fission",
+                        "Reviewed": "2021-08-25",
+                        "Scheduled for": "2021-08-26",
+                        "URL": "https://fission.codes/",
+                        "Category": "Developer Tools - Backend framework",
+                        "Type": "Open Source",
+                        "What is it?": "Decentralized app backend for storage and identity.",
+                        "Len": "243",
+                        "What we like": "Abstracts auth and storage so you can use P2P decentralized tech like IPFS without worrying about the underlying protocol. Web Native File System works across platforms and has a POSIX-style interface. Supports storage/execution of WebAssembly modules which are then available on every platform. Open source.",
+                        "What we dislike": "Auth tokens live in browser storage so you could lose access if you clear the data. Risky to rely on such an early new backend tech that is not yet standardized and built by a new startup (everything is open source so you can run it yourself).",
+                        "Interview": "/interviews/fission-brooklyn-zelenka/",
+                        "Sponsored": "FALSE"
+                    },
+                    {
+                        "Company/Org": "AskGit",
+                        "Tool/Product/Project": "AskGit",
+                        "Reviewed": "2021-08-25",
+                        "Scheduled for": "2021-08-26",
+                        "URL": "https://github.com/askgitdev/askgit",
+                        "Category": "Developer Tools - Git tools",
+                        "Type": "Open Source",
+                        "What is it?": "Query git repos with SQL.",
+                        "Len": "103",
+                        "What we like": "Web demo allows you to query any public repo (+ GitHub issues), or download the CLI. Can do complex queries like commits by email domain, most frequently changed files, filter by branch. Supports querying GitHub API e.g. query stars, repo language stats, issues/PRs. Outputs as an ASCII table, JSON, CSV or SQLite file for other tools to query the results.",
+                        "What we dislike": "Queries can be slow - several seconds. Read-only queries. Only integrated with GitHub Issues (for now).",
+                        "Interview": "",
+                        "Sponsored": "FALSE"
+                    },
+                    {
+                        "Company/Org": "Sourcegraph",
+                        "Tool/Product/Project": "Sourcegraph",
+                        "Reviewed": "2021-08-18",
+                        "Scheduled for": "2021-08-19",
+                        "URL": "https://sourcegraph.com/search",
+                        "Category": "Developer Tools - Code collaboration",
+                        "Type": "Other",
+                        "What is it?": "Code search engine.",
+                        "Len": "68",
+                        "What we like": "Code structure search on syntax e.g. function arguments, multi-line blocks, JSON structures. Can scope to repos (public / private), commit diffs/dates, languages. Option for self-hosted indexer for private code. Browser & IDE extensions for quick search and overlay on top of existing tools e.g. GitHub/GitLab PRs. CLI or web UI (with dark mode).",
+                        "What we dislike": "No custom theme support for the web UI. Can’t search issue trackers.",
+                        "Interview": "/interviews/sourcegraph-beyang-liu/",
+                        "Sponsored": "TRUE"
+                    },
+                    {
+                        "Company/Org": "Hoppscotch",
+                        "Tool/Product/Project": "Hoppscotch",
+                        "Reviewed": "2021-08-18",
+                        "Scheduled for": "2021-08-19",
+                        "URL": "https://hoppscotch.io/",
+                        "Category": "Developer Tools - Code collaboration",
+                        "Type": "Open Source",
+                        "What is it?": "Test UI for API requests.",
+                        "Len": "140",
+                        "What we like": "Build & execute HTTP, GraphQL & WebSocket requests. Syntax highlighted response parsing. Generate code to execute requests via curl, Go, Python, and other languages. Save config to local storage or GitHub Gist. Also available as a Chrome or Firefox extension. CLI in beta. Open source.",
+                        "What we dislike": "Can’t automate a chain of requests - have to manually set up each request. Can’t support cookie headers due to browser security limitations.",
+                        "Interview": "",
+                        "Sponsored": "FALSE"
+                    },
+                    {
+                        "Company/Org": "Appsmith",
+                        "Tool/Product/Project": "Appsmith",
+                        "Reviewed": "2021-08-11",
+                        "Scheduled for": "2021-08-12",
+                        "URL": "https://www.appsmith.com/",
+                        "Category": "Developer Tools - UI Builder",
+                        "Type": "Open Source",
+                        "What is it?": "Open source internal tool builder.",
+                        "Len": "221",
+                        "What we like": "Quickly build interfaces to existing databases. Proxies queries to the data source so results are not stored. Easy form construction with validation and data binding. Can use JS to write data transformations (both read and write). If the GUI concepts are too restrictive, you can always fall back to JS to customize widgets. Open source so you can host it all inside your own network.",
+                        "What we dislike": "No user collaboration in the UI editor so others editing the same project can overwrite each other. Your UI config is stored inside Appsmith’s database (MongoDB) so you can’t use version control (can be exported to JSON).",
+                        "Interview": "/interviews/appsmith-arpit-mohan/",
+                        "Sponsored": "FALSE"
+                    },
+                    {
+                        "Company/Org": "Retool",
+                        "Tool/Product/Project": "Retool",
+                        "Reviewed": "2021-08-11",
+                        "Scheduled for": "2021-08-12",
+                        "URL": "https://retool.com/",
+                        "Category": "Developer Tools - UI Builder",
+                        "Type": "SaaS",
+                        "What is it?": "Internal tool builder.",
+                        "Len": "149",
+                        "What we like": "Supports staging / non-staging environments. Datasources can be databases like MySQL and Postgres or APIs like Stripe, S3 or GraphQL. Can query all sources with SQL even if they aren’t databases. Everything is a JS object you can manipulate. You can build your own custom React components. Can configure your own Redis/Memcached cache.",
+                        "What we dislike": "Not open source, but there is a self-hosted option. Ability to sync to Git is enterprise-only. Doesn’t support complex logic e.g. multiple API calls.",
+                        "Interview": "/interviews/retool-snir-kodesh/",
+                        "Sponsored": "FALSE"
+                    },
                     {
                         "Company/Org": "Snyk",
                         "Tool/Product/Project": "Snyk Open Source",
@@ -1131,7 +1567,8 @@
                         "Len": "155",
                         "What we like": "Easy to see security status for everything. Scans full dependency tree revealing your actual security posture e.g. vulns in dependency dependencies. Relative severity scoring helps understand how relevant issues are. Inspects containers & OS packages as well as code. Separates dev dependencies from prod. Multiple options for fixes e.g. via CLI, not just PRs.",
                         "What we dislike": "Showing vulnerabilities in dependency dependencies is interesting, but what are you going to do about them? CLI to apply fixes still in beta (Python only).",
-                        "Interview": ""
+                        "Interview": "/interviews/snyk-guy-podjarny/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "OSSF",
@@ -1145,7 +1582,8 @@
                         "Len": "188",
                         "What we like": "Assessment criteria are objective, consistent and documented so OSS projects can start to adopt them. Makes it easy to assess the security posture of the projects you rely on. CLI output is clear why a check fails. Can scan a GitHub repo or infer it from npm, pypi or rubygem package names. JSON or CSV output means results can be scripted.",
                         "What we dislike": "Some assessment criteria (such as looking for commits from >1 GitHub organizations) may be onerous for small, one-person projects. No easy way to integrate into CI/CD yet (on the roadmap).",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Liveblocks",
@@ -1159,7 +1597,8 @@
                         "Len": "193",
                         "What we like": "Components to easily add live presence (live cursors, chat and reactions). Abstracts away the backend implementation challenges - networking, performance, presence detection, multi-browser support. Vendored as React / Node packages. Auth hooks to validate user permissions. Examples for raw JS, Next.js, Nuxt.js and React + Firebase.",
                         "What we dislike": "Assumes you’re building with web technologies i.e. JS. No mobile support. Still requires implementing authentication. Classic build vs buy - is it a good use of your time to try and build this?",
-                        "Interview": "/interviews/liveblocks-guillaume-salles/"
+                        "Interview": "/interviews/liveblocks-guillaume-salles/",
+                        "Sponsored": "TRUE"
                     },
                     {
                         "Company/Org": "Livekit",
@@ -1173,7 +1612,8 @@
                         "Len": "217",
                         "What we like": "SDKs for React, JS, iOS and Android to build video / audio without needing to understand WebRTC. Selective Forwarding Unit server makes it easy to scale from P2P to supporting large numbers of participants. Server scales horizontally using Redis as the backend. Automatically supports different connection types (UDP, TCP, TURN) and simulcasting.",
                         "What we dislike": "Still need to set up SSL + load balancers. Using a server component defeats the idea of P2P. Your code still needs to deal with issuing access tokens to each participant. Simulcasting only works in the browser/JS SDK.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Polypane",
@@ -1187,7 +1627,8 @@
                         "Len": "124",
                         "What we like": "Multiple browser panes side-by-side to test various sizes. Inspect element works across panes simultaneously. Scroll sync helps comparison. Built on Chrome so devtools available. Shows Web Vitals scores. Can trigger media features e.g. prefers-color-scheme, reduced-motion. Debug tools like a11y, CSS injection, disable images, mobile reachability.",
                         "What we dislike": "Signup/license key process is a bit fiddly. Quite CPU intensive. You need a very big screen to see all the windows properly.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "automerge",
@@ -1201,7 +1642,8 @@
                         "Len": "244",
                         "What we like": "Built for JS applications to allow read/write to properties whilst avoiding conflicts. Maintains a history of all changes. Network-agnostic but includes a sync protocol for send/receive messages. Custom types for conflict free counters, collaborative text editing and tables. Follows the idea of functional reactive programming.",
                         "What we dislike": "Documents are not actually immutable by default - you just code as if they are. Enforcing this can be turned on but has a major performance hit. Implementation is only in JS but versions in Rust, Swift, Python in various stages of development.\n",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Tuple",
@@ -1215,7 +1657,8 @@
                         "Len": "179",
                         "What we like": "Quick start a P2P encrypted call + screen sharing session. Quality settings go up to 5k to make code crisp and easy to read, unlike generic conferencing services. Easy to take control to type, send through keyboard shortcuts, highlight areas of the screen. Live call debug info to see any connection problems. The “ship it” stamp effect is fun.",
                         "What we dislike": "Really needs a high quality connection otherwise you can’t reach the higher resolutions and the mouse/keyboard sharing is laggy. macOS only - Linux client on the roadmap for 2021.",
-                        "Interview": "/interviews/tuple-ben-orenstein/"
+                        "Interview": "/interviews/tuple-ben-orenstein/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "GitHub",
@@ -1229,7 +1672,8 @@
                         "Len": "203",
                         "What we like": "Autocomplete is accurate - speeds up work on a line-by-line basis, just like GMail/Google Docs. Understands file context - imports, variable names, etc. Using comments to describe what you want to do then reviewing suggestions is like doing a web search. Time saver for simple, common, but annoying tasks e.g. regexes, test skeletons.",
                         "What we dislike": "Not clear if it’s thinking or not - sometimes you wait for nothing to happen. Licensing questions remain unanswered - is the code a derivative of copyrighted material? Doesn’t understand project context.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Hashicorp",
@@ -1243,7 +1687,8 @@
                         "Len": "251",
                         "What we like": "Single command to get your code into production. Can track Git repos to auto-deploy. Integrates with AWS, Azure, Google to upload artifacts, configure LBs, DNS, env vars, etc. Stream logs and execute remote commands. Preview URLs for staging. Web dashboard summarizes deploy status. Extensible hooks via plugins.",
                         "What we dislike": "Assumes your app is containerized. Need to run / maintain your own Waypoint server - still early so not entirely prod-ready. Preview URLs are public so you must set up authorization or disable them (self-hosting URL service is an option, but complex).",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Zellij",
@@ -1257,7 +1702,8 @@
                         "Len": "244",
                         "What we like": "Built-in tabs, panes, sessions, resizing, scrollback. Shows (customizable) keybindings to help discovery. “New pane” algorithmically placed in the most optimized position (or use manual splits). Can configure layouts in yaml then auto start them. Single compiled binary. Has a built-in file manager (a clone of ranger). WASM-based plugin system.",
                         "What we dislike": "Colors not inherited from existing shell config. Docs are still very limited. Some core shortcuts used by other tools e.g. Ctrl + r in bash (use Zellij lock mode to pass these through). Slightly laggy over remote connections (compared to tmux).",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Prestige",
@@ -1271,7 +1717,8 @@
                         "Len": "135",
                         "What we like": "Really simple way to execute HTTP commands but can also send more complex requests e.g. headers, file uploads, cookies, JSON. Can write commands in plain text, JS, or define variables in templates. Prettified and syntax-highlighted response parsing. Can save to local browser storage (GitHub and others on roadmap). Open source codebase.",
                         "What we dislike": "Requests run through a proxy rather than your browser (due to CORS), but localhost URLs are routed directly. No support for OAuth APIs.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "chezmoi",
@@ -1285,7 +1732,8 @@
                         "Len": "266",
                         "What we like": "Single compiled binary. No bootstrap requirements - supports many platforms. Can query password manager for secrets and supports encrypted files. Configs can be templated for differences across environments. Can run scripts, including run-once (ideal for cloud IDEs or ephemeral environments). File edit flow similar to git (which is used for versioning).",
                         "What we dislike": "You can edit files directly but using the edit flow ensures changes/conflicts are handled properly, which may require retraining muscle memory. Doesn’t handle git subdirectories e.g. Oh My Zsh particularly well (better to use a script to install outside of chezmoi).",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "IPInfo",
@@ -1299,7 +1747,8 @@
                         "Len": "108",
                         "What we like": "Lookup IP details such as ASN, location, hostname, abuse contact, tor/VPN/hosting IP categorization. Cross-platform binaries. Colored output. Bulk summarize IPs from a file (or piped in). Bash, zsh, fish auto-completion. SDKs available for major languages.",
                         "What we dislike": "Responses not cached. Available via Homebrew on Mac but not Linux or Windows package managers. No man pages.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "TRUE"
                     },
                     {
                         "Company/Org": "gitui",
@@ -1313,7 +1762,8 @@
                         "Len": "91",
                         "What we like": "Focus on high-performance repo parsing using async means the UI is responsive, low memory and low CPU even for the largest of repos. Keyboard control of common tasks e.g. stash, stage, diff review and commit with keybindings highlighted for newer users (or when you forget). Adopts terminal color scheme. Cross-platform packages (Arch, Fedora, Homebrew, Chocolatey, Nix).",
                         "What we dislike": "No log search or file history log and does not yet support bare repos (all on the roadmap).",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "GitLive",
@@ -1327,7 +1777,8 @@
                         "Len": "178",
                         "What we like": "Real-time change indicators show where others have made changes to files but not yet committed. Preview live diffs and get warnings about conflicts from other collaborators. Privacy option to stop sharing when required. Built-in video calls and codesharing which works across IDEs - VS Code, JetBrains, Android Studio.",
                         "What we dislike": "Requires everyone to use GitLive and one of the supported editors. Uploads code diffs (not the full source) to GitLive servers while changes are uncommitted, deleted once pushed.",
-                        "Interview": "/interviews/gitlive-nick-bransby-williams/"
+                        "Interview": "/interviews/gitlive-nick-bransby-williams/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Runops",
@@ -1341,7 +1792,8 @@
                         "Len": "219",
                         "What we like": "Terminal-based signup/demo. Template / version control production commands - scripts, databases, containers, cloud consoles. CLI or Slack Bot to trigger them without direct prod access. Auth/approval flows before commands execute. Optional self-hosted runner with secrets stored in your own secrets storage. Auto-redaction of sensitive logs. Bastion SSH support.",
                         "What we dislike": "Cloud version requires public access to resources e.g. database connection URL, and doesn’t support IP allowlists - self-hosted runner allows private network access. Reliant on Slack for approvals, team management, etc.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Filippo Valsorda",
@@ -1355,7 +1807,8 @@
                         "Len": "217",
                         "What we like": "Solves the hassle of configuring SSL for local dev endpoints by configuring and managing a root CA. Means you don’t need to leave testing SSL to staging (or prod!) or store real certs locally. Allows you to generate certs for localhost. Cross platform + support for browser specific root stores.",
                         "What we dislike": "You still need to configure your server to use the certs. GitHub binaries built with a slightly older version of Go (1.13) so no Apple Silicon support - use the homebrew version which does have Apple Silicon binaries.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Openbase",
@@ -1369,7 +1822,8 @@
                         "Len": "193",
                         "What we like": "Packages ranked based on various criteria such as documentation, performance, popularity. Categories for common use cases to help find most used packages. Analyze dependencies and project activity e.g. release cadence, commit frequency.",
                         "What we dislike": "Only supports searching JS packages - leaderboards available for Python, Rust, Go, Swift and Java libraries. Some criteria are more subjective than others e.g. are frequent commits good or bad?",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "gitmoji-cli",
@@ -1383,7 +1837,8 @@
                         "Len": "227",
                         "What we like": "gitmoji helps identify commits at a glance. CLI sets up a Git commit hook to trigger the interactive CLI to pick a gitmoji for the commit. Text search to find right emoji based on commit purpose. Can be configured to use Conventional Commits scopes.",
                         "What we dislike": "By default only renders on GitHub, but you can configure it to use actual emoji characters. Some may consider this polluting the git log, especially if you write your commits properly and use git shortlog in your release notes.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Xonsh",
@@ -1397,7 +1852,8 @@
                         "Len": "171",
                         "What we like": "Can do arithmetic, import modules, use data types, loops, etc, because everything it receives is interpreted with Python. Tab completion based on man-pages. Community extensions e.g. Powerline, written in Python. Cross-platform.",
                         "What we dislike": "Small community of extensions. Not bash compatible, so you have to relearn some syntax. Incompatible with Python virtual environments (has its own replacement called vox).",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Big Sky Software",
@@ -1411,7 +1867,8 @@
                         "Len": "258",
                         "What we like": "Access AJAX, CSS Transitions, WebSockets and SSEs directly in HTML. Any HTML element can issue AJAX requests. Implements the principle of  “locality of behavior” so it’s easier to understand what code is doing. Small (10k min gz), no dependencies.",
                         "What we dislike": "Injecting remote responses is a potential security issue: JS can still be executed even with a restrictive CSP, and user-generated content must be escaped. Execution must be denied within specific areas of the DOM. Violates separation of concerns principle.\n",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Semgrep",
@@ -1425,7 +1882,8 @@
                         "Len": "75",
                         "What we like": "Open source, runs locally and/or in CI/CD. No DSL - write rules in the language you use and alongside the code they check. Plugins for as-you-code analysis in Vim, VS Code, IntelliJ. Lots of community rules for common languages and frameworks (Django, Flask, Java, Rails). Integrates with CI and can add comments to PRs. Cloud web UI is optional.",
                         "What we dislike": "Experimental support for C, Rust, PHP, Lua, C#, Kotlin. No Windows support.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "QuestDB",
@@ -1439,7 +1897,8 @@
                         "Len": "252",
                         "What we like": "InfluxDB-compatible ingestion. Postgres-compatible wire API (allows querying with Grafana). Handles out of order inserts in a configurable way even though it uses an append column-based storage model. Official Docker image and Helm chart for dev/prod deploys. ANSI SQL with additional time functions. No GC.",
                         "What we dislike": "No built-in replication/clustering. Partitioning is only supported by timestamp (day, month, year) which means you tradeoff easier retention policies and faster calculations/seek times with the potential for hotspots if reads are mostly on recent data.",
-                        "Interview": "/interviews/questdb-vlad-ilyushchenko/"
+                        "Interview": "/interviews/questdb-vlad-ilyushchenko/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "atuin",
@@ -1453,7 +1912,8 @@
                         "Len": "140",
                         "What we like": "Search shell history with CLI or interactive TUI (ctrl+r). Query by date, current directory, string terms. Encrypted sync across machines with log of exit code, session, command. Fun stats e.g. “most used command”. Option to run your own sync server.",
                         "What we dislike": "Can’t delete entries from history. Default rebind on up-key takes some getting used to, or disable it in config. Only supports zsh and bash.",
-                        "Interview": "/interviews/atuin-ellie-huxtable/"
+                        "Interview": "/interviews/atuin-ellie-huxtable/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Deepnote",
@@ -1467,7 +1927,8 @@
                         "Len": "149",
                         "What we like": "Google Docs-style real-time sharing / editing. Detects dependencies, prompts for pip install and updates requirements.txt. Running the Jupyter environment in the cloud saves hassle installing kernels locally. Integrates with git. Public links. Supports Python & R.",
                         "What we dislike": "Visualizations are custom HTML embeds when exported to Jupyter notebook format - better to embed something like Plotly in code to ensure portability.",
-                        "Interview": "/interviews/deepnote-jan-matas/"
+                        "Interview": "/interviews/deepnote-jan-matas/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Skruv",
@@ -1481,7 +1942,8 @@
                         "Len": "169",
                         "What we like": "No dependencies. No build step. Very small (~400 LoC vDOM, ~100 LoC state management, ~230 LoC HTML helpers). Works with async components. Web tutorial does a good job explaining how it works (built using itself).",
                         "What we dislike": "No router. Great for very simple SPAs, but something like Mithril.js (or Vue. Or Svelte) probably needed for anything of significance (if you don’t mind the build step).",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Hookdeck",
@@ -1495,7 +1957,8 @@
                         "Len": "264",
                         "What we like": "Saves building your own queuing system - acts as a proxy to store and forward webhooks. Set up throttling and retry rules. Mirror inbound webhooks to multiple destinations, including a local CLI for testing. Alerts on failures - allows you to search & retry failures so you don’t lose any data.",
                         "What we dislike": "Assumes your webhook destinations are idempotent with “at least once” delivery. No support for signature verification - will forward all requests (you can configure schema filters), so you need to implement this yourself. No support for custom webhook URL domains.",
-                        "Interview": "/interviews/hookdeck-alex-bouchard/"
+                        "Interview": "/interviews/hookdeck-alex-bouchard/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "act",
@@ -1509,7 +1972,8 @@
                         "Len": "154",
                         "What we like": "Local simulation of the GitHub Actions environment using Docker. Much faster than commit/push for testing changes. Supports environment variables and secrets. Can trigger specific events e.g. pull request, push, and jobs within workflows (including skipping steps).",
                         "What we dislike": "Only supports Linux runners (host is multi-platform). Full Docker images are quite large (>20GB), but you can try slimmer images with fewer bundled tools.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "fselect",
@@ -1523,7 +1987,8 @@
                         "Len": "171",
                         "What we like": "Packages for all platforms (+ Nix, AUR, musl). Uses relaxed SQL to support fields e.g. size, path; operators e.g. AND, gte, like; date queries e.g. created, modified; filename glob and regex. Can use .gitignore and search MP3, MIME and other file attributes. Output in CSV, JSON, HTML.",
                         "What we dislike": "Requires the absolute path (~/path doesn’t work), or searches current working directory if no path provided. Be careful to use quotes if you use shell characters such as >",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Gruntwork",
@@ -1537,7 +2002,8 @@
                         "Len": "205",
                         "What we like": "Write a script to make a change to a single Git repo, then apply that change across multiple (specified in a list, or entire GitHub Org). Executes in parallel. Can open GitHub PRs with changes. Lots of use cases for otherwise tedious work e.g. name changes, updating dependencies, mass config changes.",
                         "What we dislike": "Only supports GitHub PRs, but can push remote branches. Releases only available as binaries, no packages (you can use go get). Sometimes scripting these things actually takes longer than doing it manually.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "KeyDB",
@@ -1551,7 +2017,8 @@
                         "Len": "167",
                         "What we like": "Drop-in replacement for Redis. Claims x5 speed boost from multi-threading. Adds some extra features like backup to S3 and active replication. Potentially reduces operational complexity by shifting scaling to CPU cores and network throughput rather than requiring clustering.",
                         "What we dislike": "Runs the normal Redis event loop on multiple threads which requires locking (low contention, but work ongoing to improve). Expects exclusive use of assigned CPU cores.",
-                        "Interview": "/interviews/keydb-john-sully/"
+                        "Interview": "/interviews/keydb-john-sully/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Ranga Vadhineni",
@@ -1565,7 +2032,8 @@
                         "Len": "106",
                         "What we like": "Easily build HTTP requests with custom params, auth (basic, bearer, OAuth), headers and body (text, JSON, XML, form, GraphQL). Parses and syntax highlights response, headers and cookies. Can create automated tests with conditions such as response time, status codes, headers, etc.",
                         "What we dislike": "All local - no config sync or dynamic loading from config files, but configs can be exported and imported.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Retool",
@@ -1579,7 +2047,8 @@
                         "Len": "116",
                         "What we like": "Create a read/write REST API to start building against before your backend is ready. Supports all HTTP verbs. Lots of default field types with sample data e.g. location, emails, avatars, credit cards.",
                         "What we dislike": "Limited to 150 rows. Hosted by a third party, so don’t send anything sensitive. Deleted after 30 days of inactivity.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Nelson Elhage",
@@ -1593,7 +2062,8 @@
                         "Len": "199",
                         "What we like": "Makes it easy to burst parallelizable commands into Lambda. Uses Go template language for managing input and output. Supports Docker wrappers to bootstrap environments. Includes a drop-in GCC/clang replacement for outsourcing compilation.",
                         "What we dislike": "Lambda is CPU and memory constrained, and the network is a bottleneck, so use cases are constrained to where parallelization makes a big difference (or there is a benefit to freeing local resources).",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Typesense",
@@ -1607,7 +2077,8 @@
                         "Len": "156",
                         "What we like": "Single binary (C++) runs natively on Linux and macOS. Tunable ranking for relevancy score tie-breaks. Sort at query-time without additional indexes. Scoped API keys. InstantSearch.js adapter. REST API with clients for JS, PHP, Python, Ruby. Open source + cloud option.",
                         "What we dislike": "Need to build your own index updater mechanism to process new data. API-only means you need to build your own UI/admin. Only supports Latin-based languages.",
-                        "Interview": "/interviews/typesense-jason-bosco/"
+                        "Interview": "/interviews/typesense-jason-bosco/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Svix",
@@ -1621,7 +2092,8 @@
                         "Len": "119",
                         "What we like": "Offering webhooks is actually more complex than you'd expect. Diahook deals with signing requests, queueing, retries, reliability, auth, E2E encryption, rate limiting, logs and debugging.",
                         "What we dislike": "You need to send your events to Diahook, which means you still need to ensure they get there (retries, debugging, etc).",
-                        "Interview": "/interviews/svix-tom-hacohen/"
+                        "Interview": "/interviews/svix-tom-hacohen/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Temporal",
@@ -1635,7 +2107,8 @@
                         "Len": "161",
                         "What we like": "Deals with the underlying infrastructure for reliable task execution: state management, retries, scaling, fault tolerance. Avoid building and running your own timers / queues - just write the function business logic. Open source server you can run yourself, or use their cloud option (in private beta).",
                         "What we dislike": "SDKs are still being built out (currently available for Go, Java, PHP, Ruby). You still need to run / scale your own database (Cassandra, MySQL, or PostgreSQL). ",
-                        "Interview": "/interviews/temporal-manu-srivastava/"
+                        "Interview": "/interviews/temporal-manu-srivastava/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Mirage JS",
@@ -1649,7 +2122,8 @@
                         "Len": "189",
                         "What we like": "Intercepts all XMLHttpRequest and fetch requests so no code changes required (one additional import). Includes in-memory database for persistence tests. Can simulate slow responses or errors. Built-in ORM handles data relationships, output formatting, serialization.",
                         "What we dislike": "Only supports REST APIs out of the box - GraphQL available as an optional plugin (still in development). Runs in the browser, not as a server, so it cannot be used to mock server-side APIs.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "git-plan",
@@ -1663,7 +2137,8 @@
                         "Len": "206",
                         "What we like": "Forces you to think about what you are going to work on in advance - writing out a plan probably helps improve your thinking, and also creates better commit messages. If you think of something you need to switch to, you can create a plan whilst it’s still top-of-mind, then come back to it later.",
                         "What we dislike": "Unintuitive to begin with, but makes sense once you try it (see blog posts linked in the project readme for guidance). Interactive rebasing is an alternative that doesn’t force you to reverse your workflow.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "WayScript",
@@ -1677,7 +2152,8 @@
                         "Len": "164",
                         "What we like": "Quickly create step function APIs from lots of pre-built integrations. Cron support. Connect to external data sources and manipulate data. Write real Python, JS, Java, shell script, GraphQL, HTML, and SQL (including using packaged dependencies) as separate steps. Configurable editor e.g. use vim keybindings, tabs vs spaces, etc.",
                         "What we dislike": "Can be slow to execute (many seconds) especially with lots of steps. Have to use their browser editor - can’t develop and run code locally (this is on the roadmap).",
-                        "Interview": "/interviews/wayscript-jesse-orshan/"
+                        "Interview": "/interviews/wayscript-jesse-orshan/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Buddy",
@@ -1691,7 +2167,8 @@
                         "Len": "135",
                         "What we like": "Fast execution of steps due to caching. Can retry builds from specific steps and live-debug in a terminal which makes setting up pipelines easier. Can switch between UI or YAML config. Commenting/sharing helps team collaboration. UI has useful features, such as env var autocompletion.",
                         "What we dislike": "Ecosystem of official build actions is small relative to GitHub Actions. UI is sometimes confusing due to the number of config options.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "ORY",
@@ -1705,7 +2182,8 @@
                         "Len": "214",
                         "What we like": "Open source & self hosted: you probably don't want to build all your own user management (signup, login, MFA, FIDO2, etc) but do care about control and ownership. Runs as a compact, single Go binary. JSON Schema data model. Headless; example UI and API SDKs for Python, PHP, Node, Go, Java, Ruby. Scale horizontally.",
                         "What we dislike": "Focus on APIs means there is no admin UI. Federation (OAuth2, OpenID) requires a separate project (ORY Hydra). \"Scale horizontally\" still means you need to scale your own RDBMS. Pre-1.0, targeting \"stable\" in 2022.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Chris Walz",
@@ -1719,7 +2197,8 @@
                         "Len": "169",
                         "What we like": "Autocomplete and flag suggestions. Commands such as release or sync combine several commands in one to speed up common tasks. Branch autocomplete for checkout. GitHub PR integration. Support for themes. Open source & cross platform.",
                         "What we dislike": "Not what you might expect from a cli: you run the bit command, then it suggests subcommands and flags, rather than tab completion. Official OS packages missing on Linux.",
-                        "Interview": "/interviews/bit-chris-walz/"
+                        "Interview": "/interviews/bit-chris-walz/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Bird Eats Bug",
@@ -1733,7 +2212,8 @@
                         "Len": "64",
                         "What we like": "Captures screenshare and click journey with associated metadata like console and network logs. Local-first; uploadable for sharing (private or public). Quick submit to JIRA, Linear, Trello, GitHub",
                         "What we dislike": "Chrome only (works on Microsoft Edge). More integrations needed.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Earthly",
@@ -1747,7 +2227,8 @@
                         "Len": "102",
                         "What we like": "Runs existing build steps inside a container using your existing CI system (Jenkins, CircleCI, GitHub Actions, etc). This makes builds reproducible locally so they run the same on your laptop as in remote CI. Steps can be parallelized. Dependency caching locally and across repos.",
                         "What we dislike": "Assumes you are building an already containerized application. Multi-platform builds are experimental.",
-                        "Interview": "/interviews/earthly-adam-gordon-bell/"
+                        "Interview": "/interviews/earthly-adam-gordon-bell/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Microsoft",
@@ -1761,7 +2242,8 @@
                         "Len": "163",
                         "What we like": "Single API to launch and script Chromium, Firefox and WebKit. Emulate devices for testing responsiveness. Auto-wait API avoids hard coding timeouts. Extract screenshots, video and debug info. Library for JS, TypeScript, Python, C#, Java. Works on Windows, macOS, Linux.",
                         "What we dislike": "Only supports latest browser versions - can’t pick older versions to test against. Browser binaries are quite large so may slow down CI/CD (cache is configurable).",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Stoplight",
@@ -1775,7 +2257,8 @@
                         "Len": "186",
                         "What we like": "Build OpenAPI (v2 Swagger or v3) compliant APIs with auto-generated docs, example code, and mocking. Write docs in Markdown. Save everything (and load existing APIs) from Git. Offline/local dev support with desktop API studio app.",
                         "What we dislike": "Limited ability to customize doc output to fit into your own design/brand. Some editor/docs UI bugs in Firefox. It does work without using OpenAPI specs, but most features assume you do.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Raycast",
@@ -1789,7 +2272,8 @@
                         "Len": "124",
                         "What we like": "Search cloud and local documents. Clipboard history. Manage GitHub PRs, JIRA issues, join Zoom calls, schedule calendar blocks. API and scripting to create your own commands. Tiling window management. Connects directly to remote services to avoid privacy issues.",
                         "What we dislike": "macOS only. Shortcuts for sub-commands are difficult to find. File search requires scoping rather than searching everywhere.",
-                        "Interview": "/interviews/raycast-petr-nikolaev/"
+                        "Interview": "/interviews/raycast-petr-nikolaev/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "DBCLI",
@@ -1803,7 +2287,8 @@
                         "Len": "224",
                         "What we like": "Autocomplete and syntax highlighted output. Support for Postgres, MySQL, SQLite, MSSQL, Redis, AWS Athena. History, search, vi/Emacs keybindings, saved queries. Open source & cross-platform.",
                         "What we dislike": "Only available via pip or brew - official OS packages would make installation easier to integrate with native package management. Installation on Windows is a hassle due to needing Python. Large results don't line-wrap well.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Accurics",
@@ -1817,21 +2302,8 @@
                         "Len": "153",
                         "What we like": "Scans Terraform, k8s, and Helm configs for security and compliance. Supports AWS, Azure, GCP, Kubernetes, GitHub and has lots of sensible policy defaults which can be extended using the Open Policy Agent Rego language. Can be run in CI/CD.",
                         "What we dislike": "Docs need work: quickstart didn't work smoothly and default policies are not well explained. Explanations of how to rectify policy violations would help.",
-                        "Interview": ""
-                    },
-                    {
-                        "Company/Org": "Oso",
-                        "Tool/Product/Project": "Oso",
-                        "Reviewed": "2021-02-15",
-                        "Scheduled for": "2021-02-18",
-                        "URL": "https://www.osohq.com/",
-                        "Category": "Security - Authentication",
-                        "Type": "Open Source",
-                        "What is it?": "A system for building application authorization.",
-                        "Len": "114",
-                        "What we like": "Flexible, declarative language for describing simple or complex access control rules in code. Easy to test policies. Native libraries for NodeJS, Java, Python, Ruby, Go, Rust. Useful tooling: debugger, tracer, and VS Code integration.",
-                        "What we dislike": "Focused only on authorization, so you need to build your own authentication (signup, login, forgot password, etc).",
-                        "Interview": "/interviews/oso-sam-scott/"
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "GitPod",
@@ -1845,7 +2317,8 @@
                         "Len": "252",
                         "What we like": ".gitpod.yml file in the repo describes the full dev environment so it's version controlled and always up to date. GitPod pre-builds after every commit so the environment is ready when you activate it. VS Code in the browser means you can develop anywhere on any machine. Easily switch workspaces e.g. to review a pull request without disrupting your current environment. Self-hosted version so you can run it all yourself (some features limited to paid license).",
                         "What we dislike": "Limited IDE support - VS Code or Theia (based on VS Code) means you have to code in the browser so you can't use your own IDE/editor (support for other IDEs in development). Requires you to be online with good connectivity because everything is remote.",
-                        "Interview": "/interviews/gitpod-christian-weichel/"
+                        "Interview": "/interviews/gitpod-christian-weichel/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "asdf",
@@ -1859,7 +2332,8 @@
                         "Len": "103",
                         "What we like": "Makes it easy to switch language runtime versions without messing up the system install (if any). Lots of plugins so it supports pretty much every language. Configs can be defined in a per-project file so it can auto switch based on current working directory. Means you can forget about language specific virtual environments because asdf manages them for you. Has an official GitHub Action.",
                         "What we dislike": "Language support is via community plugins so quality is variable. Windows support still in development.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "StackHawk",
@@ -1867,13 +2341,14 @@
                         "Reviewed": "2021-02-05",
                         "Scheduled for": "2021-02-11",
                         "URL": "https://www.stackhawk.com/",
-                        "Category": "Developer Tools - Dependency management",
+                        "Category": "Security - Vulnerability management",
                         "Type": "SaaS",
                         "What is it?": "Black box security scanning for developers.",
                         "Len": "300",
                         "What we like": "An easy way for developers to run a standardized suite of black box tests. Spiders and auto-discovers endpoints so there is almost zero config. Runs inside a container so it can be run anywhere. Web UI highlights and prioritizes all detected vulnerabilities. Can easily be run locally against any local or remote endpoint. Built on top of open source OWASP ZAP. Good quality documentation. Integrations into CI/CD e.g. GitHub Actions, GitLab, CircleCI.",
                         "What we dislike": "Assumes you know about OWASP and how to resolve highlighted issues. The nature of black box testing means some OWASP issues are false positives and are not comprehensive e.g. no detection of dependency vulnerabilities. Large example app takes >25min to scan (although our own simple app took <1 min).",
-                        "Interview": "/interviews/stackhawk-scott-gerlach/"
+                        "Interview": "/interviews/stackhawk-scott-gerlach/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Opstrace",
@@ -1887,7 +2362,8 @@
                         "Len": "368",
                         "What we like": "Automates deployment of Prometheus, Cortex, and Loki and configures them to store data in your own S3 or GCS buckets. This means you keep control of the data and the price of storage from your existing cloud provider.  Supports multiple tenants e.g. prod vs dev, and deals with scaling them. Existing Prometheus instances can be configured to send data to Opstrace.",
                         "What we dislike": "Installation and cluster management are the main differentiator - otherwise it's just packaging open source projects. API uses an Opstrace managed endpoint - custom domains supported only in the commercial version which is hidden behind \"contact us\". If you already have Prometheus, you could just set up Cortex yourself. Only supports AWS and GCP. No Windows support.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Nushell",
@@ -1901,7 +2377,8 @@
                         "Len": "215",
                         "What we like": "The first thing you notice is running `ls` outputs a structured table. All output is actually data, so it is like interacting with a spreadsheet. Nushell applies the Unix philosophy of piping commands but allows for commands like `ls | where size > 1kb`. Supports parsing data like CSV and JSON. You can script your own commands. Cross platform.",
                         "What we dislike": "Although it can be run as a command, it is designed to replace your existing shell. It is still in development so may not be stable. You will have to reconfigure everything if you have heavily customized your shell.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "EteSync",
@@ -1915,7 +2392,8 @@
                         "Len": "207",
                         "What we like": "Open source end-to-end encryption based on libsodium. SDKs for JS, Python, Java, Kotlin, C/C++, Rust. Handles sync and user sharing e.g. users collaborating on an encrypted doc. Has specialist types for calendars, tasks, and Markdown notes. Supported by a foundation and a European Commission program.",
                         "What we dislike": "A cloud service by default but you can run their open source server component. No pricing yet for the commercial cloud version. Large files not supported (on the roadmap). Local cache but no offline storage.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Infracost",
@@ -1929,7 +2407,8 @@
                         "Len": "209",
                         "What we like": "Integrates with CI (GitHub, GitLab, CircleCI, Bitbucket) to provide cost diffs for pull requests. Supports AWS and Google Cloud.",
                         "What we dislike": "Uses a Cloud Pricing API provided (for free) by the Infracost project so it requires sending data to it (you can self-host). May be out of date. Only supports AWS and Google Cloud. Other cloud vendors planned.",
-                        "Interview": "/interviews/infracost-ali-khajeh-hosseini/"
+                        "Interview": "/interviews/infracost-ali-khajeh-hosseini/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "LocalStack",
@@ -1943,7 +2422,8 @@
                         "Len": "217",
                         "What we like": "Deploy a full AWS stack in a local Docker container. Avoid paying for AWS environments for test/dev. Supports key AWS services like DynamoDB, EC2, Kinesis, Lambda, Route53, SNS, SQS. Allows you to inject errors.",
                         "What we dislike": "Some APIs require the paid version e.g. CloudFront, Cognito, ElastiCache, Glacier, RDS. Not built by AWS so will always lag behind the real thing. Good for dev but testing probably better done against the actual APIs.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "rsync.net",
@@ -1957,7 +2437,8 @@
                         "Len": "243",
                         "What we like": "rsync.net is a Unix (ZFS) filesystem over SSH but also supports commands like borg, git, rsync, s3cmd, and now rclone. rclone is a separate open source project that exposes many cloud accounts as filesystems e.g. Google Photos, Dropbox, Azure Blob storage. rsync.net connects directly so you can copy from one to the other without downloading/uploading.",
                         "What we dislike": "This is truly a filesystem over SSH so you need to know your way around the command line. Documentation is limited and the account manager UI is dated. No support for scheduling execution so you need to handle that yourself e.g. cron, systemd.",
-                        "Interview": "/interviews/rsync-john-kozubik/"
+                        "Interview": "/interviews/rsync-john-kozubik/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "laktak",
@@ -1971,7 +2452,8 @@
                         "Len": "91",
                         "What we like": "The whole idea behind using the command line is to make things faster, usually using the keyboard. This helps with that goal by improving select, copy and paste inside tmux. It works everywhere, even in SSH sessions. Works with clipboards on Linux, macOS, and Windows.",
                         "What we dislike": "tmux beta release is required for popups, otherwise this currently uses a new split window.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Seed",
@@ -1985,7 +2467,8 @@
                         "Len": "265",
                         "What we like": "Managing lots of individual Lambdas across environments and regions is a pain because of how long it takes to package and deploy, especially with AWS rate limits. Seed hooks into Git and speeds things up by deploying concurrently. Supports Serverless Framework, caching dependencies, and incremental deploys. Built-in Lambda monitoring for errors. Also supports AWS CDK.",
                         "What we dislike": "Only supports AWS Serverless i.e. Lambda, so unless you are 100% Lambda then this will be a separate CD pipeline to manage. Doesn't support other tech like containers, or other platforms like Azure/Google. Those with just a few, simple Lambdas may find it overkill.",
-                        "Interview": "/interviews/seed-jay-v/"
+                        "Interview": "/interviews/seed-jay-v/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Brave",
@@ -1999,7 +2482,8 @@
                         "Len": "295",
                         "What we like": "Decentralized filesystems allow access to content without relying on a specific host. This makes them resistent to censorship (or outages, deletion, etc). IPFS can be a pain to run, or you have to use a gateway service. Built-in browser support means users don't have to care, just like with HTTP. Brave is based on Chromium (but better privacy than Chrome) so most sites work fine.",
                         "What we dislike": "Brave is still a niche browser, and IPFS is still very early. How much content is hosted on it? Site owners need to upload (pin) their content to IPFS, which isn't necessarily straightforward. Still requires the use of ipfs:// URLs, although DNSLink support for using DNS TXT records is planned.",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Yifan Gu",
@@ -2013,7 +2497,8 @@
                         "Len": "92",
                         "What we like": "macOS Big Sur includes a new framework for managing VMs. This CLI makes it easy to run VMs without additional software i.e. using the new Virtualization.framework. Means you don't need Virtual Box, VMWare, etc for simple VM tasks.",
                         "What we dislike": "Obviously macOS-only. Only basic functionality for using VMs (probably fine for developers).",
-                        "Interview": "/interviews/vmcli-yifan-gu/"
+                        "Interview": "/interviews/vmcli-yifan-gu/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Vantage",
@@ -2027,7 +2512,8 @@
                         "Len": "315",
                         "What we like": "AWS Console UX is not great; Vantage is much cleaner and faster. It connects using a read-only CloudFormation IAM Role and they have detailed documentation about the read-only permissions it requests. \"Views\" nicely segment/group resources, even across accounts and regions, with global search for them all. Cost reporting by view and weekly email reports help you manage budgets better.",
                         "What we dislike": "Does not support all AWS products, currently focused on a few key resources e.g. EC2 instances, VPC Subnets, Route53, etc. Currently read-only, which is good for security and because it's a new tool - plans to add more management features in the future. Also AWS-only, but they are working on other cloud providers.",
-                        "Interview": "/interviews/vantage-ben-schaechter/"
+                        "Interview": "/interviews/vantage-ben-schaechter/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Skynet",
@@ -2041,7 +2527,8 @@
                         "Len": "180",
                         "What we like": "Web UI and SDKs for uploading files to a decentralized CDN. Uses a blockchain and rewards users who run nodes with coins which can be exchanged for money. Current average cost = $4.16/TB stored + $1.25/TB transferred.",
                         "What we dislike": "Time to first byte 300-500ms may be prohibitatively slow for some use cases. Streaming \"up to 1Gbps\" but what does \"up to\" really mean? Files must be public. Why call it \"Skynet\"?!",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "James Little",
@@ -2055,7 +2542,8 @@
                         "Len": "192",
                         "What we like": "Generate the index of your content, which is then downloaded by the visitor's browser and searched using the JS/WASM library \"locally\" - this is what makes it so fast.",
                         "What we dislike": "Index must be generated manually. It is specifically designed for static sites, so it would need to be hooked into a build process. Would need extra work if you wanted to index a dynamic site.",
-                        "Interview": "/interviews/stork-search-james-little/"
+                        "Interview": "/interviews/stork-search-james-little/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Starship",
@@ -2069,7 +2557,8 @@
                         "Len": "139",
                         "What we like": "Works with any shell (bash, zsh, fish, PowerShell). Context-sensitive e.g. auto-complete, shows Git info, lots of language specific configs. Written in Rust, which is trendy, and probably fast.",
                         "What we dislike": "Another layer on your shell to mess around with. If you use ZSH then Oh My ZSH already does a lot of this, and has lots of good ZSH tweaks.",
-                        "Interview": "/interviews/starship-matan-kushner/"
+                        "Interview": "/interviews/starship-matan-kushner/",
+                        "Sponsored": "FALSE"
                     },
                     {
                         "Company/Org": "Wasmer",
@@ -2083,7 +2572,8 @@
                         "Len": "197",
                         "What we like": "Allows shared libraries to be sandboxed, compiled, then run standalone or embedded in Rust, C/C++, Python, Go. Pluggable compilers allows optimisation of the final artifacts e.g. LLVM for machine code. Wasmer 1.0 adds a headless mode and cross-compilation.",
                         "What we dislike": "The use cases seem limited to untrusted, shared code. If you need cross-platform, native binaries with good performance then why not just use a compiled language like Go or Rust in the first place?",
-                        "Interview": ""
+                        "Interview": "",
+                        "Sponsored": "FALSE"
                     }
                 ],
                 "header": [
@@ -2100,9 +2590,10 @@
                     "Len",
                     "What we dislike",
                     "Len",
-                    "Interview"
+                    "Interview",
+                    "Sponsored"
                 ],
-                "range": "'All Tools'!A1:N70"
+                "range": "'All Tools'!A1:O81"
             }
         }
     ]
