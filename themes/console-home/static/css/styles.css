@@ -1467,16 +1467,6 @@ p.x-small {
     color: var(--theme-text-3);
 }
 
-/* Form
-   ================================================================================================================ */
-.console-form {
-    font-size: var(--t-size0);
-    display: flex;
-    flex-flow: row nowrap;
-    align-content: flex-start;
-    align-items: center;
-}
-
 /* Input
     --------------------------------------------------------------- */
 input.console-input-text,
@@ -1677,24 +1667,6 @@ select.console-select::-ms-expand {
             min-height: 0;
             margin-top: 0;
         }
-
-        .console-form {
-            flex-flow: column nowrap;
-            align-items: stretch;
-        }
-
-        .console-form .console-button {
-            margin-left: 0;
-            margin-top: var(--space4);
-        }
-
-        .console-form .console-button.console-button-medium {
-            margin-top: var(--space3_5);
-        }
-
-        .console-form .console-button.console-button-small {
-            margin-top: var(--space3);
-        }
     }
 
     @media (max-width: 480px) {
@@ -1708,12 +1680,6 @@ select.console-select::-ms-expand {
 
         .footer-nav ul li {
             font-size: var(--t-size0);
-        }
-    }
-
-    @media (max-width: 400px) {
-        .console-form .console-button {
-            margin-top: var(--space3);
         }
     }
 

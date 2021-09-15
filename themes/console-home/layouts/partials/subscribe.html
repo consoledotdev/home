@@ -9,7 +9,7 @@
                 {{- end -}}
             {{ if or (eq .size "medium") (eq .size "small") }}</h3>{{ else }}</h4>{{ end }}
         {{ end }}
-        <p{{ if or (eq .size "medium") (eq .size "small") }} class="small"{{ end }}>
+        <p{{ if (eq .size "medium") }} class="small"{{ end }} {{ if (eq .size "small") }} class="x-small"{{ end }}>
             {{- with .description -}}
                 {{ . }}
             {{- else -}}
@@ -29,6 +29,14 @@
             <span>Sign Up</span>
         </button>
     </form>
+
+    {{ if .copyAfter -}}
+        <div class="subscribe-copy-after">
+            <p{{ if (eq .size "medium") }} class="small"{{ end }} {{ if (eq .size "small") }} class="x-small"{{ end }}>
+                {{ .copyAfter }}
+            </p>
+        </div>
+    {{- end }}
 
     {{ `<!-- Plausible Analytics goal tracking for signups -->` | safeHTML }}
     <script>
