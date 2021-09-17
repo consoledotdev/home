@@ -6,6 +6,6 @@
     <span class="nav-wrapper-anchor" id="author"></span>
     <div class="author-box-content">
         <h6 class="title title-5">About the author</h6>
-        <p class="small"><a class="link author-name" href="{{ .context.Params.authorURL }}" rel="me">{{ .name }}</a> {{ .bio }}</p>
+        <p class="small">{{ if .context.Params.authorURL }}<a class="link author-name" href="{{ .context.Params.authorURL }}" rel="me">{{ end }}{{ .name }}{{ if .context.Params.authorURL }}</a>{{ end }} {{ .bio }}</p>
     </div>
 </div>

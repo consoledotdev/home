@@ -1,0 +1,9 @@
+.main-tools-category-review .main-tools-category-review-aside {
+    margin-top: 250px;
+}
+
+@media (min-width: 1280px) {
+    .main-tools-category-review .main-tools-category-review-aside {
+        margin-top: 220px;
+    }
+}
