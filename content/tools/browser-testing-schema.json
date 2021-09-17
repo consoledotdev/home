@@ -1,0 +1,213 @@
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "The best browser testing tools for developers",
+    "numberOfItems": 6,
+    "itemListOrder": "Ascending",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "BrowserStack",
+            "item": {
+                "@type": "Product",
+                "name": "BrowserStack",
+                "description": "Browser testing tool.",
+                "url": "https://www.browserstack.com/",
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "BrowserStack is a cross browser testing and debugging tool which supports tests built with Selenium, Cypress, Playwright and Puppeteer. It offers both live and automated testing on 2000+ real mobile devices and virtual desktop machines.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4.7",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-09-17T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "LambdaTest",
+            "item": {
+                "@type": "Product",
+                "name": "LambdaTest",
+                "description": "Browser testing tool.",
+                "url": "https://www.lambdatest.com/",
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "LambdaTest is one of the newer tools in the cross browser testing market. It has a clean UI, large number of test devices and an interesting desktop application (LT Browser) which offers live testing functionality locally.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4.7",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-09-17T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "SmartBear CrossBrowserTesting",
+            "item": {
+                "@type": "Product",
+                "name": "SmartBear CrossBrowserTesting",
+                "description": "Browser testing tool.",
+                "url": "https://crossbrowsertesting.com/",
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "In addition to live and automatic testing, SmartBear CrossBrowserTesting offers features such as screenshot testing and codeless testing using AI to record and replay interactions on screen. It offers 2,000+ target browsers and mobile devices.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4.3",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-09-17T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Sauce Labs",
+            "item": {
+                "@type": "Product",
+                "name": "Sauce Labs",
+                "description": "Browser testing tool.",
+                "url": "https://saucelabs.com/",
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "Sauce Labs is a full-scale testing platform for websites and applications that supports test frameworks such as Selenium, Playwright and Puppeteer on a large number of popular device, browser and operating system test targets.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4.2",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-09-17T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Ghost Inspector",
+            "item": {
+                "@type": "Product",
+                "name": "Ghost Inspector",
+                "description": "Browser testing tool.",
+                "url": "https://ghostinspector.com/",
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "Ghost Inspector is a cloud browser compatibility testing tool that stands out for its support for testing 2FA and end-to-end email flows. Testing can be automated on a schedule or via an API, as well as manually via the web UI, but it only supports Chrome and Firefox on desktop.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "3.5",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-09-17T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Selenium",
+            "item": {
+                "@type": "Product",
+                "name": "Selenium",
+                "description": "Browser testing tool.",
+                "url": "https://www.selenium.dev/",
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "Selenium is a web application testing framework available for Java, Python, C#, Ruby, JavaScript and Kotlin. It is built for automated testing on desktop devices and acts as a backbone service to many other tools discussed in this article, but is not recommended for use by itself.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "2.5",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-09-17T12:00:00+00:00"
+                }
+            }
+        }
+    ]
+}

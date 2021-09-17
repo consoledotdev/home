@@ -36,6 +36,10 @@ authorBio:
   Uptime Institute and affiliated with Imperial College London. David has been a
   developer for 15+ years.
 relatedCategories:
+  - category: developer-tools
+    subcategory:
+      label: Browser testing
+      name: browser-testing
   - category: devops
     subcategory:
       label: Server monitoring
@@ -492,7 +496,7 @@ organization and more options to configure what an “error” state is.
 
 {{< tools/category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="Checkly" anchor="uptrends" thumbnail="/img/favicons/www.checklyhq.com.jpg" url="https://www.checklyhq.com/" score="4.4" >}}
+{{< tools/category-review/card-heading name="Checkly" anchor="checkly" thumbnail="/img/favicons/www.checklyhq.com.jpg" url="https://www.checklyhq.com/" score="4.4" >}}
 
 It’s clear that Checkly has been built for developers because it has powerful
 API monitoring and scripted browser transaction monitoring functionality. Being

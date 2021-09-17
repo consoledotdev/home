@@ -86,6 +86,10 @@
 		</div>
 		<div class="category-reviews">
 			<div class="category-reviews-item">
+				{{ $categoryData := (dict "category" "developer-tools" "subcategory" (dict "label" "Browser testing" "name" "browser-testing")) }}
+				{{ partial "components/category.html" (dict "categoryData" $categoryData "clickable" "true" "large" "true" )  }}
+			</div>
+			<div class="category-reviews-item">
 				{{ $categoryData := (dict "category" "devops" "subcategory" (dict "label" "Server monitoring" "name" "server-monitoring")) }}
 				{{ partial "components/category.html" (dict "categoryData" $categoryData "clickable" "true" "large" "true" )  }}
 			</div>
