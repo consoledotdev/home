@@ -127,7 +127,9 @@ async function handleEvent(event) {
             ["/qa/akita-jean-yang", "https://console.dev/interviews/akita-jean-yang/"],
             ["/qa/akita-jean-yang/", "https://console.dev/interviews/akita-jean-yang/"],
             ["/tools", "https://console.dev/tools/"],
+            ["/tools/browser-testing", "https://console.dev/tools/browser-testing/"],
             ["/tools/server-monitoring", "https://console.dev/tools/server-monitoring/"],
+            ["/tools/website-monitoring", "https://console.dev/tools/website-monitoring/"],
         ])
 
         const path = url.pathname;
