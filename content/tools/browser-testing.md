@@ -1049,11 +1049,12 @@ cataract, far-sightedness and 8 types of color blindness. Accessibility testing
 can be performed in panes via A11y and Tota11y.
 
 All panes are rendered separately and CPU usage momentarily spikes to 100% when
-switching tabs. Polypane disguises this as a feature by saying “Those
-bottlenecks were always there on the testee website, Polypane just enlarges
-them.” Yet, no significant improvements were noticed while loading a simple HTML
-page on localhost. Resource hogging features like video, canvas and iframe
-elements sometimes need to be disabled to keep CPU usage in check.
+switching tabs. Polypane disguises this as a feature
+[by saying](https://polypane.app/docs/website-issues-you-could-encounter/#performance-issues)
+“Those bottlenecks were always there on the testee website, Polypane just
+enlarges them.” Yet, no significant improvements were noticed while loading a
+simple HTML page on localhost. Resource hogging features like video, canvas and
+iframe elements sometimes need to be disabled to keep CPU usage in check.
 
 Working with a large number of panes is difficult on small or medium sized
 screens. The UI needs a wide screen to use comfortably. Moreover, when caching
