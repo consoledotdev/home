@@ -25,4 +25,9 @@ partners, they must first fit our
 [selection criteria](/about/#selection-criteria) before we consider working with
 them.
 
-If you are interested, please [get in touch](mailto:hello@console.dev).
+Get in touch:
+
+{{< a-button text="hello@console.dev" title="mailto:hello@console.dev" icon-left="send" url="mailto:hello@console.dev">}}
+{{< br >}} {{< br >}}
+{{< a-button text="Download" title="Download media kit" icon-left="download" is-text="true" url="/">}}
+a .pdf version of our media kit.

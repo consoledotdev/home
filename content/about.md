@@ -7,8 +7,7 @@ isPage: about
 headerType: fixed
 ---
 
-Discover the best tools and beta releases for developers.
-{.description}
+Discover the best tools and beta releases for developers. {.description}
 
 Console aims to become the place developers go to find the best tools. Starting
 as a weekly newsletter, each week we will pick out the most interesting tools
@@ -61,7 +60,7 @@ the best, most interesting set of tools each week:
 - Does it have good documentation? Is it fast?
 - Does it have any negative impact on security or privacy?
 - How would I feel recommending this to my friends? Would I tweet a link to it?
-{.col-2-css}
+  {.col-2-css}
 
 ### Beyond the newsletter
 
@@ -81,7 +80,7 @@ To learn more about Console, check out the Console blog where you can follow our
 progress. To start, we recommend reading our thoughts on the
 '[Age of the Developer](https://blog.console.dev/focusing-on-developers/)'. We
 aim to be open and transparent so everyone can
-{{< a-github url="consoledotdev" text="see what we're building" >}}.
+{{< a-link url="https://github.com/consoledotdev" text="see what we're building" icon-right="github" >}}.
 
 Interested? Subscribe to our weekly newsletter below! And if you spot (or are
 working on) something you think we should include, email us:
