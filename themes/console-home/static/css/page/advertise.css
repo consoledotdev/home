@@ -1,0 +1,66 @@
+/* Console Advertise
+   ========================================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    .main-advertise {
+        margin-top: var(--space6);
+        margin-bottom: calc(var(--space6) - var(--space4));
+    }
+}
+
+@media (min-width: 769px) {
+    .main-advertise {
+        margin: max(calc(var(--space6) - var(--space3)), 10vh) 0 calc(var(--space6) - var(--space2));
+    }
+}
+
+@media (min-width: 1280px) {
+    .main-advertise p,
+    .main-advertise .quote {
+        font-size: var(--t-size1);
+    }
+
+    .main-advertise p.description {
+        font-size: var(--t-size3);
+    }
+
+    .main-advertise p.small {
+        font-size: var(--t-size0);
+    }
+
+    .main-advertise p.x-small {
+        font-size: var(--t-size-1);
+    }
+
+    .main-advertise-content ul li {
+        font-size: var(--t-size0);
+    }
+
+    .main-advertise .title-1 {
+        font-size: var(--t-size9);
+    }
+
+    .main-advertise .title-2 {
+        font-size: var(--t-size6);
+    }
+
+    .main-advertise .title-3 {
+        font-size: var(--t-size3);
+    }
+
+    .main-advertise .title-4 {
+        font-size: var(--t-size1);
+    }
+
+    .main-advertise .title-5 {
+        font-size: var(--t-size0);
+    }
+
+    .main-advertise .title-6 {
+        font-size: var(--t-size1);
+    }
+}

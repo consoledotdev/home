@@ -164,7 +164,8 @@
 .theme.page-article,
 .theme.page-feature,
 .theme.page-feature-article,
-.theme.page-tools-category-review {
+.theme.page-tools-category-review,
+.theme.page-advertise {
     background: var(--theme-content-bg-3);
 }
 
