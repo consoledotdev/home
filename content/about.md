@@ -7,7 +7,8 @@ isPage: about
 headerType: fixed
 ---
 
-Discover the best tools and beta releases for developers. {.description}
+Discover the best tools and beta releases for developers.
+{.description}
 
 Console aims to become the place developers go to find the best tools. Starting
 as a weekly newsletter, each week we will pick out the most interesting tools
@@ -60,7 +61,7 @@ the best, most interesting set of tools each week:
 - Does it have good documentation? Is it fast?
 - Does it have any negative impact on security or privacy?
 - How would I feel recommending this to my friends? Would I tweet a link to it?
-  {.col-2-css}
+{.col-2-css}
 
 ### Beyond the newsletter
 
