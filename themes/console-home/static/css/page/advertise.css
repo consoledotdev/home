@@ -5,6 +5,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.main-advertise p.intro {
+    font-size: var(--t-size1);
+}
+
 @media (max-width: 768px) {
     .main-advertise {
         margin-top: var(--space6);
@@ -63,4 +67,37 @@ html {
     .main-advertise .title-6 {
         font-size: var(--t-size1);
     }
+}
+
+.page-section-advertise.opening p b {
+    font-weight: 500;
+}
+
+.page-section-advertise.newsletter .intro b {
+    color: var(--theme-text-1);
+    font-weight: 500;
+}
+
+.page-section-advertise.newsletter .title span span {
+    font-weight: 500;
+    font-style: italic;
+    text-transform: lowercase;
+}
+
+.page-section-advertise.newsletter .title.rich-title {
+    align-items: flex-start;
+}
+
+.page-section-advertise.newsletter .title.rich-title .icon {
+    margin-top: 0.26em;
+    margin-right: var(--space2);
+}
+
+.page-section-advertise.site .intro {
+    color: var(--theme-text-1);
+}
+
+.page-section-advertise.podcast .icon-podcast {
+    width: var(--space6);
+    height: var(--space6);
 }

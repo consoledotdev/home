@@ -1,13 +1,60 @@
 {{ define "main" }}
 
-    <section class="page-section page-section-advertise">
+    <section class="page-section page-section-advertise opening">
         <h5 class="title title-4">Advertise with Console</h5>
         <h2 class="title title-1">Discover the best tools for developers</h2>
         <p class="description">Console is the place developers go to find the best tools. Each week we pick out the most interesting tools and new releases to help experienced developers stay up-to-date with the tools and releases that matter.</p>
         <p><b>In a crowded market, our audience trusts our recommendations.</b> Our reviews are made through years of experience and research, bringing a deep practical understanding of the needs of experienced developers looking to try new tools.</p>
-
         <a class="console-button-text icon-right" href="#how-to-work-with-us" title="How to works with us" rel="noopener"><span>How to work with us</span>
             {{ partial "icons/scroll-down.html" }}</a>
+    </section>
+
+    <section class="page-section page-section-advertise newsletter">
+        <h3 class="title title-2 rich-title">{{ partial "icons/console-mini.html" }}<span><span>console</span><br>weekly newsletter</span></h2>
+        <p class="intro">
+            <b>Trusted</b> / Smart insights, recommending the best developer tools. We only feature tools that meet our selection criteria.
+        </p>
+        <p class="intro"><b>Concise</b> / Features 2-3 tools and 3-5 betas per newsletter, giving your tool the attention it deserves.</p>
+        <p class="intro"><b>Technical</b> / Written for experienced developers. Our subscribers work at a range of different organizations - large tech companies, small businesses, agencies, media, government, healthcare and finance.</p>
+    </section>
+
+    <section class="page-section page-section-advertise site">
+        <h3 class="title title-2 rich-title">{{ partial "icons/link.html" }}console.dev</h2>
+        <div class="advertise-site-tools">
+            <h4 class="title title-3">Developer tools reviews</h4>
+            <p class="intro">
+                An archive of every tool featured in the newsletter. A go-to resource to discover the best developer tool.
+            </p>
+            <a class="console-button-text icon-right" href="/tools/" title="See developer tools reviews" rel="noopener"><span>See developer tools reviews</span>
+                {{ partial "icons/arrow-right.html" }}</a>
+        </div>
+        <div class="advertise-site-interviews">
+            <h4 class="title title-3">Developer interviews</h4>
+            <p class="intro">
+                Tell your story in our series of interviews with leading founders and CTOs.
+            </p>
+            <a class="console-button-text icon-right" href="/interviews/" title="See developer interviews" rel="noopener"><span>See developer interviews</span>
+                {{ partial "icons/arrow-right.html" }}</a>
+        </div>
+        <div class="advertise-site-betas">
+            <h4 class="title title-3">Beta Console</h4>
+            <p class="intro">
+                The latest beta release and early access programs for developers. Relied on by early-adopters to be the first to try new tools.
+            </p>
+            <a class="console-button-text icon-right" href="/betas/" title="See Beta Console" rel="noopener"><span>See Beta Console</span>
+                {{ partial "icons/arrow-right.html" }}</a>
+        </div>
+    </section>
+
+    <section class="page-section page-section-advertise podcast">
+        {{ partial "icons/podcast.html" }}
+        <h3 class="title title-2">DevTools Podcast</h2>
+        <p class="intro">
+            A discussion using specific tools as a hook to examine devtools related topics ranging from the philosophy of open source to how to decentralize your tech stack.
+        </p>
+        <p class="intro">
+            An opportunity for us to go deeper on your latest release.
+        </p>
     </section>
 
 {{ end }}
