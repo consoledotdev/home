@@ -5,7 +5,7 @@ draft: false
 summary:
   A review of the best code editors and IDEs - Neovim, VS Code, Atom, Kate,
   Nova, Onivim, and Sublime Text.
-isPage: reviews
+isPage: articles
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorBio:
@@ -16,11 +16,12 @@ authorBio:
   millions of servers. More recently, he has been researching sustainable
   computing at Imperial College London & Uptime Institute, which he continues to
   do alongside running Console.
-ogImg: /img/reviews/neovim-best-code-editor-ide-for-developers-neovim.png
-tags: [Reviews, Code Editors, IDE]
+ogImg: /img/articles/neovim-best-code-editor-ide-for-developers-neovim.png
+tags: [Articles, Code Editors, IDE]
 headerType: fixed
 aliases:
   - /collections/neovim-best-code-editor-ide-for-developers/
+  - /reviews/neovim-best-code-editor-ide-for-developers/
 ---
 
 Over the last year I have been exploring switching from macOS to Linux as my
@@ -71,7 +72,7 @@ like the (Neo)Vim approach be sure to
 the two with [Spacemacs](https://www.spacemacs.org/) or
 [Doom Emacs](https://github.com/hlissner/doom-emacs).
 
-{{< img-center src="/img/reviews/neovim-best-code-editor-ide-for-developers-neovim.png" alt="Screenshot of my neovim setup." width="100%" caption="My neovim setup on Linux inside tmux using the Nord theme." >}}
+{{< img-center src="/img/articles/neovim-best-code-editor-ide-for-developers-neovim.png" alt="Screenshot of my neovim setup." width="100%" caption="My neovim setup on Linux inside tmux using the Nord theme." >}}
 
 ### Requirements
 
@@ -313,7 +314,7 @@ over the last 5 years and as of July 2021, sits at position #3 in the rankings,
 with 10.94% market share. It's easily the most popular editor in our
 [series of developer Interview interviews](/interviews/).
 
-{{< img-center src="/img/reviews/neovim-best-code-editor-ide-for-developers-ide-index.png" alt="Graph of worldwide IDE popularity." width="100%" caption="A graph of IDE popularity showing Visual Studio vs Eclipse vs VS Code." >}}
+{{< img-center src="/img/articles/neovim-best-code-editor-ide-for-developers-ide-index.png" alt="Graph of worldwide IDE popularity." width="100%" caption="A graph of IDE popularity showing Visual Studio vs Eclipse vs VS Code." >}}
 
 Although it's based on Electron - I usually find Electron apps to be slow and
 have a weird
@@ -357,7 +358,7 @@ themes, and settings sync. It can even download dotfiles to configure the
 workspace. This makes it really easy to create multiple, isolated environments
 for all your projects, particularly if they're hosted on GitHub.
 
-{{< img-center src="/img/reviews/neovim-best-code-editor-ide-for-developers-vscode.png" alt="Screenshot of my old VS Code setup." width="100%" caption="My VS Code setup on macOS using the Nord theme." >}}
+{{< img-center src="/img/articles/neovim-best-code-editor-ide-for-developers-vscode.png" alt="Screenshot of my old VS Code setup." width="100%" caption="My VS Code setup on macOS using the Nord theme." >}}
 
 ### Other code editors I considered
 
