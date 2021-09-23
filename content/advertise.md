@@ -30,4 +30,4 @@ Get in touch:
 {{< a-button text="hello@console.dev" title="mailto:hello@console.dev" icon-left="send" url="mailto:hello@console.dev">}}
 {{< br >}} {{< br >}}
 {{< a-button text="Download" title="Download media kit" icon-left="download" is-text="true" url="/">}}
-a .pdf version of our media kit.
+a .pdf version of our advertiser kit.
