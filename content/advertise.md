@@ -9,20 +9,24 @@ headerType: fixed
 Console is the place developers go to find the best tools.
 
 Our weekly newsletter picks out the most interesting tools and new releases and
-is read by experienced developers at organizations around the world. Whether big
-public companies, government agencies, startups or small businesses, developers
-subscribe to our [newsletter](/latest/), listen to our
-[podcast](https://podcast.console.dev/) and read our [category reviews](/tools/)
-to find out which new and interesting tools they should try.
+is read by experienced developers at organizations around the world.
 
 We partner with vendors who want to connect with our audience, such as by
 syncing reviews with new releases or offering exclusives such as access to beta
 programs or bonus credits.
 
-Our editorial process is independent from our vendor partnerships. We do not
-accept payment for product inclusion. Where we feature exclusive deals from
-partners, they must first fit our
-[selection criteria](/about/#selection-criteria) before we consider working with
-them.
+Our editorial process is independent from our vendor partnerships and our ad
+packages are only available once we have completed
+[a successful review](/about/#selection-criteria). We do not accept payment for
+product inclusion.
 
-If you are interested, please [get in touch](mailto:hello@console.dev).
+#### Get in touch
+
+If you are interested, please get in touch so we can prioritize the evaluation
+of your product.
+
+{{< a-button text="hello@console.dev" title="mailto:hello@console.dev" icon-left="send" url="mailto:hello@console.dev">}}
+
+<!--{{< br >}} {{< br >}}
+{{< a-button text="Download" title="Download advertiser kit" icon-left="download" is-text="true" url="/">}}
+a .pdf version of our advertiser kit.-->

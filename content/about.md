@@ -81,7 +81,7 @@ To learn more about Console, check out the Console blog where you can follow our
 progress. To start, we recommend reading our thoughts on the
 '[Age of the Developer](https://blog.console.dev/focusing-on-developers/)'. We
 aim to be open and transparent so everyone can
-{{< a-github url="consoledotdev" text="see what we're building" >}}.
+{{< a-link url="https://github.com/consoledotdev" text="see what we're building" icon-right="github" >}}.
 
 Interested? Subscribe to our weekly newsletter below! And if you spot (or are
 working on) something you think we should include, email us:
