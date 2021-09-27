@@ -48,6 +48,7 @@
     --theme-border-3: 1px solid rgba(255, 255, 255, 0.16);
 
     --theme-separator-1: var(--c-grey-06-blacks-neutral);
+    --theme-separator-2: var(--c-grey-07);
 
     --theme-input-bg: var(--c-white-00-absolute);
     --theme-input-border: transparent;
@@ -144,6 +145,8 @@
 
     --theme-score-background: var(--c-grey-07);
     --theme-score-foreground: var(--c-white-00-absolute);
+
+    --theme-datavis-axis: var(--c-grey-06-blacks-neutral);
 
     /* Mars Internet page specific */
 

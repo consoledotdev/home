@@ -7,6 +7,7 @@ html {
 
 .main-advertise p.intro {
     font-size: var(--t-size1);
+    line-height: var(--t-lH4);
 }
 
 @media (max-width: 768px) {
@@ -100,4 +101,18 @@ html {
 .page-section-advertise.podcast .icon-podcast {
     width: var(--space6);
     height: var(--space6);
+}
+
+.advertise-audience-fact-body {
+    margin-top: var(--space3);
+}
+
+.audience-fact-number {
+    font-size: var(--t-size10);
+    line-height: var(--t-lH1);
+}
+
+.advertise-audience-fact.converting .advertise-audience-fact-body span,
+.advertise-audience-fact.qualified .advertise-audience-fact-body span {
+    color: var(--theme-text-1);
 }

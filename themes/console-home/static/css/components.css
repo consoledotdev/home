@@ -1056,6 +1056,9 @@ body:not(.mobile) .console-control:hover:before {
     padding: 0;
     background: var(--theme-separator-1);
 }
+.separator.light {
+    background: var(--theme-separator-2);
+}
 
 /* Badge
    ================================================================================================================ */
@@ -2128,4 +2131,45 @@ body:not(.mobile) .console-control:hover:before {
 .item-disclosure-indicator:hover,
 .item-disclosure-indicator:focus {
     color: var(--theme-brand-accent-text-hover);
+}
+
+/* Console Bar Chart
+   ================================================================================================================ */
+.console-bar-chart {
+    position: relative;
+}
+
+.console-bar-chart-item-bar {
+    height: calc(var(--space2) - 1px);
+    background: var(--theme-text-1);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .console-bar-chart {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 40%);
+        gap: var(--space4) var(--space4);
+    }
+}
+
+@media (min-width: 1025px) {
+    .console-bar-chart {
+        display: flex;
+        flex-flow: row nowrap;
+        border-bottom: 1px solid var(--theme-datavis-axis);
+    }
+
+    .console-bar-chart-item:not(:last-child) .console-bar-chart-item-bar {
+        width: calc(100% - var(--space1)) !important;
+    }
+
+    .console-bar-chart-item:last-child .console-bar-chart-item-bar {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .console-bar-chart-item {
+        width: 100% !important;
+    }
 }
