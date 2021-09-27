@@ -76,8 +76,8 @@ async function handleEvent(event) {
 
         // Permanent redirects
         const redirectMap = new Map([
-            ["/collections/neovim-best-code-editor-ide-for-developers", "https://console.dev/reviews/neovim-best-code-editor-ide-for-developers/"],
-            ["/collections/neovim-best-code-editor-ide-for-developers/", "https://console.dev/reviews/neovim-best-code-editor-ide-for-developers/"],
+            ["/collections/neovim-best-code-editor-ide-for-developers", "https://console.dev/articles/neovim-best-code-editor-ide-for-developers/"],
+            ["/collections/neovim-best-code-editor-ide-for-developers/", "https://console.dev/articles/neovim-best-code-editor-ide-for-developers/"],
             ["/beta", "https://console.dev/betas/"],
             ["/beta/", "https://console.dev/betas/"],
             ["/mars", "https://console.dev/research/mars/"],
@@ -85,6 +85,13 @@ async function handleEvent(event) {
             ["/research", "https://console.dev"],
             ["/research/", "https://console.dev"],
             ["/research/mars", "https://console.dev/research/mars/"],
+            ["/reviews", "https://console.dev/articles/"],
+            ["/reviews/", "https://console.dev/articles/"],
+            ["/reviews/rss.xml", "https://console.dev/articles/rss.xml"],
+            ["/reviews/neovim-best-code-editor-ide-for-developers", "https://console.dev/articles/neovim-best-code-editor-ide-for-developers/"],
+            ["/reviews/neovim-best-code-editor-ide-for-developers/", "https://console.dev/articles/neovim-best-code-editor-ide-for-developers/"],
+            ["/reviews/ssh-alternatives-for-mobile-low-latency-unreliable-connections", "https://console.dev/articles/ssh-alternatives-for-mobile-low-latency-unreliable-connections/"],
+            ["/reviews/ssh-alternatives-for-mobile-low-latency-unreliable-connections/", "https://console.dev/articles/ssh-alternatives-for-mobile-low-latency-unreliable-connections/"],
             ["/qa", "https://console.dev/interviews/"],
             ["/qa/", "https://console.dev/interviews/"],
             ["/qa/rss.xml", "https://console.dev/interviews/rss.xml"],

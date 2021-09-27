@@ -5,7 +5,7 @@ draft: false
 summary:
   A review of the best SSH alternatives for connecting to servers over poor
   connections.
-isPage: reviews
+isPage: articles
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorBio:
@@ -16,8 +16,8 @@ authorBio:
   millions of servers. More recently, he has been researching sustainable
   computing at Imperial College London & Uptime Institute, which he continues to
   do alongside running Console.
-ogImg: /img/reviews/ssh-alternatives-for-mobile-low-latency-unreliable-connections-responsetime.png
-tags: [Reviews, SSH, SSH Alternatives, Connections]
+ogImg: /img/articles/ssh-alternatives-for-mobile-low-latency-unreliable-connections-responsetime.png
+tags: [Articles, SSH, SSH Alternatives, Connections]
 headerType: fixed
 ---
 
@@ -52,7 +52,7 @@ and means I can code from any machine.
 
 However, I want to keep my text/terminal-based workflow. VS Code is a great
 product, but
-[I prefer Neovim](/reviews/neovim-best-code-editor-ide-for-developers/). I am
+[I prefer Neovim](/articles/neovim-best-code-editor-ide-for-developers/). I am
 therefore experimenting with running my development on a remote server with
 isolated containers that I connect to from my computer.
 
@@ -122,7 +122,7 @@ with TCP. The client shows when there is a delay in echoing the reply from the
 server, but only in high latency scenarios, which is fun to occasionally see
 show up in the UI.
 
-{{< img-center src="/img/reviews/ssh-alternatives-for-mobile-low-latency-unreliable-connections-responsetime.png" alt="A graph of keystroke response time: Mosh vs SSH." width="100%" caption="Cumulative distribution of keystroke response times: Mosh vs SSH. From: mosh.org" >}}
+{{< img-center src="/img/articles/ssh-alternatives-for-mobile-low-latency-unreliable-connections-responsetime.png" alt="A graph of keystroke response time: Mosh vs SSH." width="100%" caption="Cumulative distribution of keystroke response times: Mosh vs SSH. From: mosh.org" >}}
 
 The main downside with Mosh is that it emulates the terminal remotely and only
 sends the visible state of the terminal back to the client. This means if you
