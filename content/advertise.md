@@ -27,6 +27,6 @@ of your product.
 
 {{< a-button text="hello@console.dev" title="mailto:hello@console.dev" icon-left="send" url="mailto:hello@console.dev">}}
 
-<!--{{< br >}} {{< br >}}
-{{< a-button text="Download" title="Download advertiser kit" icon-left="download" is-text="true" url="/">}}
-a .pdf version of our advertiser kit.-->
+{{< br >}}
+{{< a-button text="Download" title="Download advertiser kit" icon-left="download" is-text="true" url="https://drive.google.com/file/d/1gatWFqM6hqC0F7Qkqzar3IdRizm0G0yv/view?usp=sharing" nofollow="true">}}
+a .pdf version of our advertiser kit.
