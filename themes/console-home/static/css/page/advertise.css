@@ -86,12 +86,6 @@ html {
     z-index: 1;
 }
 
-.bg-dark {
-    background: var(--c-black-01);
-    margin: 0 -6.25vw;
-    padding: 0 6.25vw;
-}
-
 /* Opening */
 
 .page-section-advertise.opening .title-1 {
