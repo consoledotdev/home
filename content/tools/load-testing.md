@@ -37,10 +37,10 @@ authorBio:
   Imperial College London. David has been a developer for 15+ years.
 ---
 
-The best load testing tools provide scriptable test plans, protocol-level and
-browser-level test execution, and for our review must also have a developer
-focus. Load testing tools help understand whether your infrastructure can handle
-a large spike of traffic and how fast pages load.
+Load testing tools help understand whether your infrastructure can handle a
+large spike of traffic and how fast pages load. The best load testing tools
+provide scriptable test plans, protocol- and browser-level test execution, and
+for this review must also have a developer focus.
 
 We tested 11 load testing tools using our independent
 [selection criteria](/about#selection-criteria) and the requirements described
@@ -59,15 +59,20 @@ tools should have from the perspective of an experienced developer.
 
 #### What is the difference between load testing and browser testing?
 
-Load testing is focused on sending large numbers of requests to simulate a
-traffic spike or a sudden influx of users. This can be achieved through protocol
-level requests to HTTP, WebSocket or API requests, but can also be implemented
-using browser simulations. Testing with a real browser is important to ensure
-that the page resources load and the pager renders quickly. Load testing
-examines the infrastructure with a focus on errors and measuring response time.
+Load testing is focused on sending lots of requests to simulate a traffic spike
+or a sudden influx of users. It examines the infrastructure with a focus on
+errors and measuring response time. This can be achieved through protocol-level
+requests to HTTP, WebSockets or API endpoints, but can also be implemented using
+browser simulations.
+
+Testing with a real browser is important to ensure that the page resources load
+and the pager renders quickly. Protocol-level testing does not load all the
+extra resources a page may reference, such as third party scripts or images.
+Browser-level testing load everything, which means the infrastructure gets fully
+tested.
 
 Browser testing is focused on browser compatibility to ensure that the web page
-renders correctly across different platforms.
+renders correctly across different versions and platforms.
 [The best browser testing tools](/tools/browser-testing/) allow tests on many
 different browsers, including older versions and mobile browsers. The browser
 version or platform do not matter for load testing.
@@ -76,11 +81,9 @@ version or platform do not matter for load testing.
 
 ### Requirements
 
-There are a large number of load testing tools available on the market. For the
-purposes of this review, I will be looking for a few key features:
-
-For each of our load testing tool reviews we will assess functionality based on
-our [standard selection criteria](/about/#selection-criteria) plus these three
+There are a large number of load testing tools available on the market. For each
+of our load testing tool reviews we will assess functionality based on our
+[standard selection criteria](/about/#selection-criteria) plus these three
 requirements:
 
 #### Scriptable test plans
@@ -92,12 +95,12 @@ can be executed directly from it.
 
 #### Protocol and browser test execution
 
-Sending lots of HTTP requests time tests the performance of the infrastructure
-but does not accurately measure how users experience the service. Browsers must
+Sending lots of HTTP requests tests the performance of the infrastructure but
+does not accurately measure how users experience the service. Browsers must
 download multiple resources, parse the page, render HTML and CSS and then
-execute Javascript. A very fast HTTP response might be very slow when rendered
-in a browser. We need to test both. Ideally, load testing should support both
-protocol and browser testing.
+execute Javascript. A very fast HTTP response might be slow when rendered in a
+browser. We need to test both. Ideally, load testing tools should support both
+protocol- and browser-level testing.
 
 #### Developer focus
 
@@ -132,14 +135,14 @@ also has its own online test builder for executing HTTP requests.
 #### Review
 
 Flood have built their own open-source browser-based load generation tool called
-Element which can be used independently, or with Flood’s cloud service.
-[Element](https://element.flood.io/) uses [Playwright](https://playwright.dev/),
-an open source NodeJS library, which allows you to script user interaction with
+[Element](https://element.flood.io/) which can be used independently, or with
+Flood’s cloud service. Element uses [Playwright](https://playwright.dev/), an
+open source NodeJS library, which allows you to script user interaction with
 Chrome, Safari and Firefox browsers.
 
 The combined support for multiple load testing frameworks means you can use
-Flood to execute both protocol level tests (with JMeter or Gatling) as well as
-browser level tests (with Selenium or Element).
+Flood to execute both protocol-level tests (with JMeter or Gatling) as well as
+browser-level tests (with Selenium or Element).
 
 Flood load tests are based around Service Level Objective (SLO) monitoring
 criteria such as concurrent users, failed/passed transactions, response time,
@@ -173,11 +176,12 @@ and others.
 
 #### Summary
 
-- Free and open source with an optional cloud service.
+- Free and open source with an optional cloud service if you want distributed
+  tests.
 - CLI for testing HTTP, WebSockets and gRPC requests.
 - Tests scripted using Javascript.
-- Exports to terminal and supports services like AWS Cloudwatch, Datadog,
-  Grafana, GitHub Actions, etc.
+- Results displayed in the terminal and supports exporting to services like AWS
+  Cloudwatch, Datadog, Grafana, GitHub Actions, etc.
 
 #### Review
 
@@ -188,12 +192,12 @@ part of Grafana, which we reviewed in our
 [best server monitoring tools review](/tools/server-monitoring/).
 
 k6 does not simulate a browser but does provide built-in metrics like time spent
-blocked, connecting, TLS handshake, data received, total response time and
-parsing of the response. This means it is very flexible and can be used for
-regression testing e.g. checking for expected output, stress testing e.g.
-sending extreme numbers of requests, smoke testing e.g. sending small numbers of
-requests to check expected responses/errors, and soak testing e.g. testing for
-reliable responses over a longer period of time.
+blocked, connecting, negotiating the TLS handshake, total data received, total
+response time and parsing of the response. This means it is very flexible and
+can be used for regression testing e.g. checking for expected output, stress
+testing e.g. sending extreme numbers of requests, smoke testing e.g. sending
+small numbers of requests to check expected responses/errors, and soak testing
+e.g. testing for reliable responses over a longer period of time.
 
 The CLI output can be configured to be human or machine readable, but there is
 no graphical interface as standard. Instead, you can pipe the results into a
@@ -205,10 +209,11 @@ CLI-first and all the test plans are written in code, so they can live alongside
 the systems they’re testing.
 [We use k6 at Console](https://blog.console.dev/automated-website-performance-testing-with-github-actions-k6-and-cloudflare-workers/) -
 deployed using GitHub Actions and Cloudflare Workers - for performance testing
-every commit for our website to ensure pages are always fast. If you are looking
-just for HTTP load testing then k6 does a great job, but the main limitation is
-the lack of browser simulation. If you want to test browser rendering
-performance, k6 is not the right tool.
+every commit for our website to ensure pages are always fast.
+
+If you are looking just for HTTP load testing then k6 does a great job, but the
+main limitation is the lack of browser simulation. If you want to test browser
+rendering performance, k6 is not the right tool.
 
 {{< img-center src="/img/tools/load-testing-k6.png" alt="k6 product screenshot" width="100%" >}}
 
@@ -250,7 +255,7 @@ Gatling.
 ### Loadster
 
 [Loadster](https://loadster.app) is a cloud load testing tool that supports both
-protocol level testing to HTTP endpoints and browser performance simulation
+protocol-level testing to HTTP endpoints and browser performance simulation
 (Chrome only). The UI has a dark, neon, retro feel (in a good way), which is a
 style we appreciate at Console!
 
@@ -279,7 +284,7 @@ time, size, status codes, headers, body and validating requests with Javascript.
 
 The main complaint against Loadster is the lack of scripting capabilities, but
 that is somewhat made up for by the advanced options available for both protocol
-and browser testing. It is clearly designed for technical users
+and browser testing. It is clearly designed for technical users.
 
 {{< nav-wrapper--open anchor-name="gatling" >}}
 
@@ -322,7 +327,7 @@ which blocks Java scripts by default.
 ### Apache JMeter
 
 [Apache JMeter](https://jmeter.apache.org/) is a free and open source load
-testing tool that runs on a protocol level to allow performance testing of HTTP,
+testing tool that runs on a protocol-level to allow performance testing of HTTP,
 HTTPS, SOAP, REST, FTP, LDAP, Mail, TCP, Java and other technologies. It creates
 test plans via a browser recorder which can be saved to a standardized format
 and run via a headless CLI on any system that supports Java.
@@ -435,9 +440,9 @@ requests.
 
 #### Summary
 
-- Scriptless tests are built using the browser editor. Code cannot be edited.
+- Does not support scripted tests - only sends requests to a specified endpoint.
 - Connects to your AWS account and uses EC2 instances to execute requests.
-- Limited integration into CI/CD - only supports Jenkins.
+- Primarily useful for stress testing.
 
 #### Review
 
@@ -448,8 +453,9 @@ response time and status codes.
 
 The advantage of using Bees with Machine Guns is that it manages starting and
 stopping the EC2 instances, optionally across multiple regions and zones, so you
-can generate large request volumes using remote, cloud infrastructure. You can
-define all the standard HTTP parameters like cookies, headers and
+can generate large request volumes using remote, cloud infrastructure.
+
+You can define all the standard HTTP parameters like cookies, headers and
 authentication. It can also be combined with
 [hurl](https://github.com/EdgeCast/hurl), an HTTP server load testing utility
 that provides better support for multithreading and more detailed performance
@@ -494,8 +500,7 @@ configuration but is otherwise quite basic.
 LoadNinja can be triggered by CI/CD integration into Jenkins, but does not
 support any other systems unless you write your own scripts to trigger runs via
 their API. The scriptless approach means it can be managed by non-technical
-users but it lacks advanced features, so I would not recommend it for
-developers.
+users but it lacks advanced features.
 
 {{< nav-wrapper--open anchor-name="neoload" >}}
 
@@ -549,7 +554,7 @@ CI/CD systems easily. There are much better load testing tools for developers.
   as well as connecting to other instances in distributed mode, however there
   are better tools available.
 - [StressStimulus](https://www.stresstimulus.com) is only available for Windows.
-  The C[Console selection criteria](/about/#selection-criteria) require that
+  The [Console selection criteria](/about/#selection-criteria) require that
   tools be available for multiple platforms, so we excluded it from this review.
 - [WebLoad](https://www.radview.com/) is an enterprise load testing tool but it
   is only available as a Windows download. The cloud SaaS version requires you
