@@ -329,6 +329,10 @@ html {
 }
 
 /* Audience */
+.page-section-advertise.audience {
+    padding: calc(var(--space6) + var(--space3)) 0 calc(var(--space6) + var(--space4));
+}
+
 .advertise-audience-facts {
     margin: calc(var(--space5) + var(--space3)) 0;
 }
