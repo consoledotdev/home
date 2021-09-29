@@ -646,6 +646,54 @@
     fill: var(--theme-cta-secondary-green-text-active);
 }
 
+/* Yellow */
+.console-button-text.console-button-yellow {
+    color: var(--theme-cta-secondary-yellow-text-idle);
+}
+.console-button-text.console-button-yellow:hover {
+    color: var(--theme-cta-secondary-yellow-text-hover);
+}
+.console-button-text.console-button-yellow:active,
+.console-button-text.console-button-yellow:focus {
+    color: var(--theme-cta-secondary-yellow-text-active);
+}
+
+.console-button-text.console-button-yellow .icon-fill {
+    fill: var(--theme-cta-secondary-yellow-text-idle);
+}
+.console-button-text.console-button-yellow:hover .icon-fill {
+    fill: var(--theme-cta-secondary-yellow-text-hover);
+}
+.console-button-text.console-button-yellow:active .icon-fill,
+.console-button-text.console-button-yellow:focus .icon-fill {
+    fill: var(--theme-cta-secondary-yellow-text-active);
+}
+
+.console-button-text.console-button-yellow .icon-stroke {
+    stroke: var(--theme-cta-secondary-yellow-text-idle);
+}
+.console-button-text.console-button-yellow:hover .icon-stroke {
+    stroke: var(--theme-cta-secondary-yellow-text-hover);
+}
+.console-button-text.console-button-yellow:active .icon-stroke,
+.console-button-text.console-button-yellow:focus .icon-stroke {
+    stroke: var(--theme-cta-secondary-yellow-text-active);
+}
+
+.console-button-text.console-button-yellow .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-yellow-text-idle);
+    fill: var(--theme-cta-secondary-yellow-text-idle);
+}
+.console-button-text.console-button-yellow:hover .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-yellow-text-hover);
+    fill: var(--theme-cta-secondary-yellow-text-hover);
+}
+.console-button-text.console-button-yellow:active .icon-fill-stroke,
+.console-button-text.console-button-yellow:focus .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-yellow-text-active);
+    fill: var(--theme-cta-secondary-yellow-text-active);
+}
+
 /* Control
    ================================================================================================================ */
 .console-control {
@@ -2139,15 +2187,35 @@ body:not(.mobile) .console-control:hover:before {
     position: relative;
 }
 
+.console-bar-chart.always-show-border {
+    border-bottom: 1px solid var(--theme-datavis-axis);
+}
+
 .console-bar-chart-item-bar {
     height: calc(var(--space2) - 1px);
     background: var(--theme-text-1);
 }
 
+.console-bar-chart.blue .console-bar-chart-item:nth-child(1) .console-bar-chart-item-bar {
+    background: var(--theme-datavis-blue-item0);
+}
+
+.console-bar-chart.blue .console-bar-chart-item:nth-child(2) .console-bar-chart-item-bar {
+    background: var(--theme-datavis-blue-item-1);
+}
+
+.console-bar-chart.blue .console-bar-chart-item:nth-child(3) .console-bar-chart-item-bar {
+    background: var(--theme-datavis-blue-item-2);
+}
+
+.console-bar-chart.blue .console-bar-chart-item:nth-child(4) .console-bar-chart-item-bar {
+    background: var(--theme-datavis-blue-item-3);
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
     .console-bar-chart {
         display: grid;
-        grid-template-columns: repeat(auto-fill, 40%);
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--space4) var(--space4);
     }
 }

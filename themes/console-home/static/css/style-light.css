@@ -10,6 +10,8 @@
     --theme-text-3: var(--c-grey-05);
     --theme-text-4: var(--c-grey-05);
     --theme-text-5: var(--c-grey-03);
+    --theme-text-attention-1: var(--c-yellow-04-main);
+    --theme-text-attention-2: var(--c-yellow-06);
     --theme-input-text: var(--c-black-02-main);
     --theme-brand-accent-text-idle: var(--c-blue-08);
     --theme-brand-accent-text-hover: var(--c-blue-09);
@@ -23,11 +25,17 @@
     --theme-cta-secondary-green-text-hover: var(--c-green-07);
     --theme-cta-secondary-green-text-active: var(--c-green-08);
 
+    --theme-cta-secondary-yellow-text-idle: var(--c-yellow-06);
+    --theme-cta-secondary-yellow-text-hover: var(--c-yellow-07);
+    --theme-cta-secondary-yellow-text-active: var(--c-yellow-08);
+
     --theme-content-bg-0: var(--c-white-00-absolute);
     --theme-content-bg-1: var(--c-white-02);
     --theme-content-bg-2: var(--c-white-01-main);
     --theme-content-bg-3: var(--c-grey-01-white-03);
     --theme-content-bg-4: var(--c-grey-01-white-03);
+
+    --theme-section-plane: var(--c-white-02);
 
     --theme-hero-fade-top: linear-gradient(180deg, rgba(245, 248, 251, 0.4) 0%, rgba(245, 248, 251, 0) 100%);
     --theme-hero-fade-bottom: linear-gradient(0deg, rgba(245, 248, 251, 0.4) 0%, rgba(245, 248, 251, 0) 100%);
@@ -148,6 +156,11 @@
 
     --theme-datavis-axis: var(--c-grey-04-whites-neutral);
 
+    --theme-datavis-blue-item0: var(--c-blue-06-main);
+    --theme-datavis-blue-item-1: var(--c-blue-05);
+    --theme-datavis-blue-item-2: var(--c-blue-04);
+    --theme-datavis-blue-item-3: var(--c-blue-03);
+
     /* Mars Internet page specific */
 
     --theme-mars-earth-halo: 0 0 0.25em rgba(0, 0, 255, 0.08);
@@ -193,6 +206,12 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
     background: var(--theme-content-bg-3);
 }
 
+@media (max-width: 768px) {
+    .theme .main-article .subscribe-cta {
+        background: transparent;
+    }
+}
+
 .theme .interviews-card {
     background-color: var(--theme-content-bg-0);
 }
@@ -209,8 +228,18 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
     display: none;
 }
 
-@media (max-width: 768px) {
-    .theme .main-article .subscribe-cta {
-        background: transparent;
-    }
+.theme .main-advertise img.light {
+    display: initial;
+}
+
+.theme .main-advertise img.dark {
+    display: none;
+}
+
+.theme .page-section-plane:before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 126 256'%3E%3Cpath d='M126 0V256H0L126 0Z' fill='%23f1f2f6'/%3E%3C/svg%3E");
+}
+
+.theme .page-section-plane:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 126 256'%3E%3Cpath d='M0 256L2.23802e-05 0L126 1.10153e-05L0 256Z' fill='%23f1f2f6'/%3E%3C/svg%3E%0A");
 }

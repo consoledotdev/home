@@ -1,59 +1,89 @@
 {{ define "main" }}
 
     <section class="page-section page-section-advertise opening">
-        <h5 class="title title-4">Advertise with Console</h5>
-        <h2 class="title title-1">Discover the best tools for developers</h2>
-        <p class="description">Console is the place developers go to find the best tools. Each week we pick out the most interesting tools and new releases to help experienced developers stay up-to-date with the tools and releases that matter.</p>
-        <p><b>In a crowded market, our audience trusts our recommendations.</b> Our reviews are made through years of experience and research, bringing a deep practical understanding of the needs of experienced developers looking to try new tools.</p>
-        <a class="console-button-text icon-right" href="#how-to-work-with-us" title="How to works with us" rel="noopener"><span>How to work with us</span>
-            {{ partial "icons/scroll-down.html" }}</a>
+        <div class="top">
+            <h5 class="title title-4"><span>Advertise</span> with Console</h5>
+            <h2 class="title title-1">Discover the best tools for developers</h2>
+            <p class="description">Console is the place developers go to find the best tools. Each week we pick out the most interesting tools and new releases to help experienced developers stay up-to-date with the tools and releases that matter.</p>
+            <p><b>In a crowded market, our audience trusts our recommendations.</b> Our reviews are made through years of experience and research, bringing a deep practical understanding of the needs of experienced developers looking to try new tools.</p>
+            <a onclick="blur();" class="console-button-text console-button-yellow icon-right" href="#how-to-work-with-us" title="How to works with us" rel="noopener"><span>How to work with us</span>
+                {{ partial "icons/scroll-down.html" }}</a>
+        </div>
     </section>
 
     <section class="page-section page-section-plane page-section-advertise newsletter">
-        <h3 class="title title-2 rich-title">{{ partial "icons/console-mini.html" }}<span><span>console</span><br>weekly newsletter</span></h3>
-        <p class="intro"><b>Trusted</b> / Smart insights, recommending the best developer tools. We only feature tools that meet our selection criteria.</p>
-        <p class="intro"><b>Concise</b> / Features 2-3 tools and 3-5 betas per newsletter, giving your tool the attention it deserves.</p>
-        <p class="intro"><b>Technical</b> / Written for experienced developers. Our subscribers work at a range of different organizations - large tech companies, small businesses, agencies, media, government, healthcare and finance.</p>
+        <div class="top">
+            <h3 class="title title-2 rich-title">{{ partial "icons/console-mini.html" }}<span><span>console</span><br>weekly newsletter</span></h3>
+            <p class="intro"><b>Trusted</b> / Smart insights, recommending the best developer tools. We only feature tools that meet our selection criteria.</p>
+            <p class="intro"><b>Concise</b> / Features 2-3 tools and 3-5 betas per newsletter, giving your tool the attention it deserves.</p>
+            <p class="intro"><b>Technical</b> / Written for experienced developers. Our subscribers work at a range of different organizations - large tech companies, small businesses, agencies, media, government, healthcare and finance.</p>
+        </div>
+        <div class="bottom">
+            <img class="light" src="/img/advertise/newsletter-light.png" alt="Console Newsletter">
+            <img class="dark" src="/img/advertise/newsletter-dark.png" alt="Console Newsletter">
+        </div>
     </section>
-
-    <section class="page-section page-section-advertise site">
-        <h3 class="title title-2 rich-title">{{ partial "icons/link.html" }}console.dev</h3>
-        <div class="advertise-site-tools">
-            <h4 class="title title-3">Developer tools reviews</h4>
-            <p class="intro">
-                An archive of every tool featured in the newsletter. A go-to resource to discover the best developer tool.
-            </p>
-            <a class="console-button-text icon-right" href="/tools/" title="See developer tools reviews" rel="noopener"><span>See developer tools reviews</span>
-                {{ partial "icons/arrow-right.html" }}</a>
+    
+    <section class="page-section page-section-advertise site" data-section-advertise-site>
+        <h3 class="title title-2 rich-title">{{ partial "icons/link.html" }}<span>console.dev</span></h3>
+        <div class="advertise-site-item advertise-site-tools">
+            <div class="top">
+                <h4 class="title title-3 rich-title">{{ partial "icons/console-review.html" }}<span>Developer tools reviews</span></h4>
+                <p class="intro">
+                    An archive of every tool featured in the newsletter. A go-to resource to discover the best developer tool.
+                </p>
+                <a class="console-button-text icon-right" href="/tools/" title="See developer tools reviews" rel="noopener"><span>See developer tools reviews</span>
+                    {{ partial "icons/arrow-right.html" }}</a>
+            </div>
+            <div class="bottom">
+                <img class="light" src="/img/advertise/ui-tools-light.png" alt="Developer tools reviews">
+                <img class="dark" src="/img/advertise/ui-tools-dark.png" alt="Developer tools reviews">
+            </div>
         </div>
-        <div class="advertise-site-interviews">
-            <h4 class="title title-3">Developer interviews</h4>
-            <p class="intro">
-                Tell your story in our series of interviews with leading founders and CTOs.
-            </p>
-            <a class="console-button-text icon-right" href="/interviews/" title="See developer interviews" rel="noopener"><span>See developer interviews</span>
-                {{ partial "icons/arrow-right.html" }}</a>
+        <div class="advertise-site-item advertise-site-interviews">
+            <div class="top">
+                <h4 class="title title-3 rich-title">{{ partial "icons/console-interview.html" }}<span>Developer interviews</span></h4>
+                <p class="intro">
+                    Tell your story in our series of interviews with leading founders and CTOs.
+                </p>
+                <a class="console-button-text icon-right" href="/interviews/" title="See developer interviews" rel="noopener"><span>See developer interviews</span>
+                    {{ partial "icons/arrow-right.html" }}</a>
+            </div>
+            <div class="bottom">
+                <img class="light" src="/img/advertise/ui-interviews-light.png" alt="Developer interviews">
+                <img class="dark" src="/img/advertise/ui-interviews-dark.png" alt="Developer interviews">
+            </div>
         </div>
-        <div class="advertise-site-betas">
-            <h4 class="title title-3">Beta Console</h4>
-            <p class="intro">
-                The latest beta release and early access programs for developers. Relied on by early-adopters to be the first to try new tools.
-            </p>
-            <a class="console-button-text icon-right" href="/betas/" title="See Beta Console" rel="noopener"><span>See Beta Console</span>
-                {{ partial "icons/arrow-right.html" }}</a>
+        <div class="advertise-site-item advertise-site-betas">
+            <div class="top">
+                <h4 class="title title-3 rich-title">{{ partial "icons/beta.html" }}<span>Beta Console</span></h4>
+                <p class="intro">
+                    The latest beta release and early access programs for developers. Relied on by early-adopters to be the first to try new tools.
+                </p>
+                <a class="console-button-text icon-right" href="/betas/" title="See Beta Console" rel="noopener"><span>See Beta Console</span>
+                    {{ partial "icons/arrow-right.html" }}</a>
+            </div>
+            <div class="bottom">
+                <img class="light" src="/img/advertise/ui-betas-light.png" alt="Beta Console">
+                <img class="dark" src="/img/advertise/ui-betas-dark.png" alt="Beta Console">
+            </div>
         </div>
     </section>
 
     <section class="page-section page-section-advertise podcast">
-        {{ partial "icons/podcast.html" }}
-        <h3 class="title title-2">DevTools Podcast</h3>
-        <p class="intro">
-            A discussion using specific tools as a hook to examine devtools related topics ranging from the philosophy of open source to how to decentralize your tech stack.
-        </p>
-        <p class="intro">
-            An opportunity for us to go deeper on your latest release.
-        </p>
-        <iframe height="400px" width="350px" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/10488ddf-3ca4-4300-9391-c2967d806334?dark=true&show=true&color=0A0A0B"></iframe>
+        <div class="top">
+            {{ partial "icons/podcast.html" }}
+            <h3 class="title title-2">DevTools Podcast</h3>
+            <p class="intro">
+                A discussion using specific tools as a hook to examine devtools related topics ranging from the philosophy of open source to how to decentralize your tech stack.
+            </p>
+            <p class="intro">
+                An opportunity for us to go deeper on your latest release.
+            </p>
+        </div>
+        <div class="bottom" data-podcast-embed-frame>
+            <iframe data-podcast-embed height="464px" width="350px" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/10488ddf-3ca4-4300-9391-c2967d806334?dark=true&show=true&color=0A0A0B"></iframe>
+        </div>
     </section>
 
     <section class="page-section page-section-plane page-section-advertise audience">
@@ -65,13 +95,32 @@
             <div class="advertise-audience-fact converting">
                 <div class="advertise-audience-fact-head">
                     <div class="audience-fact-number">68%</div>
+                    <div class="heads">
+                        <div class="head">
+                            <div class="head-fill"></div>
+                        </div>
+                        <div class="head">
+                            <div class="head-fill"></div>
+                        </div>
+                        <div class="head">
+                            {{ partial "icons/head.html"}}
+                            <div class="head-fill"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="advertise-audience-fact-body"><p><span>2 in 3</span> of our readers have signed-up to a tool featured by Console.</p></div>
             </div>
             <div class="advertise-audience-fact qualified">
                 <div class="advertise-audience-fact-head">
-                    <div class="audience-fact-number">77%</div>
-                    <p>5+ years dev experience</p>
+                    <div>
+                        <div class="audience-fact-number">77%</div>
+                        <p>5+ years dev experience</p>
+                    </div>
+                    <div class="console-bar-chart blue always-show-border">
+                        <div class="console-bar-chart-item" style="width: 77%">
+                            <div class="console-bar-chart-item-bar" style="width: 77%"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="advertise-audience-fact-body"><p><span>4 in 5</span>  have been coding for 5+ years.</p></div>
             </div>
@@ -91,7 +140,7 @@
         </div>
         <div class="advertise-audience-locations">
             <h3 class="title title-2">Locations</h3>
-            <div class="console-bar-chart">
+            <div class="console-bar-chart blue">
                 <div class="console-bar-chart-item" style="width: 26%">
                     <h4 class="title title-3">26% USA</h4>
                     <div class="console-bar-chart-item-bar" style="width: 26%"></div>
@@ -114,60 +163,62 @@
 
     <section class="page-section page-section-advertise work-with-us">
         <h2 class="title title-1">How to work with us</h2>
-        <h4 class="title title-3">1 / Free inclusion and review</h4>
+        <h4 class="title title-3"><span>1 </span><span>/</span> Free inclusion and review</h4>
         <p class="intro">
             Each week, Console reviews 2-3 interesting tools that we recommend to our subscribers. Subscribers trust and value our recommendations. We do not take payment for inclusion and do not charge to consider a product.
         </p>
-        <h4 class="title title-3">2 / Editorially independent</h4>
+        <h4 class="title title-3"><span>2 </span><span>/</span> Editorially independent</h4>
         <p class="intro">
             Reviews are editorially independent and partners do not get to read the review before it is published. Only the best tools make it and our readers know that if a tool is featured, it’s worth trying out. This means that we only include tools that meet our selection criteria.
         </p>
-        <h4 class="title title-3">3 / Focused advertising</h4>
+        <h4 class="title title-3"><span>3 </span><span>/</span> Focused advertising</h4>
         <p class="intro">
             The packages below are only available once we have completed a successful review. Each campaign is unique, built from the ground up for every partner. This is not generic advertising - we put you in front of experienced developers specifically looking to try new tools. If you are interested in either package, please get in touch so we can prioritize the evaluation of your product.
         </p>
-        <div class="framed-section framed-section-default">
-            <h3 class="title title-2">Console launch</h3>
-            <p>
-                Planning a new release or product launch? Our audience of experienced developers are specifically looking to try new things, so we can help increase signups by coordinating a campaign to coincide with your launch date.
-            </p>
-            <div class="framed-section-item">
-                <h5 class="title title-4 rich-title">{{ partial "icons/console-mini-filled.html" }}<span>Schedule</span></h5>
-                <p class="small">Schedule when your product review appears in the Console Weekly newsletter.</p>
-                <h5 class="title title-4 rich-title">{{ partial "icons/console-interview.html" }}<span>Interview</span></h5>
-                <p class="small">Supporting Q&A interview to tell the story of your product.</p>
-                <h5 class="title title-4 rich-title">{{ partial "icons/link.html" }}<span>Website</span></h5>
-                <p class="small">Inclusion of your tool in the Console Tools list.</p>
-                <h5 class="title title-4 rich-title">{{ partial "icons/social.html" }}<span>Social</span></h5>
-                <p class="small">Promotion of the launch on social media.</p>
-                <div class="separator light"></div>
-                <h5 class="title title-4 rich-title">{{ partial "icons/delay.html" }}<span>Time</span></h5>
-                <p class="small">Option to customize the send time of the newsletter to sync with the launch announcement or press release. Note that the day is not flexible - the newsletter always goes out on a Thursday.</p>
-                <h5 class="title title-4 rich-title">{{ partial "icons/console-offer.html" }}<span>Offer</span></h5>
-                <p class="small">Opportunity to provide an exclusive offer to our audience e.g. early access, invite codes, bonus credits, discounts.</p>
-                <p>Designed for a <b>one time</b> launch or release.</p>
-                <a href="mailto:hello@console.dev" class="console-button icon-left">{{ partial "icons/send.html" }}<span>Get in touch</span></a>
+        <div class="work-with-us-packages">
+            <div class="framed-section framed-section-default">
+                <h3 class="title title-2">Console launch</h3>
+                <p>
+                    Planning a new release or product launch? Our audience of experienced developers are specifically looking to try new things, so we can help increase signups by coordinating a campaign to coincide with your launch date.
+                </p>
+                <div class="framed-section-item">
+                    <h5 class="title title-4 rich-title">{{ partial "icons/console-mini-filled.html" }}<span>Schedule</span></h5>
+                    <p class="small">Schedule when your product review appears in the Console Weekly newsletter.</p>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/console-interview.html" }}<span>Interview</span></h5>
+                    <p class="small">Supporting Q&A interview to tell the story of your product.</p>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/link.html" }}<span>Website</span></h5>
+                    <p class="small">Inclusion of your tool in the Console Tools list.</p>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/social.html" }}<span>Social</span></h5>
+                    <p class="small">Promotion of the launch on social media.</p>
+                    <div class="separator light"></div>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/delay.html" }}<span>Time</span></h5>
+                    <p class="small">Option to customize the send time of the newsletter to sync with the launch announcement or press release. Note that the day is not flexible - the newsletter always goes out on a Thursday.</p>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/console-offer.html" }}<span>Offer</span></h5>
+                    <p class="small">Opportunity to provide an exclusive offer to our audience e.g. early access, invite codes, bonus credits, discounts.</p>
+                    <p>Designed for a <b>one time</b> launch or release.</p>
+                    <a href="mailto:hello@console.dev" class="console-button icon-left">{{ partial "icons/send.html" }}<span>Get in touch</span></a>
+                </div>
             </div>
-        </div>
-        <div class="framed-section framed-section-default">
-            <h3 class="title title-2">Console offer</h3>
-            <p>
-                Incentivize new signups by offering an exclusive benefit to our audience of experienced developers specifically looking to try new things. Whether early access to new features, invite codes to closed programs or bonus credits for your existing products, we can help you reach new users.
-            </p>
-            <div class="framed-section-item">
-                <h5 class="title title-4 rich-title">{{ partial "icons/console-mini-filled.html" }}<span>Schedule</span></h5>
-                <p class="small">Schedule when your product review appears in the Console Weekly newsletter.</p>
-                <h5 class="title title-4 rich-title">{{ partial "icons/console-interview.html" }}<span>Interview</span></h5>
-                <p class="small">Supporting Q&A interview to tell the story of your product.</p>
-                <h5 class="title title-4 rich-title">{{ partial "icons/link.html" }}<span>Website</span></h5>
-                <p class="small">Website promotional placement and offer highlight in the Console Tools list and/or Beta Console.</p>
-                <h5 class="title title-4 rich-title">{{ partial "icons/social.html" }}<span>Social</span></h5>
-                <p class="small">Ongoing promotion of the offer on social media for the duration of the campaign.</p>
-                <div class="separator light"></div>
-                <h5 class="title title-4 rich-title">{{ partial "icons/email.html" }}<span>Welcome</span></h5>
-                <p class="small">Placement in our “welcome email” for the duration of the campaign. This goes out to hundreds of new Console subscribers every day.</p>
-                <p>Designed to combine a <b>one time</b> feature in our newsletter with an <b>ongoing</b> campaign on our website and other channels.</p>
-                <a href="mailto:hello@console.dev" class="console-button icon-left">{{ partial "icons/send.html" }}<span>Get in touch</span></a>
+            <div class="framed-section framed-section-default">
+                <h3 class="title title-2">Console offer</h3>
+                <p>
+                    Incentivize new signups by offering an exclusive benefit to our audience of experienced developers specifically looking to try new things. Whether early access to new features, invite codes to closed programs or bonus credits for your existing products, we can help you reach new users.
+                </p>
+                <div class="framed-section-item">
+                    <h5 class="title title-4 rich-title">{{ partial "icons/console-mini-filled.html" }}<span>Schedule</span></h5>
+                    <p class="small">Schedule when your product review appears in the Console Weekly newsletter.</p>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/console-interview.html" }}<span>Interview</span></h5>
+                    <p class="small">Supporting Q&A interview to tell the story of your product.</p>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/link.html" }}<span>Website</span></h5>
+                    <p class="small">Website promotional placement and offer highlight in the Console Tools list and/or Beta Console.</p>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/social.html" }}<span>Social</span></h5>
+                    <p class="small">Ongoing promotion of the offer on social media for the duration of the campaign.</p>
+                    <div class="separator light"></div>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/email.html" }}<span>Welcome</span></h5>
+                    <p class="small">Placement in our “welcome email” for the duration of the campaign. This goes out to hundreds of new Console subscribers every day.</p>
+                    <p>Designed to combine a <b>one time</b> feature in our newsletter with an <b>ongoing</b> campaign on our website and other channels.</p>
+                    <a href="mailto:hello@console.dev" class="console-button icon-left">{{ partial "icons/send.html" }}<span>Get in touch</span></a>
+                </div>
             </div>
         </div>
     </section>
@@ -273,4 +324,5 @@
         <p class="quote"><span>{{ partial "icons/twitter.html" }}Really like the format — console.dev has been an interesting subscription, but complementing the newsletter with short-ish podcasts is a great idea.</span></p>
     </section>
 
+    <script src="/js/advertise.js"></script>
 {{ end }}
