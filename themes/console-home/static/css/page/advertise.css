@@ -86,6 +86,12 @@ html {
     z-index: 1;
 }
 
+.bg-dark {
+    background: var(--c-black-01);
+    margin: 0 -6.25vw;
+    padding: 0 6.25vw;
+}
+
 /* Opening */
 
 .page-section-advertise.opening .title-1 {
@@ -192,6 +198,26 @@ html {
     color: var(--theme-text-1);
 }
 
+.page-section-advertise.site .neon-planes-wrapper {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    margin-top: calc(calc(var(--space7) + var(--space6)) * -1);
+    transform-origin: top center;
+}
+
+.page-section-advertise.site .neon-planes {
+    position: relative;
+    width: calc(100% * 1.78);
+    padding-bottom: calc(78% * 1.78);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.page-section-advertise.site > *:not(.neon-planes-wrapper) {
+    position: relative;
+    z-index: 1;
+}
 
 .advertise-site-item .rich-title .icon {
     width: var(--space4_5);

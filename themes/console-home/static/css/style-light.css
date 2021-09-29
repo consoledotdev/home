@@ -122,6 +122,14 @@
     --theme-planes-triad-02-shadow: 0 var(--space2) var(--space4) rgba(245, 97, 245, 0.14), inset 0 0 var(--space7) rgba(245, 97, 245, 0.16);
     --theme-planes-triad-03-shadow: 0 var(--space2) var(--space4) rgba(1, 188, 144, 0.14), inset 0 0 var(--space7) rgba(1, 188, 144, 0.16);
 
+    --theme-neon-planes-blend-mode: multiply;
+    --theme-neon-planes-triad-01-body: #E4EBFF;
+    --theme-neon-planes-triad-01-glow: var(--c-blue-03);
+    --theme-neon-planes-triad-02-body: #FFE5FF;
+    --theme-neon-planes-triad-02-glow: #FFD3FF;
+    --theme-neon-planes-triad-03-body: #91FDE6;
+    --theme-neon-planes-triad-03-glow: #42FFDE;
+
     --theme-empty-bg-1: var(--c-white-01-main);
     --theme-empty-dashed-border: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23b5b6bf' stroke-width='2' stroke-dasharray='6%2c 6' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
 

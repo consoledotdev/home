@@ -19,3 +19,13 @@ let handlePodcastEmbedTheme = (() => {
     setTheme();
 })();
 
+let resizeNeonPlanes = (() => {
+    let setSize = () => {
+        let section = document.querySelector("[data-section-advertise-site]");
+        let planesWrapper = section.querySelector("[data-neon-planes-wrapper]");
+        let resizeRatio = (section.offsetHeight + 512) / planesWrapper.offsetHeight;
+        planesWrapper.style.transform = "scale(" + resizeRatio + ")";
+    };
+    setSize();
+    window.addEventListener("resize", setSize);
+})();
