@@ -1818,6 +1818,12 @@ body:not(.mobile) .console-control:hover:before {
     color: var(--theme-text-1);
 }
 
+.framed-section .quote {
+    background: transparent;
+    border: none;
+    padding: 0 0 0 var(--space1);
+}
+
 /* Console Score
    ================================================================================================================ */
 .console-score {

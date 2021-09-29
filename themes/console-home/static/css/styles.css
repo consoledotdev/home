@@ -1497,6 +1497,15 @@ p.x-small {
     background: var(--theme-content-bg-2);
 }
 
+.quote:last-child {
+    margin-bottom: 0;
+}
+
+.quote span {
+    font-style: normal;
+    color: var(--theme-text-1);
+}
+
 .page-feature-article .quote {
     background: transparent;
     font-size: var(--t-size0);

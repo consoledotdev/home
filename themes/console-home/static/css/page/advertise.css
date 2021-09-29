@@ -37,8 +37,20 @@ html {
     }
 
     .main-advertise p,
-    .main-advertise .quote {
+    .main-advertise .work-with-us .framed-section > p,
+    .main-advertise .work-with-us .framed-section-item p,
+    .main-advertise .quote,
+    .main-advertise .page-section-advertise.campaigns .framed-section .quote,
+    .main-advertise .page-section-advertise.campaigns .framed-section-item p {
         font-size: var(--t-size1);
+    }
+
+    .main-advertise .work-with-us .framed-section-item p.small {
+        font-size: var(--t-size0);
+    }
+
+    .main-advertise p.intro {
+        font-size: var(--t-size2);
     }
 
     .main-advertise p.description {
@@ -533,6 +545,10 @@ html {
     z-index: 1;
 }
 
+.work-with-us-packages .framed-section-item .title {
+    margin-bottom: var(--space1);
+}
+
 .work-with-us-packages .framed-section-item .title .icon {
     width: var(--space3_5);
     height: var(--space3_5);
@@ -541,6 +557,10 @@ html {
 
 .work-with-us-packages .framed-section-item p.small {
     margin-left: var(--space4);
+}
+
+.work-with-us-packages .framed-section-item p.small:not(:last-child) {
+    margin-bottom: var(--space3_5);
 }
 
 .work-with-us-packages .framed-section-item .separator {
@@ -554,6 +574,7 @@ html {
 }
 
 .work-with-us-packages .illustrated-title {
+    margin-top: 0;
     margin-bottom: var(--space3);
 }
 
@@ -565,4 +586,80 @@ html {
 .work-with-us-packages .framed-section-triad-03 .illustrated-title .illustration .background {
     stroke: var(--c-green-06);
     stroke-opacity: 0.5;
+}
+
+/* Campaigns */
+.page-section-advertise.campaigns .framed-section {
+    margin-top: var(--space4_5);
+}
+
+@media (min-width: 769px) {
+    .page-section-advertise.campaigns .framed-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 0;
+        align-items: stretch;
+        padding: 0;
+    }
+
+    .page-section-advertise.campaigns .top,
+    .page-section-advertise.campaigns .framed-section-item {
+        padding-top: var(--space4);
+        padding-bottom: var(--space4);
+    }
+
+    .page-section-advertise.campaigns .framed-section-item {
+        padding-top: var(--space4_5);
+        border: none;
+        border-left: var(--theme-framed-section-default-item-border);
+    }
+}
+
+.page-section-advertise.campaigns .framed-section .top .title {
+    margin-bottom: var(--space4);
+}
+
+.page-section-advertise.campaigns .framed-section .case-study-thumbnail {
+    width: var(--space4_5);
+    margin-right: var(--space3_5);
+}
+
+.page-section-advertise.campaigns .framed-section p.intro {
+    color: var(--theme-text-1);
+}
+
+.page-section-advertise.campaigns .framed-section .quote {
+    font-size: var(--t-size0);
+}
+
+.page-section-advertise.campaigns .framed-section-item .title {
+    margin-top: 0;
+    margin-bottom: var(--space1);
+}
+
+.page-section-advertise.campaigns .framed-section-item > .title {
+    margin-bottom: var(--space4);
+    color: var(--theme-text-attention-2);
+}
+
+.page-section-advertise.campaigns .framed-section-item .title .icon {
+    width: var(--space3_5);
+    height: var(--space3_5);
+    margin-right: var(--space2);
+}
+
+.page-section-advertise.campaigns .framed-section-item .title .icon-plus {
+    width: var(--space3);
+    height: var(--space3);
+    margin-left: var(--space3);
+    margin-right: 0;
+}
+
+.page-section-advertise.campaigns .framed-section-item p {
+    margin-left: var(--space4);
+    font-size: var(--t-size0);
+}
+
+.page-section-advertise.campaigns .framed-section-item p:not(:last-child) {
+    margin-bottom: var(--space3_5);
 }
