@@ -90,6 +90,10 @@
 				{{ partial "components/category.html" (dict "categoryData" $categoryData "clickable" "true" "large" "true" )  }}
 			</div>
 			<div class="category-reviews-item">
+				{{ $categoryData := (dict "category" "developer-tools" "subcategory" (dict "label" "Load testing" "name" "load-testing")) }}
+				{{ partial "components/category.html" (dict "categoryData" $categoryData "clickable" "true" "large" "true" )  }}
+			</div>
+			<div class="category-reviews-item">
 				{{ $categoryData := (dict "category" "devops" "subcategory" (dict "label" "Server monitoring" "name" "server-monitoring")) }}
 				{{ partial "components/category.html" (dict "categoryData" $categoryData "clickable" "true" "large" "true" )  }}
 			</div>
