@@ -19,13 +19,33 @@ let handlePodcastEmbedTheme = (() => {
     setTheme();
 })();
 
-let resizeNeonPlanes = (() => {
-    let setSize = () => {
-        let section = document.querySelector("[data-section-advertise-site]");
-        let planesWrapper = section.querySelector("[data-neon-planes-wrapper]");
-        let resizeRatio = (section.offsetHeight + 512) / planesWrapper.offsetHeight;
-        planesWrapper.style.transform = "scale(" + resizeRatio + ")";
-    };
-    setSize();
-    window.addEventListener("resize", setSize);
+document.addEventListener("DOMContentLoaded", (event) => {
+    let resizeNeonPlanes = (() => {
+        let setSize = () => {
+            let planesWrappers = document.querySelectorAll("[data-neon-planes-wrapper]");
+            planesWrappers.forEach((pW) => {
+                let parent = pW.parentElement;
+                let resizeRatio;
+                if (pW.dataset.site != undefined) {
+                    resizeRatio = (parent.offsetHeight + 512) / pW.offsetHeight;
+                    pW.style.transform = "scale(" + resizeRatio + ")";
+                }
+
+                if (pW.dataset.packages != undefined) {
+                    resizeRatio = (parent.offsetHeight * 0.94) / pW.offsetHeight;
+                    pW.style.transform = "scale(" + resizeRatio + ")";
+                }
+            });
+        };
+        setSize();
+        window.addEventListener("resize", setSize);
+        const resizeObserver = new ResizeObserver((entries) => {
+            setTimeout(() => {
+                setSize();
+            }, 100);
+        });
+        resizeObserver.observe(document.body);
+    })();
+});
+
 })();

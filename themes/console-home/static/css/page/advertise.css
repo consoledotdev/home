@@ -508,5 +508,29 @@ html {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 0 var(--space5);
+        align-items: flex-start;
+    }
+}
+
+.work-with-us-packages .neon-planes-wrapper {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    margin-top: calc(var(--space3_5) + var(--space2));
+    transform-origin: top center;
+}
+
+.work-with-us-packages .neon-planes {
+    position: relative;
+    width: calc(100% * 1.62);
+    padding-bottom: calc(65.43% * 1.62);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.work-with-us-packages > *:not(.neon-planes-wrapper) {
+    position: relative;
+    z-index: 1;
+}
     }
 }

@@ -23,10 +23,9 @@
             <img class="dark" src="/img/advertise/newsletter-dark.png" alt="Console Newsletter">
         </div>
     </section>
-    
-    <section class="page-section page-section-advertise site" data-section-advertise-site>
-        <div class="neon-planes-wrapper" data-neon-planes-wrapper>
-            {{ partial "components/advertise/neon-planes.html" }}
+    <section class="page-section page-section-advertise site">
+        <div class="neon-planes-wrapper" data-neon-planes-wrapper data-site>
+            {{ partial "components/advertise/neon-planes.html" (dict "context" . "type" "all" ) }}
         </div>
         <h3 class="title title-2 rich-title">{{ partial "icons/link.html" }}<span>console.dev</span></h3>
         <div class="advertise-site-item advertise-site-tools">
@@ -179,8 +178,9 @@
             The packages below are only available once we have completed a successful review. Each campaign is unique, built from the ground up for every partner. This is not generic advertising - we put you in front of experienced developers specifically looking to try new tools. If you are interested in either package, please get in touch so we can prioritize the evaluation of your product.
         </p>
         <div class="work-with-us-packages">
-            <div class="framed-section framed-section-default">
-                <h3 class="title title-2">Console launch</h3>
+            <div class="neon-planes-wrapper" data-neon-planes-wrapper data-packages>
+                {{ partial "components/advertise/neon-planes.html" (dict "context" . "type" "one-three" ) }}
+            </div>
                 <p>
                     Planning a new release or product launch? Our audience of experienced developers are specifically looking to try new things, so we can help increase signups by coordinating a campaign to coincide with your launch date.
                 </p>
