@@ -532,5 +532,37 @@ html {
     position: relative;
     z-index: 1;
 }
-    }
+
+.work-with-us-packages .framed-section-item .title .icon {
+    width: var(--space3_5);
+    height: var(--space3_5);
+    margin-right: var(--space2);
+}
+
+.work-with-us-packages .framed-section-item p.small {
+    margin-left: var(--space4);
+}
+
+.work-with-us-packages .framed-section-item .separator {
+    margin-top: var(--space4);
+    margin-bottom: var(--space4);
+}
+
+.work-with-us-packages .framed-section-item > p {
+    margin-top: var(--space4);
+    margin-bottom: var(--space4);
+}
+
+.work-with-us-packages .illustrated-title {
+    margin-bottom: var(--space3);
+}
+
+.work-with-us-packages .framed-section-triad-01 .illustrated-title .illustration .background {
+    stroke: var(--c-blue-06-main);
+    stroke-opacity: 0.5;
+}
+
+.work-with-us-packages .framed-section-triad-03 .illustrated-title .illustration .background {
+    stroke: var(--c-green-06);
+    stroke-opacity: 0.5;
 }

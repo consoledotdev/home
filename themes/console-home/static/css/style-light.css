@@ -158,6 +158,12 @@
     --theme-framed-section-attention-title: var(--c-yellow-06);
     --theme-framed-section-attention-text: var(--c-yellow-08);
     --theme-framed-section-overlay-bg: var(--c-grey-01-white-03);
+    --theme-framed-section-blue-border: 1px solid var(--c-blue-06-main);
+    --theme-framed-section-blue-item-border: 1px solid var(--c-blue-04);
+    --theme-framed-section-blue-bg: #F0F5FF;
+    --theme-framed-section-green-border: 1px solid var(--c-green-06);
+    --theme-framed-section-green-item-border: 1px solid rgba(1, 188, 144, 0.4);
+    --theme-framed-section-green-bg: var(--c-green-01);
 
     --theme-score-background: var(--c-grey-02);
     --theme-score-foreground: var(--c-black-02-main);

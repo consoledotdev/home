@@ -1792,6 +1792,32 @@ body:not(.mobile) .console-control:hover:before {
     content: none;
 }
 
+.framed-section.framed-section-triad-01 {
+    border: var(--theme-framed-section-blue-border);
+    background: var(--theme-framed-section-blue-bg);
+}
+
+.framed-section.framed-section-triad-01 .framed-section-item {
+    border-top: var(--theme-framed-section-blue-item-border);
+}
+
+.framed-section.framed-section-triad-01 p:not(.small) {
+    color: var(--theme-text-1);
+}
+
+.framed-section.framed-section-triad-03 {
+    border: var(--theme-framed-section-green-border);
+    background: var(--theme-framed-section-green-bg);
+}
+
+.framed-section.framed-section-triad-03 .framed-section-item {
+    border-top: var(--theme-framed-section-green-item-border);
+}
+
+.framed-section.framed-section-triad-03 p:not(.small) {
+    color: var(--theme-text-1);
+}
+
 /* Console Score
    ================================================================================================================ */
 .console-score {
