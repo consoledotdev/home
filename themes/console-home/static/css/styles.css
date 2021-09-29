@@ -442,8 +442,12 @@ body.show-planes:after {
 }
 
 .page-section-plane {
-    background: var(--c-black-02-main);
+    background: var(--theme-section-plane);
     padding: var(--space6) 0;
+}
+
+.page-section-plane * {
+    z-index: 1;
 }
 
 .page-section-plane:before,
@@ -454,18 +458,18 @@ body.show-planes:after {
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
+    background-size: auto 100%;
+    z-index: 0;
 }
 
 .page-section-plane:before {
     left: -100%;
-    background-position: calc(100% + 1px);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 126 256'%3E%3Cpath d='M126 0V256H0L126 0Z' fill='%230A0A0B'/%3E%3C/svg%3E");
+    background-position: calc(100% + 0.5px);
 }
 
 .page-section-plane:after {
     left: 100%;
     background-position: left;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 126 256'%3E%3Cpath d='M0 256L2.23802e-05 0L126 1.10153e-05L0 256Z' fill='%230A0A0B'/%3E%3C/svg%3E%0A");
 }
 
 .page-section-heading {
