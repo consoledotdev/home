@@ -40,6 +40,8 @@ Most recently he co-founded Hoop, an app that helps UK families discover things
 to do with their kids. It was chosen by Apple as App of the Year twice and
 installed by over 1.5 million families. {{< /div-caption >}}
 
+{{< nav-wrapper--open anchor-name="selection-criteria" >}}
+
 ### Selection Criteria
 
 Our selection criteria are explained below. The more of these questions we can
