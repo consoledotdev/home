@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 let handleScrollAppearance = (() => {
     let handleIntersect = (intersections) => {
         intersections.forEach(function (i) {
-            console.log(i)
 
             if ("checkpointSite" in i.target.dataset) {
                 if (i.isIntersecting) {
