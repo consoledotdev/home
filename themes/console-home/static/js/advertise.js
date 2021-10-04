@@ -48,4 +48,76 @@ document.addEventListener("DOMContentLoaded", (event) => {
     })();
 });
 
+let handleScrollAppearance = (() => {
+    let handleIntersect = (intersections) => {
+        intersections.forEach(function (i) {
+            console.log(i)
+
+            if ("checkpointSite" in i.target.dataset) {
+                if (i.isIntersecting) {
+                    document.body.classList.add("checkpoint-site")
+                }
+                if (!i.isIntersecting) {
+                    if (i.boundingClientRect.top > 0) document.body.classList.remove("checkpoint-site")
+                }
+            }
+
+            if ("checkpointPodcast" in i.target.dataset) {
+                if (i.isIntersecting) {
+                    document.body.classList.add("checkpoint-podcast")
+                }
+                if (!i.isIntersecting) {
+                    if (i.boundingClientRect.top > 0) document.body.classList.remove("checkpoint-podcast")
+                }
+            }
+
+            if ("checkpointWorkWithUs" in i.target.dataset) {
+                if (i.isIntersecting) {
+                    document.body.classList.add("checkpoint-work-with-us")
+                }
+                if (!i.isIntersecting) {
+                    if (i.boundingClientRect.top > 0) document.body.classList.remove("checkpoint-work-with-us")
+                }
+            }
+
+            if ("checkpointCampaigns" in i.target.dataset) {
+                if (i.isIntersecting) {
+                    document.body.classList.add("checkpoint-campaigns")
+                }
+                if (!i.isIntersecting) {
+                    if (i.boundingClientRect.top > 0) document.body.classList.remove("checkpoint-campaigns")
+                }
+            }
+
+            if ("checkpointContact" in i.target.dataset) {
+                if (i.isIntersecting) {
+                    document.body.classList.add("checkpoint-contact")
+                }
+                if (!i.isIntersecting) {
+                    if (i.boundingClientRect.top > 0) document.body.classList.remove("checkpoint-contact")
+                }
+            }
+
+        });
+    };
+    let observer = new IntersectionObserver(handleIntersect, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0,
+    });
+
+    let checkpointSite = document.querySelector("[data-checkpoint-site]");
+    observer.observe(checkpointSite);
+
+    let checkpointPodcast = document.querySelector("[data-checkpoint-podcast]");
+    observer.observe(checkpointPodcast);
+
+    let checkpointWorkWithUs = document.querySelector("[data-checkpoint-work-with-us]");
+    observer.observe(checkpointWorkWithUs);
+
+    let checkpointCampaigns = document.querySelector("[data-checkpoint-campaigns]");
+    observer.observe(checkpointCampaigns);
+
+    let checkpointContact = document.querySelector("[data-checkpoint-contact]");
+    observer.observe(checkpointContact);
 })();

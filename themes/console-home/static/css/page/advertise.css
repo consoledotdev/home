@@ -5,6 +5,52 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    transition: var(--a-layout-active);
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(82,105,255);
+    background: radial-gradient(ellipse at 0% 65%, rgba(82,105,255,0.095) 0%, rgba(82,105,255,0) 70%), radial-gradient(ellipse at 100% 65%, rgba(255,51,85,0.15) 0%, rgba(255,51,85,0) 70%);
+    z-index: 0;
+    opacity: 0;
+    transition: var(--a-layout-active);
+}
+
+body.page-advertise.checkpoint-site {
+    background: var(--theme-content-bg-1);
+    transition: var(--a-layout);
+}
+
+body.page-advertise.checkpoint-site .hero .lines {
+    opacity: 0;
+}
+
+body.page-advertise.checkpoint-podcast:before {
+    transition: var(--a-layout);
+    opacity: 1;
+}
+
+body.page-advertise.checkpoint-podcast.checkpoint-work-with-us:before {
+    opacity: 0;
+}
+
+body.page-advertise.checkpoint-campaigns {
+    background: var(--theme-content-bg-3);
+    transition: var(--a-layout);
+}
+
+/* body.page-advertise.checkpoint-contact {
+    background: var(--theme-content-bg-1);
+    transition: var(--a-layout);
+} */
+
 .main-advertise p.intro {
     font-size: var(--t-size1);
     line-height: var(--t-lH4);
@@ -448,7 +494,7 @@ p, quote {
 
 /* Podcast */
 .page-section-advertise.podcast {
-    margin-top: var(--space7);
+    margin-top: calc(var(--space7) + var(--space5));
     margin-bottom: calc(var(--space6) + var(--space5));
 }
 
