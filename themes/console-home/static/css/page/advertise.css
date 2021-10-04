@@ -105,6 +105,40 @@ p, quote {
     .main-advertise .title-6 {
         font-size: var(--t-size1);
     }
+
+    .main-advertise .console-button,
+    .main-advertise [class^="console-button"],
+    .main-advertise [class*=" console-button"] {
+        font-size: var(--t-size1);
+    }
+
+
+    .main-advertise .console-button.console-button-medium,
+    .main-advertise [class^="console-button"].console-button-medium,
+    .main-advertise [class*=" console-button"].console-button-medium {
+        font-size: var(--t-size0);
+    }
+
+    .main-advertise .console-button.console-button-small,
+    .main-advertise [class^="console-button"].console-button-small,
+    .main-advertise [class*=" console-button"].console-button-small {
+        font-size: var(--t-size-1);
+    }
+    
+    .main-advertise input.console-input-text,
+    .main-advertise select.console-select {
+        font-size: var(--t-size1);
+    }
+
+    .main-advertise input.console-input-text.console-input-medium,
+    .main-advertise select.console-select.console-input-medium {
+        font-size: var(--t-size0);
+    }
+
+    .main-advertise input.console-input-text.console-input-small,
+    .main-advertise select.console-select.console-input-small {
+        font-size: var(--t-size-1);
+    }
 }
 
 .page-section-advertise {

@@ -837,4 +837,38 @@ body:not(.page-tools-category-review):after {
     .page-tools-category-review .title.title-2:not(:first-child) {
         margin-top: calc(var(--space5) + var(--space3));
     }
+
+    .page-tools-category-review .console-button,
+    .page-tools-category-review [class^="console-button"],
+    .page-tools-category-review [class*=" console-button"] {
+        font-size: var(--t-size1);
+    }
+
+
+    .page-tools-category-review .console-button.console-button-medium,
+    .page-tools-category-review [class^="console-button"].console-button-medium,
+    .page-tools-category-review [class*=" console-button"].console-button-medium {
+        font-size: var(--t-size0);
+    }
+
+    .page-tools-category-review .console-button.console-button-small,
+    .page-tools-category-review [class^="console-button"].console-button-small,
+    .page-tools-category-review [class*=" console-button"].console-button-small {
+        font-size: var(--t-size-1);
+    }
+    
+    .page-tools-category-review input.console-input-text,
+    .page-tools-category-review select.console-select {
+        font-size: var(--t-size1);
+    }
+
+    .page-tools-category-review input.console-input-text.console-input-medium,
+    .page-tools-category-review select.console-select.console-input-medium {
+        font-size: var(--t-size0);
+    }
+
+    .page-tools-category-review input.console-input-text.console-input-small,
+    .page-tools-category-review select.console-select.console-input-small {
+        font-size: var(--t-size-1);
+    }
 }
