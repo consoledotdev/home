@@ -189,6 +189,19 @@
     --theme-mars-masking-bg: var(--c-white-01-main);
     --theme-mars-snowball-color: var(--c-grey-05);
     --theme-mars-orbit-opacity: 0.2;
+
+    /* Advertise page specific */
+
+    --theme-artwork-plane-bg: rgba(255, 255, 255, 0.7);
+    --theme-artwork-triad-01-plane-border: var(--c-blue-05);
+    --theme-artwork-triad-02-plane-border: var(--c-fuchsia-04);
+    --theme-artwork-triad-03-plane-border: var(--c-green-04);
+    --theme-artwork-triad-01-trail-bg: var(--c-blue-03);
+    --theme-artwork-triad-02-trail-bg: var(--c-fuchsia-02);
+    --theme-artwork-triad-03-trail-bg: var(--c-green-02);
+    --theme-artwork-triad-01-glow: rgba(82, 105, 255, 0.14);
+    --theme-artwork-triad-02-glow: rgba(245, 97, 245, 0.14);
+    --theme-artwork-triad-03-glow: rgba(1, 188, 144, 0.14);
 }
 
 .theme .hero .lines {
@@ -248,6 +261,10 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
 
 .theme .main-advertise img.dark {
     display: none;
+}
+
+.theme .main-advertise .social .quote {
+    background: var(--theme-content-bg-0);
 }
 
 .theme .page-section-plane:before {

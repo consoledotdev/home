@@ -1501,7 +1501,7 @@ p.x-small {
     margin-bottom: 0;
 }
 
-.quote span {
+.quote span span {
     font-style: normal;
     color: var(--theme-text-1);
 }
@@ -1511,6 +1511,19 @@ p.x-small {
     font-size: var(--t-size0);
     line-height: var(--t-lH4);
     border-left: var(--theme-border-3);
+}
+
+.quote.icon-left {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.quote.icon-left .icon {
+    margin-right: var(--space3);
+    margin-top: 0.1em;
+    flex: 0 0 auto;
+    width: var(--space3);
+    height: var(--space3);
 }
 
 .pre {

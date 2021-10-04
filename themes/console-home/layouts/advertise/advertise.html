@@ -9,6 +9,11 @@
             <a onclick="blur();" class="console-button-text console-button-yellow icon-right" href="#how-to-work-with-us" title="How to works with us" rel="noopener"><span>How to work with us</span>
                 {{ partial "icons/scroll-down.html" }}</a>
         </div>
+        <div class="bottom">
+            <div class="artwork-wrapper">
+                {{ partial "components/advertise/artwork.html"}}
+            </div>
+        </div>
     </section>
 
     <section class="page-section page-section-plane page-section-advertise newsletter">
@@ -25,7 +30,7 @@
     </section>
     <section class="page-section page-section-advertise site">
         <div class="neon-planes-wrapper" data-neon-planes-wrapper data-site>
-            {{ partial "components/advertise/neon-planes.html" (dict "context" . "type" "all" ) }}
+            {{ partial "components/neon-planes.html" (dict "context" . "type" "all" ) }}
         </div>
         <h3 class="title title-2 rich-title">{{ partial "icons/link.html" }}<span>console.dev</span></h3>
         <div class="advertise-site-item advertise-site-tools">
@@ -97,16 +102,16 @@
             <div class="advertise-audience-fact converting">
                 <div class="advertise-audience-fact-head">
                     <div class="audience-fact-number">68%</div>
-                    <div class="heads">
-                        <div class="head">
-                            <div class="head-fill"></div>
+                    <div class="future-heads">
+                        <div class="future-head">
+                            <div class="future-head-fill"></div>
                         </div>
-                        <div class="head">
-                            <div class="head-fill"></div>
+                        <div class="future-head">
+                            <div class="future-head-fill"></div>
                         </div>
-                        <div class="head">
-                            {{ partial "icons/head.html"}}
-                            <div class="head-fill"></div>
+                        <div class="future-head">
+                            {{ partial "icons/future-head.html"}}
+                            <div class="future-head-fill"></div>
                         </div>
                     </div>
                 </div>
@@ -179,7 +184,7 @@
         </p>
         <div class="work-with-us-packages">
             <div class="neon-planes-wrapper" data-neon-planes-wrapper data-packages>
-                {{ partial "components/advertise/neon-planes.html" (dict "context" . "type" "one-three" ) }}
+                {{ partial "components/neon-planes.html" (dict "context" . "type" "one-three" ) }}
             </div>
             <div class="framed-section framed-section-triad-01">
                 <h3 class="title title-2 illustrated-title right">
@@ -245,102 +250,165 @@
     <section class="page-section page-section-advertise campaigns">
         <h3 class="title title-2">Recent campaigns</h3>
         <div class="framed-section framed-section-default">
-            <h3 class="title title-2">Slim.AI</h3>
-            <p class="intro">
-                Slim.AI is a container analysis and comparison tool. Slim.AI approached Console to help sign-up early adopters to their developer platform. Console worked with their growth team to maximise exposure to our audience by offering unique invite codes to incentivize developers.
-            </p>
-            <p class="quote">
-                <span>“Our campaign with Console was very successful. We saw x5 our usual daily rate of acquisition both on the day of the newsletter and in the following days. The best thing was how qualified the audience was. We saw new people join our Discord community and start engaging, something we rarely see through more traditional paid sources. We even had a new application for an engineering position as a result of seeing the interview. Console really helped us reach exactly the audience we wanted.”</span>
-                Pieter van Noordennen, Senior Director, Growth, Slim.AI
-            </p>
+            <div class="top">
+                <h4 class="title title-3 rich-title">
+                    <div class="case-study-thumbnail aspect-ratio aspect-ratio-1-1">
+                        <img class="image" src="/img/favicons/slimai-john-amaral-logo.jpg" alt="Slim.AI Logo" />
+                    </div>
+                    <span>Slim.AI</span>
+                </h4>
+                <p class="intro">
+                    Slim.AI is a container analysis and comparison tool. Slim.AI approached Console to help sign-up early adopters to their developer platform. Console worked with their growth team to maximise exposure to our audience by offering unique invite codes to incentivize developers.
+                </p>
+                <p class="quote">
+                    <span>
+                        “Our campaign with Console was very successful. We saw x5 our usual daily rate of acquisition both on the day of the newsletter and in the following days. The best thing was how qualified the audience was. We saw new people join our Discord community and start engaging, something we rarely see through more traditional paid sources. We even had a new application for an engineering position as a result of seeing the interview. Console really helped us reach exactly the audience we wanted.”
+                        <span>Pieter van Noordennen, Senior Director, Growth, Slim.AI</span>
+                    </span>
+                </p>
+            </div>
             <div class="framed-section-item">
                 <h5 class="title title-4">How it worked?</h5>
-                <h5 class="title title-4 rich-title">{{ partial "icons/console-offer.html" }}<span>Offer</span></h5>
-                <p class="small">Slim.AI offered the Console audience an exclusive invite code that provided early access to the Developer Platform. The invite code was promoted alongside their review in the newsletter to encourage the Console audience to sign up.</p>
-                <h5 class="title title-4 rich-title">{{ partial "icons/console-interview.html" }}<span>Interview</span> {{ partial "icons/plus.html" }}</h5>
-                <h5 class="title title-4 rich-title">{{ partial "icons/link.html" }}<span>Website</span> {{ partial "icons/plus.html" }}</h5>
-                <h5 class="title title-4 rich-title">{{ partial "icons/social.html" }}<span>Social</span></h5>
-                <p class="small">To maximise reach with our audience, Console also ran an interview with Slim.AI CEO, Jon Amaral, which was published on the Console website, social media, and in the newsletter.</p>
+                <div>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/console-offer.html" }}<span>Offer</span></h5>
+                    <p>Slim.AI offered the Console audience an exclusive invite code that provided early access to the Developer Platform. The invite code was promoted alongside their review in the newsletter to encourage the Console audience to sign up.</p>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/console-interview.html" }}<span>Interview</span> {{ partial "icons/plus.html" }}</h5>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/link.html" }}<span>Website</span> {{ partial "icons/plus.html" }}</h5>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/social.html" }}<span>Social</span></h5>
+                    <p>To maximise reach with our audience, Console also ran an interview with Slim.AI CEO, Jon Amaral, which was published on the Console website, social media, and in the newsletter.</p>
+                </div>
             </div>
         </div>
         <div class="framed-section framed-section-default">
-            <h3 class="title title-2">Liveblocks</h3>
-            <p class="intro">
-                Liveblocks worked with Console to help deliver their first users as part of a coordinated launch for their real-time collaboration API. As well as driving sign-ups to their new tool, Console’s launch package also provided early industry validation for their API.    
-            </p>
-            <p class="quote">
-                <span>“Launching a new company and a new product is always difficult because you have to quickly build credibility when nobody has heard of you. Console’s audience knows that their recommendations are independent, so it made a big difference to our launch day that Liveblocks could be featured.”</span>
-                Guillaume Salles, CTO
-            </p>
+            <div class="top">
+                <h4 class="title title-3 rich-title">
+                    <div class="case-study-thumbnail aspect-ratio aspect-ratio-1-1">
+                        <img class="image" src="/img/favicons/liveblocks.io.png" alt="Slim.AI Logo" />
+                    </div>
+                    <span>Liveblocks</span>
+                </h4>
+                <p class="intro">
+                    Liveblocks worked with Console to help deliver their first users as part of a coordinated launch for their real-time collaboration API. As well as driving sign-ups to their new tool, Console’s launch package also provided early industry validation for their API.    
+                </p>
+                <p class="quote">
+                    <span>
+                        “Launching a new company and a new product is always difficult because you have to quickly build credibility when nobody has heard of you. Console’s audience knows that their recommendations are independent, so it made a big difference to our launch day that Liveblocks could be featured.”
+                        <span>Guillaume Salles, CTO</span>
+                    </span>
+                </p>
+            </div>
             <div class="framed-section-item">
                 <h5 class="title title-4">How it worked?</h5>
-                <h5 class="title title-4 rich-title">{{ partial "icons/console-mini-filled.html" }}<span>Schedule</span> {{ partial "icons/plus.html" }}</h5>
-                <h5 class="title title-4 rich-title">{{ partial "icons/delay.html" }}<span>Time</span></h5>
-                <p class="small">Console scheduled a review to appear in the Console Weekly newsletter the same day that Liveblocks launched, reaching thousands of developers’ inboxes and introducing Liveblocks to the developer community.</p>
-                <h5 class="title title-4 rich-title">{{ partial "icons/console-interview.html" }}<span>Interview</span></h5>
-                <p class="small">As part of the launch, Console also published an interview with Liveblocks CTO, Guillaume Salles, in the Console newsletter and on our website. Helping provide a background to the company for new customers, the interview also ranked highly in Google for anyone researching the newly launched company.</p>
-                <h5 class="title title-4 rich-title">{{ partial "icons/link.html" }}<span>Website</span> {{ partial "icons/plus.html" }}</h5>
-                <h5 class="title title-4 rich-title">{{ partial "icons/social.html" }}<span>Social</span></h5>
-                <p class="small">The newsletter review also appeared on the Console Tools List, offering further third-party validation for LiveBlocks to share on their own social media channels as a trusted recommendation for their new tool.</p>
+                <div>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/console-mini-filled.html" }}<span>Schedule</span> {{ partial "icons/plus.html" }}</h5>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/delay.html" }}<span>Time</span></h5>
+                    <p>Console scheduled a review to appear in the Console Weekly newsletter the same day that Liveblocks launched, reaching thousands of developers’ inboxes and introducing Liveblocks to the developer community.</p>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/console-interview.html" }}<span>Interview</span></h5>
+                    <p>As part of the launch, Console also published an interview with Liveblocks CTO, Guillaume Salles, in the Console newsletter and on our website. Helping provide a background to the company for new customers, the interview also ranked highly in Google for anyone researching the newly launched company.</p>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/link.html" }}<span>Website</span> {{ partial "icons/plus.html" }}</h5>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/social.html" }}<span>Social</span></h5>
+                    <p>The newsletter review also appeared on the Console Tools List, offering further third-party validation for LiveBlocks to share on their own social media channels as a trusted recommendation for their new tool.</p>
+                </div>
             </div>
         </div>
         <div class="framed-section framed-section-default">
-            <h3 class="title title-2">IPInfo</h3>
-            <p class="intro">
-                IPInfo is a leading API for IP address metadata lookup. They were looking for new channels to reach developers, so worked with Console to reach an audience of experienced developers.
-            </p>
-            <p class="quote">
-                <span>“IPInfo’s API solves quite a specific need, so it is important for us to reach developers who can influence decisions, or who have a budget themselves. Console’s audience fits that criteria, which is why we were interested in incentivizing their audience with an exclusive discount code. We often see a long lag between interest and conversion, but have already seen new paying customers from our target demographic as a direct result of working with Console.”</span>
-                Ben Dowling, CEO
-            </p>
+            <div class="top">
+                <h4 class="title title-3 rich-title">
+                    <div class="case-study-thumbnail aspect-ratio aspect-ratio-1-1">
+                        <img class="image" src="/img/favicons/ipinfo.io.png" alt="Slim.AI Logo" />
+                    </div>
+                    <span>IPInfo</span>
+                </h4>
+                <p class="intro">
+                    IPInfo is a leading API for IP address metadata lookup. They were looking for new channels to reach developers, so worked with Console to reach an audience of experienced developers.
+                </p>
+                <p class="quote">
+                    <span>
+                        “IPInfo’s API solves quite a specific need, so it is important for us to reach developers who can influence decisions, or who have a budget themselves. Console’s audience fits that criteria, which is why we were interested in incentivizing their audience with an exclusive discount code. We often see a long lag between interest and conversion, but have already seen new paying customers from our target demographic as a direct result of working with Console.”
+                        <span>Ben Dowling, CEO</span>
+                    </span>
+                </p>
+            </div>
             <div class="framed-section-item">
                 <h5 class="title title-4">How it worked?</h5>
-                <h5 class="title title-4 rich-title">{{ partial "icons/console-offer.html" }}<span>Offer</span></h5>
-                <p class="small">IPInfo provided the Console audience with a special discount to encourage signups. This provided a significant discount on the list price for a set period of time. Console ran the code alongside the newsletter review to increase click conversions.</p>
-                <p class="small">To incentivize our audience and deliver new customers, Console worked with IPInfo to offer a discount code exclusively available to Console subscribers to try out IPInfo for less.</p>
-                <h5 class="title title-4 rich-title">{{ partial "icons/link.html" }}<span>Website</span> {{ partial "icons/plus.html" }}</h5>
-                <h5 class="title title-4 rich-title">{{ partial "icons/social.html" }}<span>Social</span></h5>
-                <p class="small">To support the promotion, IPInfo’s review was published on the Console Tools List and promoted on social media.</p>
+                <div>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/console-offer.html" }}<span>Offer</span></h5>
+                    <p>IPInfo provided the Console audience with a special discount to encourage signups. This provided a significant discount on the list price for a set period of time. Console ran the code alongside the newsletter review to increase click conversions.</p>
+                    <p>To incentivize our audience and deliver new customers, Console worked with IPInfo to offer a discount code exclusively available to Console subscribers to try out IPInfo for less.</p>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/link.html" }}<span>Website</span> {{ partial "icons/plus.html" }}</h5>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/social.html" }}<span>Social</span></h5>
+                    <p>To support the promotion, IPInfo’s review was published on the Console Tools List and promoted on social media.</p>
+                </div>
             </div>
         </div>
         <div class="framed-section framed-section-default">
-            <h3 class="title title-2">Oso</h3>
-            <p class="intro">
-                Oso is a batteries-included framework for building authorization in your application.
-            </p>
-            <p class="intro">
-                To promote a product release, Oso worked with Console to scheduled a review, an interview with their CTO, and promotion of a blog post on Why Authorization is Hard.
-            </p>
-            <p class="quote">
-                <span>“Oso is breaking new ground in a complex space (authorization). We're creating a new product category, which is a complicated category, so it makes it challenging to break it down to developers and explain it to them. So we want to be in media, like Console, where developers are interested in learning new things. Working with Console, we were able to provide the extra context that enabled us to convey how Oso can help. We were able to sync our launch dates and coordinate an interview with our CTO to provide a primer on the vision, but also deeplink to our developer docs. This helped us maximize impact for the launch and reach thousands of developers in the right way.”</span>
-                Stephie Glaser, Developer Relations, Oso
-            </p>
+            <div class="top">
+                <h4 class="title title-3 rich-title">
+                    <div class="case-study-thumbnail aspect-ratio aspect-ratio-1-1">
+                        <img class="image" src="/img/favicons/www.osohq.com.png" alt="Slim.AI Logo" />
+                    </div>
+                    <span>Oso</span>
+                </h4>
+                <p class="intro">
+                    Oso is a batteries-included framework for building authorization in your application.
+                </p>
+                <p class="intro">
+                    To promote a product release, Oso worked with Console to scheduled a review, an interview with their CTO, and promotion of a blog post on Why Authorization is Hard.
+                </p>
+                <p class="quote">
+                    <span>
+                        “Oso is breaking new ground in a complex space (authorization). We're creating a new product category, which is a complicated category, so it makes it challenging to break it down to developers and explain it to them. So we want to be in media, like Console, where developers are interested in learning new things. Working with Console, we were able to provide the extra context that enabled us to convey how Oso can help. We were able to sync our launch dates and coordinate an interview with our CTO to provide a primer on the vision, but also deeplink to our developer docs. This helped us maximize impact for the launch and reach thousands of developers in the right way.”
+                        <span>Stephie Glaser, Developer Relations, Oso</span>
+                    </span>
+                </p>
+            </div>
             <div class="framed-section-item">
                 <h5 class="title title-4">How it worked?</h5>
-                <h5 class="title title-4 rich-title">{{ partial "icons/console-mini-filled.html" }}<span>Schedule</span></h5>
-                <p class="small">Console scheduled Oso’s review to appear in the newsletter as part of a coordinated launch. Their review, interview and blog post reached 10k developer inboxes.</p>
-                <h5 class="title title-4 rich-title">{{ partial "icons/console-interview.html" }}<span>Interview + blog post</span></h5>
-                <p class="small">Oso is tackling a challenging problem. To increase engagement and understanding, Console published an interview with Oso CTO, Sam Scott, where he provided deeper insights about the company. This accompanied their tool review and interview in the newsletter.</p>
-                <h5 class="title title-4 rich-title">{{ partial "icons/link.html" }}<span>Website</span> {{ partial "icons/plus.html" }}</h5>
-                <h5 class="title title-4 rich-title">{{ partial "icons/social.html" }}<span>Social</span></h5>
-                <p class="small">The newsletter review also appeared at the top of the Console Tools List, delivering further clicks and offering further third-party validation for Oso to promote on their own social media channels as part of their launch campaign.    </p>
+                <div>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/console-mini-filled.html" }}<span>Schedule</span></h5>
+                    <p>Console scheduled Oso’s review to appear in the newsletter as part of a coordinated launch. Their review, interview and blog post reached 10k developer inboxes.</p>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/console-interview.html" }}<span>Interview + blog post</span></h5>
+                    <p>Oso is tackling a challenging problem. To increase engagement and understanding, Console published an interview with Oso CTO, Sam Scott, where he provided deeper insights about the company. This accompanied their tool review and interview in the newsletter.</p>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/link.html" }}<span>Website</span> {{ partial "icons/plus.html" }}</h5>
+                    <h5 class="title title-4 rich-title">{{ partial "icons/social.html" }}<span>Social</span></h5>
+                    <p>The newsletter review also appeared at the top of the Console Tools List, delivering further clicks and offering further third-party validation for Oso to promote on their own social media channels as part of their launch campaign.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="page-section page-section-advertise contact">
+        <div class="neon-planes-wrapper">
+            {{ partial "components/neon-planes.html" (dict "context" . "type" "one" ) }}
+        </div>
         <h2 class="title title-1">Plan your campaign</h2>
         <p class="description">We'll help you launch your tool and find new customers the right way.</p>
-        <a href="mailto:hello@console.dev" class="console-button icon-left">{{ partial "icons/send.html" }}<span>Get in touch</span></a>
-        <p>
-            <a href="#" class="console-button-text icon-left" title="Download advertiser kit">{{ partial "icons/download.html" }}<span>Download</span></a>
-            a .pdf version of our media kit.
-        </p>
+        <div class="bottom">
+            <a href="mailto:hello@console.dev" class="console-button icon-left">{{ partial "icons/send.html" }}<span>Get in touch</span></a>
+            <p>
+                <a href="#" class="console-button-text icon-left" title="Download advertiser kit">{{ partial "icons/download.html" }}<span>Download</span></a>
+                a .pdf version of our media kit.
+            </p>
+        </div>
+    </section>
+
+    <section class="page-section page-section-advertise social">
+        <div class="neon-planes-wrapper">
+            {{ partial "components/neon-planes.html" (dict "context" . "type" "two" ) }}
+        </div>
         <h2 class="title title-1">Loved by the world’s <br />best developers</h2>
-        <p class="quote"><span>{{ partial "icons/email.html" }}I look forward to it every week. Thanks for keeping me up to date with the latest dev tool ecosystem!</span></p>
-        <p class="quote"><span>{{ partial "icons/email.html" }}A lot of love for the newsletter, website and Q&As. Thanks for the hard and super good work, big up folks!!</span> ❤️❤️</p>
-        <p class="quote"><span>{{ partial "icons/email.html" }}Console is one of my favorite newsletters</span> 😍</p>
-        <p class="quote"><span>{{ partial "icons/twitter.html" }}Really like the format — console.dev has been an interesting subscription, but complementing the newsletter with short-ish podcasts is a great idea.</span></p>
+        <div class="quotes">
+            <div class="future-heads">
+                {{ partial "icons/future-head.html"}}
+                {{ partial "icons/future-head.html"}}
+                {{ partial "icons/future-head.html"}}
+                {{ partial "icons/future-head.html"}}
+            </div>
+            <p class="quote icon-left">{{ partial "icons/email.html" }}<span>I look forward to it every week. Thanks for keeping me up to date with the latest dev tool ecosystem!</span></p>
+            <p class="quote icon-left">{{ partial "icons/email.html" }}<span>A lot of love for the newsletter, website and Q&As. Thanks for the hard and super good work, big up folks!! <span>❤️❤️</span></span></p>
+            <p class="quote icon-left">{{ partial "icons/email.html" }}<span>Console is one of my favorite newsletters <span>😍</span></span></p>
+            <p class="quote icon-left">{{ partial "icons/twitter.html" }}<span>Really like the format — console.dev has been an interesting subscription, but complementing the newsletter with short-ish podcasts is a great idea.</span></p>
+        </div>
     </section>
 
     <script src="/js/advertise.js"></script>

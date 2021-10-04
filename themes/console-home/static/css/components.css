@@ -2293,7 +2293,7 @@ body:not(.mobile) .console-control:hover:before {
     position: absolute;
     top: 0;
     left: 0;
-    transform: skew(-24.1deg);
+    transform: skew(-26.7deg);
     width: 100%;
     height: 100%;
 }
@@ -2356,11 +2356,38 @@ body:not(.mobile) .console-control:hover:before {
     margin-left: var(--skew-offset);
 }
 
-.neon-planes.one-three .neon-plane.triad-02 {
-    display: none;
-}
-
 .neon-planes.one-three .neon-plane.triad-03 {
     margin-top: 9.23%;
     margin-left: calc(10.67% + var(--skew-offset));
+}
+
+.neon-planes.one .neon-plane {
+    --size: calc(var(--space8) - var(--space5) - var(--space3_5));
+    --skew-offset-self: 22.36%;
+    width: var(--size);
+    padding-bottom: calc(var(--size) * 0.8945);
+    margin-left: 100%;
+    transform: translateX(calc(calc(100% - var(--skew-offset-self)) * -1));
+}
+
+@media (min-width: 1025px) and (max-width: 1370px) {
+    .neon-planes.one .neon-plane {
+        /* Ratio between resize length and move length: 189px move / (1370px - 1025px) resize = 0.5478 */
+        --leftMove: calc(calc(1025px - 100vw) * 0.5478);
+        left: var(--leftMove);
+    }
+}
+
+@media (min-width: 1370px) {
+    .neon-planes.one .neon-plane {
+    transform: translateX(calc(calc(100% + var(--skew-offset-self)) * -1));
+    }
+}
+
+.neon-planes.two .neon-plane {
+    --size: calc(var(--space8) - var(--space4_5));
+    --skew-offset-self: 22.36%;
+    width: var(--size);
+    padding-bottom: calc(var(--size) * 0.8945);
+    transform: translateX(calc(var(--skew-offset-self) * -1));
 }
