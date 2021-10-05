@@ -2223,6 +2223,10 @@ body:not(.mobile) .console-control:hover:before {
     border-bottom: 1px solid var(--theme-datavis-axis);
 }
 
+.console-bar-chart.always-show-border .console-bar-chart-item {
+    border-bottom: none;
+}
+
 .console-bar-chart-item-bar {
     height: calc(var(--space2) - 1px);
     background: var(--theme-text-1);
@@ -2271,6 +2275,7 @@ body:not(.mobile) .console-control:hover:before {
 @media (max-width: 1024px) {
     .console-bar-chart-item {
         width: 100% !important;
+        border-bottom: 1px solid var(--theme-datavis-axis);
     }
 }
 
