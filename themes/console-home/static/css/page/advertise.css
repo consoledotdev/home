@@ -209,7 +209,12 @@ p, quote {
 }
 
 .page-section-advertise.opening p.description {
+    margin-top: var(--space3);
     margin-bottom: var(--space3);
+}
+
+.page-section-advertise.opening p:not(.description) {
+    margin-top: var(--space4);
 }
 
 .page-section-advertise.opening p b {
@@ -724,20 +729,17 @@ p, quote {
     margin-top: var(--space3_5);
 }
 
-.page-section-advertise.work-with-us .title-3 span:nth-child(1),
-.page-section-advertise.work-with-us .title-3 span:nth-child(2) {
-    font-style: italic;
-    font-weight: 400;
-    color: var(--c-blue-06-main);
+.page-section-advertise.work-with-us > .icon {
+    width: var(--space4);
+    height: var(--space4);
 }
 
-.page-section-advertise.work-with-us .title-3 span:nth-child(1) {
-    font-size: var(--t-size1);
+.page-section-advertise.work-with-us > .icon + .title-3 {
+    margin-top: var(--space3);
 }
 
-.page-section-advertise.work-with-us .title-3 span:nth-child(2) {
-    font-size: var(--t-size0);
-    margin-right: var(--space1);
+.page-section-advertise.work-with-us p.intro b {
+    font-weight: 500;
 }
 
 .work-with-us-packages {
