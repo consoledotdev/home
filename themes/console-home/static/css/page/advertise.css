@@ -382,6 +382,10 @@ p, quote {
     display: block;
 }
 
+.page-section-advertise.newsletter a {
+    margin-top: var(--space3);
+}
+
 @media (max-width: 768px) {
     .page-section-advertise.newsletter .bottom {
         margin-top: calc(var(--space4) + var(--space3_5));
@@ -543,6 +547,10 @@ p, quote {
     .page-section-advertise.podcast .bottom {
         flex: 1 1 auto;
     }
+}
+
+.page-section-advertise.podcast .podcast-links {
+    margin-top: var(--space4);
 }
 
 /* Audience */
