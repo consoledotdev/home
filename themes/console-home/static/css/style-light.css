@@ -176,7 +176,6 @@
     --theme-datavis-blue-item-3: var(--c-blue-03);
 
     /* Mars Internet page specific */
-
     --theme-mars-earth-halo: 0 0 0.25em rgba(0, 0, 255, 0.08);
     --theme-mars-earth-shading: inset 0.2em 0 0.34em rgba(0, 0, 255, 0.16), inset 0 0 0.04em rgba(0, 0, 255, 0.35);
     --theme-mars-earth-texture: url("/img/research/mars/earth-texture-light.png");
@@ -191,7 +190,6 @@
     --theme-mars-orbit-opacity: 0.2;
 
     /* Advertise page specific */
-
     --theme-artwork-plane-bg: rgba(255, 255, 255, 0.7);
     --theme-artwork-triad-01-plane-border: var(--c-blue-05);
     --theme-artwork-triad-02-plane-border: var(--c-fuchsia-04);
@@ -247,6 +245,15 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
     background-color: var(--theme-content-bg-0);
 }
 
+.theme .page-section-plane:before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 126 256'%3E%3Cpath d='M126 0V256H0L126 0Z' fill='%23f1f2f6'/%3E%3C/svg%3E");
+}
+
+.theme .page-section-plane:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 126 256'%3E%3Cpath d='M0 256L2.23802e-05 0L126 1.10153e-05L0 256Z' fill='%23f1f2f6'/%3E%3C/svg%3E%0A");
+}
+
+/* Category Review page specific */
 .theme .tools-category-review-artwork.light {
     display: initial;
 }
@@ -255,6 +262,7 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
     display: none;
 }
 
+/* Advertise page specific */
 .theme .main-advertise img.light {
     display: initial;
 }
@@ -264,13 +272,25 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
 }
 
 .theme .main-advertise .social .quote {
+    background: var(--theme-content-bg-2);
+}
+
+body.theme:before {
+    background: transparent;
+}
+
+body.theme.page-advertise.checkpoint-site {
     background: var(--theme-content-bg-0);
 }
 
-.theme .page-section-plane:before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 126 256'%3E%3Cpath d='M126 0V256H0L126 0Z' fill='%23f1f2f6'/%3E%3C/svg%3E");
+/* body.theme.page-advertise.checkpoint-work-with-us {
+    background: var(--theme-content-bg-2);
+} */
+
+body.theme.page-advertise.checkpoint-campaigns {
+    background: var(--theme-content-bg-2);
 }
 
-.theme .page-section-plane:after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 126 256'%3E%3Cpath d='M0 256L2.23802e-05 0L126 1.10153e-05L0 256Z' fill='%23f1f2f6'/%3E%3C/svg%3E%0A");
+body.theme.page-advertise.checkpoint-contact {
+    background: var(--theme-content-bg-0);
 }
