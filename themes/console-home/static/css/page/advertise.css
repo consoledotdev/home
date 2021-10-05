@@ -548,7 +548,6 @@ p, quote {
         width: 36%;
         flex: 0 0 auto;
         margin-right: calc(var(--space5) + var(--space3));
-        padding-top: var(--space4);
     }
 
     .advertise-site-item img {
