@@ -555,6 +555,12 @@ p, quote {
         width: 145%;
         max-width: 720px;
     }
+
+    .advertise-site-item .bottom {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
 }
 
 /* Podcast */
