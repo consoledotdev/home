@@ -51,9 +51,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 let handleScrollAppearance = (() => {
     let handleIntersect = (intersections) => {
         intersections.forEach(function (i) {
-
             if ("checkpointSite" in i.target.dataset) {
-                if (i.isIntersecting) {
+                if (i.isIntersecting || (!i.isIntersecting && i.boundingClientRect.top < 0) ) {
                     document.body.classList.add("checkpoint-site")
                 }
                 if (!i.isIntersecting) {
@@ -62,7 +61,7 @@ let handleScrollAppearance = (() => {
             }
 
             if ("checkpointPodcast" in i.target.dataset) {
-                if (i.isIntersecting) {
+                if (i.isIntersecting || (!i.isIntersecting && i.boundingClientRect.top < 0)) {
                     document.body.classList.add("checkpoint-podcast")
                 }
                 if (!i.isIntersecting) {
@@ -71,7 +70,7 @@ let handleScrollAppearance = (() => {
             }
 
             if ("checkpointWorkWithUs" in i.target.dataset) {
-                if (i.isIntersecting) {
+                if (i.isIntersecting || (!i.isIntersecting && i.boundingClientRect.top < 0)) {
                     document.body.classList.add("checkpoint-work-with-us")
                 }
                 if (!i.isIntersecting) {
@@ -80,7 +79,7 @@ let handleScrollAppearance = (() => {
             }
 
             if ("checkpointCampaigns" in i.target.dataset) {
-                if (i.isIntersecting) {
+                if (i.isIntersecting || (!i.isIntersecting && i.boundingClientRect.top < 0)) {
                     document.body.classList.add("checkpoint-campaigns")
                 }
                 if (!i.isIntersecting) {
@@ -89,14 +88,13 @@ let handleScrollAppearance = (() => {
             }
 
             if ("checkpointContact" in i.target.dataset) {
-                if (i.isIntersecting) {
+                if (i.isIntersecting || (!i.isIntersecting && i.boundingClientRect.top < 0)) {
                     document.body.classList.add("checkpoint-contact")
                 }
                 if (!i.isIntersecting) {
                     if (i.boundingClientRect.top > 0) document.body.classList.remove("checkpoint-contact")
                 }
             }
-
         });
     };
     let observer = new IntersectionObserver(handleIntersect, {
