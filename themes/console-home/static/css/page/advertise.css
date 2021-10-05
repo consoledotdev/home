@@ -222,6 +222,18 @@ p, quote {
     margin-top: var(--space4);
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+    .page-section-advertise.opening p.description {
+        --shrink: calc(calc(1024px - 100vw) * 0.2);
+        width: calc(100% - var(--shrink));
+    }
+
+    .page-section-advertise.opening p:not(.description) {
+        --shrink: calc(calc(1024px - 100vw) * 0.3);
+        width: calc(100% - var(--shrink));
+    }
+}
+
 .page-section-advertise.opening p b {
     font-weight: 500;
 }
@@ -246,8 +258,20 @@ p, quote {
 .page-section-advertise.opening .bottom {
     z-index: 0;
     height: 0;
-    margin-top: var(--space4_5);
-    margin-right: -10vw;
+    margin-top: var(--space4);
+    margin-right: -4vw;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .advertise-artwork {
+        --shrink: calc(calc(1024px - 100vw) * 0.2);
+        --plane-size: calc(var(--space6) - var(--shrink));
+    }
+
+    .page-section-advertise.opening .bottom {
+        --move: calc(calc(1024px - 100vw) * 0.196);
+        margin-right: calc(-4vw - var(--move));
+    }
 }
 
 .page-section-advertise.opening .artwork-wrapper {
@@ -263,12 +287,39 @@ p, quote {
     transform: scaleY(0.8945) skew(-24.4deg);
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+    .advertise-artwork {
+        --shrink: calc(calc(1024px - 100vw) * 0.2);
+        --plane-size: calc(var(--space6) - var(--shrink));
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1372px) {
+    .advertise-artwork {
+        --expand: calc(calc(100vw - 1024px) * 0.135);
+        --plane-size: calc(var(--space6) + var(--expand));
+    }
+}
+
+@media (min-width: 1372px) {
+    .advertise-artwork {
+        --plane-size: calc(var(--space6) + 47px);
+    }
+}
+
 .advertise-artwork > * {
     flex: 0 0 auto;
 }
 
 .advertise-artwork .col:not(:first-child) {
     margin-left: calc(var(--space4) + var(--space1));
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .advertise-artwork .col:not(:first-child) {
+        --margin: calc(calc(1024px - 100vw) * 0.06);
+        margin-left: calc(var(--space4) + var(--space1) - var(--margin));
+    }
 }
 
 .advertise-artwork .plane {
