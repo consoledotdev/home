@@ -618,7 +618,7 @@ quote {
 
 /* Podcast */
 .page-section-advertise.podcast {
-    margin-top: calc(var(--space7) + var(--space5));
+    margin-top: calc(var(--space6) + var(--space5));
     margin-bottom: calc(var(--space6) + var(--space5));
 }
 

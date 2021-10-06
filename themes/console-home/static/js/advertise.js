@@ -123,7 +123,7 @@ let handleScrollAppearance = (() => {
 
     let observer2 = new IntersectionObserver(handleIntersect, {
         root: null,
-        rootMargin: "0% 0% -50%",
+        rootMargin: "0% 0% -40%",
         threshold: 0,
     });
 
