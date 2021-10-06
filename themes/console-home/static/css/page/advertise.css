@@ -17,7 +17,7 @@ body:before {
     width: 100%;
     height: 100%;
     background: transparent;
-    background: radial-gradient(ellipse at 0% 65%, rgba(82,105,255,0.095) 0%, rgba(82,105,255,0) 100%), radial-gradient(ellipse at 100% 65%, rgba(255,51,85,0.15) 0%, rgba(255,51,85,0) 100%);
+    background: radial-gradient(ellipse at 0% 65%, rgba(82, 105, 255, 0.095) 0%, rgba(82, 105, 255, 0) 100%), radial-gradient(ellipse at 100% 65%, rgba(255, 51, 85, 0.15) 0%, rgba(255, 51, 85, 0) 100%);
     z-index: 0;
     opacity: 0;
     transition: var(--a-layout-active);
@@ -65,7 +65,8 @@ body.page-advertise.checkpoint-campaigns {
     font-size: var(--t-size0);
 }
 
-p, quote {
+p,
+quote {
     max-width: 760px;
 }
 
@@ -163,7 +164,6 @@ p, quote {
         font-size: var(--t-size1);
     }
 
-
     .main-advertise .console-button.console-button-medium,
     .main-advertise [class^="console-button"].console-button-medium,
     .main-advertise [class*=" console-button"].console-button-medium {
@@ -175,7 +175,7 @@ p, quote {
     .main-advertise [class*=" console-button"].console-button-small {
         font-size: var(--t-size-1);
     }
-    
+
     .main-advertise input.console-input-text,
     .main-advertise select.console-select {
         font-size: var(--t-size1);
@@ -1077,7 +1077,7 @@ p, quote {
 }
 
 @media (max-width: 768px) {
-    .page-section-advertise.social .future-heads  {
+    .page-section-advertise.social .future-heads {
         margin-left: -38px;
     }
 
@@ -1088,7 +1088,7 @@ p, quote {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .page-section-advertise.social .future-heads  {
+    .page-section-advertise.social .future-heads {
         --leftMove: calc(calc(1024px - 100vw) * 0.15);
         margin-left: calc(var(--leftMove) * -1);
     }
