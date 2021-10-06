@@ -2252,7 +2252,7 @@ body:not(.mobile) .console-control:hover:before {
     .console-bar-chart {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: var(--space4) var(--space4);
+        gap: var(--space4) var(--space5);
     }
 }
 
@@ -2385,7 +2385,7 @@ body:not(.mobile) .console-control:hover:before {
 
 @media (min-width: 1370px) {
     .neon-planes.one .neon-plane {
-    transform: translateX(calc(calc(100% + var(--skew-offset-self)) * -1));
+        transform: translateX(calc(calc(100% + var(--skew-offset-self)) * -1));
     }
 }
 
