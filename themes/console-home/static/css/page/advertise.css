@@ -295,7 +295,7 @@ quote {
     z-index: 0;
     height: 0;
     margin-top: var(--space4);
-    margin-right: -4vw;
+    margin-right: -5vw;
 }
 
 @media (max-width: 768px) {
@@ -337,7 +337,21 @@ quote {
 @media (min-width: 769px) and (max-width: 1024px) {
     .page-section-advertise.opening .bottom {
         --move: calc(calc(1024px - 100vw) * 0.25);
-        margin-right: calc(-4vw - var(--move));
+        margin-right: calc(-5vw - var(--move));
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1372px) {
+    .page-section-advertise.opening .bottom {
+        --move: calc(calc(100vw - 1024px) * 0.15);
+        margin-right: calc(-5vw + var(--move));
+    }
+}
+
+@media (min-width: 1372px) {
+    .page-section-advertise.opening .bottom {
+        --move: calc(calc(100vw - 1024px) * 0.15);
+        margin-right: calc(-5vw + 52px);
     }
 }
 
@@ -395,14 +409,14 @@ quote {
 
 @media (min-width: 1025px) and (max-width: 1372px) {
     .advertise-artwork {
-        --expand: calc(calc(100vw - 1024px) * 0.135);
+        --expand: calc(calc(100vw - 1024px) * 0.06);
         --plane-size: calc(var(--space6) + var(--expand));
     }
 }
 
 @media (min-width: 1372px) {
     .advertise-artwork {
-        --plane-size: calc(var(--space6) + 47px);
+        --plane-size: calc(var(--space6) + 20px);
     }
 }
 
@@ -443,6 +457,19 @@ quote {
     .advertise-artwork .col:not(:first-child) {
         --margin: calc(calc(1024px - 100vw) * 0.04);
         margin-left: calc(var(--space4) + var(--space1) - var(--margin));
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1372px) {
+    .advertise-artwork .col:not(:first-child) {
+        --margin: calc(calc(100vw - 1024px) * 0.04);
+        margin-left: calc(var(--space4) + var(--space1) + var(--margin));
+    }
+}
+
+@media (min-width: 1372px) {
+    .advertise-artwork .col:not(:first-child) {
+        margin-left: calc(var(--space4) + var(--space1) + 14px);
     }
 }
 
@@ -1201,10 +1228,6 @@ quote {
 
 .page-section-advertise.contact .bottom {
     margin-top: var(--space4_5);
-}
-
-.page-section-advertise.contact .bottom p .console-button-text {
-    vertical-align: middle;
 }
 
 @media (max-width: 700px) {
