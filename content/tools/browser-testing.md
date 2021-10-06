@@ -53,8 +53,7 @@ sharing the reports with stakeholders via different channels.
 
 We tested 10 browser testing tools using our independent
 [selection criteria](/about#selection-criteria) and the requirements described
-below. The best load testing tools for developers and quality assurance
-engineers in {{< year >}} are:
+below. The best browser testing tools for developers in {{< year >}} are:
 
 1. [BrowserStack](#browserstack)
 2. [LambdaTest](#lambdatest)
