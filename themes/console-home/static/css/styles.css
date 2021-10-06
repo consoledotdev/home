@@ -1912,21 +1912,21 @@ select.console-select::-ms-expand {
     }
 }
 
-/* 1600px + left & right margin (6.25vw) */
-@media (min-width: 1828px) {
+/* 1200px + left & right margin (6.25vw) */
+@media (min-width: 1371px) {
     .header.header-fixed,
     .is-scrolled .header.header-fixed {
-        padding-left: calc(calc(100vw - 1600px) / 2);
-        padding-right: calc(calc(100vw - 1600px) / 2);
+        padding-left: calc(calc(100vw - 1200px) / 2);
+        padding-right: calc(calc(100vw - 1200px) / 2);
     }
 
     .page-article .header:not(.header-fixed) {
-        max-width: 1600px;
+        max-width: 1200px;
         margin: 0 auto;
     }
 
     .content {
-        max-width: 1600px;
+        max-width: 1200px;
     }
 
     .main-article {
