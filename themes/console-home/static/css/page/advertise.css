@@ -260,12 +260,12 @@ quote {
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .page-section-advertise.opening p.description {
-        --shrink: calc(calc(1024px - 100vw) * 0.2);
+        --shrink: calc(calc(1024px - 100vw) * 0.3);
         width: calc(100% - var(--shrink));
     }
 
     .page-section-advertise.opening p:not(.description) {
-        --shrink: calc(calc(1024px - 100vw) * 0.3);
+        --shrink: calc(calc(1024px - 100vw) * 0.4);
         width: calc(100% - var(--shrink));
     }
 }
@@ -298,14 +298,45 @@ quote {
     margin-right: -4vw;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    .advertise-artwork {
-        --shrink: calc(calc(1024px - 100vw) * 0.2);
-        --plane-size: calc(var(--space6) - var(--shrink));
-    }
-
+@media (max-width: 768px) {
     .page-section-advertise.opening .bottom {
-        --move: calc(calc(1024px - 100vw) * 0.196);
+        margin-top: var(--space5);
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    @media (min-width: 481px) {
+        .page-section-advertise.opening .bottom {
+            --margin: calc(calc(768px - 100vw) * 0.38);
+            height: calc(220px - var(--margin));
+        }
+    }
+    @media (max-width: 480px) {
+        .page-section-advertise.opening .bottom {
+            margin-top: var(--space4_5);
+            height: calc(220px - 109px);
+        }
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+        .page-section-advertise.opening .bottom {
+            --margin: calc(calc(480px - 100vw) * 0.06);
+            height: calc(220px - 109px - var(--margin));
+            --move: calc(calc(480px - 100vw) * 0.3);
+            margin-right: calc(-4vw + var(--move));
+        }
+    }
+    @media (max-width: 319px) {
+        .page-section-advertise.opening .bottom {
+            height: calc(220px - 109px - 10px);
+            margin-right: calc(-4vw + 48px);
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .page-section-advertise.opening .bottom {
+        --move: calc(calc(1024px - 100vw) * 0.25);
         margin-right: calc(-4vw - var(--move));
     }
 }
@@ -313,6 +344,13 @@ quote {
 .page-section-advertise.opening .artwork-wrapper {
     transform-origin: 0 0;
     transform: scale(1.28);
+}
+
+@media (max-width: 768px) {
+    .page-section-advertise.opening .artwork-wrapper {
+        transform: scale(1.4) translateX(-50%);
+        margin-left: 55%;
+    }
 }
 
 .advertise-artwork {
@@ -323,9 +361,34 @@ quote {
     transform: scaleY(0.8945) skew(-24.4deg);
 }
 
+@media (max-width: 768px) {
+    @media (min-width: 481px) {
+        .advertise-artwork {
+            --shrink: calc(calc(768px - 100vw) * 0.14);
+            --plane-size: calc(var(--space6) - var(--shrink));
+        }
+    }
+    @media (max-width: 480px) {
+        .advertise-artwork {
+            --plane-size: calc(var(--space6) - 40px);
+        }
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+        .advertise-artwork {
+            --shrink: calc(calc(480px - 100vw) * 0.04);
+            --plane-size: calc(var(--space6) - 40px - var(--shrink));
+        }
+    }
+    @media (max-width: 319px) {
+        .advertise-artwork {
+            --plane-size: calc(var(--space6) - 40px - 6px);
+        }
+    }
+}
+
 @media (min-width: 769px) and (max-width: 1024px) {
     .advertise-artwork {
-        --shrink: calc(calc(1024px - 100vw) * 0.2);
+        --shrink: calc(calc(1024px - 100vw) * 0.15);
         --plane-size: calc(var(--space6) - var(--shrink));
     }
 }
@@ -351,9 +414,34 @@ quote {
     margin-left: calc(var(--space4) + var(--space1));
 }
 
+@media (max-width: 768px) {
+    @media (min-width: 481px) {
+        .advertise-artwork .col:not(:first-child) {
+            --margin: calc(calc(768px - 100vw) * 0.04);
+            margin-left: calc(var(--space4) + var(--space1) - var(--margin));
+        }
+    }
+    @media (max-width: 480px) {
+        .advertise-artwork .col:not(:first-child) {
+            margin-left: calc(var(--space4) + var(--space1) - 12px);
+        }
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+        .advertise-artwork .col:not(:first-child) {
+            --margin: calc(calc(480px - 100vw) * 0.01);
+            margin-left: calc(var(--space4) + var(--space1) - 12px - var(--margin));
+        }
+    }
+    @media (max-width: 319px) {
+        .advertise-artwork .col:not(:first-child) {
+            margin-left: calc(var(--space4) + var(--space1) - 12px - 2px);
+        }
+    }
+}
+
 @media (min-width: 769px) and (max-width: 1024px) {
     .advertise-artwork .col:not(:first-child) {
-        --margin: calc(calc(1024px - 100vw) * 0.06);
+        --margin: calc(calc(1024px - 100vw) * 0.04);
         margin-left: calc(var(--space4) + var(--space1) - var(--margin));
     }
 }
@@ -391,9 +479,10 @@ quote {
 }
 
 .advertise-artwork .triad-01 .plane:before {
+    --glow: 38px;
     top: calc(30% + 14px);
     background: var(--theme-artwork-triad-01-glow);
-    box-shadow: 0 0 38px 38px var(--theme-artwork-triad-01-glow);
+    box-shadow: 0 0 var(--glow) var(--glow) var(--theme-artwork-triad-01-glow);
 }
 
 .advertise-artwork .triad-02 .plane {
@@ -404,9 +493,10 @@ quote {
 }
 
 .advertise-artwork .triad-02 .plane:before {
+    --glow: 26px;
     top: calc(30% + 9px);
     background: var(--theme-artwork-triad-02-glow);
-    box-shadow: 0 0 26px 26px var(--theme-artwork-triad-02-glow);
+    box-shadow: 0 0 var(--glow) var(--glow) var(--theme-artwork-triad-02-glow);
 }
 
 .advertise-artwork .triad-03 .plane {
@@ -417,9 +507,90 @@ quote {
 }
 
 .advertise-artwork .triad-03 .plane:before {
+    --glow: 20px;
     top: calc(30% + 7px);
     background: var(--theme-artwork-triad-03-glow);
-    box-shadow: 0 0 20px 20px var(--theme-artwork-triad-03-glow);
+    box-shadow: 0 0 var(--glow) var(--glow) var(--theme-artwork-triad-03-glow);
+}
+
+@media (max-width: 768px) {
+    @media (min-width: 481px) {
+        .advertise-artwork .triad-01 .plane:before {
+            --shrink: calc(calc(768px - 100vw) * 0.04);
+            --glow: calc(38px - var(--shrink));
+        }
+
+        .advertise-artwork .triad-02 .plane:before {
+            --shrink: calc(calc(768px - 100vw) * 0.04);
+            --glow: calc(26px - var(--shrink));
+        }
+
+        .advertise-artwork .triad-03 .plane:before {
+            --shrink: calc(calc(768px - 100vw) * 0.04);
+            --glow: calc(20px - var(--shrink));
+        }
+    }
+    @media (max-width: 480px) {
+        .advertise-artwork .triad-01 .plane:before {
+            --glow: calc(38px - 12px);
+        }
+
+        .advertise-artwork .triad-02 .plane:before {
+            --glow: calc(26px - 12px);
+        }
+
+        .advertise-artwork .triad-03 .plane:before {
+            --glow: calc(20px - 12px);
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .advertise-artwork .triad-01 .plane:before {
+        --shrink: calc(calc(1024px - 100vw) * 0.05);
+        --glow: calc(38px - var(--shrink));
+    }
+
+    .advertise-artwork .triad-02 .plane:before {
+        --shrink: calc(calc(1024px - 100vw) * 0.05);
+        --glow: calc(26px - var(--shrink));
+    }
+
+    .advertise-artwork .triad-03 .plane:before {
+        --shrink: calc(calc(1024px - 100vw) * 0.05);
+        --glow: calc(20px - var(--shrink));
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1372px) {
+    .advertise-artwork .triad-01 .plane:before {
+        --expand: calc(calc(100vw - 1024px) * 0.04);
+        --glow: calc(38px + var(--expand));
+    }
+
+    .advertise-artwork .triad-02 .plane:before {
+        --expand: calc(calc(100vw - 1024px) * 0.04);
+        --glow: calc(26px + var(--expand));
+    }
+
+    .advertise-artwork .triad-03 .plane:before {
+        --expand: calc(calc(100vw - 1024px) * 0.04);
+        --glow: calc(20px + var(--expand));
+    }
+}
+
+@media (min-width: 1372px) {
+    .advertise-artwork .triad-01 .plane:before {
+        --glow: calc(38px + 14px);
+    }
+
+    .advertise-artwork .triad-02 .plane:before {
+        --glow: calc(26px + 14px);
+    }
+
+    .advertise-artwork .triad-03 .plane:before {
+        --glow: calc(20px + 14px);
+    }
 }
 
 .advertise-artwork .triad-01 .plane .icon {
