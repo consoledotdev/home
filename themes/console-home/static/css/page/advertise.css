@@ -490,8 +490,7 @@ quote {
     position: absolute;
     z-index: 0;
     width: 100%;
-    /* margin-top: calc(calc(var(--space7) + var(--space6)) * -1); */
-    margin-top: 0;
+    margin-top: calc(calc(var(--space7) + var(--space6)) * -1);
     transform-origin: top center;
 }
 
@@ -499,7 +498,6 @@ quote {
     position: relative;
     width: calc(100% * 1.78);
     min-width: 1480px;
-    min-height: 1145px;
     padding-bottom: calc(78% * 1.78);
     left: 50%;
     transform: translateX(-50%);

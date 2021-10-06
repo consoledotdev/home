@@ -26,10 +26,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
             planesWrappers.forEach((pW) => {
                 let parent = pW.parentElement;
                 let resizeRatio;
-                // if (pW.dataset.site != undefined) {
-                //     resizeRatio = (parent.offsetHeight + 512) / pW.offsetHeight;
-                //     pW.style.transform = "scale(" + resizeRatio + ")";
-                // }
+                if (pW.dataset.site != undefined) {
+                    resizeRatio = (parent.offsetHeight + 512) / pW.offsetHeight;
+                    pW.style.transform = "scale(" + resizeRatio + ")";
+                }
 
                 if (pW.dataset.packages != undefined) {
                     resizeRatio = (parent.offsetHeight * 0.94) / pW.offsetHeight;
@@ -47,103 +47,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         resizeObserver.observe(document.body);
     })();
 });
-
-document.addEventListener("DOMContentLoaded", (event) => {
-    // detect absolute element center and size
-    // on resize detect the above again
-    // on scroll
-        // when vewport is above the below
-            // unfix element
-            // remove any additional top margin from element
-        // when viewport center is between element center and half the element height from the end of the section (plus a bottom framing margin)
-            // remove any additional top margin from element
-            // fix element and size, center horizontally
-        // when viewport center is past the above
-            // unfix element
-            // add top margin to element equal to section height minus element height (plus a bottom framing margin)
-
-    let fixSiteNeonPlanes = (() => {
-        let el = document.querySelector("[data-neon-planes-wrapper][data-site]");
-        let section = document.querySelector("[data-page-section-site]");
-        let fixStart;
-        let elWidth;
-        let elHeight;
-        let fixEnd;
-        let sectionHeight;
-        let getMetrics = () => {
-            let elRect = el.getBoundingClientRect();
-            fixStart = window.scrollY + elRect.top + (elRect.height / 2);
-            elWidth = elRect.width;
-            elHeight = elRect.height;
-            let sectionRect = section.getBoundingClientRect();
-            fixEnd = window.scrollY + sectionRect.top + sectionRect.height - (elRect.height / 2);
-            sectionHeight = sectionRect.height;
-        }
-        getMetrics();
-        window.addEventListener("resize", getMetrics);
-        const resizeObserver = new ResizeObserver((entries) => {
-            setTimeout(() => {
-                getMetrics();
-            }, 100);
-        });
-        resizeObserver.observe(document.body);
-
-        let checkFix = () => {
-            let viewCenter = window.scrollY + (window.innerHeight / 2);
-            let style = {
-                position: null,
-                width: null,
-                top: null,
-                left: null,
-                transform: null,
-                marginTop: null,
-            };
-            if (viewCenter < fixStart) {
-                console.log("before")
-                style = {
-                    position: null,
-                    width: null,
-                    top: null,
-                    left: null,
-                    transform: null,
-                    marginTop: null,
-                }
-            }
-            if (viewCenter >= fixStart && viewCenter <= fixEnd) {
-                console.log("in")
-                style = {
-                    position: "fixed",
-                    width: elWidth + "px",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                    marginTop: null,
-                }
-            }
-            if (viewCenter > fixEnd) {
-                console.log("after")
-                let marginTop = sectionHeight - elHeight;
-                style = {
-                    position: null,
-                    width: null,
-                    top: null,
-                    left: null,
-                    transform: null,
-                    marginTop: marginTop + "px",
-                }
-            }
-            el.style.position = style.position;
-            el.style.width = style.width;
-            el.style.top = style.top;
-            el.style.left = style.left;
-            el.style.transform = style.transform;
-            el.style.marginTop = style.marginTop;
-        }
-        window.addEventListener("scroll", checkFix);
-    })();
-});
-
-
 
 let handleScrollAppearance = (() => {
     let handleIntersect = (intersections) => {
