@@ -26,10 +26,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
             planesWrappers.forEach((pW) => {
                 let parent = pW.parentElement;
                 let resizeRatio;
-                if (pW.dataset.site != undefined) {
-                    resizeRatio = (parent.offsetHeight + 512) / pW.offsetHeight;
-                    pW.style.transform = "scale(" + resizeRatio + ")";
-                }
 
                 if (pW.dataset.packages != undefined) {
                     resizeRatio = (parent.offsetHeight * 0.94) / pW.offsetHeight;
@@ -52,69 +48,109 @@ let handleScrollAppearance = (() => {
     let handleIntersect = (intersections) => {
         intersections.forEach(function (i) {
             if ("checkpointSite" in i.target.dataset) {
-                if (i.isIntersecting || (!i.isIntersecting && i.boundingClientRect.top < 0) ) {
-                    document.body.classList.add("checkpoint-site")
+                if (i.isIntersecting || (!i.isIntersecting && i.boundingClientRect.top < 0)) {
+                    document.body.classList.add("checkpoint-site");
                 }
                 if (!i.isIntersecting) {
-                    if (i.boundingClientRect.top > 0) document.body.classList.remove("checkpoint-site")
+                    if (i.boundingClientRect.top > 0) document.body.classList.remove("checkpoint-site");
                 }
             }
 
             if ("checkpointPodcast" in i.target.dataset) {
                 if (i.isIntersecting || (!i.isIntersecting && i.boundingClientRect.top < 0)) {
-                    document.body.classList.add("checkpoint-podcast")
+                    document.body.classList.add("checkpoint-podcast");
                 }
                 if (!i.isIntersecting) {
-                    if (i.boundingClientRect.top > 0) document.body.classList.remove("checkpoint-podcast")
+                    if (i.boundingClientRect.top > 0) document.body.classList.remove("checkpoint-podcast");
                 }
             }
 
             if ("checkpointWorkWithUs" in i.target.dataset) {
                 if (i.isIntersecting || (!i.isIntersecting && i.boundingClientRect.top < 0)) {
-                    document.body.classList.add("checkpoint-work-with-us")
+                    document.body.classList.add("checkpoint-work-with-us");
                 }
                 if (!i.isIntersecting) {
-                    if (i.boundingClientRect.top > 0) document.body.classList.remove("checkpoint-work-with-us")
+                    if (i.boundingClientRect.top > 0) document.body.classList.remove("checkpoint-work-with-us");
                 }
             }
 
             if ("checkpointCampaigns" in i.target.dataset) {
                 if (i.isIntersecting || (!i.isIntersecting && i.boundingClientRect.top < 0)) {
-                    document.body.classList.add("checkpoint-campaigns")
+                    document.body.classList.add("checkpoint-campaigns");
                 }
                 if (!i.isIntersecting) {
-                    if (i.boundingClientRect.top > 0) document.body.classList.remove("checkpoint-campaigns")
+                    if (i.boundingClientRect.top > 0) document.body.classList.remove("checkpoint-campaigns");
                 }
             }
 
             if ("checkpointContact" in i.target.dataset) {
                 if (i.isIntersecting || (!i.isIntersecting && i.boundingClientRect.top < 0)) {
-                    document.body.classList.add("checkpoint-contact")
+                    document.body.classList.add("checkpoint-contact");
                 }
                 if (!i.isIntersecting) {
-                    if (i.boundingClientRect.top > 0) document.body.classList.remove("checkpoint-contact")
+                    if (i.boundingClientRect.top > 0) document.body.classList.remove("checkpoint-contact");
+                }
+            }
+
+            if ("checkpointNeonPlanes" in i.target.dataset) {
+                if (i.isIntersecting || (!i.isIntersecting && i.boundingClientRect.top < 0)) {
+                    document.body.classList.add("checkpoint-neon-planes");
+                }
+                if (!i.isIntersecting) {
+                    if (i.boundingClientRect.top > 0) document.body.classList.remove("checkpoint-neon-planes");
                 }
             }
         });
     };
-    let observer = new IntersectionObserver(handleIntersect, {
+
+    let observed1 = ["data-checkpoint-site", "data-checkpoint-work-with-us", "data-checkpoint-campaigns", "data-checkpoint-contact"].map((str) => {
+        return document.querySelector("[" + str + "]");
+    });
+
+    let observer1 = new IntersectionObserver(handleIntersect, {
         root: null,
         rootMargin: "0px",
         threshold: 0,
     });
 
-    let checkpointSite = document.querySelector("[data-checkpoint-site]");
-    observer.observe(checkpointSite);
+    observed1.forEach((el) => {
+        observer1.observe(el);
+    });
 
-    let checkpointPodcast = document.querySelector("[data-checkpoint-podcast]");
-    observer.observe(checkpointPodcast);
+    let observed2 = ["data-checkpoint-podcast", "data-checkpoint-neon-planes"].map((str) => {
+        return document.querySelector("[" + str + "]");
+    });
 
-    let checkpointWorkWithUs = document.querySelector("[data-checkpoint-work-with-us]");
-    observer.observe(checkpointWorkWithUs);
+    let observer2 = new IntersectionObserver(handleIntersect, {
+        root: null,
+        rootMargin: "0% 0% -50%",
+        threshold: 0,
+    });
 
-    let checkpointCampaigns = document.querySelector("[data-checkpoint-campaigns]");
-    observer.observe(checkpointCampaigns);
+    observed2.forEach((el) => {
+        observer2.observe(el);
+    });
 
-    let checkpointContact = document.querySelector("[data-checkpoint-contact]");
-    observer.observe(checkpointContact);
+    let onScrollEnd = () => {
+        observed1.forEach((el) => {
+            observer1.unobserve(el);
+            observer1.observe(el);
+        });
+        observed2.forEach((el) => {
+            observer2.unobserve(el);
+            observer2.observe(el);
+        });
+    };
+
+    var isScrolling;
+    window.addEventListener(
+        "scroll",
+        () => {
+            window.clearTimeout(isScrolling);
+            isScrolling = setTimeout(() => {
+                onScrollEnd();
+            }, 50);
+        },
+        false
+    );
 })();

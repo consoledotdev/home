@@ -23,12 +23,48 @@ body:before {
     transition: var(--a-layout-active);
 }
 
+body.page-advertise .page-section-advertise.site .neon-planes-wrapper {
+    opacity: 0;
+    transition: var(--a-layout);
+}
+
+body.page-advertise .page-section-advertise.site .neon-planes-wrapper .neon-plane {
+    opacity: 0;
+    transition: var(--a-layout);
+}
+
 body.page-advertise.checkpoint-site {
     background: var(--theme-content-bg-1);
     transition: var(--a-layout);
 }
 
 body.page-advertise.checkpoint-site .hero .lines {
+    opacity: 0;
+}
+
+body.page-advertise.checkpoint-neon-planes .page-section-advertise.site .neon-planes-wrapper {
+    opacity: 1;
+    transition: var(--a-layout-active);
+}
+
+body.page-advertise.checkpoint-neon-planes .page-section-advertise.site .neon-planes-wrapper .neon-plane {
+    opacity: 1;
+}
+
+body.page-advertise.checkpoint-neon-planes .page-section-advertise.site .neon-planes-wrapper .neon-plane.triad-01 {
+    transition-delay: 0s;
+}
+
+body.page-advertise.checkpoint-neon-planes .page-section-advertise.site .neon-planes-wrapper .neon-plane.triad-02 {
+    transition-delay: 0.2s;
+}
+
+body.page-advertise.checkpoint-neon-planes .page-section-advertise.site .neon-planes-wrapper .neon-plane.triad-03 {
+    transition-delay: 0.4s;
+}
+
+body.page-advertise.checkpoint-podcast .page-section-advertise.site .neon-planes-wrapper .neon-plane {
+    transition: var(--a-layout);
     opacity: 0;
 }
 
@@ -487,17 +523,34 @@ quote {
 }
 
 .page-section-advertise.site .neon-planes-wrapper {
-    position: absolute;
+    position: fixed;
     z-index: 0;
-    width: 100%;
-    margin-top: calc(calc(var(--space7) + var(--space6)) * -1);
-    transform-origin: top center;
+    width: 87.5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    @media (min-width: 481px) {
+        .page-section-advertise.site .neon-planes-wrapper {
+            width: 84%;
+        }
+    }
+}
+
+@media (min-width: 1371px) {
+    .page-section-advertise.site .neon-planes-wrapper {
+        max-width: 1200px;
+    }
 }
 
 .page-section-advertise.site .neon-planes {
     position: relative;
     width: calc(100% * 1.78);
     min-width: 1480px;
+    min-height: 1154px;
     padding-bottom: calc(78% * 1.78);
     left: 50%;
     transform: translateX(-50%);

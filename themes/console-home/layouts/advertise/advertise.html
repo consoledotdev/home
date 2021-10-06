@@ -34,10 +34,10 @@
     <span data-checkpoint-site></span>
 
     <section class="page-section page-section-advertise site">
-        <div class="neon-planes-wrapper" data-neon-planes-wrapper data-site>
+        <div class="neon-planes-wrapper">
             {{ partial "components/neon-planes.html" (dict "context" . "type" "all" ) }}
         </div>
-        <h3 class="title title-2 rich-title">{{ partial "icons/link.html" }}<span>console.dev</span></h3>
+        <h3 data-checkpoint-neon-planes class="title title-2 rich-title">{{ partial "icons/link.html" }}<span>console.dev</span></h3>
         <div class="advertise-site-item advertise-site-tools">
             <div class="top">
                 <h4 class="title title-3 rich-title">{{ partial "icons/console-review.html" }}<span>Developer tools reviews</span></h4>
