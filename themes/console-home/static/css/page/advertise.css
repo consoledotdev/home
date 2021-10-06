@@ -1059,6 +1059,16 @@ quote {
     color: var(--theme-text-attention-2);
 }
 
+.page-section-advertise.work-with-us .title-1 br {
+    display: none;
+}
+
+@media (max-width: 450px) {
+    .page-section-advertise.work-with-us .title-1 br {
+        display: initial;
+    }
+}
+
 .page-section-advertise.work-with-us .title-3 {
     margin-top: var(--space3_5);
 }
