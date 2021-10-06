@@ -20,6 +20,29 @@ let handlePodcastEmbedTheme = (() => {
 })();
 
 document.addEventListener("DOMContentLoaded", (event) => {
+    let levelPackageIntros = (() => {
+        let setSize = () => {
+            let paragraphs = document.querySelectorAll("[data-package-intro]");
+            let heights = [];
+            paragraphs.forEach((p) => {
+                p.style.height = null;
+                heights.push(p.getBoundingClientRect().height);
+            });
+            paragraphs.forEach((p) => {
+                if (heights[0] >= heights[1]) p.style.height = heights[0] + "px";
+                else p.style.height = heights[1] + "px";
+            });
+        };
+        setSize();
+        window.addEventListener("resize", setSize);
+        const resizeObserver = new ResizeObserver((entries) => {
+            setTimeout(() => {
+                setSize();
+            }, 100);
+        });
+        resizeObserver.observe(document.body);
+    })();
+
     let resizeNeonPlanes = (() => {
         let setSize = () => {
             let planesWrappers = document.querySelectorAll("[data-neon-planes-wrapper]");
