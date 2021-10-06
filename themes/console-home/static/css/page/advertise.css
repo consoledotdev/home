@@ -497,6 +497,7 @@ quote {
 .page-section-advertise.site .neon-planes {
     position: relative;
     width: calc(100% * 1.78);
+    min-width: 1480px;
     padding-bottom: calc(78% * 1.78);
     left: 50%;
     transform: translateX(-50%);
