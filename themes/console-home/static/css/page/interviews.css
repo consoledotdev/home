@@ -155,7 +155,7 @@ p.interviews-card-description {
     }
 }
 
-@media (max-width: 768px), (min-width: 1025px) and (max-width: 1280px) {
+@media (max-width: 768px), (min-width: 1025px) {
     .interviews-card {
         --logoWidth: 47.33%;
     }
@@ -203,12 +203,6 @@ p.interviews-card-description {
         .interviews-items > :nth-last-child(1):nth-child(even),
         .interviews-items > :nth-last-child(1):nth-child(odd) {
             margin-bottom: 0;
-        }
-    }
-
-    @media (min-width: 1280px) {
-        .interviews-split + .page-section-interviews-root {
-            margin-right: calc(50% + var(--space3) + var(--space1));
         }
     }
 }

@@ -1467,20 +1467,11 @@ body:not(.mobile) .console-control:hover:before {
     }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1371px) {
     .artwork {
+        width: 100%;
         margin-left: 0;
         margin-right: 0;
-        width: 114%;
-        margin-left: -7%;
-    }
-}
-
-/* 1600px + left & right margin (6.25vw) */
-@media (min-width: 1828px) {
-    .artwork {
-        margin-left: 0;
-        width: 100%;
     }
 }
 

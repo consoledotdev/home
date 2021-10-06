@@ -101,11 +101,6 @@ body.page-advertise.checkpoint-campaigns {
     font-size: var(--t-size0);
 }
 
-p,
-quote {
-    max-width: 760px;
-}
-
 @media (max-width: 768px) {
     .main-advertise {
         margin-top: var(--space6);
