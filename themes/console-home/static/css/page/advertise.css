@@ -1132,8 +1132,21 @@ quote {
     }
 }
 
-.page-section-advertise.campaigns .framed-section .top .title {
+.page-section-advertise.campaigns .framed-section .top .heading {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
     margin-bottom: var(--space4);
+}
+
+.page-section-advertise.campaigns .framed-section .top .heading .console-button {
+    flex: 0 0 auto;
+}
+
+.page-section-advertise.campaigns .framed-section .top .title {
+    flex: 1 1 auto;
+    margin-bottom: 0;
+    margin-right: var(--space3);
 }
 
 .page-section-advertise.campaigns .framed-section .case-study-thumbnail {
