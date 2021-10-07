@@ -1,0 +1,31 @@
+<div class="neon-planes {{ .type }}">
+    {{ if eq .type "all" -}}
+        <div class="neon-plane triad-01">
+            <div></div>
+        </div>
+        <div class="neon-plane triad-02">
+            <div></div>
+        </div>
+        <div class="neon-plane triad-03">
+            <div></div>
+        </div>
+    {{- end }}
+    {{ if eq .type "one-three" -}}
+        <div class="neon-plane triad-01">
+            <div></div>
+        </div>
+        <div class="neon-plane triad-03">
+            <div></div>
+        </div>
+    {{- end }}
+    {{ if eq .type "one" -}}
+        <div class="neon-plane triad-01">
+            <div></div>
+        </div>
+    {{- end }}
+    {{ if eq .type "two" -}}
+        <div class="neon-plane triad-02">
+            <div></div>
+        </div>
+    {{- end }}
+</div>

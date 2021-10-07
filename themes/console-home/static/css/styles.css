@@ -40,6 +40,11 @@ a {
     box-sizing: border-box;
 }
 
+p,
+quote {
+    max-width: 760px;
+}
+
 /* Hero
    ================================================================================================================ */
 
@@ -234,7 +239,7 @@ body:not(.is-same-origin) #line-10 {
     width: 111vw;
     z-index: 2;
     top: 50vh;
-    left: 50%;
+    left: 60%;
     transform: translate(-6.5%, -49%);
 }
 
@@ -439,6 +444,37 @@ body.show-planes:after {
 
 .page-section {
     position: relative;
+}
+
+.page-section-plane {
+    background: var(--theme-section-plane);
+    padding: var(--space6) 0;
+}
+
+.page-section-plane * {
+    z-index: 1;
+}
+
+.page-section-plane:before,
+.page-section-plane:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    z-index: 0;
+}
+
+.page-section-plane:before {
+    left: -100%;
+    background-position: calc(100% + 0.5px);
+}
+
+.page-section-plane:after {
+    left: 100%;
+    background-position: left;
 }
 
 .page-section-heading {
@@ -662,36 +698,6 @@ body.show-planes:after {
     width: calc(100% + 14px);
 }
 
-.podcast-links {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.podcast-links .link {
-    display: inline-block;
-    filter: grayscale(0.6);
-}
-
-.podcast-links .link:hover,
-.podcast-links .link:focus {
-    filter: grayscale(0);
-}
-
-.podcast-links .link:active {
-    opacity: 0.8;
-}
-
-.podcast-links .link:not(:first-child) {
-    margin-left: var(--space3);
-}
-
-.podcast-links .link img {
-    display: inline-block;
-    vertical-align: top;
-}
-
 @media (min-width: 512px) {
     .podcast-embed-content {
         flex-flow: row nowrap;
@@ -702,11 +708,6 @@ body.show-planes:after {
     .podcast-embed-content .podcast-embed-frame {
         flex: 1 1 auto;
     }
-
-    .podcast-links .link {
-        flex: 0 0 auto;
-        margin-left: var(--space3);
-    }
 }
 
 @media (max-width: 511px) {
@@ -714,10 +715,6 @@ body.show-planes:after {
         flex-flow: column nowrap;
         align-items: stretch;
         justify-content: flex-start;
-    }
-
-    .podcast-links .link {
-        margin-top: var(--space3);
     }
 }
 
@@ -1380,6 +1377,30 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
     margin-right: var(--space2_5);
 }
 
+.title.illustrated-title {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.title.illustrated-title span {
+    flex: 1 1 auto;
+}
+
+.title.illustrated-title .illustration {
+    width: var(--space5);
+    height: var(--space5);
+    flex: 0 0 auto;
+}
+
+.title.illustrated-title.right .illustration {
+    margin-left: var(--space3_5);
+}
+
+.title.illustrated-title.left .illustration {
+    margin-right: var(--space3_5);
+}
+
 /* Text
    ================================================================================================================ */
 
@@ -1442,11 +1463,33 @@ p.x-small {
     background: var(--theme-content-bg-2);
 }
 
+.quote:last-child {
+    margin-bottom: 0;
+}
+
+.quote span span {
+    font-style: normal;
+    color: var(--theme-text-1);
+}
+
 .page-feature-article .quote {
     background: transparent;
     font-size: var(--t-size0);
     line-height: var(--t-lH4);
     border-left: var(--theme-border-3);
+}
+
+.quote.icon-left {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.quote.icon-left .icon {
+    margin-right: var(--space3);
+    margin-top: 0.1em;
+    flex: 0 0 auto;
+    width: var(--space3);
+    height: var(--space3);
 }
 
 .pre {
@@ -1753,6 +1796,7 @@ select.console-select::-ms-expand {
     .main-feature-article-content-split aside {
         flex: 0 0 auto;
         width: 120px;
+        max-width: 380px;
         margin-left: 6vw;
     }
 }
@@ -1776,13 +1820,13 @@ select.console-select::-ms-expand {
 
 @media (min-width: 1152px) {
     .main-feature-article-content-split aside {
-        width: 24vw;
+        width: 22vw;
     }
 }
 
 @media (min-width: 1280px) {
     .main-feature-article-content-split aside {
-        width: 26vw;
+        width: 24vw;
     }
 
     .main-feature-article-content {
@@ -1833,23 +1877,61 @@ select.console-select::-ms-expand {
     .main-feature-article .title-6 {
         font-size: var(--t-size0);
     }
+
+    .main-feature-article .console-button,
+    .main-feature-article .console-button-text {
+        font-size: var(--t-size0);
+    }
+
+    .main-feature-article .console-button,
+    .main-feature-article [class^="console-button"],
+    .main-feature-article [class*=" console-button"] {
+        font-size: var(--t-size1);
+    }
+
+    .main-feature-article .console-button.console-button-medium,
+    .main-feature-article [class^="console-button"].console-button-medium,
+    .main-feature-article [class*=" console-button"].console-button-medium {
+        font-size: var(--t-size0);
+    }
+
+    .main-feature-article .console-button.console-button-small,
+    .main-feature-article [class^="console-button"].console-button-small,
+    .main-feature-article [class*=" console-button"].console-button-small {
+        font-size: var(--t-size-1);
+    }
+
+    .main-feature-article input.console-input-text,
+    .main-feature-article select.console-select {
+        font-size: var(--t-size1);
+    }
+
+    .main-feature-article input.console-input-text.console-input-medium,
+    .main-feature-article select.console-select.console-input-medium {
+        font-size: var(--t-size0);
+    }
+
+    .main-feature-article input.console-input-text.console-input-small,
+    .main-feature-article select.console-select.console-input-small {
+        font-size: var(--t-size-1);
+    }
 }
 
-/* 1600px + left & right margin (6.25vw) */
-@media (min-width: 1828px) {
+/* 1200px + left & right margin (6.25vw) */
+@media (min-width: 1371px) {
     .header.header-fixed,
     .is-scrolled .header.header-fixed {
-        padding-left: calc(calc(100vw - 1600px) / 2);
-        padding-right: calc(calc(100vw - 1600px) / 2);
+        padding-left: calc(calc(100vw - 1200px) / 2);
+        padding-right: calc(calc(100vw - 1200px) / 2);
     }
 
     .page-article .header:not(.header-fixed) {
-        max-width: 1600px;
+        max-width: 1200px;
         margin: 0 auto;
     }
 
     .content {
-        max-width: 1600px;
+        max-width: 1200px;
     }
 
     .main-article {

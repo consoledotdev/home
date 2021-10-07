@@ -76,6 +76,7 @@ async function handleEvent(event) {
 
         // Permanent redirects
         const redirectMap = new Map([
+            ["/advertise", "https://console.dev/advertise/"],
             ["/collections/neovim-best-code-editor-ide-for-developers", "https://console.dev/articles/neovim-best-code-editor-ide-for-developers/"],
             ["/collections/neovim-best-code-editor-ide-for-developers/", "https://console.dev/articles/neovim-best-code-editor-ide-for-developers/"],
             ["/beta", "https://console.dev/betas/"],
@@ -135,6 +136,7 @@ async function handleEvent(event) {
             ["/qa/akita-jean-yang/", "https://console.dev/interviews/akita-jean-yang/"],
             ["/tools", "https://console.dev/tools/"],
             ["/tools/browser-testing", "https://console.dev/tools/browser-testing/"],
+            ["/tools/load-testing", "https://console.dev/tools/load-testing/"],
             ["/tools/server-monitoring", "https://console.dev/tools/server-monitoring/"],
             ["/tools/website-monitoring", "https://console.dev/tools/website-monitoring/"],
         ])

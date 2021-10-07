@@ -10,6 +10,8 @@
     --theme-text-3: var(--c-grey-05);
     --theme-text-4: var(--c-grey-04-whites-neutral);
     --theme-text-5: var(--c-grey-06-blacks-neutral);
+    --theme-text-attention-1: var(--c-yellow-02);
+    --theme-text-attention-2: var(--c-yellow-04-main);
     --theme-input-text: var(--c-black-02-main);
     --theme-brand-accent-text-idle: var(--c-blue-04);
     --theme-brand-accent-text-hover: var(--c-blue-05);
@@ -23,11 +25,17 @@
     --theme-cta-secondary-green-text-hover: var(--c-green-06);
     --theme-cta-secondary-green-text-active: var(--c-green-07);
 
+    --theme-cta-secondary-yellow-text-idle: var(--c-yellow-04-main);
+    --theme-cta-secondary-yellow-text-hover: var(--c-yellow-05);
+    --theme-cta-secondary-yellow-text-active: var(--c-yellow-06);
+
     --theme-content-bg-0: var(--c-black-00-absolute);
     --theme-content-bg-1: var(--c-black-01);
     --theme-content-bg-2: var(--c-black-02-main);
     --theme-content-bg-3: var(--c-grey-09-black-03);
     --theme-content-bg-4: var(--c-grey-08);
+
+    --theme-section-plane: var(--c-black-02-main);
 
     --theme-hero-fade-top: linear-gradient(180deg, rgba(10, 10, 11, 0.4) 0%, rgba(10, 10, 11, 0) 100%);
     --theme-hero-fade-bottom: linear-gradient(0deg, rgba(10, 10, 11, 0.4) 0%, rgba(10, 10, 11, 0) 100%);
@@ -48,6 +56,7 @@
     --theme-border-3: 1px solid rgba(255, 255, 255, 0.16);
 
     --theme-separator-1: var(--c-grey-06-blacks-neutral);
+    --theme-separator-2: var(--c-grey-07);
 
     --theme-input-bg: var(--c-white-00-absolute);
     --theme-input-border: transparent;
@@ -113,6 +122,14 @@
     --theme-planes-triad-02-shadow: 0 var(--space2) var(--space4) rgba(245, 97, 245, 0.24), inset 0 0 var(--space7) rgba(245, 97, 245, 0.16);
     --theme-planes-triad-03-shadow: 0 var(--space2) var(--space4) rgba(1, 188, 144, 0.24), inset 0 0 var(--space7) rgba(1, 188, 144, 0.16);
 
+    --theme-neon-planes-blend-mode: lighten;
+    --theme-neon-planes-triad-01-body: var(--c-blue-10);
+    --theme-neon-planes-triad-01-glow: var(--c-blue-09);
+    --theme-neon-planes-triad-02-body: var(--c-fuchsia-10);
+    --theme-neon-planes-triad-02-glow: var(--c-fuchsia-09);
+    --theme-neon-planes-triad-03-body: #002E13;
+    --theme-neon-planes-triad-03-glow: rgba(0, 86, 41, 0.68);
+
     --theme-empty-bg-1: var(--c-grey-09-black-03);
     --theme-empty-dashed-border: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23515158' stroke-width='2' stroke-dasharray='6%2c 6' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
 
@@ -141,12 +158,24 @@
     --theme-framed-section-attention-title: var(--c-yellow-04-main);
     --theme-framed-section-attention-text: var(--c-yellow-03);
     --theme-framed-section-overlay-bg: var(--c-grey-08);
+    --theme-framed-section-blue-border: 1px solid var(--c-blue-06-main);
+    --theme-framed-section-blue-item-border: 1px solid rgba(82, 102, 255, 0.5);
+    --theme-framed-section-blue-bg: #15161F;
+    --theme-framed-section-green-border: 1px solid var(--c-green-06);
+    --theme-framed-section-green-item-border: 1px solid rgba(1, 188, 144, 0.4);
+    --theme-framed-section-green-bg: #141717;
 
     --theme-score-background: var(--c-grey-07);
     --theme-score-foreground: var(--c-white-00-absolute);
 
-    /* Mars Internet page specific */
+    --theme-datavis-axis: var(--c-grey-06-blacks-neutral);
 
+    --theme-datavis-blue-item0: var(--c-blue-06-main);
+    --theme-datavis-blue-item-1: var(--c-blue-07);
+    --theme-datavis-blue-item-2: var(--c-blue-08);
+    --theme-datavis-blue-item-3: var(--c-blue-09);
+
+    /* Mars Internet page specific */
     --theme-mars-earth-halo: 0 0 0.25em rgba(0, 0, 255, 0.3);
     --theme-mars-earth-shading: inset 0.2em 0 0.34em rgba(0, 0, 255, 0.1), inset 0 0 0.04em rgba(0, 0, 255, 0.3);
     --theme-mars-earth-texture: url("/img/research/mars/earth-texture-dark.png");
@@ -159,12 +188,25 @@
     --theme-mars-masking-bg: var(--c-grey-09-black-03);
     --theme-mars-snowball-color: var(--c-grey-02);
     --theme-mars-orbit-opacity: 0.3;
+
+    /* Advertise page specific */
+    --theme-artwork-plane-bg: rgba(10, 10, 11, 0.7);
+    --theme-artwork-triad-01-plane-border: var(--c-blue-06-main);
+    --theme-artwork-triad-02-plane-border: var(--c-fuchsia-07);
+    --theme-artwork-triad-03-plane-border: var(--c-green-07);
+    --theme-artwork-triad-01-trail-bg: var(--c-blue-10);
+    --theme-artwork-triad-02-trail-bg: var(--c-fuchsia-10);
+    --theme-artwork-triad-03-trail-bg: var(--c-green-10);
+    --theme-artwork-triad-01-glow: rgba(82, 105, 255, 0.28);
+    --theme-artwork-triad-02-glow: rgba(245, 97, 245, 0.24);
+    --theme-artwork-triad-03-glow: rgba(1, 188, 144, 0.24);
 }
 
 .theme.page-article,
 .theme.page-feature,
 .theme.page-feature-article,
-.theme.page-tools-category-review {
+.theme.page-tools-category-review,
+.theme.page-advertise {
     background: var(--theme-content-bg-3);
 }
 
@@ -200,10 +242,28 @@
     display: block;
 }
 
+.theme .page-section-plane:before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 126 256'%3E%3Cpath d='M126 0V256H0L126 0Z' fill='%230A0A0B'/%3E%3C/svg%3E");
+}
+
+.theme .page-section-plane:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 126 256'%3E%3Cpath d='M0 256L2.23802e-05 0L126 1.10153e-05L0 256Z' fill='%230A0A0B'/%3E%3C/svg%3E%0A");
+}
+
+/* Category Review page specific */
 .theme .tools-category-review-artwork.light {
     display: none;
 }
 
 .theme .tools-category-review-artwork.dark {
+    display: initial;
+}
+
+/* Advertise page specific */
+.theme .main-advertise img.light {
+    display: none;
+}
+
+.theme .main-advertise img.dark {
     display: initial;
 }
