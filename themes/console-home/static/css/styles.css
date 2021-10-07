@@ -1796,6 +1796,7 @@ select.console-select::-ms-expand {
     .main-feature-article-content-split aside {
         flex: 0 0 auto;
         width: 120px;
+        max-width: 380px;
         margin-left: 6vw;
     }
 }
