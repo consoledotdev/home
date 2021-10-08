@@ -727,6 +727,7 @@ body:not(.page-tools-category-review):after {
     .main-tools-category-review-content-split aside {
         flex: 0 0 auto;
         width: 120px;
+        max-width: 380px;
         margin-left: 7.25vw;
     }
 }
@@ -844,7 +845,6 @@ body:not(.page-tools-category-review):after {
         font-size: var(--t-size1);
     }
 
-
     .page-tools-category-review .console-button.console-button-medium,
     .page-tools-category-review [class^="console-button"].console-button-medium,
     .page-tools-category-review [class*=" console-button"].console-button-medium {
@@ -856,7 +856,7 @@ body:not(.page-tools-category-review):after {
     .page-tools-category-review [class*=" console-button"].console-button-small {
         font-size: var(--t-size-1);
     }
-    
+
     .page-tools-category-review input.console-input-text,
     .page-tools-category-review select.console-select {
         font-size: var(--t-size1);
