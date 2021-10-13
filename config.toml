@@ -31,3 +31,6 @@ section = [ "HTML", "RSS" ]
 [outputFormats.RSS]
     mediatype = "application/rss"
     baseName = "rss"
+
+[params]
+consoleSubscribers = "12k+"

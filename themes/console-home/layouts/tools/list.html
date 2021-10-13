@@ -105,7 +105,7 @@
 	</section>
 	<section class="page-section page-section-feature-root inline-cta-wrapper" data-inline-cta-wrapper>
 		<div class="feature-collapsible-cta" data-feature-cta>
-			{{ $subscribeCopyAfter := "Join 10k+ developers" }}
+			{{ $subscribeCopyAfter := (printf "Join %s developers" $.Site.Params.consoleSubscribers) }}
 			{{ $subscribeData := (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription "copyAfter" $subscribeCopyAfter ) }}
 			{{ $subscribe := partial "subscribe.html" $subscribeData }}
 			{{ partial "components/box-collapsible.html" (dict "title" $CTATitle "style" "blue" "icon" "expand.html" "content" $subscribe ) }}
