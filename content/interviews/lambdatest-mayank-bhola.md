@@ -10,9 +10,9 @@ draft: false
 headerType: fixed
 summary: Interview with Mayank Bhola, VP, Engineering, LambdaTest
 isPage: interviews
-topImg1Src: /img/interviews/akita-jean-yang-profile.jpg
+topImg1Src: /img/interviews/lambdatest-mayank-bhola-profile.jpg
 topImg2Src: /img/interviews/lambdatest-mayank-bhola-logo.jpg
-ogImg: /img/interviews/akita-jean-yang-desk.jpeg
+ogImg: /img/interviews/lambdatest-mayank-bhola-logo.jpg
 ---
 
 ### What is LambdaTest? Why did you build it?
