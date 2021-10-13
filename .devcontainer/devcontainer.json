@@ -5,12 +5,13 @@
 	"build": {
 		"dockerfile": "Dockerfile",
 		"context": "..",
-		"args": {
-			// Update 'VARIANT' to pick a Python version: 3, 3.6, 3.7, 3.8, 3.9
-			"VARIANT": "3.9",
+		"args": { 
+			// Update 'VARIANT' to pick a Python version: 3, 3.9, 3.8, 3.7, 3.6.
+			// Append -bullseye or -buster to pin to an OS version.
+			// Use -bullseye variants on local on arm64/Apple Silicon.
+			"VARIANT": "3.9-bullseye",
 			// Options
-			"INSTALL_NODE": "true",
-			"NODE_VERSION": "lts/*"
+			"NODE_VERSION": "16"
 		}
 	},
 	// Set *default* container specific settings.json values on container create.
