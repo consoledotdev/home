@@ -298,7 +298,7 @@ What are the pros and cons of hosted SaaS monitoring?
 {{< tools/category-review/card-heading name="Datadog" anchor="datadog" thumbnail="/img/favicons/www.datadoghq.com.png" url="https://www.datadoghq.com/" score="5" >}}
 
 Datadog is the industry leader with the most comprehensive and up to date set of
-integrations, however this also means it has a more complex UI.
+integrations, however this also means it has a more complex UI and is expensive.
 
 {{< img-center src="/img/tools/server-monitoring-datadog.png" alt="Datadog product screenshot" width="100%" >}}
 
@@ -363,6 +363,13 @@ The deciding factor for any monitoring tool is whether it can monitor your tech
 stack. Datadog excels here. It has the most up to date integrations across a
 wide range of tools which means anything you want to monitor is supported.
 
+And with Datadog, that means not just server monitoring but full infrastructure
+monitoring.
+[We reviewed the Datadog website monitoring features](/tools/website-monitoring/#datadog)
+in another article but they are constantly releasing new features to cover
+database monitoring, application performance monitoring, log search, network
+monitoring and others.
+
 Datadog can also ingest data from custom sources. This includes through
 OpenMetrics endpoints, allowing you to connect to Prometheus, for example, as
 well as using open standards like
@@ -394,11 +401,13 @@ All this customizability and flexibility across multiple monitoring products
 means that Datadog is not easy to use. It is better than the previous generation
 of tools like Nagios, but because the UI crams in so much functionality it can
 be difficult to find what you're looking for. This is particularly the case if
-you just need basic monitoring. For example, although the alerting functionality
-is very sophisticated there is no top level concept of an alert - these exist as
-"Monitors" and are dependent on the trigger source e.g. a server metric or
-synthetic check status. This means it is flexible for large environments but is
-cumbersome for smaller use cases. See
+you just need basic monitoring.
+
+For example, although the alerting functionality is very sophisticated there is
+no top level concept of an alert - these exist as "Monitors" and are dependent
+on the trigger source e.g. a server metric or synthetic check status. This means
+it is flexible for large environments but is cumbersome for smaller use cases.
+See
 [our review of Datadog's Synthetic Monitoring](/tools/website-monitoring/#datadog)
 for more details.
 
@@ -804,9 +813,11 @@ HAProxy, and system metrics - are officially supported. All the others are
 community built. Exporters are also run as a separate binary which you must
 download, configure and run, but for simple server monitoring the officially
 supported [node_exporter](https://github.com/prometheus/node_exporter) is easy
-to get up and running. This may not be the case for all exporters. The quality
-of unofficial third-party integrations is always a problem for any monitoring
-product, especially as the integration becomes more obscure.
+to get up and running. This may not be the case for all exporters.
+[Grafana 8.2 added a new plugin marketplace](https://grafana.com/blog/2021/10/07/grafana-8.2-released-dynamic-plugin-catalog-new-fine-grained-access-control-permissions-and-more/)
+into the web UI but the quality of unofficial third-party integrations is always
+a problem for any monitoring product, especially as the integration becomes more
+obscure.
 
 {{< div--close >}}
 
@@ -869,13 +880,12 @@ multiple series.
 Grafana is going through a transition from its legacy alerts to the new
 centralized system-wide mechanism introduced in Grafana 8.0. The new approach
 makes it easier to define alerts across your infrastructure and manage them
-independently of their visualization.
-
-Another new feature in Grafana 8.0 is the ability to
+independently of their visualization. This release also included the new ability
+to
 [stream metrics in real time to the UI](https://grafana.com/docs/grafana/latest/live/live-feature-overview/).
-This is achieved through a websocket connection so you can avoid page reloads.
-This is useful for debugging issues as they are happening or monitoring live
-changes to systems.
+This is achieved through a websocket connection so you can avoid page reloads -
+useful for debugging issues as they are happening or monitoring live changes to
+systems.
 
 As Grafana and Prometheus both focus on specific tasks, you can swap them out
 for something else.
