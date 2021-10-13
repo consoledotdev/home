@@ -19,7 +19,7 @@
             {{- $org := index . "Company/Org" -}}
             {{ $name := index . "Tool/Product/Project" }}
             <title>{{ if in $name $org }}{{ $name }}{{ else }}{{ $name }}, from {{ $org }}{{ end }}</title>
-            <link>{{ index . "URL" }}</link>
+            <link>{{ index . "URL" }}?ref=console.dev</link>
             {{ $pubDate := index . "Announced" -}}
             <pubDate>{{ dateFormat "Mon, 02 Jan 2006 15:04:05 -0700" $pubDate }}</pubDate>
             <dc:creator>{{ "<![CDATA[" | safeHTML }}console.dev]]></dc:creator>
