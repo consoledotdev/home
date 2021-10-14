@@ -167,6 +167,12 @@ etc
 
 ### Describe your computer hardware setup
 
+{{< img-center
+src="/img/interviews/lambdatest-mayank-bhola-desk.jpg"
+alt="The desk of Mayank Bhola, LambdaTest"
+width="100%"
+>}}
+
 Right now, I'm using an M1 MacBook Pro with a 27 inch
 [4K LG display](https://www.lg.com/4k-monitors). I use a
 [Keychron mechanical keyboard](https://www.keychron.com/) and I have an Apple
