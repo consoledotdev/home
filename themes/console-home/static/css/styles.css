@@ -364,6 +364,7 @@ body.show-planes:after {
     width: 100%;
     min-height: 100%;
     overflow-x: hidden;
+    z-index: 30;
 }
 
 .content {
