@@ -11,8 +11,10 @@ let toggleMenuPopup = (e) => {
     var pEl = document.getElementById(p);
     if (pEl.classList.contains(pState)) {
         pEl.classList.remove(pState);
+        pEl.style.pointerEvents = "none";
     } else {
         pEl.classList.add(pState);
+        pEl.style.pointerEvents = "all";
     }
 };
 

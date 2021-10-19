@@ -1138,6 +1138,7 @@ body:not(.mobile) .console-control:hover:before {
 /* Popup
    ================================================================================================================ */
 .popup {
+    position: relative;
     background-color: var(--theme-content-bg-4);
     border-radius: var(--corners-mid);
     padding: var(--space4);
@@ -1146,11 +1147,9 @@ body:not(.mobile) .console-control:hover:before {
     box-shadow: var(--theme-shadow-3);
     transition: var(--a-elements);
     overflow: hidden;
-    pointer-events: none;
 }
 
 .popup.is-visible {
-    pointer-events: all;
     opacity: 1;
     transition: var(--a-elements-active);
 }
