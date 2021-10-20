@@ -41,7 +41,8 @@ a {
 }
 
 p,
-quote {
+quote,
+li {
     max-width: 760px;
 }
 
