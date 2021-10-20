@@ -155,8 +155,8 @@ that you can share through email.
 
 ### Best browser testing tools
 
-We reviewed 11 browser testing tools. The best is: BrowserStack. We also
-liked [LambdaTest](#lambdatest) and
+We reviewed 11 browser testing tools. The best is: BrowserStack. We also liked
+[LambdaTest](#lambdatest) and
 [SmartBear CrossBrowserTesting](#smartbear-crossbrowsertesting).
 
 {{< nav-wrapper--open id="wrapper-2" anchor-name="browserstack" >}}
@@ -1077,27 +1077,27 @@ is the subject of this review. As such, we didn’t select it for a full review.
 
 {{< tools/category-review/card-heading name="Responsively" anchor="responsively" thumbnail="/img/favicons/responsively.svg" url="https://responsively.app/" score="none" >}}
 
-Responsively is an open source multi-pane browser built using 
-[Electron](https://www.electronjs.org/). It has prebuilt support for popular 
-devices and allows adding custom device dimensions. Hence, it is useful for 
-testing responsive web pages. It is possible to install a browser extension 
-(on Firefox, Chrome, and Edge) to send links from the browser to the 
-Responsively app and preview them instantly.
+Responsively is an open source multi-pane browser built using
+[Electron](https://www.electronjs.org/). It has built-in support for popular
+device sizes and allows adding custom dimensions which makes it is useful for
+testing responsive web pages. It is possible to install a browser extension (on
+Firefox, Chrome, and Edge) to send links from the browser to the Responsively
+app and preview them instantly.
 
-Responsively comes with a live CSS editor and a design mode which makes the 
-process of temporarily applying design rules and updating content easier. It is 
-possible to delete cookies, storage session data, and reset the network cache 
-with the click of a button. Other actions such as throttling the network or 
-loading the website via proxy are also supported. Users can add extensions from 
-the Chrome web store. However, the Responsively developers warn that the 
+Responsively comes with a live CSS editor and a design mode which makes the
+process of temporarily applying design rules and updating content easier. It is
+possible to delete cookies, storage session data, and reset the network cache
+with the click of a button. Other actions such as throttling the network or
+loading the website via proxy are also supported. Users can add extensions from
+the Chrome web store. However, the Responsively developers warn that the
 extensions may not work as intended.
 
-Unlike [Polypane](#polypane), users can disable event mirroring across the 
-panes and take screenshots of individual panes in bulk. However, in our testing 
-Responsively didn’t capture screenshots until the cursor was hovering over the 
+Unlike [Polypane](#polypane), users can disable event mirroring across the panes
+and take screenshots of individual panes in bulk. However, in our testing
+Responsively didn’t capture screenshots until the cursor was hovering over the
 pane. Similar to Polypane, it is also CPU intensive.
 
-Responsively is designed for responsive web testing - not for automated cross 
+Responsively is designed for responsive web testing - not for automated cross
 browser testing. As such, we didn’t select it for a full review.
 
 {{< img-center src="/img/tools/browser-testing-responsively.png" alt="Responsively product screenshot" width="100%" >}}
