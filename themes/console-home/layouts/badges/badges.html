@@ -11,6 +11,45 @@
 
     <section class="page-section page-section-plane page-section-advertise newsletter">
         <h3 class="title title-2 rich-title">Get your badge</h3>
+        <div class="selector-ui">
+            <div class="top">
+                <div class="selector-ui-group">
+                    <h6 class="title title-5">Type</h6>
+                    <div class="selector-ui-options">
+                        <div><input class="console-input-radio" type="radio" name="badge-type" id="badge-type-pick" value="pick" checked><label for="badge-type-pick"><span class="check"></span> Pick</label></div>
+                        <div><input class="console-input-radio" type="radio" name="badge-type" id="badge-type-logo" value="logo"><label for="badge-type-logo"><span class="check"></span> Logo</label></div>
+                        <div><input class="console-input-radio" type="radio" name="badge-type" id="badge-type-ribbon" value="ribbon"><label for="badge-type-ribbon"><span class="check"></span> Ribbon</label></div>
+                    </div>
+                </div>
+                <div class="selector-ui-group">
+                    <h6 class="title title-5">Color</h6>
+                    <div class="selector-ui-options">
+                        <div><input class="console-input-radio triad-03" type="radio" name="badge-color" id="badge-color-green" value="green" checked><label for="badge-color-green"><span class="check"></span> Green</label></div>
+                        <div><input class="console-input-radio triad-01" type="radio" name="badge-color" id="badge-color-blue" value="blue"><label for="badge-color-blue"><span class="check"></span> Blue</label></div>
+                        <div><input class="console-input-radio triad-02" type="radio" name="badge-color" id="badge-color-purple" value="purple"><label for="badge-color-purple"><span class="check"></span> Purple</label></div>
+                        <div><input class="console-input-radio" type="radio" name="badge-color" id="badge-color-bw" value="bw"><label for="badge-color-bw"><span class="check"></span> B/W</label></div>
+                    </div>
+                </div>
+                <div class="selector-ui-group">
+                    <h6 class="title title-5">Theme</h6>
+                    <div class="selector-ui-options">
+                        <div><input class="console-input-radio" type="radio" name="badge-theme" id="badge-theme-dark" value="dark" checked><label for="badge-theme-dark"><span class="check"></span> Dark</label></div>
+                        <div><input class="console-input-radio" type="radio" name="badge-theme" id="badge-theme-light" value="light"><label for="badge-theme-light"><span class="check"></span> Light</label></div>
+                    </div>
+                </div>
+                <div class="selector-ui-group">
+                    <h6 class="title title-5">Border</h6>
+                    <div class="selector-ui-options">
+                        <div><input class="console-input-toggle" type="checkbox" name="badge-border" id="badge-border" checked><label for="badge-border"><span class="check"></span> Enable</label></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="split-planes">
+                    <div class="section-plane"></div>
+                </div>
+            </div>
+        </div>
         <p>Download:</p>
         <a class="console-button icon-left" href="" title="Download .png" rel="noopener">{{ partial "icons/download.html" }}<span>.png</span></a>
         <a class="console-button icon-left" href="" title="Download .svg" rel="noopener">{{ partial "icons/download.html" }}<span>.svg</span></a>
