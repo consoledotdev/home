@@ -10,7 +10,7 @@ draft: false
 headerType: fixed
 summary: Interview with Jerónimo Irazábal, immudb
 isPage: interviews
-topImg1Src: /img/interviews/immudb-jeronimo-irazabal-profile.png
+topImg1Src: /img/interviews/immudb-jeronimo-irazabal-profile.jpg
 topImg2Src: /img/interviews/immudb-jeronimo-irazabal-logo.jpg
 ogImg: /img/interviews/immudb-jeronimo-irazabal-desk.jpg
 ---
