@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+    <section class="page-section page-section-badges opening">
+        <div class="top">
+            <h2 class="title title-1">Console Badges</h2>
+            <p class="description">Congratulations, you’ve been selected by our editorial team as an Interesting Tool for the Console Weekly newsetter.</p>
+            <p>Add a custom <span>{{ partial "icons/tool.html" }} badge</span> to your website to showcase you’ve been featured.</p>
+        </div>
+    </section>
+
+
+    <section class="page-section page-section-plane page-section-advertise newsletter">
+        <h3 class="title title-2 rich-title">Get your badge</h3>
+        <p>Download:</p>
+        <a class="console-button icon-left" href="" title="Download .png" rel="noopener">{{ partial "icons/download.html" }}<span>.png</span></a>
+        <a class="console-button icon-left" href="" title="Download .svg" rel="noopener">{{ partial "icons/download.html" }}<span>.svg</span></a>
+    </section>
+
+    <span data-checkpoint-selection-criteria></span>
+
+    <script src="/js/badges.js"></script>
+{{ end }}
