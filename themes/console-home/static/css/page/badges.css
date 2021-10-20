@@ -1,0 +1,23 @@
+/* Console Badges
+   ========================================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    transition: var(--a-layout-active);
+}
+
+@media (max-width: 768px) {
+    .main-badges {
+        margin-top: var(--space6);
+        margin-bottom: calc(var(--space6) - var(--space4));
+    }
+}
+
+@media (min-width: 769px) {
+    .main-badges {
+        margin: max(calc(var(--space6) - var(--space3)), 10vh) 0 calc(var(--space6) - var(--space2));
+    }
+}

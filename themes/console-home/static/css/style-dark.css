@@ -206,7 +206,8 @@
 .theme.page-feature,
 .theme.page-feature-article,
 .theme.page-tools-category-review,
-.theme.page-advertise {
+.theme.page-advertise ,
+.theme.page-badges {
     background: var(--theme-content-bg-3);
 }
 
