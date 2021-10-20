@@ -1,4 +1,6 @@
 {{ define "main" }}
+	{{ $CTATitle := "Discover the best tools for developers" }}
+	{{ $CTADescription := "Our free weekly email features a digest of the best new tools and beta releases for developers. " }}
 
     <section class="page-section page-section-badges opening">
         <div class="top">
@@ -8,8 +10,7 @@
         </div>
     </section>
 
-
-    <section class="page-section page-section-plane page-section-advertise newsletter">
+    <section class="page-section page-section-plane page-section-badges selector">
         <h3 class="title title-2 rich-title">Get your badge</h3>
         <div class="selector-ui">
             <div class="top">
@@ -51,11 +52,45 @@
             </div>
         </div>
         <p>Download:</p>
-        <a class="console-button icon-left" href="" title="Download .png" rel="noopener">{{ partial "icons/download.html" }}<span>.png</span></a>
-        <a class="console-button icon-left" href="" title="Download .svg" rel="noopener">{{ partial "icons/download.html" }}<span>.svg</span></a>
+        <div class="selector-ctas">
+            <a class="console-button console-button-medium icon-left" href="" title="Download .png" rel="noopener">{{ partial "icons/download.html" }}<span>.png</span></a>
+            <a class="console-button console-button-medium icon-left" href="" title="Download .svg" rel="noopener">{{ partial "icons/download.html" }}<span>.svg</span></a>
+        </div>
     </section>
 
     <span data-checkpoint-selection-criteria></span>
+
+    <section class="page-section page-section-badges selection-criteria">
+        <h3 class="title title-2 rich-title">Selection Criteria</h3>
+        <p>Our selection criteria are explained below. The more of these questions we can
+            answer positively, the more likely a tool is to be featured. We try to be
+            objective but there is always a subjective element to deciding what we think is
+            the best, most interesting set of tools each week:</p>
+        <ul class="col-2-css">
+            <li>Is this interesting and useful to developers?</li>
+            <li>Is there a self-service signup?</li>
+            <li>Would this form part of a daily-use set of developer tools?</li>
+            <li>Does it make me a better developer?</li>
+            <li>Does it solve a problem I have experienced? How well does it solve it?</li>
+            <li>Would this be used by advanced, power-users?</li>
+            <li>Is the tool high quality?</li>
+            <li>Does it do the job it claims?</li>
+            <li>Does it have a good graphical and/or command line interface? Shortcuts? Accessibility?</li>
+            <li>Is it being actively maintained with regular bug fixes and updates?</li>
+            <li>Does it have good documentation? Is it fast?</li>
+            <li>Does it have any negative impact on security or privacy?</li>
+            <li>How would I feel recommending this to my friends? Would I tweet a link to it?</li>
+        </ul>
+    </section>
+
+    <section class="page-section page-section-badges about-console">
+        {{ partial "components/about-console.html" }}
+    </section>
+
+
+    <section class="page-section page-section-badges cta">
+        {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
+    </section>
 
     <script src="/js/badges.js"></script>
 {{ end }}
