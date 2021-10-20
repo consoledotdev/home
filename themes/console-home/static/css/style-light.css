@@ -75,6 +75,26 @@
     --theme-nav-secondary-link-text-active: var(--c-blue-08);
     --theme-nav-secondary-link-text-selected: var(--c-blue-06-main);
 
+    --theme-input-checkable-off: var(--c-grey-05);
+    --theme-input-checkable-on: var(--c-black-02-main);
+    --theme-input-checkable-on-hover: var(--c-black-02-main);
+    --theme-input-checkable-off-bg-hover: rgba(0, 0, 0, 0.06);
+    --theme-input-checkable-on-bg-hover: rgba(0, 0, 0, 0.07);
+
+    --theme-input-checkable-triad-01-on: var(--c-blue-07);
+    --theme-input-checkable-triad-01-on-hover: var(--c-blue-08);
+    --theme-input-checkable-triad-01-on-bg-hover: rgba(126, 151, 255, 0.14);
+
+    --theme-input-checkable-triad-02-on: var(--c-fuchsia-06);
+    --theme-input-checkable-triad-02-on-hover: var(--c-fuchsia-07);
+    --theme-input-checkable-triad-02-on-bg-hover: rgba(255, 166, 255, 0.18);
+
+    --theme-input-checkable-triad-03-on: var(--c-green-07);
+    --theme-input-checkable-triad-03-on-hover: var(--c-green-08);
+    --theme-input-checkable-triad-03-on-bg-hover: rgba(67, 222, 193, 0.22);
+
+    --theme-input-checkable-disabled: var(--c-grey-03);
+
     --theme-control-bg: var(--c-grey-04-whites-neutral);
     --theme-control-border: var(--c-grey-09-black-03);
     --theme-control-active-text: var(--c-white-00-absolute);
