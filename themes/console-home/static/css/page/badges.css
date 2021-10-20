@@ -21,3 +21,40 @@ body {
         margin: max(calc(var(--space6) - var(--space3)), 10vh) 0 calc(var(--space6) - var(--space2));
     }
 }
+
+
+.section-plane {
+    position: absolute;
+    background: var(--theme-section-plane);
+    height: 100%;
+    width: 100%;
+}
+
+.section-plane * {
+    z-index: 1;
+}
+
+.section-plane:before,
+.section-plane:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    z-index: 0;
+}
+
+.section-plane:before {
+    left: -100%;
+    background-position: calc(100% + 0.5px);
+    background-image: var(--theme-section-plane-left);
+}
+
+.section-plane:after {
+    left: 100%;
+    background-position: left;
+    background-image: var(--theme-section-plane-right);
+}
+
