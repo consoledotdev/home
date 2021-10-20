@@ -448,7 +448,7 @@ body.show-planes:after {
 }
 
 .page-section-plane {
-    background: var(--theme-section-plane);
+    background: var(--theme-page-section-plane);
     padding: var(--space6) 0;
 }
 
@@ -471,11 +471,13 @@ body.show-planes:after {
 .page-section-plane:before {
     left: -100%;
     background-position: calc(100% + 0.5px);
+    background-image: var(--theme-page-section-plane-left);
 }
 
 .page-section-plane:after {
     left: 100%;
     background-position: left;
+    background-image: var(--theme-page-section-plane-right);
 }
 
 .page-section-heading {
