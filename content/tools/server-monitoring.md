@@ -901,9 +901,11 @@ and [Datadog](https://docs.datadoghq.com/integrations/prometheus/).
 Using Grafana and Prometheus means you maintain control over your monitoring
 infrastructure but if you decide it's too much hassle, there are hosted
 providers. [Grafana Cloud](https://grafana.com/products/cloud/) is a commercial
-SaaS version of Grafana + Prometheus, plus you get logging and tracing all in
-one service.
-[AWS also offers a managed Prometheus service](https://aws.amazon.com/prometheus/features/).
+SaaS version of Grafana + Prometheus from the creators of the projects, plus you
+get logging and tracing all in one service. Both
+[AWS](https://aws.amazon.com/prometheus/features/) and
+[Google](https://cloud.google.com/stackdriver/docs/managed-prometheus) also
+offer hosted, managed Prometheus services.
 
 {{< div--close >}}
 
