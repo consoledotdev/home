@@ -61,9 +61,6 @@ an option. But they still want to make sure everything is stored tamper-proof,
 so that they can retrieve the location data when the submarine is back in the
 harbor, and ensure that everything is still tamper-free.
 
-The supply chain security use case is what we’re exploring with our commercial 
-service, [CodeNotary](https://www.codenotary.com/).
-
 ### What does a "day in the life" look like for you?
 
 I usually start my day at 7.30am. While it might be early for me, it’s actually
