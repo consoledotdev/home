@@ -22,10 +22,10 @@ multilayer database. This is often assumed to mean immutable, but whilst immudb
 is indeed immutable, it’s also important to highlight that everything that is
 written into immudb can be verified by a client application later on.
 
-immudb is multilayered by design - it’s essentially a cryptographically
-verifiable log, so you can use it for logging events which can then be retrieved
-by the event identifier and verified. But immudb can also be used as a standard
-key-value store, with the additional benefit that everything is verifiable.
+You can use immudb for logging events which can then be retrieved by the event 
+identifier and verified, however, immudb can be used as a standard key-value 
+store and as a relational SQL database, with the added benefit that everything 
+is verifiable.
 
 This allows client apps to check whether the data has been tampered with, even
 if someone has access to the file system or underlying storage. This can be
@@ -36,9 +36,10 @@ differences when comparing immudb to blockchain. With blockchain, ownership is
 decentralized, whereas immudb can run on a single server. Clients do not need to
 trust the server because of the underlying verification capabilities.
 
-There were no other open source databases offering these capabilities. The only
-alternative was to use a blockchain platform, but that comes with much more
-complexity around storage, notarization, etc.
+When I started to work on immudb, there was nothing else that allowed for single 
+ownership with verification. The only alternative was to use a blockchain 
+platform, but that comes with much more complexity, such as smart contracts, 
+limited throughput, wallets etc. 
 
 Another factor was the focus on use cases. When you look at the general database
 landscape, none were being built from scratch with immutability in mind. Today,
@@ -47,11 +48,10 @@ offered high scalability, ease of use, and cryptographic verification, as well
 as the ability to travel through the change data in time.
 
 This retention of history makes immudb very suitable for regulated
-organizations, where they don’t want or can’t use a blockchain.
-
-We started with a very specific use case in mind because we wanted to leverage
-the capabilities of immudb to secure and protect the software supply chain,
-processes, and software delivery from code to production.
+organizations, where they don’t want or can’t use a blockchain. I thought people 
+want to have a database, they don't want a blockchain. They want to store rich 
+data, not just hashes for transactions. They want to trust the whole database 
+content. That is why I started working on immudb.
 
 Over time, immudb users showed us lots of new use cases. For example, protecting
 important documents. We even know of one organization storing the last known
