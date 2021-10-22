@@ -110,7 +110,7 @@ need more sophisticated tools. This means the ability to customize requests,
 detailed reporting, scripting, integration with CI/CD for tests on commit /
 regression testing, a CLI and a nicely designed dark mode if there is a GUI.
 
-### Best load monitoring tools
+### Best load testing tools
 
 We reviewed 11 load testing tools. The best is: [Flood](#flood). We also liked
 [k6](#k6) and [Locust](#locust).
