@@ -74,7 +74,7 @@ in templates:
 | Shortcode      | Example                                                                                                                                                                                             |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Link           | `{{< a-link url="consoledotdev" text="see what we're building" icon-left="github" icon-right="github" >}}`                                                                                          |
-| Button         | `{{< a-button url="/about/" text="About" title="View About page" is-text="true" size="null (large)||medium||small" icon-left="arrow-right" icon-right="arrow-right" >}}`                            |
+| Button         | `{{< a-button url="/about/" text="About" title="View About page" is-text="true" size="null (large)\|\|medium\|\|small" icon-left="arrow-right" icon-right="arrow-right" >}}`                            |
 | Caption Div    | `{{< div-caption >}}Markdown formatted text to appear in the caption.{{< /div-caption >}}`                                                                                                          |
 | Centered Image | `{{< img-center src="/img/interviews/stackhawk-scott-gerlach-product.png" alt="StackHawk product screenshot" width="100%" caption="The StackHawk vulnerability scanning dashboard." >}}` (Caption optional) |
 | 2-column Image | `{{< img-2col src1="/img/david.jpg" alt1="David Mytton" src2="/img/max.jpg" alt2="Max Jennings">}}`                                                                                                 |
