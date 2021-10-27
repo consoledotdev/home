@@ -1000,13 +1000,15 @@ monitoring cloud services, such as AWS Cloudwatch or Google Pub/Sub.
 
 InfluxDB is queried using [Flux](https://www.influxdata.com/products/flux/), a
 data scripting language for analyzing time series data. You can execute queries
-from a CLI or a web GUI. The GUI has a graph builder based on selecting metrics
-as the graph series, aggregation functions such as mean, count and max, and
-advanced customizations such as hover dimensions, interpolation, X and Y axis
-options and time formats. This builds a Flux query behind the scenes which you
-can edit to directly configure the executed query. InfluxDB does not have as
-many graph types as Grafana but it supports the main choices you'd expect:
-gauge, heatmap, scatter, table, etc.
+from a CLI, web GUI, or via the [Flux VS Code
+extension](https://marketplace.visualstudio.com/items?itemName=influxdata.flux).
+The GUI has a graph builder based on selecting metrics as the graph series,
+aggregation functions such as mean, count and max, and advanced customizations
+such as hover dimensions, interpolation, X and Y axis options and time formats.
+This builds a Flux query behind the scenes which you can edit to directly
+configure the executed query. InfluxDB does not have as many graph types as
+Grafana but it supports the main choices you'd expect: gauge, heatmap, scatter,
+table, etc.
 
 {{< div--close >}}
 
@@ -1066,6 +1068,20 @@ other projects. Combining InfluxDB + Telegraf gives you a powerful time series
 datastore that can ingest metrics from an ecosystem of plugins and language
 client libraries, all presented in a polished and good-looking web UI.
 
+If you don't want to run it all yourlself, there is an InfluxDB Cloud product,
+available on [AWS](https://aws.amazon.com/marketplace/pp/B08234JZPS/), [Google
+Cloud](https://console.cloud.google.com/marketplace/details/influxdata-public/cloud2-gcp-marketplace-prod)
+or [Microsoft
+Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/influxdata.influxdb-cloud).
+It includes some extra features not available in the open source version, such
+as [Notebooks](https://docs.influxdata.com/influxdb/cloud/notebooks/overview/)
+for walking through problems or debugging, and [templated alerts, dashboards and
+agent
+configurations](https://docs.influxdata.com/influxdb/cloud/influxdb-templates/).
+InfluxDB Cloud has a free plan which is useful for basic monitoring for small
+projects. The paid plans are billed based on data transfer, storage and query
+count. 
+
 {{< div--close >}}
 
 {{< tools/category-review/card-dislike--open >}}
@@ -1088,12 +1104,7 @@ Another issue is that the open source version of InfluxDB only supports
 deployment on a single server. If you need high availability with clustering
 across multiple nodes and horizontal scalability then you need to purchase the
 Enterprise version. Pricing is only available by contacting their sales team,
-which is a red flag. There is an InfluxDB Cloud offering, available on
-[AWS](https://aws.amazon.com/marketplace/pp/B08234JZPS/),
-[Google Cloud](https://console.cloud.google.com/marketplace/details/influxdata-public/cloud2-gcp-marketplace-prod)
-or
-[Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/influxdata.influxdb-cloud).
-This is billed based on data transfer, storage and query count.
+which is a red flag.
 
 Even if you're happy with the alerting constraints, the inability to deploy a
 reliable production monitoring setup without buying an enterprise version is a
