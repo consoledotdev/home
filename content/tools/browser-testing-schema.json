@@ -14,6 +14,9 @@
                 "name": "BrowserStack",
                 "description": "Browser testing tool.",
                 "url": "https://www.browserstack.com/",
+                "image": [
+                    "https://console.dev/img/favicons/www.browserstack.com.png"
+                ],
                 "review": {
                     "@type": "Review",
                     "reviewBody": "BrowserStack is a cross browser testing and debugging tool which supports tests built with Selenium, Cypress, Playwright and Puppeteer. It offers both live and automated testing on 2000+ real mobile devices and virtual desktop machines.",
@@ -48,6 +51,9 @@
                 "name": "LambdaTest",
                 "description": "Browser testing tool.",
                 "url": "https://www.lambdatest.com/",
+                "image": [
+                    "https://console.dev/img/favicons/www.lambdatest.com.jpg"
+                ],
                 "review": {
                     "@type": "Review",
                     "reviewBody": "LambdaTest is one of the newer tools in the cross browser testing market. It has a clean UI, large number of test devices and an interesting desktop application (LT Browser) which offers live testing functionality locally.",
@@ -82,6 +88,9 @@
                 "name": "SmartBear CrossBrowserTesting",
                 "description": "Browser testing tool.",
                 "url": "https://crossbrowsertesting.com/",
+                "image": [
+                    "https://console.dev/img/favicons/crossbrowsertesting.com.png"
+                ],
                 "review": {
                     "@type": "Review",
                     "reviewBody": "In addition to live and automatic testing, SmartBear CrossBrowserTesting offers features such as screenshot testing and codeless testing using AI to record and replay interactions on screen. It offers 2,000+ target browsers and mobile devices.",
@@ -116,6 +125,9 @@
                 "name": "Sauce Labs",
                 "description": "Browser testing tool.",
                 "url": "https://saucelabs.com/",
+                "image": [
+                    "https://console.dev/img/favicons/saucelabs.com.jpg"
+                ],
                 "review": {
                     "@type": "Review",
                     "reviewBody": "Sauce Labs is a full-scale testing platform for websites and applications that supports test frameworks such as Selenium, Playwright and Puppeteer on a large number of popular device, browser and operating system test targets.",
@@ -150,6 +162,9 @@
                 "name": "Ghost Inspector",
                 "description": "Browser testing tool.",
                 "url": "https://ghostinspector.com/",
+                "image": [
+                    "https://console.dev/img/favicons/ghostinspector.com.png"
+                ],
                 "review": {
                     "@type": "Review",
                     "reviewBody": "Ghost Inspector is a cloud browser compatibility testing tool that stands out for its support for testing 2FA and end-to-end email flows. Testing can be automated on a schedule or via an API, as well as manually via the web UI, but it only supports Chrome and Firefox on desktop.",
@@ -184,6 +199,9 @@
                 "name": "Selenium",
                 "description": "Browser testing tool.",
                 "url": "https://www.selenium.dev/",
+                "image": [
+                    "https://console.dev/img/favicons/www.selenium.dev.png"
+                ],
                 "review": {
                     "@type": "Review",
                     "reviewBody": "Selenium is a web application testing framework available for Java, Python, C#, Ruby, JavaScript and Kotlin. It is built for automated testing on desktop devices and acts as a backbone service to many other tools discussed in this article, but is not recommended for use by itself.",
