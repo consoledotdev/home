@@ -239,15 +239,16 @@ However, it has a small number of check locations and can get expensive.
 
 {{< tools/category-review/card-feature-title text="Multiple check types & configurable frequency" score="5" >}}
 
-Datadog supports monitoring HTTP, SSL, TCP, DNS and Ping (ICMP) service types
-for single-step endpoint monitoring. Multi-step tests only support HTTP
-endpoints because these are designed to be a series of linked HTTP requests.
-Datadog also supports recording browser sessions and then automatically
-simulating them to ensure that specific transaction flows are continuously
-tested. Datadog synthetic monitoring configuration supports the ability to
-define test frequency in seconds, minutes, hours and days with the most frequent
-test option being every second. Billing is based on the number of executions per
-month so can become very expensive for the more frequent test options.
+Datadog supports monitoring HTTP, SSL, TCP, UDP, WebSocket, DNS and Ping (ICMP)
+service types for single-step endpoint monitoring. Multi-step tests only support
+HTTP endpoints because these are designed to be a series of linked HTTP
+requests. Datadog also supports recording browser sessions and then
+automatically simulating them to ensure that specific transaction flows are
+continuously tested. Datadog synthetic monitoring configuration supports the
+ability to define test frequency in seconds, minutes, hours and days with the
+most frequent test option being every second. Billing is based on the number of
+executions per month so can become very expensive for the more frequent test
+options.
 
 {{< div--close >}}
 
