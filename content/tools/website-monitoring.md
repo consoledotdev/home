@@ -528,12 +528,14 @@ runs + $3.60/1k browser check runs.
 {{< tools/category-review/card-feature-title text="Multiple check types & configurable frequency" score="4.5" >}}
 
 Checkly only supports two types of check - HTTP API checks (JSON, GraphQL, Forms
-or raw data), and scriptable browser checks by writing Node.js scripts or
-recording a session using their recorder extension for Google Chrome. This is by
-design because Checkly is primarily built for API testing. The default check
-frequency is every 5 minutes but this can be changed to execute API checks every
-10 seconds or browser checks every 60 seconds. Everything can be
-[configured with Terraform](https://www.checklyhq.com/docs/integrations/terraform/).
+or raw data), and scriptable browser checks by writing Node.js scripts in
+[Playwright](https://github.com/microsoft/playwright) or
+[Puppeteer](https://github.com/puppeteer/puppeteer) format or recording a
+session using their recorder extension for Google Chrome. This is by design
+because Checkly is primarily built for API testing. The default check frequency
+is every 5 minutes but this can be changed to execute API checks every 10
+seconds or browser checks every 60 seconds. Everything can be [configured with
+Terraform](https://www.checklyhq.com/docs/integrations/terraform/).
 
 {{< div--close >}}
 
@@ -550,15 +552,18 @@ available on all accounts. There is no support for private check locations.
 
 {{< tools/category-review/card-feature-title text="Multi-step requests (transaction monitoring)" score="5" >}}
 
-The easy way to set up multi-step requests is to use
-[Checkly’s open source headless recorder extension](https://www.checklyhq.com/docs/headless-recorder/)
+The easy way to set up multi-step requests is to use [Checkly’s open source
+headless recorder extension](https://www.checklyhq.com/docs/headless-recorder/)
 for Google Chrome. This outputs a Node.js script in
 [Playwright](https://github.com/microsoft/playwright) or
 [Puppeteer](https://github.com/puppeteer/puppeteer) format, both of which are
 supported for defining the steps to simulate. There is no “easy” web editor for
 these steps. As the focus is on developers, there are a lot of extra features
 such as setup/teardown scripts, CI/CD integration, support for stored code
-snippets that can be imported into scripts, and environment variables.
+snippets that can be imported into scripts, and environment variables. When
+using Playwright scripts, Checkly collects performance and error tracking
+details such as network traces, console logs, screenshots for errors and reports
+on [Web Vitals](https://web.dev/vitals).
 
 {{< div--close >}}
 
@@ -593,6 +598,16 @@ well as the ability to import existing commands from cURL or OpenAPI/Swagger
 specs adds to this feeling of “built for developers”. Being able to define all
 configurations using Terraform is a bonus that developers will appreciate.
 
+We particularly like the [recent
+addition](https://blog.checklyhq.com/launching-performance-and-error-tracing-new-vercel-integration/)
+of automatic performance metrics and error checking that is now available when
+writing browser-based checks with Playwright. [Web
+Vitals](https://web.dev/vitals) are important to monitor to ensure the best user
+experience, and are tracked by Google for search ranking. This means Checkly can
+now provide useful debugging information with console logs, network request
+tracking, metrics for response times on Time to First Byte, Total Blocking Time,
+First Contentful Paint and automated screenshot collection on errors.
+
 {{< div--close >}}
 
 {{< tools/category-review/card-dislike--open >}}
@@ -600,7 +615,11 @@ configurations using Terraform is a bonus that developers will appreciate.
 The focus on some very developer-specific features, and how young the product
 is, means that Checkly does not compare as well on features to some of the other
 options. You can just test a website as if it were an API, but that is not what
-the product assumes you’re doing. There is no support for non-HTTP checks.
+the product assumes you’re doing. There is no support for non-HTTP checks. This
+is starting to change as [Checkly is releasing new web-specific monitoring
+features](https://blog.checklyhq.com/launching-performance-and-error-tracing-new-vercel-integration/),
+such as the Web Vitals integration and console error log recording mentioned
+above.
 
 There is also no option for private check locations, which is a problem when all
 the check regions are based in AWS because you cannot introduce provider/network
