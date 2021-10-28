@@ -94,7 +94,7 @@ transfer personal data to or through these services:
   Plausible Analytics
   [which does not use cookies](https://plausible.io/data-policy) and is designed
   [privacy-first](https://plausible.io/privacy-focused-web-analytics).
-- [Reddit]: If you click through from Reddit, we use Reddit's tools to track if
+- [Reddit](https://www.reddit.com/): If you click through from Reddit, we use Reddit's tools to track if
   you then sign up to Console.
 
 We may transfer your personal data outside of the EU on the basis of an adequacy
