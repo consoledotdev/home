@@ -1,0 +1,231 @@
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "The best best code collaboration and pair programming tools for developers",
+    "numberOfItems": 6,
+    "itemListOrder": "Ascending",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Visual Studio Live Share",
+            "item": {
+                "@type": "Product",
+                "name": "Visual Studio Live Share",
+                "description": "Code collaboration and pair programming tool.",
+                "url": "https://visualstudio.microsoft.com/services/live-share/",
+                "image": [
+                    "https://console.dev/img/favicons/visualstudio-liveshare.microsoft.com.png"
+                ],
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "Visual Studio Live Share is an IDE extension by Microsoft built for real time code collaboration between Visual Studio Code, Visual Studio, and a browser client. Up to 30 participants can join a coding session and it includes voice and chat communication functionality.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4.2",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-10-28T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Code With Me",
+            "item": {
+                "@type": "Product",
+                "name": "Code With Me",
+                "description": "Code collaboration and pair programming tool.",
+                "url": "https://www.jetbrains.com/code-with-me/",
+                "image": [
+                    "https://console.dev/img/favicons/www.jetbrains.com.png"
+                ],
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "Code With Me is a service for remote collaborative code editing and pair-programming that enables reviewing, editing, and debugging code with other programmers in real time. It supports up to 50 participants in a single session and includes chat, voice and video communications powered by Jitsi.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4.2",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-10-28T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "GitLive",
+            "item": {
+                "@type": "Product",
+                "name": "GitLive",
+                "description": "Code collaboration and pair programming tool.",
+                "url": "https://git.live/",
+                "image": [
+                    "https://console.dev/img/favicons/git.live.png"
+                ],
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "GitLive is a real-time code collaboration extension for VS Code, JetBrains IDEs, and Android Studio. It is deeply integrated with git and notifies the author of any merge conflicts as other people are working on files live (even before they are committed).",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "3.5",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-10-28T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "CodeTogether",
+            "item": {
+                "@type": "Product",
+                "name": "CodeTogether",
+                "description": "Code collaboration and pair programming tool.",
+                "url": "https://www.codetogether.com/",
+                "image": [
+                    "https://console.dev/img/favicons/www.codetogether.com.png"
+                ],
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "CodeTogether is an extension for VS Code, IntelliJ and Eclipse that enables real-time collaborative development across IDEs and browsers. It allows sharing servers, terminals & remote debugging with up to 32 participants.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "3.3",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-10-28T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Duckly",
+            "item": {
+                "@type": "Product",
+                "name": "Duckly",
+                "description": "Code collaboration and pair programming tool.",
+                "url": "https://duckly.com/",
+                "image": [
+                    "https://console.dev/img/favicons/duckly.com.png"
+                ],
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "Duckly (previously known as GitDuck) is a remote pair programming and livesharing tool which allows users to share code editors, browser windows and terminal sessions. It supports sharing code and the terminal with up to 20 people.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "3.3",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-10-28T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "AWS Cloud9",
+            "item": {
+                "@type": "Product",
+                "name": "AWS Cloud9",
+                "description": "Code collaboration and pair programming tool.",
+                "url": "https://aws.amazon.com/cloud9/",
+                "image": [
+                    "https://console.dev/img/favicons/aws.amazon.com.jpg"
+                ],
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "AWS Cloud9 is a cloud-based IDE which runs on EC2 VMs by default (with the option to self-host anywhere) and integrates well with the AWS ecosystem. It allows writing, running, debugging and remote pair programming directly from the browser.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "2.5",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-10-28T12:00:00+00:00"
+                }
+            }
+        }
+    ]
+}
