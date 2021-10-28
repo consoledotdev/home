@@ -83,8 +83,9 @@ transfer personal data to or through these services:
 
 - [Cloudflare](https://www.cloudflare.com/): Where run our websites and
   infrastructure.
-- [Google](https://www.google.com/): We host our email with Google, and use
-  docs/drive collaboration software from Google.
+- [Google](https://www.google.com/): We use Google Workspace for our email, docs
+  and general business collaboration/productivity. We also use Google Cloud
+  services for our websites and infrastructure.
 - [Mailchimp](https://mailchimp.com/): Used for mailing list management and
   sending emails.
 - [Microsoft Azure](https://azure.microsoft.com/): Where we run our websites and
@@ -93,6 +94,8 @@ transfer personal data to or through these services:
   Plausible Analytics
   [which does not use cookies](https://plausible.io/data-policy) and is designed
   [privacy-first](https://plausible.io/privacy-focused-web-analytics).
+- [Reddit]: If you click through from Reddit, we use Reddit's tools to track if
+  you then sign up to Console.
 
 We may transfer your personal data outside of the EU on the basis of an adequacy
 decision by the European Commission under Article 45 of the UK GDPR.
