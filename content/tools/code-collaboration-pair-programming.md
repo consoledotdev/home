@@ -71,7 +71,7 @@ tested.
 {{< tools/category-review/miniature-card name="Code With Me" thumbnail="/img/favicons/www.jetbrains.com.png" url="https://www.jetbrains.com/code-with-me/" anchor="code-with-me" score="4.2" >}}
 {{< tools/category-review/miniature-card name="GitLive" thumbnail="/img/favicons/git.live.png" url="https://git.live/" anchor="gitlive" score="3.5" >}}
 {{< tools/category-review/miniature-card name="CodeTogether" thumbnail="/img/favicons/www.codetogether.com.png" url="https://www.codetogether.com/" anchor="codetogether" score="3.3" >}}
-{{< tools/category-review/miniature-card name="Duckly" thumbnail="/img/favicons/duckly.com.png" url="https://duckly.com/" anchor="duckly" score="3.3" >}}
+{{< tools/category-review/miniature-card name="Duckly" thumbnail="/img/favicons/duckly.com.svg" url="https://duckly.com/" anchor="duckly" score="3.3" >}}
 {{< tools/category-review/miniature-card name="AWS Cloud9" thumbnail="/img/favicons/aws.amazon.com.jpg" url="https://aws.amazon.com/cloud9/" anchor="aws-cloud9" score="2.5" >}}
 {{< ul--close >}}
 
@@ -699,7 +699,7 @@ list leaves out a vast number of popular frameworks.
 
 {{< tools/category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="Duckly" anchor="duckly" thumbnail="/img/favicons/duckly.com.png" url="https://duckly.com/" score="3.3" >}}
+{{< tools/category-review/card-heading name="Duckly" anchor="duckly" thumbnail="/img/favicons/duckly.com.svg" url="https://duckly.com/" score="3.3" >}}
 
 Duckly ([previously known as
 GitDuck](https://duckly.com/blog/gitduck-is-now-duckly/)) is a remote pair
