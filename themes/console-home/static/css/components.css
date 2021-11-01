@@ -1205,6 +1205,34 @@ input:checked:disabled.console-input-toggle.triad-03 + label .check:after {
     border: 1px solid var(--theme-input-checkable-disabled);
 }
 
+/* Segmented Control
+   ================================================================================================================ */
+
+.console-segmented-control {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.console-segmented-control .console-input-radio + label .check {
+    display: none;
+}
+
+.console-segmented-control > div:not(:first-child) .console-input-radio + label {
+    margin-left: var(--space3);
+}
+
+.console-segmented-control > div:not(:first-child) .console-input-radio + label:before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--theme-text-5);
+    margin-left: calc(var(--space2) * -1);
+}
+
 /* Control
    ================================================================================================================ */
 .console-control {
@@ -3056,4 +3084,41 @@ body:not(.mobile) .console-control:hover:before {
 
 .podcast-links .title {
     margin: 0;
+}
+
+/* Section Plane
+   ================================================================================================================ */
+.section-plane {
+    position: absolute;
+    background: var(--theme-section-plane);
+    height: 100%;
+    width: 100%;
+}
+
+.section-plane * {
+    z-index: 1;
+}
+
+.section-plane:before,
+.section-plane:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    z-index: 0;
+}
+
+.section-plane:before {
+    left: -100%;
+    background-position: calc(100% + 0.5px);
+    background-image: var(--theme-section-plane-left);
+}
+
+.section-plane:after {
+    left: 100%;
+    background-position: left;
+    background-image: var(--theme-section-plane-right);
 }
