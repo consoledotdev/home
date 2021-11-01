@@ -12,42 +12,61 @@
 
     <section class="page-section page-section-plane page-section-badges selector">
         <h3 class="title title-2 rich-title">Get your badge</h3>
-        <div class="selector-ui">
+        <div data-selector-ui class="selector-ui">
             <div class="top">
                 <div class="selector-ui-group">
                     <h6 class="title title-5">Type</h6>
                     <div class="selector-ui-options">
-                        <div><input class="console-input-radio" type="radio" name="badge-type" id="badge-type-pick" value="pick" checked><label for="badge-type-pick"><span class="check"></span> Pick</label></div>
-                        <div><input class="console-input-radio" type="radio" name="badge-type" id="badge-type-logo" value="logo"><label for="badge-type-logo"><span class="check"></span> Logo</label></div>
-                        <div><input class="console-input-radio" type="radio" name="badge-type" id="badge-type-ribbon" value="ribbon"><label for="badge-type-ribbon"><span class="check"></span> Ribbon</label></div>
+                        <div><input data-badge-option class="console-input-radio" type="radio" name="badge-type" id="badge-type-pick" value="pick" checked><label for="badge-type-pick"><span class="check"></span> Pick</label></div>
+                        <div><input data-badge-option class="console-input-radio" type="radio" name="badge-type" id="badge-type-logo" value="logo"><label for="badge-type-logo"><span class="check"></span> Logo</label></div>
+                        <div><input data-badge-option class="console-input-radio" type="radio" name="badge-type" id="badge-type-ribbon" value="ribbon"><label for="badge-type-ribbon"><span class="check"></span> Ribbon</label></div>
                     </div>
                 </div>
                 <div class="selector-ui-group">
                     <h6 class="title title-5">Color</h6>
                     <div class="selector-ui-options">
-                        <div><input class="console-input-radio triad-03" type="radio" name="badge-color" id="badge-color-green" value="green" checked><label for="badge-color-green"><span class="check"></span> Green</label></div>
-                        <div><input class="console-input-radio triad-01" type="radio" name="badge-color" id="badge-color-blue" value="blue"><label for="badge-color-blue"><span class="check"></span> Blue</label></div>
-                        <div><input class="console-input-radio triad-02" type="radio" name="badge-color" id="badge-color-purple" value="purple"><label for="badge-color-purple"><span class="check"></span> Purple</label></div>
-                        <div><input class="console-input-radio" type="radio" name="badge-color" id="badge-color-bw" value="bw"><label for="badge-color-bw"><span class="check"></span> B/W</label></div>
+                        <div><input data-badge-option class="console-input-radio triad-03" type="radio" name="badge-color" id="badge-color-green1" value="green1" checked><label for="badge-color-green1"><span class="check"></span> Green 1</label></div>
+                        <div><input data-badge-option class="console-input-radio triad-03" type="radio" name="badge-color" id="badge-color-green2" value="green2"><label for="badge-color-green2"><span class="check"></span> Green 2</label></div>
+                        <div><input data-badge-option class="console-input-radio triad-01" type="radio" name="badge-color" id="badge-color-blue1" value="blue1"><label for="badge-color-blue1"><span class="check"></span> Blue 1</label></div>
+                        <div><input data-badge-option class="console-input-radio triad-01" type="radio" name="badge-color" id="badge-color-blue2" value="blue2"><label for="badge-color-blue2"><span class="check"></span> Blue 2</label></div>
+                        <div><input data-badge-option class="console-input-radio triad-02" type="radio" name="badge-color" id="badge-color-purple1" value="purple1"><label for="badge-color-purple1"><span class="check"></span> Purple 1</label></div>
+                        <div><input data-badge-option class="console-input-radio triad-02" type="radio" name="badge-color" id="badge-color-purple2" value="purple2"><label for="badge-color-purple2"><span class="check"></span> Purple 2</label></div>
+                        <div><input data-badge-option class="console-input-radio" type="radio" name="badge-color" id="badge-color-bw" value="bw"><label for="badge-color-bw"><span class="check"></span> B/W</label></div>
                     </div>
                 </div>
                 <div class="selector-ui-group">
                     <h6 class="title title-5">Theme</h6>
                     <div class="selector-ui-options">
-                        <div><input class="console-input-radio" type="radio" name="badge-theme" id="badge-theme-dark" value="dark" checked><label for="badge-theme-dark"><span class="check"></span> Dark</label></div>
-                        <div><input class="console-input-radio" type="radio" name="badge-theme" id="badge-theme-light" value="light"><label for="badge-theme-light"><span class="check"></span> Light</label></div>
+                        <div><input data-badge-option class="console-input-radio" type="radio" name="badge-theme" id="badge-theme-dark" value="dark" checked><label for="badge-theme-dark"><span class="check"></span> Dark</label></div>
+                        <div><input data-badge-option class="console-input-radio" type="radio" name="badge-theme" id="badge-theme-light" value="light"><label for="badge-theme-light"><span class="check"></span> Light</label></div>
                     </div>
                 </div>
                 <div class="selector-ui-group">
                     <h6 class="title title-5">Border</h6>
                     <div class="selector-ui-options">
-                        <div><input class="console-input-toggle" type="checkbox" name="badge-border" id="badge-border" checked><label for="badge-border"><span class="check"></span> Enable</label></div>
+                        <div><input data-badge-option class="console-input-toggle" type="checkbox" name="badge-border" id="badge-border" checked><label for="badge-border"><span class="check"></span> Enable</label></div>
+                    </div>
+                </div>
+                <div class="selector-ui-group">
+                    <h6 class="title title-5">Compact</h6>
+                    <div class="selector-ui-options">
+                        <div><input data-badge-option class="console-input-toggle" type="checkbox" name="badge-vertical" id="badge-vertical"><label for="badge-vertical"><span class="check"></span> Enable</label></div>
                     </div>
                 </div>
             </div>
             <div class="bottom">
-                <div class="split-planes">
-                    <div class="section-plane"></div>
+                <div class="selector-ui-preview">
+                    <p class="small">Preview:</p>
+                    <div class="console-segmented-control">
+                        <div><input class="console-input-radio" type="radio" name="preview-type" id="preview-type-split" value="split" checked><label for="preview-type-split"><span class="check"></span> Split</label></div>
+                        <div><input class="console-input-radio" type="radio" name="preview-type" id="preview-type-black" value="black"><label for="preview-type-black"><span class="check"></span> Black</label></div>
+                        <div><input class="console-input-radio" type="radio" name="preview-type" id="preview-type-white" value="white"><label for="preview-type-white"><span class="check"></span> White</label></div>
+                    </div>
+                </div>
+                <div data-split-planes class="split-planes is-split">
+                    <div class="section-plane left"></div>
+                    <div class="section-plane right"></div>
+                    <img data-badge-preview class="console-badge" src="/img/badges/svg/console-badge-pick-green1-dark-border.svg" alt="Console Badge" />
                 </div>
             </div>
         </div>
