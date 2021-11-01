@@ -204,7 +204,7 @@ I don't do the primary development on Akita. I let the team choose the
 languages. It used to be primarily Go and now it's coded in Python, Go and
 TypeScript.
 
-### What the most interesting challenge has been building Akita?
+### What has been the most interesting challenge building Akita?
 
 The challenge has always been defining the problem. We knew we wanted to build
 a better way of automatically understanding API behaviors, but at first we

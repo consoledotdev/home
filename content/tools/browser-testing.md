@@ -328,11 +328,14 @@ a clean UI, large number of test devices and an interesting desktop application
 
 {{< tools/category-review/card-feature-title text="Devices and browsers supported" score="4" >}}
 
-LambdaTest offers
-[2000+ different combinations](https://www.lambdatest.com/list-of-browsers) of
-browsers and devices to perform interactive cross browser compatibility testing
-of websites and web apps. All tests are currently executed on emulators, not
-real devices. Real device support is planned for a future release.
+LambdaTest offers [2000+ different
+combinations](https://www.lambdatest.com/list-of-browsers) of browsers and
+devices to perform interactive cross browser compatibility testing of websites
+and web apps, but they can be slow to make new releases available. All tests are
+currently executed on emulators, not real devices. Real device support is
+[currently in
+beta](https://www.lambdatest.com/support/docs/mobile-web-automation-on-real-devices/)
+and available on request.
 
 {{< div--close >}}
 
@@ -399,7 +402,15 @@ The biggest limitation of LambdaTest is the lack of availability of real devices
 in the testing cloud - all the tests are currently executed on a simulator. A
 large portion of internet traffic comes from mobile devices so not being able to
 test natively on mobile devices might result in shipping some bugs to
-production.
+production. The ability to use real devices is [in beta and available on
+request](https://www.lambdatest.com/support/docs/mobile-web-automation-on-real-devices/).
+
+We found that new OS releases were sometimes slow to be made available on
+LambdaTest devices. For example, iOS 15 was released on 20 Sept but it was not
+available on LambdaTest until 22 Oct. For some OSs, a 1 month delay would not
+matter because of slow user adoption, however with new iPhones delivered already
+running the latest release and many Apple users eagerly updating on release day,
+this can mean problems can't be detected until weeks after the release.
 
 Another limitation is that tests can only be automated using Selenium or
 Cypress - other frameworks like Playwright, Puppeteer, etc. are not yet

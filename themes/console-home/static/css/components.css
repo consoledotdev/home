@@ -2901,6 +2901,116 @@ body:not(.mobile) .console-control:hover:before {
 
 /* Podcast Links
    ================================================================================================================ */
+.podcast-embed .title.title-4 {
+    margin-bottom: var(--space3);
+}
+
+.podcast-embed-content {
+    display: flex;
+}
+
+.podcast-embed-frame {
+    position: relative;
+    border-radius: var(--corners-x-small);
+    height: var(--space4_5);
+    overflow: hidden;
+}
+
+.podcast-embed-frame iframe {
+    position: absolute;
+    min-width: 0; /* https://css-tricks.com/flexbox-truncated-text/ */
+    left: -8px;
+    top: -2px;
+    width: calc(100% + 14px);
+}
+
+@media (min-width: 512px) {
+    .podcast-embed-content {
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .podcast-embed-content .podcast-embed-frame {
+        flex: 1 1 auto;
+    }
+}
+
+@media (max-width: 511px) {
+    .podcast-embed-content {
+        flex-flow: column nowrap;
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+}
+
+.podcast-embed-player {
+    flex: 0 1 auto;
+    overflow: hidden;
+}
+
+.podcast-embed-player.is-playing .pause,
+.podcast-embed-player:not(.is-playing) .play {
+    display: initial;
+}
+
+.podcast-embed-player.is-playing .play,
+.podcast-embed-player:not(.is-playing) .pause {
+    display: none;
+}
+
+.podcast-embed-player-top {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: var(--space2);
+}
+
+.podcast-embed-player-top .console-button-text {
+    flex: 0 0 auto;
+    line-height: var(--t-lH1);
+    height: var(--t-lH1);
+}
+
+.podcast-embed-player-top .title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 0;
+    margin-left: var(--space2_5);
+}
+
+.podcast-embed-player-top .title:not(:first-child) {
+    margin-top: 0;
+}
+
+.elapsed-indicator {
+    position: relative;
+    width: 100%;
+    height: calc(var(--space1) / 2);
+    padding: var(--space1) 0;
+}
+
+.elapsed-indicator .bg,
+.elapsed-indicator .elapsed {
+    position: absolute;
+    height: calc(var(--space1) / 2);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.elapsed-indicator .bg {
+    width: 100%;
+    background: var(--theme-datavis-axis);
+}
+
+.elapsed-indicator .elapsed {
+    width: 0%;
+    background: var(--theme-text-4);
+}
+
 .podcast-links {
     display: flex;
     flex-flow: row nowrap;

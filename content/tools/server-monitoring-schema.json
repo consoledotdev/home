@@ -14,9 +14,12 @@
                 "name": "Datadog",
                 "description": "Hosted SaaS server monitoring.",
                 "url": "https://www.datadoghq.com/",
+                "image": [
+                    "https://console.dev/img/favicons/www.datadoghq.com.png"
+                ],
                 "review": {
                     "@type": "Review",
-                    "reviewBody": "Datadog is the industry leader with the most comprehensive and up to date set of integrations, however this also means it has a more complex UI.",
+                    "reviewBody": "Datadog is the industry leader with the most comprehensive and up to date set of integrations, however this also means it has a more complex UI and is expensive.",
                     "reviewRating": {
                         "@type": "Rating",
                         "ratingValue": "5",
@@ -53,6 +56,9 @@
                 "name": "New Relic",
                 "description": "Hosted SaaS server monitoring.",
                 "url": "https://newrelic.com/",
+                "image": [
+                    "https://console.dev/img/favicons/newrelic.com.png"
+                ],
                 "review": {
                     "@type": "Review",
                     "reviewBody": "New Relic is best known for application performance monitoring (APM) but can now monitor everything, including server monitoring. It has a clean UI but has more limited alerting capabilities.",
@@ -92,6 +98,9 @@
                 "name": "Grafana + Prometheus",
                 "description": "Self-hosted server monitoring.",
                 "url": "https://grafana.com/",
+                "image": [
+                    "https://console.dev/img/favicons/grafana.com.png"
+                ],
                 "review": {
                     "@type": "Review",
                     "reviewBody": "Grafana is the best open source metrics visualization and dashboarding tool. It can connect to various data source backends and has built-in alerting. We recommend using the open source metrics backend, Prometheus, as the primary data source.",
@@ -131,6 +140,9 @@
                 "name": "InfluxDB + Telegraf",
                 "description": "Self-hosted server monitoring.",
                 "url": "https://www.influxdata.com/products/influxdb/",
+                "image": [
+                    "https://console.dev/img/favicons/www.influxdata.com.png"
+                ],
                 "review": {
                     "@type": "Review",
                     "reviewBody": "InfluxDB is an open source time series database with a visualization and alerting layer. It combines well with Telegraf, a monitoring agent from the same developers, but the alerting features are limited.",

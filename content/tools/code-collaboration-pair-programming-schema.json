@@ -1,136 +1,25 @@
 {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "The best browser testing tools for developers",
+    "name": "The best best code collaboration and pair programming tools for developers",
     "numberOfItems": 6,
     "itemListOrder": "Ascending",
     "itemListElement": [
         {
             "@type": "ListItem",
             "position": 1,
-            "name": "BrowserStack",
+            "name": "Visual Studio Live Share",
             "item": {
                 "@type": "Product",
-                "name": "BrowserStack",
-                "description": "Browser testing tool.",
-                "url": "https://www.browserstack.com/",
+                "name": "Visual Studio Live Share",
+                "description": "Code collaboration and pair programming tool.",
+                "url": "https://visualstudio.microsoft.com/services/live-share/",
                 "image": [
-                    "https://console.dev/img/favicons/www.browserstack.com.png"
+                    "https://console.dev/img/favicons/visualstudio-liveshare.microsoft.com.png"
                 ],
                 "review": {
                     "@type": "Review",
-                    "reviewBody": "BrowserStack is a cross browser testing and debugging tool which supports tests built with Selenium, Cypress, Playwright and Puppeteer. It offers both live and automated testing on 2000+ real mobile devices and virtual desktop machines.",
-                    "reviewRating": {
-                        "@type": "Rating",
-                        "ratingValue": "4.7",
-                        "bestRating": "5",
-                        "worstRating": "0"
-                    },
-                    "author": {
-                        "@type": "Person",
-                        "name": "Naman Singhal",
-                        "email": "naman@console.dev",
-                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
-                        "image": "https://console.dev/img/naman.jpg"
-                    },
-                    "publisher": {
-                        "@type": "Organization",
-                        "name": "Console",
-                        "url": "https://console.dev"
-                    },
-                    "datePublished": "2021-09-17T12:00:00+00:00"
-                }
-            }
-        },
-        {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "LambdaTest",
-            "item": {
-                "@type": "Product",
-                "name": "LambdaTest",
-                "description": "Browser testing tool.",
-                "url": "https://www.lambdatest.com/",
-                "image": [
-                    "https://console.dev/img/favicons/www.lambdatest.com.jpg"
-                ],
-                "review": {
-                    "@type": "Review",
-                    "reviewBody": "LambdaTest is one of the newer tools in the cross browser testing market. It has a clean UI, large number of test devices and an interesting desktop application (LT Browser) which offers live testing functionality locally.",
-                    "reviewRating": {
-                        "@type": "Rating",
-                        "ratingValue": "4.7",
-                        "bestRating": "5",
-                        "worstRating": "0"
-                    },
-                    "author": {
-                        "@type": "Person",
-                        "name": "Naman Singhal",
-                        "email": "naman@console.dev",
-                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
-                        "image": "https://console.dev/img/naman.jpg"
-                    },
-                    "publisher": {
-                        "@type": "Organization",
-                        "name": "Console",
-                        "url": "https://console.dev"
-                    },
-                    "datePublished": "2021-09-17T12:00:00+00:00"
-                }
-            }
-        },
-        {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "SmartBear CrossBrowserTesting",
-            "item": {
-                "@type": "Product",
-                "name": "SmartBear CrossBrowserTesting",
-                "description": "Browser testing tool.",
-                "url": "https://crossbrowsertesting.com/",
-                "image": [
-                    "https://console.dev/img/favicons/crossbrowsertesting.com.png"
-                ],
-                "review": {
-                    "@type": "Review",
-                    "reviewBody": "In addition to live and automatic testing, SmartBear CrossBrowserTesting offers features such as screenshot testing and codeless testing using AI to record and replay interactions on screen. It offers 2,000+ target browsers and mobile devices.",
-                    "reviewRating": {
-                        "@type": "Rating",
-                        "ratingValue": "4.3",
-                        "bestRating": "5",
-                        "worstRating": "0"
-                    },
-                    "author": {
-                        "@type": "Person",
-                        "name": "Naman Singhal",
-                        "email": "naman@console.dev",
-                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
-                        "image": "https://console.dev/img/naman.jpg"
-                    },
-                    "publisher": {
-                        "@type": "Organization",
-                        "name": "Console",
-                        "url": "https://console.dev"
-                    },
-                    "datePublished": "2021-09-17T12:00:00+00:00"
-                }
-            }
-        },
-        {
-            "@type": "ListItem",
-            "position": 4,
-            "name": "Sauce Labs",
-            "item": {
-                "@type": "Product",
-                "name": "Sauce Labs",
-                "description": "Browser testing tool.",
-                "url": "https://saucelabs.com/",
-                "image": [
-                    "https://console.dev/img/favicons/saucelabs.com.jpg"
-                ],
-                "review": {
-                    "@type": "Review",
-                    "reviewBody": "Sauce Labs is a full-scale testing platform for websites and applications that supports test frameworks such as Selenium, Playwright and Puppeteer on a large number of popular device, browser and operating system test targets.",
+                    "reviewBody": "Visual Studio Live Share is an IDE extension by Microsoft built for real time code collaboration between Visual Studio Code, Visual Studio, and a browser client. Up to 30 participants can join a coding session and it includes voice and chat communication functionality.",
                     "reviewRating": {
                         "@type": "Rating",
                         "ratingValue": "4.2",
@@ -149,25 +38,62 @@
                         "name": "Console",
                         "url": "https://console.dev"
                     },
-                    "datePublished": "2021-09-17T12:00:00+00:00"
+                    "datePublished": "2021-10-28T12:00:00+00:00"
                 }
             }
         },
         {
             "@type": "ListItem",
-            "position": 5,
-            "name": "Ghost Inspector",
+            "position": 2,
+            "name": "Code With Me",
             "item": {
                 "@type": "Product",
-                "name": "Ghost Inspector",
-                "description": "Browser testing tool.",
-                "url": "https://ghostinspector.com/",
+                "name": "Code With Me",
+                "description": "Code collaboration and pair programming tool.",
+                "url": "https://www.jetbrains.com/code-with-me/",
                 "image": [
-                    "https://console.dev/img/favicons/ghostinspector.com.png"
+                    "https://console.dev/img/favicons/www.jetbrains.com.png"
                 ],
                 "review": {
                     "@type": "Review",
-                    "reviewBody": "Ghost Inspector is a cloud browser compatibility testing tool that stands out for its support for testing 2FA and end-to-end email flows. Testing can be automated on a schedule or via an API, as well as manually via the web UI, but it only supports Chrome and Firefox on desktop.",
+                    "reviewBody": "Code With Me is a service for remote collaborative code editing and pair-programming that enables reviewing, editing, and debugging code with other programmers in real time. It supports up to 50 participants in a single session and includes chat, voice and video communications powered by Jitsi.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4.2",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-10-28T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "GitLive",
+            "item": {
+                "@type": "Product",
+                "name": "GitLive",
+                "description": "Code collaboration and pair programming tool.",
+                "url": "https://git.live/",
+                "image": [
+                    "https://console.dev/img/favicons/git.live.png"
+                ],
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "GitLive is a real-time code collaboration extension for VS Code, JetBrains IDEs, and Android Studio. It is deeply integrated with git and notifies the author of any merge conflicts as other people are working on files live (even before they are committed).",
                     "reviewRating": {
                         "@type": "Rating",
                         "ratingValue": "3.5",
@@ -186,25 +112,99 @@
                         "name": "Console",
                         "url": "https://console.dev"
                     },
-                    "datePublished": "2021-09-17T12:00:00+00:00"
+                    "datePublished": "2021-10-28T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "CodeTogether",
+            "item": {
+                "@type": "Product",
+                "name": "CodeTogether",
+                "description": "Code collaboration and pair programming tool.",
+                "url": "https://www.codetogether.com/",
+                "image": [
+                    "https://console.dev/img/favicons/www.codetogether.com.png"
+                ],
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "CodeTogether is an extension for VS Code, IntelliJ and Eclipse that enables real-time collaborative development across IDEs and browsers. It allows sharing servers, terminals & remote debugging with up to 32 participants.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "3.3",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-10-28T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Duckly",
+            "item": {
+                "@type": "Product",
+                "name": "Duckly",
+                "description": "Code collaboration and pair programming tool.",
+                "url": "https://duckly.com/",
+                "image": [
+                    "https://console.dev/img/favicons/duckly.com.png"
+                ],
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "Duckly (previously known as GitDuck) is a remote pair programming and livesharing tool which allows users to share code editors, browser windows and terminal sessions. It supports sharing code and the terminal with up to 20 people.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "3.3",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2021-10-28T12:00:00+00:00"
                 }
             }
         },
         {
             "@type": "ListItem",
             "position": 6,
-            "name": "Selenium",
+            "name": "AWS Cloud9",
             "item": {
                 "@type": "Product",
-                "name": "Selenium",
-                "description": "Browser testing tool.",
-                "url": "https://www.selenium.dev/",
+                "name": "AWS Cloud9",
+                "description": "Code collaboration and pair programming tool.",
+                "url": "https://aws.amazon.com/cloud9/",
                 "image": [
-                    "https://console.dev/img/favicons/www.selenium.dev.png"
+                    "https://console.dev/img/favicons/aws.amazon.com.jpg"
                 ],
                 "review": {
                     "@type": "Review",
-                    "reviewBody": "Selenium is a web application testing framework available for Java, Python, C#, Ruby, JavaScript and Kotlin. It is built for automated testing on desktop devices and acts as a backbone service to many other tools discussed in this article, but is not recommended for use by itself.",
+                    "reviewBody": "AWS Cloud9 is a cloud-based IDE which runs on EC2 VMs by default (with the option to self-host anywhere) and integrates well with the AWS ecosystem. It allows writing, running, debugging and remote pair programming directly from the browser.",
                     "reviewRating": {
                         "@type": "Rating",
                         "ratingValue": "2.5",
@@ -223,7 +223,7 @@
                         "name": "Console",
                         "url": "https://console.dev"
                     },
-                    "datePublished": "2021-09-17T12:00:00+00:00"
+                    "datePublished": "2021-10-28T12:00:00+00:00"
                 }
             }
         }

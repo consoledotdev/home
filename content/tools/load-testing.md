@@ -110,7 +110,7 @@ need more sophisticated tools. This means the ability to customize requests,
 detailed reporting, scripting, integration with CI/CD for tests on commit /
 regression testing, a CLI and a nicely designed dark mode if there is a GUI.
 
-### Best load monitoring tools
+### Best load testing tools
 
 We reviewed 11 load testing tools. The best is: [Flood](#flood). We also liked
 [k6](#k6) and [Locust](#locust).
@@ -183,6 +183,8 @@ and others.
 - Results displayed in the terminal and supports exporting to services like AWS
   Cloudwatch, Datadog, Grafana, GitHub Actions, etc.
 
+{{< img-center src="/img/tools/load-testing-k6.png" alt="k6 product screenshot" width="100%" >}}
+
 #### Review
 
 k6 is open source but there is [a cloud version](https://k6.io/cloud/) that
@@ -214,8 +216,6 @@ every commit for our website to ensure pages are always fast.
 If you are looking just for HTTP load testing then k6 does a great job, but the
 main limitation is the lack of browser simulation. If you want to test browser
 rendering performance, k6 is not the right tool.
-
-{{< img-center src="/img/tools/load-testing-k6.png" alt="k6 product screenshot" width="100%" >}}
 
 {{< nav-wrapper--open anchor-name="locust" >}}
 

@@ -7,7 +7,8 @@ isPage: about
 headerType: fixed
 ---
 
-Discover the best tools and beta releases for developers. {.description}
+Discover the best tools and beta releases for developers.
+{.description}
 
 Console aims to become the place developers go to find the best tools. Starting
 as a weekly newsletter, each week we will pick out the most interesting tools

@@ -24,6 +24,7 @@
             if (!formSubmitted) {
                 formSubmitted = true;
                 registerForm.submit();
+                rdt('track', 'SignUp');
             }
         }
 
@@ -54,11 +55,6 @@
             <a class="link" onclick="blur();" target="_blank" rel="noopener" href="https://open.spotify.com/show/1yec5zbVfGPQUlH80tDIOW" title="Listen on Spotify"><img src="/img/icon-podcast-spotify.svg" alt="Spotify"></a>
         </div>
     </div>
-</div>
-<div class="framed-section mid framed-section-overlay">
-    <p>
-        <span class="badge inline">New</span>&nbsp;&nbsp;Read our latest review of the <a class="link" onclick="blur()" href="/tools/code-collaboration-pair-programming/">best code collaboration and pair programming tools for developers</a>.
-    </p>
 </div>
 <script src="/js/podcast-player.js"></script>
 {{ end }}
