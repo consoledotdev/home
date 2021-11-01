@@ -676,49 +676,6 @@ body.show-planes:after {
     margin-top: calc(var(--space6) * -1);
 }
 
-.podcast-embed .title.title-4 {
-    margin-bottom: var(--space3);
-}
-
-.podcast-embed-content {
-    display: flex;
-}
-
-.podcast-embed-frame {
-    position: relative;
-    border-radius: var(--corners-x-small);
-    height: var(--space4_5);
-    overflow: hidden;
-}
-
-.podcast-embed-frame iframe {
-    position: absolute;
-    min-width: 0; /* https://css-tricks.com/flexbox-truncated-text/ */
-    left: -8px;
-    top: -2px;
-    width: calc(100% + 14px);
-}
-
-@media (min-width: 512px) {
-    .podcast-embed-content {
-        flex-flow: row nowrap;
-        align-items: center;
-        justify-content: flex-start;
-    }
-
-    .podcast-embed-content .podcast-embed-frame {
-        flex: 1 1 auto;
-    }
-}
-
-@media (max-width: 511px) {
-    .podcast-embed-content {
-        flex-flow: column nowrap;
-        align-items: stretch;
-        justify-content: flex-start;
-    }
-}
-
 /* Main Nav
    ================================================================================================================ */
 
