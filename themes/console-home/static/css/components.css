@@ -811,7 +811,7 @@ input.console-input-radio + label {
     line-height: var(--t-lH4);
     font-weight: 400;
     color: var(--theme-input-checkable-off);
-    height: calc(var(--space2_5) + var(--space3));
+    min-height: calc(var(--space2_5) + var(--space3));
     transition: var(--a-controls-long);
 }
 
@@ -826,6 +826,7 @@ input:not(:disabled):not(:checked).console-input-radio + label {
 input.console-input-radio + label .check {
     position: relative;
     display: inline-block;
+    flex: 0 0 auto;
     width: calc(var(--space2_5) + var(--space3));
     height: calc(var(--space2_5) + var(--space3));
     background: transparent;
