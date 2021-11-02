@@ -39,11 +39,11 @@ let badgeSelection = (() => {
     };
 
     let getValues = () => {
+        config.vertical = selectorUI.querySelector('[name="badge-vertical"]').checked;
         config.type = selectorUI.querySelector('[name="badge-type"]:checked').value;
         config.color = selectorUI.querySelector('[name="badge-color"]:checked').value;
         config.theme = selectorUI.querySelector('[name="badge-theme"]:checked').value;
-        config.border = selectorUI.querySelector('[name="badge-border"]:checked').value;
-        config.vertical = selectorUI.querySelector('[name="badge-vertical"]').checked;
+        config.border = selectorUI.querySelector('[name="badge-border"]').checked;
 
         let optionsToDisable = [];
         if (config.type == "logo") {
