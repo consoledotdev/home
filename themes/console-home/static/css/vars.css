@@ -93,6 +93,9 @@
 
     --a-controls-long: all 0.18s cubic-bezier(0.09, 0.33, 0.12, 0.9);
     --a-controls-long-active: all 0.22s cubic-bezier(0.09, 0.33, 0.12, 0.9);
+    --a-controls-long-time: 0.18s;
+    --a-controls-long-time-active: 0.22s;
+    --a-controls-long-easing: cubic-bezier(0.09, 0.33, 0.12, 0.9);
 
     --a-elements-time: 0.2s;
     --a-elements-easing: cubic-bezier(0.09, 0.33, 0.12, 1.26);
