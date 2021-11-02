@@ -73,7 +73,7 @@ let badgeSelection = (() => {
 
     let updateBadgePreview = () => {
         let previewEl = selectorUI.querySelector("[data-badge-preview]");
-        let src = "/img/badges/svg/";
+        let src = "/img/badges/1.0/svg/";
         src += composeFilename();
         previewEl.src = src;
         console.log(previewEl.src);
