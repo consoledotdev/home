@@ -14,43 +14,50 @@
         <h3 class="title title-2 rich-title">Get your badge</h3>
         <div data-selector-ui class="selector-ui">
             <div class="top">
-                <div class="selector-ui-group">
-                    <h6 class="title title-5">Type</h6>
-                    <div class="selector-ui-options">
-                        <div><input data-badge-option class="console-input-radio" type="radio" name="badge-type" id="badge-type-pick" value="pick" checked><label for="badge-type-pick"><span class="check"></span> Pick</label></div>
-                        <div><input data-badge-option class="console-input-radio" type="radio" name="badge-type" id="badge-type-logo" value="logo"><label for="badge-type-logo"><span class="check"></span> Logo</label></div>
-                        <div><input data-badge-option class="console-input-radio" type="radio" name="badge-type" id="badge-type-ribbon" value="ribbon"><label for="badge-type-ribbon"><span class="check"></span> Ribbon</label></div>
+                <div>
+                    <div class="selector-ui-group">
+                        <h6 class="title title-5">Type</h6>
+                        <div class="selector-ui-options">
+                            <div><input data-badge-option class="console-input-radio" type="radio" name="badge-type" id="badge-type-pick" value="pick" checked><label for="badge-type-pick"><span class="check"></span> Pick</label></div>
+                            <div><input data-badge-option class="console-input-radio" type="radio" name="badge-type" id="badge-type-logo" value="logo"><label for="badge-type-logo"><span class="check"></span> Logo</label></div>
+                            <div><input data-badge-option class="console-input-radio" type="radio" name="badge-type" id="badge-type-ribbon" value="ribbon"><label for="badge-type-ribbon"><span class="check"></span> Ribbon</label></div>
+                        </div>
+                    </div>
+                    <div class="selector-ui-group">
+                        <h6 class="title title-5">Theme</h6>
+                        <div class="selector-ui-options">
+                            <div><input data-badge-option class="console-input-radio" type="radio" name="badge-theme" id="badge-theme-dark" value="dark" checked><label for="badge-theme-dark"><span class="check"></span> Dark</label></div>
+                            <div><input data-badge-option class="console-input-radio" type="radio" name="badge-theme" id="badge-theme-light" value="light"><label for="badge-theme-light"><span class="check"></span> Light</label></div>
+                        </div>
                     </div>
                 </div>
-                <div class="selector-ui-group">
-                    <h6 class="title title-5">Color</h6>
-                    <div class="selector-ui-options">
-                        <div><input data-badge-option class="console-input-radio triad-03" type="radio" name="badge-color" id="badge-color-green1" value="green1" checked><label for="badge-color-green1"><span class="check"></span> Green 1</label></div>
-                        <div><input data-badge-option class="console-input-radio triad-03" type="radio" name="badge-color" id="badge-color-green2" value="green2"><label for="badge-color-green2"><span class="check"></span> Green 2</label></div>
-                        <div><input data-badge-option class="console-input-radio triad-01" type="radio" name="badge-color" id="badge-color-blue1" value="blue1"><label for="badge-color-blue1"><span class="check"></span> Blue 1</label></div>
-                        <div><input data-badge-option class="console-input-radio triad-01" type="radio" name="badge-color" id="badge-color-blue2" value="blue2"><label for="badge-color-blue2"><span class="check"></span> Blue 2</label></div>
-                        <div><input data-badge-option class="console-input-radio triad-02" type="radio" name="badge-color" id="badge-color-purple1" value="purple1"><label for="badge-color-purple1"><span class="check"></span> Purple 1</label></div>
-                        <div><input data-badge-option class="console-input-radio triad-02" type="radio" name="badge-color" id="badge-color-purple2" value="purple2"><label for="badge-color-purple2"><span class="check"></span> Purple 2</label></div>
-                        <div><input data-badge-option class="console-input-radio" type="radio" name="badge-color" id="badge-color-bw" value="bw"><label for="badge-color-bw"><span class="check"></span> B/W</label></div>
+                <div>
+                    <div class="selector-ui-group badge-color">
+                        <h6 class="title title-5">Color</h6>
+                        <div class="selector-ui-options">
+                            <div><input data-badge-option class="console-input-radio triad-03" type="radio" name="badge-color" id="badge-color-green1" value="green1" checked><label for="badge-color-green1"><span class="check"></span> Accent Green</label></div>
+                            <div><input data-badge-option class="console-input-radio triad-01" type="radio" name="badge-color" id="badge-color-blue1" value="blue1"><label for="badge-color-blue1"><span class="check"></span> Accent Blue</label></div>
+                            <div><input data-badge-option class="console-input-radio triad-02" type="radio" name="badge-color" id="badge-color-purple1" value="purple1"><label for="badge-color-purple1"><span class="check"></span> Accent Purple</label></div>
+                            <div class="spacer"></div>
+                            <div><input data-badge-option class="console-input-radio triad-03" type="radio" name="badge-color" id="badge-color-green2" value="green2"><label for="badge-color-green2"><span class="check"></span> Full Green</label></div>
+                            <div><input data-badge-option class="console-input-radio triad-01" type="radio" name="badge-color" id="badge-color-blue2" value="blue2"><label for="badge-color-blue2"><span class="check"></span> Full Blue</label></div>
+                            <div><input data-badge-option class="console-input-radio triad-02" type="radio" name="badge-color" id="badge-color-purple2" value="purple2"><label for="badge-color-purple2"><span class="check"></span> Full Purple</label></div>
+                            <div><input data-badge-option class="console-input-radio" type="radio" name="badge-color" id="badge-color-bw" value="bw"><label for="badge-color-bw"><span class="check"></span> B/W</label></div>
+                        </div>
                     </div>
                 </div>
-                <div class="selector-ui-group">
-                    <h6 class="title title-5">Theme</h6>
-                    <div class="selector-ui-options">
-                        <div><input data-badge-option class="console-input-radio" type="radio" name="badge-theme" id="badge-theme-dark" value="dark" checked><label for="badge-theme-dark"><span class="check"></span> Dark</label></div>
-                        <div><input data-badge-option class="console-input-radio" type="radio" name="badge-theme" id="badge-theme-light" value="light"><label for="badge-theme-light"><span class="check"></span> Light</label></div>
+                <div>
+                    <div class="selector-ui-group">
+                        <h6 class="title title-5">Compact</h6>
+                        <div class="selector-ui-options">
+                            <div><input data-badge-option class="console-input-toggle" type="checkbox" name="badge-vertical" id="badge-vertical"><label for="badge-vertical"><span class="check"></span> Enable</label></div>
+                        </div>
                     </div>
-                </div>
-                <div class="selector-ui-group">
-                    <h6 class="title title-5">Border</h6>
-                    <div class="selector-ui-options">
-                        <div><input data-badge-option class="console-input-toggle" type="checkbox" name="badge-border" id="badge-border" checked><label for="badge-border"><span class="check"></span> Enable</label></div>
-                    </div>
-                </div>
-                <div class="selector-ui-group">
-                    <h6 class="title title-5">Compact</h6>
-                    <div class="selector-ui-options">
-                        <div><input data-badge-option class="console-input-toggle" type="checkbox" name="badge-vertical" id="badge-vertical"><label for="badge-vertical"><span class="check"></span> Enable</label></div>
+                    <div class="selector-ui-group">
+                        <h6 class="title title-5">Border</h6>
+                        <div class="selector-ui-options">
+                            <div><input data-badge-option class="console-input-toggle" type="checkbox" name="badge-border" id="badge-border"><label for="badge-border"><span class="check"></span> Enable</label></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -70,10 +77,29 @@
                 </div>
             </div>
         </div>
-        <p>Download:</p>
-        <div class="selector-ctas">
-            <a class="console-button console-button-medium icon-left" href="" title="Download .png" rel="noopener">{{ partial "icons/download.html" }}<span>.png</span></a>
-            <a class="console-button console-button-medium icon-left" href="" title="Download .svg" rel="noopener">{{ partial "icons/download.html" }}<span>.svg</span></a>
+        <div class="selector-actions">
+            <div class="left">
+                <p>Download:</p>
+                <div class="selector-ctas">
+                    <a onclick="blur();" class="console-button console-button-medium icon-left" href="" title="Download .png" rel="noopener">{{ partial "icons/download.html" }}<span>.png</span></a>
+                    <a onclick="blur();" class="console-button console-button-medium icon-left" href="" title="Download .svg" rel="noopener">{{ partial "icons/download.html" }}<span>.svg</span></a>
+                </div>
+            </div>
+            <div class="right">
+                <p>Embed:</p>
+                <div class="selector-actions-embed-type">
+                    <p class="small">Format:</p>
+                    <div class="console-segmented-control">
+                        <div><input class="console-input-radio" type="radio" name="embed-type" id="embed-type-png" value="png" checked><label for="embed-type-png"><span class="check"></span> png</label></div>
+                        <div><input class="console-input-radio" type="radio" name="embed-type" id="embed-type-svg" value="svg"><label for="embed-type-svg"><span class="check"></span> svg</label></div>
+                    </div>
+                    <a onclick="blur();" class="console-button-text console-button-small icon-left" href="" title="Copy code" rel="noopener">{{ partial "icons/download.html" }}<span>Copy</span></a>
+                </div>
+                <div class="embed-code-wrapper">
+                    <pre data-embed-code class="pre"></pre>
+                </div>
+                
+            </div>
         </div>
     </section>
 

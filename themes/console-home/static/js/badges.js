@@ -17,7 +17,9 @@ let handlePreviewType = (() => {
 let badgeSelection = (() => {
     let selectorUI = document.querySelector("[data-selector-ui]");
     let options = selectorUI.querySelectorAll("[data-badge-option]");
-    let extension = "svg";
+    let embedOptions = document.querySelectorAll('[name="embed-type"]');
+    let embedType = "png";
+    let previewExtension = "svg";
     let config = {
         vertical: false,
         type: false,
@@ -26,7 +28,7 @@ let badgeSelection = (() => {
         border: false,
     };
 
-    let composeFilename = () => {
+    let composeFilename = (forEmbed) => {
         let filename;
         filename = "console-badge";
         if (config.vertical) filename += "-vertical";
@@ -34,7 +36,9 @@ let badgeSelection = (() => {
         if (config.color) filename += "-" + config.color;
         filename += "-" + config.theme;
         if (config.border) filename += "-border";
-        filename += "." + extension;
+        if (forEmbed) filename += "." + embedType;
+        else filename += "." + previewExtension;
+
         return filename;
     };
 
@@ -68,6 +72,7 @@ let badgeSelection = (() => {
         opt.addEventListener("change", (e) => {
             getValues();
             updateBadgePreview();
+            updateBadgeEmbed();
         });
     });
 
@@ -76,9 +81,27 @@ let badgeSelection = (() => {
         let src = "/img/badges/1.0/svg/";
         src += composeFilename();
         previewEl.src = src;
-        console.log(previewEl.src);
     };
+
+    let updateBadgeEmbed = () => {
+        let preEl = document.querySelector("[data-embed-code]");
+        let src = "https://console.dev/img/badges/1.0/" + embedType + "/";
+        src += composeFilename(true);
+        let string = `<a href="https://console.dev" title="Visit https://console.dev"><img src="${src}" alt="Console - Developer Tool of the Week" /></a>`;
+        preEl.textContent = string;
+    };
+
+    embedOptions.forEach((option) => {
+        option.addEventListener("change", (e) => {
+            let el = e.currentTarget;
+            if (el.checked) {
+                embedType = el.value;
+                updateBadgeEmbed();
+            }
+        });
+    });
 
     getValues();
     updateBadgePreview();
+    updateBadgeEmbed();
 })();
