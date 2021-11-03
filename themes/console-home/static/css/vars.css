@@ -90,6 +90,7 @@
 
     --a-controls: all 0.15s ease-in-out;
     --a-controls-active: all 0.05s ease-in-out;
+    --a-controls-time-easing: 0.15s ease-in-out;
 
     --a-controls-long: all 0.18s cubic-bezier(0.09, 0.33, 0.12, 0.9);
     --a-controls-long-active: all 0.22s cubic-bezier(0.09, 0.33, 0.12, 0.9);

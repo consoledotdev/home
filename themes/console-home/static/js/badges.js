@@ -105,3 +105,27 @@ let badgeSelection = (() => {
     updateBadgePreview();
     updateBadgeEmbed();
 })();
+
+let handleCopyEmbedCode = (() => {
+    let copyEl = document.querySelector("[data-clipboard-copy]");
+    let cJS = new ClipboardJS("[data-clipboard-copy]");
+    let preEl = document.querySelector("[data-embed-code]");
+
+    cJS.on("success", function (e) {
+        e.clearSelection();
+
+        copyEl.classList.add("is-success");
+        setTimeout(() => {
+            copyEl.classList.remove("is-success");
+        }, 5000);
+
+        preEl.classList.add("is-changed");
+        setTimeout(() => {
+            preEl.classList.remove("is-changed");
+        }, 100);
+    });
+
+    cJS.on("error", function (e) {
+        console.error("Couldn't copy.");
+    });
+})();

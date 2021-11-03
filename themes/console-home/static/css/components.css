@@ -694,6 +694,56 @@
     fill: var(--theme-cta-secondary-yellow-text-active);
 }
 
+/* Copy Button
+   ================================================================================================================ */
+.console-button-copy .icon-copy {
+    opacity: 1;
+    transition: opacity var(--a-controls-time-easing) 0.1s, color var(--a-controls-time-easing), fill var(--a-controls-time-easing), stroke var(--a-controls-time-easing);
+}
+
+.console-button-copy .icon-checkmark {
+    margin-left: -1.2em;
+    opacity: 0;
+}
+
+.console-button-copy .idle {
+    max-height: 50px;
+    opacity: 1;
+    transition: opacity var(--a-controls-time-easing) 0.1s, max-height var(--a-controls-time-easing) 0.1s, color var(--a-controls-time-easing), fill var(--a-controls-time-easing), stroke var(--a-controls-time-easing);
+}
+
+.console-button-copy .success {
+    margin-left: -2.5em !important;
+    max-height: 0;
+    opacity: 0;
+}
+
+.console-button-copy.is-success {
+    pointer-events: none;
+}
+
+.console-button-copy.is-success .icon-copy {
+    opacity: 0;
+    transition: opacity var(--a-controls-time-easing) 0s, color var(--a-controls-time-easing), fill var(--a-controls-time-easing), stroke var(--a-controls-time-easing);
+}
+
+.console-button-copy.is-success .icon-checkmark {
+    opacity: 1;
+    transition: opacity var(--a-controls-time-easing) 0.1s, color var(--a-controls-time-easing), fill var(--a-controls-time-easing), stroke var(--a-controls-time-easing);
+}
+
+.console-button-copy.is-success .idle {
+    max-height: 0;
+    opacity: 0;
+    transition: opacity var(--a-controls-time-easing) 0s, max-height var(--a-controls-time-easing) 0s, color var(--a-controls-time-easing), fill var(--a-controls-time-easing), stroke var(--a-controls-time-easing);
+}
+
+.console-button-copy.is-success .success {
+    max-height: 50px;
+    opacity: 1;
+    transition: opacity var(--a-controls-time-easing) 0.1s, max-height var(--a-controls-time-easing) 0.1s, color var(--a-controls-time-easing), fill var(--a-controls-time-easing), stroke var(--a-controls-time-easing);
+}
+
 /* Input Text / Select
    ================================================================================================================ */
 input.console-input-text,
