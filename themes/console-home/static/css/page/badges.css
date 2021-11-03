@@ -41,6 +41,104 @@ body.page-badges.checkpoint-selection-criteria .hero .lines {
     }
 }
 
+@media (min-width: 1280px) {
+    .main-badges p,
+    .main-badges .quote {
+        font-size: var(--t-size1);
+    }
+
+    .main-badges p.intro {
+        font-size: var(--t-size2);
+    }
+
+    .main-badges p.description {
+        font-size: var(--t-size3);
+    }
+
+    .main-badges p.small {
+        font-size: var(--t-size0);
+    }
+
+    .main-badges p.x-small {
+        font-size: var(--t-size-1);
+    }
+
+    .main-badges ul li {
+        font-size: var(--t-size0);
+    }
+
+    .main-badges .title-1 {
+        font-size: var(--t-size9);
+    }
+
+    .main-badges .title-2 {
+        font-size: var(--t-size6);
+    }
+
+    .main-badges .title-3 {
+        font-size: var(--t-size3);
+    }
+
+    .main-badges .title-4 {
+        font-size: var(--t-size1);
+    }
+
+    .main-badges .title-5 {
+        font-size: var(--t-size0);
+    }
+
+    .main-badges .title-6 {
+        font-size: var(--t-size1);
+    }
+
+    .main-badges .console-button,
+    .main-badges [class^="console-button"],
+    .main-badges [class*=" console-button"] {
+        font-size: var(--t-size1);
+    }
+
+    .main-badges .console-button.console-button-medium,
+    .main-badges [class^="console-button"].console-button-medium,
+    .main-badges [class*=" console-button"].console-button-medium {
+        font-size: var(--t-size0);
+    }
+
+    .main-badges .console-button.console-button-small,
+    .main-badges [class^="console-button"].console-button-small,
+    .main-badges [class*=" console-button"].console-button-small {
+        font-size: var(--t-size-1);
+    }
+
+    .main-badges input.console-input-text,
+    .main-badges select.console-select {
+        font-size: var(--t-size1);
+    }
+
+    .main-badges input.console-input-text.console-input-medium,
+    .main-badges select.console-select.console-input-medium {
+        font-size: var(--t-size0);
+    }
+
+    .main-badges input.console-input-text.console-input-small,
+    .main-badges select.console-select.console-input-small {
+        font-size: var(--t-size-1);
+    }
+
+    .main-badges input.console-input-radio + label,
+    .main-badges input.console-input-toggle + label {
+        font-size: var(--t-size-1);
+    }
+
+    .main-badges .selector-ui-preview p.small,
+    .main-badges .selector-actions-embed-type p.small {
+        font-size: var(--t-size-1);
+    }
+
+    .main-badges .embed-code-wrapper .pre {
+        font-size: var(--t-size-2);
+    }
+}
+
 .page-section:not(:first-child).page-section-badges {
     margin-top: calc(var(--space5) + var(--space3));
 }
@@ -426,5 +524,5 @@ body.page-badges.checkpoint-selection-criteria .hero .lines {
 }
 
 .embed-code-wrapper .console-button-text {
-    margin: 0 var(--space3);
+    margin: 0 var(--space2_5) 0 var(--space3);
 }
