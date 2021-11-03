@@ -93,10 +93,10 @@
                         <div><input class="console-input-radio" type="radio" name="embed-type" id="embed-type-png" value="png" checked><label for="embed-type-png"><span class="check"></span> png</label></div>
                         <div><input class="console-input-radio" type="radio" name="embed-type" id="embed-type-svg" value="svg"><label for="embed-type-svg"><span class="check"></span> svg</label></div>
                     </div>
-                    <a onclick="blur();" class="console-button-text console-button-small icon-left" href="" title="Copy code" rel="noopener">{{ partial "icons/download.html" }}<span>Copy</span></a>
                 </div>
                 <div class="embed-code-wrapper">
-                    <pre data-embed-code class="pre"></pre>
+                    <pre id="embed-code-pre" data-embed-code class="pre"></pre>
+                    <button data-clipboard-copy data-clipboard-target="#embed-code-pre" onclick="blur();" class="console-button-text console-button-small console-button-copy icon-left" title="Copy code">{{ partial "icons/copy.html" }}{{ partial "icons/checkmark.html" }}<span class="idle">Copy</span><span class="success">Copied</span></button>
                 </div>
                 
             </div>
@@ -137,5 +137,6 @@
         {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
     </section>
 
+    <script src="/js/vendor/clipboard.min.js"></script>
     <script src="/js/badges.js"></script>
 {{ end }}
