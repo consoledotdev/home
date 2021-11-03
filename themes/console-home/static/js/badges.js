@@ -18,7 +18,7 @@ let badgeSelection = (() => {
     let selectorUI = document.querySelector("[data-selector-ui]");
     let options = selectorUI.querySelectorAll("[data-badge-option]");
     let embedOptions = document.querySelectorAll('[name="embed-type"]');
-    let embedType = "png";
+    let embedExtension = "png";
     let previewExtension = "svg";
     let config = {
         vertical: false,
@@ -28,7 +28,7 @@ let badgeSelection = (() => {
         border: false,
     };
 
-    let composeFilename = (forEmbed) => {
+    let composeFilename = (extension) => {
         let filename;
         filename = "console-badge";
         if (config.vertical) filename += "-vertical";
@@ -36,7 +36,7 @@ let badgeSelection = (() => {
         if (config.color) filename += "-" + config.color;
         filename += "-" + config.theme;
         if (config.border) filename += "-border";
-        if (forEmbed) filename += "." + embedType;
+        if (extension) filename += "." + extension;
         else filename += "." + previewExtension;
 
         return filename;
@@ -85,20 +85,44 @@ let badgeSelection = (() => {
 
     let updateBadgeEmbed = () => {
         let preEl = document.querySelector("[data-embed-code]");
-        let src = "https://console.dev/img/badges/1.0/" + embedType + "/";
-        src += composeFilename(true);
+        let src = "https://console.dev/img/badges/1.0/" + embedExtension + "/";
+        src += composeFilename(embedExtension);
         let string = `<a href="https://console.dev" title="Visit https://console.dev"><img src="${src}" alt="Console - Developer Tool of the Week" /></a>`;
         preEl.textContent = string;
+
+        preEl.classList.add("is-changed");
+        setTimeout(() => {
+            preEl.classList.remove("is-changed");
+        }, 100);
     };
 
     embedOptions.forEach((option) => {
         option.addEventListener("change", (e) => {
             let el = e.currentTarget;
             if (el.checked) {
-                embedType = el.value;
+                embedExtension = el.value;
                 updateBadgeEmbed();
             }
         });
+    });
+
+    let download = (extension) => {
+        let src = "/img/badges/1.0/" + extension + "/";
+        src += composeFilename(extension);
+        let downloadAnchorNode = document.createElement("a");
+        downloadAnchorNode.setAttribute("href", src);
+        downloadAnchorNode.setAttribute("download", composeFilename(extension));
+        document.body.appendChild(downloadAnchorNode); // required for firefox
+        downloadAnchorNode.click();
+        downloadAnchorNode.remove();
+    };
+
+    document.querySelector("[data-download-png]").addEventListener("click", () => {
+        download("png");
+    });
+
+    document.querySelector("[data-download-svg]").addEventListener("click", () => {
+        download("svg");
     });
 
     getValues();
