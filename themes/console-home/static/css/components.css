@@ -1734,6 +1734,7 @@ body:not(.mobile) .console-control:hover:before {
     padding: var(--space4);
     display: block;
     opacity: 0;
+    height: 0;
     box-shadow: var(--theme-shadow-3);
     transition: var(--a-elements);
     overflow: hidden;
@@ -1741,6 +1742,7 @@ body:not(.mobile) .console-control:hover:before {
 
 .popup.is-visible {
     opacity: 1;
+    height: auto;
     transition: var(--a-elements-active);
 }
 
