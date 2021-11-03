@@ -187,6 +187,12 @@ body.page-badges.checkpoint-selection-criteria .hero .lines {
     margin: var(--space5) 0 var(--space4_5);
 }
 
+@media (max-width: 679px) {
+    .selector-ui {
+        margin-bottom: var(--space4);
+    }
+}
+
 @media (min-width: 550px) and (max-width: 979px) {
     .selector-ui {
         margin-top: var(--space4_5);
@@ -432,6 +438,8 @@ body.page-badges.checkpoint-selection-criteria .hero .lines {
 .selector-actions {
     display: flex;
     flex-flow: column-reverse;
+    border-top: var(--theme-border-3);
+    padding-top: var(--space4);
 }
 
 .selector-actions > * {
