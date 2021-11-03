@@ -270,7 +270,7 @@ body.page-badges.checkpoint-selection-criteria .hero .lines {
 
     .selector-ui .top {
         flex: 0 0 auto;
-        width: 26%;
+        width: 30%;
         min-width: 250px;
     }
 }
@@ -462,13 +462,20 @@ body.page-badges.checkpoint-selection-criteria .hero .lines {
     .selector-actions .left {
         flex: 0 0 auto;
         margin-right: var(--space4);
-        width: 26%;
-        min-width: 250px;
+        width: 24%;
+        min-width: 216px;
     }
 
     .selector-actions .right {
         flex: 1 1 auto;
         overflow: hidden;
+    }
+}
+
+@media (min-width: 980px) {
+    .selector-actions .left {
+        width: 30%;
+        min-width: 250px;
     }
 }
 
