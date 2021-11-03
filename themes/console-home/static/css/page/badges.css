@@ -9,6 +9,15 @@ body {
     transition: var(--a-layout-active);
 }
 
+body.page-badges.checkpoint-selection-criteria {
+    background: var(--theme-content-bg-1);
+    transition: var(--a-layout);
+}
+
+body.page-badges.checkpoint-selection-criteria .hero .lines {
+    opacity: 0;
+}
+
 @media (max-width: 768px) {
     .main-badges {
         margin-top: var(--space6);
