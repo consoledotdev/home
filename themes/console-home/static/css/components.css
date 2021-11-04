@@ -3146,6 +3146,7 @@ body:not(.mobile) .console-control:hover:before {
     background: var(--theme-section-plane);
     height: 100%;
     width: 100%;
+    border-radius: 2px;
 }
 
 .section-plane * {
@@ -3174,4 +3175,14 @@ body:not(.mobile) .console-control:hover:before {
     left: 100%;
     background-position: left;
     background-image: var(--theme-section-plane-right);
+}
+
+@media (max-width: 520px) {
+    .section-plane:before {
+        margin-left: 0.5px;
+    }
+
+    .section-plane:after {
+        margin-left: -0.5px;
+    }
 }
