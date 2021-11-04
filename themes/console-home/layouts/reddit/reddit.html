@@ -24,13 +24,14 @@
             if (!formSubmitted) {
                 formSubmitted = true;
                 registerForm.submit();
-                rdt('track', 'SignUp');
             }
         }
 
         plausible("Newsletter Subscribe", {
             callback: submitForm,
         });
+
+        rdt('track', 'SignUp');
     });
 </script>
 <p>
