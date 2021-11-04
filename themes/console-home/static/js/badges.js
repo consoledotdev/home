@@ -87,7 +87,7 @@ let badgeSelection = (() => {
         let preEl = document.querySelector("[data-embed-code]");
         let src = "https://console.dev/img/badges/1.0/" + embedExtension + "/";
         src += composeFilename(embedExtension);
-        let string = `<a href="https://console.dev" title="Visit https://console.dev"><img src="${src}" alt="Console - Developer Tool of the Week" /></a>`;
+        let string = `<a href="https://console.dev" title="Visit Console - the best tools for developers"><img src="${src}" alt="Console - Developer Tool of the Week" /></a>`;
         preEl.textContent = string;
 
         preEl.classList.add("is-changed");
