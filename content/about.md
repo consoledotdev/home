@@ -25,14 +25,12 @@ focus on what you do best. Building.
 
 {{< div-caption >}} Founders David Mytton & Max Jennings.
 
-David was previously co-founder of server monitoring startup, Server Density. He
-built the original version of the product in Python and grew the business to
-acquisition in 2018, at which point it was used by hundreds of customers to
-collect billions of time series metrics from millions of servers. More recently,
-he has been researching sustainable computing at Imperial College London &
-Uptime Institute, which
-[he continues to do](https://davidmytton.blog/publications/) alongside running
-Console.
+David Mytton is co-founder of Console. From 2009-2018, David was CEO at Server
+Density, a SaaS monitoring startup used by hundreds of customers to collect
+billions of time series metrics. He is also [a
+researcher](https://davidmytton.blog/publications/) in sustainable computing at
+Uptime Institute and affiliated with Imperial College London. David has been a
+developer for 15+ years.
 
 Max has 20+ years tech experience building online businesses. Previous start-ups
 he co-founded have been acquired by Retailmenot Inc, Expedia and GCAP Media.
@@ -80,10 +78,12 @@ for product inclusion. Where we feature exclusive deals from partners, they must
 first fit our selection criteria before we consider working with them.
 
 To learn more about Console, check out the Console blog where you can follow our
-progress. To start, we recommend reading our thoughts on the
-'[Age of the Developer](https://blog.console.dev/focusing-on-developers/)'. We
-aim to be open and transparent so everyone can
-{{< a-link url="https://github.com/consoledotdev" text="see what we're building" icon-right="github" >}}.
+progress. To start, we recommend reading our thoughts on the '[Age of the
+Developer](https://blog.console.dev/focusing-on-developers/)'. We aim to be open
+and transparent so everyone can {{< a-link
+url="https://github.com/consoledotdev" text="see what we're building"
+icon-right="github" >}} so we publish [monthly status
+updates](https://blog.console.dev/tag/status-update/) about our progress.
 
 Interested? Subscribe to our weekly newsletter below! And if you spot (or are
 working on) something you think we should include, email us:
