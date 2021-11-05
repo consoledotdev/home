@@ -29,7 +29,7 @@
                             <a onclick="blur();" href="/latest/">Newsletter</a>
                         </li>                    
                     </ul>
-                    <button onclick="blur(); toggleTheme()" class="console-control theme-switcher no-popup">
+                    <button onclick="blur(); toggleTheme()" class="console-control theme-switcher no-popup" aria-label="Switch theme">
                         {{ partial "icons/theme.html" }}
                     </button>
                     <div class="menu-popup-wrapper">
@@ -49,7 +49,7 @@
                                 </li>                                
                             </ul>
                             <div class="separator"></div>
-                            <button onclick="blur(); toggleTheme(); toggleMenuPopup()" class="console-control icon-right theme-switcher">
+                            <button onclick="blur(); toggleTheme(); toggleMenuPopup()" class="console-control icon-right theme-switcher" aria-label="Switch theme">
                                 <span>Switch theme</span>{{ partial "icons/theme.html" }}
                             </button>
                         </div>
