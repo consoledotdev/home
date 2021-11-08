@@ -79,6 +79,8 @@ async function handleEvent(event) {
             ["/advertise", "https://console.dev/advertise/"],
             ["/advertise", "https://console.dev/advertise/"],
             ["/articles/ssh-alternatives-for-mobile-high-latency-unreliable-connections", "https://console.dev/articles/ssh-alternatives-for-mobile-high-latency-unreliable-connections/"],
+            ["/articles/ssh-alternatives-for-mobile-low-latency-unreliable-connections", "https://console.dev/articles/ssh-alternatives-for-mobile-high-latency-unreliable-connections/"],
+            ["/articles/ssh-alternatives-for-mobile-low-latency-unreliable-connections/", "https://console.dev/articles/ssh-alternatives-for-mobile-high-latency-unreliable-connections/"],
             ["/articles/neovim-best-code-editor-ide-for-developers", "https://console.dev/articles/neovim-best-code-editor-ide-for-developers/"],
             ["/collections/neovim-best-code-editor-ide-for-developers/", "https://console.dev/articles/neovim-best-code-editor-ide-for-developers/"],
             ["/beta", "https://console.dev/betas/"],
