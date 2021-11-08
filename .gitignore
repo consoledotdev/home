@@ -11,6 +11,8 @@ dist
 .venv/
 
 # Hugo
+# See https://github.com/gohugoio/hugo/releases/tag/v0.89.0 for the lock file
+.hugo_build.lock
 /data/
 resources/
 public/
