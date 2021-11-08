@@ -77,7 +77,9 @@ async function handleEvent(event) {
         // Permanent redirects
         const redirectMap = new Map([
             ["/advertise", "https://console.dev/advertise/"],
-            ["/collections/neovim-best-code-editor-ide-for-developers", "https://console.dev/articles/neovim-best-code-editor-ide-for-developers/"],
+            ["/advertise", "https://console.dev/advertise/"],
+            ["/articles/ssh-alternatives-for-mobile-high-latency-unreliable-connections", "https://console.dev/articles/ssh-alternatives-for-mobile-high-latency-unreliable-connections/"],
+            ["/articles/neovim-best-code-editor-ide-for-developers", "https://console.dev/articles/neovim-best-code-editor-ide-for-developers/"],
             ["/collections/neovim-best-code-editor-ide-for-developers/", "https://console.dev/articles/neovim-best-code-editor-ide-for-developers/"],
             ["/beta", "https://console.dev/betas/"],
             ["/beta/", "https://console.dev/betas/"],
@@ -91,8 +93,8 @@ async function handleEvent(event) {
             ["/reviews/rss.xml", "https://console.dev/articles/rss.xml"],
             ["/reviews/neovim-best-code-editor-ide-for-developers", "https://console.dev/articles/neovim-best-code-editor-ide-for-developers/"],
             ["/reviews/neovim-best-code-editor-ide-for-developers/", "https://console.dev/articles/neovim-best-code-editor-ide-for-developers/"],
-            ["/reviews/ssh-alternatives-for-mobile-low-latency-unreliable-connections", "https://console.dev/articles/ssh-alternatives-for-mobile-low-latency-unreliable-connections/"],
-            ["/reviews/ssh-alternatives-for-mobile-low-latency-unreliable-connections/", "https://console.dev/articles/ssh-alternatives-for-mobile-low-latency-unreliable-connections/"],
+            ["/reviews/ssh-alternatives-for-mobile-low-latency-unreliable-connections", "https://console.dev/articles/ssh-alternatives-for-mobile-high-latency-unreliable-connections/"],
+            ["/reviews/ssh-alternatives-for-mobile-low-latency-unreliable-connections/", "https://console.dev/articles/ssh-alternatives-for-mobile-high-latency-unreliable-connections/"],
             ["/qa", "https://console.dev/interviews/"],
             ["/qa/", "https://console.dev/interviews/"],
             ["/qa/rss.xml", "https://console.dev/interviews/rss.xml"],

@@ -1,5 +1,5 @@
 ---
-title: SSH alternatives for mobile, low-latency or unreliable connections
+title: SSH alternatives for mobile, high-latency or unreliable connections
 date: 2021-03-23T07:00:00Z
 draft: false
 summary:
