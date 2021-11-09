@@ -1076,7 +1076,7 @@ be executed during testing. Granular test reports are not generated in the
 customized test environment but live streaming of logs and videos of tests is
 possible.
 
-AWS device Farm supports a total of [2
+AWS Device Farm supports a total of [2
 integrations](https://docs.aws.amazon.com/devicefarm/latest/developerguide/aws-device-farm-tools-plugins.html)
 - Jenkins CI and Gradle build system in Android Studio. This is a major
 limitation - even the omnipresent ticketing system [Jira is not
