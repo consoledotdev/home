@@ -33,4 +33,4 @@ section = [ "HTML", "RSS" ]
     baseName = "rss"
 
 [params]
-consoleSubscribers = "13k+"
+consoleSubscribers = "14k+"
