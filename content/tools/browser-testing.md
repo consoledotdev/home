@@ -1050,23 +1050,39 @@ full review:
 
 {{< tools/category-review/card-heading name="AWS Device Farm" anchor="aws-device-farm" thumbnail="/img/favicons/aws.amazon.com.jpg" url="https://aws.amazon.com/device-farm/" score="none" >}}
 
-AWS Device Farm provides mobile and desktop devices for testing websites and
-web applications. Desktop browser testing can be performed on the latest 3
-releases of Google Chrome, Mozilla Firefox, and Microsoft Edge on Windows 10. A limited
-number of real [mobile devices](https://awsdevicefarm.info/) are available to perform
-automated or live testing.
+AWS Device Farm provides mobile and desktop devices for testing websites and web
+applications. Desktop browser testing can be performed on the latest 3 releases
+of Google Chrome, Mozilla Firefox, and Microsoft Edge on Windows 10. A limited
+number of real [mobile devices](https://awsdevicefarm.info/) are available to
+perform automated or live testing.
 
-AWS Device Farm is [only available in the us-west-2 (Oregon)](https://docs.aws.amazon.com/devicefarm/latest/developerguide/welcome.html) 
-region. However, it is possible to mock geo-location data and simulate lossy 
-network connections. Unfortunately, live testing has high network latency and 
-the user has to wait >2 seconds to see the output of keystrokes, this results 
-in a poor experience while typing and scrolling. 
+AWS Device Farm is [only available in the us-west-2
+(Oregon)](https://docs.aws.amazon.com/devicefarm/latest/developerguide/welcome.html)
+region. However, it is possible to mock geo-location data and simulate lossy
+network connections. Unfortunately, live testing has high network latency and
+the user has to wait >2 seconds to see the output of keystrokes, this results in
+a poor experience while typing and scrolling.
 
-An interesting feature is that users can buy [private devices](https://docs.aws.amazon.com/devicefarm/latest/developerguide/working-with-private-devices.html) which are physically deployed in AWS data centers and can be used for both automated and manual testing.
+An interesting feature is that users can buy [private
+devices](https://docs.aws.amazon.com/devicefarm/latest/developerguide/working-with-private-devices.html)
+which are physically deployed in AWS data centers and can be used for both
+automated and manual testing.
 
-Automated tests can be executed in two environments - the standard environment, which takes longer to execute but provides detailed logs, performance data, videos, screenshots, and reporting for every case in the test suite, or in a customized test environment, which allows specifying the commands which should be executed during testing. Granular test reports are not generated in the customized test environment but live streaming of logs and videos of tests is possible.
+Automated tests can be executed in two environments - the standard environment,
+which takes longer to execute but provides detailed logs, performance data,
+videos, screenshots, and reporting for every case in the test suite, or in a
+customized test environment, which allows specifying the commands which should
+be executed during testing. Granular test reports are not generated in the
+customized test environment but live streaming of logs and videos of tests is
+possible.
 
-AWS device Farm supports a total of [2 integrations](https://docs.aws.amazon.com/devicefarm/latest/developerguide/aws-device-farm-tools-plugins.html) - Jenkins CI and Gradle build system in Android Studio. This is a major limitation - even the omnipresent ticketing system [Jira is not supported](https://jira.atlassian.com/browse/JSWCLOUD-15207). AWS device farm does not integrate well with existing tools and does not offer a good selection of browsers and devices. Therefore, we did not select it for a full review.
+AWS device Farm supports a total of [2
+integrations](https://docs.aws.amazon.com/devicefarm/latest/developerguide/aws-device-farm-tools-plugins.html)
+- Jenkins CI and Gradle build system in Android Studio. This is a major
+limitation - even the omnipresent ticketing system [Jira is not
+supported](https://jira.atlassian.com/browse/JSWCLOUD-15207). AWS device farm
+does not integrate well with existing tools and does not offer a good selection
+of browsers and devices. Therefore, we did not select it for a full review.
 
 {{< img-center src="/img/tools/browser-testing-aws-device-farm.png" alt="AWS Device Farm product screenshot" width="100%" >}}
 
