@@ -47,10 +47,10 @@ We tested 10 code collaboration and pair programming tools using our independent
 below. The best code collaboration & pair programming tools for developers in
 {{< year >}} are:
 
-1. [Visual Studio Live Share](#visual-studio-live-share)
-2. [Code With Me](#code-with-me)
-3. [GitLive](#gitlive)
-4. [CodeTogether](#codetogether)
+1. [CodeTogether](#codetogether)
+2. [Visual Studio Live Share](#visual-studio-live-share)
+3. [Code With Me](#code-with-me)
+4. [GitLive](#gitlive)
 5. [Duckly](#duckly)
 6. [AWS Cloud9](#aws-cloud9)
 
@@ -67,10 +67,10 @@ tested.
 ### tl;dr the best code collaboration tools
 
 {{< tools/category-review/tldr-list--open >}}
+{{< tools/category-review/miniature-card name="CodeTogether" thumbnail="/img/favicons/www.codetogether.com.png" url="https://www.codetogether.com/" anchor="codetogether" score="4.3" >}}
 {{< tools/category-review/miniature-card name="Visual Studio Live Share" thumbnail="/img/favicons/visualstudio-liveshare.microsoft.com.png" url="https://visualstudio.microsoft.com/services/live-share/" anchor="visual-studio-live-share" score="4.2" >}}
 {{< tools/category-review/miniature-card name="Code With Me" thumbnail="/img/favicons/www.jetbrains.com.png" url="https://www.jetbrains.com/code-with-me/" anchor="code-with-me" score="4.2" >}}
 {{< tools/category-review/miniature-card name="GitLive" thumbnail="/img/favicons/git.live.png" url="https://git.live/" anchor="gitlive" score="3.5" >}}
-{{< tools/category-review/miniature-card name="CodeTogether" thumbnail="/img/favicons/www.codetogether.com.png" url="https://www.codetogether.com/" anchor="codetogether" score="3.3" >}}
 {{< tools/category-review/miniature-card name="Duckly" thumbnail="/img/favicons/duckly.com.svg" url="https://duckly.com/" anchor="duckly" score="3.3" >}}
 {{< tools/category-review/miniature-card name="AWS Cloud9" thumbnail="/img/favicons/aws.amazon.com.jpg" url="https://aws.amazon.com/cloud9/" anchor="aws-cloud9" score="2.5" >}}
 {{< ul--close >}}
@@ -141,9 +141,104 @@ allow the host to grant and revoke permissions to each individual participant.
 
 ### Best code collaboration tools
 
-We reviewed 10 online code collaboration tools. The best are: [Visual Studio Live Share](#visual-studio-live-share) and [Code With Me](#code-with-me).
+We reviewed 10 online code collaboration tools. The best is: CodeTogether. We also liked [Visual Studio Live Share](#visual-studio-live-share) and [Code With Me](#code-with-me).
 
-{{< nav-wrapper--open id="wrapper-2" anchor-name="visual-studio-live-share" >}}
+{{< nav-wrapper--open id="wrapper-2" anchor-name="codetogether" >}}
+
+{{< tools/category-review/card--open >}}
+
+{{< tools/category-review/card-top--open >}}
+
+{{< tools/category-review/card-heading name="CodeTogether" anchor="codetogether" thumbnail="/img/favicons/www.codetogether.com.png" url="https://www.codetogether.com/" score="4.3" >}}
+
+CodeTogether is an extension for VS Code, IntelliJ and Eclipse that enables
+real-time collaborative development across IDEs and browsers. It allows sharing
+servers, terminals & remote debugging with up to 32 participants.
+
+{{< img-center src="/img/tools/code-collaboration-pair-programming-codetogether.png" alt="CodeTogether product screenshot" width="100%" >}}
+
+{{< div--close >}}
+
+{{< tools/category-review/card-bottom--open >}}
+
+{{< tools/category-review/card-cost--open highlight="CodeTogether has a free plan with the maximum number of participants per session restricted to 3. Premium plans start at  $10.50/user/month." >}}
+
+{{< div--close >}}
+
+{{< framed-section--open classes="framed-section-attention" >}}
+
+{{< rich-title-5 icon="checklist" >}}Key features {{</ rich-title-5 >}}
+
+{{< framed-section-item--open >}}
+
+{{< tools/category-review/card-feature-title text="Pair programming" score="4.0" >}}
+
+CodeTogether offers two options for connecting to remote pair programming sessions - via one of the supported IDEs (VS Code, IntelliJ and Eclipse), or in a browser window. Hosts can share code, terminals, and server ports with participants during the session. Any changes made to the files are synced in real-time to all participants. Both host and participants can [launch tests](https://www.codetogether.com/docs/running-tests-and-launches/), however in both cases they are executed only on the host’s machine and the results are synced. It is also possible to create and run test specific launch configurations in Eclipse and IntelliJ clients.
+
+{{< div--close >}}
+
+{{< framed-section-item--open >}}
+
+{{< tools/category-review/card-feature-title text="Communication capabilities" score="5" >}}
+
+CodeTogether allows participants to communicate via chat, audio, and video calls. Participants can share their screen, raise hands, host polls, and play YouTube videos synchronously during the chat. The call session is connected in a separate browser tab (even when using the browser based IDE from CodeTogether) and closing the IDE also disconnects the call.
+
+In addition to the above capabilities, it offers a unique “rooms” feature.
+Participants can work together in the same room (all sharing a common
+[caret](https://en.wikipedia.org/wiki/Caret_navigation) position and text
+selections), or in a different room to work solely without disrupting the
+workflow of other participants. 
+
+{{< div--close >}}
+
+{{< framed-section-item--open >}}
+
+{{< tools/category-review/card-feature-title text="Secure collaboration" score="4" >}}
+
+All sessions in CodeTogether are relayed through a backend server however,
+sessions are [end-to-end
+encrypted](https://www.codetogether.com/download/security/) and source code is
+not stored anywhere except on the host’s machine. The host can set various
+permissions such as accepting connection requests, sharing files and terminals
+in a read-only/read-write mode, allowing participants to run/test applications
+before the session starts but those permissions can not be modified during the
+session. Enterprise customers can host CodeTogether on-premises. Audio/Video sessions are independent from the CodeTogether session services and are [**not** end-to-end encrypted](https://www.codetogether.com/download/security/).
+
+{{< div--close >}}
+
+{{< div--close >}}
+
+{{< tools/category-review/card-like--open >}}
+
+CodeTogether supports multiple IDEs (VS Code, Eclipse and IntelliJ) and allows participants to join as a guest from a browser window. Browser sessions can be configured to have light/dark mode with custom keybindings emulating any of the supported IDEs (just as powerful as real IDEs). Having cross-IDE support means participants are not restricted to a certain vendor and team members can work in the environment of their choice.
+
+[CodeTogether Teams](https://www.codetogether.com/docs/codetogether-teams/) allows the host to add, join or manage a team of people. Team members can see all active remote sessions and join directly without needing an invite URL. The host can also easily invite team members to join a session or ask a team member to host a session. It is also possible to only allow team members from a specific team to join the session. This is useful when pair programming sessions are organized frequently.
+
+Helpful assistive features such as content assist, code validation, quick fixes, etc., come from the host IDE. This means all participant's IDEs are just as powerful as the host's.
+
+Enterprise users hosting CodeTogether on-premises have access to a [metrics dashboard](https://www.codetogether.com/docs/using-the-on-premises-dashboard/) which shows the number of online users and active sessions in real time, as well as historical usage trends. Usage stats can be downloaded from the dashboard or exported to tools like Prometheus or Graphite using [StatsD](https://github.com/statsd/statsd) for analyzing metrics externally.
+
+{{< div--close >}}
+
+{{< tools/category-review/card-dislike--open >}}
+
+Although CodeTogether provides a powerful cross-IDE experience, it does not allow participants to interact with the host’s git repository. Viewing diffs, staging, and committing changes in the IDE is not possible for participants. Even when the host opens the GUI based git diff tab in their IDE, participants just stay on the last opened tab. Although all the git commands can still be executed by the participants in the shared terminal, it is not as good as Visual Studio Live Share which deeply integrates with git.
+
+In our limited testing, the video of participants would freeze sometimes, joining the call again fixes the issue temporarily. Enterprise users hosting on-premises servers can only have 25% of the total users online at same time. This limitation feels arbitrarily restrictive and the only way to increase this limit is by paying more.
+
+Permissions must be granted before the session starts and there is no way to change permissions whilst the session is active. It is not possible to grant permissions to selective participants or hide any sensitive files in the directory. This might lead to accidental exposure of API keys.
+
+Although it is possible to conduct unit tests remotely via CodeTogether, support is limited to a handful of frameworks - JUnit, TestNG, PHPUnit, and Pytest. This list leaves out a vast number of popular frameworks.
+
+{{< div--close >}}
+
+{{< div--close >}}
+
+{{< div--close >}}
+
+{{< div--close >}}
+
+{{< nav-wrapper--open id="wrapper-3" anchor-name="visual-studio-live-share" >}}
 
 {{< tools/category-review/card--open >}}
 
@@ -284,7 +379,7 @@ simultaneously.
 
 {{< div--close >}}
 
-{{< nav-wrapper--open id="wrapper-3" anchor-name="code-with-me" >}}
+{{< nav-wrapper--open id="wrapper-4" anchor-name="code-with-me" >}}
 
 {{< tools/category-review/card--open >}}
 
@@ -413,7 +508,7 @@ and the background blur feature (in beta) was very CPU intensive.
 
 {{< div--close >}}
 
-{{< nav-wrapper--open id="wrapper-4" anchor-name="gitlive" >}}
+{{< nav-wrapper--open id="wrapper-5" anchor-name="gitlive" >}}
 
 {{< tools/category-review/card--open >}}
 
@@ -550,140 +645,6 @@ All the other tools we tested advertise security measures such as the encryption
 algorithms used, technologies to protect user’s data etc., but GitLive does not
 have this information available on their website or blog. This is a barrier to
 any user who wants to do proper due diligence on GitLive’s security approach.
-
-{{< div--close >}}
-
-{{< div--close >}}
-
-{{< div--close >}}
-
-{{< div--close >}}
-
-{{< nav-wrapper--open id="wrapper-5" anchor-name="codetogether" >}}
-
-{{< tools/category-review/card--open >}}
-
-{{< tools/category-review/card-top--open >}}
-
-{{< tools/category-review/card-heading name="CodeTogether" anchor="codetogether" thumbnail="/img/favicons/www.codetogether.com.png" url="https://www.codetogether.com/" score="3.3" >}}
-
-CodeTogether is an extension for VS Code, IntelliJ and Eclipse that enables
-real-time collaborative development across IDEs and browsers. It allows sharing
-servers, terminals & remote debugging with up to 32 participants.
-
-{{< img-center src="/img/tools/code-collaboration-pair-programming-codetogether.png" alt="CodeTogether product screenshot" width="100%" >}}
-
-{{< div--close >}}
-
-{{< tools/category-review/card-bottom--open >}}
-
-{{< tools/category-review/card-cost--open highlight="CodeTogether has a free plan with the maximum number of participants per session restricted to 3. Premium plans start at  $10.50/user/month." >}}
-
-{{< div--close >}}
-
-{{< framed-section--open classes="framed-section-attention" >}}
-
-{{< rich-title-5 icon="checklist" >}}Key features {{</ rich-title-5 >}}
-
-{{< framed-section-item--open >}}
-
-{{< tools/category-review/card-feature-title text="Pair programming" score="4.5" >}}
-
-CodeTogether offers two options for connecting to remote pair programming
-sessions - via one of the supported IDEs (VS Code, IntelliJ and Eclipse) or in a
-browser window. Hosts can share code, terminals, and server ports with
-participants during the session. Any changes made to the files are synced in
-real-time to all participants. Both host and participants can [launch
-tests](https://www.codetogether.com/docs/running-tests-and-launches/), however,
-in both cases, they are executed only on the host’s machine and the results are
-synced. It is also possible to create and run test specific launch
-configurations in Eclipse and IntelliJ clients.
-
-{{< div--close >}}
-
-{{< framed-section-item--open >}}
-
-{{< tools/category-review/card-feature-title text="Communication capabilities" score="1.5" >}}
-
-CodeTogether expects users to continue using their existing tools for
-communication as it offers no chat, call or screen share functionality. Although
-communication capabilities are limited, it offers a unique “rooms” feature.
-Participants can work together in the same room (all sharing a common
-[caret](https://en.wikipedia.org/wiki/Caret_navigation) position and text
-selections), or in a different room to work solely without disrupting the
-workflow of other participants. {{< div--close >}}
-
-{{< framed-section-item--open >}}
-
-{{< tools/category-review/card-feature-title text="Secure collaboration" score="4" >}}
-
-All sessions in CodeTogether are relayed through a backend server however,
-sessions are [end-to-end
-encrypted](https://www.codetogether.com/download/security/) and source code is
-not stored anywhere except on the host’s machine. The host can set various
-permissions such as accepting connection requests, sharing files and terminals
-in a read-only/read-write mode, allowing participants to run/test applications
-before the session starts but those permissions can not be modified during the
-session. Enterprise customers can host CodeTogether on-premises.
-
-{{< div--close >}}
-
-{{< div--close >}}
-
-{{< tools/category-review/card-like--open >}}
-
-CodeTogether supports multiple IDEs (VS Code, Eclipse and IntelliJ) and allows
-participants to join as a guest from a browser window. Browser sessions can be
-configured to have light/dark mode with custom keybindings emulating any of the
-supported IDEs (just as powerful as real IDEs). Having cross-IDE support means
-participants are not restricted to a certain vendor and team members can work in
-the environment of their choice.
-
-[CodeTogether Teams](https://www.codetogether.com/docs/codetogether-teams/)
-allows the host to add, join or manage a team of people. Team members can see
-all active remote sessions and join directly without needing an invite URL. The
-host can also easily invite team members to join a session or ask a team member
-to host a session. It is also possible to only allow team members from a
-specific team to join the session. This is useful when pair programming sessions
-are organized frequently.
-
-Helpful assistive features such as content assist, code validation, quick fixes,
-etc., come from the host IDE. This means all participant’s IDEs are just as
-powerful as the host’s. 
-
-Enterprise users hosting CodeTogether on-premises have access to [a metrics
-dashboard](https://www.codetogether.com/docs/using-the-on-premises-dashboard/)
-which shows the number of online users and active sessions in real time, as well
-as historical usage trends. Usage stats can be downloaded from the dashboard or
-exported to tools like Prometheus or Graphite using
-[StatsD](https://github.com/statsd/statsd) for analyzing metrics externally. 
-
-{{< div--close >}}
-
-{{< tools/category-review/card-dislike--open >}}
-
-Although CodeTogether provides a powerful cross-IDE experience, it does not
-allow participants to interact with the host's git repository. Viewing diffs,
-staging, and committing changes in the IDE is not possible for participants.
-Even when the host opens the GUI based git diff tab in their IDE, participants
-just stay on the last opened tab. Although all the git commands can still be
-executed by the participants in the shared terminal, it is not as alluring as
-Visual Studio Live Share which deeply integrates with git.
-
-Participants have no way of communicating via built-in chat or call during the
-session - any communication must be performed on another platform. Enterprise
-users hosting on-premises servers can only have 25% of the total users online at
-same time. This limitation feels arbitrarily restrictive and the only way to
-increase this limit is by paying more. 
-
-Permissions must be granted before the session starts and there is no way to
-change permissions whilst the session is active. It is not possible to grant
-permissions to selective participants or hide any sensitive files in the
-directory. This might lead to accidental exposure of API keys.  
-
-Although it is possible to conduct unit tests remotely via CodeTogether, support
-is limited to a handful of frameworks - JUnit, TestNG, PHPUnit, and Pytest. This
-list leaves out a vast number of popular frameworks.
 
 {{< div--close >}}
 
