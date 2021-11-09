@@ -960,7 +960,7 @@ it has more cross platform support.
 We also tested the following 4 tools but they did not meet our criteria for a
 full review:
 
-{{< nav-wrapper--open anchor-name="polypane" >}}
+{{< nav-wrapper--open anchor-name="teletype" >}}
 
 {{< tools/category-review/card-heading name="Teletype" anchor="teletype" thumbnail="/img/favicons/teletype.atom.io.ico" url="https://teletype.atom.io/" score="none" >}}
 
