@@ -190,7 +190,7 @@ uses GPU acceleration (OpenGL in Rust), and
 so performance really is excellent.
 
 One of the great things is its customizability. All configuration is defined in
-[my vimrc file](https://github.com/davidmytton/dotfiles/blob/559f849d8d1f7aa7547c19ed432b16b8514687f2/dot_vimrc)
+[my vimrc file](https://github.com/davidmytton/dotfiles/blob/79ab4739d8971387d62f90866f7f9d5c900dda61/vim/.vimrc)
 that I keep in version control. I can drop this onto any system and with a
 single command all my plugins will be installed and set up exactly how I prefer
 things. As Neovim and Alacritty work cross-platform, I can easily switch between
@@ -253,10 +253,10 @@ easier to get set up. Regardless, a text-based terminal life is the way forward.
 #### (Neo)Vim plugins I use
 
 With the release of Neovim 0.5 I was able to remove most of my language plugins
-and just use Treesitter + LSP. I followed
-[Takuya Matsuyama's guide](https://blog.inkdrop.info/how-to-set-up-neovim-0-5-modern-plugins-lsp-treesitter-etc-542c3d9c9887)
-for most of it and you can see the result in
-[my vimrc file](https://github.com/davidmytton/dotfiles/blob/main/dot_vimrc).
+and just use Treesitter + LSP. I followed [Takuya Matsuyama's
+guide](https://blog.inkdrop.info/how-to-set-up-neovim-0-5-modern-plugins-lsp-treesitter-etc-542c3d9c9887)
+for most of it and you can see the result in [my vimrc
+file](https://github.com/davidmytton/dotfiles/blob/79ab4739d8971387d62f90866f7f9d5c900dda61/vim/.vimrc).
 Here are a few crucial ones:
 
 - [vim-gitgutter](https://github.com/airblade/vim-gitgutter): Shows git diff in
