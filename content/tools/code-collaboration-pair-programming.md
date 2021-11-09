@@ -101,7 +101,7 @@ criteria](/about/#selection-criteria) plus these three requirements:
 
 All tools must make it easy to create and connect to remote programming
 sessions. Hosts should be allowed to share their code to allow multiple
-participants to code simultaneously. 
+participants to code simultaneously.
 
 The UI design should make it easy to distinguish between participants and track
 who is making changes. All participants must be able to perform simple tasks
@@ -187,7 +187,7 @@ In addition to the above capabilities, it offers a unique “rooms” feature.
 Participants can work together in the same room (all sharing a common
 [caret](https://en.wikipedia.org/wiki/Caret_navigation) position and text
 selections), or in a different room to work solely without disrupting the
-workflow of other participants. 
+workflow of other participants.
 
 {{< div--close >}}
 
@@ -339,7 +339,7 @@ Participants can view the git diff of edited files against the working tree,
 stage and discard changes, but can’t commit. If any files edited by participants
 are staged, the host’s commit messages are automatically appended with a useful
 ‘Co-authored-by’ comment containing the name and email address of the
-participant. 
+participant.
 
 Live Share does not synchronize user specific extensions like themes, icons,
 keyboard bindings, etc. but shares anything that is specific to the context of
@@ -463,7 +463,7 @@ Audio and video calls have extra settings like blurring background, hand
 raising, screen sharing, muting participants, etc. which enhance the overall
 communication experience. Network statistics such as bytes sent/received, ping,
 server location etc. are available and the quality of video and audio calls can
-be changed for a low bandwidth internet connection. 
+be changed for a low bandwidth internet connection.
 
 Only the host needs to purchase a license - guests can download a client to
 connect to sessions. “Full sync mode” syncs the state of all windows such as
@@ -472,7 +472,7 @@ feature is useful when it is difficult to follow around advanced users in a
 complex workspace. Enterprise customers can choose to host their own on-premises
 relay servers for additional security, avoiding the cloud altogether. If
 desired, system administrators can disable Code With Me sessions across the
-organization. 
+organization.
 
 {{< div--close >}}
 
@@ -602,7 +602,7 @@ working copy of collaborators (before they are committed). This allows GitLive
 to offer unique features such as notifying the author of conflicts before they
 are committed and cherry picking the changes to avoid those conflicts when
 merging. Participants can choose to switch off this feature and hide their
-working copy if desired. 
+working copy if desired.
 
 GitLive integrates with multiple issue trackers (Jira, GitHub Issues, Bitbucket
 Issues, Azure DevOps Work Items and GitLab Issues) which allows participants to
@@ -626,13 +626,13 @@ participant at a time.
 GitLive’s own proprietary code sharing solution does not allow the host to share
 terminals or servers with participants. This means running or debugging
 applications remotely is not possible and the host must rely on other supported
-services (VS Live Share/Code With Me) to provide this functionality. 
+services (VS Live Share/Code With Me) to provide this functionality.
 
 GitLive shares any file opened by the host with participants, including files
 from outside the working directory. GitLive does not provide any solution to
 hide files from participants. It is not possible for the host to start a
 read-only session which means participants can edit any file (including files
-like .env which are not meant to be shared). 
+like .env which are not meant to be shared).
 
 Unfortunately we hit some bugs in our testing of GitLive’s [merge conflict
 detection](https://docs.git.live/docs/mergeconflicts/). We found that it
@@ -858,7 +858,7 @@ setting breakpoints, stepping through code, and inspecting variables.
 
 AWS Cloud9 can be set up on a managed Amazon EC2 Linux instance or any Linux
 server (running on AWS or elsewhere). Managed EC2 instances can be set to
-shutdown automatically to save billing costs. 
+shutdown automatically to save billing costs.
 
 Users are granted sudo privileges to the managed Amazon EC2 instance. This
 allows running commands, such as pushing code changes to git, defining custom
@@ -887,7 +887,7 @@ owner.
 AWS Cloud9 does not perform automatic software updates or backups, even on
 managed EC2 instances. There is no way to grant permissions for specific
 resources. This raises some security concerns even when all users are trusted
-members of the same organisation. 
+members of the same organisation.
 
 Any server running on the Cloud9 instance can only be accessed by [exposing it
 to the
@@ -928,7 +928,7 @@ full review:
 Teletype was developed by GitHub for Atom to share workspaces in real-time. It
 uses WebRTC to establish encrypted peer-to-peer connections. Users must have
 Node 7+ and PostgreSQL 9.x installed, and be authenticated via GitHub before
-starting a session. 
+starting a session.
 
 Participants can follow along with the active tab automatically and see any
 changes made in real-time. Teletype is still in beta mode and lacks many of the
@@ -947,7 +947,7 @@ Codeanywhere is a cloud based IDE comparable to AWS Cloud9. It runs on Ubuntu
 (64-bit) containers and provides root access to the owner. All the participants
 must create an account on Codeanywhere to join a session, however, only the
 owner of the container is billed for the usage. The host can invite participants
-directly from the dashboard and start collaborating. 
+directly from the dashboard and start collaborating.
 
 The host has full access to the instance and can access it remotely via SSH.
 Sharing servers internally is not possible - all HTTP and websocket ports on the
@@ -980,7 +980,7 @@ sessions](https://docs.replit.com/tutorials/05-pair-programming-using-multiplaye
 via email or Replit username. All participants can type in real time or
 permanently focus on other participants. Unlike most other tools we tested,
 Replit has separate undo stacks - each participant can revert their own changes
-without affecting the changes made by other participants. 
+without affecting the changes made by other participants.
 
 Participants can run code (and see the same results), see git diffs, stage, and
 commit changes with their own git credentials. In addition to chat, Replit
@@ -1005,7 +1005,7 @@ interesting tool but it needs some polishing; we will revisit it in the future.
 Drovio is a remote desktop client available on macOS, Windows and Linux. It
 allows the host to share their screen with up to 10 participants who each get
 their own mouse cursors to interact with the host’s desktop. The host can switch
-the participant to spectator mode to restrict their access. 
+the participant to spectator mode to restrict their access.
 
 Drovio can be [integrated with Slack](https://www.drovio.com/slack) to start
 sessions from within chat. The participants can join sessions with the app or

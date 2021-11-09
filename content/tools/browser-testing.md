@@ -1077,9 +1077,9 @@ customized test environment but live streaming of logs and videos of tests is
 possible.
 
 AWS Device Farm supports a total of [2
-integrations](https://docs.aws.amazon.com/devicefarm/latest/developerguide/aws-device-farm-tools-plugins.html)
-- Jenkins CI and Gradle build system in Android Studio. This is a major
-limitation - even the omnipresent ticketing system [Jira is not
+integrations](https://docs.aws.amazon.com/devicefarm/latest/developerguide/aws-device-farm-tools-plugins.html):
+Jenkins CI and Gradle build system in Android Studio. This is a major
+limitation. Even the omnipresent ticketing system [Jira is not
 supported](https://jira.atlassian.com/browse/JSWCLOUD-15207). AWS device farm
 does not integrate well with existing tools and does not offer a good selection
 of browsers and devices. Therefore, we did not select it for a full review.
