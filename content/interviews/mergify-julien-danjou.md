@@ -106,14 +106,14 @@ it's worked pretty well for us.
 
 For example, we'll do a Git clone of the repo with the right settings, then
 we'll do whatever we need to do to build the right branch and the right tree for
-you, and then push that back to GitHub. 
+you, and then push that back to GitHub.
 
 ### What's been the most interesting development challenge building Mergify?
 
 I think it's been working with the GitHub API because we use them heavily. We
 use every corner of the API. A lot of our job is talking with GitHub tech
 support and engineers because we are regularly finding bugs in the GitHub API!
-We use it in a way nobody does. 
+We use it in a way nobody does.
 
 Once, one of the GitHub engineers reached out to us, because they broke
 something and we were the only user of that API. It's very interesting because
