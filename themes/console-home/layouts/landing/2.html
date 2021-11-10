@@ -38,7 +38,8 @@
             </script>
             <p>
                 Every Thursday.
-                <a class="link" onclick="blur()" href="/latest/">See the latest email</a>.
+                <a onclick="blur();" class="console-button-text icon-right" href="#latest-newsletter" title="Read the latest email" rel="noopener"><span>Read the latest email</span>
+                    {{ partial "icons/scroll-down.html" }}</a>
             </p>
         </div>
         <div class="bottom">
@@ -84,8 +85,19 @@
     </section>
     
     <section class="page-section page-section-landing what-we-do-1">
+        <h3 class="title title-2 rich-title">Interesting tools & new betas</h3>
+        <span data-checkpoint-other-content></span>
+        <ul>
+            <li>2-3 developer tool recommendations.</li>
+            <li>3-5 interesting new beta releases.</li>
+            <li>Interviews with the people behind the tools.</li>
+        </ul>
+        <a onclick="blur();" class="console-button-text icon-right" href="/tools/" title="See all developer tool reviews" rel="noopener"><span>Check out all our past reviews</span>
+            {{ partial "icons/arrow-right.html" }}</a>
     </section>
     
+    <span data-checkpoint-latest-newsletter id="latest-newsletter"></span>
+
     <section class="page-section page-section-landing latest-newsletter">
     </section>
 
