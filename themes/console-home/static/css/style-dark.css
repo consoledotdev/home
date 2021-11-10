@@ -232,8 +232,9 @@
 .theme.page-feature,
 .theme.page-feature-article,
 .theme.page-tools-category-review,
-.theme.page-advertise ,
-.theme.page-badges {
+.theme.page-advertise,
+.theme.page-badges,
+.theme.page-landing {
     background: var(--theme-content-bg-3);
 }
 
@@ -284,5 +285,14 @@
 }
 
 .theme .main-advertise img.dark {
+    display: initial;
+}
+
+/* Landing page specific */
+.theme .main-landing img.light {
+    display: none;
+}
+
+.theme .main-landing img.dark {
     display: initial;
 }

@@ -312,3 +312,12 @@ body.theme.page-advertise.checkpoint-campaigns {
 body.theme.page-advertise.checkpoint-contact {
     background: var(--theme-content-bg-0);
 }
+
+/* Landing page specific */
+.theme .main-landing img.light {
+    display: initial;
+}
+
+.theme .main-landing img.dark {
+    display: none;
+}
