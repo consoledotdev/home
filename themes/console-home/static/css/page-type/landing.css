@@ -372,8 +372,79 @@ body.page-landing.checkpoint-other-content .hero .lines {
     max-width: none;
 }
 
+@media (max-width: 768px) {
+    .page-section-landing.what-we-do-1 {
+        grid-auto-columns: 1.3fr 0.7fr;
+    }
+}
+
+@media (max-width: 660px) {
+    .page-section-landing.what-we-do-1 {
+        grid-auto-columns: 0.8fr 0;
+    }
+}
+
+@media (max-width: 414px) {
+    .page-section-landing.what-we-do-1 {
+        grid-auto-columns: 0.85fr 0;
+    }
+}
+
 .page-section-landing.what-we-do-1 .bottom {
     order: -1;
+}
+
+@media (min-width: 769px) and (max-width: 1056px) {
+    .page-section-landing.what-we-do-1 .bottom {
+        margin-left: calc(calc(100vw - 1056px) * 0.279);
+    }
+}
+
+@media (max-width: 930px) {
+    .page-section-landing.what-we-do-1 .bottom {
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 830px) {
+    .page-section-landing.what-we-do-1 .bottom {
+        transform: scale(0.85);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-section-landing.what-we-do-1 .bottom {
+        order: initial;
+        margin-left: calc(var(--space4_5) * -1);
+    }
+}
+
+@media (max-width: 660px) {
+    .page-section-landing.what-we-do-1 .bottom {
+        margin-left: calc(var(--space2) * -0.6);
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 544px) {
+    .page-section-landing.what-we-do-1 .bottom {
+        margin-left: 0;
+        transform: scale(0.75);
+    }
+}
+
+@media (max-width: 500px) {
+    .page-section-landing.what-we-do-1 .bottom {
+        margin-left: 0;
+        transform: scale(0.7);
+    }
+}
+
+@media (max-width: 414px) {
+    .page-section-landing.what-we-do-1 .bottom {
+        margin-left: calc(var(--space4) * -1);
+        transform: scale(0.65);
+    }
 }
 
 .page-section-landing.what-we-do-1 .console-button-text {
@@ -408,6 +479,13 @@ body.page-landing.checkpoint-other-content .hero .lines {
     margin-left: calc(var(--space4_5) + var(--space2));
 }
 
+@media (max-width: 660px) {
+    .page-section-landing.what-we-do-1 .categories-wrapper {
+        min-width: 176px;
+        transform: skew(0deg);
+    }
+}
+
 .page-section-landing.what-we-do-1 .categories-wrapper .categories:not(:last-child) {
     margin-bottom: var(--space3_5);
 }
@@ -422,6 +500,20 @@ body.page-landing.checkpoint-other-content .hero .lines {
     height: calc(var(--space3_5));
     margin-top: 0;
     margin-right: var(--space3);
+}
+
+.page-section-landing.what-we-do-1 .console-button-text span.short {
+    display: none;
+}
+
+@media (max-width: 660px) {
+    .page-section-landing.what-we-do-1 .console-button-text span.long {
+        display: none;
+    }
+
+    .page-section-landing.what-we-do-1 .console-button-text span.short {
+        display: block;
+    }
 }
 
 /* What we do 2 */
@@ -463,6 +555,13 @@ body.page-landing.checkpoint-other-content .hero .lines {
     margin-bottom: var(--space6);
 }
 
+@media (max-width: 540px) {
+    .page-section:not(:first-child).page-section-landing.cta {
+        margin-top: calc(var(--space5) + var(--space6) - var(--space4) + 3vw);
+        margin-bottom: var(--space5);
+    }
+}
+
 .page-section-landing.cta .neon-planes-wrapper {
     position: absolute;
     width: 41.55%;
@@ -470,6 +569,20 @@ body.page-landing.checkpoint-other-content .hero .lines {
     left: 0;
     transform: translateY(-56%);
     z-index: 10;
+}
+
+@media (min-width: 769px) and (max-width: 1056px) {
+    .page-section-landing.cta .neon-planes-wrapper {
+        width: calc(41.55% + (calc(1056px - 100vw) * 0.5));
+    }
+}
+
+@media (max-width: 768px) {
+    .page-section-landing.cta .neon-planes-wrapper {
+        width: calc(80% + (calc(768px - 100vw) * 0.3));
+        margin-left: 50%;
+        transform: translate(-40%, -50%);
+    }
 }
 
 .page-section-landing.cta .neon-planes-wrapper .neon-planes.all {
@@ -499,6 +612,12 @@ body.page-landing.checkpoint-other-content .hero .lines {
     z-index: 20;
 }
 
+@media (max-width: 768px) {
+    .page-section-landing.cta .subscribe-cta {
+        padding: 0;
+    }
+}
+
 .page-section-landing.cta .title {
     margin: 0;
 }
@@ -507,13 +626,13 @@ body.page-landing.checkpoint-other-content .hero .lines {
     display: none;
 }
 
-@media (min-width: 940px) {
+@media (min-width: 941px) {
     .subscribe-cta.layout-wide.size-medium .console-form {
         max-width: 340px;
     }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1101px) {
     .subscribe-cta.layout-wide.size-medium .console-form {
         max-width: 40%;
     }
