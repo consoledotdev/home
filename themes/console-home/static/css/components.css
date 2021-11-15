@@ -254,6 +254,10 @@
     hyphens: auto;
 }
 
+.title-3 a:link {
+    font-weight: 500;
+}
+
 .link:hover,
 .link:focus {
     color: var(--theme-link-text-focus);
