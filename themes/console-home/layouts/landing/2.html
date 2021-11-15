@@ -85,15 +85,32 @@
     </section>
     
     <section class="page-section page-section-landing what-we-do-1">
-        <h3 class="title title-2 rich-title">Interesting tools & new betas</h3>
-        <span data-checkpoint-other-content></span>
-        <ul>
-            <li>2-3 developer tool recommendations.</li>
-            <li>3-5 interesting new beta releases.</li>
-            <li>Interviews with the people behind the tools.</li>
-        </ul>
-        <a onclick="blur();" class="console-button-text icon-right" href="/tools/" title="See all developer tool reviews" rel="noopener"><span>Check out all our past reviews</span>
-            {{ partial "icons/arrow-right.html" }}</a>
+        <div class="top">
+            <h3 class="title title-2 rich-title">Interesting tools & new betas</h3>
+            <span data-checkpoint-other-content></span>
+            <ul>
+                <li>2-3 developer tool recommendations.</li>
+                <li>3-5 interesting new beta releases.</li>
+                <li>Interviews with the people behind the tools.</li>
+            </ul>
+            <a onclick="blur();" class="console-button-text icon-right" href="/tools/" title="See all developer tool reviews" rel="noopener"><span>Check out all our past reviews</span>
+                {{ partial "icons/arrow-right.html" }}</a>
+        </div>
+        <div class="bottom">
+            <div class="neon-planes-wrapper">
+                {{ partial "components/neon-planes.html" (dict "context" . "type" "two" ) }}
+            </div>
+            <div class="categories-wrapper">
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "api" "subcategory" (dict "label" "API" "name" "api")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "cloud" "subcategory" (dict "label" "Cloud" "name" "cloud")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "data-science" "subcategory" (dict "label" "Data Science" "name" "data-science")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "database" "subcategory" (dict "label" "Database" "name" "database")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "developer-tools" "subcategory" (dict "label" "Developer Tools" "name" "developer-tools")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "devops" "subcategory" (dict "label" "DevOps" "name" "devops")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "misc" "subcategory" (dict "label" "Misc" "name" "misc")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "security" "subcategory" (dict "label" "Security" "name" "security")) "large" "true" )  }}
+            </div>
+        </div>
     </section>
     
     <span data-checkpoint-latest-newsletter id="latest-newsletter"></span>
@@ -101,8 +118,11 @@
     <section class="page-section page-section-landing latest-newsletter">
     </section>
 
-    <section class="page-section page-section-badges cta">
-        {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
+    <section class="page-section page-section-landing cta">
+        <div class="neon-planes-wrapper">
+            {{ partial "components/neon-planes.html" (dict "context" . "type" "all" ) }}
+        </div>
+        {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription ) }}
     </section>
 
     <script src="/js/page-type/landing.js"></script>
