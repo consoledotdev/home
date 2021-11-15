@@ -118,6 +118,65 @@
     <span data-checkpoint-latest-newsletter id="latest-newsletter"></span>
 
     <section class="page-section page-section-landing latest-newsletter">
+        <h2 class="title title-1">Latest Console Newsletter</h2>
+        <p><span>A weekly digest of the best developer tools</span> – We keep track of everything - dev tools, devops, cloud, and APIs - so you don't have to. This is the content of the newsletter sent on
+        {{ range first 1 $.Site.Data.toolslatest.items }}{{ index . "Scheduled for" | dateFormat "2 Jan 2006" }}{{ end }}.</p>
+
+        {{ $toolsCount := len $.Site.Data.toolslatest.items }}
+        {{ $toolsCount = sub $toolsCount 1 }}
+
+        <h4 class="title title-3">Contents</h4>
+        <div class="latest-newsletter-list">
+            {{ range $index, $tool := $.Site.Data.toolslatest.items }}
+                <p>{{ partial "icons/tool.html" }} <a href="{{ index . "URL" }}" class="link">{{ index . "Tool/Product/Project" }}</a> – {{ index . "What is it?" }}</p>
+            {{ end }}
+            {{- if $.Site.Data.betaslatest.items -}}
+                {{ $betaCount := len $.Site.Data.betaslatest.items }}
+                {{ $betaCount = sub $betaCount 1 }}
+                {{ range $index, $beta := $.Site.Data.betaslatest.items }}
+                    <p>{{ partial "icons/beta.html" }} <a href="{{ index . "URL" }}" class="link">{{ index . "Tool/Product/Project" }}</a> – {{ index . "What is it?" }}</p>
+                {{ end }}
+            {{- end -}}
+        </div>
+
+        <h3 class="title title-2">Interesting tools</h3>
+        <p>Each week we review 2-3 of the most interesting developer tools. Here's what we featured this week. <a href="/tools/" class="link">View the full archive</a>.</p>
+        {{ range $index, $tool := $.Site.Data.toolslatest.items }}
+            <div class="latest-newsletter-item">
+                <h4 class="title title-3"><a href="{{ index . "URL" }}" class="link">{{ index . "Tool/Product/Project" }}</a></h4>
+                <h6 class="title title-5">{{ index . "What is it?" }}</h6>
+                <p><strong>What we like:</strong> {{ index . "What we like" }}</p>
+                <p><strong>What we don&apos;t like:</strong> {{ index . "What we dislike" }}
+            </div>
+        {{ end }}
+
+        <h3 class="title title-2">New betas &amp; early release programs</h3>
+        {{- if $.Site.Data.betaslatest.items -}}
+            <p>We also include some of the more interesting beta and early access releases. Here's the ones we featured this week. View the live list on <a href="/betas/" class="link">Beta Console</a>.</p>
+            {{ $betaCount := len $.Site.Data.betaslatest.items }}
+            {{ $betaCount = sub $betaCount 1 }}
+            {{ range $index, $beta := $.Site.Data.betaslatest.items }}
+                <div class="latest-newsletter-item">
+                    <h4 class="title title-3"><a href="{{ index . "URL" }}" class="link">{{ index . "Tool/Product/Project" }}</a></h4>
+                    <h6 class="title title-5">{{ index . "What is it?" }}</h6>
+                    <div class="taxonomy">
+                        <div class="categories">
+                            {{ partial (print "icons/" (replace (lower (index . "Category")) " " "-") ".html") }}
+                            <span class="category">{{ index . "Category" }}</span>
+                        </div>
+                        <div class="tags">
+                            {{ partial "icons/tag.html" }}
+                            <span class="tag">{{ index . "Type" }}</span>, 
+                            <span class="tag">{{ index . "Access" }} access</span>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        {{- else -}}
+            <p>Nothing of note this week. We only feature the most interesting beta
+            releases you should actually check out. In the meantime, have a look at <a href="/betas/" class="link">Beta Console</a>, our live list of every developer tool and early access release.</p>
+        {{- end -}}
+
     </section>
 
     <section class="page-section page-section-landing cta">
