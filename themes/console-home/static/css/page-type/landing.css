@@ -43,7 +43,7 @@ body.page-landing.checkpoint-other-content .hero .lines {
 
 @media (min-width: 1280px) {
     .main-landing p,
-    .main-landing .quote {
+    .page-landing .main-landing .quote {
         font-size: var(--t-size1);
     }
 
@@ -63,8 +63,9 @@ body.page-landing.checkpoint-other-content .hero .lines {
         font-size: var(--t-size-1);
     }
 
-    .main-landing ul li {
+    .page-landing .main-landing ul li {
         font-size: var(--t-size1);
+        line-height: var(--t-lH3);
     }
 
     .main-landing .pre {
@@ -132,9 +133,17 @@ body.page-landing.checkpoint-other-content .hero .lines {
     .main-landing input.console-input-toggle + label {
         font-size: var(--t-size-1);
     }
+
+    .page-landing .page-section-landing.what-we-do-2 .col p {
+        font-size: var(--t-size2);
+    }
 }
 
 .page-section:not(:first-child).page-section-landing {
+    margin-top: calc(var(--space6) - var(--space3));
+}
+
+.separator {
     margin-top: calc(var(--space6) - var(--space3));
 }
 
@@ -237,6 +246,12 @@ body.page-landing.checkpoint-other-content .hero .lines {
         grid-auto-flow: column;
         grid-auto-columns: 1fr;
         align-items: center;
+    }
+}
+
+@media (min-width: 1280px) {
+    .page-section-landing.trust-signals {
+        gap: var(--space5);
     }
 }
 
@@ -349,8 +364,157 @@ body.page-landing.checkpoint-other-content .hero .lines {
 
 /* What we do 1 */
 .page-section-landing.what-we-do-1 {
+    display: grid;
+    gap: var(--space4_5);
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    max-width: none;
+}
+
+.page-section-landing.what-we-do-1 .bottom {
+    order: -1;
 }
 
 .page-section-landing.what-we-do-1 .console-button-text {
     margin-top: var(--space3_5);
+}
+
+.page-section-landing.what-we-do-1 .bottom {
+    position: relative;
+    padding-bottom: calc(var(--space4_5) - var(--space2));
+}
+
+.page-section-landing.what-we-do-1 .neon-planes-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.page-section-landing.what-we-do-1 .neon-planes-wrapper .neon-plane {
+    bottom: 0;
+    top: auto;
+    --size: calc(var(--space7) + var(--space3));
+}
+
+.page-section-landing.what-we-do-1 .neon-planes-wrapper .neon-planes div {
+    transform-origin: 0 100%;
+}
+
+.page-section-landing.what-we-do-1 .categories-wrapper {
+    position: relative;
+    transform: skew(-26.7deg);
+    transform-origin: 0 100%;
+    margin-left: calc(var(--space4_5) + var(--space2));
+}
+
+.page-section-landing.what-we-do-1 .categories-wrapper .categories:not(:last-child) {
+    margin-bottom: var(--space3_5);
+}
+
+.page-section-landing.what-we-do-1 .categories-wrapper .categories {
+    font-size: var(--t-size0);
+    align-items: center;
+}
+
+.page-section-landing.what-we-do-1 .categories-wrapper .categories .icon {
+    width: calc(var(--space3_5));
+    height: calc(var(--space3_5));
+    margin-top: 0;
+    margin-right: var(--space3);
+}
+
+/* What we do 2 */
+.page-section-landing.what-we-do-2 {
+    display: grid;
+    gap: var(--space5);
+    max-width: none;
+}
+
+@media (min-width: 769px) {
+    .page-section-landing.what-we-do-2 {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        align-items: start;
+    }
+}
+
+.page-section-landing.what-we-do-2 .col .icon {
+    width: var(--space5);
+    height: var(--space5);
+}
+
+.page-section-landing.what-we-do-2 .col .title {
+    margin-top: var(--space4);
+}
+
+.page-section-landing.what-we-do-2 .col p {
+    font-size: var(--t-size1);
+    margin-top: var(--space4);
+}
+
+/* What we do 2 */
+.page-section-landing.cta {
+    max-width: none;
+}
+
+.page-section:not(:first-child).page-section-landing.cta {
+    margin-top: calc(var(--space6) + var(--space6) - var(--space4) + 3vw);
+    margin-bottom: var(--space6);
+}
+
+.page-section-landing.cta .neon-planes-wrapper {
+    position: absolute;
+    width: 41.55%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-56%);
+    z-index: 10;
+}
+
+.page-section-landing.cta .neon-planes-wrapper .neon-planes.all {
+    position: relative;
+    padding-bottom: 65%;
+}
+
+.page-section-landing.cta .neon-planes-wrapper .neon-planes.all .neon-plane.triad-01 {
+    margin-left: 20.73%;
+}
+
+.page-section-landing.cta .neon-planes-wrapper .neon-planes.all .neon-plane.triad-02 {
+    margin-top: 12.5%;
+    margin-left: 0;
+}
+
+.page-section-landing.cta .neon-planes-wrapper .neon-planes.all .neon-plane.triad-03 {
+    margin-top: 20.5%;
+    margin-left: 32.8%;
+}
+
+.page-section-landing.cta .subscribe-cta {
+    position: relative;
+    background: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 20;
+}
+
+.page-section-landing.cta .title {
+    margin: 0;
+}
+
+.page-section-landing.cta p {
+    display: none;
+}
+
+@media (min-width: 940px) {
+    .subscribe-cta.layout-wide.size-medium .console-form {
+        max-width: 340px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .subscribe-cta.layout-wide.size-medium .console-form {
+        max-width: 40%;
+    }
 }
