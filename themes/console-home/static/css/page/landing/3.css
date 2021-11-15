@@ -1,0 +1,64 @@
+/* Console Landing page 3
+   ========================================================================== */
+.page-section-landing.opening .bottom {
+    position: relative;
+    display: grid;
+    align-items: center;
+    max-width: none;
+}
+
+.page-section-landing.opening .bottom .title {
+    display: none;
+}
+
+.page-section-landing.opening .bottom .console-form {
+    margin: var(--space4) 0;
+}
+
+@media (min-width: 769px) {
+    .page-section-landing.opening .bottom {
+        text-align: center;
+    }
+
+    .page-section-landing.opening .bottom .title {
+        display: inline-flex;
+        margin-bottom: 0;
+    }
+
+    .page-section-landing.opening .bottom .title .icon {
+        width: var(--space3_5);
+        height: var(--space3_5);
+    }
+}
+
+.page-section-landing.opening .content-wrapper {
+    position: relative;
+    z-index: 20;
+}
+
+.page-section-landing.opening .neon-planes-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 10;
+}
+
+.page-section-landing.opening .neon-planes-wrapper .neon-planes.all {
+    position: relative;
+    padding-bottom: 65%;
+}
+
+.page-section-landing.opening .neon-planes-wrapper .neon-planes.all .neon-plane.triad-01 {
+    margin-left: calc(20.73% + var(--skew-offset));
+}
+
+.page-section-landing.opening .neon-planes-wrapper .neon-planes.all .neon-plane.triad-02 {
+    margin-top: 12.5%;
+}
+
+.page-section-landing.opening .neon-planes-wrapper .neon-planes.all .neon-plane.triad-03 {
+    margin-top: 20.5%;
+    margin-left: calc(32.8% + var(--skew-offset));
+}
