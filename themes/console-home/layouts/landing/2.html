@@ -119,7 +119,7 @@
 
     <section class="page-section page-section-landing latest-newsletter">
         <h2 class="title title-1">Latest Console Newsletter</h2>
-        <p><span>A weekly digest of the best developer tools</span> – We keep track of everything - dev tools, devops, cloud, and APIs - so you don't have to. This is the content of the newsletter sent on
+        <p><b>A weekly digest of the best developer tools</b> – We keep track of everything - dev tools, devops, cloud, and APIs - so you don't have to. This is the content of the newsletter sent on
         {{ range first 1 $.Site.Data.toolslatest.items }}{{ index . "Scheduled for" | dateFormat "2 Jan 2006" }}{{ end }}.</p>
 
         {{ $toolsCount := len $.Site.Data.toolslatest.items }}
@@ -145,8 +145,8 @@
             <div class="latest-newsletter-item">
                 <h4 class="title title-3"><a href="{{ index . "URL" }}" class="link">{{ index . "Tool/Product/Project" }}</a></h4>
                 <h6 class="title title-5">{{ index . "What is it?" }}</h6>
-                <p><strong>What we like:</strong> {{ index . "What we like" }}</p>
-                <p><strong>What we don&apos;t like:</strong> {{ index . "What we dislike" }}
+                <p><b>What we like:</b> {{ index . "What we like" }}</p>
+                <p><b>What we don&apos;t like:</b> {{ index . "What we dislike" }}
                 {{ if eq (index .Sponsored) "TRUE" -}}
                     {{ partial "components/notice-disclosure-item.html" }}
                 {{- end }}

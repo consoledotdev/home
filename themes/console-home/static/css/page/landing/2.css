@@ -1,0 +1,50 @@
+/* Console Landing page 2
+   ========================================================================== */
+
+/* Latest Newsletter */
+.page-section-landing.latest-newsletter {
+}
+
+.page-section-landing.latest-newsletter .latest-newsletter-list p {
+    text-indent: calc(var(--space3_5) * -1);
+    margin-left: var(--space3_5);
+}
+
+.page-section-landing.latest-newsletter .latest-newsletter-list .icon {
+    vertical-align: -0.125em;
+    margin-right: var(--space1);
+    width: var(--space3);
+    height: var(--space3);
+}
+
+.page-section-landing.latest-newsletter .latest-newsletter-item {
+    margin-top: var(--space4);
+}
+
+.page-section-landing.latest-newsletter .title-2 {
+    margin-top: var(--space4_5);
+    margin-bottom: var(--space3);
+}
+
+.page-section-landing.latest-newsletter .title-3 {
+    margin-top: var(--space4);
+}
+
+.page-section-landing.latest-newsletter .title-5 {
+    margin-bottom: var(--space3);
+}
+
+.page-section-landing.latest-newsletter .taxonomy {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-bottom: calc(var(--space2) * -1);
+}
+
+.page-section-landing.latest-newsletter .taxonomy > *:not(:last-child) {
+    margin-right: var(--space3);
+}
+
+.page-section-landing.latest-newsletter .taxonomy > * {
+    margin-bottom: var(--space2);
+}
