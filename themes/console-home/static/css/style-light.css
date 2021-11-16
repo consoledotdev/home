@@ -323,3 +323,7 @@ body.theme.page-advertise.checkpoint-contact {
 .theme .main-landing img.dark {
     display: none;
 }
+
+body.theme.page-landing.checkpoint-other-content {
+    background: var(--theme-content-bg-0);
+}
