@@ -169,6 +169,7 @@ body.page-landing.checkpoint-other-content .hero .lines {
 
 .main-landing .quote {
     font-size: var(--t-size0);
+    background: none;
 }
 
 .main-landing ul li {
