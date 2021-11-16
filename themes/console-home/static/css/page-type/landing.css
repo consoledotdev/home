@@ -545,7 +545,7 @@ body.page-landing.checkpoint-other-content .hero .lines {
     margin-top: var(--space4);
 }
 
-/* What we do 2 */
+/* CTA */
 .page-section-landing.cta {
     max-width: none;
 }
@@ -626,15 +626,22 @@ body.page-landing.checkpoint-other-content .hero .lines {
     display: none;
 }
 
-@media (min-width: 941px) {
-    .subscribe-cta.layout-wide.size-medium .console-form {
-        max-width: 340px;
+@media (min-width: 769px) {
+    .subscribe-cta.layout-wide.size-large .console-form {
+        flex-flow: row nowrap;
+        align-items: center;
+        width: auto;
+    }
+
+    .subscribe-cta.layout-wide.size-large .console-form .console-button {
+        margin-top: 0;
+        margin-left: var(--space3);
     }
 }
 
-@media (min-width: 1101px) {
-    .subscribe-cta.layout-wide.size-medium .console-form {
-        max-width: 40%;
+@media (min-width: 1056px) {
+    .subscribe-cta.layout-wide.size-large .console-form {
+        min-width: 45%;
     }
 }
 
