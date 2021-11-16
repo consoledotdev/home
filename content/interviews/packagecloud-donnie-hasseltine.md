@@ -1,14 +1,14 @@
 ---
 title: Interview with Donnie Hasseltine, PackageCloud
 who: Donnie Hasseltine
-role: Chief Security Officer
+role: CEO
 org: PackageCloud
 what: Hosted package repository service.
 tags: ["Packaging"]
 date: 2021-11-04T12:00:00Z
 draft: false
 headerType: fixed
-summary: Interview with Donnie Hasseltine, Chief Security Officer, PackageCloud.
+summary: Interview with Donnie Hasseltine, CEO, PackageCloud.
 isPage: interviews
 topImg1Src: /img/interviews/packagecloud-donnie-hasseltine-profile.jpeg
 topImg2Src: /img/interviews/packagecloud-donnie-hasseltine-logo.jpg
