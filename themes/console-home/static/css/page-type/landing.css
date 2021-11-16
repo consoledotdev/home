@@ -147,19 +147,23 @@ body.page-landing.checkpoint-other-content .hero .lines {
     margin-top: calc(var(--space6) - var(--space3));
 }
 
+.page-landing .main-nav .menu-popup-wrapper {
+    display: none;
+}
+
 @media (min-width: 769px) {
-    .main-nav ul {
+    .page-landing .main-nav ul {
         display: none;
     }
 }
 
 @media (max-width: 768px) {
-    .main-nav > .menu-toggle {
+    .page-landing .main-nav > .menu-toggle {
         display: none;
     }
 
-    .main-nav > .theme-switcher {
-        display: block;
+    .page-landing .main-nav > .theme-switcher {
+        display: flex;
     }
 }
 
