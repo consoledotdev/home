@@ -1,5 +1,46 @@
 /* Console Landing page 3
    ========================================================================== */
+
+/* Opening */
+.page-section-landing.opening {
+    gap: var(--space5_5);
+    grid-auto-columns: 1.1fr 0.9fr;
+    z-index: 10;
+}
+
+.page-section-landing.opening .top {
+    max-width: 600;
+}
+
+@media (min-width: 723px) and (max-width: 860px) {
+    .page-section-landing.opening .top .title br {
+        display: none;
+    }
+}
+
+@media (max-width: 880px) {
+    .page-section-landing.opening {
+        grid-auto-columns: 1.2fr 0.8fr;
+    }
+
+    .page-section-landing.opening .top {
+        min-width: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .page-section-landing.opening {
+        grid-auto-columns: 1.3fr 0.7fr;
+        gap: var(--space5);
+    }
+}
+
+@media (min-width: 1280px) {
+    .page-section-landing.opening .top {
+        max-width: 760;
+    }
+}
+
 .page-section-landing.opening .bottom {
     position: relative;
     display: grid;
@@ -7,19 +48,17 @@
     max-width: none;
 }
 
+@media (min-width: 723px) {
+    .page-section-landing.opening .bottom {
+        text-align: center;
+    }
+}
+
 .page-section-landing.opening .bottom .title {
     display: none;
 }
 
-.page-section-landing.opening .bottom .console-form {
-    margin: var(--space4) 0;
-}
-
-@media (min-width: 769px) {
-    .page-section-landing.opening .bottom {
-        text-align: center;
-    }
-
+@media (min-width: 723px) {
     .page-section-landing.opening .bottom .title {
         display: inline-flex;
         margin-bottom: 0;
@@ -28,6 +67,22 @@
     .page-section-landing.opening .bottom .title .icon {
         width: var(--space3_5);
         height: var(--space3_5);
+    }
+}
+
+.page-section-landing.opening .bottom .console-form {
+    margin: var(--space4) 0;
+}
+
+@media (min-width: 723px) {
+    .page-section-landing.opening .bottom .console-form {
+        flex-flow: column nowrap;
+        align-items: stretch;
+    }
+
+    .page-section-landing.opening .bottom .console-form .console-button {
+        margin-left: 0;
+        margin-top: var(--space3);
     }
 }
 
@@ -41,7 +96,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
+    width: 157%;
+    max-width: 700px;
+    min-width: 560px;
     z-index: 10;
 }
 
@@ -61,4 +118,9 @@
 .page-section-landing.opening .neon-planes-wrapper .neon-planes.all .neon-plane.triad-03 {
     margin-top: 20.5%;
     margin-left: calc(32.8% + var(--skew-offset));
+}
+
+/* Trust Signals */
+.page-section-landing.trust-signals {
+    z-index: 20;
 }
