@@ -1376,6 +1376,10 @@ p em {
     font-style: normal;
 }
 
+p b {
+    font-weight: 500;
+}
+
 p.description {
     margin-top: var(--space4);
 }
