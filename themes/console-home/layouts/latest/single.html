@@ -33,7 +33,7 @@
             <p>Each week we review 2-3 of the most interesting developer tools. Here's what we featured this week. <a href="/tools/" class="link">View the full archive</a>.</p>
             {{ range $index, $tool := $.Site.Data.toolslatest.items }}
                 <div class="latest-newsletter-item">
-                    <h4 class="title title-3"><a href="{{ index . "URL" }}" class="link">{{ index . "Tool/Product/Project" }}</a></h4>
+                    <h4 class="title title-3"><a href="{{ index . "URL" }}" class="link"{{ if eq .Sponsored "TRUE" }} rel="sponsored"{{ end }}>{{ index . "Tool/Product/Project" }}</a></h4>
                     <h6 class="title title-5">{{ index . "What is it?" }}</h6>
                     <p><b>What we like:</b> {{ index . "What we like" }}</p>
                     <p><b>What we don&apos;t like:</b> {{ index . "What we dislike" }}
