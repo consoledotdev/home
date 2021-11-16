@@ -2883,6 +2883,7 @@ body:not(.mobile) .console-control:hover:before {
 .neon-planes {
     width: 100%;
     height: 0;
+    backdrop-filter: opacity(1);
 }
 
 .neon-plane {
