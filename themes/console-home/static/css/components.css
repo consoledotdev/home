@@ -2773,30 +2773,42 @@ body:not(.mobile) .console-control:hover:before {
 /* Disclosure Notice
    ================================================================================================================ */
 
-.disclosure-notice p span {
+.notice-disclosure p span {
     font-weight: 400;
     color: var(--theme-brand-accent-text-idle);
 }
 
-.disclosure-notice p {
+.notice-disclosure p {
     color: var(--theme-text-4);
 }
 
-/* Item Disclosure
+/* Notice Disclosure Item
    ================================================================================================================ */
-.item-disclosure {
+
+.notice-disclosure-item p span {
+    font-weight: 400;
+    color: var(--theme-brand-accent-text-idle);
+}
+
+.notice-disclosure-item p {
+    color: var(--theme-text-4);
+}
+
+/* Notice Disclosure Item (Popup)
+   ================================================================================================================ */
+.notice-disclosure-item-popup {
     position: relative;
 }
 
-.item-disclosure-indicator {
+.notice-disclosure-indicator {
     font-size: var(--t-size-3);
     font-weight: 400;
     color: var(--theme-brand-accent-text-idle);
     cursor: default;
 }
 
-.item-disclosure-indicator:hover,
-.item-disclosure-indicator:focus {
+.notice-disclosure-indicator:hover,
+.notice-disclosure-indicator:focus {
     color: var(--theme-brand-accent-text-hover);
 }
 

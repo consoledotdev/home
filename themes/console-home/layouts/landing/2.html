@@ -147,6 +147,9 @@
                 <h6 class="title title-5">{{ index . "What is it?" }}</h6>
                 <p><strong>What we like:</strong> {{ index . "What we like" }}</p>
                 <p><strong>What we don&apos;t like:</strong> {{ index . "What we dislike" }}
+                {{ if eq (index .Sponsored) "TRUE" -}}
+                    {{ partial "components/notice-disclosure-item.html" }}
+                {{- end }}
             </div>
         {{ end }}
 
