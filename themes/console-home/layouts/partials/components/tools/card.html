@@ -56,16 +56,7 @@
 				<div class="left">
 					<span class="date">Reviewed: {{ $showDate }}</span>
 					{{ if eq .Sponsored "TRUE" -}}
-						<div class="item-disclosure">
-							<div class="item-disclosure-indicator" data-tooltip-handle>✦ Sponsored</div>
-							<div class="tooltip-hook tooltip-top-down tooltip-small">
-								<div data-tooltip class="tooltip">
-									<div class="tooltip-content">
-										<p class="x-small">All reviews are editorially independent. Where indicated, we work with some partners to provide extras to our audience, but do not accept payment for reviews.</p>
-									</div>
-								</div>
-							</div>
-						</div>
+						{{ partial "components/notice-disclosure-item-popup.html" }}
 					{{- end }}
 				</div>
 				{{ with .Interview -}}

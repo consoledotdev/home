@@ -587,7 +587,7 @@ body.show-planes:after {
     color: var(--c-blue-06-main);
 }
 
-.page-section .disclosure-notice:not(:first-child) {
+.page-section .notice-disclosure:not(:first-child) {
     margin-top: var(--space3);
 }
 
