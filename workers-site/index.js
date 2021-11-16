@@ -77,12 +77,12 @@ async function handleEvent(event) {
         // Permanent redirects
         const redirectMap = new Map([
             ["/advertise", "https://console.dev/advertise/"],
-            ["/advertise", "https://console.dev/advertise/"],
             ["/articles/ssh-alternatives-for-mobile-high-latency-unreliable-connections", "https://console.dev/articles/ssh-alternatives-for-mobile-high-latency-unreliable-connections/"],
             ["/articles/ssh-alternatives-for-mobile-low-latency-unreliable-connections", "https://console.dev/articles/ssh-alternatives-for-mobile-high-latency-unreliable-connections/"],
             ["/articles/ssh-alternatives-for-mobile-low-latency-unreliable-connections/", "https://console.dev/articles/ssh-alternatives-for-mobile-high-latency-unreliable-connections/"],
             ["/articles/neovim-best-code-editor-ide-for-developers", "https://console.dev/articles/neovim-best-code-editor-ide-for-developers/"],
             ["/collections/neovim-best-code-editor-ide-for-developers/", "https://console.dev/articles/neovim-best-code-editor-ide-for-developers/"],
+            ["/betas", "https://console.dev/betas/"],
             ["/beta", "https://console.dev/betas/"],
             ["/beta/", "https://console.dev/betas/"],
             ["/mars", "https://console.dev/research/mars/"],
