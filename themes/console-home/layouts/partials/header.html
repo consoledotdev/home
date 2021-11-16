@@ -25,7 +25,7 @@
                         <li{{ if eq .context.Params.isPage "interviews" }} class="is-selected"{{ end }}>
                             <a onclick="blur();" href="/interviews/">Interviews</a>
                         </li>
-                        <li{{ if eq .context.Params.isPage "newsletter" }} class="is-selected"{{ end }}>
+                        <li{{ if eq .context.Params.isPage "latest" }} class="is-selected"{{ end }}>
                             <a onclick="blur();" href="/latest/">Newsletter</a>
                         </li>                    
                     </ul>
@@ -44,7 +44,7 @@
                                 <li{{ if eq .context.Params.isPage "interviews" }} class="is-selected"{{ end }}>
                                     <a onclick="blur(); toggleMenuPopup()" href="/interviews/">Interviews</a>
                                 </li>
-                                <li{{ if eq .context.Params.isPage "newsletter" }} class="is-selected"{{ end }}>
+                                <li{{ if eq .context.Params.isPage "latest" }} class="is-selected"{{ end }}>
                                     <a onclick="blur(); toggleMenuPopup()" href="/latest/">Newsletter</a>
                                 </li>                                
                             </ul>
