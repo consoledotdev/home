@@ -200,3 +200,44 @@ if (document.body.classList.contains("page-home")) {
         }
     })();
 }
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    let markedScrollableH = document.querySelector("[data-marked-scrollable-h]");
+    let markedScrollableV = document.querySelector("[data-marked-scrollable-v]");
+    markedScrollableH?.addEventListener("scroll", () => {
+        updateMarkedScrollable(markedScrollableH, "h");
+    });
+    markedScrollableV?.addEventListener("scroll", () => {
+        updateMarkedScrollable(markedScrollableV, "v");
+    });
+    document.addEventListener("scroll", () => {
+        if (markedScrollableH) updateMarkedScrollable(markedScrollableH, "h");
+        if (markedScrollableV) updateMarkedScrollable(markedScrollableV, "v");
+    });
+});
+
+let updateMarkedScrollable = (el, direction) => {
+    let trajectory, measure;
+    if (direction == "v") {
+        trajectory = "Top";
+        measure = "Height";
+    }
+    if (direction == "h") {
+        trajectory = "Left";
+        measure = "Width";
+    }
+
+    if (el["scroll" + trajectory] > 0) {
+        el.classList.add("is-scrolled");
+    } else {
+        el.classList.remove("is-scrolled");
+    }
+
+    let scrolled = el["offset" + measure] + el["scroll" + trajectory];
+
+    if (scrolled >= el["scroll" + measure]) {
+        el.classList.add("is-fully-scrolled");
+    } else {
+        el.classList.remove("is-fully-scrolled");
+    }
+};

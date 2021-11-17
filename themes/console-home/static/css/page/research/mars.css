@@ -2003,13 +2003,6 @@ html {
         border-right: 1px solid transparent;
         border-left: 1px solid transparent;
     }
-
-    .dtn-table:not(.is-fully-scrolled) {
-        border-right: var(--theme-border-3);
-    }
-    .dtn-table.is-scrolled {
-        border-left: var(--theme-border-3);
-    }
 }
 
 /* DTN Networking
