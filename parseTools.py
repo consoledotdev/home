@@ -112,7 +112,7 @@ def process_item(item):
         # Aggregate filter taxonomy
         item['Filter Taxonomy'] = f'{category}, {tool_type}'
 
-        if 'Weekly Pick' in item:
+        if 'Weekly Pick' in item and item['Weekly Pick']:
             item['Filter Taxonomy'] += ', weekly-pick'
 
     except Exception as e:
