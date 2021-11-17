@@ -47,8 +47,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 if (parseInt(topOffset) < 128) {
                     style.position = "fixed";
                     style.top = 0;
-                    style.marginTop = "80px";
-                    style.paddingTop = "48px";
+                    style.marginTop = "100px";
+                    style.paddingTop = "28px";
                     style.overflow = "auto";
                 }
             } else {
