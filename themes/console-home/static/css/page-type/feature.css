@@ -49,9 +49,9 @@
 }
 
 .feature-split .feature-aside .feature-aside-content {
-    padding-left: 5vw;
-    width: 26vw;
-    max-width: 400px;
+    margin-left: 5vw;
+    width: 21vw;
+    max-width: calc(400px - 5vw);
     padding-bottom: var(--space4);
     bottom: 0;
 }

@@ -3180,3 +3180,19 @@ body:not(.mobile) .console-control:hover:before {
         margin-left: -0.5px;
     }
 }
+
+/* Marked Scrollable
+   ================================================================================================================ */
+.marked-scrollable-h:not(.is-fully-scrolled) {
+    border-right: var(--theme-border-3);
+}
+.marked-scrollable-h.is-scrolled {
+    border-left: var(--theme-border-3);
+}
+
+.marked-scrollable-v:not(.is-fully-scrolled) {
+    border-bottom: var(--theme-border-3);
+}
+.marked-scrollable-v.is-scrolled {
+    border-top: var(--theme-border-3);
+}
