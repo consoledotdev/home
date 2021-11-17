@@ -23,6 +23,64 @@ document.addEventListener("DOMContentLoaded", (event) => {
             adjust(null, s);
         }
     })();
+
+    let computeAsideContentPos = (() => {
+        let asideContent = document.querySelector("[data-feature-aside-content]");
+        let scrollWrapper = document.querySelector("[data-scroll-wrapper]");
+        let contentBottomPadding = parseInt(getComputedStyle(document.querySelector("[data-content-wrapper]")).paddingBottom);
+        let footerHeight = document.querySelector("[data-footer]").getBoundingClientRect().height;
+        let safetyBottomOffset = contentBottomPadding + footerHeight + 48;
+        asideContentHeight = asideContent.getBoundingClientRect().height;
+
+        let style = {};
+        let compute = function () {
+            let contentHeight = scrollWrapper.offsetHeight;
+            let bottomScrollPos = window.innerHeight + Math.ceil(window.pageYOffset);
+            let distanceFromPageBottom = contentHeight - bottomScrollPos;
+            if (window.scrollY > 0) {
+                style.position = null;
+                style.marginTop = null;
+                style.paddingTop = null;
+                let topOffset = document.querySelector("[data-aside-anchor]").getBoundingClientRect().top;
+                style.top = null;
+                style.overflow = null;
+                if (parseInt(topOffset) < 128) {
+                    style.position = "fixed";
+                    style.top = 0;
+                    style.marginTop = "80px";
+                    style.paddingTop = "48px";
+                    style.overflow = "auto";
+                }
+            } else {
+                style.position = null;
+                style.top = null;
+                style.marginTop = null;
+                style.paddingTop = null;
+                style.overflow = null;
+            }
+
+            let enoughHeight = safetyBottomOffset + asideContentHeight + parseInt(style.marginTop);
+            if (window.innerHeight < enoughHeight) {
+                if (distanceFromPageBottom < safetyBottomOffset) {
+                    style.marginBottom = safetyBottomOffset - distanceFromPageBottom + "px";
+                } else {
+                    style.marginBottom = null;
+                }
+            } else {
+                style.marginBottom = null;
+            }
+
+            asideContent.style.position = style.position;
+            asideContent.style.top = style.top;
+            asideContent.style.marginTop = style.marginTop;
+            asideContent.style.paddingTop = style.paddingTop;
+            asideContent.style.marginBottom = style.marginBottom;
+            asideContent.style.overflow = style.overflow;
+        };
+        compute();
+        window.addEventListener("scroll", compute);
+        window.addEventListener("resize", compute);
+    })();
 });
 
 let manageAsideContentPosition = (() => {
@@ -91,40 +149,6 @@ let manageAsideContentPosition = (() => {
         setPos();
         window.addEventListener("resize", setPos);
     })();
-})();
-
-let computeAsideContentPos = (() => {
-    let style = {};
-    let compute = function () {
-        if (window.scrollY > 0) {
-            style.marginTop = 0;
-            style.position = "fixed";
-            style.top = document.querySelector("[data-aside-anchor]").getBoundingClientRect().top + "px";
-            style.bottom = null;
-            style.overflow = null;
-            if (parseInt(style.top) < 128) {
-                style.top = "128px";
-                style.bottom = 0;
-                style.overflow = "auto";
-            }
-        } else {
-            style.marginTop = null;
-            style.position = null;
-            style.top = null;
-            style.bottom = null;
-            style.overflow = null;
-        }
-
-        let asideContent = document.querySelector("[data-feature-aside-content]");
-        asideContent.style.marginTop = style.marginTop;
-        asideContent.style.top = style.top;
-        asideContent.style.position = style.position;
-        asideContent.style.bottom = style.bottom;
-        asideContent.style.overflow = style.overflow;
-    };
-    compute();
-    window.addEventListener("scroll", compute);
-    window.addEventListener("resize", compute);
 })();
 
 let shared = {
