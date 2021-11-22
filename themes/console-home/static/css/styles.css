@@ -1337,30 +1337,6 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
     margin-right: var(--space2_5);
 }
 
-.title.illustrated-title {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-}
-
-.title.illustrated-title span {
-    flex: 1 1 auto;
-}
-
-.title.illustrated-title .illustration {
-    width: var(--space5);
-    height: var(--space5);
-    flex: 0 0 auto;
-}
-
-.title.illustrated-title.right .illustration {
-    margin-left: var(--space3_5);
-}
-
-.title.illustrated-title.left .illustration {
-    margin-right: var(--space3_5);
-}
-
 /* Text
    ================================================================================================================ */
 

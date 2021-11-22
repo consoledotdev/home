@@ -51,7 +51,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 let resizeRatio;
 
                 if (pW.dataset.packages != undefined) {
-                    resizeRatio = (parent.offsetHeight * 0.94) / pW.offsetHeight;
+                    if (pW.dataset.baseTransform == undefined) {
+                        pW.dataset.baseTransform = window.getComputedStyle(pW).getPropertyValue("transform");
+                    }
+                    resizeRatio = (parent.offsetHeight * 1.09) / pW.offsetHeight;
                     pW.style.transform = "scale(" + resizeRatio + ")";
                 }
             });

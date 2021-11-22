@@ -2341,8 +2341,12 @@ body:not(.mobile) .console-control:hover:before {
     padding: var(--space4) 0;
 }
 
-.framed-section-item:first-of-type {
+.framed-section > .framed-section-item {
     margin-top: var(--space4);
+}
+
+.framed-section > .framed-section-item ~ .framed-section-item {
+    margin-top: 0;
 }
 
 .framed-section-item:last-child {
