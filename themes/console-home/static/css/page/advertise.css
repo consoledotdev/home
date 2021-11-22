@@ -1065,6 +1065,7 @@ body.page-advertise.checkpoint-campaigns {
 }
 
 .work-with-us-packages {
+    position: relative;
     margin-top: var(--space5);
 }
 
@@ -1072,14 +1073,22 @@ body.page-advertise.checkpoint-campaigns {
     position: absolute;
     z-index: 0;
     width: 100%;
-    margin-top: calc(calc(var(--space3_5) + var(--space2)) * -1);
-    transform-origin: top center;
+    max-width: 800px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1279px) {
+    .work-with-us-packages .neon-planes-wrapper {
+        max-width: 760px;
+    }
 }
 
 .work-with-us-packages .neon-planes {
     position: relative;
-    width: calc(100% * 1.9);
-    padding-bottom: calc(65.43% * 1.9);
+    width: calc(100% * 1.88);
+    padding-bottom: calc(59.2% * 1.88);
     left: 50%;
     transform: translateX(-50%);
 }
@@ -1087,10 +1096,6 @@ body.page-advertise.checkpoint-campaigns {
 .work-with-us-packages > *:not(.neon-planes-wrapper) {
     position: relative;
     z-index: 1;
-}
-
-.work-with-us-packages .framed-section {
-    opacity: 0.2;
 }
 
 .work-with-us-packages .top {
