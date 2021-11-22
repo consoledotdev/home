@@ -2955,8 +2955,8 @@ body:not(.mobile) .console-control:hover:before {
 }
 
 .neon-planes.one-three .neon-plane {
-    --skew-offset: 13.8%;
-    --size: 61.71%;
+    --skew-offset: 12.8%;
+    --size: 55.9%;
     width: var(--size);
     padding-bottom: calc(var(--size) * 0.8945);
 }
@@ -2967,7 +2967,7 @@ body:not(.mobile) .console-control:hover:before {
 
 .neon-planes.one-three .neon-plane.triad-03 {
     margin-top: 9.23%;
-    margin-left: calc(10.67% + var(--skew-offset));
+    margin-left: calc(18.67% + var(--skew-offset));
 }
 
 .neon-planes.one .neon-plane,

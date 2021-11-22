@@ -51,11 +51,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 let resizeRatio;
 
                 if (pW.dataset.packages != undefined) {
-                    if (pW.dataset.baseTransform == undefined) {
-                        pW.dataset.baseTransform = window.getComputedStyle(pW).getPropertyValue("transform");
+                    if (window.innerWidth < 840) {
+                        resizeRatio = (parent.offsetHeight * 0.9) / pW.offsetHeight;
+                        pW.style.transform = "translate(-50%, -50%) scale(" + resizeRatio + ")";
+                    } else {
+                        pW.style.transform = null;
                     }
-                    resizeRatio = (parent.offsetHeight * 1.09) / pW.offsetHeight;
-                    pW.style.transform = "scale(" + resizeRatio + ")";
                 }
             });
         };
