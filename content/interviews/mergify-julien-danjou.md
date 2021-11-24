@@ -194,4 +194,6 @@ I run, which I do as often as I can, and I enjoy cooking a lot, usually spending
 ### Find out more
 
 [Mergify](https://mergify.com/) is a tool for automating GitHub pull requests.
-This interview was conducted on 28 Oct 2021.
+It was originally featured as an "Interesting Tool" in the [Console
+newsletter](https://console.dev) on 25 Nov 2021. This interview was conducted on
+28 Oct 2021.
