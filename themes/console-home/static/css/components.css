@@ -3200,3 +3200,19 @@ body:not(.mobile) .console-control:hover:before {
 .marked-scrollable-v.is-scrolled {
     border-top: var(--theme-border-3);
 }
+
+/* Vendor Ranking
+   ================================================================================================================ */
+
+.vendor-ranking {
+    font-weight: 500;
+    font-style: italic;
+    text-transform: uppercase;
+    color: var(--theme-text-1);
+    display: inline-block;
+}
+
+.vendor-ranking span {
+    font-weight: 300;
+    color: var(--theme-text-2);
+}

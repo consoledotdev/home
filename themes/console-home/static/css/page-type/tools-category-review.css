@@ -5,28 +5,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body:not(.page-tools-category-review):before {
-    content: "";
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 30vh;
-    background: var(--theme-hero-fade-top);
-    z-index: 20;
-}
-
-body:not(.page-tools-category-review):after {
-    content: "";
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 30vh;
-    background: var(--theme-hero-fade-bottom);
-    z-index: 20;
-}
-
 .page-tools-category-review .content {
     height: auto;
 }

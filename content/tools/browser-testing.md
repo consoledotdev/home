@@ -51,9 +51,9 @@ can be integrated with existing continuous integration pipelines, provide
 advanced debugging capabilities to pinpoint the root cause of failure, and allow
 sharing the reports with stakeholders via different channels.
 
-We tested 12 browser testing tools using our independent [selection
-criteria](/about#selection-criteria) and the requirements described below. The
-best browser testing tools for developers in {{< year >}} are:
+We tested 12 browser testing tools using our independent
+[selection criteria](/about#selection-criteria) and the requirements described
+below. The best browser testing tools for developers in {{< year >}} are:
 
 1. [BrowserStack](#browserstack)
 2. [LambdaTest](#lambdatest)
@@ -73,7 +73,7 @@ and the localization testing capabilities.
 ### tl;dr the best browser testing tools
 
 {{< tools/category-review/tldr-list--open >}}
-{{< tools/category-review/miniature-card name="BrowserStack" thumbnail="/img/favicons/www.browserstack.com.png" full-review="/tools/browser-testing/browser-stack" url="https://www.browserstack.com/" anchor="browserstack" score="4.7" >}}
+{{< tools/category-review/miniature-card name="BrowserStack" thumbnail="/img/favicons/www.browserstack.com.png" full-review="/tools/browser-testing/browserstack" url="https://www.browserstack.com/" anchor="browserstack" score="4.7" >}}
 {{< tools/category-review/miniature-card name="Lambdatest" thumbnail="/img/favicons/www.lambdatest.com.jpg" url="https://www.lambdatest.com/" anchor="lambdatest" score="4.7" >}}
 {{< tools/category-review/miniature-card name="SmartBear CrossBrowserTesting" thumbnail="/img/favicons/crossbrowsertesting.com.png" url="https://crossbrowsertesting.com/" anchor="smartbear-crossbrowsertesting" score="4.3" >}}
 {{< tools/category-review/miniature-card name="Sauce Labs" thumbnail="/img/favicons/saucelabs.com.jpg" url="https://saucelabs.com/" anchor="sauce-labs" score="4.2" >}}
@@ -329,13 +329,13 @@ a clean UI, large number of test devices and an interesting desktop application
 
 {{< tools/category-review/card-feature-title text="Devices and browsers supported" score="4" >}}
 
-LambdaTest offers [2000+ different
-combinations](https://www.lambdatest.com/list-of-browsers) of browsers and
-devices to perform interactive cross browser compatibility testing of websites
-and web apps, but they can be slow to make new releases available. All tests are
-currently executed on emulators, not real devices. Real device support is
-[currently in
-beta](https://www.lambdatest.com/support/docs/mobile-web-automation-on-real-devices/)
+LambdaTest offers
+[2000+ different combinations](https://www.lambdatest.com/list-of-browsers) of
+browsers and devices to perform interactive cross browser compatibility testing
+of websites and web apps, but they can be slow to make new releases available.
+All tests are currently executed on emulators, not real devices. Real device
+support is
+[currently in beta](https://www.lambdatest.com/support/docs/mobile-web-automation-on-real-devices/)
 and available on request.
 
 {{< div--close >}}
@@ -403,8 +403,8 @@ The biggest limitation of LambdaTest is the lack of availability of real devices
 in the testing cloud - all the tests are currently executed on a simulator. A
 large portion of internet traffic comes from mobile devices so not being able to
 test natively on mobile devices might result in shipping some bugs to
-production. The ability to use real devices is [in beta and available on
-request](https://www.lambdatest.com/support/docs/mobile-web-automation-on-real-devices/).
+production. The ability to use real devices is
+[in beta and available on request](https://www.lambdatest.com/support/docs/mobile-web-automation-on-real-devices/).
 
 We found that new OS releases were sometimes slow to be made available on
 LambdaTest devices. For example, iOS 15 was released on 20 Sept but it was not
@@ -1057,15 +1057,15 @@ of Google Chrome, Mozilla Firefox, and Microsoft Edge on Windows 10. A limited
 number of real [mobile devices](https://awsdevicefarm.info/) are available to
 perform automated or live testing.
 
-AWS Device Farm is [only available in the us-west-2
-(Oregon)](https://docs.aws.amazon.com/devicefarm/latest/developerguide/welcome.html)
+AWS Device Farm is
+[only available in the us-west-2 (Oregon)](https://docs.aws.amazon.com/devicefarm/latest/developerguide/welcome.html)
 region. However, it is possible to mock geo-location data and simulate lossy
 network connections. Unfortunately, live testing has high network latency and
 the user has to wait >2 seconds to see the output of keystrokes, this results in
 a poor experience while typing and scrolling.
 
-An interesting feature is that users can buy [private
-devices](https://docs.aws.amazon.com/devicefarm/latest/developerguide/working-with-private-devices.html)
+An interesting feature is that users can buy
+[private devices](https://docs.aws.amazon.com/devicefarm/latest/developerguide/working-with-private-devices.html)
 which are physically deployed in AWS data centers and can be used for both
 automated and manual testing.
 
@@ -1077,13 +1077,14 @@ be executed during testing. Granular test reports are not generated in the
 customized test environment but live streaming of logs and videos of tests is
 possible.
 
-AWS Device Farm supports a total of [2
-integrations](https://docs.aws.amazon.com/devicefarm/latest/developerguide/aws-device-farm-tools-plugins.html):
+AWS Device Farm supports a total of
+[2 integrations](https://docs.aws.amazon.com/devicefarm/latest/developerguide/aws-device-farm-tools-plugins.html):
 Jenkins CI and Gradle build system in Android Studio. This is a major
-limitation. Even the omnipresent ticketing system [Jira is not
-supported](https://jira.atlassian.com/browse/JSWCLOUD-15207). AWS device farm
-does not integrate well with existing tools and does not offer a good selection
-of browsers and devices. Therefore, we did not select it for a full review.
+limitation. Even the omnipresent ticketing system
+[Jira is not supported](https://jira.atlassian.com/browse/JSWCLOUD-15207). AWS
+device farm does not integrate well with existing tools and does not offer a
+good selection of browsers and devices. Therefore, we did not select it for a
+full review.
 
 {{< img-center src="/img/tools/browser-testing-aws-device-farm.png" alt="AWS Device Farm product screenshot" width="100%" >}}
 

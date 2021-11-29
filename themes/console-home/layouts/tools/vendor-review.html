@@ -1,0 +1,37 @@
+{{ define "main" }}
+	{{ $CTATitle := "Interesting tools by email" }}
+	{{ $CTADescription := "Our free weekly newsletter picks out the 2-3 most interesting tools." }}
+
+    <section class="page-section main-vendor-review-content">
+        <h2 class="title title-1">
+            {{ .Params.title }} review
+        </h2>
+        
+        <div class="page-meta">
+            <p class="small">
+                {{ $categoryData := (dict "category" .Params.category "subcategory" (dict "label" .Params.subcategory.label "name" .Params.subcategory.name)) }}
+                <span class="vendor-ranking">Ranked #{{ .Params.ranking.value }}<span> / {{ .Params.ranking.total }}</span></span>
+                in {{ partial "components/category.html" (dict "categoryData" $categoryData "large" "true" "inline" "true" "clickable" "true") }}
+            </p>
+            <p class="small">
+                <span class="page-meta-separator">&mdash;</span>
+                <span>Last updated: {{ .Lastmod.Format "2006-01-02" }}</span>
+            </p>
+        </div>
+
+        <a class="console-button console-button-medium icon-right" href="{{ .Params.vendorURL }}" title="Visit {{ .Params.title }}" target="_blank"
+            rel="noopener"><span>Visit {{ .Params.title }}</span>
+            {{ partial "icons/external-link.html" }}</a>
+    </section>
+    <div class="main-vendor-review-content-split">
+        <aside class="main-vendor-review-aside" data-aside>
+            {{ partial (print "components/tools/vendor-review/" .Params.isVendor "/aside.html" ) }}
+        </aside>
+        <section class="page-section main-vendor-review-content">
+            {{ .Content }}
+            {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
+        </section>
+    </div>
+
+	<script src="/js/tools/vendor-review.js"></script>
+{{ end }}
