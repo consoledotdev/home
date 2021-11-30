@@ -114,6 +114,15 @@ html {
 
 .page-vendor-review .title.title-1 {
     margin-top: 0;
+    align-items: flex-start;
+}
+
+.page-vendor-review .title.title-1 .vendor-thumbnail {
+    flex: 0 0 auto;
+}
+
+.page-vendor-review .title.title-1 > span {
+    margin-top: calc(var(--space1) + var(--space0));
 }
 
 /* .page-tools-category-review .title-1 span {
@@ -253,20 +262,46 @@ html {
     gap: var(--space4_5);
 }
 
-@media (min-width: 769px) {
+@media (min-width: 769px) and (max-width: 1055px) {
     .page-section-vendor-review.opening .top {
         grid-auto-flow: column;
-        grid-auto-columns: 600px 1fr;
-        align-items: start;
+        grid-auto-columns: 60% 1fr;
+        align-items: center;
     }
 }
 
-.page-section-vendor-review.opening .top .right {
+@media (min-width: 1056px) {
+    .page-section-vendor-review.opening .top {
+        grid-auto-flow: column;
+        grid-auto-columns: 600px 1fr;
+        align-items: center;
+    }
+}
+
+.page-section-vendor-review.opening .top .right .image {
     position: relative;
+    width: 100%;
+    height: auto;
 }
 
 .page-section-vendor-review.opening .title-1 {
     margin-bottom: var(--space3);
+}
+
+.page-section-vendor-review.opening .title-1 .vendor-thumbnail {
+    width: calc(var(--space4_5) + var(--space2));
+    margin-right: var(--space3);
+}
+
+.page-section-vendor-review.opening .page-meta > p:first-child > span:nth-child(2) {
+    text-transform: uppercase;
+    font-style: italic;
+    margin-right: var(--space2);
+}
+
+.page-section-vendor-review.opening .page-meta .categories .icon {
+    width: var(--t-size0);
+    height: var(--t-size0);
 }
 
 .page-section-vendor-review.opening .intro {
@@ -353,11 +388,14 @@ html {
     .rating-group .item {
         display: flex;
         flex-flow: column nowrap;
-        justify-content: space-between;
+        justify-content: stretch;
         align-items: center;
     }
 
     .rating-group .item p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
     }
 
@@ -381,6 +419,38 @@ html {
 
 .page-vendor-review .framed-section-attention {
     background: var(--theme-framed-section-attention-bg-2);
+}
+
+.page-vendor-review .framed-section-attention .feature-title {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-bottom: var(--space3);
+}
+
+.page-vendor-review .framed-section-attention .feature-title .title {
+    flex: 1 1 auto;
+    margin-bottom: 0;
+}
+
+.page-vendor-review .framed-section-attention .feature-title .console-score {
+    flex: 0 0 auto;
+}
+
+.page-vendor-review .framed-section-attention .framed-section-item p {
+    font-size: var(--t-size0);
+}
+
+.page-vendor-review .rich-title.title-2 .icon-like {
+    stroke: var(--theme-signaling-positive);
+    width: var(--space4);
+    height: var(--space4);
+}
+
+.page-vendor-review .rich-title.title-2 .icon-dislike {
+    stroke: var(--theme-signaling-warning);
+    width: var(--space4);
+    height: var(--space4);
 }
 
 @media (max-width: 768px) {
@@ -512,7 +582,7 @@ html {
         font-size: var(--t-size2);
     }
 
-    .rating-group.features .item > p {
+    .main-vendor-review .rating-group.features .item > p {
         font-size: var(--t-size0);
     }
 }

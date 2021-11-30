@@ -109,7 +109,7 @@ failed test cases.
 
 {{< nav-wrapper--open id="wrapper-2" anchor-name="like" >}}
 
-### What we like
+{{< rich-title-3 icon="like" >}}What we like{{</ rich-title-3 >}}
 
 BrowserStack supports testing on a large number of browsers (50+ versions for
 popular ones) and devices (both real and virtual). Real mobile devices are
@@ -156,7 +156,7 @@ variety of scenarios.
 
 {{< nav-wrapper--open id="wrapper-3" anchor-name="dislike" >}}
 
-### What we don't like
+{{< rich-title-3 icon="dislike" >}}What we don't like{{</ rich-title-3 >}}
 
 BrowserStack Live allows testing websites on physical mobile devices in
 real-time, but we found that network latency is high. This issue is most

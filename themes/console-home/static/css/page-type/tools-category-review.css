@@ -759,10 +759,6 @@ html {
         font-size: var(--t-size0);
     }
 
-    .page-tools-category-review .tools-category-review-tool-card .framed-section-item p {
-        font-size: var(--t-size1);
-    }
-
     .page-tools-category-review .page-meta-detail p {
         font-size: var(--t-size-1);
     }

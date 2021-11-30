@@ -145,7 +145,7 @@
     --theme-neon-planes-triad-01-glow: var(--c-blue-09);
     --theme-neon-planes-triad-02-body: var(--c-fuchsia-10);
     --theme-neon-planes-triad-02-glow: var(--c-fuchsia-09);
-    --theme-neon-planes-triad-03-body: #002E13;
+    --theme-neon-planes-triad-03-body: #002e13;
     --theme-neon-planes-triad-03-glow: rgba(0, 86, 41, 0.68);
 
     --theme-empty-bg-1: var(--c-grey-09-black-03);
@@ -164,7 +164,7 @@
 
     --theme-signaling-positive: var(--c-signaling-positive-01);
     --theme-signaling-warning: var(--c-signaling-warning-01);
-    --theme-signaling-error:: var(--c-signaling-error-01);
+    --theme-signaling-error: var(--c-signaling-error-01);
 
     --theme-framed-section-default-border: 1px solid var(--c-grey-06-blacks-neutral);
     --theme-framed-section-default-item-border: 1px solid var(--c-grey-07);
@@ -172,13 +172,13 @@
     --theme-framed-section-attention-border: 1px solid rgba(255, 204, 85, 0.4);
     --theme-framed-section-attention-item-border: 1px solid rgba(255, 204, 85, 0.1);
     --theme-framed-section-attention-bg: #161514;
-    --theme-framed-section-attention-bg-2: #0E0C07;
+    --theme-framed-section-attention-bg-2: #0e0c07;
     --theme-framed-section-attention-title: var(--c-yellow-04-main);
     --theme-framed-section-attention-text: var(--c-yellow-03);
     --theme-framed-section-overlay-bg: var(--c-grey-08);
     --theme-framed-section-blue-border: 1px solid var(--c-blue-06-main);
     --theme-framed-section-blue-item-border: 1px solid rgba(82, 102, 255, 0.5);
-    --theme-framed-section-blue-bg: #15161F;
+    --theme-framed-section-blue-bg: #15161f;
     --theme-framed-section-green-border: 1px solid var(--c-green-06);
     --theme-framed-section-green-item-border: 1px solid rgba(1, 188, 144, 0.4);
     --theme-framed-section-green-bg: #141717;

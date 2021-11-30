@@ -5,7 +5,7 @@
     <section class="page-section page-section-vendor-review opening">
         <h2 class="title title-1 rich-title">
             {{ partial "components/thumbnail-vendor.html" (dict "name" .Params.title "image" .Params.thumbnail "category" .Params.category ) }}
-            {{ .Params.title }} review
+            <span>{{ .Params.title }} review</span>
         </h2>
         <div class="top">
             <div class="left">
@@ -13,7 +13,7 @@
                     <p class="small">
                         {{ $categoryData := (dict "category" .Params.category "subcategory" (dict "label" .Params.subcategory.label "name" .Params.subcategory.name)) }}
                         <span class="vendor-ranking">Ranked #{{ .Params.ranking.value }}<span> / {{ .Params.ranking.total }}</span></span>
-                        in {{ partial "components/category.html" (dict "categoryData" $categoryData "large" "true" "inline" "true" "clickable" "true") }}
+                        <span>in</span> {{ partial "components/category.html" (dict "categoryData" $categoryData "large" "true" "inline" "true" "clickable" "true") }}
                     </p>
                     <p class="small">
                         <span class="page-meta-separator">&mdash;</span>
