@@ -1,0 +1,11 @@
+<span class="console-score">
+    {{ if eq .score "none" }}
+        No rating
+    {{ else}}
+        {{ $score := (float .score) }}
+        {{ $min := (float 0) }}
+        {{ $max := (float 5) }}
+        <span class="console-score-text">{{ $score }}/{{ $max }}</span>
+        {{ partial "components/score-bar.html" (dict "min" $min "max" $max "score" $score "name" .name "id" .id ) }}
+    {{ end }}
+</span>
