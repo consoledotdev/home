@@ -202,17 +202,40 @@ if (document.body.classList.contains("page-home")) {
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    let markedScrollableH = document.querySelector("[data-marked-scrollable-h]");
-    let markedScrollableV = document.querySelector("[data-marked-scrollable-v]");
-    markedScrollableH?.addEventListener("scroll", () => {
-        updateMarkedScrollable(markedScrollableH, "h");
+    let markedScrollablesH = document.querySelectorAll("[data-marked-scrollable-h]");
+    let markedScrollablesV = document.querySelectorAll("[data-marked-scrollable-v]");
+
+    let updateScroller = (item, dir) => {
+        item.addEventListener("scroll", () => {
+            updateMarkedScrollable(item, dir);
+        });
+    };
+
+    markedScrollablesH.forEach((item) => {
+        updateMarkedScrollable(item, "h");
+        updateScroller(item, "h");
     });
-    markedScrollableV?.addEventListener("scroll", () => {
-        updateMarkedScrollable(markedScrollableV, "v");
+    markedScrollablesV.forEach((item) => {
+        updateMarkedScrollable(item, "v");
+        updateScroller(item, "v");
     });
+
     document.addEventListener("scroll", () => {
-        if (markedScrollableH) updateMarkedScrollable(markedScrollableH, "h");
-        if (markedScrollableV) updateMarkedScrollable(markedScrollableV, "v");
+        markedScrollablesH.forEach((item) => {
+            updateMarkedScrollable(item, "h");
+        });
+        markedScrollablesV.forEach((item) => {
+            updateMarkedScrollable(item, "v");
+        });
+    });
+
+    window.addEventListener("resize", () => {
+        markedScrollablesH.forEach((item) => {
+            updateMarkedScrollable(item, "h");
+        });
+        markedScrollablesV.forEach((item) => {
+            updateMarkedScrollable(item, "v");
+        });
     });
 });
 
