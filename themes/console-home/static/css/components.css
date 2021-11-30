@@ -3223,3 +3223,54 @@ body:not(.mobile) .console-control:hover:before {
     font-weight: 300;
     color: var(--theme-text-2);
 }
+
+/* Simple Table
+    --------------------------------------------------------------- */
+.simple-table-grid {
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-columns: 1fr;
+    min-width: 458px;
+}
+
+.simple-table-grid .row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: var(--space4);
+    border-bottom: var(--theme-border-2);
+    padding: var(--space2) 0;
+}
+
+.simple-table-grid .cell {
+    font-size: var(--t-size-2);
+    font-style: italic;
+    color: var(--theme-text-1);
+    line-height: var(--t-lH4);
+    padding: 0 var(--space2);
+    word-break: break-word;
+}
+
+.simple-table-grid .cell-header {
+    font-weight: 500;
+    border-bottom: var(--theme-border-3);
+    padding-bottom: var(--space2);
+    margin-bottom: var(--space1);
+}
+
+.simple-table-grid .cell-meta {
+    color: var(--theme-text-4);
+}
+
+@media (max-width: 600px) {
+    .simple-table {
+        position: relative;
+        padding: 0;
+        margin: var(--space4) 0 calc(var(--space4) + var(--space3));
+        padding: var(--space3_5) 0 var(--space3_5);
+        overflow-x: scroll;
+        transition: var(--a-micro);
+        border-right: 1px solid transparent;
+        border-left: 1px solid transparent;
+    }
+}

@@ -126,31 +126,37 @@ despite being released several months ago.
 Local testing can be done by creating an encrypted tunnel to securely test
 websites hosted behind firewalls or VPNs. Additional configuration can be set up
 to mask the output of particular commands, allowing sensitive data like email,
-cookies, credentials, etc. to be redacted from session logs. Disabling Selenium
-logs and video recordings for such tests can further improve privacy. When video
-recordings are turned off, screenshots of remote test devices can be captured
-and stored straight to the user's computer to analyze issues.
+cookies, credentials, etc. to be
+[redacted from session logs](https://www.browserstack.com/docs/automate/selenium/hide-sensitive-data#nodejs).
+Disabling Selenium logs and video recordings for such tests can further improve
+privacy. When video recordings are turned off, screenshots of remote test
+devices can be captured and stored straight to the user's computer to analyze
+issues.
 
-BrowserStack offers a Chrome extension that opens the current URL in a live
-testing environment with a single click. User interface components can be
-tested - allowing/denying browser permissions or simulating clicks on alerts and
-prompts is possible. This is important to avoid regressions or errors in crucial
-transaction procedures.
+BrowserStack offers a
+[Chrome extension](https://chrome.google.com/webstore/detail/browserstack/nkihdmlheodkdfojglpcjjmioefjahjb/related?hl=en)
+that opens the current URL in a live testing environment with a single click.
+User interface components can be tested - allowing/denying browser permissions
+or simulating clicks on alerts and prompts is possible. This is important to
+avoid regressions or errors in crucial transaction procedures.
 
 Testing on real devices is supported, which makes it easier to find
-device-specific peculiarities. BrowserStack has data centers across the globe -
-the tests can be tailored to run in various countries and languages, allowing
-timezone bugs and localization issues to be detected. Local censorship can also
-be discovered thanks to the ability to run tests from more than 60 countries
-(currently in beta).
+device-specific peculiarities. BrowserStack has data centers
+[across the globe](https://www.browserstack.com/data-centers) - the tests can be
+tailored to run in various countries and languages, allowing timezone bugs and
+localization issues to be detected. Local censorship can also be discovered
+thanks to the ability to run tests from more than
+[60 countries](https://www.browserstack.com/ip-geolocation) (currently in beta).
 
-BrowserStack supports several SDKs and integrations for popular CI/CD tools to
-perform automatic tests viaBitbucket Pipelines, GitHub Actions and on CMSs such
-as WordPress and Shopify. It is possible to integrate BrowserStack and multiple
-other platforms like Google Sheets, Microsoft Teams, OneDrive, Microsoft Office
-365, Vimeo, etc. using the Zapier integration. Compatibility with a large number
-of services allows users to extend BrowserStack’s functionality and use it in a
-variety of scenarios.
+BrowserStack supports
+[several SDKs](https://www.browserstack.com/docs/automate/selenium) and
+integrations for popular CI/CD tools to perform automatic tests viaBitbucket
+Pipelines, GitHub Actions and on CMSs such as WordPress and Shopify. It is
+possible to integrate BrowserStack and multiple other platforms like Google
+Sheets, Microsoft Teams, OneDrive, Microsoft Office 365, Vimeo, etc. using the
+[Zapier](https://zapier.com/apps/browserstack/integrations) integration.
+Compatibility with a large number of services allows users to extend
+BrowserStack’s functionality and use it in a variety of scenarios.
 
 {{< div--close >}}
 
@@ -183,11 +189,36 @@ reached, the only way to add more tests is to wait for prior tests to finish
 execution or pay more. There is no option to view or edit the queue from the
 dashboard - only the number of tests in the queue are displayed.
 
-BrowserStack supports Axe API to run accessibility tests, test reports are
-generated as JSON objects and contain relevant details such as Xpath of the
-element which caused the violation. Although it gets the job done, this process
-is not very user friendly because the tester needs to scour through raw JSON
-files. Other tools like Polypane or Ghost Inspector provide better solutions by
-presenting the results in a more user friendly fashion.
+BrowserStack supports
+[Axe API](https://www.deque.com/axe/core-documentation/api-documentation/) to
+run
+[accessibility tests](https://www.browserstack.com/docs/automate/selenium/accessibility-testing),
+test reports are generated as JSON objects and contain relevant details such as
+Xpath of the element which caused the violation. Although it gets the job done,
+this process is not very user friendly because the tester needs to scour through
+raw JSON files. Other tools like Polypane or Ghost Inspector provide better
+solutions by presenting the results in a more user friendly fashion.
+
+{{< div--close >}}
+
+{{< nav-wrapper--open id="wrapper-4" anchor-name="console-developer-perspective" >}}
+
+### Console developer perspective
+
+{{< tools/vendor-review/browserstack/console-developer-perspective >}}
+
+{{< div--close >}}
+
+{{< nav-wrapper--open id="wrapper-5" anchor-name="company-context" >}}
+
+### Company context
+
+{{< tools/vendor-review/browserstack/company-context >}}
+
+{{< div--close >}}
+
+{{< nav-wrapper--open id="wrapper-6" anchor-name="alternatives" >}}
+
+### Alternatives
 
 {{< div--close >}}

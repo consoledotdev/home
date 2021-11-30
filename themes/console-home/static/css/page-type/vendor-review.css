@@ -453,6 +453,11 @@ html {
     height: var(--space4);
 }
 
+.console-developer-perspective-table .row,
+.company-context-table .row {
+    grid-auto-columns: 30% 1fr;
+}
+
 @media (max-width: 768px) {
     @media (max-width: 480px) {
         .main-vendor-review .nav-wrapper > .framed-section {
