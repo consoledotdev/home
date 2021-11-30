@@ -57,7 +57,7 @@
     flex-grow: 1;
 }
 
-.beta-card-thumbnail {
+.vendor-thumbnail {
     flex-shrink: 0;
     width: calc(var(--space4) + var(--space3));
     margin-right: var(--space4);
@@ -116,7 +116,7 @@ p.beta-card-description {
         margin-bottom: var(--space2_5);
     }
 
-    .beta-card-thumbnail {
+    .vendor-thumbnail {
         margin-top: calc(var(--space1) / 2);
     }
 
@@ -140,7 +140,7 @@ p.beta-card-description {
             margin-bottom: var(--space2_5);
         }
 
-        .beta-card-thumbnail {
+        .vendor-thumbnail {
             margin-right: var(--space3);
         }
 

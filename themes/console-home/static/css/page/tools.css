@@ -42,7 +42,7 @@
     flex-grow: 1;
 }
 
-.tool-card-thumbnail {
+.vendor-thumbnail {
     flex-shrink: 0;
     width: calc(var(--space4) + var(--space3));
     margin-right: var(--space3_5);
@@ -178,7 +178,7 @@ p.tool-card-description {
         margin-bottom: var(--space2_5);
     }
 
-    .tool-card-thumbnail {
+    .vendor-thumbnail {
         margin-right: var(--space3);
     }
 

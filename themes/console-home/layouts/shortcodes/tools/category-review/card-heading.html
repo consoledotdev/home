@@ -2,17 +2,7 @@
     {{- $favicon := .Get "thumbnail" -}}
     {{- $faviconStatic := print "static/" $favicon -}}
     <div class="left">
-        <div class="tool-card-thumbnail aspect-ratio aspect-ratio-1-1">
-            {{- if $favicon -}}
-                {{- if (fileExists $faviconStatic) -}}
-                    <img class="image" src="{{ $favicon }}" alt="{{ .Get "name" }} Logo" />
-                {{- else -}}
-                    <div class="card-thumbnail-generic">{{ partial (print "icons/" .Page.Params.category ".html") }}</div>
-                {{- end -}}
-            {{- else -}}
-                <div class="card-thumbnail-generic">{{ partial (print "icons/" .Page.Params.category ".html") }}</div>
-            {{- end -}}
-        </div>
+        {{ partial "components/thumbnail-vendor.html" (dict "name" ( .Get "name" ) "image" ( .Get "thumbnail" ) "category" .Page.Params.category ) }}
         <div class="title-score">
             <h4 class="title title-3">{{ if ne (.Get "score") "none" }}<label for="score-meter-{{ lower (.Get "anchor") }}">{{ end }}{{ .Get "name" }}{{ if ne (.Get "score") "none" }}</label>{{ end }}</h4>
             {{ partial "components/score.html" (dict "score" (.Get "score") "name" ( .Get "name" ) ) }}

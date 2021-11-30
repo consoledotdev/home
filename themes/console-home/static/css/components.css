@@ -1932,7 +1932,13 @@ body:not(.mobile) .console-control:hover:before {
     transition: var(--a-controls-active);
 }
 
-.card-thumbnail-generic {
+.console-card .title .link {
+    text-decoration: none;
+}
+
+/* Category Thumbnail
+   ================================================================================================================ */
+.category-thumbnail-generic {
     position: absolute;
     top: 0;
     left: 0;
@@ -1946,26 +1952,27 @@ body:not(.mobile) .console-control:hover:before {
     justify-content: center;
 }
 
-.card-thumbnail-generic .icon {
+.category-thumbnail-generic .icon {
     width: var(--t-size4);
     height: var(--t-size4);
 }
 
-.card-thumbnail-generic .icon-fill {
+.category-thumbnail-generic .icon-fill {
     fill: var(--theme-text-5);
 }
 
-.card-thumbnail-generic .icon-stroke {
+.category-thumbnail-generic .icon-stroke {
     stroke: var(--theme-text-5);
 }
 
-.card-thumbnail-generic .icon-fill-stroke {
+.category-thumbnail-generic .icon-fill-stroke {
     fill: var(--theme-text-5);
     stroke: var(--theme-text-5);
 }
 
-.console-card .title .link {
-    text-decoration: none;
+/* Vendor Thumbnail
+   ================================================================================================================ */
+.vendor-thumbnail {
 }
 
 /* Illustrated Text

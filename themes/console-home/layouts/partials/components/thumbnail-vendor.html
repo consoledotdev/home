@@ -1,0 +1,13 @@
+{{- $image := .image -}}
+{{- $imageStatic := print "static/" $image -}}
+<div class="vendor-thumbnail aspect-ratio aspect-ratio-1-1">
+    {{- if $image -}}
+        {{- if (fileExists $imageStatic) -}}
+            <img class="image" src="{{ $image }}" alt="{{ .name }} Logo" />
+        {{- else -}}
+            <div class="category-thumbnail-generic">{{ partial (print "icons/" .category ".html") }}</div>
+        {{- end -}}
+    {{- else -}}
+        <div class="category-thumbnail-generic">{{ partial (print "icons/" .category ".html") }}</div>
+    {{- end -}}
+</div>

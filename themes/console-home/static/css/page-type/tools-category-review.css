@@ -179,9 +179,8 @@ html {
     flex: 0 0 auto;
 }
 
-.tools-category-review-tldr-list .console-card .tool-card-thumbnail {
+.tools-category-review-tldr-list .console-card .vendor-thumbnail {
     width: var(--space4);
-    border-radius: var(--corners-small);
     margin-right: var(--space3);
 }
 
@@ -246,7 +245,7 @@ html {
     flex: 0 1 auto;
 }
 
-.page-tools-category-review .tool-card-heading .tool-card-thumbnail {
+.page-tools-category-review .tool-card-heading .vendor-thumbnail {
     width: calc(var(--space3) + var(--space4));
     margin-right: var(--space3_5);
 }
