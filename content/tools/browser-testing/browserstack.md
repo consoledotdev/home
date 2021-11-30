@@ -21,9 +21,26 @@ subcategory:
   label: Browser testing
   name: browser-testing
 vendorURL: https://www.browserstack.com/
+thumbnail: /img/favicons/www.browserstack.com.png
 ranking:
   value: 1
   total: 6
+scores:
+  overall: 5
+  features:
+    - name: Devices and browsers supported
+      value: 5
+    - name: Automation
+      value: 4.5
+    - name: Debugging & error reporting
+      value: 4.5
+productShot:
+  image: /img/tools/browser-testing-browserstack.png
+intro:
+  "BrowserStack is a great tool for manual and automated testing on a large
+  number of devices. Integrations with other services make it a powerful tool,
+  but latency can be high when live-testing devices and some newer OS releases
+  are not immediately available."
 ---
 
 {{< nav-wrapper--open id="wrapper-0" anchor-name="cost" >}}
@@ -47,7 +64,7 @@ mobile).
 
 {{< framed-section-item--open >}}
 
-#### Devices and browsers supported
+{{< tools/vendor-review/feature-title text="Devices and browsers supported" score="5" >}}
 
 Tests can be conducted on more than
 [3,000 devices and browsers](https://www.browserstack.com/list-of-browsers-and-platforms/live),
@@ -61,7 +78,7 @@ also supported, but with fewer historical versions.
 
 {{< framed-section-item--open >}}
 
-#### Automation
+{{< tools/vendor-review/feature-title text="Automation" score="4.5" >}}
 
 BrowserStack supports automation workflows written in multiple languages (Java,
 JavaScript, C#, PHP, Python, Ruby, and Perl) and frameworks (Selenium,
@@ -73,9 +90,9 @@ download logs, update/delete resources, etc.
 
 {{< div--close >}}
 
-{{< framed-section-item--open classes="flat-lists" >}}
+{{< framed-section-item--open >}}
 
-#### Debugging & error reporting
+{{< tools/vendor-review/feature-title text="Debugging & error reporting" score="4.5" >}}
 
 BrowserStack can report bugs to various project management tools like Jira,
 Trello, GitHub and Slack. Screenshots captured during tests can be annotated in
@@ -92,7 +109,7 @@ failed test cases.
 
 {{< nav-wrapper--open id="wrapper-2" anchor-name="like" >}}
 
-### Like
+### What we like
 
 BrowserStack supports testing on a large number of browsers (50+ versions for
 popular ones) and devices (both real and virtual). Real mobile devices are
@@ -139,7 +156,7 @@ variety of scenarios.
 
 {{< nav-wrapper--open id="wrapper-3" anchor-name="dislike" >}}
 
-### Don't like
+### What we don't like
 
 BrowserStack Live allows testing websites on physical mobile devices in
 real-time, but we found that network latency is high. This issue is most

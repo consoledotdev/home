@@ -1,0 +1,4 @@
+<div class="feature-title">
+    <h4 class="title title-3">{{ .Get "text" }}</h4>
+    {{ partial "components/score.html" (dict "score" (.Get "score") "name" ( .Get "text" ) ) }}
+</div>

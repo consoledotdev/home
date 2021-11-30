@@ -2,32 +2,57 @@
 	{{ $CTATitle := "Interesting tools by email" }}
 	{{ $CTADescription := "Our free weekly newsletter picks out the 2-3 most interesting tools." }}
 
-    <section class="page-section main-vendor-review-content">
-        <h2 class="title title-1">
+    <section class="page-section page-section-vendor-review opening">
+        <h2 class="title title-1 rich-title">
+            {{ partial "components/thumbnail-vendor.html" (dict "name" .Params.title "image" .Params.thumbnail "category" .Params.category ) }}
             {{ .Params.title }} review
         </h2>
-        
-        <div class="page-meta">
-            <p class="small">
-                {{ $categoryData := (dict "category" .Params.category "subcategory" (dict "label" .Params.subcategory.label "name" .Params.subcategory.name)) }}
-                <span class="vendor-ranking">Ranked #{{ .Params.ranking.value }}<span> / {{ .Params.ranking.total }}</span></span>
-                in {{ partial "components/category.html" (dict "categoryData" $categoryData "large" "true" "inline" "true" "clickable" "true") }}
-            </p>
-            <p class="small">
-                <span class="page-meta-separator">&mdash;</span>
-                <span>Last updated: {{ .Lastmod.Format "2006-01-02" }}</span>
-            </p>
+        <div class="top">
+            <div class="left">
+                <div class="page-meta">
+                    <p class="small">
+                        {{ $categoryData := (dict "category" .Params.category "subcategory" (dict "label" .Params.subcategory.label "name" .Params.subcategory.name)) }}
+                        <span class="vendor-ranking">Ranked #{{ .Params.ranking.value }}<span> / {{ .Params.ranking.total }}</span></span>
+                        in {{ partial "components/category.html" (dict "categoryData" $categoryData "large" "true" "inline" "true" "clickable" "true") }}
+                    </p>
+                    <p class="small">
+                        <span class="page-meta-separator">&mdash;</span>
+                        <span>Last updated: {{ .Lastmod.Format "2006-01-02" }}</span>
+                    </p>
+                </div>
+                <p class="intro">{{ .Params.intro }}</p>
+                <a class="console-button console-button-medium icon-right" href="{{ .Params.vendorURL }}" title="Visit {{ .Params.title }}" target="_blank"
+                    rel="noopener"><span>Visit {{ .Params.title }}</span>
+                    {{ partial "icons/external-link.html" }}</a>
+            </div>
+            <div class="right">
+                <img class="image" src="{{ .Params.productShot.image }}" alt="{{ .Params.title }} product screenshot" />
+            </div>
         </div>
-
-        <a class="console-button console-button-medium icon-right" href="{{ .Params.vendorURL }}" title="Visit {{ .Params.title }}" target="_blank"
-            rel="noopener"><span>Visit {{ .Params.title }}</span>
-            {{ partial "icons/external-link.html" }}</a>
+        <div class="bottom">
+            <div class="rating-summary">
+                <div class="rating-group overall">
+                    <div class="item">
+                        <p>Overall rating</p>
+                        {{ partial "components/score.html" (dict "score" .Params.scores.overall "name" "Overall rating" )  }}
+                    </div>
+                </div>
+                <div class="rating-group features">
+                    {{ range .Params.scores.features }}
+                        <div class="item">
+                            <p>{{ .name }}</p>
+                            {{ partial "components/score.html" (dict "score" .value  "name" .name )  }}
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
     </section>
     <div class="main-vendor-review-content-split">
         <aside class="main-vendor-review-aside" data-aside>
             {{ partial (print "components/tools/vendor-review/" .Params.isVendor "/aside.html" ) }}
         </aside>
-        <section class="page-section main-vendor-review-content">
+        <section class="page-section page-section-vendor-review">
             {{ .Content }}
             {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
         </section>

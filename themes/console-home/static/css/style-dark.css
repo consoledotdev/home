@@ -203,6 +203,14 @@
 
     --theme-vapor-globe-blue-1: linear-gradient(180deg, var(--c-blue-10), var(--c-blue-11));
 
+    /* Vendor Review page specific */
+    --theme-rating-summary-overall-border: 1px solid var(--c-grey-04-whites-neutral);
+    --theme-rating-summary-overall-bg: var(--theme-framed-section-default-bg);
+    --theme-rating-summary-overall-item-border: var(--theme-framed-section-default-item-border);
+    --theme-rating-summary-features-border: var(--theme-framed-section-attention-border);
+    --theme-rating-summary-features-bg: var(--theme-framed-section-attention-bg-2);
+    --theme-rating-summary-features-item-border: var(--theme-framed-section-attention-item-border);
+
     /* Mars Internet page specific */
     --theme-mars-earth-halo: 0 0 0.25em rgba(0, 0, 255, 0.3);
     --theme-mars-earth-shading: inset 0.2em 0 0.34em rgba(0, 0, 255, 0.1), inset 0 0 0.04em rgba(0, 0, 255, 0.3);
@@ -248,6 +256,10 @@
 .theme.page-article:after,
 .theme.page-feature:after {
     background: linear-gradient(0deg, rgba(21, 21, 23, 0.4) 0%, rgba(21, 21, 23, 0) 100%);
+}
+
+.theme.page-vendor-review {
+    background: var(--theme-content-bg-1);
 }
 
 .theme .hero .lines {
