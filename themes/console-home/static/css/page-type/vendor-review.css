@@ -239,6 +239,7 @@ html {
 } */
 
 .main-vendor-review .subscribe-cta {
+    margin-top: var(--space5_5);
     background: var(--theme-content-bg-3);
 }
 
