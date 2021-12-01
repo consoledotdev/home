@@ -1,0 +1,36 @@
+{{ $name := .Get "name" }}
+{{ $dataKey := replace ($name | title) "-" "" }}
+{{ $first := substr $dataKey 0 1 | lower }}
+{{ $last := substr $dataKey 1 }}
+{{ $dataKey = (print $first $last) }}
+
+<div class="{{ $name }}-table simple-table marked-scrollable-h" data-marked-scrollable-h>
+    <div class="simple-table-grid">
+        {{ range (index $.Site.Data.tools.browser_testing.browserstack $dataKey ) }}
+            <div class="row">
+                <span class="cell cell-meta">{{ index . 0 }}</span>
+                <span class="cell">
+                    {{- range (index . 1) -}}
+                        {{- if reflect.IsMap . -}}
+                                {{- with .links -}}
+                                    {{- range . -}}
+                                            <a class="link" title="{{ .href }}" href="{{ .href }}" target="_blank" rel="noopener">
+                                                {{- with .iconLeft }}
+                                                    {{ partial (print "icons/" . ".html") }}
+                                                {{ end -}}
+                                                {{ .text | markdownify }}
+                                                {{- with .iconRight }}
+                                                    {{ partial (print "icons/" . ".html") }}
+                                                {{ end -}}
+                                            </a>
+                                    {{- end -}}
+                                {{- end -}}
+                        {{- else -}}
+                            {{ . | markdownify }}
+                        {{- end -}}
+                    {{- end -}}
+                </span>
+            </div>
+        {{ end }}
+    </div>
+</div>

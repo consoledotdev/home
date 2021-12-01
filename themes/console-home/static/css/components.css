@@ -3251,6 +3251,10 @@ body:not(.mobile) .console-control:hover:before {
     word-break: break-word;
 }
 
+.simple-table-grid .cell.link-list .link:not(:last-child) {
+    margin-right: var(--space2_5);
+}
+
 .simple-table-grid .cell-header {
     font-weight: 500;
     border-bottom: var(--theme-border-3);

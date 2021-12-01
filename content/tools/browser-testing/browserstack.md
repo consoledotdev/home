@@ -205,7 +205,7 @@ solutions by presenting the results in a more user friendly fashion.
 
 ### Console developer perspective
 
-{{< tools/vendor-review/browserstack/console-developer-perspective >}}
+{{< simple-table name="console-developer-perspective" >}}
 
 {{< div--close >}}
 
@@ -213,7 +213,7 @@ solutions by presenting the results in a more user friendly fashion.
 
 ### Company context
 
-{{< tools/vendor-review/browserstack/company-context >}}
+{{< simple-table name="company-context" >}}
 
 {{< div--close >}}
 
