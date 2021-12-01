@@ -41,6 +41,28 @@ intro:
   number of devices. Integrations with other services make it a powerful tool,
   but latency can be high when live-testing devices and some newer OS releases
   are not immediately available."
+relatedArticles:
+  - category: developer-tools
+    article:
+      name: Some article
+      url: https://somewhere.it
+  - category: devops
+    article:
+      name: Some other article
+      url: https://somewhere.it
+  - category: devops
+    subcategory:
+      label: Website monitoring
+      name: website-monitoring
+relatedReviews:
+  - name: LambdaTest
+    thumbnail: /img/favicons/www.lambdatest.com.jpg
+    url: /tools/browser-testing/lambdatest
+    category: developer-tools
+  - name: SmartBear CrossBrowserTesting
+    thumbnail: /img/favicons/crossbrowsertesting.com.png
+    url: /tools/browser-testing/crossbrowsertesting
+    category: developer-tools
 ---
 
 {{< nav-wrapper--open id="wrapper-0" anchor-name="cost" >}}
@@ -220,5 +242,21 @@ solutions by presenting the results in a more user friendly fashion.
 {{< nav-wrapper--open id="wrapper-6" anchor-name="alternatives" >}}
 
 ### Alternatives
+
+{{< div--close >}}
+
+{{< nav-wrapper--open id="wrapper-7" anchor-name="related-reviews" >}}
+
+### More browser testing reviews
+
+{{< tools/related-reviews >}}
+
+{{< div--close >}}
+
+{{< nav-wrapper--open id="wrapper-8" anchor-name="related-articles" >}}
+
+### Further reading
+
+{{< tools/related-articles >}}
 
 {{< div--close >}}

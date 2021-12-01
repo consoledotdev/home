@@ -3285,3 +3285,56 @@ body:not(.mobile) .console-control:hover:before {
         border-left: 1px solid transparent;
     }
 }
+
+/* Related Articles
+    --------------------------------------------------------------- */
+.related-articles {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+.related-articles > *:not(:first-child) {
+    margin-top: var(--space3);
+}
+
+.related-articles > .link {
+    text-decoration: none;
+    font-size: var(--t-size-1);
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    line-height: var(--t-lH4);
+    white-space: nowrap;
+}
+
+/* Related Reviews
+    --------------------------------------------------------------- */
+.related-reviews {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+.related-reviews > *:not(:first-child) {
+    margin-top: var(--space3);
+}
+
+.related-reviews > .link {
+    text-decoration: none;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    line-height: var(--t-lH4);
+    white-space: nowrap;
+}
+
+.related-reviews > .link .vendor-thumbnail {
+    width: var(--t-size6);
+    height: var(--t-size6);
+    margin-right: var(--space2_5);
+}
+
+.related-reviews > .link span {
+    font-weight: 500;
+}
