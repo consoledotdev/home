@@ -3234,6 +3234,17 @@ body:not(.mobile) .console-control:hover:before {
 
 /* Simple Table
     --------------------------------------------------------------- */
+.simple-table {
+    position: relative;
+    padding: 0;
+    margin: var(--space4) 0 calc(var(--space4) + var(--space3));
+    padding: var(--space3_5) 0 var(--space3_5);
+    overflow-x: scroll;
+    transition: var(--a-micro);
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+}
+
 .simple-table-grid {
     display: grid;
     grid-auto-flow: row;
@@ -3242,16 +3253,29 @@ body:not(.mobile) .console-control:hover:before {
 }
 
 .simple-table-grid .row {
+    position: relative;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
     gap: var(--space4);
-    border-bottom: var(--theme-border-2);
-    padding: var(--space2) 0;
+}
+
+.simple-table-grid .row:not(:last-child):before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-top: var(--theme-border-2);
 }
 
 .simple-table-grid .row.header {
     font-weight: 500;
+}
+
+.simple-table-grid .row.header:not(:last-child):before {
+    border-top: var(--theme-border-3);
 }
 
 .simple-table-grid .cell {
@@ -3259,12 +3283,17 @@ body:not(.mobile) .console-control:hover:before {
     font-style: italic;
     color: var(--theme-text-1);
     line-height: var(--t-lH4);
-    padding: 0 var(--space2);
+    padding: var(--space2) var(--space2);
     word-break: break-word;
 }
 
-.simple-table-grid .cell.link-list .link:not(:last-child) {
-    margin-right: var(--space2_5);
+.simple-table-grid .cell .link + .link {
+    margin-left: var(--space2);
+}
+
+.simple-table-grid .cell > .icon {
+    width: var(--t-size0);
+    height: var(--t-size0);
 }
 
 .simple-table-grid .cell-header {
@@ -3279,16 +3308,6 @@ body:not(.mobile) .console-control:hover:before {
 }
 
 @media (max-width: 600px) {
-    .simple-table {
-        position: relative;
-        padding: 0;
-        margin: var(--space4) 0 calc(var(--space4) + var(--space3));
-        padding: var(--space3_5) 0 var(--space3_5);
-        overflow-x: scroll;
-        transition: var(--a-micro);
-        border-right: 1px solid transparent;
-        border-left: 1px solid transparent;
-    }
 }
 
 /* Related Articles
