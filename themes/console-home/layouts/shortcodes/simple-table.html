@@ -40,6 +40,9 @@
                                                     </a>
                                             {{- end -}}
                                         {{- end -}}
+                                        {{- with .icon -}}
+                                            {{ partial (print "icons/" . ".html") }}
+                                        {{- end -}}
                                 {{- else -}}
                                     {{ . | markdownify }}
                                 {{- end -}}
