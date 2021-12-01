@@ -1590,6 +1590,9 @@ body:not(.mobile) .console-control:hover:before {
 .categories.large .icon,
 .tags.large .icon {
     margin-top: 0.15em;
+    width: var(--t-size0);
+    height: var(--t-size0);
+    margin-right: calc(var(--space2) + 2px);
 }
 
 .categories .icon-fill {
