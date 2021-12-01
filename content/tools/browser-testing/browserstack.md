@@ -69,7 +69,7 @@ relatedReviews:
 
 ### Cost
 
-{{< p-custom classes="cost-highlight" >}}$39—249/month{{< p--close >}}
+{{< p-custom class="cost-highlight" >}}$39—249/month{{< p--close >}}
 
 BrowserStack offers plans starting at $39/month for live testing, $169/month for
 automated testing (desktop only) and $249/month for automated testing (desktop &
