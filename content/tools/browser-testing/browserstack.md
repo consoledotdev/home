@@ -243,6 +243,12 @@ solutions by presenting the results in a more user friendly fashion.
 
 ### Alternatives
 
+{{< div-custom class="comparison-checklist-table-wrapper" >}}
+
+{{< simple-table name="comparison-checklist" data-file="tools/browser_testing/browserstack" >}}
+
+{{< div--close >}}
+
 {{< div--close >}}
 
 {{< nav-wrapper--open id="wrapper-7" anchor-name="related-reviews" >}}

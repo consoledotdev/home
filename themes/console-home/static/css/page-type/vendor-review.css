@@ -454,9 +454,52 @@ html {
     height: var(--space4);
 }
 
+.console-developer-perspective-table,
+.company-context-table {
+    width: 100%;
+}
+
 .console-developer-perspective-table .row,
 .company-context-table .row {
-    grid-auto-columns: 30% 1fr;
+    grid-auto-columns: max(180px, 11vw) 1fr;
+}
+
+.comparison-checklist-table-wrapper {
+    position: relative;
+    height: 100%;
+    width: 1px;
+}
+
+.comparison-checklist-table {
+    width: 87.5vw;
+}
+
+.comparison-checklist-table .simple-table-grid {
+    min-width: 896px;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .comparison-checklist-table {
+        width: 84vw;
+    }
+}
+
+.comparison-checklist-table .row {
+    grid-template-columns: max(180px, 11vw) repeat(6, 1fr);
+}
+
+.comparison-checklist-table .row .cell:nth-child(2) {
+    background: var(--theme-content-bg-4);
+}
+
+.comparison-checklist-table .row .cell {
+    display: flex;
+    align-items: center;
+}
+
+.comparison-checklist-table .row .cell:not(:nth-child(1)) {
+    justify-content: center;
+    text-align: center;
 }
 
 @media (max-width: 768px) {

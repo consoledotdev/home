@@ -37,5 +37,17 @@
                 }
             ]
         ]
+    ],
+    "comparisonChecklist": [
+        ["H", "Feature", ["BrowserStack"], ["LambdaTest"], ["Ghost Inspector"], ["Sauce Labs"], ["CrossBrowserTesting"], ["Selenium"]],
+        ["Live testing", [{ "icon": "checkmark" }], [{ "icon": "checkmark" }], [""], [{ "icon": "checkmark" }], [{ "icon": "checkmark" }], [""]],
+        ["Real devices", ["On request"], [{ "icon": "checkmark" }], [""], [{ "icon": "checkmark" }], [{ "icon": "checkmark" }], ["n/a"]],
+        ["Automated testing", [{ "icon": "checkmark" }], [{ "icon": "checkmark" }], [{ "icon": "checkmark" }], [{ "icon": "checkmark" }], [{ "icon": "checkmark" }], [{ "icon": "checkmark" }]],
+        ["Screenshot Regression Testing", [{ "icon": "checkmark" }], [{ "icon": "checkmark" }], [""], [""], [{ "icon": "checkmark" }], [""]],
+        ["Local testing", [{ "icon": "checkmark" }], [{ "icon": "checkmark" }], [""], [{ "icon": "checkmark" }], [{ "icon": "checkmark" }], [{ "icon": "checkmark" }]],
+        ["Email and SMS testing", [""], [""], [{ "icon": "checkmark" }], [""], [""], [""]],
+        ["Generates reports", [{ "icon": "checkmark" }], [{ "icon": "checkmark" }], [{ "icon": "checkmark" }], [{ "icon": "checkmark" }], [{ "icon": "checkmark" }], [""]],
+        ["Low-code automated testing", ["Not directly"], ["Not directly"], [{ "icon": "checkmark" }], [{ "icon": "checkmark" }], ["Not directly"], [{ "icon": "checkmark" }]],
+        ["Good accessibility testing", ["Lighthouse report"], ["axe"], [{ "icon": "checkmark" }], [""], [""], [""]]
     ]
 }
