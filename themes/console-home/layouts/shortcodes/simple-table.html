@@ -33,7 +33,7 @@
                                                         {{- with .iconLeft }}
                                                             {{ partial (print "icons/" . ".html") }}
                                                         {{ end -}}
-                                                        {{ .text | markdownify }}
+                                                        <span>{{ .text | markdownify }}</span>
                                                         {{- with .iconRight }}
                                                             {{ partial (print "icons/" . ".html") }}
                                                         {{ end -}}

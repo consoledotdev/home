@@ -244,7 +244,7 @@
 .link:link,
 .link:visited {
     color: var(--theme-link-text-idle);
-    text-decoration: underline;
+    text-decoration: none;
     font-weight: 400;
     transition: var(--a-controls);
     outline: none;
@@ -252,6 +252,11 @@
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     hyphens: auto;
+}
+
+.link:link span,
+.link:visited span {
+    text-decoration: underline;
 }
 
 .title-3 a:link {
