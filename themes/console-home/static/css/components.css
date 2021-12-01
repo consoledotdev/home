@@ -3242,6 +3242,10 @@ body:not(.mobile) .console-control:hover:before {
     padding: var(--space2) 0;
 }
 
+.simple-table-grid .row.header {
+    font-weight: 500;
+}
+
 .simple-table-grid .cell {
     font-size: var(--t-size-2);
     font-style: italic;

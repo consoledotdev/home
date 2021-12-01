@@ -1965,43 +1965,9 @@ html {
 
 /* DTN Table
     --------------------------------------------------------------- */
-
-.dtn-table-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: var(--space2) 0;
-    min-width: 458px;
-}
-
-.dtn-table-grid .cell {
-    font-size: var(--t-size-2);
-    font-style: italic;
-    color: var(--theme-text-1);
-    line-height: var(--t-lH4);
-    padding-right: var(--space4);
-}
-
-.dtn-table-grid .cell-header {
-    font-weight: 500;
-    border-bottom: var(--theme-border-3);
-    padding-bottom: var(--space2);
-    margin-bottom: var(--space1);
-}
-
-.dtn-table-grid .cell-meta {
-    color: var(--theme-text-4);
-}
-
 @media (max-width: 600px) {
     .dtn-table {
-        position: relative;
-        padding: 0;
-        margin: var(--space4) 0 calc(var(--space4) + var(--space3));
         padding: var(--space3_5) 0 var(--space3_5);
-        overflow-x: scroll;
-        transition: var(--a-micro);
-        border-right: 1px solid transparent;
-        border-left: 1px solid transparent;
     }
 }
 

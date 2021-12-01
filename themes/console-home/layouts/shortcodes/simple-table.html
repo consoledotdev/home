@@ -3,33 +3,50 @@
 {{ $first := substr $dataKey 0 1 | lower }}
 {{ $last := substr $dataKey 1 }}
 {{ $dataKey = (print $first $last) }}
+{{ $pathFragments := split (.Get "data-file") "/" }}
 
-<div class="{{ $name }}-table simple-table marked-scrollable-h" data-marked-scrollable-h>
+{{ $.Scratch.Set "data" $.Site.Data }}
+{{ range $pathFragments }}
+    {{ $.Scratch.Set "data" (index ($.Scratch.Get "data") . ) }}
+{{ end }}
+{{ $data := $.Scratch.Get "data" }}
+
+<div class="{{ $name }}-table simple-table marked-scrollable-h{{ with .Get "class" }} {{ . }}{{ end }}" data-marked-scrollable-h>
     <div class="simple-table-grid">
-        {{ range (index $.Site.Data.tools.browser_testing.browserstack $dataKey ) }}
-            <div class="row">
-                <span class="cell cell-meta">{{ index . 0 }}</span>
-                <span class="cell">
-                    {{- range (index . 1) -}}
-                        {{- if reflect.IsMap . -}}
-                                {{- with .links -}}
-                                    {{- range . -}}
-                                            <a class="link" title="{{ .href }}" href="{{ .href }}" target="_blank" rel="noopener">
-                                                {{- with .iconLeft }}
-                                                    {{ partial (print "icons/" . ".html") }}
-                                                {{ end -}}
-                                                {{ .text | markdownify }}
-                                                {{- with .iconRight }}
-                                                    {{ partial (print "icons/" . ".html") }}
-                                                {{ end -}}
-                                            </a>
-                                    {{- end -}}
+        {{ range (index $data $dataKey ) }}
+            {{ $.Scratch.Set "start" 0 }}
+            {{ if eq (index . 0) "H" }}
+                {{ $.Scratch.Set "start" 1 }}
+            {{ end }}
+
+            <div class="row{{ if eq (index . 0) "H" }} header{{ end }}">
+                {{ range $i, $item := after ( $.Scratch.Get "start" ) . }}
+                    {{ if eq $i 0 }}
+                        <span class="cell cell-meta">{{ $item }}</span>
+                    {{ else }}
+                        <span class="cell">
+                            {{- range $item -}}
+                                {{- if reflect.IsMap . -}}
+                                        {{- with .links -}}
+                                            {{- range . -}}
+                                                    <a class="link" title="{{ .href }}" href="{{ .href }}" target="_blank" rel="noopener">
+                                                        {{- with .iconLeft }}
+                                                            {{ partial (print "icons/" . ".html") }}
+                                                        {{ end -}}
+                                                        {{ .text | markdownify }}
+                                                        {{- with .iconRight }}
+                                                            {{ partial (print "icons/" . ".html") }}
+                                                        {{ end -}}
+                                                    </a>
+                                            {{- end -}}
+                                        {{- end -}}
+                                {{- else -}}
+                                    {{ . | markdownify }}
                                 {{- end -}}
-                        {{- else -}}
-                            {{ . | markdownify }}
-                        {{- end -}}
-                    {{- end -}}
-                </span>
+                            {{- end -}}
+                        </span>
+                    {{ end }}
+                {{ end }}
             </div>
         {{ end }}
     </div>
