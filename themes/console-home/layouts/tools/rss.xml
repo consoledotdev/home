@@ -26,7 +26,7 @@
 			{{- $faviconStatic := print "static/" $favicon -}}
 			{{ if $favicon }}{{ if (fileExists $faviconStatic) }}<media:content url="https://console.dev/{{ $favicon}}" medium="image" />{{ end }}{{ end }}
             <description>{{ index . "What is it?" }}</description>
-            <content:encoded>{{ "<![CDATA[" | safeHTML }}<h2>Console.dev review of: <a href="{{ index . "URL" }}?ref=console.dev">{{ index . "Tool/Product/Project" }}</a></h2><p><strong>What we like:</strong> {{ index . "What we like" }}</p><p><strong>What we don't like:</strong> {{ index . "What we dislike" }}</p>{{ if eq .Sponsored "TRUE" -}}<p><strong>✦ Sponsored placement:</strong> <a href="https://console.dev">Console newsletter</a> subscribers may have received extras with this review. All reviews are editorially independent, and partners must meet <a href="https://console.dev/about/#selection-criteria">our selection criteria</a>. We do not accept payment for reviews.</p>{{- end }}]]></content:encoded>
+            <content:encoded>{{ "<![CDATA[" | safeHTML }}<h2><a href="https://console.dev">Console.dev</a> review of: <a href="{{ index . "URL" }}?ref=console.dev">{{ index . "Tool/Product/Project" }}</a></h2><p><strong>What we like:</strong> {{ index . "What we like" }}</p><p><strong>What we don't like:</strong> {{ index . "What we dislike" }}</p>{{ if eq .Sponsored "TRUE" -}}<p><strong>✦ Sponsored:</strong> All reviews are editorially independent, and partners must meet <a href="https://console.dev/about/#selection-criteria">our selection criteria</a>.</p>{{- end }}]]></content:encoded>
         </item>
         {{ end }}
     </channel>
