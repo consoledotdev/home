@@ -1214,7 +1214,7 @@ provide far more functionality for browser testing.
 Mabl can be installed on Windows, macOS and Debian-based Linux distributions,
 but requires installation of Chrome to be able to make and execute tests. It can
 execute automated tests locally (only on Chrome) or on the cloud (on Chrome, 
-Firefox, Internet Explorer, Safari). Web testing on mobile is currenlty in Beta
+Firefox, Internet Explorer, Safari). Web testing on mobile is currently in Beta
 and limited to a handful of virtual devices.
 
 Mabl claims to be a low-code test automation alternative to Selenium. Tests can
