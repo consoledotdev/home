@@ -73,16 +73,16 @@ best based on our 15+ years of development experience.
 
 The best hosted SaaS server monitoring tools:
 
-{{< tools/category-review/tldr-list--open >}}
-{{< tools/category-review/miniature-card name="Datadog" thumbnail="/img/favicons/www.datadoghq.com.png" url="https://www.datadoghq.com/" anchor="datadog" score="5" >}}
-{{< tools/category-review/miniature-card name="New Relic" thumbnail="/img/favicons/newrelic.com.png" url="https://newrelic.com/" anchor="new-relic" score="4.5" >}}
+{{< category-review/tldr-list--open >}}
+{{< category-review/miniature-card name="Datadog" thumbnail="/img/favicons/www.datadoghq.com.png" url="https://www.datadoghq.com/" anchor="datadog" score="5" >}}
+{{< category-review/miniature-card name="New Relic" thumbnail="/img/favicons/newrelic.com.png" url="https://newrelic.com/" anchor="new-relic" score="4.5" >}}
 {{< ul--close >}}
 
 The best self-hosted on premises server monitoring tools:
 
-{{< tools/category-review/tldr-list--open >}}
-{{< tools/category-review/miniature-card name="Grafana + Prometheus" thumbnail="/img/favicons/grafana.com.png" url="https://grafana.com/" anchor="grafana-prometheus" score="4.3" >}}
-{{< tools/category-review/miniature-card name="InfluxDB + Telegraf" thumbnail="/img/favicons/www.influxdata.com.png" url="https://www.influxdata.com/" anchor="influxdb-telegraf" score="4.0" >}}
+{{< category-review/tldr-list--open >}}
+{{< category-review/miniature-card name="Grafana + Prometheus" thumbnail="/img/favicons/grafana.com.png" url="https://grafana.com/" anchor="grafana-prometheus" score="4.3" >}}
+{{< category-review/miniature-card name="InfluxDB + Telegraf" thumbnail="/img/favicons/www.influxdata.com.png" url="https://www.influxdata.com/" anchor="influxdb-telegraf" score="4.0" >}}
 {{< ul--close >}}
 
 But do you still need server monitoring? New applications might be serverless
@@ -292,11 +292,11 @@ What are the pros and cons of hosted SaaS monitoring?
 
 {{< nav-wrapper--open id="wrapper-2" anchor-name="datadog" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="Datadog" anchor="datadog" thumbnail="/img/favicons/www.datadoghq.com.png" url="https://www.datadoghq.com/" score="5" >}}
+{{< category-review/card-heading name="Datadog" anchor="datadog" thumbnail="/img/favicons/www.datadoghq.com.png" url="https://www.datadoghq.com/" score="5" >}}
 
 Datadog is the industry leader with the most comprehensive and up to date set of
 integrations, however this also means it has a more complex UI and is expensive.
@@ -305,9 +305,9 @@ integrations, however this also means it has a more complex UI and is expensive.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="$15-27 server/month" >}}
+{{< category-review/card-cost--open highlight="$15-27 server/month" >}}
 
 Datadog gets expensive very quickly. Server monitoring pricing ranges from
 $15-27/server/month depending on features and monthly vs annual commitment.
@@ -320,7 +320,7 @@ $15-27/server/month depending on features and monthly vs annual commitment.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Integrations / plugins" score="5" >}}
+{{< category-review/card-feature-title text="Integrations / plugins" score="5" >}}
 
 Datadog has
 [more than 450 integrations](https://www.datadoghq.com/product/platform/integrations/#all)
@@ -333,7 +333,7 @@ is open source so you can easily write your own plugins.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Graphs" score="5" >}}
+{{< category-review/card-feature-title text="Graphs" score="5" >}}
 
 Datadog uses its own query language to generate graphs so you can easily
 customize what is displayed, or just pick from the UI. Various chart types are
@@ -345,7 +345,7 @@ Datadog's built-in incident management product.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Alerts" score="5" >}}
+{{< category-review/card-feature-title text="Alerts" score="5" >}}
 
 Datadog has a powerful alert system based around different data sources. These
 can be simple host or metric based triggers but Datadog also supports alerting
@@ -358,7 +358,7 @@ webhooks and others.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 The deciding factor for any monitoring tool is whether it can monitor your tech
 stack. Datadog excels here. It has the most up to date integrations across a
@@ -396,7 +396,7 @@ infrastructure and debug problems.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 All this customizability and flexibility across multiple monitoring products
 means that Datadog is not easy to use. It is better than the previous generation
@@ -429,11 +429,11 @@ for small environments that only need basic monitoring.
 
 {{< nav-wrapper--open id="wrapper-3" anchor-name="new-relic" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="New Relic" anchor="new-relic" thumbnail="/img/favicons/newrelic.com.png" url="https://newrelic.com/" score="4.5" >}}
+{{< category-review/card-heading name="New Relic" anchor="new-relic" thumbnail="/img/favicons/newrelic.com.png" url="https://newrelic.com/" score="4.5" >}}
 
 New Relic is best known for application performance monitoring (APM) but can now
 monitor everything, including server monitoring. It has a clean UI but has more
@@ -443,9 +443,9 @@ limited alerting capabilities.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="100GB free then $0.25 GB/month" >}}
+{{< category-review/card-cost--open highlight="100GB free then $0.25 GB/month" >}}
 
 New Relic has a reputation for being very expensive but it now includes a
 generous free quota. A single user can get 100GB/month worth of ingested data
@@ -464,7 +464,7 @@ frequency.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Integrations / plugins" score="4.5" >}}
+{{< category-review/card-feature-title text="Integrations / plugins" score="4.5" >}}
 
 New Relic has [360+ integrations](https://newrelic.com/integrations) so
 everything you might want to use is covered. Some of these are implemented
@@ -478,7 +478,7 @@ regularly releases integrations on the day new products are announced.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Graphs" score="5" >}}
+{{< category-review/card-feature-title text="Graphs" score="5" >}}
 
 New Relic's graphs are based on their own
 [NRQL](https://docs.newrelic.com/docs/query-your-data/nrql-new-relic-query-language/get-started/introduction-nrql-new-relics-query-language/)
@@ -493,7 +493,7 @@ which is a nice touch.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Alerts" score="4" >}}
+{{< category-review/card-feature-title text="Alerts" score="4" >}}
 
 Alerting in New Relic is based around "policies" that have trigger conditions. A
 "Golden Signals" policy is auto-created on installing the monitoring agent which
@@ -507,7 +507,7 @@ flexible as Datadog.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 The real power of New Relic comes from everything existing as a metric and
 building their UI through its custom query language -
@@ -545,7 +545,7 @@ a clever sales trick!
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 Although the power of NRQL is used for defining alert triggers, the notification
 options are not as powerful as Datadog. You can define thresholds such as
@@ -589,7 +589,7 @@ not as highly rated as the two options above, but may be worth considering.
 
 {{< nav-wrapper--open id="wrapper-4" anchor-name="appoptics" >}}
 
-{{< tools/category-review/card-heading name="AppOptics" anchor="appoptics" thumbnail="/img/favicons/www.appoptics.com.png" url="https://www.appoptics.com" score="2" >}}
+{{< category-review/card-heading name="AppOptics" anchor="appoptics" thumbnail="/img/favicons/www.appoptics.com.png" url="https://www.appoptics.com" score="2" >}}
 
 AppOptics is part of the Solarwinds cloud monitoring suite and integrates into
 their APM and log management tools. On the surface it has many of the same
@@ -611,7 +611,7 @@ then you may as well pay a bit more for Datadog or New Relic.
 
 {{< nav-wrapper--open id="wrapper-5" anchor-name="dynatrace" >}}
 
-{{< tools/category-review/card-heading name="Dynatrace" anchor="dynatrace" thumbnail="/img/favicons/www.dynatrace.com.png" url="https://www.dynatrace.com" score="2" >}}
+{{< category-review/card-heading name="Dynatrace" anchor="dynatrace" thumbnail="/img/favicons/www.dynatrace.com.png" url="https://www.dynatrace.com" score="2" >}}
 
 Dynatrace has been around in various forms since 2006, starting as an
 application performance monitoring tool and then expanding to cover all aspects
@@ -661,7 +661,7 @@ complex pricing, we do not recommend Dynatrace for server monitoring.
 
 {{< nav-wrapper--open anchor-name="logic-monitor" >}}
 
-{{< tools/category-review/card-heading name="Logic Monitor" anchor="logic-monitor" thumbnail="/img/favicons/www.logicmonitor.com.png" url="https://www.logicmonitor.com" score="none" >}}
+{{< category-review/card-heading name="Logic Monitor" anchor="logic-monitor" thumbnail="/img/favicons/www.logicmonitor.com.png" url="https://www.logicmonitor.com" score="none" >}}
 
 Logic Monitor tricks you into thinking you are signing up for a trial but you
 can't actually test the product without speaking to someone - you are actually
@@ -676,7 +676,7 @@ so we were unable to evaluate Logic Monitor.
 
 {{< nav-wrapper--open anchor-name="lightstep" >}}
 
-{{< tools/category-review/card-heading name="Lightstep" anchor="lightstep" thumbnail="/img/favicons/lightstep.com.png" url="https://lightstep.com/" score="none" >}}
+{{< category-review/card-heading name="Lightstep" anchor="lightstep" thumbnail="/img/favicons/lightstep.com.png" url="https://lightstep.com/" score="none" >}}
 
 Lightstep is designed primarily as a tracing tool that also supports
 infrastructure metrics. It doesn't have its own monitoring agent so it requires
@@ -778,11 +778,11 @@ What are the pros and cons of self-hosted on premises monitoring?
 
 {{< nav-wrapper--open id="wrapper-6" anchor-name="grafana-prometheus" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="Grafana + Prometheus" anchor="grafana-prometheus" thumbnail="/img/favicons/grafana.com.png" url="https://grafana.com" score="4.3" >}}
+{{< category-review/card-heading name="Grafana + Prometheus" anchor="grafana-prometheus" thumbnail="/img/favicons/grafana.com.png" url="https://grafana.com" score="4.3" >}}
 
 Grafana is the best open source metrics visualization and dashboarding tool. It
 can connect to various data source backends and has built-in alerting. We
@@ -793,7 +793,7 @@ recommend using the open source metrics backend,
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
 {{< framed-section--open classes="framed-section-attention" >}}
 
@@ -801,7 +801,7 @@ recommend using the open source metrics backend,
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Integrations / plugins" score="4" >}}
+{{< category-review/card-feature-title text="Integrations / plugins" score="4" >}}
 
 Metrics are first pushed into Prometheus which Grafana queries for generating
 dashboards, graphs, and triggering alerts. This is achieved either through
@@ -824,7 +824,7 @@ obscure.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Graphs" score="5" >}}
+{{< category-review/card-feature-title text="Graphs" score="5" >}}
 
 It's in the name - Grafana has the most sophisticated and flexible graph builder
 of all the tools we reviewed. Everything is based around visualization panels
@@ -841,7 +841,7 @@ one or more panels.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Alerts" score="4" >}}
+{{< category-review/card-feature-title text="Alerts" score="4" >}}
 
 Grafana 8.0 introduced a new alerting mechanism where alerts are centralized
 with a single system-wide alerting view, but it is still
@@ -859,7 +859,7 @@ OpsGenie and webhooks.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 Grafana + Prometheus are the best free and open source server monitoring tools.
 These two tools excel at their particular specialisms. Grafana is the most
@@ -910,7 +910,7 @@ offer hosted, managed Prometheus services.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 With flexibility comes complexity. Prometheus is not designed for long term
 metrics storage and provides no durability guarantees because it runs on a
@@ -954,11 +954,11 @@ alert on multiple metric sources.
 
 {{< nav-wrapper--open id="wrapper-7" anchor-name="influxdb-telegraf" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="InfluxDB + Telegraf" anchor="influxdb-telegraf" thumbnail="/img/favicons/www.influxdata.com.png" url="https://www.influxdata.com/products/influxdb/" score="4" >}}
+{{< category-review/card-heading name="InfluxDB + Telegraf" anchor="influxdb-telegraf" thumbnail="/img/favicons/www.influxdata.com.png" url="https://www.influxdata.com/products/influxdb/" score="4" >}}
 
 InfluxDB is an open source time series database with a visualization and
 alerting layer. It combines well with
@@ -970,7 +970,7 @@ limited.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
 {{< framed-section--open classes="framed-section-attention" >}}
 
@@ -978,7 +978,7 @@ limited.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Integrations / plugins" score="4.5" >}}
+{{< category-review/card-feature-title text="Integrations / plugins" score="4.5" >}}
 
 Data flows into InfluxDB through two sources - directly to your InfluxDB
 instance via instrumenting your code, or via a plugin for the Telegraf
@@ -997,7 +997,7 @@ monitoring cloud services, such as AWS Cloudwatch or Google Pub/Sub.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Graphs" score="4" >}}
+{{< category-review/card-feature-title text="Graphs" score="4" >}}
 
 InfluxDB is queried using [Flux](https://www.influxdata.com/products/flux/), a
 data scripting language for analyzing time series data. You can execute queries
@@ -1015,7 +1015,7 @@ table, etc.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Alerts" score="3" >}}
+{{< category-review/card-feature-title text="Alerts" score="3" >}}
 
 Alerting in InfluxDB is based around checks that define urgency levels - crit,
 warn, info, ok. Checks can be triggered based on thresholds or "deadman", which
@@ -1039,7 +1039,7 @@ data from InfluxDB and triggering alerts. This has
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 InfluxDB has a great installation and onboarding flow and the UI and color
 choices really appeal as a developer! The UI is intuitive and it is easy to
@@ -1084,7 +1084,7 @@ count.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 Alerting is the main limitation you will face if you use InfluxDB. Although
 values are extracted through the sophisticated Flux query language, there are
@@ -1127,7 +1127,7 @@ rated as the two options above, but may be worth considering.
 
 {{< nav-wrapper--open anchor-name="checkmk" >}}
 
-{{< tools/category-review/card-heading name="checkmk" anchor="checkmk" thumbnail="/img/favicons/checkmk.com.png" url="https://checkmk.com" score="none" >}}
+{{< category-review/card-heading name="checkmk" anchor="checkmk" thumbnail="/img/favicons/checkmk.com.png" url="https://checkmk.com" score="none" >}}
 
 checkmk is an unusual project because the free open source edition (checkmk Raw)
 is based on Nagios but the other "Enterprise" editions (available in Free,
@@ -1160,7 +1160,7 @@ choose from.
 
 {{< nav-wrapper--open anchor-name="graphite" >}}
 
-{{< tools/category-review/card-heading name="Graphite" anchor="graphite" url="https://graphite.readthedocs.io/en/latest/" score="none" >}}
+{{< category-review/card-heading name="Graphite" anchor="graphite" url="https://graphite.readthedocs.io/en/latest/" score="none" >}}
 
 Graphite is a time series datastore that can generate graphs. It was originally
 released in 2006 and open sourced in 2008. It's still in active development but
@@ -1177,7 +1177,7 @@ are better options.
 
 {{< nav-wrapper--open anchor-name="icinga" >}}
 
-{{< tools/category-review/card-heading name="Icinga" anchor="icinga" thumbnail="/img/favicons/icinga.com.png" url="https://icinga.com" score="1" >}}
+{{< category-review/card-heading name="Icinga" anchor="icinga" thumbnail="/img/favicons/icinga.com.png" url="https://icinga.com" score="1" >}}
 
 Icinga was originally a fork of Nagios and continues to maintain compatibility.
 It has a more modern UI but is not really on-par with the power of Grafana or
@@ -1192,7 +1192,7 @@ you think server monitoring should include graphs then Icinga isn't for you.
 
 {{< nav-wrapper--open id="wrapper-8" anchor-name="nagios" >}}
 
-{{< tools/category-review/card-heading name="Nagios" anchor="nagios" thumbnail="/img/favicons/www.nagios.org.png" url="https://www.nagios.org/" score="1" >}}
+{{< category-review/card-heading name="Nagios" anchor="nagios" thumbnail="/img/favicons/www.nagios.org.png" url="https://www.nagios.org/" score="1" >}}
 
 Nagios is one of the oldest monitoring products around, having originally been
 released in 2002. Its age shows, and although it is based around an open source
@@ -1214,7 +1214,7 @@ sophistication of the alternatives like Grafana, Prometheus and InfluxDB.
 
 {{< nav-wrapper--open anchor-name="netdata" >}}
 
-{{< tools/category-review/card-heading name="Netdata" anchor="netdata" thumbnail="/img/favicons/www.netdata.cloud.png" url="https://www.netdata.cloud" score="3" >}}
+{{< category-review/card-heading name="Netdata" anchor="netdata" thumbnail="/img/favicons/www.netdata.cloud.png" url="https://www.netdata.cloud" score="3" >}}
 
 Netdata is an open source monitoring product that has an installable agent which
 defaults to local storage of metrics on a single host. Users connect to the
@@ -1246,7 +1246,7 @@ few days.
 
 {{< nav-wrapper--open anchor-name="opentsdb" >}}
 
-{{< tools/category-review/card-heading name="OpenTSDB" anchor="opentsdb" thumbnail="/img/favicons/opentsdb.net.png" url="http://opentsdb.net/" score="none" >}}
+{{< category-review/card-heading name="OpenTSDB" anchor="opentsdb" thumbnail="/img/favicons/opentsdb.net.png" url="http://opentsdb.net/" score="none" >}}
 
 OpenTSDB is a time series database built on top of Hadoop and HBase. It's a good
 option if you need to store a huge volume of time series data but it's not a
@@ -1260,7 +1260,7 @@ interested in OpenTSDB then you may want to consider
 
 {{< nav-wrapper--open anchor-name="opstrace" >}}
 
-{{< tools/category-review/card-heading name="Opstrace" anchor="opstrace" thumbnail="/img/favicons/opstrace.com.png" url="https://opstrace.com/" score="none" >}}
+{{< category-review/card-heading name="Opstrace" anchor="opstrace" thumbnail="/img/favicons/opstrace.com.png" url="https://opstrace.com/" score="none" >}}
 
 Opstrace packages several open source monitoring tools
 ([Cortex](https://cortexmetrics.io), [Loki](https://grafana.com/oss/loki/),
@@ -1275,7 +1275,7 @@ version. We'll reevaluate Opstrace in the future.
 
 {{< nav-wrapper--open anchor-name="sensu" >}}
 
-{{< tools/category-review/card-heading name="Sensu" anchor="sensu" thumbnail="/img/favicons/sensu.io.png" url="https://sensu.io" score="none" >}}
+{{< category-review/card-heading name="Sensu" anchor="sensu" thumbnail="/img/favicons/sensu.io.png" url="https://sensu.io" score="none" >}}
 
 Sensu is open source monitoring software, but only if you
 [compile it from source code yourself](https://github.com/sensu/sensu-go), then
@@ -1292,7 +1292,7 @@ This section only covers open source options so we did not evaluate Sensu Go.
 
 {{< nav-wrapper--open anchor-name="signoz" >}}
 
-{{< tools/category-review/card-heading name="SigNoz" anchor="signoz" thumbnail="/img/favicons/signoz.io.png" url="https://signoz.io" score="none" >}}
+{{< category-review/card-heading name="SigNoz" anchor="signoz" thumbnail="/img/favicons/signoz.io.png" url="https://signoz.io" score="none" >}}
 
 SigNoz is a metrics monitoring tool built around
 [OpenTelemetry](https://opentelemetry.io/) that uses Clickhouse or Kafka + Druid
@@ -1305,7 +1305,7 @@ early in development and not on par with our main recommendations above.
 
 {{< nav-wrapper--open id="wrapper-9" anchor-name="zabbix" >}}
 
-{{< tools/category-review/card-heading name="Zabbix" anchor="zabbix" thumbnail="/img/favicons/www.zabbix.com.png" url="https://www.zabbix.com" score="3" >}}
+{{< category-review/card-heading name="Zabbix" anchor="zabbix" thumbnail="/img/favicons/www.zabbix.com.png" url="https://www.zabbix.com" score="3" >}}
 
 Zabbix is an monolithic monitoring tool written in PHP with Apache or Nginx as
 the frontend and several options for the database backend (MySQL, PostgreSQL,
@@ -1361,13 +1361,13 @@ our two finalists above.
 
 ### FAQ
 
-{{< tools/category-review/faq category="server-monitoring" >}}
+{{< category-review/faq category="server-monitoring" >}}
 
 {{< nav-wrapper--open id="wrapper-10" anchor-name="editorial-policy" >}}
 
 ### Related categories
 
-{{< tools/category-review/related-categories >}}
+{{< category-review/related-categories >}}
 
 ### Our editorial policy
 

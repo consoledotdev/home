@@ -73,13 +73,13 @@ and the localization testing capabilities.
 
 ### tl;dr the best browser testing tools
 
-{{< tools/category-review/tldr-list--open >}}
-{{< tools/category-review/miniature-card name="BrowserStack" thumbnail="/img/favicons/www.browserstack.com.png" full-review="/browser-testing/browserstack" url="https://www.browserstack.com/" anchor="browserstack" score="4.7" >}}
-{{< tools/category-review/miniature-card name="Lambdatest" thumbnail="/img/favicons/www.lambdatest.com.jpg" url="https://www.lambdatest.com/" anchor="lambdatest" score="4.7" >}}
-{{< tools/category-review/miniature-card name="SmartBear CrossBrowserTesting" thumbnail="/img/favicons/crossbrowsertesting.com.png" url="https://crossbrowsertesting.com/" anchor="smartbear-crossbrowsertesting" score="4.3" >}}
-{{< tools/category-review/miniature-card name="Sauce Labs" thumbnail="/img/favicons/saucelabs.com.jpg" url="https://saucelabs.com/" anchor="sauce-labs" score="4.2" >}}
-{{< tools/category-review/miniature-card name="Ghost Inspector" thumbnail="/img/favicons/ghostinspector.com.png" url="https://ghostinspector.com/" anchor="ghost-inspector" score="3.5" >}}
-{{< tools/category-review/miniature-card name="Selenium" thumbnail="/img/favicons/www.selenium.dev.png" url="https://www.selenium.dev/" anchor="selenium" score="2.5" >}}
+{{< category-review/tldr-list--open >}}
+{{< category-review/miniature-card name="BrowserStack" thumbnail="/img/favicons/www.browserstack.com.png" full-review="/browser-testing/browserstack" url="https://www.browserstack.com/" anchor="browserstack" score="4.7" >}}
+{{< category-review/miniature-card name="Lambdatest" thumbnail="/img/favicons/www.lambdatest.com.jpg" url="https://www.lambdatest.com/" anchor="lambdatest" score="4.7" >}}
+{{< category-review/miniature-card name="SmartBear CrossBrowserTesting" thumbnail="/img/favicons/crossbrowsertesting.com.png" url="https://crossbrowsertesting.com/" anchor="smartbear-crossbrowsertesting" score="4.3" >}}
+{{< category-review/miniature-card name="Sauce Labs" thumbnail="/img/favicons/saucelabs.com.jpg" url="https://saucelabs.com/" anchor="sauce-labs" score="4.2" >}}
+{{< category-review/miniature-card name="Ghost Inspector" thumbnail="/img/favicons/ghostinspector.com.png" url="https://ghostinspector.com/" anchor="ghost-inspector" score="3.5" >}}
+{{< category-review/miniature-card name="Selenium" thumbnail="/img/favicons/www.selenium.dev.png" url="https://www.selenium.dev/" anchor="selenium" score="2.5" >}}
 {{< ul--close >}}
 
 {{< div--close >}}
@@ -162,11 +162,11 @@ We reviewed 12 browser testing tools. The best is: BrowserStack. We also liked
 
 {{< nav-wrapper--open id="wrapper-2" anchor-name="browserstack" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="BrowserStack" anchor="browserstack" thumbnail="/img/favicons/www.browserstack.com.png" url="https://www.browserstack.com/" score="4.7" >}}
+{{< category-review/card-heading name="BrowserStack" anchor="browserstack" thumbnail="/img/favicons/www.browserstack.com.png" url="https://www.browserstack.com/" score="4.7" >}}
 
 BrowserStack is a cross browser testing and debugging tool which supports tests
 built with Selenium, Cypress, Playwright and Puppeteer. It offers both live and
@@ -177,9 +177,9 @@ automated testing on 2000+ real mobile devices and virtual desktop machines.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="BrowserStack is one of the more expensive choices for browser testing, but that price reflects its quality. It costs $39/m for live testing and $249/m for automated testing with 1 parallel test." >}}
+{{< category-review/card-cost--open highlight="BrowserStack is one of the more expensive choices for browser testing, but that price reflects its quality. It costs $39/m for live testing and $249/m for automated testing with 1 parallel test." >}}
 
 {{< div--close >}}
 
@@ -189,7 +189,7 @@ automated testing on 2000+ real mobile devices and virtual desktop machines.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Devices and browsers supported" score="5" >}}
+{{< category-review/card-feature-title text="Devices and browsers supported" score="5" >}}
 
 BrowserStack offers testing on 2,000+ mobile and desktop browsers ranging from
 legacy versions of Internet Explorer to the latest beta releases of popular
@@ -200,7 +200,7 @@ multiple vendors. Latest Windows 11 and macOS Monterey releases are available.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Automation" score="4.5" >}}
+{{< category-review/card-feature-title text="Automation" score="4.5" >}}
 
 BrowserStack supports automation workflows written in a wide variety of
 languages and frameworks. Support for continuous integration tools like Jenkins
@@ -211,7 +211,7 @@ pipeline.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Debugging & Error reporting" score="4.5" >}}
+{{< category-review/card-feature-title text="Debugging & Error reporting" score="4.5" >}}
 
 BrowserStack can report bugs to Jira, Trello, GitHub and Slack. Screenshots can
 be annotated to highlight certain sections which did not render properly before
@@ -223,7 +223,7 @@ etc.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 BrowserStack supports testing with multiple frameworks, namely Cypress,
 Playwright and Puppeteer on
@@ -261,7 +261,7 @@ for debugging and updating/deleting projects and builds.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 Testing on real devices comes with a few caveats, most notable of them being
 network latency during live testing. Response time between clicks and page
@@ -304,11 +304,11 @@ feedback and deeper insights.
 
 {{< nav-wrapper--open id="wrapper-3" anchor-name="lambdatest" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="LambdaTest" anchor="lambdatest" thumbnail="/img/favicons/www.lambdatest.com.jpg" url="https://www.lambdatest.com/" score="4.7" >}}
+{{< category-review/card-heading name="LambdaTest" anchor="lambdatest" thumbnail="/img/favicons/www.lambdatest.com.jpg" url="https://www.lambdatest.com/" score="4.7" >}}
 
 LambdaTest is one of the newer tools in the cross browser testing market. It has
 a clean UI, large number of test devices and an interesting desktop application
@@ -318,9 +318,9 @@ a clean UI, large number of test devices and an interesting desktop application
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="Although LambdaTest offers a free plan with a limited testing quota (which resets every month), a premium subscription is needed for unlimited live and automatic cross browser testing. This starts at $19/m (live testing) and $119/m (automatic testing) with 1 parallel execution." >}}
+{{< category-review/card-cost--open highlight="Although LambdaTest offers a free plan with a limited testing quota (which resets every month), a premium subscription is needed for unlimited live and automatic cross browser testing. This starts at $19/m (live testing) and $119/m (automatic testing) with 1 parallel execution." >}}
 
 {{< div--close >}}
 
@@ -330,7 +330,7 @@ a clean UI, large number of test devices and an interesting desktop application
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Devices and browsers supported" score="4" >}}
+{{< category-review/card-feature-title text="Devices and browsers supported" score="4" >}}
 
 LambdaTest offers
 [2000+ different combinations](https://www.lambdatest.com/list-of-browsers) of
@@ -345,7 +345,7 @@ and available on request.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Automation" score="5" >}}
+{{< category-review/card-feature-title text="Automation" score="5" >}}
 
 End-to-end automated tests can be executed in the cloud using the Selenium or
 Cypress frameworks. LambdaTest has a collection of
@@ -358,7 +358,7 @@ LambdaTest to provide a seamless testing experience.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Debugging & Error reporting" score="5" >}}
+{{< category-review/card-feature-title text="Debugging & Error reporting" score="5" >}}
 
 Debugging failed tests is a smooth process because testing metadata, network
 requests, test framework logs and a list of commands executed are presented in
@@ -377,7 +377,7 @@ Trello, GitHub, GitLab etc. can also be used while testing.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 LambdaTest doesn't just provide testing infrastructure but a whole range of
 features such as an inbuilt issue tracker, automated full page screenshot tool
@@ -400,7 +400,7 @@ from test devices was available.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 The biggest limitation of LambdaTest is the lack of availability of real devices
 in the testing cloud - all the tests are currently executed on a simulator. A
@@ -445,11 +445,11 @@ feature, but right now it feels very early.
 
 {{< nav-wrapper--open id="wrapper-4" anchor-name="smartbear-crossbrowsertesting" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="SmartBear CrossBrowserTesting" anchor="smartbear-crossbrowsertesting" thumbnail="/img/favicons/crossbrowsertesting.com.png" url="https://crossbrowsertesting.com/" score="4.2" >}}
+{{< category-review/card-heading name="SmartBear CrossBrowserTesting" anchor="smartbear-crossbrowsertesting" thumbnail="/img/favicons/crossbrowsertesting.com.png" url="https://crossbrowsertesting.com/" score="4.2" >}}
 
 In addition to live and automatic testing, SmartBear CrossBrowserTesting offers
 features such as screenshot testing and codeless testing using AI to record and
@@ -460,9 +460,9 @@ devices.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="Plans start at $39/m for live testing and $169/month for automated testing. Open Source projects can get access to testing environments for free." >}}
+{{< category-review/card-cost--open highlight="Plans start at $39/m for live testing and $169/month for automated testing. Open Source projects can get access to testing environments for free." >}}
 
 {{< div--close >}}
 
@@ -472,7 +472,7 @@ devices.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Devices and browsers supported" score="4.5" >}}
+{{< category-review/card-feature-title text="Devices and browsers supported" score="4.5" >}}
 
 CrossBrowserTesting provides 2,000+ browsers and real mobile devices for live
 and automated testing. All major versions of Windows (including 32 bit versions)
@@ -485,7 +485,7 @@ Sleipnir Mobile, UC Browser and Camino is also available.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Automation" score="4" >}}
+{{< category-review/card-feature-title text="Automation" score="4" >}}
 
 CrossBrowserTesting
 [offers integrations](https://crossbrowsertesting.com/automated-testing/integrations)
@@ -500,7 +500,7 @@ visual comparison functionality through
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Debugging & Error reporting" score="4" >}}
+{{< category-review/card-feature-title text="Debugging & Error reporting" score="4" >}}
 
 Test results and relevant logs are shown next to each step which makes them easy
 to navigate. Video recordings and any screenshots captured during the testing
@@ -513,7 +513,7 @@ a public link, Slack, Jira and email.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 Live testing can be performed on a large number of devices, and we particularly
 like the availability of unusual browsers like Opera Mini, Samsung Internet,
@@ -544,7 +544,7 @@ NodeJS module, desktop app or command line.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 Network latency in live testing, especially when performing local testing, is on
 the higher end of the spectrum of the tools we tested. Sound has a poor bitrate
@@ -581,11 +581,11 @@ on its latest devices is unacceptable.
 
 {{< nav-wrapper--open id="wrapper-5" anchor-name="sauce-labs" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="Sauce Labs" anchor="sauce-labs" thumbnail="/img/favicons/saucelabs.com.jpg" url="https://saucelabs.com/" score="4.2" >}}
+{{< category-review/card-heading name="Sauce Labs" anchor="sauce-labs" thumbnail="/img/favicons/saucelabs.com.jpg" url="https://saucelabs.com/" score="4.2" >}}
 
 Sauce Labs is a full-scale testing platform for websites and applications that
 supports test frameworks such as Selenium, Playwright and Puppeteer on a large
@@ -595,9 +595,9 @@ number of popular device, browser and operating system test targets.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="Sauce Labs is priced at $49/m for manual testing and $199/m and $249/m for automated virtual device and real device testing. Pricing increases with more parallel tests." >}}
+{{< category-review/card-cost--open highlight="Sauce Labs is priced at $49/m for manual testing and $199/m and $249/m for automated virtual device and real device testing. Pricing increases with more parallel tests." >}}
 
 {{< div--close >}}
 
@@ -607,7 +607,7 @@ number of popular device, browser and operating system test targets.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Devices and browsers supported" score="4.5" >}}
+{{< category-review/card-feature-title text="Devices and browsers supported" score="4.5" >}}
 
 Sauce Labs offer
 [a vast number](https://saucelabs.com/platform/supported-browsers-devices) of
@@ -623,7 +623,7 @@ are available as emulators/simulators.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Automation" score="4" >}}
+{{< category-review/card-feature-title text="Automation" score="4" >}}
 
 Sauce Labs can [integrate](https://saucelabs.com/platform/integrations-plugins)
 directly with Jenkins, Bamboo, TeamCity, Travis CI and CircleCI as well as
@@ -637,7 +637,7 @@ to GUI dashboards.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Debugging & Error reporting" score="4" >}}
+{{< category-review/card-feature-title text="Debugging & Error reporting" score="4" >}}
 
 The dashboard and reports are neatly segregated by live and automated tests,
 then further subdivided into tests run on real and virtual devices. Video
@@ -655,7 +655,7 @@ directly from the test results page for any completed job.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 Sauce Labs offers testing against thousands of the latest browsers, iOS and
 Android devices. Testing devices that are not available or require a special
@@ -690,7 +690,7 @@ languages and customer support is available around the clock.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 Sauce Labs is one of the oldest and most mature browser testing software tools,
 which means that it has accumulated some technical debt. The most frustrating
@@ -738,11 +738,11 @@ the test fixed this. This may indicate that devices are not wiped between tests.
 
 {{< nav-wrapper--open id="wrapper-6" anchor-name="ghost-inspector" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="Ghost Inspector" anchor="ghost-inspector" thumbnail="/img/favicons/ghostinspector.com.png" url="https://ghostinspector.com/" score="3.5" >}}
+{{< category-review/card-heading name="Ghost Inspector" anchor="ghost-inspector" thumbnail="/img/favicons/ghostinspector.com.png" url="https://ghostinspector.com/" score="3.5" >}}
 
 Ghost Inspector is a cloud browser compatibility testing tool that stands out
 for its support for testing 2FA and end-to-end email flows. Testing can be
@@ -753,9 +753,9 @@ it only supports Chrome and Firefox on desktop.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="Starts at $99/m with pricing increased based on the number of tests or team members" >}}
+{{< category-review/card-cost--open highlight="Starts at $99/m with pricing increased based on the number of tests or team members" >}}
 
 {{< div--close >}}
 
@@ -765,7 +765,7 @@ it only supports Chrome and Firefox on desktop.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Devices and browsers supported" score="2.5" >}}
+{{< category-review/card-feature-title text="Devices and browsers supported" score="2.5" >}}
 
 Ghost Inspector can run tests with various versions of Chrome and Firefox. The
 resolution of the browser window on the testing machine can be changed to
@@ -777,7 +777,7 @@ real nor virtual mobile devices are supported.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Automation" score="4" >}}
+{{< category-review/card-feature-title text="Automation" score="4" >}}
 
 Tests can be [integrated](https://ghostinspector.com/docs/integration/) with
 popular continuous delivery services such as AWS CodePipeline, Azure DevOps,
@@ -790,7 +790,7 @@ intervals.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Debugging & Error reporting" score="4" >}}
+{{< category-review/card-feature-title text="Debugging & Error reporting" score="4" >}}
 
 Every step in test reports is color coded which makes it easy to identify which
 steps were passed/failed and which steps were skipped. Console output logged
@@ -803,7 +803,7 @@ CSV formats.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 Ghost Inspector can test functionality of websites and web apps on multiple
 browsers with different user agents and screen sizes. Visual testing is possible
@@ -838,7 +838,7 @@ priority.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 Ghost Inspector only supports Firefox and Chrome. Including Chrome means the
 most popular browser is covered, the missing support for Safari means a major
@@ -875,11 +875,11 @@ whereas other features such as the web camera and HTTP3 are not supported.
 
 {{< nav-wrapper--open id="wrapper-7" anchor-name="selenium" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="Selenium" anchor="selenium" thumbnail="/img/favicons/www.selenium.dev.png" url="https://www.selenium.dev/" score="2.5" >}}
+{{< category-review/card-heading name="Selenium" anchor="selenium" thumbnail="/img/favicons/www.selenium.dev.png" url="https://www.selenium.dev/" score="2.5" >}}
 
 Selenium is a web application testing framework available for Java, Python, C#,
 Ruby, JavaScript and Kotlin. It is built for automated testing on desktop
@@ -890,9 +890,9 @@ article, but is not recommended for use by itself.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="Selenium is free and open source." >}}
+{{< category-review/card-cost--open highlight="Selenium is free and open source." >}}
 
 {{< div--close >}}
 
@@ -902,7 +902,7 @@ article, but is not recommended for use by itself.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Devices and browsers supported" score="3" >}}
+{{< category-review/card-feature-title text="Devices and browsers supported" score="3" >}}
 
 Selenium is available on Windows, macOS and Linux. Drivers for popular browsers
 such as Chrome, Edge, Firefox and Safari are directly supported by their
@@ -916,7 +916,7 @@ to achieve that.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Automation" score="3" >}}
+{{< category-review/card-feature-title text="Automation" score="3" >}}
 
 Since it is open source, the number of integrations possible are endless, but
 there are no integrations available out of the box. Advanced users may develop
@@ -940,7 +940,7 @@ since 2020.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Debugging & Error reporting" score="1.5" >}}
+{{< category-review/card-feature-title text="Debugging & Error reporting" score="1.5" >}}
 
 Selenium is
 [not designed](https://www.selenium.dev/documentation/guidelines/improved_reporting/)
@@ -956,7 +956,7 @@ process of test case management to some extent.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 Selenium was first released in 2004 and has stayed relevant for almost two
 decades. Many other browser compatibility testing tools are built on Selenium
@@ -985,7 +985,7 @@ setting browser profiles in Firefox.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 Selenium was built for automating desktop browsers, so it focuses only on that.
 It does not provide a good solution for automated visual testing and all the
@@ -1055,7 +1055,7 @@ full review:
 
 {{< nav-wrapper--open anchor-name="aws-device-farm" >}}
 
-{{< tools/category-review/card-heading name="AWS Device Farm" anchor="aws-device-farm" thumbnail="/img/favicons/aws.amazon.com.jpg" url="https://aws.amazon.com/device-farm/" score="none" >}}
+{{< category-review/card-heading name="AWS Device Farm" anchor="aws-device-farm" thumbnail="/img/favicons/aws.amazon.com.jpg" url="https://aws.amazon.com/device-farm/" score="none" >}}
 
 AWS Device Farm provides mobile and desktop devices for testing websites and web
 applications. Desktop browser testing can be performed on the latest 3 releases
@@ -1098,7 +1098,7 @@ full review.
 
 {{< nav-wrapper--open anchor-name="polypane" >}}
 
-{{< tools/category-review/card-heading name="Polypane" anchor="polypane" thumbnail="/img/favicons/polypane.app.png" url="https://polypane.app/" score="none" >}}
+{{< category-review/card-heading name="Polypane" anchor="polypane" thumbnail="/img/favicons/polypane.app.png" url="https://polypane.app/" score="none" >}}
 
 Polypane is a multi-pane browser made for web testing using different window
 sizes with scrolling sync. Whilst it supports Windows, Linux and macOS, it can
@@ -1141,7 +1141,7 @@ is the subject of this review. As such, we didn’t select it for a full review.
 
 {{< nav-wrapper--open anchor-name="responsively" >}}
 
-{{< tools/category-review/card-heading name="Responsively" anchor="responsively" thumbnail="/img/favicons/responsively.svg" url="https://responsively.app/" score="none" >}}
+{{< category-review/card-heading name="Responsively" anchor="responsively" thumbnail="/img/favicons/responsively.svg" url="https://responsively.app/" score="none" >}}
 
 Responsively is an open source multi-pane browser built using
 [Electron](https://www.electronjs.org/). It has built-in support for popular
@@ -1172,7 +1172,7 @@ browser testing. As such, we didn’t select it for a full review.
 
 {{< nav-wrapper--open anchor-name="functionize" >}}
 
-{{< tools/category-review/card-heading name="Functionize" anchor="functionize" thumbnail="/img/favicons/www.functionize.com.png" url="https://www.functionize.com" score="none" >}}
+{{< category-review/card-heading name="Functionize" anchor="functionize" thumbnail="/img/favicons/www.functionize.com.png" url="https://www.functionize.com" score="none" >}}
 
 Functionize only supports testing on Chrome and needs an Chrome extension to
 make tests, which makes it impossible to make tests on any other browser. The
@@ -1192,7 +1192,7 @@ As such, we excluded it from our review.
 
 {{< nav-wrapper--open anchor-name="browsersync" >}}
 
-{{< tools/category-review/card-heading name="Browsersync" anchor="browsersync" thumbnail="/img/favicons/browsersync.io.png" url="https://browsersync.io/" score="none" >}}
+{{< category-review/card-heading name="Browsersync" anchor="browsersync" thumbnail="/img/favicons/browsersync.io.png" url="https://browsersync.io/" score="none" >}}
 
 Browsersync is available as a free NPM package which syncs browser states and
 interactions such as click, scroll, form input and submit on multiple devices in
@@ -1214,7 +1214,7 @@ provide far more functionality for browser testing.
 
 {{< nav-wrapper--open anchor-name="mabl" >}}
 
-{{< tools/category-review/card-heading name="Mabl" anchor="mabl" thumbnail="/img/favicons/www.mabl.com.jpg" url="https://www.mabl.com/" score="none" >}}
+{{< category-review/card-heading name="Mabl" anchor="mabl" thumbnail="/img/favicons/www.mabl.com.jpg" url="https://www.mabl.com/" score="none" >}}
 
 Mabl can be installed on Windows, macOS and Debian-based Linux distributions,
 but requires installation of Chrome to be able to make and execute tests. It can
@@ -1249,11 +1249,11 @@ of rough edges. We hope to revisit this tool in the future.
 
 ### FAQ
 
-{{< tools/category-review/faq category="browser-testing" >}}
+{{< category-review/faq category="browser-testing" >}}
 
 ### Related categories
 
-{{< tools/category-review/related-categories >}}
+{{< category-review/related-categories >}}
 
 {{< nav-wrapper--open id="wrapper-10" anchor-name="editorial-policy" >}}
 

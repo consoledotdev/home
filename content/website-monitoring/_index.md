@@ -86,14 +86,14 @@ middle of the night! Some services even support configuration in Terraform.
 
 ### tl;dr the best website monitoring tools
 
-{{< tools/category-review/tldr-list--open >}}
-{{< tools/category-review/miniature-card name="Datadog" thumbnail="/img/favicons/www.datadoghq.com.png" url="https://www.datadoghq.com/" anchor="datadog" score="4.6" >}}
-{{< tools/category-review/miniature-card name="Uptrends" thumbnail="/img/favicons/www.uptrends.com.jpg" url="https://www.uptrends.com/" anchor="uptrends" score="4.5" >}}
-{{< tools/category-review/miniature-card name="Checkly" thumbnail="/img/favicons/www.checklyhq.com.jpg" url="https://www.checklyhq.com/" anchor="checkly" score="4.4" >}}
-{{< tools/category-review/miniature-card name="Site24x7" thumbnail="/img/favicons/www.site24x7.com.jpg" url="https://www.site24x7.com/" anchor="site24x7" score="4.3" >}}
-{{< tools/category-review/miniature-card name="New Relic" thumbnail="/img/favicons/newrelic.com.png" url="https://newrelic.com/" anchor="newrelic" score="4.1" >}}
-{{< tools/category-review/miniature-card name="Uptime.com" thumbnail="/img/favicons/uptime.com.svg" url="https://uptime.com/" anchor="uptime" score="3.8" >}}
-{{< tools/category-review/miniature-card name="RapidSpike" thumbnail="/img/favicons/www.rapidspike.com.png" url="https://www.rapidspike.com/" anchor="rapidspike" score="3.8" >}}
+{{< category-review/tldr-list--open >}}
+{{< category-review/miniature-card name="Datadog" thumbnail="/img/favicons/www.datadoghq.com.png" url="https://www.datadoghq.com/" anchor="datadog" score="4.6" >}}
+{{< category-review/miniature-card name="Uptrends" thumbnail="/img/favicons/www.uptrends.com.jpg" url="https://www.uptrends.com/" anchor="uptrends" score="4.5" >}}
+{{< category-review/miniature-card name="Checkly" thumbnail="/img/favicons/www.checklyhq.com.jpg" url="https://www.checklyhq.com/" anchor="checkly" score="4.4" >}}
+{{< category-review/miniature-card name="Site24x7" thumbnail="/img/favicons/www.site24x7.com.jpg" url="https://www.site24x7.com/" anchor="site24x7" score="4.3" >}}
+{{< category-review/miniature-card name="New Relic" thumbnail="/img/favicons/newrelic.com.png" url="https://newrelic.com/" anchor="newrelic" score="4.1" >}}
+{{< category-review/miniature-card name="Uptime.com" thumbnail="/img/favicons/uptime.com.svg" url="https://uptime.com/" anchor="uptime" score="3.8" >}}
+{{< category-review/miniature-card name="RapidSpike" thumbnail="/img/favicons/www.rapidspike.com.png" url="https://www.rapidspike.com/" anchor="rapidspike" score="3.8" >}}
 {{< ul--close >}}
 
 {{< div--close >}}
@@ -210,11 +210,11 @@ We reviewed 13 website monitoring tools. The best is: Datadog. We also liked
 
 {{< nav-wrapper--open id="wrapper-2" anchor-name="datadog" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="Datadog" anchor="datadog" thumbnail="/img/favicons/www.datadoghq.com.png" url="https://www.datadoghq.com/" score="4.6" >}}
+{{< category-review/card-heading name="Datadog" anchor="datadog" thumbnail="/img/favicons/www.datadoghq.com.png" url="https://www.datadoghq.com/" score="4.6" >}}
 
 Datadog has a powerful synthetic monitoring product with an advanced editor for
 defining execution steps and detailed test reporting, screenshots and request
@@ -226,9 +226,9 @@ However, it has a small number of check locations and can get expensive.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="$5-18 per thousand test executions" >}}
+{{< category-review/card-cost--open highlight="$5-18 per thousand test executions" >}}
 
 {{< div--close >}}
 
@@ -238,7 +238,7 @@ However, it has a small number of check locations and can get expensive.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multiple check types & configurable frequency" score="5" >}}
+{{< category-review/card-feature-title text="Multiple check types & configurable frequency" score="5" >}}
 
 Datadog supports monitoring HTTP, SSL, TCP, UDP, WebSocket, DNS and Ping (ICMP)
 service types for single-step endpoint monitoring. Multi-step tests only support
@@ -255,7 +255,7 @@ options.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multiple check locations" score="3.5" >}}
+{{< category-review/card-feature-title text="Multiple check locations" score="3.5" >}}
 
 Datadog only supports 16 different locations, all but one of which match up with
 Amazon Web Services regions. Datadog recently added a new location running
@@ -270,7 +270,7 @@ supported by the standard set.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multi-step requests (transaction monitoring)" score="5" >}}
+{{< category-review/card-feature-title text="Multi-step requests (transaction monitoring)" score="5" >}}
 
 Datadog supports multi-step transaction monitoring via 2 options - HTTP API
 endpoints and browser tests.
@@ -291,7 +291,7 @@ defined a single test with 50 steps, it would be billed as 2 test executions.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Alerts" score="5" >}}
+{{< category-review/card-feature-title text="Alerts" score="5" >}}
 
 Alerting for Datadog Synthetic Monitoring is based around conditions set when
 configuring the test. You can define how many retries and how often, as well as
@@ -308,7 +308,7 @@ but has advanced features for more sophisticated operations teams.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 Datadog’s Synthetic Monitoring product is one of the best because of the power
 of its different check types. Whether you simply want to execute periodic checks
@@ -336,7 +336,7 @@ product. We covered the server monitoring features in
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 Datadog’s website monitoring is let down by the limited number of check
 locations. Until recently, it relied only on AWS for check locations which is
@@ -364,11 +364,11 @@ want all the advanced functionality, it is difficult to beat.
 
 {{< nav-wrapper--open id="wrapper-3" anchor-name="uptrends" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="Uptrends" anchor="uptrends" thumbnail="/img/favicons/www.uptrends.com.jpg" url="https://www.uptrends.com/" score="4.5" >}}
+{{< category-review/card-heading name="Uptrends" anchor="uptrends" thumbnail="/img/favicons/www.uptrends.com.jpg" url="https://www.uptrends.com/" score="4.5" >}}
 
 Uptrends is more expensive at the entry level to get access to uptime and
 multi-step request monitoring, but it has features like support for running
@@ -379,9 +379,9 @@ locations.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="From $17.19/month for 10 monitors" >}}
+{{< category-review/card-cost--open highlight="From $17.19/month for 10 monitors" >}}
 
 Pricing increases based on features, access to monitoring locations, and number
 of checks.
@@ -394,7 +394,7 @@ of checks.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multiple check types & configurable frequency" score="4.5" >}}
+{{< category-review/card-feature-title text="Multiple check types & configurable frequency" score="4.5" >}}
 
 Uptrends supports basic HTTP(S) check types as well as browser load testing
 (Chrome, Firefox and Internet Explorer), transaction monitoring for websites
@@ -406,7 +406,7 @@ often as every minute or up to every 60 minutes.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multiple check locations" score="5" >}}
+{{< category-review/card-feature-title text="Multiple check locations" score="5" >}}
 
 [Uptrends has over 200 check locations](https://www.uptrends.com/checkpoints)
 around the world. Sensible defaults are selected to cover major regions but
@@ -420,7 +420,7 @@ means errors are detected faster.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multi-step requests (transaction monitoring)" score="4" >}}
+{{< category-review/card-feature-title text="Multi-step requests (transaction monitoring)" score="4" >}}
 
 Uptrends supports multi-step API monitoring and web browser transaction
 monitoring. Transaction steps can be created in the web editor or using the
@@ -434,7 +434,7 @@ selector, but the options are more limited compared to competitors.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Alerts" score="4.5" >}}
+{{< category-review/card-feature-title text="Alerts" score="4.5" >}}
 
 Uptrends supports user alerts via email, SMS and phone, as well as integrations
 into systems like Microsoft Teams, Opsgenie, PagerDuty, ServiceNow, Slack and
@@ -449,7 +449,7 @@ flexible, but not as powerful as alert definitions in Datadog.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 Uptrends stands out for its large number of check locations, particularly with
 the diverse options for city locations in each region. This is important for
@@ -476,7 +476,7 @@ many people.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 The Uptrends UI (no dark mode!) seems to be halfway between the modern look of
 its website (which matches the left menu in the product UI) and an older, legacy
@@ -501,11 +501,11 @@ organization and more options to configure what an “error” state is.
 
 {{< nav-wrapper--open id="wrapper-4" anchor-name="checkly" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="Checkly" anchor="checkly" thumbnail="/img/favicons/www.checklyhq.com.jpg" url="https://www.checklyhq.com/" score="4.4" >}}
+{{< category-review/card-heading name="Checkly" anchor="checkly" thumbnail="/img/favicons/www.checklyhq.com.jpg" url="https://www.checklyhq.com/" score="4.4" >}}
 
 It’s clear that Checkly has been built for developers because it has powerful
 API monitoring and scripted browser transaction monitoring functionality. Being
@@ -518,9 +518,9 @@ and more flexible alerting.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="50k checks per month free, then $1.20/1k checks" >}}
+{{< category-review/card-cost--open highlight="50k checks per month free, then $1.20/1k checks" >}}
 
 Free: 50k API checks/month + 5k browser checks/month. Paid: $1.20/10k check
 runs + $3.60/1k browser check runs.
@@ -533,7 +533,7 @@ runs + $3.60/1k browser check runs.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multiple check types & configurable frequency" score="4.5" >}}
+{{< category-review/card-feature-title text="Multiple check types & configurable frequency" score="4.5" >}}
 
 Checkly only supports two types of check - HTTP API checks (JSON, GraphQL, Forms
 or raw data), and scriptable browser checks by writing Node.js scripts in
@@ -551,7 +551,7 @@ every 60 seconds. Everything can be
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multiple check locations" score="4" >}}
+{{< category-review/card-feature-title text="Multiple check locations" score="4" >}}
 
 Checkly supports 21 check locations which match up to AWS regions. These are
 available on all accounts. There is no support for private check locations.
@@ -560,7 +560,7 @@ available on all accounts. There is no support for private check locations.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multi-step requests (transaction monitoring)" score="5" >}}
+{{< category-review/card-feature-title text="Multi-step requests (transaction monitoring)" score="5" >}}
 
 The easy way to set up multi-step requests is to use
 [Checkly’s open source headless recorder extension](https://www.checklyhq.com/docs/headless-recorder/)
@@ -579,7 +579,7 @@ on [Web Vitals](https://web.dev/vitals).
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Alerts" score="4" >}}
+{{< category-review/card-feature-title text="Alerts" score="4" >}}
 
 Alert conditions are based around assertions defined on a check level. These
 validate request results such as the HTTP status code, headers, response time
@@ -593,7 +593,7 @@ PagerDuty, SMS, Opsgenie and others.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 Checkly claims to be built specifically for developers and this shows with its
 clean, modern UI (but no dark mode!), well written and comprehensive docs, and a
@@ -622,7 +622,7 @@ errors.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 The focus on some very developer-specific features, and how young the product
 is, means that Checkly does not compare as well on features to some of the other
@@ -652,11 +652,11 @@ incident management system.
 
 {{< nav-wrapper--open id="wrapper-5" anchor-name="site24x7" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="Site24x7" anchor="site24x7" thumbnail="/img/favicons/www.site24x7.com.jpg" url="https://www.site24x7.com/" score="4.3" >}}
+{{< category-review/card-heading name="Site24x7" anchor="site24x7" thumbnail="/img/favicons/www.site24x7.com.jpg" url="https://www.site24x7.com/" score="4.3" >}}
 
 Site24x7 has a lot of functionality and covers basic availability checks,
 transaction monitoring as well as browser performance testing and step-by-step
@@ -668,9 +668,9 @@ installer for Linux systems).
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="From $10/month for 10 website monitors, 1 synthetic monitor and 1 minute check frequency" >}}
+{{< category-review/card-cost--open highlight="From $10/month for 10 website monitors, 1 synthetic monitor and 1 minute check frequency" >}}
 
 {{< div--close >}}
 
@@ -680,7 +680,7 @@ installer for Linux systems).
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multiple check types & configurable frequency" score="5" >}}
+{{< category-review/card-feature-title text="Multiple check types & configurable frequency" score="5" >}}
 
 Site24x7 supports basic website monitoring checks, transaction monitoring for
 websites and APIs (REST and GraphQL) as well as other services like WebSockets,
@@ -694,7 +694,7 @@ Enterprise plan.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multiple check locations" score="4" >}}
+{{< category-review/card-feature-title text="Multiple check locations" score="4" >}}
 
 Site24x7 has over 100 check locations which can be selected as pre-defined
 groups e.g. Europe, North America, etc., or by selecting individual locations
@@ -710,7 +710,7 @@ useful for checking particular cellular networks.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multi-step requests (transaction monitoring)" score="4.5" >}}
+{{< category-review/card-feature-title text="Multi-step requests (transaction monitoring)" score="4.5" >}}
 
 Transaction monitoring is available in Site24x7 either through using their
 session recorder browser extension for Chrome, Firefox or Edge, or by importing
@@ -721,7 +721,7 @@ These can use the response from a previous step as part of the next.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Alerts" score="4" >}}
+{{< category-review/card-feature-title text="Alerts" score="4" >}}
 
 Site24x7 allows you to define two states for alerts - trouble and down. These
 are set based on parameters such as whether response strings or headers are
@@ -736,7 +736,7 @@ Zapier.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 Site24x7 has a comprehensive set of features that covers all aspects of website
 and synthetic monitoring. It supports all types of checks, such as DNS, Mail and
@@ -757,7 +757,7 @@ performance on real mobile devices.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 It seems that Site24x7 has developed its extensive functionality over a long
 period of time, which means the web UI is very busy. There are lots of options
@@ -783,11 +783,11 @@ option in the web UI, but it was a 404.
 
 {{< nav-wrapper--open id="wrapper-6" anchor-name="newrelic" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="New Relic" anchor="newrelic" thumbnail="/img/favicons/newrelic.com.png" url="https://newrelic.com/" score="4.1" >}}
+{{< category-review/card-heading name="New Relic" anchor="newrelic" thumbnail="/img/favicons/newrelic.com.png" url="https://newrelic.com/" score="4.1" >}}
 
 New Relic Synthetic Monitoring has options to test APIs, script browser
 interactions, check for broken links or just ping specific endpoints. It
@@ -798,9 +798,9 @@ extra cost, but it has limited alerting capabilities.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="100GB free then $0.25 GB/month" >}}
+{{< category-review/card-cost--open highlight="100GB free then $0.25 GB/month" >}}
 
 New Relic’s pricing is based on the total amount of data ingested per month.
 This works well for log monitoring or tracing, but becomes difficult to
@@ -817,7 +817,7 @@ very generous free quota.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multiple check types & configurable frequency" score="3.5" >}}
+{{< category-review/card-feature-title text="Multiple check types & configurable frequency" score="3.5" >}}
 
 New Relic provides several products - availability checks using cURL to “ping” a
 URL, SSL certificate expiration checks, broken link checks, page load
@@ -832,7 +832,7 @@ min, 10 min, 15 min - it does not support custom values.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multiple check locations" score="4.5" >}}
+{{< category-review/card-feature-title text="Multiple check locations" score="4.5" >}}
 
 New Relic supports 20 check locations. All of them match up with AWS regions but
 it is unclear whether they are actually running on AWS. One major difference New
@@ -850,7 +850,7 @@ to use in your test scripts.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multi-step requests (transaction monitoring)" score="5" >}}
+{{< category-review/card-feature-title text="Multi-step requests (transaction monitoring)" score="5" >}}
 
 New Relic has several options for creating multi-step requests. The most
 advanced option is through scripted monitors which use
@@ -868,7 +868,7 @@ chaining HTTP requests, such as for checking API responses.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Alerts" score="3.5" >}}
+{{< category-review/card-feature-title text="Alerts" score="3.5" >}}
 
 Website monitoring alerts in New Relic are separate from the check configuration
 and are based on “policies” with metrics that trigger them. The default alerting
@@ -884,7 +884,7 @@ and effort to figure out the right query for the metrics you want to alert on.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 New Relic’s data volume approach to billing means you can configure many
 sophisticated synthetic checks across multiple locations and have them executing
@@ -907,7 +907,7 @@ format.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 As we found in [our server monitoring review](/server-monitoring/#new-relic),
 New Relic continues to be let down by its alerting functionality. It is not as
@@ -930,11 +930,11 @@ requires extra time and effort.
 
 {{< nav-wrapper--open id="wrapper-7" anchor-name="uptime" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="Uptime.com" anchor="uptime" thumbnail="/img/favicons/uptime.com.svg" url="https://uptime.com/" score="3.8" >}}
+{{< category-review/card-heading name="Uptime.com" anchor="uptime" thumbnail="/img/favicons/uptime.com.svg" url="https://uptime.com/" score="3.8" >}}
 
 Uptime.com (previously known as Uptime) supports multiple check types and allows
 you to build multi-step transaction monitoring using XPath or JSON selectors.
@@ -945,9 +945,9 @@ than competitors, which are also limited by the pricing plan you choose.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="$16-$299/month depending on features and check quota" >}}
+{{< category-review/card-cost--open highlight="$16-$299/month depending on features and check quota" >}}
 
 {{< div--close >}}
 
@@ -957,7 +957,7 @@ than competitors, which are also limited by the pricing plan you choose.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multiple check types & configurable frequency" score="5" >}}
+{{< category-review/card-feature-title text="Multiple check types & configurable frequency" score="5" >}}
 
 Uptime.com includes multiple check types that allow you to monitor HTTP, DNS,
 NTP, SSH, Ping (ICMP), TCP, UDP, IMAP, POP, SMTP endpoints, Whois/domain
@@ -970,7 +970,7 @@ every hour.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multiple check locations" score="3" >}}
+{{< category-review/card-feature-title text="Multiple check locations" score="3" >}}
 
 Check locations are available depending on which plan you subscribe to. The
 cheapest option only allows for checks within the US, with Europe and Worldwide
@@ -987,7 +987,7 @@ that runs within a Docker container.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multi-step requests (transaction monitoring)" score="4" >}}
+{{< category-review/card-feature-title text="Multi-step requests (transaction monitoring)" score="4" >}}
 
 Uptime.com supports both multi-step HTTP API requests and transaction
 monitoring. API checks are built using an in-app editor which presents basic
@@ -1000,7 +1000,7 @@ perform actions like hovering on elements and completing forms.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Alerts" score="3" >}}
+{{< category-review/card-feature-title text="Alerts" score="3" >}}
 
 Alert conditions are configured as part of each check. You define conditions
 such as strings to expect, SSL validations and response time targets. Uptime.com
@@ -1015,7 +1015,7 @@ large number of checks and their alerts would be tedious.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 The initial setup process probes your DNS records to try and auto detect
 recommended checks. This helps to demonstrate the functionality of the product
@@ -1036,7 +1036,7 @@ that would be sufficient for most websites.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 Uptime.com will do the job for most website monitoring, but it lacks more
 advanced features that developers would appreciate. For example, alerting is
@@ -1067,11 +1067,11 @@ was the dot-com era of the early-2000s but it is a strange choice in 2021.
 
 {{< nav-wrapper--open id="wrapper-8" anchor-name="rapidspike" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="RapidSpike" anchor="rapidspike" thumbnail="/img/favicons/www.rapidspike.com.png" url="https://www.rapidspike.com/" score="3.8" >}}
+{{< category-review/card-heading name="RapidSpike" anchor="rapidspike" thumbnail="/img/favicons/www.rapidspike.com.png" url="https://www.rapidspike.com/" score="3.8" >}}
 
 RapidSpike takes an innovative approach to domain, page and transaction
 monitoring with automatic insights about domain expiry, page accessibility, and
@@ -1083,9 +1083,9 @@ developers.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="From $39/month (1 domain + 2 pages + 1 transaction monitor)" >}}
+{{< category-review/card-cost--open highlight="From $39/month (1 domain + 2 pages + 1 transaction monitor)" >}}
 
 {{< div--close >}}
 
@@ -1095,7 +1095,7 @@ developers.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multiple check types & configurable frequency" score="3.5" >}}
+{{< category-review/card-feature-title text="Multiple check types & configurable frequency" score="3.5" >}}
 
 RapidSpike is primarily a website monitoring service, which means it mainly
 supports HTTP(S) checks against a URL, including sub-pages and multi-step
@@ -1116,7 +1116,7 @@ normally be looking for in a monitoring service.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multiple check locations" score="3" >}}
+{{< category-review/card-feature-title text="Multiple check locations" score="3" >}}
 
 RapidSpike executes monitoring requests from 11 regions for the basic uptime
 monitoring checks. These are not configurable for the top level site but when
@@ -1128,7 +1128,7 @@ be changed. RapidSpike does not support private test locations.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Multi-step requests (transaction monitoring)" score="4.5" >}}
+{{< category-review/card-feature-title text="Multi-step requests (transaction monitoring)" score="4.5" >}}
 
 RapidSpike supports multi-step transaction monitoring for HTTP(S) websites
 through its “User Journey” functionality. These are defined through a web-based
@@ -1145,7 +1145,7 @@ each execution.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Alerts" score="3" >}}
+{{< category-review/card-feature-title text="Alerts" score="3" >}}
 
 RapidSpike supports sending alerts via multiple channels including email, SMS,
 phone, WhatsApp, Slack, PagerDuty, Zendesk and Webhooks. Rules are defined
@@ -1161,7 +1161,7 @@ missing string, load time, etc) and whether steps are failing or not.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 RapidSpike provides a unique approach to website monitoring by introducing a
 hierarchy into how it executes checks. You first define your website as a top
@@ -1184,7 +1184,7 @@ be set up for various conditions.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 RapidSpike’s unique approach to configuring the check hierarchy means it has a
 higher learning curve if you are used to other tools. The UI can be confusing
@@ -1218,7 +1218,7 @@ We also tested the following 6 tools but they did not meet our criteria:
 
 {{< nav-wrapper--open anchor-name="alertra" >}}
 
-{{< tools/category-review/card-heading name="Alertra" anchor="alertra" thumbnail="/img/favicons/www.alertra.com.jpg" url="https://www.alertra.com" score="none" >}}
+{{< category-review/card-heading name="Alertra" anchor="alertra" thumbnail="/img/favicons/www.alertra.com.jpg" url="https://www.alertra.com" score="none" >}}
 
 Alertra has support for monitoring all major check types such as HTTP(S), Ping
 (ICMP), SMTP, POP3, TCP etc with the option to configure check frequency between
@@ -1247,7 +1247,7 @@ tools in this review are much better.
 
 {{< nav-wrapper--open anchor-name="alertbot" >}}
 
-{{< tools/category-review/card-heading name="AlertBot" anchor="alertbot" thumbnail="/img/favicons/www.alertbot.com.jpg" url="https://www.alertbot.com" score="none" >}}
+{{< category-review/card-heading name="AlertBot" anchor="alertbot" thumbnail="/img/favicons/www.alertbot.com.jpg" url="https://www.alertbot.com" score="none" >}}
 
 AlertBot provides website and synthetic multi-step monitoring for HTTP(S)
 websites, plus availability ping monitoring for arbitrary ports. However, the UI
@@ -1266,7 +1266,7 @@ with more functionality.
 
 {{< nav-wrapper--open anchor-name="freshping" >}}
 
-{{< tools/category-review/card-heading name="FreshPing" anchor="freshping" thumbnail="/img/favicons/www.freshworks.com.png" url="https://www.freshworks.com/website-monitoring/" score="none" >}}
+{{< category-review/card-heading name="FreshPing" anchor="freshping" thumbnail="/img/favicons/www.freshworks.com.png" url="https://www.freshworks.com/website-monitoring/" score="none" >}}
 
 FreshPing provides basic HTTP(S), WebSocket, Ping (ICMP), TCP, UDP and DNS
 checks at 1 or 5 minute check intervals. It is only possible to select a single
@@ -1281,7 +1281,7 @@ requirements for our review criteria.
 
 {{< nav-wrapper--open anchor-name="pingdom" >}}
 
-{{< tools/category-review/card-heading name="Pingdom" anchor="pingdom" thumbnail="/img/favicons/www.pingdom.com.png" url="https://www.pingdom.com/" score="none" >}}
+{{< category-review/card-heading name="Pingdom" anchor="pingdom" thumbnail="/img/favicons/www.pingdom.com.png" url="https://www.pingdom.com/" score="none" >}}
 
 Pingdom is one of the oldest website monitoring tools - I remember using it more
 than a decade ago when there were not many options, and it did a great job!
@@ -1328,7 +1328,7 @@ competition. You can get a much more powerful product for free from New Relic.
 
 {{< nav-wrapper--open anchor-name="statuscake" >}}
 
-{{< tools/category-review/card-heading name="StatusCake" anchor="statuscake" thumbnail="/img/favicons/www.statuscake.com.png" url="https://www.statuscake.com/" score="none" >}}
+{{< category-review/card-heading name="StatusCake" anchor="statuscake" thumbnail="/img/favicons/www.statuscake.com.png" url="https://www.statuscake.com/" score="none" >}}
 
 Signing up to StatusCake drops you into their limited free plan so you need to
 activate the trial to test all the features. Checks are available for HTTP(S),
@@ -1347,7 +1347,7 @@ criteria.
 
 {{< nav-wrapper--open anchor-name="uptimerobot" >}}
 
-{{< tools/category-review/card-heading name="UptimeRobot" anchor="uptimerobot" thumbnail="/img/favicons/uptimerobot.com.jpg" url="https://uptimerobot.com/" score="none" >}}
+{{< category-review/card-heading name="UptimeRobot" anchor="uptimerobot" thumbnail="/img/favicons/uptimerobot.com.jpg" url="https://uptimerobot.com/" score="none" >}}
 
 UptimeRobot has very basic website monitoring functionality that can check
 HTTP(S) endpoints, look for strings in the page response, execute ping checks or
@@ -1366,13 +1366,13 @@ As such, we do not recommend UptimeRobot for developers.
 
 ### FAQ
 
-{{< tools/category-review/faq category="website-monitoring" >}}
+{{< category-review/faq category="website-monitoring" >}}
 
 {{< nav-wrapper--open id="wrapper-10" anchor-name="editorial-policy" >}}
 
 ### Related categories
 
-{{< tools/category-review/related-categories >}}
+{{< category-review/related-categories >}}
 
 ### Our editorial policy
 

@@ -254,7 +254,7 @@ solutions by presenting the results in a more user friendly fashion.
 
 ### More browser testing reviews
 
-{{< tools/related-reviews >}}
+{{< related-reviews >}}
 
 {{< div--close >}}
 
@@ -262,6 +262,6 @@ solutions by presenting the results in a more user friendly fashion.
 
 ### Further reading
 
-{{< tools/related-articles >}}
+{{< related-articles >}}
 
 {{< div--close >}}

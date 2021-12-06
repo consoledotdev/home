@@ -67,13 +67,13 @@ tested.
 
 ### tl;dr the best code collaboration tools
 
-{{< tools/category-review/tldr-list--open >}}
-{{< tools/category-review/miniature-card name="CodeTogether" thumbnail="/img/favicons/www.codetogether.com.png" url="https://www.codetogether.com/" anchor="codetogether" score="4.3" >}}
-{{< tools/category-review/miniature-card name="Visual Studio Live Share" thumbnail="/img/favicons/visualstudio-liveshare.microsoft.com.png" url="https://visualstudio.microsoft.com/services/live-share/" anchor="visual-studio-live-share" score="4.2" >}}
-{{< tools/category-review/miniature-card name="Code With Me" thumbnail="/img/favicons/www.jetbrains.com.png" url="https://www.jetbrains.com/code-with-me/" anchor="code-with-me" score="4.2" >}}
-{{< tools/category-review/miniature-card name="GitLive" thumbnail="/img/favicons/git.live.png" url="https://git.live/" anchor="gitlive" score="3.5" >}}
-{{< tools/category-review/miniature-card name="Duckly" thumbnail="/img/favicons/duckly.com.svg" url="https://duckly.com/" anchor="duckly" score="3.3" >}}
-{{< tools/category-review/miniature-card name="AWS Cloud9" thumbnail="/img/favicons/aws.amazon.com.jpg" url="https://aws.amazon.com/cloud9/" anchor="aws-cloud9" score="2.5" >}}
+{{< category-review/tldr-list--open >}}
+{{< category-review/miniature-card name="CodeTogether" thumbnail="/img/favicons/www.codetogether.com.png" url="https://www.codetogether.com/" anchor="codetogether" score="4.3" >}}
+{{< category-review/miniature-card name="Visual Studio Live Share" thumbnail="/img/favicons/visualstudio-liveshare.microsoft.com.png" url="https://visualstudio.microsoft.com/services/live-share/" anchor="visual-studio-live-share" score="4.2" >}}
+{{< category-review/miniature-card name="Code With Me" thumbnail="/img/favicons/www.jetbrains.com.png" url="https://www.jetbrains.com/code-with-me/" anchor="code-with-me" score="4.2" >}}
+{{< category-review/miniature-card name="GitLive" thumbnail="/img/favicons/git.live.png" url="https://git.live/" anchor="gitlive" score="3.5" >}}
+{{< category-review/miniature-card name="Duckly" thumbnail="/img/favicons/duckly.com.svg" url="https://duckly.com/" anchor="duckly" score="3.3" >}}
+{{< category-review/miniature-card name="AWS Cloud9" thumbnail="/img/favicons/aws.amazon.com.jpg" url="https://aws.amazon.com/cloud9/" anchor="aws-cloud9" score="2.5" >}}
 {{< ul--close >}}
 
 {{< div--close >}}
@@ -149,11 +149,11 @@ also liked [Visual Studio Live Share](#visual-studio-live-share) and
 
 {{< nav-wrapper--open id="wrapper-2" anchor-name="codetogether" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="CodeTogether" anchor="codetogether" thumbnail="/img/favicons/www.codetogether.com.png" url="https://www.codetogether.com/" score="4.3" >}}
+{{< category-review/card-heading name="CodeTogether" anchor="codetogether" thumbnail="/img/favicons/www.codetogether.com.png" url="https://www.codetogether.com/" score="4.3" >}}
 
 CodeTogether is an extension for VS Code, IntelliJ and Eclipse that enables
 real-time collaborative development across IDEs and browsers. It allows sharing
@@ -163,9 +163,9 @@ servers, terminals & remote debugging with up to 32 participants.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="CodeTogether has a free plan with the maximum number of participants per session restricted to 3. Premium plans start at  $10.50/user/month." >}}
+{{< category-review/card-cost--open highlight="CodeTogether has a free plan with the maximum number of participants per session restricted to 3. Premium plans start at  $10.50/user/month." >}}
 
 {{< div--close >}}
 
@@ -175,7 +175,7 @@ servers, terminals & remote debugging with up to 32 participants.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Pair programming" score="4.0" >}}
+{{< category-review/card-feature-title text="Pair programming" score="4.0" >}}
 
 CodeTogether offers two options for connecting to remote pair programming
 sessions - via one of the supported IDEs (VS Code, IntelliJ and Eclipse), or in
@@ -191,7 +191,7 @@ configurations in Eclipse and IntelliJ clients.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Communication capabilities" score="5" >}}
+{{< category-review/card-feature-title text="Communication capabilities" score="5" >}}
 
 CodeTogether allows participants to communicate via chat, audio, and video
 calls. Participants can share their screen, raise hands, host polls, and play
@@ -209,7 +209,7 @@ workflow of other participants.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Secure collaboration" score="4" >}}
+{{< category-review/card-feature-title text="Secure collaboration" score="4" >}}
 
 All sessions in CodeTogether are relayed through a backend server however,
 sessions are
@@ -227,7 +227,7 @@ are
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 CodeTogether supports multiple IDEs (VS Code, Eclipse and IntelliJ) and allows
 participants to join as a guest from a browser window. Browser sessions can be
@@ -257,7 +257,7 @@ exported to tools like Prometheus or Graphite using
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 Although CodeTogether provides a powerful cross-IDE experience, it does not
 allow participants to interact with the host’s git repository. Viewing diffs,
@@ -292,11 +292,11 @@ list leaves out a vast number of popular frameworks.
 
 {{< nav-wrapper--open id="wrapper-3" anchor-name="visual-studio-live-share" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="Visual Studio Live Share" anchor="visual-studio-live-share" thumbnail="/img/favicons/visualstudio-liveshare.microsoft.com.png" url="https://visualstudio.microsoft.com/services/live-share/" score="4.2" >}}
+{{< category-review/card-heading name="Visual Studio Live Share" anchor="visual-studio-live-share" thumbnail="/img/favicons/visualstudio-liveshare.microsoft.com.png" url="https://visualstudio.microsoft.com/services/live-share/" score="4.2" >}}
 
 Visual Studio Live Share is an IDE extension by Microsoft built for real time
 code collaboration between Visual Studio Code, Visual Studio, and a browser
@@ -307,9 +307,9 @@ and chat communication functionality.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="Visual Studio Live Share is available for free." >}}
+{{< category-review/card-cost--open highlight="Visual Studio Live Share is available for free." >}}
 
 {{< div--close >}}
 
@@ -319,7 +319,7 @@ and chat communication functionality.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Pair programming" score="5" >}}
+{{< category-review/card-feature-title text="Pair programming" score="5" >}}
 
 Live Share supports up to 30 participants within a coding session. Once shared,
 the participants can access the entire workspace of the host. Live Share can
@@ -333,7 +333,7 @@ results.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Communication capabilities" score="3.0" >}}
+{{< category-review/card-feature-title text="Communication capabilities" score="3.0" >}}
 
 Live Share allows participants to communicate via voice calls as well as chat
 once the Live Share Audio extension has been installed. Basic features such as
@@ -346,7 +346,7 @@ discuss the code in context.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Secure collaboration" score="4.5" >}}
+{{< category-review/card-feature-title text="Secure collaboration" score="4.5" >}}
 
 All code, any terminals, running servers (once shared), and any other
 collaboration features provided by Live Share sessions are
@@ -361,7 +361,7 @@ prevent accidental edits without losing other functionality such as debugging.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 Visual Studio Live Share automatically populates a list of recent and suggested
 contacts in the IDE to directly invite available participants without needing to
@@ -401,7 +401,7 @@ installed - regardless of whether or not participants have it installed as well.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 Visual Studio Live Share cannot be used with other non-Microsoft editors like
 Eclipse or Sublime, but that is probably not surprising! The participants must
@@ -432,11 +432,11 @@ simultaneously.
 
 {{< nav-wrapper--open id="wrapper-4" anchor-name="code-with-me" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="Code With Me" anchor="code-with-me" thumbnail="/img/favicons/www.jetbrains.com.png" url="https://www.jetbrains.com/code-with-me/" score="4.2" >}}
+{{< category-review/card-heading name="Code With Me" anchor="code-with-me" thumbnail="/img/favicons/www.jetbrains.com.png" url="https://www.jetbrains.com/code-with-me/" score="4.2" >}}
 
 Code With Me is a service for remote collaborative code editing and
 pair-programming that enables reviewing, editing, and debugging code with other
@@ -447,9 +447,9 @@ and includes chat, voice and video communications powered by Jitsi.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="Code With Me is free for users using the community version or with an active subscription to JetBrains IDEs. Premium licenses start at $5/user/month and $10/user/month for individual and enterprise users respectively." >}}
+{{< category-review/card-cost--open highlight="Code With Me is free for users using the community version or with an active subscription to JetBrains IDEs. Premium licenses start at $5/user/month and $10/user/month for individual and enterprise users respectively." >}}
 
 {{< div--close >}}
 
@@ -459,7 +459,7 @@ and includes chat, voice and video communications powered by Jitsi.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Pair programming" score="4.5" >}}
+{{< category-review/card-feature-title text="Pair programming" score="4.5" >}}
 
 Code With Me allows connecting with up to 50 participants in a single session.
 However, only 5 participants can type simultaneously. In addition to the code
@@ -473,7 +473,7 @@ points, run, and debug code alongside the host on the host's machine.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Communication capabilities" score="4.0" >}}
+{{< category-review/card-feature-title text="Communication capabilities" score="4.0" >}}
 
 Code With Me uses the open-source Jitsi framework to provide chat, voice and
 video conferencing solutions within IDE. This allows them to offer certain
@@ -487,7 +487,7 @@ is also a unique feature not offered by other tools.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Secure collaboration" score="4.0" >}}
+{{< category-review/card-feature-title text="Secure collaboration" score="4.0" >}}
 
 Code With Me has a variety of security settings that allow the host to control
 the level of access to the project data. The permissions can be configured for
@@ -502,7 +502,7 @@ unencrypted because they are used for establishing a session.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 Code With Me offers code completion to all participants in a session. Unlike
 many other tools we tested, the undo functionality is local to each participant,
@@ -527,7 +527,7 @@ organization.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 Code With Me implements the main functionality we were looking for, but suffers
 from a lack of polish. For example, when installing the client in our tests, an
@@ -561,11 +561,11 @@ and the background blur feature (in beta) was very CPU intensive.
 
 {{< nav-wrapper--open id="wrapper-5" anchor-name="gitlive" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="GitLive" anchor="gitlive" thumbnail="/img/favicons/git.live.png" url="https://git.live/" score="3.5" >}}
+{{< category-review/card-heading name="GitLive" anchor="gitlive" thumbnail="/img/favicons/git.live.png" url="https://git.live/" score="3.5" >}}
 
 GitLive is a real-time code collaboration extension for VS Code, JetBrains IDEs,
 and Android Studio. It is deeply integrated with git and notifies the author of
@@ -576,9 +576,9 @@ are committed).
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="GitLive offers a free plan with the session duration limited to 40min. The premium plan costs $7/user/month with a maximum session duration of 4hrs." >}}
+{{< category-review/card-cost--open highlight="GitLive offers a free plan with the session duration limited to 40min. The premium plan costs $7/user/month with a maximum session duration of 4hrs." >}}
 
 {{< div--close >}}
 
@@ -588,7 +588,7 @@ are committed).
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Pair programming" score="3" >}}
+{{< category-review/card-feature-title text="Pair programming" score="3" >}}
 
 GitLive requires participants to have a local copy of the git repository hosted
 on one of the supported hosting services (i.e. GitHub, Bitbucket, GitLab and
@@ -604,7 +604,7 @@ participants can not remotely run, debug or view the output of executed code.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Communication capabilities" score="4.5" >}}
+{{< category-review/card-feature-title text="Communication capabilities" score="4.5" >}}
 
 GitLive’s video-calling feature allows participants to start the collaboration
 session straight from their IDE. The ability to start and answer calls right
@@ -617,7 +617,7 @@ GitLive does not offer chat functionality.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Secure collaboration" score="3" >}}
+{{< category-review/card-feature-title text="Secure collaboration" score="3" >}}
 
 GitLive requires the project admin to
 [authorize GitLive](https://docs.git.live/docs/admin/) on the repository hosting
@@ -633,7 +633,7 @@ established and if they are accessible by GitLive staff.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 GitLive takes a unique approach to solve the problem of remote pair programming
 by supporting Visual Studio Live Share and Code With Me alongside their own
@@ -664,7 +664,7 @@ team.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 GitLive does not manage any permissions on it’s own and only allows live-sharing
 between contributors of the repository. This means all participants must have a
@@ -707,11 +707,11 @@ any user who wants to do proper due diligence on GitLive’s security approach.
 
 {{< nav-wrapper--open id="wrapper-6" anchor-name="duckly" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="Duckly" anchor="duckly" thumbnail="/img/favicons/duckly.com.svg" url="https://duckly.com/" score="3.3" >}}
+{{< category-review/card-heading name="Duckly" anchor="duckly" thumbnail="/img/favicons/duckly.com.svg" url="https://duckly.com/" score="3.3" >}}
 
 Duckly
 ([previously known as GitDuck](https://duckly.com/blog/gitduck-is-now-duckly/))
@@ -723,9 +723,9 @@ and the terminal with up to 20 people.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="Duckly is free for teams with up to 6 members. A premium subscription costs $10/person/month." >}}
+{{< category-review/card-cost--open highlight="Duckly is free for teams with up to 6 members. A premium subscription costs $10/person/month." >}}
 
 {{< div--close >}}
 
@@ -735,7 +735,7 @@ and the terminal with up to 20 people.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Pair programming" score="3" >}}
+{{< category-review/card-feature-title text="Pair programming" score="3" >}}
 
 Duckly allows connecting with up to 20 people on a call. Team members can join
 sessions via a browser or from various supported IDEs. Participants joining from
@@ -747,7 +747,7 @@ read-write mode by installing an additional NPM package.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Communication capabilities" score="4" >}}
+{{< category-review/card-feature-title text="Communication capabilities" score="4" >}}
 
 All sessions in Duckly start as voice calls first and team members can join chat
 rooms directly without any invite. Collaboration features like video calling,
@@ -760,7 +760,7 @@ member.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Secure collaboration" score="3" >}}
+{{< category-review/card-feature-title text="Secure collaboration" score="3" >}}
 
 All the files shared from IDE are shared via peer-to-peer connections and are
 end-to-end encrypted. Calls are made using a third-party (Daily.co) API and are
@@ -773,7 +773,7 @@ default.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 Duckly makes it easy to share code in real-time and work together because it
 offers support for [multiple popular IDEs](https://duckly.com/tools), such as VS
@@ -792,7 +792,7 @@ within the IDE.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 The biggest drawback of using Duckly is the inability to debug applications
 remotely. Depending on the language, the ability to run and debug applications
@@ -831,11 +831,11 @@ on private projects makes it unsuitable for big teams.
 
 {{< nav-wrapper--open id="wrapper-7" anchor-name="aws-cloud9" >}}
 
-{{< tools/category-review/card--open >}}
+{{< category-review/card--open >}}
 
-{{< tools/category-review/card-top--open >}}
+{{< category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="AWS Cloud9" anchor="aws-cloud9" thumbnail="/img/favicons/aws.amazon.com.jpg" url="https://aws.amazon.com/cloud9/" score="2.5" >}}
+{{< category-review/card-heading name="AWS Cloud9" anchor="aws-cloud9" thumbnail="/img/favicons/aws.amazon.com.jpg" url="https://aws.amazon.com/cloud9/" score="2.5" >}}
 
 AWS Cloud9 is a cloud-based IDE which runs on EC2 VMs by default (with the
 option to self-host anywhere) and integrates well with the AWS ecosystem. It
@@ -846,9 +846,9 @@ browser.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-bottom--open >}}
+{{< category-review/card-bottom--open >}}
 
-{{< tools/category-review/card-cost--open highlight="AWS Cloud9 is free to use but users have to pay for the compute and storage resources consumed by the underlying virtual machine." >}}
+{{< category-review/card-cost--open highlight="AWS Cloud9 is free to use but users have to pay for the compute and storage resources consumed by the underlying virtual machine." >}}
 
 {{< div--close >}}
 
@@ -858,7 +858,7 @@ browser.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Pair programming" score="3" >}}
+{{< category-review/card-feature-title text="Pair programming" score="3" >}}
 
 AWS Cloud9 is hosted in the cloud and all collaborators must have an AWS account
 in the same organisation to join collaborative sessions. Multiple participants
@@ -872,7 +872,7 @@ with the internet by adjusting firewall settings.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Communication capabilities" score="2.5" >}}
+{{< category-review/card-feature-title text="Communication capabilities" score="2.5" >}}
 
 AWS Cloud9 does not support audio/video calls but has chat functionality local
 to the EC2 instance it is running on. This means messages are persistent between
@@ -885,7 +885,7 @@ not allow a permanent focus to follow their cursor as they move around files.
 
 {{< framed-section-item--open >}}
 
-{{< tools/category-review/card-feature-title text="Secure collaboration" score="2" >}}
+{{< category-review/card-feature-title text="Secure collaboration" score="2" >}}
 
 The design of Cloud9 makes it impossible to add untrusted individuals by mistake
 because the participant needs to have an AWS account within the organisation
@@ -900,7 +900,7 @@ participants.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-like--open >}}
+{{< category-review/card-like--open >}}
 
 AWS Cloud9 comes preinstalled with SDKs for over 40 programming languages
 including JavaScript, Python, PHP, Ruby, Go, and C++ which means users can get
@@ -925,7 +925,7 @@ CodeBuild, AWS CodePipeline, and AWS CodeDeploy.
 
 {{< div--close >}}
 
-{{< tools/category-review/card-dislike--open >}}
+{{< category-review/card-dislike--open >}}
 
 All members who have read/write permissions have full access to the owner's AWS
 access credentials. Unlike many other tools in this review, participants can
@@ -973,7 +973,7 @@ full review:
 
 {{< nav-wrapper--open anchor-name="teletype" >}}
 
-{{< tools/category-review/card-heading name="Teletype" anchor="teletype" thumbnail="/img/favicons/teletype.atom.io.ico" url="https://teletype.atom.io/" score="none" >}}
+{{< category-review/card-heading name="Teletype" anchor="teletype" thumbnail="/img/favicons/teletype.atom.io.ico" url="https://teletype.atom.io/" score="none" >}}
 
 Teletype was developed by GitHub for Atom to share workspaces in real-time. It
 uses WebRTC to establish encrypted peer-to-peer connections. Users must have
@@ -991,7 +991,7 @@ it from our review.
 
 {{< nav-wrapper--open anchor-name="codeanywhere" >}}
 
-{{< tools/category-review/card-heading name="Codeanywhere" anchor="codeanywhere" thumbnail="/img/favicons/codeanywhere.com.png" url="https://codeanywhere.com/" score="none" >}}
+{{< category-review/card-heading name="Codeanywhere" anchor="codeanywhere" thumbnail="/img/favicons/codeanywhere.com.png" url="https://codeanywhere.com/" score="none" >}}
 
 Codeanywhere is a cloud based IDE comparable to AWS Cloud9. It runs on Ubuntu
 (64-bit) containers and provides root access to the owner. All the participants
@@ -1018,7 +1018,7 @@ lost when the file is saved. As such, we didn’t select it for a full review.
 
 {{< nav-wrapper--open anchor-name="replit" >}}
 
-{{< tools/category-review/card-heading name="Replit" anchor="replit" thumbnail="/img/favicons/replit.com.png" url="https://replit.com/" score="none" >}}
+{{< category-review/card-heading name="Replit" anchor="replit" thumbnail="/img/favicons/replit.com.png" url="https://replit.com/" score="none" >}}
 
 Replit is a cloud based IDE for real-time collaboration. Unlike AWS Cloud9,
 users must select a programming language before creating a Repl container. The
@@ -1050,7 +1050,7 @@ interesting tool but it needs some polishing; we will revisit it in the future.
 
 {{< nav-wrapper--open anchor-name="drovio" >}}
 
-{{< tools/category-review/card-heading name="Drovio" anchor="drovio" thumbnail="/img/favicons/www.drovio.com.png" url="https://www.drovio.com/" score="none" >}}
+{{< category-review/card-heading name="Drovio" anchor="drovio" thumbnail="/img/favicons/www.drovio.com.png" url="https://www.drovio.com/" score="none" >}}
 
 Drovio is a remote desktop client available on macOS, Windows and Linux. It
 allows the host to share their screen with up to 10 participants who each get
@@ -1079,7 +1079,7 @@ it from a full review.
 
 ### FAQ
 
-{{< tools/category-review/faq category="code-collaboration-pair-programming" >}}
+{{< category-review/faq category="code-collaboration-pair-programming" >}}
 
 {{< nav-wrapper--open id="wrapper-10" anchor-name="editorial-policy" >}}
 
