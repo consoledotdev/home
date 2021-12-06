@@ -75,7 +75,7 @@ and the localization testing capabilities.
 ### tl;dr the best browser testing tools
 
 {{< tools/category-review/tldr-list--open >}}
-{{< tools/category-review/miniature-card name="BrowserStack" thumbnail="/img/favicons/www.browserstack.com.png" full-review="/tools/browser-testing/browserstack" url="https://www.browserstack.com/" anchor="browserstack" score="4.7" >}}
+{{< tools/category-review/miniature-card name="BrowserStack" thumbnail="/img/favicons/www.browserstack.com.png" full-review="/browser-testing/browserstack/" url="https://www.browserstack.com/" anchor="browserstack" score="4.7" >}}
 {{< tools/category-review/miniature-card name="Lambdatest" thumbnail="/img/favicons/www.lambdatest.com.jpg" url="https://www.lambdatest.com/" anchor="lambdatest" score="4.7" >}}
 {{< tools/category-review/miniature-card name="SmartBear CrossBrowserTesting" thumbnail="/img/favicons/crossbrowsertesting.com.png" url="https://crossbrowsertesting.com/" anchor="smartbear-crossbrowsertesting" score="4.3" >}}
 {{< tools/category-review/miniature-card name="Sauce Labs" thumbnail="/img/favicons/saucelabs.com.jpg" url="https://saucelabs.com/" anchor="sauce-labs" score="4.2" >}}
