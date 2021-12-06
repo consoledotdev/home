@@ -173,7 +173,7 @@ built with Selenium, Cypress, Playwright and Puppeteer. It offers both live and
 automated testing on 2000+ real mobile devices and virtual desktop machines.
 [Read full review](/browser-testing/browserstack)
 
-{{< img-center src="/img/tools/browser-testing-browserstack.png" alt="Browserstack product screenshot" width="100%" >}}
+{{< img-center src="/img/browser-testing/browserstack.png" alt="Browserstack product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -314,7 +314,7 @@ LambdaTest is one of the newer tools in the cross browser testing market. It has
 a clean UI, large number of test devices and an interesting desktop application
 (LT Browser) which offers live testing functionality locally.
 
-{{< img-center src="/img/tools/browser-testing-lambdatest.png" alt="LambdaTest product screenshot" width="100%" >}}
+{{< img-center src="/img/browser-testing/lambdatest.png" alt="LambdaTest product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -456,7 +456,7 @@ features such as screenshot testing and codeless testing using AI to record and
 replay interactions on screen. It offers 2,000+ target browsers and mobile
 devices.
 
-{{< img-center src="/img/tools/browser-testing-smartbear-crossbrowsertesting.png" alt="SmartBear CrossBrowserTesting product screenshot" width="100%" >}}
+{{< img-center src="/img/browser-testing/smartbear-crossbrowsertesting.png" alt="SmartBear CrossBrowserTesting product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -591,7 +591,7 @@ Sauce Labs is a full-scale testing platform for websites and applications that
 supports test frameworks such as Selenium, Playwright and Puppeteer on a large
 number of popular device, browser and operating system test targets.
 
-{{< img-center src="/img/tools/browser-testing-sauce-labs.png" alt="Sauce Labs product screenshot" width="100%" >}}
+{{< img-center src="/img/browser-testing/sauce-labs.png" alt="Sauce Labs product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -749,7 +749,7 @@ for its support for testing 2FA and end-to-end email flows. Testing can be
 automated on a schedule or via an API, as well as manually via the web UI, but
 it only supports Chrome and Firefox on desktop.
 
-{{< img-center src="/img/tools/browser-testing-ghost-inspector.png" alt="Ghost Inspector product screenshot" width="100%" >}}
+{{< img-center src="/img/browser-testing/ghost-inspector.png" alt="Ghost Inspector product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -886,7 +886,7 @@ Ruby, JavaScript and Kotlin. It is built for automated testing on desktop
 devices and acts as a backbone service to many other tools discussed in this
 article, but is not recommended for use by itself.
 
-{{< img-center src="/img/tools/browser-testing-selenium.png" alt="Selenium product screenshot" width="100%" >}}
+{{< img-center src="/img/browser-testing/selenium.png" alt="Selenium product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1092,7 +1092,7 @@ device farm does not integrate well with existing tools and does not offer a
 good selection of browsers and devices. Therefore, we did not select it for a
 full review.
 
-{{< img-center src="/img/tools/browser-testing-aws-device-farm.png" alt="AWS Device Farm product screenshot" width="100%" >}}
+{{< img-center src="/img/browser-testing/aws-device-farm.png" alt="AWS Device Farm product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1135,7 +1135,7 @@ Polypane is a good product for its intended purpose - local testing of
 side-by-side windows, but it is not designed for general browser testing, which
 is the subject of this review. As such, we didn’t select it for a full review.
 
-{{< img-center src="/img/tools/browser-testing-polypane.png" alt="Polypane product screenshot" width="100%" >}}
+{{< img-center src="/img/browser-testing/polypane.png" alt="Polypane product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1166,7 +1166,7 @@ pane. Similar to Polypane, it is also CPU intensive.
 Responsively is designed for responsive web testing - not for automated cross
 browser testing. As such, we didn’t select it for a full review.
 
-{{< img-center src="/img/tools/browser-testing-responsively.png" alt="Responsively product screenshot" width="100%" >}}
+{{< img-center src="/img/browser-testing/responsively.png" alt="Responsively product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1208,7 +1208,7 @@ extend functionality.
 Browsersync does a good job of basic live testing but other tools we reviewed
 provide far more functionality for browser testing.
 
-{{< img-center src="/img/tools/browser-testing-browsersync.png" alt="Browsersync product screenshot" width="100%" >}}
+{{< img-center src="/img/browser-testing/browsersync.png" alt="Browsersync product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1241,7 +1241,7 @@ is strange considering they provide browser testing services.
 Mabl is promising, however, it feels like it is still very early and has a lot
 of rough edges. We hope to revisit this tool in the future.
 
-{{< img-center src="/img/tools/browser-testing-mabl.png" alt="Mabl product screenshot" width="100%" >}}
+{{< img-center src="/img/browser-testing/mabl.png" alt="Mabl product screenshot" width="100%" >}}
 
 {{< div--close >}}
 

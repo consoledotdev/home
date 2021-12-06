@@ -159,7 +159,7 @@ CodeTogether is an extension for VS Code, IntelliJ and Eclipse that enables
 real-time collaborative development across IDEs and browsers. It allows sharing
 servers, terminals & remote debugging with up to 32 participants.
 
-{{< img-center src="/img/tools/code-collaboration-pair-programming-codetogether.png" alt="CodeTogether product screenshot" width="100%" >}}
+{{< img-center src="/img/code-collaboration-pair-programming/codetogether.png" alt="CodeTogether product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -303,7 +303,7 @@ code collaboration between Visual Studio Code, Visual Studio, and a browser
 client. Up to 30 participants can join a coding session and it includes voice
 and chat communication functionality.
 
-{{< img-center src="/img/tools/code-collaboration-pair-programming-visual-studio-live-share.png" alt="Visual Studio Live Share product screenshot" width="100%" >}}
+{{< img-center src="/img/code-collaboration-pair-programming/visual-studio-live-share.png" alt="Visual Studio Live Share product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -443,7 +443,7 @@ pair-programming that enables reviewing, editing, and debugging code with other
 programmers in real time. It supports up to 50 participants in a single session
 and includes chat, voice and video communications powered by Jitsi.
 
-{{< img-center src="/img/tools/code-collaboration-pair-programming-code-with-me.png" alt="Code With Me product screenshot" width="100%" >}}
+{{< img-center src="/img/code-collaboration-pair-programming/code-with-me.png" alt="Code With Me product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -572,7 +572,7 @@ and Android Studio. It is deeply integrated with git and notifies the author of
 any merge conflicts as other people are working on files live (even before they
 are committed).
 
-{{< img-center src="/img/tools/code-collaboration-pair-programming-gitlive.png" alt="GitLive product screenshot" width="100%" >}}
+{{< img-center src="/img/code-collaboration-pair-programming/gitlive.png" alt="GitLive product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -719,7 +719,7 @@ is a remote pair programming and livesharing tool which allows users to share
 code editors, browser windows and terminal sessions. It supports sharing code
 and the terminal with up to 20 people.
 
-{{< img-center src="/img/tools/code-collaboration-pair-programming-duckly.png" alt="Duckly product screenshot" width="100%" >}}
+{{< img-center src="/img/code-collaboration-pair-programming/duckly.png" alt="Duckly product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -842,7 +842,7 @@ option to self-host anywhere) and integrates well with the AWS ecosystem. It
 allows writing, running, debugging and remote pair programming directly from the
 browser.
 
-{{< img-center src="/img/tools/code-collaboration-pair-programming-aws-cloud9.png" alt="AWS Cloud9 product screenshot" width="100%" >}}
+{{< img-center src="/img/code-collaboration-pair-programming/aws-cloud9.png" alt="AWS Cloud9 product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1012,7 +1012,7 @@ real time and any changes are only synced after the file is saved. If two people
 are concurrently working on the same file, any changes made by the other are
 lost when the file is saved. As such, we didn’t select it for a full review.
 
-{{< img-center src="/img/tools/code-collaboration-pair-programming-codeanywhere.png" alt="Codeanywhere product screenshot" width="100%" >}}
+{{< img-center src="/img/code-collaboration-pair-programming/codeanywhere.png" alt="Codeanywhere product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1044,7 +1044,7 @@ testing we were not able to execute even a “Hello World!” application
 successfully - all the code we tested failed with no output. This is an
 interesting tool but it needs some polishing; we will revisit it in the future.
 
-{{< img-center src="/img/tools/code-collaboration-pair-programming-replit.png" alt="Replit product screenshot" width="100%" >}}
+{{< img-center src="/img/code-collaboration-pair-programming/replit.png" alt="Replit product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1071,7 +1071,7 @@ this article are better because they were designed specifically for online code
 collaboration rather than as a generic screen sharing tool. As such we excluded
 it from a full review.
 
-{{< img-center src="/img/tools/code-collaboration-pair-programming-drovio.png" alt="Polypane product screenshot" width="100%" >}}
+{{< img-center src="/img/code-collaboration-pair-programming/drovio.png" alt="Polypane product screenshot" width="100%" >}}
 
 {{< div--close >}}
 

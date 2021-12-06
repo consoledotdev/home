@@ -222,7 +222,7 @@ traces. It also has sophisticated alerting and incident management
 functionality, especially if you’re using their other monitoring products.
 However, it has a small number of check locations and can get expensive.
 
-{{< img-center src="/img/tools/website-monitoring-datadog.png" alt="Datadog product screenshot" width="100%" >}}
+{{< img-center src="/img/website-monitoring/datadog.png" alt="Datadog product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -375,7 +375,7 @@ multi-step request monitoring, but it has features like support for running
 tests using Chrome, Firefox and Internet Explorer, plus over 200 check
 locations.
 
-{{< img-center src="/img/tools/website-monitoring-uptrends.png" alt="Uptrends product screenshot" width="100%" >}}
+{{< img-center src="/img/website-monitoring/uptrends.png" alt="Uptrends product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -514,7 +514,7 @@ defined in Terraform, is great for developers. However, it is missing some
 features of competitors, such as more check types, private monitoring locations
 and more flexible alerting.
 
-{{< img-center src="/img/tools/website-monitoring-checkly.png" alt="Checkly product screenshot" width="100%" >}}
+{{< img-center src="/img/website-monitoring/checkly.png" alt="Checkly product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -664,7 +664,7 @@ API monitoring. However, it has a cramped UI as well as some unusual technical
 implementation details for its private check locations (such as a graphical
 installer for Linux systems).
 
-{{< img-center src="/img/tools/website-monitoring-site24x7.png" alt="Site24x7 product screenshot" width="100%" >}}
+{{< img-center src="/img/website-monitoring/site24x7.png" alt="Site24x7 product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -794,7 +794,7 @@ interactions, check for broken links or just ping specific endpoints. It
 includes a generous free package and you can set up private locations for no
 extra cost, but it has limited alerting capabilities.
 
-{{< img-center src="/img/tools/website-monitoring-newrelic.png" alt="New Relic product screenshot" width="100%" >}}
+{{< img-center src="/img/website-monitoring/newrelic.png" alt="New Relic product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -941,7 +941,7 @@ you to build multi-step transaction monitoring using XPath or JSON selectors.
 However, it is let down by limited alerting options and fewer check locations
 than competitors, which are also limited by the pricing plan you choose.
 
-{{< img-center src="/img/tools/website-monitoring-uptime.png" alt="Uptime product screenshot" width="100%" >}}
+{{< img-center src="/img/website-monitoring/uptime.png" alt="Uptime product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1079,7 +1079,7 @@ performance. Although multi-step requests can be scripted in JSON, the focus on
 HTTP(S) website monitoring means it is more suited to non-technical users than
 developers.
 
-{{< img-center src="/img/tools/website-monitoring-rapidspike.png" alt="RapidSpike product screenshot" width="100%" >}}
+{{< img-center src="/img/website-monitoring/rapidspike.png" alt="RapidSpike product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1241,7 +1241,7 @@ $9.95.
 Alertra might be appropriate for very basic requirements, but we think other
 tools in this review are much better.
 
-{{< img-center src="/img/tools/website-monitoring-alertra.png" alt="Alertra product screenshot" width="100%" >}}
+{{< img-center src="/img/website-monitoring/alertra.png" alt="Alertra product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1260,7 +1260,7 @@ limited.
 Given that pricing starts at $110/month, there are better tools for lower prices
 with more functionality.
 
-{{< img-center src="/img/tools/website-monitoring-alertbot.png" alt="AlertBot product screenshot" width="100%" >}}
+{{< img-center src="/img/website-monitoring/alertbot.png" alt="AlertBot product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1275,7 +1275,7 @@ which significantly limits the usefulness of the monitoring. There is no support
 for multi-step transaction monitoring, which means it does not meet the minimum
 requirements for our review criteria.
 
-{{< img-center src="/img/tools/website-monitoring-freshping.png" alt="FreshPing product screenshot" width="100%" >}}
+{{< img-center src="/img/website-monitoring/freshping.png" alt="FreshPing product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1322,7 +1322,7 @@ Pingdom’s pricing is attractive - starting at around $15/m for 10 uptime check
 1 transaction check and some SMS - but the product is limited compared to the
 competition. You can get a much more powerful product for free from New Relic.
 
-{{< img-center src="/img/tools/website-monitoring-pingdom.png" alt="Pingdom product screenshot" width="100%" >}}
+{{< img-center src="/img/website-monitoring/pingdom.png" alt="Pingdom product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1341,7 +1341,7 @@ However, StatusCake does not support multi-step transaction monitoring and has
 very limited alerting capabilities. It is therefore excluded by our review
 criteria.
 
-{{< img-center src="/img/tools/website-monitoring-statuscake.png" alt="StatusCake product screenshot" width="100%" >}}
+{{< img-center src="/img/website-monitoring/statuscake.png" alt="StatusCake product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -1360,7 +1360,7 @@ The UI is not well designed and there is no dark mode.
 
 As such, we do not recommend UptimeRobot for developers.
 
-{{< img-center src="/img/tools/website-monitoring-uptimerobot.png" alt="UptimeRobot product screenshot" width="100%" >}}
+{{< img-center src="/img/website-monitoring/uptimerobot.png" alt="UptimeRobot product screenshot" width="100%" >}}
 
 {{< div--close >}}
 

@@ -132,7 +132,7 @@ also has its own online test builder for executing HTTP requests.
   test scripts in Element or Selenium.
 - Tests are based around defined Service Level Objectives (SLOs).
 
-{{< img-center src="/img/tools/load-testing-flood.png" alt="Flood product screenshot" width="100%" >}}
+{{< img-center src="/img/load-testing/flood.png" alt="Flood product screenshot" width="100%" >}}
 
 #### Review
 
@@ -185,7 +185,7 @@ and others.
 - Results displayed in the terminal and supports exporting to services like AWS
   Cloudwatch, Datadog, Grafana, GitHub Actions, etc.
 
-{{< img-center src="/img/tools/load-testing-k6.png" alt="k6 product screenshot" width="100%" >}}
+{{< img-center src="/img/load-testing/k6.png" alt="k6 product screenshot" width="100%" >}}
 
 #### Review
 
@@ -237,7 +237,7 @@ support any system that can interact with Python e.g. XML-RPC.
   or Docker.
 - Protocol-level testing only - does not support browser testing.
 
-{{< img-center src="/img/tools/load-testing-locust.png" alt="Locust product screenshot" width="100%" >}}
+{{< img-center src="/img/load-testing/locust.png" alt="Locust product screenshot" width="100%" >}}
 
 #### Review
 
@@ -269,7 +269,7 @@ style we appreciate at Console!
   editor.
 - No custom scripting support.
 
-{{< img-center src="/img/tools/load-testing-loadster.png" alt="Loadster product screenshot" width="100%" >}}
+{{< img-center src="/img/load-testing/loadster.png" alt="Loadster product screenshot" width="100%" >}}
 
 #### Review
 
@@ -382,7 +382,7 @@ Collections.
 - Supports different testing methods including protocol and browser testing.
 - Cannot edit the script code unless you install a Windows application.
 
-{{< img-center src="/img/tools/load-testing-loadview.png" alt="LoadView product screenshot" width="100%" >}}
+{{< img-center src="/img/load-testing/loadview.png" alt="LoadView product screenshot" width="100%" >}}
 
 #### Review
 
@@ -483,7 +483,7 @@ browser requests recorded by a browser editor.
 - Support for ramp up configuration for stress testing.
 - Only supports Jenkins for CI/CD integration.
 
-{{< img-center src="/img/tools/load-testing-loadninja.png" alt="LoadNinja product screenshot" width="100%" >}}
+{{< img-center src="/img/load-testing/loadninja.png" alt="LoadNinja product screenshot" width="100%" >}}
 
 #### Review
 
@@ -518,7 +518,7 @@ desktop application for load testing written in Java.
 - Powerful test design options, but the UI is dated and slow. It’s a pain to
   install because of the unpolished Java implementation.
 
-{{< img-center src="/img/tools/load-testing-neoload.png" alt="NeoLoad product screenshot" width="100%" >}}
+{{< img-center src="/img/load-testing/neoload.png" alt="NeoLoad product screenshot" width="100%" >}}
 
 #### Review
 

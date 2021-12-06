@@ -34,7 +34,7 @@ scores:
     - name: Debugging & error reporting
       value: 4.5
 productShot:
-  image: /img/tools/browser-testing-browserstack.png
+  image: /img/browser-testing/browserstack.png
 intro:
   "BrowserStack is a great tool for manual and automated testing on a large
   number of devices. Integrations with other services make it a powerful tool,

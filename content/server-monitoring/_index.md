@@ -301,7 +301,7 @@ What are the pros and cons of hosted SaaS monitoring?
 Datadog is the industry leader with the most comprehensive and up to date set of
 integrations, however this also means it has a more complex UI and is expensive.
 
-{{< img-center src="/img/tools/server-monitoring-datadog.png" alt="Datadog product screenshot" width="100%" >}}
+{{< img-center src="/img/server-monitoring/datadog.png" alt="Datadog product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -439,7 +439,7 @@ New Relic is best known for application performance monitoring (APM) but can now
 monitor everything, including server monitoring. It has a clean UI but has more
 limited alerting capabilities.
 
-{{< img-center src="/img/tools/server-monitoring-newrelic.png" alt="New Relic product screenshot" width="100%" >}}
+{{< img-center src="/img/server-monitoring/newrelic.png" alt="New Relic product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -789,7 +789,7 @@ can connect to various data source backends and has built-in alerting. We
 recommend using the open source metrics backend,
 [Prometheus](https://prometheus.io/), as the primary data source.
 
-{{< img-center src="/img/tools/server-monitoring-grafana.png" alt="Grafana product screenshot" width="100%" >}}
+{{< img-center src="/img/server-monitoring/grafana.png" alt="Grafana product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
@@ -966,7 +966,7 @@ alerting layer. It combines well with
 monitoring agent from the same developers, but the alerting features are
 limited.
 
-{{< img-center src="/img/tools/server-monitoring-influxdb.png" alt="InfluxDB product screenshot" width="100%" >}}
+{{< img-center src="/img/server-monitoring/influxdb.png" alt="InfluxDB product screenshot" width="100%" >}}
 
 {{< div--close >}}
 
