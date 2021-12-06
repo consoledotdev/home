@@ -54,7 +54,7 @@ let computeTOCPos = (() => {
 let createObserver = (() => {
     let toggleTOCLink = (enable, id) => {
         let link = document.querySelector('[data-toc-link][data-toc-wrapper="' + id + '"]');
-        if (id) {
+        if (link) {
             if (enable) {
                 let activeLink = document.querySelector("[data-toc-link].is-active");
                 if (activeLink) activeLink.classList.remove("is-active");
@@ -68,18 +68,18 @@ let createObserver = (() => {
     let handleIntersect = (intersections) => {
         intersections.forEach(function (i) {
             if (i.isIntersecting) {
-                // console.log("enter item");
+                // console.log("enter item " + i.target.id);
                 toggleTOCLink(true, i.target.id);
             }
             if (!i.isIntersecting) {
                 let rootTop = i.rootBounds.top;
                 let elTop = i.boundingClientRect.top;
                 if (rootTop > elTop) {
-                    // console.log("past item");
+                    // console.log("past item " + i.target.id);
                     toggleTOCLink(false, i.target.id);
                 }
                 if (rootTop < elTop) {
-                    // console.log("before item");
+                    // console.log("before item " + i.target.id);
                     toggleTOCLink(false, i.target.id);
                 }
             }
@@ -88,7 +88,7 @@ let createObserver = (() => {
 
     let observerOptions = {
         root: null,
-        rootMargin: "-20% 0% -40%",
+        rootMargin: "-60% 0% -40%",
         threshold: 0,
     };
 
