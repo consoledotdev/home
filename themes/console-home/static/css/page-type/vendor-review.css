@@ -476,7 +476,7 @@ html {
 }
 
 .comparison-checklist-table .simple-table-grid {
-    min-width: 896px;
+    min-width: 1088px;
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
