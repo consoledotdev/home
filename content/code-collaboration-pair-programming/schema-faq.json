@@ -31,7 +31,7 @@
             "name": "How can I do remote pair programming for free?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "<p>Visual Studio Live Share, Code With Me, Duckly, and CodeTogether can be used for creating free pair-programming sessions. <a href=\"/tools/code-collaboration-pair-programming/\" class=\"link\">The Console review of the best code collaboration and pair programming tools for developers</a> explains which one we think is best.</p>"
+                "text": "<p>Visual Studio Live Share, Code With Me, Duckly, and CodeTogether can be used for creating free pair-programming sessions. <a href=\"/code-collaboration-pair-programming/\" class=\"link\">The Console review of the best code collaboration and pair programming tools for developers</a> explains which one we think is best.</p>"
             }
         }
     ]

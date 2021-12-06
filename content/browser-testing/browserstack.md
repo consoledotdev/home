@@ -57,11 +57,11 @@ relatedArticles:
 relatedReviews:
   - name: LambdaTest
     thumbnail: /img/favicons/www.lambdatest.com.jpg
-    url: /tools/browser-testing/lambdatest
+    url: /browser-testing/lambdatest
     category: developer-tools
   - name: SmartBear CrossBrowserTesting
     thumbnail: /img/favicons/crossbrowsertesting.com.png
-    url: /tools/browser-testing/crossbrowsertesting
+    url: /browser-testing/crossbrowsertesting
     category: developer-tools
 ---
 

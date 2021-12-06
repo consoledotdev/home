@@ -1,5 +1,5 @@
 <script type="application/ld+json">
-    {{- $schemaFile := print "/content/tools/" $.Page.Params.subcategory "-faq.json" -}}
+    {{- $schemaFile := print "/content/" $.Page.Params.subcategory "/schema-faq.json" -}}
     {{- $faq := getJSON $schemaFile }}
     {{ $faq }}
 </script>

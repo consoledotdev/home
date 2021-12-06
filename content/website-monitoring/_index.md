@@ -35,6 +35,8 @@ authorBio:
   time series metrics. He is also a researcher in sustainable computing at
   Uptime Institute and affiliated with Imperial College London. David has been a
   developer for 15+ years.
+aliases:
+  - /tools/website-monitoring/
 relatedCategories:
   - category: developer-tools
     subcategory:
@@ -331,7 +333,7 @@ is part of the overall Datadog monitoring platform, it is designed to be used
 with the other monitoring products. You can standardize all your monitoring
 inside Datadog, including running incidents through their incident management
 product. We covered the server monitoring features in
-[our review of server monitoring tools](/tools/server-monitoring/#datadog).
+[our review of server monitoring tools](/server-monitoring/#datadog).
 
 {{< div--close >}}
 
@@ -910,7 +912,7 @@ format.
 {{< tools/category-review/card-dislike--open >}}
 
 As we found in
-[our server monitoring review](/tools/server-monitoring/#new-relic), New Relic
+[our server monitoring review](/server-monitoring/#new-relic), New Relic
 continues to be let down by its alerting functionality. It is not as flexible as
 competitors even though it has a lot of potential by being backed by its custom
 query language.
