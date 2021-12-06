@@ -14,12 +14,11 @@ metaDescription:
 headerType: fixed
 hideLines: true
 hidePlanes: true
-type: tools
+type: category-review
 layout: category-review
-isPage: tools
-isSubpage: server-monitoring
+isPage: server-monitoring
 customStyle: true
-pageType: tools-category-review
+pageType: category-review
 customPageStyle: true
 category: devops
 subcategory: server-monitoring
@@ -561,8 +560,8 @@ all the features of New Relic, but it is more challenging to predict how much
 data you need. 100GB/m sounds like a lot but can you intuitively estimate how
 much data a monitoring agent on a single server would report each month? What
 about if you then add APM, logs, and synthetic monitoring? See our
-[review of New Relic's Synthetic Monitoring](/website-monitoring/#newrelic)
-for more details.
+[review of New Relic's Synthetic Monitoring](/website-monitoring/#newrelic) for
+more details.
 
 There are also some strange
 [documented limits around how much data can be ingested at once](https://docs.newrelic.com/docs/licenses/license-information/general-usage-licenses/new-relic-data-usage-limits-policies/).
@@ -1002,8 +1001,8 @@ monitoring cloud services, such as AWS Cloudwatch or Google Pub/Sub.
 
 InfluxDB is queried using [Flux](https://www.influxdata.com/products/flux/), a
 data scripting language for analyzing time series data. You can execute queries
-from a CLI, web GUI, or via the [Flux VS Code
-extension](https://marketplace.visualstudio.com/items?itemName=influxdata.flux).
+from a CLI, web GUI, or via the
+[Flux VS Code extension](https://marketplace.visualstudio.com/items?itemName=influxdata.flux).
 The GUI has a graph builder based on selecting metrics as the graph series,
 aggregation functions such as mean, count and max, and advanced customizations
 such as hover dimensions, interpolation, X and Y axis options and time formats.
@@ -1071,18 +1070,17 @@ datastore that can ingest metrics from an ecosystem of plugins and language
 client libraries, all presented in a polished and good-looking web UI.
 
 If you don't want to run it all yourlself, there is an InfluxDB Cloud product,
-available on [AWS](https://aws.amazon.com/marketplace/pp/B08234JZPS/), [Google
-Cloud](https://console.cloud.google.com/marketplace/details/influxdata-public/cloud2-gcp-marketplace-prod)
-or [Microsoft
-Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/influxdata.influxdb-cloud).
+available on [AWS](https://aws.amazon.com/marketplace/pp/B08234JZPS/),
+[Google Cloud](https://console.cloud.google.com/marketplace/details/influxdata-public/cloud2-gcp-marketplace-prod)
+or
+[Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/influxdata.influxdb-cloud).
 It includes some extra features not available in the open source version, such
 as [Notebooks](https://docs.influxdata.com/influxdb/cloud/notebooks/overview/)
-for walking through problems or debugging, and [templated alerts, dashboards and
-agent
-configurations](https://docs.influxdata.com/influxdb/cloud/influxdb-templates/).
+for walking through problems or debugging, and
+[templated alerts, dashboards and agent configurations](https://docs.influxdata.com/influxdb/cloud/influxdb-templates/).
 InfluxDB Cloud has a free plan which is useful for basic monitoring for small
 projects. The paid plans are billed based on data transfer, storage and query
-count. 
+count.
 
 {{< div--close >}}
 

@@ -1,0 +1,9 @@
+.main-category-review .main-category-review-aside {
+    margin-top: 90px;
+}
+
+@media (min-width: 1280px) {
+    .main-category-review .main-category-review-aside {
+        margin-top: 140px;
+    }
+}

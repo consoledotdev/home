@@ -281,11 +281,11 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
 }
 
 /* Category Review page specific */
-.theme .tools-category-review-artwork.light {
+.theme .category-review-artwork.light {
     display: initial;
 }
 
-.theme .tools-category-review-artwork.dark {
+.theme .category-review-artwork.dark {
     display: none;
 }
 

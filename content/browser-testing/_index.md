@@ -16,12 +16,11 @@ metaDescription:
 headerType: fixed
 hideLines: true
 hidePlanes: true
-type: tools
+type: category-review
 layout: category-review
-isPage: tools
-isSubpage: browser-testing
+isPage: browser-testing
 customStyle: true
-pageType: tools-category-review
+pageType: category-review
 customPageStyle: true
 category: developer-tools
 subcategory: browser-testing
@@ -194,7 +193,7 @@ automated testing on 2000+ real mobile devices and virtual desktop machines.
 
 BrowserStack offers testing on 2,000+ mobile and desktop browsers ranging from
 legacy versions of Internet Explorer to the latest beta releases of popular
-browsers. Tests can be conducted on all popular iOS and Android devices from 
+browsers. Tests can be conducted on all popular iOS and Android devices from
 multiple vendors. Latest Windows 11 and macOS Monterey releases are available.
 
 {{< div--close >}}
@@ -226,13 +225,13 @@ etc.
 
 {{< tools/category-review/card-like--open >}}
 
-BrowserStack supports testing with multiple frameworks, namely Cypress, 
+BrowserStack supports testing with multiple frameworks, namely Cypress,
 Playwright and Puppeteer on
 [a large number of browsers](https://www.browserstack.com/list-of-browsers-and-platforms/automate)
 installed on real and simulated devices. Selenium 4 and its BiDi APIs are also
-supported which allows features like intercepting network requests, listening 
-to JS exceptions & console logs, etc. Desktop operating systems go as far back
-as Windows XP and MacOS 10.6 with support for 50+ latest versions of major
+supported which allows features like intercepting network requests, listening to
+JS exceptions & console logs, etc. Desktop operating systems go as far back as
+Windows XP and MacOS 10.6 with support for 50+ latest versions of major
 browsers. On mobile devices, live testing can be performed on Android and iOS
 versions going back to 2.2 and 3.0 respectively.
 
@@ -476,9 +475,9 @@ devices.
 {{< tools/category-review/card-feature-title text="Devices and browsers supported" score="4.5" >}}
 
 CrossBrowserTesting provides 2,000+ browsers and real mobile devices for live
-and automated testing. All major versions of Windows (including 32 bit versions) and
-macOS are available with several versions of multiple browsers. Android and iOS
-devices with versions going as far back as Android 4.2 and iOS 4.3.3 are
+and automated testing. All major versions of Windows (including 32 bit versions)
+and macOS are available with several versions of multiple browsers. Android and
+iOS devices with versions going as far back as Android 4.2 and iOS 4.3.3 are
 available. Support for obscure browsers such as Dolphin Mobile, Maxthon Mobile,
 Sleipnir Mobile, UC Browser and Camino is also available.
 
@@ -564,13 +563,13 @@ scroll actions. We found that recording steps with a trackpad on a laptop causes
 sporadic clicks. In our experiments, running the test immediately after
 recording (without any edits) failed just after page load.
 
-The users who want to test their apps on Apple devices should be concerned. 
-Support for Apple devices is inferior to other similar tools. At the time of 
-writing (December 2021), macOS Monterey (launched in October 2021) and iOS 15 
-(launched in September 2021) were not available even after several months of 
-release. Recently launched iPhone 13 (launched in September 2021) is also not 
-available. Apple is a prominent vendor and having to wait several months to 
-test on its latest devices is unacceptable.
+The users who want to test their apps on Apple devices should be concerned.
+Support for Apple devices is inferior to other similar tools. At the time of
+writing (December 2021), macOS Monterey (launched in October 2021) and iOS 15
+(launched in September 2021) were not available even after several months of
+release. Recently launched iPhone 13 (launched in September 2021) is also not
+available. Apple is a prominent vendor and having to wait several months to test
+on its latest devices is unacceptable.
 
 {{< div--close >}}
 
@@ -863,7 +862,7 @@ until they are deleted after 1 hour.
 
 Although they boast support for 2FA, this needs a subscription to Twilio to
 [receive 2FA SMS](https://ghostinspector.com/docs/common-testing-scenarios/#sms-otp).
-Some browser functionality such as IFrames and alert boxes are hard to test, 
+Some browser functionality such as IFrames and alert boxes are hard to test,
 whereas other features such as the web camera and HTTP3 are not supported.
 
 {{< div--close >}}
@@ -968,7 +967,7 @@ assumption that it will be here for a long period of time.
 
 Selenium 4 was recently released and it adds native support for the Chrome
 DevTools protocol and WebDriver BiDirectional Protocol which gives more control
-over properties such as Application Cache, Fetch, Network, Performance, 
+over properties such as Application Cache, Fetch, Network, Performance,
 Profiler, Resource Timing, Security and Target CDP domains etc.
 
 Using Selenium Grid, tests can be scaled from execution on a single machine to
@@ -1005,14 +1004,15 @@ reporting need to be handled by third party software.
 
 Selenium Grid requires the availability of actual or virtual Windows/macOS/Linux
 machines and mobile devices on the network with browsers installed. When setting
-up Selenium Grid, in addition to [six components](https://www.selenium.dev/documentation/grid/components_of_a_grid/)
+up Selenium Grid, in addition to
+[six components](https://www.selenium.dev/documentation/grid/components_of_a_grid/)
 you will need to maintain a database and a messaging server, which takes a long
 time compared to other solutions available on the market. Updating the machines
-and trying to match the number of browser combinations offered by other tools 
-quickly causes the infrastructure cost to spiral out of control. Time and 
-effort spent in setting up infrastructure for small projects is impractical 
-for all but the largest teams - even then it may be more efficient to pay 
-a provider to do this for you.
+and trying to match the number of browser combinations offered by other tools
+quickly causes the infrastructure cost to spiral out of control. Time and effort
+spent in setting up infrastructure for small projects is impractical for all but
+the largest teams - even then it may be more efficient to pay a provider to do
+this for you.
 
 When
 [60% of global traffic comes from mobile devices](https://www.perficient.com/insights/research-hub/mobile-vs-desktop-usage),
@@ -1113,8 +1113,9 @@ cataract, far-sightedness and 8 types of color blindness. Accessibility testing
 can be performed in panes via A11y and Tota11y.
 
 The Polypane browser extension (available for Chrome, Edge, Safari, Firefox and
-Opera) can be used to quickly open any URL in Polypane. A [custom protocol](https://polypane.app/docs/link/) 
-can also be used to share links along with browser panes.
+Opera) can be used to quickly open any URL in Polypane. A
+[custom protocol](https://polypane.app/docs/link/) can also be used to share
+links along with browser panes.
 
 All panes are rendered separately and CPU usage momentarily spikes to 100% when
 switching tabs. Polypane disguises this as a feature
@@ -1184,8 +1185,8 @@ load changes and updates to tests.
 Although Functionize does provide some advanced functionality such as creating
 web hooks, self healing tests, setting HTTP headers & cookies, it still lacks
 important functionality such as multiple browser and OS support. Functionize
-requires users to join a 45 minute workshop before signing up for a free
-trial. As such, we excluded it from our review.
+requires users to join a 45 minute workshop before signing up for a free trial.
+As such, we excluded it from our review.
 
 {{< div--close >}}
 
@@ -1217,7 +1218,7 @@ provide far more functionality for browser testing.
 
 Mabl can be installed on Windows, macOS and Debian-based Linux distributions,
 but requires installation of Chrome to be able to make and execute tests. It can
-execute automated tests locally (only on Chrome) or on the cloud (on Chrome, 
+execute automated tests locally (only on Chrome) or on the cloud (on Chrome,
 Firefox, Internet Explorer, Safari). Web testing on mobile is currently in Beta
 and limited to a handful of virtual devices.
 

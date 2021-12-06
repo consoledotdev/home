@@ -14,12 +14,11 @@ metaDescription:
 headerType: fixed
 hideLines: true
 hidePlanes: true
-type: tools
+type: category-review
 layout: category-review
-isPage: tools
-isSubpage: website-monitoring
+isPage: website-monitoring
 customStyle: true
-pageType: tools-category-review
+pageType: category-review
 customPageStyle: true
 category: devops
 subcategory: website-monitoring
@@ -461,14 +460,14 @@ Uptrends offers multiple check types and has a particularly powerful full page
 monitoring product that allows for performance monitoring of pages in different
 browsers. Although it doesn’t support Safari - an important platform on mobile -
 it is one of the few website monitoring services to offer Internet Explorer and
-Firefox as options. 
+Firefox as options.
 
-The ["Full Page
-Check"](https://www.uptrends.com/support/kb/full-page-check/whats-new) feature
-provides detailed monitoring of the structure of page, from Core Web Vitals to
-W3C metrics. This provides a detailed waterfall-style breakdown of the page
-performance. Unfortunately, this is only available when selecting Chrome as the
-browser type.
+The
+["Full Page Check"](https://www.uptrends.com/support/kb/full-page-check/whats-new)
+feature provides detailed monitoring of the structure of page, from Core Web
+Vitals to W3C metrics. This provides a detailed waterfall-style breakdown of the
+page performance. Unfortunately, this is only available when selecting Chrome as
+the browser type.
 
 We have been spoiled by the power of the alerting offered by Datadog, but
 Uptrends offers most of the same options and has a large number of integrations.
@@ -541,13 +540,12 @@ or raw data), and scriptable browser checks by writing Node.js scripts in
 [Playwright](https://github.com/microsoft/playwright) or
 [Puppeteer](https://github.com/puppeteer/puppeteer) format or recording a
 session using their recorder extension for Google Chrome. For example,
-[`faker.js` can be
-included](https://blog.checklyhq.com/checkly-runtime-2021-10/) to generate fake
-data for check scripts. This is by design because Checkly is primarily built for
-API testing. The default check frequency is every 5 minutes but this can be
-changed to execute API checks every 10 seconds or browser checks every 60
-seconds. Everything can be [configured with
-Terraform](https://www.checklyhq.com/docs/integrations/terraform/).
+[`faker.js` can be included](https://blog.checklyhq.com/checkly-runtime-2021-10/)
+to generate fake data for check scripts. This is by design because Checkly is
+primarily built for API testing. The default check frequency is every 5 minutes
+but this can be changed to execute API checks every 10 seconds or browser checks
+every 60 seconds. Everything can be
+[configured with Terraform](https://www.checklyhq.com/docs/integrations/terraform/).
 
 {{< div--close >}}
 
@@ -564,8 +562,8 @@ available on all accounts. There is no support for private check locations.
 
 {{< tools/category-review/card-feature-title text="Multi-step requests (transaction monitoring)" score="5" >}}
 
-The easy way to set up multi-step requests is to use [Checkly’s open source
-headless recorder extension](https://www.checklyhq.com/docs/headless-recorder/)
+The easy way to set up multi-step requests is to use
+[Checkly’s open source headless recorder extension](https://www.checklyhq.com/docs/headless-recorder/)
 for Google Chrome. This outputs a Node.js script in
 [Playwright](https://github.com/microsoft/playwright) or
 [Puppeteer](https://github.com/puppeteer/puppeteer) format, both of which are
@@ -605,22 +603,22 @@ engines - [Playwright](https://github.com/microsoft/playwright) and
 [Puppeteer](https://github.com/puppeteer/puppeteer) - then developed their own
 browser extension to help quickly write the scripts.
 
-The addition of features like teardown scripts, environment variables, [support
-for data testing library
-`faker.js`](https://blog.checklyhq.com/checkly-runtime-2021-10/) as well as the
-ability to import existing commands from cURL or OpenAPI/Swagger specs adds to
-this feeling of “built for developers”. Being able to define all configurations
-using Terraform is a bonus that developers will appreciate.
+The addition of features like teardown scripts, environment variables,
+[support for data testing library `faker.js`](https://blog.checklyhq.com/checkly-runtime-2021-10/)
+as well as the ability to import existing commands from cURL or OpenAPI/Swagger
+specs adds to this feeling of “built for developers”. Being able to define all
+configurations using Terraform is a bonus that developers will appreciate.
 
-We particularly like the [recent
-addition](https://blog.checklyhq.com/launching-performance-and-error-tracing-new-vercel-integration/)
+We particularly like the
+[recent addition](https://blog.checklyhq.com/launching-performance-and-error-tracing-new-vercel-integration/)
 of automatic performance metrics and error checking that is now available when
-writing browser-based checks with Playwright. [Web
-Vitals](https://web.dev/vitals) are important to monitor to ensure the best user
-experience, and are tracked by Google for search ranking. This means Checkly can
-now provide useful debugging information with console logs, network request
-tracking, metrics for response times on Time to First Byte, Total Blocking Time,
-First Contentful Paint and automated screenshot collection on errors.
+writing browser-based checks with Playwright.
+[Web Vitals](https://web.dev/vitals) are important to monitor to ensure the best
+user experience, and are tracked by Google for search ranking. This means
+Checkly can now provide useful debugging information with console logs, network
+request tracking, metrics for response times on Time to First Byte, Total
+Blocking Time, First Contentful Paint and automated screenshot collection on
+errors.
 
 {{< div--close >}}
 
@@ -630,8 +628,8 @@ The focus on some very developer-specific features, and how young the product
 is, means that Checkly does not compare as well on features to some of the other
 options. You can just test a website as if it were an API, but that is not what
 the product assumes you’re doing. There is no support for non-HTTP checks. This
-is starting to change as [Checkly is releasing new web-specific monitoring
-features](https://blog.checklyhq.com/launching-performance-and-error-tracing-new-vercel-integration/),
+is starting to change as
+[Checkly is releasing new web-specific monitoring features](https://blog.checklyhq.com/launching-performance-and-error-tracing-new-vercel-integration/),
 such as the Web Vitals integration and console error log recording mentioned
 above.
 
@@ -743,8 +741,8 @@ Zapier.
 Site24x7 has a comprehensive set of features that covers all aspects of website
 and synthetic monitoring. It supports all types of checks, such as DNS, Mail and
 arbitrary TCP/UDP ports. It also has options for extras such as blocklist
-checking, domain/SSL certificate expiry, and [network-level
-metrics](https://www.site24x7.com/community/obtain-visibility-across-the-internet-with-isp-latency-monitoring)
+checking, domain/SSL certificate expiry, and
+[network-level metrics](https://www.site24x7.com/community/obtain-visibility-across-the-internet-with-isp-latency-monitoring)
 such as latency, jitter and network path analysis.
 
 Although not quite as many as Uptrends, Site24x7 has a large number of check
@@ -911,11 +909,10 @@ format.
 
 {{< tools/category-review/card-dislike--open >}}
 
-As we found in
-[our server monitoring review](/server-monitoring/#new-relic), New Relic
-continues to be let down by its alerting functionality. It is not as flexible as
-competitors even though it has a lot of potential by being backed by its custom
-query language.
+As we found in [our server monitoring review](/server-monitoring/#new-relic),
+New Relic continues to be let down by its alerting functionality. It is not as
+flexible as competitors even though it has a lot of potential by being backed by
+its custom query language.
 
 Check configuration is also missing some of the advanced features of tools like
 Datadog, where test assertions on properties like response time, HTTP status
@@ -1318,8 +1315,8 @@ and individuals), how long to wait for a “down” state and how often to resen
 alerts, but there is no ability to define what “down” means. You can check for
 strings on the page and send custom headers, but there is no option for parsing
 the response headers or alerting based on response time. Alerts can only be sent
-via email, SMS, or webhook - [they recently shut down their iOS and Android
-apps](https://documentation.solarwinds.com/en/success_center/pingdom/content/release_notes/release_notes.htm#link1).
+via email, SMS, or webhook -
+[they recently shut down their iOS and Android apps](https://documentation.solarwinds.com/en/success_center/pingdom/content/release_notes/release_notes.htm#link1).
 
 Pingdom’s pricing is attractive - starting at around $15/m for 10 uptime checks,
 1 transaction check and some SMS - but the product is limited compared to the

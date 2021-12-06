@@ -2,7 +2,7 @@
 	{{ $CTATitle := "Interesting tools by email" }}
 	{{ $CTADescription := "Our free weekly newsletter picks out the 2-3 most interesting tools." }}
 
-    <section class="page-section main-tools-category-review-content">
+    <section class="page-section main-category-review-content">
         
         <h2 class="title title-1">
             {{ .Params.titlePrefix }} <span>{{ .Params.titleCategory }}</span> {{ .Params.titleSuffix }}
@@ -27,9 +27,9 @@
         </div>
 		{{ partial "components/notice-disclosure.html" }}<br />
     </section>
-    <div class="main-tools-category-review-content-split">
+    <div class="main-category-review-content-split">
         
-        <section class="page-section main-tools-category-review-content">
+        <section class="page-section main-category-review-content">
             {{ .Content }}
             {{ partial "components/author.html" (dict "context" . "bio" .Params.authorBio "img" .Params.authorImg "name" .Params.authorName ) }}
             <br />

@@ -2,7 +2,7 @@
 	{{ $CTATitle := "Interesting tools by email" }}
 	{{ $CTADescription := "Our free weekly newsletter picks out the 2-3 most interesting tools." }}
 
-    <section class="page-section main-tools-category-review-content">
+    <section class="page-section main-category-review-content">
 
         <script type="application/ld+json">
             {{- $schemaFile := print "/content/" .Params.subcategory "/schema-reviews.json" }}
@@ -32,14 +32,14 @@
             </p>
         </div>
 		{{ partial "components/notice-disclosure.html" }}
-        {{ partial "components/tools/category-review/artwork-dark.html" . }}
-        {{ partial "components/tools/category-review/artwork-light.html" . }}
+        {{ partial "components/category-review/artwork-dark.html" . }}
+        {{ partial "components/category-review/artwork-light.html" . }}
     </section>
-    <div class="main-tools-category-review-content-split">
-        <aside class="main-tools-category-review-aside" data-aside>
-            {{ partial (print "components/tools/category-review/" .Params.isSubpage "/aside.html" ) }}
+    <div class="main-category-review-content-split">
+        <aside class="main-category-review-aside" data-aside>
+            {{ partial (print "components/category-review/" .Params.isPage "/aside.html" ) }}
         </aside>
-        <section class="page-section main-tools-category-review-content">
+        <section class="page-section main-category-review-content">
             {{ .Content }}
             {{ partial "components/author.html" (dict "context" . "bio" .Params.authorBio "img" .Params.authorImg "name" .Params.authorName ) }}
             {{ partial "components/about-console.html" }}
@@ -47,5 +47,5 @@
         </section>
     </div>
 
-	<script src="/js/tools/category-review.js"></script>
+	<script src="/js/category-review.js"></script>
 {{ end }}

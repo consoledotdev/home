@@ -6,22 +6,21 @@ titleSuffix: "tools for developers"
 date: 2021-10-28T12:00:00+00:00
 draft: false
 summary:
-  "The best code collaboration & pair programming for developers: Visual Studio Live
-  Share, Code with Me, GitLive, Duckly, CodeTogether, AWS Cloud9. 10
-  code collaboration & pair programming tools reviewed."
+  "The best code collaboration & pair programming for developers: Visual Studio
+  Live Share, Code with Me, GitLive, Duckly, CodeTogether, AWS Cloud9. 10 code
+  collaboration & pair programming tools reviewed."
 metaDescription:
-  "The best code collaboration & pair programming for developers: Visual Studio Live
-  Share, Code with Me, GitLive, Duckly, CodeTogether, AWS Cloud9. 10
-  code collaboration & pair programming tools reviewed."
+  "The best code collaboration & pair programming for developers: Visual Studio
+  Live Share, Code with Me, GitLive, Duckly, CodeTogether, AWS Cloud9. 10 code
+  collaboration & pair programming tools reviewed."
 headerType: fixed
 hideLines: true
 hidePlanes: true
-type: tools
+type: category-review
 layout: category-review
-isPage: tools
-isSubpage: code-collaboration-pair-programming
+isPage: code-collaboration-pair-programming
 customStyle: true
-pageType: tools-category-review
+pageType: category-review
 customPageStyle: true
 category: developer-tools
 subcategory: code-collaboration-pair-programming
@@ -94,8 +93,9 @@ programming & code collaboration tools in {{< year >}} must have these three
 requirements.
 
 For each of our code collaboration & pair programming tool reviews we will
-assess functionality based on our [standard selection
-criteria](/about/#selection-criteria) plus these three requirements:
+assess functionality based on our
+[standard selection criteria](/about/#selection-criteria) plus these three
+requirements:
 
 {{< framed-section-item--open >}}
 
@@ -143,7 +143,9 @@ allow the host to grant and revoke permissions to each individual participant.
 
 ### Best code collaboration tools
 
-We reviewed 10 online code collaboration tools. The best is: CodeTogether. We also liked [Visual Studio Live Share](#visual-studio-live-share) and [Code With Me](#code-with-me).
+We reviewed 10 online code collaboration tools. The best is: CodeTogether. We
+also liked [Visual Studio Live Share](#visual-studio-live-share) and
+[Code With Me](#code-with-me).
 
 {{< nav-wrapper--open id="wrapper-2" anchor-name="codetogether" >}}
 
@@ -175,7 +177,15 @@ servers, terminals & remote debugging with up to 32 participants.
 
 {{< tools/category-review/card-feature-title text="Pair programming" score="4.0" >}}
 
-CodeTogether offers two options for connecting to remote pair programming sessions - via one of the supported IDEs (VS Code, IntelliJ and Eclipse), or in a browser window. Hosts can share code, terminals, and server ports with participants during the session. Any changes made to the files are synced in real-time to all participants. Both host and participants can [launch tests](https://www.codetogether.com/docs/running-tests-and-launches/), however in both cases they are executed only on the host’s machine and the results are synced. It is also possible to create and run test specific launch configurations in Eclipse and IntelliJ clients.
+CodeTogether offers two options for connecting to remote pair programming
+sessions - via one of the supported IDEs (VS Code, IntelliJ and Eclipse), or in
+a browser window. Hosts can share code, terminals, and server ports with
+participants during the session. Any changes made to the files are synced in
+real-time to all participants. Both host and participants can
+[launch tests](https://www.codetogether.com/docs/running-tests-and-launches/),
+however in both cases they are executed only on the host’s machine and the
+results are synced. It is also possible to create and run test specific launch
+configurations in Eclipse and IntelliJ clients.
 
 {{< div--close >}}
 
@@ -183,7 +193,11 @@ CodeTogether offers two options for connecting to remote pair programming sessio
 
 {{< tools/category-review/card-feature-title text="Communication capabilities" score="5" >}}
 
-CodeTogether allows participants to communicate via chat, audio, and video calls. Participants can share their screen, raise hands, host polls, and play YouTube videos synchronously during the chat. The call session is connected in a separate browser tab (even when using the browser based IDE from CodeTogether) and closing the IDE also disconnects the call.
+CodeTogether allows participants to communicate via chat, audio, and video
+calls. Participants can share their screen, raise hands, host polls, and play
+YouTube videos synchronously during the chat. The call session is connected in a
+separate browser tab (even when using the browser based IDE from CodeTogether)
+and closing the IDE also disconnects the call.
 
 In addition to the above capabilities, it offers a unique “rooms” feature.
 Participants can work together in the same room (all sharing a common
@@ -198,13 +212,16 @@ workflow of other participants.
 {{< tools/category-review/card-feature-title text="Secure collaboration" score="4" >}}
 
 All sessions in CodeTogether are relayed through a backend server however,
-sessions are [end-to-end
-encrypted](https://www.codetogether.com/download/security/) and source code is
-not stored anywhere except on the host’s machine. The host can set various
-permissions such as accepting connection requests, sharing files and terminals
-in a read-only/read-write mode, allowing participants to run/test applications
-before the session starts but those permissions can not be modified during the
-session. Enterprise customers can host CodeTogether on-premises. Audio/Video sessions are independent from the CodeTogether session services and are [**not** end-to-end encrypted](https://www.codetogether.com/download/security/).
+sessions are
+[end-to-end encrypted](https://www.codetogether.com/download/security/) and
+source code is not stored anywhere except on the host’s machine. The host can
+set various permissions such as accepting connection requests, sharing files and
+terminals in a read-only/read-write mode, allowing participants to run/test
+applications before the session starts but those permissions can not be modified
+during the session. Enterprise customers can host CodeTogether on-premises.
+Audio/Video sessions are independent from the CodeTogether session services and
+are
+[**not** end-to-end encrypted](https://www.codetogether.com/download/security/).
 
 {{< div--close >}}
 
@@ -212,25 +229,58 @@ session. Enterprise customers can host CodeTogether on-premises. Audio/Video ses
 
 {{< tools/category-review/card-like--open >}}
 
-CodeTogether supports multiple IDEs (VS Code, Eclipse and IntelliJ) and allows participants to join as a guest from a browser window. Browser sessions can be configured to have light/dark mode with custom keybindings emulating any of the supported IDEs (just as powerful as real IDEs). Having cross-IDE support means participants are not restricted to a certain vendor and team members can work in the environment of their choice.
+CodeTogether supports multiple IDEs (VS Code, Eclipse and IntelliJ) and allows
+participants to join as a guest from a browser window. Browser sessions can be
+configured to have light/dark mode with custom keybindings emulating any of the
+supported IDEs (just as powerful as real IDEs). Having cross-IDE support means
+participants are not restricted to a certain vendor and team members can work in
+the environment of their choice.
 
-[CodeTogether Teams](https://www.codetogether.com/docs/codetogether-teams/) allows the host to add, join or manage a team of people. Team members can see all active remote sessions and join directly without needing an invite URL. The host can also easily invite team members to join a session or ask a team member to host a session. It is also possible to only allow team members from a specific team to join the session. This is useful when pair programming sessions are organized frequently.
+[CodeTogether Teams](https://www.codetogether.com/docs/codetogether-teams/)
+allows the host to add, join or manage a team of people. Team members can see
+all active remote sessions and join directly without needing an invite URL. The
+host can also easily invite team members to join a session or ask a team member
+to host a session. It is also possible to only allow team members from a
+specific team to join the session. This is useful when pair programming sessions
+are organized frequently.
 
-Helpful assistive features such as content assist, code validation, quick fixes, etc., come from the host IDE. This means all participant's IDEs are just as powerful as the host's.
+Helpful assistive features such as content assist, code validation, quick fixes,
+etc., come from the host IDE. This means all participant's IDEs are just as
+powerful as the host's.
 
-Enterprise users hosting CodeTogether on-premises have access to a [metrics dashboard](https://www.codetogether.com/docs/using-the-on-premises-dashboard/) which shows the number of online users and active sessions in real time, as well as historical usage trends. Usage stats can be downloaded from the dashboard or exported to tools like Prometheus or Graphite using [StatsD](https://github.com/statsd/statsd) for analyzing metrics externally.
+Enterprise users hosting CodeTogether on-premises have access to a
+[metrics dashboard](https://www.codetogether.com/docs/using-the-on-premises-dashboard/)
+which shows the number of online users and active sessions in real time, as well
+as historical usage trends. Usage stats can be downloaded from the dashboard or
+exported to tools like Prometheus or Graphite using
+[StatsD](https://github.com/statsd/statsd) for analyzing metrics externally.
 
 {{< div--close >}}
 
 {{< tools/category-review/card-dislike--open >}}
 
-Although CodeTogether provides a powerful cross-IDE experience, it does not allow participants to interact with the host’s git repository. Viewing diffs, staging, and committing changes in the IDE is not possible for participants. Even when the host opens the GUI based git diff tab in their IDE, participants just stay on the last opened tab. Although all the git commands can still be executed by the participants in the shared terminal, it is not as good as Visual Studio Live Share which deeply integrates with git.
+Although CodeTogether provides a powerful cross-IDE experience, it does not
+allow participants to interact with the host’s git repository. Viewing diffs,
+staging, and committing changes in the IDE is not possible for participants.
+Even when the host opens the GUI based git diff tab in their IDE, participants
+just stay on the last opened tab. Although all the git commands can still be
+executed by the participants in the shared terminal, it is not as good as Visual
+Studio Live Share which deeply integrates with git.
 
-In our limited testing, the video of participants would freeze sometimes, joining the call again fixes the issue temporarily. Enterprise users hosting on-premises servers can only have 25% of the total users online at same time. This limitation feels arbitrarily restrictive and the only way to increase this limit is by paying more.
+In our limited testing, the video of participants would freeze sometimes,
+joining the call again fixes the issue temporarily. Enterprise users hosting
+on-premises servers can only have 25% of the total users online at same time.
+This limitation feels arbitrarily restrictive and the only way to increase this
+limit is by paying more.
 
-Permissions must be granted before the session starts and there is no way to change permissions whilst the session is active. It is not possible to grant permissions to selective participants or hide any sensitive files in the directory. This might lead to accidental exposure of API keys.
+Permissions must be granted before the session starts and there is no way to
+change permissions whilst the session is active. It is not possible to grant
+permissions to selective participants or hide any sensitive files in the
+directory. This might lead to accidental exposure of API keys.
 
-Although it is possible to conduct unit tests remotely via CodeTogether, support is limited to a handful of frameworks - JUnit, TestNG, PHPUnit, and Pytest. This list leaves out a vast number of popular frameworks.
+Although it is possible to conduct unit tests remotely via CodeTogether, support
+is limited to a handful of frameworks - JUnit, TestNG, PHPUnit, and Pytest. This
+list leaves out a vast number of popular frameworks.
 
 {{< div--close >}}
 
@@ -299,12 +349,11 @@ discuss the code in context.
 {{< tools/category-review/card-feature-title text="Secure collaboration" score="4.5" >}}
 
 All code, any terminals, running servers (once shared), and any other
-collaboration features provided by Live Share sessions are [end-to-end
-encrypted](https://docs.microsoft.com/en-us/visualstudio/liveshare/reference/security#wire-encryption)
+collaboration features provided by Live Share sessions are
+[end-to-end encrypted](https://docs.microsoft.com/en-us/visualstudio/liveshare/reference/security#wire-encryption)
 using the SSH protocol and the encryption key is rotated periodically throughout
 the duration of the session. Hosts can fine-tune access controls in settings to
-[automatically accept or reject join
-requests](https://docs.microsoft.com/en-us/visualstudio/liveshare/reference/security#auto-rejecting-or-accepting-users-that-are-not-signed-in-anonymous)
+[automatically accept or reject join requests](https://docs.microsoft.com/en-us/visualstudio/liveshare/reference/security#auto-rejecting-or-accepting-users-that-are-not-signed-in-anonymous)
 made by anonymous participants. Sessions can be started in read-only mode to
 prevent accidental edits without losing other functionality such as debugging.
 
@@ -324,15 +373,15 @@ status altogether.
 
 Connections are established in peer-to-peer mode by default and a fallback relay
 server in the cloud is used when direct connections are blocked by a firewall.
-It is possible to [explicitly set connection
-mode](https://docs.microsoft.com/en-us/visualstudio/liveshare/reference/connectivity#changing-the-connection-mode)
+It is possible to
+[explicitly set connection mode](https://docs.microsoft.com/en-us/visualstudio/liveshare/reference/connectivity#changing-the-connection-mode)
 to one or the other. Participants who do not have the IDE installed can join a
 collaboration session from the browser as a guest participant.
 
 By default, Live Share shares any files opened by the host, even if they are
 external to the shared folder, and hides any file that is specified in
-`.gitignore`. [Fine-grained
-control](https://docs.microsoft.com/en-us/visualstudio/liveshare/reference/security#controlling-file-access-and-visibility)
+`.gitignore`.
+[Fine-grained control](https://docs.microsoft.com/en-us/visualstudio/liveshare/reference/security#controlling-file-access-and-visibility)
 over file sharing is possible by creating a `.vsls.json` file with the desired
 permission settings. The participants can follow along with the host by
 requesting focus, which makes pair programming much easier.
@@ -429,10 +478,10 @@ points, run, and debug code alongside the host on the host's machine.
 Code With Me uses the open-source Jitsi framework to provide chat, voice and
 video conferencing solutions within IDE. This allows them to offer certain
 features not available in other tools such as sending private messages to
-participants and hand raise functionality in meetings. [Full Sync
-Mode](https://www.jetbrains.com/help/idea/code-with-me.html#full_sync), which
-replicates a guest's screen to look similar to the host's or vice versa, is also
-a unique feature not offered by other tools.
+participants and hand raise functionality in meetings.
+[Full Sync Mode](https://www.jetbrains.com/help/idea/code-with-me.html#full_sync),
+which replicates a guest's screen to look similar to the host's or vice versa,
+is also a unique feature not offered by other tools.
 
 {{< div--close >}}
 
@@ -443,11 +492,11 @@ a unique feature not offered by other tools.
 Code With Me has a variety of security settings that allow the host to control
 the level of access to the project data. The permissions can be configured for
 the whole session or for specific guests in the session. Connections are
-established through an [open-source distributed
-protocol](https://github.com/JetBrains/rd) created by JetBrains which uses TLS
-1.3 for end-to-end encryption. However some metadata like IP addresses, project
-names, and the operating system username are shared unencrypted because they are
-used for establishing a session.
+established through an
+[open-source distributed protocol](https://github.com/JetBrains/rd) created by
+JetBrains which uses TLS 1.3 for end-to-end encryption. However some metadata
+like IP addresses, project names, and the operating system username are shared
+unencrypted because they are used for establishing a session.
 
 {{< div--close >}}
 
@@ -544,12 +593,12 @@ are committed).
 GitLive requires participants to have a local copy of the git repository hosted
 on one of the supported hosting services (i.e. GitHub, Bitbucket, GitLab and
 Azure DevOps). The host can use the livesharing service from GitLive to start
-collaboration sessions, or [use Visual Studio Live Share/Code With
-Me](https://docs.git.live/docs/supportforlivesharecodewithme/). The GitLive
-built-in code sharing service can share code across multiple IDEs which allows
-participants to work together on the same file in real time. However, only 2
-people can take part in a pair programming session and participants can not
-remotely run, debug or view the output of executed code.
+collaboration sessions, or
+[use Visual Studio Live Share/Code With Me](https://docs.git.live/docs/supportforlivesharecodewithme/).
+The GitLive built-in code sharing service can share code across multiple IDEs
+which allows participants to work together on the same file in real time.
+However, only 2 people can take part in a pair programming session and
+participants can not remotely run, debug or view the output of executed code.
 
 {{< div--close >}}
 
@@ -570,15 +619,15 @@ GitLive does not offer chat functionality.
 
 {{< tools/category-review/card-feature-title text="Secure collaboration" score="3" >}}
 
-GitLive requires the project admin to [authorize
-GitLive](https://docs.git.live/docs/admin/) on the repository hosting service,
-which allows GitLive to maintain strict access control and share the repository
-only with those participants who have write access to the repository. This means
-GitLive itself does not manage any permissions - removing a member's access to a
-repository removes their access on GitLive. The [privacy
-policy](https://app.git.live/privacy) shows what data is collected and how it is
-used, but no information is published about how sessions are established and if
-they are accessible by GitLive staff.
+GitLive requires the project admin to
+[authorize GitLive](https://docs.git.live/docs/admin/) on the repository hosting
+service, which allows GitLive to maintain strict access control and share the
+repository only with those participants who have write access to the repository.
+This means GitLive itself does not manage any permissions - removing a member's
+access to a repository removes their access on GitLive. The
+[privacy policy](https://app.git.live/privacy) shows what data is collected and
+how it is used, but no information is published about how sessions are
+established and if they are accessible by GitLive staff.
 
 {{< div--close >}}
 
@@ -636,12 +685,12 @@ hide files from participants. It is not possible for the host to start a
 read-only session which means participants can edit any file (including files
 like .env which are not meant to be shared).
 
-Unfortunately we hit some bugs in our testing of GitLive’s [merge conflict
-detection](https://docs.git.live/docs/mergeconflicts/). We found that it
-sometimes displays error messages like “mismatch of hash comparing” and “sync
-failed during collaboration” which causes either one or all participants to lose
-changes made in that file. It’s difficult to know if this was a temporary
-problem, but it is something to watch out for.
+Unfortunately we hit some bugs in our testing of GitLive’s
+[merge conflict detection](https://docs.git.live/docs/mergeconflicts/). We found
+that it sometimes displays error messages like “mismatch of hash comparing” and
+“sync failed during collaboration” which causes either one or all participants
+to lose changes made in that file. It’s difficult to know if this was a
+temporary problem, but it is something to watch out for.
 
 All the other tools we tested advertise security measures such as the encryption
 algorithms used, technologies to protect user’s data etc., but GitLive does not
@@ -664,11 +713,11 @@ any user who wants to do proper due diligence on GitLive’s security approach.
 
 {{< tools/category-review/card-heading name="Duckly" anchor="duckly" thumbnail="/img/favicons/duckly.com.svg" url="https://duckly.com/" score="3.3" >}}
 
-Duckly ([previously known as
-GitDuck](https://duckly.com/blog/gitduck-is-now-duckly/)) is a remote pair
-programming and livesharing tool which allows users to share code editors,
-browser windows and terminal sessions. It supports sharing code and the terminal
-with up to 20 people.
+Duckly
+([previously known as GitDuck](https://duckly.com/blog/gitduck-is-now-duckly/))
+is a remote pair programming and livesharing tool which allows users to share
+code editors, browser windows and terminal sessions. It supports sharing code
+and the terminal with up to 20 people.
 
 {{< img-center src="/img/tools/code-collaboration-pair-programming-duckly.png" alt="Duckly product screenshot" width="100%" >}}
 
@@ -728,10 +777,10 @@ default.
 
 Duckly makes it easy to share code in real-time and work together because it
 offers support for [multiple popular IDEs](https://duckly.com/tools), such as VS
-Code, Android Studio and all JetBrains IDEs. Support for more is [on the
-way](https://trello.com/b/nl38gbF4/duckly-transparent-roadmap). Team members can
-also start collaborating directly from the browser without the need to install
-and set-up an IDE.
+Code, Android Studio and all JetBrains IDEs. Support for more is
+[on the way](https://trello.com/b/nl38gbF4/duckly-transparent-roadmap). Team
+members can also start collaborating directly from the browser without the need
+to install and set-up an IDE.
 
 Team members can see any active sessions and join directly from the Duckly
 dashboard. Session URLs generated are human readable and can be typed easily,
@@ -891,9 +940,8 @@ managed EC2 instances. There is no way to grant permissions for specific
 resources. This raises some security concerns even when all users are trusted
 members of the same organisation.
 
-Any server running on the Cloud9 instance can only be accessed by [exposing it
-to the
-internet](https://docs.aws.amazon.com/cloud9/latest/user-guide/app-preview.html#app-preview-preview-app).
+Any server running on the Cloud9 instance can only be accessed by
+[exposing it to the internet](https://docs.aws.amazon.com/cloud9/latest/user-guide/app-preview.html#app-preview-preview-app).
 This requires setting up complex security groups and firewall configurations
 which if misconfigured, leaves the instance open to attacks. Other tools solve
 this by establishing a private tunnel between the host and the participants.
@@ -977,8 +1025,8 @@ users must select a programming language before creating a Repl container. The
 host is given limited access to the container - logging in via ssh, executing
 sudo commands, etc., is not possible.
 
-The host can invite participants for [pair-programming
-sessions](https://docs.replit.com/tutorials/05-pair-programming-using-multiplayer-with-repl-it)
+The host can invite participants for
+[pair-programming sessions](https://docs.replit.com/tutorials/05-pair-programming-using-multiplayer-with-repl-it)
 via email or Replit username. All participants can type in real time or
 permanently focus on other participants. Unlike most other tools we tested,
 Replit has separate undo stacks - each participant can revert their own changes
