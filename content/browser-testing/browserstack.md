@@ -8,11 +8,10 @@ metaDescription:
 headerType: fixed
 hideLines: true
 hidePlanes: true
-type: tools
+type: vendor-review
 layout: vendor-review
-isPage: tools
-isSubpage: browser-testing
-isVendor: browserstack
+isPage: browser-testing
+isSubpage: browserstack
 customStyle: false
 pageType: vendor-review
 customPageStyle: true
@@ -86,7 +85,7 @@ mobile).
 
 {{< framed-section-item--open >}}
 
-{{< tools/vendor-review/feature-title text="Devices and browsers supported" score="5" >}}
+{{< vendor-review/feature-title text="Devices and browsers supported" score="5" >}}
 
 Tests can be conducted on more than
 [3,000 devices and browsers](https://www.browserstack.com/list-of-browsers-and-platforms/live),
@@ -100,7 +99,7 @@ also supported, but with fewer historical versions.
 
 {{< framed-section-item--open >}}
 
-{{< tools/vendor-review/feature-title text="Automation" score="4.5" >}}
+{{< vendor-review/feature-title text="Automation" score="4.5" >}}
 
 BrowserStack supports automation workflows written in multiple languages (Java,
 JavaScript, C#, PHP, Python, Ruby, and Perl) and frameworks (Selenium,
@@ -114,7 +113,7 @@ download logs, update/delete resources, etc.
 
 {{< framed-section-item--open >}}
 
-{{< tools/vendor-review/feature-title text="Debugging & error reporting" score="4.5" >}}
+{{< vendor-review/feature-title text="Debugging & error reporting" score="4.5" >}}
 
 BrowserStack can report bugs to various project management tools like Jira,
 Trello, GitHub and Slack. Screenshots captured during tests can be annotated in
@@ -227,7 +226,7 @@ solutions by presenting the results in a more user friendly fashion.
 
 ### Console developer perspective
 
-{{< simple-table name="console-developer-perspective" data-file="tools/browser_testing/browserstack" >}}
+{{< simple-table name="console-developer-perspective" data-file="browser_testing/browserstack" >}}
 
 {{< div--close >}}
 
@@ -235,7 +234,7 @@ solutions by presenting the results in a more user friendly fashion.
 
 ### Company context
 
-{{< simple-table name="company-context" data-file="tools/browser_testing/browserstack" >}}
+{{< simple-table name="company-context" data-file="browser_testing/browserstack" >}}
 
 {{< div--close >}}
 
@@ -245,7 +244,7 @@ solutions by presenting the results in a more user friendly fashion.
 
 {{< div-custom class="comparison-checklist-table-wrapper" >}}
 
-{{< simple-table name="comparison-checklist" data-file="tools/browser_testing/browserstack" >}}
+{{< simple-table name="comparison-checklist" data-file="browser_testing/browserstack" >}}
 
 {{< div--close >}}
 

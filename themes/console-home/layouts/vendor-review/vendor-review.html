@@ -50,7 +50,7 @@
     </section>
     <div class="main-vendor-review-content-split">
         <aside class="main-vendor-review-aside" data-aside>
-            {{ partial (print "components/tools/vendor-review/" .Params.isVendor "/aside.html" ) }}
+            {{ partial (print "components/vendor-review/" .Params.isSubpage "/aside.html" ) }}
         </aside>
         <section class="page-section page-section-vendor-review">
             {{ .Content }}
@@ -58,5 +58,5 @@
         </section>
     </div>
 
-	<script src="/js/tools/vendor-review.js"></script>
+	<script src="/js/vendor-review.js"></script>
 {{ end }}
