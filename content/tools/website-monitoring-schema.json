@@ -218,10 +218,10 @@
         {
             "@type": "ListItem",
             "position": 6,
-            "name": "Uptime",
+            "name": "Uptime.com",
             "item": {
                 "@type": "Product",
-                "name": "Uptime",
+                "name": "Uptime.com",
                 "description": "Website monitoring.",
                 "url": "https://uptime.com/",
                 "image": [
@@ -229,7 +229,7 @@
                 ],
                 "review": {
                     "@type": "Review",
-                    "reviewBody": "Uptime supports multiple check types and allows you to build multi-step transaction monitoring using XPath or JSON selectors. However, it is let down by limited alerting options and fewer check locations than competitors, which are also limited by the pricing plan you choose.",
+                    "reviewBody": "Uptime.com (previously known as Uptime) supports multiple check types and allows you to build multi-step transaction monitoring using XPath or JSON selectors. However, it is let down by limited alerting options and fewer check locations than competitors, which are also limited by the pricing plan you choose.",
                     "reviewRating": {
                         "@type": "Rating",
                         "ratingValue": "3.8",

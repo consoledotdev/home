@@ -91,7 +91,7 @@ middle of the night! Some services even support configuration in Terraform.
 {{< tools/category-review/miniature-card name="Checkly" thumbnail="/img/favicons/www.checklyhq.com.jpg" url="https://www.checklyhq.com/" anchor="checkly" score="4.4" >}}
 {{< tools/category-review/miniature-card name="Site24x7" thumbnail="/img/favicons/www.site24x7.com.jpg" url="https://www.site24x7.com/" anchor="site24x7" score="4.3" >}}
 {{< tools/category-review/miniature-card name="New Relic" thumbnail="/img/favicons/newrelic.com.png" url="https://newrelic.com/" anchor="newrelic" score="4.1" >}}
-{{< tools/category-review/miniature-card name="Uptime" thumbnail="/img/favicons/uptime.com.png" url="https://uptime.com/" anchor="uptime" score="3.8" >}}
+{{< tools/category-review/miniature-card name="Uptime.com" thumbnail="/img/favicons/uptime.com.svg" url="https://uptime.com/" anchor="uptime" score="3.8" >}}
 {{< tools/category-review/miniature-card name="RapidSpike" thumbnail="/img/favicons/www.rapidspike.com.png" url="https://www.rapidspike.com/" anchor="rapidspike" score="3.8" >}}
 {{< ul--close >}}
 
@@ -459,7 +459,14 @@ Uptrends offers multiple check types and has a particularly powerful full page
 monitoring product that allows for performance monitoring of pages in different
 browsers. Although it doesn’t support Safari - an important platform on mobile -
 it is one of the few website monitoring services to offer Internet Explorer and
-Firefox as options.
+Firefox as options. 
+
+The ["Full Page
+Check"](https://www.uptrends.com/support/kb/full-page-check/whats-new) feature
+provides detailed monitoring of the structure of page, from Core Web Vitals to
+W3C metrics. This provides a detailed waterfall-style breakdown of the page
+performance. Unfortunately, this is only available when selecting Chrome as the
+browser type.
 
 We have been spoiled by the power of the alerting offered by Datadog, but
 Uptrends offers most of the same options and has a large number of integrations.
@@ -531,10 +538,13 @@ Checkly only supports two types of check - HTTP API checks (JSON, GraphQL, Forms
 or raw data), and scriptable browser checks by writing Node.js scripts in
 [Playwright](https://github.com/microsoft/playwright) or
 [Puppeteer](https://github.com/puppeteer/puppeteer) format or recording a
-session using their recorder extension for Google Chrome. This is by design
-because Checkly is primarily built for API testing. The default check frequency
-is every 5 minutes but this can be changed to execute API checks every 10
-seconds or browser checks every 60 seconds. Everything can be [configured with
+session using their recorder extension for Google Chrome. For example,
+[`faker.js` can be
+included](https://blog.checklyhq.com/checkly-runtime-2021-10/) to generate fake
+data for check scripts. This is by design because Checkly is primarily built for
+API testing. The default check frequency is every 5 minutes but this can be
+changed to execute API checks every 10 seconds or browser checks every 60
+seconds. Everything can be [configured with
 Terraform](https://www.checklyhq.com/docs/integrations/terraform/).
 
 {{< div--close >}}
@@ -593,10 +603,12 @@ engines - [Playwright](https://github.com/microsoft/playwright) and
 [Puppeteer](https://github.com/puppeteer/puppeteer) - then developed their own
 browser extension to help quickly write the scripts.
 
-The addition of features like teardown scripts and environment variables, as
-well as the ability to import existing commands from cURL or OpenAPI/Swagger
-specs adds to this feeling of “built for developers”. Being able to define all
-configurations using Terraform is a bonus that developers will appreciate.
+The addition of features like teardown scripts, environment variables, [support
+for data testing library
+`faker.js`](https://blog.checklyhq.com/checkly-runtime-2021-10/) as well as the
+ability to import existing commands from cURL or OpenAPI/Swagger specs adds to
+this feeling of “built for developers”. Being able to define all configurations
+using Terraform is a bonus that developers will appreciate.
 
 We particularly like the [recent
 addition](https://blog.checklyhq.com/launching-performance-and-error-tracing-new-vercel-integration/)
@@ -671,11 +683,12 @@ installer for Linux systems).
 {{< tools/category-review/card-feature-title text="Multiple check types & configurable frequency" score="5" >}}
 
 Site24x7 supports basic website monitoring checks, transaction monitoring for
-websites and APIs as well as other services like WebSockets, DNS, Mail, TCP,
-UDP, POP, SMTP, FTP, NTP and even old SOAP Web Services. It can also check for
-SSL certificate and domain expiry, website defacement and blocklist checks.
-Checks can be executed as often as every minute or up to every day. It is also
-possible to check every 30 sec if you subscribe to the Enterprise plan.
+websites and APIs (REST and GraphQL) as well as other services like WebSockets,
+DNS, Mail, TCP, UDP, POP, SMTP, FTP, NTP and even old SOAP Web Services. It can
+also check for SSL certificate and domain expiry, website defacement and
+blocklist checks. Checks can be executed as often as every minute or up to every
+day. It is also possible to check every 30 sec if you subscribe to the
+Enterprise plan.
 
 {{< div--close >}}
 
@@ -728,7 +741,9 @@ Zapier.
 Site24x7 has a comprehensive set of features that covers all aspects of website
 and synthetic monitoring. It supports all types of checks, such as DNS, Mail and
 arbitrary TCP/UDP ports. It also has options for extras such as blocklist
-checking and domain/SSL certificate expiry.
+checking, domain/SSL certificate expiry, and [network-level
+metrics](https://www.site24x7.com/community/obtain-visibility-across-the-internet-with-isp-latency-monitoring)
+such as latency, jitter and network path analysis.
 
 Although not quite as many as Uptrends, Site24x7 has a large number of check
 locations around the world so you can generally find at least two different
@@ -920,12 +935,12 @@ requires extra time and effort.
 
 {{< tools/category-review/card-top--open >}}
 
-{{< tools/category-review/card-heading name="Uptime" anchor="uptrends" thumbnail="/img/favicons/uptime.com.png" url="https://uptime.com/" score="3.8" >}}
+{{< tools/category-review/card-heading name="Uptime.com" anchor="uptime" thumbnail="/img/favicons/uptime.com.svg" url="https://uptime.com/" score="3.8" >}}
 
-Uptime supports multiple check types and allows you to build multi-step
-transaction monitoring using XPath or JSON selectors. However, it is let down by
-limited alerting options and fewer check locations than competitors, which are
-also limited by the pricing plan you choose.
+Uptime.com (previously known as Uptime) supports multiple check types and allows
+you to build multi-step transaction monitoring using XPath or JSON selectors.
+However, it is let down by limited alerting options and fewer check locations
+than competitors, which are also limited by the pricing plan you choose.
 
 {{< img-center src="/img/tools/website-monitoring-uptime.png" alt="Uptime product screenshot" width="100%" >}}
 
@@ -945,10 +960,10 @@ also limited by the pricing plan you choose.
 
 {{< tools/category-review/card-feature-title text="Multiple check types & configurable frequency" score="5" >}}
 
-Uptime includes multiple check types that allow you to monitor HTTP, DNS, NTP,
-SSH, Ping (ICMP), TCP, UDP, IMAP, POP, SMTP endpoints, Whois/domain results,
-scan websites for malware and viruses, check for SSL certificate expiry and
-execute multi-step API/transaction monitors. Check frequency defaults to an
+Uptime.com includes multiple check types that allow you to monitor HTTP, DNS,
+NTP, SSH, Ping (ICMP), TCP, UDP, IMAP, POP, SMTP endpoints, Whois/domain
+results, scan websites for malware and viruses, check for SSL certificate expiry
+and execute multi-step API/transaction monitors. Check frequency defaults to an
 interval of every 5 minutes, but can be configured down to every minute or up to
 every hour.
 
@@ -975,12 +990,12 @@ that runs within a Docker container.
 
 {{< tools/category-review/card-feature-title text="Multi-step requests (transaction monitoring)" score="4" >}}
 
-Uptime supports both multi-step HTTP API requests and transaction monitoring.
-API checks are built using an in-app editor which presents basic options such as
-GET URL and matching responses based on XPath or JSON selector values.
-Transaction monitoring uses a similar approach but also supports recording a
-session using a Chrome extension. This offers more flexibility to perform
-actions like hovering on elements and completing forms.
+Uptime.com supports both multi-step HTTP API requests and transaction
+monitoring. API checks are built using an in-app editor which presents basic
+options such as GET URL and matching responses based on XPath or JSON selector
+values. Transaction monitoring uses a similar approach but also supports
+recording a session using a Chrome extension. This offers more flexibility to
+perform actions like hovering on elements and completing forms.
 
 {{< div--close >}}
 
@@ -989,8 +1004,8 @@ actions like hovering on elements and completing forms.
 {{< tools/category-review/card-feature-title text="Alerts" score="3" >}}
 
 Alert conditions are configured as part of each check. You define conditions
-such as strings to expect, SSL validations and response time targets. Uptime can
-integrate into third-party services like Datadog, PagerDuty and OpsGenie and
+such as strings to expect, SSL validations and response time targets. Uptime.com
+can integrate into third-party services like Datadog, PagerDuty and OpsGenie and
 also has mobile apps for iOS and Android which can receive push notification
 alerts. Alerts can be sent out via different channels such as email, phone, SMS
 and any of the configured integrations. Although the basic functionality exists,
@@ -1006,28 +1021,29 @@ large number of checks and their alerts would be tedious.
 The initial setup process probes your DNS records to try and auto detect
 recommended checks. This helps to demonstrate the functionality of the product
 because it automatically configures spam blocklist, domain expiry, SSL
-certificate, virus & malware and HTTPS checks. The Uptime UI is straightforward
-and it is easy to understand the status of all your checks at a glance.
+certificate, virus & malware and HTTPS checks. The Uptime.com UI is
+straightforward and it is easy to understand the status of all your checks at a
+glance.
 
 The inclusion of different check types like Whois/domain results and malware
 scanning is a useful addition to standard website monitoring options. These are
 the types of checks that are often forgotten, but are as important as ensuring
 your services stay online.
 
-For simple website monitoring, Uptime does a good job. It is not too expensive
-and includes key features you’d need for a basic website. The transaction
-monitoring is also simple to use but still includes functionality that would be
-sufficient for most websites.
+For simple website monitoring, Uptime.com does a good job. It is not too
+expensive and includes key features you’d need for a basic website. The
+transaction monitoring is also simple to use but still includes functionality
+that would be sufficient for most websites.
 
 {{< div--close >}}
 
 {{< tools/category-review/card-dislike--open >}}
 
-Uptime will do the job for most website monitoring, but it lacks more advanced
-features that developers would appreciate. For example, alerting is limited to
-simple up/down status and the options for defining what is considered “down” are
-relatively simple. Further, the check locations are mostly focused on the US and
-Europe with limited coverage elsewhere.
+Uptime.com will do the job for most website monitoring, but it lacks more
+advanced features that developers would appreciate. For example, alerting is
+limited to simple up/down status and the options for defining what is considered
+“down” are relatively simple. Further, the check locations are mostly focused on
+the US and Europe with limited coverage elsewhere.
 
 The UI does not support dark mode and although there is an API with an OpenAPI
 schema, it is limited to 500 queries per hour and 60 queries per minute which
@@ -1037,7 +1053,10 @@ Check reporting is also limited - there is a simple response time graph by
 location but there is no resource component breakdown and no per check run
 analysis. This is often useful for debugging check errors or performance issues
 so you can see which parts of a request are causing the problem, but is lacking
-in Uptime.
+in Uptime.com.
+
+Also, changing your name from Uptime to Uptime.com seems weird - maybe if this
+was the dot-com era of the early-2000s but it is a strange choice in 2021.
 
 {{< div--close >}}
 
@@ -1297,7 +1316,8 @@ and individuals), how long to wait for a “down” state and how often to resen
 alerts, but there is no ability to define what “down” means. You can check for
 strings on the page and send custom headers, but there is no option for parsing
 the response headers or alerting based on response time. Alerts can only be sent
-via email, SMS, or webhook.
+via email, SMS, or webhook - [they recently shut down their iOS and Android
+apps](https://documentation.solarwinds.com/en/success_center/pingdom/content/release_notes/release_notes.htm#link1).
 
 Pingdom’s pricing is attractive - starting at around $15/m for 10 uptime checks,
 1 transaction check and some SMS - but the product is limited compared to the
