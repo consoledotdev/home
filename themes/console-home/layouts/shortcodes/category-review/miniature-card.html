@@ -12,7 +12,7 @@
         {{ partial "components/score.html" (dict "score" (.Get "score") "name" ( .Get "name" ) "id" (print "cardmin-meter-" (lower (.Get "anchor"))) ) }}
         <span class="actions">
             {{ with (.Get "full-review") }}
-                <a class="console-button-text console-button-small icon-right" href="{{ . }}/">
+                <a class="console-button-text console-button-small icon-right" href="{{ . }}">
                     <span>Full review</span>
                     {{ partial "icons/arrow-right.html" }}
                 </a>
