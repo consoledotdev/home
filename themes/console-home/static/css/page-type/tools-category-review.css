@@ -42,9 +42,9 @@ html {
 
 .page-tools-category-review .title-1 .icon {
     display: none;
-    width: var(--space4);
-    height: var(--space4);
-    vertical-align: -0.07em;
+    width: calc(var(--space4) + var(--space2));
+    height: calc(var(--space4) + var(--space2));
+    vertical-align: -0.14em;
     margin-right: var(--space2);
 }
 
