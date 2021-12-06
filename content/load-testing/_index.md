@@ -35,6 +35,8 @@ authorBio:
   billions of time series metrics from millions of servers. He is also a
   researcher in sustainable computing at Uptime Institute and affiliated with
   Imperial College London. David has been a developer for 15+ years.
+aliases:
+  - /tools/load-testing/
 ---
 
 Load testing tools help understand whether your infrastructure can handle a
@@ -73,7 +75,7 @@ tested.
 
 Browser testing is focused on browser compatibility to ensure that the web page
 renders correctly across different versions and platforms.
-[The best browser testing tools](/tools/browser-testing/) allow tests on many
+[The best browser testing tools](/browser-testing/) allow tests on many
 different browsers, including older versions and mobile browsers. The browser
 version or platform do not matter for load testing.
 

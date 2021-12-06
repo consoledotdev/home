@@ -35,6 +35,8 @@ authorBio:
   recently published research into machine learning predictions of software
   quality at the International Conference on Advanced Computing and
   Communication Systems.
+aliases:
+  - /tools/code-collaboration-pair-programming/
 ---
 
 The best code collaboration and pair programming tools allow participants to

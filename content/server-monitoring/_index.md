@@ -36,6 +36,8 @@ authorBio:
   billions of time series metrics from millions of servers. He is also a
   researcher in sustainable computing at Uptime Institute and affiliated with
   Imperial College London. David has been a developer for 15+ years.
+aliases:
+  - /tools/server-monitoring/
 relatedCategories:
   - category: devops
     subcategory:
@@ -365,7 +367,7 @@ wide range of tools which means anything you want to monitor is supported.
 
 And with Datadog, that means not just server monitoring but full infrastructure
 monitoring.
-[We reviewed the Datadog website monitoring features](/tools/website-monitoring/#datadog)
+[We reviewed the Datadog website monitoring features](/website-monitoring/#datadog)
 in another article but they are constantly releasing new features to cover
 database monitoring, application performance monitoring, log search, network
 monitoring and others.
@@ -559,7 +561,7 @@ all the features of New Relic, but it is more challenging to predict how much
 data you need. 100GB/m sounds like a lot but can you intuitively estimate how
 much data a monitoring agent on a single server would report each month? What
 about if you then add APM, logs, and synthetic monitoring? See our
-[review of New Relic's Synthetic Monitoring](/tools/website-monitoring/#newrelic)
+[review of New Relic's Synthetic Monitoring](/website-monitoring/#newrelic)
 for more details.
 
 There are also some strange
