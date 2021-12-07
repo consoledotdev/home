@@ -190,7 +190,7 @@ BrowserStack’s functionality and use it in a variety of scenarios.
 
 {{< img-custom class="content-image" src="/img/browser-testing/browserstack-mobiletesting.png" alt="Screenshot of mobile testing with BrowserStack." >}}
 
-{{< div--close >}}
+{{< a--close >}}
 
 {{< nav-wrapper--open id="wrapper-3" anchor-name="dislike" >}}
 
@@ -236,7 +236,7 @@ solutions by presenting the results in a more user friendly fashion.
 
 {{< img-custom class="content-image" src="/img/browser-testing/browserstack-webtesting.png" alt="Screenshot of web testing with BrowserStack." >}}
 
-{{< div--close >}}
+{{< a--close >}}
 
 {{< nav-wrapper--open id="wrapper-4" anchor-name="console-developer-perspective" >}}
 
