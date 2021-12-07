@@ -226,7 +226,7 @@ solutions by presenting the results in a more user friendly fashion.
 
 ### Console developer perspective
 
-{{< simple-table name="console-developer-perspective" data-file="browser_testing/browserstack" >}}
+{{< simple-table name="console-developer-perspective" data-file="browser-testing/browserstack" >}}
 
 {{< div--close >}}
 
@@ -234,7 +234,7 @@ solutions by presenting the results in a more user friendly fashion.
 
 ### Company context
 
-{{< simple-table name="company-context" data-file="browser_testing/browserstack" >}}
+{{< simple-table name="company-context" data-file="browser-testing/browserstack" >}}
 
 {{< div--close >}}
 
@@ -244,7 +244,7 @@ solutions by presenting the results in a more user friendly fashion.
 
 {{< div-custom class="comparison-checklist-table-wrapper" >}}
 
-{{< simple-table name="comparison-checklist" data-file="browser_testing/browserstack" >}}
+{{< simple-table name="comparison-checklist" data-file="browser-testing/browserstack" >}}
 
 {{< div--close >}}
 
