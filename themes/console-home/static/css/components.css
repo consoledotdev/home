@@ -244,7 +244,7 @@
 .link:link,
 .link:visited {
     color: var(--theme-link-text-idle);
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: 400;
     transition: var(--a-controls);
     outline: none;
@@ -254,9 +254,9 @@
     hyphens: auto;
 }
 
-.link:link span,
-.link:visited span {
-    text-decoration: underline;
+.link.link-icon:link,
+.link.link-icon:visited {
+    text-decoration: none;
 }
 
 .title-3 a:link {
@@ -273,6 +273,17 @@
     color: var(--theme-link-text-active);
     text-decoration: none;
     transition: var(--a-controls-active);
+}
+
+.link.link-icon:link span,
+.link.link-icon:visited span {
+    text-decoration: underline;
+}
+
+.link.link-icon:hover span,
+.link.link-icon:focus span,
+.link.link-icon:active span {
+    text-decoration: none;
 }
 
 .link:link .icon,

@@ -1,4 +1,4 @@
-<a href="{{ .Get "url" }}" class="link" target="_blank" rel="noopener">
+<a href="{{ .Get "url" }}" class="link link-icon" target="_blank" rel="noopener">
     {{- if ( .Get "icon-left" ) }}{{ partial (print "icons/" ( .Get "icon-left" ) ".html") }} {{ end -}}
     <span>{{ .Get "text" }}</span>
     {{- if ( .Get "icon-right" ) }} {{ partial (print "icons/" ( .Get "icon-right" ) ".html") }}{{ end -}}

@@ -29,7 +29,7 @@
                                 {{- if reflect.IsMap . -}}
                                         {{- with .links -}}
                                             {{- range . -}}
-                                                    <a class="link" title="{{ .href }}" href="{{ .href }}" target="_blank" rel="noopener">
+                                                    <a class="link link-icon" title="{{ .href }}" href="{{ .href }}" target="_blank" rel="noopener">
                                                         {{- with .iconLeft }}
                                                             {{ partial (print "icons/" . ".html") }}
                                                         {{ end -}}
