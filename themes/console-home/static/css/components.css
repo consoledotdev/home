@@ -3379,3 +3379,82 @@ body:not(.mobile) .console-control:hover:before {
 .related-reviews > .link span {
     font-weight: 500;
 }
+
+/* Modal
+   ================================================================================================================ */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.modal-backdrop.is-visible {
+}
+
+.modal-backdrop:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--theme-translucent);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    opacity: 0;
+    transition: opacity var(--a-modal-time) var(--a-modal-easing);
+}
+
+.modal-backdrop.is-visible:before {
+    opacity: 1;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 0px;
+    transform: translate(-50%, -50%);
+    background-color: var(--theme-content-bg-4);
+    border-radius: var(--corners-mid);
+    padding: var(--space4);
+    box-shadow: var(--theme-shadow-3);
+    transition: all var(--a-modal-time) var(--a-modal-easing);
+    transition-delay: 0s;
+}
+
+.is-visible .modal {
+    transition-delay: 0s;
+}
+
+.modal > * {
+    display: block;
+    width: 100%;
+    border-radius: var(--corners-mid);
+}
+
+.modal-link:link,
+.modal-link:visited {
+    display: block;
+    text-decoration: none;
+    border: 1px solid transparent;
+    background: transparent;
+    border-radius: var(--corners-mid);
+    transition: var(--a-controls);
+}
+
+.modal-link:hover,
+.modal-link:focus {
+    transition: var(--a-controls-active);
+    border: var(--theme-actionable-box-border-focus);
+    background: var(--theme-actionable-box-bg-focus);
+    outline: none;
+}
+
+.modal-link:active {
+    border: var(--theme-actionable-box-border-active);
+    background: var(--theme-actionable-box-bg-active);
+}
