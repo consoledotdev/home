@@ -18,7 +18,7 @@ ogImg: /img/interviews/soda-maarten-masschelein-profile.jpg
 ## What is Soda? Why did you build it?
 
 [Soda](https://www.soda.io/) is a data observability company that provides open
-source data reliability engineering tools and a data management platform. 
+source data reliability engineering tools and a data management platform.
 
 In our day-to-day lives, we are all using data more than we realize to make
 decisions and our choices are driven by data, and in business, almost all of our
@@ -129,7 +129,7 @@ talent and operations leads.
 When we started the company, what really made both Tom and myself click was the
 adoption of our products. We don't like products that are gated behind a lot of
 license agreements and not available to everyone. That was the spirit from day
-one, we wanted to build products that we could put in the hands of everyone. 
+one, we wanted to build products that we could put in the hands of everyone.
 
 We started in closed source, so that we could understand all of the different
 stakeholders that are involved in this problem. What we found was that data
