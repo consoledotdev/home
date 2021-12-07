@@ -200,12 +200,12 @@
         [
             "Real devices",
             [
-                "On request"
-            ],
-            [
                 {
                     "icon": "checkmark"
                 }
+            ],
+            [
+                "On request"
             ],
             [
                 ""
@@ -399,10 +399,10 @@
         [
             "Accessibility testing",
             [
-                "Lighthouse"
+                "axe"
             ],
             [
-                "axe"
+                "Lighthouse"
             ],
             [
                 {
