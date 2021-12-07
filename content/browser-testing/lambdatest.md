@@ -24,6 +24,7 @@ category: developer-tools
 subcategory:
   label: Browser testing
   name: browser-testing
+vendorName: LambdaTest
 vendorURL: https://www.lambdatest.com/
 thumbnail: /img/favicons/www.lambdatest.com.jpg
 ranking:
@@ -166,7 +167,9 @@ by
 [launching failing tests](https://www.lambdatest.com/support/docs/issue-tracker/#how-can-i-reproduce-my-marked-bugs)
 with just 1-click.
 
-{{< img-center src="/img/browser-testing/lambdatest-issue-tracker.png" alt="Screenshot of LambdaTest Issue tracker." width="100%" >}}
+{{< modal-custom type="screen" type-screen="/img/browser-testing/lambdatest-issue-tracker.png" >}}
+{{< img-custom class="content-image" src="/img/browser-testing/lambdatest-issue-tracker.png" alt="Screenshot of LambdaTest Issue tracker." >}}
+{{< a--close >}}
 
 LambdaTest can reroute connections during live testing to one of 27 supported
 countries with minimal latency which allows testing for geo-targeting, geo
@@ -191,7 +194,9 @@ requests. Tunnels can also be established using an
 [npm plugin](https://www.npmjs.com/package/@lambdatest/node-tunnel) or
 [GitHub Action](https://github.com/marketplace/actions/lambdatest-tunnel-action).
 
-{{< img-center src="/img/browser-testing/lambdatest-underpass.png" alt="Screenshot of LambdaTest Underpass." width="100%" >}}
+{{< modal-custom type="screen" type-screen="/img/browser-testing/lambdatest-underpass.png" >}}
+{{< img-custom class="content-image" src="/img/browser-testing/lambdatest-underpass.png" alt="Screenshot of LambdaTest Underpass." >}}
+{{< a--close >}}
 
 The analytics functionality provides a useful summary of the automated tests
 and shows insightful graphs depicting queue utilization, pass-fail ratio, test
@@ -241,7 +246,9 @@ users who use multiple monitors or a tiling window manager. Similar tools such
 as Polypane, which was specifically made for this purpose, outperforms
 LambadaTest's browser in many aspects.
 
-{{< img-center src="/img/browser-testing/lambdatest-lt-browser.png" alt="Screenshot of web testing with LambdaTest." width="100%" >}}
+{{< modal-custom type="screen" type-screen="/img/browser-testing/lambdatest-lt-browser.png" >}}
+{{< img-custom class="content-image" src="/img/browser-testing/lambdatest-lt-browser.png" alt="Screenshot of web testing with LambdaTest." >}}
+{{< a--close >}}
 
 When using the LambdaTest CLI to establish a tunnel, we encountered some issues
 with the "File descriptor limit" - causing tests to fail.
