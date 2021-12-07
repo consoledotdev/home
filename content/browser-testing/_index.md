@@ -171,7 +171,7 @@ We reviewed 12 browser testing tools. The best is: BrowserStack. We also liked
 BrowserStack is a cross browser testing and debugging tool which supports tests
 built with Selenium, Cypress, Playwright and Puppeteer. It offers both live and
 automated testing on 2000+ real mobile devices and virtual desktop machines.
-[Read full review](/browser-testing/browserstack)
+[Read full review](/browser-testing/browserstack).
 
 {{< img-center src="/img/browser-testing/browserstack.png" alt="Browserstack product screenshot" width="100%" >}}
 
@@ -230,7 +230,7 @@ Playwright and Puppeteer on
 [a large number of browsers](https://www.browserstack.com/list-of-browsers-and-platforms/automate)
 installed on real and simulated devices. Selenium 4 and its BiDi APIs are also
 supported which allows features like intercepting network requests, listening to
-JS exceptions & console logs, etc. 
+JS exceptions & console logs, etc.
 
 As discussed in [our detailed review](/browser-testing/browserstack/), desktop
 operating systems go as far back as Windows XP and MacOS 10.6 with support for

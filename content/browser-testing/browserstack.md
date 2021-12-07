@@ -186,6 +186,8 @@ Sheets, Microsoft Teams, OneDrive, Microsoft Office 365, Vimeo, etc. using the
 Compatibility with a large number of services allows users to extend
 BrowserStack’s functionality and use it in a variety of scenarios.
 
+{{< img-center src="/img/browser-testing/browserstack-mobiletesting.png" alt="Screenshot of mobile testing with BrowserStack." width="100%" >}}
+
 {{< div--close >}}
 
 {{< nav-wrapper--open id="wrapper-3" anchor-name="dislike" >}}
@@ -227,6 +229,8 @@ Xpath of the element which caused the violation. Although it gets the job done,
 this process is not very user friendly because the tester needs to scour through
 raw JSON files. Other tools like Polypane or Ghost Inspector provide better
 solutions by presenting the results in a more user friendly fashion.
+
+{{< img-center src="/img/browser-testing/browserstack-webtesting.png" alt="Screenshot of web testing with BrowserStack." width="100%" >}}
 
 {{< div--close >}}
 
