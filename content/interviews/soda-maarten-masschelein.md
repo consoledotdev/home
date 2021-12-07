@@ -15,7 +15,7 @@ topImg2Src: /img/favicons/www.soda.io.png
 ogImg: /img/interviews/soda-maarten-masschelein-profile.jpg
 ---
 
-## What is Soda? Why did you build it?
+### What is Soda? Why did you build it?
 
 [Soda](https://www.soda.io/) is a data observability company that provides open
 source data reliability engineering tools and a data management platform.
@@ -51,7 +51,7 @@ That's the core of what we're solving for at Soda: giving data teams the power
 to create trusted data products, and an integrated platform to bring everyone
 closer to data.
 
-## How have engineers solved this in the past?
+### How have engineers solved this in the past?
 
 There have been some tooling solutions in the past. If you go back in history,
 some of them got acquired by the likes of [Oracle](https://www.oracle.com/),
@@ -87,7 +87,7 @@ see.
 
 Data and ML are the two new kids on the block.
 
-## What does a "day in the life" look like for you?
+### What does a "day in the life" look like for you?
 
 As the CEO of the company my day is quite varied, but it's mostly focused on
 hiring new talent and ensuring our team members have what they need to get our
@@ -104,7 +104,7 @@ heard it here first!). He spends most of his day coding and speaking with
 contributors, users, and customers with the community, figuring out what matters
 most to them, so we can build an amazing product for them.
 
-## What does the team look like?
+### What does the team look like?
 
 At the moment we are product and engineering strong - the team is about 35
 people. We're split across a number of domains that are strategic to the product
@@ -124,7 +124,7 @@ We’re building out our go-to-market and field team, and currently have roles i
 business development, sales, and marketing. And we’re also supported by our
 talent and operations leads.
 
-## How do you handle the balance between commercial and open source?
+### How do you handle the balance between commercial and open source?
 
 When we started the company, what really made both Tom and myself click was the
 adoption of our products. We don't like products that are gated behind a lot of
@@ -150,7 +150,7 @@ workflows, associated metadata, and results. Open source means every individual
 can start using it today, and they'll get value from it. The commercial
 component makes that a better experience for teams.
 
-## How did you first get into software development?
+### How did you first get into software development?
 
 I always had a fascination with software development. My first computer was an
 IBM 486 that I tinkered so much with, that I broke it!
@@ -172,14 +172,14 @@ side, so I decided to go into a role at a software company as a solution
 architect. I helped implement data management and data management tooling at
 companies, and evolved into management positions across the business from there.
 
-## Is the Soda tech stack all Python?
+### Is the Soda tech stack all Python?
 
 It’s a combination. For everything open source that touches data, we use Python.
 We might extend this more into Java, with for example
 [Scala](https://www.scala-lang.org/). On our backend, it's a mix but
 predominantly Java.
 
-## What's the most interesting development challenge you've faced building Soda?
+### What's the most interesting development challenge you've faced building Soda?
 
 I think the most interesting thing is when we have a problem in which multiple
 stakeholders are involved. It becomes super complicated to create a great user
@@ -207,7 +207,7 @@ in setting-up workflows.
 
 We’re applying the same recipe to data reliability and observability.
 
-## What’s the most interesting tool or tech you’re currently playing around with?
+### What’s the most interesting tool or tech you’re currently playing around with?
 
 The most interesting one today in data is [dbt](https://www.getdbt.com/). This
 notion of what [Terraform](https://www.terraform.io/) has taught the world of
@@ -219,7 +219,7 @@ stack so we now understand exactly how users are using our software, which CLI
 commands they use, why they get stuck and so on. That is something we do using
 both OpenTelemetry and dbt.
 
-## Describe your computer hardware setup
+### Describe your computer hardware setup
 
 At home, I have a desktop and then I use my laptop on the go. I'm an occasional
 gamer so I have a gaming machine, and was fortunate enough to do my setup right
@@ -233,7 +233,7 @@ For my laptop, I really choose practicality and power, but it needs to be a
 small device. For the last decade I’ve been using a 13 inch [MacBook
 Pro](https://www.apple.com/shop/buy-mac/macbook-pro/13-inch).
 
-## Describe your computer software setup
+### Describe your computer software setup
 
 **OS:** macOS.
 
@@ -248,7 +248,7 @@ moment
 
 **Source control:** Git.
 
-## Describe your desk setup
+### Describe your desk setup
 
 At home, because I live in a pretty small apartment in Brussels, I don't really
 have a proper setup like a home office desk, so I end up sitting around
@@ -265,7 +265,7 @@ It's a former train station in Brussels where they used to gather all of the
 goods coming from outside of the city into the city. It's a massive site, and a
 really inspiring place to be.
 
-## When coding
+### When coding
 
 **Daytime or nighttime?** Night time.
 
@@ -274,7 +274,7 @@ really inspiring place to be.
 **Silence or music?** Both. If it’s music, it cannot contain lyrics. I like
 either classical music or Berlin house or techno. Either work.
 
-## What non-tech activities do you like to do?
+### What non-tech activities do you like to do?
 
 I love board and computer games, particularly, strategy games like Age of
 Empires. Outside of that, I'm a sucker for classic cars. I have a 50 year old
