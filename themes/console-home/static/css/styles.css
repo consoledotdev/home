@@ -1463,6 +1463,15 @@ p.x-small {
     border-radius: var(--corners-mid);
 }
 
+.content-image {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: top;
+    border-radius: var(--corners-mid);
+}
+
 /* Media Queries
    ================================================================================================================ */
 
