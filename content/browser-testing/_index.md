@@ -191,7 +191,7 @@ automated testing on 2000+ real mobile devices and virtual desktop machines.
 
 {{< category-review/card-feature-title text="Devices and browsers supported" score="5" >}}
 
-BrowserStack offers testing on 2,000+ mobile and desktop browsers ranging from
+BrowserStack offers testing on 3,000+ mobile and desktop browsers ranging from
 legacy versions of Internet Explorer to the latest beta releases of popular
 browsers. Tests can be conducted on all popular iOS and Android devices from
 multiple vendors. Latest Windows 11 and macOS Monterey releases are available.
@@ -230,10 +230,12 @@ Playwright and Puppeteer on
 [a large number of browsers](https://www.browserstack.com/list-of-browsers-and-platforms/automate)
 installed on real and simulated devices. Selenium 4 and its BiDi APIs are also
 supported which allows features like intercepting network requests, listening to
-JS exceptions & console logs, etc. Desktop operating systems go as far back as
-Windows XP and MacOS 10.6 with support for 50+ latest versions of major
-browsers. On mobile devices, live testing can be performed on Android and iOS
-versions going back to 2.2 and 3.0 respectively.
+JS exceptions & console logs, etc. 
+
+As discussed in [our detailed review](/browser-testing/browserstack/), desktop
+operating systems go as far back as Windows XP and MacOS 10.6 with support for
+50+ latest versions of major browsers. On mobile devices, live testing can be
+performed on Android and iOS versions going back to 2.2 and 3.0 respectively.
 
 Local testing can be performed by establishing an encrypted tunnel to securely
 test websites hosted on environments behind firewalls or VPNs.
