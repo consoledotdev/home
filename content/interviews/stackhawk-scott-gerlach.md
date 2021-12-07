@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Scott Gerlach, Co-founder & CSO, StackHawk.
 isPage: interviews
 topImg1Src: /img/interviews/stackhawk-scott-gerlach-profile.jpg
-topImg2Src: /img/interviews/stackhawk-scott-gerlach-logo.png
+topImg2Src: /img/favicons/www.stackhawk.com.png
 ogImg: /img/interviews/stackhawk-scott-gerlach-desk.jpg
 ---
 

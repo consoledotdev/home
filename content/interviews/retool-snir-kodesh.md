@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Snir Kodesh, Head of Engineering, Retool.
 isPage: interviews
 topImg1Src: /img/interviews/retool-snir-kodesh-profile.jpeg
-topImg2Src: /img/interviews/retool-snir-kodesh-logo.jpg
+topImg2Src: /img/favicons/retool.com.jpg
 ogImg: /img/interviews/retool-snir-kodesh-profile.jpeg
 ---
 

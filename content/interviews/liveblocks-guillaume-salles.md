@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Guillaume Salles, Liveblocks
 isPage: interviews
 topImg1Src: /img/interviews/liveblocks-guillaume-salles-profile.jpg
-topImg2Src: /img/interviews/liveblocks-guillaume-salles-logo.png
+topImg2Src: /img/favicons/liveblocks.io.png
 ogImg: /img/interviews/liveblocks-guillaume-salles-desk.jpg
 ---
 

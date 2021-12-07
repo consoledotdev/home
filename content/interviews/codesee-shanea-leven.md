@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Shanea Leven, CEO, CodeSee
 isPage: interviews
 topImg1Src: /img/interviews/codesee-shanea-leven-profile.jpeg
-topImg2Src: /img/interviews/codesee-shanea-leven-logo.png
+topImg2Src: /img/favicons/www.codesee.io.png
 ogImg: /img/interviews/codesee-shanea-leven-desk.jpg
 ---
 

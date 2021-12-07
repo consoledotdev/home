@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Ben Schaechter, Co-founder, Vantage.
 isPage: interviews
 topImg1Src: /img/interviews/vantage-ben-schaechter-profile.jpeg
-topImg2Src: /img/interviews/vantage-ben-schaechter-logo.png
+topImg2Src: /img/favicons/www.vantage.sh.png
 ogImg: /img/interviews/vantage-ben-schaechter-desk.png
 ---
 

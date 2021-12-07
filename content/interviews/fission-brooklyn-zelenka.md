@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Brooklyn Zelenka, CTO, Fission.
 isPage: interviews
 topImg1Src: /img/interviews/fission-brooklyn-zelenka-profile.jpg
-topImg2Src: /img/interviews/fission-brooklyn-zelenka-logo.png
+topImg2Src: /img/favicons/fission.codes.png
 ogImg: /img/interviews/fission-brooklyn-zelenka-desk.jpeg
 ---
 

@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Adam Gordon Bell, Software Engineer, Earthly
 isPage: interviews
 topImg1Src: /img/interviews/earthly-adam-gordon-bell-profile.jpg
-topImg2Src: /img/interviews/earthly-adam-gordon-bell-logo.png
+topImg2Src: /img/favicons/earthly.dev.png
 ogImg: /img/interviews/earthly-adam-gordon-bell-desk.jpg
 ---
 

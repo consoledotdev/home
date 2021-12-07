@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Jan Matas, CTO, Deepnote
 isPage: interviews
 topImg1Src: /img/interviews/deepnote-jan-matas-profile.jpg
-topImg2Src: /img/interviews/deepnote-jan-matas-logo.png
+topImg2Src: /img/favicons/deepnote.com.png
 ogImg: /img/interviews/deepnote-jan-matas-desk.jpg
 ---
 
