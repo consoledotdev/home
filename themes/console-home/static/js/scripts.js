@@ -192,11 +192,19 @@ if (document.body.classList.contains("page-home")) {
         if (mediaQuery) {
             if (!mediaQuery.matches) animate();
 
-            mediaQuery.addEventListener("change", () => {
-                mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-                if (!mediaQuery.matches) animate();
-                else stopAnimation();
-            });
+            if (mediaQuery.addEventListener) {
+                mediaQuery.addEventListener("change", () => {
+                    mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+                    if (!mediaQuery.matches) animate();
+                    else stopAnimation();
+                });
+            } else {
+                mediaQuery.addListener(() => {
+                    mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+                    if (!mediaQuery.matches) animate();
+                    else stopAnimation();
+                });
+            }
         }
     })();
 }
@@ -266,13 +274,8 @@ let updateMarkedScrollable = (el, direction) => {
 };
 
 class Modal {
-    links;
-    html;
-    contentHook;
-    modalTiming = 240; //ms, see CSS
-    activeLink;
-
     constructor(links) {
+        this.modalTiming = 240; //ms, see CSS
         this.links = links;
         this.html = "<div class='modal-backdrop' data-modal-backdrop><div class='modal' data-modal></div></div>";
         let temp = document.createElement("div");
