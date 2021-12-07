@@ -22,6 +22,7 @@ category: developer-tools
 subcategory:
   label: Browser testing
   name: browser-testing
+vendorName: BrowserStack
 vendorURL: https://www.browserstack.com/
 thumbnail: /img/favicons/www.browserstack.com.png
 ranking:
