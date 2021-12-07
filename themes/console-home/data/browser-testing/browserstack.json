@@ -35,7 +35,7 @@
         [
             "Documentation quality",
             [
-                "Good documentation, powerful search, code samples available."
+                "Good documentation with search. Code samples available."
             ]
         ],
         [
@@ -53,7 +53,7 @@
         [
             "Support",
             [
-                "FAQ section followed by email support."
+                "FAQ section and email support."
             ]
         ],
         [
@@ -162,7 +162,7 @@
                 "Sauce Labs"
             ],
             [
-                "CrossBrowserTesting"
+                "CrossBrowser Testing"
             ],
             [
                 "Selenium"
@@ -258,7 +258,7 @@
             ]
         ],
         [
-            "Screenshot Regression Testing",
+            "Screenshot regression testing",
             [
                 {
                     "icon": "checkmark"
@@ -397,9 +397,9 @@
             ]
         ],
         [
-            "Good accessibility testing",
+            "Accessibility testing",
             [
-                "Lighthouse report"
+                "Lighthouse"
             ],
             [
                 "axe"

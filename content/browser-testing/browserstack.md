@@ -1,10 +1,13 @@
 ---
-title: "BrowserStack"
-date: 2021-11-29T15:58:43+01:00
+title: "BrowserStack review"
+date: 2021-12-07T07:00:00+00:00
 draft: false
-summary: A tool for manual and automated testing on a large number of devices.
+summary: 
+  BrowserStack is a great product for manual and automated testing on a large
+  number of devices. Read our review of BrowserStack - a browser testing tool.
 metaDescription:
-  A tool for manual and automated testing on a large number of devices.
+  BrowserStack is a great product for manual and automated testing on a large
+  number of devices. Read our review of BrowserStack - a browser testing tool.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -36,7 +39,7 @@ scores:
 productShot:
   image: /img/browser-testing/browserstack.png
 intro:
-  "BrowserStack is a great tool for manual and automated testing on a large
+  "BrowserStack is a great product for manual and automated testing on a large
   number of devices. Integrations with other services make it a powerful tool,
   but latency can be high when live-testing devices and some newer OS releases
   are not immediately available."
@@ -140,9 +143,13 @@ like screen resolution, operating system (ranging from Windows 11 to Windows XP
 and macOS 12 to macOS 10.6), browser version and some browser-specific
 capabilities such as whether or not to enable popups in Internet Explorer.
 Multiple testing frameworks, namely Selenium, Cypress, Playwright and Puppeteer
-can be used to write tests. At the time of writing, recently launched devices
-and OS updates (macOS 12, and iPhone 13) were still not available for testing
-despite being released several months ago.
+can be used to write tests.
+
+At the time of writing, recently launched devices and OS updates (macOS 12, and
+iPhone 13) were still not available for testing despite being released several
+months ago. The speed at which new OS releases are available varies
+significantly amongst all [the different browser testing tools we
+reviewed](/browser-testing/).
 
 Local testing can be done by creating an encrypted tunnel to securely test
 websites hosted behind firewalls or VPNs. Additional configuration can be set up
@@ -194,10 +201,11 @@ on Chrome browsers on Android devices. Screen reader functionality (in beta) is
 not yet supported on mobile devices. On desktop devices, it did not work
 properly and kept repeating the same sentence again and again.
 
-Test reports are not generated for live tests. Other vendors keep a log of tests
-performed and allow screen recording while testing to review bugs later, but
-this is not possible with BrowserStack. Bugs can only be shared via a
-screenshot, making it difficult to share findings with stakeholders.
+Test reports are not generated for live tests. [Other products we
+tested](/browser-stack/) keep a log of tests performed and allow screen
+recording while testing to review bugs later, but this is not possible with
+BrowserStack. Bugs can only be shared via a screenshot, making it difficult to
+share findings with stakeholders.
 
 Most of the real mobile devices available for testing are from a handful of
 vendors (Samsung or Google) - fewer devices are available from other vendors
@@ -241,6 +249,11 @@ solutions by presenting the results in a more user friendly fashion.
 {{< nav-wrapper--open id="wrapper-6" anchor-name="alternatives" >}}
 
 ### Alternatives
+
+In our review of the [best browser testing tools for
+developers](/browser-testing/), we highlight the best 6 browser testing tools
+for developers in {{< year >}}. See how they compare to BrowserStack in the
+table below.
 
 {{< div-custom class="comparison-checklist-table-wrapper" >}}
 
