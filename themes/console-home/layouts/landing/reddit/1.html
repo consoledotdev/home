@@ -1,0 +1,144 @@
+{{ define "main" }}
+	{{ $CTATitle := "Discover the best tools for developers" }}
+	{{ $CTADescription := "Our free weekly email features a digest of the best new tools and beta releases for developers. " }}
+
+    <section class="page-section page-section-landing opening">
+        <div class="top">
+            <h2 class="title title-1">Discover the best tools for developers</h2>
+            <p class="description">A free weekly email digest of the best tools and beta releases for developers.</p>
+            <form action="https://dev.us7.list-manage.com/subscribe/post?u=f8c3cd14ee8d63c53d0986a48&amp;id=267911a165" method="post" id="console-subscribe" name="console-subscribe" class="console-form">
+                <input id="form-email" name="EMAIL" class="console-input-text" type="email" placeholder="Your email" title="Email" required />
+                <input type="hidden" value="{{ .Page.RelPermalink }}" name="REFERRER" id="mc-referrer" />
+                <div style="position: absolute; left: -5000px" aria-hidden="true"><input type="text" name="b_f8c3cd14ee8d63c53d0986a48_267911a165" tabindex="-1" value="" /><!-- Anti spam field --></div>
+
+                <button onclick="blur()" class="console-button icon-left" type="submit" title="Signup">
+                    {{ partial "icons/send.html" }}
+                    <span>Sign Up</span>
+                </button>
+            </form>
+            {{ `<!-- Plausible Analytics goal tracking for signups -->` | safeHTML }}
+            <script>
+                var registerForm = document.querySelector("#console-subscribe");
+                registerForm.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    setTimeout(submitForm, 1000);
+                    var formSubmitted = false;
+
+                    function submitForm() {
+                        if (!formSubmitted) {
+                            formSubmitted = true;
+                            registerForm.submit();
+                        }
+                    }
+                    plausible("Newsletter Subscribe", {
+                        callback: submitForm,
+                    });
+
+                    rdt('track', 'SignUp');
+                });
+            </script>
+            <p>
+                Every Thursday.
+                <a class="link" onclick="blur()" href="/latest/">See the latest email</a>.
+            </p>
+        </div>
+        <div class="bottom">
+            <img class="dark" src="/img/landing/newsletter-dark.png" alt="Console Newsletter">
+            <img class="light" src="/img/landing/newsletter-light.png" alt="Console Newsletter">
+        </div>
+    </section>
+
+    <section class="page-section page-section-plane page-section-landing trust-signals">
+        <div class="top">
+            <h3 class="title title-2 rich-title">Trusted by {{ $.Site.Params.consoleSubscribers }} developers</h3>
+            <p class="quote">
+                <span>
+                    “If you’re interested in cool new developer tools check out Console it’s a great, short and sharp roundup newsletter, well worth a follow” 
+                    <span>James Governor, Co-founder, RedMonk</span>
+                </span>
+            </p>
+        </div>
+        <div class="bottom">
+            <p>Join subscribers from:</p>
+            <div class="logo-cloud-artwork">
+                <div class="logo-cloud">
+                    <img class="dark" src="/img/landing/reached-company-logo-github-dark.png" alt="GitHub">
+                    <img class="dark" src="/img/landing/reached-company-logo-atlassian-dark.png" alt="Atlassian">
+                    <img class="dark" src="/img/landing/reached-company-logo-microsoft-dark.png" alt="Microsoft">
+                    <img class="dark" src="/img/landing/reached-company-logo-cloudflare-dark.png" alt="Cloudflare">
+                    <img class="dark" src="/img/landing/reached-company-logo-adobe-dark.png" alt="Adobe">
+                    <img class="dark" src="/img/landing/reached-company-logo-sourcegraph-dark.png" alt="Sourcegraph">
+                    <img class="dark" src="/img/landing/reached-company-logo-twilio-dark.png" alt="Twilio">
+                    <img class="dark" src="/img/landing/reached-company-logo-snyk-dark.png" alt="Snyk">
+                    <img class="light" src="/img/landing/reached-company-logo-github-light.png" alt="GitHub">
+                    <img class="light" src="/img/landing/reached-company-logo-atlassian-light.png" alt="Atlassian">
+                    <img class="light" src="/img/landing/reached-company-logo-microsoft-light.png" alt="Microsoft">
+                    <img class="light" src="/img/landing/reached-company-logo-cloudflare-light.png" alt="Cloudflare">
+                    <img class="light" src="/img/landing/reached-company-logo-adobe-light.png" alt="Adobe">
+                    <img class="light" src="/img/landing/reached-company-logo-sourcegraph-light.png" alt="Sourcegraph">
+                    <img class="light" src="/img/landing/reached-company-logo-twilio-light.png" alt="Twilio">
+                    <img class="light" src="/img/landing/reached-company-logo-snyk-light.png" alt="Snyk">
+                </div>
+                <div class="vapor-globe"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="page-section page-section-landing what-we-do-1">
+        <div class="top">
+            <h3 class="title title-2">Interesting tools & new betas</h3>
+            <span data-checkpoint-other-content></span>
+            <ul>
+                <li>2-3 developer tool recommendations.</li>
+                <li>3-5 interesting new beta releases.</li>
+                <li>Interviews with the people behind the tools.</li>
+            </ul>
+            <a onclick="blur();" class="console-button-text icon-right" href="/tools/" title="See all developer tool reviews" rel="noopener"><span class="long">Check out all our past reviews</span><span class="short">See past reviews</span>
+                {{ partial "icons/arrow-right.html" }}</a>
+        </div>
+        <div class="bottom">
+            <div class="neon-planes-wrapper">
+                {{ partial "components/neon-planes.html" (dict "context" . "type" "two" ) }}
+            </div>
+            <div class="categories-wrapper">
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "api" "subcategory" (dict "label" "API" "name" "api")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "cloud" "subcategory" (dict "label" "Cloud" "name" "cloud")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "data-science" "subcategory" (dict "label" "Data Science" "name" "data-science")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "database" "subcategory" (dict "label" "Database" "name" "database")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "developer-tools" "subcategory" (dict "label" "Developer Tools" "name" "developer-tools")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "devops" "subcategory" (dict "label" "DevOps" "name" "devops")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "misc" "subcategory" (dict "label" "Misc" "name" "misc")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "security" "subcategory" (dict "label" "Security" "name" "security")) "large" "true" )  }}
+            </div>
+        </div>
+    </section>
+
+    <div class="separator light"></div>
+    
+    <section class="page-section page-section-landing what-we-do-2">
+        <div class="col">
+            {{ partial "icons/tool.html" }}
+            <h4 class="title title-3">Only the most interesting new tools</h4>
+            <p>We use our years of development experience to review and recommend the best tools.</p>
+        </div>
+        <div class="col">
+            {{ partial "icons/beta.html" }}
+            <h4 class="title title-3">Access the latest beta releases</h4>
+            <p>We keep track of all the latest news and releases, highlighting the most interesting announcements.</p>
+        </div>
+        <div class="col">
+            {{ partial "icons/console-mini.html" }}
+            <h4 class="title title-3">All tools must meet our selection criteria</h4>
+            <p>All reviews are independently assessed against our strict <a class="link" href="/about/#selection-criteria">selection criteria</a>.</p>
+        </div>
+    </section>
+
+    <section class="page-section page-section-landing cta">
+        <div class="neon-planes-wrapper">
+            {{ partial "components/neon-planes.html" (dict "context" . "type" "all" ) }}
+        </div>
+        {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
+    </section>
+
+    <script src="/js/page-type/landing.js"></script>
+{{ end }}

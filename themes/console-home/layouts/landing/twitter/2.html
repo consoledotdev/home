@@ -1,0 +1,205 @@
+{{ define "main" }}
+	{{ $CTATitle := "Discover the best tools for developers" }}
+	{{ $CTADescription := "Our free weekly email features a digest of the best new tools and beta releases for developers. " }}
+
+    <!-- Twitter universal website tag code -->
+    <script>
+        !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+        },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+        a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+        // Insert Twitter Pixel ID and Standard Event data below
+        twq('init','o5cre');
+        twq('track','PageView');
+    </script>
+    <!-- End Twitter universal website tag code -->
+
+    <section class="page-section page-section-landing opening">
+        <div class="top">
+            <h2 class="title title-1">Discover the best tools for developers</h2>
+            <p class="description">A free weekly email digest of the best tools and beta releases for developers.</p>
+            <form action="https://dev.us7.list-manage.com/subscribe/post?u=f8c3cd14ee8d63c53d0986a48&amp;id=267911a165" method="post" id="console-subscribe" name="console-subscribe" class="console-form">
+                <input id="form-email" name="EMAIL" class="console-input-text" type="email" placeholder="Your email" title="Email" required />
+                <input type="hidden" value="{{ .Page.RelPermalink }}" name="REFERRER" id="mc-referrer" />
+                <div style="position: absolute; left: -5000px" aria-hidden="true"><input type="text" name="b_f8c3cd14ee8d63c53d0986a48_267911a165" tabindex="-1" value="" /><!-- Anti spam field --></div>
+
+                <button onclick="blur()" class="console-button icon-left" type="submit" title="Signup">
+                    {{ partial "icons/send.html" }}
+                    <span>Sign Up</span>
+                </button>
+            </form>
+            {{ `<!-- Plausible Analytics goal tracking for signups -->` | safeHTML }}
+            <script>
+                var registerForm = document.querySelector("#console-subscribe");
+                registerForm.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    setTimeout(submitForm, 1000);
+                    var formSubmitted = false;
+
+                    function submitForm() {
+                        if (!formSubmitted) {
+                            formSubmitted = true;
+                            registerForm.submit();
+                        }
+                    }
+                    plausible("Newsletter Subscribe", {
+                        callback: submitForm,
+                    });
+
+                    twq('track','Purchase');
+                });
+            </script>
+            <p>
+                Every Thursday.
+                <a onclick="blur();" class="console-button-text icon-right" href="#latest-newsletter" title="Read the latest email" rel="noopener"><span>Read the latest email</span>
+                    {{ partial "icons/scroll-down.html" }}</a>
+            </p>
+        </div>
+        <div class="bottom">
+            <img class="light" src="/img/landing/newsletter-light.png" alt="Console Newsletter">
+            <img class="dark" src="/img/landing/newsletter-dark.png" alt="Console Newsletter">
+        </div>
+    </section>
+
+    <section class="page-section page-section-plane page-section-landing trust-signals">
+        <div class="top">
+            <h3 class="title title-2 rich-title">Trusted by {{ $.Site.Params.consoleSubscribers }} developers</h3>
+            <p class="quote">
+                <span>
+                    “If you’re interested in cool new developer tools check out Console it’s a great, short and sharp roundup newsletter, well worth a follow” 
+                    <span>James Governor, Co-founder, RedMonk</span>
+                </span>
+            </p>
+        </div>
+        <div class="bottom">
+            <p>Join subscribers from:</p>
+            <div class="logo-cloud-artwork">
+                <div class="logo-cloud">
+                    <img class="dark" src="/img/landing/reached-company-logo-github-dark.png" alt="GitHub">
+                    <img class="dark" src="/img/landing/reached-company-logo-atlassian-dark.png" alt="Atlassian">
+                    <img class="dark" src="/img/landing/reached-company-logo-microsoft-dark.png" alt="Microsoft">
+                    <img class="dark" src="/img/landing/reached-company-logo-cloudflare-dark.png" alt="Cloudflare">
+                    <img class="dark" src="/img/landing/reached-company-logo-adobe-dark.png" alt="Adobe">
+                    <img class="dark" src="/img/landing/reached-company-logo-sourcegraph-dark.png" alt="Sourcegraph">
+                    <img class="dark" src="/img/landing/reached-company-logo-twilio-dark.png" alt="Twilio">
+                    <img class="dark" src="/img/landing/reached-company-logo-snyk-dark.png" alt="Snyk">
+                    <img class="light" src="/img/landing/reached-company-logo-github-light.png" alt="GitHub">
+                    <img class="light" src="/img/landing/reached-company-logo-atlassian-light.png" alt="Atlassian">
+                    <img class="light" src="/img/landing/reached-company-logo-microsoft-light.png" alt="Microsoft">
+                    <img class="light" src="/img/landing/reached-company-logo-cloudflare-light.png" alt="Cloudflare">
+                    <img class="light" src="/img/landing/reached-company-logo-adobe-light.png" alt="Adobe">
+                    <img class="light" src="/img/landing/reached-company-logo-sourcegraph-light.png" alt="Sourcegraph">
+                    <img class="light" src="/img/landing/reached-company-logo-twilio-light.png" alt="Twilio">
+                    <img class="light" src="/img/landing/reached-company-logo-snyk-light.png" alt="Snyk">
+                </div>
+                <div class="vapor-globe"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="page-section page-section-landing what-we-do-1">
+        <div class="top">
+            <h3 class="title title-2 rich-title">Interesting tools & new betas</h3>
+            <span data-checkpoint-other-content></span>
+            <ul>
+                <li>2-3 developer tool recommendations.</li>
+                <li>3-5 interesting new beta releases.</li>
+                <li>Interviews with the people behind the tools.</li>
+            </ul>
+            <a onclick="blur();" class="console-button-text icon-right" href="/tools/" title="See all developer tool reviews" rel="noopener"><span class="long">Check out all our past reviews</span><span class="short">See past reviews</span>
+                {{ partial "icons/arrow-right.html" }}</a>
+        </div>
+        <div class="bottom">
+            <div class="neon-planes-wrapper">
+                {{ partial "components/neon-planes.html" (dict "context" . "type" "two" ) }}
+            </div>
+            <div class="categories-wrapper">
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "api" "subcategory" (dict "label" "API" "name" "api")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "cloud" "subcategory" (dict "label" "Cloud" "name" "cloud")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "data-science" "subcategory" (dict "label" "Data Science" "name" "data-science")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "database" "subcategory" (dict "label" "Database" "name" "database")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "developer-tools" "subcategory" (dict "label" "Developer Tools" "name" "developer-tools")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "devops" "subcategory" (dict "label" "DevOps" "name" "devops")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "misc" "subcategory" (dict "label" "Misc" "name" "misc")) "large" "true" )  }}
+                {{ partial "components/category.html" (dict "categoryData" (dict "category" "security" "subcategory" (dict "label" "Security" "name" "security")) "large" "true" )  }}
+            </div>
+        </div>
+    </section>
+
+    <div class="separator light"></div>
+    
+    <span data-checkpoint-latest-newsletter id="latest-newsletter"></span>
+
+    <section class="page-section page-section-landing latest-newsletter">
+        <h2 class="title title-1">Latest Console Newsletter</h2>
+        <p><b>A weekly digest of the best developer tools</b> – We keep track of everything - dev tools, devops, cloud, and APIs - so you don't have to. This is the content of the newsletter sent on
+        {{ range first 1 $.Site.Data.toolslatest.items }}{{ index . "Scheduled for" | dateFormat "2 Jan 2006" }}{{ end }}.</p>
+
+        {{ $toolsCount := len $.Site.Data.toolslatest.items }}
+        {{ $toolsCount = sub $toolsCount 1 }}
+
+        <h4 class="title title-3">Contents</h4>
+        <div class="latest-newsletter-list">
+            {{ range $index, $tool := $.Site.Data.toolslatest.items }}
+                <p>{{ partial "icons/tool.html" }} <a href="{{ index . "URL" }}" class="link">{{ index . "Tool/Product/Project" }}</a> – {{ index . "What is it?" }}</p>
+            {{ end }}
+            {{- if $.Site.Data.betaslatest.items -}}
+                {{ $betaCount := len $.Site.Data.betaslatest.items }}
+                {{ $betaCount = sub $betaCount 1 }}
+                {{ range $index, $beta := $.Site.Data.betaslatest.items }}
+                    <p>{{ partial "icons/beta.html" }} <a href="{{ index . "URL" }}" class="link">{{ index . "Tool/Product/Project" }}</a> – {{ index . "What is it?" }}</p>
+                {{ end }}
+            {{- end -}}
+        </div>
+
+        <h3 class="title title-2">Interesting tools</h3>
+        <p>Each week we review 2-3 of the most interesting developer tools. Here's what we featured this week. <a href="/tools/" class="link">View the full archive</a>.</p>
+        {{ range $index, $tool := $.Site.Data.toolslatest.items }}
+            <div class="latest-newsletter-item">
+                <h4 class="title title-3"><a href="{{ index . "URL" }}" class="link">{{ index . "Tool/Product/Project" }}</a></h4>
+                <h6 class="title title-5">{{ index . "What is it?" }}</h6>
+                <p><b>What we like:</b> {{ index . "What we like" }}</p>
+                <p><b>What we don&apos;t like:</b> {{ index . "What we dislike" }}
+                {{ if eq (index .Sponsored) "TRUE" -}}
+                    {{ partial "components/notice-disclosure-item.html" }}
+                {{- end }}
+            </div>
+        {{ end }}
+
+        <h3 class="title title-2">New betas &amp; early release programs</h3>
+        {{- if $.Site.Data.betaslatest.items -}}
+            <p>We also include some of the more interesting beta and early access releases. Here's the ones we featured this week. View the live list on <a href="/betas/" class="link">Beta Console</a>.</p>
+            {{ $betaCount := len $.Site.Data.betaslatest.items }}
+            {{ $betaCount = sub $betaCount 1 }}
+            {{ range $index, $beta := $.Site.Data.betaslatest.items }}
+                <div class="latest-newsletter-item">
+                    <h4 class="title title-3"><a href="{{ index . "URL" }}" class="link">{{ index . "Tool/Product/Project" }}</a></h4>
+                    <h6 class="title title-5">{{ index . "What is it?" }}</h6>
+                    <div class="taxonomy">
+                        <div class="categories">
+                            {{ partial (print "icons/" (replace (lower (index . "Category")) " " "-") ".html") }}
+                            <span class="category">{{ index . "Category" }}</span>
+                        </div>
+                        <div class="tags">
+                            {{ partial "icons/tag.html" }}
+                            <span class="tag">{{ index . "Type" }}</span>, 
+                            <span class="tag">{{ index . "Access" }} access</span>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        {{- else -}}
+            <p>Nothing of note this week. We only feature the most interesting beta
+            releases you should actually check out. In the meantime, have a look at <a href="/betas/" class="link">Beta Console</a>, our live list of every developer tool and early access release.</p>
+        {{- end -}}
+
+    </section>
+
+    <section class="page-section page-section-landing cta">
+        <div class="neon-planes-wrapper">
+            {{ partial "components/neon-planes.html" (dict "context" . "type" "all" ) }}
+        </div>
+        {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
+    </section>
+
+    <script src="/js/page-type/landing.js"></script>
+{{ end }}
