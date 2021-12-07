@@ -3420,7 +3420,7 @@ body:not(.mobile) .console-control:hover:before {
     transform: translate(-50%, -50%);
     background-color: var(--theme-content-bg-4);
     border-radius: var(--corners-mid);
-    padding: var(--space4);
+    padding: 0px;
     box-shadow: var(--theme-shadow-3);
     transition: all var(--a-modal-time) var(--a-modal-easing);
     transition-delay: 0s;
