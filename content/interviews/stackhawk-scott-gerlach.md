@@ -230,7 +230,7 @@ Anker](https://www.anker.com/products/variant/anker-24g-wireless-vertical-ergono
 And then clicky keyboards. Today I’m using my [Code
 Keyboard](https://www.codekeyboards.com/), which has a custom StackHawk Escape
 key and custom [MX Brown
-switches](https://www.cherrymx.de/en/mx-original/mx-brown.html).
+switches](https://www.cherrymx.de/en/cherry-mx/mx-original/mx-brown.html).
 
 ### Describe your software setup
 
