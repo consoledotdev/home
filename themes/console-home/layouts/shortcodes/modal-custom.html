@@ -1,0 +1,7 @@
+<a href="#" class="modal-link{{ with .Get "class"}} {{ . }}{{ end }}"
+    data-modal-link
+    data-modal-type="{{ .Get "type" }}"
+    {{ if eq (.Get "type") "screen" }}
+        data-modal-type-screen="{{ .Get "type-screen" }}"
+    {{ end }}
+    >
