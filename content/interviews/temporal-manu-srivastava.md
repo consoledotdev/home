@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Manu Srivastava, Engineer, Temporal
 isPage: interviews
 topImg1Src: /img/interviews/temporal-manu-srivastava-profile.jpg
-topImg2Src: /img/interviews/temporal-manu-srivastava-logo.jpg
+topImg2Src: /img/favicons/temporal.io.png
 ogImg: /img/interviews/temporal-manu-srivastava-desk.jpg
 ---
 

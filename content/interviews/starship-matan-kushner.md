@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Matan Kushner, Creator, Starship.
 isPage: interviews
 topImg1Src: /img/interviews/starship-matan-kushner-profile.jpg
-topImg2Src: /img/interviews/starship-matan-kushner-logo.png
+topImg2Src: /img/favicons/starship.rs.png
 ogImg: /img/interviews/starship-matan-kushner-desk.jpg
 ---
 

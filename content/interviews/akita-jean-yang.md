@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Jean Yang, CEO, Akita
 isPage: interviews
 topImg1Src: /img/interviews/akita-jean-yang-profile.jpg
-topImg2Src: /img/interviews/akita-jean-yang-logo.png
+topImg2Src: /img/favicons/www.akitasoftware.com.png
 ogImg: /img/interviews/akita-jean-yang-desk.jpeg
 ---
 

@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Mayank Bhola, VP, Engineering, LambdaTest
 isPage: interviews
 topImg1Src: /img/interviews/lambdatest-mayank-bhola-profile.jpg
-topImg2Src: /img/interviews/lambdatest-mayank-bhola-logo.jpg
+topImg2Src: /img/favicons/www.lambdatest.com.jpg
 ogImg: /img/interviews/lambdatest-mayank-bhola-logo.jpg
 ---
 

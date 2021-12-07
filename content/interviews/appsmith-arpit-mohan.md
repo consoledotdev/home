@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Arpit Mohan, CTO, Appsmith.
 isPage: interviews
 topImg1Src: /img/interviews/appsmith-arpit-mohan-profile.png
-topImg2Src: /img/interviews/appsmith-arpit-mohan-logo.png
+topImg2Src: /img/favicons/www.appsmith.com.png
 ogImg: /img/interviews/appsmith-arpit-mohan-desk.jpg
 ---
 

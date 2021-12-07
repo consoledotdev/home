@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with John Sully, CEO, KeyDB.
 isPage: interviews
 topImg1Src: /img/interviews/keydb-john-sully-profile.jpg
-topImg2Src: /img/interviews/keydb-john-sully-logo.jpg
+topImg2Src: /img/favicons/keydb.dev.jpg
 ogImg: /img/interviews/keydb-john-sully-desk.png
 ---
 

@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with John Amaral, CEO, Slim.AI.
 isPage: interviews
 topImg1Src: /img/interviews/slimai-john-amaral-profile.png
-topImg2Src: /img/interviews/slimai-john-amaral-logo.jpg
+topImg2Src: /img/favicons/slim.ai.jpg
 ogImg: /img/interviews/slimai-john-amaral-setup.png
 ---
 

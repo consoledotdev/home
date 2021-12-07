@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Vlad Ilyushchenko, CTO, QuestDB
 isPage: interviews
 topImg1Src: /img/interviews/questdb-vlad-ilyushchenko-profile.jpeg
-topImg2Src: /img/interviews/questdb-vlad-ilyushchenko-logo.jpg
+topImg2Src: /img/favicons/questdb.io.png
 ogImg: /img/interviews/questdb-vlad-ilyushchenko-desk.jpg
 ---
 

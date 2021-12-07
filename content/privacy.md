@@ -94,8 +94,10 @@ transfer personal data to or through these services:
   Plausible Analytics
   [which does not use cookies](https://plausible.io/data-policy) and is designed
   [privacy-first](https://plausible.io/privacy-focused-web-analytics).
-- [Reddit](https://www.reddit.com/): If you click through from Reddit, we use Reddit's tools to track if
-  you then sign up to Console.
+- [Reddit](https://www.reddit.com/): If you click through from a Reddit ad, we
+  use Reddit's tools to track if you then sign up to Console.
+- [Twitter](https://twitter.com/): If you click through from a Twitter ad, we
+  use Reddit's tools to track if you then sign up to Console.
 
 We may transfer your personal data outside of the EU on the basis of an adequacy
 decision by the European Commission under Article 45 of the UK GDPR.

@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Jesse Orshan, Co-founder, WayScript.
 isPage: interviews
 topImg1Src: /img/interviews/wayscript-jesse-orshan-profile.jpg
-topImg2Src: /img/interviews/wayscript-jesse-orshan-logo.png
+topImg2Src: /img/favicons/wayscript.com.png
 ogImg: /img/interviews/wayscript-jesse-orshan-desk.jpg
 ---
 

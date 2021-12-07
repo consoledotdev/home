@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with David Zhao, CTO, LiveKit
 isPage: interviews
 topImg1Src: /img/interviews/livekit-david-zhao-profile.jpg
-topImg2Src: /img/interviews/livekit-david-zhao-logo.jpg
+topImg2Src: /img/favicons/livekit.io.jpg
 ogImg: /img/interviews/livekit-david-zhao-desk.jpeg
 ---
 

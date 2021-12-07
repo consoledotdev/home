@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Scott Gerlach, Co-founder & CSO, StackHawk.
 isPage: interviews
 topImg1Src: /img/interviews/stackhawk-scott-gerlach-profile.jpg
-topImg2Src: /img/interviews/stackhawk-scott-gerlach-logo.png
+topImg2Src: /img/favicons/www.stackhawk.com.png
 ogImg: /img/interviews/stackhawk-scott-gerlach-desk.jpg
 ---
 
@@ -230,7 +230,7 @@ Anker](https://www.anker.com/products/variant/anker-24g-wireless-vertical-ergono
 And then clicky keyboards. Today I’m using my [Code
 Keyboard](https://www.codekeyboards.com/), which has a custom StackHawk Escape
 key and custom [MX Brown
-switches](https://www.cherrymx.de/en/mx-original/mx-brown.html).
+switches](https://www.cherrymx.de/en/cherry-mx/mx-original/mx-brown.html).
 
 ### Describe your software setup
 

@@ -37,6 +37,12 @@
 
     {{ $iso8601 := "2006-01-02T15:04:05-07:00" -}}
     <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <!-- Hey Browser, 
+     this website support `dark` and `light`
+     but the author prefers `dark` representation 
+     https://www.stefanjudis.com/today-i-learned/how-to-tell-browsers-that-your-site-supports-color-schemes/
+    -->
+    <meta name="color-scheme" content="dark light">
 
     {{ if not .PublishDate.IsZero -}}
     <meta property="article:published_time" {{ .PublishDate.Format $iso8601 | printf "content=%q" | safeHTMLAttr }}>
@@ -135,7 +141,7 @@
             };
     </script>
     <!-- Include Ad tracking only for visitors from Reddit - first party cookies disabled -->
-    {{- if eq $.Page.RelPermalink "/reddit/" -}}
+    {{- if (or (eq $.Page.RelPermalink "/reddit/") (eq $.Page.RelPermalink "/landing/reddit/1/") (eq $.Page.RelPermalink "/landing/reddit/2/") (eq $.Page.RelPermalink "/landing/reddit/3/")) -}}
     <!-- Reddit Pixel -->
     <script>
     !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','t2_919zho3h');rdt('disableFirstPartyCookies');rdt('track', 'PageVisit');
