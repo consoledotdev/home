@@ -341,7 +341,7 @@ class Modal {
         let end = {
             x: window.innerWidth / 2,
             y: window.innerHeight / 2,
-            w: window.innerWidth * 0.8,
+            w: window.innerWidth * 0.9,
         };
 
         setTimeout(() => {
