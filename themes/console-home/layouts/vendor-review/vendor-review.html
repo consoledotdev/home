@@ -3,6 +3,11 @@
 	{{ $CTADescription := "Our free weekly newsletter picks out the 2-3 most interesting tools." }}
 
     <section class="page-section page-section-vendor-review opening">
+        <script type="application/ld+json">
+            {{- $schemaFile := print "/content/" .Params.subcategory.name "/schema-" .Params.isSubpage ".json" }}
+            {{ readFile $schemaFile | safeJS }}
+        </script>
+
         <h2 class="title title-1 rich-title">
             {{ partial "components/thumbnail-vendor.html" (dict "name" .Params.title "image" .Params.thumbnail "category" .Params.category ) }}
             <span>{{ .Params.title }}</span>

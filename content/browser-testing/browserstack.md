@@ -28,7 +28,7 @@ ranking:
   value: 1
   total: 6
 scores:
-  overall: 5
+  overall: 4.7
   features:
     - name: Devices and browsers supported
       value: 5
