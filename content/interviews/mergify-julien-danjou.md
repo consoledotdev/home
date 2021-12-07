@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Julien Danjou, CEO, Mergify
 isPage: interviews
 topImg1Src: /img/interviews/mergify-julien-danjou-profile.jpg
-topImg2Src: /img/interviews/mergify-julien-danjou-logo.svg
+topImg2Src: /img/favicons/mergify.com.svg
 ogImg: /img/interviews/mergify-julien-danjou-desk.jpg
 ---
 

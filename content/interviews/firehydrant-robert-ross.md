@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Robert Ross, CEO, FireHydrant
 isPage: interviews
 topImg1Src: /img/interviews/firehydrant-robert-ross-profile.jpg
-topImg2Src: /img/interviews/firehydrant-robert-ross-logo.jpg
+topImg2Src: /img/favicons/firehydrant.io.png
 ogImg: /img/interviews/firehydrant-robert-ross-desk.jpeg
 ---
 

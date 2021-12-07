@@ -27,4 +27,4 @@ jobs:
                   # https://github.com/calibreapp/image-actions#ignore-paths
                   # The Sourcegraph logo get compressed down to really poor
                   # quality for some reason, so exclude it
-                  ignorePaths: "static/img/favicons/about.sourcegraph.com.png,static/img/favicons/sourcegraph.com.png,static/img/interviews/sourcegraph-beyang-liu-logo.png"
+                  ignorePaths: "static/img/favicons/about.sourcegraph.com.png,static/img/favicons/sourcegraph.com.png"

@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Beyang Liu, CTO, Sourcegraph.
 isPage: interviews
 topImg1Src: /img/interviews/sourcegraph-beyang-liu-profile.jpeg
-topImg2Src: /img/interviews/sourcegraph-beyang-liu-logo.png
+topImg2Src: /img/favicons/sourcegraph.com.png
 ogImg: /img/interviews/sourcegraph-beyang-liu-desk.jpg
 ---
 

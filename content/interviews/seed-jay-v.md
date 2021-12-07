@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Jay V, CEO, Seed.
 isPage: interviews
 topImg1Src: /img/interviews/seed-jay-v-profile.jpg
-topImg2Src: /img/interviews/seed-jay-v-logo.svg
+topImg2Src: /img/favicons/seed.run.svg
 ogImg: /img/interviews/seed-jay-v-desk.jpg
 ---
 

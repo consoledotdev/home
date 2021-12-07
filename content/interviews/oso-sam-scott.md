@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Sam Scott, CTO, Oso.
 isPage: interviews
 topImg1Src: /img/interviews/oso-sam-scott-profile.png
-topImg2Src: /img/interviews/oso-sam-scott-logo.png
+topImg2Src: /img/favicons/www.osohq.com.png
 ogImg: /img/interviews/oso-sam-scott-desk.jpg
 ---
 

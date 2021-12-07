@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Donnie Hasseltine, CEO, PackageCloud.
 isPage: interviews
 topImg1Src: /img/interviews/packagecloud-donnie-hasseltine-profile.jpeg
-topImg2Src: /img/interviews/packagecloud-donnie-hasseltine-logo.jpg
+topImg2Src: /img/favicons/packagecloud.io.jpg
 ogImg: /img/interviews/packagecloud-donnie-hasseltine-desk.jpg
 ---
 
