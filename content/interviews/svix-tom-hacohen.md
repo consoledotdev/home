@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Tom Hacohen, CEO, Svix
 isPage: interviews
 topImg1Src: /img/interviews/svix-tom-hacohen-profile.jpg
-topImg2Src: /img/interviews/svix-tom-hacohen-logo.svg
+topImg2Src: /img/favicons/www.svix.com.svg
 ogImg: /img/interviews/svix-tom-hacohen-desk.jpg
 ---
 

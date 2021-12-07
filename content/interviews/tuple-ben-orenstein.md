@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Ben Orenstein, Tuple
 isPage: interviews
 topImg1Src: /img/interviews/tuple-ben-orenstein-profile.jpg
-topImg2Src: /img/interviews/tuple-ben-orenstein-logo.jpg
+topImg2Src: /img/favicons/tuple.app.png
 ogImg: /img/interviews/tuple-ben-orenstein-desk.jpg
 ---
 

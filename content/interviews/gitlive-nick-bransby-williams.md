@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Nick Bransby-Williams, GitLive
 isPage: interviews
 topImg1Src: /img/interviews/gitlive-nick-bransby-williams-profile.png
-topImg2Src: /img/interviews/gitlive-nick-bransby-williams-logo.png
+topImg2Src: /img/favicons/git.live.png
 ogImg: /img/interviews/gitlive-nick-bransby-williams-desk.jpg
 ---
 
