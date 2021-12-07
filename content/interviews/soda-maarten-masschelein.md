@@ -10,9 +10,9 @@ draft: false
 headerType: fixed
 summary: Interview with Maarten Masschelein, CEO, Soda
 isPage: interviews
-topImg1Src: /img/interviews/soda-maarten-masschelein-profile.jpg
+topImg1Src: /img/interviews/soda-maarten-masschelein-profile.png
 topImg2Src: /img/favicons/www.soda.io.png
-ogImg: /img/interviews/soda-maarten-masschelein-profile.jpg
+ogImg: /img/interviews/soda-maarten-masschelein-profile.png
 ---
 
 ### What is Soda? Why did you build it?
