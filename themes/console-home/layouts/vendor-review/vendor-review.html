@@ -31,7 +31,12 @@
                     {{ partial "icons/external-link.html" }}</a>
             </div>
             <div class="right">
-                <img class="image" src="{{ .Params.productShot.image }}" alt="{{ .Params.title }} product screenshot" />
+                <a href="#" class="modal-link"
+                    data-modal-link
+                    data-modal-type="screen"
+                    data-modal-type-screen="{{ .Params.productShot.image }}">
+                        <img class="image" src="{{ .Params.productShot.image }}" alt="{{ .Params.title }} product screenshot" />
+                </a>
             </div>
         </div>
         <div class="bottom">

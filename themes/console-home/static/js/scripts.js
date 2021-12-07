@@ -264,3 +264,132 @@ let updateMarkedScrollable = (el, direction) => {
         el.classList.remove("is-fully-scrolled");
     }
 };
+
+class Modal {
+    links;
+    html;
+    contentHook;
+    modalTiming = 240; //ms, see CSS
+    activeLink;
+
+    constructor(links) {
+        this.links = links;
+        this.html = "<div class='modal-backdrop' data-modal-backdrop><div class='modal' data-modal></div></div>";
+        let temp = document.createElement("div");
+        temp.innerHTML = this.html;
+        this.html = temp.firstChild;
+        this.contentHook = this.html.querySelector("[data-modal]");
+
+        this.bindLinks();
+        this.bindClose();
+    }
+
+    bindLinks() {
+        this.links.forEach((link) => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+
+                this.setContent(link.dataset);
+                this.prepForShow();
+
+                setTimeout(() => {
+                    this.show(link);
+                }, 1);
+            });
+        });
+    }
+
+    setContent(dataset) {
+        let content;
+        if ((dataset.type = "screen")) {
+            let img = document.createElement("img");
+            img.src = dataset.modalTypeScreen;
+            content = img;
+        }
+
+        this.contentHook.innerHTML = "";
+        this.contentHook.appendChild(content);
+        document.body.appendChild(this.html);
+    }
+
+    prepForShow() {
+        if (this.contentHook.dataset.transition == undefined || this.contentHook.dataset.padding == undefined) {
+            let style = window.getComputedStyle(this.contentHook);
+            this.contentHook.dataset.transition = style.getPropertyValue("transition");
+            this.contentHook.dataset.padding = style.getPropertyValue("padding");
+        }
+
+        this.contentHook.style.transition = "all 0s linear";
+        this.contentHook.style.padding = "0px";
+        this.contentHook.style.left = null;
+        this.contentHook.style.top = null;
+        this.contentHook.style.width = null;
+    }
+
+    show(link) {
+        this.activeLink = link;
+        let origin = link.getBoundingClientRect();
+
+        let start = {
+            x: origin.x + origin.width / 2,
+            y: origin.y + origin.height / 2,
+            w: origin.width,
+        };
+        let end = {
+            x: window.innerWidth / 2,
+            y: window.innerHeight / 2,
+            w: window.innerWidth * 0.8,
+        };
+
+        setTimeout(() => {
+            this.contentHook.style.left = start.x + "px";
+            this.contentHook.style.top = start.y + "px";
+            this.contentHook.style.width = start.w + "px";
+
+            setTimeout(() => {
+                this.contentHook.style.transition = this.contentHook.dataset.transition;
+                this.html.classList.add("is-visible");
+
+                setTimeout(() => {
+                    this.contentHook.style.left = end.x + "px";
+                    this.contentHook.style.top = end.y + "px";
+                    this.contentHook.style.width = end.w + "px";
+                    this.contentHook.style.padding = this.contentHook.dataset.padding;
+                }, this.modalTiming);
+            }, 20);
+        }, 80);
+    }
+
+    bindClose() {
+        this.html.addEventListener("click", this.close.bind(this));
+    }
+
+    close() {
+        let origin = this.activeLink.getBoundingClientRect();
+
+        let end = {
+            x: origin.x + origin.width / 2,
+            y: origin.y + origin.height / 2,
+            w: origin.width,
+        };
+
+        this.contentHook.style.left = end.x + "px";
+        this.contentHook.style.top = end.y + "px";
+        this.contentHook.style.width = end.w + "px";
+        this.contentHook.style.padding = "0px";
+
+        this.html.classList.remove("is-visible");
+
+        setTimeout(() => {
+            this.prepForShow();
+            this.html.remove();
+            this.contentHook.innerHTML = "";
+            this.activeLink = undefined;
+        }, this.modalTiming);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    let modalLinks = document.querySelectorAll("[data-modal-link]");
+    if (modalLinks) new Modal(modalLinks);
+});
