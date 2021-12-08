@@ -231,7 +231,7 @@ near-Earth components, but are not a complete, general purpose solution.
 
 #### Delay-Tolerant Networking
 
-{{< research/mars/dtn-table >}}
+{{< simple-table name="dtn" data-file="research/mars" class="mars-illustration" >}}
 
 Back in 2007, a new
 [Delay-Tolerant Networking Architecture](https://tools.ietf.org/html/rfc4838)

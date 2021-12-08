@@ -1,0 +1,59 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "Review",
+    "headline": "Selenium review",
+    "description": "SSelenium is a free and open source browser testing framework that powers many other browser testing tools, but requires significant technical knowledge  to use. Read our review of Selenium - a browser testing tool.",
+    "itemReviewed": {
+        "@type": "Product",
+        "name": "Selenium",
+        "category": "Browser testing",
+        "description": "Browser testing tool.",
+        "url": "https://www.selenium.dev/",
+        "image": [
+            "https://console.dev/img/favicons/www.selenium.dev.png"
+        ],
+        "offers": {
+            "@type": "AggregateOffer",
+            "highPrice": "0",
+            "lowPrice": "0",
+            "priceCurrency": "USD",
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "price": "0",
+                    "description": "Automated cross-browser testing"
+                }
+            ]
+        }
+    },
+    "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "2.5",
+        "bestRating": "5",
+        "worstRating": "0"
+    },
+    "negativeNotes": [
+        "Expensive and time consuming to maintain",
+        "Test reports difficult to read",
+        "Mobile testing not possible without third party tools"
+    ],
+    "positiveNotes": [
+        "Supports Windows, Linux, macOS and more",
+        "Automation workflows can be written in multiple languages (Java, Python, CSharp, Ruby, JavaScript, and Kotlin)",
+        "Provides extensive control over networking and data storage"
+    ],
+    "author": {
+        "@type": "Person",
+        "name": "Naman Singhal",
+        "email": "naman@console.dev",
+        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+        "image": "https://console.dev/img/naman.jpg"
+    },
+    "name": "Browser testing tool",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Console",
+        "url": "https://console.dev"
+    },
+    "reviewBody": "Selenium is an open source browser testing framework used by many other browser testing tools because of its maturity and power. However, it requires significant technical knowledge to set up - including managing your own test devices - so we do not recommend it for most users."
+}

@@ -1,0 +1,385 @@
+{
+    "consoleDeveloperPerspective": [
+        [
+            "Dark mode",
+            [
+                "No"
+            ]
+        ],
+        [
+            "CLI",
+            [
+                "No"
+            ]
+        ],
+        [
+            "APIs",
+            [
+                {
+                    "links": [
+                        {
+                            "href": "https://crossbrowsertesting.com/apidocs/v3/",
+                            "text": "Yes",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                }
+            ]
+        ],
+        [
+            "SDKs",
+            [
+                "Java, JavaScript, Python, C#, Ruby, PHP"
+            ]
+        ],
+        [
+            "Documentation quality",
+            [
+                "Satisfactory documentation. Code samples available on GitHub."
+            ]
+        ],
+        [
+            "Developer power features",
+            [
+                "No"
+            ]
+        ],
+        [
+            "Operational overhead",
+            [
+                "Users must set up their own proxy servers in different regions for localization testing"
+            ]
+        ],
+        [
+            "Support",
+            [
+                "Chat and email support."
+            ]
+        ],
+        [
+            "Security and privacy considerations",
+            [
+                "All saved data is wiped from device after each use."
+            ]
+        ]
+    ],
+    "companyContext": [
+        [
+            "Year founded",
+            [
+                "2008"
+            ]
+        ],
+        [
+            "Company stage",
+            [
+                "Acquired startup"
+            ]
+        ],
+        [
+            "Key customers",
+            [
+                "Accenture, Expedia, Wistia, Onboardify, Inflow",
+                {
+                    "links": [
+                        {
+                            "href": "https://crossbrowsertesting.com/customers",
+                            "text": "see all",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                },
+                "."
+            ]
+        ],
+        [
+            "Social",
+            [
+                {
+                    "links": [
+                        {
+                            "href": "https://twitter.com/xbrowsertesting",
+                            "text": "Twitter",
+                            "iconLeft": "twitter"
+                        }
+                    ]
+                }
+            ]
+        ]
+    ],
+    "comparisonChecklist": [
+        [
+            "H",
+            "Feature",
+            [
+                "CrossBrowser Testing"
+            ],
+            [
+                "LambdaTest"
+            ],
+            [
+                "Ghost Inspector"
+            ],
+            [
+                "Sauce Labs"
+            ],
+            [
+                "BrowserStack"
+            ],
+            [
+                "Selenium"
+            ]
+        ],
+        [
+            "Live testing",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            "Real devices",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                "On request"
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                "N/A"
+            ]
+        ],
+        [
+            "Automated testing",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ]
+        ],
+        [
+            "Screenshot regression testing",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            "Local testing",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ]
+        ],
+        [
+            "Email and SMS testing",
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            "Generates reports",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            "Low-code automated testing",
+            [
+                "Not directly"
+            ],
+            [
+                "Not directly"
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                "Not directly"
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ]
+        ],
+        [
+            "Accessibility testing",
+            [
+                ""
+            ],
+            [
+                "Lighthouse"
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                "axe"
+            ],
+            [
+                ""
+            ]
+        ]
+    ]
+}

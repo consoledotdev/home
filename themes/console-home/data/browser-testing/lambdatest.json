@@ -1,0 +1,418 @@
+{
+    "consoleDeveloperPerspective": [
+        [
+            "Dark mode",
+            [
+                "No"
+            ]
+        ],
+        [
+            "CLI",
+            [
+                "No"
+            ]
+        ],
+        [
+            "APIs",
+            [
+                {
+                    "links": [
+                        {
+                            "href": "https://www.lambdatest.com/support/api-doc/",
+                            "text": "Yes",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                }
+            ]
+        ],
+        [
+            "SDKs",
+            [
+                "All the languages & frameworks are compatible with Selenium as well as Cypress."
+            ]
+        ],
+        [
+            "Documentation quality",
+            [
+                "Great documentation, code samples are available on GitHub, can add API tokens in the documentation and run commands from the browser tab itself."
+            ]
+        ],
+        [
+            "Developer power features",
+            [
+                "LT Browser supports keyboard shortcuts."
+            ]
+        ],
+        [
+            "Operational overhead",
+            [
+                "Private tunnel setup required for local testing, otherwise minimal setup required."
+            ]
+        ],
+        [
+            "Support",
+            [
+                "24x7 support available on chat and phone."
+            ]
+        ],
+        [
+            "Security and privacy considerations",
+            [
+                "SOC2 Certified, GDPR Compliant, and CCPA Compliant. Machines reverted to their initial state after the test."
+            ]
+        ]
+    ],
+    "companyContext": [
+        [
+            "CEO",
+            [
+                {
+                    "links": [
+                        {
+                            "href": "https://twitter.com/asad0801",
+                            "text": "Asad Khan",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                }
+            ]
+        ],
+        [
+            "Year founded",
+            [
+                "2017"
+            ]
+        ],
+        [
+            "Number of employees",
+            [
+                "201-500"
+            ]
+        ],
+        [
+            "Company stage",
+            [
+                {
+                    "links": [
+                        {
+                            "href": "https://venturebeat.com/2021/06/02/cross-browser-app-testing-platform-lambdatest-raises-16m/",
+                            "text": "Established startup",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                }
+            ]
+        ],
+        [
+            "Key customers",
+            [
+                "Dashlane, Cisco, ZOHO, Capgemini, Deloitte, Apple, Microsoft, Postman, ",
+                {
+                    "links": [
+                        {
+                            "href": "https://www.lambdatest.com/customers/",
+                            "text": "see all",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                },
+                "."
+            ]
+        ],
+        [
+            "Social",
+            [
+                {
+                    "links": [
+                        {
+                            "href": "https://twitter.com/lambdatesting",
+                            "text": "Twitter",
+                            "iconLeft": "twitter"
+                        },
+                        {
+                            "href": "https://www.linkedin.com/company/lambdatest/",
+                            "text": "LinkedIn",
+                            "iconLeft": "linkedin"
+                        }
+                    ]
+                }
+            ]
+        ]
+    ],
+    "comparisonChecklist": [    
+        [
+            "H",
+            "Feature",
+            [
+                "LambdaTest"
+            ],
+            [
+                "BrowserStack"
+            ],
+            [
+                "Ghost Inspector"
+            ],
+            [
+                "Sauce Labs"
+            ],
+            [
+                "CrossBrowser Testing"
+            ],
+            [
+                "Selenium"
+            ]
+        ],
+        [
+            "Live testing",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            "Real devices",
+            [
+                "On request"
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                "n/a"
+            ]
+        ],
+        [
+            "Automated testing",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ]
+        ],
+        [
+            "Screenshot regression testing",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            "Local testing",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ]
+        ],
+        [
+            "Email and SMS testing",
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            "Generates reports",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            "Low-code automated testing",
+            [
+                "Not directly"
+            ],
+            [
+                "Not directly"
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                "Not directly"
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ]
+        ],
+        [
+            "Accessibility testing",
+            [
+                "Lighthouse"
+            ],
+            [
+                "axe"
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ]
+        ]
+    ]
+}

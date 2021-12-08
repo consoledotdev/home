@@ -42,7 +42,7 @@
     flex-grow: 1;
 }
 
-.tool-card-thumbnail {
+.vendor-thumbnail {
     flex-shrink: 0;
     width: calc(var(--space4) + var(--space3));
     margin-right: var(--space3_5);
@@ -133,12 +133,6 @@ p.tool-card-description {
     font-size: var(--t-size-1);
 }
 
-.page-tools .category-reviews .categories .icon {
-    width: var(--space3);
-    height: var(--space3);
-    margin-right: calc(var(--space2) + 2px);
-}
-
 .page-tools .category-reviews-item .categories {
     margin-bottom: var(--space3);
 }
@@ -178,7 +172,7 @@ p.tool-card-description {
         margin-bottom: var(--space2_5);
     }
 
-    .tool-card-thumbnail {
+    .vendor-thumbnail {
         margin-right: var(--space3);
     }
 

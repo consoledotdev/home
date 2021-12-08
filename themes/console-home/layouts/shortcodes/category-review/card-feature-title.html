@@ -1,0 +1,4 @@
+<div class="tool-card-feature-title">
+    <h6 class="title title-6">{{ .Get "text" }}</h6>
+    {{ partial "components/score.html" (dict "score" ( .Get "score" ) "name" ( .Get "text" ) ) }}
+</div>

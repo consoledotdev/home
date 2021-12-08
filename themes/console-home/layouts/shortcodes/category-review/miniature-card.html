@@ -1,0 +1,30 @@
+<li class="console-card miniature-card">
+    {{- $favicon := .Get "thumbnail" -}}
+    {{- $faviconStatic := print "static/" $favicon -}}
+    <div class="left">
+        {{ partial "components/thumbnail-vendor.html" (dict "name" ( .Get "name" ) "image" ( .Get "thumbnail" ) "category" .Page.Params.category ) }}
+        <div class="title-score">
+            <h4 class="title title-3"><label for="cardmin-meter-{{ lower (.Get "anchor") }}"><a class="link" href="#{{ .Get "anchor" }}">{{ .Get "name" }}</a></label></h4>
+             {{ partial "components/score.html" (dict "score" (.Get "score") "name" ( .Get "name" )) }}
+        </div>
+    </div>
+    <div class="right">
+        {{ partial "components/score.html" (dict "score" (.Get "score") "name" ( .Get "name" ) "id" (print "cardmin-meter-" (lower (.Get "anchor"))) ) }}
+        <span class="actions">
+            {{ with (.Get "full-review") }}
+                <a class="console-button-text console-button-small icon-right" href="{{ . }}">
+                    <span>Full review</span>
+                    {{ partial "icons/arrow-right.html" }}
+                </a>
+            {{ else }}
+                <a class="console-button-text console-button-small" href="#{{ .Get "anchor" }}">
+                    <span>Read</span>
+                    {{ partial "icons/arrow-down.html" }}
+                </a>
+            {{ end }}
+            <a class="console-button-text console-button-small icon-right" href="{{ .Get "url" }}" title="{{ .Get "url" }}" target="_blank"
+                rel="noopener"><span>Visit</span>
+                {{ partial "icons/external-link.html" }}</a>
+        </span>
+    </div>
+</li>

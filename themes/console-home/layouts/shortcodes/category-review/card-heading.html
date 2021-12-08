@@ -1,0 +1,17 @@
+<div class="tool-card-heading">
+    {{- $favicon := .Get "thumbnail" -}}
+    {{- $faviconStatic := print "static/" $favicon -}}
+    <div class="left">
+        {{ partial "components/thumbnail-vendor.html" (dict "name" ( .Get "name" ) "image" ( .Get "thumbnail" ) "category" .Page.Params.category ) }}
+        <div class="title-score">
+            <h4 class="title title-3">{{ if ne (.Get "score") "none" }}<label for="score-meter-{{ lower (.Get "anchor") }}">{{ end }}{{ .Get "name" }}{{ if ne (.Get "score") "none" }}</label>{{ end }}</h4>
+            {{ partial "components/score.html" (dict "score" (.Get "score") "name" ( .Get "name" ) ) }}
+        </div>
+    </div>
+    <div class="right">
+        {{ partial "components/score.html" (dict "score" (.Get "score") "name" ( .Get "name" ) "id" (print "score-meter-" (lower (.Get "anchor"))) ) }}
+        <a class="console-button console-button-small icon-right" href="{{ .Get "url" }}" title="{{ .Get "url" }}" target="_blank"
+            rel="noopener"><span>Visit</span>
+            {{ partial "icons/external-link.html" }}</a>
+    </div>
+</div>

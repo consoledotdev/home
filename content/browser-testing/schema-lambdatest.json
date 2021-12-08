@@ -1,0 +1,74 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "Review",
+    "headline": "LambdaTest review",
+    "description": "LambdaTest supports automated browser testing on devices and browsers new and old. Read our review of LambdaTest - a browser testing tool.",
+    "itemReviewed": {
+        "@type": "Product",
+        "name": "LambdaTest",
+        "category": "Browser testing",
+        "description": "Browser testing tool.",
+        "url": "https://www.lambdatest.com/",
+        "image": [
+            "https://console.dev/img/favicons/www.lambdatest.com.jpg"
+        ],
+        "offers": {
+            "@type": "AggregateOffer",
+            "highPrice": "198",
+            "lowPrice": "0",
+            "priceCurrency": "USD",
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "price": "0",
+                    "description": "60 mins of realtime testing (per month)"
+                },
+                {
+                    "@type": "Offer",
+                    "price": "19",
+                    "description": "Live testing (per month)"
+                },
+                {
+                    "@type": "Offer",
+                    "price": "198",
+                    "description": "Automated testing (desktop only, per month)"
+                },
+                {
+                    "@type": "Offer",
+                    "price": "119",
+                    "description": "Automated testing (desktop and mobile, per month)"
+                }
+            ]
+        }
+    },
+    "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.7",
+        "bestRating": "5",
+        "worstRating": "0"
+    },
+    "negativeNotes": [
+        "Real mobile devices not available for testing",
+        "Favors Chrome browser over others",
+        "Fewer testing frameworks supported compared to competitors"
+    ],
+    "positiveNotes": [
+        "In-built issue tracker",
+        "Can perform automated testing from 27 countries",
+        "Test reports and can be visualized to gain insights"
+    ],
+    "author": {
+        "@type": "Person",
+        "name": "Naman Singhal",
+        "email": "naman@console.dev",
+        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+        "image": "https://console.dev/img/naman.jpg"
+    },
+    "name": "Browser testing tool",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Console",
+        "url": "https://console.dev"
+    },
+    "reviewBody": "LambdaTest offers automated cross-browser tests on a large number of devices ranging from the earliest versions of Chrome, Firefox, Opera on Windows XP and macOS Lion to the latest versions on Windows 11 and macOS Monterey across multiple platforms. However, the slow rollout of the new OS and device releases and the absence of real devices in the testing cloud is something to look out for."
+}

@@ -1,0 +1,10 @@
+{
+    "dtn": [
+        ["H", "Property", ["DTN"], ["TCP/IP"]],
+        ["End-to-end link", ["Intermittent"], ["Continuous"]],
+        ["Propagation delay", ["Long (IP timeouts)"], ["Short"]],
+        ["Reliability", ["Low"], ["High"]],
+        ["Link data rate", ["Asymmetric"], ["Symmetric"]],
+        ["Protocol", ["Bundle Protocol"], ["TCP/IP, UDP/IP"]]
+    ]
+}

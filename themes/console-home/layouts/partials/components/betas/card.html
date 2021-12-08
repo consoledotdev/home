@@ -12,19 +12,7 @@
     <span class="date">{{ $showDate }}</span>
 	<div class="beta-card-content">
 		<div class="left">
-			{{- $favicon := index . "favicon" -}}
-			{{- $faviconStatic := print "static/" $favicon -}}
-			<div class="beta-card-thumbnail aspect-ratio aspect-ratio-1-1">
-				{{- if $favicon -}}
-					{{- if (fileExists $faviconStatic) -}}
-						<img class="image" src="/{{ $favicon }}" alt="{{ index . "Company/Org" }} Logo" />
-					{{- else -}}
-						<div class="card-thumbnail-generic">{{ partial (print "icons/" (replace (lower .Category) " " "-") ".html") }}</div>
-					{{- end -}}
-				{{- else -}}
-					<div class="card-thumbnail-generic">{{ partial (print "icons/" (replace (lower .Category) " " "-") ".html") }}</div>
-				{{- end -}}
-			</div>
+            {{ partial "components/thumbnail-vendor.html" (dict "name" ( index . "Company/Org" ) "image" ( print "/" (index . "favicon") ) "category" (replace (lower .Category) " " "-") ) }}
 			<h4 class="title title-3">
 				{{- $org := index . "Company/Org" -}}
 				{{- $name := index . "Tool/Product/Project" -}}

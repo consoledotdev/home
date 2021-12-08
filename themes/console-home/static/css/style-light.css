@@ -141,12 +141,12 @@
     --theme-planes-triad-03-shadow: 0 var(--space2) var(--space4) rgba(1, 188, 144, 0.14), inset 0 0 var(--space7) rgba(1, 188, 144, 0.16);
 
     --theme-neon-planes-blend-mode: multiply;
-    --theme-neon-planes-triad-01-body: #E4EBFF;
+    --theme-neon-planes-triad-01-body: #e4ebff;
     --theme-neon-planes-triad-01-glow: var(--c-blue-03);
-    --theme-neon-planes-triad-02-body: #FFE5FF;
-    --theme-neon-planes-triad-02-glow: #FFD3FF;
-    --theme-neon-planes-triad-03-body: #91FDE6;
-    --theme-neon-planes-triad-03-glow: #42FFDE;
+    --theme-neon-planes-triad-02-body: #ffe5ff;
+    --theme-neon-planes-triad-02-glow: #ffd3ff;
+    --theme-neon-planes-triad-03-body: #91fde6;
+    --theme-neon-planes-triad-03-glow: #42ffde;
 
     --theme-empty-bg-1: var(--c-white-01-main);
     --theme-empty-dashed-border: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23b5b6bf' stroke-width='2' stroke-dasharray='6%2c 6' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
@@ -164,7 +164,7 @@
 
     --theme-signaling-positive: var(--c-signaling-positive-02);
     --theme-signaling-warning: var(--c-signaling-warning-02);
-    --theme-signaling-error:: var(--c-signaling-error-02);
+    --theme-signaling-error: var(--c-signaling-error-02);
 
     --theme-framed-section-default-border: 1px solid var(--c-grey-03);
     --theme-framed-section-default-item-border: 1px solid var(--c-grey-02);
@@ -178,7 +178,7 @@
     --theme-framed-section-overlay-bg: var(--c-grey-01-white-03);
     --theme-framed-section-blue-border: 1px solid var(--c-blue-06-main);
     --theme-framed-section-blue-item-border: 1px solid var(--c-blue-04);
-    --theme-framed-section-blue-bg: #F0F5FF;
+    --theme-framed-section-blue-bg: #f0f5ff;
     --theme-framed-section-green-border: 1px solid var(--c-green-06);
     --theme-framed-section-green-item-border: 1px solid rgba(1, 188, 144, 0.4);
     --theme-framed-section-green-bg: var(--c-green-01);
@@ -202,6 +202,13 @@
     --theme-section-plane-right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 126 256'%3E%3Cpath d='M0 256L2.23802e-05 0L126 1.10153e-05L0 256Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
 
     --theme-vapor-globe-blue-1: linear-gradient(180deg, var(--c-blue-02), var(--c-blue-04));
+
+    /* Vendor Review page specific */
+    --theme-rating-summary-overall-border: var(--theme-framed-section-default-border);
+    --theme-rating-summary-overall-bg: var(--theme-framed-section-default-bg);
+    --theme-rating-summary-features-border: var(--theme-framed-section-attention-border);
+    --theme-rating-summary-features-bg: var(--theme-framed-section-attention-bg-2);
+    --theme-rating-summary-features-item-border: var(--theme-framed-section-attention-item-border);
 
     /* Mars Internet page specific */
     --theme-mars-earth-halo: 0 0 0.25em rgba(0, 0, 255, 0.08);
@@ -274,11 +281,11 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
 }
 
 /* Category Review page specific */
-.theme .tools-category-review-artwork.light {
+.theme .category-review-artwork.light {
     display: initial;
 }
 
-.theme .tools-category-review-artwork.dark {
+.theme .category-review-artwork.dark {
     display: none;
 }
 
