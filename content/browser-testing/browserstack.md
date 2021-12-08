@@ -188,10 +188,10 @@ Compatibility with a large number of services allows users to extend
 BrowserStack’s functionality and use it in a variety of scenarios.
 
 {{< modal-custom type="screen" type-screen="/img/browser-testing/browserstack-mobiletesting.png" >}}
-{{< img-custom class="content-image" src="/img/browser-testing/browserstack-mobiletesting.png" alt="Screenshot of mobile testing with BrowserStack." >}}
-{{< a--close >}}
 
-{{< div--close >}}
+{{< img-custom class="content-image" src="/img/browser-testing/browserstack-mobiletesting.png" alt="Screenshot of mobile testing with BrowserStack." >}}
+
+{{< a--close >}}
 
 {{< nav-wrapper--open id="wrapper-3" anchor-name="dislike" >}}
 
@@ -234,10 +234,10 @@ raw JSON files. Other tools like Polypane or Ghost Inspector provide better
 solutions by presenting the results in a more user friendly fashion.
 
 {{< modal-custom type="screen" type-screen="/img/browser-testing/browserstack-webtesting.png" >}}
-{{< img-custom class="content-image" src="/img/browser-testing/browserstack-webtesting.png" alt="Screenshot of web testing with BrowserStack." >}}
-{{< a--close >}}
 
-{{< div--close >}}
+{{< img-custom class="content-image" src="/img/browser-testing/browserstack-webtesting.png" alt="Screenshot of web testing with BrowserStack." >}}
+
+{{< a--close >}}
 
 {{< nav-wrapper--open id="wrapper-4" anchor-name="console-developer-perspective" >}}
 
