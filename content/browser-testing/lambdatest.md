@@ -76,11 +76,12 @@ relatedReviews:
 
 ### Cost
 
-{{< p-custom class="cost-highlight" >}}$19—119/month{{< p--close >}}
+{{< p-custom class="cost-highlight" >}}$0—198/month{{< p--close >}}
 
-Live testing plans start at $19/month, Web & Mobile Browser Automation plans
-start at $119/month. Users can also purchase on-demand access passes at $10 to
-get 120 minutes of manual testing time.
+LambdaTest offers a free plan with limited testing quota each month. Live
+testing plans start at $19/month, Web & Mobile Browser Automation plans start
+at $119/month. Users can also purchase on-demand access passes at $10 to get
+120 minutes of manual testing time.
 
 {{< div--close >}}
 

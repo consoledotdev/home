@@ -14,8 +14,8 @@
         ],
         "offers": {
             "@type": "AggregateOffer",
-            "highPrice": "99",
-            "lowPrice": "399",
+            "highPrice": "399",
+            "lowPrice": "99",
             "priceCurrency": "USD",
             "offers": [
                 {

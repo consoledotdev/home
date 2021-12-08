@@ -14,10 +14,15 @@
         ],
         "offers": {
             "@type": "AggregateOffer",
-            "highPrice": "19",
-            "lowPrice": "198",
+            "highPrice": "198",
+            "lowPrice": "0",
             "priceCurrency": "USD",
             "offers": [
+                {
+                    "@type": "Offer",
+                    "price": "0",
+                    "description": "60 mins of realtime testing (per month)"
+                },
                 {
                     "@type": "Offer",
                     "price": "19",

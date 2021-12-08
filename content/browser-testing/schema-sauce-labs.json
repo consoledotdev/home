@@ -14,8 +14,8 @@
         ],
         "offers": {
             "@type": "AggregateOffer",
-            "highPrice": "49",
-            "lowPrice": "249",
+            "highPrice": "249",
+            "lowPrice": "49",
             "priceCurrency": "USD",
             "offers": [
                 {
@@ -44,12 +44,12 @@
     "negativeNotes": [
         "Poor automated accessibility testing tools",
         "High network latency during live testing",
-        "Localization testing not possible without additinal setup"
+        "Slow availability of new devices and operating systems"
     ],
     "positiveNotes": [
         "Powerful API available to run tests from command line",
         "Large number of real devices and browsers available for testing",
-        "Full page screenshots can be captured automatically at scale"
+        "Can set-up high availability connections for local testing"
     ],
     "author": {
         "@type": "Person",
