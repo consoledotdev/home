@@ -62,13 +62,13 @@ relatedArticles:
       label: Website monitoring
       name: website-monitoring
 relatedReviews:
-  - name: BrowserStack
-    thumbnail: /img/favicons/www.browserstack.com.png
-    url: /browser-testing/browserstack
+  - name: Sauce Labs
+    thumbnail: /img/favicons/saucelabs.com.jpg
+    url: /browser-testing/sauce-labs
     category: developer-tools
-  - name: SmartBear CrossBrowserTesting
-    thumbnail: /img/favicons/crossbrowsertesting.com.png
-    url: /browser-testing/crossbrowsertesting
+  - name: Selenium 
+    thumbnail: /img/favicons/www.selenium.dev.png
+    url: /browser-testing/selenium
     category: developer-tools
 ---
 

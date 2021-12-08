@@ -315,6 +315,7 @@ feedback and deeper insights.
 LambdaTest is one of the newer tools in the cross browser testing market. It has
 a clean UI, large number of test devices and an interesting desktop application
 (LT Browser) which offers live testing functionality locally.
+[Read full review](/browser-testing/lambdatest).
 
 {{< img-center src="/img/browser-testing/lambdatest.png" alt="LambdaTest product screenshot" width="100%" >}}
 
@@ -456,7 +457,7 @@ feature, but right now it feels very early.
 In addition to live and automatic testing, SmartBear CrossBrowserTesting offers
 features such as screenshot testing and codeless testing using AI to record and
 replay interactions on screen. It offers 2,000+ target browsers and mobile
-devices.
+devices. [Read full review](/browser-testing/crossbrowsertesting).
 
 {{< img-center src="/img/browser-testing/smartbear-crossbrowsertesting.png" alt="SmartBear CrossBrowserTesting product screenshot" width="100%" >}}
 
@@ -592,6 +593,7 @@ on its latest devices is unacceptable.
 Sauce Labs is a full-scale testing platform for websites and applications that
 supports test frameworks such as Selenium, Playwright and Puppeteer on a large
 number of popular device, browser and operating system test targets.
+[Read full review](/browser-testing/sauce-labs).
 
 {{< img-center src="/img/browser-testing/sauce-labs.png" alt="Sauce Labs product screenshot" width="100%" >}}
 
@@ -750,6 +752,7 @@ Ghost Inspector is a cloud browser compatibility testing tool that stands out
 for its support for testing 2FA and end-to-end email flows. Testing can be
 automated on a schedule or via an API, as well as manually via the web UI, but
 it only supports Chrome and Firefox on desktop.
+[Read full review](/browser-testing/ghost-inspector).
 
 {{< img-center src="/img/browser-testing/ghost-inspector.png" alt="Ghost Inspector product screenshot" width="100%" >}}
 
@@ -887,6 +890,7 @@ Selenium is a web application testing framework available for Java, Python, C#,
 Ruby, JavaScript and Kotlin. It is built for automated testing on desktop
 devices and acts as a backbone service to many other tools discussed in this
 article, but is not recommended for use by itself.
+[Read full review](/browser-testing/selenium).
 
 {{< img-center src="/img/browser-testing/selenium.png" alt="Selenium product screenshot" width="100%" >}}
 
