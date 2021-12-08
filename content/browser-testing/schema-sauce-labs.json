@@ -1,0 +1,68 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "Review",
+    "headline": "Sauce Labs review",
+    "description": "Sauce Labs is an ideal tool for large businesses because it has global presence and decades of experience in making browser testing tools. Read our review of Sauce Labs - a browser testing tool.",
+    "itemReviewed": {
+        "@type": "Product",
+        "name": "Sauce Labs",
+        "category": "Browser testing",
+        "description": "Browser testing tool.",
+        "url": "https://saucelabs.com/",
+        "image": [
+            "https://console.dev/img/favicons/sauce-labs.com.png"
+        ],
+        "offers": {
+            "@type": "AggregateOffer",
+            "highPrice": "49",
+            "lowPrice": "249",
+            "priceCurrency": "USD",
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "price": "49",
+                    "description": "Manual testing on real and virtual devices (per month)"
+                },                {
+                    "@type": "Offer",
+                    "price": "199",
+                    "description": "Automated and manual testing on virtual devices (per month)"
+                },
+                {
+                    "@type": "Offer",
+                    "price": "249",
+                    "description": "Automated and manual testing on real and virtual devices (per month)"
+                }
+            ]
+        }
+    },
+    "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.2",
+        "bestRating": "5",
+        "worstRating": "0"
+    },
+    "negativeNotes": [
+        "Poor automated accessibility testing tools",
+        "High network latency during live testing",
+        "Localization testing not possible without additinal setup"
+    ],
+    "positiveNotes": [
+        "Powerful API available to run tests from command line",
+        "Large number of real devices and browsers available for testing",
+        "Full page screenshots can be captured automatically at scale"
+    ],
+    "author": {
+        "@type": "Person",
+        "name": "Naman Singhal",
+        "email": "naman@console.dev",
+        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+        "image": "https://console.dev/img/naman.jpg"
+    },
+    "name": "Browser testing tool",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Console",
+        "url": "https://console.dev"
+    },
+    "reviewBody": "Sauce Labs has a global presence and is ideal for large businesses. It provides a large number of devices and browsers and it is also possible to purchase private devices for testing. Popular tools and services can be integrated easily to extend functionality."
+}
