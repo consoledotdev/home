@@ -31,7 +31,7 @@ ranking:
 scores:
   overall: 4.7
   features:
-    - name: Devices and browsers supported
+    - name: Device & browser support
       value: 5
     - name: Automation
       value: 4.5
@@ -60,11 +60,23 @@ relatedArticles:
 relatedReviews:
   - name: LambdaTest
     thumbnail: /img/favicons/www.lambdatest.com.jpg
-    url: /browser-testing/lambdatest
+    url: /browser-testing/lambdatest/
     category: developer-tools
   - name: SmartBear CrossBrowserTesting
     thumbnail: /img/favicons/crossbrowsertesting.com.png
-    url: /browser-testing/crossbrowsertesting
+    url: /browser-testing/crossbrowsertesting/
+    category: developer-tools
+  - name: Sauce Labs
+    thumbnail: /img/favicons/saucelabs.com.jpg
+    url: /browser-testing/sauce-labs/
+    category: developer-tools
+  - name: Ghost Inspector
+    thumbnail: /img/favicons/ghostinspector.com.png
+    url: /browser-testing/ghost-inspector/
+    category: developer-tools
+  - name: Selenium
+    thumbnail: /img/favicons/www.selenium.dev.png
+    url: /browser-testing/selenium/
     category: developer-tools
 ---
 
@@ -89,7 +101,7 @@ mobile).
 
 {{< framed-section-item--open >}}
 
-{{< vendor-review/feature-title text="Devices and browsers supported" score="5" >}}
+{{< vendor-review/feature-title text="Device & browser support" score="5" >}}
 
 Tests can be conducted on more than
 [3,000 devices and browsers](https://www.browserstack.com/list-of-browsers-and-platforms/live),
@@ -257,7 +269,7 @@ solutions by presenting the results in a more user friendly fashion.
 
 {{< nav-wrapper--open id="wrapper-6" anchor-name="alternatives" >}}
 
-### Alternatives
+### Browser testing tool comparison
 
 In our review of the [best browser testing tools for
 developers](/browser-testing/), we highlight the best 6 browser testing tools
@@ -274,16 +286,12 @@ table below.
 
 {{< nav-wrapper--open id="wrapper-7" anchor-name="related-reviews" >}}
 
-### More browser testing reviews
+### BrowserStack alternatives
 
 {{< related-reviews >}}
 
 {{< div--close >}}
 
 {{< nav-wrapper--open id="wrapper-8" anchor-name="related-articles" >}}
-
-### Further reading
-
-{{< related-articles >}}
 
 {{< div--close >}}

@@ -22,7 +22,8 @@
                     "@type": "Offer",
                     "price": "49",
                     "description": "Manual testing on real and virtual devices (per month)"
-                },                {
+                },
+                {
                     "@type": "Offer",
                     "price": "199",
                     "description": "Automated and manual testing on virtual devices (per month)"
@@ -64,5 +65,5 @@
         "name": "Console",
         "url": "https://console.dev"
     },
-    "reviewBody": "Sauce Labs has a global presence and is ideal for large businesses. It provides a large number of devices and browsers and it is also possible to purchase private devices for testing. Popular tools and services can be integrated easily to extend functionality."
+    "reviewBody": "Sauce Labs has a global presence and is ideal for large businesses. It provides a large number of devices and browsers and it is also possible to purchase private devices for testing. However, it has only a limited number of integrations and suffers from high latency during live testing."
 }

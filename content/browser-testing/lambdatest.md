@@ -3,13 +3,11 @@ title: "LambdaTest review"
 date: 2021-12-07T07:00:00+00:00
 draft: false
 summary: 
-  LambdaTest is a great product for automated testing on a large number of 
-  devices from around the world. Read our review of LambdaTest - a browser 
-  testing tool.
+  LambdaTest supports automated browser testing on devices and browsers new and 
+  old. Read our review of LambdaTest - a browser testing tool.
 metaDescription:
-  LambdaTest is a great product for automated testing on a large number of 
-  devices from around the world. Read our review of LambdaTest - a browser 
-  testing tool.
+  LambdaTest supports automated browser testing on devices and browsers new and 
+  old. Read our review of LambdaTest - a browser testing tool.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -33,7 +31,7 @@ ranking:
 scores:
   overall: 4.7
   features:
-    - name: Devices and browsers supported
+    - name: Device & browser support
       value: 4
     - name: Automation
       value: 5
@@ -43,7 +41,7 @@ productShot:
   image: /img/browser-testing/lambdatest.png
 intro:
   "LambdaTest offers automated cross-browser tests on a large number of devices 
-  ranging from the earliest versions of Chrome, Firefox, and Opera on Windows XP 
+  ranging from the earliest versions of Chrome, Firefox, Opera on Windows XP 
   and macOS Lion to the latest versions on Windows 11 and macOS Monterey across 
   multiple platforms. However, the slow rollout of the new OS and device releases 
   and the absence of real devices in the testing cloud is something to look out 
@@ -62,13 +60,25 @@ relatedArticles:
       label: Website monitoring
       name: website-monitoring
 relatedReviews:
+  - name: BrowserStack
+    thumbnail: /img/favicons/www.browserstack.com.png
+    url: /browser-testing/browserstack/
+    category: developer-tools
+  - name: SmartBear CrossBrowserTesting
+    thumbnail: /img/favicons/crossbrowsertesting.com.png
+    url: /browser-testing/crossbrowsertesting/
+    category: developer-tools
   - name: Sauce Labs
     thumbnail: /img/favicons/saucelabs.com.jpg
-    url: /browser-testing/sauce-labs
+    url: /browser-testing/sauce-labs/
     category: developer-tools
-  - name: Selenium 
+  - name: Ghost Inspector
+    thumbnail: /img/favicons/ghostinspector.com.png
+    url: /browser-testing/ghost-inspector/
+    category: developer-tools
+  - name: Selenium
     thumbnail: /img/favicons/www.selenium.dev.png
-    url: /browser-testing/selenium
+    url: /browser-testing/selenium/
     category: developer-tools
 ---
 
@@ -78,10 +88,10 @@ relatedReviews:
 
 {{< p-custom class="cost-highlight" >}}$0—198/month{{< p--close >}}
 
-LambdaTest offers a free plan with limited testing quota each month. Live
-testing plans start at $19/month, Web & Mobile Browser Automation plans start
-at $119/month. Users can also purchase on-demand access passes at $10 to get
-120 minutes of manual testing time.
+LambdaTest offers a free plan with a limited testing quota each month. Live
+testing plans start at $19/month, Web & Mobile Browser Automation plans start at
+$119/month. Users can also purchase on-demand access passes at $10 to get 120
+minutes of manual testing time.
 
 {{< div--close >}}
 
@@ -94,16 +104,20 @@ at $119/month. Users can also purchase on-demand access passes at $10 to get
 
 {{< framed-section-item--open >}}
 
-{{< vendor-review/feature-title text="Devices and browsers supported" score="5" >}}
+{{< vendor-review/feature-title text="Device & browser support" score="5" >}}
 
 LambdaTest offers a good selection of browsers on both desktop and mobile
 devices for real-time testing ranging from the earliest versions of Chrome,
 Firefox, and Opera on Windows XP and macOS Lion to the latest versions on
-Windows 11 and macOS Monterey. Some of the older browsers mentioned are not
-available for automated browser testing, only live testing. Currently, all
-tests are executed on emulators by default. Automated web testing on
-[real devices](https://www.lambdatest.com/support/docs/mobile-web-automation-on-real-devices/)
-(in beta) is available upon request.
+Windows 11 and macOS Monterey. However, some of the older browsers mentioned are
+not available for automated browser testing, only live testing.
+
+Currently, all tests are executed on emulators by default. Automated web testing
+on [real
+devices](https://www.lambdatest.com/support/docs/mobile-web-automation-on-real-devices/)
+(in beta) is available upon request. If you need to test on real devices, one of
+the [other browser testing tools we tested](/browser-testing/) may be a better
+fit.
 
 {{< div--close >}}
 
@@ -235,17 +249,17 @@ in live testing.
 
 [LT Browser](https://www.lambdatest.com/lt-browser), a free offering by
 LambdaTest for locally testing websites on multiple devices, is in early
-development. Using it over everyday browsers such as Chrome or Firefox has a
-few advantages, such as the availability of predefined viewports and the
-ability to record the screen during tests; however, it also falls behind
-consumer browsers in some cases. Performance reports generated in the
-LambdaTest Browser are just regular Lighthouse reports and take a long time to
-generate and it is not possible to test multiple URLs at once by separating
-tabs into different windows - only one URL can be viewed at a time. Devtools
-cannot be separated into individual windows either, which would limit power
-users who use multiple monitors or a tiling window manager. Similar tools such
-as Polypane, which was specifically made for this purpose, outperforms
-LambadaTest's browser in many aspects.
+development. Using it over everyday browsers such as Chrome or Firefox has a few
+advantages, such as the availability of predefined viewports and the ability to
+record the screen during tests; however, it also falls behind consumer browsers
+in some cases. Performance reports generated in the LambdaTest Browser are just
+regular Lighthouse reports, take a long time to generate and it is not possible
+to test multiple URLs at once by separating tabs into different windows - only
+one URL can be viewed at a time. Devtools cannot be separated into individual
+windows either, which would limit power users who use multiple monitors or a
+tiling window manager. [Other browser testing tools we
+tested](/browser-testing/), such as Polypane which was specifically made for
+this purpose, outperforms LambadaTest's browser in many aspects.
 
 {{< modal-custom type="screen" type-screen="/img/browser-testing/lambdatest-lt-browser.png" >}}
 {{< img-custom class="content-image" src="/img/browser-testing/lambdatest-lt-browser.png" alt="Screenshot of web testing with LambdaTest." >}}
@@ -279,7 +293,7 @@ of handling such workloads.
 
 {{< nav-wrapper--open id="wrapper-6" anchor-name="alternatives" >}}
 
-### Alternatives
+### Browser testing tool comparison
 
 In our review of the [best browser testing tools for
 developers](/browser-testing/), we highlight the best 6 browser testing tools
@@ -296,16 +310,12 @@ table below.
 
 {{< nav-wrapper--open id="wrapper-7" anchor-name="related-reviews" >}}
 
-### More browser testing reviews
+### LambdaTest alternatives
 
 {{< related-reviews >}}
 
 {{< div--close >}}
 
 {{< nav-wrapper--open id="wrapper-8" anchor-name="related-articles" >}}
-
-### Further reading
-
-{{< related-articles >}}
 
 {{< div--close >}}

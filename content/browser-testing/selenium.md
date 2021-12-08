@@ -3,13 +3,13 @@ title: "Selenium review"
 date: 2021-12-07T07:00:00+00:00
 draft: false
 summary: 
-  Selenium is a tool for automating browsers and allows concurrent tesing on a
-  large number of devices spread across the globe. Read our review of Selenium -
-  a browser testing tool.
+  Selenium is a free and open source browser testing framework that powers many 
+  other browser testing tools, but requires significant technical knowledge 
+  to use. Read our review of Selenium - a browser testing tool.
 metaDescription:
-  Selenium is a tool for automating browsers and allows concurrent tesing on a
-  large number of devices spread across the globe. Read our review of Selenium -
-  a browser testing tool.
+  Selenium is a free and open source browser testing framework that powers many 
+  other browser testing tools, but requires significant technical knowledge 
+  to use. Read our review of Selenium - a browser testing tool.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -33,7 +33,7 @@ ranking:
 scores:
   overall: 2.5
   features:
-    - name: Devices and browsers supported
+    - name: Device & browser support
       value: 3
     - name: Automation
       value: 3
@@ -42,10 +42,10 @@ scores:
 productShot:
   image: /img/browser-testing/selenium.png
 intro:
-  "Selenium provides the underlying framework for many browser testing tools
-  because it provides powerful infrastructure for automating browser web testing.
-  However, it requires significant technical knowledge to set up - including
-  managing your own test devices - so we do not recommend it for most users."
+  "Selenium is an open source browser testing framework used by many other 
+  browser testing tools because of its maturity and power. However, it requires 
+  significant technical knowledge to set up - including managing your own test 
+  devices - so we do not recommend it for most users."
 relatedArticles:
   - category: developer-tools
     article:
@@ -60,13 +60,25 @@ relatedArticles:
       label: Website monitoring
       name: website-monitoring
 relatedReviews:
-  - name: Ghost Inspector
-    thumbnail: /img/favicons/ghostinspector.com.png
-    url: /browser-testing/ghost-inspector
+  - name: BrowserStack
+    thumbnail: /img/favicons/www.browserstack.com.png
+    url: /browser-testing/browserstack/
+    category: developer-tools
+  - name: LambdaTest
+    thumbnail: /img/favicons/www.lambdatest.com.jpg
+    url: /browser-testing/lambdatest/
     category: developer-tools
   - name: SmartBear CrossBrowserTesting
     thumbnail: /img/favicons/crossbrowsertesting.com.png
-    url: /browser-testing/crossbrowsertesting
+    url: /browser-testing/crossbrowsertesting/
+    category: developer-tools
+  - name: Sauce Labs
+    thumbnail: /img/favicons/saucelabs.com.jpg
+    url: /browser-testing/sauce-labs/
+    category: developer-tools
+  - name: Ghost Inspector
+    thumbnail: /img/favicons/ghostinspector.com.png
+    url: /browser-testing/ghost-inspector/
     category: developer-tools
 ---
 
@@ -89,7 +101,7 @@ Selenium is free and open source (Apache License 2.0).
 
 {{< framed-section-item--open >}}
 
-{{< vendor-review/feature-title text="Devices and browsers supported" score="3" >}}
+{{< vendor-review/feature-title text="Device & browser support" score="3" >}}
 
 Selenium can be configured to run on all versions of Windows and macOS. Many
 Linux distributions are directly supported and some determined users can even
@@ -148,9 +160,12 @@ other than through the raw output.
 
 First introduced in 2004, Selenium has evolved into an industry standard.
 Selenium 4 is W3C compliant and many cross-browser testing tools are built on
-top of it. Browser testing vendors like BrowserStack, LambdaTest and Sauce
-Labs, actively contribute to the development of Selenium and provide Selenium
-Grid as a service on their respective testing platforms.
+top of it. Browser testing vendors like
+[BrowserStack](/browser-testing/browserstack/),
+[LambdaTest](/browser-testing/lambdatest/) and [Sauce
+Labs](/browser-testing/sauce-labs/) actively contribute to the development of
+Selenium and provide Selenium Grid as a service on their respective testing
+platforms.
 
 Selenium supports the [Chrome DevTools
 Protocol](https://www.selenium.dev/documentation/support_packages/chrome_devtools/)
@@ -170,15 +185,15 @@ browser manipulation. Some of the noteworthy features are:
 
 [Selenium IDE](https://www.selenium.dev/selenium-ide/) is a low-code testing
 tool that records and plays back browser interactions. This allows novice
-developers to conduct automated testing. It is possible to design intricate
-test cases by adding [conditional logic and
+developers to conduct automated testing. It is possible to design intricate test
+cases by adding [conditional logic and
 looping](https://www.selenium.dev/selenium-ide/docs/en/introduction/control-flow)
 to tests. The Selenium IDE also supports
 [plugins](https://www.selenium.dev/selenium-ide/docs/en/plugins/plugins-getting-started)
 that further enhance its functionality. [Web Test
 Recorder](https://ghostinspector.com/docs/test-recorder/) is a similar offering
-by Ghost Inspector and it is possible to run tests generated by Selenium IDE in
-the Ghost Inspector cloud environment.
+by [Ghost Inspector]((/browser-testing/ghost-inspector/)) and it is possible to
+run tests generated by Selenium IDE in the Ghost Inspector cloud environment.
 
 [Selenium Grid](https://www.selenium.dev/documentation/grid/), which allows
 executing tests on multiple physical or virtual devices, can be used to run
@@ -187,13 +202,17 @@ Grid consists of several
 [components](https://www.selenium.dev/documentation/grid/grid_architecture/)
 which makes it very flexible, for example, assembling a grid of four machines
 each running three instances of Firefox 70.0 would allow 12 tests to run
-concurrently. The ability to distribute tests makes it possible to scale tests
-from a single machine to parallel executions on servers all over the world. The
-number of tests that could be executed concurrently is only limited by the
-capabilities of the hardware. Since the tester owns the testing infrastructure,
-it is possible to exercise greater control over data handling and storage
-policies. Tests can be executed without an internet connection, thereby
-minimizing the network costs and security concerns.
+concurrently.
+
+The ability to distribute tests makes it possible to scale tests from a single
+machine to parallel executions on servers all over the world. The number of
+tests that could be executed concurrently is only limited by the capabilities of
+the hardware.
+
+Since the tester owns the testing infrastructure, it is possible to exercise
+greater control over data handling and storage policies. Tests can be executed
+without an internet connection, thereby minimizing the network costs and
+security concerns.
 
 Selenium provides some advanced capabilities such as manipulating browser
 cookies, drag & drop mouse actions, support for GraphQL queries, transfer of
@@ -213,22 +232,24 @@ Selenium a good choice for tasks other than testing, like web scraping.
 
 {{< rich-title-3 icon="dislike" >}}What we don't like{{</ rich-title-3 >}}
 
-Selenium has some major limitations because it was not created to perform
-visual testing or generate user friendly test reports. Tests are focused on
-whether or not the correct content is displayed rather than whether it is
-displayed correctly. This is a big restriction in today's fast-paced world
-where developers run A/B testing on the tiniest of UI elements to increase
-conversion rates and engagement. Other tools like
-[BrowserStack](https://www.browserstack.com/percy) and [Sauce
-Labs](https://saucelabs.com/platform/visual-testing) provide modern solutions
-to perform visual regression tests whereas the Selenium team
+Compared to the [other SaaS browser testing tools we
+reviewed](/browser-testing/), Selenium has some major limitations because it was
+not created to perform visual testing or generate user friendly test reports.
+Tests are focused on whether or not the correct content is displayed rather than
+whether it is displayed correctly. This is a big restriction in today's
+fast-paced world where developers run A/B testing on the tiniest of UI elements
+to increase conversion rates and engagement. 
+
+Other tools like [BrowserStack](/browser-testing/browserstack/) and [Sauce
+Labs](/browser-testing/sauce-labs/) provide modern solutions to perform visual
+regression tests whereas the Selenium team
 [believes](https://www.selenium.dev/documentation/guidelines/domain_specific_language/)
 that the user interface is a secondary consideration for users.
 
 Test case management and error reporting with Selenium is an arduous task. It
 does not generate test reports or notify about the results, other tools provide
 these features out of the box. In contrast to [Sauce
-Labs](https://saucelabs.com/platform/error-reporting), which provides advanced
+Labs](/browser-testing/sauce-labs/), which provides advanced
 services to detect patterns in error reports, Selenium reports all results to
 console output by default. This makes collaborating with team members
 difficult. Third-party software must be used for organising test cases which
@@ -243,25 +264,25 @@ functionality is highly dependent on the version of the browser.
 
 [Selenium IDE](https://www.selenium.dev/selenium-ide/), a no-code solution to
 record tests, is only available for Chrome and Firefox browsers. It does not
-provide all the features supported by Selenium and users must resort back to
-coding which requires a good grasp of one of the supported programming
-languages. When writing tests with Selenium, there is a steep learning curve.
-The only technical assistance available is through community forums.
+provide all the features supported by Selenium and users must resort to code,
+which requires a good grasp of one of the supported programming languages. When
+writing tests with Selenium, there is a steep learning curve. The only technical
+assistance available is through community forums.
 
 Selenium Grid requires the availability of real or virtual desktop and mobile
 devices connected to a network during testing. Setting up a testing grid is a
 complex process and requires a large capital investment upfront. Regularly
 updating machines is a gargantuan task and adding the latest devices on launch
-further increases the costs. 
+further increases the costs.
 
 Managing your own device lab is a questionable use of time and money when SaaS
-options are available. Other tools provide Selenium Grid as a service that
-already consists of thousands of machines spread across different geographic
-regions. There are no upfront costs associated with this and testers can start
-being productive within minutes. The time and effort spent in setting up
-infrastructure for small projects is impractical for all but the largest teams
-\- even then it may be more efficient to pay a provider to do this for you.
-Some providers like [Sauce
+options are available. [Alternatives we reviewed](/browser-testing/) provide
+Selenium Grid as a service that already consists of thousands of machines spread
+across different geographic regions. There are no upfront costs associated with
+this and testers can start being productive within minutes. The time and effort
+spent in setting up infrastructure for small projects is impractical for all but
+the largest teams - even then it may be more efficient to pay a provider to do
+this for you. Some providers like [Sauce
 Labs](https://docs.saucelabs.com/mobile-apps/supported-devices/index.html#private-device-cloud)
 and [AWS Device
 Farm](https://docs.aws.amazon.com/devicefarm/latest/developerguide/working-with-private-devices.html)
@@ -292,7 +313,7 @@ collection of public devices.
 
 {{< nav-wrapper--open id="wrapper-6" anchor-name="alternatives" >}}
 
-### Alternatives
+### Browser testing tool comparison
 
 In our review of the [best browser testing tools for
 developers](/browser-testing/), we highlight the best 6 browser testing tools
@@ -309,16 +330,10 @@ table below.
 
 {{< nav-wrapper--open id="wrapper-7" anchor-name="related-reviews" >}}
 
-### More browser testing reviews
+### Selenium alternatives
 
 {{< related-reviews >}}
 
 {{< div--close >}}
 
 {{< nav-wrapper--open id="wrapper-8" anchor-name="related-articles" >}}
-
-### Further reading
-
-{{< related-articles >}}
-
-{{< div--close >}}

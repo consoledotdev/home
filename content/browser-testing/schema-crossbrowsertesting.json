@@ -2,7 +2,7 @@
     "@context": "https://schema.org/",
     "@type": "Review",
     "headline": "SmartBear CrossBrowserTesting review",
-    "description": "SmartBear CrossBrowserTesting is a great product for manual and automated testing on a large number of devices. Read our review of SmartBear CrossBrowserTesting - a browser testing tool.",
+    "description": "SmartBear CrossBrowserTesting supports live and automated testing on very old devices as well as newer releases. Read our review of SmartBear CrossBrowserTesting - a browser testing tool.",
     "itemReviewed": {
         "@type": "Product",
         "name": "SmartBear CrossBrowserTesting",
@@ -60,5 +60,5 @@
         "name": "Console",
         "url": "https://console.dev"
     },
-    "reviewBody": "SmartBear CrossBrowserTesting provides both automated and live tests across multiple platforms and devices going back to Windows XP and iOS 4. The large number of integrations and frameworks makes it particularly powerful."
+    "reviewBody": "SmartBear CrossBrowserTesting provides both automated and live tests across multiple platforms and devices going back to Windows XP and iOS 4. The large number of integrations and frameworks makes it particularly powerful, but it is limited by high test latency and the lack of accessibility testing features."
 }

@@ -33,7 +33,7 @@ ranking:
 scores:
   overall: 4.2
   features:
-    - name: Devices and browsers supported
+    - name: Device & browser support
       value: 4.5
     - name: Automation
       value: 4
@@ -44,8 +44,8 @@ productShot:
 intro:
   "Sauce Labs has a global presence and is ideal for large businesses. It provides
   a large number of devices and browsers and it is also possible to purchase
-  private devices for testing. Popular tools and services can be integrated
-  easily to extend functionality."
+  private devices for testing. However, it has only a limited number of 
+  integrations and suffers from high latency during live testing."
 relatedArticles:
   - category: developer-tools
     article:
@@ -62,11 +62,23 @@ relatedArticles:
 relatedReviews:
   - name: BrowserStack
     thumbnail: /img/favicons/www.browserstack.com.png
-    url: /browser-testing/browserstack
+    url: /browser-testing/browserstack/
+    category: developer-tools
+  - name: LambdaTest
+    thumbnail: /img/favicons/www.lambdatest.com.jpg
+    url: /browser-testing/lambdatest/
+    category: developer-tools
+  - name: SmartBear CrossBrowserTesting
+    thumbnail: /img/favicons/crossbrowsertesting.com.png
+    url: /browser-testing/crossbrowsertesting/
+    category: developer-tools
+  - name: Ghost Inspector
+    thumbnail: /img/favicons/ghostinspector.com.png
+    url: /browser-testing/ghost-inspector/
     category: developer-tools
   - name: Selenium
     thumbnail: /img/favicons/www.selenium.dev.png
-    url: /browser-testing/selenium
+    url: /browser-testing/selenium/
     category: developer-tools
 ---
 
@@ -90,7 +102,7 @@ and $249/month for automated virtual device and real device testing.
 
 {{< framed-section-item--open >}}
 
-{{< vendor-review/feature-title text="Devices and browsers supported" score="4.5" >}}
+{{< vendor-review/feature-title text="Device & browser support" score="4.5" >}}
 
 Sauce Labs provides cloud infrastructure for testing on thousands of desktop
 and mobile browser/OS combinations around the world.
@@ -99,12 +111,13 @@ Desktop testing can be performed on multiple versions of Windows, macOS, and
 Linux operating systems. They claim to [deliver new
 versions](https://saucelabs.com/platform/supported-browsers-devices) within 48
 hours of release, however, when we checked (2 months after launch), Windows 11
-and macOS 12 were still not available. Mobile testing can be performed on
-emulators as well as 240+ real Android and iOS devices. Recently launched
-"Google Pixel 6" and "iPhone 13" are also available. On desktop, users can
-choose between many versions of Chrome, Firefox, Safari, and Edge; but on
-mobile devices, users are stuck with pre-installed browsers, i.e. Chrome on
-Android and Safari on iOS devices.
+and macOS 12 were still not available.
+
+Mobile testing can be performed on emulators as well as 240+ real Android and
+iOS devices. Recently launched "Google Pixel 6" and "iPhone 13" are also
+available. On desktop, users can choose between many versions of Chrome,
+Firefox, Safari, and Edge; but on mobile devices, users are stuck with
+pre-installed browsers, i.e. Chrome on Android and Safari on iOS devices.
 
 {{< div--close >}}
 
@@ -133,11 +146,12 @@ insight into network requests and browser performance. All the commands issued
 during the test can be reviewed in test reports available in the dashboard.  It
 also shows a video recording of the test, test logs, and test metadata.
 Long-term trends are presented as graphs in the dashboard to visualize
-pass/fail rate, number of errors etc. Test results can be posted to Slack,
-integrated into other systems via a webhook or shared directly via a link.
-Reports shared via a link can be set to be viewed by public, private, team
-audiences. Any bugs discovered in the report can be reported to Jira directly
-from the dashboard.
+pass/fail rate, number of errors etc.
+
+Test results can be posted to Slack, integrated into other systems via a webhook
+or shared directly via a link. Reports shared via a link can be set to be viewed
+by public, private, team audiences. Any bugs discovered in the report can be
+reported to Jira directly from the dashboard.
 
 {{< div--close >}}
 
@@ -172,10 +186,12 @@ to the traditional approach of whitelisting certain IP address ranges, this
 solution provides time-based access controls. It is possible to connect several
 tunnels at once and group them together to be used as a single [high
 availability
-connection](https://docs.saucelabs.com/secure-connections/sauce-connect/setup-configuration/high-availability/)
-. It also provides the tester the ability to distribute the test traffic (using
-round-robin load-balancing) between different tunnels. This feature is unique
-to Sauce Labs and might prove useful in some settings/occasions.
+connection](https://docs.saucelabs.com/secure-connections/sauce-connect/setup-configuration/high-availability/).
+
+It also provides the tester the ability to distribute the test traffic (using
+round-robin load-balancing) between different tunnels. This feature is unique to
+Sauce Labs and not something we saw with [the other browser testing tools we
+reviewed](/browser-testing/).
 
 There are many reasons one would use Sauce Labs over other tools. The following
 features set this tool apart:
@@ -190,9 +206,11 @@ such as internet traffic, number of process threads, and CPU/Memory usage are
 available with live testing. Having access to these device metrics alongside
 detailed device logs is useful when debugging. It is possible to send and
 retrieve  text snippets to and from the clipboard on virtual machines as well as
-to share Live testing sessions in real-time. Neither BrowserStack nor
-CrossBrowserTesting provides device vitals, if this feature is important for
-your use case then Sauce Labs may be the only option.
+to share Live testing sessions in real-time. Neither
+[BrowserStack](/browser-testing/browserstack/) nor
+[CrossBrowserTesting](/browser-testing/crossbrowsertesting/) provides device
+vitals, if this feature is important for your use case then Sauce Labs may be
+the only option.
 
 Performance metrics such as Time to First Meaningful Paint, Time to First
 Interactive, Page Weight, Speed Index etc. can be captured to analyze
@@ -224,10 +242,10 @@ integrations only with other well-established tools and services. Jenkins,
 Travis CI, CircleCI, etc. are supported but lesser-known tools like Spinnaker
 and Buildbot can not be used with Sauce Labs. Similarly, for ticketing systems,
 Jira is supported but BugZilla and MantisBT are not. This makes working with
-unsupported tools harder than it needs to be and might limit the number of
-tools you can work with in the future. All the Sauce Labs alternatives can be
-integrated with Slack in one way or another, but Sauce Labs does not yet offer
-this - it's [coming
+unsupported tools harder than it needs to be and might limit the number of tools
+you can work with in the future. All the [Sauce Labs
+alternatives](/browser-testing/) can be integrated with Slack in one way or
+another, but Sauce Labs does not yet offer this - it's [coming
 soon](https://docs.saucelabs.com/basics/integrations/slack/).
 
 We found that scrolling and typing actions during live testing is difficult due
@@ -236,7 +254,7 @@ Users have to regularly wait 1-2 seconds after each input to see changes on the
 screen, this makes the testing process slow and irritating. On mobile devices,
 each device only has one browser available (Safari on iOS and Chrome on
 Android). If having multiple browsers on mobile devices is a strong necessity,
-then we suggest using BrowserStack.
+then we suggest using [BrowserStack](/browser-testing/browserstack/).
 
 Sauce Labs [claims to reset
 devices](https://docs.saucelabs.com/mobile-apps/supported-devices/#real-device-cleaning)
@@ -265,8 +283,9 @@ testing and makes it easy to test geographical features.
 , Sauce Labs acquired [Backtrace](https://backtrace.io/) which contains most of
 the advanced debugging features. Features such as data redaction, querying,
 sorting and grouping by the captured log attributes are bundled into an
-independent service which needs to be purchased separately. BrowserStack
-provides some of these features (like [data
+independent service which needs to be purchased separately.
+[BrowserStack](/browser-testing/browserstack/) provides some of these features
+(like [data
 redaction](https://www.browserstack.com/docs/automate/selenium/hide-sensitive-data))
 at no additional cost. We hope to see these services merge functionality over
 time, but for now they are essentially separate tools.
@@ -295,7 +314,7 @@ time, but for now they are essentially separate tools.
 
 {{< nav-wrapper--open id="wrapper-6" anchor-name="alternatives" >}}
 
-### Alternatives
+### Browser testing tool comparison
 
 In our review of the [best browser testing tools for
 developers](/browser-testing/), we highlight the best 6 browser testing tools
@@ -312,16 +331,10 @@ table below.
 
 {{< nav-wrapper--open id="wrapper-7" anchor-name="related-reviews" >}}
 
-### More browser testing reviews
+### Sauce Labs alternatives
 
 {{< related-reviews >}}
 
 {{< div--close >}}
 
 {{< nav-wrapper--open id="wrapper-8" anchor-name="related-articles" >}}
-
-### Further reading
-
-{{< related-articles >}}
-
-{{< div--close >}}

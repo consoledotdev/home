@@ -2,7 +2,7 @@
     "@context": "https://schema.org/",
     "@type": "Review",
     "headline": "Selenium review",
-    "description": "Selenium is a tool for automating browsers and allows concurrent tesing on a large number of devices spread across the globe. Read our review of Selenium - a browser testing tool.",
+    "description": "SSelenium is a free and open source browser testing framework that powers many other browser testing tools, but requires significant technical knowledge  to use. Read our review of Selenium - a browser testing tool.",
     "itemReviewed": {
         "@type": "Product",
         "name": "Selenium",
@@ -33,8 +33,8 @@
         "worstRating": "0"
     },
     "negativeNotes": [
-        "Large sums of money and time must be invested to maintain Selenium Grid",
-        "Test reports can not generated",
+        "Expensive and time consuming to maintain",
+        "Test reports difficult to read",
         "Mobile testing not possible without third party tools"
     ],
     "positiveNotes": [
@@ -55,5 +55,5 @@
         "name": "Console",
         "url": "https://console.dev"
     },
-    "reviewBody": "Selenium is a great product for manual and automated testing on a large number of devices. Integrations with other services make it a powerful tool, but latency can be high when live-testing devices and some newer OS releases are not immediately available."
+    "reviewBody": "Selenium is an open source browser testing framework used by many other browser testing tools because of its maturity and power. However, it requires significant technical knowledge to set up - including managing your own test devices - so we do not recommend it for most users."
 }

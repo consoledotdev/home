@@ -3,11 +3,13 @@ title: "SmartBear CrossBrowserTesting review"
 date: 2021-12-07T07:00:00+00:00
 draft: false
 summary: 
-  SmartBear CrossBrowserTesting is a great product for manual and automated testing on a large
-  number of devices. Read our review of SmartBear CrossBrowserTesting - a browser testing tool.
+  SmartBear CrossBrowserTesting supports live and automated testing on very old 
+  devices as well as newer releases. Read our review of SmartBear 
+  CrossBrowserTesting - a browser testing tool.
 metaDescription:
-  SmartBear CrossBrowserTesting is a great product for manual and automated testing on a large
-  number of devices. Read our review of SmartBear CrossBrowserTesting - a browser testing tool.
+  SmartBear CrossBrowserTesting supports live and automated testing on very old 
+  devices as well as newer releases. Read our review of SmartBear 
+  CrossBrowserTesting - a browser testing tool.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -31,7 +33,7 @@ ranking:
 scores:
   overall: 4.2
   features:
-    - name: Devices and browsers supported
+    - name: Device & browser support
       value: 4.5
     - name: Automation
       value: 4
@@ -42,7 +44,9 @@ productShot:
 intro:
   "SmartBear CrossBrowserTesting provides both automated and live tests across
   multiple platforms and devices going back to Windows XP and iOS 4. The large
-  number of integrations and frameworks makes it particularly powerful."
+  number of integrations and frameworks makes it particularly powerful, but it 
+  is limited by high test latency and the lack of accessibility testing 
+  features."
 relatedArticles:
   - category: developer-tools
     article:
@@ -57,13 +61,25 @@ relatedArticles:
       label: Website monitoring
       name: website-monitoring
 relatedReviews:
+  - name: BrowserStack
+    thumbnail: /img/favicons/www.browserstack.com.png
+    url: /browser-testing/browserstack/
+    category: developer-tools
   - name: LambdaTest
     thumbnail: /img/favicons/www.lambdatest.com.jpg
-    url: /browser-testing/lambdatest
+    url: /browser-testing/lambdatest/
+    category: developer-tools
+  - name: Sauce Labs
+    thumbnail: /img/favicons/saucelabs.com.jpg
+    url: /browser-testing/sauce-labs/
     category: developer-tools
   - name: Ghost Inspector
     thumbnail: /img/favicons/ghostinspector.com.png
-    url: /browser-testing/ghost-inspector
+    url: /browser-testing/ghost-inspector/
+    category: developer-tools
+  - name: Selenium
+    thumbnail: /img/favicons/www.selenium.dev.png
+    url: /browser-testing/selenium/
     category: developer-tools
 ---
 
@@ -87,7 +103,7 @@ and $169/month for automated testing.
 
 {{< framed-section-item--open >}}
 
-{{< vendor-review/feature-title text="Devices and browsers supported" score="4.5" >}}
+{{< vendor-review/feature-title text="Device & browser support" score="4.5" >}}
 
 CrossBrowserTesting offers a good selection of desktop and mobile devices to
 choose from. All the versions of Windows, macOS, Android, and iOS ranging from
@@ -154,14 +170,14 @@ Selenium script before capturing screenshots, etc. Multiple screenshot tests
 are run concurrently which reduces wait time and it is possible to run tests on
 locally hosted websites.
 
+{{< modal-custom type="screen" type-screen="/img/browser-testing/crossbrowsertesting-live-testing.png" >}}
+{{< img-custom class="content-image" src="/img/browser-testing/crossbrowsertesting-live-testing.png" alt="Screenshot of Live testing tool with SmartBear CrossBrowserTesting." >}}
+{{< a--close >}}
+
 Results from the test can be notified via email or can be sent to Applitools
 for inspection. Live testing sessions (with identical testing configuration)
 can be launched with one click from the screenshot test reports to quickly
 interact with malfunctioning interfaces.
-
-{{< modal-custom type="screen" type-screen="/img/browser-testing/crossbrowsertesting-live-testing.png" >}}
-{{< img-custom class="content-image" src="/img/browser-testing/crossbrowsertesting-live-testing.png" alt="Screenshot of Live testing tool with SmartBear CrossBrowserTesting." >}}
-{{< a--close >}}
 
 Standout features offered by CrossBrowserTesting include:
 
@@ -171,10 +187,13 @@ Standout features offered by CrossBrowserTesting include:
 - Screenshots, videos & logs can be accessed after testing.
 - Network logs for each request are displayed in an easy-to-understand gantt chart to identify performance bottlenecks.
 
-Some of the features mentioned above are not available in competing tools. For
-example, BrowserStack does not provide test reports for live tests, LambdaTest
-does not offer real devices (currently in beta), and Ghost Inspector and
-Selenium do not support live testing at all.
+Some of the features mentioned above are not available in the [alternative
+browser testing tools we tested](/browser-testing/). For example,
+[BrowserStack](/browser-testing/browserstack/) does not provide test reports for
+live tests, [LambdaTest](/browser-testing/lambdatest/) does not offer real
+devices (currently in beta), and [Ghost
+Inspector](/browser-testing/ghost-inspector/) and
+[Selenium](/browser-testing/selenium/) do not support live testing at all.
 
 The record & replay feature allows recording website interactions and replaying
 them as tests without touching a single line of code. Tests can be combined to
@@ -186,11 +205,11 @@ IDE](https://www.selenium.dev/selenium-ide/).
 
 Remote testing servers can be connected to local machines (via a secure web
 socket tunnel) or any proxy service to test websites behind a firewall without
-needing to expose them to the internet. It is also possible to share a
-directory on a local machine with read-only access to testing servers. Local
-tunnels can be established via [Chrome
-extension](https://chrome.google.com/webstore/detail/crossbrowsertesting-local/ldabplgpogjknofonmccpbgeoolbcbfm)
-, [NodeJS module](https://github.com/crossbrowsertesting/cbt-tunnel-nodejs),
+needing to expose them to the internet. It is also possible to share a directory
+on a local machine with read-only access to testing servers. Local tunnels can
+be established via [Chrome
+extension](https://chrome.google.com/webstore/detail/crossbrowsertesting-local/ldabplgpogjknofonmccpbgeoolbcbfm),
+[NodeJS module](https://github.com/crossbrowsertesting/cbt-tunnel-nodejs),
 desktop application, or the command line.
 
 {{< modal-custom type="screen" type-screen="/img/browser-testing/crossbrowsertesting-screenshot-tool.png" >}}
@@ -213,7 +232,7 @@ testing tools should provide more advanced, feature-rich solutions for
 accessibility testing.
 
 When compared to other tools, network latency during live testing is high.
-Having to wait >1 seconds on average for each keystroke to appear on screen
+Having to wait >1 second on average for each keystroke to appear on screen
 while typing is unreasonable and makes testing a tedious task. This issue is
 even worse when using a tunnel or a proxy to test locally. During live testing,
 sound is available, but it has a low bitrate quality.
@@ -228,11 +247,7 @@ Testing localization settings of websites are not possible directly - all
 testing traffic originates from servers in the US. Users can [set up a
 proxy](https://support.smartbear.com/crossbrowsertesting/docs/live-testing/test-geo-located-content.html)
 that routes all testing traffic from the desired location, however this induces
-unnecessary overhead and additional costs. Other tools such as
-[BrowserStack](https://www.browserstack.com/data-centers),LambdaTest, Sauce
-Labs and [Ghost
-Inspector](https://ghostinspector.com/docs/test-running-ip-addresses/) provide
-testing servers from across the globe.
+unnecessary overhead and additional costs.
 
 We encountered some issues with the record & playback functionality. Tests
 generated are not perfect and sometimes need to be corrected by the tester
@@ -284,7 +299,7 @@ table below.
 
 {{< nav-wrapper--open id="wrapper-7" anchor-name="related-reviews" >}}
 
-### More browser testing reviews
+### Browser testing tool comparison
 
 {{< related-reviews >}}
 
@@ -292,7 +307,7 @@ table below.
 
 {{< nav-wrapper--open id="wrapper-8" anchor-name="related-articles" >}}
 
-### Further reading
+### CrossBrowserTesting alternatives
 
 {{< related-articles >}}
 

@@ -75,11 +75,11 @@ and the localization testing capabilities.
 
 {{< category-review/tldr-list--open >}}
 {{< category-review/miniature-card name="BrowserStack" thumbnail="/img/favicons/www.browserstack.com.png" full-review="/browser-testing/browserstack/" url="https://www.browserstack.com/" anchor="browserstack" score="4.7" >}}
-{{< category-review/miniature-card name="Lambdatest" thumbnail="/img/favicons/www.lambdatest.com.jpg" url="https://www.lambdatest.com/" anchor="lambdatest" score="4.7" >}}
-{{< category-review/miniature-card name="SmartBear CrossBrowserTesting" thumbnail="/img/favicons/crossbrowsertesting.com.png" url="https://crossbrowsertesting.com/" anchor="smartbear-crossbrowsertesting" score="4.3" >}}
-{{< category-review/miniature-card name="Sauce Labs" thumbnail="/img/favicons/saucelabs.com.jpg" url="https://saucelabs.com/" anchor="sauce-labs" score="4.2" >}}
-{{< category-review/miniature-card name="Ghost Inspector" thumbnail="/img/favicons/ghostinspector.com.png" url="https://ghostinspector.com/" anchor="ghost-inspector" score="3.5" >}}
-{{< category-review/miniature-card name="Selenium" thumbnail="/img/favicons/www.selenium.dev.png" url="https://www.selenium.dev/" anchor="selenium" score="2.5" >}}
+{{< category-review/miniature-card name="LambdaTest" thumbnail="/img/favicons/www.lambdatest.com.jpg" full-review="/browser-testing/lambdatest/" url="https://www.lambdatest.com/" anchor="lambdatest" score="4.7" >}}
+{{< category-review/miniature-card name="SmartBear CrossBrowserTesting" thumbnail="/img/favicons/crossbrowsertesting.com.png" full-review="/browser-testing/crossbrowsertesting/" url="https://crossbrowsertesting.com/" anchor="smartbear-crossbrowsertesting" score="4.3" >}}
+{{< category-review/miniature-card name="Sauce Labs" thumbnail="/img/favicons/saucelabs.com.jpg" full-review="/browser-testing/sauce-labs/" url="https://saucelabs.com/" anchor="sauce-labs" score="4.2" >}}
+{{< category-review/miniature-card name="Ghost Inspector" thumbnail="/img/favicons/ghostinspector.com.png" full-review="/browser-testing/ghost-inspector/" url="https://ghostinspector.com/" anchor="ghost-inspector" score="3.5" >}}
+{{< category-review/miniature-card name="Selenium" thumbnail="/img/favicons/www.selenium.dev.png" full-review="/browser-testing/selenium/" url="https://www.selenium.dev/" anchor="selenium" score="2.5" >}}
 {{< ul--close >}}
 
 {{< div--close >}}
