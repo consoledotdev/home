@@ -78,6 +78,7 @@ in templates:
 | Centered Image | `{{< img-center src="/img/interviews/stackhawk-scott-gerlach-product.png" alt="StackHawk product screenshot" width="100%" caption="The StackHawk vulnerability scanning dashboard." >}}` (Caption optional) |
 | 2-column Image | `{{< img-2col src1="/img/david.jpg" alt1="David Mytton" src2="/img/max.jpg" alt2="Max Jennings">}}`                                                                                                 |
 | Subscribe Box  | `{{< section-subscribe> }}`                                                                                                                                                                         |
+| Image Modal    | `{{< modal-custom type="screen" type-screen="/img/browser-testing/browserstack-webtesting.png" >}}{{< img-custom class="content-image" src="/img/browser-testing/browserstack-webtesting.png" alt="Screenshot of web testing with BrowserStack." >}}{{< a--close >}}`|
 
 ## Parsing tools JSON for `/latest/`
 

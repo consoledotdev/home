@@ -18,7 +18,7 @@
                 {
                     "links": [
                         {
-                            "href": "https://www.browserstack.com/docs/automate/api-reference/selenium/introduction",
+                            "href": "https://www.lambdatest.com/support/api-doc/",
                             "text": "Yes",
                             "iconRight": "external-link"
                         }
@@ -29,19 +29,19 @@
         [
             "SDKs",
             [
-                "All the languages & frameworks that are compatible with Selenium and non-Selenium frameworks like Cypress, Playwright and Puppeteer."
+                "All the languages & frameworks are compatible with Selenium as well as Cypress."
             ]
         ],
         [
             "Documentation quality",
             [
-                "Good documentation with search. Code samples available."
+                "Great documentation, code samples are available on GitHub, can add API tokens in the documentation and run commands from the browser tab itself."
             ]
         ],
         [
             "Developer power features",
             [
-                "No"
+                "LT Browser supports keyboard shortcuts."
             ]
         ],
         [
@@ -53,13 +53,13 @@
         [
             "Support",
             [
-                "FAQ section and email support."
+                "24x7 support available on chat and phone."
             ]
         ],
         [
             "Security and privacy considerations",
             [
-                "SOC2 Certified, and GDPR Compliant. Machines reverted to initial state after test."
+                "SOC2 Certified, GDPR Compliant, and CCPA Compliant. Machines reverted to their initial state after the test."
             ]
         ]
     ],
@@ -70,13 +70,8 @@
                 {
                     "links": [
                         {
-                            "href": "https://www.linkedin.com/in/ritesh-arora-88937b7/",
-                            "text": "Ritesh Arora",
-                            "iconRight": "external-link"
-                        },
-                        {
-                            "href": "https://www.linkedin.com/in/nakulaggarwal/",
-                            "text": "Nakul Aggarwal",
+                            "href": "https://twitter.com/asad0801",
+                            "text": "Asad Khan",
                             "iconRight": "external-link"
                         }
                     ]
@@ -86,13 +81,13 @@
         [
             "Year founded",
             [
-                "2011"
+                "2017"
             ]
         ],
         [
             "Number of employees",
             [
-                "501-1,000"
+                "201-500"
             ]
         ],
         [
@@ -101,7 +96,7 @@
                 {
                     "links": [
                         {
-                            "href": "https://www.browserstack.com/press/browserstack-closes-200-million-in-series-b-funding-at-a-4-billion-valuation",
+                            "href": "https://venturebeat.com/2021/06/02/cross-browser-app-testing-platform-lambdatest-raises-16m/",
                             "text": "Established startup",
                             "iconRight": "external-link"
                         }
@@ -112,11 +107,11 @@
         [
             "Key customers",
             [
-                "Shopify, Canva, Basecamp, OLX, Microsoft, Twitter, Harvard University, Expedia, ",
+                "Dashlane, Cisco, ZOHO, Capgemini, Deloitte, Apple, Microsoft, Postman, ",
                 {
                     "links": [
                         {
-                            "href": "https://www.browserstack.com/customers",
+                            "href": "https://www.lambdatest.com/customers/",
                             "text": "see all",
                             "iconRight": "external-link"
                         }
@@ -131,12 +126,12 @@
                 {
                     "links": [
                         {
-                            "href": "https://twitter.com/browserstack",
+                            "href": "https://twitter.com/lambdatesting",
                             "text": "Twitter",
                             "iconLeft": "twitter"
                         },
                         {
-                            "href": "https://www.linkedin.com/company/browserstack/",
+                            "href": "https://www.linkedin.com/company/lambdatest/",
                             "text": "LinkedIn",
                             "iconLeft": "linkedin"
                         }
@@ -145,15 +140,15 @@
             ]
         ]
     ],
-    "comparisonChecklist": [
+    "comparisonChecklist": [    
         [
             "H",
             "Feature",
             [
-                "BrowserStack"
+                "LambdaTest"
             ],
             [
-                "LambdaTest"
+                "BrowserStack"
             ],
             [
                 "Ghost Inspector"
@@ -200,12 +195,12 @@
         [
             "Real devices",
             [
+                "On request"
+            ],
+            [
                 {
                     "icon": "checkmark"
                 }
-            ],
-            [
-                "On request"
             ],
             [
                 ""
@@ -399,10 +394,10 @@
         [
             "Accessibility testing",
             [
-                "axe"
+                "Lighthouse"
             ],
             [
-                "Lighthouse"
+                "axe"
             ],
             [
                 {

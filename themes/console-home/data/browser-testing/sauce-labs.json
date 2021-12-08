@@ -9,7 +9,15 @@
         [
             "CLI",
             [
-                "No"
+                {
+                    "links": [
+                        {
+                            "href": "https://docs.saucelabs.com/testrunner-toolkit/saucectl/",
+                            "text": "Yes",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                }
             ]
         ],
         [
@@ -18,7 +26,7 @@
                 {
                     "links": [
                         {
-                            "href": "https://www.browserstack.com/docs/automate/api-reference/selenium/introduction",
+                            "href": "https://docs.saucelabs.com/dev/api/",
                             "text": "Yes",
                             "iconRight": "external-link"
                         }
@@ -29,13 +37,13 @@
         [
             "SDKs",
             [
-                "All the languages & frameworks that are compatible with Selenium and non-Selenium frameworks like Cypress, Playwright and Puppeteer."
+                "C#, Java, JavaScript, Python, Ruby"
             ]
         ],
         [
             "Documentation quality",
             [
-                "Good documentation with search. Code samples available."
+                "Good documentation, powerful search, code samples available."
             ]
         ],
         [
@@ -47,19 +55,19 @@
         [
             "Operational overhead",
             [
-                "Private tunnel setup required for local testing, otherwise minimal setup required."
+                "Users must change endpoint URLs in test configuration for each data center"
             ]
         ],
         [
             "Support",
             [
-                "FAQ section and email support."
+                "Training portal, email support, 24x7 phone support for enterprise plan customers"
             ]
         ],
         [
             "Security and privacy considerations",
             [
-                "SOC2 Certified, and GDPR Compliant. Machines reverted to initial state after test."
+                "SOC 2 Type 2, SOC 3, CCPA Compliant, Privacy Shield Certified"
             ]
         ]
     ],
@@ -70,13 +78,8 @@
                 {
                     "links": [
                         {
-                            "href": "https://www.linkedin.com/in/ritesh-arora-88937b7/",
-                            "text": "Ritesh Arora",
-                            "iconRight": "external-link"
-                        },
-                        {
-                            "href": "https://www.linkedin.com/in/nakulaggarwal/",
-                            "text": "Nakul Aggarwal",
+                            "href": "https://www.linkedin.com/in/aledmiles/",
+                            "text": "Aled Miles",
                             "iconRight": "external-link"
                         }
                     ]
@@ -86,37 +89,29 @@
         [
             "Year founded",
             [
-                "2011"
+                "2008"
             ]
         ],
         [
             "Number of employees",
             [
-                "501-1,000"
+                "201-500"
             ]
         ],
         [
             "Company stage",
             [
-                {
-                    "links": [
-                        {
-                            "href": "https://www.browserstack.com/press/browserstack-closes-200-million-in-series-b-funding-at-a-4-billion-valuation",
-                            "text": "Established startup",
-                            "iconRight": "external-link"
-                        }
-                    ]
-                }
+                "Established startup"
             ]
         ],
         [
             "Key customers",
             [
-                "Shopify, Canva, Basecamp, OLX, Microsoft, Twitter, Harvard University, Expedia, ",
+                "VISA, Walmart, Stripe, Deutsche Bank, Alaska Airlines, DoorDash, Mozilla",
                 {
                     "links": [
                         {
-                            "href": "https://www.browserstack.com/customers",
+                            "href": "https://saucelabs.com/resources/case-studies",
                             "text": "see all",
                             "iconRight": "external-link"
                         }
@@ -131,12 +126,12 @@
                 {
                     "links": [
                         {
-                            "href": "https://twitter.com/browserstack",
+                            "href": "https://twitter.com/saucelabs",
                             "text": "Twitter",
                             "iconLeft": "twitter"
                         },
                         {
-                            "href": "https://www.linkedin.com/company/browserstack/",
+                            "href": "https://www.linkedin.com/company/sauce-labs/",
                             "text": "LinkedIn",
                             "iconLeft": "linkedin"
                         }
@@ -150,7 +145,7 @@
             "H",
             "Feature",
             [
-                "BrowserStack"
+                "Sauce Labs"
             ],
             [
                 "LambdaTest"
@@ -159,10 +154,10 @@
                 "Ghost Inspector"
             ],
             [
-                "Sauce Labs"
+                "CrossBrowser Testing"
             ],
             [
-                "CrossBrowser Testing"
+                "BrowserStack"
             ],
             [
                 "Selenium"
@@ -221,7 +216,7 @@
                 }
             ],
             [
-                "n/a"
+                "N/A"
             ]
         ],
         [
@@ -260,9 +255,7 @@
         [
             "Screenshot regression testing",
             [
-                {
-                    "icon": "checkmark"
-                }
+                ""
             ],
             [
                 {
@@ -273,7 +266,9 @@
                 ""
             ],
             [
-                ""
+                {
+                    "icon": "checkmark"
+                }
             ],
             [
                 {
@@ -372,7 +367,9 @@
         [
             "Low-code automated testing",
             [
-                "Not directly"
+                {
+                    "icon": "checkmark"
+                }
             ],
             [
                 "Not directly"
@@ -383,9 +380,7 @@
                 }
             ],
             [
-                {
-                    "icon": "checkmark"
-                }
+                "Not directly"
             ],
             [
                 "Not directly"
@@ -399,7 +394,7 @@
         [
             "Accessibility testing",
             [
-                "axe"
+                ""
             ],
             [
                 "Lighthouse"
@@ -413,7 +408,7 @@
                 ""
             ],
             [
-                ""
+                "axe"
             ],
             [
                 ""

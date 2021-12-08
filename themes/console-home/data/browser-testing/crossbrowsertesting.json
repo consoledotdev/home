@@ -18,7 +18,7 @@
                 {
                     "links": [
                         {
-                            "href": "https://www.browserstack.com/docs/automate/api-reference/selenium/introduction",
+                            "href": "https://crossbrowsertesting.com/apidocs/v3/",
                             "text": "Yes",
                             "iconRight": "external-link"
                         }
@@ -29,13 +29,13 @@
         [
             "SDKs",
             [
-                "All the languages & frameworks that are compatible with Selenium and non-Selenium frameworks like Cypress, Playwright and Puppeteer."
+                "Java, JavaScript, Python, C#, Ruby, PHP"
             ]
         ],
         [
             "Documentation quality",
             [
-                "Good documentation with search. Code samples available."
+                "Satisfactory documentation. Code samples available on GitHub."
             ]
         ],
         [
@@ -47,76 +47,43 @@
         [
             "Operational overhead",
             [
-                "Private tunnel setup required for local testing, otherwise minimal setup required."
+                "Users must set up their own proxy servers in different regions for localization testing"
             ]
         ],
         [
             "Support",
             [
-                "FAQ section and email support."
+                "Chat and email support."
             ]
         ],
         [
             "Security and privacy considerations",
             [
-                "SOC2 Certified, and GDPR Compliant. Machines reverted to initial state after test."
+                "All saved data is wiped from device after each use."
             ]
         ]
     ],
     "companyContext": [
         [
-            "CEO",
-            [
-                {
-                    "links": [
-                        {
-                            "href": "https://www.linkedin.com/in/ritesh-arora-88937b7/",
-                            "text": "Ritesh Arora",
-                            "iconRight": "external-link"
-                        },
-                        {
-                            "href": "https://www.linkedin.com/in/nakulaggarwal/",
-                            "text": "Nakul Aggarwal",
-                            "iconRight": "external-link"
-                        }
-                    ]
-                }
-            ]
-        ],
-        [
             "Year founded",
             [
-                "2011"
-            ]
-        ],
-        [
-            "Number of employees",
-            [
-                "501-1,000"
+                "2008"
             ]
         ],
         [
             "Company stage",
             [
-                {
-                    "links": [
-                        {
-                            "href": "https://www.browserstack.com/press/browserstack-closes-200-million-in-series-b-funding-at-a-4-billion-valuation",
-                            "text": "Established startup",
-                            "iconRight": "external-link"
-                        }
-                    ]
-                }
+                "Acquired startup"
             ]
         ],
         [
             "Key customers",
             [
-                "Shopify, Canva, Basecamp, OLX, Microsoft, Twitter, Harvard University, Expedia, ",
+                "Accenture, Expedia, Wistia, Onboardify, Inflow",
                 {
                     "links": [
                         {
-                            "href": "https://www.browserstack.com/customers",
+                            "href": "https://crossbrowsertesting.com/customers",
                             "text": "see all",
                             "iconRight": "external-link"
                         }
@@ -131,14 +98,9 @@
                 {
                     "links": [
                         {
-                            "href": "https://twitter.com/browserstack",
+                            "href": "https://twitter.com/xbrowsertesting",
                             "text": "Twitter",
                             "iconLeft": "twitter"
-                        },
-                        {
-                            "href": "https://www.linkedin.com/company/browserstack/",
-                            "text": "LinkedIn",
-                            "iconLeft": "linkedin"
                         }
                     ]
                 }
@@ -150,7 +112,7 @@
             "H",
             "Feature",
             [
-                "BrowserStack"
+                "CrossBrowser Testing"
             ],
             [
                 "LambdaTest"
@@ -162,7 +124,7 @@
                 "Sauce Labs"
             ],
             [
-                "CrossBrowser Testing"
+                "BrowserStack"
             ],
             [
                 "Selenium"
@@ -221,7 +183,7 @@
                 }
             ],
             [
-                "n/a"
+                "N/A"
             ]
         ],
         [
@@ -399,7 +361,7 @@
         [
             "Accessibility testing",
             [
-                "axe"
+                ""
             ],
             [
                 "Lighthouse"
@@ -413,7 +375,7 @@
                 ""
             ],
             [
-                ""
+                "axe"
             ],
             [
                 ""

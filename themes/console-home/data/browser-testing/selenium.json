@@ -3,7 +3,7 @@
         [
             "Dark mode",
             [
-                "No"
+                "N/A"
             ]
         ],
         [
@@ -15,68 +15,55 @@
         [
             "APIs",
             [
-                {
-                    "links": [
-                        {
-                            "href": "https://www.browserstack.com/docs/automate/api-reference/selenium/introduction",
-                            "text": "Yes",
-                            "iconRight": "external-link"
-                        }
-                    ]
-                }
+                "No"
             ]
         ],
         [
             "SDKs",
             [
-                "All the languages & frameworks that are compatible with Selenium and non-Selenium frameworks like Cypress, Playwright and Puppeteer."
+                "Java, Python, CSharp, Ruby, JavaScript, and Kotlin"
             ]
         ],
         [
             "Documentation quality",
             [
-                "Good documentation with search. Code samples available."
+                "Good in most instances (sometimes outdated or incomplete), code samples are available."
             ]
         ],
         [
             "Developer power features",
             [
-                "No"
+                "Everything can be customized"
             ]
         ],
         [
             "Operational overhead",
             [
-                "Private tunnel setup required for local testing, otherwise minimal setup required."
+                "Users must maintain infrastructure to run tests."
             ]
         ],
         [
             "Support",
             [
-                "FAQ section and email support."
+                "No official support is available. Users can ask queries on community forums."
             ]
         ],
         [
             "Security and privacy considerations",
             [
-                "SOC2 Certified, and GDPR Compliant. Machines reverted to initial state after test."
+                "User owns all the infrastructure and data."
             ]
         ]
     ],
     "companyContext": [
         [
-            "CEO",
+            "Maintainers",
             [
                 {
                     "links": [
                         {
-                            "href": "https://www.linkedin.com/in/ritesh-arora-88937b7/",
-                            "text": "Ritesh Arora",
-                            "iconRight": "external-link"
-                        },
-                        {
-                            "href": "https://www.linkedin.com/in/nakulaggarwal/",
-                            "text": "Nakul Aggarwal",
+                            "href": "https://github.com/orgs/SeleniumHQ/people",
+                            "text": "View on GitHub",
                             "iconRight": "external-link"
                         }
                     ]
@@ -86,23 +73,31 @@
         [
             "Year founded",
             [
-                "2011"
+                "2004"
             ]
         ],
         [
-            "Number of employees",
-            [
-                "501-1,000"
-            ]
-        ],
-        [
-            "Company stage",
+            "License",
             [
                 {
                     "links": [
                         {
-                            "href": "https://www.browserstack.com/press/browserstack-closes-200-million-in-series-b-funding-at-a-4-billion-valuation",
-                            "text": "Established startup",
+                            "href": "https://github.com/SeleniumHQ/selenium/blob/trunk/LICENSE",
+                            "text": "Apache License 2.0",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                }
+            ]
+        ],
+        [
+            "Sources of revenue",
+            [
+                {
+                    "links": [
+                        {
+                            "href": "https://www.selenium.dev/sponsors/",
+                            "text": "Sponsors",
                             "iconRight": "external-link"
                         }
                     ]
@@ -112,17 +107,7 @@
         [
             "Key customers",
             [
-                "Shopify, Canva, Basecamp, OLX, Microsoft, Twitter, Harvard University, Expedia, ",
-                {
-                    "links": [
-                        {
-                            "href": "https://www.browserstack.com/customers",
-                            "text": "see all",
-                            "iconRight": "external-link"
-                        }
-                    ]
-                },
-                "."
+                "BrowserStack, LambdaTest. Sauce Labs, Perfecto, Subject7, applitools"
             ]
         ],
         [
@@ -131,14 +116,9 @@
                 {
                     "links": [
                         {
-                            "href": "https://twitter.com/browserstack",
+                            "href": "https://twitter.com/SeleniumHQ",
                             "text": "Twitter",
                             "iconLeft": "twitter"
-                        },
-                        {
-                            "href": "https://www.linkedin.com/company/browserstack/",
-                            "text": "LinkedIn",
-                            "iconLeft": "linkedin"
                         }
                     ]
                 }
@@ -150,7 +130,7 @@
             "H",
             "Feature",
             [
-                "BrowserStack"
+                "Selenium"
             ],
             [
                 "LambdaTest"
@@ -165,15 +145,13 @@
                 "CrossBrowser Testing"
             ],
             [
-                "Selenium"
+                "BrowserStack"
             ]
         ],
         [
             "Live testing",
             [
-                {
-                    "icon": "checkmark"
-                }
+                ""
             ],
             [
                 {
@@ -194,15 +172,15 @@
                 }
             ],
             [
-                ""
+                {
+                    "icon": "checkmark"
+                }
             ]
         ],
         [
             "Real devices",
             [
-                {
-                    "icon": "checkmark"
-                }
+                "N/A"
             ],
             [
                 "On request"
@@ -221,7 +199,9 @@
                 }
             ],
             [
-                "n/a"
+                {
+                    "icon": "checkmark"
+                }
             ]
         ],
         [
@@ -260,19 +240,6 @@
         [
             "Screenshot regression testing",
             [
-                {
-                    "icon": "checkmark"
-                }
-            ],
-            [
-                {
-                    "icon": "checkmark"
-                }
-            ],
-            [
-                ""
-            ],
-            [
                 ""
             ],
             [
@@ -282,6 +249,19 @@
             ],
             [
                 ""
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
             ]
         ],
         [
@@ -341,48 +321,37 @@
         [
             "Generates reports",
             [
-                {
-                    "icon": "checkmark"
-                }
-            ],
-            [
-                {
-                    "icon": "checkmark"
-                }
-            ],
-            [
-                {
-                    "icon": "checkmark"
-                }
-            ],
-            [
-                {
-                    "icon": "checkmark"
-                }
-            ],
-            [
-                {
-                    "icon": "checkmark"
-                }
-            ],
-            [
                 ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
             ]
         ],
         [
             "Low-code automated testing",
             [
-                "Not directly"
-            ],
-            [
-                "Not directly"
-            ],
-            [
-                {
-                    "icon": "checkmark"
-                }
-            ],
-            [
                 {
                     "icon": "checkmark"
                 }
@@ -394,12 +363,23 @@
                 {
                     "icon": "checkmark"
                 }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                "Not directly"
+            ],
+            [
+                "Not directly"
             ]
         ],
         [
             "Accessibility testing",
             [
-                "axe"
+                ""
             ],
             [
                 "Lighthouse"
@@ -416,7 +396,7 @@
                 ""
             ],
             [
-                ""
+                "axe"
             ]
         ]
     ]

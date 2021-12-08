@@ -3,13 +3,21 @@
         [
             "Dark mode",
             [
-                "No"
+                "Yes"
             ]
         ],
         [
             "CLI",
             [
-                "No"
+                {
+                    "links": [
+                        {
+                            "href": "https://ghostinspector.com/docs/api/cli/",
+                            "text": "Yes",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                }
             ]
         ],
         [
@@ -18,7 +26,7 @@
                 {
                     "links": [
                         {
-                            "href": "https://www.browserstack.com/docs/automate/api-reference/selenium/introduction",
+                            "href": "https://ghostinspector.com/docs/api/",
                             "text": "Yes",
                             "iconRight": "external-link"
                         }
@@ -29,13 +37,13 @@
         [
             "SDKs",
             [
-                "All the languages & frameworks that are compatible with Selenium and non-Selenium frameworks like Cypress, Playwright and Puppeteer."
+                "JavaScript"
             ]
         ],
         [
             "Documentation quality",
             [
-                "Good documentation with search. Code samples available."
+                "Good documentation, code samples, and video tutorials available."
             ]
         ],
         [
@@ -47,19 +55,19 @@
         [
             "Operational overhead",
             [
-                "Private tunnel setup required for local testing, otherwise minimal setup required."
+                "No"
             ]
         ],
         [
             "Support",
             [
-                "FAQ section and email support."
+                "24x7 chat and email support"
             ]
         ],
         [
             "Security and privacy considerations",
             [
-                "SOC2 Certified, and GDPR Compliant. Machines reverted to initial state after test."
+                "Ghost Inspector has not undergone a SOC audit but it is GDPR compliant"
             ]
         ]
     ],
@@ -70,13 +78,8 @@
                 {
                     "links": [
                         {
-                            "href": "https://www.linkedin.com/in/ritesh-arora-88937b7/",
-                            "text": "Ritesh Arora",
-                            "iconRight": "external-link"
-                        },
-                        {
-                            "href": "https://www.linkedin.com/in/nakulaggarwal/",
-                            "text": "Nakul Aggarwal",
+                            "href": "https://www.linkedin.com/in/justinklemm/",
+                            "text": "Justin Klemm",
                             "iconRight": "external-link"
                         }
                     ]
@@ -86,43 +89,25 @@
         [
             "Year founded",
             [
-                "2011"
+                "2014"
             ]
         ],
         [
             "Number of employees",
             [
-                "501-1,000"
+                "<10"
             ]
         ],
         [
             "Company stage",
             [
-                {
-                    "links": [
-                        {
-                            "href": "https://www.browserstack.com/press/browserstack-closes-200-million-in-series-b-funding-at-a-4-billion-valuation",
-                            "text": "Established startup",
-                            "iconRight": "external-link"
-                        }
-                    ]
-                }
+                "Small startup"
             ]
         ],
         [
             "Key customers",
             [
-                "Shopify, Canva, Basecamp, OLX, Microsoft, Twitter, Harvard University, Expedia, ",
-                {
-                    "links": [
-                        {
-                            "href": "https://www.browserstack.com/customers",
-                            "text": "see all",
-                            "iconRight": "external-link"
-                        }
-                    ]
-                },
-                "."
+                "Intercom, Imperfect Foods, Geckoboard, Kurtosys."
             ]
         ],
         [
@@ -131,12 +116,12 @@
                 {
                     "links": [
                         {
-                            "href": "https://twitter.com/browserstack",
+                            "href": "https://twitter.com/GhostInspector",
                             "text": "Twitter",
                             "iconLeft": "twitter"
                         },
                         {
-                            "href": "https://www.linkedin.com/company/browserstack/",
+                            "href": "https://www.linkedin.com/company/ghost-inspector/",
                             "text": "LinkedIn",
                             "iconLeft": "linkedin"
                         }
@@ -150,13 +135,10 @@
             "H",
             "Feature",
             [
-                "BrowserStack"
+                "Ghost Inspector"
             ],
             [
                 "LambdaTest"
-            ],
-            [
-                "Ghost Inspector"
             ],
             [
                 "Sauce Labs"
@@ -165,23 +147,26 @@
                 "CrossBrowser Testing"
             ],
             [
+                "BrowserStack"
+            ],
+            [
                 "Selenium"
             ]
         ],
         [
             "Live testing",
             [
-                {
-                    "icon": "checkmark"
-                }
-            ],
-            [
-                {
-                    "icon": "checkmark"
-                }
-            ],
-            [
                 ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
             ],
             [
                 {
@@ -200,17 +185,12 @@
         [
             "Real devices",
             [
-                {
-                    "icon": "checkmark"
-                }
+                ""
             ],
             [
                 "On request"
             ],
             [
-                ""
-            ],
-            [
                 {
                     "icon": "checkmark"
                 }
@@ -221,7 +201,12 @@
                 }
             ],
             [
-                "n/a"
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                "N/A"
             ]
         ],
         [
@@ -260,9 +245,7 @@
         [
             "Screenshot regression testing",
             [
-                {
-                    "icon": "checkmark"
-                }
+                ""
             ],
             [
                 {
@@ -273,7 +256,9 @@
                 ""
             ],
             [
-                ""
+                {
+                    "icon": "checkmark"
+                }
             ],
             [
                 {
@@ -287,17 +272,17 @@
         [
             "Local testing",
             [
-                {
-                    "icon": "checkmark"
-                }
-            ],
-            [
-                {
-                    "icon": "checkmark"
-                }
-            ],
-            [
                 ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
             ],
             [
                 {
@@ -318,15 +303,15 @@
         [
             "Email and SMS testing",
             [
-                ""
-            ],
-            [
-                ""
-            ],
-            [
                 {
                     "icon": "checkmark"
                 }
+            ],
+            [
+                ""
+            ],
+            [
+                ""
             ],
             [
                 ""
@@ -372,7 +357,9 @@
         [
             "Low-code automated testing",
             [
-                "Not directly"
+                {
+                    "icon": "checkmark"
+                }
             ],
             [
                 "Not directly"
@@ -383,9 +370,7 @@
                 }
             ],
             [
-                {
-                    "icon": "checkmark"
-                }
+                "Not directly"
             ],
             [
                 "Not directly"
@@ -399,21 +384,21 @@
         [
             "Accessibility testing",
             [
-                "axe"
-            ],
-            [
-                "Lighthouse"
-            ],
-            [
                 {
                     "icon": "checkmark"
                 }
             ],
             [
+                "Lighthouse"
+            ],
+            [
                 ""
             ],
             [
                 ""
+            ],
+            [
+                "axe"
             ],
             [
                 ""
