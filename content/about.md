@@ -23,14 +23,14 @@ focus on what you do best. Building.
 
 {{< img-2col src1="/img/david.jpg" alt1="David Mytton" src2="/img/max.jpg" alt2="Max Jennings">}}
 
-{{< div-caption >}} Founders David Mytton & Max Jennings.
+{{< div-caption >}} Console Co-founders David Mytton & Max Jennings.
 
-David Mytton is co-founder of Console. From 2009-2018, David was CEO at Server
-Density, a SaaS monitoring startup used by hundreds of customers to collect
-billions of time series metrics. He is also [a
-researcher](https://davidmytton.blog/publications/) in sustainable computing at
-Uptime Institute and affiliated with Imperial College London. David has been a
-developer for 15+ years.
+David Mytton is Co-founder & CEO of Console. From 2009-2018, David was CEO at
+Server Density, a SaaS monitoring startup used by hundreds of customers to
+collect billions of time series metrics. He is also [a
+researcher](https://davidmytton.blog/publications/) in sustainable computing and
+affiliated with Imperial College London. David has been a developer for 15+
+years.
 
 Max has 20+ years tech experience building online businesses. Previous start-ups
 he co-founded have been acquired by Retailmenot Inc, Expedia and GCAP Media.
