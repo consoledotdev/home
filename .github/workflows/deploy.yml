@@ -139,12 +139,12 @@ jobs:
 
             # No drafts in prod
             - name: "hugo build (prod)"
-              uses: jakejarvis/hugo-build-action@v0.89.4
+              uses: jakejarvis/hugo-build-action@v0.90.1
               if: github.event.inputs.environment != 'test'
 
             # Build drafts in the test environment
             - name: "hugo build (test)"
-              uses: jakejarvis/hugo-build-action@v0.89.4
+              uses: jakejarvis/hugo-build-action@v0.90.1
               if: github.event.inputs.environment == 'test'
               with:
                   args: --buildDrafts
