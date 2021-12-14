@@ -34,7 +34,7 @@ let computeTOCPos = (() => {
         if (diff < 0) {
             style.position = "fixed";
             style.top = midPoint - TOCHeightHalf + "px";
-            if (reachedBottom) {
+            if (reachedBottom || lastBlock.getBoundingClientRect().top < 0) {
                 let pos = midPoint - TOCHeightHalf + lastBlock.getBoundingClientRect().top;
                 style.top = pos + "px";
             }
