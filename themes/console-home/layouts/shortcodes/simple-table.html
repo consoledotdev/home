@@ -15,7 +15,7 @@
     data-marked-scrollable-h
     {{ with (.Get "fixed") }}data-table-fixed="{{ . }}"{{ end }}
     {{ with (.Get "fixed-count") }}data-table-fixed-count="{{ . }}"{{ end }}>
-    <div data-table-fixed-inner class="simple-table-grid">
+    <div class="simple-table-grid">
         {{ range (index $data $dataKey ) }}
             {{ $.Scratch.Set "start" 0 }}
             {{ if eq (index . 0) "H" }}
@@ -25,9 +25,9 @@
             <div data-table-row class="row{{ if eq (index . 0) "H" }} header{{ end }}">
                 {{ range $i, $item := after ( $.Scratch.Get "start" ) . }}
                     {{ if eq $i 0 }}
-                        <span data-table-cell class="cell cell-meta">{{ $item }}</span>
+                        <span class="cell cell-meta">{{ $item }}</span>
                     {{ else }}
-                        <span data-table-cell class="cell">
+                        <span class="cell">
                             {{- range $item -}}
                                 {{- if reflect.IsMap . -}}
                                         {{- with .links -}}

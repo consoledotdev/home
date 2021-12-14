@@ -273,32 +273,6 @@ let updateMarkedScrollable = (el, direction) => {
     }
 };
 
-// let setupSimpleTableWithFixed = (() => {
-//     let tablesWithFixed = document.querySelectorAll("[data-table-fixed]");
-
-//     tablesWithFixed.forEach((t) => {
-//         let pos = t.dataset.tableFixed;
-//         let count = t.dataset.tableFixedCount;
-
-//         let inner = t.querySelector("[data-table-fixed-inner]");
-//         let clone = inner.cloneNode(true);
-//         clone.classList.add("fixed", "fixed-left");
-//         let rows = clone.querySelectorAll("[data-table-row]");
-//         rows.forEach((r) => {
-//             let length = r.children.length;
-//             for (let i = length - 1; i >= 0; i--) {
-//                 if (i >= count) {
-//                     r.children.item(i).remove();
-//                 }
-//             }
-//         });
-
-//         if (pos == "left") {
-//             t.insertBefore(clone, t.firstChild);
-//         }
-//     });
-// })();
-
 class TableWithFixed {
     constructor(table) {
         this.table = table;
@@ -346,57 +320,6 @@ class TableWithFixed {
         });
     }
 }
-
-// document.addEventListener("DOMContentLoaded", (event) => {
-//     let tablesWithFixed = document.querySelectorAll("[data-table-fixed]");
-
-//     let updateFixedCells = (item) => {
-//         let pos = item.dataset.tableFixed;
-//         let count = item.dataset.tableFixedCount;
-
-//         let transform = {};
-//         if (pos == "left") {
-//             transform.prop = "X";
-//             transform.amt = item.scrollLeft;
-//         }
-
-//         if (transform.amt > 0) {
-//             let rows = item.querySelectorAll("[data-table-row]");
-//             rows.forEach((r) => {
-//                 let length = r.children.length;
-//                 for (let i = length - 1; i >= 0; i--) {
-//                     if (i < count) {
-//                         let cell = r.children.item(i);
-//                         cell.style.transform = "translate(" + item.scrollLeft + "px)";
-//                     }
-//                 }
-//             });
-//         }
-//     };
-
-//     let updateFixedScroller = (item) => {
-//         item.addEventListener("scroll", () => {
-//             updateFixedCells(item);
-//         });
-//     };
-
-//     tablesWithFixed.forEach((item) => {
-//         updateFixedCells(item);
-//         updateFixedScroller(item);
-//     });
-
-//     document.addEventListener("scroll", () => {
-//         tablesWithFixed.forEach((item) => {
-//             updateFixedCells(item);
-//         });
-//     });
-
-//     window.addEventListener("resize", () => {
-//         tablesWithFixed.forEach((item) => {
-//             updateFixedCells(item);
-//         });
-//     });
-// });
 
 class Modal {
     constructor(links) {
