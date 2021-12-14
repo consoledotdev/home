@@ -205,6 +205,8 @@ BrowserStack’s functionality and use it in a variety of scenarios.
 
 {{< a--close >}}
 
+{{< div--close >}}
+
 {{< nav-wrapper--open id="wrapper-3" anchor-name="dislike" >}}
 
 {{< rich-title-3 icon="dislike" >}}What we don't like{{</ rich-title-3 >}}
@@ -250,6 +252,8 @@ solutions by presenting the results in a more user friendly fashion.
 {{< img-custom class="content-image" src="/img/browser-testing/browserstack-webtesting.png" alt="Screenshot of web testing with BrowserStack." >}}
 
 {{< a--close >}}
+
+{{< div--close >}}
 
 {{< nav-wrapper--open id="wrapper-4" anchor-name="console-developer-perspective" >}}
 

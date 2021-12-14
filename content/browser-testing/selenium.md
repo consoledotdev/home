@@ -337,3 +337,5 @@ table below.
 {{< div--close >}}
 
 {{< nav-wrapper--open id="wrapper-8" anchor-name="related-articles" >}}
+
+{{< div--close >}}
