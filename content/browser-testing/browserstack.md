@@ -278,7 +278,7 @@ table below.
 
 {{< div-custom class="comparison-checklist-table-wrapper" >}}
 
-{{< simple-table name="comparison-checklist" data-file="browser-testing/browserstack" >}}
+{{< simple-table name="comparison-checklist" data-file="browser-testing/browserstack" fixed="left" fixed-count="2" >}}
 
 {{< div--close >}}
 
