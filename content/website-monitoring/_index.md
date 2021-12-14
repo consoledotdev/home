@@ -910,9 +910,13 @@ format.
 {{< category-review/card-dislike--open >}}
 
 As we found in [our server monitoring review](/server-monitoring/#new-relic),
-New Relic continues to be let down by its alerting functionality. It is not as
-flexible as competitors even though it has a lot of potential by being backed by
-its custom query language.
+New Relic has powerful alerting based around thresholds, deviation from
+baseline, outlier detection, aggregation and warning levels. Effort spent
+learning NRQL for building graphs and dashboards pays off because it is also
+used for configuring alerts. New Relic supports the notification channels you
+would expect - like Slack and email - but is not quite as advanced as what
+Datadog offers. New Relic does not have any functionality around forecasting,
+combining metrics into composites or sophisticated incident management.
 
 Check configuration is also missing some of the advanced features of tools like
 Datadog, where test assertions on properties like response time, HTTP status

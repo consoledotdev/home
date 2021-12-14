@@ -562,14 +562,12 @@ about if you then add APM, logs, and synthetic monitoring? See our
 [review of New Relic's Synthetic Monitoring](/website-monitoring/#newrelic) for
 more details.
 
-There are also some strange
-[documented limits around how much data can be ingested at once](https://docs.newrelic.com/docs/licenses/license-information/general-usage-licenses/new-relic-data-usage-limits-policies/).
+There are also some [documented limits around how much data can be ingested at
+once](https://docs.newrelic.com/docs/licenses/license-information/general-usage-licenses/new-relic-data-usage-limits-policies/).
 With server monitoring this is limited to 5,000 agents per account and 5,000 new
 containers per hour per account. You'd have to be operating at quite a large
 scale to hit these, especially the container limits, but 5k servers is not as
-high as you might think. Isn't the purpose of SaaS monitoring to be able to grow
-without having to think about how to deal with scaling the infrastructure behind
-it?
+high as you might think. This may come as a surprise to those scaling rapidly.
 
 {{< div--close >}}
 
