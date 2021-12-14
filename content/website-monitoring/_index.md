@@ -1216,6 +1216,8 @@ technical users.
 
 We also tested the following 6 tools but they did not meet our criteria:
 
+{{< div--close >}}
+
 {{< nav-wrapper--open anchor-name="alertra" >}}
 
 {{< category-review/card-heading name="Alertra" anchor="alertra" thumbnail="/img/favicons/www.alertra.com.jpg" url="https://www.alertra.com" score="none" >}}
@@ -1368,11 +1370,11 @@ As such, we do not recommend UptimeRobot for developers.
 
 {{< category-review/faq category="website-monitoring" >}}
 
-{{< nav-wrapper--open id="wrapper-10" anchor-name="editorial-policy" >}}
-
 ### Related categories
 
 {{< category-review/related-categories >}}
+
+{{< nav-wrapper--open id="wrapper-10" anchor-name="editorial-policy" >}}
 
 ### Our editorial policy
 
