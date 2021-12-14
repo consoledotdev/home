@@ -201,5 +201,5 @@ featured as an "interesting tool" in the
 conducted on 26 Jul 2021.
 
 Console is an investor in Liveblocks. We are actively investing in devtools
-related startups that fit our [selection criteria](/about/#selection-criteria)
-for the newsletter.
+related startups that fit our [selection criteria](/selection-criteria/) for the
+newsletter.

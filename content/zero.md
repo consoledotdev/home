@@ -18,7 +18,7 @@ Console has a large audience of experienced developers who trust us to provide
 recommendations about the tools they should try out. We're working with
 [advertising partners](/advertise/) to reach that audience, but we are also
 investing in early stage startups that meet
-[our selection criteria](/about/#selection-criteria) to help build the next
+[our selection criteria](/selection-criteria/) to help build the next
 generation of developer tools. If we'd feature the tool in the newsletter, we'd
 also consider investing.
 

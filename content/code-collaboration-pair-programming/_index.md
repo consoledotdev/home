@@ -44,8 +44,8 @@ provide communication options such as a chat and voice/video conferencing built
 into the coding environment.
 
 We tested 10 code collaboration and pair programming tools using our independent
-[selection criteria](/about#selection-criteria) and the requirements described
-below. The best code collaboration & pair programming tools for developers in
+[selection criteria](/selection-criteria/) and the requirements described below.
+The best code collaboration & pair programming tools for developers in
 {{< year >}} are:
 
 1. [CodeTogether](#codetogether)
@@ -93,9 +93,8 @@ programming & code collaboration tools in {{< year >}} must have these three
 requirements.
 
 For each of our code collaboration & pair programming tool reviews we will
-assess functionality based on our
-[standard selection criteria](/about/#selection-criteria) plus these three
-requirements:
+assess functionality based on our [standard selection
+criteria](/selection-criteria/) plus these three requirements:
 
 {{< framed-section-item--open >}}
 
@@ -1088,9 +1087,8 @@ it from a full review.
 #### Why you can trust us
 
 Console is written by developers for developers. Using our decades of experience
-building software at scale, we apply strict
-[selection criteria](/about/#selection-criteria) to decide which software we
-feature.
+building software at scale, we apply strict [selection
+criteria](/selection-criteria/) to decide which software we feature.
 
 This includes asking questions like "Would this form part of a daily-use set of
 developer tools?", "Would this be used by advanced, power-users?" and "Does it

@@ -53,9 +53,9 @@ world, the ability to build multi-step transaction monitoring tests (also known
 as synthetic monitoring), and advanced alerting so you can be notified via
 different channels when your website or API goes down.
 
-We tested 13 website monitoring services using our
-[independent selection criteria](/about/#selection-criteria). The best website
-monitoring tools for developers and devops engineers in {{< year >}} are:
+We tested 13 website monitoring services using our [independent selection
+criteria](/selection-criteria/). The best website monitoring tools for
+developers and devops engineers in {{< year >}} are:
 
 1. [Datadog](#datadog)
 2. [Uptrends](#uptrends)
@@ -112,8 +112,8 @@ useful to improve the product experience (like dark mode) and a good API, but
 modern website monitoring tools in {{< year >}} must have these four.
 
 For each of our website monitoring software reviews we will assess functionality
-based on our [standard selection criteria](/about/#selection-criteria) plus
-these four requirements:
+based on our [standard selection criteria](/selection-criteria/) plus these four
+requirements:
 
 {{< framed-section-item--open >}}
 
@@ -1379,9 +1379,8 @@ As such, we do not recommend UptimeRobot for developers.
 #### Why you can trust us
 
 Console is written by developers for developers. Using our decades of experience
-building software at scale, we apply strict
-[selection criteria](/about/#selection-criteria) to decide which software we
-feature.
+building software at scale, we apply strict [selection
+criteria](/selection-criteria/) to decide which software we feature.
 
 This includes asking questions like "Would this form part of a daily-use set of
 developer tools?", "Would this be used by advanced, power-users?" and "Does it

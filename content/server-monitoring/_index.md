@@ -48,10 +48,9 @@ The best server monitoring tools have lots of high quality integrations and
 plugins, have highly flexible graphs, and provide advanced alerting
 functionality so you can be notified when things go wrong.
 
-We tested 18 server monitoring services using our independent
-[selection criteria](/about#selection-criteria) and the requirements described
-below. The best server monitoring tools for developers and devops engineers in
-{{< year >}} are:
+We tested 18 server monitoring services using our independent [selection
+criteria](/selection-criteria/) and the requirements described below. The best
+server monitoring tools for developers and devops engineers in {{< year >}} are:
 
 1. [Datadog](#datadog)
 2. [New Relic](#new-relic)
@@ -123,8 +122,8 @@ improve the product experience, but modern server monitoring tools in
 {{< year >}} must have these three.
 
 For each of our server monitoring tool reviews we will assess functionality
-based on our [standard selection criteria](/about/#selection-criteria) and these
-three requirements:
+based on our [standard selection criteria](/selection-criteria/) and these three
+requirements:
 
 {{< framed-section-item--open >}}
 
@@ -669,8 +668,8 @@ can't actually test the product without speaking to someone - you are actually
 not list their pricing anywhere makes for a frustrating experience for a
 developer who just wants to try the product themselves.
 
-[Our selection criteria](/about/#selection-criteria) require self-service signup
-so we were unable to evaluate Logic Monitor.
+[Our selection criteria](/selection-criteria/) require self-service signup so we
+were unable to evaluate Logic Monitor.
 
 {{< div--close >}}
 
@@ -1374,9 +1373,8 @@ our two finalists above.
 #### Why you can trust us
 
 Console is written by developers for developers. Using our decades of experience
-building software at scale, we apply strict
-[selection criteria](/about/#selection-criteria) to decide which tools we
-feature.
+building software at scale, we apply strict [selection
+criteria](/selection-criteria/) to decide which tools we feature.
 
 This includes asking questions like "Would this form part of a daily-use set of
 developer tools?", "Would this be used by advanced, power-users?" and "Does it

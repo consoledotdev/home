@@ -42,26 +42,8 @@ installed by over 1.5 million families. {{< /div-caption >}}
 
 ### Selection Criteria
 
-Our selection criteria are explained below. The more of these questions we can
-answer positively, the more likely a tool is to be featured. We try to be
-objective but there is always a subjective element to deciding what we think is
-the best, most interesting set of tools each week:
-
-- Is this interesting and useful to developers?
-- Is there a self-service signup?
-- Would this form part of a daily-use set of developer tools?
-- Does it make me a better developer?
-- Does it solve a problem I have experienced? How well does it solve it?
-- Would this be used by advanced, power-users?
-- Is the tool high quality?
-- Does it do the job it claims?
-- Does it have a good graphical and/or command line interface? Shortcuts?
-  Accessibility?
-- Is it being actively maintained with regular bug fixes and updates?
-- Does it have good documentation? Is it fast?
-- Does it have any negative impact on security or privacy?
-- How would I feel recommending this to my friends? Would I tweet a link to it?
-{.col-2-css}
+Visit the [selection criteria](/selection-criteria/) page to read how to choose
+what appears in the Console newsletter each week.
 
 ### Beyond the newsletter
 
@@ -69,13 +51,12 @@ Over time our goal is to **build a community where developers can find the best
 tools**. This will include long form research, discussion, and exclusive deals
 and/or early access to beta programs and new releases.
 
-We aim to support Console through this last one -
-[partnering with vendors](/advertise/) to connect with our audience, such as by
-syncing reviews with new releases or offering exclusives such as access to beta
-programs or bonus credits. We may be paid for these. However, our editorial
-process is independent from our vendor partnerships. We do not accept payment
-for product inclusion. Where we feature exclusive deals from partners, they must
-first fit our selection criteria before we consider working with them.
+We aim to support Console through this last one - [partnering with
+vendors](/advertise/) to connect with our audience, such as by syncing reviews
+with new releases or offering exclusives such as access to beta programs or
+bonus credits. We may be paid for these. However, our editorial process is
+independent from our vendor partnerships. All partners must first fit our
+[selection criteria](/selection-criteria/) before we consider working with them.
 
 To learn more about Console, check out the Console blog where you can follow our
 progress. To start, we recommend reading our thoughts on the '[Age of the

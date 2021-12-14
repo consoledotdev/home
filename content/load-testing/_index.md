@@ -44,10 +44,9 @@ large spike of traffic and how fast pages load. The best load testing tools
 provide scriptable test plans, protocol- and browser-level test execution, and
 for this review must also have a developer focus.
 
-We tested 11 load testing tools using our independent
-[selection criteria](/about#selection-criteria) and the requirements described
-below. The best 6 load testing tools for developers and engineers in
-{{< year >}} are:
+We tested 11 load testing tools using our independent [selection
+criteria](/selection-criteria/) and the requirements described below. The best 6
+load testing tools for developers and engineers in {{< year >}} are:
 
 1. [Flood](#flood)
 2. [k6](#k6)
@@ -85,7 +84,7 @@ version or platform do not matter for load testing.
 
 There are a large number of load testing tools available on the market. For each
 of our load testing tool reviews we will assess functionality based on our
-[standard selection criteria](/about/#selection-criteria) plus these three
+[standard selection criteria](/selection-criteria/) plus these three
 requirements:
 
 #### Scriptable test plans
@@ -541,11 +540,11 @@ CI/CD systems easily. There are much better load testing tools for developers.
 
 ### Also considered
 
-- [Silk Performer](https://www.microfocus.com/en-us/products/silk-performer/overview)
+- [Silk
+  Performer](https://www.microfocus.com/en-us/products/silk-performer/overview)
   we were not able to test because it required contacting sales to request a
-  free trial. The [Console selection criteria](/about/#selection-criteria)
-  require that tools be available as self-service, so we excluded it from this
-  review.
+  free trial. The [Console selection criteria](/selection-criteria/) require
+  that tools be available as self-service, so we excluded it from this review.
 - [SmartMeter](https://www.smartmeter.io) is a desktop application written in
   Java. It has a built-in browser used to record test plans which are then
   executed from your local machine. It also supports the Apache JMeter format so
@@ -556,12 +555,12 @@ CI/CD systems easily. There are much better load testing tools for developers.
   as well as connecting to other instances in distributed mode, however there
   are better tools available.
 - [StressStimulus](https://www.stresstimulus.com) is only available for Windows.
-  The [Console selection criteria](/about/#selection-criteria) require that
-  tools be available for multiple platforms, so we excluded it from this review.
+  The [Console selection criteria](/selection-criteria/) require that tools be
+  available for multiple platforms, so we excluded it from this review.
 - [WebLoad](https://www.radview.com/) is an enterprise load testing tool but it
   is only available as a Windows download. The cloud SaaS version requires you
   to submit a form and wait to speak to a sales rep to get an account. The
-  [Console selection criteria](/about/#selection-criteria) require that tools be
+  [Console selection criteria](/selection-criteria/) require that tools be
   available as self-service, so we excluded it from this review.
 
 {{< nav-wrapper--open anchor-name="editorial-policy" >}}
@@ -571,9 +570,8 @@ CI/CD systems easily. There are much better load testing tools for developers.
 #### Why you can trust us
 
 Console is written by developers for developers. Using our decades of experience
-building software at scale, we apply strict
-[selection criteria](/about/#selection-criteria) to decide which software we
-feature.
+building software at scale, we apply strict [selection
+criteria](/selection-criteria/) to decide which software we feature.
 
 This includes asking questions like "Would this form part of a daily-use set of
 developer tools?", "Would this be used by advanced, power-users?" and "Does it

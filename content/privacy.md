@@ -97,7 +97,7 @@ transfer personal data to or through these services:
 - [Reddit](https://www.reddit.com/): If you click through from a Reddit ad, we
   use Reddit's tools to track if you then sign up to Console.
 - [Twitter](https://twitter.com/): If you click through from a Twitter ad, we
-  use Reddit's tools to track if you then sign up to Console.
+  use Twitter's tools to track if you then sign up to Console.
 
 We may transfer your personal data outside of the EU on the basis of an adequacy
 decision by the European Commission under Article 45 of the UK GDPR.
