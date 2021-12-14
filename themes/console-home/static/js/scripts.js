@@ -266,12 +266,137 @@ let updateMarkedScrollable = (el, direction) => {
 
     let scrolled = el["offset" + measure] + el["scroll" + trajectory];
 
-    if (scrolled >= el["scroll" + measure]) {
+    if (scrolled >= el["scroll" + measure] - 1) {
         el.classList.add("is-fully-scrolled");
     } else {
         el.classList.remove("is-fully-scrolled");
     }
 };
+
+// let setupSimpleTableWithFixed = (() => {
+//     let tablesWithFixed = document.querySelectorAll("[data-table-fixed]");
+
+//     tablesWithFixed.forEach((t) => {
+//         let pos = t.dataset.tableFixed;
+//         let count = t.dataset.tableFixedCount;
+
+//         let inner = t.querySelector("[data-table-fixed-inner]");
+//         let clone = inner.cloneNode(true);
+//         clone.classList.add("fixed", "fixed-left");
+//         let rows = clone.querySelectorAll("[data-table-row]");
+//         rows.forEach((r) => {
+//             let length = r.children.length;
+//             for (let i = length - 1; i >= 0; i--) {
+//                 if (i >= count) {
+//                     r.children.item(i).remove();
+//                 }
+//             }
+//         });
+
+//         if (pos == "left") {
+//             t.insertBefore(clone, t.firstChild);
+//         }
+//     });
+// })();
+
+class TableWithFixed {
+    constructor(table) {
+        this.table = table;
+        this.pos = table.dataset.tableFixed;
+        this.count = table.dataset.tableFixedCount;
+        this.rows = table.querySelectorAll("[data-table-row]");
+        this.bindEvents();
+    }
+
+    bindEvents() {
+        this.table.addEventListener("scroll", this.updateFixedCells.bind(this));
+        document.addEventListener("scroll", this.updateFixedCells.bind(this));
+        window.addEventListener("resize", this.updateFixedCells.bind(this));
+    }
+
+    updateFixedCells() {
+        this.rows.forEach((r) => {
+            let cellOffset = 0;
+            if (this.pos == "left") {
+                for (let i = 0; i < this.count; i++) {
+                    let cell = r.children.item(i);
+                    cell.classList.add("fixed");
+                    cell.classList.add("left");
+                    if (i == this.count - 1) cell.classList.add("last");
+                    if (i > 0) {
+                        let prevCell = r.children.item(i - 1);
+                        cellOffset += prevCell.offsetWidth;
+                    }
+                    cell.style.left = cellOffset - 1 + "px";
+                }
+            }
+            if (this.pos == "right") {
+                for (let i = r.children.length - 1; i >= r.children.length - this.count; i--) {
+                    let cell = r.children.item(i);
+                    cell.classList.add("fixed");
+                    cell.classList.add("right");
+                    if (i == r.children.length - this.count) cell.classList.add("last");
+                    if (i < r.children.length - 1) {
+                        let prevCell = r.children.item(i + 1);
+                        cellOffset += prevCell.offsetWidth;
+                    }
+                    cell.style.right = cellOffset - 1 + "px";
+                }
+            }
+        });
+    }
+}
+
+// document.addEventListener("DOMContentLoaded", (event) => {
+//     let tablesWithFixed = document.querySelectorAll("[data-table-fixed]");
+
+//     let updateFixedCells = (item) => {
+//         let pos = item.dataset.tableFixed;
+//         let count = item.dataset.tableFixedCount;
+
+//         let transform = {};
+//         if (pos == "left") {
+//             transform.prop = "X";
+//             transform.amt = item.scrollLeft;
+//         }
+
+//         if (transform.amt > 0) {
+//             let rows = item.querySelectorAll("[data-table-row]");
+//             rows.forEach((r) => {
+//                 let length = r.children.length;
+//                 for (let i = length - 1; i >= 0; i--) {
+//                     if (i < count) {
+//                         let cell = r.children.item(i);
+//                         cell.style.transform = "translate(" + item.scrollLeft + "px)";
+//                     }
+//                 }
+//             });
+//         }
+//     };
+
+//     let updateFixedScroller = (item) => {
+//         item.addEventListener("scroll", () => {
+//             updateFixedCells(item);
+//         });
+//     };
+
+//     tablesWithFixed.forEach((item) => {
+//         updateFixedCells(item);
+//         updateFixedScroller(item);
+//     });
+
+//     document.addEventListener("scroll", () => {
+//         tablesWithFixed.forEach((item) => {
+//             updateFixedCells(item);
+//         });
+//     });
+
+//     window.addEventListener("resize", () => {
+//         tablesWithFixed.forEach((item) => {
+//             updateFixedCells(item);
+//         });
+//     });
+// });
 
 class Modal {
     constructor(links) {
@@ -395,4 +520,11 @@ class Modal {
 document.addEventListener("DOMContentLoaded", (event) => {
     let modalLinks = document.querySelectorAll("[data-modal-link]");
     if (modalLinks) new Modal(modalLinks);
+
+    let tablesWithFixed = document.querySelectorAll("[data-table-fixed]");
+    if (tablesWithFixed) {
+        tablesWithFixed.forEach((t) => {
+            new TableWithFixed(t);
+        });
+    }
 });

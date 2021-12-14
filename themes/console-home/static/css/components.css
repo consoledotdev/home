@@ -3214,17 +3214,23 @@ body:not(.mobile) .console-control:hover:before {
 /* Marked Scrollable
    ================================================================================================================ */
 .marked-scrollable-h:not(.is-fully-scrolled) {
-    border-right: var(--theme-border-3);
+    box-shadow: inset 1px 0 0 transparent, inset -1px 0 0 var(--theme-border-3-color);
 }
 .marked-scrollable-h.is-scrolled {
-    border-left: var(--theme-border-3);
+    box-shadow: inset 1px 0 0 var(--theme-border-3-color), inset -1px 0 0 var(--theme-border-3-color);
+}
+.marked-scrollable-h.is-scrolled.is-fully-scrolled {
+    box-shadow: inset 1px 0 0 var(--theme-border-3-color), inset -1px 0 0 transparent;
 }
 
 .marked-scrollable-v:not(.is-fully-scrolled) {
-    border-bottom: var(--theme-border-3);
+    box-shadow: inset 0 1px 0 transparent, inset 0 -1px 0 var(--theme-border-3-color);
 }
 .marked-scrollable-v.is-scrolled {
-    border-top: var(--theme-border-3);
+    box-shadow: inset 0 1px 0 var(--theme-border-3-color), inset 0 -1px 0 var(--theme-border-3-color);
+}
+.marked-scrollable-v.is-scrolled.is-fully-scrolled {
+    box-shadow: inset 0 1px 0 var(--theme-border-3-color), inset 0 -1px 0 transparent;
 }
 
 /* Vendor Ranking
@@ -3248,12 +3254,11 @@ body:not(.mobile) .console-control:hover:before {
 .simple-table {
     position: relative;
     padding: 0;
-    margin: var(--space4) 0 calc(var(--space4) + var(--space3));
-    padding: var(--space3_5) 0 var(--space3_5);
+    margin: calc(var(--space4_5) + var(--space2)) 0 calc(var(--space5) + var(--space3));
+    padding: 0;
     overflow-x: scroll;
     transition: var(--a-micro);
-    border-right: 1px solid transparent;
-    border-left: 1px solid transparent;
+    box-shadow: inset 1px 0 0 0px transparent, inset -1px 0 0 0px transparent;
 }
 
 .simple-table-grid {
@@ -3268,25 +3273,10 @@ body:not(.mobile) .console-control:hover:before {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
-    gap: var(--space4);
-}
-
-.simple-table-grid .row:not(:last-child):before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 0;
-    bottom: 0;
-    left: 0;
-    border-top: var(--theme-border-2);
 }
 
 .simple-table-grid .row.header {
     font-weight: 500;
-}
-
-.simple-table-grid .row.header:not(:last-child):before {
-    border-top: var(--theme-border-3);
 }
 
 .simple-table-grid .cell {
@@ -3294,8 +3284,38 @@ body:not(.mobile) .console-control:hover:before {
     font-style: italic;
     color: var(--theme-text-1);
     line-height: var(--t-lH4);
-    padding: var(--space2) var(--space2);
+    padding: var(--space2) calc(var(--space2) + var(--space3));
     word-break: break-word;
+}
+
+.simple-table-grid .cell:first-child {
+    padding-left: var(--space2);
+}
+
+.simple-table-grid .cell:last-child {
+    padding-right: var(--space2);
+}
+
+.simple-table-grid .row:not(:last-child) .cell {
+    border-bottom: var(--theme-border-2);
+}
+
+.simple-table-grid .row-header .cell {
+    border-bottom: var(--theme-border-3);
+}
+
+.simple-table-grid .cell.fixed {
+    z-index: 10;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.marked-scrollable-h.is-scrolled .simple-table-grid .cell.fixed.left.last {
+    box-shadow: 1px 0 0 var(--theme-border-4-color);
+}
+
+.marked-scrollable-h:not(.is-fully-scrolled) .simple-table-grid .cell.fixed.right.last {
+    box-shadow: -1px 0 0 var(--theme-border-4-color);
 }
 
 .simple-table-grid .cell .link + .link {

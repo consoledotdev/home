@@ -475,10 +475,6 @@ html {
     width: 87.5vw;
 }
 
-.comparison-checklist-table .simple-table-grid {
-    min-width: 1088px;
-}
-
 @media (min-width: 481px) and (max-width: 768px) {
     .comparison-checklist-table {
         width: 84vw;
@@ -491,8 +487,28 @@ html {
     }
 }
 
+.comparison-checklist-table .simple-table-grid {
+    min-width: 1088px;
+}
+
+@media (max-width: 580px) {
+    .comparison-checklist-table .simple-table-grid {
+        min-width: calc(28vw * 7);
+    }
+}
+
+.comparison-checklist-table .simple-table-grid .cell.fixed {
+    background: var(--theme-vendor-review-page-bg);
+}
+
 .comparison-checklist-table .row {
     grid-template-columns: max(180px, 11vw) repeat(6, 1fr);
+}
+
+@media (max-width: 580px) {
+    .comparison-checklist-table .row {
+        grid-template-columns: repeat(7, 28vw) !important;
+    }
 }
 
 .comparison-checklist-table .row .cell:nth-child(2) {

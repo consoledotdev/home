@@ -1965,9 +1965,15 @@ html {
 
 /* DTN Table
     --------------------------------------------------------------- */
+.dtn-table {
+    padding: 0;
+    margin: var(--space4_5) 0 var(--space5);
+}
+
 @media (max-width: 600px) {
     .dtn-table {
-        padding: var(--space3_5) 0 var(--space3_5);
+        padding: 0;
+        margin: var(--space3_5) 0 var(--space4);
     }
 }
 

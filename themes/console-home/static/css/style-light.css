@@ -52,6 +52,8 @@
     --theme-border-1: 1px solid rgba(0, 0, 0, 0.04);
     --theme-border-2: 1px solid rgba(0, 0, 0, 0.08);
     --theme-border-3: 1px solid rgba(0, 0, 0, 0.18);
+    --theme-border-3-color: rgba(0, 0, 0, 0.18);
+    --theme-border-4-color: rgba(0, 0, 0, 0.27);
 
     --theme-separator-1: var(--c-grey-04-whites-neutral);
     --theme-separator-2: var(--c-grey-02);
@@ -204,6 +206,7 @@
     --theme-vapor-globe-blue-1: linear-gradient(180deg, var(--c-blue-02), var(--c-blue-04));
 
     /* Vendor Review page specific */
+    --theme-vendor-review-page-bg: var(--theme-content-bg-2);
     --theme-rating-summary-overall-border: var(--theme-framed-section-default-border);
     --theme-rating-summary-overall-bg: var(--theme-framed-section-default-bg);
     --theme-rating-summary-features-border: var(--theme-framed-section-attention-border);
