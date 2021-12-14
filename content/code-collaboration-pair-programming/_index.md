@@ -140,6 +140,8 @@ allow the host to grant and revoke permissions to each individual participant.
 
 {{< div--close >}}
 
+{{< div--close >}}
+
 ### Best code collaboration tools
 
 We reviewed 10 online code collaboration tools. The best is: CodeTogether. We

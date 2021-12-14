@@ -579,8 +579,6 @@ it?
 
 {{< div--close >}}
 
-{{< nav-wrapper--open anchor-name="hosted-saas-also-considered" >}}
-
 #### Also considered: Dynatrace, Logic Monitor + 2 more
 
 These are the other hosted SaaS server monitoring services we tested. They are
@@ -684,8 +682,6 @@ you to
 Datadog, Prometheus, AWS, Google Cloud or OpenTelemetry. As such, we decided not
 to review it as part of this article on server monitoring. It will be covered in
 a future Console review of tracing and observability tools.
-
-{{< div--close >}}
 
 {{< div--close >}}
 
@@ -1117,8 +1113,6 @@ major limitation.
 
 {{< div--close >}}
 
-{{< nav-wrapper--open anchor-name="self-hosted-also-considered" >}}
-
 #### Also considered: 8 more
 
 These are the other server monitoring tools we tested. They are not as highly
@@ -1356,17 +1350,15 @@ our two finalists above.
 
 {{< div--close >}}
 
-{{< div--close >}}
-
 ### FAQ
 
 {{< category-review/faq category="server-monitoring" >}}
 
-{{< nav-wrapper--open id="wrapper-10" anchor-name="editorial-policy" >}}
-
 ### Related categories
 
 {{< category-review/related-categories >}}
+
+{{< nav-wrapper--open id="wrapper-10" anchor-name="editorial-policy" >}}
 
 ### Our editorial policy
 

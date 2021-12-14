@@ -44,9 +44,9 @@ large spike of traffic and how fast pages load. The best load testing tools
 provide scriptable test plans, protocol- and browser-level test execution, and
 for this review must also have a developer focus.
 
-We tested 11 load testing tools using our independent [selection
-criteria](/selection-criteria/) and the requirements described below. The best 6
-load testing tools for developers and engineers in {{< year >}} are:
+We tested 11 load testing tools using our independent
+[selection criteria](/selection-criteria/) and the requirements described below.
+The best 6 load testing tools for developers and engineers in {{< year >}} are:
 
 1. [Flood](#flood)
 2. [k6](#k6)
@@ -116,6 +116,8 @@ regression testing, a CLI and a nicely designed dark mode if there is a GUI.
 We reviewed 11 load testing tools. The best is: [Flood](#flood). We also liked
 [k6](#k6) and [Locust](#locust).
 
+{{< div--close >}}
+
 {{< nav-wrapper--open anchor-name="flood" >}}
 
 ### Flood
@@ -163,6 +165,8 @@ different scripting frameworks as well as the control it offers over the
 infrastructure. As a developer, I appreciate the cross-platform/framework
 approach because it allows you to define all your test plans in code, which is
 where they should be.
+
+{{< div--close >}}
 
 {{< nav-wrapper--open anchor-name="k6" >}}
 
@@ -218,6 +222,8 @@ If you are looking just for HTTP load testing then k6 does a great job, but the
 main limitation is the lack of browser simulation. If you want to test browser
 rendering performance, k6 is not the right tool.
 
+{{< div--close >}}
+
 {{< nav-wrapper--open anchor-name="locust" >}}
 
 ### Locust
@@ -250,6 +256,8 @@ Locust displays its results in a simple web UI but they can also be exported as
 CSV, or direct to the terminal if executed as a CLI. If you don’t like
 Javascript, Java or Scala, Locust is a good alternative to k6, JMeter or
 Gatling.
+
+{{< div--close >}}
 
 {{< nav-wrapper--open anchor-name="loadster" >}}
 
@@ -287,6 +295,8 @@ The main complaint against Loadster is the lack of scripting capabilities, but
 that is somewhat made up for by the advanced options available for both protocol
 and browser testing. It is clearly designed for technical users.
 
+{{< div--close >}}
+
 {{< nav-wrapper--open anchor-name="gatling" >}}
 
 ### Gatling
@@ -322,6 +332,8 @@ Gatling is a very flexible load testing tool framework that benefits from the
 power of using Scala for test plans. However, its reliance on Java means
 installation is a pain for developers on their desktop, especially if on macOS
 which blocks Java scripts by default.
+
+{{< div--close >}}
 
 {{< nav-wrapper--open anchor-name="apache-jmeter" >}}
 
@@ -364,6 +376,8 @@ into other testing products. JMeter was once the first choice for developers -
 and is still a good, open source load testing framework - but there are now good
 quality JMeter alternatives that can provide a more modern approach.
 
+{{< div--close >}}
+
 {{< nav-wrapper--open anchor-name="loadview" >}}
 
 ### LoadView
@@ -399,6 +413,8 @@ recording and editing test scripts in code, but only using
 Tests must also be run through the UI or triggered via the API, so integration
 into CI/CD pipelines is limited.
 
+{{< div--close >}}
+
 {{< nav-wrapper--open anchor-name="siege" >}}
 
 ### Siege
@@ -427,6 +443,8 @@ numbers of simultaneous requests. This is good for testing whether your
 infrastructure can suddenly scale up, but does not represent what real users
 will do. Siege is useful for quick testing, but the other tools reviewed have
 many more capabilities.
+
+{{< div--close >}}
 
 {{< nav-wrapper--open anchor-name="bees-with-machine-guns" >}}
 
@@ -468,6 +486,8 @@ lacks advanced scripting and reporting, so is probably best used as a simple
 ad-hoc test utility. It does have a cool name though. The status outputs are
 quite fun.
 
+{{< div--close >}}
+
 {{< nav-wrapper--open anchor-name="loadninja" >}}
 
 ### LoadNinja
@@ -502,6 +522,8 @@ LoadNinja can be triggered by CI/CD integration into Jenkins, but does not
 support any other systems unless you write your own scripts to trigger runs via
 their API. The scriptless approach means it can be managed by non-technical
 users but it lacks advanced features.
+
+{{< div--close >}}
 
 {{< nav-wrapper--open anchor-name="neoload" >}}
 
@@ -540,8 +562,7 @@ CI/CD systems easily. There are much better load testing tools for developers.
 
 ### Also considered
 
-- [Silk
-  Performer](https://www.microfocus.com/en-us/products/silk-performer/overview)
+- [Silk Performer](https://www.microfocus.com/en-us/products/silk-performer/overview)
   we were not able to test because it required contacting sales to request a
   free trial. The [Console selection criteria](/selection-criteria/) require
   that tools be available as self-service, so we excluded it from this review.
@@ -563,6 +584,8 @@ CI/CD systems easily. There are much better load testing tools for developers.
   [Console selection criteria](/selection-criteria/) require that tools be
   available as self-service, so we excluded it from this review.
 
+{{< div--close >}}
+
 {{< nav-wrapper--open anchor-name="editorial-policy" >}}
 
 ### Our editorial policy
@@ -570,8 +593,8 @@ CI/CD systems easily. There are much better load testing tools for developers.
 #### Why you can trust us
 
 Console is written by developers for developers. Using our decades of experience
-building software at scale, we apply strict [selection
-criteria](/selection-criteria/) to decide which software we feature.
+building software at scale, we apply strict
+[selection criteria](/selection-criteria/) to decide which software we feature.
 
 This includes asking questions like "Would this form part of a daily-use set of
 developer tools?", "Would this be used by advanced, power-users?" and "Does it
@@ -581,3 +604,5 @@ to be featured.
 
 We **do not** accept payment for inclusion and where we work with partners, they
 must fit our selection criteria before we consider working with them.
+
+{{< div--close >}}
