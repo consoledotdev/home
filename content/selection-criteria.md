@@ -51,10 +51,14 @@ required, but the more the better:s
 
 - Is the company building services and/or products where the primary user is a
   developer?
+- How well does the product meet the "Interesting tools" criteria above?
 - Are there challenging problems to solve? Is that because it's a new startup
   building something interesting and/or because the code is deployed at scale?
 - How is the company contributing to open source? Is the product itself open
   source? Do they have an open source program?
+- What is the internal developer experience like? Are they using modern tools,
+  are builds fast, how often do they deploy, how well does the development
+  environment work?
 - How detailed is the careers website? Do I get a real sense of what it would be
   like to work there?
 - How public is the company about their technology? Do they have an active blog
@@ -62,7 +66,6 @@ required, but the more the better:s
   online (blog, social media, video) talking about it?
 - What are the HR policies like? Is remote work allowed? What is the office
   culture like? Are they transparent about benefits?
-- How well does the product meet the "Interesting tools" criteria above?
 - Is the organization financially secure? What does the revenue, profit,
   donations and/or funding situation look like?
 
