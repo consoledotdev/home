@@ -1310,7 +1310,11 @@ availability configuration, which
 [you must manage yourself](https://blog.zabbix.com/zabbix-ha-cluster-setups/8264/).
 
 Zabbix consists of several components, the main two being the Zabbix Server and
-the monitoring agent installed onto each system you want to monitor.
+the monitoring agent installed onto each system you want to monitor. The lack of
+support for high availability is a major limitation that is being fixed in the
+upcoming 6.0 release. This new version, currently in beta, [includes high
+availability clustering out of the
+box](https://blog.zabbix.com/whats-new-in-zabbix-6-0-lts-by-arturs-lontons-zabbix-summit-online-2021/17761/#Zabbix_server_High_Availability_cluster).
 
 Agents can either communicate with the server directly or they route through a
 Zabbix Proxy that alleviates load on the server. This is because Zabbix comes
