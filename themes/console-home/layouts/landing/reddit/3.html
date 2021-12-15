@@ -42,7 +42,11 @@
                             callback: submitForm,
                         });
 
-                        rdt('track', 'SignUp');
+                        // Uses Cloudflare Zaraz to sandbox third-party JS
+                        // Reddit in this case
+                        // https://dash.cloudflare.com/e7764905d1562eb381bdbef888ca7a92/console.dev/zaraz
+                        // https://developers.cloudflare.com/zaraz/events-api
+                        zaraz.track("reddit_signup")
                     });
                 </script>
                 <p>Free. Sent every Thursday.</p>

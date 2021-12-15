@@ -2,17 +2,6 @@
 	{{ $CTATitle := "Discover the best tools for developers" }}
 	{{ $CTADescription := "Our free weekly email features a digest of the best new tools and beta releases for developers. " }}
 
-    <!-- Twitter universal website tag code -->
-    <script>
-        !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
-        },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
-        a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
-        // Insert Twitter Pixel ID and Standard Event data below
-        twq('init','o5cre');
-        twq('track','PageView');
-    </script>
-    <!-- End Twitter universal website tag code -->
-
     <section class="page-section page-section-landing opening">
         <div class="top">
             <h2 class="title title-1">Discover the best <br/>tools for developers</h2>
@@ -53,7 +42,11 @@
                             callback: submitForm,
                         });
 
-                        twq('track','Purchase');
+                        // Uses Cloudflare Zaraz to sandbox third-party JS
+                        // Twitter in this case
+                        // https://dash.cloudflare.com/e7764905d1562eb381bdbef888ca7a92/console.dev/zaraz
+                        // https://developers.cloudflare.com/zaraz/events-api
+                        zaraz.track("twitter_signup")
                     });
                 </script>
                 <p>Free. Sent every Thursday.</p>
