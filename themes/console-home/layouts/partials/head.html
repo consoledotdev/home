@@ -130,14 +130,4 @@
     {{ if .Params.robotsDisallow }}
     <meta name="robots" content="noindex,follow,noarchive">
     {{end -}}
-
-    {{ `<!-- Plausible Analytics: https://blog.console.dev/picking-privacy-first-analytics/ -->` | safeHTML }}
-    <script defer data-domain="console.dev" src="https://plausible.io/js/plausible.outbound-links.js"></script>
-    <script>
-        window.plausible =
-            window.plausible ||
-            function () {
-                (window.plausible.q = window.plausible.q || []).push(arguments);
-            };
-    </script>
 </head>
