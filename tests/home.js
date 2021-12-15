@@ -21,15 +21,33 @@ export default function () {
             "CF-Access-Client-Secret": `${__ENV.CF_CLIENT_SECRET}`
         }
     });
+    //const res = http.get("http://localhost:1313/");
 
     // Basic HTML parsing
     // https://k6.io/docs/examples/parse-html/
     const doc = parseHTML(res.body); // equivalent to res.html()
     const pageTitle = doc.find("head title").text();
+    const metaDescription = doc.find("meta[name='description']").attr("content");
+    const relCanonical = doc.find("link[rel='canonical']").attr("href");
+    const ogSiteName = doc.find("meta[property='og:site_name']").attr("content");
+    const ogTitle = doc.find("meta[property='og:title']").attr("content");
+    const ogDescription = doc.find("meta[property='og:description']").attr("content");
+    const ogURL = doc.find("meta[property='og:url']").attr("content");
+
+    // What are we expecting?
+    const expectedCanonical = "https://console.dev/"
+    const expectedTitle = "Console Newsletter - The best tools for developers";
+    const expectedDescription = "A free weekly email digest of the best tools and beta releases for developers.";
 
     const result = check(res, {
         "status is 200": (r) => r.status == 200,
-        "page title is correct": (r) => pageTitle == "Console Newsletter - The best tools for developers",
+        "page title is correct": (r) => pageTitle == expectedTitle,
+        "correct meta description": (r) => metaDescription == expectedDescription,
+        "correct link rel canonical": (r) => relCanonical == expectedCanonical,
+        "correct og:site_name": (r) => ogSiteName == "Console",
+        "correct og:title": (r) => ogTitle == pageTitle,
+        "correct og:decription": (r) => ogDescription == expectedDescription,
+        "correct og:url": (r) => ogURL == expectedCanonical,
     });
 
     errorRate.add(!result);

@@ -8,14 +8,14 @@ export const options = {
     duration: "5s",
     vus: 5,
     thresholds: {
-        http_req_duration: ["p(95)<1000"],
+        http_req_duration: ["p(95)<1500"],
         errors: ["rate<0.01"], // <1% errors
     },
 };
 export default function () {
     // Use service tokens to access the test URL behind Cloudflare
     // https://developers.cloudflare.com/cloudflare-one/identity/service-auth/service-tokens
-    const res = http.get("https://test.console.dev/tools/", {
+    const res = http.get("https://test.console.dev/browser-testing/", {
         headers: {
             "CF-Access-Client-Id": `${__ENV.CF_CLIENT_ID}`,
             "CF-Access-Client-Secret": `${__ENV.CF_CLIENT_SECRET}`
@@ -35,9 +35,9 @@ export default function () {
     const ogURL = doc.find("meta[property='og:url']").attr("content");
 
     // What are we expecting?
-    const expectedCanonical = "https://console.dev/tools/"
-    const expectedTitle = "The best developer tools - Console";
-    const expectedDescription = "Each week Console reviews the best tools for developers.";
+    const expectedCanonical = "https://console.dev/browser-testing/"
+    const expectedTitle = "The Best Browser Testing Tools For Developers - Console";
+    const expectedDescription = "The best browser testing tools for developers: BrowserStack, LambdaTest, SmartBear CrossBrowserTesting, Sauce Labs, Ghost Inspector, Selenium. 10 browser testing tools reviewed.";
 
     const result = check(res, {
         "status is 200": (r) => r.status == 200,
