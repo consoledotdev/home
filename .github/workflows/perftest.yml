@@ -1,10 +1,10 @@
-name: Run perf tests
+name: Run k6 tests
 
 on: push
 
 jobs:
     k6_load_test:
-        name: k6 Load Test
+        name: k6 Tests
         runs-on: ubuntu-latest
 
         steps:
@@ -48,3 +48,20 @@ jobs:
               env:
                   CF_CLIENT_ID: ${{ secrets.CF_CLIENT_ID }}
                   CF_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET }}
+
+            - name: k6 test (browser-testing)
+              uses: k6io/action@v0.2.0
+              with:
+                  filename: tests/browser-testing.js
+              env:
+                  CF_CLIENT_ID: ${{ secrets.CF_CLIENT_ID }}
+                  CF_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET }}
+
+            - name: k6 test (browser-testing-browserstack)
+              uses: k6io/action@v0.2.0
+              with:
+                  filename: tests/browser-testing-browserstack.js
+              env:
+                  CF_CLIENT_ID: ${{ secrets.CF_CLIENT_ID }}
+                  CF_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET }}
+
