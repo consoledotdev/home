@@ -1257,10 +1257,9 @@ Opstrace packages several open source monitoring tools
 ([Cortex](https://cortexmetrics.io), [Loki](https://grafana.com/oss/loki/),
 [Grafana](https://grafana.com), [Prometheus](https://prometheus.io)) to make
 deployment and management easier. This is still an early-stage project so we did
-not evaluate it, and there are some limitations such as
-[needing](https://opstrace.com/docs/references/faq#how-do-i-use-my-own-domain)
-to use a `*.opstrace.io` domain unless you contact them about a commercial
-version. We'll reevaluate Opstrace in the future.
+not evaluate it. On [14 Dec 2021 it was acquired by
+GitLab](https://opstrace.com/blog/gitlab) so we'll be keeping an eye out to see
+what GitLab does next.
 
 {{< div--close >}}
 
