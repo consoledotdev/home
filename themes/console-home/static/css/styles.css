@@ -432,7 +432,17 @@ body.show-planes:after {
     align-items: center;
 }
 
-@media screen and (max-width: 768px) {
+.page-home .main {
+    width: 440px;
+}
+
+@media (max-width: 540px) {
+    .page-home .main {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
     .page-home .main {
         margin-top: calc(var(--space6) - var(--space4_5));
         margin-bottom: calc(var(--space6) - var(--space4_5));
@@ -1604,10 +1614,6 @@ p.x-small {
         position: fixed;
         left: 6.25vw;
         right: 6.25vw;
-    }
-
-    .main {
-        width: 440px;
     }
 
     .main-article {
