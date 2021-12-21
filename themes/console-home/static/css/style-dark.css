@@ -44,7 +44,7 @@
     --theme-translucent-firefox: rgba(16, 16, 18, 0.95);
 
     --theme-translucent-footer: rgba(0, 0, 0, 0.6);
-    --theme-translucent-footer-firefox: rgba(16, 16, 18, 0.95);
+    --theme-translucent-footer-firefox: rgba(4, 4, 4, 0.93);
 
     --theme-shadow-1: 0 var(--space1) var(--space3) rgba(0, 0, 0, 0.4);
     --theme-shadow-2: 0 var(--space2) var(--space4) rgba(0, 0, 0, 0.8);

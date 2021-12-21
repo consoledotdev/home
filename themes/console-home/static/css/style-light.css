@@ -41,8 +41,10 @@
     --theme-content-pick-border-1: 2px solid rgba(1, 188, 144, 0.4);
 
     --theme-translucent: rgba(245, 248, 251, 0.6);
-
     --theme-translucent-firefox: rgba(238, 241, 246, 0.95);
+
+    --theme-translucent-footer: rgba(252, 253, 255, 0.6);
+    --theme-translucent-footer-firefox: rgba(252, 253, 255, 0.93);
 
     --theme-shadow-1: 0 var(--space1) var(--space3) rgba(0, 0, 0, 0.07);
     --theme-shadow-2: 0 var(--space2_5) var(--space4) rgba(0, 0, 0, 0.1);
