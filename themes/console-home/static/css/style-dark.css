@@ -41,8 +41,10 @@
     --theme-content-pick-border-1: 2px solid rgba(1, 188, 144, 0.25);
 
     --theme-translucent: rgba(10, 10, 11, 0.6);
-
     --theme-translucent-firefox: rgba(16, 16, 18, 0.95);
+
+    --theme-translucent-footer: rgba(0, 0, 0, 0.6);
+    --theme-translucent-footer-firefox: rgba(16, 16, 18, 0.95);
 
     --theme-shadow-1: 0 var(--space1) var(--space3) rgba(0, 0, 0, 0.4);
     --theme-shadow-2: 0 var(--space2) var(--space4) rgba(0, 0, 0, 0.8);
@@ -74,6 +76,11 @@
     --theme-nav-secondary-link-text-focus: var(--c-blue-04);
     --theme-nav-secondary-link-text-active: var(--c-blue-06-main);
     --theme-nav-secondary-link-text-selected: var(--c-blue-04);
+
+    --theme-nav-tertiary-link-text-idle: var(--c-grey-05);
+    --theme-nav-tertiary-link-text-focus: var(--c-blue-04);
+    --theme-nav-tertiary-link-text-active: var(--c-blue-06-main);
+    --theme-nav-tertiary-link-text-selected: var(--c-blue-04);
 
     --theme-input-checkable-off: var(--c-grey-04-whites-neutral);
     --theme-input-checkable-on: var(--c-white-00-absolute);

@@ -1,66 +1,67 @@
-    <footer data-footer class="footer">
-        <nav class="footer-nav">
-            <ul class="footer-social">
-                <li>
-                    <a rel="me" onclick="blur()" href="https://twitter.com/consoledotdev" aria-label="Twitter">
-                        {{- partial "icons/twitter.html" -}}<span>Twitter</span>
-                    </a>
-                </li>
-                <li>
-                    <a rel="me" onclick="blur()" href="https://github.com/consoledotdev" aria-label="GitHub">
-                        {{- partial "icons/github.html" -}}<span>GitHub</span>
-                    </a>
-                </li>
-                <li>
-                    <a rel="me" onclick="blur()" href="https://mastodon.online/@console" aria-label="Mastodon">
-                        {{- partial "icons/mastodon.html" -}}<span>Mastodon</span>
-                    </a>
-                </li>
-            </ul>
-            <div class="footer-locations">
-                <ul>
+    <div data-footer class="wide-block footer-block">
+        <footer class="footer">
+            <nav class="footer-nav-left">
+                {{ partial "icons/console-mini.html" }}
+                <ul class="footer-pages">
                     <li>
-                        <a onclick="blur()" href="https://blog.console.dev/">Blog</a>
+                        <a class="menu-item menu-item-secondary" onclick="blur()" href="/tools/">Tools</a>
                     </li>
                     <li>
-                        <a onclick="blur()" href="https://podcast.console.dev/">Podcast</a>
-                    </li>                
-                </ul>
-                <ul>
-                    <li>
-                        <a onclick="blur()" href="/articles/">Articles</a>
+                        <a class="menu-item menu-item-secondary" onclick="blur()" href="/betas/">Betas</a>
                     </li>
                     <li>
-                        <a onclick="blur()" href="/research/mars/">Mars</a>
-                    </li>                               
-                </ul>
-                <ul>
+                        <a class="menu-item menu-item-secondary" onclick="blur()" href="/interviews/">Interviews</a>
+                    </li>
                     <li>
-                        <a onclick="blur()" href="/about/">About</a>
+                        <a class="menu-item menu-item-secondary" onclick="blur()" href="/articles/">Articles</a>
+                    </li>
+                    <li>
+                        <a class="menu-item menu-item-secondary icon-right" onclick="blur()" target="_blank" href="https://blog.console.dev/"><span>Blog</span>{{- partial "icons/external-link.html" -}}</a>
+                    </li>
+                    <li>
+                        <a class="menu-item menu-item-secondary icon-right" onclick="blur()" target="_blank" href="https://podcast.console.dev/"><span> Podcast</span>{{- partial "icons/external-link.html" -}}</a>
+                    </li>
+                    <li>
+                        <a class="menu-item menu-item-secondary" onclick="blur()" href="/advertise/">Advertise</a>
+                    </li>
+                    <li>
+                        <a class="menu-item menu-item-secondary" onclick="blur()" href="/badges/">Badges</a>
+                    </li>
+                    <li>
+                        <a class="menu-item menu-item-secondary" onclick="blur()" href="/zero/">Zero</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="footer-nav-right">
+                <ul class="footer-phatic">
+                    <li>
+                        <a class="menu-item menu-item-tertiary" onclick="blur()" href="/about/">About</a>
                     </li> 
                     <li>
-                        <a onclick="blur()" href="/privacy/">Privacy</a>
-                    </li>              
-                </ul>
-                <ul>
-                    <li>
-                        <a onclick="blur()" href="/advertise/">Advertise</a>
+                        <a class="menu-item menu-item-tertiary" onclick="blur()" href="mailto:hello@console.dev">Contact</a>
                     </li>
                     <li>
-                        <a onclick="blur()" href="/badges/">Badges</a>
+                        <a class="menu-item menu-item-tertiary" onclick="blur()" href="/privacy/">Privacy</a>
                     </li>
                 </ul>
-                <ul>
+                <ul class="footer-social">
                     <li>
-                        <a onclick="blur()" href="/zero/">Zero</a>
+                        <a class="menu-item menu-item-secondary icon-left" rel="me" onclick="blur()" target="_blank" href="https://twitter.com/consoledotdev" aria-label="Twitter">
+                            {{- partial "icons/twitter.html" -}}<span>Twitter</span>
+                        </a>
                     </li>
-                </ul>
-                <ul>
                     <li>
-                        <a onclick="blur()" href="mailto:hello@console.dev">Contact</a>
+                        <a class="menu-item menu-item-secondary icon-left" rel="me" onclick="blur()" target="_blank" href="https://github.com/consoledotdev" aria-label="GitHub">
+                            {{- partial "icons/github.html" -}}<span>GitHub</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu-item menu-item-secondary icon-left" rel="me" onclick="blur()" target="_blank" href="https://mastodon.online/@console" aria-label="Mastodon">
+                            {{- partial "icons/mastodon.html" -}}<span>Mastodon</span>
+                        </a>
                     </li>
                 </ul>
-            </div>
-        </nav>
-    </footer>
+            </nav>
+        </footer>
+    </div>
 </div> <!-- END .content -->
