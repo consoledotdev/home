@@ -314,6 +314,7 @@
     outline: none;
     transition: var(--a-controls);
     padding: var(--space1) var(--space2_5);
+    letter-spacing: 0.08em;
 }
 
 .menu-item .icon {

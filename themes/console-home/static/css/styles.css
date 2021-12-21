@@ -753,35 +753,7 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
     position: relative;
     list-style: none;
     flex: 0 0 auto;
-    letter-spacing: 0.08em;
-    font-size: var(--t-size0);
     padding: var(--space1) var(--space1);
-}
-
-.main-nav a:link,
-.main-nav a:visited {
-    color: var(--theme-nav-primary-link-text-idle);
-    text-decoration: none;
-    font-weight: 500;
-    outline: none;
-    transition: var(--a-controls);
-    padding: var(--space1) var(--space2_5);
-}
-
-.main-nav a:hover,
-.main-nav a:focus {
-    color: var(--theme-nav-primary-link-text-focus);
-    text-decoration: none;
-}
-.main-nav a:active {
-    color: var(--theme-nav-primary-link-text-active);
-    text-decoration: none;
-    transition: var(--a-controls-active);
-}
-
-.main-nav li.is-selected a {
-    color: var(--theme-nav-primary-link-text-selected);
-    cursor: default;
 }
 
 .main-nav .menu-popup-wrapper ul {
