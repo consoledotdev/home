@@ -768,7 +768,7 @@
    ================================================================================================================ */
 input.console-input-text,
 select.console-select {
-    margin: 0;
+    margin: 0 1px;
     padding: 0;
     border: var(--theme-input-border);
     outline: none;
