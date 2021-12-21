@@ -17,16 +17,16 @@
                     {{ partial "components/menu-toggle.html" }}
                     <ul class="no-popup">
                         <li{{ if eq .context.Params.isPage "tools" }} class="is-selected"{{ end }}>
-                            <a onclick="blur();" href="/tools/">Tools</a>
+                            <a class="menu-item menu-item-primary" onclick="blur();" href="/tools/">Tools</a>
                         </li>
                         <li{{ if eq .context.Params.isPage "betas" }} class="is-selected"{{ end }}>
-                            <a onclick="blur();" href="/betas/">Betas</a>
+                            <a class="menu-item menu-item-primary" onclick="blur();" href="/betas/">Betas</a>
                         </li>
                         <li{{ if eq .context.Params.isPage "interviews" }} class="is-selected"{{ end }}>
-                            <a onclick="blur();" href="/interviews/">Interviews</a>
+                            <a class="menu-item menu-item-primary" onclick="blur();" href="/interviews/">Interviews</a>
                         </li>
                         <li{{ if eq .context.Params.isPage "latest" }} class="is-selected"{{ end }}>
-                            <a onclick="blur();" href="/latest/">Newsletter</a>
+                            <a class="menu-item menu-item-primary" onclick="blur();" href="/latest/">Newsletter</a>
                         </li>                    
                     </ul>
                     <button onclick="blur(); toggleTheme()" class="console-control theme-switcher no-popup" aria-label="Switch theme">
@@ -36,16 +36,16 @@
                         <div id="menu-popup" class="popup popup-top-down">
                             <ul>
                                 <li{{ if eq .context.Params.isPage "tools" }} class="is-selected"{{ end }}>
-                                    <a onclick="blur(); toggleMenuPopup()" href="/tools/">Tools</a>
+                                    <a class="menu-item menu-item-primary" onclick="blur(); toggleMenuPopup()" href="/tools/">Tools</a>
                                 </li>
                                 <li{{ if eq .context.Params.isPage "betas" }} class="is-selected"{{ end }}>
-                                    <a onclick="blur(); toggleMenuPopup()" href="/betas/">Betas</a>
+                                    <a class="menu-item menu-item-primary" onclick="blur(); toggleMenuPopup()" href="/betas/">Betas</a>
                                 </li>
                                 <li{{ if eq .context.Params.isPage "interviews" }} class="is-selected"{{ end }}>
-                                    <a onclick="blur(); toggleMenuPopup()" href="/interviews/">Interviews</a>
+                                    <a class="menu-item menu-item-primary" onclick="blur(); toggleMenuPopup()" href="/interviews/">Interviews</a>
                                 </li>
                                 <li{{ if eq .context.Params.isPage "latest" }} class="is-selected"{{ end }}>
-                                    <a onclick="blur(); toggleMenuPopup()" href="/latest/">Newsletter</a>
+                                    <a class="menu-item menu-item-primary" onclick="blur(); toggleMenuPopup()" href="/latest/">Newsletter</a>
                                 </li>                                
                             </ul>
                             <div class="separator"></div>
