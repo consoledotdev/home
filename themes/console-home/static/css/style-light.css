@@ -241,7 +241,15 @@
 }
 
 .theme .hero .lines {
-    opacity: 0.06;
+    opacity: 0.045;
+}
+
+.theme .hero .dynamic-planes-item-bg {
+    opacity: 0.25;
+}
+
+.theme .hero .dynamic-planes-item-border {
+    opacity: 0.09;
 }
 
 .theme .logo-svg-animated-explode .plane {

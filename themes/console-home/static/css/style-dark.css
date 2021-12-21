@@ -266,12 +266,12 @@
 }
 
 .theme .hero .lines {
-    opacity: 0.08;
+    opacity: 0.06;
 }
 
 .page-article.theme .hero .lines,
 .page-feature.theme .hero .lines {
-    opacity: 0.06;
+    opacity: 0.04;
 }
 
 .page-article.theme .hero .dynamic-planes .dynamic-planes-item .dynamic-planes-item-bg,

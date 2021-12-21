@@ -2603,13 +2603,13 @@ body:not(.mobile) .console-control:hover:before {
 
 .dynamic-planes-item-bg {
     background: var(--theme-planes-background);
-    opacity: 0.5;
+    opacity: 0.3;
     z-index: 1;
 }
 
 .dynamic-planes-item-border {
     border: 1px solid var(--theme-planes-off-stroke);
-    opacity: 0.13;
+    opacity: 0.078;
     z-index: 2;
 }
 
@@ -2642,15 +2642,15 @@ body:not(.mobile) .console-control:hover:before {
 }
 
 .dynamic-planes-item.triad-01 .dynamic-planes-item-border-selected {
-    border: 1px solid var(--c-blue-06-main);
+    border: 1px solid var(--c-blue-07);
 }
 
 .dynamic-planes-item.triad-02 .dynamic-planes-item-border-selected {
-    border: 1px solid var(--c-fuchsia-05-main);
+    border: 1px solid var(--c-fuchsia-06);
 }
 
 .dynamic-planes-item.triad-03 .dynamic-planes-item-border-selected {
-    border: 1px solid var(--c-green-05-main);
+    border: 1px solid var(--c-green-06);
 }
 
 .dynamic-planes-item.selected .dynamic-planes-item-border,
@@ -2702,42 +2702,42 @@ body:not(.mobile) .console-control:hover:before {
 }
 
 .dynamic-planes-item.triad-01 .dynamic-planes-item-icon-selected .icon-fill {
-    fill: var(--c-blue-06-main);
+    fill: var(--c-blue-07);
 }
 
 .dynamic-planes-item.triad-02 .dynamic-planes-item-icon-selected .icon-fill {
-    fill: var(--c-fuchsia-05-main);
+    fill: var(--c-fuchsia-06);
 }
 
 .dynamic-planes-item.triad-03 .dynamic-planes-item-icon-selected .icon-fill {
-    fill: var(--c-green-05-main);
+    fill: var(--c-green-06);
 }
 
 .dynamic-planes-item.triad-01 .dynamic-planes-item-icon-selected .icon-stroke {
-    stroke: var(--c-blue-06-main);
+    stroke: var(--c-blue-07);
 }
 
 .dynamic-planes-item.triad-02 .dynamic-planes-item-icon-selected .icon-stroke {
-    stroke: var(--c-fuchsia-05-main);
+    stroke: var(--c-fuchsia-06);
 }
 
 .dynamic-planes-item.triad-03 .dynamic-planes-item-icon-selected .icon-stroke {
-    stroke: var(--c-green-05-main);
+    stroke: var(--c-green-06);
 }
 
 .dynamic-planes-item.triad-01 .dynamic-planes-item-icon-selected .icon-fill-stroke {
-    fill: var(--c-blue-06-main);
-    stroke: var(--c-blue-06-main);
+    fill: var(--c-blue-07);
+    stroke: var(--c-blue-07);
 }
 
 .dynamic-planes-item.triad-02 .dynamic-planes-item-icon-selected .icon-fill-stroke {
-    fill: var(--c-fuchsia-05-main);
-    stroke: var(--c-fuchsia-05-main);
+    fill: var(--c-fuchsia-06);
+    stroke: var(--c-fuchsia-06);
 }
 
 .dynamic-planes-item.triad-03 .dynamic-planes-item-icon-selected .icon-fill-stroke {
-    fill: var(--c-green-05-main);
-    stroke: var(--c-green-05-main);
+    fill: var(--c-green-06);
+    stroke: var(--c-green-06);
 }
 
 /* Page Meta
