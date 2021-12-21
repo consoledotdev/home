@@ -230,8 +230,12 @@
     --theme-mars-earth-texture: url("/img/research/mars/earth-texture-light.png");
 
     --theme-mars-mars-halo: 0 0 0.25em rgba(255, 0, 0, 0.12);
+    --theme-mars-mars-halo-large: 0 0 1em 1em rgba(255, 50, 50, 0.12);
+    --theme-mars-mars-halo-large-white: 0 0 1em 0.6em rgba(255, 100, 100, 0.12);
     --theme-mars-mars-shading: inset 0.2em 0 0.34em rgba(255, 0, 0, 0.16), inset 0 0 0.04em rgba(255, 0, 0, 0.35);
     --theme-mars-mars-texture: url("/img/research/mars/mars-texture-light.png");
+    --theme-mars-text-link-hover: rgba(255, 110, 40, 1);
+    --theme-mars-text-link-active: rgba(225, 60, 0, 1);
 
     --theme-mars-connector-green: #00cc00;
     --theme-mars-masking-bg: var(--c-white-01-main);
