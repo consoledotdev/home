@@ -157,6 +157,10 @@
     --theme-neon-planes-triad-03-body: #002e13;
     --theme-neon-planes-triad-03-glow: rgba(0, 86, 41, 0.68);
 
+    --theme-neon-planes-triad-01-stroke: var(--c-blue-07);
+    --theme-neon-planes-triad-02-stroke: var(--c-fuchsia-06);
+    --theme-neon-planes-triad-03-stroke: var(--c-green-06);
+
     --theme-empty-bg-1: var(--c-grey-09-black-03);
     --theme-empty-dashed-border: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23515158' stroke-width='2' stroke-dasharray='6%2c 6' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
 
@@ -282,7 +286,9 @@
 }
 
 .page-article.theme .hero .dynamic-planes .dynamic-planes-item .dynamic-planes-item-bg,
-.page-feature.theme .hero .dynamic-planes .dynamic-planes-item .dynamic-planes-item-bg {
+.page-feature.theme .hero .dynamic-planes .dynamic-planes-item .dynamic-planes-item-bg,
+.page-article.theme .hero .dynamic-planes .dynamic-planes-item .dynamic-planes-item-bg-selected,
+.page-feature.theme .hero .dynamic-planes .dynamic-planes-item .dynamic-planes-item-bg-selected {
     background: var(--theme-planes-background-2);
 }
 

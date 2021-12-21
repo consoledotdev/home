@@ -2943,15 +2943,15 @@ body:not(.mobile) .console-control:hover:before {
 }
 
 .dynamic-planes-item.triad-01 .dynamic-planes-item-border-selected {
-    border: 1px solid var(--c-blue-07);
+    border: 1px solid var(--theme-neon-planes-triad-01-stroke);
 }
 
 .dynamic-planes-item.triad-02 .dynamic-planes-item-border-selected {
-    border: 1px solid var(--c-fuchsia-06);
+    border: 1px solid var(--theme-neon-planes-triad-02-stroke);
 }
 
 .dynamic-planes-item.triad-03 .dynamic-planes-item-border-selected {
-    border: 1px solid var(--c-green-06);
+    border: 1px solid var(--theme-neon-planes-triad-03-stroke);
 }
 
 .dynamic-planes-item.selected .dynamic-planes-item-border,
@@ -3003,42 +3003,42 @@ body:not(.mobile) .console-control:hover:before {
 }
 
 .dynamic-planes-item.triad-01 .dynamic-planes-item-icon-selected .icon-fill {
-    fill: var(--c-blue-07);
+    fill: var(--theme-neon-planes-triad-01-stroke);
 }
 
 .dynamic-planes-item.triad-02 .dynamic-planes-item-icon-selected .icon-fill {
-    fill: var(--c-fuchsia-06);
+    fill: var(--theme-neon-planes-triad-02-stroke);
 }
 
 .dynamic-planes-item.triad-03 .dynamic-planes-item-icon-selected .icon-fill {
-    fill: var(--c-green-06);
+    fill: var(--theme-neon-planes-triad-03-stroke);
 }
 
 .dynamic-planes-item.triad-01 .dynamic-planes-item-icon-selected .icon-stroke {
-    stroke: var(--c-blue-07);
+    stroke: var(--theme-neon-planes-triad-01-stroke);
 }
 
 .dynamic-planes-item.triad-02 .dynamic-planes-item-icon-selected .icon-stroke {
-    stroke: var(--c-fuchsia-06);
+    stroke: var(--theme-neon-planes-triad-02-stroke);
 }
 
 .dynamic-planes-item.triad-03 .dynamic-planes-item-icon-selected .icon-stroke {
-    stroke: var(--c-green-06);
+    stroke: var(--theme-neon-planes-triad-03-stroke);
 }
 
 .dynamic-planes-item.triad-01 .dynamic-planes-item-icon-selected .icon-fill-stroke {
-    fill: var(--c-blue-07);
-    stroke: var(--c-blue-07);
+    fill: var(--theme-neon-planes-triad-01-stroke);
+    stroke: var(--theme-neon-planes-triad-01-stroke);
 }
 
 .dynamic-planes-item.triad-02 .dynamic-planes-item-icon-selected .icon-fill-stroke {
-    fill: var(--c-fuchsia-06);
-    stroke: var(--c-fuchsia-06);
+    fill: var(--theme-neon-planes-triad-02-stroke);
+    stroke: var(--theme-neon-planes-triad-02-stroke);
 }
 
 .dynamic-planes-item.triad-03 .dynamic-planes-item-icon-selected .icon-fill-stroke {
-    fill: var(--c-green-06);
-    stroke: var(--c-green-06);
+    fill: var(--theme-neon-planes-triad-03-stroke);
+    stroke: var(--theme-neon-planes-triad-03-stroke);
 }
 
 /* Page Meta
