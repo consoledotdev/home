@@ -381,3 +381,339 @@ let manageAsideContentPosition = (() => {
 //     sortBy = document.querySelector("[data-sort-feature-items-select]").value;
 //     sortItems(sortBy);
 // };
+
+class Sections {
+    constructor() {
+        this.outClass = "is-hidden";
+        this.wrapper = document.querySelector("[data-feature-content-wrapper]");
+        this.filterables = this.getFilterables();
+        this.sortables = this.getSortables();
+        this.groupables = this.getGroupables();
+    }
+
+    getFilterables() {
+        let filterables = [];
+        let els = document.querySelectorAll("[data-feature-items-section]");
+        for (const el of els) {
+            let items = el.querySelectorAll("[data-card]");
+            let filterable = {
+                section: el,
+                items: items,
+            };
+            filterables.push(filterable);
+        }
+        return filterables;
+    }
+
+    getSortables() {
+        let sortables = [];
+        let els = document.querySelectorAll("[data-feature-items]");
+        for (const el of els) {
+            let items = el.querySelectorAll("[data-card]");
+            let sortable = {
+                container: el,
+                items: items,
+            };
+            sortables.push(sortable);
+        }
+        return sortables;
+    }
+
+    getGroupables() {
+        return document.querySelectorAll("[data-card]");
+    }
+
+    filter(item, isIn) {
+        if (isIn) {
+            item.classList.remove(this.outClass);
+        } else {
+            item.classList.add(this.outClass);
+        }
+    }
+
+    updateSectionsCount() {
+        for (let f of this.filterables) {
+            let visibleItems = Array.prototype.slice.call(f.items).filter((i) => {
+                return !i.classList.contains(this.outClass);
+            });
+            let visibleCardsCount = visibleItems.length;
+            let count = f.section.querySelector("[data-feature-items-count]");
+            if (visibleCardsCount == 0) count.innerHTML = "";
+            else count.innerHTML = "(" + visibleCardsCount + ")";
+        }
+    }
+
+    updateSectionEmptyPlaceholderVisibility() {
+        for (let f of this.filterables) {
+            let visibleItems = Array.prototype.slice.call(f.items).filter((i) => {
+                return !i.classList.contains(this.outClass);
+            });
+            let visibleCardsCount = visibleItems.length;
+
+            let emptyPlaceholder = f.section.querySelector("[data-feature-card-empty-placeholder]");
+            if (visibleCardsCount <= 0) {
+                emptyPlaceholder.classList.remove(this.outClass);
+            } else {
+                emptyPlaceholder.classList.add(this.outClass);
+            }
+        }
+    }
+
+    replaceSorted(items, container) {
+        let emptyPlaceholder = container.querySelector("[data-feature-card-empty-placeholder]");
+        container.innerHTML = "";
+        items.forEach((item) => {
+            container.appendChild(item);
+        });
+        // add back empty placeholder dom
+        container.appendChild(emptyPlaceholder);
+    }
+
+    rebuildSectionsWithData(data, by) {
+        let sectionTemplate = this.filterables[0].section;
+        for (let s of this.filterables) {
+            s.section.remove();
+        }
+
+        for (const sect of data) {
+            let newSection = sectionTemplate.cloneNode(true);
+            newSection.querySelector("[data-feature-section-name]").innerHTML = sect.name;
+
+            let viewAllLink = newSection.querySelector("[data-view-all-link]");
+            viewAllLink.href = sect.viewAllLink.href;
+            if (sect.viewAllLink.isHidden) viewAllLink.classList.add("is-hidden");
+            else viewAllLink.classList.remove("is-hidden");
+
+            // empties section and fills back with new section cards
+            let itemsEl = newSection.querySelector("[data-feature-items]");
+            let emptyPlaceholder = newSection.querySelector("[data-feature-card-empty-placeholder]");
+            itemsEl.innerHTML = "";
+
+            for (let item of sect.items) {
+                itemsEl.appendChild(item);
+            }
+            itemsEl.appendChild(emptyPlaceholder);
+
+            this.wrapper.appendChild(newSection);
+        }
+
+        this.filterables = this.getFilterables();
+        this.sortables = this.getSortables();
+
+        this.updateSectionsCount();
+        this.updateSectionEmptyPlaceholderVisibility();
+    }
+
+    public() {
+        return {
+            getFilterables: () => {
+                return this.filterables;
+            },
+            filter: (item, isIn) => {
+                this.filter(item, isIn);
+            },
+            filteringDone: () => {
+                this.updateSectionsCount();
+                this.updateSectionEmptyPlaceholderVisibility();
+            },
+            getSortables: () => {
+                return this.sortables;
+            },
+            replaceSorted: (items, container) => {
+                this.replaceSorted(items, container);
+            },
+            getGroupables: () => {
+                return this.groupables;
+            },
+            rebuildWithData: (data, by) => {
+                this.rebuildSectionsWithData(data, by);
+            },
+        };
+    }
+}
+
+class Filter {
+    constructor(sections) {
+        this.sections = sections;
+        this.form = document.querySelector("[data-feature-filters-form]");
+        this.toggles = this.form.querySelectorAll("[data-filter='toggle']");
+        this.buttonClearAll = this.form.querySelector("[data-filter='clear-all']");
+        this.buttonSelectAll = this.form.querySelector("[data-filter='select-all']");
+        this.bindActions();
+        this.selectAll();
+    }
+
+    bindActions() {
+        this.toggles.forEach((t) => {
+            t.addEventListener("click", this.toggledCheck.bind(this));
+        });
+        this.buttonClearAll.addEventListener("click", this.clearAll.bind(this));
+        this.buttonSelectAll.addEventListener("click", this.selectAll.bind(this));
+    }
+
+    toggledCheck() {
+        this.setButtonsAllVisibility();
+        this.filter();
+    }
+
+    clearAll(e) {
+        if (e) e.preventDefault();
+        for (let t of this.toggles) t.checked = false;
+        this.setButtonsAllVisibility();
+        this.filter();
+    }
+
+    selectAll(e) {
+        if (e) e.preventDefault();
+        for (let t of this.toggles) t.checked = true;
+        this.setButtonsAllVisibility();
+        this.filter();
+    }
+
+    setButtonsAllVisibility() {
+        let activeFilterValues = this.getActiveFilterValues();
+        let totalFilters = this.toggles.length;
+        this.form.classList.remove("is-showing-all");
+        if (activeFilterValues.length == totalFilters) this.form.classList.add("is-showing-all");
+    }
+
+    filter() {
+        let activeFilterValues = this.getActiveFilterValues();
+        for (let section of this.sections.public().getFilterables()) {
+            for (let item of section.items) {
+                let taxonomy = item.dataset.taxonomy;
+                let match = false;
+
+                for (let value of activeFilterValues) {
+                    match = taxonomy.indexOf(value) >= 0 && true;
+                    if (match) break;
+                }
+
+                if (match) {
+                    this.sections.public().filter(item, true);
+                } else {
+                    this.sections.public().filter(item, false);
+                }
+            }
+        }
+        this.sections.public().filteringDone();
+    }
+
+    getActiveFilterValues() {
+        let activeFilterValues = [];
+        for (let t of this.toggles) {
+            if (t.checked) {
+                activeFilterValues.push(t.value);
+            }
+        }
+        return activeFilterValues;
+    }
+}
+
+class Sorter {
+    constructor(sections) {
+        this.sections = sections;
+        this.inputSorter = document.querySelector("[data-sort-feature-items-select]");
+        this.bind();
+    }
+
+    bind() {
+        this.inputSorter.addEventListener("change", this.sortBy.bind(this, null));
+    }
+
+    getSorted(items, by) {
+        if (by == "name") {
+            items.sort(function (a, b) {
+                if (a.dataset.name.toLowerCase() < b.dataset.name.toLowerCase()) {
+                    return -1;
+                }
+                if (a.dataset.name.toLowerCase() > b.dataset.name.toLowerCase()) {
+                    return 1;
+                }
+                return 0;
+            });
+        }
+        if (by == "date") {
+            items.sort(function (a, b) {
+                if (a.dataset.date < b.dataset.date) {
+                    return 1;
+                }
+                if (a.dataset.date > b.dataset.date) {
+                    return -1;
+                }
+                return 0;
+            });
+        }
+        return items;
+    }
+
+    sortBy(by) {
+        by = by ?? this.inputSorter.value;
+        for (let sortable of this.sections.public().getSortables()) {
+            let items = Array.prototype.slice.call(sortable.items);
+            let sortedItems = this.getSorted(items, by);
+            this.sections.public().replaceSorted(sortedItems, sortable.container);
+        }
+    }
+}
+
+class Grouper {
+    constructor(sections) {
+        this.sections = sections;
+        this.inputGrouper = document.querySelector("[data-group-feature-items-select]");
+        this.categories = this.getCategories();
+        this.bind();
+    }
+
+    bind() {
+        this.inputGrouper.addEventListener("change", this.groupBy.bind(this, null));
+    }
+
+    groupBy(by) {
+        by = by ?? this.inputGrouper.value;
+        let groupsData = this.getNewGroupsData(by);
+        this.sections.public().rebuildWithData(groupsData, by);
+    }
+
+    getNewGroupsData(by) {
+        let data = [];
+        let items = this.sections.public().getGroupables();
+        if (by == "none") {
+            let sect = {};
+            sect.name = "Latest Tools";
+            sect.items = [];
+            for (let item of items) {
+                sect.items.push(item);
+            }
+            sect.viewAllLink = {
+                isHidden: true,
+                href: "",
+            };
+            data.push(sect);
+        } else if (by == "category") {
+            this.categories.map((c) => {
+                let sect = {};
+                sect.name = c.label;
+                sect.items = [];
+                for (let item of items) {
+                    if (item.dataset.category == c.label) sect.items.push(item);
+                }
+                sect.viewAllLink = {
+                    isHidden: false,
+                    href: "/category/" + c.name + "/",
+                };
+                data.push(sect);
+            });
+        }
+        return data;
+    }
+
+    getCategories() {
+        let categories = document.querySelector("#feature-js").dataset.categories.split(",");
+        categories = categories.map((c) => {
+            let parts = c.split("|");
+            return { label: parts[0], name: parts[1] };
+        });
+        return categories;
+    }
+}
