@@ -981,6 +981,31 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
     vertical-align: middle;
 }
 
+@media (max-width: 511px) {
+    .footer-nav-left > .icon-console-mini {
+        width: var(--space3_5);
+        height: var(--space3_5);
+    }
+
+    .footer-pages,
+    .footer-phatic,
+    .footer-social {
+        margin-top: calc(var(--space1) * 1);
+    }
+
+    .footer-pages li,
+    .footer-phatic li,
+    .footer-social li {
+        margin-bottom: calc(var(--space2) + var(--space0));
+    }
+
+    .footer ul li .menu-item,
+    .footer ul li .menu-item:link,
+    .footer ul li .menu-item:visited {
+        font-size: var(--t-size0);
+    }
+}
+
 /* Logo
    ================================================================================================================ */
 
@@ -1632,10 +1657,6 @@ p.x-small {
 
         .main-nav .menu-popup-wrapper ul li {
             font-size: var(--t-size1);
-        }
-
-        .footer-nav ul li {
-            font-size: var(--t-size0);
         }
     }
 
