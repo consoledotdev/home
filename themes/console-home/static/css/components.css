@@ -23,13 +23,6 @@
     stroke: var(--theme-text-1);
 }
 
-@media (max-width: 480px) {
-    .icon {
-        width: 16px;
-        height: 16px;
-    }
-}
-
 /* .icon-menu
     --------------------------------------------------------------- */
 [class^="icon-menu-shape-"],
