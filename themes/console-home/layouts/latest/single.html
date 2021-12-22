@@ -1,8 +1,7 @@
 {{ define "main" }}
     <section class="page-section">
         <h2 class="title title-1">{{ .Title }}</h2>
-        <p><b>A weekly digest of the best developer tools</b> – We keep track of everything - dev tools, devops, cloud, and APIs - so you don't have to. This is the content of the newsletter sent on
-        {{ range first 1 $.Site.Data.toolslatest.items }}{{ index . "Scheduled for" | dateFormat "2 Jan 2006" }}{{ end }}.</p>
+        <p><b>A weekly digest of the best developer tools</b> – We keep track of everything - dev tools, devops, cloud, and APIs - so you don't have to.</p><p>{{- if $.Site.Params.forceNewsletterDate -}}We're currently taking a short break over the holidays. This was the content of the newsletter sent on&nbsp;{{- $.Site.Params.forceNewsletterDate -}}. We'll be back on&nbsp;{{- $.Site.Params.returnNewsletterDate -}}.{{- else -}}This is the content of the newsletter sent on {{ range first 1 $.Site.Data.toolslatest.items }}{{ index . "Scheduled for" | dateFormat "2 Jan 2006" }}{{ end }}.{{- end -}}</p>
         <br />
 
         <section class="page-section">

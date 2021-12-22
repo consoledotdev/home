@@ -12,6 +12,7 @@ from urllib.parse import urlparse
 
 import requests
 import favicon
+import tomli
 from dateutil.parser import parse
 from dateutil.relativedelta import relativedelta, TH
 
@@ -121,9 +122,20 @@ def process_item(item):
     return item
 
 
-# Get last Thursday
-today = date.today()
-last_thursday = today - relativedelta(weekday=TH(-1))
+# Open the hugo config.toml to see if there is a hard coded date
+with open("config.toml", "rb") as f:
+    toml_dict = tomli.load(f)
+
+# If there is a hard coded date, use that
+if 'date' in toml_dict:
+    date_str = toml_dict['params']['forceNewsletterDate']
+    last_thursday = parse(date_str)
+else:
+    # Get last Thursday
+    today = date.today()
+    last_thursday = today - relativedelta(weekday=TH(-1))
+
+print(f'Parsing tools for date: {last_thursday}')
 
 # Parse the tools JSON to get:
 # - The latest tools for /latest/
