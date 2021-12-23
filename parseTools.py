@@ -126,13 +126,14 @@ def process_item(item):
 with open("config.toml", "rb") as f:
     toml_dict = tomli.load(f)
 
+today = date.today()
+
 # If there is a hard coded date, use that
-if 'date' in toml_dict:
+if 'forceNewsletterDate' in toml_dict['params']:
     date_str = toml_dict['params']['forceNewsletterDate']
     last_thursday = parse(date_str)
 else:
     # Get last Thursday
-    today = date.today()
     last_thursday = today - relativedelta(weekday=TH(-1))
 
 print(f'Parsing tools for date: {last_thursday}')
