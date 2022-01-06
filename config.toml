@@ -34,5 +34,5 @@ section = [ "HTML", "RSS" ]
 
 [params]
 consoleSubscribers = "17k+"
-forceNewsletterDate = "" # YYYY-MM-DD
-returnNewsletterDate = "" # YYYY-MM-DD
+#forceNewsletterDate = "" # YYYY-MM-DD
+#returnNewsletterDate = "" # YYYY-MM-DD
