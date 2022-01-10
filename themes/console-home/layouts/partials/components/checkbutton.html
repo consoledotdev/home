@@ -1,5 +1,5 @@
 <div class="console-checkbutton{{ with .context.master }} console-checkbutton-master{{ end }}{{ with .context.color }} color-{{ . }}{{ end }}">
-	<input data-filter="{{with .dataFilter }}{{ . }}{{ end }}" type="checkbox" name="{{ .context.name }}-filter" id="{{ .context.name }}-filter" value="{{ .context.name }}"{{ with .context.checked }} checked{{ end }} onclick="blur()">
+	<input data-filter="{{with .dataFilter }}{{ . }}{{ end }}"{{with .dataFilterGroup }} data-filter-group="{{ . }}"{{ end }} data-label="{{- .context.label -}}" type="checkbox" name="{{ .context.name }}-filter" id="{{ .context.name }}-filter" value="{{ .context.name }}"{{ with .context.checked }} checked{{ end }} onclick="blur()">
 	<label for="{{ .context.name }}-filter" onclick="blur();">
 		{{- with .context.master }}
 			{{- partial "icons/minus.html" -}}

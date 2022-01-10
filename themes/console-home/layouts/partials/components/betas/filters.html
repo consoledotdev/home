@@ -14,7 +14,7 @@
 				{{ if eq .name "weekly-pick" }}
 					{{ $details = merge . (dict "color" "green") }}
 				{{ end }}
-				{{ partial "components/checkbutton.html" (dict "context" $details "action" "filtering.toggledCheck" "dataFilter" "toggle" ) }}
+				{{ partial "components/checkbutton.html" (dict "context" $details "action" "filtering.toggledCheck" "dataFilter" "toggle" "dataFilterGroup" "category" ) }}
 			{{ end }}
 		</div>
 		<div>

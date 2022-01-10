@@ -1431,6 +1431,8 @@ p {
     margin: 0;
     color: var(--theme-text-2);
     transition: var(--a-micro);
+    font-weight: 300;
+    letter-spacing: 0.06em;
 }
 
 p em {

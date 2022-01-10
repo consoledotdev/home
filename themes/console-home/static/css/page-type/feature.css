@@ -42,6 +42,7 @@
 
 .feature-split .feature-content-wrapper {
     flex: 1 1 auto;
+    max-width: 100%;
 }
 
 .inline-filters-wrapper .box-collapsible.is-expanded .box-collapsible-content {

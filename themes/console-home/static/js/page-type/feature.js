@@ -308,6 +308,13 @@ class Filter {
         this.toggles = this.form.querySelectorAll("[data-filter='toggle']");
         this.buttonClearAll = this.form.querySelector("[data-filter='clear-all']");
         this.buttonSelectAll = this.form.querySelector("[data-filter='select-all']");
+        this.collapsedInfo = document.querySelector("[data-inline-filters-wrapper] [data-box-collapsible-info]");
+        this.collapsedTitle = document.querySelector("[data-inline-filters-wrapper] [data-box-collapsible-title]");
+        this.initialCollapsedTitle = this.collapsedTitle.innerHTML;
+        this.dictionary = {
+            tag: ["tag", "tags"],
+            category: ["category", "categories"],
+        };
         this.bindActions();
         this.selectAll();
     }
@@ -322,6 +329,7 @@ class Filter {
 
     toggledCheck() {
         this.setButtonsAllVisibility();
+        this.updateInfo();
         this.filter();
     }
 
@@ -329,6 +337,7 @@ class Filter {
         if (e) e.preventDefault();
         for (let t of this.toggles) t.checked = false;
         this.setButtonsAllVisibility();
+        this.updateInfo();
         this.filter();
     }
 
@@ -336,25 +345,50 @@ class Filter {
         if (e) e.preventDefault();
         for (let t of this.toggles) t.checked = true;
         this.setButtonsAllVisibility();
+        this.updateInfo();
         this.filter();
     }
 
     setButtonsAllVisibility() {
-        let activeFilterValues = this.getActiveFilterValues();
+        let totalActiveFilters = this.getActiveFilterValues().all.length;
         let totalFilters = this.toggles.length;
         this.form.classList.remove("is-showing-all");
-        if (activeFilterValues.length == totalFilters) this.form.classList.add("is-showing-all");
+        if (totalActiveFilters == totalFilters) this.form.classList.add("is-showing-all");
+    }
+
+    updateInfo() {
+        let activeFilterValues = this.getActiveFilterValues();
+        let totalFilters = this.toggles.length;
+
+        if (activeFilterValues.all.length == totalFilters) {
+            this.collapsedTitle.innerHTML = this.initialCollapsedTitle;
+            this.collapsedInfo.innerHTML = "";
+            this.collapsedInfo.classList.remove("is-visible");
+        } else {
+            let strings = [];
+            Object.keys(activeFilterValues.byGroup).forEach((k, i) => {
+                let string = activeFilterValues.byGroup[k].length + " ";
+                if (activeFilterValues.byGroup[k].length == 1) string += this.dictionary[k][0];
+                else string += this.dictionary[k][1];
+                strings.push(string);
+            });
+
+            this.collapsedTitle.innerHTML = strings.join(", ");
+            let activeFilterslabels = activeFilterValues.all.map((v) => v.label);
+            this.collapsedInfo.innerHTML = activeFilterslabels.join(", ") + ".";
+            this.collapsedInfo.classList.add("is-visible");
+        }
     }
 
     filter() {
-        let activeFilterValues = this.getActiveFilterValues();
+        let allActiveFilterValues = this.getActiveFilterValues().all;
         for (let section of this.sections.public().getFilterables()) {
             for (let item of section.items) {
                 let taxonomy = item.dataset.taxonomy;
                 let match = false;
 
-                for (let value of activeFilterValues) {
-                    match = taxonomy.indexOf(value) >= 0 && true;
+                for (let value of allActiveFilterValues) {
+                    match = taxonomy.indexOf(value.name) >= 0 && true;
                     if (match) break;
                 }
 
@@ -369,10 +403,19 @@ class Filter {
     }
 
     getActiveFilterValues() {
-        let activeFilterValues = [];
+        let activeFilterValues = {
+            all: [],
+            byGroup: {},
+        };
         for (let t of this.toggles) {
+            if (!activeFilterValues.byGroup[t.dataset.filterGroup]) activeFilterValues.byGroup[t.dataset.filterGroup] = [];
             if (t.checked) {
-                activeFilterValues.push(t.value);
+                let value = {
+                    name: t.value,
+                    label: t.dataset.label,
+                };
+                activeFilterValues.byGroup[t.dataset.filterGroup].push(value);
+                activeFilterValues.all.push(value);
             }
         }
         return activeFilterValues;
