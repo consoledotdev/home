@@ -2,7 +2,7 @@
 	<form action="" class="console-filters is-showing-all" data-feature-filters-form>
 		<div class="sort-by">
 			<label for="sort-feature-items" class="console-label console-label-small">Sort by</label>
-			<select class="console-select console-input-small" name="" id="sort-feature-items" data-sort-feature-items-select onchange="blur(); sortItems()">
+			<select class="console-select console-input-small" name="" id="sort-feature-items" data-sort-feature-items-select onchange="blur()">
 				<option value="date" selected>Date</option>
 				<option value="name">Name</option>
 			</select>
@@ -14,14 +14,14 @@
 				{{ if eq .name "weekly-pick" }}
 					{{ $details = merge . (dict "color" "green") }}
 				{{ end }}
-				{{ partial "components/checkbutton.html" (dict "context" $details "action" "filtering.toggledCheck" ) }}
+				{{ partial "components/checkbutton.html" (dict "context" $details "action" "filtering.toggledCheck" "dataFilter" "toggle" "dataFilterGroup" "category" ) }}
 			{{ end }}
 		</div>
 		<div>
-			<button onclick="blur(); filtering.selectedAllChecks(); return false" class="console-button-text console-button-small select-all" title="Select all">
+			<button data-filter="select-all" onclick="blur()" class="console-button-text console-button-small select-all" title="Select all">
 				<span>Select all</span>
 			</button>
-			<button onclick="blur(); filtering.clearedAllChecks(); return false" class="console-button-text console-button-small clear-all" title="Clear all">
+			<button data-filter="clear-all" onclick="blur()" class="console-button-text console-button-small clear-all" title="Clear all">
 				<span>Clear all</span>
 			</button>
 		</div>

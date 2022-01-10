@@ -1,9 +1,14 @@
-// first sorting when the page is loaded to order data from json
-sortItems("name");
-sortItems("date");
+document.addEventListener("DOMContentLoaded", (event) => {
+    let sections = new Sections();
 
-// first grouping when the page is loaded
-groupItems();
+    let filter = new Filter(sections, false);
 
-// first count when the page is loaded
-filtering.selectedAllChecks();
+    let sorter = new Sorter(sections);
+    sorter.sortBy("name");
+    sorter.sortBy("date");
+
+    let grouper = new Grouper(sections);
+    grouper.groupBy();
+
+    sorter.sortBy();
+});
