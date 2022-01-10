@@ -783,6 +783,10 @@ Code, Android Studio and all JetBrains IDEs. Support for more is
 members can also start collaborating directly from the browser without the need
 to install and set-up an IDE.
 
+Duckly web-app offers a web based IDE (VSCode) which provides all the features
+available on native Visual Studio Code. This makes it easier for guests to
+participate in coding sessions without needing to install anything.
+
 Team members can see any active sessions and join directly from the Duckly
 dashboard. Session URLs generated are human readable and can be typed easily,
 unlike many other tools. The host can invite participants with a team URL, which
