@@ -1428,7 +1428,13 @@ body.page-advertise.checkpoint-campaigns {
 .page-section-advertise.social .quotes {
     margin-top: var(--space4_5);
     width: 85%;
-    max-width: 760px;
+    max-width: 600px;
+}
+
+@media (min-width: 1280px) {
+    .page-section-advertise.social .quotes {
+        max-width: 700px;
+    }
 }
 
 @media (max-width: 600px) {

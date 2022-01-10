@@ -43,7 +43,7 @@ a {
 p,
 quote,
 li {
-    max-width: 760px;
+    max-width: 700px;
 }
 
 /* Hero
@@ -1729,7 +1729,12 @@ p.x-small {
         flex: 0 0 auto;
         width: 120px;
         max-width: 380px;
-        margin-left: 6vw;
+    }
+
+    @media (max-width: 940px) {
+        .main-feature-article-content-split aside {
+            margin-left: 7.25vw;
+        }
     }
 }
 
@@ -1762,7 +1767,7 @@ p.x-small {
     }
 
     .main-feature-article-content {
-        max-width: 760px;
+        max-width: 700px;
     }
 
     .main-feature-article p,
