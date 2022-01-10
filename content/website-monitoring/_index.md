@@ -247,9 +247,9 @@ requests. Datadog also supports recording browser sessions and then
 automatically simulating them to ensure that specific transaction flows are
 continuously tested. Datadog synthetic monitoring configuration supports the
 ability to define test frequency in seconds, minutes, hours and days with the
-most frequent test option being every second. Billing is based on the number of
-executions per month so can become very expensive for the more frequent test
-options.
+most frequent test option being every 5 minutes and least frequent option being
+every week. Billing is based on the number of executions per month so can
+become very expensive for the more frequent test options.
 
 {{< div--close >}}
 
@@ -764,14 +764,12 @@ period of time, which means the web UI is very busy. There are lots of options
 and text all over the UI. This means it is powerful, but not particularly easy
 to use. One reason for this is that Site24x7 also supports APM, server, cloud,
 network, and log monitoring. We’re only assessing website monitoring in this
-review, but those features are all crammed into the same UI. There is also no
-dark mode.
+review, but those features are all crammed into the same UI.
 
 When you get into the more advanced features, such as deploying your own private
 test locations, limitations in the technical approach of the product reveal
 themselves. It is strange to deploy a test agent on Linux that has a graphical
-installer rather than using OS packages. There is a link to a “silent” install
-option in the web UI, but it was a 404.
+installer rather than using OS packages.
 
 {{< div--close >}}
 
@@ -806,8 +804,7 @@ New Relic’s pricing is based on the total amount of data ingested per month.
 This works well for log monitoring or tracing, but becomes difficult to
 understand when applied to website monitoring. New Relic solves this by
 indicating how many checks can be executed as part of your quota when
-configuring a check. 100GB allows 100,000,000 checks, which works out to be a
-very generous free quota.
+configuring a check.
 
 {{< div--close >}}
 
@@ -1105,9 +1102,8 @@ RapidSpike is primarily a website monitoring service, which means it mainly
 supports HTTP(S) checks against a URL, including sub-pages and multi-step
 requests. However, it also supports Ping checks against IP addresses (or
 domains) which it refers to as server monitoring. These can include port scans
-where it will detect and scan open ports. It is not possible to configure which
-ports it scans for. Check frequency is configurable, down to every 1 minute or
-as infrequently as every 60 minutes.
+where it will detect and scan open ports. Check frequency is configurable,
+down to every 1 minute or as infrequently as every 60 minutes.
 
 As part of the website monitoring, RapidSpike includes multiple “Insights”
 checks. These range from domain expiry and SSL certificate validation to SSL
