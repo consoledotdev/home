@@ -16,9 +16,9 @@ Filter.prototype.filter = function () {
                 }
             }
             if (match) {
-                this.sections.public().filter(item, true);
+                this.sections.public().filter("buttons", item, true);
             } else {
-                this.sections.public().filter(item, false);
+                this.sections.public().filter("buttons", item, false);
             }
         }
     }
@@ -33,4 +33,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let sorter = new Sorter(sections);
     sorter.sortBy("name");
     sorter.sortBy("date");
+
+    let searcher = new Searcher(sections, filter);
 });

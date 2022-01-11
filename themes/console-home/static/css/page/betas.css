@@ -11,7 +11,11 @@
     transition: var(--a-micro);
 }
 
-.beta-card.is-hidden {
+.beta-card.is-hidden-by-buttons {
+    display: none;
+}
+
+.beta-card.is-hidden-by-search {
     display: none;
 }
 
