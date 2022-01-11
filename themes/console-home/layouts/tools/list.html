@@ -124,7 +124,7 @@
 				{{ $filters := partial "components/tools/filters.html" (dict "dot" $.Site.Data.toolsfilters ) }}
 				{{ partial "components/box-collapsible.html" (dict "title" "Filters" "icon" "filter.html" "content" $filters) }}
 			</section>
-			<section class="page-section" data-feature-items-section>
+			<section class="page-section" data-feature-items-section="latest-tools">
 				<div class="page-section-heading">
 					<div class="left">
 						<h3 class="title title-2"><span data-feature-section-name>Latest Tools</span><span class="count" data-feature-items-count></span></h3>
@@ -142,7 +142,8 @@
 				</div>
 				<div class="feature-items" data-feature-items>
 					{{ range $.Site.Data.toolsreviewed.items }}
-						{{ partial "components/tools/card.html" . }}
+						{{ $dot := merge . (dict "defaultGroup" "latest-tools") }}
+						{{ partial "components/tools/card.html" $dot }}
 					{{ end }}
 					{{ partial "components/feature/card-empty.html" (dict "context" . "itemName" "Tools" ) }}
 				</div>

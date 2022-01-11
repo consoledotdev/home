@@ -249,9 +249,11 @@ class Sections {
             newSection.querySelector("[data-feature-section-name]").innerHTML = sect.name;
 
             let viewAllLink = newSection.querySelector("[data-view-all-link]");
-            viewAllLink.href = sect.viewAllLink.href;
-            if (sect.viewAllLink.isHidden) viewAllLink.classList.add("is-hidden");
-            else viewAllLink.classList.remove("is-hidden");
+            if (viewAllLink) {
+                viewAllLink.href = sect.viewAllLink.href;
+                if (sect.viewAllLink.isHidden) viewAllLink.classList.add("is-hidden");
+                else viewAllLink.classList.remove("is-hidden");
+            }
 
             // empties section and fills back with new section cards
             let itemsEl = newSection.querySelector("[data-feature-items]");
@@ -473,6 +475,7 @@ class Grouper {
     constructor(sections) {
         this.sections = sections;
         this.inputGrouper = document.querySelector("[data-group-feature-items-select]");
+        this.defaultGroups = this.getDefaultGroups();
         this.categories = this.getCategories();
         this.bind();
     }
@@ -491,17 +494,19 @@ class Grouper {
         let data = [];
         let items = this.sections.public().getGroupables();
         if (by == "none") {
-            let sect = {};
-            sect.name = "Latest Tools";
-            sect.items = [];
-            for (let item of items) {
-                sect.items.push(item);
-            }
-            sect.viewAllLink = {
-                isHidden: true,
-                href: "",
-            };
-            data.push(sect);
+            this.defaultGroups.map((c) => {
+                let sect = {};
+                sect.name = c.label;
+                sect.items = [];
+                for (let item of items) {
+                    if (item.dataset.defaultGroup == c.name) sect.items.push(item);
+                }
+                sect.viewAllLink = {
+                    isHidden: true,
+                    href: "",
+                };
+                data.push(sect);
+            });
         } else if (by == "category") {
             this.categories.map((c) => {
                 let sect = {};
@@ -518,6 +523,19 @@ class Grouper {
             });
         }
         return data;
+    }
+
+    getDefaultGroups() {
+        let groups = [];
+        this.sections.filterables.forEach((sect) => {
+            let name = sect.section.dataset.featureItemsSection;
+            let label = sect.section.querySelector("[data-feature-section-name]").innerHTML;
+            groups.push({
+                label: label,
+                name: name,
+            });
+        });
+        return groups;
     }
 
     getCategories() {
