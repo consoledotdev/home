@@ -1,8 +1,11 @@
 <div class="feature-filters" data-feature-filters>
 	<form action="" class="console-filters is-showing-all" data-feature-filters-form>
-		<div style="display: inline-block; position: relative;">
-			<input class="console-input-text console-input-small" type="text" placeholder="Search..." />
-			<span onmousedown="event.preventDefault(); input = this.previousElementSibling; input.focus(); input.value = ''; input.dispatchEvent(new Event('change'));" class="console-input-text-cancel">{{ partial "icons/cancel.html"}}</span>
+		<div class="search">
+			<label for="search-feature-items" class="console-label console-label-small">Search</label>
+			<div class="search-feature-items-input-wrapper" style="display: inline-block; position: relative;">
+				<input id="search-feature-items" name="search-string" class="console-input-text console-input-small" type="text" placeholder="Search..." />
+				<span onmousedown="event.preventDefault(); input = this.previousElementSibling; input.focus(); input.value = ''; input.dispatchEvent(new Event('change'));" class="console-input-text-cancel">{{ partial "icons/cancel.html"}}</span>
+			</div>
 		</div>
 		<div class="sort-by">
 			<label for="sort-feature-items" class="console-label console-label-small">Sort by</label>
