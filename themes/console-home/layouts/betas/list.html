@@ -42,7 +42,7 @@
 		</aside>
 		<div class="feature-content-wrapper" data-aside-anchor>
             <section class="page-section inline-filters-wrapper" data-inline-filters-wrapper>
-				{{ $filters := partial "components/betas/filters.html" (dict "items" $.Site.Data.betasfilters.items ) }}
+				{{ $filters := partial "components/betas/filters.html" (dict "dot" $.Site.Data.betasfilters ) }}
 				{{ partial "components/box-collapsible.html" (dict "title" "Filters" "icon" "filter.html" "content" $filters) }}
 			</section>
 			<section class="page-section" data-feature-items-section>
