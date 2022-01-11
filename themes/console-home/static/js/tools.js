@@ -11,4 +11,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     grouper.groupBy();
 
     sorter.sortBy();
+
+    let searcher = new Searcher(sections, filter);
 });
