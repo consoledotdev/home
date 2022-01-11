@@ -15,17 +15,17 @@
 			</select>
 		</div>
 		<div class="show-by">
-			<label class="console-label console-label-small">Tag</label>
-			{{ range .dot.tagItems }}
-				{{ $details := merge . (dict "color" "blue") }}
-				{{ partial "components/checkbutton.html" (dict "context" $details "action" "filtering.toggledCheck" "dataFilter" "toggle" "dataFilterGroup" "tag" ) }}
-			{{ end }}
-		</div>
-		<div class="show-by">
 			<label class="console-label console-label-small">Category</label>
 			{{ range .dot.categoryItems }}
 				{{ $details := merge . (dict "color" "blue") }}
 				{{ partial "components/checkbutton.html" (dict "context" $details "action" "filtering.toggledCheck" "dataFilter" "toggle" "dataFilterGroup" "category" ) }}
+			{{ end }}
+		</div>
+		<div class="show-by">
+			<label class="console-label console-label-small">Tag</label>
+			{{ range .dot.tagItems }}
+				{{ $details := merge . (dict "color" "blue") }}
+				{{ partial "components/checkbutton.html" (dict "context" $details "action" "filtering.toggledCheck" "dataFilter" "toggle" "dataFilterGroup" "tag" ) }}
 			{{ end }}
 		</div>
 		<div>
