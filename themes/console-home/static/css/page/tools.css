@@ -1,5 +1,12 @@
 /* Console Tools
    ========================================================================== */
+.view-all-link {
+    display: none;
+}
+
+.view-all-link.is-hidden {
+    display: none;
+}
 
 .inline-filters-wrapper .box-collapsible.is-expanded .box-collapsible-content {
     max-height: 540px;
@@ -103,14 +110,6 @@ p.tool-card-description {
 
 .tool-card-content .top > .right > .taxonomy > *:not(:last-child) {
     margin-right: var(--space3);
-}
-
-.view-all-link {
-    display: none;
-}
-
-.view-all-link.is-hidden {
-    display: none;
 }
 
 .tool-card .bottom .details {
