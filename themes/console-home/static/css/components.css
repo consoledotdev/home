@@ -1157,6 +1157,42 @@ select.console-select::-ms-expand {
     display: none;
 }
 
+input.console-input-text + .console-input-text-cancel {
+    position: absolute;
+    display: inline-block;
+    background: var(--c-blue-06-main);
+    padding: var(--space0);
+    width: var(--space2_5);
+    height: var(--space2_5);
+    border-radius: 50%;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: var(--a--micro);
+    opacity: 0;
+}
+
+input.console-input-text + .console-input-text-cancel .icon {
+    display: inline-block;
+    vertical-align: top;
+    width: var(--space2);
+    height: var(--space2);
+}
+
+input.console-input-text:not(:placeholder-shown):focus + .console-input-text-cancel {
+    opacity: 0.6;
+}
+
+input.console-input-text:not(:placeholder-shown):focus + .console-input-text-cancel:hover {
+    opacity: 1;
+}
+
+input.console-input-text:not(:placeholder-shown):focus + .console-input-text-cancel:active {
+    opacity: 1;
+    background: var(--c-blue-08);
+}
+
 /* Label
    ================================================================================================================ */
 .console-label {
