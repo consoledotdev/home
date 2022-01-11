@@ -3,7 +3,7 @@
 		<div class="search">
 			<label for="search-feature-items" class="console-label console-label-small">Search</label>
 			<div class="search-feature-items-input-wrapper" style="display: inline-block; position: relative;">
-				<input id="search-feature-items" name="search-string" class="console-input-text console-input-small" type="text" placeholder="Search..." />
+				<input id="search-feature-items" name="search-string" class="console-input-text console-input-small" type="text" placeholder="Search..." data-search-feature-items-input />
 				<span onmousedown="event.preventDefault(); input = this.previousElementSibling; input.focus(); input.value = ''; input.dispatchEvent(new Event('change'));" class="console-input-text-cancel">{{ partial "icons/cancel.html"}}</span>
 			</div>
 		</div>
