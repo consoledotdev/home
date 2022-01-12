@@ -53,7 +53,7 @@ infrastructure the abilities of a senior solutions architect. Even for the more
 experienced devops professionals, the aim is to make their jobs easier by giving
 them access to the data they want in the format they need.
 
-## How does it work alongside tools like Terraform?
+### How does it work alongside tools like Terraform?
 
 We do quite a bit of integration with IaC. For some of our enterprise clients,
 we have this tool we internally call “Terra-Forms” where we take a pre-existing
