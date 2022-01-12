@@ -153,7 +153,11 @@ let manageAsideContentPosition = (() => {
 
 class Sections {
     constructor() {
-        this.outClass = "is-hidden";
+        this.hiddenClass = {
+            buttons: "is-hidden-by-buttons",
+            search: "is-hidden-by-search",
+            generic: "is-hidden",
+        };
         this.wrapper = document.querySelector("[data-feature-content-wrapper]");
         this.filterables = this.getFilterables();
         this.sortables = this.getSortables();
@@ -192,18 +196,18 @@ class Sections {
         return document.querySelectorAll("[data-card]");
     }
 
-    filter(item, isIn) {
+    filter(by, item, isIn) {
         if (isIn) {
-            item.classList.remove(this.outClass);
+            item.classList.remove(this.hiddenClass[by]);
         } else {
-            item.classList.add(this.outClass);
+            item.classList.add(this.hiddenClass[by]);
         }
     }
 
     updateSectionsCount() {
         for (let f of this.filterables) {
             let visibleItems = Array.prototype.slice.call(f.items).filter((i) => {
-                return !i.classList.contains(this.outClass);
+                return !(i.classList.contains(this.hiddenClass.buttons) || i.classList.contains(this.hiddenClass.search));
             });
             let visibleCardsCount = visibleItems.length;
             let count = f.section.querySelector("[data-feature-items-count]");
@@ -215,15 +219,15 @@ class Sections {
     updateSectionEmptyPlaceholderVisibility() {
         for (let f of this.filterables) {
             let visibleItems = Array.prototype.slice.call(f.items).filter((i) => {
-                return !i.classList.contains(this.outClass);
+                return !(i.classList.contains(this.hiddenClass.buttons) || i.classList.contains(this.hiddenClass.search));
             });
             let visibleCardsCount = visibleItems.length;
 
             let emptyPlaceholder = f.section.querySelector("[data-feature-card-empty-placeholder]");
             if (visibleCardsCount <= 0) {
-                emptyPlaceholder.classList.remove(this.outClass);
+                emptyPlaceholder.classList.remove(this.hiddenClass.generic);
             } else {
-                emptyPlaceholder.classList.add(this.outClass);
+                emptyPlaceholder.classList.add(this.hiddenClass.generic);
             }
         }
     }
@@ -250,9 +254,9 @@ class Sections {
 
             let viewAllLink = newSection.querySelector("[data-view-all-link]");
             if (viewAllLink) {
-                viewAllLink.href = sect.viewAllLink.href;
-                if (sect.viewAllLink.isHidden) viewAllLink.classList.add("is-hidden");
-                else viewAllLink.classList.remove("is-hidden");
+              viewAllLink.href = sect.viewAllLink.href;
+              if (sect.viewAllLink.isHidden) viewAllLink.classList.add(this.hiddenClass.generic);
+              else viewAllLink.classList.remove(this.hiddenClass.generic);
             }
 
             // empties section and fills back with new section cards
@@ -280,8 +284,8 @@ class Sections {
             getFilterables: () => {
                 return this.filterables;
             },
-            filter: (item, isIn) => {
-                this.filter(item, isIn);
+            filter: (by, item, isIn) => {
+                this.filter(by, item, isIn);
             },
             filteringDone: () => {
                 this.updateSectionsCount();
@@ -313,6 +317,7 @@ class Filter {
         this.collapsedInfo = document.querySelector("[data-inline-filters-wrapper] [data-box-collapsible-info]");
         this.collapsedTitle = document.querySelector("[data-inline-filters-wrapper] [data-box-collapsible-title]");
         this.initialCollapsedTitle = this.collapsedTitle.innerHTML;
+        this.searchTerm = "";
         this.dictionary = {
             tag: ["tag", "tags"],
             category: ["category", "categories"],
@@ -358,14 +363,26 @@ class Filter {
         if (totalActiveFilters == totalFilters) this.form.classList.add("is-showing-all");
     }
 
-    updateInfo() {
+    updateInfo(info) {
+        if (info) {
+            if (info.type == "search") {
+                this.searchTerm = info.content;
+            }
+        }
+        let searchFeedback = this.searchTerm != "" ? 'Searching "' + this.searchTerm + '"' : "";
+
         let activeFilterValues = this.getActiveFilterValues();
         let totalFilters = this.toggles.length;
 
         if (activeFilterValues.all.length == totalFilters) {
             this.collapsedTitle.innerHTML = this.initialCollapsedTitle;
-            this.collapsedInfo.innerHTML = "";
-            this.collapsedInfo.classList.remove("is-visible");
+            if (searchFeedback != "") {
+                this.collapsedInfo.innerHTML = searchFeedback + ".";
+                this.collapsedInfo.classList.add("is-visible");
+            } else {
+                this.collapsedInfo.innerHTML = "";
+                this.collapsedInfo.classList.remove("is-visible");
+            }
         } else {
             let strings = [];
             Object.keys(activeFilterValues.byGroup).forEach((k, i) => {
@@ -374,11 +391,14 @@ class Filter {
                 else string += this.dictionary[k][1];
                 strings.push(string);
             });
-
             this.collapsedTitle.innerHTML = strings.join(", ");
-            let activeFilterslabels = activeFilterValues.all.map((v) => v.label);
-            this.collapsedInfo.innerHTML = activeFilterslabels.join(", ") + ".";
-            this.collapsedInfo.classList.add("is-visible");
+
+            let activeFilterslabels = activeFilterValues.all.map((v) => v.label).join(", ");
+            if (activeFilterslabels != "" || searchFeedback != "") {
+                if (activeFilterslabels == "") activeFilterslabels = "nothing";
+                this.collapsedInfo.innerHTML = (searchFeedback != "" ? searchFeedback + " in " : "") + activeFilterslabels + ".";
+                this.collapsedInfo.classList.add("is-visible");
+            }
         }
     }
 
@@ -395,9 +415,9 @@ class Filter {
                 }
 
                 if (match) {
-                    this.sections.public().filter(item, true);
+                    this.sections.public().filter("buttons", item, true);
                 } else {
-                    this.sections.public().filter(item, false);
+                    this.sections.public().filter("buttons", item, false);
                 }
             }
         }
@@ -421,6 +441,14 @@ class Filter {
             }
         }
         return activeFilterValues;
+    }
+
+    public() {
+        return {
+            updateInfoWith(info) {
+                this.updateInfo(info);
+            },
+        };
     }
 }
 
@@ -545,5 +573,69 @@ class Grouper {
             return { label: parts[0], name: parts[1] };
         });
         return categories;
+    }
+}
+
+class Searcher {
+    constructor(sections, filter) {
+        this.sections = sections;
+        this.filter = filter;
+        this.input = document.querySelector("[data-search-feature-items-input]");
+        this.bind();
+    }
+
+    bind() {
+        this.input.addEventListener("change", this.search.bind(this, null));
+        this.input.addEventListener("keyup", this.search.bind(this, null));
+    }
+
+    search(term) {
+        term = term ?? this.sanitizeInput(this.input.value);
+
+        this.filter.public().updateInfoWith.call(this.filter, {
+            type: "search",
+            content: term,
+        });
+        this.filterByTerm(term);
+    }
+
+    filterByTerm(term) {
+        let ignoreCase = true;
+        if (term[0] == '"' && term[term.length - 1] == '"') ignoreCase = false;
+        if (ignoreCase) term = term.toLowerCase();
+        term = term.replace(/['"]+/g, "");
+
+        for (let section of this.sections.public().getFilterables()) {
+            for (let item of section.items) {
+                let match = false;
+                let searchables = item.querySelectorAll("[data-searchable]");
+                searchables.forEach((searchable) => {
+                    let content = searchable.textContent;
+                    if (ignoreCase) content = content.toLowerCase();
+                    if (content.indexOf(term) >= 0) match = true;
+                });
+
+                if (match) {
+                    this.sections.public().filter("search", item, true);
+                } else {
+                    this.sections.public().filter("search", item, false);
+                }
+            }
+        }
+        this.sections.public().filteringDone();
+    }
+
+    sanitizeInput(value) {
+        const escapes = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#x27;",
+            "/": "&#x2F;",
+            "`": "&grave;",
+        };
+        const reg = /[&<>"'`/]/gi;
+        return value.replace(reg, (match) => escapes[match]);
     }
 }

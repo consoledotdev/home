@@ -8,7 +8,7 @@
 			<a onclick="blur();" class="card-link" href="{{ $url }}" target="_blank" rel="noopener{{ if eq .Sponsored "TRUE" }} sponsored{{ end }}"><span>Visit {{ partial "icons/external-link.html" }}</span></a>
 			<div class="left">
             	{{ partial "components/thumbnail-vendor.html" (dict "name" ( index . "Company/Org" ) "image" (print "/" (index . "favicon") ) "category" (replace (lower $topcategory) " " "-") ) }}
-				<h4 class="title title-3">
+				<h4 data-searchable class="title title-3">
 					{{- $org := index . "Company/Org" -}}
 					{{- $name := index . "Tool/Product/Project" -}}
 					{{- if in $name $org -}}{{ $name }}{{- else -}}{{ $name }}, from {{ $org }}{{- end -}}
@@ -21,7 +21,7 @@
 						{{- $name := index . "Tool/Product/Project" -}}
 						{{- if in $name $org -}}{{ $name }}{{- else -}}{{ $name }}, from {{ $org }}{{- end -}}
 					</h4>
-					<p class="tool-card-description">{{ index . "What is it?" }}</p>
+					<p data-searchable class="tool-card-description">{{ index . "What is it?" }}</p>
 				</div>
 				<div class="taxonomy">
 					<div class="categories">
@@ -37,8 +37,8 @@
 		</div>
 		<div class="bottom">
 			<div class="like-dont-like col-2">
-				<div class="left"><p class="small"><span>{{ partial "icons/like.html" }} What we like:</span> {{ index . "What we like" }}</p></div>
-				<div class="right"><p class="small"><span>{{ partial "icons/dislike.html" }} What we don't like:</span> {{ index . "What we dislike" }}</p></div>
+				<div class="left"><p data-searchable class="small"><span>{{ partial "icons/like.html" }} What we like:</span> {{ index . "What we like" }}</p></div>
+				<div class="right"><p data-searchable class="small"><span>{{ partial "icons/dislike.html" }} What we don't like:</span> {{ index . "What we dislike" }}</p></div>
 			</div>
 			<div class="details">
 				<div class="left">

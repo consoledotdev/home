@@ -14,7 +14,7 @@
 	<div class="beta-card-content">
 		<div class="left">
             {{ partial "components/thumbnail-vendor.html" (dict "name" ( index . "Company/Org" ) "image" ( print "/" (index . "favicon") ) "category" (replace (lower .Category) " " "-") ) }}
-			<h4 class="title title-3">
+			<h4 data-searchable class="title title-3">
 				{{- $org := index . "Company/Org" -}}
 				{{- $name := index . "Tool/Product/Project" -}}
 				{{- if in $name $org -}}{{ $name }}{{- else -}}{{ $name }}, from {{ $org }}{{- end -}}
@@ -27,7 +27,7 @@
 					{{- $name := index . "Tool/Product/Project" -}}
 					{{- if in $name $org -}}{{ $name }}{{- else -}}{{ $name }}, from {{ $org }}{{- end -}}
 				</h4>
-				<p class="beta-card-description">{{ index . "What is it?" }}</p>
+				<p data-searchable class="beta-card-description">{{ index . "What is it?" }}</p>
 			</div>
 			<div class="taxonomy">
 				<div class="categories">

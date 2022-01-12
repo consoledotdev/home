@@ -1,5 +1,12 @@
 <div class="feature-filters" data-feature-filters>
 	<form action="" class="console-filters is-showing-all" data-feature-filters-form>
+		<div class="search">
+			<label for="search-feature-items" class="console-label console-label-small">Search</label>
+			<div class="search-feature-items-input-wrapper" style="display: inline-block; position: relative;">
+				<input id="search-feature-items" name="search-string" class="console-input-text console-input-small" type="text" placeholder="Search..." data-search-feature-items-input />
+				<span onmousedown="event.preventDefault(); input = this.previousElementSibling; input.focus(); input.value = ''; input.dispatchEvent(new Event('change'));" class="console-input-text-cancel">{{ partial "icons/cancel.html"}}</span>
+			</div>
+		</div>
 		<div class="sort-by">
 			<label for="sort-feature-items" class="console-label console-label-small">Sort by</label>
 			<select class="console-select console-input-small" name="" id="sort-feature-items" data-sort-feature-items-select onchange="blur()">
