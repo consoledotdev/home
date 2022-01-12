@@ -13,8 +13,10 @@
     <link rel="preload" href="/fonts/rubik-v12-latin-300italic.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="/fonts/rubik-v12-latin-500.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="/fonts/rubik-v12-latin-500italic.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="/css/style-dark.css" as="style" />
-    <link rel="preload" href="/css/style-light.css" as="style" />
+    {{ $styleDarkCSS := resources.Get "css/style-dark.css" }}
+    <link rel="preload" href="{{ ($styleDarkCSS | resources.Minify).Permalink }}" as="style" data-theme-style-dark />
+    {{ $styleLightCSS := resources.Get "css/style-light.css" }}
+    <link rel="preload" href="{{ ($styleLightCSS | resources.Minify).Permalink }}" as="style" data-theme-style-light />
     {{ $normalizeCSS := resources.Get "css/normalize.css" }}
     {{ $fontsCSS := resources.Get "css/fonts.css" }}
     {{ $varsCSS := resources.Get "css/vars.css" }}

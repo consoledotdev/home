@@ -6,17 +6,21 @@ let getTheme = () => {
         // if (window.matchMedia("(prefers-color-scheme: dark)").matches) theme = "dark";
         // if (window.matchMedia("(prefers-color-scheme: light)").matches) theme = "light";
     }
-    return theme;
+    let preloaded = document.querySelector("[data-theme-style-" + theme + "]");
+    return {
+        name: theme,
+        url: preloaded.href,
+    };
 };
 
 let toggleTheme = () => {
     let theme = getTheme();
-    let newTheme = theme == "dark" ? "light" : "dark";
+    let newTheme = theme.name == "dark" ? "light" : "dark";
     localStorage.setItem("theme", newTheme);
     let stylesheet = document.querySelector("[data-theme-style]");
-    stylesheet.href = stylesheet.href.replace(theme, newTheme);
+    stylesheet.href = theme.url.replace(theme.name, newTheme);
     const themeChangeEvent = new CustomEvent("themeChange", { detail: { theme: newTheme } });
     document.body.dispatchEvent(themeChangeEvent);
 };
 
-document.write('<link rel="stylesheet" href="/css/style-' + getTheme() + '.css" data-theme-style />');
+document.write('<link rel="stylesheet" href="' + getTheme().url + '" data-theme-style />');
