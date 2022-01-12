@@ -19,4 +19,4 @@ let toggleTheme = () => {
     document.body.dispatchEvent(themeChangeEvent);
 };
 
-document.write('<link rel="stylesheet" href="/css/style-' + getTheme() + '.css" data-theme-style" />');
+document.write('<link rel="stylesheet" href="/css/style-' + getTheme() + '.css" data-theme-style />');
