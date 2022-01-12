@@ -572,7 +572,8 @@ class Searcher {
     }
 
     search(term) {
-        term = term ?? this.input.value;
+        term = term ?? this.sanitizeInput(this.input.value);
+
         this.filter.public().updateInfoWith.call(this.filter, {
             type: "search",
             content: term,
@@ -604,5 +605,19 @@ class Searcher {
             }
         }
         this.sections.public().filteringDone();
+    }
+
+    sanitizeInput(value) {
+        const escapes = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#x27;",
+            "/": "&#x2F;",
+            "`": "&grave;",
+        };
+        const reg = /[&<>"'`/]/gi;
+        return value.replace(reg, (match) => escapes[match]);
     }
 }
