@@ -254,9 +254,9 @@ class Sections {
 
             let viewAllLink = newSection.querySelector("[data-view-all-link]");
             if (viewAllLink) {
-              viewAllLink.href = sect.viewAllLink.href;
-              if (sect.viewAllLink.isHidden) viewAllLink.classList.add(this.hiddenClass.generic);
-              else viewAllLink.classList.remove(this.hiddenClass.generic);
+                viewAllLink.href = sect.viewAllLink.href;
+                if (sect.viewAllLink.isHidden) viewAllLink.classList.add(this.hiddenClass.generic);
+                else viewAllLink.classList.remove(this.hiddenClass.generic);
             }
 
             // empties section and fills back with new section cards
@@ -369,7 +369,7 @@ class Filter {
                 this.searchTerm = info.content;
             }
         }
-        let searchFeedback = this.searchTerm != "" ? 'Searching "' + this.searchTerm + '"' : "";
+        let searchFeedback = this.searchTerm != "" ? "Searching '&hairsp;" + this.searchTerm + "&hairsp;'" : "";
 
         let activeFilterValues = this.getActiveFilterValues();
         let totalFilters = this.toggles.length;
@@ -591,20 +591,16 @@ class Searcher {
 
     search(term) {
         term = term ?? this.sanitizeInput(this.input.value);
-
+        let search = this.defineSearch(term);
         this.filter.public().updateInfoWith.call(this.filter, {
             type: "search",
-            content: term,
+            content: search.term,
         });
-        this.filterByTerm(term);
+        this.filterBySearch(search);
     }
 
-    filterByTerm(term) {
-        let ignoreCase = true;
-        if (term[0] == '"' && term[term.length - 1] == '"') ignoreCase = false;
-        if (ignoreCase) term = term.toLowerCase();
-        term = term.replace(/['"]+/g, "");
-
+    filterBySearch(search) {
+        let ignoreCase = !search.caseSensitive;
         for (let section of this.sections.public().getFilterables()) {
             for (let item of section.items) {
                 let match = false;
@@ -612,7 +608,7 @@ class Searcher {
                 searchables.forEach((searchable) => {
                     let content = searchable.textContent;
                     if (ignoreCase) content = content.toLowerCase();
-                    if (content.indexOf(term) >= 0) match = true;
+                    if (content.indexOf(search.term) >= 0) match = true;
                 });
 
                 if (match) {
@@ -623,6 +619,17 @@ class Searcher {
             }
         }
         this.sections.public().filteringDone();
+    }
+
+    defineSearch(term) {
+        let caseSensitive = term.match(/^&quot;/g) !== null && term.match(/&quot;$/g) !== null;
+        if (caseSensitive) term = term.substring(6, term.length - 6);
+        else term = term.toLowerCase();
+
+        return {
+            caseSensitive: caseSensitive,
+            term: term,
+        };
     }
 
     sanitizeInput(value) {
