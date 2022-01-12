@@ -52,5 +52,6 @@
     </div>
 
     {{ $categoryReviewJS := resources.Get "/js/category-review.js" }}
-    <script src="{{ ($categoryReviewJS | resources.Minify | resources.Fingerprint).Permalink }}"></script>
+    {{ if hugo.IsProduction }}{{ $categoryReviewJS = $categoryReviewJS | resources.Minify | resources.Fingerprint }}{{ end }}
+    <script src="{{ $categoryReviewJS.Permalink }}"></script>
 {{ end }}

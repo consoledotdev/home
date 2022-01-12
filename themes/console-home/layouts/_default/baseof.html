@@ -32,6 +32,7 @@
         </div>
 
         {{ $scriptsJS := resources.Get "js/scripts.js" }}
-        <script src="{{ ($scriptsJS | resources.Minify | resources.Fingerprint).Permalink }}"></script>
+        {{ if hugo.IsProduction }}{{ $scriptsJS = $scriptsJS | resources.Minify | resources.Fingerprint }}{{ end }}
+        <script src="{{ $scriptsJS.Permalink }}"></script>
     </body>
 </html>

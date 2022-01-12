@@ -121,5 +121,6 @@
     <script src="/js/vendor/clipboard.min.js"></script>
 
 	{{ $badgesJS := resources.Get "/js/badges.js" }}
-	<script src="{{ ($badgesJS | resources.Minify | resources.Fingerprint).Permalink }}"></script>
+    {{ if hugo.IsProduction }}{{ $badgesJS = $badgesJS | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script src="{{ $badgesJS.Permalink }}"></script>
 {{ end }}

@@ -92,8 +92,10 @@
     {{ end }}
 
 	{{ $pageTypeJS := resources.Get "/js/page-type/feature.js" }}
-	<script id="feature-js" src="{{ ($pageTypeJS | resources.Minify | resources.Fingerprint).Permalink }}" data-categories="{{ $.Scratch.Get "categories" }}"></script>
+    {{ if hugo.IsProduction }}{{ $pageTypeJS = $pageTypeJS | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script id="feature-js" src="{{ $pageTypeJS.Permalink }}" data-categories="{{ $.Scratch.Get "categories" }}"></script>
 
 	{{ $betasJS := resources.Get "/js/betas.js" }}
-	<script src="{{ ($betasJS | resources.Minify | resources.Fingerprint).Permalink }}"></script>
+    {{ if hugo.IsProduction }}{{ $betasJS = $betasJS | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script src="{{ $betasJS.Permalink }}"></script>
 {{ end }}

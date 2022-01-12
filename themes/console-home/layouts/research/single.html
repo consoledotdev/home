@@ -33,5 +33,6 @@
     </div>
 
     {{ $subpageJS := resources.Get (print "/js/research/" .Params.isSubpage ".js") }}
-    <script src="{{ ($subpageJS | resources.Minify | resources.Fingerprint).Permalink }}"></script>
+    {{ if hugo.IsProduction }}{{ $subpageJS = $subpageJS | resources.Minify | resources.Fingerprint }}{{ end }}
+    <script src="{{ $subpageJS.Permalink }}"></script>
 {{ end }}

@@ -195,5 +195,6 @@
     </section>
 
 	{{ $landingJS := resources.Get "/js/page-type/landing.js" }}
-	<script src="{{ ($landingJS | resources.Minify | resources.Fingerprint).Permalink }}"></script>
+    {{ if hugo.IsProduction }}{{ $landingJS = $landingJS | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script src="{{ $landingJS.Permalink }}"></script>
 {{ end }}
