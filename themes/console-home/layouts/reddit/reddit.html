@@ -60,5 +60,7 @@
         </div>
     </div>
 </div>
-<script src="/js/podcast-player.js"></script>
+
+{{ $podcastPlayerJS := resources.Get "/js/podcast-player.js" }}
+<script src="{{ ($podcastPlayerJS | resources.Minify | resources.Fingerprint).Permalink }}"></script>
 {{ end }}

@@ -51,5 +51,6 @@
         </section>
     </div>
 
-	<script src="/js/category-review.js"></script>
+    {{ $categoryReviewJS := resources.Get "/js/category-review.js" }}
+    <script src="{{ ($categoryReviewJS | resources.Minify | resources.Fingerprint).Permalink }}"></script>
 {{ end }}

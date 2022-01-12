@@ -22,7 +22,8 @@
     {{ $varsCSS := resources.Get "css/vars.css" }}
     {{ $defsCSSMin := slice $normalizeCSS $fontsCSS $varsCSS | resources.Concat "css/defs.css" | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $defsCSSMin.Permalink }}" />
-    <script src="/js/head-scripts.js"></script>
+    {{ $headScriptsJS := resources.Get "js/head-scripts.js" }}
+    <script src="{{ ($headScriptsJS | resources.Minify | resources.Fingerprint).Permalink }}"></script>
     {{ $stylesCSS := resources.Get "css/styles.css" }}
     {{ $componentsCSS := resources.Get "css/components.css" }}
     {{ $mainCSSMin := slice $stylesCSS $componentsCSS | resources.Concat "css/main.css" | resources.Minify | resources.Fingerprint }}

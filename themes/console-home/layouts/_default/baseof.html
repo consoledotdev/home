@@ -30,6 +30,8 @@
             </main>
             {{ partial "footer.html" . }}
         </div>
-        <script src="/js/scripts.js"></script>
+
+        {{ $scriptsJS := resources.Get "js/scripts.js" }}
+        <script src="{{ ($scriptsJS | resources.Minify | resources.Fingerprint).Permalink }}"></script>
     </body>
 </html>

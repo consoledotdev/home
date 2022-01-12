@@ -163,6 +163,10 @@
 			{{ $.Scratch.Set "categories" (print ($.Scratch.Get "categories") "," $element.label "|" $element.name ) }}
 		{{ end }}
     {{ end }}
-	<script id="feature-js" src="/js/page-type/feature.js" data-categories="{{ $.Scratch.Get "categories" }}"></script>
-	<script src="/js/tools.js"></script>
+
+	{{ $pageTypeJS := resources.Get "/js/page-type/feature.js" }}
+	<script id="feature-js" src="{{ ($pageTypeJS | resources.Minify | resources.Fingerprint).Permalink }}" data-categories="{{ $.Scratch.Get "categories" }}"></script>
+
+	{{ $betasJS := resources.Get "/js/tools.js" }}
+	<script src="{{ ($betasJS | resources.Minify | resources.Fingerprint).Permalink }}"></script>
 {{ end }}

@@ -194,5 +194,6 @@
         {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
     </section>
 
-    <script src="/js/page-type/landing.js"></script>
+	{{ $landingJS := resources.Get "/js/page-type/landing.js" }}
+	<script src="{{ ($landingJS | resources.Minify | resources.Fingerprint).Permalink }}"></script>
 {{ end }}
