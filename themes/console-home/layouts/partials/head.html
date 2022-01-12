@@ -7,22 +7,32 @@
     <meta name="description" content="{{ .Params.metaDescription }}" />
     {{- end }}
 
-    <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="preload" href="/fonts/rubik-v12-latin-regular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="/fonts/rubik-v12-latin-italic.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="/fonts/rubik-v12-latin-300.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="/fonts/rubik-v12-latin-300italic.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="/fonts/rubik-v12-latin-500.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="/fonts/rubik-v12-latin-500italic.woff2" as="font" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/fonts.css" />
-    <link rel="stylesheet" href="/css/vars.css" />
     <link rel="preload" href="/css/style-dark.css" as="style" />
     <link rel="preload" href="/css/style-light.css" as="style" />
+    {{ $normalizeCSS := resources.Get "css/normalize.css" }}
+    {{ $fontsCSS := resources.Get "css/fonts.css" }}
+    {{ $varsCSS := resources.Get "css/vars.css" }}
+    {{ $defsCSSMin := slice $normalizeCSS $fontsCSS $varsCSS | resources.Concat "css/defs.css" | resources.Minify }}
+    <link rel="stylesheet" href="{{ $defsCSSMin.Permalink }}" />
     <script src="/js/head-scripts.js"></script>
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/components.css" />
-    {{ if and .Params.pageType .Params.customPageStyle }}<link rel="stylesheet" href="/css/page-type/{{ .Params.pageType }}.css" />{{ end }}
-    {{ if and .Params.isPage .Params.customStyle }}<link rel="stylesheet" href="/css/page/{{ .Params.isPage }}{{ with .Params.isSubpage }}/{{ . }}{{ end }}.css" />{{ end }}
+    {{ $stylesCSS := resources.Get "css/styles.css" }}
+    {{ $componentsCSS := resources.Get "css/components.css" }}
+    {{ $mainCSSMin := slice $stylesCSS $componentsCSS | resources.Concat "css/main.css" | resources.Minify }}
+    <link rel="stylesheet" href="{{ $mainCSSMin.Permalink }}" />
+    {{ if and .Params.pageType .Params.customPageStyle }}
+        {{ $pageTypeCSS := resources.Get (print "css/page-type/" .Params.pageType ".css") }}
+        <link rel="stylesheet" href="{{ ($pageTypeCSS | resources.Minify).Permalink }}" />
+    {{ end }}
+    {{ if and .Params.isPage .Params.customStyle }}
+        {{ $pageCSS := resources.Get (print "css/page/" .Params.isPage (cond (ne .Params.isSubpage nil) (print "/" .Params.isSubpage) "") ".css") }}
+        <link rel="stylesheet" href="{{ ($pageCSS | resources.Minify).Permalink }}" />
+    {{ end }}
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.png" type="image/png" />

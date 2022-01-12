@@ -13,10 +13,10 @@ let toggleTheme = () => {
     let theme = getTheme();
     let newTheme = theme == "dark" ? "light" : "dark";
     localStorage.setItem("theme", newTheme);
-    let stylesheet = document.getElementById("theme-style");
+    let stylesheet = document.querySelector("[data-theme-style]");
     stylesheet.href = stylesheet.href.replace(theme, newTheme);
     const themeChangeEvent = new CustomEvent("themeChange", { detail: { theme: newTheme } });
     document.body.dispatchEvent(themeChangeEvent);
 };
 
-document.write('<link id="theme-style" rel="stylesheet" type="text/css" href="/css/style-' + getTheme() + '.css" />');
+document.write('<link rel="stylesheet" href="/css/style-' + getTheme() + '.css" data-theme-style" />');
