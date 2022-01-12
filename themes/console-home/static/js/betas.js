@@ -34,5 +34,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     sorter.sortBy("name");
     sorter.sortBy("date");
 
+    let grouper = new Grouper(sections);
+    grouper.groupBy();
+
+    sorter.sortBy();
+ 
     let searcher = new Searcher(sections, filter);
 });
