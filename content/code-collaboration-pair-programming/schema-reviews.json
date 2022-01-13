@@ -19,7 +19,7 @@
                 ],
                 "review": {
                     "@type": "Review",
-                    "reviewBody": "CodeTogether is an extension for VS Code, IntelliJ and Eclipse that enables real-time collaborative development across IDEs and browsers. It allows sharing servers, terminals & remote debugging with up to 32 participants.",
+                    "reviewBody": "CodeTogether is an extension for VS Code, IntelliJ and Eclipse that enables real-time collaborative development across IDEs and browsers. It allows sharing servers, terminals & remote debugging with up to 50 participants.",
                     "reviewRating": {
                         "@type": "Rating",
                         "ratingValue": "4.3",

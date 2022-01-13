@@ -1,6 +1,6 @@
 ---
 title: "LambdaTest review"
-date: 2021-12-07T07:00:00+00:00
+date: 2022-01-13T07:00:00+00:00
 draft: false
 summary: 
   LambdaTest supports automated browser testing on devices and browsers new and 
@@ -217,6 +217,12 @@ The analytics functionality provides a useful summary of the automated tests
 and shows insightful graphs depicting queue utilization, pass-fail ratio, test
 coverage which can be filtered by date, tags, browser, OS, and the user who
 executed the test. This makes analyzing trends across the builds easier.
+
+The [HyperTest](https://www.lambdatest.com/hypertest) feature by LambdaTest is
+an intelligent test orchestration tool that reduces test execution time. Tests
+can be managed through a YAML file or a CLI tool that integrates with CI/CD
+platofroms. [On-Premise Selenium Grid](https://www.lambdatest.com/on-premise-selenium-grid)
+servers can be installed to run tests behind a firewall.
 
 {{< div--close >}}
 
