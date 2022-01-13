@@ -166,7 +166,7 @@ servers, terminals & remote debugging with up to 50 participants.
 
 {{< category-review/card-bottom--open >}}
 
-{{< category-review/card-cost--open highlight="CodeTogether has a free plan with the maximum number of participants per session restricted to 3. Premium plans start at  $5.25/user/month." >}}
+{{< category-review/card-cost--open highlight="CodeTogether has a free plan with the maximum number of participants per session restricted to 3. Premium plans start at $5.25/user/month." >}}
 
 {{< div--close >}}
 
@@ -272,7 +272,7 @@ Studio Live Share which deeply integrates with git.
 In our limited testing, the video of participants would freeze sometimes,
 joining the call again fixes the issue temporarily. Enterprise users hosting
 on-premises servers should note that only 25% of the total users can be online
-at the same time, this limit can be increased by paying more.
+at the same time, but this limit can be increased by paying more.
 
 Permissions must be granted before the session starts and there is no way to
 change permissions whilst the session is active. It is not possible to grant
