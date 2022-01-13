@@ -158,7 +158,7 @@ also liked [Visual Studio Live Share](#visual-studio-live-share) and
 
 CodeTogether is an extension for VS Code, IntelliJ and Eclipse that enables
 real-time collaborative development across IDEs and browsers. It allows sharing
-servers, terminals & remote debugging with up to 32 participants.
+servers, terminals & remote debugging with up to 50 participants.
 
 {{< img-center src="/img/code-collaboration-pair-programming/codetogether.png" alt="CodeTogether product screenshot" width="100%" >}}
 
@@ -166,7 +166,7 @@ servers, terminals & remote debugging with up to 32 participants.
 
 {{< category-review/card-bottom--open >}}
 
-{{< category-review/card-cost--open highlight="CodeTogether has a free plan with the maximum number of participants per session restricted to 3. Premium plans start at  $10.50/user/month." >}}
+{{< category-review/card-cost--open highlight="CodeTogether has a free plan with the maximum number of participants per session restricted to 3. Premium plans start at  $5.25/user/month." >}}
 
 {{< div--close >}}
 
@@ -247,7 +247,8 @@ are organized frequently.
 
 Helpful assistive features such as content assist, code validation, quick fixes,
 etc., come from the host IDE. This means all participant's IDEs are just as
-powerful as the host's.
+powerful as the host's. Host can create a `.codetogether.ignore` file before
+starting a session to hide sensitive data.
 
 Enterprise users hosting CodeTogether on-premises have access to a
 [metrics dashboard](https://www.codetogether.com/docs/using-the-on-premises-dashboard/)
@@ -270,14 +271,12 @@ Studio Live Share which deeply integrates with git.
 
 In our limited testing, the video of participants would freeze sometimes,
 joining the call again fixes the issue temporarily. Enterprise users hosting
-on-premises servers can only have 25% of the total users online at same time.
-This limitation feels arbitrarily restrictive and the only way to increase this
-limit is by paying more.
+on-premises servers should note that only 25% of the total users can be online
+at the same time, this limit can be increased by paying more.
 
 Permissions must be granted before the session starts and there is no way to
 change permissions whilst the session is active. It is not possible to grant
-permissions to selective participants or hide any sensitive files in the
-directory. This might lead to accidental exposure of API keys.
+permissions to selective participants.
 
 Although it is possible to conduct unit tests remotely via CodeTogether, support
 is limited to a handful of frameworks - JUnit, TestNG, PHPUnit, and Pytest. This
@@ -495,9 +494,11 @@ the level of access to the project data. The permissions can be configured for
 the whole session or for specific guests in the session. Connections are
 established through an
 [open-source distributed protocol](https://github.com/JetBrains/rd) created by
-JetBrains which uses TLS 1.3 for end-to-end encryption. However some metadata
-like IP addresses, project names, and the operating system username are shared
-unencrypted because they are used for establishing a session.
+JetBrains which uses TLS 1.3 for
+[end-to-end encryption](https://www.jetbrains.com/help/idea/faq-about-code-with-me-security.html#communication_ports).
+However some metadata like IP addresses, project names, and the operating
+system username are shared unencrypted because they are used for
+establishing a session.
 
 {{< div--close >}}
 
@@ -968,10 +969,10 @@ pair-programming.
 
 #### Also considered
 
-We considered [Floobits](https://floobits.com/) but it looks like it is no
-longer maintained. We examined [Tuple](https://tuple.app/) but it is currently
-only supports macOS - Linux support is on the roadmap, so will will return when
-it has more cross platform support.
+We considered [Floobits](https://floobits.com/) and [Saros](https://www.saros-project.org/)
+but they are not updated regularly. We examined [Tuple](https://tuple.app/)
+but it is currently only supports macOS - Linux support is on the roadmap,
+so will will return when it has more cross platform support.
 
 We also tested the following 4 tools but they did not meet our criteria for a
 full review:
