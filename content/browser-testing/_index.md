@@ -394,6 +394,12 @@ to expose them to the public internet. Tunnels can be established using a
 desktop application, npm plugin, GitHub Action or executing a binary file over
 the command line. Lambda Test is also SOC2 Certified.
 
+[HyperTest](https://www.lambdatest.com/hypertest) platform can be used to run
+hundreds of parallel tests on Windows, macOS, and Linux at a fast speed.
+Enterprises customers with stringent security requirements can host their own
+[Selenium Grid](https://www.lambdatest.com/on-premise-selenium-grid) instance
+to run tests inside a secure environment.
+
 LambdaTest allows testing for geo targeting, geo blocking, and geo localization
 features like language translation, currency change and time zone changes across
 27+ countries. The connection can be rerouted during live testing without
