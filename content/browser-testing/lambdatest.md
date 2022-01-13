@@ -1,6 +1,6 @@
 ---
 title: "LambdaTest review"
-date: 2022-01-13T07:00:00+00:00
+date: 2021-12-07T07:00:00+00:00
 draft: false
 summary: 
   LambdaTest supports automated browser testing on devices and browsers new and 
