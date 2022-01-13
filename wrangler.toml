@@ -3,6 +3,7 @@ type = "webpack"
 account_id = "e7764905d1562eb381bdbef888ca7a92"
 zone_id = "a231ab8a31380c1d3d664b11d1d459cb"
 vars = { ENVIRONMENT = "test" }
+compatibility_date = "2022-01-13"
 
 [env.production]
 vars = { ENVIRONMENT = "production" }
