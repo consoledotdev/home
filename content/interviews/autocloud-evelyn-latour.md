@@ -33,11 +33,11 @@ grand vision with all of this is to reimagine cloud visibility by creating a new
 industry standard for visualizing and querying multi-cloud data.
 
 AutoCloud has four founders [Tyson](https://www.linkedin.com/in/tkunovsky/),
-[Drew](https://www.linkedin.com/in/christopher-koning/),
-[Chris](https://www.linkedin.com/in/drewgilliam/), and myself. Tyson, Drew and
-Chris have worked together previously in a cloud consulting company and were
-helping enterprises with cloud migrations and greenfield projects where they
-kept encountering the same problem.
+[Drew](https://www.linkedin.com/in/drewgilliam/),
+[Chris](https://www.linkedin.com/in/christopher-koning/), and myself. Tyson,
+Drew and Chris have worked together previously in a cloud consulting company and
+were helping enterprises with cloud migrations and greenfield projects where
+they kept encountering the same problem.
 
 These companies didn't have a core competency in technology and were really
 struggling to build reliable, secure, and cost-effective cloud infrastructure.
