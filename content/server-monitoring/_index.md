@@ -808,10 +808,18 @@ community built. Exporters are also run as a separate binary which you must
 download, configure and run, but for simple server monitoring the officially
 supported [node_exporter](https://github.com/prometheus/node_exporter) is easy
 to get up and running. This may not be the case for all exporters.
+
 [Grafana 8.2 added a new plugin marketplace](https://grafana.com/blog/2021/10/07/grafana-8.2-released-dynamic-plugin-catalog-new-fine-grained-access-control-permissions-and-more/)
 into the web UI but the quality of unofficial third-party integrations is always
 a problem for any monitoring product, especially as the integration becomes more
 obscure.
+
+Running [Prometheus in Agent mode](https://prometheus.io/blog/2021/11/16/agent/)
+(available from the 2.32 release) enabled support for remote write, remote read
+and forwarding of metrics. This is useful if you have multiple environments with
+other components that provide `/metrics` endpoins, but you don't want to expose
+them all over the network. Communicating with multiple, federated Prometheus
+instances running in agent mode is the way to solve this.
 
 {{< div--close >}}
 
@@ -910,7 +918,10 @@ metrics storage and provides no durability guarantees because it runs on a
 single node. This means you need to connect it to remote storage options such as
 [Cortex](https://cortexmetrics.io/) or [Thanos](https://thanos.io/), both of
 which are open source and provide horizontal scalability, high availability,
-multi-tenancy and long term storage.
+multi-tenancy and long term storage. Whether [the new Prometheus Agent
+mode](https://prometheus.io/blog/2021/11/16/agent/), which introduces a type of
+stateless collector, enables better HA deployments will be interesting to see as
+the feature gets deployed.
 
 Alerting is another thing you have to manage through the
 [Alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager/)
@@ -1063,17 +1074,18 @@ datastore that can ingest metrics from an ecosystem of plugins and language
 client libraries, all presented in a polished and good-looking web UI.
 
 If you don't want to run it all yourlself, there is an InfluxDB Cloud product,
-available on [AWS](https://aws.amazon.com/marketplace/pp/B08234JZPS/),
-[Google Cloud](https://console.cloud.google.com/marketplace/details/influxdata-public/cloud2-gcp-marketplace-prod)
-or
-[Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/influxdata.influxdb-cloud).
+available on [AWS](https://aws.amazon.com/marketplace/pp/B08234JZPS/), [Google
+Cloud](https://console.cloud.google.com/marketplace/details/influxdata-public/cloud2-gcp-marketplace-prod)
+or [Microsoft
+Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/influxdata.influxdb-cloud).
 It includes some extra features not available in the open source version, such
-as [Notebooks](https://docs.influxdata.com/influxdb/cloud/notebooks/overview/)
-for walking through problems or debugging, and
-[templated alerts, dashboards and agent configurations](https://docs.influxdata.com/influxdb/cloud/influxdb-templates/).
-InfluxDB Cloud has a free plan which is useful for basic monitoring for small
-projects. The paid plans are billed based on data transfer, storage and query
-count.
+as [templated alerts, dashboards and agent
+configurations](https://docs.influxdata.com/influxdb/cloud/influxdb-templates/).
+[Notebooks](https://docs.influxdata.com/influxdb/v2.1/notebooks/) were also
+previously only available in the cloud version, but are now in the open source
+release as of InfluxDB 2.1. InfluxDB Cloud has a free plan which is useful for
+basic monitoring for small projects. The paid plans are billed based on data
+transfer, storage and query count.
 
 {{< div--close >}}
 
