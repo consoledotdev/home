@@ -123,7 +123,7 @@ def process_item(item):
 
 
 # Open the hugo config.toml to see if there is a hard coded date
-with open("config.toml", "rb") as f:
+with open("config/_default/config.toml", "rb") as f:
     toml_dict = tomli.load(f)
 
 today = date.today()

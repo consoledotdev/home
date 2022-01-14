@@ -119,5 +119,8 @@
     </section>
 
     <script src="/js/vendor/clipboard.min.js"></script>
-    <script src="/js/badges.js"></script>
+
+	{{ $badgesJS := resources.Get "/js/badges.js" }}
+    {{ if hugo.IsProduction }}{{ $badgesJS = $badgesJS | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script src="{{ $badgesJS.Permalink }}"></script>
 {{ end }}

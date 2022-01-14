@@ -6,6 +6,7 @@ enableRobotsTXT = true
 enableGitInfo = true
 disableHugoGeneratorInject = true
 rssLimit = 10
+assetDir = "assets"
 
 disableKinds = ["taxonomy", "term"]
 

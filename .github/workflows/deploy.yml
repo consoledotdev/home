@@ -147,7 +147,7 @@ jobs:
               uses: jakejarvis/hugo-build-action@v0.89.4
               if: github.event.inputs.environment == 'test'
               with:
-                  args: --buildDrafts
+                  args: --buildDrafts --environment test
 
             # If this is the automated build then deploy to prod
             # otherwise deploy to wherever is specified

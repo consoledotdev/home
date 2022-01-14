@@ -461,5 +461,7 @@
         </div>
     </section>
 
-    <script src="/js/advertise.js"></script>
+	{{ $advertiseJS := resources.Get "/js/advertise.js" }}
+    {{ if hugo.IsProduction }}{{ $advertiseJS = $advertiseJS | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script src="{{ $advertiseJS.Permalink }}"></script>
 {{ end }}

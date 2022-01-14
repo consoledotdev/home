@@ -30,6 +30,9 @@
             </main>
             {{ partial "footer.html" . }}
         </div>
-        <script src="/js/scripts.js"></script>
+
+        {{ $scriptsJS := resources.Get "js/scripts.js" }}
+        {{ if hugo.IsProduction }}{{ $scriptsJS = $scriptsJS | resources.Minify | resources.Fingerprint }}{{ end }}
+        <script src="{{ $scriptsJS.Permalink }}"></script>
     </body>
 </html>

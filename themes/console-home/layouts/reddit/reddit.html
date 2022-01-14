@@ -60,5 +60,8 @@
         </div>
     </div>
 </div>
-<script src="/js/podcast-player.js"></script>
+
+{{ $podcastPlayerJS := resources.Get "/js/podcast-player.js" }}
+{{ if hugo.IsProduction }}{{ $podcastPlayerJS = $podcastPlayerJS | resources.Minify | resources.Fingerprint }}{{ end }}
+<script src="{{ $podcastPlayerJS.Permalink }}"></script>
 {{ end }}

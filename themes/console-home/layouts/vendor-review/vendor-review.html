@@ -68,5 +68,7 @@
         </section>
     </div>
 
-	<script src="/js/vendor-review.js"></script>
+	{{ $vendorReviewJS := resources.Get "/js/vendor-review.js" }}
+    {{ if hugo.IsProduction }}{{ $vendorReviewJS = $vendorReviewJS | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script src="{{ $vendorReviewJS.Permalink }}"></script>
 {{ end }}

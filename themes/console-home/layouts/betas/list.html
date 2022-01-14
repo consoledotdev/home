@@ -90,6 +90,12 @@
 			{{ $.Scratch.Set "categories" (print ($.Scratch.Get "categories") "," $element.label "|" $element.name ) }}
 		{{ end }}
     {{ end }}
-	<script id="feature-js" src="/js/page-type/feature.js" data-categories="{{ $.Scratch.Get "categories" }}"></script>
-	<script src="/js/betas.js"></script>
+
+	{{ $pageTypeJS := resources.Get "/js/page-type/feature.js" }}
+    {{ if hugo.IsProduction }}{{ $pageTypeJS = $pageTypeJS | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script id="feature-js" src="{{ $pageTypeJS.Permalink }}" data-categories="{{ $.Scratch.Get "categories" }}"></script>
+
+	{{ $betasJS := resources.Get "/js/betas.js" }}
+    {{ if hugo.IsProduction }}{{ $betasJS = $betasJS | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script src="{{ $betasJS.Permalink }}"></script>
 {{ end }}
