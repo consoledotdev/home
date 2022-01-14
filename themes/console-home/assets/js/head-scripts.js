@@ -17,8 +17,9 @@ let toggleTheme = () => {
     let theme = getTheme();
     let newTheme = theme.name == "dark" ? "light" : "dark";
     localStorage.setItem("theme", newTheme);
+    let preloaded = document.querySelector("[data-theme-style-" + newTheme + "]");
     let stylesheet = document.querySelector("[data-theme-style]");
-    stylesheet.href = theme.url.replace(theme.name, newTheme);
+    stylesheet.href = preloaded.href;
     const themeChangeEvent = new CustomEvent("themeChange", { detail: { theme: newTheme } });
     document.body.dispatchEvent(themeChangeEvent);
 };
