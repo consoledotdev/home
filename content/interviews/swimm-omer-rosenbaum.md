@@ -6,7 +6,7 @@ org: Swimm
 what: Platform for continuous documentation.
 tags: ["Docs"]
 date: 2021-12-16T12:00:00Z
-draft: true
+draft: false
 headerType: fixed
 summary: Interview with Omer Rosenbaum, CTO, Swimm.
 isPage: interviews
