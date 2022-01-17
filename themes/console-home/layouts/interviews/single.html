@@ -3,8 +3,8 @@
     <h2 class="title title-1">Interview with {{ .Params.who }}</h2>
     <p class="description">{{ .Params.role }}, {{ .Params.org }} - {{ .Params.what }}</p>
     <div class="col-2">
-        <div class="aspect-ratio aspect-ratio-1-1"><img class="image" src="{{ .Params.topImg1Src }}" alt="{{ .Params.topImg1Alt }}" /></div>
-        <div class="aspect-ratio aspect-ratio-1-1"><img class="image" src="{{ .Params.topImg2Src }}" alt="{{ .Params.topImg2Alt }}" /></div>
+        <div class="aspect-ratio aspect-ratio-1-1"><img loading="lazy" class="image" src="{{ .Params.topImg1Src }}" alt="{{ .Params.topImg1Alt }}" /></div>
+        <div class="aspect-ratio aspect-ratio-1-1"><img loading="lazy" class="image" src="{{ .Params.topImg2Src }}" alt="{{ .Params.topImg2Alt }}" /></div>
     </div>
 
     {{ .Content }}

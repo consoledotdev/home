@@ -247,6 +247,7 @@ html {
 
 .page-section-vendor-review.opening .title-1 .vendor-thumbnail {
     width: calc(var(--space4_5) + var(--space2));
+    height: calc(var(--space4_5) + var(--space2));
     margin-right: var(--space3);
 }
 
