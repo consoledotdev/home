@@ -1,13 +1,26 @@
-{{- $image := .image -}}
-{{- $imageStatic := print "static/" $image -}}
-<div class="vendor-thumbnail aspect-ratio aspect-ratio-1-1">
-    {{- if $image -}}
-        {{- if (fileExists $imageStatic) -}}
-            <img loading="lazy" class="image" src="{{ $image }}" alt="{{ .name }} Logo" />
-        {{- else -}}
+{{ if .image }}
+    {{- $resource := resources.Get .image -}}
+    <div class="vendor-thumbnail aspect-ratio aspect-ratio-1-1">
+        {{- if $resource -}}
+            {{ if eq $resource.ResourceType "image" }}
+                {{ $imgPermalink := $resource.Permalink }}
+                {{ if or (eq $resource.MediaType.SubType "jpg") (eq $resource.MediaType.SubType "png") }}
+                    {{ $resizedImgNextGen := $resource.Resize "96x webp" }}
+                    {{ $resizedImg := "" }}
+                    {{ if or (eq $resource.MediaType.SubType "jpg") }}{{ $resizedImg = $resource.Resize "96x jpeg" }}{{ end }}
+                    {{ if or (eq $resource.MediaType.SubType "png") }}{{ $resizedImg = $resource.Resize "96x png" }}{{ end }}
+                    <picture>
+                        <source srcset="{{ $resizedImgNextGen.Permalink }}" type="image/webp">
+                        <img class="image" loading="lazy" src="{{ $resizedImg.Permalink }}" alt="{{ .name }} Logo">
+                    </picture>
+                {{ else }}
+                    <img loading="lazy" class="image" src="/{{ .image }}" alt="{{ .name }} Logo" />
+                {{ end }}
+            {{ else }}
+                <div class="category-thumbnail-generic">{{ partial (print "icons/" .category ".html") }}</div>
+            {{ end }}
+        {{ else }}
             <div class="category-thumbnail-generic">{{ partial (print "icons/" .category ".html") }}</div>
         {{- end -}}
-    {{- else -}}
-        <div class="category-thumbnail-generic">{{ partial (print "icons/" .category ".html") }}</div>
-    {{- end -}}
-</div>
+    </div>
+{{ end }}

@@ -46,13 +46,13 @@ def process_item(item):
 
     # Check if there is already an icon at that path in priority order for
     # .png, .svg, .jpg, .ico
-    if os.path.isfile('static/' + favicon_path + '.png'):
+    if os.path.isfile('assets/' + favicon_path + '.png'):
         item['favicon'] = favicon_path + '.png'
-    elif os.path.isfile('static/' + favicon_path + '.svg'):
+    elif os.path.isfile('assets/' + favicon_path + '.svg'):
         item['favicon'] = favicon_path + '.svg'
-    elif os.path.isfile('static/' + favicon_path + '.jpg'):
+    elif os.path.isfile('assets/' + favicon_path + '.jpg'):
         item['favicon'] = favicon_path + '.jpg'
-    elif os.path.isfile('static/' + favicon_path + '.ico'):
+    elif os.path.isfile('assets/' + favicon_path + '.ico'):
         item['favicon'] = favicon_path + '.ico'
 
     # If no icon exists, we need to download it
@@ -68,7 +68,7 @@ def process_item(item):
                 response = requests.get(icon.url, stream=True)
                 item['favicon'] = f'{favicon_path}.{icon.format}'
 
-                downloadPath = f'static/{item["favicon"]}'
+                downloadPath = f'assets/{item["favicon"]}'
 
                 print(f'- Downloading: {icon.url} to {downloadPath}')
 
