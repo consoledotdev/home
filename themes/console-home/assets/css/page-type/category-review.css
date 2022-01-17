@@ -199,6 +199,7 @@ html {
 
 .category-review-tldr-list .console-card .vendor-thumbnail {
     width: var(--space4);
+    height: var(--space4);
     margin-right: var(--space3);
 }
 
@@ -265,6 +266,7 @@ html {
 
 .page-category-review .tool-card-heading .vendor-thumbnail {
     width: calc(var(--space3) + var(--space4));
+    height: calc(var(--space3) + var(--space4));
     margin-right: var(--space3_5);
 }
 

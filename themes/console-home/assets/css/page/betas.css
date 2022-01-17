@@ -64,6 +64,7 @@
 .vendor-thumbnail {
     flex-shrink: 0;
     width: calc(var(--space4) + var(--space3));
+    height: calc(var(--space4) + var(--space3));
     margin-right: var(--space4);
 }
 

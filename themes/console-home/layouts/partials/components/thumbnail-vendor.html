@@ -3,7 +3,7 @@
 <div class="vendor-thumbnail aspect-ratio aspect-ratio-1-1">
     {{- if $image -}}
         {{- if (fileExists $imageStatic) -}}
-            <img class="image" src="{{ $image }}" alt="{{ .name }} Logo" />
+            <img loading="lazy" class="image" src="{{ $image }}" alt="{{ .name }} Logo" />
         {{- else -}}
             <div class="category-thumbnail-generic">{{ partial (print "icons/" .category ".html") }}</div>
         {{- end -}}
