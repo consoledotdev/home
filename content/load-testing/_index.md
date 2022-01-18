@@ -14,10 +14,8 @@ metaDescription:
 headerType: fixed
 hideLines: true
 hidePlanes: true
-type: tools
 layout: simple
-isPage: tools
-isSubpage: load-testing
+isPage: load-testing
 customStyle: false
 customPageStyle: false
 category: developer-tools

@@ -247,9 +247,10 @@ requests. Datadog also supports recording browser sessions and then
 automatically simulating them to ensure that specific transaction flows are
 continuously tested. Datadog synthetic monitoring configuration supports the
 ability to define test frequency in seconds, minutes, hours and days with the
-most frequent test option being every 5 minutes and least frequent option being
-every week. Billing is based on the number of executions per month so can
-become very expensive for the more frequent test options.
+most frequent test option being every 1 second (1 minute for multi-step tests)
+and least frequent option being every week. Billing is based on the number of
+executions per month so can become very expensive for the more frequent test
+options.
 
 {{< div--close >}}
 
