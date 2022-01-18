@@ -12,7 +12,7 @@ metaDescription:
   "The best load testing tools for developers: Flood, k6, Locust, Loadster,
   Gatling, Apache JMeter. 11 load testing tools reviewed."
 headerType: fixed
-hideLines: true
+hideLines: false
 hidePlanes: true
 layout: simple
 isPage: load-testing
