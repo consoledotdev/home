@@ -131,8 +131,8 @@ let toggleCollapsible = (e) => {
     }
 };
 
-if (document.body.classList.contains("page-home")) {
-    let animateDynamicPlanes = (() => {
+let animateDynamicPlanes = (() => {
+    if (document.body.classList.contains("page-home")) {
         let i1, i2, i3, i4, i5, i6;
         let animate = () => {
             let columns = document.querySelectorAll("[data-dynamic-planes-column]");
@@ -206,8 +206,8 @@ if (document.body.classList.contains("page-home")) {
                 });
             }
         }
-    })();
-}
+    }
+})();
 
 document.addEventListener("DOMContentLoaded", (event) => {
     let markedScrollablesH = document.querySelectorAll("[data-marked-scrollable-h]");
