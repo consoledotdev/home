@@ -13,7 +13,7 @@
     <span class="date">{{ $showDate }}</span>
 	<div class="beta-card-content">
 		<div class="left">
-            {{ partial "components/thumbnail-vendor.html" (dict "name" ( index . "Company/Org" ) "image" (index . "favicon") "category" (replace (lower .Category) " " "-") ) }}
+            {{ partial "components/thumbnail-vendor.html" (dict "name" ( index . "Company/Org" ) "image" (print "/" (index . "favicon")) "category" (replace (lower .Category) " " "-") ) }}
 			<h4 data-searchable class="title title-3">
 				{{- $org := index . "Company/Org" -}}
 				{{- $name := index . "Tool/Product/Project" -}}

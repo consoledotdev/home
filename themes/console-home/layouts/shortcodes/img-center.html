@@ -1,5 +1,11 @@
 <div class="content-block center-aligned">
-    <img loading="lazy" class="content-image" src="{{ .Get "src" }}" alt="{{ .Get "alt" }}" width="{{ .Get "width" }}" />
+
+    {{ $nextGenImgSrc := partial "components/processed-img.html" (dict "src" (.Get "src") "width" "1400" "nextGen" "true") }}
+    {{ $imgSrc := partial "components/processed-img.html" (dict "src" (.Get "src") "width" "1400") }}
+    {{with $nextGenImgSrc }}<picture><source srcset="{{ . }}" type="image/webp">{{ end }}
+        <img loading="lazy" class="content-image" src="{{ $imgSrc }}" alt="{{ .Get "alt" }}" width="{{ .Get "width" }}" />
+    {{with $nextGenImgSrc }}</picture>{{ end }}
+    
 </div>
 {{- if .Get "caption" -}}
 <div class="caption center-aligned">

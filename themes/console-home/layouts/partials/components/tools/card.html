@@ -7,7 +7,7 @@
 		<div class="top">
 			<a onclick="blur();" class="card-link" href="{{ $url }}" target="_blank" rel="noopener{{ if eq .Sponsored "TRUE" }} sponsored{{ end }}"><span>Visit {{ partial "icons/external-link.html" }}</span></a>
 			<div class="left">
-            	{{ partial "components/thumbnail-vendor.html" (dict "name" ( index . "Company/Org" ) "image" (index . "favicon") "category" (replace (lower $topcategory) " " "-") ) }}
+            	{{ partial "components/thumbnail-vendor.html" (dict "name" ( index . "Company/Org" ) "image" (print "/" (index . "favicon")) "category" (replace (lower $topcategory) " " "-") ) }}
 				<h4 data-searchable class="title title-3">
 					{{- $org := index . "Company/Org" -}}
 					{{- $name := index . "Tool/Product/Project" -}}

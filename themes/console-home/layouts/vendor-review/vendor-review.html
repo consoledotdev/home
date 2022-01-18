@@ -31,11 +31,15 @@
                     {{ partial "icons/external-link.html" }}</a>
             </div>
             <div class="right">
+                {{ $nextGenImgSrc := partial "components/processed-img.html" (dict "src" .Params.productShot.image "width" "1400" "nextGen" "true") }}
+                {{ $imgSrc := partial "components/processed-img.html" (dict "src" .Params.productShot.image "width" "1400") }}
                 <a href="#" class="modal-link"
                     data-modal-link
                     data-modal-type="screen"
-                    data-modal-type-screen="{{ .Params.productShot.image }}">
-                        <img loading="lazy" class="image" src="{{ .Params.productShot.image }}" alt="{{ .Params.title }} product screenshot" />
+                    data-modal-type-screen="{{ $imgSrc }}">
+                        {{with $nextGenImgSrc }}<picture><source srcset="{{ . }}" type="image/webp">{{ end }}
+                            <img loading="lazy" class="image" src="{{ $imgSrc }}" alt="{{ .Params.title }} product screenshot" />
+                        {{with $nextGenImgSrc }}</picture>{{ end }}
                 </a>
             </div>
         </div>
