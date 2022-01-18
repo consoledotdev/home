@@ -1,7 +1,7 @@
 ---
 title: Interview with Omer Rosenbaum, Swimm
 who: Omer Rosenbaum
-role: CEO
+role: CTO
 org: Swimm
 what: Platform for continuous documentation.
 tags: ["Docs"]
