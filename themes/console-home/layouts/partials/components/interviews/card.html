@@ -4,88 +4,24 @@
         <div class="interviews-card-combo">
             <div class="interviews-card-company-logo">
                 <div class="logo aspect-ratio aspect-ratio-1-1">
-                    {{ if .Params.topImg2Src }}
-                        {{- $resource := resources.Get .Params.topImg2Src -}}
-                        {{- if $resource -}}
-                            {{ if eq $resource.ResourceType "image" }}
-                                {{ $imgPermalink := $resource.Permalink }}
-                                {{ if or (eq $resource.MediaType.SubType "jpg") (eq $resource.MediaType.SubType "jpeg") (eq $resource.MediaType.SubType "png") }}
 
-                                    {{ $resizedImgNextGen := "" }}
-                                    {{ if gt $resource.Width 216 }}
-                                        {{ $resizedImgNextGen = $resource.Resize "216x webp Lanczos" }}
-                                    {{ else }}
-                                        {{ $resizedImgNextGen = $resource.Resize (print $resource.Width "x webp") }}
-                                    {{ end }}
-
-                                    {{ $resizedImg := "" }}
-                                    {{ if or (eq $resource.MediaType.SubType "jpg") (eq $resource.MediaType.SubType "jpeg") }}
-                                        {{ if gt $resource.Width 216 }}
-                                            {{ $resizedImg = $resource.Resize "216x jpeg Lanczos" }}
-                                        {{ else }}
-                                            {{ $resizedImg = $resource.Resize (print $resource.Width "x jpeg") }}
-                                        {{ end }}
-                                    {{ else if (eq $resource.MediaType.SubType "png") }}
-                                        {{ if gt $resource.Width 216 }}
-                                            {{ $resizedImg = $resource.Resize "216x png Lanczos" }}
-                                        {{ else }}
-                                            {{ $resizedImg = $resource.Resize (print $resource.Width "x png") }}
-                                        {{ end }}
-                                    {{ end }}
-
-                                    <picture>
-                                        <source srcset="{{ $resizedImgNextGen.Permalink }}" type="image/webp">
-                                        <img loading="lazy" class="image" src="{{ $resizedImg.Permalink }}" alt="{{ .Params.topImg2Alt }}">
-                                    </picture>
-                                {{ else }}
-                                    <img loading="lazy" class="image" src="{{ .Params.topImg2Src }}" alt="{{ .Params.topImg2Alt }}" />
-                                {{ end }}
-                            {{ end }}
-                        {{- end -}}
-                    {{ end }}
+                    {{ $nextGenImgSrc := partial "components/processed-img.html" (dict "src" .Params.topImg2Src "width" "216" "nextGen" "true") }}
+                    {{ $imgSrc := partial "components/processed-img.html" (dict "src" .Params.topImg2Src "width" "216") }}
+                    {{with $nextGenImgSrc }}<picture><source srcset="{{ . }}" type="image/webp">{{ end }}
+                        <img loading="lazy" class="image" src="{{ $imgSrc }}" alt="{{ .Params.topImg2Alt }}" />
+                    {{with $nextGenImgSrc }}</picture>{{ end }}
+                    
                 </div>
             </div>
             <div class="plane-picture">
                 <img class="ratio" src="/img/ratio-plane.png" alt="">
-                {{ if .Params.topImg1Src }}
-                    {{- $resource := resources.Get .Params.topImg1Src -}}
-                    {{- if $resource -}}
-                        {{ if eq $resource.ResourceType "image" }}
-                            {{ $imgPermalink := $resource.Permalink }}
-                            {{ if or (eq $resource.MediaType.SubType "jpg") (eq $resource.MediaType.SubType "jpeg") (eq $resource.MediaType.SubType "png") }}
 
-                                {{ $resizedImgNextGen := "" }}
-                                {{ if gt $resource.Width 992 }}
-                                    {{ $resizedImgNextGen = $resource.Resize "992x webp Lanczos" }}
-                                {{ else }}
-                                    {{ $resizedImgNextGen = $resource.Resize (print $resource.Width "x webp") }}
-                                {{ end }}
-
-                                {{ $resizedImg := "" }}
-                                {{ if or (eq $resource.MediaType.SubType "jpg") (eq $resource.MediaType.SubType "jpeg") }}
-                                    {{ if gt $resource.Width 992 }}
-                                        {{ $resizedImg = $resource.Resize "992x jpeg Lanczos" }}
-                                    {{ else }}
-                                        {{ $resizedImg = $resource.Resize (print $resource.Width "x jpeg") }}
-                                    {{ end }}
-                                {{ else if (eq $resource.MediaType.SubType "png") }}
-                                    {{ if gt $resource.Width 992 }}
-                                        {{ $resizedImg = $resource.Resize "992x png Lanczos" }}
-                                    {{ else }}
-                                        {{ $resizedImg = $resource.Resize (print $resource.Width "x png") }}
-                                    {{ end }}
-                                {{ end }}
-
-                                <picture>
-                                    <source srcset="{{ $resizedImgNextGen.Permalink }}" type="image/webp">
-                                    <img loading="lazy" class="image" src="{{ $resizedImg.Permalink }}" alt="{{ .Params.topImg1Alt }}">
-                                </picture>
-                            {{ else }}
-                                <img loading="lazy" class="image" src="{{ .Params.topImg1Src }}" alt="{{ .Params.topImg1Alt }}" />
-                            {{ end }}
-                        {{ end }}
-                    {{- end -}}
-                {{ end }}
+                {{ $nextGenImgSrc := partial "components/processed-img.html" (dict "src" .Params.topImg1Src "width" "992" "nextGen" "true") }}
+                {{ $imgSrc := partial "components/processed-img.html" (dict "src" .Params.topImg1Src "width" "992") }}
+                {{with $nextGenImgSrc }}<picture><source srcset="{{ . }}" type="image/webp">{{ end }}
+                    <img loading="lazy" class="image" src="{{ $imgSrc }}" alt="{{ .Params.topImg1Alt }}" />
+                {{with $nextGenImgSrc }}</picture>{{ end }}
+                
             </div>
         </div>
         <div class="interviews-card-content">

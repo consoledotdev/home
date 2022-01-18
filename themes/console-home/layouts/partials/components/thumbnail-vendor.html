@@ -1,45 +1,11 @@
-{{ if .image }}
-    {{- $resource := resources.Get .image -}}
-    <div class="vendor-thumbnail aspect-ratio aspect-ratio-1-1">
-        {{- if $resource -}}
-            {{ if eq $resource.ResourceType "image" }}
-                {{ $imgPermalink := $resource.Permalink }}
-                {{ if or (eq $resource.MediaType.SubType "jpg") (eq $resource.MediaType.SubType "jpeg") (eq $resource.MediaType.SubType "png") }}
-
-                    {{ $resizedImgNextGen := "" }}
-                    {{ if gt $resource.Width 96 }}
-                        {{ $resizedImgNextGen = $resource.Resize "96x webp Lanczos" }}
-                    {{ else }}
-                        {{ $resizedImgNextGen = $resource.Resize (print $resource.Width "x webp") }}
-                    {{ end }}
-
-                    {{ $resizedImg := "" }}
-                    {{ if or (eq $resource.MediaType.SubType "jpg") (eq $resource.MediaType.SubType "jpeg") }}
-                        {{ if gt $resource.Width 96 }}
-                            {{ $resizedImg = $resource.Resize "96x jpeg Lanczos" }}
-                        {{ else }}
-                            {{ $resizedImg = $resource.Resize (print $resource.Width "x jpeg") }}
-                        {{ end }}
-                    {{ else if (eq $resource.MediaType.SubType "png") }}
-                        {{ if gt $resource.Width 96 }}
-                            {{ $resizedImg = $resource.Resize "96x png Lanczos" }}
-                        {{ else }}
-                            {{ $resizedImg = $resource.Resize (print $resource.Width "x png") }}
-                        {{ end }}
-                    {{ end }}
-
-                    <picture>
-                        <source srcset="{{ $resizedImgNextGen.Permalink }}" type="image/webp">
-                        <img loading="lazy" class="image" src="{{ $resizedImg.Permalink }}" alt="{{ .name }} Logo">
-                    </picture>
-                {{ else }}
-                    <img loading="lazy" class="image" src="/{{ .image }}" alt="{{ .name }} Logo" />
-                {{ end }}
-            {{ else }}
-                <div class="category-thumbnail-generic">{{ partial (print "icons/" .category ".html") }}</div>
-            {{ end }}
-        {{ else }}
-            <div class="category-thumbnail-generic">{{ partial (print "icons/" .category ".html") }}</div>
-        {{- end -}}
-    </div>
-{{ end }}
+<div class="vendor-thumbnail aspect-ratio aspect-ratio-1-1">
+    {{ $imgSrc := partial "components/processed-img.html" (dict "src" .image "width" "96") }}
+    {{ if $imgSrc }}
+        {{ $nextGenImgSrc := partial "components/processed-img.html" (dict "src" .image "width" "96" "nextGen" "true") }}
+        {{with $nextGenImgSrc }}<picture><source srcset="{{ . }}" type="image/webp">{{ end }}
+            <img loading="lazy" class="image" src="{{ $imgSrc }}" alt="{{ .name }} Logo" />
+        {{with $nextGenImgSrc }}</picture>{{ end }}
+    {{ else }}
+        <div class="category-thumbnail-generic">{{ partial (print "icons/" .category ".html") }}</div>
+    {{ end }}
+</div>

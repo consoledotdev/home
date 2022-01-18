@@ -2,6 +2,6 @@
     data-modal-link
     data-modal-type="{{ .Get "type" }}"
     {{ if eq (.Get "type") "screen" }}
-        data-modal-type-screen="{{ .Get "type-screen" }}"
+        data-modal-type-screen="{{ partial "components/processed-img.html" (dict "src" (.Get "type-screen") "width" "1400") }}"
     {{ end }}
     >

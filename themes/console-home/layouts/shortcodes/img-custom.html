@@ -1,1 +1,5 @@
-<img loading="lazy" class="{{ with .Get "class"}}{{ . }}{{ end }}" src="{{ .Get "src"}}" alt="{{ with .Get "alt" }}{{ . }}{{ end }}" />
+{{ $nextGenImgSrc := partial "components/processed-img.html" (dict "src" (.Get "src") "width" "1400" "nextGen" "true") }}
+{{ $imgSrc := partial "components/processed-img.html" (dict "src" (.Get "src") "width" "1400") }}
+{{with $nextGenImgSrc }}<picture><source srcset="{{ . }}" type="image/webp">{{ end }}
+    <img loading="lazy" class="{{ with (.Get "class") }}{{ . }}{{ end }}" src="{{ $imgSrc }}" alt="{{ with (.Get "alt") }}{{ . }}{{ end }}" />
+{{with $nextGenImgSrc }}</picture>{{ end }}
