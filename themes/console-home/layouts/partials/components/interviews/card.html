@@ -35,7 +35,7 @@
 
                                     <picture>
                                         <source srcset="{{ $resizedImgNextGen.Permalink }}" type="image/webp">
-                                        <img loading="lazy" class="image" src="{{ $resizedImg.Permalink }}" alt="{{ .Params.topImg2Alt }} Logo">
+                                        <img loading="lazy" class="image" src="{{ $resizedImg.Permalink }}" alt="{{ .Params.topImg2Alt }}">
                                     </picture>
                                 {{ else }}
                                     <img loading="lazy" class="image" src="{{ .Params.topImg2Src }}" alt="{{ .Params.topImg2Alt }}" />
@@ -78,7 +78,7 @@
 
                                 <picture>
                                     <source srcset="{{ $resizedImgNextGen.Permalink }}" type="image/webp">
-                                    <img loading="lazy" class="image" src="{{ $resizedImg.Permalink }}" alt="{{ .Params.topImg1Alt }} Logo">
+                                    <img loading="lazy" class="image" src="{{ $resizedImg.Permalink }}" alt="{{ .Params.topImg1Alt }}">
                                 </picture>
                             {{ else }}
                                 <img loading="lazy" class="image" src="{{ .Params.topImg1Src }}" alt="{{ .Params.topImg1Alt }}" />
