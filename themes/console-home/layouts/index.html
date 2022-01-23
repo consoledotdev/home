@@ -40,11 +40,11 @@
     <h5 class="title title-4">Console DevTools Podcast</h5>
     <div class="podcast-embed-content">
         <div data-podcast-player-wrapper class="podcast-embed-player">
-            <audio data-podcast-player style="display: none;" preload="none" src="https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/34131858-ecea-45c6-b5db-64c5ec8bd0ff/audio/f61fc39a-7b0f-45f2-8e31-d507c5254572/default_tc.mp3?aid=rss_feed&feed=T80CJwln"></audio>
+            <audio data-podcast-player style="display: none;" preload="none" src="{{ $.Site.Params.consolePodcastURL}}"></audio>
             <div class="podcast-embed-player-top">
                 <button onclick="playEpisode(); blur();" class="console-button-text play" aria-label="Play">{{ partial "icons/play.html" }}</button>
                 <button onclick="stopEpisode(); blur();" class="console-button-text pause" aria-label="Pause">{{ partial "icons/pause.html" }}</button>
-                <h6 class="title title-5" title="Security with Thomas Ptacek, Fly.io">Security with Thomas Ptacek, Fly.io</h5>
+                <h6 class="title title-5" title="{{ $.Site.Params.consolePodcastTitle }}">{{ $.Site.Params.consolePodcastTitle }}</h5>
             </div>
             <div data-elapsed-indicator class="elapsed-indicator"><span class="bg"></span><span class="elapsed" style="width: 0%"></span></div>
         </div>
