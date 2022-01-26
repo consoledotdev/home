@@ -179,9 +179,7 @@ async function handleEvent(event) {
         response.headers.set("X-Frame-Options", "DENY");
         response.headers.set("Referrer-Policy", "strict-origin");
         response.headers.set("Feature-Policy", "none");
-        // Opt out of Google's FLoC
-        // https://amifloced.org/
-        response.headers.set("Permissions-Policy", "interest-cohort=()")
+
         // Get the referrer from the URL string, false if not set
         var referrer = url.searchParams.get("ref") || false;
 
