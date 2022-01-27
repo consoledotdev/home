@@ -5,7 +5,7 @@
     {{ if $resource }}
         {{ if eq $resource.ResourceType "image" }}
             {{ $imgPermalink := $resource.Permalink }}
-            {{ if or (eq $resource.MediaType.SubType "jpg") (eq $resource.MediaType.SubType "jpeg") (eq $resource.MediaType.SubType "png") }}
+            {{ if (and (or (eq $resource.MediaType.SubType "jpg") (eq $resource.MediaType.SubType "jpeg") (eq $resource.MediaType.SubType "png")) (isset $resource "Width")) }}
 
                 {{ if .nextGen }} 
 
