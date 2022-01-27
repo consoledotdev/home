@@ -35,7 +35,7 @@ section = [ "HTML", "RSS" ]
 
 [params]
 consoleSubscribers = "18k+"
-consolePodcastTitle = "Observability, with Charity Majors"
-consolePodcastURL = "https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/8e88affe-5a27-4755-875d-5f2947bc5bbb/audio/1865a097-033b-478c-8037-7f2883098ade/default_tc.mp3?aid=rss_feed&feed=T80CJwln"
+consolePodcastTitle = "Decentralization, with Brooklyn Zelenka"
+consolePodcastURL = "https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/21114878-64c4-4605-95ba-81c946feaa77/audio/32a8188f-0a02-4847-95f8-b8f007ef3a34/default_tc.mp3?aid=rss_feed&feed=T80CJwln"
 #forceNewsletterDate = "" # YYYY-MM-DD
 #returnNewsletterDate = "" # YYYY-MM-DD
