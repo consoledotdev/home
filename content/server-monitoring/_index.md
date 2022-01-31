@@ -48,9 +48,10 @@ The best server monitoring tools have lots of high quality integrations and
 plugins, have highly flexible graphs, and provide advanced alerting
 functionality so you can be notified when things go wrong.
 
-We tested 18 server monitoring services using our independent [selection
-criteria](/selection-criteria/) and the requirements described below. The best
-server monitoring tools for developers and devops engineers in {{< year >}} are:
+We tested 18 server monitoring services using our independent
+[selection criteria](/selection-criteria/) and the requirements described below.
+The best server monitoring tools for developers and devops engineers in
+{{< year >}} are:
 
 1. [Datadog](#datadog)
 2. [New Relic](#new-relic)
@@ -189,8 +190,8 @@ Alerting is broken down into two parts:
 
 #### Everything else
 
-The best monitoring tools in 2021 don't just monitor servers, they also have
-lots of other features. These include incident management, runbooks, team
+The best monitoring tools in {{< year >}} don't just monitor servers, they also
+have lots of other features. These include incident management, runbooks, team
 collaboration, machine learning for anomaly detection and suggested
 remediations, error tracking, and many other complementary features.
 
@@ -562,8 +563,8 @@ about if you then add APM, logs, and synthetic monitoring? See our
 [review of New Relic's Synthetic Monitoring](/website-monitoring/#newrelic) for
 more details.
 
-There are also some [documented limits around how much data can be ingested at
-once](https://docs.newrelic.com/docs/licenses/license-information/general-usage-licenses/new-relic-data-usage-limits-policies/).
+There are also some
+[documented limits around how much data can be ingested at once](https://docs.newrelic.com/docs/licenses/license-information/general-usage-licenses/new-relic-data-usage-limits-policies/).
 With server monitoring this is limited to 5,000 agents per account and 5,000 new
 containers per hour per account. You'd have to be operating at quite a large
 scale to hit these, especially the container limits, but 5k servers is not as
@@ -918,10 +919,10 @@ metrics storage and provides no durability guarantees because it runs on a
 single node. This means you need to connect it to remote storage options such as
 [Cortex](https://cortexmetrics.io/) or [Thanos](https://thanos.io/), both of
 which are open source and provide horizontal scalability, high availability,
-multi-tenancy and long term storage. Whether [the new Prometheus Agent
-mode](https://prometheus.io/blog/2021/11/16/agent/), which introduces a type of
-stateless collector, enables better HA deployments will be interesting to see as
-the feature gets deployed.
+multi-tenancy and long term storage. Whether
+[the new Prometheus Agent mode](https://prometheus.io/blog/2021/11/16/agent/),
+which introduces a type of stateless collector, enables better HA deployments
+will be interesting to see as the feature gets deployed.
 
 Alerting is another thing you have to manage through the
 [Alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager/)
@@ -1074,13 +1075,13 @@ datastore that can ingest metrics from an ecosystem of plugins and language
 client libraries, all presented in a polished and good-looking web UI.
 
 If you don't want to run it all yourlself, there is an InfluxDB Cloud product,
-available on [AWS](https://aws.amazon.com/marketplace/pp/B08234JZPS/), [Google
-Cloud](https://console.cloud.google.com/marketplace/details/influxdata-public/cloud2-gcp-marketplace-prod)
-or [Microsoft
-Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/influxdata.influxdb-cloud).
+available on [AWS](https://aws.amazon.com/marketplace/pp/B08234JZPS/),
+[Google Cloud](https://console.cloud.google.com/marketplace/details/influxdata-public/cloud2-gcp-marketplace-prod)
+or
+[Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/influxdata.influxdb-cloud).
 It includes some extra features not available in the open source version, such
-as [templated alerts, dashboards and agent
-configurations](https://docs.influxdata.com/influxdb/cloud/influxdb-templates/).
+as
+[templated alerts, dashboards and agent configurations](https://docs.influxdata.com/influxdb/cloud/influxdb-templates/).
 [Notebooks](https://docs.influxdata.com/influxdb/v2.1/notebooks/) were also
 previously only available in the cloud version, but are now in the open source
 release as of InfluxDB 2.1. InfluxDB Cloud has a free plan which is useful for
@@ -1269,9 +1270,9 @@ Opstrace packages several open source monitoring tools
 ([Cortex](https://cortexmetrics.io), [Loki](https://grafana.com/oss/loki/),
 [Grafana](https://grafana.com), [Prometheus](https://prometheus.io)) to make
 deployment and management easier. This is still an early-stage project so we did
-not evaluate it. On [14 Dec 2021 it was acquired by
-GitLab](https://opstrace.com/blog/gitlab) so we'll be keeping an eye out to see
-what GitLab does next.
+not evaluate it. On
+[14 Dec 2021 it was acquired by GitLab](https://opstrace.com/blog/gitlab) so
+we'll be keeping an eye out to see what GitLab does next.
 
 {{< div--close >}}
 
@@ -1324,9 +1325,8 @@ availability configuration, which
 Zabbix consists of several components, the main two being the Zabbix Server and
 the monitoring agent installed onto each system you want to monitor. The lack of
 support for high availability is a major limitation that is being fixed in the
-upcoming 6.0 release. This new version, currently in beta, [includes high
-availability clustering out of the
-box](https://blog.zabbix.com/whats-new-in-zabbix-6-0-lts-by-arturs-lontons-zabbix-summit-online-2021/17761/#Zabbix_server_High_Availability_cluster).
+upcoming 6.0 release. This new version, currently in beta,
+[includes high availability clustering out of the box](https://blog.zabbix.com/whats-new-in-zabbix-6-0-lts-by-arturs-lontons-zabbix-summit-online-2021/17761/#Zabbix_server_High_Availability_cluster).
 
 Agents can either communicate with the server directly or they route through a
 Zabbix Proxy that alleviates load on the server. This is because Zabbix comes
@@ -1358,8 +1358,8 @@ Twilio.
 Zabbix is a powerful open source monitoring tool but it feels somewhat dated
 compared to more modern options like Grafana and InfluxDB. We like its open
 source philosophy and it covers most of what you would expect in a server
-monitoring tool in 2021, but doesn't quite get our recommendation compared to
-our two finalists above.
+monitoring tool in {{< year >}}, but doesn't quite get our recommendation
+compared to our two finalists above.
 
 {{< div--close >}}
 
@@ -1378,8 +1378,8 @@ our two finalists above.
 #### Why you can trust us
 
 Console is written by developers for developers. Using our decades of experience
-building software at scale, we apply strict [selection
-criteria](/selection-criteria/) to decide which tools we feature.
+building software at scale, we apply strict
+[selection criteria](/selection-criteria/) to decide which tools we feature.
 
 This includes asking questions like "Would this form part of a daily-use set of
 developer tools?", "Would this be used by advanced, power-users?" and "Does it

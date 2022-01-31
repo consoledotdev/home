@@ -53,9 +53,9 @@ world, the ability to build multi-step transaction monitoring tests (also known
 as synthetic monitoring), and advanced alerting so you can be notified via
 different channels when your website or API goes down.
 
-We tested 13 website monitoring services using our [independent selection
-criteria](/selection-criteria/). The best website monitoring tools for
-developers and devops engineers in {{< year >}} are:
+We tested 13 website monitoring services using our
+[independent selection criteria](/selection-criteria/). The best website
+monitoring tools for developers and devops engineers in {{< year >}} are:
 
 1. [Datadog](#datadog)
 2. [Uptrends](#uptrends)
@@ -87,13 +87,13 @@ middle of the night! Some services even support configuration in Terraform.
 ### tl;dr the best website monitoring tools
 
 {{< category-review/tldr-list--open >}}
-{{< category-review/miniature-card name="Datadog" thumbnail="/img/favicons/www.datadoghq.com.png" url="https://www.datadoghq.com/" anchor="datadog" score="4.6" >}}
-{{< category-review/miniature-card name="Uptrends" thumbnail="/img/favicons/www.uptrends.com.jpg" url="https://www.uptrends.com/" anchor="uptrends" score="4.5" >}}
-{{< category-review/miniature-card name="Checkly" thumbnail="/img/favicons/www.checklyhq.com.jpg" url="https://www.checklyhq.com/" anchor="checkly" score="4.4" >}}
-{{< category-review/miniature-card name="Site24x7" thumbnail="/img/favicons/www.site24x7.com.jpg" url="https://www.site24x7.com/" anchor="site24x7" score="4.3" >}}
-{{< category-review/miniature-card name="New Relic" thumbnail="/img/favicons/newrelic.com.png" url="https://newrelic.com/" anchor="newrelic" score="4.1" >}}
-{{< category-review/miniature-card name="Uptime.com" thumbnail="/img/favicons/uptime.com.svg" url="https://uptime.com/" anchor="uptime" score="3.8" >}}
-{{< category-review/miniature-card name="RapidSpike" thumbnail="/img/favicons/www.rapidspike.com.png" url="https://www.rapidspike.com/" anchor="rapidspike" score="3.8" >}}
+{{< category-review/miniature-card name="Datadog" thumbnail="/img/favicons/www.datadoghq.com.png" full-review="/website-monitoring/datadog/" url="https://www.datadoghq.com/" anchor="datadog" score="4.6" >}}
+{{< category-review/miniature-card name="Uptrends" thumbnail="/img/favicons/www.uptrends.com.jpg" full-review="/website-monitoring/uptrends/" url="https://www.uptrends.com/" anchor="uptrends" score="4.5" >}}
+{{< category-review/miniature-card name="Checkly" thumbnail="/img/favicons/www.checklyhq.com.jpg" full-review="/website-monitoring/checkly/" url="https://www.checklyhq.com/" anchor="checkly" score="4.4" >}}
+{{< category-review/miniature-card name="Site24x7" thumbnail="/img/favicons/www.site24x7.com.jpg" full-review="/website-monitoring/site24x7/" url="https://www.site24x7.com/" anchor="site24x7" score="4.3" >}}
+{{< category-review/miniature-card name="New Relic" thumbnail="/img/favicons/newrelic.com.png" full-review="/website-monitoring/new-relic/" url="https://newrelic.com/" anchor="newrelic" score="4.1" >}}
+{{< category-review/miniature-card name="Uptime.com" thumbnail="/img/favicons/uptime.com.svg" full-review="/website-monitoring/uptime.com/" url="https://uptime.com/" anchor="uptime" score="3.8" >}}
+{{< category-review/miniature-card name="RapidSpike" thumbnail="/img/favicons/www.rapidspike.com.png" full-review="/website-monitoring/rapidspike/" url="https://www.rapidspike.com/" anchor="rapidspike" score="3.8" >}}
 {{< ul--close >}}
 
 {{< div--close >}}
@@ -176,8 +176,8 @@ best monitoring tools. We are assessing products from the perspective of
 experienced software developers who will want these more advanced features.
 
 This means we consider multi-step requests (transactions) to be a crucial part
-of good website monitoring services in 2021. We will not review services that
-don’t support it.
+of good website monitoring services in {{< year >}}. We will not review services
+that don’t support it.
 
 #### Alerts
 
@@ -221,6 +221,7 @@ defining execution steps and detailed test reporting, screenshots and request
 traces. It also has sophisticated alerting and incident management
 functionality, especially if you’re using their other monitoring products.
 However, it has a small number of check locations and can get expensive.
+[Read full review](/website-monitoring/datadog/)
 
 {{< img-center src="/img/website-monitoring/datadog.png" alt="Datadog product screenshot" width="100%" >}}
 
@@ -374,7 +375,7 @@ want all the advanced functionality, it is difficult to beat.
 Uptrends is more expensive at the entry level to get access to uptime and
 multi-step request monitoring, but it has features like support for running
 tests using Chrome, Firefox and Internet Explorer, plus over 200 check
-locations.
+locations. [Read full review](/website-monitoring/uptrends/)
 
 {{< img-center src="/img/website-monitoring/uptrends.png" alt="Uptrends product screenshot" width="100%" >}}
 
@@ -513,7 +514,7 @@ API monitoring and scripted browser transaction monitoring functionality. Being
 able to use Node.js scripts through the Playwright and Puppeteer frameworks, all
 defined in Terraform, is great for developers. However, it is missing some
 features of competitors, such as more check types, private monitoring locations
-and more flexible alerting.
+and more flexible alerting. [Read full review](/website-monitoring/checkly/)
 
 {{< img-center src="/img/website-monitoring/checkly.png" alt="Checkly product screenshot" width="100%" >}}
 
@@ -663,7 +664,7 @@ Site24x7 has a lot of functionality and covers basic availability checks,
 transaction monitoring as well as browser performance testing and step-by-step
 API monitoring. However, it has a cramped UI as well as some unusual technical
 implementation details for its private check locations (such as a graphical
-installer for Linux systems).
+installer for Linux systems). [Read full review](/website-monitoring/site24x7/)
 
 {{< img-center src="/img/website-monitoring/site24x7.png" alt="Site24x7 product screenshot" width="100%" >}}
 
@@ -792,6 +793,7 @@ New Relic Synthetic Monitoring has options to test APIs, script browser
 interactions, check for broken links or just ping specific endpoints. It
 includes a generous free package and you can set up private locations for no
 extra cost, but it has limited alerting capabilities.
+[Read full review](/website-monitoring/new-relic/)
 
 {{< img-center src="/img/website-monitoring/newrelic.png" alt="New Relic product screenshot" width="100%" >}}
 
@@ -942,6 +944,7 @@ Uptime.com (previously known as Uptime) supports multiple check types and allows
 you to build multi-step transaction monitoring using XPath or JSON selectors.
 However, it is let down by limited alerting options and fewer check locations
 than competitors, which are also limited by the pricing plan you choose.
+[Read full review](/website-monitoring/uptime.com/)
 
 {{< img-center src="/img/website-monitoring/uptime.png" alt="Uptime product screenshot" width="100%" >}}
 
@@ -1079,7 +1082,7 @@ RapidSpike takes an innovative approach to domain, page and transaction
 monitoring with automatic insights about domain expiry, page accessibility, and
 performance. Although multi-step requests can be scripted in JSON, the focus on
 HTTP(S) website monitoring means it is more suited to non-technical users than
-developers.
+developers. [Read full review](/website-monitoring/rapidspike/)
 
 {{< img-center src="/img/website-monitoring/rapidspike.png" alt="RapidSpike product screenshot" width="100%" >}}
 
@@ -1103,8 +1106,8 @@ RapidSpike is primarily a website monitoring service, which means it mainly
 supports HTTP(S) checks against a URL, including sub-pages and multi-step
 requests. However, it also supports Ping checks against IP addresses (or
 domains) which it refers to as server monitoring. These can include port scans
-where it will detect and scan open ports. Check frequency is configurable,
-down to every 1 minute or as infrequently as every 60 minutes.
+where it will detect and scan open ports. Check frequency is configurable, down
+to every 1 minute or as infrequently as every 60 minutes.
 
 As part of the website monitoring, RapidSpike includes multiple “Insights”
 checks. These range from domain expiry and SSL certificate validation to SSL
@@ -1382,8 +1385,8 @@ As such, we do not recommend UptimeRobot for developers.
 #### Why you can trust us
 
 Console is written by developers for developers. Using our decades of experience
-building software at scale, we apply strict [selection
-criteria](/selection-criteria/) to decide which software we feature.
+building software at scale, we apply strict
+[selection criteria](/selection-criteria/) to decide which software we feature.
 
 This includes asking questions like "Would this form part of a daily-use set of
 developer tools?", "Would this be used by advanced, power-users?" and "Does it
