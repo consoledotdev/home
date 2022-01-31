@@ -1,0 +1,363 @@
+{
+    "consoleDeveloperPerspective": [
+        [
+            "Dark mode",
+            [
+                "No"
+            ]
+        ],
+        [
+            "APIs",
+            [
+                {
+                    "links": [
+                        {
+                            "href": "https://www.checklyhq.com/docs/api",
+                            "text": "Yes",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                },
+                "(Beta)"
+            ]
+        ],
+        [
+            "Documentation quality",
+            [
+                "Good"
+            ]
+        ],
+        [
+            "Developer power features",
+            [
+                "Define tests with Terraform."
+            ]
+        ],
+        [
+            "Operational overhead",
+            [
+                "None"
+            ]
+        ],
+        [
+            "Support",
+            [
+                "Email support."
+            ]
+        ],
+        [
+            "Security and privacy considerations",
+            [
+                "Checkly operates a white hat responsible disclosure program but does not hold any security certifications."
+            ]
+        ]
+    ],
+    "companyContext": [
+        [
+            "CEO",
+            [
+                {
+                    "links": [
+                        {
+                            "href": "https://www.linkedin.com/in/hanneslenke/",
+                            "text": "Hannes Lenke",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                }
+            ]
+        ],
+        [
+            "Year founded",
+            [
+                "2018"
+            ]
+        ],
+        [
+            "Number of employees",
+            [
+                "11-50"
+            ]
+        ],
+        [
+            "Company stage",
+            [
+                "Startup"
+            ]
+        ],
+        [
+            "Headquarters",
+            [
+                "Berlin, Germany"
+            ]
+        ],
+        [
+            "Key customers",
+            [
+                "1Password, Vercel, Pipedream"
+            ]
+        ],
+        [
+            "Social",
+            [
+                {
+                    "links": [
+                        {
+                            "href": "https://twitter.com/checklyHQ",
+                            "text": "Twitter",
+                            "iconLeft": "twitter"
+                        },
+                        {
+                            "href": "https://www.linkedin.com/company/checkly/",
+                            "text": "LinkedIn",
+                            "iconLeft": "linkedin"
+                        }
+                    ]
+                }
+            ]
+        ]
+    ],
+    "comparisonChecklist": [
+        [
+            "H",
+            "Feature",
+            [
+                "Checkly"
+            ],
+            [
+                "Datadog"
+            ],
+            [
+                "Uptrends"
+            ],
+            [
+                "Site24x7"
+            ],
+            [
+                "New Relic"
+            ],
+            [
+                "Uptime.com"
+            ],
+            [
+                "RapidSpike"
+            ]
+        ],
+        [
+            "IPv6 support",
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            "Check locations",
+            [
+                "21"
+            ],
+            [
+                "16"
+            ],
+            [
+                "220"
+            ],
+            [
+                "110"
+            ],
+            [
+                "20"
+            ],
+            [
+                "49"
+            ],
+            [
+                "15"
+            ]
+        ],
+        [
+            "Mobile applciation",
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            "In-built status pages",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ]
+        ],
+        [
+            "Custom dashboards",
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            "SMS alerts",
+            [
+                "Using AWS SNS"
+            ],
+            [
+                "Using Twilio"
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                "Using AWS SNS"
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ]
+        ],
+        [
+            "Phone alerts",
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ]
+        ]
+    ]
+}
