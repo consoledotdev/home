@@ -3351,7 +3351,7 @@ body:not(.mobile) .console-control:hover:before {
     padding-bottom: calc(var(--size) * 0.8945);
 }
 
-/* Podcast Links
+/* Podcast embed
    ================================================================================================================ */
 .podcast-embed .title.title-4 {
     margin-bottom: var(--space3);
@@ -3463,6 +3463,19 @@ body:not(.mobile) .console-control:hover:before {
     background: var(--theme-text-4);
 }
 
+@media (max-width: 511px) {
+    .podcast-embed-player + .podcast-links .link {
+        margin-top: var(--space3);
+        margin-left: 0;
+    }
+}
+
+/* Podcast links
+   ================================================================================================================ */
+.podcast-links-wrapper .title {
+    color: var(--theme-text-2);
+}
+
 .podcast-links {
     display: flex;
     flex-flow: row nowrap;
@@ -3496,13 +3509,10 @@ body:not(.mobile) .console-control:hover:before {
 @media (min-width: 512px) {
     .podcast-links .link {
         flex: 0 0 auto;
-        margin-left: var(--space3);
     }
-}
 
-@media (max-width: 511px) {
-    .podcast-links .link {
-        margin-top: var(--space3);
+    .podcast-links .link:not(:first-child) {
+        margin-left: var(--space3);
     }
 }
 
