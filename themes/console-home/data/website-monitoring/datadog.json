@@ -1,0 +1,381 @@
+{
+    "consoleDeveloperPerspective": [
+        [
+            "Dark mode",
+            [
+                "Yes"
+            ]
+        ],
+        [
+            "APIs",
+            [
+                {
+                    "links": [
+                        {
+                            "href": "https://docs.datadoghq.com/api/latest/",
+                            "text": "Yes",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                }
+            ]
+        ],
+        [
+            "Documentation quality",
+            [
+                "Excellent"
+            ]
+        ],
+        [
+            "Developer power features",
+            [
+                "None"
+            ]
+        ],
+        [
+            "Operational overhead",
+            [
+                "None"
+            ]
+        ],
+        [
+            "Support",
+            [
+                "Slack chat and in-app live chat available between 10:00 and 19:00 ET"
+            ]
+        ],
+        [
+            "Security and privacy considerations",
+            [
+                "SOC 2 Type II compliance, HIPAA-compliant, FedRAMP compliant, ISO security standard 27001, 27017 and 27018"
+            ]
+        ]
+    ],
+    "companyContext": [
+        [
+            "CEO",
+            [
+                {
+                    "links": [
+                        {
+                            "href": "https://www.linkedin.com/in/olivierpomel/",
+                            "text": "Olivier Pomel",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                }
+            ]
+        ],
+        [
+            "Year founded",
+            [
+                "2010"
+            ]
+        ],
+        [
+            "Number of employees",
+            [
+                "1,001-5,000"
+            ]
+        ],
+        [
+            "Company stage",
+            [
+                {
+                    "links": [
+                        {
+                            "href": "https://investors.datadoghq.com/stock-information",
+                            "text": "Publicly traded company",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                }
+            ]
+        ],
+        [
+            "Headquarters",
+            [
+                "New York City, USA"
+            ]
+        ],
+        [
+            "Key customers",
+            [
+                "Samsung, Shell, Dreamworks, Lenovo, NASDAQ,",
+                {
+                    "links": [
+                        {
+                            "href": "https://www.datadoghq.com/customers/",
+                            "text": "See more",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                }
+            ]
+        ],
+        [
+            "Social",
+            [
+                {
+                    "links": [
+                        {
+                            "href": "https://twitter.com/datadoghq",
+                            "text": "Twitter",
+                            "iconLeft": "twitter"
+                        },
+                        {
+                            "href": "https://www.linkedin.com/company/datadog/",
+                            "text": "LinkedIn",
+                            "iconLeft": "linkedin"
+                        }
+                    ]
+                }
+            ]
+        ]
+    ],
+    "comparisonChecklist": [
+        [
+            "H",
+            "Feature",
+            [
+                "Datadog"
+            ],
+            [
+                "Checkly"
+            ],
+            [
+                "Uptrends"
+            ],
+            [
+                "Site24x7"
+            ],
+            [
+                "New Relic"
+            ],
+            [
+                "Uptime.com"
+            ],
+            [
+                "RapidSpike"
+            ]
+        ],
+        [
+            "IPv6 support",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            "Check locations",
+            [
+                "16"
+            ],
+            [
+                "21"
+            ],
+            [
+                "220"
+            ],
+            [
+                "110"
+            ],
+            [
+                "20"
+            ],
+            [
+                "49"
+            ],
+            [
+                "15"
+            ]
+        ],
+        [
+            "Mobile applciation",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            "In-built status pages",
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ]
+        ],
+        [
+            "Custom dashboards",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            "SMS alerts",
+            [
+                "Using Twilio"
+            ],
+            [
+                "Using AWS SNS"
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                "Using AWS SNS"
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ]
+        ],
+        [
+            "Phone alerts",
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ]
+        ]
+    ]
+}
