@@ -3,11 +3,11 @@ title: "Uptrends review"
 date: 2022-01-31T07:00:00+00:00
 draft: false
 summary:
-  Uptrends can run complex transaction workflows and monitor websites from more
+  Uptrends can run complex transaction monitoring workflows and monitor websites from more
   than 200 global regions. Read our review of Uptrends - a website monitoring
   tool.
 metaDescription:
-  Uptrends can run complex transaction workflows and monitor websites from more
+  Uptrends can run complex transaction monitoring workflows and monitor websites from more
   than 200 global regions. Read our review of Uptrends - a website monitoring
   tool.
 headerType: fixed
@@ -181,13 +181,15 @@ duration.
 {{< rich-title-3 icon="like" >}}What we like{{</ rich-title-3 >}}
 
 Uptrends can run checks from more than 220 locations around the world. This
-number is greater than any other website monitoring tool we tested. Site24x7
-offers 110+ locations which is the second highest, Datadog and New Relic offer
-16 and 20 respectively. Having a diverse selection to choose from makes it a
-useful tool for monitoring geographical and localization differences. For
-example, ecommerce websites can change currency settings or streaming video
-services can check availability of content. If the number of test locations is
-important for your use case, Uptrends is a clear winner.
+number is greater than any other website monitoring tool we tested.
+[Site24x7](/website-monitoring/site24x7/) offers 110+ locations which is the
+second highest, [Datadog](/website-monitoring/datadog/) and [New
+Relic](/website-monitoring/new-relic/) offer 16 and 20 respectively. Having a
+diverse selection to choose from makes it a useful tool for monitoring
+geographical and localization differences. For example, ecommerce websites can
+change currency settings or streaming video services can check availability of
+content. If the number of test locations is important for your use case,
+Uptrends is a clear winner.
 
 Uptrends provides secure storage, known as
 [vault](https://www.uptrends.com/support/kb/vault), to store:
@@ -201,19 +203,21 @@ Uptrends provides secure storage, known as
 
 This service is useful as it will remove incentives to permanently store
 credentials in tests - the certificates and credentials can be rotated at a
-regular interval using the Vault API. Checkly, an alternative website monitoring
-tool, also provides an option to securely store data by locked environment
-variables, but Uptrends offers more functionality.
+regular interval using the Vault API. [Checkly](/website-monitoring/checkly/),
+an alternative website monitoring tool, also provides an option to securely
+store data by locked environment variables, but Uptrends offers more
+functionality.
 
 Uptends can complete advanced multi-step transaction workflows such as password
 reset request, checkout flow, booking a flight and performing a payment. These
 can be built using an in-built web editor or recorded via a browser extension.
 The web editor has a simple graphical user interface and uses CSS selectors to
-locate elements. Similar to RapidSpike, Uptrends stores test scripts as JSON
-files which can be directly edited by the user and modified as needed. These
-scripts can be updated via the API and integrated with CI/CD tools for automatic
-deployment which makes it a powerful tool. Uptrends also provides a team of
-transaction consultants to fine-tune and test scripts free of charge.
+locate elements. Similar to [RapidSpike](/website-monitoring/rapidspike/),
+Uptrends stores test scripts as JSON files which can be directly edited by the
+user and modified as needed. These scripts can be updated via the API and
+integrated with CI/CD tools for automatic deployment which makes it a powerful
+tool. Uptrends also provides a team of transaction consultants to fine-tune and
+test scripts free of charge.
 
 Full Page Check monitor types loads the defined test webpage using an actual
 browser, and downloads each element (scripts, CSS, third-party elements,
@@ -280,7 +284,8 @@ available to introduce new users to basic features. A collection of articles in
 their knowledge base is available which further explains the features of each
 tool. This means it takes longer to find relevant information and forces you to
 jump from one section to another. If having good documentation is a priority for
-you, then Datadog and New Relic have done a great job of designing their
+you, then [Datadog](/website-monitoring/datadog/) and [New
+Relic](/website-monitoring/new-relic/) have done a great job of designing their
 documentation.
 
 {{< modal-custom type="screen" type-screen="/img/website-monitoring/uptrends-dashboard.jpeg" >}}

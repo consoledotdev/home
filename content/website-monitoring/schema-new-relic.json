@@ -2,7 +2,7 @@
     "@context": "https://schema.org/",
     "@type": "Review",
     "headline": "New Relic review",
-    "description": "New Relic is a good monitoring tool which can run synthetic tests and transaction workflows. It has a custom query language to filter metrics. Read our review of New Relic - a website monitoring tool.",
+    "description": "New Relic is a powerful monitoring tool which can run synthetic tests and transaction workflows. It has a custom query language to filter metrics. Read our review of New Relic - a website monitoring tool.",
     "itemReviewed": {
         "@type": "Product",
         "name": "New Relic",

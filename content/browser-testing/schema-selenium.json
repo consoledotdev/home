@@ -2,7 +2,7 @@
     "@context": "https://schema.org/",
     "@type": "Review",
     "headline": "Selenium review",
-    "description": "Selenium is a free and open source browser testing framework that powers many other browser testing tools, but requires significant technical knowledge  to use. Read our review of Selenium - a browser testing tool.",
+    "description": "Selenium is a free and open source browser testing framework that powers many other browser testing tools, but requires significant technical knowledge to use. Read our review of Selenium - a browser testing tool.",
     "itemReviewed": {
         "@type": "Product",
         "name": "Selenium",
