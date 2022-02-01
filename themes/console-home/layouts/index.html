@@ -48,10 +48,7 @@
             </div>
             <div data-elapsed-indicator class="elapsed-indicator"><span class="bg"></span><span class="elapsed" style="width: 0%"></span></div>
         </div>
-        <div class="podcast-links">
-            <a class="link" onclick="blur();" target="_blank" rel="noopener" href="https://podcasts.apple.com/us/podcast/console-devtools/id1572448316" title="Listen on Apple Podcasts"><img loading="lazy" src="/img/icon-podcast-apple.svg" alt="Apple Podcasts" width="32" height="33"></a>
-            <a class="link" onclick="blur();" target="_blank" rel="noopener" href="https://open.spotify.com/show/1yec5zbVfGPQUlH80tDIOW" title="Listen on Spotify"><img loading="lazy" src="/img/icon-podcast-spotify.svg" alt="Spotify" width="32" height="33"></a>
-        </div>
+        {{ partial "components/podcast-links.html" (dict "apple" "true" "spotify" "true") }}
     </div>
 </div>
 <!--<div class="framed-section mid framed-section-overlay">
