@@ -17,8 +17,9 @@ ogImg: /img/interviews/budibase-martin-mckeaveney-desk.jpeg
 
 ### What is Budibase? Why did you build it?
 
-[Budibase](https://budibase.com/) is an open source, low-code platform for
-building business applications and internal tools. We make it easy and fast for
+[Budibase](https://budibase.com/) is an [open
+source](https://github.com/Budibase/budibase), low-code platform for building
+business applications and internal tools. We make it easy and fast for
 developers and IT professionals to create their own software, by providing a
 visual app building experience with three main pillars: data, design, and
 automation.
@@ -116,7 +117,8 @@ or more over the next year.
 
 ### How do you think about the balance between the open source code base and your cloud product?
 
-The whole team works on the Open Source product, and the code base is shared
+The whole team works on [the Open Source
+product](https://github.com/Budibase/budibase), and the code base is shared
 between the two. We do have things in there, like conditionals for certain
 things that are in the cloud product, but there's not really any features that
 are enabled on the cloud side that you can't do in the self-hosted version. The
