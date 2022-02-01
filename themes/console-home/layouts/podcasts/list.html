@@ -1,0 +1,76 @@
+{{ define "main" }}
+	{{ $CTATitle := "Subscribe to the weekly Console newsletter" }}
+	{{ $CTADescription := "Our free weekly newsletter features the latest interesting tools." }}
+
+    <section class="page-section page-section-feature-root opening">
+        <h2 class="title rich-title title-1">{{ partial "icons/podcast.html"}}<span>{{ .Title }}</span></h2>
+        <div class="section-body">
+            <div class="left">
+                <p class="description">
+                    Interviews with interesting people in the devtools space.
+                </p>
+                <p>
+                    From security to dev focused infrastructure, and from homomorphic encryption to privacy and decentralization, we discuss the technical details around devtools.
+                </p>
+            </div>
+            <div class="right">
+                <div class="framed-section mid framed-section-overlay podcast-links-container">
+                    {{ partial "components/podcast-links.html" (dict "apple" "true" "spotify" "true" "google" "true" "overcast" "true" "title" "Listen & subscribe") }}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page-section page-section-feature-root">
+        <h5 class="title title-4">Latest Episode / S02 E03 — 2022-01-20</h5>
+            {{ range first 1 (where .Pages.ByPublishDate.Reverse "Params.season" 2) }}
+                {{ partial "components/podcasts/card.html" . }}
+            {{ end }}
+    </section>
+	<div class="feature-split">
+		<aside data-aside-wrapper class="feature-aside">
+			<div class="feature-aside-content marked-scrollable-v" data-feature-aside-content data-marked-scrollable-v>
+                Yo.
+            </div>
+		</aside>
+		<div class="feature-content-wrapper" data-aside-anchor data-feature-content-wrapper>
+			<section class="page-section" data-feature-items-section="season-2">
+				<div class="page-section-heading">
+                    <h3 class="title title-2"><span data-feature-section-name>Season 2</span></h3>
+				</div>
+				<div class="page-section-heading">
+                    <h5 class="title title-4"><span data-feature-section-name>Other episodes</span></h5>
+				</div>
+				<div class="feature-items" data-feature-items>
+                    {{ range after 1 (where .Pages.ByPublishDate.Reverse "Params.season" 2) }}
+                        {{ partial "components/podcasts/card.html" . }}
+                    {{ end }}
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="feature-split">
+		<aside data-aside-wrapper class="feature-aside">
+			<div class="feature-aside-content marked-scrollable-v" data-feature-aside-content data-marked-scrollable-v>
+                Yo.
+            </div>
+		</aside>
+		<div class="feature-content-wrapper" data-aside-anchor data-feature-content-wrapper>
+			<section class="page-section" data-feature-items-section="season-2">
+				<div class="page-section-heading">
+                    <h3 class="title title-2"><span data-feature-section-name>Season 1</span></h3>
+				</div>
+				<div class="feature-items" data-feature-items>
+                    {{ range (where .Pages.ByPublishDate.Reverse "Params.season" 1) }}
+                        {{ partial "components/podcasts/card.html" . }}
+                    {{ end }}
+				</div>
+			</section>
+		</div>
+	</div>
+	<section class="page-section page-section-feature-root">
+        {{ partial "components/author.html" (dict "context" . "bio" .Params.authorBio "img" .Params.authorImg "name" .Params.authorName ) }}
+        {{ partial "components/about-console.html" }}
+		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" ) }}
+	</section>
+
+{{ end }}

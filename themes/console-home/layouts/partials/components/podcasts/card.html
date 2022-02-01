@@ -1,0 +1,41 @@
+<div class="podcasts-card">
+    <a onclick="blur();" class="card-link" href="{{ .RelPermalink }}"><span>Read</span></a>
+    <div class="podcasts-card-inner">
+        <div class="podcasts-card-combo">
+            <div class="podcasts-card-company-logo">
+                <div class="logo aspect-ratio aspect-ratio-1-1">
+
+                    {{ $nextGenImgSrc := partial "components/processed-img.html" (dict "src" .Params.topImg2Src "width" "216" "nextGen" "true") }}
+                    {{ $imgSrc := partial "components/processed-img.html" (dict "src" .Params.topImg2Src "width" "216") }}
+                    {{with $nextGenImgSrc }}<picture><source srcset="{{ . }}" type="image/webp">{{ end }}
+                        <img loading="lazy" class="image" src="{{ $imgSrc }}" alt="{{ .Params.topImg2Alt }}" />
+                    {{with $nextGenImgSrc }}</picture>{{ end }}
+                    
+                </div>
+            </div>
+            <div class="plane-picture">
+                <img class="ratio" src="/img/ratio-plane.png" alt="">
+
+                {{ $nextGenImgSrc := partial "components/processed-img.html" (dict "src" .Params.topImg1Src "width" "992" "nextGen" "true") }}
+                {{ $imgSrc := partial "components/processed-img.html" (dict "src" .Params.topImg1Src "width" "992") }}
+                {{with $nextGenImgSrc }}<picture><source srcset="{{ . }}" type="image/webp">{{ end }}
+                    <img loading="lazy" class="image" src="{{ $imgSrc }}" alt="{{ .Params.topImg1Alt }}" />
+                {{with $nextGenImgSrc }}</picture>{{ end }}
+                
+            </div>
+        </div>
+        <div class="podcasts-card-content">
+            <div class="podcasts-card-heading">
+                <div class="podcasts-card-person">
+                    <p class="podcasts-card-person-name">{{.Params.who }}</p>
+                    <p class="podcasts-card-person-role">{{ .Params.role }}</p>
+                </div>
+                <div class="podcasts-card-company">
+                    <p class="podcasts-card-company-name">{{ .Params.org }}</p>
+                </div>
+            </div>
+            <p class="small podcasts-card-description">{{ .Params.what }}</p>
+            <span class="date bottom">{{ .Date.Format "2006-01-02" }}</span>
+        </div>
+    </div>
+</div>
