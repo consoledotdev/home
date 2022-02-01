@@ -80,8 +80,6 @@ relatedReviews:
 
 ### Cost
 
-{{< p-custom class="cost-highlight" >}}Free{{< p--close >}}
-
 50k API checks and 5k browser checks are free every month. The pay as you go
 plan is priced at $1.20/10k API checks and $3.60/1k browser checks. Monthly and
 annual plans are also available.
@@ -203,6 +201,10 @@ an integration from Vercel Marketplace). Integration with Vercel makes it
 possible to trigger Checkly checks on every commit, see high-level check results
 in the Vercel deployment screen, and block merges unless the tests pass.
 
+{{< modal-custom type="screen" type-screen="/img/website-monitoring/checkly-dashboard.jpeg" >}}
+{{< img-custom class="content-image" src="/img/website-monitoring/checkly-dashboard.jpeg" alt="Screenshot of dashboard in Checkly." >}}
+{{< a--close >}}
+
 There are three ways to construct API tests - using the web editor, importing a
 curl command or importing from a [Swagger](https://swagger.io/)/OpenAPI spec
 (both JSON and YAML formats are supported). It is possible to specify whether
@@ -227,8 +229,8 @@ can create status pages to display these metrics publicly.
 Finally, everything can be managed through an API (with support for different
 permissions) which makes it easy to build custom integrations and export data.
 
-{{< modal-custom type="screen" type-screen="/img/browser-testing/selenium-code.png" >}}
-{{< img-custom class="content-image" src="/img/browser-testing/selenium-code.png" alt="Screenshot of Checkly script in VS code." >}}
+{{< modal-custom type="screen" type-screen="/img/website-monitoring/checkly-browser-check.jpeg" >}}
+{{< img-custom class="content-image" src="/img/website-monitoring/checkly-browser-check.jpeg" alt="Screenshot of browser tests in Checkly." >}}
 {{< a--close >}}
 
 {{< div--close >}}
@@ -280,8 +282,8 @@ UTC - users have to do some mental maths if they live in a different time zone.
 The headless recorder is also only available on the Chrome web store and the
 recorded tests can only be run on Chrome.
 
-{{< modal-custom type="screen" type-screen="/img/browser-testing/selenium-browser.png" >}}
-{{< img-custom class="content-image" src="/img/browser-testing/selenium-browser.png" alt="Screenshot of web testing with Checkly." >}}
+{{< modal-custom type="screen" type-screen="/img/website-monitoring/checkly-status-page.jpeg" >}}
+{{< img-custom class="content-image" src="/img/website-monitoring/checkly-status-page.jpeg" alt="Screenshot of Checkly status page." >}}
 {{< a--close >}}
 
 {{< div--close >}}
