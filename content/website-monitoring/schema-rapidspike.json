@@ -1,0 +1,64 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "Review",
+    "headline": "RapidSpike review",
+    "description": "RapidSpike can run synthetic website monitoring tests as well as checks for SEO, security, accessibility and performance. Read our review of RapidSpike - a website monitoring tool.",
+    "itemReviewed": {
+        "@type": "Product",
+        "name": "RapidSpike",
+        "category": "Website monitoring",
+        "description": "Website monitoring tool.",
+        "url": "https://www.rapidspike.com/",
+        "image": [
+            "https://console.dev/img/favicons/www.rapidspike.com.png"
+        ],
+        "offers": {
+            "@type": "AggregateOffer",
+            "highPrice": "340",
+            "lowPrice": "39",
+            "priceCurrency": "USD",
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "price": "39",
+                    "description": "100 data usage credits per month"
+                },
+                {
+                    "@type": "Offer",
+                    "price": "340",
+                    "description": "500 data usage credits with a account manager"
+                }
+            ]
+        }
+    },
+    "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "3.8",
+        "bestRating": "5",
+        "worstRating": "0"
+    },
+    "negativeNotes": [
+        "Documentation is subpar",
+        "IPv6 not supported",
+        "Uses a credit system for billing which is difficult to understand"
+    ],
+    "positiveNotes": [
+        "Perform an automated vulnerability assessment",
+        "Individual elements can be tracked",
+        "Uses Selenium to simulate browser interactions"
+    ],
+    "author": {
+        "@type": "Person",
+        "name": "Naman Singhal",
+        "email": "naman@console.dev",
+        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+        "image": "https://console.dev/img/naman.jpg"
+    },
+    "name": "Website monitoring tool",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Console",
+        "url": "https://console.dev"
+    },
+    "reviewBody": "RapidSpike takes a different approach from the other website monitoring tools we reviewed with a focus more on the overall website experience, including checks for SEO, security, accessibility and performance. It supports the usual check types like HTTP and various protocols, as well as synthetic monitoring using Selenium."
+}
