@@ -1,0 +1,63 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "Review",
+    "headline": "Uptrends review",
+    "description": "Uptrends can run complex transaction workflows and monitor websites from more than 200 global regions. Read our review of Uptrends - a website monitoring tool.",
+    "itemReviewed": {
+        "@type": "Product",
+        "name": "Uptrends",
+        "category": "Website monitoring",
+        "description": "Website monitoring tool.",
+        "url": "https://www.uptrends.com/",
+        "image": [
+            "https://console.dev/img/favicons/www.uptrends.com.jpg"
+        ],
+        "offers": {
+            "@type": "AggregateOffer",
+            "highPrice": "226.94",
+            "lowPrice": "16.21",
+            "priceCurrency": "USD",
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "price": "16.21",
+                    "description": "10 uptime monitors (Billed yearly)"
+                },
+                {
+                    "@type": "Offer",
+                    "price": "226.94",
+                    "description": "250 uptime monitors (Billed yearly)"
+                }
+            ]
+        }
+    },
+    "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.5",
+        "bestRating": "5",
+        "worstRating": "0"
+    },
+    "negativeNotes": [
+        "Documentation is poorly designed",
+        "Feature organization is unintuitive, UI is confusing"
+    ],
+    "positiveNotes": [
+        "Raise alerts via phone call and SMS",
+        "A large number of check locations available",
+        "Sensitive data can be stored separately from tests"
+    ],
+    "author": {
+        "@type": "Person",
+        "name": "Naman Singhal",
+        "email": "naman@console.dev",
+        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+        "image": "https://console.dev/img/naman.jpg"
+    },
+    "name": "Website monitoring tool",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Console",
+        "url": "https://console.dev"
+    },
+    "reviewBody": "Uptrends is a website monitoring tool that supports complex transaction workflows. It uses real browsers to perform full page checks that can track individual elements on the page. Uptrends also has over 220 check locations around the world, which makes it one of the most geographically diverse monitoring tools we tested."
+}
