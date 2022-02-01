@@ -1,0 +1,63 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "Review",
+    "headline": "New Relic review",
+    "description": "New Relic is a good monitoring tool which can run synthetic tests and transaction workflows. It has a custom query language to filter metrics. Read our review of New Relic - a website monitoring tool.",
+    "itemReviewed": {
+        "@type": "Product",
+        "name": "New Relic",
+        "category": "Website monitoring",
+        "description": "Website monitoring tool.",
+        "url": "https://newrelic.com/",
+        "image": [
+            "https://console.dev/img/favicons/newrelic.com.png"
+        ],
+        "offers": {
+            "@type": "AggregateOffer",
+            "highPrice": "0.25",
+            "lowPrice": "0",
+            "priceCurrency": "USD",
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "price": "0",
+                    "description": "Limited quota of 100GB data and 10k synthetics checks"
+                },
+                {
+                    "@type": "Offer",
+                    "price": "0.25",
+                    "description": "$0.25/GB/month after first 100GB"
+                }
+            ]
+        }
+    },
+    "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.1",
+        "bestRating": "5",
+        "worstRating": "0"
+    },
+    "negativeNotes": [
+        "Fewer check locations compared to other tools",
+        "Pricing model difficult to comprehend"
+    ],
+    "positiveNotes": [
+        "Private check locations supported",
+        "Custom query language for building dashboards",
+        "Detect anomalies using machine learning"
+    ],
+    "author": {
+        "@type": "Person",
+        "name": "Naman Singhal",
+        "email": "naman@console.dev",
+        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+        "image": "https://console.dev/img/naman.jpg"
+    },
+    "name": "Website monitoring tool",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Console",
+        "url": "https://console.dev"
+    },
+    "reviewBody": "New Relic is a powerful monitoring tool - in this review we focus on the website monitoring functionality. For synthetic website monitoring, multiple protocols are supported, from HTTP to TCP and WebSockets, and New Relic has powerful alerting functionality and with integrations into many notification platforms like PagerDuty, JIRA and Slack."
+}
