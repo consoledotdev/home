@@ -1,0 +1,359 @@
+{
+    "consoleDeveloperPerspective": [
+        [
+            "Dark mode",
+            [
+                "Yes"
+            ]
+        ],
+        [
+            "APIs",
+            [
+                {
+                    "links": [
+                        {
+                            "href": "https://www.site24x7.com/help/api/",
+                            "text": "Yes",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                }
+            ]
+        ],
+        [
+            "Documentation quality",
+            [
+                "Fair"
+            ]
+        ],
+        [
+            "Developer power features",
+            [
+                "None"
+            ]
+        ],
+        [
+            "Operational overhead",
+            [
+                "None"
+            ]
+        ],
+        [
+            "Support",
+            [
+                "Phone and email support"
+            ]
+        ],
+        [
+            "Security and privacy considerations",
+            [
+                "ISO 27001, SOC 2 Type II, and HIPAA compliant."
+            ]
+        ]
+    ],
+    "companyContext": [
+        [
+            "Year founded",
+            [
+                "2006"
+            ]
+        ],
+        [
+            "Number of employees",
+            [
+                "201-500"
+            ]
+        ],
+        [
+            "Company stage",
+            [
+                "Subsidiary of conglomerate"
+            ]
+        ],
+        [
+            "Headquarters",
+            [
+                "California, USA"
+            ]
+        ],
+        [
+            "Key customers",
+            [
+                "GoDaddy, Ford, VMware, SAP, NASA, TSMC,",
+                {
+                    "links": [
+                        {
+                            "href": "https://www.site24x7.com/customers.html",
+                            "text": "See more",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                }
+            ]
+        ],
+        [
+            "Social",
+            [
+                {
+                    "links": [
+                        {
+                            "href": "https://twitter.com/Site24x7",
+                            "text": "Twitter",
+                            "iconLeft": "twitter"
+                        },
+                        {
+                            "href": "https://www.linkedin.com/company/site24x7/",
+                            "text": "LinkedIn",
+                            "iconLeft": "linkedin"
+                        }
+                    ]
+                }
+            ]
+        ]
+    ],
+    "comparisonChecklist": [
+        [
+            "H",
+            "Feature",
+            [
+                "Site24x7"
+            ],
+            [
+                "Checkly"
+            ],
+            [
+                "Uptrends"
+            ],
+            [
+                "Datadog"
+            ],
+            [
+                "New Relic"
+            ],
+            [
+                "Uptime.com"
+            ],
+            [
+                "RapidSpike"
+            ]
+        ],
+        [
+            "IPv6 support",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            "Check locations",
+            [
+                "110"
+            ],
+            [
+                "21"
+            ],
+            [
+                "220"
+            ],
+            [
+                "16"
+            ],
+            [
+                "20"
+            ],
+            [
+                "49"
+            ],
+            [
+                "15"
+            ]
+        ],
+        [
+            "Mobile applciation",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            "In-built status pages",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ]
+        ],
+        [
+            "Custom dashboards",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ]
+        ],
+        [
+            "SMS alerts",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                "Using AWS SNS"
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                "Using Twilio"
+            ],
+            [
+                "Using AWS SNS"
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ]
+        ],
+        [
+            "Phone alerts",
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ]
+        ]
+    ]
+}
