@@ -1,0 +1,62 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "Review",
+    "headline": "Uptime.com review",
+    "description": "Uptime.com is a valuable website monitoring tool for enterprise customers. It offers features like private check locations, sub-accounts with limited access scope, and internal status pages. Read our review of Uptime.com - a website monitoring tool.",
+    "itemReviewed": {
+        "@type": "Product",
+        "name": "Uptime.com",
+        "category": "Website monitoring",
+        "description": "Website monitoring tool.",
+        "url": "https://uptime.com/",
+        "image": [
+            "https://console.dev/img/favicons/uptime.com.svg"
+        ],
+        "offers": {
+            "@type": "AggregateOffer",
+            "highPrice": "499",
+            "lowPrice": "19",
+            "priceCurrency": "USD",
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "price": "19",
+                    "description": "10 monitoring checks from 5 locations"
+                },
+                {
+                    "@type": "Offer",
+                    "price": "499",
+                    "description": "Custom number of checks and locations"
+                }
+            ]
+        }
+    },
+    "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "3.8",
+        "bestRating": "5",
+        "worstRating": "0"
+    },
+    "negativeNotes": [
+        "Limited check locations in some geographic regions",
+        "Test reports are not detailed enough"
+    ],
+    "positiveNotes": [
+        "Internal status pages avaialble",
+        "Sub-accounts supported"
+    ],
+    "author": {
+        "@type": "Person",
+        "name": "Naman Singhal",
+        "email": "naman@console.dev",
+        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+        "image": "https://console.dev/img/naman.jpg"
+    },
+    "name": "Website monitoring tool",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Console",
+        "url": "https://console.dev"
+    },
+    "reviewBody": "Uptime.com supports a large number of protocols for website monitoring. Useful features like private check locations, sub-accounts with limited access scope, and internal status pages make Uptime.com a particularly valuable tool for enterprise customers."
+}
