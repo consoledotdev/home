@@ -3,11 +3,11 @@ title: "New Relic review"
 date: 2022-01-31T07:00:00+00:00
 draft: false
 summary:
-  New Relic is a good monitoring tool which can run synthetic tests and
+  New Relic is a powerful monitoring tool which can run synthetic tests and
   transaction workflows. It has a custom query language to filter logs and
   metrics. Read our review of New Relic - a website monitoring tool.
 metaDescription:
-  New Relic is a good monitoring tool which can run synthetic tests and
+  New Relic is a powerful monitoring tool which can run synthetic tests and
   transaction workflows. It has a custom query language to filter logs and
   metrics. Read our review of New Relic - a website monitoring tool.
 headerType: fixed
@@ -44,7 +44,7 @@ scores:
 productShot:
   image: /img/website-monitoring/newrelic.png
 intro:
-  "New Relic is a great tool for website monitoring. It provides NRQL a powerful
+  "New Relic is a great tool for website monitoring. It provides NRQL, a powerful
   custom query language similar to SQL which can be used for making dashboards
   and defining alerts. A generous free quota is available each month."
 relatedReviews:
@@ -259,8 +259,8 @@ in recent months. If your organization and monitoring platform both use the same
 infrastructure then, outages might not be detected. Users would benefit from
 adding a private monitoring location using a different cloud provider, but that
 introduces additional cost and adds a new responsibility to monitor the
-monitoring server. Datadog uses a mix of AWS and Azure servers to run checks. In
-our opinion, this is a better approach.
+monitoring server. [Datadog](/website-monitoring/datadog/) uses a mix of AWS and
+Azure servers to run checks. In our opinion, this is a better approach.
 
 {{< div--close >}}
 

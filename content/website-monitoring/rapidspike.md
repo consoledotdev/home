@@ -273,7 +273,9 @@ compared to alternative monitoring tools, such as Uptrends which offers 200+
 test locations worldwide. Having more check locations is preferable when users
 are not concentrated in one part of the world. Private check locations are also
 not supported, which means it is not possible to check internal-facing
-endpoints. New Relic, Datadog and Uptime.com provide easy to set up Docker
+endpoints. [New Relic](/website-monitoring/new-relic/),
+[Datadog](/website-monitoring/datadog/) and
+[Uptime.com](/website-monitoring/uptime.com/) provide easy to set up Docker
 containers to run tests from private servers.
 
 RapidSpike uses a credit system for billing - separate credits are required for

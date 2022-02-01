@@ -50,10 +50,10 @@
     "negativeNotes": [
         "IPv6 connections not supported",
         "FTP, SSH, NTP monitors not supported",
-        "Arbitrary javascript packages can not be used in tests"
+        "Arbitrary Javascript packages can not be used in tests"
     ],
     "positiveNotes": [
-        "Can store monitoring configuration using Terraform",
+        "Can manage monitoring configuration using Terraform",
         "Run setup & teardown scripts before and after tests",
         "Test statistics can be exported"
     ],

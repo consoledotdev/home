@@ -47,7 +47,7 @@ intro:
   "Datadog is a powerful monitoring tool - in this review we focus on the
   website monitoring functionality. For synthetic website monitoring, multiple
   protocols are supported, from HTTP to TCP and WebSockets, and Datadog has
-  powerful alerting functionality and with integrations into many notification
+  powerful alerting functionality with integrations into many notification
   platforms like PagerDuty, JIRA and Slack."
 relatedReviews:
   - name: New Relic
@@ -99,7 +99,7 @@ browser tests (per thousand executions, billed annually).
 Datadog can monitor single-step endpoints with various protocols (HTTP, TCP,
 UDP, SSL, DNS, WebSocket, and ICMP).
 [Multistep tests](https://docs.datadoghq.com/synthetics/multistep/?tab=requestoptions)
-are a configuration, but only for HTTP, with  advanced functionality like
+are a configuration, but only for HTTP, with advanced functionality like
 authenticating through mTLS, AWS SigV4, and Microsoft NTLM in addition to HTTP
 basic auth.
 
@@ -216,7 +216,7 @@ staging environment and promoted to production if the tests pass.
 
 Alerting is a part of the overall Datadog monitoring platform. If you use other
 Datadog monitoring products then the benefits compound, particularly if you also
-use their incident management features.  This centralizes all your monitoring
+use their incident management features. This centralizes all your monitoring
 which is useful to devops teams and creating custom notifications that pull in
 relevant information from other metrics.
 
@@ -240,12 +240,13 @@ errors, etc. are stored using AES256 encryption.
 {{< rich-title-3 icon="dislike" >}}What we don't like{{</ rich-title-3 >}}
 
 The number of check locations provided by Datadog falls short of expectations -
-for example, Uptrends and Site24x7 offer more than 200 and 100 check locations
-each. By comparison, DataDog offers a meagre 16 locations, which limits its
-usefulness for detecting very local issues. Setting up private infrastructure
-rectifies this, but introduces more complexity and additional costs.
-Furthermore, this new infrastructure must itself be monitored and regularly
-updated.
+for example, [Uptrends](/website-monitoring/uptrends/) and
+[Site24x7](/website-monitoring/site24x7/) offer more than 200 and 100 check
+locations each. By comparison, Datadog offers a meagre 16 locations, which
+limits its usefulness for detecting very local issues. Setting up private
+infrastructure rectifies this, but introduces more complexity and additional
+costs. Furthermore, this new infrastructure must itself be monitored and
+regularly updated.
 
 In addition to websites, Datadog can also monitor servers, networks, and
 databases. Its other services such as log management and security platform all
@@ -254,15 +255,16 @@ website/synthetic monitoring then Checkly is a good alternative to Datadog.
 
 To record browser tests, Datadog requires a browser extension that is only
 available on Chrome. These tests can only be edited via an in-app editor.
-Similar tools like RapidSpike and Uptrends allow directly editing JSON files -
+Similar tools like [RapidSpike](/website-monitoring/rapidspike/) and
+[Uptrends](/website-monitoring/uptrends/) allow directly editing JSON files -
 this provides more flexibility when making the tests.
 
 Datadog requires third-party integrations to build status pages. It is possible
 to share custom dashboards publicly using in-built features, but it is difficult
 to set up incident and response updates - we do not recommend using it as a
-status page. Uptime.com provides public and internal status pages as a built-in
-functionality that integrates well with the rest of the services offered by the
-tool.
+status page. [Uptime.com](/website-monitoring/uptime.com/) provides public and
+internal status pages as a built-in functionality that integrates well with the
+rest of the services offered by the tool.
 
 Pricing is based on the number of executed checks. These are executed from
 multiple locations at a defined frequency for each monitor, and it is easy to

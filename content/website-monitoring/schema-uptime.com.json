@@ -2,7 +2,7 @@
     "@context": "https://schema.org/",
     "@type": "Review",
     "headline": "Uptime.com review",
-    "description": "Uptime.com is a valuable website monitoring tool for enterprise customers. It offers features like private check locations, sub-accounts with limited access scope, and internal status pages. Read our review of Uptime.com - a website monitoring tool.",
+    "description": "Uptime.com is a particularly suited to enterprise customers. It offers features like private check locations, sub-accounts with limited access scope, and internal status pages. Read our review of Uptime.com - a website monitoring tool.",
     "itemReviewed": {
         "@type": "Product",
         "name": "Uptime.com",

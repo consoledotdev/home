@@ -132,11 +132,11 @@ major limitation compared to the alternatives.
 Checkly’s open source headless recorder extension for Chrome can be used to
 quickly compose a Playwright or Puppeteer script for running multi-step requests
 via Node.js. The lack of a no-code editor to build tests, available in
-alternatives like Uptrends, highlights Checkly’s developer focus - the user is
-presented with JavaScript code and is expected to edit that directly. Being able
-to directly edit test scripts gives a lot of freedom, such as adding
-setup/teardown scripts that allow adding custom headers to requests and signing
-an HMAC request.
+alternatives like [Uptrends](/website-monitoring/uptrends/), highlights
+Checkly’s developer focus - the user is presented with JavaScript code and is
+expected to edit that directly. Being able to directly edit test scripts gives a
+lot of freedom, such as adding setup/teardown scripts that allow adding custom
+headers to requests and signing an HMAC request.
 
 Checkly also supports adding environment variables, storing code snippets which
 can be used again in other scripts, integrating with CI/CD tools, performance
@@ -239,9 +239,10 @@ permissions) which makes it easy to build custom integrations and export data.
 
 {{< rich-title-3 icon="dislike" >}}What we don't like{{</ rich-title-3 >}}
 
-Checkly does not support non-HTTP tests. Other tools like Datadog and New Relic
-support additional protocols like FTP, SSH, NTP, etc. -- these are all missing
-in Checkly.
+Checkly does not support non-HTTP tests. Other tools like
+[Datadog](/website-monitoring/datadog/) and [New
+Relic](/website-monitoring/new-relic/) support additional protocols like FTP,
+SSH, NTP, etc. - these are all missing in Checkly.
 
 The customizations available for dashboards, which also serves as a public
 status page, are limited. The logo, title and URL can be defined but what
@@ -250,7 +251,8 @@ be useful for people to subscribe to status changes.
 [StatusPage](https://www.atlassian.com/software/statuspage) can be integrated
 with Checkly but it requires an additional subscription and adds more complexity
 to the monitoring stack. If status pages are necessary for your use-case, other
-tools like Uptime.com and Site24x7 provide a better experience.
+tools like [Uptime.com](/website-monitoring/uptime.com/) and
+[Site24x7](/website-monitoring/site24x7/) provide a better experience.
 
 All tests in Checkly must be written in JavaScript. This is great for
 developers, but means users must have a technical background to implement

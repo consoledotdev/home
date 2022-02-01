@@ -3,12 +3,12 @@ title: "Uptime.com review"
 date: 2022-01-31T07:00:00+00:00
 draft: false
 summary:
-  Uptime.com is a valuable website monitoring tool for enterprise customers. It
+  Uptime.com is a particularly suited to enterprise customers. It
   offers features like private check locations, sub-accounts with limited access
   scope, and internal status pages. Read our review of Uptime.com - a website
   monitoring tool.
 metaDescription:
-  Uptime.com is a valuable website monitoring tool for enterprise customers. It
+  Uptime.com is a particularly suited to  enterprise customers. It
   offers features like private check locations, sub-accounts with limited access
   scope, and internal status pages. Read our review of Uptime.com - a website
   monitoring tool.
@@ -169,8 +169,9 @@ friendly. The initial setup process automatically adds recommended monitors,
 which includes monitors like DNS, domain expiry, SSL/TLS expiry, spam blacklist
 and virus & malware detection. This speeds up the initial setup process and
 gives a quick demonstration of various useful features offered by Uptime.com.
-This contrasts with DataDog or Site24x7 which have a very busy UI and take more
-time to find out where everything is.
+This contrasts with [Datadog](/website-monitoring/datadog/) or
+[Site24x7](/website-monitoring/site24x7/) which have a very busy UI and take
+more time to find out where everything is.
 
 Uptime.com provides functionally to add a
 [public status page](https://support.uptime.com/hc/en-us/articles/360016373219-Public-Status-Page),
@@ -184,10 +185,10 @@ they display the following metrics:
 - Previous incidents and outages.
 - Informational metrics such as upload & download time.
 
-These pages can be customized to match your company
-([such as in this example](https://uptime.com/s/samplepsp)). This is useful
-because it is a common scenario to present external status pages to customers
-and is not available from Uptime.com alternatives such as Datadog.
+These pages can be customized to match your company ([such as in this
+example](https://uptime.com/s/samplepsp)). This is useful because it is a common
+scenario to present external status pages to customers and is not available from
+Uptime.com alternatives such as [Datadog](/website-monitoring/datadog/).
 
 The availability of internal status pages makes it possible to easily share
 incident history and metrics that contain sensitive information with team
@@ -228,10 +229,11 @@ when an incident occurs.
 
 Uptime.com offers plenty of features for novice users but advanced users may
 find it lacking. For example, alerting is limited to up/down status and
-relatively few options are available for defining what is considered “down”. New
-Relic provides powerful configuration of alert conditions through the use of its
-query language, NRQL (similar to SQL) - this is a better choice for users who
-wish to exercise more control over their alerts.
+relatively few options are available for defining what is considered “down”.
+[New Relic](/website-monitoring/new-relic/) provides powerful configuration of
+alert conditions through the use of its query language, NRQL (similar to SQL) -
+this is a better choice for users who wish to exercise more control over their
+alerts.
 
 Out of 49 publicly available check locations, 16 are located in just two
 countries (USA and UK). This is problematic as test locations are concentrated
@@ -239,9 +241,10 @@ in a few locations, and if an outage occurs outside these locations, it might
 take longer to identify the issue. Furthermore, private check locations are only
 available as an add-on to business and enterprise customers, which introduces
 additional cost. If the number of check locations is a priority for you, then we
-recommend using Uptrends (as it offers more than 200 check locations staggered
-around the world) or New Relic (which can run tests on private docker containers
-at no additional cost).
+recommend using [Uptrends](/website-monitoring/uptrends/) (as it offers more
+than 200 check locations staggered around the world) or [New
+Relic](/website-monitoring/new-relic/) (which can run tests on private docker
+containers at no additional cost).
 
 There are some things enterprise users should be aware of - the API is limited
 to 500 queries per hour, which can be easily exceeded in large environments. The
@@ -251,9 +254,10 @@ For a basic web monitor, the test reports consist of a line chart that shows
 response time by location and a stacked bar chart that depicts uptime. Report
 analysis only offers history and a summary of incidents. These reports offer
 surface level information and lack in depth insights offered by some other
-tools. For example, New Relic gives access to all the metrics which can be
-queried using NRQL and RapidSpike makes a HAR file of each test which can be
-used to track each individual element on the website and draw trends over time.
+tools. For example, [New Relic](/website-monitoring/new-relic/) gives access to
+all the metrics which can be queried using NRQL and RapidSpike makes a HAR file
+of each test which can be used to track each individual element on the website
+and draw trends over time.
 
 {{< modal-custom type="screen" type-screen="/img/website-monitoring/uptime.com-alerts.jpeg" >}}
 {{< img-custom class="content-image" src="/img/website-monitoring/uptime.com-alerts.jpeg" alt="Screenshot of uptime.com's alert page." >}}
