@@ -240,7 +240,7 @@ sound is available, but it has a low bitrate quality.
 CrossBrowserTesting used to provide an option to perform functional testing on
 headless browsers on Ubuntu - this feature has since been silently removed. We
 also found that the latest macOS and iPhone devices announced in September 2021
-are still not available after 2 months. On older iOS devices, only Safari is
+are still not available in February 2022. On older iOS devices, only Safari is
 supported. Chrome is available only on a few recently released iPhones.
 
 Testing localization settings of websites are not possible directly - all
