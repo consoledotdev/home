@@ -1,0 +1,381 @@
+{
+    "consoleDeveloperPerspective": [
+        [
+            "Dark mode",
+            [
+                "No"
+            ]
+        ],
+        [
+            "APIs",
+            [
+                {
+                    "links": [
+                        {
+                            "href": "https://docs.rapidspike.com/system-api/index.html",
+                            "text": "Yes",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                }
+            ]
+        ],
+        [
+            "Documentation quality",
+            [
+                {
+                    "links": [
+                        {
+                            "href": "https://docs.rapidspike.com/",
+                            "text": "Subpar",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                }
+            ]
+        ],
+        [
+            "Developer power features",
+            [
+                "None"
+            ]
+        ],
+        [
+            "Operational overhead",
+            [
+                "None"
+            ]
+        ],
+        [
+            "Support",
+            [
+                "Chat and email support during office hours. A dedicated account manager is available at an extra cost."
+            ]
+        ],
+        [
+            "Security and privacy considerations",
+            [
+                "Data is stored and processed in accordance with general data protection regulation."
+            ]
+        ]
+    ],
+    "companyContext": [
+        [
+            "CEO",
+            [
+                {
+                    "links": [
+                        {
+                            "href": "https://uk.linkedin.com/in/gavwinter",
+                            "text": "Gav Winter",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                }
+            ]
+        ],
+        [
+            "Year founded",
+            [
+                "2015"
+            ]
+        ],
+        [
+            "Number of employees",
+            [
+                "11-50"
+            ]
+        ],
+        [
+            "Company stage",
+            [
+                "Startup"
+            ]
+        ],
+        [
+            "Headquarters",
+            [
+                "Leeds, UK"
+            ]
+        ],
+        [
+            "Key customers",
+            [
+                "Tryzens, Leicester City Council, William Hill,",
+                {
+                    "links": [
+                        {
+                            "href": "https://www.rapidspike.com/customers/",
+                            "text": "See more",
+                            "iconRight": "external-link"
+                        }
+                    ]
+                }
+            ]
+        ],
+        [
+            "Social",
+            [
+                {
+                    "links": [
+                        {
+                            "href": "https://twitter.com/rapidspike",
+                            "text": "Twitter",
+                            "iconLeft": "twitter"
+                        },
+                        {
+                            "href": "https://www.linkedin.com/company/rapidspike/",
+                            "text": "LinkedIn",
+                            "iconLeft": "linkedin"
+                        }
+                    ]
+                }
+            ]
+        ]
+    ],
+    "comparisonChecklist": [
+        [
+            "H",
+            "Feature",
+            [
+                "RapidSpike"
+            ],
+            [
+                "Checkly"
+            ],
+            [
+                "Uptrends"
+            ],
+            [
+                "Datadog"
+            ],
+            [
+                "New Relic"
+            ],
+            [
+                "Uptime.com"
+            ],
+            [
+                "Site24x7"
+            ]
+        ],
+        [
+            "IPv6 support",
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ]
+        ],
+        [
+            "Check locations",
+            [
+                "15"
+            ],
+            [
+                "21"
+            ],
+            [
+                "220"
+            ],
+            [
+                "16"
+            ],
+            [
+                "20"
+            ],
+            [
+                "49"
+            ],
+            [
+                "110"
+            ]
+        ],
+        [
+            "Mobile applciation",
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ]
+        ],
+        [
+            "In-built status pages",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ]
+        ],
+        [
+            "Custom dashboards",
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ]
+        ],
+        [
+            "SMS alerts",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                "Using AWS SNS"
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                "Using Twilio"
+            ],
+            [
+                "Using AWS SNS"
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ]
+        ],
+        [
+            "Phone alerts",
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ],
+            [
+                ""
+            ],
+            [
+                {
+                    "icon": "checkmark"
+                }
+            ],
+            [
+                ""
+            ]
+        ]
+    ]
+}
