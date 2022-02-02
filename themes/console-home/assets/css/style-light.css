@@ -199,7 +199,7 @@
     --theme-score-background: var(--c-grey-02);
     --theme-score-foreground: var(--c-black-02-main);
 
-    --theme-datavis-axis: var(--c-grey-04-whites-neutral);
+    --theme-datavis-axis: var(--c-grey-03);
 
     --theme-datavis-blue-item0: var(--c-blue-06-main);
     --theme-datavis-blue-item-1: var(--c-blue-05);
