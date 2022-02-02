@@ -26,16 +26,20 @@
         </div>
         <div class="podcasts-card-content">
             <div class="podcasts-card-heading">
-                <div class="podcasts-card-person">
-                    <p class="podcasts-card-person-name">{{.Params.who }}</p>
-                    <p class="podcasts-card-person-role">{{ .Params.role }}</p>
-                </div>
-                <div class="podcasts-card-company">
-                    <p class="podcasts-card-company-name">{{ .Params.org }}</p>
+                <div class="podcasts-card-title">{{ .Params.title }}</div>
+                <div class="podcasts-card-people">
+                    <p class="podcasts-card-people-names">with {{.Params.who }}</p>
+                    <p class="podcasts-card-people-extra">{{ with .Params.role }}{{ . }}, {{end}}{{ .Params.org }}</p>
                 </div>
             </div>
             <p class="small podcasts-card-description">{{ .Params.what }}</p>
-            <span class="date bottom">{{ .Date.Format "2006-01-02" }}</span>
+            <div class="podcasts-card-meta">
+                {{ $s := .Params.season }}
+                {{ $e := .Params.episode }}
+                <span class="episode-no">S{{ if lt $s 10 }}0{{ end }}{{ $s }} E{{ if lt $e 10 }}0{{ end }}{{ $e }}</span>
+                <span>—</span>
+                <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+            </div>
         </div>
     </div>
 </div>

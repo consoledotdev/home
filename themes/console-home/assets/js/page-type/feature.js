@@ -95,60 +95,62 @@ let manageAsideContentPosition = (() => {
     setPos();
     window.addEventListener("resize", setPos);
 
-    let manageCTAPosition = (() => {
-        let ctaEl = document.querySelector("[data-feature-cta]").querySelector(".subscribe-cta");
-        let asideContentWrapper = document.querySelector("[data-feature-aside-content]");
-        let inlineWrapper = document.querySelector("[data-inline-cta-wrapper]");
-        let inlineWrapperCollapsible = inlineWrapper.querySelector("[data-collapsible-content]");
-        let setPos = () => {
-            let title = ctaEl.querySelector(".title");
-            let input = ctaEl.querySelector(".console-input-text");
-            let button = ctaEl.querySelector(".console-button");
-            if (window.innerWidth >= 1025) {
-                ctaEl.classList.remove("layout-wide", "size-medium");
-                ctaEl.classList.add("layout-small", "size-small", "sidebar");
-                title.classList.remove("title-4");
-                title.classList.add("title-5");
-                input.classList.remove("console-input-medium");
-                input.classList.add("console-input-small");
-                button.classList.remove("console-button-medium");
-                button.classList.add("console-button-small");
-                asideContentWrapper.insertBefore(ctaEl, asideContentWrapper.firstChild);
-                inlineWrapper.classList.add("is-hidden");
-            } else {
-                ctaEl.classList.remove("layout-small", "size-small", "sidebar");
-                ctaEl.classList.add("layout-wide", "size-medium");
-                title.classList.remove("title-5");
-                title.classList.add("title-4");
-                input.classList.remove("console-input-small");
-                input.classList.add("console-input-medium");
-                button.classList.remove("console-button-small");
-                button.classList.add("console-button-medium");
-                inlineWrapperCollapsible.appendChild(ctaEl);
-                inlineWrapper.classList.remove("is-hidden");
-            }
-        };
-        setPos();
-        window.addEventListener("resize", setPos);
-    })();
+    if (document.body.classList.contains("page-tools") || document.body.classList.contains("page-betas")) {
+        let manageCTAPosition = (() => {
+            let ctaEl = document.querySelector("[data-feature-cta]").querySelector(".subscribe-cta");
+            let asideContentWrapper = document.querySelector("[data-feature-aside-content]");
+            let inlineWrapper = document.querySelector("[data-inline-cta-wrapper]");
+            let inlineWrapperCollapsible = inlineWrapper.querySelector("[data-collapsible-content]");
+            let setPos = () => {
+                let title = ctaEl.querySelector(".title");
+                let input = ctaEl.querySelector(".console-input-text");
+                let button = ctaEl.querySelector(".console-button");
+                if (window.innerWidth >= 1025) {
+                    ctaEl.classList.remove("layout-wide", "size-medium");
+                    ctaEl.classList.add("layout-small", "size-small", "sidebar");
+                    title.classList.remove("title-4");
+                    title.classList.add("title-5");
+                    input.classList.remove("console-input-medium");
+                    input.classList.add("console-input-small");
+                    button.classList.remove("console-button-medium");
+                    button.classList.add("console-button-small");
+                    asideContentWrapper.insertBefore(ctaEl, asideContentWrapper.firstChild);
+                    inlineWrapper.classList.add("is-hidden");
+                } else {
+                    ctaEl.classList.remove("layout-small", "size-small", "sidebar");
+                    ctaEl.classList.add("layout-wide", "size-medium");
+                    title.classList.remove("title-5");
+                    title.classList.add("title-4");
+                    input.classList.remove("console-input-small");
+                    input.classList.add("console-input-medium");
+                    button.classList.remove("console-button-small");
+                    button.classList.add("console-button-medium");
+                    inlineWrapperCollapsible.appendChild(ctaEl);
+                    inlineWrapper.classList.remove("is-hidden");
+                }
+            };
+            setPos();
+            window.addEventListener("resize", setPos);
+        })();
 
-    let manageFiltersPosition = (() => {
-        let filtersEl = document.querySelector("[data-feature-filters]");
-        let asideContentWrapper = document.querySelector("[data-feature-aside-content]");
-        let inlineWrapper = document.querySelector("[data-inline-filters-wrapper]");
-        let inlineWrapperCollapsible = inlineWrapper.querySelector("[data-collapsible-content]");
-        let setPos = () => {
-            if (window.innerWidth >= 1025) {
-                asideContentWrapper.appendChild(filtersEl);
-                inlineWrapper.classList.add("is-hidden");
-            } else {
-                inlineWrapperCollapsible.appendChild(filtersEl);
-                inlineWrapper.classList.remove("is-hidden");
-            }
-        };
-        setPos();
-        window.addEventListener("resize", setPos);
-    })();
+        let manageFiltersPosition = (() => {
+            let filtersEl = document.querySelector("[data-feature-filters]");
+            let asideContentWrapper = document.querySelector("[data-feature-aside-content]");
+            let inlineWrapper = document.querySelector("[data-inline-filters-wrapper]");
+            let inlineWrapperCollapsible = inlineWrapper.querySelector("[data-collapsible-content]");
+            let setPos = () => {
+                if (window.innerWidth >= 1025) {
+                    asideContentWrapper.appendChild(filtersEl);
+                    inlineWrapper.classList.add("is-hidden");
+                } else {
+                    inlineWrapperCollapsible.appendChild(filtersEl);
+                    inlineWrapper.classList.remove("is-hidden");
+                }
+            };
+            setPos();
+            window.addEventListener("resize", setPos);
+        })();
+    }
 })();
 
 class Sections {
