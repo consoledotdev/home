@@ -1,10 +1,5 @@
 /* Podcasts Index
    ========================================================================== */
-
-.page-podcasts .page-section-feature-root.opening p.description {
-    margin-top: 0;
-}
-
 @media (min-width: 1057px) {
     .page-podcasts .page-section-feature-root.opening {
         margin-right: 0;
@@ -20,6 +15,10 @@
     .page-podcasts .page-section-feature-root.opening .section-body .right {
         text-align: center;
     }
+}
+
+.page-podcasts .page-section-feature-root.opening p.description {
+    margin-top: 0;
 }
 
 .page-podcasts .podcast-links-container {
@@ -124,7 +123,6 @@
     height: 100%;
     top: 0;
     left: 0;
-    max-width: 252px;
 }
 
 .podcasts-card-company-logo {
@@ -159,49 +157,46 @@
     margin-left: 320px;
 }
 
-.podcasts-card-content > :not(:last-child) {
-    margin-bottom: calc(var(--space1) + var(--space2));
+.podcasts-card-content > :not(:first-child):not(:last-child) {
+    margin-top: calc(var(--space1) + var(--space2));
+}
+
+.podcasts-card-content > :last-child {
+    margin-top: var(--space2);
 }
 
 .podcasts-card-heading > :not(:last-child) {
-    margin-bottom: calc(var(--space1) / 2);
+    margin-bottom: var(--space1);
 }
 
-.podcasts-card-person p,
-.podcasts-card-company p {
+.podcasts-card-people p {
     margin-bottom: 0;
 }
 
-.podcasts-card-person {
+.podcasts-card-people {
     display: flex;
     flex-flow: row wrap;
     align-items: baseline;
 }
 
-.podcasts-card-person-name {
+.podcasts-card-people-names {
     flex: 0 0 auto;
     margin-right: calc(var(--space2));
     font-weight: 500;
-    font-size: var(--t-size0);
-    color: var(--theme-text-2);
+    font-size: var(--t-size-1);
+    color: var(--theme-text-4);
     flex: 0 1 auto;
 }
 
-.podcasts-card-person-role {
+.podcasts-card-people-extra {
     flex: 0 0 auto;
-    color: var(--theme-text-2);
+    color: var(--theme-text-4);
     font-size: var(--t-size-3);
     font-style: italic;
     flex: 0 1 auto;
 }
 
-.podcasts-card-company {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-}
-
-.podcasts-card-company-name {
+.podcasts-card-title {
     flex: 0 0 auto;
     margin-right: calc(var(--space1) + var(--space2));
     font-weight: 500;
@@ -211,9 +206,18 @@
 }
 
 p.podcasts-card-description {
-    font-size: var(--t-size-2);
-    color: var(--theme-text-1);
+    font-size: var(--t-size-1);
+    color: var(--theme-text-2);
     margin: 0;
+}
+
+.podcasts-card-meta span {
+    color: var(--theme-text-3);
+    font-size: var(--t-size-2);
+}
+
+.podcasts-card-meta .episode-no {
+    font-style: italic;
 }
 
 @media (max-width: 768px) {
@@ -229,7 +233,7 @@ p.podcasts-card-description {
     }
 }
 
-@media (max-width: 768px), (min-width: 1025px) {
+@media (max-width: 768px) {
     .podcasts-card {
         --logoWidth: 47.33%;
     }

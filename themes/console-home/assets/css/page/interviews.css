@@ -101,13 +101,13 @@
     margin-right: calc(var(--space2));
     font-weight: 500;
     font-size: var(--t-size0);
-    color: var(--theme-text-2);
+    color: var(--theme-text-4);
     flex: 0 1 auto;
 }
 
 .interviews-card-person-role {
     flex: 0 0 auto;
-    color: var(--theme-text-2);
+    color: var(--theme-text-4);
     font-size: var(--t-size-3);
     font-style: italic;
     flex: 0 1 auto;
@@ -133,8 +133,7 @@
 }
 
 p.interviews-card-description {
-    font-size: var(--t-size-2);
-    color: var(--theme-text-1);
+    color: var(--theme-text-2);
     margin: 0;
 }
 

@@ -20,11 +20,14 @@
             </div>
         </div>
     </section>
-    <section class="page-section page-section-feature-root">
-        <h5 class="title title-4">Latest Episode / S02 E03 — 2022-01-20</h5>
-            {{ range first 1 (where .Pages.ByPublishDate.Reverse "Params.season" 2) }}
-                {{ partial "components/podcasts/card.html" . }}
-            {{ end }}
+    <section class="page-section page-section-feature-root featured">
+        {{ $featured := index (where .Pages.ByPublishDate.Reverse "Params.season" 2) 0 }}
+        {{ $s := $featured.Params.season }}
+        {{ $e := $featured.Params.episode }}
+        <h5 class="title title-4">
+            Latest Episode <span>/ S{{ if lt $s 10 }}0{{ end }}{{ $s }} E{{ if lt $e 10 }}0{{ end }}{{ $e }} — {{ $featured.Date.Format "2006-01-02" }}</span>
+        </h5>
+        {{ partial "components/podcasts/card.html" $featured }}
     </section>
 	<div class="feature-split">
 		<aside data-aside-wrapper class="feature-aside">
@@ -73,4 +76,7 @@
 		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" ) }}
 	</section>
 
+	{{ $pageTypeJS := resources.Get "/js/page-type/feature.js" }}
+    {{ if hugo.IsProduction }}{{ $pageTypeJS = $pageTypeJS | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script id="feature-js" src="{{ $pageTypeJS.Permalink }}"></script>
 {{ end }}

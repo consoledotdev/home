@@ -1,11 +1,13 @@
 ---
 title: How do developers pick tools? (Cue & Leapp)
-who:
+who: David Mytton & Jean Yang
 role:
 org:
 what:
-  Episode 10 of the Console DevTools Podcast, a devtools discussion with David
-  Mytton (Co-founder, Console) and Jean Yang (CEO, Akita Software).
+  "Episode 10 of the Console DevTools Podcast, a devtools discussion with David
+  Mytton (Co-founder, Console) and Jean Yang (CEO, Akita Software). Tools
+  discussed: Cue - Open source data validation language, Leapp - manage cloud
+  access credentials."
 season: 1
 episode: 10
 date: 2021-09-09T07:45:00Z
