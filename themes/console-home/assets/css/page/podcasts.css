@@ -93,6 +93,45 @@
     }
 }
 
+.page-podcasts .page-section-feature-root.featured {
+    margin-bottom: calc(var(--space4_5) + var(--space4));
+    margin-right: 0;
+}
+
+.page-podcasts .page-section-feature-root.featured .combo-card-combo-box {
+    width: calc(var(--space7) + 40%); /* calc(var(--space8) - var(--space4_5)) */
+}
+
+.page-podcasts .page-section-feature-root.featured .title span {
+    font-weight: 300;
+    color: var(--theme-text-3);
+}
+
+.page-podcasts .page-section-feature-root.featured .combo-card-title {
+    font-size: var(--t-size2);
+}
+
+.page-podcasts .page-section-feature-root.featured .combo-card-people-names {
+    font-size: var(--t-size0);
+}
+
+.page-podcasts .page-section-feature-root.featured .combo-card-description {
+    margin-bottom: 0;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    word-break: break-word;
+}
+
+.page-podcasts .page-section-feature-root.featured .combo-card-meta {
+    display: none;
+}
+
+.page-podcasts .feature-items .combo-card-description {
+    display: none;
+}
+
 .page-podcasts .author-box {
     margin: var(--space5) 0 var(--space4_5);
 }
@@ -261,4 +300,144 @@ p.podcasts-card-description {
     .podcasts-card-content {
         margin-left: 0;
     }
+}
+
+/* Combo card --------------------------------------------------------------------------- */
+.combo-card {
+    position: relative;
+    background-color: var(--theme-content-bg-1);
+    box-shadow: var(--theme-shadow-1);
+    border-radius: var(--corners-mid);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.combo-card-combo-box {
+    position: relative;
+    flex: 0 1 auto;
+    width: calc(var(--space6_5) + 10%);
+    display: flex;
+    flex-flow: row nowrap;
+    border-top-left-radius: var(--corners-mid);
+    border-bottom-left-radius: var(--corners-mid);
+    overflow: hidden;
+}
+
+.combo-card-combo-box .ratio {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+
+.combo-card-combo-box-visuals {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.combo-card-combo-box-visuals .plane-picture {
+    height: 100%;
+}
+
+.combo-card-combo-box-visuals .plane-picture.left {
+    background: var(--theme-content-bg-0);
+    width: 47.08%;
+    margin-right: -23.71%;
+    clip-path: polygon(0% 0%, 0% 100%, 50.36% 100%, 100% 0%);
+}
+
+.combo-card-combo-box-visuals .plane-picture.right {
+    flex: 0 0 auto;
+    background: plum;
+    height: 100%;
+    width: 76.82%;
+    clip-path: polygon(30.9% 0%, 0% 100%, 69.1% 100%, 100% 0%);
+}
+
+/* Combo card logo --------------------------- */
+.combo-card-combo-box .logo {
+    position: absolute;
+    margin: 17.64% 0 0 17.64%;
+    width: 35.29%;
+    border-radius: var(--corners-x-small);
+    overflow: hidden;
+}
+
+.combo-card-combo-box .logo .image {
+    object-fit: contain;
+}
+
+/* Combo card content --------------------------- */
+.combo-card-content {
+    flex: 0 1 auto;
+    max-height: 100%;
+    padding: var(--space3) var(--space4);
+}
+
+.combo-card-content > :not(:first-child):not(:last-child) {
+    margin-top: calc(var(--space1) + var(--space2));
+}
+
+.combo-card-content > :last-child {
+    margin-top: var(--space2);
+}
+
+.combo-card-heading > :not(:last-child) {
+    margin-bottom: var(--space1);
+}
+
+.combo-card-people p {
+    margin-bottom: 0;
+}
+
+.combo-card-people {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+}
+
+.combo-card-people-names {
+    flex: 0 0 auto;
+    margin-right: calc(var(--space2));
+    font-weight: 500;
+    font-size: var(--t-size-1);
+    color: var(--theme-text-4);
+    flex: 0 1 auto;
+}
+
+.combo-card-people-extra {
+    flex: 0 0 auto;
+    color: var(--theme-text-4);
+    font-size: var(--t-size-3);
+    font-style: italic;
+    flex: 0 1 auto;
+}
+
+.combo-card-title {
+    flex: 0 0 auto;
+    margin-right: calc(var(--space1) + var(--space2));
+    font-weight: 500;
+    font-size: var(--t-size1);
+    color: var(--theme-text-1);
+    flex: 0 1 auto;
+}
+
+p.combo-card-description {
+    font-size: var(--t-size-1);
+    color: var(--theme-text-2);
+    margin: 0;
+}
+
+.combo-card-meta span {
+    color: var(--theme-text-3);
+    font-size: var(--t-size-2);
+}
+
+.combo-card-meta .episode-no {
+    font-style: italic;
 }

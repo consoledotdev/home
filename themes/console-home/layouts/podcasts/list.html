@@ -27,7 +27,7 @@
         <h5 class="title title-4">
             Latest Episode <span>/ S{{ if lt $s 10 }}0{{ end }}{{ $s }} E{{ if lt $e 10 }}0{{ end }}{{ $e }} — {{ $featured.Date.Format "2006-01-02" }}</span>
         </h5>
-        {{ partial "components/podcasts/card.html" $featured }}
+        {{ partial "components/podcasts/combo-card.html" $featured }}
     </section>
 	<div class="feature-split">
 		<aside data-aside-wrapper class="feature-aside">
@@ -44,6 +44,9 @@
                     <h5 class="title title-4"><span data-feature-section-name>Other episodes</span></h5>
 				</div>
 				<div class="feature-items" data-feature-items>
+                    {{ range after 1 (where .Pages.ByPublishDate.Reverse "Params.season" 2) }}
+                        {{ partial "components/podcasts/combo-card.html" . }}
+                    {{ end }}
                     {{ range after 1 (where .Pages.ByPublishDate.Reverse "Params.season" 2) }}
                         {{ partial "components/podcasts/card.html" . }}
                     {{ end }}
@@ -63,6 +66,9 @@
                     <h3 class="title title-2"><span data-feature-section-name>Season 1</span></h3>
 				</div>
 				<div class="feature-items" data-feature-items>
+                    {{ range (where .Pages.ByPublishDate.Reverse "Params.season" 1) }}
+                        {{ partial "components/podcasts/combo-card.html" . }}
+                    {{ end }}
                     {{ range (where .Pages.ByPublishDate.Reverse "Params.season" 1) }}
                         {{ partial "components/podcasts/card.html" . }}
                     {{ end }}
