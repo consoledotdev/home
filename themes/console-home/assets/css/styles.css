@@ -499,6 +499,10 @@ body.show-planes:after {
     margin-bottom: var(--space4);
 }
 
+.page-section-sub .page-section-heading {
+    margin-bottom: 0;
+}
+
 .page-section-heading .left {
     flex: 1 1 auto;
     margin-right: var(--space3);

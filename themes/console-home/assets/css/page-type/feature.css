@@ -58,6 +58,10 @@
     bottom: 0;
 }
 
+.feature-split .feature-aside-content .aside-block:not(:first-child) {
+    margin-top: var(--space4_5);
+}
+
 .feature-split .feature-content-wrapper .console-filters .search,
 .feature-split .feature-content-wrapper .console-filters .show-by,
 .feature-split .feature-content-wrapper .console-filters .sort-by,

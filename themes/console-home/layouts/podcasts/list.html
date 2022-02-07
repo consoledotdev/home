@@ -38,24 +38,30 @@
 				<div class="page-section-heading">
                     <h3 class="title title-2"><span data-feature-section-name>Season 2</span></h3>
 				</div>
-                <div class="page-section-sub" data-inline-aside-content-wrapper>
+                <div class="page-section-sub aside" data-inline-aside-content-wrapper>
                     <div data-aside-content>
-                        <div class="page-section-heading">
-                            <h5 class="title title-4"><span data-feature-section-name>The host</span></h5>
-                        </div>
-                        <div class="person-profile">
-                            {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/david.jpg" "imgSize" "128" "alt" "Photo of David Mytton" ) }}
-                            <a href="#author" class="link" title="About David Mytton">David Mytton</a>
-                        </div>
-                        <div class="page-section-heading">
-                            <h5 class="title title-4"><span data-feature-section-name>Guests</span></h5>
-                        </div>
-                        {{ range (where .Pages.ByPublishDate.Reverse "Params.season" 2) }}
-                            <div class="person-profile">
-                                {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" .Params.topImg1Src "imgSize" "128" "alt" (print "Photo of " .Params.who) ) }}
-                                <span>{{ .Params.who }}</span>
+                        <div class="aside-block">
+                            <div class="page-section-heading">
+                                <h5 class="title title-4"><span data-feature-section-name>The host</span></h5>
                             </div>
-                        {{ end }}
+                            <div class="person-profile">
+                                {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/david.jpg" "imgSize" "128" "alt" "Photo of David Mytton" ) }}
+                                <a href="#author" class="link" title="About David Mytton">David Mytton</a>
+                            </div>
+                        </div>
+                        <div class="aside-block guests">
+                            <div class="page-section-heading">
+                                <h5 class="title title-4"><span data-feature-section-name>Guests</span></h5>
+                            </div>
+                            <div class="person-profiles">
+                                {{ range (where .Pages.ByPublishDate.Reverse "Params.season" 2) }}
+                                    <div class="person-profile">
+                                        {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" .Params.topImg1Src "imgSize" "128" "alt" (print "Photo of " .Params.who) ) }}
+                                        <span>{{ .Params.who }}</span>
+                                    </div>
+                                {{ end }}
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="page-section-sub">
@@ -80,18 +86,22 @@
 				<div class="page-section-heading">
                     <h3 class="title title-2"><span data-feature-section-name>Season 1</span></h3>
 				</div>
-                <div class="page-section-sub" data-inline-aside-content-wrapper>
+                <div class="page-section-sub aside" data-inline-aside-content-wrapper>
                     <div data-aside-content>
-                        <div class="page-section-heading">
-                            <h5 class="title title-4"><span data-feature-section-name>With</span></h5>
-                        </div>
-                        <div class="person-profile">
-                            {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/david.jpg" "imgSize" "128" "alt" "Photo of David Mytton" ) }}
-                            <a href="#author" class="link" title="About David Mytton">David Mytton</a>
-                        </div>
-                        <div class="person-profile">
-                            {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/podcasts/akita-jean-yang-profile.jpg" "imgSize" "128" "alt" "Photo of Jean Yang" ) }}
-                            <a href="https://twitter.com/jeanqasaur" target="_blank" class="link icon-link" title="https://twitter.com/jeanqasaur"><span>Jean Yang</span> {{ partial "icons/external-link.html" }}</a>
+                        <div class="aside-block">
+                            <div class="page-section-heading">
+                                <h5 class="title title-4"><span data-feature-section-name>With</span></h5>
+                            </div>
+                            <div class="person-profiles">
+                                <div class="person-profile">
+                                    {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/david.jpg" "imgSize" "128" "alt" "Photo of David Mytton" ) }}
+                                    <a href="#author" class="link" title="About David Mytton">David Mytton</a>
+                                </div>
+                                <div class="person-profile">
+                                    {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/podcasts/akita-jean-yang-profile.jpg" "imgSize" "128" "alt" "Photo of Jean Yang" ) }}
+                                    <a href="https://twitter.com/jeanqasaur" target="_blank" class="link icon-link" title="https://twitter.com/jeanqasaur"><span>Jean Yang</span> {{ partial "icons/external-link.html" }}</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

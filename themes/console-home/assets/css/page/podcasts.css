@@ -4,6 +4,14 @@ html {
     scroll-behavior: smooth;
 }
 
+.page-podcasts .is-hidden {
+    display: none;
+}
+
+.page-podcasts .feature-split {
+    min-height: var(--space7_5);
+}
+
 @media (min-width: 1057px) {
     .page-podcasts .page-section-feature-root.opening {
         margin-right: 0;
@@ -98,16 +106,19 @@ html {
 }
 
 .page-podcasts .page-section-feature-root.featured {
-    margin-bottom: calc(var(--space4_5) + var(--space4));
+    margin-bottom: calc(var(--space5) + var(--space4_5));
     margin-right: 0;
 }
 
+/* Combo card */
 .page-podcasts .combo-card-meta .episode-no {
     font-style: italic;
 }
 
-.page-podcasts .page-section-feature-root.featured .combo-card-combo-box {
-    width: calc(var(--space7) + 40%); /* calc(var(--space8) - var(--space4_5)) */
+@media (min-width: 769px) {
+    .page-podcasts .page-section-feature-root.featured .combo-card-combo-box {
+        width: calc(var(--space7) + 21vw); /* calc(var(--space8) - var(--space4_5)) */
+    }
 }
 
 .page-podcasts .page-section-feature-root.featured .title span {
@@ -119,7 +130,7 @@ html {
     font-size: var(--t-size2);
 }
 
-.page-podcasts .page-section-feature-root.featured .combo-card-people-names {
+.page-podcasts .page-section-feature-root.featured .combo-card-subtitle-main {
     font-size: var(--t-size0);
 }
 
@@ -132,6 +143,26 @@ html {
     word-break: break-word;
 }
 
+@media (min-width: 769px) {
+    @media (max-width: 1024px) {
+        .page-podcasts .page-section-feature-root.featured .combo-card-description {
+            -webkit-line-clamp: 5;
+        }
+    }
+
+    @media (max-width: 960px) {
+        .page-podcasts .page-section-feature-root.featured .combo-card-description {
+            -webkit-line-clamp: 4;
+        }
+    }
+
+    @media (max-width: 860px) {
+        .page-podcasts .page-section-feature-root.featured .combo-card-description {
+            -webkit-line-clamp: 2;
+        }
+    }
+}
+
 .page-podcasts .page-section-feature-root.featured .combo-card-meta {
     display: none;
 }
@@ -140,6 +171,74 @@ html {
     display: none;
 }
 
+/* Aside */
+.page-podcasts .page-section-sub.aside {
+    margin-bottom: var(--space4);
+}
+
+.page-podcasts .page-section-sub .aside-block {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    margin-top: calc(var(--space3) * -1);
+    margin-left: calc(var(--space3_5) * -1);
+}
+
+.page-podcasts .page-section-sub .aside-block > * {
+    margin-top: var(--space3);
+    margin-left: var(--space3_5);
+}
+
+.page-podcasts .feature-aside-content .page-section-heading {
+    margin-bottom: 0;
+}
+
+.page-podcasts .feature-aside-content .page-section-heading .title {
+    margin-bottom: 0;
+}
+
+.page-podcasts .page-section-sub.aside .title {
+    margin-bottom: 0;
+}
+
+.page-podcasts .feature-aside-content .person-profiles,
+.page-podcasts .feature-aside-content .person-profile:not(:first-child) {
+    margin-top: var(--space3_5);
+}
+
+.page-podcasts .page-section-sub .person-profiles {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.page-podcasts .page-section-sub .person-profiles > * {
+    margin-top: var(--space3);
+}
+
+.person-profile {
+    display: grid;
+    grid-template-columns: var(--space5) 1fr;
+    align-items: center;
+    gap: var(--space2);
+}
+
+.page-podcasts .page-section-sub.aside .person-profile {
+    margin-left: var(--space3_5);
+}
+
+.person-profile .plane-picture {
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .page-podcasts .aside-block.guests {
+        display: none;
+    }
+}
+
+/* Closing */
 .page-podcasts .author-box {
     margin: var(--space5) 0 var(--space4_5);
 }

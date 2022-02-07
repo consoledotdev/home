@@ -2316,8 +2316,8 @@ body:not(.mobile) .console-control:hover:before {
 
 .combo-card-combo-box {
     position: relative;
-    flex: 0 1 auto;
-    width: calc(var(--space6_5) + 10%);
+    flex: 0 0 auto;
+    width: calc(var(--space6_5) + 12vw);
     display: flex;
     flex-flow: row nowrap;
     border-top-left-radius: var(--corners-mid);
@@ -2484,6 +2484,53 @@ p.combo-card-description {
     color: var(--theme-text-3);
     font-size: var(--t-size-2);
     line-height: var(--t-lH3);
+}
+
+@media (max-width: 768px) {
+    .combo-card {
+        flex-flow: column nowrap;
+    }
+
+    .combo-card-combo-box {
+        width: 100%;
+        border-top-right-radius: var(--corners-mid);
+        border-bottom-left-radius: 0;
+    }
+
+    /* Logo + Profile */
+    .combo-card-combo-box-visuals.logo-profile .plane-picture.right {
+        width: 76.82%;
+        clip-path: polygon(30.9% 0%, 0% 100%, 100% 100%, 100% 0%);
+    }
+
+    /* Logo + Logo */
+    .combo-card-combo-box-visuals.logo-logo .plane-picture.left {
+        width: 61.5%;
+        clip-path: polygon(0% 0%, 0% 100%, 61.46% 100%, 100% 0%);
+    }
+
+    .combo-card-combo-box-visuals.logo-logo .plane-picture.mid {
+        clip-path: polygon(97.18% 0%, 0% 100%, 2.82% 100%, 100% 0%);
+    }
+
+    .combo-card-combo-box-visuals.logo-logo .plane-picture.right {
+        width: 61.5%;
+        clip-path: polygon(38.54% 0%, 0% 100%, 100% 100%, 100% 0%);
+    }
+
+    /* Combo card logo --------------------------- */
+    /* Logo + Logo */
+    .combo-card-combo-box-visuals.logo-logo .plane-picture.left .logo {
+        margin-left: 23.46%;
+    }
+
+    .combo-card-combo-box-visuals.logo-logo .plane-picture.right .logo {
+        margin-left: 49.72%;
+    }
+
+    .combo-card-content {
+        width: 100%;
+    }
 }
 
 /* Category Thumbnail
