@@ -2302,6 +2302,190 @@ body:not(.mobile) .console-control:hover:before {
     text-decoration: none;
 }
 
+/* Combo Card
+   ================================================================================================================ */
+.combo-card {
+    position: relative;
+    background-color: var(--theme-content-bg-1);
+    box-shadow: var(--theme-shadow-1);
+    border-radius: var(--corners-mid);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.combo-card-combo-box {
+    position: relative;
+    flex: 0 1 auto;
+    width: calc(var(--space6_5) + 10%);
+    display: flex;
+    flex-flow: row nowrap;
+    border-top-left-radius: var(--corners-mid);
+    border-bottom-left-radius: var(--corners-mid);
+    overflow: hidden;
+}
+
+.combo-card-combo-box .ratio {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+
+.combo-card-combo-box-visuals {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.combo-card-combo-box-visuals .plane-picture {
+    height: 100%;
+}
+
+.combo-card-combo-box-visuals .plane-picture.left,
+.combo-card-combo-box-visuals .plane-picture.right {
+    position: relative;
+    flex: 0 0 auto;
+    height: 100%;
+}
+
+/* Logo + Profile */
+.combo-card-combo-box-visuals.logo-profile .plane-picture.left {
+    background: var(--theme-content-bg-0);
+    width: 47.08%;
+    margin-right: -23.71%;
+    clip-path: polygon(0% 0%, 0% 100%, 50.36% 100%, 100% 0%);
+}
+
+.combo-card-combo-box-visuals.logo-profile .plane-picture.right {
+    width: 76.82%;
+    clip-path: polygon(30.9% 0%, 0% 100%, 69.1% 100%, 100% 0%);
+}
+
+/* Logo + Logo */
+.combo-card-combo-box-visuals.logo-logo .plane-picture.left {
+    background: var(--theme-content-bg-0);
+    width: 51.2%;
+    margin-right: -23.71%;
+    clip-path: polygon(0% 0%, 0% 100%, 53.69% 100%, 100% 0%);
+}
+
+.combo-card-combo-box-visuals.logo-logo .plane-picture.mid {
+    background: var(--theme-content-bg-2);
+    width: 24.4%;
+    margin-right: -23.71%;
+    clip-path: polygon(97.18% 0%, 0% 100%, 2.82% 100%, 100% 0%);
+}
+
+.combo-card-combo-box-visuals.logo-logo .plane-picture.right {
+    background: var(--theme-content-bg-0);
+    width: 71.9%;
+    clip-path: polygon(32.97% 0%, 0% 100%, 67% 100%, 100% 0%);
+}
+
+/* Combo card logo --------------------------- */
+.combo-card-combo-box-visuals .logo {
+    position: absolute;
+    border-radius: var(--corners-x-small);
+    overflow: hidden;
+}
+
+.combo-card-combo-box-visuals .logo .image {
+    object-fit: contain;
+}
+
+/* Logo + Profile */
+.combo-card-combo-box-visuals.logo-profile .plane-picture.left .logo {
+    margin: 17.64% 0 0 17.64%;
+    width: 35.29%;
+}
+
+/* Logo + Logo */
+.combo-card-combo-box-visuals.logo-logo .plane-picture.left .logo,
+.combo-card-combo-box-visuals.logo-logo .plane-picture.right .logo {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.combo-card-combo-box-visuals.logo-logo .plane-picture.left .logo {
+    margin-left: 17.64%;
+    width: 32.21%;
+}
+
+.combo-card-combo-box-visuals.logo-logo .plane-picture.right .logo {
+    width: 22.94%;
+    margin-left: 37.1%;
+}
+
+/* Combo card content --------------------------- */
+.combo-card-content {
+    flex: 1 1 auto;
+    max-height: 100%;
+    padding: var(--space3) var(--space4);
+}
+
+.combo-card-content > :not(:first-child):not(:last-child) {
+    margin-top: calc(var(--space1) + var(--space2));
+}
+
+.combo-card-content > :last-child {
+    margin-top: var(--space2);
+}
+
+.combo-card-heading > :not(:last-child) {
+    margin-bottom: var(--space1);
+}
+
+.combo-card-subtitle p {
+    margin-bottom: 0;
+}
+
+.combo-card-subtitle {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+}
+
+.combo-card-subtitle-main {
+    flex: 0 0 auto;
+    margin-right: calc(var(--space2));
+    font-weight: 500;
+    font-size: var(--t-size-1);
+    color: var(--theme-text-4);
+    flex: 0 1 auto;
+}
+
+.combo-card-subtitle-extra {
+    flex: 0 0 auto;
+    color: var(--theme-text-4);
+    font-size: var(--t-size-3);
+    font-style: italic;
+    flex: 0 1 auto;
+}
+
+.combo-card-title {
+    flex: 0 0 auto;
+    font-weight: 500;
+    font-size: var(--t-size1);
+    color: var(--theme-text-1);
+    flex: 0 1 auto;
+}
+
+p.combo-card-description {
+    font-size: var(--t-size-1);
+    color: var(--theme-text-2);
+    margin: 0;
+}
+
+.combo-card-meta span {
+    color: var(--theme-text-3);
+    font-size: var(--t-size-2);
+    line-height: var(--t-lH3);
+}
+
 /* Category Thumbnail
    ================================================================================================================ */
 .category-thumbnail-generic {

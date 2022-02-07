@@ -1,0 +1,20 @@
+<div class="plane-picture left">
+    
+    <div class="logo aspect-ratio aspect-ratio-1-1">
+        {{ $nextGenImgSrc := partial "components/processed-img.html" (dict "src" .content.Params.topImg2Src "width" "216" "nextGen" "true") }}
+        {{ $imgSrc := partial "components/processed-img.html" (dict "src" .content.Params.topImg2Src "width" "216") }}
+        {{with $nextGenImgSrc }}<picture><source srcset="{{ . }}" type="image/webp">{{ end }}
+            <img loading="lazy" class="image" src="{{ $imgSrc }}" alt="{{ .content.Params.topImg2Alt }}" />
+        {{with $nextGenImgSrc }}</picture>{{ end }}
+    </div>
+
+</div>
+<div class="plane-picture right">
+
+    {{ $nextGenImgSrc := partial "components/processed-img.html" (dict "src" .content.Params.topImg1Src "width" "992" "nextGen" "true") }}
+    {{ $imgSrc := partial "components/processed-img.html" (dict "src" .content.Params.topImg1Src "width" "992") }}
+    {{with $nextGenImgSrc }}<picture><source srcset="{{ . }}" type="image/webp">{{ end }}
+        <img loading="lazy" class="image" src="{{ $imgSrc }}" alt="{{ .content.Params.topImg1Alt }}" />
+    {{with $nextGenImgSrc }}</picture>{{ end }}
+
+</div>

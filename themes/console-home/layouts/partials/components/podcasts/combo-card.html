@@ -1,45 +1,31 @@
 <div class="combo-card">
-    <a onclick="blur();" class="card-link" href="{{ .RelPermalink }}"><span>Read</span></a>
+    <a onclick="blur();" class="card-link" href="{{ .content.RelPermalink }}"><span>Read</span></a>
     <div class="combo-card-combo-box">
         <img class="ratio" src="/img/ratio-combo.png" alt="">
-        <div class="combo-card-combo-box-visuals">
-            <div class="plane-picture left">
-                
-                <div class="logo aspect-ratio aspect-ratio-1-1">
-                    {{ $nextGenImgSrc := partial "components/processed-img.html" (dict "src" .Params.topImg2Src "width" "216" "nextGen" "true") }}
-                    {{ $imgSrc := partial "components/processed-img.html" (dict "src" .Params.topImg2Src "width" "216") }}
-                    {{with $nextGenImgSrc }}<picture><source srcset="{{ . }}" type="image/webp">{{ end }}
-                        <img loading="lazy" class="image" src="{{ $imgSrc }}" alt="{{ .Params.topImg2Alt }}" />
-                    {{with $nextGenImgSrc }}</picture>{{ end }}
-                </div>
-
-            </div>
-            <div class="plane-picture right">
-
-                {{ $nextGenImgSrc := partial "components/processed-img.html" (dict "src" .Params.topImg1Src "width" "992" "nextGen" "true") }}
-                {{ $imgSrc := partial "components/processed-img.html" (dict "src" .Params.topImg1Src "width" "992") }}
-                {{with $nextGenImgSrc }}<picture><source srcset="{{ . }}" type="image/webp">{{ end }}
-                    <img loading="lazy" class="image" src="{{ $imgSrc }}" alt="{{ .Params.topImg1Alt }}" />
-                {{with $nextGenImgSrc }}</picture>{{ end }}
-
-            </div>
+        <div class="combo-card-combo-box-visuals{{ with .visualsType }} {{ . }}{{ end }}">
+            {{ if eq .visualsType "logo-profile" }}
+                {{ partial "components/podcasts/combo-card-logo-profile.html" (dict "content" .content) }}
+            {{ end }}
+            {{ if eq .visualsType "logo-logo" }}
+                {{ partial "components/podcasts/combo-card-logo-logo.html" (dict "content" .content) }}
+            {{ end }}
         </div>
     </div>
     <div class="combo-card-content">
         <div class="combo-card-heading">
-            <div class="combo-card-title">{{ .Params.title }}</div>
-            <div class="combo-card-people">
-                <p class="combo-card-people-names">with {{.Params.who }}</p>
-                <p class="combo-card-people-extra">{{ with .Params.role }}{{ . }}, {{end}}{{ .Params.org }}</p>
+            <div class="combo-card-title">{{ .content.Params.title }}</div>
+            <div class="combo-card-subtitle">
+                <p class="combo-card-subtitle-main">with {{ .content.Params.who }}</p>
+                <p class="combo-card-subtitle-extra">{{ with .content.Params.role }}{{ . }}, {{end}}{{ .content.Params.org }}</p>
             </div>
         </div>
-        <p class="small combo-card-description">{{ .Params.what }}</p>
+        <p class="small combo-card-description">{{ .content.Params.what }}</p>
         <div class="combo-card-meta">
-            {{ $s := .Params.season }}
-            {{ $e := .Params.episode }}
+            {{ $s := .content.Params.season }}
+            {{ $e := .content.Params.episode }}
             <span class="episode-no">S{{ if lt $s 10 }}0{{ end }}{{ $s }} E{{ if lt $e 10 }}0{{ end }}{{ $e }}</span>
             <span>—</span>
-            <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+            <span class="date">{{ .content.Date.Format "2006-01-02" }}</span>
         </div>
     </div>
 </div>

@@ -1535,6 +1535,7 @@ p.x-small {
 .date {
     display: inline-block;
     font-size: var(--t-size-2);
+    line-height: var(--t-lH3);
     color: var(--theme-text-3);
 }
 
