@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         /* manage season info position */
         let featureSplits = document.querySelectorAll("[data-feature-split]");
         let setPos = () => {
-            console.log("hey");
             featureSplits.forEach((split) => {
                 let el = split.querySelector("[data-aside-content]");
                 let asideWrapper = split.querySelector("[data-aside-content-wrapper]");
