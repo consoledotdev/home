@@ -37,10 +37,6 @@ authorBio:
 aliases:
   - /tools/browser-testing/
 relatedCategories:
-  - category: developer-tools
-    subcategory:
-      label: Load testing
-      name: load-testing
   - category: devops
     subcategory:
       label: Website monitoring
