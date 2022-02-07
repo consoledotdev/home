@@ -24,134 +24,138 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
     })();
 
-    let computeAsideContentPos = (() => {
-        let asideContent = document.querySelector("[data-feature-aside-content]");
-        let scrollWrapper = document.querySelector("[data-scroll-wrapper]");
-        let contentBottomPadding = parseInt(getComputedStyle(document.querySelector("[data-content-wrapper]")).paddingBottom);
-        let footerHeight = document.querySelector("[data-footer]").getBoundingClientRect().height;
-        let safetyBottomOffset = contentBottomPadding + footerHeight + 48;
-        asideContentHeight = asideContent.getBoundingClientRect().height;
-
-        let style = {};
-        let compute = function () {
-            let contentHeight = scrollWrapper.offsetHeight;
-            let bottomScrollPos = window.innerHeight + Math.ceil(window.pageYOffset);
-            let distanceFromPageBottom = contentHeight - bottomScrollPos;
-            if (window.scrollY > 0) {
-                style.position = null;
-                style.marginTop = null;
-                style.paddingTop = null;
-                let topOffset = document.querySelector("[data-aside-anchor]").getBoundingClientRect().top;
-                style.top = null;
-                style.overflow = null;
-                if (parseInt(topOffset) < 128) {
-                    style.position = "fixed";
-                    style.top = 0;
-                    style.marginTop = "100px";
-                    style.paddingTop = "28px";
-                    style.overflow = "auto";
+    let manageAsideContentResponsiveness = (() => {
+        let asideWrappers = document.querySelectorAll("[data-aside-wrapper]");
+        let setPos = () => {
+            asideWrappers.forEach((w) => {
+                if (window.innerWidth >= 1025) {
+                    w.classList.remove("is-hidden");
+                } else {
+                    w.classList.add("is-hidden");
                 }
-            } else {
-                style.position = null;
-                style.top = null;
-                style.marginTop = null;
-                style.paddingTop = null;
-                style.overflow = null;
-            }
+            });
+        };
+        setPos();
+        window.addEventListener("resize", setPos);
+    })();
 
-            let enoughHeight = safetyBottomOffset + asideContentHeight + parseInt(style.marginTop);
-            if (window.innerHeight < enoughHeight) {
-                if (distanceFromPageBottom < safetyBottomOffset) {
-                    style.marginBottom = safetyBottomOffset - distanceFromPageBottom + "px";
+    if (document.body.classList.contains("page-tools") || document.body.classList.contains("page-betas")) {
+        let manageAsideContentPosition = (() => {
+            let manageCTAPosition = (() => {
+                let ctaEl = document.querySelector("[data-feature-cta]").querySelector(".subscribe-cta");
+                let asideContentWrapper = document.querySelector("[data-feature-aside-content]");
+                let inlineWrapper = document.querySelector("[data-inline-cta-wrapper]");
+                let inlineWrapperCollapsible = inlineWrapper.querySelector("[data-collapsible-content]");
+                let setPos = () => {
+                    let title = ctaEl.querySelector(".title");
+                    let input = ctaEl.querySelector(".console-input-text");
+                    let button = ctaEl.querySelector(".console-button");
+                    if (window.innerWidth >= 1025) {
+                        ctaEl.classList.remove("layout-wide", "size-medium");
+                        ctaEl.classList.add("layout-small", "size-small", "sidebar");
+                        title.classList.remove("title-4");
+                        title.classList.add("title-5");
+                        input.classList.remove("console-input-medium");
+                        input.classList.add("console-input-small");
+                        button.classList.remove("console-button-medium");
+                        button.classList.add("console-button-small");
+                        asideContentWrapper.insertBefore(ctaEl, asideContentWrapper.firstChild);
+                        inlineWrapper.classList.add("is-hidden");
+                    } else {
+                        ctaEl.classList.remove("layout-small", "size-small", "sidebar");
+                        ctaEl.classList.add("layout-wide", "size-medium");
+                        title.classList.remove("title-5");
+                        title.classList.add("title-4");
+                        input.classList.remove("console-input-small");
+                        input.classList.add("console-input-medium");
+                        button.classList.remove("console-button-small");
+                        button.classList.add("console-button-medium");
+                        inlineWrapperCollapsible.appendChild(ctaEl);
+                        inlineWrapper.classList.remove("is-hidden");
+                    }
+                };
+                setPos();
+                window.addEventListener("resize", setPos);
+            })();
+
+            let manageFiltersPosition = (() => {
+                let filtersEl = document.querySelector("[data-feature-filters]");
+                let asideContentWrapper = document.querySelector("[data-feature-aside-content]");
+                let inlineWrapper = document.querySelector("[data-inline-filters-wrapper]");
+                let inlineWrapperCollapsible = inlineWrapper.querySelector("[data-collapsible-content]");
+                let setPos = () => {
+                    if (window.innerWidth >= 1025) {
+                        asideContentWrapper.appendChild(filtersEl);
+                        inlineWrapper.classList.add("is-hidden");
+                    } else {
+                        inlineWrapperCollapsible.appendChild(filtersEl);
+                        inlineWrapper.classList.remove("is-hidden");
+                    }
+                };
+                setPos();
+                window.addEventListener("resize", setPos);
+            })();
+        })();
+
+        let computeAsideContentPos = (() => {
+            let asideContent = document.querySelector("[data-feature-aside-content]");
+            let scrollWrapper = document.querySelector("[data-scroll-wrapper]");
+            let contentBottomPadding = parseInt(getComputedStyle(document.querySelector("[data-content-wrapper]")).paddingBottom);
+            let footerHeight = document.querySelector("[data-footer]").getBoundingClientRect().height;
+            let safetyBottomOffset = contentBottomPadding + footerHeight + 48;
+            asideContentHeight = asideContent.getBoundingClientRect().height;
+
+            let style = {};
+            let compute = function () {
+                let contentHeight = scrollWrapper.offsetHeight;
+                let bottomScrollPos = window.innerHeight + Math.ceil(window.pageYOffset);
+                let distanceFromPageBottom = contentHeight - bottomScrollPos;
+                if (window.scrollY > 0) {
+                    style.position = null;
+                    style.marginTop = null;
+                    style.paddingTop = null;
+                    let topOffset = document.querySelector("[data-aside-anchor]").getBoundingClientRect().top;
+                    style.top = null;
+                    style.overflow = null;
+                    if (parseInt(topOffset) < 128) {
+                        style.position = "fixed";
+                        style.top = 0;
+                        style.marginTop = "100px";
+                        style.paddingTop = "28px";
+                        style.overflow = "auto";
+                    }
+                } else {
+                    style.position = null;
+                    style.top = null;
+                    style.marginTop = null;
+                    style.paddingTop = null;
+                    style.overflow = null;
+                }
+
+                let enoughHeight = safetyBottomOffset + asideContentHeight + parseInt(style.marginTop);
+                if (window.innerHeight < enoughHeight) {
+                    if (distanceFromPageBottom < safetyBottomOffset) {
+                        style.marginBottom = safetyBottomOffset - distanceFromPageBottom + "px";
+                    } else {
+                        style.marginBottom = null;
+                    }
                 } else {
                     style.marginBottom = null;
                 }
-            } else {
-                style.marginBottom = null;
-            }
 
-            asideContent.style.position = style.position;
-            asideContent.style.top = style.top;
-            asideContent.style.marginTop = style.marginTop;
-            asideContent.style.paddingTop = style.paddingTop;
-            asideContent.style.marginBottom = style.marginBottom;
-            asideContent.style.overflow = style.overflow;
-        };
-        compute();
-        window.addEventListener("scroll", compute);
-        window.addEventListener("resize", compute);
-    })();
-});
-
-let manageAsideContentPosition = (() => {
-    let asideWrapper = document.querySelector("[data-aside-wrapper]");
-    let setPos = () => {
-        if (window.innerWidth >= 1025) {
-            asideWrapper.classList.remove("is-hidden");
-        } else {
-            asideWrapper.classList.add("is-hidden");
-        }
-    };
-    setPos();
-    window.addEventListener("resize", setPos);
-
-    if (document.body.classList.contains("page-tools") || document.body.classList.contains("page-betas")) {
-        let manageCTAPosition = (() => {
-            let ctaEl = document.querySelector("[data-feature-cta]").querySelector(".subscribe-cta");
-            let asideContentWrapper = document.querySelector("[data-feature-aside-content]");
-            let inlineWrapper = document.querySelector("[data-inline-cta-wrapper]");
-            let inlineWrapperCollapsible = inlineWrapper.querySelector("[data-collapsible-content]");
-            let setPos = () => {
-                let title = ctaEl.querySelector(".title");
-                let input = ctaEl.querySelector(".console-input-text");
-                let button = ctaEl.querySelector(".console-button");
-                if (window.innerWidth >= 1025) {
-                    ctaEl.classList.remove("layout-wide", "size-medium");
-                    ctaEl.classList.add("layout-small", "size-small", "sidebar");
-                    title.classList.remove("title-4");
-                    title.classList.add("title-5");
-                    input.classList.remove("console-input-medium");
-                    input.classList.add("console-input-small");
-                    button.classList.remove("console-button-medium");
-                    button.classList.add("console-button-small");
-                    asideContentWrapper.insertBefore(ctaEl, asideContentWrapper.firstChild);
-                    inlineWrapper.classList.add("is-hidden");
-                } else {
-                    ctaEl.classList.remove("layout-small", "size-small", "sidebar");
-                    ctaEl.classList.add("layout-wide", "size-medium");
-                    title.classList.remove("title-5");
-                    title.classList.add("title-4");
-                    input.classList.remove("console-input-small");
-                    input.classList.add("console-input-medium");
-                    button.classList.remove("console-button-small");
-                    button.classList.add("console-button-medium");
-                    inlineWrapperCollapsible.appendChild(ctaEl);
-                    inlineWrapper.classList.remove("is-hidden");
-                }
+                asideContent.style.position = style.position;
+                asideContent.style.top = style.top;
+                asideContent.style.marginTop = style.marginTop;
+                asideContent.style.paddingTop = style.paddingTop;
+                asideContent.style.marginBottom = style.marginBottom;
+                asideContent.style.overflow = style.overflow;
             };
-            setPos();
-            window.addEventListener("resize", setPos);
-        })();
-
-        let manageFiltersPosition = (() => {
-            let filtersEl = document.querySelector("[data-feature-filters]");
-            let asideContentWrapper = document.querySelector("[data-feature-aside-content]");
-            let inlineWrapper = document.querySelector("[data-inline-filters-wrapper]");
-            let inlineWrapperCollapsible = inlineWrapper.querySelector("[data-collapsible-content]");
-            let setPos = () => {
-                if (window.innerWidth >= 1025) {
-                    asideContentWrapper.appendChild(filtersEl);
-                    inlineWrapper.classList.add("is-hidden");
-                } else {
-                    inlineWrapperCollapsible.appendChild(filtersEl);
-                    inlineWrapper.classList.remove("is-hidden");
-                }
-            };
-            setPos();
-            window.addEventListener("resize", setPos);
+            compute();
+            window.addEventListener("scroll", compute);
+            window.addEventListener("resize", compute);
         })();
     }
-})();
+});
 
 class Sections {
     constructor() {
