@@ -29,49 +29,84 @@
         </h5>
         {{ partial "components/podcasts/combo-card.html" (dict "visualsType" "logo-profile" "content" $featured) }}
     </section>
-	<div class="feature-split">
+	<div class="feature-split" data-feature-split>
 		<aside data-aside-wrapper class="feature-aside">
-			<div class="feature-aside-content marked-scrollable-v" data-feature-aside-content data-marked-scrollable-v>
-                Yo.
-            </div>
+			<div class="feature-aside-content" data-aside-content-wrapper></div>
 		</aside>
-		<div class="feature-content-wrapper" data-aside-anchor data-feature-content-wrapper>
+		<div class="feature-content-wrapper">
 			<section class="page-section" data-feature-items-section="season-2">
 				<div class="page-section-heading">
                     <h3 class="title title-2"><span data-feature-section-name>Season 2</span></h3>
 				</div>
-				<div class="page-section-heading">
-                    <h5 class="title title-4"><span data-feature-section-name>Other episodes</span></h5>
-				</div>
-				<div class="feature-items" data-feature-items>
-                    {{ range after 1 (where .Pages.ByPublishDate.Reverse "Params.season" 2) }}
-                        {{ partial "components/podcasts/combo-card.html" (dict "visualsType" "logo-profile" "content" .) }}
-                    {{ end }}
-				</div>
+                <div class="page-section-sub" data-inline-aside-content-wrapper>
+                    <div data-aside-content>
+                        <div class="page-section-heading">
+                            <h5 class="title title-4"><span data-feature-section-name>The host</span></h5>
+                        </div>
+                        <div class="person-profile">
+                            {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/david.jpg" "imgSize" "128" "alt" "Photo of David Mytton" ) }}
+                            <a href="#author" class="link" title="About David Mytton">David Mytton</a>
+                        </div>
+                        <div class="page-section-heading">
+                            <h5 class="title title-4"><span data-feature-section-name>Guests</span></h5>
+                        </div>
+                        {{ range (where .Pages.ByPublishDate.Reverse "Params.season" 2) }}
+                            <div class="person-profile">
+                                {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" .Params.topImg1Src "imgSize" "128" "alt" (print "Photo of " .Params.who) ) }}
+                                <span>{{ .Params.who }}</span>
+                            </div>
+                        {{ end }}
+                    </div>
+                </div>
+                <div class="page-section-sub">
+                    <div class="page-section-heading">
+                        <h5 class="title title-4"><span data-feature-section-name>Other episodes</span></h5>
+                    </div>
+                    <div class="feature-items" data-feature-items>
+                        {{ range after 1 (where .Pages.ByPublishDate.Reverse "Params.season" 2) }}
+                            {{ partial "components/podcasts/combo-card.html" (dict "visualsType" "logo-profile" "content" .) }}
+                        {{ end }}
+                    </div>
+                </div>
 			</section>
 		</div>
 	</div>
-	<div class="feature-split">
+	<div class="feature-split" data-feature-split>
 		<aside data-aside-wrapper class="feature-aside">
-			<div class="feature-aside-content marked-scrollable-v" data-feature-aside-content data-marked-scrollable-v>
-                Yo.
-            </div>
+			<div class="feature-aside-content" data-aside-content-wrapper></div>
 		</aside>
 		<div class="feature-content-wrapper" data-aside-anchor data-feature-content-wrapper>
 			<section class="page-section" data-feature-items-section="season-2">
 				<div class="page-section-heading">
                     <h3 class="title title-2"><span data-feature-section-name>Season 1</span></h3>
 				</div>
-				<div class="feature-items" data-feature-items>
-                    {{ range (where .Pages.ByPublishDate.Reverse "Params.season" 1) }}
-                        {{ partial "components/podcasts/combo-card.html" (dict "visualsType" "logo-logo" "content" .) }}
-                    {{ end }}
-				</div>
+                <div class="page-section-sub" data-inline-aside-content-wrapper>
+                    <div data-aside-content>
+                        <div class="page-section-heading">
+                            <h5 class="title title-4"><span data-feature-section-name>With</span></h5>
+                        </div>
+                        <div class="person-profile">
+                            {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/david.jpg" "imgSize" "128" "alt" "Photo of David Mytton" ) }}
+                            <a href="#author" class="link" title="About David Mytton">David Mytton</a>
+                        </div>
+                        <div class="person-profile">
+                            {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/podcasts/akita-jean-yang-profile.jpg" "imgSize" "128" "alt" "Photo of Jean Yang" ) }}
+                            <a href="https://twitter.com/jeanqasaur" target="_blank" class="link icon-link" title="https://twitter.com/jeanqasaur"><span>Jean Yang</span> {{ partial "icons/external-link.html" }}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-section-sub">
+                    <div class="feature-items" data-feature-items>
+                        {{ range (where .Pages.ByPublishDate.Reverse "Params.season" 1) }}
+                            {{ partial "components/podcasts/combo-card.html" (dict "visualsType" "logo-logo" "content" .) }}
+                        {{ end }}
+                    </div>
+                </div>
 			</section>
 		</div>
 	</div>
 	<section class="page-section page-section-feature-root">
-        {{ partial "components/author.html" (dict "context" . "bio" .Params.authorBio "img" .Params.authorImg "name" .Params.authorName ) }}
+        <div name="author">{{ partial "components/author.html" (dict "context" . "bio" .Params.authorBio "img" .Params.authorImg "name" .Params.authorName ) }}</div>
         {{ partial "components/about-console.html" }}
 		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" ) }}
 	</section>
