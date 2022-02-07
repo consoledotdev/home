@@ -1,5 +1,9 @@
 /* Podcasts Index
    ========================================================================== */
+html {
+    scroll-behavior: smooth;
+}
+
 @media (min-width: 1057px) {
     .page-podcasts .page-section-feature-root.opening {
         margin-right: 0;
