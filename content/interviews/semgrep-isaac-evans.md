@@ -12,7 +12,7 @@ summary: Interview with Isaac Evans, CEO, Semgrep.
 isPage: interviews
 topImg1Src: /img/interviews/semgrep-isaac-evans-profile.jpeg
 topImg2Src: /img/favicons/semgrep.dev.png
-ogImg: /img/interviews/sourcegraph-beyang-liu-desk.jpg
+ogImg: /img/interviews/semgrep-isaac-evans-profile.jpeg
 ---
 
 ### What is Semgrep? Why did you build it?
