@@ -1,14 +1,5 @@
 <div class="author-box">
-    <div class="plane-picture by-width">
-        <img class="ratio" src="/img/ratio-plane.png" alt="">
-
-        {{ $nextGenImgSrc := partial "components/processed-img.html" (dict "src" .img "width" "328" "nextGen" "true") }}
-        {{ $imgSrc := partial "components/processed-img.html" (dict "src" .img "width" "328") }}
-        {{with $nextGenImgSrc }}<picture><source srcset="{{ . }}" type="image/webp">{{ end }}
-            <img loading="lazy" class="image" src="{{ $imgSrc }}" alt="Photo of {{ .name }}" />
-        {{with $nextGenImgSrc }}</picture>{{ end }}
-
-    </div>
+    {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" .img "imgSize" "328" "alt" (print "Photo of " .name) ) }}
     <span class="nav-wrapper-anchor" id="author"></span>
     <div class="author-box-content">
         <h6 class="title title-5">About the author</h6>

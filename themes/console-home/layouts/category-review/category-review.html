@@ -16,16 +16,7 @@
             </h2>
             <div class="page-meta">
                 <p class="small">
-                    <span class="plane-picture">
-                        <img class="ratio" src="/img/ratio-plane.png" alt="">
-
-                        {{ $nextGenImgSrc := partial "components/processed-img.html" (dict "src" .Params.authorImg "width" "52" "nextGen" "true") }}
-                        {{ $imgSrc := partial "components/processed-img.html" (dict "src" .Params.authorImg "width" "52") }}
-                        {{with $nextGenImgSrc }}<picture><source srcset="{{ . }}" type="image/webp">{{ end }}
-                            <img loading="lazy" class="image" src="{{ $imgSrc }}" alt="Photo of {{ .Params.authorName }}" />
-                        {{with $nextGenImgSrc }}</picture>{{ end }}
-
-                    </span>
+                    {{ partial "components/plane-picture.html" (dict "flow" "inline" "img" .Params.authorImg "imgSize" "64" "alt" .Params.authorName ) }}
                     <a href="#author" class="link" rel="me">{{ .Params.authorName }}</a>
                 </p>
                 <p class="small">
