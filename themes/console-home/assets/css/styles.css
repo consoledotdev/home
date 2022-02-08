@@ -1282,6 +1282,11 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
     align-items: center;
 }
 
+.title.rich-title .icon {
+    flex: 0 0 auto;
+}
+
+/* title 1 */
 .title.title-1 {
     font-size: var(--t-size8);
     margin-bottom: var(--space4);
@@ -1297,6 +1302,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
     margin-right: var(--space3);
 }
 
+/* title 2 */
 .title.title-2 {
     font-size: var(--t-size5);
     margin-bottom: var(--space4);
@@ -1322,6 +1328,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
     margin-right: var(--space3);
 }
 
+/* title 3 */
 .title.title-3 {
     font-size: var(--t-size2);
     font-weight: 500;
@@ -1347,6 +1354,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
     margin-right: var(--space3);
 }
 
+/* title 4 */
 .title.title-4 {
     font-size: var(--t-size0);
     text-transform: uppercase;
@@ -1375,6 +1383,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
     margin-right: var(--space3);
 }
 
+/* title 5 */
 .title.title-5 {
     font-size: var(--t-size-1);
     text-transform: uppercase;
@@ -1402,6 +1411,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
     margin-right: var(--space2_5);
 }
 
+/* title 6 */
 .title.title-6 {
     font-size: var(--t-size0);
     font-weight: 500;

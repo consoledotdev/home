@@ -29,6 +29,18 @@ html {
     }
 }
 
+.page-podcasts .title-1 {
+    display: block;
+}
+
+.page-podcasts .title-1 .icon {
+    display: inline-block;
+    margin-right: var(--space1);
+    width: calc(var(--space4) * 1.2);
+    height: calc(var(--space4) * 1.2);
+    vertical-align: -0.12em;
+}
+
 .page-podcasts .page-section-feature-root.opening p.description {
     margin-top: 0;
 }
