@@ -110,6 +110,27 @@ html {
     margin-right: 0;
 }
 
+.page-podcasts .title-4 {
+    color: var(--theme-text-2);
+}
+
+.page-podcasts .page-section-feature-root.featured .title {
+    position: relative;
+    overflow: hidden;
+}
+
+.page-podcasts .page-section-feature-root.featured .title span:nth-child(1) {
+    display: inline-block;
+    margin-right: 17px;
+}
+
+.page-podcasts .page-section-feature-root.featured .title span:nth-child(2) {
+    display: inline-block;
+    font-weight: 300;
+    color: var(--theme-text-3);
+    text-indent: -17px;
+}
+
 /* Combo card */
 .page-podcasts .combo-card-meta .episode-no {
     font-style: italic;
@@ -120,11 +141,6 @@ html {
         width: calc(var(--space7) + 21vw); /* calc(var(--space8) - var(--space4_5)) */
         max-width: var(--space8);
     }
-}
-
-.page-podcasts .page-section-feature-root.featured .title span {
-    font-weight: 300;
-    color: var(--theme-text-3);
 }
 
 .page-podcasts .page-section-feature-root.featured .combo-card-title {
