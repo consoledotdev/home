@@ -41,6 +41,19 @@
                 <div class="page-section-sub aside" data-inline-aside-content-wrapper>
                     <div data-aside-content>
                         <div class="aside-block">
+                            <div class="podcast-embed-content">
+                                <div data-podcast-player-wrapper class="podcast-embed-player">
+                                    <audio data-podcast-player style="display: none;" preload="none" src="{{ $.Params.S02Trailer }}"></audio>
+                                    <div class="podcast-embed-player-top">
+                                        <button data-play onclick="blur();" class="console-button-text play" aria-label="Play">{{ partial "icons/play.html" }}</button>
+                                        <button data-pause onclick="blur();" class="console-button-text pause" aria-label="Pause">{{ partial "icons/pause.html" }}</button>
+                                        <h6 class="title title-5" title="Listen to S02 trailer">Listen to S02 trailer</h5>
+                                    </div>
+                                    <div data-progress class="player-progress"><span class="bg"></span><span data-elapsed class="elapsed" style="width: 0%"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aside-block">
                             <div class="page-section-heading">
                                 <h5 class="title title-4"><span data-feature-section-name>The host</span></h5>
                             </div>
@@ -89,6 +102,19 @@
                 <div class="page-section-sub aside" data-inline-aside-content-wrapper>
                     <div data-aside-content>
                         <div class="aside-block">
+                            <div class="podcast-embed-content">
+                                <div data-podcast-player-wrapper class="podcast-embed-player">
+                                    <audio data-podcast-player style="display: none;" preload="none" src="{{ $.Params.S01Trailer }}"></audio>
+                                    <div class="podcast-embed-player-top">
+                                        <button data-play onclick="blur();" class="console-button-text play" aria-label="Play">{{ partial "icons/play.html" }}</button>
+                                        <button data-pause onclick="blur();" class="console-button-text pause" aria-label="Pause">{{ partial "icons/pause.html" }}</button>
+                                        <h6 class="title title-5" title="Listen to S01 trailer">Listen to S01 trailer</h5>
+                                    </div>
+                                    <div data-progress class="player-progress"><span class="bg"></span><span data-elapsed class="elapsed" style="width: 0%"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aside-block">
                             <div class="page-section-heading">
                                 <h5 class="title title-4"><span data-feature-section-name>With</span></h5>
                             </div>
@@ -128,4 +154,8 @@
 	{{ $podcastsJS := resources.Get "/js/podcasts.js" }}
     {{ if hugo.IsProduction }}{{ $podcastsJS = $podcastsJS | resources.Minify | resources.Fingerprint }}{{ end }}
 	<script src="{{ $podcastsJS.Permalink }}"></script>
+
+    {{ $podcastPlayerJS := resources.Get "/js/podcast-player.js" }}
+    {{ if hugo.IsProduction }}{{ $podcastPlayerJS = $podcastPlayerJS | resources.Minify | resources.Fingerprint }}{{ end }}
+    <script src="{{ $podcastPlayerJS.Permalink }}"></script>
 {{ end }}
