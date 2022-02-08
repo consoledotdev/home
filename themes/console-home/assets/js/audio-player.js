@@ -1,11 +1,11 @@
-class PodcastPlayer {
+class AudioPlayer {
     constructor(p) {
         this.public = this.publicMethods();
 
         this.wrapper = p;
         this.playBtn = this.wrapper.querySelector("[data-play]");
         this.pauseBtn = this.wrapper.querySelector("[data-pause]");
-        this.audioEl = this.wrapper.querySelector("[data-podcast-player]");
+        this.audioEl = this.wrapper.querySelector("[data-console-player-audio]");
         this.progress = this.wrapper.querySelector("[data-progress]");
         this.elapsed = this.progress.querySelector("[data-elapsed]");
 
@@ -92,6 +92,6 @@ class PodcastPlayer {
 window.CNSL = {
     players: [],
 };
-document.querySelectorAll("[data-podcast-player-wrapper]").forEach((p) => {
-    window.CNSL.players.push(new PodcastPlayer(p));
+document.querySelectorAll("[data-console-player-wrapper]").forEach((p) => {
+    window.CNSL.players.push(new AudioPlayer(p));
 });
