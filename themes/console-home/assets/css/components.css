@@ -844,6 +844,8 @@
     transition: var(--a-controls-active);
 }
 
+/* Primary
+    --------------------------------------------------------------- */
 .console-button {
     background: var(--c-blue-06-main);
     padding: calc(var(--space2) + var(--space1)) calc(var(--space3) + var(--space1));
@@ -874,6 +876,24 @@
 
 .console-button.console-button-small {
     padding: var(--space2) var(--space3);
+}
+
+/* Round Button */
+.console-button.round {
+    border-radius: var(--space3_5);
+}
+
+.console-button.console-button-medium.round {
+    border-radius: 21px;
+}
+
+.console-button.console-button-small.round {
+    border-radius: calc(var(--space4) + var(--space1));
+}
+
+/* Quiet */
+.console-button.quiet:not(:hover):not(:focus):not(:active) {
+    background: rgba(var(--c-white-00-absolute-RGB), 0.1);
 }
 
 /* Text Button
@@ -1023,6 +1043,76 @@
 .console-button-text.console-button-yellow:focus .icon-fill-stroke {
     stroke: var(--theme-cta-secondary-yellow-text-active);
     fill: var(--theme-cta-secondary-yellow-text-active);
+}
+
+/* Icon only
+    --------------------------------------------------------------- */
+.console-button.icon-only {
+    padding: calc(var(--space2) + var(--space1)) calc(var(--space2) + var(--space1));
+}
+
+.console-button.console-button-medium.icon-only {
+    padding: calc(var(--space2) + calc(var(--space1) / 2)) calc(var(--space2) + calc(var(--space1) / 2));
+}
+
+.console-button.console-button-small.icon-only {
+    padding: var(--space2) var(--space2);
+}
+
+.console-button.icon-only span,
+[class^="console-button"].icon-only span,
+[class*=" console-button"].icon-only span {
+    display: none;
+}
+
+/* Play media button
+    --------------------------------------------------------------- */
+.console-button.play {
+    position: relative;
+}
+
+/* visually adjust play icon position on icon only buttons */
+.console-button.icon-only.play .icon {
+    margin-left: 2px;
+    margin-right: -2px;
+}
+
+.console-button.icon-only.play .hover-content {
+    display: block;
+}
+
+.console-button.play .hover-content {
+    display: block;
+    position: absolute;
+    right: 100%;
+    margin-right: var(--space2_5);
+    white-space: nowrap;
+    font-size: var(--t-size-3);
+    font-weight: 300;
+    line-height: var(--t-lH4);
+    letter-spacing: 0.06em;
+    padding: var(--space0) var(--space1);
+    opacity: 0;
+    pointer-events: none;
+    background: var(--c-blue-06-main);
+    transition: var(--a-controls);
+    border-radius: var(--corners-x-small);
+}
+
+.console-button.play:hover .hover-content,
+.console-button.play:focus .hover-content,
+.console-button.play:active .hover-content {
+    opacity: 1;
+    transition: var(--a-controls-active);
+}
+
+.console-button.play:hover .hover-content,
+.console-button.play:focus .hover-content {
+    background: var(--c-blue-07);
+}
+
+.console-button.play:active .hover-content {
+    background: var(--c-blue-08);
 }
 
 /* Copy Button
