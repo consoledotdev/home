@@ -2511,9 +2511,15 @@ body:not(.mobile) .console-control:hover:before {
 }
 
 /* Combo card content --------------------------- */
-.combo-card-content {
+.combo-card-content-wrapper {
     flex: 1 1 auto;
     max-height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.combo-card-content {
+    flex: 1 1 auto;
     padding: var(--space3) var(--space4);
 }
 
@@ -2618,7 +2624,7 @@ p.combo-card-description {
         margin-left: 49.72%;
     }
 
-    .combo-card-content {
+    .combo-card-content-wrapper {
         width: 100%;
     }
 }
