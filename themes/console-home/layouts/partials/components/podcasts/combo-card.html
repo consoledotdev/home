@@ -1,5 +1,5 @@
 <div class="combo-card">
-    <a onclick="blur();" class="card-link" href="{{ .content.RelPermalink }}"><span>Read</span></a>
+    <a data-card-link onclick="blur();" class="card-link" href="{{ .content.RelPermalink }}"></a>
     <div class="combo-card-combo-box">
         <img class="ratio" src="/img/ratio-combo.png" alt="">
         <div class="combo-card-combo-box-visuals{{ with .visualsType }} {{ . }}{{ end }}">
@@ -28,4 +28,9 @@
             <span class="date">{{ .content.Date.Format "2006-01-02" }}</span>
         </div>
     </div>
+    <button data-play-button class="console-button round icon-only quiet play" tabindex="-1" aria-label="Play">
+        {{ partial "icons/play.html" }}
+        {{ $duration := printf "2000-01-01T%s%s" "00:" .content.Params.duration | time }}
+        <span class="hover-content">Play · {{ $duration.Minute }}m {{ $duration.Second }}s</span>
+    </button>
 </div>

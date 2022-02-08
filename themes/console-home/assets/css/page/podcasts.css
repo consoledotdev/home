@@ -200,6 +200,30 @@ html {
     display: none;
 }
 
+.page-podcasts .combo-card .console-button {
+    margin-right: var(--space3_5);
+}
+
+.page-podcasts .combo-card:hover .console-button.quiet,
+.page-podcasts .combo-card:focus .console-button.quiet {
+    background: var(--c-blue-07);
+}
+
+.page-podcasts .combo-card:active .console-button.quiet {
+    background: var(--c-blue-08);
+}
+
+.page-podcasts .combo-card:hover .console-button.play .hover-content,
+.page-podcasts .combo-card:focus .console-button.play .hover-content {
+    background: var(--c-blue-07);
+    opacity: 1;
+}
+
+.page-podcasts .combo-card:active .console-button.play .hover-content {
+    background: var(--c-blue-08);
+    opacity: 1;
+}
+
 /* Aside */
 .page-podcasts .page-section-sub.aside {
     margin-bottom: var(--space4);
