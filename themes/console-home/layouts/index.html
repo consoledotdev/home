@@ -42,11 +42,11 @@
         <div data-podcast-player-wrapper class="podcast-embed-player">
             <audio data-podcast-player style="display: none;" preload="none" src="{{ $.Site.Params.consolePodcastURL}}"></audio>
             <div class="podcast-embed-player-top">
-                <button onclick="playEpisode(); blur();" class="console-button-text play" aria-label="Play">{{ partial "icons/play.html" }}</button>
-                <button onclick="stopEpisode(); blur();" class="console-button-text pause" aria-label="Pause">{{ partial "icons/pause.html" }}</button>
+                <button data-play onclick="blur();" class="console-button-text play" aria-label="Play">{{ partial "icons/play.html" }}</button>
+                <button data-pause onclick="blur();" class="console-button-text pause" aria-label="Pause">{{ partial "icons/pause.html" }}</button>
                 <h6 class="title title-5" title="{{ $.Site.Params.consolePodcastTitle }}">{{ $.Site.Params.consolePodcastTitle }}</h5>
             </div>
-            <div data-elapsed-indicator class="elapsed-indicator"><span class="bg"></span><span class="elapsed" style="width: 0%"></span></div>
+            <div data-progress class="player-progress"><span class="bg"></span><span data-elapsed class="elapsed" style="width: 0%"></span></div>
         </div>
         {{ partial "components/podcast-links.html" (dict "apple" "true" "spotify" "true") }}
     </div>

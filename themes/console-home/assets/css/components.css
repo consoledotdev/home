@@ -3719,6 +3719,10 @@ p.combo-card-description {
     .podcast-embed-content .podcast-embed-frame {
         flex: 1 1 auto;
     }
+
+    .podcast-embed-content .podcast-links {
+        margin-left: var(--space3);
+    }
 }
 
 @media (max-width: 511px) {
@@ -3770,15 +3774,16 @@ p.combo-card-description {
     margin-top: 0;
 }
 
-.elapsed-indicator {
+.player-progress {
     position: relative;
     width: 100%;
     height: calc(var(--space1) / 2);
     padding: var(--space1) 0;
+    cursor: pointer;
 }
 
-.elapsed-indicator .bg,
-.elapsed-indicator .elapsed {
+.player-progress .bg,
+.player-progress .elapsed {
     position: absolute;
     height: calc(var(--space1) / 2);
     top: 50%;
@@ -3786,12 +3791,12 @@ p.combo-card-description {
     transform: translateY(-50%);
 }
 
-.elapsed-indicator .bg {
+.player-progress .bg {
     width: 100%;
     background: var(--theme-datavis-axis);
 }
 
-.elapsed-indicator .elapsed {
+.player-progress .elapsed {
     width: 0%;
     background: var(--theme-text-4);
 }
