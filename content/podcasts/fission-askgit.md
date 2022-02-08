@@ -11,6 +11,7 @@ what:
 season: 1
 episode: 8
 date: 2021-08-26T07:45:00Z
+duration: 14:04
 draft: false
 headerType: fixed
 summary:

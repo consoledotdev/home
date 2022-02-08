@@ -13,6 +13,7 @@ what:
 season: 2
 episode: 3
 date: 2022-01-20T07:05:00Z
+duration: 27:37
 draft: false
 headerType: fixed
 summary:

@@ -12,6 +12,7 @@ what:
 season: 2
 episode: 2
 date: 2022-01-06T07:00:00Z
+duration: 33:18
 draft: false
 headerType: fixed
 summary:

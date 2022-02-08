@@ -10,6 +10,7 @@ what:
 season: 1
 episode: 9
 date: 2021-09-02T07:45:00Z
+duration: 15:23
 draft: false
 headerType: fixed
 summary:

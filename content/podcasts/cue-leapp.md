@@ -11,6 +11,7 @@ what:
 season: 1
 episode: 10
 date: 2021-09-09T07:45:00Z
+duration: 14:44
 draft: false
 headerType: fixed
 summary:
