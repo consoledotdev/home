@@ -44,12 +44,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 let el = split.querySelector("[data-aside-content]");
                 let asideWrapper = split.querySelector("[data-aside-content-wrapper]");
                 let inlineWrapper = split.querySelector("[data-inline-aside-content-wrapper]");
+                let trailerEl = el.querySelector("[data-trailer-player]");
                 if (window.innerWidth >= 1025) {
-                    asideWrapper.appendChild(el);
-                    inlineWrapper.classList.add("is-hidden");
+                    if (!inlineWrapper.classList.contains("player-prepended")) {
+                        console.log("running", trailerEl);
+                        el.insertBefore(trailerEl, el.firstChild);
+                        asideWrapper.appendChild(el);
+                        inlineWrapper.classList.add("is-hidden");
+                        inlineWrapper.classList.add("player-prepended");
+                    }
                 } else {
-                    inlineWrapper.appendChild(el);
-                    inlineWrapper.classList.remove("is-hidden");
+                    if (inlineWrapper.classList.contains("player-prepended")) {
+                        el.appendChild(trailerEl);
+                        inlineWrapper.appendChild(el);
+                        inlineWrapper.classList.remove("is-hidden");
+                        inlineWrapper.classList.remove("player-prepended");
+                    }
                 }
             });
         };
