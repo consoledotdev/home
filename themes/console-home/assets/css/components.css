@@ -2533,6 +2533,12 @@ p.combo-card-description {
     }
 }
 
+@media (min-width: 769px) {
+    .combo-card-combo-box {
+        max-width: calc(var(--space7_5) - var(--space5));
+    }
+}
+
 /* Category Thumbnail
    ================================================================================================================ */
 .category-thumbnail-generic {

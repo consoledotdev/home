@@ -118,6 +118,7 @@ html {
 @media (min-width: 769px) {
     .page-podcasts .page-section-feature-root.featured .combo-card-combo-box {
         width: calc(var(--space7) + 21vw); /* calc(var(--space8) - var(--space4_5)) */
+        max-width: var(--space8);
     }
 }
 
