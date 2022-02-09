@@ -63,15 +63,7 @@
                             </div>
                         </div>
                         <div class="aside-block" data-trailer-player>
-                            <div data-console-player-wrapper class="console-player">
-                                <audio data-console-player-audio style="display: none;" preload="none" src="{{ $.Params.S02Trailer }}"></audio>
-                                <div class="console-player-top">
-                                    <button data-play onclick="blur();" class="console-button-text play" aria-label="Play">{{ partial "icons/play.html" }}</button>
-                                    <button data-pause onclick="blur();" class="console-button-text pause" aria-label="Pause">{{ partial "icons/pause.html" }}</button>
-                                    <h6 class="title title-5" title="Listen to S02 trailer">Listen to S02 trailer</h5>
-                                </div>
-                                <div data-progress class="progress"><span class="bg"></span><span data-elapsed class="elapsed" style="width: 0%"></span></div>
-                            </div>
+                            {{ partial "components/audio-player.html" (dict "src" $.Params.S02Trailer "title" "Listen to S02 trailer" )}}
                         </div>
                     </div>
                 </div>
@@ -115,15 +107,7 @@
                             </div>
                         </div>
                         <div class="aside-block" data-trailer-player>
-                            <div data-console-player-wrapper class="console-player">
-                                <audio data-console-player-audio style="display: none;" preload="none" src="{{ $.Params.S01Trailer }}"></audio>
-                                <div class="console-player-top">
-                                    <button data-play onclick="blur();" class="console-button-text play" aria-label="Play">{{ partial "icons/play.html" }}</button>
-                                    <button data-pause onclick="blur();" class="console-button-text pause" aria-label="Pause">{{ partial "icons/pause.html" }}</button>
-                                    <h6 class="title title-5" title="Listen to S01 trailer">Listen to S01 trailer</h5>
-                                </div>
-                                <div data-progress class="progress"><span class="bg"></span><span data-elapsed class="elapsed" style="width: 0%"></span></div>
-                            </div>
+                            {{ partial "components/audio-player.html" (dict "src" $.Params.S01Trailer "title" "Listen to S01 trailer" )}}
                         </div>
                     </div>
                 </div>

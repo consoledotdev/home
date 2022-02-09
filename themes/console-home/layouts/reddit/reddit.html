@@ -45,15 +45,7 @@
 <div class="framed-section mid framed-section-overlay podcast-embed">
     <h5 class="title title-4">Console DevTools Podcast</h5>
     <div class="podcast-embed-content">
-        <div data-console-player-wrapper class="console-player">
-            <audio data-console-player-audio style="display: none;" preload="none" src="{{ $.Site.Params.consolePodcastURL}}"></audio>
-            <div class="console-player-top">
-                <button data-play onclick="blur();" class="console-button-text play" aria-label="Play">{{ partial "icons/play.html" }}</button>
-                <button data-pause onclick="blur();" class="console-button-text pause" aria-label="Pause">{{ partial "icons/pause.html" }}</button>
-                <h6 class="title title-5" title="{{ $.Site.Params.consolePodcastTitle }}">{{ $.Site.Params.consolePodcastTitle }}</h5>
-            </div>
-            <div data-progress class="progress"><span class="bg"></span><span data-elapsed class="elapsed" style="width: 0%"></span></div>
-        </div>
+        {{ partial "components/audio-player.html" (dict "src" $.Site.Params.consolePodcastURL "title" $.Site.Params.consolePodcastTitle )}}
         {{ partial "components/podcast-links.html" (dict "apple" "true" "spotify" "true") }}
     </div>
 </div>
