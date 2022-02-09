@@ -276,7 +276,8 @@
     background: linear-gradient(0deg, rgba(21, 21, 23, 0.4) 0%, rgba(21, 21, 23, 0) 100%);
 }
 
-.theme.page-vendor-review {
+.theme.page-vendor-review,
+.theme.page-podcast-episode {
     background: var(--theme-content-bg-1);
 }
 
