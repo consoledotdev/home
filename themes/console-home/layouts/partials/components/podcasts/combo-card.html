@@ -1,16 +1,6 @@
 <div class="combo-card">
     <a data-card-link onclick="blur();" class="card-link" href="{{ .content.RelPermalink }}"></a>
-    <div class="combo-card-combo-box">
-        <img class="ratio" src="/img/ratio-combo.png" alt="">
-        <div class="combo-card-combo-box-visuals{{ with .visualsType }} {{ . }}{{ end }}">
-            {{ if eq .visualsType "logo-profile" }}
-                {{ partial "components/podcasts/combo-card-logo-profile.html" (dict "content" .content) }}
-            {{ end }}
-            {{ if eq .visualsType "logo-logo" }}
-                {{ partial "components/podcasts/combo-card-logo-logo.html" (dict "content" .content) }}
-            {{ end }}
-        </div>
-    </div>
+    {{ partial "components/combo-box.html" (dict "visualsType" .visualsType "content" .content) }}
     <div class="combo-card-content-wrapper">
         <div class="combo-card-content">
             <div class="combo-card-heading">

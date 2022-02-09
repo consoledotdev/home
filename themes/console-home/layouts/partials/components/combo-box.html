@@ -1,0 +1,11 @@
+<div class="combo-box">
+    <img class="ratio" src="/img/ratio-combo.png" alt="">
+    <div class="combo-box-visuals{{ with .visualsType }} {{ . }}{{ end }}">
+        {{ if eq .visualsType "logo-profile" }}
+            {{ partial "components/combo-box-logo-profile.html" (dict "content" .content) }}
+        {{ end }}
+        {{ if eq .visualsType "logo-logo" }}
+            {{ partial "components/combo-box-logo-logo.html" (dict "content" .content) }}
+        {{ end }}
+    </div>
+</div>
