@@ -36,13 +36,13 @@
 		<div class="feature-content-wrapper">
 			<section class="page-section" data-feature-items-section="season-2">
 				<div class="page-section-heading">
-                    <h3 class="title title-2"><span data-feature-section-name>Season 2</span></h3>
+                    <h3 class="title title-2">Season 2</h3>
 				</div>
                 <div class="page-section-sub aside" data-inline-aside-content-wrapper>
                     <div class="aside-content" data-aside-content>
                         <div class="aside-block">
                             <div class="page-section-heading">
-                                <h5 class="title title-4"><span data-feature-section-name>The host</span></h5>
+                                <h5 class="title title-4">The host</h5>
                             </div>
                             <div class="person-profile">
                                 {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/david.jpg" "imgSize" "128" "alt" "Photo of David Mytton" ) }}
@@ -51,7 +51,7 @@
                         </div>
                         <div class="aside-block guests">
                             <div class="page-section-heading">
-                                <h5 class="title title-4"><span data-feature-section-name>Guests</span></h5>
+                                <h5 class="title title-4">Guests</h5>
                             </div>
                             <div class="person-profiles">
                                 {{ range (where .Pages.ByPublishDate.Reverse "Params.season" 2) }}
@@ -69,7 +69,7 @@
                 </div>
                 <div class="page-section-sub">
                     <div class="page-section-heading">
-                        <h5 class="title title-4"><span data-feature-section-name>Other episodes</span></h5>
+                        <h5 class="title title-4">Other episodes</h5>
                     </div>
                     <div class="feature-items" data-feature-items>
                         {{ range after 1 (where .Pages.ByPublishDate.Reverse "Params.season" 2) }}
@@ -87,13 +87,13 @@
 		<div class="feature-content-wrapper" data-aside-anchor data-feature-content-wrapper>
 			<section class="page-section" data-feature-items-section="season-2">
 				<div class="page-section-heading">
-                    <h3 class="title title-2"><span data-feature-section-name>Season 1</span></h3>
+                    <h3 class="title title-2">Season 1</h3>
 				</div>
                 <div class="page-section-sub aside" data-inline-aside-content-wrapper>
                     <div class="aside-content" data-aside-content>
                         <div class="aside-block">
                             <div class="page-section-heading">
-                                <h5 class="title title-4"><span data-feature-section-name>With</span></h5>
+                                <h5 class="title title-4">With</h5>
                             </div>
                             <div class="person-profiles">
                                 <div class="person-profile">
