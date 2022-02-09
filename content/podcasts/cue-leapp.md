@@ -1,8 +1,6 @@
 ---
 title: How do developers pick tools? (Cue & Leapp)
 who: David Mytton & Jean Yang
-role:
-org:
 what:
   "Episode 10 of the Console DevTools Podcast, a devtools discussion with David
   Mytton (Co-founder, Console) and Jean Yang (CEO, Akita Software). Tools

@@ -1,8 +1,10 @@
 ---
 title: Dev infrastructure
 who: John Graham Cumming
+whoLink: https://twitter.com/jgrahamc
 role: CTO
 org: Cloudflare
+orgLink: https://www.cloudflare.com/
 what:
   In this episode we speak with John Graham-Cumming, CTO of Cloudflare, a global
   web platform built for security and performance. We discuss the philosophy

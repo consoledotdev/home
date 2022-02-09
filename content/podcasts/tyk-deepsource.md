@@ -1,8 +1,6 @@
 ---
 title: Can you rely on autofix? (Tyk & DeepSource)
 who: David Mytton & Jean Yang
-role:
-org:
 what:
   "Episode 9 of the Console DevTools Podcast, a devtools discussion with David
   Mytton (Co-founder, Console) and Jean Yang (CEO, Akita Software). Tools

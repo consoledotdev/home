@@ -1,8 +1,9 @@
 ---
 title: Observability
 who: Charity Majors
-role:
+whoLink: https://twitter.com/mipsytipsy
 org: Honeycomb
+orgLink: https://www.honeycomb.io/
 what:
   In this episode we speak to Charity Majors, CTO at Honeycomb, an observability
   tool for distributed systems. We discuss why observability is based around

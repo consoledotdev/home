@@ -1,8 +1,6 @@
 ---
 title: Decentralize your tech stack (Fission & AskGit)
 who: David Mytton & Jean Yang
-role:
-org:
 what:
   "Episode 8 of the Console DevTools Podcast, a devtools discussion with David
   Mytton (Co-founder, Console) and Jean Yang (CEO, Akita Software). Tools

@@ -1,8 +1,10 @@
 ---
 title: Security
 who: Thomas Ptacek
+whoLink: https://twitter.com/tqbf
 role: Developer
 org: Fly.io
+orgLink: https://fly.io/
 what:
   In this episode we speak to Thomas Ptacek, currently a software engineer at
   Fly.io and previously a co-founder at security firms Latacora and Matasano
