@@ -1,6 +1,14 @@
 <a onclick="blur()"
     href="{{ .Get "url" }}"{{ if ( .Get "nofollow" ) }} rel="nofollow"{{ end }}
-    class="console-button{{ if ( .Get "is-text" ) }}-text{{ end }}{{ if ( .Get "size" ) }} console-button-{{ .Get "size" }}{{ end }} {{- if ( .Get "icon-left" ) }} icon-left{{ end }}{{- if ( .Get "icon-right" ) }} icon-right{{ end }}"
+    class="console-button
+        {{- if ( .Get "is-text" ) }}-text{{ end -}}
+        {{- if ( .Get "size" ) }} console-button-{{ .Get "size" }}{{ end -}}
+        {{- if ( .Get "icon-left" ) }} icon-left{{ end -}}
+        {{- if ( .Get "icon-right" ) }} icon-right{{ end -}}
+        {{- if ( .Get "icon-only" ) }} icon-only{{ end -}}
+        {{- if ( .Get "round" ) }} round{{ end -}}
+        {{- if ( .Get "quiet" ) }} quiet{{ end -}}
+        {{- if ( .Get "play" ) }} play{{ end -}}"
     title="{{ .Get "title" }}">
         {{- if ( .Get "icon-left" ) }}{{ partial (print "icons/" ( .Get "icon-left" ) ".html") }} {{ end -}}
         <span>{{ .Get "text" }}</span>
