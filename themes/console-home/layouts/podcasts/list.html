@@ -122,7 +122,7 @@
 		</div>
 	</div>
 	<section class="page-section page-section-feature-root">
-        <div name="author">{{ partial "components/author.html" (dict "context" . "bio" .Params.authorBio "img" .Params.authorImg "name" .Params.authorName ) }}</div>
+        <div name="author">{{ partial "components/author.html" (dict "context" . "bio" .Params.authorBio "img" .Params.authorImg "name" .Params.authorName "url" .Params.authorURL ) }}</div>
         {{ partial "components/about-console.html" }}
 		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" ) }}
 	</section>
