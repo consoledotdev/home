@@ -1,0 +1,8 @@
+{{ $title := or (.Get "title") "" }}
+{{ $style := or (.Get "style") "" }}
+{{ $icon := "expand" }}
+{{ if .Get "icon"}}
+    {{ $icon = (print (.Get "icon") ".html") }}
+{{ end }}
+
+{{ partial "components/box-collapsible.html" (dict "title" $title "style" $style "icon" $icon "content" (.Inner | .Page.RenderString) ) }}
