@@ -1,0 +1,148 @@
+{{ define "main" }}
+	{{ $CTATitle := "Subscribe to the weekly Console newsletter" }}
+	{{ $CTADescription := "Our free weekly newsletter features the latest interesting tools." }}
+
+    <section class="page-section page-section-podcast-episode opening">
+        <a href="/podcasts/" class="console-button-text console-button-green icon-left">
+            {{ partial "icons/podcast.html" }}
+            <span>DevTools Podcast</span>
+        </a>
+        <h2 class="title title-1">{{ .Params.title }}</h2>
+        <div class="title-extras">
+            <h4 class="title title-3">with
+                {{ with .Params.whoLink }}<a href="{{ . }}" title="{{ . }}" target="_blank" rel="noopener">{{ end }}
+                    {{ .Params.who }}
+                {{ with .Params.whoLink }}</a>{{ end }}
+            </h4>
+            <p class="small">
+                {{ with .Params.role }}{{ . }},{{end}}
+                {{ with .Params.orgLink }}<a href="{{ . }}" title="{{ . }}" target="_blank" rel="noopener">{{ end }}
+                    {{ .Params.org }}
+                {{ with .Params.orgLink }}</a>{{ end }}
+            </p>
+        </div>
+        <div class="top">
+            <div class="left">
+                <div class="page-meta">
+                    <p class="small">
+                        {{ $s := .Params.season }}
+                        {{ $e := .Params.episode }}
+                        S{{ if lt $s 10 }}0{{ end }}{{ $s }} E{{ if lt $e 10 }}0{{ end }}{{ $e }}
+                    </p>
+                    <p class="small">
+                        <span class="page-meta-separator">&mdash;</span>
+                        <span>{{ .Date.Format "2006-01-02" }}</span>
+                    </p>
+                </div>
+                <p class="intro">{{ .Params.summary }}</p>
+            </div>
+            <div class="right">
+                {{ if eq .Params.season 1 }}
+                    {{ partial "components/combo-box.html" (dict "visualsType" "logo-logo" "content" .) }}
+                {{ else if eq .Params.season 2 }}
+                    {{ partial "components/combo-box.html" (dict "visualsType" "logo-profile" "content" .) }}
+                {{ end }}
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="framed-section mid framed-section-overlay podcast-embed">
+                <div class="podcast-embed-content">
+                    {{ partial "components/audio-player.html" (dict "src" $.Site.Params.consolePodcastURL "title" $.Site.Params.consolePodcastTitle )}}
+                    {{ partial "components/podcast-links.html" (dict "apple" "true" "spotify" "true" "google" "true" "overcast" "true") }}
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="content-split">
+        <aside class="content-aside-wrapper" data-aside>
+            <div class="aside-content" data-aside-content>
+                <div class="aside-block">
+                    <div class="page-section-heading">
+                        <h5 class="title title-4">
+                            {{ if eq .Params.season 1 }}
+
+                                With
+
+                            {{ else if eq .Params.season 2 }}
+
+                                The host
+
+                            {{ end }}
+                        </h5>
+                    </div>
+                    {{ if eq .Params.season 1 }}<div class="person-profiles">{{ end }}
+
+                        <div class="person-profile">
+                            {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/david.jpg" "imgSize" "128" "alt" "Photo of David Mytton" ) }}
+                            <a href="#author" class="link" title="About David Mytton">David Mytton</a>
+                        </div>
+
+                        {{ if eq .Params.season 1 }}
+
+                                <div class="person-profile">
+                                    {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/podcasts/akita-jean-yang-profile.jpg" "imgSize" "128" "alt" "Photo of Jean Yang" ) }}
+                                    <a href="https://twitter.com/jeanqasaur" target="_blank" class="link icon-link" title="https://twitter.com/jeanqasaur"><span>Jean Yang</span> {{ partial "icons/external-link.html" }}</a>
+                                </div>
+
+                        {{ end }}
+
+                    {{ if eq .Params.season 1 }}</div>{{ end }}
+                </div>
+                <div class="aside-block">
+                    <div class="page-section-heading">
+                        <h5 class="title title-4">More episodes</h5>
+                    </div>
+                    <div class="other-episodes">
+                        {{ $section := .Site.GetPage "section" "podcasts" }}
+                        {{ $pages := $section.Pages }}
+                        
+                        {{ range (where $pages.ByPublishDate.Reverse "Params.season" .Params.season) }}
+                            <div class="other-episode">
+                                <h6 class="title title-5">{{ .Title }}</h6>
+                                <div class="other-episode-title-extras">
+                                    <p class="small">with
+                                        {{ with .Params.whoLink }}<a href="{{ . }}" title="{{ . }}" target="_blank" rel="noopener">{{ end }}
+                                            {{ .Params.who }}
+                                        {{ with .Params.whoLink }}</a>{{ end }}
+                                        </span>
+                                    <p class="small">
+                                        {{ with .Params.role }}{{ . }},{{end}}
+                                        {{ with .Params.orgLink }}<a href="{{ . }}" title="{{ . }}" target="_blank" rel="noopener">{{ end }}
+                                            {{ .Params.org }}
+                                        {{ with .Params.orgLink }}</a>{{ end }}
+                                    </span>
+                                </div>
+                                <div class="other-episode-meta">
+                                    <p class="small">
+                                        {{ $s := .Params.season }}
+                                        {{ $e := .Params.episode }}
+                                        S{{ if lt $s 10 }}0{{ end }}{{ $s }} E{{ if lt $e 10 }}0{{ end }}{{ $e }}
+                                    </p>
+                                </div>
+                            </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </aside>
+		<div class="content-main-wrapper">
+            <section class="page-section page-section-podcast-episode">
+                {{ .Content }}
+            </section>
+            <section class="page-section page-section-feature-root">
+                <div name="david-mytton">{{ partial "components/author.html" (dict "context" . "bio" .Params.authorBio "img" .Params.authorImg "name" .Params.authorName "url" .Params.authorURL ) }}</div>
+                {{ if eq .Params.season 1 }}<div name="jean-yang">{{ partial "components/author.html" (dict "context" . "bio" .Params.author2Bio "img" .Params.author2Img "name" .Params.author2Name "url" .Params.author2URL ) }}</div>{{ end }}
+                {{ partial "components/about-console.html" }}
+                {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" ) }}
+            </section>
+        </div>
+    </div>
+
+    {{ $audioPlayerJS := resources.Get "/js/audio-player.js" }}
+    {{ if hugo.IsProduction }}{{ $audioPlayerJS = $audioPlayerJS | resources.Minify | resources.Fingerprint }}{{ end }}
+    <script src="{{ $audioPlayerJS.Permalink }}"></script>
+
+	{{ $js := resources.Get "/js/podcast-episode.js" }}
+    {{ if hugo.IsProduction }}{{ $js = $js | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script src="{{ $js.Permalink }}"></script>
+{{ end }}
