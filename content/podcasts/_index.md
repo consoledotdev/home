@@ -14,10 +14,6 @@ sitemap:
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
-authorBioBrief:
-  From 2009-2018 David was CEO at Server Density, a SaaS server monitoring
-  startup. He has been a developer for 15+ years and is now co-founder of
-  Console.
 authorBio:
   is co-founder of Console. From 2009-2018, David was CEO at Server Density, a
   SaaS server monitoring startup used by hundreds of customers to collect
