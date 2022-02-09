@@ -147,10 +147,6 @@
     {{ if hugo.IsProduction }}{{ $pageTypeJS = $pageTypeJS | resources.Minify | resources.Fingerprint }}{{ end }}
 	<script id="feature-js" src="{{ $pageTypeJS.Permalink }}"></script>
 
-	{{ $podcastsJS := resources.Get "/js/podcasts.js" }}
-    {{ if hugo.IsProduction }}{{ $podcastsJS = $podcastsJS | resources.Minify | resources.Fingerprint }}{{ end }}
-	<script src="{{ $podcastsJS.Permalink }}"></script>
-
     {{ $audioPlayerJS := resources.Get "/js/audio-player.js" }}
     {{ if hugo.IsProduction }}{{ $audioPlayerJS = $audioPlayerJS | resources.Minify | resources.Fingerprint }}{{ end }}
     <script src="{{ $audioPlayerJS.Permalink }}"></script>
