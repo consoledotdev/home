@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 let trailerEl = el.querySelector("[data-trailer-player]");
                 if (window.innerWidth >= 1025) {
                     if (!inlineWrapper.classList.contains("player-prepended")) {
-                        console.log("running", trailerEl);
                         el.insertBefore(trailerEl, el.firstChild);
                         asideWrapper.appendChild(el);
                         inlineWrapper.classList.add("is-hidden");
