@@ -10,11 +10,18 @@ episode: 9
 date: 2021-09-02T07:45:00Z
 duration: 15:23
 draft: false
-headerType: fixed
 summary:
   Tyk (API gateway) & Deepsource (automated code reviews), a devtools discussion
   with David Mytton and Jean Yang.
-isPage: podcasts
+metaDescription:
+  Tyk (API gateway) & Deepsource (automated code reviews), a devtools discussion
+  with David Mytton and Jean Yang.
+headerType: fixed
+hideLines: true
+hidePlanes: true
+isSubpage: podcast-episode
+pageType: podcast-episode
+customPageStyle: true
 topImg1Src: /img/favicons/deepsource.io.png
 topImg2Src: /img/favicons/tyk.io.png
 ogImg: /img/favicons/deepsource.io.png

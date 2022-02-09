@@ -20,7 +20,15 @@ headerType: fixed
 summary:
   Dev infrastructure - a devtools discussion with John Graham-Cumming
   (Cloudflare). Episode 1 (Season 2) of the Console DevTools Podcast.
-isPage: podcasts
+metaDescription:
+  Dev infrastructure - a devtools discussion with John Graham-Cumming
+  (Cloudflare). Episode 1 (Season 2) of the Console DevTools Podcast.
+headerType: fixed
+hideLines: true
+hidePlanes: true
+isSubpage: podcast-episode
+pageType: podcast-episode
+customPageStyle: true
 topImg1Src: /img/podcasts/cloudflare-john-graham-cumming-profile.jpg
 topImg2Src: /img/favicons/www.cloudflare.com.png
 ogImg: /img/podcasts/cloudflare-john-graham-cumming-profile.jpg

@@ -11,11 +11,18 @@ episode: 10
 date: 2021-09-09T07:45:00Z
 duration: 14:44
 draft: false
-headerType: fixed
 summary:
   Cue (open source data validation language) & Leapp (manage cloud access
   credentials), a devtools discussion with David Mytton and Jean Yang.
-isPage: podcasts
+metaDescription:
+  Cue (open source data validation language) & Leapp (manage cloud access
+  credentials), a devtools discussion with David Mytton and Jean Yang.
+headerType: fixed
+hideLines: true
+hidePlanes: true
+isSubpage: podcast-episode
+pageType: podcast-episode
+customPageStyle: true
 topImg1Src: /img/favicons/www.leapp.cloud.png
 topImg2Src: /img/favicons/cuelang.org.png
 ogImg: /img/favicons/www.leapp.cloud.png

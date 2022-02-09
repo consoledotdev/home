@@ -11,11 +11,18 @@ episode: 8
 date: 2021-08-26T07:45:00Z
 duration: 14:04
 draft: false
-headerType: fixed
 summary:
   Fission (decentralized app backend for storage and identity) & AskGit (query
   git repos with SQL), a devtools discussion with David Mytton and Jean Yang.
-isPage: podcasts
+metaDescription:
+  Fission (decentralized app backend for storage and identity) & AskGit (query
+  git repos with SQL), a devtools discussion with David Mytton and Jean Yang.
+headerType: fixed
+hideLines: true
+hidePlanes: true
+isSubpage: podcast-episode
+pageType: podcast-episode
+customPageStyle: true
 topImg1Src: /img/favicons/github.com.png
 topImg2Src: /img/favicons/fission.codes.png
 ogImg: /img/favicons/github.com.png

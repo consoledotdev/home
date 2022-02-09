@@ -18,11 +18,18 @@ episode: 2
 date: 2022-01-13T07:05:00Z
 duration: 32:13
 draft: false
-headerType: fixed
 summary:
   Security - a devtools discussion with Thomas Ptacek (Fly.io). Episode 2
   (Season 2) of the Console DevTools Podcast.
-isPage: podcasts
+metaDescription:
+  Security - a devtools discussion with Thomas Ptacek (Fly.io). Episode 2
+  (Season 2) of the Console DevTools Podcast.
+headerType: fixed
+hideLines: true
+hidePlanes: true
+isSubpage: podcast-episode
+pageType: podcast-episode
+customPageStyle: true
 topImg1Src: /img/podcasts/fly.io-thomas-ptacek-profile.jpg
 topImg2Src: /img/favicons/fly.io.png
 ogImg: /img/podcasts/honeycomb-charity-majors-profile.jpg

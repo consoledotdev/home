@@ -16,11 +16,18 @@ episode: 3
 date: 2022-01-20T07:05:00Z
 duration: 27:37
 draft: false
-headerType: fixed
 summary:
   Observability - a devtools discussion with Charity Majors (Honeycomb). Episode
   3 (Season 2) of the Console DevTools Podcast.
-isPage: podcasts
+metaDescription:
+  Observability - a devtools discussion with Charity Majors (Honeycomb). Episode
+  3 (Season 2) of the Console DevTools Podcast.
+headerType: fixed
+hideLines: true
+hidePlanes: true
+isSubpage: podcast-episode
+pageType: podcast-episode
+customPageStyle: true
 topImg1Src: /img/podcasts/honeycomb-charity-majors-profile.jpg
 topImg2Src: /img/favicons/docs.honeycomb.io.png
 ogImg: /img/podcasts/honeycomb-charity-majors-profile.jpg
