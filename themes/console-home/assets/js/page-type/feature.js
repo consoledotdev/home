@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     if (document.body.classList.contains("page-tools") || document.body.classList.contains("page-betas")) {
-        let asideContentWrapper = document.querySelector("[data-feature-aside-content]");
+        let asideContentWrapper = document.querySelector("[data-aside-content-wrapper]");
 
         /* manage CTA position */
         let ctaEl = document.querySelector("[data-feature-cta]").querySelector(".subscribe-cta");

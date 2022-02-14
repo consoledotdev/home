@@ -54,7 +54,7 @@
         </div>
     </section>
     <div class="content-split">
-        <aside class="content-aside-wrapper" data-aside>
+        <aside class="aside-content-wrapper" data-aside-content-wrapper>
             <div class="aside-content" data-aside-content>
                 <div class="aside-block">
                     <div class="page-section-heading">
@@ -88,7 +88,7 @@
 
                     {{ if eq .Params.season 1 }}</div>{{ end }}
                 </div>
-                <div class="aside-block">
+                <div class="aside-block more-episodes">
                     <div class="page-section-heading">
                         <h5 class="title title-4">More episodes</h5>
                     </div>
@@ -125,7 +125,7 @@
                 </div>
             </div>
         </aside>
-		<div class="content-main-wrapper">
+		<div class="main-content-wrapper">
             <section class="page-section page-section-podcast-episode">
                 {{ .Content }}
             </section>

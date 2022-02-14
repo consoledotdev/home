@@ -4291,3 +4291,77 @@ p.combo-card-description {
 .is-large .mars-illustration-mars-texture span:last-child {
     background-image: url("/img/research/mars/mars-texture-large.png");
 }
+
+/* Aside
+   ================================================================================================================ */
+.aside-content-wrapper {
+    margin-left: 5vw;
+    width: 21vw;
+    max-width: calc(400px - 5vw);
+    padding-bottom: var(--space4);
+    padding-left: var(--space0);
+    bottom: 0;
+}
+
+.aside-content-wrapper .page-section-heading {
+    margin-bottom: 0;
+}
+
+.aside-content-wrapper .page-section-heading .title {
+    margin-bottom: 0;
+}
+
+/* Aside block */
+.aside-content-wrapper .aside-block:not(:first-child) {
+    margin-top: var(--space4_5);
+}
+
+.page-section .aside-block {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    margin-top: var(--space3);
+    margin-left: calc(var(--space3_5) * -1);
+}
+
+.page-section .aside-block > * {
+    margin-top: var(--space3);
+    margin-left: var(--space3_5);
+}
+
+.page-section .aside-block:first-child {
+    margin-right: var(--space3_5);
+}
+
+/* Person profile
+   ================================================================================================================ */
+.person-profile {
+    display: grid;
+    grid-template-columns: var(--space5) 1fr;
+    align-items: center;
+    gap: var(--space2);
+}
+
+.person-profile .plane-picture {
+    width: 100%;
+}
+
+.aside-content-wrapper .person-profiles,
+.aside-content-wrapper .person-profile:not(:first-child) {
+    margin-top: var(--space3_5);
+}
+
+.page-section .person-profiles {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.page-section .person-profiles > * {
+    margin-top: var(--space3);
+}
+
+.page-section .person-profile {
+    margin-left: var(--space3_5);
+}

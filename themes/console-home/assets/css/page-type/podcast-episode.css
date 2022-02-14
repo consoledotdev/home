@@ -43,8 +43,11 @@ html {
 }
 
 .page-podcast-episode .title.title-4 {
-    margin-bottom: var(--space3_5);
     color: var(--theme-text-2);
+}
+
+.page-podcast-episode .page-section .title.title-4 {
+    margin-bottom: var(--space3_5);
 }
 
 .page-podcast-episode .title.title-4:not(:first-child) {
@@ -233,8 +236,10 @@ html {
     }
 }
 
-.main-podcast-episode .content-aside-wrapper {
-    margin-top: 0;
+@media (max-width: 1024px) {
+    .main-podcast-episode .aside-block.more-episodes {
+        display: none;
+    }
 }
 
 /* Subscribe CTA ------------------------------------------------------------- */
