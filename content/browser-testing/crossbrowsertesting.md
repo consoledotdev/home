@@ -2,13 +2,13 @@
 title: "SmartBear CrossBrowserTesting review"
 date: 2021-12-07T07:00:00+00:00
 draft: false
-summary: 
-  SmartBear CrossBrowserTesting supports live and automated testing on very old 
-  devices as well as newer releases. Read our review of SmartBear 
+summary:
+  SmartBear CrossBrowserTesting supports live and automated testing on very old
+  devices as well as newer releases. Read our review of SmartBear
   CrossBrowserTesting - a browser testing tool.
 metaDescription:
-  SmartBear CrossBrowserTesting supports live and automated testing on very old 
-  devices as well as newer releases. Read our review of SmartBear 
+  SmartBear CrossBrowserTesting supports live and automated testing on very old
+  devices as well as newer releases. Read our review of SmartBear
   CrossBrowserTesting - a browser testing tool.
 headerType: fixed
 hideLines: true
@@ -20,6 +20,8 @@ isSubpage: crossbrowsertesting
 customStyle: false
 pageType: vendor-review
 customPageStyle: true
+xlViewport:
+  largeText: true
 category: developer-tools
 subcategory:
   label: Browser testing
@@ -44,8 +46,8 @@ productShot:
 intro:
   "SmartBear CrossBrowserTesting provides both automated and live tests across
   multiple platforms and devices going back to Windows XP and iOS 4. The large
-  number of integrations and frameworks makes it particularly powerful, but it 
-  is limited by high test latency and the lack of accessibility testing 
+  number of integrations and frameworks makes it particularly powerful, but it
+  is limited by high test latency and the lack of accessibility testing
   features."
 relatedArticles:
   - category: developer-tools
@@ -107,11 +109,11 @@ and $169/month for automated testing.
 
 CrossBrowserTesting offers a good selection of desktop and mobile devices to
 choose from. All the versions of Windows, macOS, Android, and iOS ranging from
-Windows 11 to Windows XP, “macOS 11.0” to “Mac OSX 10.10”, Android 11 to
-Android 4.2, and iOS 14.0 to iOS 4.3.3 respectively are available. On desktop,
-each OS is available with different browsers (approximately 50 versions of
-each) and display resolutions (800x480 to 2560x1920). On older Android devices,
-less popular browsers like Opera Mobile and UC Browser are also available. Only
+Windows 11 to Windows XP, “macOS 11.0” to “Mac OSX 10.10”, Android 11 to Android
+4.2, and iOS 14.0 to iOS 4.3.3 respectively are available. On desktop, each OS
+is available with different browsers (approximately 50 versions of each) and
+display resolutions (800x480 to 2560x1920). On older Android devices, less
+popular browsers like Opera Mobile and UC Browser are also available. Only
 mobile Safari is available for most iOS devices but Chrome is supported on more
 recent iPhones.
 
@@ -121,13 +123,13 @@ recent iPhones.
 
 {{< vendor-review/feature-title text="Automation" score="4" >}}
 
-CrossBrowserTesting integrates with a vast set of tools which makes it
-possible to create complex workflows.
+CrossBrowserTesting integrates with a vast set of tools which makes it possible
+to create complex workflows.
 [Integrations](https://support.smartbear.com/crossbrowsertesting/docs/integrations/index.html)
 with CI/CD tools (Jenkins CI, TeamCity, VS Team Services, etc.) and testing
-services (Lighthouse, TestComplete, Katalon Studio, etc.) are available.
-Testing frameworks such as TestNG, NUnit, Mocha, Jest, Cucumber, Jasmine, etc.
-are also supported. CrossBrowserTesting provides a powerful
+services (Lighthouse, TestComplete, Katalon Studio, etc.) are available. Testing
+frameworks such as TestNG, NUnit, Mocha, Jest, Cucumber, Jasmine, etc. are also
+supported. CrossBrowserTesting provides a powerful
 [API](https://support.smartbear.com/crossbrowsertesting/docs/api.html) that
 enables customizing website-testing workflows and allows implementing browser
 testing services via HTTP. Any action which can be performed via dashboard can
@@ -139,9 +141,9 @@ also be performed via an API endpoint.
 
 {{< vendor-review/feature-title text="Debugging & error reporting" score="4" >}}
 
-CrossBrowserTesting allows adding notes and tags to test reports - this makes
-it easier to filter test reports and share. Test reports can be shared in bulk
-with team members via a public link, Slack, Jira, or email.
+CrossBrowserTesting allows adding notes and tags to test reports - this makes it
+easier to filter test reports and share. Test reports can be shared in bulk with
+team members via a public link, Slack, Jira, or email.
 
 All test executions show test steps with relevant details like execution logs,
 detailed network logs, video recordings and screenshots. This makes
@@ -166,49 +168,52 @@ baseline run.
 Tests can be scheduled to run on set intervals or triggered from either
 dashboard or API. Advanced configuration can be set up to perform actions like
 HTTP authentication, form login, waiting for a set duration, executing a
-Selenium script before capturing screenshots, etc. Multiple screenshot tests
-are run concurrently which reduces wait time and it is possible to run tests on
+Selenium script before capturing screenshots, etc. Multiple screenshot tests are
+run concurrently which reduces wait time and it is possible to run tests on
 locally hosted websites.
 
 {{< modal-custom type="screen" type-screen="/img/browser-testing/crossbrowsertesting-live-testing.png" >}}
 {{< img-custom class="content-image" src="/img/browser-testing/crossbrowsertesting-live-testing.png" alt="Screenshot of Live testing tool with SmartBear CrossBrowserTesting." >}}
 {{< a--close >}}
 
-Results from the test can be notified via email or can be sent to Applitools
-for inspection. Live testing sessions (with identical testing configuration)
-can be launched with one click from the screenshot test reports to quickly
-interact with malfunctioning interfaces.
+Results from the test can be notified via email or can be sent to Applitools for
+inspection. Live testing sessions (with identical testing configuration) can be
+launched with one click from the screenshot test reports to quickly interact
+with malfunctioning interfaces.
 
 Standout features offered by CrossBrowserTesting include:
 
-- Support for uncommon browsers like Opera Mini, Samsung Internet, Microsoft Edge Mobile, etc.
-- A vast number of [real devices](https://crossbrowsertesting.com/real-devices) are available for live interaction.
+- Support for uncommon browsers like Opera Mini, Samsung Internet, Microsoft
+  Edge Mobile, etc.
+- A vast number of [real devices](https://crossbrowsertesting.com/real-devices)
+  are available for live interaction.
 - Remote developer tools are available for debugging.
 - Screenshots, videos & logs can be accessed after testing.
-- Network logs for each request are displayed in an easy-to-understand gantt chart to identify performance bottlenecks.
+- Network logs for each request are displayed in an easy-to-understand gantt
+  chart to identify performance bottlenecks.
 
-Some of the features mentioned above are not available in the [alternative
-browser testing tools we tested](/browser-testing/). For example,
+Some of the features mentioned above are not available in the
+[alternative browser testing tools we tested](/browser-testing/). For example,
 [BrowserStack](/browser-testing/browserstack/) does not provide test reports for
 live tests, [LambdaTest](/browser-testing/lambdatest/) does not offer real
-devices (currently in beta), and [Ghost
-Inspector](/browser-testing/ghost-inspector/) and
+devices (currently in beta), and
+[Ghost Inspector](/browser-testing/ghost-inspector/) and
 [Selenium](/browser-testing/selenium/) do not support live testing at all.
 
 The record & replay feature allows recording website interactions and replaying
 them as tests without touching a single line of code. Tests can be combined to
 build suites, which can then be replayed or scheduled to do "automated-manual"
 testing. This feature performs on par with similar offerings by other vendors
-such as [Ghost Inspector Web Test
-Recorder](https://ghostinspector.com/docs/test-recorder/) and [Selenium
-IDE](https://www.selenium.dev/selenium-ide/).
+such as
+[Ghost Inspector Web Test Recorder](https://ghostinspector.com/docs/test-recorder/)
+and [Selenium IDE](https://www.selenium.dev/selenium-ide/).
 
 Remote testing servers can be connected to local machines (via a secure web
 socket tunnel) or any proxy service to test websites behind a firewall without
 needing to expose them to the internet. It is also possible to share a directory
 on a local machine with read-only access to testing servers. Local tunnels can
-be established via [Chrome
-extension](https://chrome.google.com/webstore/detail/crossbrowsertesting-local/ldabplgpogjknofonmccpbgeoolbcbfm),
+be established via
+[Chrome extension](https://chrome.google.com/webstore/detail/crossbrowsertesting-local/ldabplgpogjknofonmccpbgeoolbcbfm),
 [NodeJS module](https://github.com/crossbrowsertesting/cbt-tunnel-nodejs),
 desktop application, or the command line.
 
@@ -223,8 +228,8 @@ desktop application, or the command line.
 {{< rich-title-3 icon="dislike" >}}What we don't like{{</ rich-title-3 >}}
 
 CrossBrowserTesting does not provide solutions to perform automated
-accessibility testing. The [Lighthouse
-report](https://support.smartbear.com/crossbrowsertesting/docs/integrations/lighthouse.html)
+accessibility testing. The
+[Lighthouse report](https://support.smartbear.com/crossbrowsertesting/docs/integrations/lighthouse.html)
 generated during screenshot testing has a section on accessibility, but nothing
 more is offered. This came as a surprise because it is a basic feature and is
 already present in mainstream browsers such as Chrome. Specialized browser
@@ -232,10 +237,10 @@ testing tools should provide more advanced, feature-rich solutions for
 accessibility testing.
 
 When compared to other tools, network latency during live testing is high.
-Having to wait >1 second on average for each keystroke to appear on screen
-while typing is unreasonable and makes testing a tedious task. This issue is
-even worse when using a tunnel or a proxy to test locally. During live testing,
-sound is available, but it has a low bitrate quality.
+Having to wait >1 second on average for each keystroke to appear on screen while
+typing is unreasonable and makes testing a tedious task. This issue is even
+worse when using a tunnel or a proxy to test locally. During live testing, sound
+is available, but it has a low bitrate quality.
 
 CrossBrowserTesting used to provide an option to perform functional testing on
 headless browsers on Ubuntu - this feature has since been silently removed. We
@@ -244,8 +249,8 @@ are still not available in February 2022. On older iOS devices, only Safari is
 supported. Chrome is available only on a few recently released iPhones.
 
 Testing localization settings of websites are not possible directly - all
-testing traffic originates from servers in the US. Users can [set up a
-proxy](https://support.smartbear.com/crossbrowsertesting/docs/live-testing/test-geo-located-content.html)
+testing traffic originates from servers in the US. Users can
+[set up a proxy](https://support.smartbear.com/crossbrowsertesting/docs/live-testing/test-geo-located-content.html)
 that routes all testing traffic from the desired location, however this induces
 unnecessary overhead and additional costs.
 
@@ -284,10 +289,10 @@ this makes it possible to store tests alongside code and execute them anywhere.
 
 ### Alternatives
 
-In our review of the [best browser testing tools for
-developers](/browser-testing/), we highlight the best 6 browser testing tools
-for developers in {{< year >}}. See how they compare to SmartBear CrossBrowserTesting in the
-table below.
+In our review of the
+[best browser testing tools for developers](/browser-testing/), we highlight the
+best 6 browser testing tools for developers in {{< year >}}. See how they
+compare to SmartBear CrossBrowserTesting in the table below.
 
 {{< div-custom class="comparison-checklist-table-wrapper" >}}
 

@@ -20,6 +20,8 @@ isSubpage: new-relic
 customStyle: false
 pageType: vendor-review
 customPageStyle: true
+xlViewport:
+  largeText: true
 category: developer-tools
 subcategory:
   label: Website monitoring
@@ -44,9 +46,9 @@ scores:
 productShot:
   image: /img/website-monitoring/newrelic.png
 intro:
-  "New Relic is a great tool for website monitoring. It provides NRQL, a powerful
-  custom query language similar to SQL which can be used for making dashboards
-  and defining alerts. A generous free quota is available each month."
+  "New Relic is a great tool for website monitoring. It provides NRQL, a
+  powerful custom query language similar to SQL which can be used for making
+  dashboards and defining alerts. A generous free quota is available each month."
 relatedReviews:
   - name: Datadog
     thumbnail: /img/favicons/www.datadoghq.com.png

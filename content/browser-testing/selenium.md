@@ -2,14 +2,14 @@
 title: "Selenium review"
 date: 2021-12-07T07:00:00+00:00
 draft: false
-summary: 
-  Selenium is a free and open source browser testing framework that powers many 
-  other browser testing tools, but requires significant technical knowledge 
-  to use. Read our review of Selenium - a browser testing tool.
+summary:
+  Selenium is a free and open source browser testing framework that powers many
+  other browser testing tools, but requires significant technical knowledge to
+  use. Read our review of Selenium - a browser testing tool.
 metaDescription:
-  Selenium is a free and open source browser testing framework that powers many 
-  other browser testing tools, but requires significant technical knowledge 
-  to use. Read our review of Selenium - a browser testing tool.
+  Selenium is a free and open source browser testing framework that powers many
+  other browser testing tools, but requires significant technical knowledge to
+  use. Read our review of Selenium - a browser testing tool.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -20,6 +20,8 @@ isSubpage: selenium
 customStyle: false
 pageType: vendor-review
 customPageStyle: true
+xlViewport:
+  largeText: true
 category: developer-tools
 subcategory:
   label: Browser testing
@@ -42,9 +44,9 @@ scores:
 productShot:
   image: /img/browser-testing/selenium.png
 intro:
-  "Selenium is an open source browser testing framework used by many other 
-  browser testing tools because of its maturity and power. However, it requires 
-  significant technical knowledge to set up - including managing your own test 
+  "Selenium is an open source browser testing framework used by many other
+  browser testing tools because of its maturity and power. However, it requires
+  significant technical knowledge to set up - including managing your own test
   devices - so we do not recommend it for most users."
 relatedArticles:
   - category: developer-tools
@@ -110,8 +112,8 @@ browser vendors like Google, Microsoft, Mozilla, and Apple provide Selenium
 compatible
 [drivers](https://www.selenium.dev/documentation/getting_started/installing_browser_drivers/#quick-reference)
 for their browsers. Selenium does not support testing on mobile devices
-directly, but it is [possible to work
-around](https://saucelabs.com/blog/can-selenium-be-used-for-mobile-testing)
+directly, but it is
+[possible to work around](https://saucelabs.com/blog/can-selenium-be-used-for-mobile-testing)
 this limitation.
 
 {{< div--close >}}
@@ -124,8 +126,8 @@ Selenium can be integrated to work with many CI/CD tools like Azure Pipelines,
 Jenkins, GitLab CI, etc. Unfortunately, support for such integrations is
 community-driven and development can be slow. One example of this is the
 [Selenium plugin for Jenkins](https://plugins.jenkins.io/selenium/) - despite
-having a known [security issue](https://plugins.jenkins.io/selenium/) since
-2020 it still gets over 2,000 monthly downloads.
+having a known [security issue](https://plugins.jenkins.io/selenium/) since 2020
+it still gets over 2,000 monthly downloads.
 
 As it is an open source project, users can develop their custom plugins to meet
 their needs, and the possibilities for integrations are endless. A vast number
@@ -138,12 +140,12 @@ and many have been completely abandoned.
 
 {{< vendor-review/feature-title text="Debugging & error reporting" score="1.5" >}}
 
-Selenium is designed only to automate browsers, [not to
-report](https://www.selenium.dev/documentation/guidelines/improved_reporting/)
-on the status of test cases run. By default, all results are printed to
-standard output - sharing findings and collaborating in a large team is
-difficult. A few third-party solutions such as
-[JUnit](https://junit.org/junit5/), [TestNG](https://junit.org/junit5/), and
+Selenium is designed only to automate browsers,
+[not to report](https://www.selenium.dev/documentation/guidelines/improved_reporting/)
+on the status of test cases run. By default, all results are printed to standard
+output - sharing findings and collaborating in a large team is difficult. A few
+third-party solutions such as [JUnit](https://junit.org/junit5/),
+[TestNG](https://junit.org/junit5/), and
 [Extent reports](https://www.extentreports.com/) are available to simplify the
 test case management procedure and generate GUI reports that cannot be accessed
 other than through the raw output.
@@ -162,23 +164,25 @@ First introduced in 2004, Selenium has evolved into an industry standard.
 Selenium 4 is W3C compliant and many cross-browser testing tools are built on
 top of it. Browser testing vendors like
 [BrowserStack](/browser-testing/browserstack/),
-[LambdaTest](/browser-testing/lambdatest/) and [Sauce
-Labs](/browser-testing/sauce-labs/) actively contribute to the development of
-Selenium and provide Selenium Grid as a service on their respective testing
-platforms.
+[LambdaTest](/browser-testing/lambdatest/) and
+[Sauce Labs](/browser-testing/sauce-labs/) actively contribute to the
+development of Selenium and provide Selenium Grid as a service on their
+respective testing platforms.
 
-Selenium supports the [Chrome DevTools
-Protocol](https://www.selenium.dev/documentation/support_packages/chrome_devtools/)
-and is working with browser vendors to add support for [WebDriver BiDirectional
-Protocol](https://www.selenium.dev/documentation/webdriver/bidi_apis/).
+Selenium supports the
+[Chrome DevTools Protocol](https://www.selenium.dev/documentation/support_packages/chrome_devtools/)
+and is working with browser vendors to add support for
+[WebDriver BiDirectional Protocol](https://www.selenium.dev/documentation/webdriver/bidi_apis/).
 Together these features greatly enhance the testing capabilities and allow
 better control over browser properties, thus increasing possibilities for
 browser manipulation. Some of the noteworthy features are:
 
-- Intercepting HTTP responses - parameters like URL, response headers, response code, etc. can be accessed.
+- Intercepting HTTP responses - parameters like URL, response headers, response
+  code, etc. can be accessed.
 - Network speed emulation and blocking certain URLs.
 - Automating the input of basic auth credentials.
-- Mutation observation - listen to events when a specific DOM element is updated.
+- Mutation observation - listen to events when a specific DOM element is
+  updated.
 - Mocking geolocation.
 - Capturing console logs.
 - Work with browser cache and override user agent string.
@@ -186,14 +190,15 @@ browser manipulation. Some of the noteworthy features are:
 [Selenium IDE](https://www.selenium.dev/selenium-ide/) is a low-code testing
 tool that records and plays back browser interactions. This allows novice
 developers to conduct automated testing. It is possible to design intricate test
-cases by adding [conditional logic and
-looping](https://www.selenium.dev/selenium-ide/docs/en/introduction/control-flow)
+cases by adding
+[conditional logic and looping](https://www.selenium.dev/selenium-ide/docs/en/introduction/control-flow)
 to tests. The Selenium IDE also supports
 [plugins](https://www.selenium.dev/selenium-ide/docs/en/plugins/plugins-getting-started)
-that further enhance its functionality. [Web Test
-Recorder](https://ghostinspector.com/docs/test-recorder/) is a similar offering
-by [Ghost Inspector]((/browser-testing/ghost-inspector/)) and it is possible to
-run tests generated by Selenium IDE in the Ghost Inspector cloud environment.
+that further enhance its functionality.
+[Web Test Recorder](https://ghostinspector.com/docs/test-recorder/) is a similar
+offering by [Ghost Inspector](<(/browser-testing/ghost-inspector/)>) and it is
+possible to run tests generated by Selenium IDE in the Ghost Inspector cloud
+environment.
 
 [Selenium Grid](https://www.selenium.dev/documentation/grid/), which allows
 executing tests on multiple physical or virtual devices, can be used to run
@@ -232,35 +237,36 @@ Selenium a good choice for tasks other than testing, like web scraping.
 
 {{< rich-title-3 icon="dislike" >}}What we don't like{{</ rich-title-3 >}}
 
-Compared to the [other SaaS browser testing tools we
-reviewed](/browser-testing/), Selenium has some major limitations because it was
-not created to perform visual testing or generate user friendly test reports.
-Tests are focused on whether or not the correct content is displayed rather than
-whether it is displayed correctly. This is a big restriction in today's
-fast-paced world where developers run A/B testing on the tiniest of UI elements
-to increase conversion rates and engagement. 
+Compared to the
+[other SaaS browser testing tools we reviewed](/browser-testing/), Selenium has
+some major limitations because it was not created to perform visual testing or
+generate user friendly test reports. Tests are focused on whether or not the
+correct content is displayed rather than whether it is displayed correctly. This
+is a big restriction in today's fast-paced world where developers run A/B
+testing on the tiniest of UI elements to increase conversion rates and
+engagement.
 
-Other tools like [BrowserStack](/browser-testing/browserstack/) and [Sauce
-Labs](/browser-testing/sauce-labs/) provide modern solutions to perform visual
-regression tests whereas the Selenium team
+Other tools like [BrowserStack](/browser-testing/browserstack/) and
+[Sauce Labs](/browser-testing/sauce-labs/) provide modern solutions to perform
+visual regression tests whereas the Selenium team
 [believes](https://www.selenium.dev/documentation/guidelines/domain_specific_language/)
 that the user interface is a secondary consideration for users.
 
 Test case management and error reporting with Selenium is an arduous task. It
 does not generate test reports or notify about the results, other tools provide
-these features out of the box. In contrast to [Sauce
-Labs](/browser-testing/sauce-labs/), which provides advanced
-services to detect patterns in error reports, Selenium reports all results to
-console output by default. This makes collaborating with team members
-difficult. Third-party software must be used for organising test cases which
-adds more complexity to the tech stack.
+these features out of the box. In contrast to
+[Sauce Labs](/browser-testing/sauce-labs/), which provides advanced services to
+detect patterns in error reports, Selenium reports all results to console output
+by default. This makes collaborating with team members difficult. Third-party
+software must be used for organising test cases which adds more complexity to
+the tech stack.
 
 Selenium does not explicitly support testing on mobile devices. Two other
 solutions, namely [Appium](https://appium.io/) and
-[Selendroid](http://selendroid.io/), are available to solve this by
-implementing mobile tests using Selenium. Selenium BiDi API is under
-development and Chrome DevTools Protocol does not have a stable API - the
-functionality is highly dependent on the version of the browser.
+[Selendroid](http://selendroid.io/), are available to solve this by implementing
+mobile tests using Selenium. Selenium BiDi API is under development and Chrome
+DevTools Protocol does not have a stable API - the functionality is highly
+dependent on the version of the browser.
 
 [Selenium IDE](https://www.selenium.dev/selenium-ide/), a no-code solution to
 record tests, is only available for Chrome and Firefox browsers. It does not
@@ -282,10 +288,10 @@ across different geographic regions. There are no upfront costs associated with
 this and testers can start being productive within minutes. The time and effort
 spent in setting up infrastructure for small projects is impractical for all but
 the largest teams - even then it may be more efficient to pay a provider to do
-this for you. Some providers like [Sauce
-Labs](https://docs.saucelabs.com/mobile-apps/supported-devices/index.html#private-device-cloud)
-and [AWS Device
-Farm](https://docs.aws.amazon.com/devicefarm/latest/developerguide/working-with-private-devices.html)
+this for you. Some providers like
+[Sauce Labs](https://docs.saucelabs.com/mobile-apps/supported-devices/index.html#private-device-cloud)
+and
+[AWS Device Farm](https://docs.aws.amazon.com/devicefarm/latest/developerguide/working-with-private-devices.html)
 even allow purchasing real private devices in addition to their already large
 collection of public devices.
 
@@ -315,10 +321,10 @@ collection of public devices.
 
 ### Browser testing tool comparison
 
-In our review of the [best browser testing tools for
-developers](/browser-testing/), we highlight the best 6 browser testing tools
-for developers in {{< year >}}. See how they compare to Selenium in the
-table below.
+In our review of the
+[best browser testing tools for developers](/browser-testing/), we highlight the
+best 6 browser testing tools for developers in {{< year >}}. See how they
+compare to Selenium in the table below.
 
 {{< div-custom class="comparison-checklist-table-wrapper" >}}
 

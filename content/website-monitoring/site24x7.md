@@ -20,6 +20,8 @@ isSubpage: site24x7
 customStyle: false
 pageType: vendor-review
 customPageStyle: true
+xlViewport:
+  largeText: true
 category: developer-tools
 subcategory:
   label: Website monitoring
@@ -168,15 +170,14 @@ JSONPath or XPath.
 
 Site24x7 offers more check locations than
 [Datadog](/website-monitoring/datadog/) (16),
-[Checkly](/website-monitoring/checkly/) (21), and [New
-Relic](/website-monitoring/new-relic/) (20) combined. Availability of 110+ check
-locations makes it possible to monitor the website from all regions of the world
-rather than a few major cities. This range of locations is only possible with
-alternative tools if a private check location is used. It is possible to
-[integrate an AWS
-account](https://www.site24x7.com/help/aws/advanced-configurations.html) to sync
-resource info, for example, metadata of EC2 instances can be synced and alerts
-can be issued when there is an outage at AWS' end.
+[Checkly](/website-monitoring/checkly/) (21), and
+[New Relic](/website-monitoring/new-relic/) (20) combined. Availability of 110+
+check locations makes it possible to monitor the website from all regions of the
+world rather than a few major cities. This range of locations is only possible
+with alternative tools if a private check location is used. It is possible to
+[integrate an AWS account](https://www.site24x7.com/help/aws/advanced-configurations.html)
+to sync resource info, for example, metadata of EC2 instances can be synced and
+alerts can be issued when there is an outage at AWS' end.
 
 Site24x7 provides an
 [On-Premise Poller](https://www.site24x7.com/help/getting-started/on-premise-poller.html)
@@ -240,14 +241,14 @@ seem to have outgrown their size. Datadog and New Relic's documentation is
 vastly superior and regularly updated - anyone can suggest changes on GitHub,
 which is a common approach for more modern devtools products.
 
-An example of this outdated approach is demonstrated by how the [On-premise
-poller](https://www.site24x7.com/help/admin/adding-a-monitor/on-premise-poller.html)
+An example of this outdated approach is demonstrated by how the
+[On-premise poller](https://www.site24x7.com/help/admin/adding-a-monitor/on-premise-poller.html)
 is implemented - the Linux version has a GUI based installer and requires sudo
 privileges. This is unusual as most people would only use the CLI version on
 servers, particularly on Linux. Sysadmins would not like the idea of running a
 third party application with root privileges on a server. Alternatives to
-Site24x7 like [Datadog](/website-monitoring/Datadog/) and [New
-Relic](/website-monitoring/new-relic/) use a Docker container.
+Site24x7 like [Datadog](/website-monitoring/Datadog/) and
+[New Relic](/website-monitoring/new-relic/) use a Docker container.
 
 This lack of attention to implementation detail means there is a concern about
 the overall quality of the service.

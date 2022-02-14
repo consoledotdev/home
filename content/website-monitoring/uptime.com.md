@@ -3,14 +3,14 @@ title: "Uptime.com review"
 date: 2022-01-31T07:00:00+00:00
 draft: false
 summary:
-  Uptime.com is a particularly suited to enterprise customers. It
-  offers features like private check locations, sub-accounts with limited access
-  scope, and internal status pages. Read our review of Uptime.com - a website
+  Uptime.com is a particularly suited to enterprise customers. It offers
+  features like private check locations, sub-accounts with limited access scope,
+  and internal status pages. Read our review of Uptime.com - a website
   monitoring tool.
 metaDescription:
-  Uptime.com is a particularly suited to  enterprise customers. It
-  offers features like private check locations, sub-accounts with limited access
-  scope, and internal status pages. Read our review of Uptime.com - a website
+  Uptime.com is a particularly suited to  enterprise customers. It offers
+  features like private check locations, sub-accounts with limited access scope,
+  and internal status pages. Read our review of Uptime.com - a website
   monitoring tool.
 headerType: fixed
 hideLines: true
@@ -22,6 +22,8 @@ isSubpage: uptime.com
 customStyle: false
 pageType: vendor-review
 customPageStyle: true
+xlViewport:
+  largeText: true
 category: developer-tools
 subcategory:
   label: Website monitoring
@@ -185,10 +187,11 @@ they display the following metrics:
 - Previous incidents and outages.
 - Informational metrics such as upload & download time.
 
-These pages can be customized to match your company ([such as in this
-example](https://uptime.com/s/samplepsp)). This is useful because it is a common
-scenario to present external status pages to customers and is not available from
-Uptime.com alternatives such as [Datadog](/website-monitoring/datadog/).
+These pages can be customized to match your company
+([such as in this example](https://uptime.com/s/samplepsp)). This is useful
+because it is a common scenario to present external status pages to customers
+and is not available from Uptime.com alternatives such as
+[Datadog](/website-monitoring/datadog/).
 
 The availability of internal status pages makes it possible to easily share
 incident history and metrics that contain sensitive information with team
@@ -242,9 +245,9 @@ take longer to identify the issue. Furthermore, private check locations are only
 available as an add-on to business and enterprise customers, which introduces
 additional cost. If the number of check locations is a priority for you, then we
 recommend using [Uptrends](/website-monitoring/uptrends/) (as it offers more
-than 200 check locations staggered around the world) or [New
-Relic](/website-monitoring/new-relic/) (which can run tests on private docker
-containers at no additional cost).
+than 200 check locations staggered around the world) or
+[New Relic](/website-monitoring/new-relic/) (which can run tests on private
+docker containers at no additional cost).
 
 There are some things enterprise users should be aware of - the API is limited
 to 500 queries per hour, which can be easily exceeded in large environments. The
