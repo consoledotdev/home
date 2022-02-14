@@ -2678,9 +2678,10 @@ p.combo-card-description {
 }
 
 /* Vendor Thumbnail
-   ================================================================================================================ */
+   ================================================================================================================
 .vendor-thumbnail {
 }
+*/
 
 /* Illustrated Text
    ================================================================================================================ */
@@ -3207,7 +3208,7 @@ p.combo-card-description {
    ================================================================================================================ */
 .dynamic-planes {
     -webkit-backface-visibility: hidden; /* fix border animation flash glitch */
-    -backface-visibility: hidden; /* fix border animation flash glitch */
+    backface-visibility: hidden; /* fix border animation flash glitch */
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -4115,9 +4116,6 @@ p.combo-card-description {
     bottom: 0;
     right: 0;
     z-index: 1000;
-}
-
-.modal-backdrop.is-visible {
 }
 
 .modal-backdrop:before {
