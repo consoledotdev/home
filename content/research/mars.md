@@ -10,6 +10,8 @@ isPage: research
 isSubpage: mars
 pageType: feature-article
 customStyle: true
+xlViewport:
+  largeText: true
 headerType: fixed
 hidePlanes: true
 hideLines: true

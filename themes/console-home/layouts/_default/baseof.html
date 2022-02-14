@@ -12,6 +12,9 @@
         {{ $pageClasses = (print ($pageClasses) " page-" .Params.isPage ) }}
     {{- end }}
 {{- end -}}
+{{- if and .Params.xlViewport .Params.xlViewport.largeText -}}
+    {{ $pageClasses = (print ($pageClasses) " xl-viewport-large-text" ) }}
+{{ end }}
 <!DOCTYPE html>
 <html lang="en" class="{{ $pageClasses }}">
     {{ `<!-- Site source available at https://github.com/consoledotdev/home -->` | safeHTML }}

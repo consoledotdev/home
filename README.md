@@ -63,6 +63,8 @@ you only need Hugo:
   form article (eg: Mars Internet).
 - `customPageStyle`: `true` or `false` - Will expect and load a custom style
   based on the `pageType` string.
+- `xlViewport`: segment for specifying style classes for xl viewports.
+  - `largeText`: `true` or `false` will enable text size increase on xl viewports.
 
 ### Custom Hugo Shortcodes
 
