@@ -983,7 +983,7 @@ full review:
 
 {{< nav-wrapper--open anchor-name="teletype" >}}
 
-{{< category-review/card-heading name="Teletype" anchor="teletype" thumbnail="/img/favicons/teletype.atom.io.ico" url="https://teletype.atom.io/" score="none" >}}
+{{< category-review/card-heading name="Teletype" anchor="teletype" thumbnail="/img/favicons/teletype.atom.io.png" url="https://teletype.atom.io/" score="none" >}}
 
 Teletype was developed by GitHub for Atom to share workspaces in real-time. It
 uses WebRTC to establish encrypted peer-to-peer connections. Users must have
