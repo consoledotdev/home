@@ -20,6 +20,8 @@ isPage: website-monitoring
 customStyle: true
 pageType: category-review
 customPageStyle: true
+xlViewport:
+  largeText: true
 category: devops
 subcategory: website-monitoring
 authorName: David Mytton

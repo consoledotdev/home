@@ -22,6 +22,8 @@ isPage: code-collaboration-pair-programming
 customStyle: true
 pageType: category-review
 customPageStyle: true
+xlViewport:
+  largeText: true
 category: developer-tools
 subcategory: code-collaboration-pair-programming
 authorName: Naman Singhal
@@ -93,8 +95,9 @@ programming & code collaboration tools in {{< year >}} must have these three
 requirements.
 
 For each of our code collaboration & pair programming tool reviews we will
-assess functionality based on our [standard selection
-criteria](/selection-criteria/) plus these three requirements:
+assess functionality based on our
+[standard selection criteria](/selection-criteria/) plus these three
+requirements:
 
 {{< framed-section-item--open >}}
 
@@ -496,9 +499,9 @@ established through an
 [open-source distributed protocol](https://github.com/JetBrains/rd) created by
 JetBrains which uses TLS 1.3 for
 [end-to-end encryption](https://www.jetbrains.com/help/idea/faq-about-code-with-me-security.html#communication_ports).
-However some metadata like IP addresses, project names, and the operating
-system username are shared unencrypted because they are used for
-establishing a session.
+However some metadata like IP addresses, project names, and the operating system
+username are shared unencrypted because they are used for establishing a
+session.
 
 {{< div--close >}}
 
@@ -969,10 +972,11 @@ pair-programming.
 
 #### Also considered
 
-We considered [Floobits](https://floobits.com/) and [Saros](https://www.saros-project.org/)
-but they are not updated regularly. We examined [Tuple](https://tuple.app/)
-but it is currently only supports macOS - Linux support is on the roadmap,
-so will will return when it has more cross platform support.
+We considered [Floobits](https://floobits.com/) and
+[Saros](https://www.saros-project.org/) but they are not updated regularly. We
+examined [Tuple](https://tuple.app/) but it is currently only supports macOS -
+Linux support is on the roadmap, so will will return when it has more cross
+platform support.
 
 We also tested the following 4 tools but they did not meet our criteria for a
 full review:
@@ -1094,8 +1098,8 @@ it from a full review.
 #### Why you can trust us
 
 Console is written by developers for developers. Using our decades of experience
-building software at scale, we apply strict [selection
-criteria](/selection-criteria/) to decide which software we feature.
+building software at scale, we apply strict
+[selection criteria](/selection-criteria/) to decide which software we feature.
 
 This includes asking questions like "Would this form part of a daily-use set of
 developer tools?", "Would this be used by advanced, power-users?" and "Does it
