@@ -93,8 +93,9 @@ programming & code collaboration tools in {{< year >}} must have these three
 requirements.
 
 For each of our code collaboration & pair programming tool reviews we will
-assess functionality based on our [standard selection
-criteria](/selection-criteria/) plus these three requirements:
+assess functionality based on our
+[standard selection criteria](/selection-criteria/) plus these three
+requirements:
 
 {{< framed-section-item--open >}}
 
@@ -200,11 +201,11 @@ YouTube videos synchronously during the chat. The call session is connected in a
 separate browser tab (even when using the browser based IDE from CodeTogether)
 and closing the IDE also disconnects the call.
 
-In addition to the above capabilities, it offers a unique “rooms” feature.
-Participants can work together in the same room (all sharing a common
+In addition to the above capabilities, it offers a unique “virtual cursors”
+feature. Participants can work together (using a common
 [caret](https://en.wikipedia.org/wiki/Caret_navigation) position and text
-selections), or in a different room to work solely without disrupting the
-workflow of other participants.
+selections), or switch to "pseudo alone mode" to work alone (if session
+permissions allow) without disrupting the workflow of other participants.
 
 {{< div--close >}}
 
@@ -250,7 +251,9 @@ etc., come from the host IDE. This means all participant's IDEs are just as
 powerful as the host's. Host can create a `.codetogether.ignore` file before
 starting a session to hide sensitive data.
 
-Enterprise users hosting CodeTogether on-premises have access to a
+Enterprise users can host a private multi-server instance of CodeTogether which
+can be distributed geographically to reduce latency within regions and provides
+service redundancy, load balancing and scalability. These users have access to a
 [metrics dashboard](https://www.codetogether.com/docs/using-the-on-premises-dashboard/)
 which shows the number of online users and active sessions in real time, as well
 as historical usage trends. Usage stats can be downloaded from the dashboard or
@@ -496,9 +499,9 @@ established through an
 [open-source distributed protocol](https://github.com/JetBrains/rd) created by
 JetBrains which uses TLS 1.3 for
 [end-to-end encryption](https://www.jetbrains.com/help/idea/faq-about-code-with-me-security.html#communication_ports).
-However some metadata like IP addresses, project names, and the operating
-system username are shared unencrypted because they are used for
-establishing a session.
+However some metadata like IP addresses, project names, and the operating system
+username are shared unencrypted because they are used for establishing a
+session.
 
 {{< div--close >}}
 
@@ -969,10 +972,11 @@ pair-programming.
 
 #### Also considered
 
-We considered [Floobits](https://floobits.com/) and [Saros](https://www.saros-project.org/)
-but they are not updated regularly. We examined [Tuple](https://tuple.app/)
-but it is currently only supports macOS - Linux support is on the roadmap,
-so will will return when it has more cross platform support.
+We considered [Floobits](https://floobits.com/) and
+[Saros](https://www.saros-project.org/) but they are not updated regularly. We
+examined [Tuple](https://tuple.app/) but it is currently only supports macOS -
+Linux support is on the roadmap, so will will return when it has more cross
+platform support.
 
 We also tested the following 4 tools but they did not meet our criteria for a
 full review:
@@ -1094,8 +1098,8 @@ it from a full review.
 #### Why you can trust us
 
 Console is written by developers for developers. Using our decades of experience
-building software at scale, we apply strict [selection
-criteria](/selection-criteria/) to decide which software we feature.
+building software at scale, we apply strict
+[selection criteria](/selection-criteria/) to decide which software we feature.
 
 This includes asking questions like "Would this form part of a daily-use set of
 developer tools?", "Would this be used by advanced, power-users?" and "Does it
