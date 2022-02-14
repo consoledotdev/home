@@ -1164,7 +1164,7 @@ choose from.
 
 {{< nav-wrapper--open anchor-name="graphite" >}}
 
-{{< category-review/card-heading name="Graphite" anchor="graphite" url="https://graphite.readthedocs.io/en/latest/" score="none" >}}
+{{< category-review/card-heading name="Graphite" anchor="graphite" url="https://graphite.readthedocs.io/en/latest/" thumbnail="/img/favicons/graphite.readthedocs.io.ico" score="none" >}}
 
 Graphite is a time series datastore that can generate graphs. It was originally
 released in 2006 and open sourced in 2008. It's still in active development but
