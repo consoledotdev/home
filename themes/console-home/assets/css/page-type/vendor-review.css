@@ -262,6 +262,10 @@ html {
     height: var(--t-size0);
 }
 
+.page-section-vendor-review.opening .page-meta p {
+    color: var(--theme-text-3);
+}
+
 .page-section-vendor-review.opening .intro {
     margin: var(--space3_5) 0;
     color: var(--theme-text-1);
