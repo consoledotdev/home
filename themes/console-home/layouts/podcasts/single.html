@@ -3,33 +3,33 @@
 	{{ $CTADescription := "Our free weekly newsletter features the latest interesting tools." }}
 
     <section class="page-section page-section-podcast-episode opening">
-        <a href="/podcasts/" class="console-button-text console-button-green icon-left">
-            {{ partial "icons/podcast.html" }}
-            <span>DevTools Podcast</span>
-        </a>
-        <h2 class="title title-1">{{ .Params.title }}</h2>
-        <div class="title-extras">
-            <h4 class="title title-3">with
-                {{ with .Params.whoLink }}<a href="{{ . }}" title="{{ . }}" target="_blank" rel="noopener">{{ end }}
-                    {{ .Params.who }}
-                {{ with .Params.whoLink }}</a>{{ end }}
-            </h4>
-            <p class="small">
-                {{ with .Params.role }}{{ . }},{{end}}
-                {{ with .Params.orgLink }}<a href="{{ . }}" title="{{ . }}" target="_blank" rel="noopener">{{ end }}
-                    {{ .Params.org }}
-                {{ with .Params.orgLink }}</a>{{ end }}
-            </p>
-        </div>
         <div class="top">
             <div class="left">
-                <div class="page-meta">
+                <a href="/podcasts/" class="console-button-text console-button-green icon-left">
+                    {{ partial "icons/podcast.html" }}
+                    <span>DevTools Podcast</span>
+                </a>
+                <h2 class="title title-1">{{ .Params.title }}</h2>
+                <div class="title-extras">
+                    <h4 class="title title-3">with
+                        {{ with .Params.whoLink }}<a class="link" href="{{ . }}" title="{{ . }}" target="_blank" rel="noopener">{{ end }}
+                            {{ .Params.who }}
+                        {{ with .Params.whoLink }}</a>{{ end }}
+                    </h4>
                     <p class="small">
+                        {{ with .Params.role }}{{ . }},{{end}}
+                        {{ with .Params.orgLink }}<a class="link" href="{{ . }}" title="{{ . }}" target="_blank" rel="noopener">{{ end }}
+                            {{ .Params.org }}
+                        {{ with .Params.orgLink }}</a>{{ end }}
+                    </p>
+                </div>
+                <div class="page-meta">
+                    <p class="small episode-no">
                         {{ $s := .Params.season }}
                         {{ $e := .Params.episode }}
                         S{{ if lt $s 10 }}0{{ end }}{{ $s }} E{{ if lt $e 10 }}0{{ end }}{{ $e }}
                     </p>
-                    <p class="small">
+                    <p class="small date">
                         <span class="page-meta-separator">&mdash;</span>
                         <span>{{ .Date.Format "2006-01-02" }}</span>
                     </p>
@@ -101,13 +101,13 @@
                                 <h6 class="title title-5">{{ .Title }}</h6>
                                 <div class="other-episode-title-extras">
                                     <p class="small">with
-                                        {{ with .Params.whoLink }}<a href="{{ . }}" title="{{ . }}" target="_blank" rel="noopener">{{ end }}
+                                        {{ with .Params.whoLink }}<a class="link" href="{{ . }}" title="{{ . }}" target="_blank" rel="noopener">{{ end }}
                                             {{ .Params.who }}
                                         {{ with .Params.whoLink }}</a>{{ end }}
                                         </span>
                                     <p class="small">
                                         {{ with .Params.role }}{{ . }},{{end}}
-                                        {{ with .Params.orgLink }}<a href="{{ . }}" title="{{ . }}" target="_blank" rel="noopener">{{ end }}
+                                        {{ with .Params.orgLink }}<a class="link" href="{{ . }}" title="{{ . }}" target="_blank" rel="noopener">{{ end }}
                                             {{ .Params.org }}
                                         {{ with .Params.orgLink }}</a>{{ end }}
                                     </span>
