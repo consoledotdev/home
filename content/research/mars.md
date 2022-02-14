@@ -10,6 +10,7 @@ isPage: research
 isSubpage: mars
 pageType: feature-article
 customStyle: true
+customPageStyle: true
 xlViewport:
   largeText: true
 headerType: fixed
@@ -89,15 +90,15 @@ with establishing the internet on Mars.
 
 ### The problem with connecting Mars & Earth
 
-Whilst the average [distance between Earth and
-Mars](https://www.space.com/16875-how-far-away-is-mars.html) is 229 million km /
-142 million miles, [it can
-range](https://en.wikipedia.org/wiki/Mars#Closest_approaches) from 54.6 million
-km / 33.9 million miles to 401 million km / 249 million miles. Assuming that a
-link between the planets can transmit data at the speed of light, direct
+Whilst the average
+[distance between Earth and Mars](https://www.space.com/16875-how-far-away-is-mars.html)
+is 229 million km / 142 million miles,
+[it can range](https://en.wikipedia.org/wiki/Mars#Closest_approaches) from 54.6
+million km / 33.9 million miles to 401 million km / 249 million miles. Assuming
+that a link between the planets can transmit data at the speed of light, direct
 transmission of a single data packet could therefore take between 3-22 minutes
-to reach its destination - ✍︎ [see our
-calculations](https://github.com/consoledotdev/mars-internet/blob/main/calculations.ipynb).
+to reach its destination - ✍︎
+[see our calculations](https://github.com/consoledotdev/mars-internet/blob/main/calculations.ipynb).
 
 If a person on Mars tried to access a service located on Earth, not only would
 they need to wait for the requested data to travel from Earth to Mars, but just
@@ -210,10 +211,10 @@ NASA already runs several communication networks in space:
 - [Near Space Network](https://esc.gsfc.nasa.gov/projects/NSN): A network of
   ground-based antennas for communication with satellites in orbit around the
   Earth.
-- [Space Network](https://esc.gsfc.nasa.gov/projects/SN):
-  A network of ground stations that communicate with Earth orbiting satellites
-  for tracking and relay communications, such as for the International Space
-  Station and Hubble Space Telescope.
+- [Space Network](https://esc.gsfc.nasa.gov/projects/SN): A network of ground
+  stations that communicate with Earth orbiting satellites for tracking and
+  relay communications, such as for the International Space Station and Hubble
+  Space Telescope.
 - [Deep Space Network](https://www.nasa.gov/directorates/heo/scan/services/networks/deep_space_network/about):
   Consists of an array of Earth-based radio antennas (in California, Spain,
   Australia) and several orbiting satellites to allow communication with
