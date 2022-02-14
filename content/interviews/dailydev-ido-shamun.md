@@ -4,7 +4,7 @@ who: Ido Shamun
 role: CTO
 org: Daily.dev
 what: Developer news aggregator.
-tags: ['Cloud']
+tags: ['News']
 date: 2022-01-27T12:00:00Z
 draft: true
 headerType: fixed
