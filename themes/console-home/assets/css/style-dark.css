@@ -216,6 +216,9 @@
 
     --theme-vapor-globe-blue-1: linear-gradient(180deg, var(--c-blue-10), var(--c-blue-11));
 
+    --theme-interviewer-name: var(--theme-text-1);
+    --theme-interviewee-name: var(--c-green-05-main);
+
     /* Vendor Review page specific */
     --theme-vendor-review-page-bg: var(--theme-content-bg-1);
     --theme-rating-summary-overall-border: 1px solid var(--c-grey-04-whites-neutral);

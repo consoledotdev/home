@@ -142,11 +142,11 @@ html {
 
 .main-podcast-episode .page-section.opening .title-extras .title,
 .main-podcast-episode .page-section.opening .title-extras .small,
-.main-podcast-episode .page-section.opening .title-extras a.link {
+.main-podcast-episode .page-section.opening .title-extras a.link:not(:hover):not(:focus):not(:active) {
     color: var(--theme-text-4);
 }
 
-.main-podcast-episode .page-section.opening .title-extras p a.link {
+.main-podcast-episode .page-section.opening .title-extras p > * {
     vertical-align: -0.28em;
     font-style: italic;
 }
@@ -198,6 +198,71 @@ html {
     }
 }
 
+/* Clippings */
+.podcast-episode-clipping p:nth-child(1n) strong:first-child {
+    color: var(--theme-interviewer-name);
+}
+
+.podcast-episode-clipping p:nth-child(2n) strong:first-child {
+    color: var(--theme-interviewee-name);
+}
+
+/* Transcript */
+.main-podcast-episode .box-collapsible .title.title-4 {
+    margin-bottom: 0;
+}
+
+.main-podcast-episode .box-collapsible.is-expanded .box-collapsible-content {
+    max-height: none;
+}
+
+.main-podcast-episode .box-collapsible-content p:nth-child(1n) strong:first-child {
+    color: var(--theme-interviewer-name);
+}
+
+.main-podcast-episode .box-collapsible-content p:nth-child(2n) strong:first-child {
+    color: var(--theme-interviewee-name);
+}
+
+/* Aside */
+.aside-content-wrapper .other-episodes,
+.aside-content-wrapper .other-episode:not(:first-child) {
+    margin-top: var(--space3_5);
+}
+
+.other-episode .title.title-6 {
+    font-size: var(--t-size1);
+}
+
+.other-episode .title.title-6,
+.other-episode p {
+    margin-bottom: var(--space0);
+}
+
+.other-episode-title-extras .title,
+.other-episode-title-extras .small,
+.other-episode-title-extras a.link:not(:hover):not(:focus):not(:active) {
+    color: var(--theme-text-4);
+}
+
+.other-episode-title-extras p:last-child {
+    font-size: var(--t-size-3);
+    font-style: italic;
+}
+
+.other-episode-meta {
+    margin-top: var(--space2);
+}
+
+.other-episode-meta p {
+    color: var(--theme-text-3);
+    font-size: var(--t-size-2);
+}
+
+.other-episode-meta .episode-no {
+    font-style: italic;
+}
+
 /* Subscribe CTA ------------------------------------------------------------- */
 .main-podcast-episode .subscribe-cta {
     margin-top: var(--space5_5);
@@ -211,5 +276,19 @@ html {
         background: transparent;
         border-top: 1px solid var(--c-blue-04);
         padding-top: var(--space4);
+    }
+}
+
+@media (min-width: 1280px) {
+    .other-episode .title.title-6 {
+        font-size: var(--t-size2);
+    }
+
+    .other-episode-title-extras p:last-child {
+        font-size: var(--t-size-2);
+    }
+
+    .other-episode-meta p {
+        font-size: var(--t-size-1);
     }
 }

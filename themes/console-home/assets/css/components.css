@@ -272,6 +272,10 @@
     font-weight: 500;
 }
 
+.title-6 a:link {
+    font-weight: 500;
+}
+
 .link:hover,
 .link:focus {
     color: var(--theme-link-text-focus);
