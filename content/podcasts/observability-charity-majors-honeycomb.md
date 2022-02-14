@@ -46,6 +46,9 @@ authorBio:
 
 ### Episode notes
 
+{{< div-custom class="aside" data="data-inline-aside-content-wrapper" >}}
+{{< div--close >}}
+
 In this episode we speak to Charity Majors, CTO at
 [Honeycomb](https://www.honeycomb.io/), an observability tool for distributed
 systems. We discuss why observability is based around events and not metrics,

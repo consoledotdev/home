@@ -4294,6 +4294,16 @@ p.combo-card-description {
 
 /* Aside
    ================================================================================================================ */
+.aside-wrapper {
+    flex: 0 0 auto;
+    width: 26vw;
+    max-width: 400px;
+}
+
+.aside-wrapper.is-hidden {
+    display: none;
+}
+
 .aside-content-wrapper {
     margin-left: 5vw;
     width: 21vw;

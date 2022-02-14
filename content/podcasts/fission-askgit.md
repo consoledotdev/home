@@ -49,6 +49,9 @@ author2Bio:
 
 ### Episode notes
 
+{{< div-custom class="aside" data="data-inline-aside-content-wrapper" >}}
+{{< div--close >}}
+
 Episode 8 of the Console DevTools Podcast, a devtools discussion with David
 Mytton (Co-founder, Console) and Jean Yang (CEO, Akita Software).
 

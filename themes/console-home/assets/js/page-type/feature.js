@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     if (document.body.classList.contains("page-podcasts")) {
         /* manage season info position */
-        let featureSplits = document.querySelectorAll("[data-feature-split]");
+        let contentSplits = document.querySelectorAll("[data-content-split]");
         let setPos = () => {
-            featureSplits.forEach((split) => {
+            contentSplits.forEach((split) => {
                 let el = split.querySelector("[data-aside-content]");
                 let asideWrapper = split.querySelector("[data-aside-content-wrapper]");
                 let inlineWrapper = split.querySelector("[data-inline-aside-content-wrapper]");
@@ -185,7 +185,7 @@ class Sections {
             search: "is-hidden-by-search",
             generic: "is-hidden",
         };
-        this.wrapper = document.querySelector("[data-feature-content-wrapper]");
+        this.wrapper = document.querySelector("[data-main-content-wrapper]");
         this.filterables = this.getFilterables();
         this.sortables = this.getSortables();
         this.groupables = this.getGroupables();

@@ -53,78 +53,80 @@
             </div>
         </div>
     </section>
-    <div class="content-split">
-        <aside class="aside-content-wrapper" data-aside-content-wrapper>
-            <div class="aside-content" data-aside-content>
-                <div class="aside-block">
-                    <div class="page-section-heading">
-                        <h5 class="title title-4">
+    <div data-content-split class="content-split">
+		<aside data-aside-wrapper class="aside-wrapper">
+            <div data-aside-content-wrapper class="aside-content-wrapper">
+                <div data-aside-content class="aside-content">
+                    <div class="aside-block">
+                        <div class="page-section-heading">
+                            <h5 class="title title-4">
+                                {{ if eq .Params.season 1 }}
+
+                                    With
+
+                                {{ else if eq .Params.season 2 }}
+
+                                    The host
+
+                                {{ end }}
+                            </h5>
+                        </div>
+                        {{ if eq .Params.season 1 }}<div class="person-profiles">{{ end }}
+
+                            <div class="person-profile">
+                                {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/david.jpg" "imgSize" "128" "alt" "Photo of David Mytton" ) }}
+                                <a href="#author" class="link" title="About David Mytton">David Mytton</a>
+                            </div>
+
                             {{ if eq .Params.season 1 }}
 
-                                With
-
-                            {{ else if eq .Params.season 2 }}
-
-                                The host
+                                    <div class="person-profile">
+                                        {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/podcasts/akita-jean-yang-profile.jpg" "imgSize" "128" "alt" "Photo of Jean Yang" ) }}
+                                        <a href="https://twitter.com/jeanqasaur" target="_blank" class="link icon-link" title="https://twitter.com/jeanqasaur"><span>Jean Yang</span> {{ partial "icons/external-link.html" }}</a>
+                                    </div>
 
                             {{ end }}
-                        </h5>
-                    </div>
-                    {{ if eq .Params.season 1 }}<div class="person-profiles">{{ end }}
 
-                        <div class="person-profile">
-                            {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/david.jpg" "imgSize" "128" "alt" "Photo of David Mytton" ) }}
-                            <a href="#author" class="link" title="About David Mytton">David Mytton</a>
+                        {{ if eq .Params.season 1 }}</div>{{ end }}
+                    </div>
+                    <div class="aside-block more-episodes">
+                        <div class="page-section-heading">
+                            <h5 class="title title-4">More episodes</h5>
                         </div>
-
-                        {{ if eq .Params.season 1 }}
-
-                                <div class="person-profile">
-                                    {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/podcasts/akita-jean-yang-profile.jpg" "imgSize" "128" "alt" "Photo of Jean Yang" ) }}
-                                    <a href="https://twitter.com/jeanqasaur" target="_blank" class="link icon-link" title="https://twitter.com/jeanqasaur"><span>Jean Yang</span> {{ partial "icons/external-link.html" }}</a>
-                                </div>
-
-                        {{ end }}
-
-                    {{ if eq .Params.season 1 }}</div>{{ end }}
-                </div>
-                <div class="aside-block more-episodes">
-                    <div class="page-section-heading">
-                        <h5 class="title title-4">More episodes</h5>
-                    </div>
-                    <div class="other-episodes">
-                        {{ $section := .Site.GetPage "section" "podcasts" }}
-                        {{ $pages := $section.Pages }}
-                        
-                        {{ range (where $pages.ByPublishDate.Reverse "Params.season" .Params.season) }}
-                            <div class="other-episode">
-                                <h6 class="title title-5">{{ .Title }}</h6>
-                                <div class="other-episode-title-extras">
-                                    <p class="small">with
-                                        {{ with .Params.whoLink }}<a class="link" href="{{ . }}" title="{{ . }}" target="_blank" rel="noopener">{{ end }}
-                                            {{ .Params.who }}
-                                        {{ with .Params.whoLink }}</a>{{ end }}
+                        <div class="other-episodes">
+                            {{ $section := .Site.GetPage "section" "podcasts" }}
+                            {{ $pages := $section.Pages }}
+                            
+                            {{ range (where $pages.ByPublishDate.Reverse "Params.season" .Params.season) }}
+                                <div class="other-episode">
+                                    <h6 class="title title-5">{{ .Title }}</h6>
+                                    <div class="other-episode-title-extras">
+                                        <p class="small">with
+                                            {{ with .Params.whoLink }}<a class="link" href="{{ . }}" title="{{ . }}" target="_blank" rel="noopener">{{ end }}
+                                                {{ .Params.who }}
+                                            {{ with .Params.whoLink }}</a>{{ end }}
+                                            </span>
+                                        <p class="small">
+                                            {{ with .Params.role }}{{ . }},{{end}}
+                                            {{ with .Params.orgLink }}<a class="link" href="{{ . }}" title="{{ . }}" target="_blank" rel="noopener">{{ end }}
+                                                {{ .Params.org }}
+                                            {{ with .Params.orgLink }}</a>{{ end }}
                                         </span>
-                                    <p class="small">
-                                        {{ with .Params.role }}{{ . }},{{end}}
-                                        {{ with .Params.orgLink }}<a class="link" href="{{ . }}" title="{{ . }}" target="_blank" rel="noopener">{{ end }}
-                                            {{ .Params.org }}
-                                        {{ with .Params.orgLink }}</a>{{ end }}
-                                    </span>
+                                    </div>
+                                    <div class="other-episode-meta">
+                                        <p class="small">
+                                            {{ $s := .Params.season }}
+                                            {{ $e := .Params.episode }}
+                                            S{{ if lt $s 10 }}0{{ end }}{{ $s }} E{{ if lt $e 10 }}0{{ end }}{{ $e }}
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="other-episode-meta">
-                                    <p class="small">
-                                        {{ $s := .Params.season }}
-                                        {{ $e := .Params.episode }}
-                                        S{{ if lt $s 10 }}0{{ end }}{{ $s }} E{{ if lt $e 10 }}0{{ end }}{{ $e }}
-                                    </p>
-                                </div>
-                            </div>
-                        {{ end }}
+                            {{ end }}
+                        </div>
                     </div>
                 </div>
             </div>
-        </aside>
+		</aside>
 		<div class="main-content-wrapper">
             <section class="page-section page-section-podcast-episode">
                 {{ .Content }}

@@ -47,6 +47,9 @@ authorBio:
 
 ### Episode notes
 
+{{< div-custom class="aside" data="data-inline-aside-content-wrapper" >}}
+{{< div--close >}}
+
 In this episode we speak with John Graham-Cumming, CTO of
 [Cloudflare](https://www.cloudflare.com/), a global web platform built for
 security and performance. We discuss the philosophy behind the idea that the

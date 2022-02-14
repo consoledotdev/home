@@ -8,7 +8,7 @@ html {
     display: none;
 }
 
-.page-podcasts .feature-split {
+.page-podcasts .content-split {
     min-height: var(--space7_5);
 }
 

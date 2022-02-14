@@ -48,6 +48,9 @@ authorBio:
 
 ### Episode notes
 
+{{< div-custom class="aside" data="data-inline-aside-content-wrapper" >}}
+{{< div--close >}}
+
 In this episode we speak to Thomas Ptacek, currently a software engineer at
 [Fly.io](https://fly.io/) and previously a co-founder at security firms Latacora
 and Matasano Security. We discuss the state of software security in sectors like
