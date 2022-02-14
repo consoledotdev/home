@@ -17,7 +17,7 @@
                         {{ with .Params.whoLink }}</a>{{ end }}
                     </h4>
                     <p class="small">
-                        {{ with .Params.role }}{{ . }},{{end}}
+                        <span>{{ with .Params.role }}{{ . }},{{end}}</span>
                         {{ with .Params.orgLink }}<a class="link" href="{{ . }}" title="{{ . }}" target="_blank" rel="noopener">{{ end }}
                             {{ .Params.org }}
                         {{ with .Params.orgLink }}</a>{{ end }}
@@ -96,31 +96,33 @@
                         <div class="other-episodes">
                             {{ $section := .Site.GetPage "section" "podcasts" }}
                             {{ $pages := $section.Pages }}
-                            
+                            {{ $pageTitle := .Params.title }}
                             {{ range (where $pages.ByPublishDate.Reverse "Params.season" .Params.season) }}
+                                {{ if not (eq .Title $pageTitle) }}
                                 <div class="other-episode">
-                                    <h6 class="title title-5">{{ .Title }}</h6>
+                                    <h6 class="title title-6"><a class="link" href="{{ .RelPermalink }}" title="{{ .RelPermalink }}" rel="noopener">{{ .Title }}</a></h6>
                                     <div class="other-episode-title-extras">
-                                        <p class="small">with
-                                            {{ with .Params.whoLink }}<a class="link" href="{{ . }}" title="{{ . }}" target="_blank" rel="noopener">{{ end }}
+                                        <p class="small"><a class="link" href="{{ .RelPermalink }}" title="{{ .RelPermalink }}" rel="noopener">with
+                                            {{ with .Params.whoLink }}{{ end }}
                                                 {{ .Params.who }}
-                                            {{ with .Params.whoLink }}</a>{{ end }}
-                                            </span>
+                                            {{ with .Params.whoLink }}{{ end }}</a>
+                                        </p>
                                         <p class="small">
                                             {{ with .Params.role }}{{ . }},{{end}}
-                                            {{ with .Params.orgLink }}<a class="link" href="{{ . }}" title="{{ . }}" target="_blank" rel="noopener">{{ end }}
+                                            {{ with .Params.orgLink }}{{ end }}
                                                 {{ .Params.org }}
-                                            {{ with .Params.orgLink }}</a>{{ end }}
-                                        </span>
+                                            {{ with .Params.orgLink }}{{ end }}
+                                        </p>
                                     </div>
                                     <div class="other-episode-meta">
-                                        <p class="small">
+                                        <p class="small episode-no">
                                             {{ $s := .Params.season }}
                                             {{ $e := .Params.episode }}
                                             S{{ if lt $s 10 }}0{{ end }}{{ $s }} E{{ if lt $e 10 }}0{{ end }}{{ $e }}
                                         </p>
                                     </div>
                                 </div>
+                                {{ end }}
                             {{ end }}
                         </div>
                     </div>
