@@ -28,6 +28,8 @@ hidePlanes: true
 isSubpage: podcast-episode
 pageType: podcast-episode
 customPageStyle: true
+xlViewport:
+  largeText: true
 topImg1Src: /img/podcasts/honeycomb-charity-majors-profile.jpg
 topImg2Src: /img/favicons/docs.honeycomb.io.png
 ogImg: /img/podcasts/honeycomb-charity-majors-profile.jpg

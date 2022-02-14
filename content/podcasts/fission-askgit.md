@@ -23,6 +23,8 @@ hidePlanes: true
 isSubpage: podcast-episode
 pageType: podcast-episode
 customPageStyle: true
+xlViewport:
+  largeText: true
 topImg1Src: /img/favicons/github.com.png
 topImg2Src: /img/favicons/fission.codes.png
 ogImg: /img/favicons/github.com.png

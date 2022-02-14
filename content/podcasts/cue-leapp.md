@@ -23,6 +23,8 @@ hidePlanes: true
 isSubpage: podcast-episode
 pageType: podcast-episode
 customPageStyle: true
+xlViewport:
+  largeText: true
 topImg1Src: /img/favicons/www.leapp.cloud.png
 topImg2Src: /img/favicons/cuelang.org.png
 ogImg: /img/favicons/www.leapp.cloud.png

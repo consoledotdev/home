@@ -22,6 +22,8 @@ hidePlanes: true
 isSubpage: podcast-episode
 pageType: podcast-episode
 customPageStyle: true
+xlViewport:
+  largeText: true
 topImg1Src: /img/favicons/deepsource.io.png
 topImg2Src: /img/favicons/tyk.io.png
 ogImg: /img/favicons/deepsource.io.png

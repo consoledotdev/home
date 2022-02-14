@@ -29,6 +29,8 @@ hidePlanes: true
 isSubpage: podcast-episode
 pageType: podcast-episode
 customPageStyle: true
+xlViewport:
+  largeText: true
 topImg1Src: /img/podcasts/cloudflare-john-graham-cumming-profile.jpg
 topImg2Src: /img/favicons/www.cloudflare.com.png
 ogImg: /img/podcasts/cloudflare-john-graham-cumming-profile.jpg
