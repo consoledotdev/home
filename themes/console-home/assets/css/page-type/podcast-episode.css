@@ -198,6 +198,18 @@ html {
     }
 }
 
+/* Notes */
+.main-podcast-episode .page-section.notes .title-4.rich-title {
+    display: block;
+}
+.main-podcast-episode .page-section.notes .rich-title .icon {
+    width: calc(var(--space3) + var(--space1));
+    height: calc(var(--space3) + var(--space1));
+    vertical-align: -0.26em;
+    stroke: var(--theme-text-2);
+    margin-right: var(--space2);
+}
+
 /* Clippings */
 .podcast-episode-clipping p:nth-child(1n) strong:first-child {
     color: var(--theme-interviewer-name);
@@ -225,6 +237,12 @@ html {
 }
 
 /* Aside */
+.main-podcast-episode .aside-content-wrapper {
+    margin-left: 3vw;
+    width: 100%;
+    max-width: none;
+}
+
 .aside-content-wrapper .other-episodes,
 .aside-content-wrapper .other-episode:not(:first-child) {
     margin-top: var(--space3_5);

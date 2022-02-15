@@ -130,10 +130,10 @@
             </div>
 		</aside>
 		<div class="main-content-wrapper">
-            <section class="page-section page-section-podcast-episode">
+            <section class="page-section page-section-podcast-episode notes">
                 {{ .Content }}
             </section>
-            <section class="page-section page-section-feature-root">
+            <section class="page-section page-section-podcast-episode about">
                 <div name="david-mytton">{{ partial "components/author.html" (dict "context" . "bio" .Params.authorBio "img" .Params.authorImg "name" .Params.authorName "url" .Params.authorURL ) }}</div>
                 {{ if eq .Params.season 1 }}<div name="jean-yang">{{ partial "components/author.html" (dict "context" . "bio" .Params.author2Bio "img" .Params.author2Img "name" .Params.author2Name "url" .Params.author2URL ) }}</div>{{ end }}
                 {{ partial "components/about-console.html" }}
