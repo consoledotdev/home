@@ -4358,6 +4358,11 @@ p.combo-card-description {
     margin-right: var(--space3_5);
 }
 
+.page-section .aside-block .page-section-heading,
+.page-section .aside-block .title.title-4 {
+    margin-bottom: 0;
+}
+
 /* Person profile
    ================================================================================================================ */
 .person-profile {

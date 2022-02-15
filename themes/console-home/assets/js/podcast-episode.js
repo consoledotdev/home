@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let asideWrappers = document.querySelectorAll("[data-aside-wrapper]");
     let setAsideVisibility = () => {
         asideWrappers.forEach((w) => {
-            if (window.innerWidth >= 1025) {
+            if (window.innerWidth >= 769) {
                 w.classList.remove("is-hidden");
             } else {
                 w.classList.add("is-hidden");
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             let el = split.querySelector("[data-aside-content]");
             let asideWrapper = split.querySelector("[data-aside-content-wrapper]");
             let inlineWrapper = split.querySelector("[data-inline-aside-content-wrapper]");
-            if (window.innerWidth >= 1025) {
+            if (window.innerWidth >= 769) {
                 if (inlineWrapper.classList.contains("appended")) {
                     asideWrapper.appendChild(el);
                     inlineWrapper.classList.add("is-hidden");

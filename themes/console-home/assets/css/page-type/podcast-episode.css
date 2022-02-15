@@ -46,7 +46,7 @@ html {
     color: var(--theme-text-2);
 }
 
-.page-podcast-episode .page-section .title.title-4 {
+.page-podcast-episode .page-section > .title.title-4 {
     margin-bottom: var(--space3_5);
 }
 
@@ -67,6 +67,28 @@ html {
 
 .main-podcast-episode .page-section.opening .bottom {
     margin-top: var(--space5);
+}
+
+@media (max-width: 768px) {
+    .main-podcast-episode .page-section.opening .top {
+        gap: var(--space4_5);
+    }
+}
+
+@media (max-width: 639px) {
+    .main-podcast-episode .page-section.opening .bottom {
+        margin-top: var(--space4_5);
+    }
+}
+
+@media (max-width: 480px) {
+    .main-podcast-episode .page-section.opening .top {
+        gap: var(--space4);
+    }
+
+    .main-podcast-episode .page-section.opening .bottom {
+        margin-top: var(--space4);
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1160px) {
@@ -192,7 +214,7 @@ html {
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .main-podcast-episode .aside-block.more-episodes {
         display: none;
     }
@@ -201,6 +223,8 @@ html {
 /* Notes */
 .main-podcast-episode .page-section.notes .title-4.rich-title {
     display: block;
+    text-indent: calc(var(--space4) * -1);
+    margin-left: var(--space4);
 }
 
 .main-podcast-episode .page-section.notes .rich-title .icon {
@@ -227,6 +251,10 @@ html {
 }
 
 @media (max-width: 479px) {
+    .podcast-episode-clipping {
+        align-items: flex-start;
+    }
+
     .podcast-episode-clipping .console-button {
         margin-left: var(--space3);
     }
@@ -248,8 +276,8 @@ html {
 
 /* Transcript */
 .podcast-transcript {
-    margin-top: var(--space4_5);
-    margin-bottom: calc(var(--space5) + var(--space3));
+    margin-top: var(--space5);
+    margin-bottom: calc(var(--space5) + var(--space4));
 }
 
 .main-podcast-episode .box-collapsible {
@@ -283,8 +311,8 @@ html {
 
 /* Aside */
 .main-podcast-episode .aside-content-wrapper {
-    margin-left: 3vw;
-    width: 100%;
+    margin-left: max(var(--space4_5), 3vw);
+    width: auto;
     max-width: none;
 }
 
@@ -324,6 +352,11 @@ html {
 
 .other-episode-meta .episode-no {
     font-style: italic;
+}
+
+.main-podcast-episode .aside.appended {
+    margin-top: calc(var(--space3) * -1);
+    margin-bottom: var(--space4);
 }
 
 /* Subscribe CTA ------------------------------------------------------------- */
