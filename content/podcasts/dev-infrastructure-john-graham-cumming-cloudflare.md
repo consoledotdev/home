@@ -103,7 +103,7 @@ on the end user device?
 
 {{</ podcast-episode/clipping >}}
 
-{{< box-collapsible title="Full transcript" >}}
+{{< box-collapsible title="Full transcript" class="podcast-transcript" >}}
 
 **David Mytton:** Welcome to season two of The Console Podcast. I'm David
 Mytton, co-founder of console.dev, a free weekly newsletter highlighting the

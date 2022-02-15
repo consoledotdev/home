@@ -59,7 +59,7 @@ risk, and what they should do about securing their dependencies. We also explore
 how security threats have changed over the years, and what developers working on
 open source should do to improve their own security.
 
-{{< rich-title-5 icon="future-head" >}}Thomas Ptacek {{</ rich-title-5 >}}
+{{< rich-title-5 icon="future-head" >}}About Thomas Ptacek {{</ rich-title-5 >}}
 
 Thomas Ptacek is a leading security researcher. Best known as one of the
 co-founders of Matasano Security, which was prior to its acquisition by NCC
@@ -100,7 +100,7 @@ don't have these problems.
 
 {{</ podcast-episode/clipping >}}
 
-{{< box-collapsible title="Full transcript" >}}
+{{< box-collapsible title="Full transcript" class="podcast-transcript" >}}
 
 **David Mytton:** Welcome to the Console Podcast. I'm David Mytton, co-founder
 of Console.dev, a free weekly newsletter highlighting the best and most

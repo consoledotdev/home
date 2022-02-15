@@ -68,7 +68,7 @@ Other things mentioned:
 - Everybody Lies
 - Bogdan Vasilescu
 
-{{< box-collapsible title="Full transcript" >}}
+{{< box-collapsible title="Full transcript" class="podcast-transcript" >}}
 
 **David Mytton:** Welcome to the Console DevTools podcast, a show all about
 interesting developer tools. I'm David Mytton, co-founder of Console.

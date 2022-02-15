@@ -72,7 +72,7 @@ Other things mentioned:
 - AWS Identity and Access Management
 - Apache Subversion
 
-{{< box-collapsible title="Full transcript" >}}
+{{< box-collapsible title="Full transcript" class="podcast-transcript" >}}
 
 **David Mytton:** Welcome to the Console DevTools podcast. A show all about
 interesting developer tools. I'm David Mytton, co-founder of Console.

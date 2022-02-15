@@ -202,6 +202,7 @@ html {
 .main-podcast-episode .page-section.notes .title-4.rich-title {
     display: block;
 }
+
 .main-podcast-episode .page-section.notes .rich-title .icon {
     width: calc(var(--space3) + var(--space1));
     height: calc(var(--space3) + var(--space1));
@@ -211,6 +212,32 @@ html {
 }
 
 /* Clippings */
+.podcast-episode-clipping {
+    display: flex;
+    align-items: center;
+    margin-top: var(--space4);
+}
+
+.podcast-episode-clipping .framed-section {
+    flex: 1 1 auto;
+}
+
+.podcast-episode-clipping .console-button {
+    flex: 0 0 auto;
+}
+
+@media (max-width: 479px) {
+    .podcast-episode-clipping .console-button {
+        margin-left: var(--space3);
+    }
+}
+
+@media (min-width: 480px) {
+    .podcast-episode-clipping .console-button {
+        margin-left: var(--space4);
+    }
+}
+
 .podcast-episode-clipping p:nth-child(1n) strong:first-child {
     color: var(--theme-interviewer-name);
 }
@@ -220,6 +247,15 @@ html {
 }
 
 /* Transcript */
+.podcast-transcript {
+    margin-top: var(--space4_5);
+    margin-bottom: calc(var(--space5) + var(--space3));
+}
+
+.main-podcast-episode .box-collapsible {
+    background: var(--theme-collapsible-bg-2);
+}
+
 .main-podcast-episode .box-collapsible .title.title-4 {
     margin-bottom: 0;
 }
@@ -228,12 +264,21 @@ html {
     max-height: none;
 }
 
-.main-podcast-episode .box-collapsible-content p:nth-child(1n) strong:first-child {
+.podcast-transcript .box-collapsible-content p:nth-child(1n) strong:first-child {
     color: var(--theme-interviewer-name);
 }
 
-.main-podcast-episode .box-collapsible-content p:nth-child(2n) strong:first-child {
+.podcast-transcript .box-collapsible-content p:nth-child(2n) strong:first-child {
     color: var(--theme-interviewee-name);
+}
+
+/* About */
+.main-podcast-episode .author-box {
+    margin: var(--space5) 0 var(--space4_5);
+}
+
+.main-podcast-episode .about-console-box {
+    margin: var(--space4_5) 0 var(--space5);
 }
 
 /* Aside */
