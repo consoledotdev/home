@@ -3730,6 +3730,7 @@ p.combo-card-description {
     height: var(--t-lH1);
     width: 1.2em;
     height: 1.2em;
+    stroke: var(--theme-text-2);
 }
 
 .console-player.is-loading .icon-loader {
