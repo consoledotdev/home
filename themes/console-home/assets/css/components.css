@@ -3832,7 +3832,6 @@ p.combo-card-description {
 @media (max-width: 511px) {
     .podcast-embed-content .console-player + .podcast-links .link {
         margin-top: var(--space3);
-        margin-left: 0;
     }
 }
 
