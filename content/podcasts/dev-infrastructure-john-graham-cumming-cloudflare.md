@@ -72,7 +72,7 @@ Times, The San Francisco Chronicle, New Scientist, and other publications.
 
 ### Highlights
 
-{{< podcast-episode/clipping time="01:10"  >}}
+{{< podcast-episode/clipping time="12:41"  >}}
 
 **David Mytton:** One of my favorite Easter eggs is in the Starlink terms and
 conditions about how their legal jurisdiction changes as you leave Earth and
@@ -91,7 +91,7 @@ platform to deal with.
 
 {{</ podcast-episode/clipping >}}
 
-{{< podcast-episode/clipping time="02:15"  >}}
+{{< podcast-episode/clipping time="07:44"  >}}
 
 **John Graham-Cumming:** I think we're going to enter a world in which the
 latency is much, much lower on average. And the interesting question is how is

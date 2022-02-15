@@ -70,7 +70,7 @@ engineer at Fly.io
 
 ### Highlights
 
-{{< podcast-episode/clipping time="01:20"  >}}
+{{< podcast-episode/clipping time="01:37"  >}}
 
 **David Mytton:** What's your take on the current state of security in these
 types of industries?
@@ -87,7 +87,7 @@ software stacks. And those stacks were all generally kind of conceived of in the
 
 {{</ podcast-episode/clipping >}}
 
-{{< podcast-episode/clipping time="02:15"  >}}
+{{< podcast-episode/clipping time="21:15"  >}}
 
 **David Mytton:** For developers working on open source, and on their own
 projects, what can they do to improve the security of those projects for their
