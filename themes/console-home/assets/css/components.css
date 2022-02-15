@@ -3737,6 +3737,18 @@ p.combo-card-description {
     color: var(--theme-text-2);
 }
 
+.console-player-top .title-alt {
+    display: none;
+}
+
+.console-player.is-playing .console-player-top .title-alt {
+    display: block;
+}
+
+.console-player.is-playing .console-player-top .title-alt + .title-main {
+    display: none;
+}
+
 .console-player-top .title:not(:first-child) {
     margin-top: 0;
 }

@@ -47,7 +47,7 @@
         <div class="bottom">
             <div class="framed-section mid framed-section-overlay podcast-embed">
                 <div class="podcast-embed-content">
-                    {{ partial "components/audio-player.html" (dict "src" $.Site.Params.consolePodcastURL "title" $.Site.Params.consolePodcastTitle )}}
+                    {{ partial "components/audio-player.html" (dict "src" $.Site.Params.consolePodcastURL "title" "Play the episode" "titleAlt" "Pause" )}}
                     {{ partial "components/podcast-links.html" (dict "apple" "true" "spotify" "true" "google" "true" "overcast" "true") }}
                 </div>
             </div>

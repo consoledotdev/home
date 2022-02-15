@@ -3,7 +3,10 @@
     <div class="console-player-top">
         <button data-play onclick="blur();" class="console-button-text play" aria-label="Play">{{ partial "icons/play.html" }}</button>
         <button data-pause onclick="blur();" class="console-button-text pause" aria-label="Pause">{{ partial "icons/pause.html" }}</button>
-        <h6 class="title title-5" title="{{ .title }}">{{ .title }}</h6>
+        <h6 class="title title-5" title="{{ .title }}">
+            {{ with .titleAlt }}<span data-title-alt class="title-alt">{{ . }}</span>{{ end }}
+            <span data-title-main class="title-main">{{ .title }}</span>
+        </h6>
     </div>
     <div data-progress class="progress"><span class="bg"></span><span data-elapsed class="elapsed" style="width: 0%"></span></div>
 </div>
