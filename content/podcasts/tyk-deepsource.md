@@ -9,6 +9,7 @@ season: 1
 episode: 9
 date: 2021-09-02T07:45:00Z
 duration: 15:23
+episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/640186a1-91f2-4c62-a312-93641b85671e/audio/fb8ffc23-cf6e-4e67-b4fe-e89a58f61600/default_tc.mp3
 draft: false
 summary:
   Tyk (API gateway) & Deepsource (automated code reviews), a devtools discussion

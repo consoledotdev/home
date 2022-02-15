@@ -15,6 +15,7 @@ season: 2
 episode: 3
 date: 2022-01-20T07:05:00Z
 duration: 27:37
+episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/8e88affe-5a27-4755-875d-5f2947bc5bbb/audio/1865a097-033b-478c-8037-7f2883098ade/default_tc.mp3
 draft: false
 summary:
   Observability - a devtools discussion with Charity Majors (Honeycomb). Episode

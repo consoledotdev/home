@@ -15,6 +15,7 @@ season: 2
 episode: 2
 date: 2022-01-06T07:00:00Z
 duration: 33:18
+episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/a810f07c-1df0-4198-bd2f-a2629d3eeee3/audio/17a8dc25-bab4-473a-8d7d-8d66124778b2/default_tc.mp3
 draft: false
 headerType: fixed
 summary:

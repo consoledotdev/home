@@ -10,6 +10,7 @@ season: 1
 episode: 10
 date: 2021-09-09T07:45:00Z
 duration: 14:44
+episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/83f81c73-ed78-42d9-a9fd-fc2f7631b2d0/audio/a4290c30-c886-4891-881e-c29b991b1e6e/default_tc.mp3
 draft: false
 summary:
   Cue (open source data validation language) & Leapp (manage cloud access

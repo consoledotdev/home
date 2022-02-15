@@ -10,6 +10,7 @@ season: 1
 episode: 8
 date: 2021-08-26T07:45:00Z
 duration: 14:04
+episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/a13efbcc-f622-48c0-865e-c174f57f8c42/audio/fbf982ff-d25e-4bfc-b413-8375f0222152/default_tc.mp3
 draft: false
 summary:
   Fission (decentralized app backend for storage and identity) & AskGit (query

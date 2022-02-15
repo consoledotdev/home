@@ -37,4 +37,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
     };
     setPos();
     window.addEventListener("resize", setPos);
+
+    /* manage audio player fixing */
+    let playerAnchor = document.querySelector("[data-podcast-embed-anchor]");
+    let player = document.querySelector("[data-podcast-embed]");
+    let setPlayer = function () {
+        let playerHeight = player.getBoundingClientRect().height;
+        playerAnchor.style.height = playerHeight + "px";
+        let yPos = playerAnchor.getBoundingClientRect().top + window.scrollY - 104;
+        if (window.scrollY > yPos) {
+            document.body.classList.add("is-fixed-player");
+        } else {
+            document.body.classList.remove("is-fixed-player");
+        }
+    };
+    setPlayer();
+    document.addEventListener("scroll", setPlayer);
+    document.addEventListener("resize", setPlayer);
 });

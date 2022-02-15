@@ -189,6 +189,31 @@ html {
     flex: 1 1 auto;
 }
 
+.is-fixed-player .podcast-embed {
+    position: fixed;
+    left: 6.25vw;
+    right: 6.25vw;
+    top: calc(var(--space5_5) + var(--space2));
+    margin: 0 auto;
+    box-shadow: var(--theme-shadow-3);
+    z-index: 30;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .is-fixed-player .podcast-embed {
+        left: 8vw;
+        right: 8vw;
+    }
+}
+
+/* 1200px + left & right margin (6.25vw) */
+@media (min-width: 1371px) {
+    .is-fixed-player .podcast-embed {
+        left: calc(calc(100vw - 1200px) / 2);
+        right: calc(calc(100vw - 1200px) / 2);
+    }
+}
+
 @media (max-width: 768px) {
     @media (max-width: 414px) {
         .main-podcast-episode .page-section.opening .title-1,
