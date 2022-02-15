@@ -165,6 +165,7 @@
     --theme-empty-dashed-border: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23b5b6bf' stroke-width='2' stroke-dasharray='6%2c 6' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
 
     --theme-collapsible-bg-1: var(--c-grey-01-white-03);
+    --theme-collapsible-bg-2: var(--c-grey-01-white-03);
     --theme-collapsible-bg-blue-1: var(--c-blue-03);
 
     --theme-badge-text: var(--c-white-00-absolute);
