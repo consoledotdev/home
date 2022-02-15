@@ -137,6 +137,27 @@
     width: 82%;
 }
 
+/* .icon-loader
+    --------------------------------------------------------------- */
+.icon-loader .path {
+    animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
+}
+
 /* Illustrations
    ================================================================================================================ */
 .illustration {
@@ -3704,11 +3725,24 @@ p.combo-card-description {
     overflow: hidden;
 }
 
+.console-player .icon-loader {
+    display: none;
+    height: var(--t-lH1);
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.console-player.is-loading .icon-loader {
+    display: initial;
+}
+
 .console-player.is-playing .pause,
 .console-player:not(.is-playing) .play {
     display: initial;
 }
 
+.console-player.is-loading .play,
+.console-player.is-loading .pause,
 .console-player.is-playing .play,
 .console-player:not(.is-playing) .pause {
     display: none;
@@ -3728,6 +3762,7 @@ p.combo-card-description {
     height: var(--t-lH1);
 }
 
+/* title */
 .console-player-top .title {
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -3735,9 +3770,20 @@ p.combo-card-description {
     margin-bottom: 0;
     margin-left: var(--space2_5);
     color: var(--theme-text-2);
+    flex: 1 1 auto;
 }
 
+.console-player-top .title-loading,
 .console-player-top .title-alt {
+    display: none;
+}
+
+.console-player.is-loading .console-player-top .title-loading {
+    display: initial;
+}
+
+.console-player.is-loading .console-player-top .title-alt,
+.console-player.is-loading .console-player-top .title-main {
     display: none;
 }
 
@@ -3753,6 +3799,42 @@ p.combo-card-description {
     margin-top: 0;
 }
 
+/* audio time */
+.console-player-top .audio-time {
+    display: none;
+    vertical-align: top;
+    white-space: nowrap;
+    font-size: var(--t-size-3);
+    line-height: var(--t-lH3);
+}
+
+.console-player-top .audio-time span {
+    vertical-align: top;
+}
+
+.console-player.show-time .console-player-top .audio-time {
+    display: inline-block;
+}
+
+.console-player-top .audio-time .total {
+    color: var(--theme-text-2);
+}
+
+.console-player-top .audio-time .elapsed {
+    display: none;
+    color: var(--theme-text-2);
+}
+
+.console-player-top .audio-time .elapsed span {
+    color: var(--theme-text-1);
+}
+
+.console-player.is-playing .console-player-top .audio-time .elapsed,
+.console-player.is-paused .console-player-top .audio-time .elapsed {
+    display: inline-block;
+}
+
+/* progress */
 .console-player .progress {
     position: relative;
     width: 100%;

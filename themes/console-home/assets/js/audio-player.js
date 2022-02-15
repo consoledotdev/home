@@ -8,6 +8,8 @@ class AudioPlayer {
         this.audioEl = this.wrapper.querySelector("[data-console-player-audio]");
         this.progress = this.wrapper.querySelector("[data-progress]");
         this.elapsed = this.progress.querySelector("[data-elapsed]");
+        this.timeElapsed = this.wrapper.querySelector("[data-time-elapsed]");
+        this.timeTotal = this.wrapper.querySelector("[data-time-total]");
 
         this.isDragging = false;
         this.draggedToPos = -1;
@@ -15,6 +17,7 @@ class AudioPlayer {
         this.dragTime = this.dragTime.bind(this);
         this.stopDragging = this.stopDragging.bind(this);
         this.onTimeUpdate = this.onTimeUpdate.bind(this);
+        this.onLoadedMetadata = this.onLoadedMetadata.bind(this);
         this.play = this.play.bind(this);
         this.pause = this.pause.bind(this);
 
@@ -29,11 +32,11 @@ class AudioPlayer {
         this.playBtn.addEventListener("click", this.play);
         this.pauseBtn.addEventListener("click", this.pause);
         this.audioEl.ontimeupdate = this.onTimeUpdate;
+        this.audioEl.onloadedmetadata = this.onLoadedMetadata;
     }
 
     dragTime(e) {
         if (e.type == "mousedown") this.isDragging = true;
-
         if (this.isDragging) {
             let rect = this.progress.getBoundingClientRect();
             let pos = parseFloat((e.offsetX / rect.width) * 100).toFixed(2);
@@ -41,10 +44,10 @@ class AudioPlayer {
             this.draggedToPos = pos;
         }
     }
+
     stopDragging() {
         if (this.isDragging) {
             this.isDragging = false;
-
             if (this.draggedToPos >= 0) {
                 let newTime = (this.audioEl.duration ? this.audioEl.duration : 0) * (this.draggedToPos / 100);
                 this.audioEl.currentTime = newTime;
@@ -55,26 +58,47 @@ class AudioPlayer {
 
     onTimeUpdate(e) {
         if (!this.isDragging) {
+            this.timeElapsed.textContent = this.getFormattedTime(e.target.currentTime);
             let elapsed = parseFloat((e.target.currentTime / e.target.duration) * 100).toFixed(2);
             this.elapsed.style.width = elapsed + "%";
         }
     }
 
-    play() {
-        this.checkOtherPlayers();
-        this.audioEl.play();
-        this.wrapper.classList.add("is-playing");
+    onLoadedMetadata(e) {
+        this.wrapper.classList.add("is-loaded-metadata");
+        this.timeTotal.textContent = this.getFormattedTime(e.target.duration);
+    }
+
+    async play() {
+        try {
+            this.checkOtherPlayers();
+            this.wrapper.classList.add("is-loading");
+            await this.audioEl.play();
+            this.wrapper.classList.add("is-playing");
+            this.wrapper.classList.remove("is-loading");
+        } catch (err) {
+            this.wrapper.classList.remove("is-playing");
+            this.wrapper.classList.remove("is-loading");
+            console.err("Can't play audio: ", err);
+        }
     }
 
     pause() {
         this.audioEl.pause();
         this.wrapper.classList.remove("is-playing");
+        this.wrapper.classList.add("is-paused");
     }
 
     checkOtherPlayers() {
         window.CNSL.players.forEach((p) => {
             if (p.public.isPlaying()) p.public.stopPlaying();
         });
+    }
+
+    getFormattedTime(duration) {
+        let mins = Math.floor(duration / 60);
+        let secs = Math.floor(duration % 60);
+        return ("0" + mins).slice(-2) + ":" + ("0" + secs).slice(-2);
     }
 
     publicMethods() {

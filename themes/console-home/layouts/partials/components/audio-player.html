@@ -1,12 +1,18 @@
-<div data-console-player-wrapper class="console-player">
+<div data-console-player-wrapper class="console-player{{with .classes}} {{ . }}{{ end }}">
     <audio data-console-player-audio style="display: none;" preload="none" src="{{ .src }}"></audio>
     <div class="console-player-top">
+        {{ partial "icons/loader.html" }}
         <button data-play onclick="blur();" class="console-button-text play" aria-label="Play">{{ partial "icons/play.html" }}</button>
         <button data-pause onclick="blur();" class="console-button-text pause" aria-label="Pause">{{ partial "icons/pause.html" }}</button>
         <h6 class="title title-5" title="{{ .title }}">
+            <span class="title-loading">Loading&hellip;</span>
             {{ with .titleAlt }}<span data-title-alt class="title-alt">{{ . }}</span>{{ end }}
             <span data-title-main class="title-main">{{ .title }}</span>
         </h6>
+        <span class="audio-time">
+            <span class="elapsed"><span data-time-elapsed>00:00</span> /</span>
+            <span data-time-total class="total">{{ .duration }}</span>
+        </span>
     </div>
     <div data-progress class="progress"><span class="bg"></span><span data-elapsed class="elapsed" style="width: 0%"></span></div>
 </div>
