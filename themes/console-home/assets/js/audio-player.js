@@ -109,6 +109,15 @@ class AudioPlayer {
             stopPlaying: () => {
                 this.pause();
             },
+            playAtTime: (time) => {
+                let parts = time.split(":");
+                let mins = parts[0];
+                let secs = parts[1];
+                let atTime = parseInt(parts[0] * 60);
+                atTime += parseInt(parts[1]);
+                this.audioEl.currentTime = atTime;
+                if (this.audioEl.paused) this.play();
+            },
         };
     }
 }

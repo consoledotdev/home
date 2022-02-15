@@ -54,4 +54,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
     setPlayer();
     document.addEventListener("scroll", setPlayer);
     document.addEventListener("resize", setPlayer);
+
+    /* manage clippings playback */
+    let clippingPlayers = document.querySelectorAll("[data-play-at-time]");
+    clippingPlayers.forEach((p) => {
+        let playAtTime = (e) => {
+            let time = e.currentTarget.dataset.playAtTime;
+            e.currentTarget.blur();
+            window.CNSL.players[0].public.playAtTime(time);
+        };
+        p.addEventListener("click", playAtTime);
+    });
 });
