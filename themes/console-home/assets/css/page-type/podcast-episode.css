@@ -221,6 +221,10 @@ html {
 }
 
 /* Notes */
+.main-podcast-episode .page-section.notes {
+    margin-bottom: var(--space5_5);
+}
+
 .main-podcast-episode .page-section.notes .title-4.rich-title {
     display: block;
     text-indent: calc(var(--space4) * -1);
@@ -277,7 +281,6 @@ html {
 /* Transcript */
 .podcast-transcript {
     margin-top: var(--space5);
-    margin-bottom: calc(var(--space5) + var(--space4));
 }
 
 .main-podcast-episode .box-collapsible {
@@ -301,12 +304,12 @@ html {
 }
 
 /* About */
-.main-podcast-episode .author-box {
-    margin: var(--space5) 0 var(--space4_5);
+.main-podcast-episode .page-section.about > * {
+    margin-top: var(--space4_5);
 }
 
 .main-podcast-episode .about-console-box {
-    margin: var(--space4_5) 0 var(--space5);
+    margin: var(--space4_5) 0 var(--space5_5);
 }
 
 /* Aside */
