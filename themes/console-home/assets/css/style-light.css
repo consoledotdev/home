@@ -222,6 +222,9 @@
     --theme-interviewer-name: var(--theme-text-1);
     --theme-interviewee-name: var(--c-green-06);
 
+    /* Podcast widget */
+    --theme-podcast-widget-title: var(--c-green-06);
+
     /* Vendor Review page specific */
     --theme-vendor-review-page-bg: var(--theme-content-bg-2);
     --theme-rating-summary-overall-border: var(--theme-framed-section-default-border);
