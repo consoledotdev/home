@@ -449,6 +449,26 @@ body.show-planes:after {
     }
 }
 
+.page-home .podcast-widget {
+    margin-top: var(--space4_5);
+}
+
+@media (max-width: 420px) {
+    .page-home .podcast-widget .title span:before {
+        content: "Podcast";
+    }
+
+    .page-home .podcast-widget .podcast-widget-links > .link:before {
+        content: "See all";
+    }
+
+    @media (max-width: 380px) {
+        .page-home .podcast-widget .date {
+            display: none;
+        }
+    }
+}
+
 .main-article,
 .main-feature {
     z-index: 30;
