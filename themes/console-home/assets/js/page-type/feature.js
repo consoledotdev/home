@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     setAsideVisibility();
     window.addEventListener("resize", setAsideVisibility);
 
-    if (document.body.classList.contains("page-podcasts")) {
+    if (document.body.classList.contains("page-podcast")) {
         /* manage season info position */
         let contentSplits = document.querySelectorAll("[data-content-split]");
         let setPos = () => {

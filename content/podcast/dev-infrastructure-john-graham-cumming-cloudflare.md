@@ -32,9 +32,9 @@ pageType: podcast-episode
 customPageStyle: true
 xlViewport:
   largeText: true
-topImg1Src: /img/podcasts/cloudflare-john-graham-cumming-profile.jpg
+topImg1Src: /img/podcast/cloudflare-john-graham-cumming-profile.jpg
 topImg2Src: /img/favicons/www.cloudflare.com.png
-ogImg: /img/podcasts/cloudflare-john-graham-cumming-profile.jpg
+ogImg: /img/podcast/cloudflare-john-graham-cumming-profile.jpg
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg

@@ -3,7 +3,7 @@ title: "DevTools Podcast"
 date: 2022-02-01T15:23:18+01:00
 draft: false
 summary: Interviews with interesting people in the devtools space.
-isPage: podcasts
+isPage: podcast
 customStyle: true
 pageType: feature
 customPageStyle: true

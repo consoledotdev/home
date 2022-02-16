@@ -39,7 +39,7 @@ authorBio:
   Imperial College London. David has been a developer for 15+ years.
 author2Name: Jean Yang
 author2URL: https://twitter.com/jeanqasaur
-author2Img: /img/podcasts/akita-jean-yang-profile.jpg
+author2Img: /img/podcast/akita-jean-yang-profile.jpg
 author2Bio:
   is CEO of Akita Software. Jean earned her PhD in software correctness and
   programming language design from MIT and then became a professor in computer

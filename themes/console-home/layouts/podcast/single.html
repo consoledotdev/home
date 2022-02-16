@@ -5,7 +5,7 @@
     <section class="page-section page-section-podcast-episode opening">
         <div class="top">
             <div class="left">
-                <a href="/podcasts/" class="console-button-text console-button-green icon-left">
+                <a href="/podcast/" class="console-button-text console-button-green icon-left">
                     {{ partial "icons/podcast.html" }}
                     <span>DevTools Podcast</span>
                 </a>
@@ -81,7 +81,7 @@
                             {{ if eq .Params.season 1 }}
 
                                     <div class="person-profile">
-                                        {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/podcasts/akita-jean-yang-profile.jpg" "imgSize" "128" "alt" "Photo of Jean Yang" ) }}
+                                        {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/podcast/akita-jean-yang-profile.jpg" "imgSize" "128" "alt" "Photo of Jean Yang" ) }}
                                         <a href="https://twitter.com/jeanqasaur" target="_blank" class="link icon-link" title="https://twitter.com/jeanqasaur"><span>Jean Yang</span> {{ partial "icons/external-link.html" }}</a>
                                     </div>
 
@@ -94,7 +94,7 @@
                             <h5 class="title title-4">More episodes</h5>
                         </div>
                         <div class="other-episodes">
-                            {{ $section := .Site.GetPage "section" "podcasts" }}
+                            {{ $section := .Site.GetPage "section" "podcast" }}
                             {{ $pages := $section.Pages }}
                             {{ $pageTitle := .Params.title }}
                             {{ range (where $pages.ByPublishDate.Reverse "Params.season" .Params.season) }}

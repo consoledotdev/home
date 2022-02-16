@@ -33,9 +33,9 @@ pageType: podcast-episode
 customPageStyle: true
 xlViewport:
   largeText: true
-topImg1Src: /img/podcasts/fly.io-thomas-ptacek-profile.jpg
+topImg1Src: /img/podcast/fly.io-thomas-ptacek-profile.jpg
 topImg2Src: /img/favicons/fly.io.png
-ogImg: /img/podcasts/honeycomb-charity-majors-profile.jpg
+ogImg: /img/podcast/honeycomb-charity-majors-profile.jpg
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
