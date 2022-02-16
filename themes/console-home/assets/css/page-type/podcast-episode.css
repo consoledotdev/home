@@ -112,7 +112,7 @@ html {
     max-width: none;
     width: 100%;
     height: auto;
-    border: 1px solid var(--theme-content-bg-3);
+    border: var(--theme-border-2);
 }
 
 /* Logo + Profile */

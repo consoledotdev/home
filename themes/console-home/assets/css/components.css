@@ -2585,6 +2585,7 @@ body:not(.mobile) .console-control:hover:before {
     flex: 0 0 auto;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    border-bottom: var(--theme-border-2);
 }
 
 /* Combo card content --------------------------- */
