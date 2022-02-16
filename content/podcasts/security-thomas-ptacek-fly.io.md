@@ -17,7 +17,7 @@ season: 2
 episode: 2
 date: 2022-01-13T07:05:00Z
 duration: 32:13
-episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/34131858-ecea-45c6-b5db-64c5ec8bd0ff/audio/f61fc39a-7b0f-45f2-8e31-d507c5254572/default_tc.mp3;
+episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/34131858-ecea-45c6-b5db-64c5ec8bd0ff/audio/f61fc39a-7b0f-45f2-8e31-d507c5254572/default_tc.mp3
 draft: false
 summary:
   Security - a devtools discussion with Thomas Ptacek (Fly.io). Episode 2
