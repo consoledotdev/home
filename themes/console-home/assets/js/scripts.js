@@ -440,6 +440,32 @@ class Modal {
     }
 }
 
+class ComboBox {
+    constructor(el) {
+        this.el = el;
+        this.threshold = el.dataset.verticalThreshold;
+
+        this.checkThreshold = this.checkThreshold.bind(this);
+
+        this.bind();
+    }
+
+    bind() {
+        if (this.threshold) {
+            window.addEventListener("resize", this.checkThreshold);
+            this.checkThreshold();
+        }
+    }
+
+    checkThreshold() {
+        if (window.innerWidth <= this.threshold) {
+            this.el.classList.add("is-vertical");
+        } else {
+            this.el.classList.remove("is-vertical");
+        }
+    }
+}
+
 document.addEventListener("DOMContentLoaded", (event) => {
     let modalLinks = document.querySelectorAll("[data-modal-link]");
     if (modalLinks) new Modal(modalLinks);
@@ -448,6 +474,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     if (tablesWithFixed) {
         tablesWithFixed.forEach((t) => {
             new TableWithFixed(t);
+        });
+    }
+
+    let comboBoxes = document.querySelectorAll("[data-combo-box]");
+    if (comboBoxes) {
+        comboBoxes.forEach((b) => {
+            new ComboBox(b);
         });
     }
 });
