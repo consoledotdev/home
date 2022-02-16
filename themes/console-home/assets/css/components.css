@@ -4018,7 +4018,6 @@ p.combo-card-description {
 
 .podcast-widget-links > .link {
     flex: 1 0 auto;
-    margin-right: var(--space3_5);
 }
 
 .podcast-widget-links > .link:before {
@@ -4044,6 +4043,7 @@ p.combo-card-description {
 
 .podcast-widget.links-body .podcast-widget-links {
     margin-left: var(--space3);
+    margin-right: var(--space3_5);
 }
 
 /* Meta -------------------------------------------------------------------------------- */
