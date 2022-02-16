@@ -3729,7 +3729,7 @@ p.combo-card-description {
    ================================================================================================================ */
 .console-player {
     flex: 0 1 auto;
-    overflow: hidden;
+    /* no hidden overflow: progress scrubbing */
 }
 
 .console-player .icon-loader {
@@ -3847,18 +3847,20 @@ p.combo-card-description {
 .console-player .progress {
     position: relative;
     width: 100%;
-    height: calc(var(--space1) / 2);
-    padding: var(--space1) 0;
+    height: var(--space0);
+    padding: var(--space2) 0;
+    margin: calc(var(--space1) * -1) 0;
     cursor: pointer;
 }
 
 .console-player .progress .bg,
 .console-player .progress .elapsed {
     position: absolute;
-    height: calc(var(--space1) / 2);
+    height: var(--space0);
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    pointer-events: none;
 }
 
 .console-player .progress .bg {
