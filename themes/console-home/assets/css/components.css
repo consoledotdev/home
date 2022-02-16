@@ -2529,43 +2529,42 @@ body:not(.mobile) .console-control:hover:before {
     margin-left: 37.1%;
 }
 
-@media (max-width: 768px) {
-    /* Logo + Profile */
-    .combo-box-visuals.logo-profile .plane-picture.right {
-        width: 76.82%;
-        clip-path: polygon(30.9% 0%, 0% 100%, 100% 100%, 100% 0%);
-    }
-
-    /* Logo + Logo */
-    .combo-box-visuals.logo-logo .plane-picture.left {
-        width: 61.5%;
-        clip-path: polygon(0% 0%, 0% 100%, 61.46% 100%, 100% 0%);
-    }
-
-    .combo-box-visuals.logo-logo .plane-picture.mid {
-        clip-path: polygon(97.18% 0%, 0% 100%, 2.82% 100%, 100% 0%);
-    }
-
-    .combo-box-visuals.logo-logo .plane-picture.right {
-        width: 61.5%;
-        clip-path: polygon(38.54% 0%, 0% 100%, 100% 100%, 100% 0%);
-    }
-
-    /* Combo card logo --------------------------- */
-    /* Logo + Logo */
-    .combo-box-visuals.logo-logo .plane-picture.left .logo {
-        margin-left: 23.46%;
-    }
-
-    .combo-box-visuals.logo-logo .plane-picture.right .logo {
-        margin-left: 49.72%;
-    }
-}
-
 @media (min-width: 769px) {
     .combo-box {
         max-width: calc(var(--space7_5) - var(--space5));
     }
+}
+
+/* Vertical layout --------------------------------------------------------------------------- */
+/* Logo + Profile */
+.combo-box.is-vertical .combo-box-visuals.logo-profile .plane-picture.right {
+    width: 76.82%;
+    clip-path: polygon(30.9% 0%, 0% 100%, 100% 100%, 100% 0%);
+}
+
+/* Logo + Logo */
+.combo-box.is-vertical .combo-box-visuals.logo-logo .plane-picture.left {
+    width: 61.5%;
+    clip-path: polygon(0% 0%, 0% 100%, 61.46% 100%, 100% 0%);
+}
+
+.combo-box.is-vertical .combo-box-visuals.logo-logo .plane-picture.mid {
+    clip-path: polygon(97.18% 0%, 0% 100%, 2.82% 100%, 100% 0%);
+}
+
+.combo-box.is-vertical .combo-box-visuals.logo-logo .plane-picture.right {
+    width: 61.5%;
+    clip-path: polygon(38.54% 0%, 0% 100%, 100% 100%, 100% 0%);
+}
+
+/* Combo card logo --------------------------- */
+/* Logo + Logo */
+.combo-box.is-vertical .combo-box-visuals.logo-logo .plane-picture.left .logo {
+    margin-left: 23.46%;
+}
+
+.combo-box.is-vertical .combo-box-visuals.logo-logo .plane-picture.right .logo {
+    margin-left: 49.72%;
 }
 
 /* Combo Card

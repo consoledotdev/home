@@ -27,7 +27,7 @@
         <h5 class="title title-4">
             <span>Latest Episode</span> <span>/ S{{ if lt $s 10 }}0{{ end }}{{ $s }} E{{ if lt $e 10 }}0{{ end }}{{ $e }} — {{ $featured.Date.Format "2006-01-02" }}</span>
         </h5>
-        {{ partial "components/podcast/combo-card.html" (dict "visualsType" "logo-profile" "content" $featured) }}
+        {{ partial "components/podcast/combo-card.html" (dict "visualsType" "logo-profile" "comboBoxVerticalThreshold" "768" "content" $featured) }}
     </section>
 	<div class="content-split" data-content-split>
 		<aside data-aside-wrapper class="aside-wrapper">
@@ -73,7 +73,7 @@
                     </div>
                     <div class="feature-items" data-feature-items>
                         {{ range after 1 (where .Pages.ByPublishDate.Reverse "Params.season" 2) }}
-                            {{ partial "components/podcast/combo-card.html" (dict "visualsType" "logo-profile" "content" .) }}
+                            {{ partial "components/podcast/combo-card.html" (dict "visualsType" "logo-profile" "comboBoxVerticalThreshold" "768" "content" .) }}
                         {{ end }}
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                 <div class="page-section-sub">
                     <div class="feature-items" data-feature-items>
                         {{ range (where .Pages.ByPublishDate.Reverse "Params.season" 1) }}
-                            {{ partial "components/podcast/combo-card.html" (dict "visualsType" "logo-logo" "content" .) }}
+                            {{ partial "components/podcast/combo-card.html" (dict "visualsType" "logo-logo" "comboBoxVerticalThreshold" "768" "content" .) }}
                         {{ end }}
                     </div>
                 </div>

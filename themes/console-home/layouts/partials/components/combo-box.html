@@ -1,4 +1,4 @@
-<div class="combo-box">
+<div data-combo-box {{ with .verticalThreshold }} data-vertical-threshold="{{ . }}"{{ end }} class="combo-box{{ with .isVertical}} is-vertical{{ end }}">
     <img class="ratio" src="/img/ratio-combo.png" alt="">
     <div class="combo-box-visuals{{ with .visualsType }} {{ . }}{{ end }}">
         {{ if eq .visualsType "logo-profile" }}

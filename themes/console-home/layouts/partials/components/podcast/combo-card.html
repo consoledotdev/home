@@ -1,6 +1,6 @@
 <div class="combo-card">
     <a data-card-link onclick="blur();" class="card-link" href="{{ .content.RelPermalink }}"></a>
-    {{ partial "components/combo-box.html" (dict "visualsType" .visualsType "content" .content) }}
+    {{ partial "components/combo-box.html" (dict "visualsType" .visualsType "verticalThreshold" .comboBoxVerticalThreshold "content" .content) }}
     <div class="combo-card-content-wrapper">
         <div class="combo-card-content">
             <div class="combo-card-heading">
