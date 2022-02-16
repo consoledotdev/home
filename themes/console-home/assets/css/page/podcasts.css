@@ -171,28 +171,23 @@ html {
 
 .page-podcasts .page-section-feature-root.featured .combo-card-description {
     margin-bottom: 0;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
-    overflow: hidden;
-    word-break: break-word;
 }
 
 @media (min-width: 769px) {
     @media (max-width: 1024px) {
-        .page-podcasts .page-section-feature-root.featured .combo-card-description {
+        .page-podcasts .page-section-feature-root.featured .combo-card-description.clamp-6 {
             -webkit-line-clamp: 5;
         }
     }
 
     @media (max-width: 960px) {
-        .page-podcasts .page-section-feature-root.featured .combo-card-description {
+        .page-podcasts .page-section-feature-root.featured .combo-card-description.clamp-6 {
             -webkit-line-clamp: 4;
         }
     }
 
     @media (max-width: 860px) {
-        .page-podcasts .page-section-feature-root.featured .combo-card-description {
+        .page-podcasts .page-section-feature-root.featured .combo-card-description.clamp-6 {
             -webkit-line-clamp: 2;
         }
     }

@@ -689,6 +689,26 @@ body.show-planes:after {
     margin-top: calc(var(--space6) * -1);
 }
 
+[class^="clamp-"],
+[class*=" clamp-"] {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-word;
+}
+
+.clamp-1 {
+    -webkit-line-clamp: 1;
+}
+
+.clamp-2 {
+    -webkit-line-clamp: 2;
+}
+
+.clamp-6 {
+    -webkit-line-clamp: 6;
+}
+
 /* Main Nav
    ================================================================================================================ */
 

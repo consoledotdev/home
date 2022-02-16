@@ -4,13 +4,13 @@
     <div class="combo-card-content-wrapper">
         <div class="combo-card-content">
             <div class="combo-card-heading">
-                <div class="combo-card-title">{{ .content.Params.title }}</div>
+                <div class="combo-card-title clamp-2">{{ .content.Params.title }}</div>
                 <div class="combo-card-subtitle">
-                    <p class="combo-card-subtitle-main">with {{ .content.Params.who }}</p>
-                    <p class="combo-card-subtitle-extra">{{ with .content.Params.role }}{{ . }}, {{end}}{{ .content.Params.org }}</p>
+                    <p class="combo-card-subtitle-main clamp-2">with {{ .content.Params.who }}</p>
+                    <p class="combo-card-subtitle-extra clamp-1">{{ with .content.Params.role }}{{ . }}, {{end}}{{ .content.Params.org }}</p>
                 </div>
             </div>
-            <p class="small combo-card-description">{{ .content.Params.what }}</p>
+            <p class="small combo-card-description clamp-6">{{ .content.Params.what }}</p>
             <div class="combo-card-meta">
                 {{ $s := .content.Params.season }}
                 {{ $e := .content.Params.episode }}
