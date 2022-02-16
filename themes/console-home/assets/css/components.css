@@ -3729,6 +3729,7 @@ p.combo-card-description {
    ================================================================================================================ */
 .console-player {
     flex: 0 1 auto;
+    min-width: 0; /* Prevents flex children from overflowing */
     /* no hidden overflow: progress scrubbing */
 }
 
