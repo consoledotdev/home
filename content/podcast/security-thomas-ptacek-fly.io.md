@@ -101,7 +101,7 @@ don't have these problems.
 
 {{</ podcast-episode/clipping >}}
 
-{{< box-collapsible title="Full transcript" class="podcast-transcript" >}}
+{{< box-collapsible title="Full transcript" class="podcast-transcript is-expanded" >}}
 
 **David Mytton:** Welcome to the Console Podcast. I'm David Mytton, co-founder
 of Console.dev, a free weekly newsletter highlighting the best and most

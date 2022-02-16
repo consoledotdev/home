@@ -68,7 +68,7 @@ Other things mentioned:
 - Go
 - Akita Software
 
-{{< box-collapsible title="Full transcript" class="podcast-transcript" >}}
+{{< box-collapsible title="Full transcript" class="podcast-transcript is-expanded" >}}
 
 **David Mytton:** Welcome to the Console DevTools podcast, a show all about
 interesting developer tools. I'm David Mytton, co-founder of Console.

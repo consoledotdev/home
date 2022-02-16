@@ -74,7 +74,7 @@ is the co-author of O'Reilly's Database Reliability Engineering.
 
 {{</ podcast-episode/clipping >}}
 
-{{< box-collapsible title="Full transcript" class="podcast-transcript" >}}
+{{< box-collapsible title="Full transcript" class="podcast-transcript is-expanded" >}}
 
 **David Mytton:** Welcome to the Console podcast. I'm David Mytton, co-founder
 of console.dev, a free weekly newsletter highlighting the best and most
