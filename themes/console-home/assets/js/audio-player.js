@@ -79,7 +79,7 @@ class AudioPlayer {
         } catch (err) {
             this.wrapper.classList.remove("is-playing");
             this.wrapper.classList.remove("is-loading");
-            console.err("Can't play audio: ", err);
+            console.error("Can't play audio: ", err);
         }
     }
 
