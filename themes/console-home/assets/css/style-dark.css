@@ -35,6 +35,8 @@
     --theme-content-bg-3: var(--c-grey-09-black-03);
     --theme-content-bg-4: var(--c-grey-08);
 
+    --theme-shading-RGB: var(--c-white-00-absolute-RGB);
+
     --theme-hero-fade-top: linear-gradient(180deg, rgba(10, 10, 11, 0.4) 0%, rgba(10, 10, 11, 0) 100%);
     --theme-hero-fade-bottom: linear-gradient(0deg, rgba(10, 10, 11, 0.4) 0%, rgba(10, 10, 11, 0) 100%);
 

@@ -405,15 +405,19 @@ html {
 }
 
 @media (min-width: 1280px) {
-    .other-episode .title.title-6 {
+    .xl-viewport-large-text .other-episode .title.title-6 {
         font-size: var(--t-size2);
     }
 
-    .other-episode-title-extras p:last-child {
+    .xl-viewport-large-text .other-episode-title-extras p:last-child {
         font-size: var(--t-size-2);
     }
 
-    .other-episode-meta p {
+    .xl-viewport-large-text .other-episode-meta p {
         font-size: var(--t-size-1);
+    }
+
+    .xl-viewport-large-text .console-player .icon-loader {
+        font-size: var(--t-size1);
     }
 }

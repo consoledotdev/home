@@ -210,6 +210,16 @@ html {
     background: var(--c-blue-07);
 }
 
+.page-podcasts .combo-card:hover .console-button.quiet .icon-fill,
+.page-podcasts .combo-card:focus .console-button.quiet .icon-fill {
+    fill: var(--c-white-00-absolute);
+}
+
+.page-podcasts .combo-card:hover .console-button.quiet .icon-stroke,
+.page-podcasts .combo-card:focus .console-button.quiet .icon-stroke {
+    stroke: var(--c-white-00-absolute);
+}
+
 .page-podcasts .combo-card:active .console-button.quiet {
     background: var(--c-blue-08);
 }
@@ -217,11 +227,13 @@ html {
 .page-podcasts .combo-card:hover .console-button.play .hover-content,
 .page-podcasts .combo-card:focus .console-button.play .hover-content {
     background: var(--c-blue-07);
+    color: var(--c-white-00-absolute);
     opacity: 1;
 }
 
 .page-podcasts .combo-card:active .console-button.play .hover-content {
     background: var(--c-blue-08);
+    color: var(--c-white-00-absolute);
     opacity: 1;
 }
 

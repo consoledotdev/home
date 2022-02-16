@@ -35,6 +35,8 @@
     --theme-content-bg-3: var(--c-grey-01-white-03);
     --theme-content-bg-4: var(--c-grey-01-white-03);
 
+    --theme-shading-RGB: var(--c-grey-05-RGB);
+
     --theme-hero-fade-top: linear-gradient(180deg, rgba(245, 248, 251, 0.4) 0%, rgba(245, 248, 251, 0) 100%);
     --theme-hero-fade-bottom: linear-gradient(0deg, rgba(245, 248, 251, 0.4) 0%, rgba(245, 248, 251, 0) 100%);
 
@@ -307,6 +309,10 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
 }
 
 .theme .tool-card .bottom {
+    background-color: var(--theme-content-bg-0);
+}
+
+.theme .combo-card {
     background-color: var(--theme-content-bg-0);
 }
 

@@ -918,7 +918,14 @@
 
 /* Quiet */
 .console-button.quiet:not(:hover):not(:focus):not(:active) {
-    background: rgba(var(--c-white-00-absolute-RGB), 0.1);
+    background: rgba(var(--theme-shading-RGB), 0.1);
+    color: var(--theme-text-1);
+}
+.console-button.quiet:not(:hover):not(:focus):not(:active) .icon-fill {
+    fill: var(--theme-text-1);
+}
+.console-button.quiet:not(:hover):not(:focus):not(:active) .icon-stroke {
+    stroke: var(--theme-text-1);
 }
 
 /* Text Button
@@ -3726,15 +3733,14 @@ p.combo-card-description {
 
 .console-player .icon-loader {
     display: none;
-    height: var(--t-lH1);
+    line-height: var(--t-lH1);
     width: 1.2em;
     height: 1.2em;
-    font-size: var(--t-size1);
     stroke: var(--theme-text-2);
 }
 
 .console-player.is-loading .icon-loader {
-    display: initial;
+    display: block;
 }
 
 .console-player.is-playing .pause,
@@ -3770,6 +3776,7 @@ p.combo-card-description {
     overflow: hidden;
     margin-bottom: 0;
     margin-left: var(--space2_5);
+    margin-right: var(--space2_5);
     color: var(--theme-text-2);
     flex: 1 1 auto;
 }
