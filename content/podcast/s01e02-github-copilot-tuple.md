@@ -28,7 +28,8 @@ xlViewport:
   largeText: true
 topImg1Src: /img/favicons/copilot.github.com.png
 topImg2Src: /img/favicons/tuple.app.png
-ogImg: /img/favicons/github.com.png
+ogImg: /img/podcast/podcast-cover.png
+twitterCard: https://player.simplecast.com/67ba5a7c-dd85-447d-971a-b8c4e7be8ab6?dark=true
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg

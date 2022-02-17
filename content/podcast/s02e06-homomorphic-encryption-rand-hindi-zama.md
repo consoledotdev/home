@@ -32,7 +32,8 @@ xlViewport:
   largeText: true
 topImg1Src: /img/podcast/zama-rand-hindi-profile.jpeg
 topImg2Src: /img/favicons/zama.ai.png
-ogImg: /img/podcast/zama-rand-hindi-profile.jpeg
+ogImg: /img/podcast/podcast-cover.png
+twitterCard: https://player.simplecast.com/0684a0d5-f177-4c80-a9a6-d69652c9fb59?dark=true
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg

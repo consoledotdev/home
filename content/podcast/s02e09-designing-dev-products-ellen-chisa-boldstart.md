@@ -31,7 +31,8 @@ xlViewport:
  largeText: true
 topImg1Src: /img/podcast/boldstart-ellen-chisa-profile.png
 topImg2Src: /img/favicons/boldstart.vc.png
-ogImg: /img/podcast/boldstart-ellen-chisa-profile.png
+ogImg: /img/podcast/podcast-cover.png
+twitterCard: https://player.simplecast.com/428ff543-da40-40c3-9772-31c5496cac63?dark=true
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg

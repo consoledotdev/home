@@ -28,7 +28,8 @@ xlViewport:
   largeText: true
 topImg1Src: /img/favicons/snyk.io.jpg
 topImg2Src: /img/favicons/github.com.png
-ogImg: /img/favicons/snyk.io.jpg
+ogImg: /img/podcast/podcast-cover.png
+twitterCard: https://player.simplecast.com/d80275f0-4cf4-4fd8-b63b-55ea67ad61b1?dark=true
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg

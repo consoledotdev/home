@@ -32,7 +32,8 @@ xlViewport:
  largeText: true
 topImg1Src: /img/podcast/warp-michelle-lim-profile.jpeg
 topImg2Src: /img/favicons/www.warp.dev.png
-ogImg: /img/podcast/warp-michelle-lim-profile.jpeg
+ogImg: /img/podcast/podcast-cover.png
+twitterCard: https://player.simplecast.com/18f6d195-23a1-4b52-b9b5-42693c26967e?dark=true
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg

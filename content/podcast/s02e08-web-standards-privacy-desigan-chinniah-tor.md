@@ -31,7 +31,8 @@ xlViewport:
  largeText: true
 topImg1Src: /img/podcast/tor-desigan-chinniah-profile.jpeg
 topImg2Src: /img/favicons/www.torproject.org.png
-ogImg: /img/podcast/tor-desigan-chinniah-profile.jpeg
+ogImg: /img/podcast/podcast-cover.png
+twitterCard: https://player.simplecast.com/b6380552-15dc-4bd0-bc45-286a4a498733?dark=true
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg

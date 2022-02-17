@@ -31,7 +31,8 @@ xlViewport:
   largeText: true
 topImg1Src: /img/podcast/honeycomb-charity-majors-profile.jpg
 topImg2Src: /img/favicons/docs.honeycomb.io.png
-ogImg: /img/podcast/honeycomb-charity-majors-profile.jpg
+ogImg: /img/podcast/podcast-cover.png
+twitterCard: https://player.simplecast.com/8e88affe-5a27-4755-875d-5f2947bc5bbb?dark=true
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg

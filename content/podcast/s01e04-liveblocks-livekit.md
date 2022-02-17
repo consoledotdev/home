@@ -30,7 +30,8 @@ xlViewport:
   largeText: true
 topImg1Src: /img/favicons/liveblocks.io.png
 topImg2Src: /img/favicons/livekit.io.jpg
-ogImg: /img/favicons/liveblocks.io.png
+ogImg: /img/podcast/podcast-cover.png
+twitterCard: https://player.simplecast.com/ae6ee861-bca1-411f-b24d-a4c1ac9478c6?dark=true
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg

@@ -33,7 +33,8 @@ xlViewport:
  largeText: true
 topImg1Src: /img/podcast/fly.io-thomas-ptacek-profile.jpg
 topImg2Src: /img/favicons/fly.io.png
-ogImg: /img/podcast/honeycomb-charity-majors-profile.jpg
+ogImg: /img/podcast/podcast-cover.png
+twitterCard: https://player.simplecast.com/34131858-ecea-45c6-b5db-64c5ec8bd0ff?dark=true
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg

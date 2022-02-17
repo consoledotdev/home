@@ -145,6 +145,15 @@
     <meta property="og:type" content="{{ $ogType }}" />
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta name="twitter:site" content="@consoledotdev" />
+    {{- if .Params.twitterCard }}
+    <meta name="twitter:card" content="player" />
+	<meta name="twitter:title" content="{{ .Title }}" />
+	<meta name="twitter:description" content="{{ .Params.metaDescription }}" />
+	<meta name="twitter:image" content="https://console.dev{{ $ogImg }}" />
+	<meta name="twitter:player" content="{{ .Params.twitterCard }}" />
+	<meta name="twitter:player:width" content="200" />
+	<meta name="twitter:player:height" content="200" />
+    {{- end }}
     {{ range .Params.tags }}
     <meta property="article:section" content="{{ . }}">{{ end }}
     {{ if .Params.robotsDisallow }}
