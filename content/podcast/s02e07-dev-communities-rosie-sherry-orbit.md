@@ -75,11 +75,13 @@ Ministry of Testing - and led community at Indie Hackers.
 
 {{< podcast-episode/clipping time="05:24" >}}
 
-**Rosie:** Community is special within its own rights. It has its own
-goals. The goal of community is not to sell a product. … We're not there for
-sales, as community, we're there to help people, help them through their
-community journey, help them thrive, in whichever way we can, in using whatever
-resources we have access to, whereas marketing has a different goal.
+**Rosie:**  I have this gripe, this is only since the pandemic, because the
+pandemic has brought on this huge interest in community. What’s happened, as a
+result is business people, marketing people are saying, “oh, community’s a new
+thing. We have to invest in community.” They end up saying community is a new
+marketing. It’s like, no. No it’s not. Stay away from community, please.
+Community is special within its own rights. It has its own goals. The goal of
+community is not to sell a product.
 
 {{</ podcast-episode/clipping >}}
 
