@@ -91,11 +91,14 @@ and Facebook.
 
 ### Highlights
 
-{{< podcast-episode/clipping time="01:20" >}}
+{{< podcast-episode/clipping time="03:30" >}}
 
-**David:** ...
-
-**Brooklyn:** ...
+**Zach:** When you run a terminal today on your modern Mac, you're
+actually running a terminal emulator like you said, and that's a piece of
+software that is copying the behavior of that hardware. And so the terminal
+emulator, when you run terminal.app or Warp or iTerm, it's an actual sort of
+native GUI app that runs on your Mac. It's pretending to be this piece of
+hardware. And it's pretending to do that at a pretty deep level.
 
 {{</ podcast-episode/clipping >}}
 

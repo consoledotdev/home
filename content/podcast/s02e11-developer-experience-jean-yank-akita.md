@@ -85,11 +85,28 @@ selected as one of the MIT Technology Review's 35 Innovators Under 35 in 2016.
 
 ### Highlights
 
-{{< podcast-episode/clipping time="01:20" >}}
+{{< podcast-episode/clipping time="12:39" >}}
 
-**David:** ...
+**Jean:** The next generation of developer experience needs to focus on
+complexity-embracing tools. How do we help developers accept and deal with the
+mess that is their software systems? What I mean by abstraction tools is full
+automation tools. This idea you can call an API, makes your problems go away.
+You can use this low code tool, to make your problems go away. Those are great
+individually. But then even if the sum total of your system is abstraction
+tools, it actually is a much more complex problem now. Because what happens when
+you have a bug? Where did it come from? How do you isolate it? How do you fix
+it?
 
-**Brooklyn:** ...
+{{</ podcast-episode/clipping >}}
+
+{{< podcast-episode/clipping time="18:07" >}}
+
+**Jean:** There's a lot of quiet power shifting. Who owns the
+infrastructure and who owns data about your production deployments? That's who
+is getting to call the shots about the tooling of the future. It's not the
+languages, it's not the language creators, it is for sure, not the steering
+committees of the languages. I don't know. I would love to see more fights
+around that stuff.
 
 {{</ podcast-episode/clipping >}}
 

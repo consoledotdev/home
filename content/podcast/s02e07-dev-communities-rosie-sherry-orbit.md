@@ -73,11 +73,23 @@ Ministry of Testing - and led community at Indie Hackers.
 
 ### Highlights
 
-{{< podcast-episode/clipping time="01:20" >}}
+{{< podcast-episode/clipping time="05:24" >}}
 
-**David:** ...
+**Rosie:** Community is special within its own rights. It has its own
+goals. The goal of community is not to sell a product. … We're not there for
+sales, as community, we're there to help people, help them through their
+community journey, help them thrive, in whichever way we can, in using whatever
+resources we have access to, whereas marketing has a different goal.
 
-**Brooklyn:** ...
+{{</ podcast-episode/clipping >}}
+
+{{< podcast-episode/clipping time="19:00" >}}
+
+**Rosie:** I have this belief that members don't always know what they
+want. You know, it's like the mom test. They think they know what they want, but
+they don't and they'll shout out some random stuff and say, "this would be
+great. I want this." But actually, the reality of what they want is not the
+actual thing.
 
 {{</ podcast-episode/clipping >}}
 
@@ -109,8 +121,7 @@ prior to that, I led the community at Indie Hackers. I did that for a couple of
 years. I kind of got into that partly because I'd done community before, but
 also because I was an Indie Hacker, myself. Nice gig, nice opportunity to work
 with Portland. For me, trying to understand how they run community was
-interesting. And then prior to that, I started in tech back in something like
-2000. So it was, I was starting to feel a bit old.
+interesting.
 
 It's been like 20 years now, which is crazy to think about, but I started as a
 tester. So I did that for a few years as I was doing that, I kind of discovered

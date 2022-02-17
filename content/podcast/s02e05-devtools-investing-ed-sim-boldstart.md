@@ -101,11 +101,28 @@ Economics from Harvard.
 
 ### Highlights
 
-{{< podcast-episode/clipping time="01:20"  >}}
+{{< podcast-episode/clipping time="02:54"  >}}
 
-**David:** ...
+**Ed:** I think the biggest thing that founders and engineers have to think
+about is not thinking about raising money. Do it not for us, do it for your
+user. Tell me the persona, the user, the actual day in the life of that user,
+and how are you building a product or a DevTool to make that user's life better,
+whether it's abstracting away operations, whether it's allowing them to code
+faster, whatever that might be. Think about who that individual user is. Because
+we don't think about the unit of one and are obsessed with that individual user.
+It doesn't matter what you do. There's no company.
 
-**Brooklyn:** ...
+{{</ podcast-episode/clipping >}}
+
+{{< podcast-episode/clipping time="03:27"  >}}
+
+**Ed:** The best investors will understand how one user becomes 10 users,
+and then a hundred users, and then a thousand users. And they will not force you
+to try to get revenue too early. And we can go through that whole thing later,
+David, about why getting revenue too early can screw up a company. But that's
+what we look for. We look for that obsession. And we know, the second we meet
+these founders, when they talk about the problem, and the user, and the pain
+they experience. You can just feel it viscerally through the Zoom.
 
 {{</ podcast-episode/clipping >}}
 

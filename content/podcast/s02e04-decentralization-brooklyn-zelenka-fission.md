@@ -96,11 +96,29 @@ with standards like UCAN auth and the Webnative File System.
 
 ### Highlights
 
-{{< podcast-episode/clipping time="01:20"  >}}
+{{< podcast-episode/clipping time="02:08"  >}}
 
-**David:** ...
+**Brooklyn Zelenka:** At Fission, we set ourselves a constraint right at the beginning
+that everything had to work directly in a browser with no extensions, no
+plugins, any of that stuff. That immediately ruled out blockchain. So we're
+saying, "Well, how can we apply a lot of these techniques to get the same sort
+of user and benefits of decentralization, interoperable data, permissionless,
+the option to exit, to self-host, and not to rely on a single provider in the
+web." That's taken us into all kinds of interesting areas.
 
-**Brooklyn:** ...
+{{</ podcast-episode/clipping >}}
+
+{{< podcast-episode/clipping time="05:55"  >}}
+
+**David:** What would you say is the advantage of using the web tech versus
+relying on some of the operating system APIs to do these things?
+
+**Brooklyn:** So the browser is the most widely installed, cross platform, easy
+to use, easy to onboard piece of software that we've ever written. Everyone has
+one. It's on every device. Because of web standards, they work not identically,
+but pretty good, shockingly well. Learning native APIs is great, but you tend to
+be locked onto a particular platform, to the point that there have been attempts
+to apply web tech and web APIs to native app building.
 
 {{</ podcast-episode/clipping >}}
 

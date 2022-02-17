@@ -81,11 +81,32 @@ is the co-author of O'Reilly's Database Reliability Engineering.
 
 ### Highlights
 
-{{< podcast-episode/clipping time="01:20"  >}}
+{{< podcast-episode/clipping time="03:36"  >}}
 
-**David:** ...
+**Charity:** That's when I kind of went, "oh, I don't know how engineer anymore,
+without these tools that we've been using and developing around". So Christina
+and I started Honeycomb, and for the first six months, we realized pretty
+quickly that we were going to have to write a storage engine from scratch, which
+is something I was spent my entire career telling people, never write a
+database, never write a database, but we had to. We had to start writing it from
+scratch, because we needed a column restore and we needed all these things that
+nothing an open source would address.
 
-****Charity:**** ...
+{{</ podcast-episode/clipping >}}
+
+{{< podcast-episode/clipping time="16:25"  >}}
+
+**Charity:**  People could get a lot out of metrics. It's a 30 year old
+technology. We have gotten used to contorting ourselves in all sorts of ways and
+it's the thing that people are familiar with. At the end of the day, I wouldn't
+actually call anything that's built on time series database observability that
+I've seen. It just doesn't measure up to the level of... Which is so unfortunate
+that people have co-opted the term observability for anything that you're doing,
+"Oh, we have metrics, logs and traces. Therefore we have..." In my mind, if you
+have to hop from tool to tool to tool to answer the question, that's definitely
+not observability, but I have no match for hundreds of millions of dollars in
+marketing spent. So we are where we are. But I will say that the engineers who
+experience the difference, understand it and won't go back.
 
 {{</ podcast-episode/clipping >}}
 

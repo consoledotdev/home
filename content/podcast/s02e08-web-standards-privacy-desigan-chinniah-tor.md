@@ -84,11 +84,26 @@ and Seedcamp
 
 ### Highlights
 
-{{< podcast-episode/clipping time="01:20" >}}
+{{< podcast-episode/clipping time="18:44" >}}
 
-**David:** ...
+**Desigan:** Does a content creator need to be paid through some token
+or cryptocurrency? No. I'm sure if you just offer them good old fiat they'd be
+more than willing to do that. But will it help with discovery and new business
+models that they could monetize their content? Almost certainly.
 
-**Brooklyn:** ...
+{{</ podcast-episode/clipping >}}
+
+{{< podcast-episode/clipping time="18:44" >}}
+
+**Desigan:** Historically where content creators have made, let's say
+most of their revenue it's historically been on ad networks or the like and even
+then there was this discrimination depending on where you were in the world.
+
+The amount of revenue you could generate from your CPMs or what have you,
+depending on if you were in North America or you were in some part of Latin
+America or Asia or Africa was very different. It didn't matter even if you were
+creating good content. All of a sudden, I feel with Web3, it will just level the
+playing field.
 
 {{</ podcast-episode/clipping >}}
 

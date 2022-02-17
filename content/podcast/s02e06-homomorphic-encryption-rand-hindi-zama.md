@@ -85,11 +85,31 @@ where he focused on AI and Privacy issues.
 
 ### Highlights
 
-{{< podcast-episode/clipping time="01:20"  >}}
+{{< podcast-episode/clipping time="15:36"  >}}
 
-**David:** ...
+**Rand:** So how do you convince companies to adopt homomorphic
+encryption? Well, it turns out that companies increasingly differentiate between
+the data and the usage of the data, and it turns out that the data itself is
+often a liability because you get government surveillance, so you become a
+honeypot for data breaches and hackers. There is a whole bunch of potential
+privacy scandals that can emerge.
 
-**Brooklyn:** ...
+If anything, companies don't want to store user data. What they want is to use
+the data to do some meaningful, maybe train a neural network or do analytics or
+provide a service, all of which you can do with homomorphic encryption.
+Homomorphic encryption enables you to use the data without actually seeing the
+data. That's the whole point.
+
+{{</ podcast-episode/clipping >}}
+
+{{< podcast-episode/clipping time="23:55"  >}}
+
+**Rand:** If you can't pull the thread of homomorphic encryption all the
+way to consumer applications and web apps and things like that, it's pretty
+obvious that at some point the user is going to need to manage their FHE keys
+when they're accessing their services, because you need to encrypt and decrypt
+the data and contrary to SSL, TLS, you are the one keeping the keys. You should
+never send it to the service provider.
 
 {{</ podcast-episode/clipping >}}
 
@@ -103,7 +123,7 @@ principles behind encryption, homomorphic encryption, and programmable
 bootstrapping, how these technologies can ensure user data privacy, what is
 changing that is making them more relevant to today, and how developers should
 be thinking about building on new protocols from HTTP to HTTPS to HTTPZ. We're
-keeping this to 30 minutes, so let's get started. I'm here with **Rand:** .
+keeping this to 30 minutes, so let's get started. I'm here with Rand Hindi.
 Rand, thanks for joining the Console Podcast.
 
 **Rand:** Thank you, David.

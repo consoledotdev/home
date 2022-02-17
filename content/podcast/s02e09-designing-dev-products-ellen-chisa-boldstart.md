@@ -83,11 +83,26 @@ Ventures.
 
 ### Highlights
 
-{{< podcast-episode/clipping time="01:20" >}}
+{{< podcast-episode/clipping time="04:51" >}}
 
-**David:** ...
+**Ellen:** I think, especially as companies get larger, there becomes a point
+where you have enough developers on the team where doing that specialization and
+going really deep on a topic matters. But especially at the beginning, or if
+you're doing something where the infrastructure isn't a unique part of the
+differentiation for your company, you don't necessarily want to worry about all
+those trade offs.
 
-**Brooklyn:** ...
+{{</ podcast-episode/clipping >}}
+
+{{< podcast-episode/clipping time="11:20" >}}
+
+**Ellen:** I will happily customize my set of tooling for software development
+or for taking notes or for whatever it is to get to the exact right answer for
+me. But most people just want something that's good enough and will get the job
+done and they're not sitting there optimizing it. And I think that jump as a
+developer tools company starts to grow, tends to be when you need someone else
+to be also thinking about product and what the end users want, not just
+answering your own problem anymore.
 
 {{</ podcast-episode/clipping >}}
 
