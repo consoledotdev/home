@@ -30,7 +30,7 @@ xlViewport:
   largeText: true
 topImg1Src: /img/podcast/boldstart-ed-sim-profile.png
 topImg2Src: /img/favicons/boldstart.vc.png
-ogImg: /img/podcast/podcast-cover.png
+ogImg: /img/podcast/podcast-cover.jpeg
 twitterCard: https://player.simplecast.com/72a312a7-0768-4faa-a902-3bf9b9634fd0?dark=true
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start

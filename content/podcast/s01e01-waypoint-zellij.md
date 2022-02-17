@@ -27,7 +27,7 @@ xlViewport:
   largeText: true
 topImg1Src: /img/favicons/www.waypointproject.io.png
 topImg2Src: /img/favicons/zellij.dev.png
-ogImg: /img/podcast/podcast-cover.png
+ogImg: /img/podcast/podcast-cover.jpeg
 twitterCard: https://player.simplecast.com/34cade96-6fc7-489e-b7f0-8df02409e8de?dark=true
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start

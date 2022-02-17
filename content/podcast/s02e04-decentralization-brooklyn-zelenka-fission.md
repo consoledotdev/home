@@ -31,7 +31,7 @@ xlViewport:
   largeText: true
 topImg1Src: /img/podcast/fission-brooklyn-zelenka-profile.jpg
 topImg2Src: /img/favicons/fission.codes.png
-ogImg: /img/podcast/podcast-cover.png
+ogImg: /img/podcast/podcast-cover.jpeg
 twitterCard: https://player.simplecast.com/21114878-64c4-4605-95ba-81c946feaa77?dark=true
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start

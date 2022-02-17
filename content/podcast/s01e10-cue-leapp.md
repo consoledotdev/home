@@ -28,7 +28,7 @@ xlViewport:
   largeText: true
 topImg1Src: /img/favicons/www.leapp.cloud.png
 topImg2Src: /img/favicons/cuelang.org.png
-ogImg: /img/podcast/podcast-cover.png
+ogImg: /img/podcast/podcast-cover.jpeg
 twitterCard: https://player.simplecast.com/83f81c73-ed78-42d9-a9fd-fc2f7631b2d0?dark=true
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start

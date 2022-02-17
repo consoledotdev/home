@@ -30,7 +30,7 @@ xlViewport:
  largeText: true
 topImg1Src: /img/podcast/orbit-rosie-sherry-profile.jpg
 topImg2Src: /img/favicons/orbit.love.png
-ogImg: /img/podcast/podcast-cover.png
+ogImg: /img/podcast/podcast-cover.jpeg
 twitterCard: https://player.simplecast.com/fa34a600-4345-4f17-b64b-ec5cf09c22f8?dark=true
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start

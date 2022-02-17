@@ -28,7 +28,7 @@ xlViewport:
   largeText: true
 topImg1Src: /img/favicons/about.sourcegraph.com.png
 topImg2Src: /img/favicons/hoppscotch.io.jpg
-ogImg: /img/podcast/podcast-cover.png
+ogImg: /img/podcast/podcast-cover.jpeg
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg

@@ -31,7 +31,7 @@ xlViewport:
  largeText: true
 topImg1Src: /img/podcast/akita-jean-yang-profile.jpg
 topImg2Src: /img/favicons/www.akitasoftware.com.png
-ogImg: /img/podcast/podcast-cover.png
+ogImg: /img/podcast/podcast-cover.jpeg
 twitterCard: https://player.simplecast.com/b8afcf2e-a50a-46ad-8088-7a8f771a7f8c?dark=true
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start

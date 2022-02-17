@@ -28,7 +28,7 @@ xlViewport:
   largeText: true
 topImg1Src: /img/favicons/www.appsmith.com.png
 topImg2Src: /img/favicons/retool.com.jpg
-ogImg: /img/podcast/podcast-cover.png
+ogImg: /img/podcast/podcast-cover.jpeg
 twitterCard: https://player.simplecast.com/8c8341f0-0a3a-4f2c-bfe0-0abb6b3c1c87?dark=true
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start

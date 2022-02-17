@@ -32,7 +32,7 @@ xlViewport:
   largeText: true
 topImg1Src: /img/podcast/cloudflare-john-graham-cumming-profile.jpg
 topImg2Src: /img/favicons/www.cloudflare.com.png
-ogImg: /img/podcast/podcast-cover.png
+ogImg: /img/podcast/podcast-cover.jpeg
 twitterCard: https://player.simplecast.com/a810f07c-1df0-4198-bd2f-a2629d3eeee3?dark=true
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
