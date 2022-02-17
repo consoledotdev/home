@@ -157,6 +157,7 @@ async function handleEvent(event) {
             ["/tools/code-collaboration-pair-programming/", "https://console.dev/code-collaboration-pair-programming/"],
             ["/tools/server-monitoring/", "https://console.dev/server-monitoring/"],
             ["/tools/website-monitoring/", "https://console.dev/website-monitoring/"],
+            ["/podcast", "https://console.dev/podcast/"],
         ])
 
         const path = url.pathname;
