@@ -4,16 +4,14 @@ who: Charity Majors
 whoLink: https://twitter.com/mipsytipsy
 org: Honeycomb
 orgLink: https://www.honeycomb.io/
-what:
-  In this episode we speak to Charity Majors, CTO at Honeycomb, an observability
-  tool for distributed systems. We discuss why observability is based around
-  events and not metrics, how developers should think about achieving
-  appropriately observable systems, why Honeycomb implemented their own
-  distributed columnar data store, and how you can delete most of your alerts by
-  implementing service level objectives.
+what: 
+ We discuss why observability is based around events and not metrics,
+ how developers should think about achieving appropriately observable systems,
+ why Honeycomb implemented their own distributed columnar data store, and how you
+ can delete most of your alerts by implementing service level objectives.
 season: 2
 episode: 3
-date: 2022-01-20T07:05:00Z
+date: 2022-01-20T08:00:00Z
 duration: 27:37
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/8e88affe-5a27-4755-875d-5f2947bc5bbb/audio/1865a097-033b-478c-8037-7f2883098ade/default_tc.mp3
 draft: false
@@ -57,8 +55,24 @@ how developers should think about achieving appropriately observable systems,
 why Honeycomb implemented their own distributed columnar data store, and how you
 can delete most of your alerts by implementing service level objectives.
 
-{{< rich-title-5 icon="future-head" >}}About Charity Majors
-{{</ rich-title-5 >}}
+Things mentioned:
+
+- [MongoDB](https://www.mongodb.com/)
+- [Postgres](https://www.postgresql.org/)
+- [Scuba](https://research.fb.com/wp-content/uploads/2016/11/scuba-diving-into-data-at-facebook.pdf)
+- [High cardinality](https://en.wikipedia.org/wiki/Cardinality_(SQL_statements))
+- [Druid](http://druid.io/)
+- [Kafka](https://kafka.apache.org/)
+- [AWS Lambda](https://aws.amazon.com/lambda/)
+- [Zookeeper](https://zookeeper.apache.org/doc/r3.4.11/zookeeperTutorial.html)
+- [Appropriate
+  observability](https://www.honeycomb.io/wp-content/uploads/2018/07/Honeycomb-Guide-Achieving-Observability-v1.pdf)
+- [Akita Software](https://www.akitasoftware.com/)
+- [Sourcegraph](https://sourcegraph.com/search)
+- [Charity.wft](https://charity.wtf/)
+- [Honeycomb blog](https://www.honeycomb.io/blog/)
+
+{{< rich-title-5 icon="future-head" >}}About Charity Majors{{</ rich-title-5 >}}
 
 Charity Majors is an ops engineer and accidental startup founder at
 honeycomb.io. Prior to this she worked at Parse, Facebook, and Linden Labs. She
@@ -68,15 +82,15 @@ is the co-author of O'Reilly's Database Reliability Engineering.
 
 {{< podcast-episode/clipping time="01:20"  >}}
 
-**David Mytton:** ...
+**David:** ...
 
-**Charity Majors:** ...
+****Charity:**** ...
 
 {{</ podcast-episode/clipping >}}
 
 {{< box-collapsible title="Full transcript" class="podcast-transcript is-expanded" >}}
 
-**David Mytton:** Welcome to the Console podcast. I'm David Mytton, co-founder
+**David:** Welcome to the Console podcast. I'm David Mytton, co-founder
 of console.dev, a free weekly newsletter highlighting the best and most
 interesting tools for developers.
 
@@ -88,42 +102,41 @@ distributed column data store, and how you can delete most of your alerts by
 implementing service level objectives. We're keeping this to 30 minutes, so
 let's get started.
 
-I'm here with Charity Majors:. Charity, thanks for joining the Console podcast.
+I'm here with Charity Majors. Charity, thanks for joining the Console podcast.
 
-**Charity Majors:** Yeah, thanks for having me. We go way back now, don't we
+**Charity:** Yeah, thanks for having me. We go way back now, don't we
 David?
 
-**David Mytton:** That's right. I go all the way back to the early days of
-MongoDB. A long time.
+**David:** That's right. I go all the way back to the early days of MongoDB. A
+long time.
 
-**Charity Majors:** 2012?
+**Charity:** 2012?
 
-**David Mytton:** Yeah. Yeah.
+**David:** Yeah. Yeah.
 
-**Charity Majors:** Almost a decade? Holy crap.
+**Charity:** Almost a decade? Holy crap.
 
-**David Mytton:** I know. All those conferences, touring the world with Mongo.
+**David:** I know. All those conferences, touring the world with Mongo.
 
-**Charity Majors:** Yeah. We were their favorite non hired \[inaudible
-00:01:06\] folks there for a while I think.
+**Charity:** Yeah. We were their favorite non hired [inaudible 00:01:06] folks
+there for a while I think.
 
-**David Mytton:** The outsource marketing team.
+**David:** The outsource marketing team.
 
-**Charity Majors:** Yep.
+**Charity:** Yep.
 
-**David Mytton:** Well, let's start with a brief background then. Tell us a
-little bit about what you are currently doing and how you got here.
+**David:** Well, let's start with a brief background then. Tell us a little bit
+about what you are currently doing and how you got here.
 
-**Charity Majors:** Well, I'm the co-founder and CTO of honeycomb.io, which is,
-I would say the world first actual observability tool or platform. We got here
-because, as you were just saying, Parse early Mongo days and everything. Parse
-was mobile backend as a service. We were doing a lot of things before its time.
-We were doing microservices before there was really a term for it. We were doing
-a lot of platform things that the existing set of tools just really didn't work
-for, well, all the aggregates and everything. When you've got a million users
-and a different app hits the iTunes top 10 every week, you can't really predict
-and make dashboards, and just use that to explain what's going on in your
-system.
+**Charity:** Well, I'm the co-founder and CTO of honeycomb.io, which is, I would
+say the world first actual observability tool or platform. We got here because,
+as you were just saying, Parse early Mongo days and everything. Parse was mobile
+backend as a service. We were doing a lot of things before its time. We were
+doing microservices before there was really a term for it. We were doing a lot
+of platform things that the existing set of tools just really didn't work for,
+well, all the aggregates and everything. When you've got a million users and a
+different app hits the iTunes top 10 every week, you can't really predict and
+make dashboards, and just use that to explain what's going on in your system.
 
 So Parse got acquired by Facebook and it was professionally embarrassing to me
 how often we were going down. It was just every day we'd go down and I could go
@@ -177,15 +190,15 @@ high cardinality was impossible, that they just, it just couldn't be done.
 And they just accepted that. It is impossible when you start with metrics
 because the cost of them rises linearly with your cardinality. It's not
 impossible if you use these arbitrarily wide structured data blocks, which is,
-you know what, we were basing our \[ bleeped 00:05:14\] on. So it took about
-three years, I think for us to find product market fit, it was grueling. And
-honestly it was just as much the world changing to meet us as it was us changing
-our product to meet the world. But finally, it all clicked when we introduced
-these sort of auto instrumentation and the landing page where you would be met,
-not with an empty query browser, but with the traditional errors, latency,
-requests per second, people could orient themselves. So at this point, we're
-almost six years in. We really hit our stride around year four and a half, which
-is forever in VC years.
+you know what, we were basing our [ bleeped 00:05:14] on. So it took about three
+years, I think for us to find product market fit, it was grueling. And honestly
+it was just as much the world changing to meet us as it was us changing our
+product to meet the world. But finally, it all clicked when we introduced these
+sort of auto instrumentation and the landing page where you would be met, not
+with an empty query browser, but with the traditional errors, latency, requests
+per second, people could orient themselves. So at this point, we're almost six
+years in. We really hit our stride around year four and a half, which is forever
+in VC years.
 
 We went through a few different investors who are just like, "If you haven't
 succeeded yet, you're never going to succeed." And I'm like, "But we had to
@@ -201,22 +214,22 @@ engineer leaves a company that was using Honeycomb and they to go to a new
 company and they have the exact same experience that I did, which is just like,
 "Holy, I don't know how to engineer without this anymore." And they bring us in.
 
-**David Mytton:** Can you explain what you mean by high cardinality and what
-that means for focusing on events rather than metrics?
+**David:** Can you explain what you mean by high cardinality and what that means
+for focusing on events rather than metrics?
 
-**Charity Majors:** Yeah. High cardinality is, well, imagine you have a
-collection of a hundred million users and you've got all of these variables
-about them, like gender height, wait, first name, last name. Well anything like
-first name, last name is going to be very high cardinality. Anything that is a
-unique ID is going to be the highest possible cardinality, social security
-number. Anything that is a single value, like species equals human will be the
-lowest possible cardinality. And the thing about metrics is a metric is a single
-number with a few tags appended and metrics are really designed for efficiency
-and not for describe ability or correlation or anything like that. They're
-designed to be very efficient, but they only really handle low cardinality
-dimensions. They can be aggregated really easily on things like gender or
-species, but they cannot be aggregated on things like social security number or
-weight or height because there are just too many possible values.
+**Charity:** Yeah. High cardinality is, well, imagine you have a collection of a
+hundred million users and you've got all of these variables about them, like
+gender height, wait, first name, last name. Well anything like first name, last
+name is going to be very high cardinality. Anything that is a unique ID is going
+to be the highest possible cardinality, social security number. Anything that is
+a single value, like species equals human will be the lowest possible
+cardinality. And the thing about metrics is a metric is a single number with a
+few tags appended and metrics are really designed for efficiency and not for
+describe ability or correlation or anything like that. They're designed to be
+very efficient, but they only really handle low cardinality dimensions. They can
+be aggregated really easily on things like gender or species, but they cannot be
+aggregated on things like social security number or weight or height because
+there are just too many possible values.
 
 And when you're using events instead, you have these arbitrarily wide structured
 data blocks. And when I say arbitrarily wide, like a well instrumented system
@@ -242,14 +255,14 @@ before it, that's not debugging. That's like doing BI stuff. The whole point of
 observability is that you should be able to iterate swiftly, like is it this? Is
 it this? That is it that? And just like follow the path.
 
-**David Mytton:** So take us through the decision to build your own data store
-then because if we go back to, when we first met, there were a few options for
-data stores. MongoDB was the brand new shiny one and there were SQL databases,
+**David:** So take us through the decision to build your own data store then
+because if we go back to, when we first met, there were a few options for data
+stores. MongoDB was the brand new shiny one and there were SQL databases,
 relational databases. And there are a few new ideas coming around with
 Cassandra. But today, if you just look at like AWS's database tab on their
 website, they've got a lot of products there. So how have things evolved?
 
-**Charity Majors:** We would still need to write our own, sadly. We did a lot of
+**Charity:** We would still need to write our own, sadly. We did a lot of
 investigation at the time and, and we tried out a bunch of things. And honestly
 the one data storage type that we came closest to using was called Druid. I
 don't know if you're familiar with Druid IO, but Druid, it's a high performance
@@ -260,78 +273,76 @@ it's strings or numbers or whatever. The one thing that it didn't do, we
 estimated we would've had to rewrite about a third of the database just to get
 what we wanted, any ingest layer, which was arbitrarily wide.
 
-**Charity Majors:** You can't have to deal schema if you're dealing with
-observability, anything that is schema based is verboten, because you need to be
-able to toss in a new key value pair whenever it comes up and you need to be
-able to stop writing that. It has to have that flexibility and that fluidity in
-order for you to have the value of observability and most databases don't like
-that. Most databases for good reasons, for efficiency and for all this stuff,
-they want you to define schema. MongoDB famously is one that doesn't make you,
-you can do some fancy tricks with Postgres. Postgres has now JSON block store
-and everything. But in the end, having the ability to do completely flexible
-schema was huge for us. And we also knew that having a column or database was
-key.
+**Charity:** You can't have to deal schema if you're dealing with observability,
+anything that is schema based is verboten, because you need to be able to toss
+in a new key value pair whenever it comes up and you need to be able to stop
+writing that. It has to have that flexibility and that fluidity in order for you
+to have the value of observability and most databases don't like that. Most
+databases for good reasons, for efficiency and for all this stuff, they want you
+to define schema. MongoDB famously is one that doesn't make you, you can do some
+fancy tricks with Postgres. Postgres has now JSON block store and everything.
+But in the end, having the ability to do completely flexible schema was huge for
+us. And we also knew that having a column or database was key.
 
-**Charity Majors:** For those who don't know having column or database is
-basically like the opposite of an RDBMS. Everything is an index. Everything that
-you put in there is an index. And then the way we developed it, based on this
-\[Scuba White Paper 00:11:27\] was in a widely distributed fashion where, well
-we use \[Kafka 00:11:31\] , the events come in through the API, they get dropped
-into Kafka. And then we have a pair of retriever data stores reading each topic
-from Kafka. Each topic translates into a column. You can distribute any user's
+**Charity:** For those who don't know having column or database is basically
+like the opposite of an RDBMS. Everything is an index. Everything that you put
+in there is an index. And then the way we developed it, based on this [Scuba
+White Paper 00:11:27] was in a widely distributed fashion where, well we use
+[Kafka 00:11:31] , the events come in through the API, they get dropped into
+Kafka. And then we have a pair of retriever data stores reading each topic from
+Kafka. Each topic translates into a column. You can distribute any user's
 traffic widely over many columns, over many nodes. It's very flexible. We've
 got, I don't know, a couple hundred data store notes at this point. Each have a
 pair for fail. But it's just really flexible and elastic the changes that we
 needed to make. And we actually age out the data to S3 after just a couple hours
 too.
 
-**Charity Majors:** And our query planner, this is funny. Our query planner runs
-mostly in serverless queries, Lambda, AWS queries. We move the query planner to
-AWS. We thought that it would slow the whole thing down, turns out it didn't,
-the performance footprint is different, but not slower on the whole. At the end
-of the day, having that ability of control over also how many databases will
-take the trade off of fast and close to right is better than done and perfect?
+**Charity:** And our query planner, this is funny. Our query planner runs mostly
+in serverless queries, Lambda, AWS queries. We move the query planner to AWS. We
+thought that it would slow the whole thing down, turns out it didn't, the
+performance footprint is different, but not slower on the whole. At the end of
+the day, having that ability of control over also how many databases will take
+the trade off of fast and close to right is better than done and perfect?
 
-**Charity Majors:** For databases, that's not a good story to tell, but for ours
-it is because it matters way more for people to be able to get their results
-very quickly. And if it's off, by 0.5%, once in a while, doesn't matter so much
-as it getting to them very swiftly. We're actually working on a blog post right
-now. The title is like, "10 reasons why you really don't want us to open store
-our data store." And it basically just comes down to all these reasons. It's
+**Charity:** For databases, that's not a good story to tell, but for ours it is
+because it matters way more for people to be able to get their results very
+quickly. And if it's off, by 0.5%, once in a while, doesn't matter so much as it
+getting to them very swiftly. We're actually working on a blog post right now.
+The title is like, "10 reasons why you really don't want us to open store our
+data store." And it basically just comes down to all these reasons. It's
 narrowly optimized for observability use cases and for our use cases. And it
 would be pathologically difficult for most people to run because it's not just
 like spin up a node. It's at the level of complexity of you remember anything
 that had to use Zookeeper back in the day, it's like, okay, now I've got five
 problems.
 
-**David Mytton:** Right. So it's optimized for those really high performance
-queries in a very short time window where you're debugging something happening.
-And then the S3 latency is acceptable for the longer queries?
+**David:** Right. So it's optimized for those really high performance queries in
+a very short time window where you're debugging something happening. And then
+the S3 latency is acceptable for the longer queries?
 
-**Charity Majors:** Actually our 99th percentile latency is still under a
-second. S3 is faster than you'd expect when you're fanning it out widely enough.
-Not if you're running a query over 60 days worth, then it might take a few
-seconds, but it's pretty fast. I mean, aging out is key too, but also just the
-ability to distribute it horizontally. Because you're basically going to be
-doing a full table scan across all of the indexes that you're trying to pull
-from having the ability to write out columns that are very wide strings and
-index on those and do groupings with all the other SQL operators and stuff.
-There's just a lot of stuff that nobody in their right mind would write a
-database to handle.
+**Charity:** Actually our 99th percentile latency is still under a second. S3 is
+faster than you'd expect when you're fanning it out widely enough. Not if you're
+running a query over 60 days worth, then it might take a few seconds, but it's
+pretty fast. I mean, aging out is key too, but also just the ability to
+distribute it horizontally. Because you're basically going to be doing a full
+table scan across all of the indexes that you're trying to pull from having the
+ability to write out columns that are very wide strings and index on those and
+do groupings with all the other SQL operators and stuff. There's just a lot of
+stuff that nobody in their right mind would write a database to handle.
 
-**David Mytton:** And how does cost come into the equation? Because that was
-always the big issue with trying to get really good before from queries is just
-the cost of memory or some specialized database that you might buy as a service.
-How have you thought about that?
+**David:** And how does cost come into the equation? Because that was always the
+big issue with trying to get really good before from queries is just the cost of
+memory or some specialized database that you might buy as a service. How have
+you thought about that?
 
-**Charity Majors:** (14:22):
+**Charity:** (14:22):
 
 Yeah, that's a great question because I think that observability, the reason it
 came around when it did apart from us being there, it is like any scientific
 invention when the time comes, someone able to figure it out. The converging
 reasons that this was the time for observability I think is because the
 cheapness of hardware like SSDs are now, at Facebook, they were in all the
-\[Bleeped 00:14:44\] Ram, they had these giant Ram discs that they would... And
+[Bleeped 00:14:44] Ram, they had these giant Ram discs that they would... And
 nobody's going to pay for that, but now we can put it on SSDs and then age it
 out to S3 pretty quickly, given that like over 90% of all queries are for within
 the last day or two. So we run that on SSDs that are local run the rest in S3,
@@ -347,20 +358,20 @@ wasn't really, if alls failed, you could attach DBD and step through it or you
 could do a bunch of fancy, MySQL stuff, whatever.
 
 But the hardest problem with modern systems is not so much debugging your code.
-It's where the \[bleeped 00:15:41\] in the system is the code that I need to
-debug when you bought hundreds of services? Everything is a high cardinality
-field now. The number of servers, the containers that you have, the number of
-queries you run, the number of just everything. And so much of modern stacks may
-not even run on your own hardware. It might be a third party thing. It might be
+It's where the [bleeped 00:15:41] in the system is the code that I need to debug
+when you bought hundreds of services? Everything is a high cardinality field
+now. The number of servers, the containers that you have, the number of queries
+you run, the number of just everything. And so much of modern stacks may not
+even run on your own hardware. It might be a third party thing. It might be
 Lambda jobs. Anything that you could instrument for yourself though, should be
 able to be collected and in one place that you can tell just that at a glance
 where the problem is coming from.
 
-**David Mytton:** Where do you see the role of some of the more specialist time
-series databases becoming quite popular now, particularly open source databases?
-Are those still relevant? Could developers just run their own?
+**David:** Where do you see the role of some of the more specialist time series
+databases becoming quite popular now, particularly open source databases? Are
+those still relevant? Could developers just run their own?
 
-**Charity Majors:** People could get a lot out of metrics. It's a 30 year old
+**Charity:** People could get a lot out of metrics. It's a 30 year old
 technology. We have gotten used to contorting ourselves in all sorts of ways and
 it's the thing that people are familiar with. At the end of the day, I wouldn't
 actually call anything that's built on time series database observability that
@@ -372,11 +383,11 @@ not observability, but I have no match for hundreds of millions of dollars in
 marketing spent. So we are where we are. But I will say that the engineers who
 experience the difference, understand it and won't go back.
 
-**Charity Majors:** There's always going to be use cases for time series
-databases, they're so good at aggregating stuff. They're so good at doing things
-cheaply and at Honeycomb, we just added a metrics capability, both so that
-people can get more easily onboarded and because there are a few metrics that
-are worth paying attention to. In my mind, most of the metrics stuff should be
+**Charity:** There's always going to be use cases for time series databases,
+they're so good at aggregating stuff. They're so good at doing things cheaply
+and at Honeycomb, we just added a metrics capability, both so that people can
+get more easily onboarded and because there are a few metrics that are worth
+paying attention to. In my mind, most of the metrics stuff should be
 infrastructure because it's stuff that you're interested in asking the, for the
 perspective of your service or the perspective of your hardware. You're asking,
 am I good? Am I safe? Am I running as expected? Metrics work really great for
@@ -385,28 +396,28 @@ around how is my user's experience? How is each and every one of my users
 experience today, being able to slice and dice by that high cardinal dimension,
 which is your user ID and just ask, how is the application behaving for them?
 
-**Charity Majors:** There's non overlapping or minimally overlapping \[inaudible
-00:18:05\] where if you run a lot of infrastructure, absolutely need lots of
-time series databases. If you mostly run your own software, this is the stuff
-that's your bread and butter that you ship every day, you mostly need
-observability. But you still probably want to answer the question, if I just
-shipped some code, did my memory usage triple or did the CPU usage spike or did
-my data usage explode? Other than those three questions, it's not clear to me
-that you need much more of that from your infrastructure layer. I think
-honestly, that thinking about instrumentation, the way the serverless kids do is
-the right paradigm moving forward. You don't have access to a lot of the low
-level infrastructure stuff, but you ask the questions that you need to know in
-order to keep your users' experiences healthy. Maybe a container isn't
-performing well anymore. Just stop sending traffic to it, because that's someone
-else's problem. Your problem is keeping track of your user's experience.
+**Charity:** There's non overlapping or minimally overlapping [inaudible
+00:18:05] where if you run a lot of infrastructure, absolutely need lots of time
+series databases. If you mostly run your own software, this is the stuff that's
+your bread and butter that you ship every day, you mostly need observability.
+But you still probably want to answer the question, if I just shipped some code,
+did my memory usage triple or did the CPU usage spike or did my data usage
+explode? Other than those three questions, it's not clear to me that you need
+much more of that from your infrastructure layer. I think honestly, that
+thinking about instrumentation, the way the serverless kids do is the right
+paradigm moving forward. You don't have access to a lot of the low level
+infrastructure stuff, but you ask the questions that you need to know in order
+to keep your users' experiences healthy. Maybe a container isn't performing well
+anymore. Just stop sending traffic to it, because that's someone else's problem.
+Your problem is keeping track of your user's experience.
 
-**David Mytton:** And is this where the concept of appropriate observability
-comes in? What does that mean for granularity and developers having to
-instrument everything? Or is it just certain things?
+**David:** And is this where the concept of appropriate observability comes in?
+What does that mean for granularity and developers having to instrument
+everything? Or is it just certain things?
 
-**Charity Majors:** I think the right way to instrument for observability is,
-like I said, by aggregating around the user's experience, which means like the
-way Honeycomb does it is the request enters a service. We open a new Honeycomb
+**Charity:** I think the right way to instrument for observability is, like I
+said, by aggregating around the user's experience, which means like the way
+Honeycomb does it is the request enters a service. We open a new Honeycomb
 event. We pre-populate it with everything we know about it. The variables that
 we fed in via the request, anything about the AWS environment, anything about
 the language internals, all that stuff. While that request is executing, you as
@@ -418,9 +429,9 @@ structured data block. And what you basically end up with is one of these events
 per request per service, which is how you can tell at a glance where in your
 entire system the badness is coming from.
 
-**Charity Majors:** And because you have these wide events, you could correlate
-a \[ 00:20:07\] ton of information. You can go, "Oh, all of these errors have
-these 20 different variables in common," or stuff like that. Which is materially
+**Charity:** And because you have these wide events, you could correlate a [
+00:20:07] ton of information. You can go, "Oh, all of these errors have these 20
+different variables in common," or stuff like that. Which is materially
 different from what you did with metrics, because if you wanted to be able to
 ask those questions, you had to predict them in advance. You had to go, "Ah,
 maybe someday we will get a bunch of errors that are coming from this iOS
@@ -428,35 +439,35 @@ device, this version, this build ID." You have to predict and create a dashboard
 up front for it. And there's just an infinite number of things that can go
 wrong. That just doesn't work anymore.
 
-**David Mytton:**Does that mean you are storing all of the raw data all of the
-time or does sampling come in?
+**David:**Does that mean you are storing all of the raw data all of the time or
+does sampling come in?
 
-**Charity Majors:** Well, that's a client side decision. We don't make that
-decision for you. Our client side libraries support dynamic sampling, because I
-mean like at the end of the day, if you want your health check request to have
-the same level of importance as your errors to slash payments, that's up to you.
-Many people don't, but that's up to you, but we store it all. We give everybody,
-even our free tier, 60 days worth of storage because storage is cheap now it
-really me off the way. So many companies are still charging on storage like
-that's what's costly for them. That's not costly at all. What's costly is the
+**Charity:** Well, that's a client side decision. We don't make that decision
+for you. Our client side libraries support dynamic sampling, because I mean like
+at the end of the day, if you want your health check request to have the same
+level of importance as your errors to slash payments, that's up to you. Many
+people don't, but that's up to you, but we store it all. We give everybody, even
+our free tier, 60 days worth of storage because storage is cheap now it really
+me off the way. So many companies are still charging on storage like that's
+what's costly for them. That's not costly at all. What's costly is the
 engineering effort to make a great user experience.
 
-**David Mytton:** That makes sense. So in terms of the next step, once all the
-data's in there, I suppose there's two route to using it. There's something's
-gone wrong and you need to access the data, you are running some kind of query,
-but then the step before that is knowing that something has gone wrong and
-that's alerting. And the typical problem is too many alerts, alert fatigue. How
-do you think about that?
+**David:** That makes sense. So in terms of the next step, once all the data's
+in there, I suppose there's two route to using it. There's something's gone
+wrong and you need to access the data, you are running some kind of query, but
+then the step before that is knowing that something has gone wrong and that's
+alerting. And the typical problem is too many alerts, alert fatigue. How do you
+think about that?
 
-**Charity Majors:** Oh, I'm so glad you asked. What we see is that when people
-adopt SLOs, they get to delete like 90% of their paging alerts. You want to
-align your alerts with your customers actually being in pain and you want to
-align them with as this alert is being burned down, is it so bad that you need
-to wake someone up in the middle of the night or is it not? So you get to
-optimize for engineering happiness. Besides that though, I really think that
-observability demands a different of interacting with your data than monitoring
-does. Monitoring is all about, you should never have to look at your dashboards.
-It will alert you. It will tell you when it's time to look at it. Otherwise you
+**Charity:** Oh, I'm so glad you asked. What we see is that when people adopt
+SLOs, they get to delete like 90% of their paging alerts. You want to align your
+alerts with your customers actually being in pain and you want to align them
+with as this alert is being burned down, is it so bad that you need to wake
+someone up in the middle of the night or is it not? So you get to optimize for
+engineering happiness. Besides that though, I really think that observability
+demands a different of interacting with your data than monitoring does.
+Monitoring is all about, you should never have to look at your dashboards. It
+will alert you. It will tell you when it's time to look at it. Otherwise you
 don't have to look at them at all.
 
 With observability, I think it's about being a constant kind of conversation
@@ -497,9 +508,9 @@ production and at least to a culture where people want to see what's happening.
 They're not afraid to see what's happening. And that I think is the ultimate
 goal.
 
-**David Mytton:** And this plays into the idea that developers should be
-responsible for the code that they write. Once it goes into production, it's not
-just throwing it over to another team, right?
+**David:** And this plays into the idea that developers should be responsible
+for the code that they write. Once it goes into production, it's not just
+throwing it over to another team, right?
 
 It's inevitable. I mean, our systems are becoming so complex that you can't run
 them like black boxes. I come from ops. I think this is wonderful for ops people
@@ -515,42 +526,42 @@ production, to bring observability to the team, to train them on how to have
 that virtuous feedback loop, where you're looking at it to take their hands and
 lead them to the water, so to speak because it doesn't work any other way.
 
-**David Mytton:** Great. Well, before we wrap up, I have two lightning questions
-for you. So first is, are there any interesting dev tools that you're playing
-around with at the moment?
+**David:** Great. Well, before we wrap up, I have two lightning questions for
+you. So first is, are there any interesting dev tools that you're playing around
+with at the moment?
 
-**Charity Majors:** Yeah. I've been looking at \[Akeda 00:25:50\] and some other
-of the streaming software stuff. I'm not quite sure how it fits into the future
-yet, but there's something there. I'm afraid that it's going to be like the way
+**Charity:** Yeah. I've been looking at [Akeda 00:25:50] and some other of the
+streaming software stuff. I'm not quite sure how it fits into the future yet,
+but there's something there. I'm afraid that it's going to be like the way
 tracing was for too long and still kind of is where it's off putting and
 complicated and only the top 5% of elite engineers ever interact with it. That's
 the bad view, but I'm trying to figure out how it could be better than that. And
-\[Liz Fong-Jones 00:26:14\] and I have been talking about, maybe this is
-actually the answer to auto instrumentation. If we can be generating source
-graphs and providing a glimpse into here's where your code is actually failing.
-I don't know. We'll see.
+[Liz Fong-Jones 00:26:14] and I have been talking about, maybe this is actually
+the answer to auto instrumentation. If we can be generating source graphs and
+providing a glimpse into here's where your code is actually failing. I don't
+know. We'll see.
 
-**David Mytton:** And then the second question is what your current tech setup,
-what hardware and software are using on a daily basis?
+**David:** And then the second question is what your current tech setup, what
+hardware and software are using on a daily basis?
 
-**Charity Majors:** MacBook Pro, Chrome and Quip, sadly. I still use VIM for all
-of my to-do lists and stuff, but it's been a long time since I've actually
-gotten a log-in or do anything useful.
+**Charity:** MacBook Pro, Chrome and Quip, sadly. I still use VIM for all of my
+to-do lists and stuff, but it's been a long time since I've actually gotten a
+log-in or do anything useful.
 
-**David Mytton:** Excellent. Well, that's all we've got time for today.
-Unfortunately. Where can people find you online?
+**David:** Excellent. Well, that's all we've got time for today. Unfortunately.
+Where can people find you online?
 
-**Charity Majors:** My personal site is charity.wtf. Honeycomb blog is
+**Charity:** My personal site is charity.wtf. Honeycomb blog is
 honeycomb.io/blog, and I'm occasionally on Twitter at Nipseytipsy.
 
-**David Mytton:** Excellent. Well, thanks joining the Console podcast.
+**David:** Excellent. Well, thanks joining the Console podcast.
 
-**Charity Majors:** Thanks for having me, super fun.
+**Charity:** Thanks for having me, super fun.
 
-**David Mytton:** Thanks for listening to the Console Dev Tools podcast. Please
-let us know what you think on Twitter. I'm at David Mytton, and you can follow
-at console.dev. Don't forget to subscribe and rate us in your podcast player.
-And if you are playing around with or building any interesting dev tools, please
-get in touch. Our email's in this show notes. See you next time.
+**David:** Thanks for listening to the Console Dev Tools podcast. Please let us
+know what you think on Twitter. I'm at David Mytton, and you can follow at
+console.dev. Don't forget to subscribe and rate us in your podcast player. And
+if you are playing around with or building any interesting dev tools, please get
+in touch. Our email's in this show notes. See you next time.
 
 {{</ box-collapsible >}}

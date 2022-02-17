@@ -5,26 +5,24 @@ whoLink: https://twitter.com/tqbf
 role: Developer
 org: Fly.io
 orgLink: https://fly.io/
-what:
-  In this episode we speak to Thomas Ptacek, currently a software engineer at
-  Fly.io and previously a co-founder at security firms Latacora and Matasano
-  Security. We discuss the state of software security in sectors like energy and
-  healthcare,  how software developers should think about supply chain risk, and
-  what they should do about securing their dependencies. We also explore how
-  security threats have changed over the years, and what developers working on
-  open source should do to improve their own security.
+what: 
+ We discuss the state of software security in sectors like energy and 
+ healthcare, how software developers should think about supply chain risk, and 
+ what they should do about securing their dependencies. We also explore how 
+ security threats have changed over the years, and what developers working on 
+ open source should do to improve their own security.
 season: 2
 episode: 2
-date: 2022-01-13T07:05:00Z
+date: 2022-01-13T08:00:00Z
 duration: 32:13
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/34131858-ecea-45c6-b5db-64c5ec8bd0ff/audio/f61fc39a-7b0f-45f2-8e31-d507c5254572/default_tc.mp3
 draft: false
 summary:
-  Security - a devtools discussion with Thomas Ptacek (Fly.io). Episode 2
-  (Season 2) of the Console DevTools Podcast.
+ Security - a devtools discussion with Thomas Ptacek (Fly.io). Episode 2
+ (Season 2) of the Console DevTools Podcast.
 metaDescription:
-  Security - a devtools discussion with Thomas Ptacek (Fly.io). Episode 2
-  (Season 2) of the Console DevTools Podcast.
+ Security - a devtools discussion with Thomas Ptacek (Fly.io). Episode 2
+ (Season 2) of the Console DevTools Podcast.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -32,7 +30,7 @@ isSubpage: podcast-episode
 pageType: podcast-episode
 customPageStyle: true
 xlViewport:
-  largeText: true
+ largeText: true
 topImg1Src: /img/podcast/fly.io-thomas-ptacek-profile.jpg
 topImg2Src: /img/favicons/fly.io.png
 ogImg: /img/podcast/honeycomb-charity-majors-profile.jpg
@@ -40,11 +38,11 @@ authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
 authorBio:
-  is co-founder of Console. From 2009-2018, David was CEO at Server Density, a
-  SaaS server monitoring startup used by hundreds of customers to collect
-  billions of time series metrics from millions of servers. He is also a
-  researcher in sustainable computing at Uptime Institute and affiliated with
-  Imperial College London. David has been a developer for 15+ years.
+ is co-founder of Console. From 2009-2018, David was CEO at Server Density, a
+ SaaS server monitoring startup used by hundreds of customers to collect
+ billions of time series metrics from millions of servers. He is also a
+ researcher in sustainable computing at Uptime Institute and affiliated with
+ Imperial College London. David has been a developer for 15+ years.
 ---
 
 ### Episode notes
@@ -53,14 +51,32 @@ authorBio:
 {{< div--close >}}
 
 In this episode we speak to Thomas Ptacek, currently a software engineer at
-[Fly.io](https://fly.io/) and previously a co-founder at security firms Latacora
-and Matasano Security. We discuss the state of software security in sectors like
-energy and healthcare, how software developers should think about supply chain
-risk, and what they should do about securing their dependencies. We also explore
-how security threats have changed over the years, and what developers working on
-open source should do to improve their own security.
+[Fly.io](https://fly.io/) and previously a co-founder at security firms
+[Latacora](https://www.latacora.com/) and Matasano Security. We discuss the
+state of software security in sectors like energy and healthcare, how software
+developers should think about supply chain risk, and what they should do about
+securing their dependencies. We also explore how security threats have changed
+over the years, and what developers working on open source should do to improve
+their own security.
 
-{{< rich-title-5 icon="future-head" >}}About Thomas Ptacek {{</ rich-title-5 >}}
+Things mentioned:
+
+- [Django](https://www.djangoproject.com/)
+- [NodeJS](https://nodejs.org/en/)
+- [React](https://reactjs.org/)
+- [Deno](https://deno.land/)
+- [Okta](https://www.okta.com/)
+- [Google cloud authentication](https://cloud.google.com/docs/authentication)
+- [Tailscale](https://tailscale.com/)
+- [WireGuard](https://www.wireguard.com/)
+- [Server-side request
+ forgery](https://en.wikipedia.org/wiki/Server-side_request_forgery)
+- [Burp Suite](https://portswigger.net/burp)
+- [Black Hat](https://www.blackhat.com/)
+- [Emacs Tramp Mode](https://www.emacswiki.org/emacs/TrampMode)
+- [Magit](https://magit.vc/)
+
+{{< rich-title-5 icon="future-head" >}}About Thomas Ptacek{{</ rich-title-5 >}}
 
 Thomas Ptacek is a leading security researcher. Best known as one of the
 co-founders of Matasano Security, which was prior to its acquisition by NCC
@@ -71,7 +87,7 @@ engineer at Fly.io
 
 ### Highlights
 
-{{< podcast-episode/clipping time="01:37"  >}}
+{{< podcast-episode/clipping time="01:37" >}}
 
 **David Mytton:** What's your take on the current state of security in these
 types of industries?
@@ -88,7 +104,7 @@ software stacks. And those stacks were all generally kind of conceived of in the
 
 {{</ podcast-episode/clipping >}}
 
-{{< podcast-episode/clipping time="21:15"  >}}
+{{< podcast-episode/clipping time="21:15" >}}
 
 **David Mytton:** For developers working on open source, and on their own
 projects, what can they do to improve the security of those projects for their
@@ -103,7 +119,7 @@ don't have these problems.
 
 {{< box-collapsible title="Full transcript" class="podcast-transcript is-expanded" >}}
 
-**David Mytton:** Welcome to the Console Podcast. I'm David Mytton, co-founder
+**David:** Welcome to the Console Podcast. I'm David Mytton, co-founder
 of Console.dev, a free weekly newsletter highlighting the best and most
 interesting tools for developers. In this episode, I speak with Thomas Ptacek ,
 currently a software engineer at Fly.io and previously a co-founder at security
@@ -115,12 +131,12 @@ do to improve their own security. We're keeping this to 30 minutes, so let's get
 started. I'm here with Thomas Ptacek: . Thomas, thanks for joining the Console
 Podcast.
 
-**Thomas Ptacek:** Thanks for having me on the Console Podcast.
+**Thomas:** Thanks for having me on the Console Podcast.
 
-**David Mytton:** Let's start with a brief background. Tell us a little bit
+**David:** Let's start with a brief background. Tell us a little bit
 about what you're currently doing and how you got here.
 
-**Thomas Ptacek:** I'm an engineer. I'm a developer at a company called Fly.io.
+**Thomas:** I'm an engineer. I'm a developer at a company called Fly.io.
 We're a fun way of running applications in the cloud, close to users. I can talk
 more about what Fly does. I get the sense that when people want to hear from me,
 they're generally interested in security stuff. I've been doing software
@@ -131,7 +147,7 @@ especially small tech companies to kind of navigate that whole space and figure
 out what to do about that whole landscape of things. Everything's being broken
 everywhere and all software being garbage. That's kind of my portfolio.
 
-**David Mytton:**So, when we think of tech companies, we generally think of the
+**David:**So, when we think of tech companies, we generally think of the
 big names like Apple, Google, Microsoft, and Amazon. These are companies that
 build software as part of their core business. And even though they invest
 billions of dollars into security every year, there are regular major security
@@ -142,7 +158,7 @@ healthcares. Sectors where they might not have billions of dollars to spend on
 security. What's your take on the current state of security in these types of
 industries?
 
-**Thomas Ptacek:** I guess it's a bit of good news and a bit of bad news. Right?
+**Thomas:** I guess it's a bit of good news and a bit of bad news. Right?
 The bad news is kind of the same bad news no matter who we're talking about,
 which is, again, computers are garbage. Especially software. All software is
 trash. So, the basic problem that everyone faces is no matter kind of what
@@ -155,7 +171,7 @@ We've barely kind of come to grips with how to build software with even a
 modicum of just basic security promises. Like if I can talk to it, I can't run
 remote code on it. Right?
 
-**Thomas Ptacek:** That's a problem we've barely figured out how to deal with.
+**Thomas:** That's a problem we've barely figured out how to deal with.
 The bad news is that if you're working on infrastructure or a regulated
 business, or especially in places like energy or utilities or things like that,
 you're facing a lot of the same problems, basically all of the same problems,
@@ -179,12 +195,12 @@ particular kind company in that space that you're thinking of? What's the model
 of the small company that doesn't have ten million dollars to spend on security
 consulting this year?
 
-**David Mytton:** Right. So, I suppose we're hearing all the time about state
+**David:** Right. So, I suppose we're hearing all the time about state
 sponsored cybersecurity on critical infrastructure and that often centers around
 the idea of shutting down the electricity grid is the big catastrophe that's
 potentially out there. Do you think that is the right thing to be focusing on?
 
-**Thomas Ptacek:** I'll say two things. Right? The second thing I'll say is
+**Thomas:** I'll say two things. Right? The second thing I'll say is
 something that everyone's heard already before, and I don't have any real unique
 insight to offer for it. The little bit of insight I can say here is that when
 we think about things like shutting the electricity grid down, that's not an
@@ -228,19 +244,19 @@ harder if you're like a corporate IT person or an IT security person. And the
 best you can do is get a consultant to kick the tires on something before you
 buy it and operationalize it.
 
-**David Mytton:** Right. So, it's more likely that it's going to be a ransomware
+**David:** Right. So, it's more likely that it's going to be a ransomware
 attack that's led into someone who's non-technical on the network rather than
 some highly elaborate zero day and some control plane somewhere.
 
-**Thomas Ptacek:**  I think both are possible, but I think the ransomware style
+**Thomas:** I think both are possible, but I think the ransomware style
 attack is more straightforward. It's more lucrative. I think it's more likely to
 be the way we see it going down.
 
-**David Mytton:** But how should the broader tech industry think about this
+**David:** But how should the broader tech industry think about this
 systemic risk, for example, will running our code in data centers that require
 electricity?
 
-**Thomas Ptacek:** Yeah. Your guess is as good as mine. If the question is about
+**Thomas:** Yeah. Your guess is as good as mine. If the question is about
 whether we should use memory safe programming languages, I'm right there with an
 answer. If the question is what we do about our enormous dependence and our
 interdependence on all these different actors doing different levels of security
@@ -248,14 +264,14 @@ assurance for what they're delivering, I have no no freaking idea. I'm totally
 lost. Someday the power is going to go down and I'm just going to live with it
 until it comes back on.
 
-**David Mytton:** Well, that's actually a good link into discussing open source
+**David:** Well, that's actually a good link into discussing open source
 and our dependencies on a huge supply chain and all of those libraries that
 we're all importing to our code that we can, in theory, look at the source code
 for but very few people are doing. How should software developers think about
 that supply chain risk with all the dependencies and the dependencies,
 dependencies, and so on?
 
-**Thomas Ptacek:** It's a real problem. So, from, I think, around 2016 to 2020,
+**Thomas:** It's a real problem. So, from, I think, around 2016 to 2020,
 I was a principle at a company called Lata Quora. And that company still exists,
 I'm just at Fly now. We'd set up security teams for startups that were mostly
 building on top of typical open source software stacks. Jango or a lot of
@@ -268,7 +284,7 @@ possible piece of software and into its own package. And those packages have a
 weird web of dependencies and maintainers, and I think it's basically hopeless
 to keep up with are changes being introduced maliciously?
 
-**Thomas Ptacek:** My odds of detecting that are really minimal. Right? There's
+**Thomas:** My odds of detecting that are really minimal. Right? There's
 so much code in an NPM and a node setup. There's so much code that you're
 pulling in through dependencies and in each of those dependencies you're using
 so little of it and keeping a good map of which parts of which packages you're
@@ -315,7 +331,7 @@ like the idea of being prepared to rebuild your own dependencies from scratch.
 At least the big ones. You might remember, I think it was back in 2012, I'm
 trying to remember the dates for Heartbleed. Right around the time of the
 Heartbleed vulnerability in open SSL, the consulting company I was at at the
-time, \[Monosomo 00:12:01\] Security, we were on an engagement and we found
+time, Monsanto Security, we were on an engagement and we found
 almost identical vulnerability in nginx. So, it wasn't in open SSL. It was in
 the web server itself.
 
@@ -388,10 +404,10 @@ with that are worth investing in, but that a lot of it is not worth spending a
 lot of effort on. I don't know if that sounded incoherent or not, but that's a
 shotgun blast of my answer there.
 
-**David Mytton:**That all makes sense. So, what are the things that those
+**David:** That all makes sense. So, what are the things that those
 companies in between one or two people and 50, what should they focus on first?
 
-**Thomas Ptacek:** As people are probably aware, there is a huge industry of
+**Thomas:** As people are probably aware, there is a huge industry of
 products that are intended to increase security for networks or for software.
 There are things that kind of will promise to watch your application to detect
 attacks or block attacks or scan your code for vulnerabilities and things like
@@ -482,11 +498,11 @@ think that people tend to put off getting single sign on set up and the earlier
 you do that, the easier it is to scale it across your company. You really want
 that set up early. So, I'm a big fan of doing things like that.
 
-**David Mytton:** Flipping it over to developers working on open source, then on
+**David:** Flipping it over to developers working on open source, then on
 their own projects, what can they do to improve the security of those projects
 for their users?
 
-**Thomas Ptacek:** Well, I don't want to be too patronizing, but the first thing
+**Thomas:** Well, I don't want to be too patronizing, but the first thing
 I'd say is work in a memory safe language. So, I think there are big classes of
 vulnerabilities that you can get around just by working in modern languages that
 don't have these problems. In my head right now, I'm trying to think of what the
@@ -529,12 +545,12 @@ but that's the first thing off the top of my head is just thinking more in terms
 of vulnerabilities and how you're getting your head around with the
 vulnerabilities are that you're trying to mitigate.
 
-**David Mytton:** How do you think that's changed over the time you've been in
+**David:** How do you think that's changed over the time you've been in
 the industry? Or how do you think the vulnerabilities or the security issues
 developers have to face and mitigate have changed? Or is everyone just making
 the same mistakes?
 
-**Thomas Ptacek:**  We're making new mistakes. When I started the default
+**Thomas:**  We're making new mistakes. When I started the default
 language that almost any open source project would be built in was C and
 thankfully C is now a rarity. Good bit of advice for people thinking about
 adding dependencies to their stack is to avoid the dependencies that are written
@@ -586,12 +602,12 @@ And every single year, there's a talk from the PortSwigger people on some new
 vulnerability they've discovered. Sounds kind of silly when I say it, but pay
 attention to PortSwigger. A bit of advice I have there.
 
-**David Mytton:** Would you say that a lot of the attack surface has now
+**David:** Would you say that a lot of the attack surface has now
 essentially been outsourced to the cloud providers, given that we're running, at
 least a lot of new projects are deployed, on the cloud? Is that how developers
 should think about that?
 
-**Thomas Ptacek:**  I'm a hundred percent biased here. Right? Fly.io is a cloud
+**Thomas:** I'm a hundred percent biased here. Right? Fly.io is a cloud
 hosting provider. Right? We're doing essentially the same things that AWS does.
 We run some of AWS's code in that we run Firecracker for virtual machines.
 Speaking against my own interests. Right? There's definitely a big sense in
@@ -612,11 +628,11 @@ It's worth asking that question and getting a sense of it. There is something to
 the idea of you're trusting the engineering team for that hosting provider to
 provide a big part of your application security.
 
-**David Mytton:** Before we wrap up that then, I have two quick fire questions
+**David:** Before we wrap up that then, I have two quick fire questions
 for you. So, first is what is the current favorite dev tool that you're using at
 the moment?
 
-**Thomas Ptacek:**  I will tell you, but it's a terrible answer. Right? So the
+**Thomas:** I will tell you, but it's a terrible answer. Right? So the
 favorite dev tool that I've kind of adopted over the last year is Emacs Tramp.
 Emacs' the editor everyone knows. Emacs' the list operating system that is also
 an editor. Has a feature called Tramp, which has been around forever but I've
@@ -641,11 +657,11 @@ it still blows my mind that that works. So, my recommendation is switch to Emacs
 because it's the best possible editor and then use Tramp because Tramp is
 amazing.
 
-**David Mytton:** You partially answered my second question, which is what is
+**David:** You partially answered my second question, which is what is
 your current tech setup? Hardware and software that you're using on your daily
 driver?
 
-**Thomas Ptacek:**  I have a MacBook. It runs Emacs and it runs terminal
+**Thomas:**  I have a MacBook. It runs Emacs and it runs terminal
 Windows. It could be any MacBook. It would be just fine for me. So, I'm typing
 right now on a 2018 Intel, 15 inch MacBook. And my keyboard reads Q, W, 6, B, T,
 Y. I've gradually harvested keys from other computers that I have in my office
@@ -657,24 +673,24 @@ will actually be the keys that I'm typing on. But really it's almost just a dumb
 terminal for me. Right? I just need Emacs to work. I need Emacs and Twitter to
 work and then I'm kind of off to the races. So, I'm pretty easy.
 
-**David Mytton:** Excellent. Where can people find you online?
+**David:** Excellent. Where can people find you online?
 
-**Thomas Ptacek:**  I'm noisy on Twitter. My Twitter name is TQBF, the quick
+**Thomas:**  I'm noisy on Twitter. My Twitter name is TQBF, the quick
 brown fox on Twitter. I'm pretty easy to find there. There's a site many people
 are familiar with called Hacker News. I think if you took the three highest
 karma, kind of biggest losers, on Hacker News and combined them, they still
 would not be as big of a Hacker News loser as I am. By a factor of three I'm the
 highest karma person on Hacker News. Which is where I waste a lot of time. So
-I'm \[tptacek 00:31:25\] on Hacker News if you want to see me ranting about
+I'm tptacek on Hacker News if you want to see me ranting about
 random legal things or the tech industry there as well. So, Hacker News and
 Twitter are where to find me, unfortunately.
 
-**David Mytton:** Excellent. Well, that's all we have time for today. Thanks
+**David:** Excellent. Well, that's all we have time for today. Thanks
 very much for joining the Console Podcast.
 
-**Thomas Ptacek:** Thank you very much for having me. I appreciate it.
+**Thomas:** Thank you very much for having me. I appreciate it.
 
-**David Mytton:** Thanks for listening to the Console Dev Tools Podcast. Please
+**David:** Thanks for listening to the Console Dev Tools Podcast. Please
 let us know what you think on Twitter. I'm @DavidMytton and you can follow
 @consoledotdev. Don't forget to subscribe and rate us in your podcast player.
 And if you are playing around with, or building, any interesting dev tools,

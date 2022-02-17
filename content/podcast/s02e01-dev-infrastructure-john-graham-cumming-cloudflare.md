@@ -6,14 +6,12 @@ role: CTO
 org: Cloudflare
 orgLink: https://www.cloudflare.com/
 what:
-  In this episode we speak with John Graham-Cumming, CTO of Cloudflare, a global
-  web platform built for security and performance. We discuss the philosophy
-  behind the idea that the network is a computer, why developers should be able
-  to ignore the low level details of where their code runs, and the challenges
-  of deploying data centers on Mars.
+  We discuss the philosophy behind the idea that the network is a computer, why 
+  developers should be able to ignore the low level details of where their code 
+  runs, and the challenges of deploying data centers on Mars.
 season: 2
-episode: 2
-date: 2022-01-06T07:00:00Z
+episode: 1
+date: 2022-01-06T08:00:00Z
 duration: 33:18
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/a810f07c-1df0-4198-bd2f-a2629d3eeee3/audio/17a8dc25-bab4-473a-8d7d-8d66124778b2/default_tc.mp3
 draft: false
@@ -58,8 +56,27 @@ network is a computer, why developers should be able to ignore the low level
 details of where their code runs, and the challenges of deploying data centers
 on Mars.
 
-{{< rich-title-5 icon="future-head" >}}About John Graham Cumming
-{{</ rich-title-5 >}}
+Things mentioned:
+
+- [Apple silicon](https://support.apple.com/en-gb/HT211814)
+- [Arm](https://www.arm.com/)
+- [IBM](https://www.ibm.com/)
+- [Intel](https://www.intel.com/)
+- [Starlink](https://www.starlink.com/)
+- [Donald Knute](https://en.wikipedia.org/wiki/Donald_Knuth)
+- [Cloudflare Workers](https://workers.cloudflare.com/)
+- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine))
+- [Go](https://go.dev/)
+- [Rust](https://www.rust-lang.org/)
+- [WebAssembly (Wasm)](https://webassembly.org/)
+- [COBOL](https://en.wikipedia.org/wiki/COBOL)
+- [Green Compute](https://blog.cloudflare.com/announcing-green-compute/)
+- [Cloudflare Wrangler](https://developers.cloudflare.com/workers/cli-wrangler)
+- [J programming language](https://www.jsoftware.com/#/)
+- [Raspberry Pi](https://www.raspberrypi.org/)
+- [Jgc.org](https://www.jgc.org/)
+
+{{< rich-title-5 icon="future-head" >}}About John Graham Cumming{{</ rich-title-5 >}}
 
 John Graham-Cumming is the CTO of Cloudflare and is a computer programmer and
 author. He studied mathematics and computation at Oxford and stayed for a
@@ -106,7 +123,7 @@ on the end user device?
 
 {{< box-collapsible title="Full transcript" class="podcast-transcript is-expanded" >}}
 
-**David Mytton:** Welcome to season two of The Console Podcast. I'm David
+**David:** Welcome to season two of The Console Podcast. I'm David
 Mytton, co-founder of console.dev, a free weekly newsletter highlighting the
 best and most interesting tools for developers. In this season I'll be
 interviewing 11 interesting people about a specific technical topic. From
@@ -122,13 +139,13 @@ challenges of deploying data centers on Mars. We're keeping this to 30 minutes,
 so let's get started. I'm here with John Graham-Cumming. John, thanks for
 joining The Console Podcast.
 
-**John Graham-Cumming:** Well, thank you very much for inviting me. It's lovely
+**John:** Well, thank you very much for inviting me. It's lovely
 to get a chance to chat.
 
-**David Mytton:** Let's start with a brief background, then. Tell us a little
+**David:** Let's start with a brief background, then. Tell us a little
 bit about what you're currently doing and how you got here.
 
-**John Graham-Cumming:** Well, I'm John Graham-Cumming. I'm the CTO of a company
+**John:** Well, I'm John Graham-Cumming. I'm the CTO of a company
 called Cloudflare. How did I get here? Well, I got here because I met Matthew
 Prince, the CEO of Cloudflare, years and years and years ago, so long ago I
 don't want to tell you how long ago it was. And I'd had a long career in a
@@ -138,13 +155,13 @@ Cloudflare, I wanted to work for Matthew, I wanted to work for Michelle, and
 luckily it turned out not to be just good people to work for but a company that
 has become very successful.
 
-**David Mytton:** Well, Cloudflare started life focused on some core network
+**David:** Well, Cloudflare started life focused on some core network
 services like content delivery, security and DDoS protection. But in the last
 few years you've been working up the layers and compute and storage are now core
 parts of the service. What's the philosophy behind this approach and the
 building blocks?
 
-**John Graham-Cumming:** Well, I think the ideas or a few different aspects we
+**John:** Well, I think the ideas or a few different aspects we
 saw, when you're talking about now, in 2010, 2011, that only a few companies
 really got the best out of the internet. And what I mean by that is they had the
 best security, they had the best performance, they gave you the best online
@@ -160,10 +177,10 @@ plan to bring those attributes to anything connected to the internet. And over
 time, we have built that out. I mean, we started out with really for the web,
 really for websites, and really now it's anything connected to the internet.
 
-**David Mytton:** And you have this concept of the network is the computer. What
+**David:** And you have this concept of the network is the computer. What
 does that actually mean?
 
-**John Graham-Cumming:** Well, I think that obviously that's an old slogan that
+**John:** Well, I think that obviously that's an old slogan that
 came from Sun Microsystems. And Sun was really one of the first companies that
 was shipping all of its machines with network cards in them and seeing the
 network as fundamental to how things operate. I think what we mean by it now is
@@ -188,11 +205,11 @@ worry about anything else. So I'm really trying to bring the 8-bit age to the
 entire world and make it as easy as those days with a home computer in the
 1980s.
 
-**David Mytton:**  Right. So developers don't have to worry about the idea of
+**David:**  Right. So developers don't have to worry about the idea of
 what is happening on the low level. They can just hand over the code and you're
 dealing with and abstracting all of those difficult problems.
 
-**John Graham-Cumming:** Yep, exactly. There are times when it's interesting to
+**John:** Yep, exactly. There are times when it's interesting to
 worry about the performance of the machine, the architecture of the processor,
 all the idiosyncrasies about the memory and everything, but there are many times
 you just want to run your code. And if you think about it, we stopped
@@ -204,13 +221,13 @@ about these underlying layers. Let's not even worry about the scaling and all
 those kind of things. We'll run your code for you and we'll run it where it
 needs to be run."
 
-**David Mytton:** And how do you think that is exposed to developers? Because
+**David:** And how do you think that is exposed to developers? Because
 for a long time you could just assume, well, your code's going to run on Intel
 architecture chips, but that's started to change quite a bit with Apple Silicon
 and ARM chips, and now you've got to deal with FPGAs and GPUs, and RISC is
 making a comeback. Do developers really need to care about all that?
 
-**John Graham-Cumming:** Well, I mean, if you think about Intel obviously is a
+**John:** Well, I mean, if you think about Intel obviously is a
 really, really popular platform, but the reality is that ARM is everywhere
 because it's in your phone, and there are billions and billions of phones. And
 so the idea that the Intel architecture was dominant is actually kind of wrong.
@@ -229,10 +246,10 @@ plane, you mostly don't think if it's a Boeing or an Airbus, you mostly think
 about the destination. And I think that's what most engineers are thinking about
 when they write code.
 
-**David Mytton:** And what about network latency? Developers, do developers need
+**David:** And what about network latency? Developers, do developers need
 to care about that? How should they think about it?
 
-**John Graham-Cumming:** Well, it depends what you're doing. I mean, I think
+**John:** Well, it depends what you're doing. I mean, I think
 that we are definitely entering an era where there will be low latency from an
 end user's device, be it a computer or a phone, to a place where their code
 runs. And the reason that's happening is not sadly that we made the speed of
@@ -255,10 +272,10 @@ the question developers will need to ask, unless they're doing something that
 genuinely requires low latency, such as gaming or virtual reality or something,
 in which case they'll be seriously concentrating on latency from the beginning.
 
-**David Mytton:** Does that assume much more processing either on the device or
+**David:** Does that assume much more processing either on the device or
 very close to the device as opposed to centralized?
 
-**John Graham-Cumming:** Well, if you think about the hyperscalers like Amazon,
+**John:** Well, if you think about the hyperscalers like Amazon,
 I mean, they've been very successful by building these very, very large data
 centers, right? And that's fantastic. I think that as we get to low latency,
 you're going to want to be near the end user. We're obviously already using
@@ -282,19 +299,19 @@ they're really well-connected means that you can do things really, really fast
 on the serverless platform. So I think there is really a future in which
 serverless becomes enormously important.
 
-**David Mytton:** So it kind of removes the latency question from the user
+**David:** So it kind of removes the latency question from the user
 perspective, using a service. Is there still a question in terms of the
 internals of when you're building an application as a developer and thinking
 about what callbacks you might be doing to backend services? Or do you think
 those will be co-located closer to the user as well?
 
-**John Graham-Cumming:** I think some of them will be co-located. I also think
+**John:** I think some of them will be co-located. I also think
 just the fact that a platform like ours or others, they have really good
 connectivity to the internet. In our case, we have our own fiber backbone, so we
 can move stuff without it going over the internet. I think it'll just be such a
 great developer experience to be on the serverless platform.
 
-**David Mytton:** Right. And then you've also got the different connectivity
+**David:** Right. And then you've also got the different connectivity
 types. You talked about 5G, and that's the latest technology that we're
 hopefully seeing being rolled out, but then there's satellite and Starlink where
 there might be high throughput but you've got quite significantly higher
@@ -302,7 +319,7 @@ latency, but also in developing countries where the infrastructure's not quite
 as advanced and they might be several generations behind. Does that introduce
 different tiers potentially that developers need to consider?
 
-**John Graham-Cumming:** Well, so Starlink's interesting because Starlink
+**John:** Well, so Starlink's interesting because Starlink
 latency is pretty good. You're talking tens of milliseconds. And the reason for
 it is is that it's easy to think, "Well, it's in space, so it's far away." And
 if you're old enough to remember transatlantic phone calls that went via
@@ -328,20 +345,20 @@ give you, the developer, a place to run code that you know is high performance
 and well-connected to the internet even if the end user's connection isn't as
 good as the lovely gigabit connection you have at home.
 
-**David Mytton:** One of my favorite Easter eggs is in the Starlink terms and
+**David:** One of my favorite Easter eggs is in the Starlink terms and
 conditions about how their legal jurisdiction changes as you leave Earth and
 transit through space and then ultimately land on Mars. That introduces
 currently hypothetical but potential interesting questions around latency
 between Earth and Mars, obviously completely hypothetical. How would you think
 about architecting for that kind of problem?
 
-**John Graham-Cumming:** Well, I mean, obviously, you can get relatively high
+**John:** Well, I mean, obviously, you can get relatively high
 bandwidth, but as you say, if you've watched The Martian, you may remember how
 many minutes Mark Watney was waiting for a reply every time he sent a question.
 
-**David Mytton:** Right.
+**David:** Right.
 
-**John Graham-Cumming:** The latency is enormous. So what you're going to have
+**John:** The latency is enormous. So what you're going to have
 to do is you're going to have to move the data and the application to Mars,
 right, or maybe in orbiting around Mars. So I think once we get to that point,
 no one's going to be doing anything interactive directly with the Earth, they're
@@ -351,13 +368,13 @@ which is what this solar system serverless platform will have to deal with. So
 once again, I think this becomes not an application developer problem but
 actually a problem for the platform to deal with.
 
-**David Mytton:** So given that we're still quite early on in the development of
+**David:** So given that we're still quite early on in the development of
 serverless platforms, where do you see things going in terms of improving
 developer experience, so things like logging, error reporting, build, test,
 deploy cycles, that kind of stuff, that's already quite mature in other
 environments?
 
-**John Graham-Cumming:** It's funny, I once attended a talk by Donald Knuth in
+**John:** It's funny, I once attended a talk by Donald Knuth in
 Menlo Park, and at the end of it somebody stood up and said, "Which do you think
 is the better language, Java or C++?" which dates when that talk was done. And
 he replied, "Which one has the better debugger?" And I think you highlight the
@@ -377,10 +394,10 @@ to worry about all sorts of features." And we see it from the people who use our
 platform that they just never even think about the scaling or load balancing or
 anything like that.
 
-**David Mytton:** What does that mean for optimization and thinking about
+**David:** What does that mean for optimization and thinking about
 performance? Can you just throw hardware and resources at a problem?
 
-**John Graham-Cumming:** Well, it depends what the problem is. Let suppose
+**John:** Well, it depends what the problem is. Let suppose
 you're trying to do a simulation of something in physics where you really are
 going to spend a lot of time optimizing how you do that and working on probably
 some high performance computing environment. That is going to be a very, very
@@ -393,25 +410,25 @@ that you just shouldn't have to be thinking about the hardware, or the operating
 system, or the architecture, you should just be thinking about writing code in
 the language that you prefer.
 
-**David Mytton:** And the constraints are changing and improving. Like, you've
+**David:** And the constraints are changing and improving. Like, you've
 just increased the execution time, for example, on Cloudflare Workers. Do you
 think that developers should just expect that to get better over time, and the
 constraints they see today will be vastly improved in six and 12 months time?
 
-**John Graham-Cumming:** Yes, absolutely. I mean, obviously, we are growing and
+**John:** Yes, absolutely. I mean, obviously, we are growing and
 building out our platform at the same time. So initially, we had constraints
 just because we were overwhelmed with demand. As we've grown out, we've
 increased. And as we've seen the demand actually for other applications to be on
 our platform, we've increased the runtime constraints. I think eventually, yeah,
 I mean, this will become how people build stuff.
 
-**David Mytton:** And how does that play into technology choices? So for
+**David:** And how does that play into technology choices? So for
 example, the V8 engine that Workers is based on is written in C++, but end
 developers write in JavaScript or anything that can compile into WebAssembly,
 and you're big users of Go and Rust internally. How do you think about those
 different technology choices?
 
-**John Graham-Cumming:** Well, from our perspective, what V8 gave us was a
+**John:** Well, from our perspective, what V8 gave us was a
 highly optimized, very widely used, very well-understood runtime environment,
 which we were then able to wrap around our own security features to be able to
 allow us to allow others to write code on our platform. We wanted to use V8 for
@@ -424,7 +441,7 @@ execute it safely, especially if we had all the infrastructure in place for the
 rest of V8. So I think those two things together came together to say, "This is
 a good place to begin."
 
-**John Graham-Cumming:** Will we use V8 forever? I have no idea. You can easily
+**John:** Will we use V8 forever? I have no idea. You can easily
 imagine a world in which in five years' time there's so much WASM that maybe we
 want to do something entirely native with WASM or maybe we've made silicon that
 runs WASM directly. But I think that it is clear that WASM is a very good target
@@ -441,13 +458,13 @@ which, from an end user perspective, you shouldn't worry about it. You should
 just make sure that we run your code as fast and as securely as you need it to
 be run.
 
-**David Mytton:** And how have you approached the security aspects of that? And
+**David:** And how have you approached the security aspects of that? And
 I suppose being able to compile into WebAssembly is the key there, so that you
 can do interesting things like changing how the date API in JavaScript is
 working internally so you can prevent those timing attacks. What can you tell us
 about your approach to the platform level security?
 
-**John Graham-Cumming:** Well, we have a really long post, actually, about this
+**John:** Well, we have a really long post, actually, about this
 on the developer region of the Worker stuff for Cloudflare, but obviously, V8
 itself is highly scrutinized, right, because it is in every browser out there.
 And of course, people would like to attack it. And we built an environment where
@@ -469,12 +486,12 @@ sign up for free and run code today. And I think that it's something you never
 stop working on, but it is something that we think the combination of what we
 did and the work the V8 team does, it is a good platform to write code on.
 
-**David Mytton:** How have you managed to achieve that such rapid rollout speed
+**David:** How have you managed to achieve that such rapid rollout speed
 across... You've got hundreds of edge locations around the world. How is that
 architected to avoid problems showing up in production and detecting those kind
 of things at scale?
 
-**John Graham-Cumming:** So there's a few things. So the way in which Cloudflare
+**John:** So there's a few things. So the way in which Cloudflare
 works is we have an internal system called Quicksilver, which binds together all
 of those machines around the world and allows us to push out configuration to
 them. And that happens very, very rapidly, seconds to around the world. Or we
@@ -499,9 +516,9 @@ at pretty much exactly the same CPU utilization around the world. So whether
 it's a third generation machine or a 10th generation machine, we're able to use
 its CPU effectively and safely.
 
-**David Mytton:** Is that entirely automated? How's that evolved over time?
+**David:** Is that entirely automated? How's that evolved over time?
 
-**John Graham-Cumming:** Yes. I mean, so it used to be entirely manual, right?
+**John:** Yes. I mean, so it used to be entirely manual, right?
 So it's like, "Oh, that machine's a bit over load. Let's move some traffic
 around." Then we did a sort of semiautomatic mode where we did modeling of what
 normally happened, and we set up load balancing to machines based on that
@@ -515,10 +532,10 @@ CPUs around the world at exactly the same level, no matter what the load is,
 because we're able to move the traffic and keep things flowing. And it's made us
 incredibly efficient.
 
-**David Mytton:** Is that linked into how you handle very large DDoS attacks as
+**David:** Is that linked into how you handle very large DDoS attacks as
 well?
 
-**John Graham-Cumming:** So, yes and no. Large DDoS attacks are something we've
+**John:** So, yes and no. Large DDoS attacks are something we've
 been dealing with right from the very beginning at Cloudflare. We'd always been
 a company that would deal with DDoS attacks, and over time we built a entirely
 separate DDoS system. And actually, we have more than one. We have a system that
@@ -538,11 +555,11 @@ types that run in the kernel very, very fast. A lot of this stuff has been built
 up over years to the point where just the other day we handled an almost two
 terabits per second DDoS without any manual intervention.
 
-**David Mytton:** Where do you see VMs and containers fitting into this, as the
+**David:** Where do you see VMs and containers fitting into this, as the
 classic building blocks of applications compared to the much smaller layers that
 the serverless functions exist in and then your own software layer?
 
-**John Graham-Cumming:** Our guess is that some people will still want to run a
+**John:** Our guess is that some people will still want to run a
 container where they've set everything up and they want to give us the
 container. We're not ready yet to offer that service. I think that it is
 possible that we will. We've talked a little bit about our sort of thinking on
@@ -553,11 +570,11 @@ applications. And I think as that gets built out, it'll just become natural to
 not even worry about the container with all of the dependencies. We'll say, "Oh
 yes, I can run it on this platform because that platform exists."
 
-**David Mytton:** And does that make it a lot easier to do these lower level
+**David:** And does that make it a lot easier to do these lower level
 optimizations you're talking about with even the custom silicon when it's
 running on the serverless engine?
 
-**John Graham-Cumming:** Yes, definitely. I mean, I think, if you're able to
+**John:** Yes, definitely. I mean, I think, if you're able to
 control the environment you're running in, then, yes, you can absolutely make
 all sorts of optimizations. I mean, the fact that we have hardware built for us
 allows us to pick exactly the CPU we want, exactly the memory, exactly the
@@ -569,12 +586,12 @@ shouldn't have to worry about any of that. They need to say, "Oh yes, I'll just
 run my code on this incredibly inexpensive, incredibly flexible, scalable
 platform," and it just works.
 
-**David Mytton:** How do you think about aging out those different components of
+**David:** How do you think about aging out those different components of
 the infrastructure? Is that how it ties into your efficiency management layer,
 so even when you have the older generations of equipment, you can still manage
 them with the latest versions?
 
-**John Graham-Cumming:** Yeah. I mean, that's one of the things we do, right,
+**John:** Yeah. I mean, that's one of the things we do, right,
 which is that. So there's a financial component to this, right, which is the
 depreciation on the hardware, right? So over time you've paid for it
 essentially, right? The real thing to look at is what we really care about is
@@ -584,7 +601,7 @@ second can you do per watt of power, right? And so over time, when you look at
 the blended cost of running our service, at some point, some of those older
 machines start to look expensive because they're more power hungry per request.
 
-**John Graham-Cumming:** And so by having this Unimog software layer, we can
+**John:** And so by having this Unimog software layer, we can
 make that decision based on nontechnical reasons. It's not like, "Oh, well, it's
 too old because we don't like this machine because it's got DDR, whatever memory
 in it." But it's like, "Oh, it's actually too expensive for us to run." And
@@ -593,12 +610,12 @@ has allowed us to be incredibly efficient. And one of the reasons why the
 business has done so well is that ability to really drive down the cost of
 operating the thing through software and software on top of this platform.
 
-**David Mytton:** Right. And the computational efficiency but also the
+**David:** Right. And the computational efficiency but also the
 sustainability of the platform when you're thinking about carbon intensity per
 kilowatt-hour and how that blends into your global estate of locations. How are
 you thinking about the sustainability? Is that just linked into the efficiency?
 
-**John Graham-Cumming:** It's not just linked into the efficiency, right? So,
+**John:** It's not just linked into the efficiency, right? So,
 yes, we want to be more efficient, absolutely, because that makes sense from a
 financial perspective and from a carbon perspective, but it's also like, how do
 we power this? And so we're looking at, where are we getting our electricity
@@ -606,7 +623,7 @@ from? Where are we getting our cooling from? And so that's something we've been
 on a long journey around, either buying offsets or directly sourcing power which
 is from renewable sources. And we'll continue to do that.
 
-**John Graham-Cumming:** We have this thing called Green Compute, actually,
+**John:** We have this thing called Green Compute, actually,
 where you can choose that your code will only run in data centers where we've
 all already got to a acceptable level of carbon use, which I think is a cool
 thing. And again, it's one of these things where you don't have to worry about
@@ -614,22 +631,22 @@ the machines and the operating system, all this stuff, it's that you can
 literally press a button in the UI and say, "I only want this run in data
 centers which are sustainably powered," which is pretty amazing.
 
-**David Mytton:** So it's essentially a config flag and you can trade off
+**David:** So it's essentially a config flag and you can trade off
 different things like locations that you require and the sustainability?
 
-**John Graham-Cumming:** Yeah. And eventually, of course, you won't have to make
+**John:** Yeah. And eventually, of course, you won't have to make
 this trade-off because we're pushing to make the whole thing sustainable, and
 then you won't have to worry. But if you want to do it today, you can absolutely
 do that.
 
-**David Mytton:** Before we wrap up, I have two lightning questions for you.
+**David:** Before we wrap up, I have two lightning questions for you.
 
-**John Graham-Cumming:** Go for it.
+**John:** Go for it.
 
-**David Mytton:** So the first one is, what interesting dev tools are you
+**David:** So the first one is, what interesting dev tools are you
 playing around with at the moment?
 
-**John Graham-Cumming:** I don't code that much anymore because the CTO role at
+**John:** I don't code that much anymore because the CTO role at
 Cloudflare, I started out as a programmer and I wrote loads of code, and then I
 ended up being the CTO and running everything, and now the CTO role is very much
 around outbound stuff, stuff like this interview with you, talking to customers,
@@ -645,16 +662,16 @@ interesting mathematical language called J, and one day I'm going to sit down
 and really learn J properly, and which will take me back to my original roots as
 an undergraduate mathematician.
 
-**David Mytton:** Hopefully, you can compile it to WebAssembly and run it on a
+**David:** Hopefully, you can compile it to WebAssembly and run it on a
 Worker.
 
-**John Graham-Cumming:** Maybe. Maybe, yeah. Maybe that's what I should do. Get
+**John:** Maybe. Maybe, yeah. Maybe that's what I should do. Get
 it running there, yeah.
 
-**David Mytton:** And then the second question is, what is your current tech
+**David:** And then the second question is, what is your current tech
 setup? What hardware and software do you use on a daily basis?
 
-**John Graham-Cumming:** So I have sitting in front of me a MacBook Pro, which I
+**John:** So I have sitting in front of me a MacBook Pro, which I
 access everything from. I have probably within striking distance of my desk here
 about eight Raspberry Pis, because I love Raspberry Pis. I love anything to do
 with microcontrollers, anything to do with small compute platforms. I have a
@@ -664,25 +681,25 @@ And I have various machines around the world if I need to run something there.
 But more and more, I'm actually just using Cloudflare's platform to run things.
 It's just easy and I don't have to worry about updating and scaling it.
 
-**David Mytton:** Excellent. Well, that's all we've got time for, unfortunately.
+**David:** Excellent. Well, that's all we've got time for, unfortunately.
 Where can people find you online?
 
-**John Graham-Cumming:** Obviously, Cloudflare is where I work, but my website
+**John:** Obviously, Cloudflare is where I work, but my website
 is jgc.org. It has various things about me. And obviously, Twitter is my primary
 sort of public face, which is jgrahamc is my Twitter. And I'm very happy to
 interact with people there. I do it on a pretty much daily, maybe even hourly,
 basis.
 
-**David Mytton:** Excellent. Well, thanks for joining The Console Podcast.
+**David:** Excellent. Well, thanks for joining The Console Podcast.
 
-**John Graham-Cumming:** It was very lovely to talk to you. Thank you so much
+**John:** It was very lovely to talk to you. Thank you so much
 for taking the time to have me and inviting me, and I hope people think about
 this serverless future and in particular tell us what we've got wrong, because
 I'm sure we've got a million things wrong.
 
-**David Mytton:** Thanks for listening to The Console DevTools Podcast. Please
-let us know what you think on Twitter. I'm @DavidMytton and you can follow
-@console.dev. Don't forget to subscribe and rate us in your podcast player. And
+**David:** Thanks for listening to The Console DevTools Podcast. Please
+let us know what you think on Twitter. I'm @Davidmytton and you can follow
+@consoledotdev. Don't forget to subscribe and rate us in your podcast player. And
 if you're playing around with or building any interesting dev tools, please get
 in touch. Our email's in the show notes. See you next time.
 
