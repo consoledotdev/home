@@ -58,11 +58,12 @@ you only need Hugo:
   custom stylesheet definition, menu item activation and assets location.
 - `customStyle`: `true` or `false` - Will expect and load a custom style based
   on the `isPage` string.
-- `pageType`: `feature`, `article` or `feature-article` - Define the page type
-  as feature page (eg: Beta List), article page (eg: About, Interview) or long
-  form article (eg: Mars Internet).
-- `customPageStyle`: `true` or `false` - Will expect and load a custom style
+- `pageType`: `feature`, `article`, `vendor-review`, see `css/pageType/` ... - 
+  Defines a custom class for the `<body>` and `<main>` page elements. 
+- `customPageStyle`: `true` or `false` - Will expect and load a custom stylesheet
   based on the `pageType` string.
+- `xlViewport`: segment for specifying style classes for xl viewports.
+  - `largeText`: `true` or `false` will enable text size increase on xl viewports.
 
 ### Custom Hugo Shortcodes
 

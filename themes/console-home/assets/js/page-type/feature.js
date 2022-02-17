@@ -1,36 +1,131 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-    let adjustSelectWidth = (() => {
-        let adjust = (e, el) => {
-            let s = e?.target || el;
-            let selectedText = s.options[s.selectedIndex].text;
-            var canvas = document.createElement("canvas");
-            var context = canvas.getContext("2d");
-            context.font = "16px Rubik";
-            if (s.classList.contains("console-input-medium")) {
-                context.font = "14px Rubik";
-            }
-            if (s.classList.contains("console-input-small")) {
-                context.font = "13px Rubik";
-            }
-            var metrics = context.measureText(selectedText);
-            var pad = parseInt(getComputedStyle(s).paddingLeft) + parseInt(getComputedStyle(s).paddingRight);
-            s.style.width = pad + metrics.width + 8 + "px";
-        };
-
-        let selects = document.getElementsByClassName("console-select");
-        for (let s of selects) {
-            s.addEventListener("change", adjust);
-            adjust(null, s);
+    /* adjust select width */
+    let adjustSelectWidth = (e, el) => {
+        let s = e?.target || el;
+        let selectedText = s.options[s.selectedIndex].text;
+        var canvas = document.createElement("canvas");
+        var context = canvas.getContext("2d");
+        context.font = "16px Rubik";
+        if (s.classList.contains("console-input-medium")) {
+            context.font = "14px Rubik";
         }
-    })();
+        if (s.classList.contains("console-input-small")) {
+            context.font = "13px Rubik";
+        }
+        var metrics = context.measureText(selectedText);
+        var pad = parseInt(getComputedStyle(s).paddingLeft) + parseInt(getComputedStyle(s).paddingRight);
+        s.style.width = pad + metrics.width + 8 + "px";
+    };
+    let selects = document.getElementsByClassName("console-select");
+    for (let s of selects) {
+        s.addEventListener("change", adjustSelectWidth);
+        adjustSelectWidth(null, s);
+    }
 
-    let computeAsideContentPos = (() => {
-        let asideContent = document.querySelector("[data-feature-aside-content]");
+    /* manage aside content responsiveness */
+    let asideWrappers = document.querySelectorAll("[data-aside-wrapper]");
+    let setAsideVisibility = () => {
+        asideWrappers.forEach((w) => {
+            if (window.innerWidth >= 1025) {
+                w.classList.remove("is-hidden");
+            } else {
+                w.classList.add("is-hidden");
+            }
+        });
+    };
+    setAsideVisibility();
+    window.addEventListener("resize", setAsideVisibility);
+
+    if (document.body.classList.contains("page-podcast")) {
+        /* manage season info position */
+        let contentSplits = document.querySelectorAll("[data-content-split]");
+        let setPos = () => {
+            contentSplits.forEach((split) => {
+                let el = split.querySelector("[data-aside-content]");
+                let asideWrapper = split.querySelector("[data-aside-content-wrapper]");
+                let inlineWrapper = split.querySelector("[data-inline-aside-content-wrapper]");
+                let trailerEl = el.querySelector("[data-trailer-player]");
+                if (window.innerWidth >= 1025) {
+                    if (!inlineWrapper.classList.contains("player-prepended")) {
+                        el.insertBefore(trailerEl, el.firstChild);
+                        asideWrapper.appendChild(el);
+                        inlineWrapper.classList.add("is-hidden");
+                        inlineWrapper.classList.add("player-prepended");
+                    }
+                } else {
+                    if (inlineWrapper.classList.contains("player-prepended")) {
+                        el.appendChild(trailerEl);
+                        inlineWrapper.appendChild(el);
+                        inlineWrapper.classList.remove("is-hidden");
+                        inlineWrapper.classList.remove("player-prepended");
+                    }
+                }
+            });
+        };
+        setPos();
+        window.addEventListener("resize", setPos);
+    }
+
+    if (document.body.classList.contains("page-tools") || document.body.classList.contains("page-betas")) {
+        let asideContentWrapper = document.querySelector("[data-aside-content-wrapper]");
+
+        /* manage CTA position */
+        let ctaEl = document.querySelector("[data-feature-cta]").querySelector(".subscribe-cta");
+        let inlineCTAWrapper = document.querySelector("[data-inline-cta-wrapper]");
+        let inlineCTAWrapperCollapsible = inlineCTAWrapper.querySelector("[data-collapsible-content]");
+        let setCTAPos = () => {
+            let title = ctaEl.querySelector(".title");
+            let input = ctaEl.querySelector(".console-input-text");
+            let button = ctaEl.querySelector(".console-button");
+            if (window.innerWidth >= 1025) {
+                ctaEl.classList.remove("layout-wide", "size-medium");
+                ctaEl.classList.add("layout-small", "size-small", "sidebar");
+                title.classList.remove("title-4");
+                title.classList.add("title-5");
+                input.classList.remove("console-input-medium");
+                input.classList.add("console-input-small");
+                button.classList.remove("console-button-medium");
+                button.classList.add("console-button-small");
+                asideContentWrapper.insertBefore(ctaEl, asideContentWrapper.firstChild);
+                inlineCTAWrapper.classList.add("is-hidden");
+            } else {
+                ctaEl.classList.remove("layout-small", "size-small", "sidebar");
+                ctaEl.classList.add("layout-wide", "size-medium");
+                title.classList.remove("title-5");
+                title.classList.add("title-4");
+                input.classList.remove("console-input-small");
+                input.classList.add("console-input-medium");
+                button.classList.remove("console-button-small");
+                button.classList.add("console-button-medium");
+                inlineCTAWrapperCollapsible.appendChild(ctaEl);
+                inlineCTAWrapper.classList.remove("is-hidden");
+            }
+        };
+        setCTAPos();
+        window.addEventListener("resize", setCTAPos);
+
+        /* manage filters position */
+        let filtersEl = document.querySelector("[data-feature-filters]");
+        let inlineFiltersWrapper = document.querySelector("[data-inline-filters-wrapper]");
+        let inlineFiltersWrapperCollapsible = inlineFiltersWrapper.querySelector("[data-collapsible-content]");
+        let setFiltersPos = () => {
+            if (window.innerWidth >= 1025) {
+                asideContentWrapper.appendChild(filtersEl);
+                inlineFiltersWrapper.classList.add("is-hidden");
+            } else {
+                inlineFiltersWrapperCollapsible.appendChild(filtersEl);
+                inlineFiltersWrapper.classList.remove("is-hidden");
+            }
+        };
+        setFiltersPos();
+        window.addEventListener("resize", setFiltersPos);
+
+        /* compute aside content position */
         let scrollWrapper = document.querySelector("[data-scroll-wrapper]");
         let contentBottomPadding = parseInt(getComputedStyle(document.querySelector("[data-content-wrapper]")).paddingBottom);
         let footerHeight = document.querySelector("[data-footer]").getBoundingClientRect().height;
         let safetyBottomOffset = contentBottomPadding + footerHeight + 48;
-        asideContentHeight = asideContent.getBoundingClientRect().height;
+        asideContentHeight = asideContentWrapper.getBoundingClientRect().height;
 
         let style = {};
         let compute = function () {
@@ -70,86 +165,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 style.marginBottom = null;
             }
 
-            asideContent.style.position = style.position;
-            asideContent.style.top = style.top;
-            asideContent.style.marginTop = style.marginTop;
-            asideContent.style.paddingTop = style.paddingTop;
-            asideContent.style.marginBottom = style.marginBottom;
-            asideContent.style.overflow = style.overflow;
+            asideContentWrapper.style.position = style.position;
+            asideContentWrapper.style.top = style.top;
+            asideContentWrapper.style.marginTop = style.marginTop;
+            asideContentWrapper.style.paddingTop = style.paddingTop;
+            asideContentWrapper.style.marginBottom = style.marginBottom;
+            asideContentWrapper.style.overflow = style.overflow;
         };
         compute();
         window.addEventListener("scroll", compute);
         window.addEventListener("resize", compute);
-    })();
+    }
 });
-
-let manageAsideContentPosition = (() => {
-    let asideWrapper = document.querySelector("[data-aside-wrapper]");
-    let setPos = () => {
-        if (window.innerWidth >= 1025) {
-            asideWrapper.classList.remove("is-hidden");
-        } else {
-            asideWrapper.classList.add("is-hidden");
-        }
-    };
-    setPos();
-    window.addEventListener("resize", setPos);
-
-    let manageCTAPosition = (() => {
-        let ctaEl = document.querySelector("[data-feature-cta]").querySelector(".subscribe-cta");
-        let asideContentWrapper = document.querySelector("[data-feature-aside-content]");
-        let inlineWrapper = document.querySelector("[data-inline-cta-wrapper]");
-        let inlineWrapperCollapsible = inlineWrapper.querySelector("[data-collapsible-content]");
-        let setPos = () => {
-            let title = ctaEl.querySelector(".title");
-            let input = ctaEl.querySelector(".console-input-text");
-            let button = ctaEl.querySelector(".console-button");
-            if (window.innerWidth >= 1025) {
-                ctaEl.classList.remove("layout-wide", "size-medium");
-                ctaEl.classList.add("layout-small", "size-small", "sidebar");
-                title.classList.remove("title-4");
-                title.classList.add("title-5");
-                input.classList.remove("console-input-medium");
-                input.classList.add("console-input-small");
-                button.classList.remove("console-button-medium");
-                button.classList.add("console-button-small");
-                asideContentWrapper.insertBefore(ctaEl, asideContentWrapper.firstChild);
-                inlineWrapper.classList.add("is-hidden");
-            } else {
-                ctaEl.classList.remove("layout-small", "size-small", "sidebar");
-                ctaEl.classList.add("layout-wide", "size-medium");
-                title.classList.remove("title-5");
-                title.classList.add("title-4");
-                input.classList.remove("console-input-small");
-                input.classList.add("console-input-medium");
-                button.classList.remove("console-button-small");
-                button.classList.add("console-button-medium");
-                inlineWrapperCollapsible.appendChild(ctaEl);
-                inlineWrapper.classList.remove("is-hidden");
-            }
-        };
-        setPos();
-        window.addEventListener("resize", setPos);
-    })();
-
-    let manageFiltersPosition = (() => {
-        let filtersEl = document.querySelector("[data-feature-filters]");
-        let asideContentWrapper = document.querySelector("[data-feature-aside-content]");
-        let inlineWrapper = document.querySelector("[data-inline-filters-wrapper]");
-        let inlineWrapperCollapsible = inlineWrapper.querySelector("[data-collapsible-content]");
-        let setPos = () => {
-            if (window.innerWidth >= 1025) {
-                asideContentWrapper.appendChild(filtersEl);
-                inlineWrapper.classList.add("is-hidden");
-            } else {
-                inlineWrapperCollapsible.appendChild(filtersEl);
-                inlineWrapper.classList.remove("is-hidden");
-            }
-        };
-        setPos();
-        window.addEventListener("resize", setPos);
-    })();
-})();
 
 class Sections {
     constructor() {
@@ -158,7 +185,7 @@ class Sections {
             search: "is-hidden-by-search",
             generic: "is-hidden",
         };
-        this.wrapper = document.querySelector("[data-feature-content-wrapper]");
+        this.wrapper = document.querySelector("[data-main-content-wrapper]");
         this.filterables = this.getFilterables();
         this.sortables = this.getSortables();
         this.groupables = this.getGroupables();

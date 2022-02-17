@@ -2,11 +2,11 @@
 title: "LambdaTest review"
 date: 2021-12-07T07:00:00+00:00
 draft: false
-summary: 
-  LambdaTest supports automated browser testing on devices and browsers new and 
+summary:
+  LambdaTest supports automated browser testing on devices and browsers new and
   old. Read our review of LambdaTest - a browser testing tool.
 metaDescription:
-  LambdaTest supports automated browser testing on devices and browsers new and 
+  LambdaTest supports automated browser testing on devices and browsers new and
   old. Read our review of LambdaTest - a browser testing tool.
 headerType: fixed
 hideLines: true
@@ -18,6 +18,8 @@ isSubpage: lambdatest
 customStyle: false
 pageType: vendor-review
 customPageStyle: true
+xlViewport:
+  largeText: true
 category: developer-tools
 subcategory:
   label: Browser testing
@@ -40,12 +42,12 @@ scores:
 productShot:
   image: /img/browser-testing/lambdatest.png
 intro:
-  "LambdaTest offers automated cross-browser tests on a large number of devices 
-  ranging from the earliest versions of Chrome, Firefox, Opera on Windows XP 
-  and macOS Lion to the latest versions on Windows 11 and macOS Monterey across 
-  multiple platforms. However, the slow rollout of the new OS and device releases 
-  and the absence of real devices in the testing cloud is something to look out 
-  for."
+  "LambdaTest offers automated cross-browser tests on a large number of devices
+  ranging from the earliest versions of Chrome, Firefox, Opera on Windows XP and
+  macOS Lion to the latest versions on Windows 11 and macOS Monterey across
+  multiple platforms. However, the slow rollout of the new OS and device
+  releases and the absence of real devices in the testing cloud is something to
+  look out for."
 relatedArticles:
   - category: developer-tools
     article:
@@ -113,8 +115,8 @@ Windows 11 and macOS Monterey. However, some of the older browsers mentioned are
 not available for automated browser testing, only live testing.
 
 Currently, all tests are executed on emulators by default. Automated web testing
-on [real
-devices](https://www.lambdatest.com/support/docs/mobile-web-automation-on-real-devices/)
+on
+[real devices](https://www.lambdatest.com/support/docs/mobile-web-automation-on-real-devices/)
 (in beta) is available upon request. If you need to test on real devices, one of
 the [other browser testing tools we tested](/browser-testing/) may be a better
 fit.
@@ -140,8 +142,8 @@ Google Cloud CI, etc.) makes it easy to integrate into CI/CD workflows.
 
 {{< vendor-review/feature-title text="Debugging & error reporting" score="4.5" >}}
 
-LambdaTest supports issue trackers like Jira, Bugzilla, Bugherd, Mantis, etc.
-as well as offering their own issue tracker which is deeply integrated with the
+LambdaTest supports issue trackers like Jira, Bugzilla, Bugherd, Mantis, etc. as
+well as offering their own issue tracker which is deeply integrated with the
 platform and can be used to assign bugs/tasks to team members. Issues can be
 shared directly with team members via email or can be exported to PDF/Excel
 format, however, test reports cannot be shared directly - screen capture videos
@@ -168,17 +170,15 @@ supports smart testing of rendered pages by comparing them against previous
 runs. Managing and tracking the development process is possible either by using
 one of the
 [supported integrations](https://www.lambdatest.com/support/docs/integrations-with-project-management-tools/)
-or by using the in-built project manager which allows filtering tests by
-project name, version numbers and build names as well as creating versioned
-projects. This helps in keeping track of tests alongside releases of web
-applications.
+or by using the in-built project manager which allows filtering tests by project
+name, version numbers and build names as well as creating versioned projects.
+This helps in keeping track of tests alongside releases of web applications.
 
 LambdaTest offers an in-built issue tracker which allows managing bugs across
 tests by sharing them across various platforms via email and shared links or
 exporting in PDF and XLSX formats. This issue tracker is deeply integrated with
 LambdaTest services and using it over other ticketing systems has a few
-advantages. For instance, the arduous task of reproducing bugs is made easier
-by
+advantages. For instance, the arduous task of reproducing bugs is made easier by
 [launching failing tests](https://www.lambdatest.com/support/docs/issue-tracker/#how-can-i-reproduce-my-marked-bugs)
 with just 1-click.
 
@@ -199,10 +199,10 @@ during live testing on desktop (except when using Safari) unlike other tools
 such as Sauce Labs, which do not support it.
 
 LambdaTest provides multiple ways to connect locally hosted servers and folders
-to testing servers. LambdaTest Tunnel (a command-line binary) does this using
-an SSH connection without ever needing to expose anything to the public
-internet. LambdaTest Underpass (a GUI-based application) is a more user-
-friendly way to establish tunnels. It offers advanced features like setting up
+to testing servers. LambdaTest Tunnel (a command-line binary) does this using an
+SSH connection without ever needing to expose anything to the public internet.
+LambdaTest Underpass (a GUI-based application) is a more user- friendly way to
+establish tunnels. It offers advanced features like setting up
 password-protected proxies, DNS overrides, choosing connection mode (SSH or
 WebSocket) as well as using the tunnel to serve only inbound or outbound
 requests. Tunnels can also be established using an
@@ -213,15 +213,16 @@ requests. Tunnels can also be established using an
 {{< img-custom class="content-image" src="/img/browser-testing/lambdatest-underpass.png" alt="Screenshot of LambdaTest Underpass." >}}
 {{< a--close >}}
 
-The analytics functionality provides a useful summary of the automated tests
-and shows insightful graphs depicting queue utilization, pass-fail ratio, test
+The analytics functionality provides a useful summary of the automated tests and
+shows insightful graphs depicting queue utilization, pass-fail ratio, test
 coverage which can be filtered by date, tags, browser, OS, and the user who
 executed the test. This makes analyzing trends across the builds easier.
 
 The [HyperTest](https://www.lambdatest.com/hypertest) feature by LambdaTest is
 an intelligent test orchestration tool that reduces test execution time. Tests
 can be managed through a YAML file or a CLI tool that integrates with CI/CD
-platofroms. [On-Premise Selenium Grid](https://www.lambdatest.com/on-premise-selenium-grid)
+platofroms.
+[On-Premise Selenium Grid](https://www.lambdatest.com/on-premise-selenium-grid)
 servers can be installed to run tests behind a firewall.
 
 {{< div--close >}}
@@ -234,8 +235,8 @@ The most prominent limitation of mobile testing on LambdaTest is the
 unavailability of real testing devices. Users need to contact sales
 representatives to get access to real mobile devices - by default all tests are
 executed on a simulator. Although they
-[claim](https://www.lambdatest.com/support-faq?question=4) that new devices
-and versions are dded within a week, we found that support for new devices and
+[claim](https://www.lambdatest.com/support-faq?question=4) that new devices and
+versions are dded within a week, we found that support for new devices and
 operating systems is slower - they generally appear several weeks after their
 release.
 
@@ -263,9 +264,10 @@ regular Lighthouse reports, take a long time to generate and it is not possible
 to test multiple URLs at once by separating tabs into different windows - only
 one URL can be viewed at a time. Devtools cannot be separated into individual
 windows either, which would limit power users who use multiple monitors or a
-tiling window manager. [Other browser testing tools we
-tested](/browser-testing/), such as Polypane which was specifically made for
-this purpose, outperforms LambadaTest's browser in many aspects.
+tiling window manager.
+[Other browser testing tools we tested](/browser-testing/), such as Polypane
+which was specifically made for this purpose, outperforms LambadaTest's browser
+in many aspects.
 
 {{< modal-custom type="screen" type-screen="/img/browser-testing/lambdatest-lt-browser.png" >}}
 {{< img-custom class="content-image" src="/img/browser-testing/lambdatest-lt-browser.png" alt="Screenshot of web testing with LambdaTest." >}}
@@ -301,10 +303,10 @@ of handling such workloads.
 
 ### Browser testing tool comparison
 
-In our review of the [best browser testing tools for
-developers](/browser-testing/), we highlight the best 6 browser testing tools
-for developers in {{< year >}}. See how they compare to LambdaTest in the
-table below.
+In our review of the
+[best browser testing tools for developers](/browser-testing/), we highlight the
+best 6 browser testing tools for developers in {{< year >}}. See how they
+compare to LambdaTest in the table below.
 
 {{< div-custom class="comparison-checklist-table-wrapper" >}}
 

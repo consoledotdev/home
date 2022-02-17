@@ -1,0 +1,18 @@
+{{if eq .flow "inline" }}
+    <span class="plane-picture{{ with .type }} {{ . }}{{ end }}{{ with .classes }} {{ . }}{{ end }}">
+{{ else }}
+    <div class="plane-picture{{ with .type }} {{ . }}{{ end }}{{ with .classes }} {{ . }}{{ end }}">
+{{ end }}
+        <img class="ratio" src="/img/ratio-plane.png" alt="">
+
+        {{ $nextGenImgSrc := partial "components/processed-img.html" (dict "src" .img "width" .imgSize "nextGen" "true") }}
+        {{ $imgSrc := partial "components/processed-img.html" (dict "src" .img "width" .imgSize) }}
+        {{with $nextGenImgSrc }}<picture><source srcset="{{ . }}" type="image/webp">{{ end }}
+            <img loading="lazy" class="image" src="{{ $imgSrc }}" alt="{{ .alt }}" />
+        {{with $nextGenImgSrc }}</picture>{{ end }}
+
+{{if eq .flow "inline" }}
+    </span>
+{{ else }}
+    </div>
+{{ end }}

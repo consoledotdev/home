@@ -20,6 +20,8 @@ isSubpage: checkly
 customStyle: false
 pageType: vendor-review
 customPageStyle: true
+xlViewport:
+  largeText: true
 category: developer-tools
 subcategory:
   label: Website monitoring
@@ -240,9 +242,9 @@ permissions) which makes it easy to build custom integrations and export data.
 {{< rich-title-3 icon="dislike" >}}What we don't like{{</ rich-title-3 >}}
 
 Checkly does not support non-HTTP tests. Other tools like
-[Datadog](/website-monitoring/datadog/) and [New
-Relic](/website-monitoring/new-relic/) support additional protocols like FTP,
-SSH, NTP, etc. - these are all missing in Checkly.
+[Datadog](/website-monitoring/datadog/) and
+[New Relic](/website-monitoring/new-relic/) support additional protocols like
+FTP, SSH, NTP, etc. - these are all missing in Checkly.
 
 The customizations available for dashboards, which also serves as a public
 status page, are limited. The logo, title and URL can be defined but what

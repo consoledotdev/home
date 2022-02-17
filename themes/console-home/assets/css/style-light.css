@@ -35,6 +35,8 @@
     --theme-content-bg-3: var(--c-grey-01-white-03);
     --theme-content-bg-4: var(--c-grey-01-white-03);
 
+    --theme-shading-RGB: var(--c-grey-05-RGB);
+
     --theme-hero-fade-top: linear-gradient(180deg, rgba(245, 248, 251, 0.4) 0%, rgba(245, 248, 251, 0) 100%);
     --theme-hero-fade-bottom: linear-gradient(0deg, rgba(245, 248, 251, 0.4) 0%, rgba(245, 248, 251, 0) 100%);
 
@@ -165,6 +167,7 @@
     --theme-empty-dashed-border: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23b5b6bf' stroke-width='2' stroke-dasharray='6%2c 6' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
 
     --theme-collapsible-bg-1: var(--c-grey-01-white-03);
+    --theme-collapsible-bg-2: var(--c-grey-01-white-03);
     --theme-collapsible-bg-blue-1: var(--c-blue-03);
 
     --theme-badge-text: var(--c-white-00-absolute);
@@ -199,7 +202,7 @@
     --theme-score-background: var(--c-grey-02);
     --theme-score-foreground: var(--c-black-02-main);
 
-    --theme-datavis-axis: var(--c-grey-04-whites-neutral);
+    --theme-datavis-axis: var(--c-grey-03);
 
     --theme-datavis-blue-item0: var(--c-blue-06-main);
     --theme-datavis-blue-item-1: var(--c-blue-05);
@@ -215,6 +218,9 @@
     --theme-section-plane-right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 126 256'%3E%3Cpath d='M0 256L2.23802e-05 0L126 1.10153e-05L0 256Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
 
     --theme-vapor-globe-blue-1: linear-gradient(180deg, var(--c-blue-02), var(--c-blue-04));
+
+    --theme-interviewer-name: var(--theme-text-1);
+    --theme-interviewee-name: var(--c-green-06);
 
     /* Vendor Review page specific */
     --theme-vendor-review-page-bg: var(--theme-content-bg-2);
@@ -303,6 +309,10 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
 }
 
 .theme .tool-card .bottom {
+    background-color: var(--theme-content-bg-0);
+}
+
+.theme .combo-card {
     background-color: var(--theme-content-bg-0);
 }
 

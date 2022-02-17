@@ -262,6 +262,10 @@ html {
     height: var(--t-size0);
 }
 
+.page-section-vendor-review.opening .page-meta p {
+    color: var(--theme-text-3);
+}
+
 .page-section-vendor-review.opening .intro {
     margin: var(--space3_5) 0;
     color: var(--theme-text-1);
@@ -574,86 +578,12 @@ html {
         font-size: var(--t-size-1);
     }
 
-    .main-vendor-review p,
-    .main-vendor-review .quote {
-        font-size: var(--t-size1);
-    }
-
-    .main-vendor-review p.description {
-        font-size: var(--t-size3);
-    }
-
-    .main-vendor-review p.small {
-        font-size: var(--t-size0);
-    }
-
-    .main-vendor-review p.x-small {
-        font-size: var(--t-size-1);
-    }
-
-    .page-section-vendor-review ul li {
-        font-size: var(--t-size0);
-    }
-
-    .main-vendor-review .title-1 {
-        font-size: var(--t-size9);
-    }
-
-    .main-vendor-review .title-2 {
-        font-size: var(--t-size6);
-    }
-
-    .main-vendor-review .title-3 {
-        font-size: var(--t-size3);
-    }
-
-    .main-vendor-review .title-4 {
-        font-size: var(--t-size1);
-    }
-
-    .main-vendor-review .title-5 {
-        font-size: var(--t-size0);
-    }
-
     .main-vendor-review .title-6 {
         font-size: var(--t-size1);
     }
 
     .page-vendor-review .title.title-2:not(:first-child) {
         margin-top: calc(var(--space5) + var(--space3));
-    }
-
-    .page-vendor-review .console-button,
-    .page-vendor-review [class^="console-button"],
-    .page-vendor-review [class*=" console-button"] {
-        font-size: var(--t-size1);
-    }
-
-    .page-vendor-review .console-button.console-button-medium,
-    .page-vendor-review [class^="console-button"].console-button-medium,
-    .page-vendor-review [class*=" console-button"].console-button-medium {
-        font-size: var(--t-size0);
-    }
-
-    .page-vendor-review .console-button.console-button-small,
-    .page-vendor-review [class^="console-button"].console-button-small,
-    .page-vendor-review [class*=" console-button"].console-button-small {
-        font-size: var(--t-size-1);
-    }
-
-    .page-vendor-review input.console-input-text,
-    .page-vendor-review select.console-select {
-        font-size: var(--t-size1);
-    }
-
-    .page-vendor-review input.console-input-text.console-input-medium,
-    .page-vendor-review select.console-select.console-input-medium {
-        font-size: var(--t-size0);
-    }
-
-    .page-vendor-review input.console-input-text.console-input-small,
-    .page-vendor-review select.console-select.console-input-small {
-        font-size: var(--t-size-1);
     }
 
     .main-vendor-review .cost-highlight {

@@ -20,6 +20,8 @@ isSubpage: rapidspike
 customStyle: false
 pageType: vendor-review
 customPageStyle: true
+xlViewport:
+  largeText: true
 category: developer-tools
 subcategory:
   label: Website monitoring

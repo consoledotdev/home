@@ -111,12 +111,12 @@
 			{{ partial "components/box-collapsible.html" (dict "title" $CTATitle "style" "blue" "icon" "expand.html" "content" $subscribe ) }}
         </div>
 	</section>
-	<div class="feature-split">
-		<aside data-aside-wrapper class="feature-aside">
-			<div class="feature-aside-content marked-scrollable-v" data-feature-aside-content data-marked-scrollable-v></div>
+	<div class="content-split">
+		<aside data-aside-wrapper class="aside-wrapper">
+			<div data-aside-content-wrapper data-marked-scrollable-v class="aside-content-wrapper marked-scrollable-v"></div>
 		</aside>
-		<div class="feature-content-wrapper" data-aside-anchor data-feature-content-wrapper>
-            <section class="page-section inline-filters-wrapper" data-inline-filters-wrapper>
+		<div data-aside-anchor data-main-content-wrapper class="main-content-wrapper">
+            <section data-inline-filters-wrapper class="page-section inline-filters-wrapper">
 				{{ $filters := partial "components/tools/filters.html" (dict "dot" $.Site.Data.toolsfilters ) }}
 				{{ partial "components/box-collapsible.html" (dict "title" "Filters" "icon" "filter.html" "content" $filters) }}
 			</section>

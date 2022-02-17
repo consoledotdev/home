@@ -1,1 +1,1 @@
-<div class="{{ with .Get "class"}}{{ . }}{{ end }}">
+<div class="{{ with .Get "class"}}{{ . }}{{ end }}" {{ with .Get "data"}} {{ . | safeHTMLAttr }}{{ end }}>

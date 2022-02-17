@@ -3,13 +3,13 @@ title: "Uptrends review"
 date: 2022-01-31T07:00:00+00:00
 draft: false
 summary:
-  Uptrends can run complex transaction monitoring workflows and monitor websites from more
-  than 200 global regions. Read our review of Uptrends - a website monitoring
-  tool.
+  Uptrends can run complex transaction monitoring workflows and monitor websites
+  from more than 200 global regions. Read our review of Uptrends - a website
+  monitoring tool.
 metaDescription:
-  Uptrends can run complex transaction monitoring workflows and monitor websites from more
-  than 200 global regions. Read our review of Uptrends - a website monitoring
-  tool.
+  Uptrends can run complex transaction monitoring workflows and monitor websites
+  from more than 200 global regions. Read our review of Uptrends - a website
+  monitoring tool.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -20,6 +20,8 @@ isSubpage: uptrends
 customStyle: false
 pageType: vendor-review
 customPageStyle: true
+xlViewport:
+  largeText: true
 category: developer-tools
 subcategory:
   label: Website monitoring
@@ -183,9 +185,9 @@ duration.
 Uptrends can run checks from more than 220 locations around the world. This
 number is greater than any other website monitoring tool we tested.
 [Site24x7](/website-monitoring/site24x7/) offers 110+ locations which is the
-second highest, [Datadog](/website-monitoring/datadog/) and [New
-Relic](/website-monitoring/new-relic/) offer 16 and 20 respectively. Having a
-diverse selection to choose from makes it a useful tool for monitoring
+second highest, [Datadog](/website-monitoring/datadog/) and
+[New Relic](/website-monitoring/new-relic/) offer 16 and 20 respectively. Having
+a diverse selection to choose from makes it a useful tool for monitoring
 geographical and localization differences. For example, ecommerce websites can
 change currency settings or streaming video services can check availability of
 content. If the number of test locations is important for your use case,
@@ -284,9 +286,9 @@ available to introduce new users to basic features. A collection of articles in
 their knowledge base is available which further explains the features of each
 tool. This means it takes longer to find relevant information and forces you to
 jump from one section to another. If having good documentation is a priority for
-you, then [Datadog](/website-monitoring/datadog/) and [New
-Relic](/website-monitoring/new-relic/) have done a great job of designing their
-documentation.
+you, then [Datadog](/website-monitoring/datadog/) and
+[New Relic](/website-monitoring/new-relic/) have done a great job of designing
+their documentation.
 
 {{< modal-custom type="screen" type-screen="/img/website-monitoring/uptrends-dashboard.jpeg" >}}
 {{< img-custom class="content-image" src="/img/website-monitoring/uptrends-dashboard.jpeg" alt="Screenshot of Uptrends' Dashboard." >}}

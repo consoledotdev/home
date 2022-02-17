@@ -22,6 +22,8 @@ isPage: code-collaboration-pair-programming
 customStyle: true
 pageType: category-review
 customPageStyle: true
+xlViewport:
+  largeText: true
 category: developer-tools
 subcategory: code-collaboration-pair-programming
 authorName: Naman Singhal

@@ -2,7 +2,7 @@
 title: "BrowserStack review"
 date: 2021-12-07T07:00:00+00:00
 draft: false
-summary: 
+summary:
   BrowserStack is a great product for manual and automated testing on a large
   number of devices. Read our review of BrowserStack - a browser testing tool.
 metaDescription:
@@ -18,6 +18,8 @@ isSubpage: browserstack
 customStyle: false
 pageType: vendor-review
 customPageStyle: true
+xlViewport:
+  largeText: true
 category: developer-tools
 subcategory:
   label: Browser testing
@@ -161,8 +163,8 @@ can be used to write tests.
 At the time of writing, recently launched devices and OS updates (macOS 12, and
 iPhone 13) were still not available for testing despite being released several
 months ago. The speed at which new OS releases are available varies
-significantly amongst all [the different browser testing tools we
-reviewed](/browser-testing/).
+significantly amongst all
+[the different browser testing tools we reviewed](/browser-testing/).
 
 Local testing can be done by creating an encrypted tunnel to securely test
 websites hosted behind firewalls or VPNs. Additional configuration can be set up
@@ -220,11 +222,11 @@ on Chrome browsers on Android devices. Screen reader functionality (in beta) is
 not yet supported on mobile devices. On desktop devices, it did not work
 properly and kept repeating the same sentence again and again.
 
-Test reports are not generated for live tests. [Other products we
-tested](/browser-stack/) keep a log of tests performed and allow screen
-recording while testing to review bugs later, but this is not possible with
-BrowserStack. Bugs can only be shared via a screenshot, making it difficult to
-share findings with stakeholders.
+Test reports are not generated for live tests.
+[Other products we tested](/browser-stack/) keep a log of tests performed and
+allow screen recording while testing to review bugs later, but this is not
+possible with BrowserStack. Bugs can only be shared via a screenshot, making it
+difficult to share findings with stakeholders.
 
 Most of the real mobile devices available for testing are from a handful of
 vendors (Samsung or Google) - fewer devices are available from other vendors
@@ -275,10 +277,10 @@ solutions by presenting the results in a more user friendly fashion.
 
 ### Browser testing tool comparison
 
-In our review of the [best browser testing tools for
-developers](/browser-testing/), we highlight the best 6 browser testing tools
-for developers in {{< year >}}. See how they compare to BrowserStack in the
-table below.
+In our review of the
+[best browser testing tools for developers](/browser-testing/), we highlight the
+best 6 browser testing tools for developers in {{< year >}}. See how they
+compare to BrowserStack in the table below.
 
 {{< div-custom class="comparison-checklist-table-wrapper" >}}
 

@@ -1,0 +1,137 @@
+{{ define "main" }}
+	{{ $CTATitle := "Subscribe to the weekly Console newsletter" }}
+	{{ $CTADescription := "Our free weekly newsletter features the latest interesting tools." }}
+
+    <section class="page-section page-section-feature-root opening">
+        <h2 class="title rich-title title-1">{{ partial "icons/podcast.html"}}<span>{{ .Title }}</span></h2>
+        <div class="section-body">
+            <div class="left">
+                <p class="description">
+                    Interviews with interesting people in the devtools space.
+                </p>
+                <p>
+                    From security to dev focused infrastructure, and from homomorphic encryption to privacy and decentralization, we discuss the technical details around devtools.
+                </p>
+            </div>
+            <div class="right">
+                <div class="framed-section mid framed-section-overlay podcast-links-container">
+                    {{ partial "components/podcast-links.html" (dict "apple" "true" "spotify" "true" "google" "true" "overcast" "true" "title" "Listen & subscribe") }}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page-section page-section-feature-root featured">
+        {{ $featured := index (where .Pages.ByPublishDate.Reverse "Params.season" 2) 0 }}
+        {{ $s := $featured.Params.season }}
+        {{ $e := $featured.Params.episode }}
+        <h5 class="title title-4">
+            <span>Latest Episode</span> <span>/ S{{ if lt $s 10 }}0{{ end }}{{ $s }} E{{ if lt $e 10 }}0{{ end }}{{ $e }} — {{ $featured.Date.Format "2006-01-02" }}</span>
+        </h5>
+        {{ partial "components/podcast/combo-card.html" (dict "visualsType" "logo-profile" "content" $featured) }}
+    </section>
+	<div class="content-split" data-content-split>
+		<aside data-aside-wrapper class="aside-wrapper">
+			<div data-aside-content-wrapper class="aside-content-wrapper"></div>
+		</aside>
+		<div class="main-content-wrapper">
+			<section class="page-section" data-feature-items-section="season-2">
+				<div class="page-section-heading">
+                    <h3 class="title title-2">Season 2</h3>
+				</div>
+                <div data-inline-aside-content-wrapper class="page-section-sub aside">
+                    <div data-aside-content class="aside-content">
+                        <div class="aside-block">
+                            <div class="page-section-heading">
+                                <h5 class="title title-4">The host</h5>
+                            </div>
+                            <div class="person-profile">
+                                {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/david.jpg" "imgSize" "128" "alt" "Photo of David Mytton" ) }}
+                                <a href="https://twitter.com/davidmytton" target="_blank" class="link icon-link" title="https://twitter.com/davidmytton"><span>David Mytton</span> {{ partial "icons/external-link.html" }}</a>
+                            </div>
+                        </div>
+                        <div class="aside-block guests">
+                            <div class="page-section-heading">
+                                <h5 class="title title-4">Guests</h5>
+                            </div>
+                            <div class="person-profiles">
+                                {{ range (where .Pages.ByPublishDate.Reverse "Params.season" 2) }}
+                                    <div class="person-profile">
+                                        {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" .Params.topImg1Src "imgSize" "128" "alt" (print "Photo of " .Params.who) ) }}
+                                        <span>{{ .Params.who }}</span>
+                                    </div>
+                                {{ end }}
+                            </div>
+                        </div>
+                        <div class="aside-block" data-trailer-player>
+                            {{ partial "components/audio-player.html" (dict "src" $.Params.S02Trailer "title" "Listen to S02 trailer" )}}
+                        </div>
+                    </div>
+                </div>
+                <div class="page-section-sub">
+                    <div class="page-section-heading">
+                        <h5 class="title title-4">Other episodes</h5>
+                    </div>
+                    <div class="feature-items" data-feature-items>
+                        {{ range after 1 (where .Pages.ByPublishDate.Reverse "Params.season" 2) }}
+                            {{ partial "components/podcast/combo-card.html" (dict "visualsType" "logo-profile" "content" .) }}
+                        {{ end }}
+                    </div>
+                </div>
+			</section>
+		</div>
+	</div>
+	<div class="content-split" data-content-split>
+		<aside data-aside-wrapper class="aside-wrapper">
+			<div data-aside-content-wrapper class="aside-content-wrapper"></div>
+		</aside>
+		<div data-aside-anchor data-main-content-wrapper class="main-content-wrapper">
+			<section class="page-section" data-feature-items-section="season-2">
+				<div class="page-section-heading">
+                    <h3 class="title title-2">Season 1</h3>
+				</div>
+                <div data-inline-aside-content-wrapper class="page-section-sub aside">
+                    <div data-aside-content class="aside-content">
+                        <div class="aside-block">
+                            <div class="page-section-heading">
+                                <h5 class="title title-4">With</h5>
+                            </div>
+                            <div class="person-profiles">
+                                <div class="person-profile">
+                                    {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/david.jpg" "imgSize" "128" "alt" "Photo of David Mytton" ) }}
+                                    <a href="https://twitter.com/davidmytton" target="_blank" class="link icon-link" title="https://twitter.com/davidmytton"><span>David Mytton</span> {{ partial "icons/external-link.html" }}</a>
+                                </div>
+                                <div class="person-profile">
+                                    {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/podcast/akita-jean-yang-profile.jpg" "imgSize" "128" "alt" "Photo of Jean Yang" ) }}
+                                    <a href="https://twitter.com/jeanqasaur" target="_blank" class="link icon-link" title="https://twitter.com/jeanqasaur"><span>Jean Yang</span> {{ partial "icons/external-link.html" }}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aside-block" data-trailer-player>
+                            {{ partial "components/audio-player.html" (dict "src" $.Params.S01Trailer "title" "Listen to S01 trailer" )}}
+                        </div>
+                    </div>
+                </div>
+                <div class="page-section-sub">
+                    <div class="feature-items" data-feature-items>
+                        {{ range (where .Pages.ByPublishDate.Reverse "Params.season" 1) }}
+                            {{ partial "components/podcast/combo-card.html" (dict "visualsType" "logo-logo" "content" .) }}
+                        {{ end }}
+                    </div>
+                </div>
+			</section>
+		</div>
+	</div>
+	<section class="page-section page-section-feature-root">
+        <div name="author">{{ partial "components/author.html" (dict "context" . "bio" .Params.authorBio "img" .Params.authorImg "name" .Params.authorName "url" .Params.authorURL ) }}</div>
+        {{ partial "components/about-console.html" }}
+		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" ) }}
+	</section>
+
+	{{ $pageTypeJS := resources.Get "/js/page-type/feature.js" }}
+    {{ if hugo.IsProduction }}{{ $pageTypeJS = $pageTypeJS | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script id="feature-js" src="{{ $pageTypeJS.Permalink }}"></script>
+
+    {{ $audioPlayerJS := resources.Get "/js/audio-player.js" }}
+    {{ if hugo.IsProduction }}{{ $audioPlayerJS = $audioPlayerJS | resources.Minify | resources.Fingerprint }}{{ end }}
+    <script src="{{ $audioPlayerJS.Permalink }}"></script>
+{{ end }}

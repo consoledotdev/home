@@ -20,6 +20,8 @@ isPage: server-monitoring
 customStyle: true
 pageType: category-review
 customPageStyle: true
+xlViewport:
+  largeText: true
 category: devops
 subcategory: server-monitoring
 authorName: David Mytton

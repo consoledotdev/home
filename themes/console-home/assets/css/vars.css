@@ -3,10 +3,12 @@
 
 :root {
     --c-white-00-absolute: #ffffff;
+    --c-white-00-absolute-RGB: 255, 255, 255;
     --c-white-01-main: #f5f8fb;
     --c-white-02: #f1f2f6;
 
     --c-black-00-absolute: #000000;
+    --c-black-00-absolute-RGB: 0, 0, 0;
     --c-black-01: #040404;
     --c-black-02-main: #0a0a0b;
 
@@ -15,6 +17,7 @@
     --c-grey-03: #b5b6bf;
     --c-grey-04-whites-neutral: #95969f;
     --c-grey-05: #6f7078;
+    --c-grey-05-RGB: 111, 112, 120;
     --c-grey-06-blacks-neutral: #515158;
     --c-grey-07: #323237;
     --c-grey-08: #232327;

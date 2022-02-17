@@ -1,4 +1,4 @@
-<div class="box-collapsible{{ with .style}} color-{{ . }}{{ end }}">
+<div class="box-collapsible{{ with .style}} color-{{ . }}{{ end }}{{ with .class }} {{ . }}{{ end }}">
 	<button class="box-collapsible-top" onclick="blur(); toggleCollapsible(event)">
 		<div data-box-collapsible-title class="title title-4">{{ .title }}</div>
 		{{ partial (printf "%s%s" "icons/" .icon ) }}

@@ -7,10 +7,7 @@
         <p class="description">{{ .Params.summary }}</p>
         <div class="page-meta">
             <p class="small">
-                <span class="plane-picture">
-                    <img class="ratio" src="/img/ratio-plane.png" alt="">
-                    <img loading="lazy" class="image" src="{{ .Params.authorImg }}" alt="{{ .Params.authorName }}">
-                </span>
+                {{ partial "components/plane-picture.html" (dict "flow" "inline" "img" .Params.authorImg "imgSize" "64" "alt" .Params.authorName ) }}
                 <a href="#author" class="link" rel="me">{{ .Params.authorName }}</a>
             </p>
             <p class="small">
@@ -26,7 +23,7 @@
         </aside>
         <section class="page-section main-feature-article-content">
             {{ .Content }}
-            {{ partial "components/author.html" (dict "context" . "bio" .Params.authorBio "img" .Params.authorImg "name" .Params.authorName ) }}
+            {{ partial "components/author.html" (dict "context" . "bio" .Params.authorBio "img" .Params.authorImg "name" .Params.authorName "url" .Params.authorURL ) }}
             {{ partial "components/about-console.html" }}
             {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
         </section>

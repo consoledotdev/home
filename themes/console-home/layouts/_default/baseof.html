@@ -1,23 +1,26 @@
 
-{{- $.Scratch.Set "pageClasses" "page-" -}}
+{{- $pageClasses := "page-" -}}
 {{- if not .Params.pageType -}}
-    {{ $.Scratch.Set "pageClasses" (print ($.Scratch.Get "pageClasses") "article" ) }}
+    {{ $pageClasses = (print ($pageClasses) "article" ) }}
 {{- else -}}
-    {{ $.Scratch.Set "pageClasses" (print ($.Scratch.Get "pageClasses") .Params.pageType ) }}
+    {{ $pageClasses = (print ($pageClasses) .Params.pageType ) }}
 {{- end -}}
 {{- if .Params.isSubpage -}}
-    {{ $.Scratch.Set "pageClasses" (print ($.Scratch.Get "pageClasses") " page-" .Params.isSubpage ) }}
+    {{ $pageClasses = (print ($pageClasses) " page-" .Params.isSubpage ) }}
 {{- else -}}
     {{- if .Params.isPage }}
-        {{ $.Scratch.Set "pageClasses" (print ($.Scratch.Get "pageClasses") " page-" .Params.isPage ) }}
+        {{ $pageClasses = (print ($pageClasses) " page-" .Params.isPage ) }}
     {{- end }}
 {{- end -}}
+{{- if and .Params.xlViewport .Params.xlViewport.largeText -}}
+    {{ $pageClasses = (print ($pageClasses) " xl-viewport-large-text" ) }}
+{{ end }}
 <!DOCTYPE html>
-<html lang="en" class="{{ $.Scratch.Get "pageClasses" }}">
+<html lang="en" class="{{ $pageClasses }}">
     {{ `<!-- Site source available at https://github.com/consoledotdev/home -->` | safeHTML }}
     
     {{ partial "head.html" . }}
-    <body class="theme {{ $.Scratch.Get "pageClasses" -}}
+    <body class="theme {{ $pageClasses -}}
         {{- if (not .Params.hidePlanes) }} show-planes{{ end -}}">
         <div class="overflow-wrapper" data-scroll-wrapper>
             {{ partial "header.html" (dict "context" . "headerType" .Params.headerType "hidePlanes" .Params.hidePlanes "hideLines" .Params.hideLines ) }}
