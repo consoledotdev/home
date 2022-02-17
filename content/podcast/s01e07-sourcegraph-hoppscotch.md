@@ -69,10 +69,8 @@ Other things mentioned:
 - [PageRank](https://en.wikipedia.org/wiki/PageRank).
 - [Github Copilot](https://copilot.github.com/).
 - [Postman](https://www.postman.com/).
-- [Console EP2 - GitHub
-  Copilot](https://podcast.console.dev/episodes/ep2-github-copilot-tuple)
-- [Console EP6 - Philosophy of open
-  source](https://podcast.console.dev/episodes/ep6-appsmith-retool)
+- [Console EP2 - GitHub Copilot](/podcast/s01e02-github-copilot-tuple/)
+- [Console EP6 - Philosophy of open source](/podcast/s01e06-appsmith-retool/)
 
 {{< box-collapsible title="Full transcript" class="podcast-transcript is-expanded" >}}
 

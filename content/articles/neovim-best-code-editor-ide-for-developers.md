@@ -236,7 +236,7 @@ workspace manager that combines the best of tmux with native tabs and
 scrollback. We recently
 [reviewed it in the Console newsletter](https://console.dev/tools/) and
 discussed it on
-[the first episode of the Console DevTools Podcast](https://podcast.console.dev/episodes/ep1-waypoint-zellij).
+[the first episode of the Console DevTools Podcast](/podcast/s01e01-waypoint-zellij/).
 
 I did try [Emacs](https://www.gnu.org/software/emacs/), but it wasn't for me. If
 you don't yet have [a strong opinion](https://en.wikipedia.org/wiki/Editor_war)

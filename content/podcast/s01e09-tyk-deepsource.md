@@ -67,10 +67,8 @@ Other things mentioned:
 - [nginx](https://nginx.org/en/)
 - [Go](https://golang.org/)
 - [Akita Software](https://www.akitasoftware.com/)
-- [EP5 Console DevTools
-  Podcast](https://podcast.console.dev/episodes/ep5-snyk-security-scorecard)
-- [EP2 Console DevTools
-  Podcast](https://podcast.console.dev/episodes/ep2-github-copilot-tuple)
+- [EP5 Console DevTools Podcast](/podcast/s01e05-snyk-security-scorecard/)
+- [EP2 Console DevTools Podcast](/podcast/s01e02-github-copilot-tuple/)
 
 {{< box-collapsible title="Full transcript" class="podcast-transcript is-expanded" >}}
 
