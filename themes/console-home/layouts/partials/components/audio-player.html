@@ -15,4 +15,8 @@
         </span>
     </div>
     <div data-progress class="progress"><span class="bg"></span><span data-elapsed class="elapsed" style="width: 0%"></span></div>
+
+    {{ $audioPlayerJS := resources.Get "/js/audio-player.js" }}
+    {{ if hugo.IsProduction }}{{ $audioPlayerJS = $audioPlayerJS | resources.Minify | resources.Fingerprint }}{{ end }}
+    <script src="{{ $audioPlayerJS.Permalink }}"></script>
 </div>

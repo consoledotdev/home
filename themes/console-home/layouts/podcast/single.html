@@ -142,10 +142,6 @@
         </div>
     </div>
 
-    {{ $audioPlayerJS := resources.Get "/js/audio-player.js" }}
-    {{ if hugo.IsProduction }}{{ $audioPlayerJS = $audioPlayerJS | resources.Minify | resources.Fingerprint }}{{ end }}
-    <script src="{{ $audioPlayerJS.Permalink }}"></script>
-
 	{{ $js := resources.Get "/js/podcast-episode.js" }}
     {{ if hugo.IsProduction }}{{ $js = $js | resources.Minify | resources.Fingerprint }}{{ end }}
 	<script src="{{ $js.Permalink }}"></script>
