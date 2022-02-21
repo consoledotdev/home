@@ -1724,7 +1724,7 @@ p.x-small {
         font-size: var(--t-size-1);
     }
 
-    .page-section-podcast-episode ul li {
+    .xl-viewport-large-text ul li {
         font-size: var(--t-size0);
     }
 
