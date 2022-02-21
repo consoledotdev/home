@@ -3958,6 +3958,9 @@ p.combo-card-description {
 
 .podcast-widget.art-body .podcast-widget-body {
     background: var(--theme-content-bg-0);
+}
+
+.podcast-widget .podcast-widget-body {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -3977,9 +3980,6 @@ p.combo-card-description {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-}
-
-.podcast-widget.art-body .console-player {
     flex: 1 1 auto;
 }
 
