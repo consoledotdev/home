@@ -38,9 +38,9 @@
             </div>
             <div class="right">
                 {{ if eq .Params.season 1 }}
-                    {{ partial "components/combo-box.html" (dict "visualsType" "logo-logo" "content" .) }}
+                    {{ partial "components/combo-box.html" (dict "visualsType" "logo-logo" "isVertical" "true" "content" .) }}
                 {{ else if eq .Params.season 2 }}
-                    {{ partial "components/combo-box.html" (dict "visualsType" "logo-profile" "content" .) }}
+                    {{ partial "components/combo-box.html" (dict "visualsType" "logo-profile" "isVertical" "true" "content" .) }}
                 {{ end }}
             </div>
         </div>

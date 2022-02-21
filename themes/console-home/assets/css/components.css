@@ -2561,10 +2561,12 @@ body:not(.mobile) .console-control:hover:before {
 /* Logo + Logo */
 .combo-box.is-vertical .combo-box-visuals.logo-logo .plane-picture.left .logo {
     margin-left: 23.46%;
+    width: 27%;
 }
 
 .combo-box.is-vertical .combo-box-visuals.logo-logo .plane-picture.right .logo {
     margin-left: 49.72%;
+    width: 27%;
 }
 
 /* Combo Card
