@@ -44,12 +44,12 @@
                 {{ end }}
             </div>
         </div>
-        <div data-podcast-embed-anchor class="bottom">
-            <div data-podcast-embed class="framed-section mid framed-section-overlay podcast-embed">
-                <div class="podcast-embed-content">
-                    {{ partial "components/audio-player.html" (dict "src" .Params.episodeURL "title" "Play the episode" "titleAlt" "Pause" "duration" .Params.duration "classes" "show-time" )}}
-                    {{ partial "components/podcast-links.html" (dict "apple" "true" "spotify" "true" "google" "true" "overcast" "true") }}
-                </div>
+        <div data-podcast-widget-anchor class="bottom">
+            <div data-podcast-widget class="podcast-widget-wrapper">
+                <!-- Podcast embed -->
+                {{ $playerAttrs := (dict "title" "Play the episode" "titleAlt" "Pause" "classes" "show-time" ) }}
+                {{ partial "components/podcast-widget.html" (dict "classes" "large" "podcast" . "art" "body" "links" "body" "hideArt" "true" "hideHeader" "true" "playerAttrs" $playerAttrs) }}
+                <!-- end -->
             </div>
         </div>
     </section>

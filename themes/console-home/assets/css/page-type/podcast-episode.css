@@ -159,7 +159,7 @@ html {
     flex: 1 1 auto;
 }
 
-.is-fixed-player .podcast-embed {
+.is-fixed-player .podcast-widget-wrapper {
     position: fixed;
     left: 6.25vw;
     right: 6.25vw;
@@ -170,7 +170,7 @@ html {
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-    .is-fixed-player .podcast-embed {
+    .is-fixed-player .podcast-widget-wrapper {
         left: 8vw;
         right: 8vw;
     }
@@ -178,7 +178,7 @@ html {
 
 /* 1200px + left & right margin (6.25vw) */
 @media (min-width: 1371px) {
-    .is-fixed-player .podcast-embed {
+    .is-fixed-player .podcast-widget-wrapper {
         left: calc(calc(100vw - 1200px) / 2);
         right: calc(calc(100vw - 1200px) / 2);
     }
