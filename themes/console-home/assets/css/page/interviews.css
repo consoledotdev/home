@@ -218,5 +218,8 @@ p.interviews-card-description {
     margin-bottom: var(--space4_5);
 }
 
-.podcast-launch .podcast-widget .podcast-widget-links > .link {
+@media (max-width: 1024px) {
+    .podcast-launch .podcast-widget .podcast-widget-links > .link {
+        display: none;
+    }
 }
