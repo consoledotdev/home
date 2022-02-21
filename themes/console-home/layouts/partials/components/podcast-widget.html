@@ -56,7 +56,7 @@
 
         {{ $playerTitle := .podcast.Title }}
         {{ if .playerAttrs.title }}{{ $playerTitle = .playerAttrs.title }}{{ end }}
-        {{ partial "components/audio-player.html" (dict "src" .podcast.Params.episodeURL "title" $playerTitle )}}
+        {{ partial "components/audio-player.html" (dict "src" .podcast.Params.episodeURL "title" $playerTitle "classes" .playerAttrs.classes "duration" .playerAttrs.duration )}}
 
         {{ if and (eq .links "body") (not .hideLinks) }}
             {{ $links }}

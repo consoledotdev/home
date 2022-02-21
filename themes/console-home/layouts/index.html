@@ -44,7 +44,7 @@
 
 {{ $playerTitle := print $podcast.Title ", with " $podcast.Params.who }}
 {{ with $podcast.Params.org }}{{ $playerTitle = print $playerTitle " (" $podcast.Params.org ")" }}{{ end }}
-{{ $playerAttrs := (dict "title" $playerTitle ) }}
+{{ $playerAttrs := (dict "title" $playerTitle "duration" $podcast.Params.duration ) }}
 
 {{ partial "components/podcast-widget.html" (dict "podcast" $podcast "art" "header" "links" "footer" "playerAttrs" $playerAttrs) }}
 <!-- end -->
