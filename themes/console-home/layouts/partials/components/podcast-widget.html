@@ -69,4 +69,8 @@
         </div>
     {{ end }}
 
+
+    {{ $audioPlayerJS := resources.Get "/js/audio-player.js" }}
+    {{ if hugo.IsProduction }}{{ $audioPlayerJS = $audioPlayerJS | resources.Minify | resources.Fingerprint }}{{ end }}
+    <script src="{{ $audioPlayerJS.Permalink }}"></script>
 </div>
