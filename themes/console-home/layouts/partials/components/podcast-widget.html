@@ -21,7 +21,11 @@
 {{ $podcastLinks := partial "components/podcast-links.html" (dict "apple" "true" "spotify" "true" "google" "true" "overcast" "true") }}
 {{ $links := (print "<div class=\"podcast-widget-links\">" $podcastPageLink $podcastLinks "</div>" | safeHTML) }}
 
-<div class="podcast-widget{{ with .art}} art-{{ . }}{{ end }}{{ with .links}} links-{{ . }}{{ end }}{{ with .classes}} {{ . }}{{ end }}">
+<div class="podcast-widget
+    {{- with .art}} art-{{ . }}{{ end }}
+    {{- with .links}} links-{{ . }}{{ end }}
+    {{- with .classes}} {{ . }}{{ end }}
+    {{- with .style}} style-{{ . }}{{ else }} style-default{{ end }}">
     
     {{ if not .hideHeader }}
         <div class="podcast-widget-header">

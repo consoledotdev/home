@@ -3878,7 +3878,6 @@ p.combo-card-description {
 /* Podcast widget
    ================================================================================================================ */
 .podcast-widget {
-    border: var(--theme-border-2);
     border-radius: var(--corners-mid);
 }
 
@@ -3905,12 +3904,7 @@ p.combo-card-description {
 }
 
 .podcast-widget.art-header .podcast-widget-header {
-    background: var(--theme-content-bg-0);
     padding-right: 0;
-}
-
-.podcast-widget.art-body .podcast-widget-header {
-    background: var(--theme-content-bg-1);
 }
 
 .podcast-widget-heading .title {
@@ -3951,27 +3945,10 @@ p.combo-card-description {
 }
 
 /* Body -------------------------------------------------------------------------------- */
-.podcast-widget.art-header .podcast-widget-body {
-    background: var(--theme-content-bg-1);
-    border-top: var(--theme-border-2);
-}
-
-.podcast-widget.art-body .podcast-widget-body {
-    background: var(--theme-content-bg-0);
-}
-
 .podcast-widget .podcast-widget-body {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-}
-
-.podcast-widget.art-body .podcast-widget-header + .podcast-widget-body {
-    border-top: var(--theme-border-2);
-}
-
-.podcast-widget.art-body.links-footer .podcast-widget-body {
-    border-bottom: var(--theme-border-2);
 }
 
 .podcast-widget .console-player {
@@ -3984,10 +3961,6 @@ p.combo-card-description {
 }
 
 /* Footer -------------------------------------------------------------------------------- */
-.podcast-widget-footer {
-    background: var(--theme-content-bg-1);
-}
-
 .podcast-widget.art-body .podcast-widget-footer {
     padding: var(--space3);
 }
@@ -4002,7 +3975,8 @@ p.combo-card-description {
     width: calc(var(--comboBoxHeight) * 2.109);
 }
 
-.podcast-widget-header .combo-box {
+.podcast-widget-header .combo-box,
+.podcast-widget-body .combo-box {
     border-radius: 0;
 }
 
@@ -4082,6 +4056,45 @@ p.combo-card-description {
     display: inline-block;
     margin-left: var(--space2);
     margin-right: var(--space2);
+}
+
+/* Themes -------------------------------------------------------------------------------- */
+/* default */
+.podcast-widget.style-default.art-header .podcast-widget-header,
+.podcast-widget.style-default.art-body .podcast-widget-body {
+    background: var(--theme-content-bg-0);
+}
+
+.podcast-widget.style-default.art-body .podcast-widget-header,
+.podcast-widget.style-default.art-header .podcast-widget-body,
+.podcast-widget.style-default .podcast-widget-footer {
+    background: var(--theme-content-bg-1);
+}
+
+.podcast-widget.style-default.art-header .podcast-widget-body:not(:first-child) {
+    border-top: var(--theme-border-2);
+}
+
+.podcast-widget.style-default.art-body .podcast-widget-header + .podcast-widget-body {
+    border-top: var(--theme-border-2);
+}
+
+.podcast-widget.style-default.art-body.links-footer .podcast-widget-body {
+    border-bottom: var(--theme-border-2);
+}
+
+/* alt */
+.podcast-widget.style-alt.art-header .podcast-widget-header,
+.podcast-widget.style-alt.art-body .podcast-widget-body,
+.podcast-widget.style-alt .podcast-widget-header .combo-box-visuals.logo-profile .plane-picture.left,
+.podcast-widget.style-alt .podcast-widget-body .combo-box-visuals.logo-profile .plane-picture.left {
+    background: var(--theme-content-bg-3);
+}
+
+.podcast-widget.style-alt.art-body .podcast-widget-header,
+.podcast-widget.style-alt.art-header .podcast-widget-body,
+.podcast-widget.style-alt .podcast-widget-footer {
+    background: var(--theme-content-bg-4);
 }
 
 /* Podcast links
