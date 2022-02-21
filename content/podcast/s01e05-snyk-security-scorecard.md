@@ -4,8 +4,8 @@ who: David Mytton & Jean Yang
 what:
   "Episode 5 of the Console DevTools Podcast, a devtools discussion with David
   Mytton (Co-founder, Console) and Jean Yang (CEO, Akita Software). Tools
-  discussed: Snyk - Dependency security monitoring, Security Scorecard - Security 
-  health metrics."
+  discussed: Snyk - Dependency security monitoring, Security Scorecard -
+  Security health metrics."
 season: 1
 episode: 5
 date: 2021-08-05T08:00:00Z
@@ -13,10 +13,10 @@ duration: 14:11
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/d80275f0-4cf4-4fd8-b63b-55ea67ad61b1/audio/c0ac707f-a50e-41e9-b4e3-4f866e21ef59/default_tc.mp3
 draft: false
 summary:
-  Snyk (dependency security monitoring) & Security Scorecard (security health 
+  Snyk (dependency security monitoring) & Security Scorecard (security health
   metrics), a devtools discussion with David Mytton and Jean Yang.
 metaDescription:
-  Snyk (dependency security monitoring) & Security Scorecard (security health 
+  Snyk (dependency security monitoring) & Security Scorecard (security health
   metrics), a devtools discussion with David Mytton and Jean Yang.
 headerType: fixed
 hideLines: true
@@ -59,8 +59,8 @@ Mytton (Co-founder, Console) and Jean Yang (CEO, Akita Software).
 
 Tools discussed:
 
-1. [Snyk Open Source](https://snyk.io/product/open-source-security-management/)
-   - Dependency security monitoring.
+1. [Snyk Open Source](https://snyk.io/product/open-source-security-management/) -
+   Dependency security monitoring.
 2. [Security Scorecard](https://github.com/ossf/scorecard) - Security health
    metrics.
 
@@ -73,15 +73,15 @@ Other things mentioned:
 
 {{< box-collapsible title="Full transcript" class="podcast-transcript is-expanded" >}}
 
-**David:** Welcome to the Console DevTools Podcast, a show all about
-interesting developer tools. I'm David Mytton, co-founder of Console.
+**David:** Welcome to the Console DevTools Podcast, a show all about interesting
+developer tools. I'm David Mytton, co-founder of Console.
 
 **Jean:** And I'm Jean Yang, CEO of Akita Software, an API observability
 startup. In each episode, we'll discuss two interesting developer tools. We're
 keeping this to 15 minutes, so let's get started.
 
-**David:** This week we are focusing on security and have two interesting
-tools to discuss from that space.
+**David:** This week we are focusing on security and have two interesting tools
+to discuss from that space.
 
 The first of these is Snyk Open Source, a security monitoring tool that helps
 you look at your dependencies and get a view of the security status of
@@ -110,8 +110,8 @@ remediate and fix all the vulnerabilities, which is pretty cool. It gives you
 much more visibility than something just like a pull request being opened. How
 do you see it, Jean?
 
-**Jean:** I, like you, have only used Dependabot, and I've used it because
-it shows up in my GitHub repositories. I'll be honest, normally we don't do
+**Jean:** I, like you, have only used Dependabot, and I've used it because it
+shows up in my GitHub repositories. I'll be honest, normally we don't do
 anything unless it tells us exactly what to do, which is pretty often, so that's
 pretty good.
 
@@ -133,13 +133,12 @@ something harder, but Snyk has done such a good job in scanning containers,
 scanning dependencies that I wonder how much they can go beyond scanning for
 actionable things like automatic fixes and things like that.
 
-**David:** It's really interesting because of the depth that it goes
-into. It's true if you just want pull requests opened up with an updated version
-string in your requirements file for Python or whatever the module system you're
-using, then Dependabot does the job. Snyk goes into the containers to look at
-the operating system packages that are underlying them, and it just gives you
-much more depth in understanding all of the things that your code is relying
-on.
+**David:** It's really interesting because of the depth that it goes into. It's
+true if you just want pull requests opened up with an updated version string in
+your requirements file for Python or whatever the module system you're using,
+then Dependabot does the job. Snyk goes into the containers to look at the
+operating system packages that are underlying them, and it just gives you much
+more depth in understanding all of the things that your code is relying on.
 
 It's a challenge in terms of what you have to do with them next. For example, I
 had to a really simple Nginx Docker container that was fully up to date as far
@@ -160,20 +159,20 @@ and things like that. That's something I'm curious about. Where in a developer's
 priorities or a security team's priorities do these bugs actually fall and is it
 possible to get to a higher set of priorities by going deeper somehow?
 
-**David:** The relative security scoring was interesting to see because
-it helped me understand which issues I should focus on. Those 169 issues, most
-of them are not relevant to me, so highlighting just the two that were critical
+**David:** The relative security scoring was interesting to see because it
+helped me understand which issues I should focus on. Those 169 issues, most of
+them are not relevant to me, so highlighting just the two that were critical
 that I may want to think about was particularly useful. I also liked how it
 separates the dev dependencies from production, because although I do want to
 fix the dev vulnerabilities at some point, they're not in production, so I'm
 going to deprioritize those and focus on other things.
 
-**Jean:** Right, that is helpful. My question, though, is are there 300
-more relative priorities that are higher priorities than what you can scan for?
+**Jean:** Right, that is helpful. My question, though, is are there 300 more
+relative priorities that are higher priorities than what you can scan for?
 
-**David:** Exactly. So the question for the audience is what are you
-using to manage your dependencies, and do you use anything? How do you know when
-there are updates? Let us know on Twitter at the consoledotdev Twitter handle.
+**David:** Exactly. So the question for the audience is what are you using to
+manage your dependencies, and do you use anything? How do you know when there
+are updates? Let us know on Twitter at the consoledotdev Twitter handle.
 
 The second tool that we're talking about today is Security Scorecard. This is an
 open source project that has been released by the Open Source Security
@@ -203,10 +202,10 @@ a good arbiter of this, and they're accepting contributions to the project, but
 some of these may be onerous for very small projects or just individuals who are
 developing projects that turn out to be really successful.
 
-**Jean:** I think that's great commentary, David. I think the answer to
-who's deciding often in companies seems like not many people at all. Back when
-Akita, my company, had more of a security focus, I used to interview a lot of
-security teams.
+**Jean:** I think that's great commentary, David. I think the answer to who's
+deciding often in companies seems like not many people at all. Back when Akita,
+my company, had more of a security focus, I used to interview a lot of security
+teams.
 
 What they said was their own OKRs were often very fuzzy, and imposing metrics on
 the rest of the company about what security means. It was often up to them to
@@ -250,8 +249,8 @@ useful; but they're taking on some of the CISO's liability, where something like
 this is very useful, but it may not be taking on that much liability from a CISO
 perspective.
 
-**David:** What do you think the responsibility of modern developers is
-for security? Tools like Snyk and Dependabot are putting developers in charge of
+**David:** What do you think the responsibility of modern developers is for
+security? Tools like Snyk and Dependabot are putting developers in charge of
 merging pull requests and dealing with the vulnerability reports, basically
 moving away from the idea of having a security team that forces best practices
 on the organization and perhaps building a split like we've seen with DevOps and
@@ -260,11 +259,11 @@ reliability, and they might come in on almost like a consulting basis to advise
 engineers, but really...engineers, you build it, you run it, and now you've got
 to secure it.
 
-**Jean:** Seeing security as something after the fact only made sense if
-you're securing infrastructure, not code. If you think about what happens in
-code and it is considered as security vulnerabilities, like injection attacks,
-memory leaks, using dependencies that you shouldn't be able to, a security team
-can't just shut that off because that breaks the functionality of your code.
+**Jean:** Seeing security as something after the fact only made sense if you're
+securing infrastructure, not code. If you think about what happens in code and
+it is considered as security vulnerabilities, like injection attacks, memory
+leaks, using dependencies that you shouldn't be able to, a security team can't
+just shut that off because that breaks the functionality of your code.
 
 Security is very much something that you can't just scan infrastructure for.
 Security is very much something that's tied to the code. Developers should have
@@ -274,30 +273,29 @@ tools are scanning tools. Many of those security bugs that a developer has
 control over are deeper. I think this relationship needs to evolve, but I don't
 know what has to happen for it to do so.
 
-**David:** Making security developer friendly is something we were
-talking about earlier, and I think that has been a big success of a Snyk and
-their approach to it.  Rather than developers using a tool they don't actually
-want to use, this comes down to the developer experience across all tools.
-Making a product that developers actually want to use is probably one of the
-biggest barriers for any adoption of any kind of best practice.
+**David:** Making security developer friendly is something we were talking about
+earlier, and I think that has been a big success of a Snyk and their approach to
+it.  Rather than developers using a tool they don't actually want to use, this
+comes down to the developer experience across all tools. Making a product that
+developers actually want to use is probably one of the biggest barriers for any
+adoption of any kind of best practice.
 
 **Jean:** Yeah, absolutely.
 
-**David:** So if you're developing an open source project, tell us how
-you're managing the governance of things like pull requests and who's involved
-in the organization.
+**David:** So if you're developing an open source project, tell us how you're
+managing the governance of things like pull requests and who's involved in the
+organization.
 
-**Jean:** And tell us how you balance this with other priorities and what
-can help.
+**Jean:** And tell us how you balance this with other priorities and what can
+help.
 
-**David:** Alright, that's it for this week. Please tell a developer
-friend about the podcast if you enjoyed it, and remember to look at the weekly
-Console newsletter with the best tools and beta releases for developers at
-console.dev.
+**David:** Alright, that's it for this week. Please tell a developer friend
+about the podcast if you enjoyed it, and remember to look at the weekly Console
+newsletter with the best tools and beta releases for developers at console.dev.
 
-**Jean:** Please talk to us, tell us what you want to hear about
-@consoledotdev. You can also find me @jeanqasaur on Twitter, and you can also
-read more about my company @AkitaSoftware on Twitter as well.
+**Jean:** Please talk to us, tell us what you want to hear about @consoledotdev.
+You can also find me @jeanqasaur on Twitter, and you can also read more about my
+company @AkitaSoftware on Twitter as well.
 
 **David:** Thanks. See you next week.
 
