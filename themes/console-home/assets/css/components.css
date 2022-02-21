@@ -4062,25 +4062,25 @@ p.combo-card-description {
 /* default */
 .podcast-widget.style-default.art-header .podcast-widget-header,
 .podcast-widget.style-default.art-body .podcast-widget-body {
-    background: var(--theme-content-bg-0);
+    background: var(--theme-podcast-widget-default-bg-1);
 }
 
 .podcast-widget.style-default.art-body .podcast-widget-header,
 .podcast-widget.style-default.art-header .podcast-widget-body,
 .podcast-widget.style-default .podcast-widget-footer {
-    background: var(--theme-content-bg-1);
+    background: var(--theme-podcast-widget-default-bg-2);
 }
 
 .podcast-widget.style-default.art-header .podcast-widget-body:not(:first-child) {
-    border-top: var(--theme-border-2);
+    border-top: var(--theme-podcast-widget-default-border);
 }
 
 .podcast-widget.style-default.art-body .podcast-widget-header + .podcast-widget-body {
-    border-top: var(--theme-border-2);
+    border-top: var(--theme-podcast-widget-default-border);
 }
 
 .podcast-widget.style-default.art-body.links-footer .podcast-widget-body {
-    border-bottom: var(--theme-border-2);
+    border-bottom: var(--theme-podcast-widget-default-border);
 }
 
 /* alt */
@@ -4088,13 +4088,25 @@ p.combo-card-description {
 .podcast-widget.style-alt.art-body .podcast-widget-body,
 .podcast-widget.style-alt .podcast-widget-header .combo-box-visuals.logo-profile .plane-picture.left,
 .podcast-widget.style-alt .podcast-widget-body .combo-box-visuals.logo-profile .plane-picture.left {
-    background: var(--theme-content-bg-3);
+    background: var(--theme-podcast-widget-alt-bg-1);
 }
 
 .podcast-widget.style-alt.art-body .podcast-widget-header,
 .podcast-widget.style-alt.art-header .podcast-widget-body,
 .podcast-widget.style-alt .podcast-widget-footer {
-    background: var(--theme-content-bg-4);
+    background: var(--theme-podcast-widget-alt-bg-2);
+}
+
+.podcast-widget.style-alt.art-header .podcast-widget-body:not(:first-child) {
+    border-top: var(--theme-podcast-widget-alt-border);
+}
+
+.podcast-widget.style-alt.art-body .podcast-widget-header + .podcast-widget-body {
+    border-top: var(--theme-podcast-widget-alt-border);
+}
+
+.podcast-widget.style-alt.art-body.links-footer .podcast-widget-body {
+    border-bottom: var(--theme-podcast-widget-alt-border);
 }
 
 /* Podcast links

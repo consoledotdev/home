@@ -224,6 +224,13 @@
 
     /* Podcast widget */
     --theme-podcast-widget-title: var(--c-green-06);
+    --theme-podcast-widget-border: var(--theme-border-2);
+    --theme-podcast-widget-default-border: var(--theme-border-2);
+    --theme-podcast-widget-default-bg-1: var(--theme-content-bg-0);
+    --theme-podcast-widget-default-bg-2: var(--theme-content-bg-0);
+    --theme-podcast-widget-alt-border: var(--theme-border-2);
+    --theme-podcast-widget-alt-bg-1: var(--theme-content-bg-3);
+    --theme-podcast-widget-alt-bg-2: var(--theme-content-bg-4);
 
     /* Vendor Review page specific */
     --theme-vendor-review-page-bg: var(--theme-content-bg-2);
