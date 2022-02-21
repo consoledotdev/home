@@ -22,24 +22,24 @@
                 </a>
             </p>
         </div>
-        <div class="podcast-launch">
-            <p>Listen to more interviews on the
-                <a href="/podcast/" class="console-button-text console-button-green icon-left">{{ partial "icons/podcast.html"}}<span>Console DevTools Podcast</span></a>.</p>
-        
-            <!-- Podcast embed -->
-            {{ $section := .Site.GetPage "section" "podcast" }}
-            {{ $pages := $section.Pages }}
-            {{ $podcast := index (where $pages.ByPublishDate.Reverse "Params.season" 2) 0 }}
+    </section>
+    <section class="page-section page-section-interviews-root podcast-launch">
+        <p>Listen to more interviews on the
+            <a href="/podcast/" class="console-button-text console-button-green icon-left">{{ partial "icons/podcast.html"}}<span>Console DevTools Podcast</span></a>.</p>
+    
+        <!-- Podcast embed -->
+        {{ $section := .Site.GetPage "section" "podcast" }}
+        {{ $pages := $section.Pages }}
+        {{ $podcast := index (where $pages.ByPublishDate.Reverse "Params.season" 2) 0 }}
 
-            {{ $playerTitle := print $podcast.Title ", with " $podcast.Params.who }}
-            {{ with $podcast.Params.org }}{{ $playerTitle = print $playerTitle " (" $podcast.Params.org ")" }}{{ end }}
+        {{ $playerTitle := print $podcast.Title ", with " $podcast.Params.who }}
+        {{ with $podcast.Params.org }}{{ $playerTitle = print $playerTitle " (" $podcast.Params.org ")" }}{{ end }}
         {{ $playerAttrs := (dict "title" $playerTitle "classes" "show-time" "duration" $podcast.Params.duration ) }}
 
-            {{ partial "components/podcast-widget.html" (dict "podcast" $podcast "art" "body" "links" "body" "hideHeader" "true" "playerAttrs" $playerAttrs) }}
-            <!-- end -->
-            
-            <p>Keep reading our interviews:</p>
-        </div>
+        {{ partial "components/podcast-widget.html" (dict "podcast" $podcast "art" "body" "links" "body" "hideHeader" "true" "playerAttrs" $playerAttrs) }}
+        <!-- end -->
+        
+        <p>Keep reading our interviews:</p>
     </section>
     <div class="interviews-split">
         <div class="interviews">
