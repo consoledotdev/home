@@ -159,6 +159,10 @@ html {
     flex: 1 1 auto;
 }
 
+.main-podcast-episode .podcast-widget .podcast-widget-links > .link {
+    display: none;
+}
+
 .is-fixed-player .podcast-widget-wrapper {
     position: fixed;
     left: 6.25vw;
@@ -191,6 +195,23 @@ html {
             width: 100%;
             max-width: none;
         }
+    }
+}
+
+.main-podcast-episode .podcast-widget.large,
+.main-podcast-episode .podcast-widget.small {
+    display: none;
+}
+
+@media (min-width: 512px) {
+    .main-podcast-episode .podcast-widget.large {
+        display: block;
+    }
+}
+
+@media (max-width: 511px) {
+    .main-podcast-episode .podcast-widget.small {
+        display: block;
     }
 }
 
