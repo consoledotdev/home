@@ -3988,6 +3988,7 @@ p.combo-card-description {
 /* Combo box -------------------------------------------------------------------------------- */
 .podcast-widget .combo-box {
     --comboBoxHeight: var(--space5);
+    height: var(--comboBoxHeight);
     width: calc(var(--comboBoxHeight) * 2.109);
 }
 

@@ -454,7 +454,7 @@ body.show-planes:after {
 }
 
 @media (max-width: 420px) {
-    .page-home .podcast-widget .title span:before {
+    .page-home .podcast-widget .podcast-widget-header .title span:before {
         content: "Podcast";
     }
 
