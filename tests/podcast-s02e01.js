@@ -54,7 +54,7 @@ export default function () {
         "correct meta description": (r) => metaDescription == expectedDescription,
         "correct link rel canonical": (r) => relCanonical == expectedCanonical,
         "correct og:site_name": (r) => ogSiteName == "Console",
-        "correct og:title": (r) => ogTitle == pageTitle,
+        "correct og:title": (r) => ogTitle == expectedTitle,
         "correct og:decription": (r) => ogDescription == expectedDescription,
         "correct og:url": (r) => ogURL == expectedCanonical,
         "correct twitter:site": (r) => twitterSite == "@consoledotdev",
