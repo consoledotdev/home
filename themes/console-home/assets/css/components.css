@@ -4075,7 +4075,7 @@ p.combo-card-description {
     border-bottom: var(--theme-podcast-widget-default-border);
 }
 
-.podcast-widget.style-default.art-header .podcast-widget-body {
+.podcast-widget.style-default.art-header .podcast-widget-body:not(:first-child) {
     border-top: var(--theme-podcast-widget-default-border);
 }
 
@@ -4101,7 +4101,7 @@ p.combo-card-description {
     border-bottom: var(--theme-podcast-widget-alt-border);
 }
 
-.podcast-widget.style-alt.art-header .podcast-widget-body {
+.podcast-widget.style-alt.art-header .podcast-widget-body:not(:first-child) {
     border-top: var(--theme-podcast-widget-alt-border);
 }
 

@@ -271,6 +271,21 @@
     --theme-artwork-triad-03-glow: rgba(1, 188, 144, 0.14);
 }
 
+.theme.page-article,
+.theme.page-feature,
+.theme.page-feature-article,
+.theme.page-category-review,
+.theme.page-advertise,
+.theme.page-badges,
+.theme.page-landing {
+    background: var(--theme-content-bg-3);
+}
+
+.theme.page-vendor-review,
+.theme.page-podcast-episode {
+    background: var(--theme-content-bg-0);
+}
+
 .theme .hero .lines {
     opacity: 0.045;
 }
