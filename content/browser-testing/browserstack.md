@@ -217,10 +217,13 @@ BrowserStack Live allows testing websites on physical mobile devices in
 real-time, but we found that network latency is high. This issue is most
 prominent when scrolling or typing. A few seconds of delay between pressing a
 key and seeing the character on screen is undesirable and annoying. Another
-thing to keep in mind is that remote debugging via dev tools is available only
-on Chrome browsers on Android devices. Screen reader functionality (in beta) is
-not yet supported on mobile devices. On desktop devices, it did not work
-properly and kept repeating the same sentence again and again.
+thing to keep in mind is that
+[remote debugging](https://developer.chrome.com/docs/devtools/remote-debugging/)
+on mobile devices is only supported when testing Chrome (Android) and Safari
+(iOS) - devtools are not supported on Firefox or Chrome (iOS). Screen reader
+functionality (in beta) is not yet supported on mobile devices. On desktop
+devices, it did not work properly and kept repeating the same sentence again and
+again.
 
 Test reports are not generated for live tests.
 [Other products we tested](/browser-stack/) keep a log of tests performed and

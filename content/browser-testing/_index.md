@@ -267,9 +267,11 @@ Testing on real devices comes with a few caveats, most notable of them being
 network latency during live testing. Response time between clicks and page
 update ranges from moderate to high (depending on the availability of testing
 devices in your nearest region) which sometimes makes it looks like the system
-has ceased responding. Remote debugging via
-[dev tools](https://developer.chrome.com/docs/devtools/remote-debugging/) is not
-available on mobile devices.
+has ceased responding. When using BrowserStack on Firefox,
+[remote debugging](https://developer.chrome.com/docs/devtools/remote-debugging/)
+on mobile devices is not supported altogether, when using Chrome, only Chrome
+(Android) and Safari (iOS) are supported - other mobile browsers such as Chrome
+on iOS and Samsung Internet can not be debugged.
 
 The majority of Android devices offered are by Samsung or Google; the list of
 devices offered by other vendors is sparsely populated. The number of devices
