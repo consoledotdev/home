@@ -2,12 +2,12 @@
     Type (required):
         .art = "header" || "body" - positions the artwork in header or in body.
         .links = "body" || "footer" - positions the links in body or footer.
+
     Options:
         .hideHeader = "true" - hides the header.
         .hideArt = "true" - hides the artwork.
         .hideLinks = "true" - hides the links.
         .style = "alt" - displays an alternative style.
-        .classes = "show-time" - shows the total and elapsed time.
     
     Other:
         .playerAttrs - options for the console player component.
@@ -62,7 +62,9 @@
 
         {{ $playerTitle := .podcast.Title }}
         {{ if .playerAttrs.title }}{{ $playerTitle = .playerAttrs.title }}{{ end }}
-        {{ partial "components/audio-player.html" (dict "src" .podcast.Params.episodeURL "title" $playerTitle "classes" .playerAttrs.classes "duration" .podcast.Params.duration )}}
+        {{ $playerTitleAlt := "" }}
+        {{ if .playerAttrs.titleAlt }}{{ $playerTitleAlt = .playerAttrs.titleAlt }}{{ end }}
+        {{ partial "components/audio-player.html" (dict "src" .podcast.Params.episodeURL "title" $playerTitle "titleAlt" $playerTitleAlt "classes" .playerAttrs.classes "duration" .podcast.Params.duration )}}
 
         {{ if and (eq .links "body") (not .hideLinks) }}
             {{ $links }}
