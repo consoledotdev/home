@@ -115,37 +115,6 @@ html {
     border: var(--theme-border-2);
 }
 
-/* Logo + Profile */
-.combo-box-visuals.logo-profile .plane-picture.right {
-    width: 76.82%;
-    clip-path: polygon(30.9% 0%, 0% 100%, 100% 100%, 100% 0%);
-}
-
-/* Logo + Logo */
-.combo-box-visuals.logo-logo .plane-picture.left {
-    width: 61.5%;
-    clip-path: polygon(0% 0%, 0% 100%, 61.46% 100%, 100% 0%);
-}
-
-.combo-box-visuals.logo-logo .plane-picture.mid {
-    clip-path: polygon(97.18% 0%, 0% 100%, 2.82% 100%, 100% 0%);
-}
-
-.combo-box-visuals.logo-logo .plane-picture.right {
-    width: 61.5%;
-    clip-path: polygon(38.54% 0%, 0% 100%, 100% 100%, 100% 0%);
-}
-
-/* Combo card logo --------------------------- */
-/* Logo + Logo */
-.combo-box-visuals.logo-logo .plane-picture.left .logo {
-    margin-left: 23.46%;
-}
-
-.combo-box-visuals.logo-logo .plane-picture.right .logo {
-    margin-left: 49.72%;
-}
-
 .main-podcast-episode .page-section.opening .intro {
     margin: var(--space3) 0 0;
     color: var(--theme-text-1);
@@ -190,7 +159,11 @@ html {
     flex: 1 1 auto;
 }
 
-.is-fixed-player .podcast-embed {
+.main-podcast-episode .podcast-widget .podcast-widget-links > .link {
+    display: none;
+}
+
+.is-fixed-player .podcast-widget-wrapper {
     position: fixed;
     left: 6.25vw;
     right: 6.25vw;
@@ -201,7 +174,7 @@ html {
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-    .is-fixed-player .podcast-embed {
+    .is-fixed-player .podcast-widget-wrapper {
         left: 8vw;
         right: 8vw;
     }
@@ -209,7 +182,7 @@ html {
 
 /* 1200px + left & right margin (6.25vw) */
 @media (min-width: 1371px) {
-    .is-fixed-player .podcast-embed {
+    .is-fixed-player .podcast-widget-wrapper {
         left: calc(calc(100vw - 1200px) / 2);
         right: calc(calc(100vw - 1200px) / 2);
     }
@@ -222,6 +195,23 @@ html {
             width: 100%;
             max-width: none;
         }
+    }
+}
+
+.main-podcast-episode .podcast-widget.large,
+.main-podcast-episode .podcast-widget.small {
+    display: none;
+}
+
+@media (min-width: 512px) {
+    .main-podcast-episode .podcast-widget.large {
+        display: block;
+    }
+}
+
+@media (max-width: 511px) {
+    .main-podcast-episode .podcast-widget.small {
+        display: block;
     }
 }
 

@@ -1,0 +1,78 @@
+<!--
+    Type (required):
+        .art = "header" || "body" - positions the artwork in header or in body.
+        .links = "body" || "footer" - positions the links in body or footer.
+    Options:
+        .hideHeader = "true" - hides the header.
+        .hideArt = "true" - hides the artwork.
+        .hideLinks = "true" - hides the links.
+        .style = "alt" - displays an alternative style.
+        .classes = "show-time" - shows the total and elapsed time.
+    
+    Other:
+        .playerAttrs - options for the console player component.
+-->
+
+{{ $visualsType := "logo-logo" }}
+{{ if eq .podcast.Params.season 2 }}{{ $visualsType = "logo-profile" }}{{ end }}
+{{ $isVertical := "" }}
+{{ if eq .art "header"}}{{ $isVertical = "true" }}{{ end }}
+{{ $art := partial "components/combo-box.html" (dict "visualsType" $visualsType "content" .podcast "isVertical" $isVertical) }}
+
+{{ $podcastPageLink := ("<a href=\"/podcast/\" class=\"link\"></a>" | safeHTML) }}
+{{ $podcastLinks := partial "components/podcast-links.html" (dict "apple" "true" "spotify" "true" "google" "true" "overcast" "true") }}
+{{ $links := (print "<div class=\"podcast-widget-links\">" $podcastPageLink $podcastLinks "</div>" | safeHTML) }}
+
+<div class="podcast-widget
+    {{- with .art}} art-{{ . }}{{ end }}
+    {{- with .links}} links-{{ . }}{{ end }}
+    {{- with .classes}} {{ . }}{{ end }}
+    {{- with .style}} style-{{ . }}{{ else }} style-default{{ end }}">
+    
+    {{ if not .hideHeader }}
+        <div class="podcast-widget-header">
+            <div class="podcast-widget-heading">
+                <h6 class="title title-6 rich-title">
+                    {{ partial "icons/podcast.html" }}
+                    <span></span>
+                </h6>
+                <div class="podcast-widget-meta">
+                    <p class="small episode-no">
+                        {{ $s := .podcast.Params.season }}
+                        {{ $e := .podcast.Params.episode }}
+                        S{{ if lt $s 10 }}0{{ end }}{{ $s }} E{{ if lt $e 10 }}0{{ end }}{{ $e }}
+                    </p>
+                    <p class="small date">
+                        <span class="page-meta-separator">&mdash;</span>
+                        <span>{{ .podcast.Date.Format "2006-01-02" }}</span>
+                    </p>
+                </div>
+            </div>
+
+            {{ if and (eq .art "header") (not .hideArt) }}
+                {{ $art }}
+            {{ end }}
+        </div>
+    {{ end }}
+
+    <div class="podcast-widget-body">
+        {{ if and (eq .art "body") (not .hideArt) }}
+            {{ $art }}
+        {{ end }}
+
+        {{ $playerTitle := .podcast.Title }}
+        {{ if .playerAttrs.title }}{{ $playerTitle = .playerAttrs.title }}{{ end }}
+        {{ partial "components/audio-player.html" (dict "src" .podcast.Params.episodeURL "title" $playerTitle "classes" .playerAttrs.classes "duration" .podcast.Params.duration )}}
+
+        {{ if and (eq .links "body") (not .hideLinks) }}
+            {{ $links }}
+        {{ end }}
+    </div>
+
+    {{ if and (eq .links "footer") (not .hideLinks) }} 
+        <div class="podcast-widget-footer">
+            {{ $links }}
+        </div>
+    {{ end }}
+
+</div>

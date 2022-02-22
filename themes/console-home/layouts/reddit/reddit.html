@@ -42,15 +42,17 @@
     Every Thursday.
     <a class="link" onclick="blur()" href="/latest/">See the latest email</a>.
 </p>
-<div class="framed-section mid framed-section-overlay podcast-embed">
-    <h5 class="title title-4">Console DevTools Podcast</h5>
-    <div class="podcast-embed-content">
-        {{ partial "components/audio-player.html" (dict "src" $.Site.Params.consolePodcastURL "title" $.Site.Params.consolePodcastTitle )}}
-        {{ partial "components/podcast-links.html" (dict "apple" "true" "spotify" "true") }}
-    </div>
-</div>
 
-{{ $audioPlayerJS := resources.Get "/js/audio-player.js" }}
-{{ if hugo.IsProduction }}{{ $audioPlayerJS = $audioPlayerJS | resources.Minify | resources.Fingerprint }}{{ end }}
-<script src="{{ $audioPlayerJS.Permalink }}"></script>
+<!-- Podcast embed -->
+{{ $section := .Site.GetPage "section" "podcast" }}
+{{ $pages := $section.Pages }}
+{{ $podcast := index (where $pages.ByPublishDate.Reverse "Params.season" 2) 0 }}
+
+{{ $playerTitle := print $podcast.Title ", with " $podcast.Params.who }}
+{{ with $podcast.Params.org }}{{ $playerTitle = print $playerTitle " (" $podcast.Params.org ")" }}{{ end }}
+{{ $playerAttrs := (dict "title" $playerTitle ) }}
+
+{{ partial "components/podcast-widget.html" (dict "style" "alt" "podcast" $podcast "art" "header" "links" "footer" "playerAttrs" $playerAttrs) }}
+<!-- end -->
+
 {{ end }}

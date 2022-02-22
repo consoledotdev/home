@@ -2529,43 +2529,44 @@ body:not(.mobile) .console-control:hover:before {
     margin-left: 37.1%;
 }
 
-@media (max-width: 768px) {
-    /* Logo + Profile */
-    .combo-box-visuals.logo-profile .plane-picture.right {
-        width: 76.82%;
-        clip-path: polygon(30.9% 0%, 0% 100%, 100% 100%, 100% 0%);
-    }
-
-    /* Logo + Logo */
-    .combo-box-visuals.logo-logo .plane-picture.left {
-        width: 61.5%;
-        clip-path: polygon(0% 0%, 0% 100%, 61.46% 100%, 100% 0%);
-    }
-
-    .combo-box-visuals.logo-logo .plane-picture.mid {
-        clip-path: polygon(97.18% 0%, 0% 100%, 2.82% 100%, 100% 0%);
-    }
-
-    .combo-box-visuals.logo-logo .plane-picture.right {
-        width: 61.5%;
-        clip-path: polygon(38.54% 0%, 0% 100%, 100% 100%, 100% 0%);
-    }
-
-    /* Combo card logo --------------------------- */
-    /* Logo + Logo */
-    .combo-box-visuals.logo-logo .plane-picture.left .logo {
-        margin-left: 23.46%;
-    }
-
-    .combo-box-visuals.logo-logo .plane-picture.right .logo {
-        margin-left: 49.72%;
-    }
-}
-
 @media (min-width: 769px) {
     .combo-box {
         max-width: calc(var(--space7_5) - var(--space5));
     }
+}
+
+/* Vertical layout --------------------------------------------------------------------------- */
+/* Logo + Profile */
+.combo-box.is-vertical .combo-box-visuals.logo-profile .plane-picture.right {
+    width: 76.82%;
+    clip-path: polygon(30.9% 0%, 0% 100%, 100% 100%, 100% 0%);
+}
+
+/* Logo + Logo */
+.combo-box.is-vertical .combo-box-visuals.logo-logo .plane-picture.left {
+    width: 61.5%;
+    clip-path: polygon(0% 0%, 0% 100%, 61.46% 100%, 100% 0%);
+}
+
+.combo-box.is-vertical .combo-box-visuals.logo-logo .plane-picture.mid {
+    clip-path: polygon(97.18% 0%, 0% 100%, 2.82% 100%, 100% 0%);
+}
+
+.combo-box.is-vertical .combo-box-visuals.logo-logo .plane-picture.right {
+    width: 61.5%;
+    clip-path: polygon(38.54% 0%, 0% 100%, 100% 100%, 100% 0%);
+}
+
+/* Combo card logo --------------------------- */
+/* Logo + Logo */
+.combo-box.is-vertical .combo-box-visuals.logo-logo .plane-picture.left .logo {
+    margin-left: 23.46%;
+    width: 27%;
+}
+
+.combo-box.is-vertical .combo-box-visuals.logo-logo .plane-picture.right .logo {
+    margin-left: 49.72%;
+    width: 27%;
 }
 
 /* Combo Card
@@ -3874,59 +3875,238 @@ p.combo-card-description {
     background: var(--theme-text-4);
 }
 
-/* Podcast embed
+/* Podcast widget
    ================================================================================================================ */
-.podcast-embed .title.title-4 {
-    margin-bottom: var(--space3);
+.podcast-widget {
+    border-radius: var(--corners-mid);
 }
 
-.podcast-embed-content {
-    display: flex;
-}
-
-.podcast-embed-frame {
-    position: relative;
-    border-radius: var(--corners-x-small);
-    height: var(--space4_5);
+.podcast-widget > div:first-child {
+    border-top-left-radius: var(--corners-mid);
+    border-top-right-radius: var(--corners-mid);
     overflow: hidden;
 }
 
-.podcast-embed-frame iframe {
-    position: absolute;
-    min-width: 0; /* https://css-tricks.com/flexbox-truncated-text/ */
-    left: -8px;
-    top: -2px;
-    width: calc(100% + 14px);
+.podcast-widget > div:last-child {
+    border-bottom-left-radius: var(--corners-mid);
+    border-bottom-right-radius: var(--corners-mid);
+    overflow: hidden;
 }
 
-@media (min-width: 512px) {
-    .podcast-embed-content {
-        flex-flow: row nowrap;
-        align-items: center;
-        justify-content: flex-start;
-    }
-
-    .podcast-embed-content .podcast-embed-frame {
-        flex: 1 1 auto;
-    }
-
-    .podcast-embed-content .podcast-links {
-        margin-left: var(--space3);
-    }
+/* Header -------------------------------------------------------------------------------- */
+.podcast-widget-header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--space3);
+    min-height: calc(var(--space4) + var(--space2));
 }
 
-@media (max-width: 511px) {
-    .podcast-embed-content {
-        flex-flow: column nowrap;
-        align-items: stretch;
-        justify-content: flex-start;
-    }
+.podcast-widget.art-header .podcast-widget-header {
+    padding-right: 0;
 }
 
-@media (max-width: 511px) {
-    .podcast-embed-content .console-player + .podcast-links .link {
-        margin-top: var(--space3);
-    }
+.podcast-widget-heading .title {
+    margin-bottom: 0;
+    color: var(--theme-podcast-widget-title);
+}
+
+.podcast-widget-heading .title span:before {
+    content: "DevTools Podcast";
+}
+
+.podcast-widget-heading .title .icon {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.podcast-widget-heading .title .icon.icon-stroke {
+    stroke: var(--theme-podcast-widget-title);
+}
+.podcast-widget-heading .title .icon.icon-fill {
+    fill: var(--theme-podcast-widget-title);
+}
+.podcast-widget-heading .title .icon.icon-fill-stroke {
+    stroke: var(--theme-podcast-widget-title);
+    fill: var(--theme-podcast-widget-title);
+}
+
+.podcast-widget.art-body .podcast-widget-heading {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 0 auto;
+}
+
+.podcast-widget.art-body .podcast-widget-heading .title {
+    flex: 0 0 auto;
+}
+
+/* Body -------------------------------------------------------------------------------- */
+.podcast-widget .podcast-widget-body {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.podcast-widget .console-player {
+    margin: 0 var(--space3);
+    height: var(--space5);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    flex: 1 1 auto;
+}
+
+/* Footer -------------------------------------------------------------------------------- */
+.podcast-widget.art-body .podcast-widget-footer {
+    padding: var(--space3);
+}
+
+.podcast-widget.art-header .podcast-widget-footer {
+    padding: var(--space2) var(--space3) var(--space3);
+}
+
+/* Combo box -------------------------------------------------------------------------------- */
+.podcast-widget .combo-box {
+    --comboBoxHeight: var(--space5);
+    width: calc(var(--comboBoxHeight) * 2.109);
+}
+
+.podcast-widget-header .combo-box,
+.podcast-widget-body .combo-box {
+    border-radius: 0;
+}
+
+.podcast-widget.art-body .combo-box {
+    flex: 0 0 auto;
+}
+
+/* Links -------------------------------------------------------------------------------- */
+.podcast-widget-links {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.podcast-widget-links > .link {
+    flex: 1 0 auto;
+}
+
+.podcast-widget-links > .link:before {
+    content: "All episodes";
+}
+
+.podcast-widget-links .podcast-links {
+    flex: 0 0 auto;
+}
+
+.podcast-widget.links-body .podcast-widget-links {
+    flex: 0 0 auto;
+    flex-direction: row-reverse;
+}
+
+.podcast-widget.links-footer .podcast-widget-links > .link {
+    margin-right: var(--space3_5);
+}
+
+.podcast-widget.links-body .podcast-widget-links > .link {
+    margin-left: var(--space3_5);
+}
+
+.podcast-widget.links-body .podcast-widget-links {
+    margin-left: var(--space3);
+    margin-right: var(--space3_5);
+}
+
+/* Meta -------------------------------------------------------------------------------- */
+.podcast-widget.art-header .podcast-widget-meta {
+    margin-top: var(--space1);
+}
+
+.podcast-widget-meta {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    overflow: hidden;
+}
+
+.podcast-widget-meta p {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-bottom: 0;
+    font-size: var(--t-size-2);
+    line-height: var(--t-lH4);
+}
+
+.podcast-widget-meta .episode-no {
+    color: var(--theme-text-3);
+    font-style: italic;
+}
+
+.podcast-widget-meta p > * {
+    flex: 0 0 auto;
+}
+
+.podcast-widget-meta p > .page-meta-separator {
+    display: inline-block;
+    margin-left: var(--space2);
+    margin-right: var(--space2);
+}
+
+/* Themes -------------------------------------------------------------------------------- */
+/* default */
+.podcast-widget.style-default.art-header .podcast-widget-header,
+.podcast-widget.style-default.art-body .podcast-widget-body {
+    background: var(--theme-podcast-widget-default-bg-1);
+}
+
+.podcast-widget.style-default.art-body .podcast-widget-header,
+.podcast-widget.style-default.art-header .podcast-widget-body,
+.podcast-widget.style-default .podcast-widget-footer {
+    background: var(--theme-podcast-widget-default-bg-2);
+}
+
+.podcast-widget.style-default.art-header .podcast-widget-body:not(:first-child) {
+    border-top: var(--theme-podcast-widget-default-border);
+}
+
+.podcast-widget.style-default.art-body .podcast-widget-header + .podcast-widget-body {
+    border-top: var(--theme-podcast-widget-default-border);
+}
+
+.podcast-widget.style-default.art-body.links-footer .podcast-widget-body {
+    border-bottom: var(--theme-podcast-widget-default-border);
+}
+
+/* alt */
+.podcast-widget.style-alt.art-header .podcast-widget-header,
+.podcast-widget.style-alt.art-body .podcast-widget-body,
+.podcast-widget.style-alt .podcast-widget-header .combo-box-visuals.logo-profile .plane-picture.left,
+.podcast-widget.style-alt .podcast-widget-body .combo-box-visuals.logo-profile .plane-picture.left {
+    background: var(--theme-podcast-widget-alt-bg-1);
+}
+
+.podcast-widget.style-alt.art-body .podcast-widget-header,
+.podcast-widget.style-alt.art-header .podcast-widget-body,
+.podcast-widget.style-alt .podcast-widget-footer {
+    background: var(--theme-podcast-widget-alt-bg-2);
+}
+
+.podcast-widget.style-alt.art-header .podcast-widget-body:not(:first-child) {
+    border-top: var(--theme-podcast-widget-alt-border);
+}
+
+.podcast-widget.style-alt.art-body .podcast-widget-header + .podcast-widget-body {
+    border-top: var(--theme-podcast-widget-alt-border);
+}
+
+.podcast-widget.style-alt.art-body.links-footer .podcast-widget-body {
+    border-bottom: var(--theme-podcast-widget-alt-border);
 }
 
 /* Podcast links

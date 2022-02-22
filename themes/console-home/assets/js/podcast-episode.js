@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     window.addEventListener("resize", setPos);
 
     /* manage audio player fixing */
-    let playerAnchor = document.querySelector("[data-podcast-embed-anchor]");
-    let player = document.querySelector("[data-podcast-embed]");
+    let playerAnchor = document.querySelector("[data-podcast-widget-anchor]");
+    let player = document.querySelector("[data-podcast-widget]");
     let setPlayer = function () {
         let playerHeight = player.getBoundingClientRect().height;
         playerAnchor.style.height = playerHeight + "px";
