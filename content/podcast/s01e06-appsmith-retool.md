@@ -1,5 +1,5 @@
 ---
-title: Code search, dev flow & testing (Appsmith & Retool)
+title: Open source vs commercial (Appsmith & Retool)
 who: David Mytton & Jean Yang
 what:
   "Episode 6 of the Console DevTools Podcast, a devtools discussion with David
