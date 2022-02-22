@@ -16,6 +16,9 @@ window.CNSL.AudioPlayer =
             this.elapsed = this.progress.querySelector("[data-elapsed]");
             this.timeElapsed = this.wrapper.querySelector("[data-time-elapsed]");
             this.timeTotal = this.wrapper.querySelector("[data-time-total]");
+            this.titleWrapper = this.wrapper.querySelector("[data-title-wrapper]");
+            this.title = this.wrapper.querySelector("[data-title-main]");
+            this.titleText = this.title.innerText;
 
             this.isDragging = false;
             this.draggedToPos = -1;
@@ -83,6 +86,7 @@ window.CNSL.AudioPlayer =
                 await this.audioEl.play();
                 this.wrapper.classList.add("is-playing");
                 this.wrapper.classList.remove("is-loading");
+                this.scrollTitle();
             } catch (err) {
                 this.wrapper.classList.remove("is-playing");
                 this.wrapper.classList.remove("is-loading");
@@ -94,6 +98,7 @@ window.CNSL.AudioPlayer =
             this.audioEl.pause();
             this.wrapper.classList.remove("is-playing");
             this.wrapper.classList.add("is-paused");
+            this.scrollTitle(true);
         }
 
         checkOtherPlayers() {
@@ -106,6 +111,48 @@ window.CNSL.AudioPlayer =
             let mins = Math.floor(duration / 60);
             let secs = Math.floor(duration % 60);
             return ("0" + mins).slice(-2) + ":" + ("0" + secs).slice(-2);
+        }
+
+        scrollTitle(stop = false) {
+            if (stop) {
+                clearInterval(this.scrollTitleFwd);
+                clearInterval(this.scrollTitleBwd);
+            } else {
+                let space = this.titleWrapper.getBoundingClientRect().width;
+                let used = this.title.getBoundingClientRect().width;
+                let removed = 0;
+                let goForwards = () => {
+                    setTimeout(() => {
+                        this.scrollTitleFwd = setInterval(() => {
+                            space = this.titleWrapper.getBoundingClientRect().width;
+                            used = this.title.getBoundingClientRect().width;
+                            if (used > space) {
+                                removed++;
+                                this.title.textContent = this.titleText.substring(removed);
+                            } else {
+                                clearInterval(this.scrollTitleFwd);
+                                goBackwards();
+                            }
+                        }, 200);
+                    }, 2000);
+                };
+                let goBackwards = () => {
+                    setTimeout(() => {
+                        this.scrollTitleBwd = setInterval(() => {
+                            space = this.titleWrapper.getBoundingClientRect().width;
+                            used = this.title.getBoundingClientRect().width;
+                            if (removed > 0) {
+                                removed--;
+                                this.title.textContent = this.titleText.substring(removed);
+                            } else {
+                                clearInterval(this.scrollTitleBwd);
+                                goForwards();
+                            }
+                        }, 200);
+                    }, 2000);
+                };
+                if (used > space) goForwards();
+            }
         }
 
         publicMethods() {
