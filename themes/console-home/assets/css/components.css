@@ -3794,7 +3794,8 @@ p.combo-card-description {
     mask-repeat: no-repeat;
 }
 
-.console-player-top .title .title-main {
+.console-player-top .title .title-main,
+.console-player-top .title .title-alt {
     transition-property: margin;
     transition-duration: 2s;
     transition-timing-function: cubic-bezier(0.12, 0, 0.88, 1);
@@ -3815,7 +3816,7 @@ p.combo-card-description {
 }
 
 .console-player.is-playing .console-player-top .title-alt {
-    display: block;
+    display: inline;
 }
 
 .console-player.is-playing .console-player-top .title-alt + .title-main {

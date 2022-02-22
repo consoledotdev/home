@@ -18,7 +18,7 @@ window.CNSL.AudioPlayer =
             this.timeTotal = this.wrapper.querySelector("[data-time-total]");
             this.titleWrapper = this.wrapper.querySelector("[data-title-wrapper]");
             this.title = this.wrapper.querySelector("[data-title-main]");
-            this.titleText = this.title.innerText;
+            this.titleAlt = this.wrapper.querySelector("[data-title-alt]");
 
             this.isDragging = false;
             this.draggedToPos = -1;
@@ -32,6 +32,8 @@ window.CNSL.AudioPlayer =
             this.checkOtherPlayers = this.checkOtherPlayers.bind(this);
             this.hoverScrollTitle = this.hoverScrollTitle.bind(this);
             this.hoverScrollTitleStop = this.hoverScrollTitleStop.bind(this);
+            this.hoverScrollTitleAlt = this.hoverScrollTitleAlt.bind(this);
+            this.hoverScrollTitleAltStop = this.hoverScrollTitleAltStop.bind(this);
 
             this.bind();
         }
@@ -47,6 +49,8 @@ window.CNSL.AudioPlayer =
             this.audioEl.onloadedmetadata = this.onLoadedMetadata;
             this.titleWrapper.addEventListener("mouseover", this.hoverScrollTitle);
             this.titleWrapper.addEventListener("mouseout", this.hoverScrollTitleStop);
+            this.titleWrapper.addEventListener("mouseover", this.hoverScrollTitleAlt);
+            this.titleWrapper.addEventListener("mouseout", this.hoverScrollTitleAltStop);
         }
 
         dragTime(e) {
@@ -91,6 +95,7 @@ window.CNSL.AudioPlayer =
                 this.wrapper.classList.add("is-playing");
                 this.wrapper.classList.remove("is-loading");
                 this.scrollTitle();
+                this.scrollTitleAlt();
             } catch (err) {
                 this.wrapper.classList.remove("is-playing");
                 this.wrapper.classList.remove("is-loading");
@@ -103,6 +108,7 @@ window.CNSL.AudioPlayer =
             this.wrapper.classList.remove("is-playing");
             this.wrapper.classList.add("is-paused");
             this.scrollTitleStop();
+            this.scrollTitleAltStop();
         }
 
         checkOtherPlayers() {
@@ -118,11 +124,11 @@ window.CNSL.AudioPlayer =
         }
 
         scrollTitle() {
-            let wrapperW = this.titleWrapper.getBoundingClientRect().width;
+            let wrapperW = this.titleWrapper.getBoundingClientRect().width - 4;
             let contentW = this.title.getBoundingClientRect().width;
 
             let goForwards = () => {
-                let wrapperW = this.titleWrapper.getBoundingClientRect().width;
+                let wrapperW = this.titleWrapper.getBoundingClientRect().width - 4;
                 let contentW = this.title.getBoundingClientRect().width;
                 let diff = wrapperW - contentW;
                 let scrollDuration = Math.abs(diff) * 50;
@@ -135,7 +141,7 @@ window.CNSL.AudioPlayer =
                 }, 10);
             };
             let goBackwards = () => {
-                let wrapperW = this.titleWrapper.getBoundingClientRect().width;
+                let wrapperW = this.titleWrapper.getBoundingClientRect().width - 4;
                 let contentW = this.title.getBoundingClientRect().width;
                 let diff = wrapperW - contentW;
                 let scrollDuration = Math.abs(diff) * 30;
@@ -163,6 +169,54 @@ window.CNSL.AudioPlayer =
 
         hoverScrollTitleStop() {
             if (this.audioEl.paused) this.scrollTitleStop();
+        }
+
+        scrollTitleAlt() {
+            let wrapperW = this.titleWrapper.getBoundingClientRect().width - 4;
+            let contentW = this.titleAlt.getBoundingClientRect().width;
+
+            let goForwards = () => {
+                let wrapperW = this.titleWrapper.getBoundingClientRect().width - 4;
+                let contentW = this.titleAlt.getBoundingClientRect().width;
+                let diff = wrapperW - contentW;
+                let scrollDuration = Math.abs(diff) * 50;
+                this.scrollTitleAltFwd = setTimeout(() => {
+                    this.titleAlt.style.marginLeft = diff + "px";
+                    this.titleAlt.style.transitionDuration = parseInt(scrollDuration / 1000) + "s";
+                    setTimeout(() => {
+                        goBackwards();
+                    }, scrollDuration);
+                }, 10);
+            };
+            let goBackwards = () => {
+                let wrapperW = this.titleWrapper.getBoundingClientRect().width - 4;
+                let contentW = this.titleAlt.getBoundingClientRect().width;
+                let diff = wrapperW - contentW;
+                let scrollDuration = Math.abs(diff) * 30;
+                this.scrollTitleAltBwd = setTimeout(() => {
+                    this.titleAlt.style.marginLeft = "0px";
+                    this.titleAlt.style.transitionDuration = parseInt(scrollDuration / 1000) + "s";
+                    setTimeout(() => {
+                        goForwards();
+                    }, scrollDuration);
+                }, 2000);
+            };
+            if (wrapperW < contentW) goForwards();
+        }
+
+        scrollTitleAltStop() {
+            this.titleAlt.style.marginLeft = "0px";
+            this.titleAlt.style.transitionDuration = "0.1s";
+            clearTimeout(this.scrollTitleAltFwd);
+            clearTimeout(this.scrollTitleAltBwd);
+        }
+
+        hoverScrollTitleAlt() {
+            if (this.audioEl.paused) this.scrollTitleAlt();
+        }
+
+        hoverScrollTitleAltStop() {
+            if (this.audioEl.paused) this.scrollTitleAltStop();
         }
 
         publicMethods() {
