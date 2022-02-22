@@ -126,7 +126,7 @@
     {{ end -}}
     <!-- https://developer.yoast.com/features/opengraph/functional-specification -->
     <meta property="og:site_name" content="Console" />
-    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:title" content="{{ .Title }}{{if eq .Params.pageType "podcast-episode"}} - Console DevTools Podcast{{end}}" />
     {{ if not .Params.metaDescription -}}
     <meta property="og:description" content="{{ .Summary }}" />
     {{- else -}}
@@ -147,7 +147,7 @@
     <meta name="twitter:site" content="@consoledotdev" />
     {{- if .Params.twitterCard }}
     <meta name="twitter:card" content="player" />
-	<meta name="twitter:title" content="{{ .Title }}" />
+	<meta name="twitter:title" content="{{ .Title }}{{if eq .Params.pageType "podcast-episode"}} - Console DevTools Podcast{{end}}" />
 	<meta name="twitter:description" content="{{ .Params.metaDescription }}" />
 	<meta name="twitter:image" content="https://console.dev{{ $ogImg }}" />
 	<meta name="twitter:player" content="{{ .Params.twitterCard }}" />

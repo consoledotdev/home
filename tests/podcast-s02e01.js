@@ -45,6 +45,7 @@ export default function () {
     // What are we expecting?
     const expectedCanonical = "https://console.dev/podcast/s02e01-dev-infrastructure-john-graham-cumming-cloudflare/"
     const expectedTitle = "Dev infrastructure, with John Graham Cumming - Console DevTools Podcast";
+    const expectedOgTitle = "Dev infrastructure - Console DevTools Podcast"
     const expectedDescription = "Dev infrastructure - a devtools discussion with John Graham-Cumming (Cloudflare). Episode 1 (Season 2) of the Console DevTools Podcast.";
     const expectedPlayer = "https://player.simplecast.com/a810f07c-1df0-4198-bd2f-a2629d3eeee3?dark=true";
 
@@ -54,12 +55,12 @@ export default function () {
         "correct meta description": (r) => metaDescription == expectedDescription,
         "correct link rel canonical": (r) => relCanonical == expectedCanonical,
         "correct og:site_name": (r) => ogSiteName == "Console",
-        "correct og:title": (r) => ogTitle == expectedTitle,
+        "correct og:title": (r) => ogTitle == expectedOgTitle,
         "correct og:decription": (r) => ogDescription == expectedDescription,
         "correct og:url": (r) => ogURL == expectedCanonical,
         "correct twitter:site": (r) => twitterSite == "@consoledotdev",
         "correct twitter:card": (r) => twitterCard == "player",
-        "correct twitter:title": (r) => twitterTitle == "Dev infrastructure",
+        "correct twitter:title": (r) => twitterTitle == expectedOgTitle,
         "correct twitter:description": (r) => twitterDescription == expectedDescription,
         "correct twitter:image": (r) => twitterImage == "https://console.dev/img/podcast/podcast-cover.jpeg",
         "correct twitter:player": (r) => twitterPlayer == expectedPlayer,
