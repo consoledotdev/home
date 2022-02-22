@@ -1,5 +1,5 @@
 ---
-title: "DevTools Podcast"
+title: "Console DevTools Podcast"
 date: 2022-02-01T15:23:18+01:00
 draft: false
 summary: Interviews with interesting people in the devtools space.

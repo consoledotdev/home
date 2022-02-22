@@ -1,5 +1,5 @@
 <head>
-    <title>{{ .Title }}</title>
+    <title>{{if eq .Params.pageType "podcast-episode"}}{{ .Params.title}}, with {{ .Params.who }} - Console DevTools Podcast{{else}}{{ .Title }}{{end}}</title>
     <meta charset="utf-8" />
     {{ if not .Params.metaDescription -}}
     <meta name="description" content="{{ .Summary }}" />
