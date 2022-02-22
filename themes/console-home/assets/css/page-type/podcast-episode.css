@@ -159,6 +159,10 @@ html {
     flex: 1 1 auto;
 }
 
+.main-podcast-episode .podcast-widget-wrapper {
+    border-radius: var(--corners-mid);
+}
+
 .main-podcast-episode .podcast-widget .podcast-widget-links > .link {
     display: none;
 }
