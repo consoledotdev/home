@@ -304,16 +304,8 @@ compare to SmartBear CrossBrowserTesting in the table below.
 
 {{< nav-wrapper--open id="wrapper-7" anchor-name="related-reviews" >}}
 
-### Browser testing tool comparison
-
-{{< related-reviews >}}
-
-{{< div--close >}}
-
-{{< nav-wrapper--open id="wrapper-8" anchor-name="related-articles" >}}
-
 ### CrossBrowserTesting alternatives
 
-{{< related-articles >}}
+{{< related-reviews >}}
 
 {{< div--close >}}
