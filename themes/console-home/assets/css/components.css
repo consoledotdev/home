@@ -3783,6 +3783,11 @@ p.combo-card-description {
     color: var(--theme-text-2);
     flex: 1 1 auto;
 }
+.console-player-top .title .title-main {
+    transition-property: margin;
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(0.12, 0, 0.88, 1);
+}
 
 .console-player-top .title-loading,
 .console-player-top .title-alt {
