@@ -299,11 +299,12 @@ campaigns:
         LaTour. The campaign delivered a strong ROI, out performing many other
         industry alternatives.
     quote:
-      "“Console.dev enabled us to quickly reach a large, highly targeted
-      audience, many of whom decided to sign up for our platform and who are in
-      the process of converting to paid users. We've advertised in a couple of
-      of other trade/industry publications before, but console.dev was the most
-      effective in terms of ROI.” <span>Tyson Kunovsky, CEO, AutoCloud</span>"
+      “<a onclick="blur();" href="/" class="link">Console.dev</a> enabled us to
+      quickly reach a large, highly targeted audience, many of whom decided to
+      sign up for our platform and who are in the process of converting to paid
+      users. We've advertised in a couple of of other trade/industry
+      publications before, but console.dev was the most effective in terms of
+      ROI.” <span>Tyson Kunovsky, CEO, AutoCloud</span>
     howItWorked:
       - icon: console-interview
         name: Interview
