@@ -6,7 +6,7 @@ let handlePodcastEmbedTheme = (() => {
         let embedFrame = document.querySelector("[data-podcast-embed-frame]");
         let embed = document.querySelector("[data-podcast-embed]");
         embed.remove();
-        if (theme == "dark") {
+        if (theme.name == "dark") {
             embed.src = embed.src.replace("dark=false", "dark=true");
             embed.src = embed.src.replace("color=F1F2F6", "color=0A0A0B");
         } else {
