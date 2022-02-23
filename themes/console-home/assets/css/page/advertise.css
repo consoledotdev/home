@@ -1213,6 +1213,10 @@ body.page-advertise.checkpoint-campaigns {
     padding-bottom: var(--space4);
 }
 
+.page-section-advertise.campaigns .framed-section > .framed-section-item {
+    margin-top: 0;
+}
+
 @media (min-width: 769px) {
     .page-section-advertise.campaigns .framed-section {
         display: grid;
