@@ -30,7 +30,7 @@ pageType: podcast-episode
 customPageStyle: true
 xlViewport:
  largeText: true
-topImg1Src: /img/podcast/warp-michelle-lim-profile.jpeg
+topImg1Src: /img/podcast/warp-michelle-lim-zach-lloyd-profile.jpg
 topImg2Src: /img/favicons/www.warp.dev.png
 ogImg: /img/podcast/podcast-cover.jpeg
 twitterCard: https://player.simplecast.com/18f6d195-23a1-4b52-b9b5-42693c26967e?dark=true
