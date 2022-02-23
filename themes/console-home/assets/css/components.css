@@ -322,21 +322,59 @@
 
 .link:link .icon,
 .link:visited .icon {
-    fill: var(--theme-link-text-idle);
     transition: var(--a-controls);
     vertical-align: -0.2em;
     width: 1em;
     height: 1em;
 }
 
-.link:hover .icon,
-.link:focus .icon {
+.link:active .icon {
+    transition: var(--a-controls-active);
+}
+
+.link:link .icon-stroke,
+.link:visited .icon-stroke {
+    stroke: var(--theme-link-text-idle);
+}
+
+.link:hover .icon-stroke,
+.link:focus .icon-stroke {
+    stroke: var(--theme-link-text-focus);
+}
+
+.link:active .icon-stroke {
+    stroke: var(--theme-link-text-active);
+}
+
+.link:link .icon-fill,
+.link:visited .icon-fill {
+    fill: var(--theme-link-text-idle);
+}
+
+.link:hover .icon-fill,
+.link:focus .icon-fill {
     fill: var(--theme-link-text-focus);
 }
 
-.link:active .icon {
+.link:active .icon-fill {
     fill: var(--theme-link-text-active);
-    transition: var(--a-controls-active);
+}
+
+.link:link .icon-fill-stroke,
+.link:visited .icon-fill-stroke {
+    fill: var(--theme-link-text-idle);
+    stroke: var(--theme-link-text-idle);
+}
+
+.link:hover .icon-fill-stroke,
+.link:focus .icon-fill-stroke {
+    fill: var(--theme-link-text-focus);
+    stroke: var(--theme-link-text-focus);
+}
+
+.link:active .icon-fill-stroke {
+    fill: var(--theme-link-text-active);
+    stroke: var(--theme-link-text-active);
 }
 
 /* Menu Item
