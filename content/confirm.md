@@ -6,7 +6,8 @@ summary: Subscription confirmed.
 robotsDisallow: true
 ---
 
-You are now subscribed to the weekly Console newsletter. {.description}
+You are now subscribed to the weekly Console newsletter. 
+{.description}
 
 **Every Thursday** we will send you the most interesting developer tools and
 beta releases.
@@ -41,7 +42,7 @@ Each week we bring you the best new betas and early access programs.
 
 Listen to interviews with interesting people in the devtools space. From
 security to dev focused infrastructure, and from homomorphic encryption to
-privacy ad decentralization, we discuss the technical details around devtools.
+privacy and decentralization, we discuss the technical details around devtools.
 
 {{< a-link icon-right="arrow-right" url="/podcast/" text="Listen to episodes" >}}
 
