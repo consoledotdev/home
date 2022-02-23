@@ -729,6 +729,10 @@ body.show-planes:after {
     -webkit-line-clamp: 6;
 }
 
+.main-article .framed-section {
+    margin: var(--space4_5) 0 var(--space3_5);
+}
+
 /* Main Nav
    ================================================================================================================ */
 
@@ -1341,11 +1345,11 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
 /* title 2 */
 .title.title-2 {
     font-size: var(--t-size5);
-    margin-bottom: var(--space4);
+    margin-bottom: var(--space3);
 }
 
 .title.title-2:not(:first-child) {
-    margin-top: var(--space4);
+    margin-top: var(--space4_5);
 }
 
 .title-2.rich-title .icon {
