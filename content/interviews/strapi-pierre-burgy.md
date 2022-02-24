@@ -67,7 +67,7 @@ any revenue. That was the strategy. Our investors were completely aligned with
 us to build the largest community of Headless CMS users, which we have
 successfully done.
 
-In 2022 we released Strapi Enterprise Edition, which is the extension of the
+In 2020 we released Strapi Enterprise Edition, which is the extension of the
 open source product. This extension includes additional features such as
 role-based access control, single sign-on and support. We sell this Enterprise
 Edition through a self-serve model on our pricing page, and through a
