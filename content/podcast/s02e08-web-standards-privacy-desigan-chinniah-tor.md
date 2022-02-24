@@ -11,7 +11,7 @@ what:
  Does it live in browser settings, extensions or on the protocol core level?
 season: 2
 episode: 8
-date: 2022-02-24T08:00:00Z
+date: 2022-02-24T06:00:00Z
 duration: 32:47
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/b6380552-15dc-4bd0-bc45-286a4a498733/audio/b67a47d6-0c97-4ca6-801b-f37ddf75c59b/default_tc.mp3
 draft: false

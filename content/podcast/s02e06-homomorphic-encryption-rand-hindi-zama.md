@@ -12,7 +12,7 @@ what:
  HTTPS to HTTPZ.
 season: 2
 episode: 6
-date: 2022-02-10T08:00:00Z
+date: 2022-02-10T06:00:00Z
 duration: 28:28
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/0684a0d5-f177-4c80-a9a6-d69652c9fb59/audio/a1adb2a1-a854-483f-a0bd-c32d672ffa10/default_tc.mp3
 draft: false

@@ -12,7 +12,7 @@ what:
     the challenges garbage collection brings to high performance UIs.
 season: 2
 episode: 10
-date: 2022-03-10T08:00:00Z
+date: 2022-03-10T06:00:00Z
 duration: 28:07
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/18f6d195-23a1-4b52-b9b5-42693c26967e/audio/eceae148-5838-405f-91ea-c613069fc4ac/default_tc.mp3
 draft: false

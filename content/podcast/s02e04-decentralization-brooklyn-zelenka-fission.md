@@ -11,7 +11,7 @@ what:
  the place to build, not the native operating system.
 season: 2
 episode: 4
-date: 2022-01-27T08:00:00Z
+date: 2022-01-27T06:00:00Z
 duration: 29:39
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/21114878-64c4-4605-95ba-81c946feaa77/audio/32a8188f-0a02-4847-95f8-b8f007ef3a34/default_tc.mp3
 draft: false

@@ -11,7 +11,7 @@ what:
     developers to actually use them.
 season: 2
 episode: 9
-date: 2022-03-03T08:00:00Z
+date: 2022-03-03T06:00:00Z
 duration: 32:45
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/428ff543-da40-40c3-9772-31c5496cac63/audio/a98e5b20-4bed-44a2-87f5-acf98c8dfb40/default_tc.mp3
 draft: false

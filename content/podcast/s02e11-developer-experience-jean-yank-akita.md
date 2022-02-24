@@ -11,7 +11,7 @@ what:
     microservices are the solution to the ever-growing complexity of software.
 season: 2
 episode: 11
-date: 2022-03-17T08:00:00Z
+date: 2022-03-17T06:00:00Z
 duration: 33:51
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/b8afcf2e-a50a-46ad-8088-7a8f771a7f8c/audio/304e9877-5489-4d64-bd5d-c6b3cab57264/default_tc.mp3
 draft: false

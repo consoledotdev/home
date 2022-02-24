@@ -10,7 +10,7 @@ what:
  decentralization, and what essential tools you need for managing communities.
 season: 2
 episode: 7
-date: 2022-02-17T08:00:00Z
+date: 2022-02-17T06:00:00Z
 duration: 28:10
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/fa34a600-4345-4f17-b64b-ec5cf09c22f8/audio/e06049c7-ba55-493f-9716-9a0d3605a3d9/default_tc.mp3
 draft: false

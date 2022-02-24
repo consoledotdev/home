@@ -10,7 +10,7 @@ what:
  ones, whether raising money is even needed, and what the role of open source is.
 season: 2
 episode: 5
-date: 2022-02-03T08:00:00Z
+date: 2022-02-03T06:00:00Z
 duration: 30:38
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/72a312a7-0768-4faa-a902-3bf9b9634fd0/audio/5fce0eb5-f702-49b3-abf4-a78c89e2d00c/default_tc.mp3
 draft: false
