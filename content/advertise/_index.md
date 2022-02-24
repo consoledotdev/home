@@ -260,7 +260,7 @@ campaigns:
       - Console collaborated with Teleport to promote the launch of Teleport 8,
         a remote access management tool. Targeting a technical audience, Console
         coordinated a campaign to complement their other marketing channels
-        which saw us interview with CEO, Ev Kontsevoy and promote a launch post
+        which saw us interview with CEO, Ev Kontsevoy, and promote a launch post
         about the product launch. Thanks to our engaged developer audience, we
         were able to deliver a high volume of developers interested in the
         launch.
@@ -284,7 +284,7 @@ campaigns:
         name: Interview + blog post
       - text:
           To support the launch, alongside their tool review, we published an an
-          interview with CEO, Ev Kontsevoy who shared the background to the
+          interview with CEO, Ev Kontsevoy, who shared the background to the
           launch alongside a technical blog post about the release. The
           interview and blog post together provided deeper context about
           Teleport 8 that provided extra insight to drive further engagement
@@ -294,23 +294,22 @@ campaigns:
     img: /img/favicons/www.autocloud.dev.png
     intro:
       - Following a successful campaign to promote AutoCloud’s GraphQL API for
-        the cloud, AutoCloud returned to promote their core product, AutoCloud.
-        Alongside their tool review, Console interviewed their CPO, Evelyn
-        LaTour. The campaign delivered a strong ROI, out performing many other
-        industry alternatives.
+        the cloud (CloudGraph), AutoCloud returned to promote their core product, 
+        AutoCloud. Alongside their tool review, Console interviewed their CPO,
+        Evelyn LaTour. The campaign delivered a strong ROI, out performing many 
+        other industry alternatives.
     quote:
-      “<a onclick="blur();" href="/" class="link">Console.dev</a> enabled us to
-      quickly reach a large, highly targeted audience, many of whom decided to
-      sign up for our platform and who are in the process of converting to paid
-      users. We've advertised in a couple of of other trade/industry
-      publications before, but console.dev was the most effective in terms of
-      ROI.” <span>Tyson Kunovsky, CEO, AutoCloud</span>
+      “Console enabled us to quickly reach a large, highly targeted audience, 
+      many of whom decided to sign up for our platform and who are in the 
+      process of converting to paid users. We've advertised in a couple of of 
+      other trade/industry publications before, but Console was the most 
+      effective in terms of ROI.” <span>Tyson Kunovsky, CEO, AutoCloud</span>
     howItWorked:
       - icon: console-interview
         name: Interview
       - text:
           To support their tool review, Console interviewed their CPO, Evelyn
-          LaTour to discuss the product in more detail and tell the story of
+          LaTour, to discuss the product in more detail and tell the story of
           their company.
       - icon: link
         name: Website
