@@ -4,11 +4,11 @@ who: Charity Majors
 whoLink: https://twitter.com/mipsytipsy
 org: Honeycomb
 orgLink: https://www.honeycomb.io/
-what: 
- We discuss why observability is based around events and not metrics,
- how developers should think about achieving appropriately observable systems,
- why Honeycomb implemented their own distributed columnar data store, and how you
- can delete most of your alerts by implementing service level objectives.
+what:
+  We discuss why observability is based around events and not metrics, how
+  developers should think about achieving appropriately observable systems, why
+  Honeycomb implemented their own distributed columnar data store, and how you
+  can delete most of your alerts by implementing service level objectives.
 season: 2
 episode: 3
 date: 2022-01-20T06:00:00Z
@@ -61,13 +61,12 @@ Things mentioned:
 - [MongoDB](https://www.mongodb.com/)
 - [Postgres](https://www.postgresql.org/)
 - [Scuba](https://research.fb.com/wp-content/uploads/2016/11/scuba-diving-into-data-at-facebook.pdf)
-- [High cardinality](https://en.wikipedia.org/wiki/Cardinality_(SQL_statements))
+- [High cardinality](<https://en.wikipedia.org/wiki/Cardinality_(SQL_statements)>)
 - [Druid](http://druid.io/)
 - [Kafka](https://kafka.apache.org/)
 - [AWS Lambda](https://aws.amazon.com/lambda/)
 - [Zookeeper](https://zookeeper.apache.org/doc/r3.4.11/zookeeperTutorial.html)
-- [Appropriate
-  observability](https://www.honeycomb.io/wp-content/uploads/2018/07/Honeycomb-Guide-Achieving-Observability-v1.pdf)
+- [Appropriate observability](https://www.honeycomb.io/wp-content/uploads/2018/07/Honeycomb-Guide-Achieving-Observability-v1.pdf)
 - [Akita Software](https://www.akitasoftware.com/)
 - [Sourcegraph](https://sourcegraph.com/search)
 - [Charity.wft](https://charity.wtf/)
@@ -96,7 +95,7 @@ nothing an open source would address.
 
 {{< podcast-episode/clipping time="16:25"  >}}
 
-**Charity:**  People could get a lot out of metrics. It's a 30 year old
+**Charity:** People could get a lot out of metrics. It's a 30 year old
 technology. We have gotten used to contorting ourselves in all sorts of ways and
 it's the thing that people are familiar with. At the end of the day, I wouldn't
 actually call anything that's built on time series database observability that
@@ -112,9 +111,9 @@ experience the difference, understand it and won't go back.
 
 {{< box-collapsible title="Full transcript" class="podcast-transcript is-expanded" >}}
 
-**David:** Welcome to the Console podcast. I'm David Mytton, co-founder
-of console.dev, a free weekly newsletter highlighting the best and most
-interesting tools for developers.
+**David:** Welcome to the Console podcast. I'm David Mytton, co-founder of
+console.dev, a free weekly newsletter highlighting the best and most interesting
+tools for developers.
 
 In this episode, I speak with Charity Majors, CTO at Honeycomb, an observability
 tool for distributed systems. We discuss why observability is based around
@@ -126,8 +125,7 @@ let's get started.
 
 I'm here with Charity Majors. Charity, thanks for joining the Console podcast.
 
-**Charity:** Yeah, thanks for having me. We go way back now, don't we
-David?
+**Charity:** Yeah, thanks for having me. We go way back now, don't we David?
 
 **David:** That's right. I go all the way back to the early days of MongoDB. A
 long time.
@@ -581,9 +579,9 @@ honeycomb.io/blog, and I'm occasionally on Twitter at Nipseytipsy.
 **Charity:** Thanks for having me, super fun.
 
 **David:** Thanks for listening to the Console Dev Tools podcast. Please let us
-know what you think on Twitter. I'm at David Mytton, and you can follow at
-console.dev. Don't forget to subscribe and rate us in your podcast player. And
-if you are playing around with or building any interesting dev tools, please get
-in touch. Our email's in this show notes. See you next time.
+know what you think on Twitter. I'm at David Mytton, and you can follow
+@consoledotdev. Don't forget to subscribe and rate us in your podcast player.
+And if you are playing around with or building any interesting dev tools, please
+get in touch. Our email's in this show notes. See you next time.
 
 {{</ box-collapsible >}}
