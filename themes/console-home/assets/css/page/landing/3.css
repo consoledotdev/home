@@ -1,6 +1,26 @@
 /* Console Landing page 3
    ========================================================================== */
 
+@media (min-width: 769px) {
+    .page-landing .main-nav ul {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-landing .main-nav .menu-popup-wrapper {
+        display: block;
+    }
+
+    .page-landing .main-nav > .menu-toggle {
+        display: block;
+    }
+
+    .page-landing .main-nav > .theme-switcher {
+        display: none;
+    }
+}
+
 /* Opening */
 .page-section-landing.opening {
     gap: var(--space5_5);
