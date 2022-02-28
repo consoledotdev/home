@@ -3,7 +3,7 @@ title: Interview with Max Stoiber, GraphCDN
 who: Max Stoiber
 role: Founder
 org: GraphCDN
-what: CDN for GraphQL queries.
+what: GraphQL CDN.
 tags: ["Cloud", "DevOps"]
 date: 2022-02-15T12:00:00Z
 draft: true
@@ -244,7 +244,7 @@ GraphCDN and about this whole cache thing. As a founder, that's really, really
 gratifying to see people with cool use cases that use you. Another customer
 recently wrote to us to say we “saved their bacon during Black Friday”.
 
-## What is the most interesting tool you are playing around with at the moment?
+### What is the most interesting tool you are playing around with at the moment?
 
 I recently got a new laptop. Whenever I get a new laptop, I'm not the kind of
 person that transfers everything over. I have my old laptop laying right next to
@@ -262,7 +262,7 @@ suggests all of the possible commands in Git, then if you type git commit, it
 shows you all the possible options. It's made my life a lot easier. I also love
 [Cron](https://cron.com/), which is a new calendar app.
 
-### Tell me about your computer hardware set-up
+### Describe your computer hardware
 
 I've got a 16-inch [MacBook Pro M1 Max](https://www.apple.com/uk/macbook-pro/).
 I switched to a 16-inch from 13-inch MacBooks and having that extra screen real
@@ -272,7 +272,7 @@ estate makes a big difference. When I held my 13-inch earlier today, I was like,
 I also have a curved ultra wide monitor. The non-curved ones are terrible
 because everything's far away. I made that mistake!
 
-### Describe your computer software setup
+### Describe your computer software
 
 **OS:** macOS.
 
