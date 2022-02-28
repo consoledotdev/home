@@ -143,7 +143,7 @@ body.page-landing.checkpoint-other-content .hero .lines {
     margin-top: calc(var(--space6) - var(--space3));
 }
 
-.separator {
+.main-landing .separator {
     margin-top: calc(var(--space6) - var(--space3));
 }
 
@@ -152,7 +152,7 @@ body.page-landing.checkpoint-other-content .hero .lines {
         margin-top: calc(var(--space6) - var(--space4));
     }
 
-    .separator {
+    .main-landing .separator {
         margin-top: calc(var(--space6) - var(--space4));
     }
 }
@@ -162,7 +162,7 @@ body.page-landing.checkpoint-other-content .hero .lines {
         margin-top: calc(var(--space6) - var(--space4_5));
     }
 
-    .separator {
+    .main-landing .separator {
         margin-top: calc(var(--space6) - var(--space5));
     }
 }
@@ -173,10 +173,6 @@ body.page-landing.checkpoint-other-content .hero .lines {
     }
 }
 
-.page-landing .main-nav .menu-popup-wrapper {
-    display: none;
-}
-
 @media (min-width: 769px) {
     .page-landing .main-nav ul {
         display: none;
@@ -184,6 +180,10 @@ body.page-landing.checkpoint-other-content .hero .lines {
 }
 
 @media (max-width: 768px) {
+    .page-landing .main-nav .menu-popup-wrapper {
+        display: none;
+    }
+
     .page-landing .main-nav > .menu-toggle {
         display: none;
     }
