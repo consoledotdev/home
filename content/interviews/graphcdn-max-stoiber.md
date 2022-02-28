@@ -10,9 +10,9 @@ draft: true
 headerType: fixed
 summary: Interview with Max Stoiber, Founder, GraphCDN.
 isPage: interviews
-topImg1Src: /img/interviews/graphcdn-max-stoiber-profile.jpg
-topImg2Src: /img/interviews/graphcdn-max-stoiber-logo.jpg
-ogImg: /img/interviews/graphcdn-max-stoiber-desk.png
+topImg1Src: /img/interviews/graphcdn-max-stoiber-profile.jpeg
+topImg2Src: /img/interviews/graphcdn-max-stoiber-logo.png
+ogImg: /img/interviews/graphcdn-max-stoiber-desk.jpg
 ---
 
 ### What is GraphCDN and why did you build it?
@@ -290,7 +290,7 @@ Some of my European friends that are more privacy-sensitive use Signal.
 
 ### Describe your desk setup
 
-{{< img-center src="/img/interviews/graphcdn-max-stoiber-desk.png" alt="The desk of Max Stoiber, GraphCDN" width="100%" >}}
+{{< img-center src="/img/interviews/graphcdn-max-stoiber-desk.jpg" alt="The desk of Max Stoiber, GraphCDN" width="100%" >}}
 
 For my desk I use a standing desk from IKEA. I have an
 [ErgoDox](https://ergodox-ez.com/) split mechanical keyboard, which every normal
