@@ -880,6 +880,10 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
     color: var(--theme-mars-text-link-active);
 }
 
+.main-nav .menu-popup-wrapper .separator {
+    margin: var(--space3) 0;
+}
+
 /* Footer
    ================================================================================================================ */
 .footer-block {
