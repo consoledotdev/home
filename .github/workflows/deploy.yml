@@ -86,15 +86,13 @@ jobs:
                   retention-days: 1
 
             - name: Setup Python
-              uses: actions/setup-python@v2
+              uses: actions/setup-python@v3
               with:
-                  python-version: "3.x" # Version range or exact version of a Python version to use, using SemVer's version range syntax
+                  python-version: "3.9"
+                  cache: "pip"
 
             - name: Install pip dependencies
-              shell: bash
-              run: |
-                  pip install --upgrade pip
-                  pip install -r requirements.txt
+              run: pip install -r requirements.txt
 
             - name: Parse tools JSON
               run: |
