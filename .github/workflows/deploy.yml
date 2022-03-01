@@ -86,7 +86,7 @@ jobs:
                   retention-days: 1
 
             - name: Setup Python
-              uses: actions/setup-python@v2
+              uses: actions/setup-python@v3
               with:
                   python-version: "3.x" # Version range or exact version of a Python version to use, using SemVer's version range syntax
 
