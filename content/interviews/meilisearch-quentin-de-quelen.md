@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Quentin de Quelen, CEO, Meilisearch.
 isPage: interviews
 topImg1Src: /img/interviews/meilisearch-quentin-de-quelen-profile.jpeg
-topImg2Src: /img/interviews/meilisearch-quentin-de-quelen-logo.svg
+topImg2Src: /img/favicons/www.meilisearch.com.svg
 ogImg: /img/interviews/meilisearch-quentin-de-quelen-desk.jpeg
 ---
 
