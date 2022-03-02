@@ -15,7 +15,7 @@ topImg2Src: /img/interviews/meilisearch-quentin-de-quelen-logo.svg
 ogImg: /img/interviews/meilisearch-quentin-de-quelen-desk.jpeg
 ---
 
-### What is Meilisearch and why did you build it?
+### What is Meilisearch? Why did you build it?
 
 [Meilisearch](https://www.meilisearch.com/) is an open source, user facing
 search engine built in Rust. We created Meilisearch because we were fed up
