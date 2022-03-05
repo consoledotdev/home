@@ -160,12 +160,6 @@ capabilities such as whether or not to enable popups in Internet Explorer.
 Multiple testing frameworks, namely Selenium, Cypress, Playwright and Puppeteer
 can be used to write tests.
 
-At the time of writing, recently launched devices and OS updates (macOS 12, and
-iPhone 13) were still not available for testing despite being released several
-months ago. The speed at which new OS releases are available varies
-significantly amongst all
-[the different browser testing tools we reviewed](/browser-testing/).
-
 Local testing can be done by creating an encrypted tunnel to securely test
 websites hosted behind firewalls or VPNs. Additional configuration can be set up
 to mask the output of particular commands, allowing sensitive data like email,
@@ -235,7 +229,11 @@ Most of the real mobile devices available for testing are from a handful of
 vendors (Samsung or Google) - fewer devices are available from other vendors
 (OnePlus, Xiaomi, and Motorola) and for some vendors (Vivo, Oppo, and Huawei)
 only a single device is available. There are no Linux desktop devices available
-for testing. Newer devices like iPhone 13 are also not available yet.
+for testing. We also noticed that the newer devices are not available until 4-6
+months after the launch. For example, iPhone 13 (launched September 2021) and
+Pixel 6 (launched October 2021) was not available until March 2022. The speed at
+which new OS releases are available varies significantly amongst all
+[the different browser testing tools we reviewed](../).
 
 BrowserStack limits the number of tests that can be queued. Once this limit is
 reached, the only way to add more tests is to wait for prior tests to finish
