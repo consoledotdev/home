@@ -785,6 +785,11 @@ imitate a wide range of screen sizes including mobile and tablet for testing
 responsive designs. An unknown operating system is used to run tests and neither
 real nor virtual mobile devices are supported.
 
+While other tools boast the availability of most comprehensive collection of
+browser versions, Ghost Inspector only supports a few latest versions - upon the
+release of a new version, the
+[oldest version is deleted](https://ghostinspector.com/blog/upcoming-feature-changes-2022-q1/#old-browser-versions).
+
 {{< div--close >}}
 
 {{< framed-section-item--open >}}
@@ -1115,8 +1120,9 @@ full review.
 {{< category-review/card-heading name="Polypane" anchor="polypane" thumbnail="/img/favicons/polypane.app.png" url="https://polypane.app/" score="none" >}}
 
 Polypane is a multi-pane browser made for web testing using different window
-sizes with scrolling sync. Whilst it supports Windows, Linux and macOS, it can
-only test Chrome due to being built with the Chromium browser engine.
+sizes with scrolling sync. Whilst it supports both x86 and ARM based computing
+architectures on Windows, Linux and macOS, it can only test Chrome due to being
+built with the Chromium browser engine.
 
 Polypane provides an excellent experience for responsive testing. It comes with
 all popular viewport sizes configured by default and allows the option to add

@@ -245,10 +245,7 @@ Travis CI, CircleCI, etc. are supported but lesser-known tools like Spinnaker
 and Buildbot can not be used with Sauce Labs. Similarly, for ticketing systems,
 Jira is supported but BugZilla and MantisBT are not. This makes working with
 unsupported tools harder than it needs to be and might limit the number of tools
-you can work with in the future. All the
-[Sauce Labs alternatives](/browser-testing/) can be integrated with Slack in one
-way or another, but Sauce Labs does not yet offer this - it's
-[coming soon](https://docs.saucelabs.com/basics/integrations/slack/).
+you can work with in the future.
 
 We found that scrolling and typing actions during live testing is difficult due
 to high network latency; when playing videos, the frame rate is very poor. Users

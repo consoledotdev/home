@@ -106,12 +106,16 @@ members.
 
 {{< vendor-review/feature-title text="Device & browser support" score="2.5" >}}
 
-Ghost Inspector can run tests on the latest 30 (approximately) releases of
-Chrome and Firefox. For testing responsive designs, the resolution of the
-browser window on the test device can be modified to replicate a broad range of
-desktop, mobile and tablet screen sizes. Functional testing on a headless Chrome
-browser is also supported. Tests are performed on an unknown desktop operating
-system, and neither real nor virtual mobile devices are supported.
+Ghost Inspector can run tests on the latest 10 (approximately) releases of
+Chrome and Firefox. While [other tools](../) maintain the most comprehensive
+collection of browser versions on a variety of devices, Ghost Inspector only
+supports a few latest versions - upon the release of a new version, the
+[oldest version is deleted](https://ghostinspector.com/blog/upcoming-feature-changes-2022-q1/#old-browser-versions).
+For testing responsive designs, the resolution of the browser window on the test
+device can be modified to replicate a broad range of desktop, mobile and tablet
+screen sizes. Functional testing on a headless Chrome browser is also supported.
+Tests are performed on an unknown desktop operating system, and neither real nor
+virtual mobile devices are supported.
 
 {{< div--close >}}
 
