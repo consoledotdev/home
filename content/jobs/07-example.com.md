@@ -13,8 +13,7 @@ companyInfo:
   location: New York
   description:
     "Example is building the next generation of open source observability
-    software for cloud-native environments. Keep track of code-level performance
-    and monitor production incidents."
+    software for cloud-native environments."
   product:
     name: "Example"
     description:
@@ -28,8 +27,6 @@ companyInfo:
       reliability of your application."
   techStack:
     - Go
-    - Elm
-    - Postgres
     - AWS
   meta:
     - label: "Founded"
@@ -61,7 +58,7 @@ companyInfo:
   category: "Developer Tools - Backend framework"
   topCategory: "Developer Tools"
   subCategory: "Backend framework"
-  filterTaxonomy: "developer-tools, open-source"
+  filterTaxonomy: "developer-tools, open-source, go, aws"
 interview: /
 podcast: /
 review: /

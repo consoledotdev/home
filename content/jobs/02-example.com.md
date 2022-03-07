@@ -10,7 +10,7 @@ companyInfo:
   favicon: /img/favicons/www.example.com.png
   URL: https://www.example.com
   jobsURL: https://example.com/careers
-  location: New York
+  location: Rome
   description:
     "Example is building the next generation of open source observability
     software for cloud-native environments. Keep track of code-level performance
@@ -27,10 +27,7 @@ companyInfo:
       track down code bottlenecks, debug customer errors and monitor the
       reliability of your application."
   techStack:
-    - Go
-    - Elm
-    - Postgres
-    - AWS
+    - Python
   meta:
     - label: "Founded"
       value: 2009
@@ -58,12 +55,11 @@ companyInfo:
       mobile application within just a few hours, making use of the infinite
       scalability of our cloud service."
   type: "Open Source"
-  category: "Developer Tools - Backend framework"
+  category: "Developer Tools - Source control"
   topCategory: "Developer Tools"
-  subCategory: "Backend framework"
-  filterTaxonomy: "developer-tools, open-source"
+  subCategory: "Source control"
+  filterTaxonomy: "developer-tools, open-source, python"
 interview: /
-podcast: /
 review: /
 ---
 

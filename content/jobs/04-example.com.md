@@ -57,14 +57,12 @@ companyInfo:
       particular edge cases. They were able to integrate the Java SDK into their
       mobile application within just a few hours, making use of the infinite
       scalability of our cloud service."
-  type: "Open Source"
-  category: "Developer Tools - Backend framework"
-  topCategory: "Developer Tools"
-  subCategory: "Backend framework"
-  filterTaxonomy: "developer-tools, open-source"
+  type: "Other"
+  category: "Security - Vulnerability management"
+  topCategory: "Security"
+  subCategory: "Vulnerability management"
+  filterTaxonomy: "security, other, go, elm, postgres, aws"
 interview: /
-podcast: /
-review: /
 ---
 
 ### Development profile

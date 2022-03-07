@@ -10,11 +10,10 @@ companyInfo:
   favicon: /img/favicons/www.example.com.png
   URL: https://www.example.com
   jobsURL: https://example.com/careers
-  location: New York
+  location: London
   description:
     "Example is building the next generation of open source observability
-    software for cloud-native environments. Keep track of code-level performance
-    and monitor production incidents."
+    software for cloud-native environments."
   product:
     name: "Example"
     description:
@@ -27,10 +26,9 @@ companyInfo:
       track down code bottlenecks, debug customer errors and monitor the
       reliability of your application."
   techStack:
-    - Go
-    - Elm
-    - Postgres
-    - AWS
+    - C/C++
+    - React
+    - Ruby
   meta:
     - label: "Founded"
       value: 2009
@@ -57,13 +55,11 @@ companyInfo:
       particular edge cases. They were able to integrate the Java SDK into their
       mobile application within just a few hours, making use of the infinite
       scalability of our cloud service."
-  type: "Open Source"
-  category: "Developer Tools - Backend framework"
-  topCategory: "Developer Tools"
-  subCategory: "Backend framework"
-  filterTaxonomy: "developer-tools, open-source"
-interview: /
-podcast: /
+  type: "SaaS"
+  category: "Database - Time series database"
+  topCategory: "Database"
+  subCategory: "Time series database"
+  filterTaxonomy: "database, saas, c-cplusplus, react, ruby"
 review: /
 ---
 
