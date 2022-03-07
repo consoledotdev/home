@@ -21,9 +21,13 @@
     --theme-cta-secondary-text-hover: var(--c-blue-06-main);
     --theme-cta-secondary-text-active: var(--c-blue-08);
 
-    --theme-cta-secondary-green-text-idle: var(--c-green-06);
-    --theme-cta-secondary-green-text-hover: var(--c-green-07);
-    --theme-cta-secondary-green-text-active: var(--c-green-08);
+    --theme-cta-secondary-triad-02-text-idle: var(--c-fuchsia-06);
+    --theme-cta-secondary-triad-02-text-hover: var(--c-fuchsia-07);
+    --theme-cta-secondary-triad-02-text-active: var(--c-fuchsia-08);
+
+    --theme-cta-secondary-triad-03-text-idle: var(--c-green-06);
+    --theme-cta-secondary-triad-03-text-hover: var(--c-green-07);
+    --theme-cta-secondary-triad-03-text-active: var(--c-green-08);
 
     --theme-cta-secondary-yellow-text-idle: var(--c-yellow-06);
     --theme-cta-secondary-yellow-text-hover: var(--c-yellow-07);
@@ -334,6 +338,10 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
 }
 
 .theme .tool-card .bottom {
+    background-color: var(--theme-content-bg-0);
+}
+
+.theme .jobs-card .bottom {
     background-color: var(--theme-content-bg-0);
 }
 

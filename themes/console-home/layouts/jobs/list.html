@@ -1,0 +1,77 @@
+{{ define "main" }}
+    {{ $CTATitle := "Interesting Tools by email" }}
+	{{ $CTADescription := "Our free weekly newsletter picks out the 2-3 most interesting tools. " }}
+
+	<section class="page-section page-section-feature-root">
+		<h2 class="title title-1">DevTools jobs</h2>
+		<p class="description">The best dev tools companies currently hiring.</p>
+        <div class="page-meta">
+            <p class="small">
+				<span>Are you hiring?</span>
+			</p>
+            <p class="small">
+                &nbsp;&nbsp;
+				<a onclick="blur();" href="mailto:hello@console.dev" class="console-button-text console-button-small icon-left submit-company" title="Submit Company">
+					{{ partial "icons/jobs.html" }}
+					<span>Submit Company</span>
+				</a>
+			</p>
+		</div>
+	</section>
+
+	<section class="page-section page-section-feature-root inline-cta-wrapper" data-inline-cta-wrapper>
+		<div class="feature-collapsible-cta" data-feature-cta>
+			{{ $subscribeCopyAfter := (printf "Join %s developers" $.Site.Params.consoleSubscribers) }}
+			{{ $subscribeData := (dict "context" . "layout" "wide" "size" "medium" "title" $CTATitle "description" $CTADescription "copyAfter" $subscribeCopyAfter ) }}
+			{{ $subscribe := partial "subscribe.html" $subscribeData }}
+			{{ partial "components/box-collapsible.html" (dict "title" $CTATitle "style" "blue" "icon" "expand.html" "content" $subscribe ) }}
+        </div>
+	</section>
+
+	<div class="content-split">
+		<aside data-aside-wrapper class="aside-wrapper">
+			<div data-aside-content-wrapper data-marked-scrollable-v class="aside-content-wrapper marked-scrollable-v"></div>
+		</aside>
+		<div data-aside-anchor data-main-content-wrapper class="main-content-wrapper">
+            <section data-inline-filters-wrapper class="page-section inline-filters-wrapper">
+				{{ $filters := partial "components/jobs/filters.html" (dict "dot" $.Site.Data.jobsfilters ) }}
+				{{ partial "components/box-collapsible.html" (dict "title" "Filters" "icon" "filter.html" "content" $filters) }}
+			</section>
+			<section class="page-section" data-feature-items-section="all-companies">
+				<div class="page-section-heading">
+					<div class="left">
+						<h3 class="title title-2"><span data-feature-section-name>All companies</span><span class="count" data-feature-items-count></span></h3>
+					</div>
+					<div class="right">
+						<a onclick="blur();" href="/jobs/rss.xml" class="console-button-text console-button-small icon-left" title="RSS Feed">
+							{{ partial "icons/rss.html" }}
+							<span>Feed</span>
+						</a>
+						<a onclick="blur();" href="" class="console-button-text console-button-small icon-right view-all-link" title="View all in category" data-view-all-link>
+							<span>View all</span>
+							{{ partial "icons/arrow-right.html" }}
+						</a>
+					</div>
+				</div>
+				<div class="feature-items" data-feature-items>
+                    {{ range .Pages.ByPublishDate.Reverse }}
+                        {{ partial "components/jobs/card.html" . }}
+                    {{ end }}
+					{{ partial "components/feature/card-empty.html" (dict "context" . "itemName" "Tools" ) }}
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<section class="page-section page-section-feature-root">
+		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
+	</section>
+
+	{{ $pageTypeJS := resources.Get "/js/page-type/feature.js" }}
+    {{ if hugo.IsProduction }}{{ $pageTypeJS = $pageTypeJS | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script id="feature-js" src="{{ $pageTypeJS.Permalink }}"></script>
+
+	{{ $pagejs := resources.Get "/js/jobs.js" }}
+    {{ if hugo.IsProduction }}{{ $pagejs = $pagejs | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script src="{{ $pagejs.Permalink }}"></script>
+{{ end }}

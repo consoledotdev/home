@@ -1,33 +1,25 @@
 /* Console Tools
    ========================================================================== */
-.view-all-link {
-    display: none;
-}
-
-.view-all-link.is-hidden {
-    display: none;
-}
-
 .inline-filters-wrapper .box-collapsible.is-expanded .box-collapsible-content {
     max-height: 540px;
 }
 
-.tool-card {
+.jobs-card {
     position: relative;
     box-shadow: var(--theme-shadow-1);
     transition: var(--a-micro);
     border-radius: var(--corners-mid);
 }
 
-.tool-card.is-hidden-by-buttons {
+.jobs-card.is-hidden-by-buttons {
     display: none;
 }
 
-.tool-card.is-hidden-by-search {
+.jobs-card.is-hidden-by-search {
     display: none;
 }
 
-.tool-card .top {
+.jobs-card .top {
     position: relative;
     display: flex;
     flex-flow: row nowrap;
@@ -39,17 +31,17 @@
     border-top-right-radius: var(--corners-mid);
 }
 
-.tool-card .top > .left {
+.jobs-card .top > .left {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
 }
 
-.tool-card .top > .left .title {
+.jobs-card .top > .left .title-location {
     display: none;
 }
 
-.tool-card .top > .right {
+.jobs-card .top > .right {
     flex-grow: 1;
 }
 
@@ -61,46 +53,38 @@
     margin-top: calc(var(--space) / 2);
 }
 
-.tool-card .title {
+.jobs-card .title-location {
     margin-bottom: var(--space1);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
 }
 
-p.tool-card-description {
+.jobs-card .title {
+    margin-bottom: 0;
+    margin-right: var(--space2_5);
+}
+
+.jobs-card-location {
+    flex: 0 0 auto;
+    color: var(--theme-text-4);
+    font-size: var(--t-size-3);
+    font-style: italic;
+    flex: 0 1 auto;
+}
+
+p.jobs-card-description {
     margin: 0;
 }
 
-.tool-card .like-dont-like p span {
-    color: var(--theme-text-1);
-    font-weight: 500;
-}
-
-.tool-card .bottom {
+.jobs-card .bottom {
     background: var(--theme-content-bg-1);
     padding: var(--space3) var(--space4);
     border-bottom-left-radius: var(--corners-mid);
     border-bottom-right-radius: var(--corners-mid);
 }
 
-.tool-card .bottom .col-2 {
-    margin-top: 0;
-}
-
-.tool-card .like-dont-like .icon {
-    display: inline-block;
-    width: var(--t-size-2);
-    height: var(--t-size-1);
-    vertical-align: -0.1em;
-}
-
-.tool-card .like-dont-like .icon-like {
-    stroke: var(--theme-signaling-positive);
-}
-
-.tool-card .like-dont-like .icon-dislike {
-    stroke: var(--theme-signaling-warning);
-}
-
-.tool-card-content .top > .right > .taxonomy {
+.jobs-card-content .top > .right > .taxonomy {
     display: flex;
     margin-top: var(--space2);
     flex-flow: row wrap;
@@ -109,70 +93,69 @@ p.tool-card-description {
     margin-bottom: calc(var(--space2) * -1);
 }
 
-.tool-card-content .top > .right > .taxonomy > * {
+.jobs-card-content .top > .right > .taxonomy > * {
     margin-bottom: var(--space2);
 }
 
-.tool-card-content .top > .right > .taxonomy > *:not(:last-child) {
+.jobs-card-content .top > .right > .taxonomy > *:not(:last-child) {
     margin-right: var(--space3);
 }
 
-.tool-card .bottom .details {
-    margin-top: var(--space3);
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-}
-
-.tool-card .bottom .details .left {
+.jobs-card .bottom .details {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: calc(var(--space3_5) * -1);
 }
 
-.tool-card .bottom .details .left .date {
+.jobs-card .bottom .details > * {
+    margin-top: var(--space3_5);
+}
+
+.jobs-card .bottom .details .left {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: var(--space4);
+}
+
+.jobs-card .bottom .details .left .date {
     margin-right: var(--space2_5);
+    display: none;
 }
 
-.page-tools .category-reviews .categories {
-    font-size: var(--t-size-1);
+.jobs-card .bottom .details .right {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: calc(var(--space3_5) - var(--space2_5));
 }
 
-.page-tools .category-reviews-item .categories {
-    margin-bottom: var(--space3);
+.jobs-card .bottom .details .right > *:not(:last-child) {
+    margin-right: var(--space3);
+}
+
+.jobs-card .bottom .details .right > * {
+    margin-top: var(--space2_5);
 }
 
 @media (max-width: 768px) {
-    .tool-card > *:not(:last-child):not(:first-child) {
+    .jobs-card > *:not(:last-child):not(:first-child) {
         margin-bottom: var(--space2_5);
     }
 
-    .tool-card-content .top > *:not(:last-child):not(.card-link) {
+    .jobs-card-content .top > *:not(:last-child):not(.card-link) {
         margin-bottom: var(--space2_5);
     }
 
-    p.tool-card-description {
+    p.jobs-card-description {
         margin-bottom: var(--space2_5);
     }
 
-    .tool-card .bottom .col-2 {
-        flex-flow: column nowrap;
-    }
-
-    .tool-card .bottom .col-2 > *:not(:first-child) {
-        margin-top: var(--space3);
-    }
-
-    .tool-card .bottom .col-2 .left,
-    .tool-card .bottom .col-2 .right {
-        width: auto;
-    }
-
-    .tool-card-content .top {
+    .jobs-card-content .top {
         flex-flow: column nowrap;
         align-items: flex-start;
     }
 
-    .tool-card-content .top > .right > *:not(:last-child) {
+    .jobs-card-content .top > .right > *:not(:last-child) {
         margin-bottom: var(--space2_5);
     }
 
@@ -180,77 +163,72 @@ p.tool-card-description {
         margin-right: var(--space3);
     }
 
-    .tool-card-content .top > .left .title {
+    .jobs-card-content .top > .left .title-location {
         display: block;
         margin: 0;
     }
 
-    .tool-card-content .top > .right .title {
+    .jobs-card-content .top > .right .title-location {
         display: none;
     }
 
     @media (max-width: 600px) {
-        .tool-card .top {
+        .jobs-card .top {
             padding-left: var(--space3_5);
             padding-right: var(--space3_5);
         }
 
-        .tool-card .bottom {
+        .jobs-card .bottom {
             padding-left: var(--space3_5);
             padding-right: var(--space3_5);
         }
 
-        .tool-card .bottom .details {
+        .jobs-card .bottom .details {
             flex-flow: column nowrap;
             align-items: flex-start;
-        }
-
-        .tool-card .bottom .details > *:not(:first-child) {
-            margin-top: var(--space3);
         }
     }
 
     @media (min-width: 601px) {
-        .tool-card > *:not(:last-child) {
+        .jobs-card > *:not(:last-child) {
             margin-bottom: 0;
         }
     }
 }
 
 @media (min-width: 769px) {
-    .tool-card {
+    .jobs-card {
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
     }
 
-    .tool-card > *:not(:last-child):not(:first-child) {
+    .jobs-card > *:not(:last-child):not(:first-child) {
         margin-right: var(--space4);
     }
 
-    .tool-card-content .top {
+    .jobs-card-content .top {
         flex: 1 1 auto;
     }
 
-    p.tool-card-description {
+    p.jobs-card-description {
         margin-bottom: var(--space1);
     }
 
-    @media (min-width: 1360px) {
-        .tool-card-content .top > .right {
+    @media (min-width: 954px) and (max-width: 1024px), (min-width: 1360px) {
+        .jobs-card-content .top > .right {
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-between;
             align-items: center;
         }
 
-        .tool-card-content .top > .right > .left {
+        .jobs-card-content .top > .right > .left {
             flex: 1 1 auto;
-            margin-right: var(--space4);
-            max-width: 60%;
+            margin-right: var(--space4_5);
         }
 
-        .tool-card-content .top > .right > .taxonomy {
+        .jobs-card-content .top > .right > .taxonomy {
             flex: 0 0 auto;
             max-width: 40%;
             flex-flow: column nowrap;
@@ -259,19 +237,19 @@ p.tool-card-description {
             margin-bottom: 0;
         }
 
-        .tool-card-content .top > .right > .taxonomy > * {
+        .jobs-card-content .top > .right > .taxonomy > * {
             margin-bottom: 0;
         }
 
-        .tool-card-content .top > .right > .taxonomy > *:not(:last-child) {
+        .jobs-card-content .top > .right > .taxonomy > *:not(:last-child) {
             margin-right: 0;
         }
 
-        .tool-card-content .top > .right > .taxonomy > *:not(:first-child) {
+        .jobs-card-content .top > .right > .taxonomy > *:not(:first-child) {
             margin-top: var(--space1);
         }
 
-        p.tool-card-description {
+        p.jobs-card-description {
             margin-bottom: 0;
         }
     }

@@ -1019,52 +1019,100 @@
     fill: var(--theme-cta-secondary-text-active);
 }
 
-/* Green */
-.console-button-text.console-button-green {
-    color: var(--theme-cta-secondary-green-text-idle);
+/* Triad 02 (Fuchsia) */
+.console-button-text.console-button-triad-02 {
+    color: var(--theme-cta-secondary-triad-02-text-idle);
 }
-.console-button-text.console-button-green:hover {
-    color: var(--theme-cta-secondary-green-text-hover);
+.console-button-text.console-button-triad-02:hover {
+    color: var(--theme-cta-secondary-triad-02-text-hover);
 }
-.console-button-text.console-button-green:active,
-.console-button-text.console-button-green:focus {
-    color: var(--theme-cta-secondary-green-text-active);
-}
-
-.console-button-text.console-button-green .icon-fill {
-    fill: var(--theme-cta-secondary-green-text-idle);
-}
-.console-button-text.console-button-green:hover .icon-fill {
-    fill: var(--theme-cta-secondary-green-text-hover);
-}
-.console-button-text.console-button-green:active .icon-fill,
-.console-button-text.console-button-green:focus .icon-fill {
-    fill: var(--theme-cta-secondary-green-text-active);
+.console-button-text.console-button-triad-02:active,
+.console-button-text.console-button-triad-02:focus {
+    color: var(--theme-cta-secondary-triad-02-text-active);
 }
 
-.console-button-text.console-button-green .icon-stroke {
-    stroke: var(--theme-cta-secondary-green-text-idle);
+.console-button-text.console-button-triad-02 .icon-fill {
+    fill: var(--theme-cta-secondary-triad-02-text-idle);
 }
-.console-button-text.console-button-green:hover .icon-stroke {
-    stroke: var(--theme-cta-secondary-green-text-hover);
+.console-button-text.console-button-triad-02:hover .icon-fill {
+    fill: var(--theme-cta-secondary-triad-02-text-hover);
 }
-.console-button-text.console-button-green:active .icon-stroke,
-.console-button-text.console-button-green:focus .icon-stroke {
-    stroke: var(--theme-cta-secondary-green-text-active);
+.console-button-text.console-button-triad-02:active .icon-fill,
+.console-button-text.console-button-triad-02:focus .icon-fill {
+    fill: var(--theme-cta-secondary-triad-02-text-active);
 }
 
-.console-button-text.console-button-green .icon-fill-stroke {
-    stroke: var(--theme-cta-secondary-green-text-idle);
-    fill: var(--theme-cta-secondary-green-text-idle);
+.console-button-text.console-button-triad-02 .icon-stroke {
+    stroke: var(--theme-cta-secondary-triad-02-text-idle);
 }
-.console-button-text.console-button-green:hover .icon-fill-stroke {
-    stroke: var(--theme-cta-secondary-green-text-hover);
-    fill: var(--theme-cta-secondary-green-text-hover);
+.console-button-text.console-button-triad-02:hover .icon-stroke {
+    stroke: var(--theme-cta-secondary-triad-02-text-hover);
 }
-.console-button-text.console-button-green:active .icon-fill-stroke,
-.console-button-text.console-button-green:focus .icon-fill-stroke {
-    stroke: var(--theme-cta-secondary-green-text-active);
-    fill: var(--theme-cta-secondary-green-text-active);
+.console-button-text.console-button-triad-02:active .icon-stroke,
+.console-button-text.console-button-triad-02:focus .icon-stroke {
+    stroke: var(--theme-cta-secondary-triad-02-text-active);
+}
+
+.console-button-text.console-button-triad-02 .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-triad-02-text-idle);
+    fill: var(--theme-cta-secondary-triad-02-text-idle);
+}
+.console-button-text.console-button-triad-02:hover .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-triad-02-text-hover);
+    fill: var(--theme-cta-secondary-triad-02-text-hover);
+}
+.console-button-text.console-button-triad-02:active .icon-fill-stroke,
+.console-button-text.console-button-triad-02:focus .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-triad-02-text-active);
+    fill: var(--theme-cta-secondary-triad-02-text-active);
+}
+
+/* Triad-03 (Green) */
+.console-button-text.console-button-triad-03 {
+    color: var(--theme-cta-secondary-triad-03-text-idle);
+}
+.console-button-text.console-button-triad-03:hover {
+    color: var(--theme-cta-secondary-triad-03-text-hover);
+}
+.console-button-text.console-button-triad-03:active,
+.console-button-text.console-button-triad-03:focus {
+    color: var(--theme-cta-secondary-triad-03-text-active);
+}
+
+.console-button-text.console-button-triad-03 .icon-fill {
+    fill: var(--theme-cta-secondary-triad-03-text-idle);
+}
+.console-button-text.console-button-triad-03:hover .icon-fill {
+    fill: var(--theme-cta-secondary-triad-03-text-hover);
+}
+.console-button-text.console-button-triad-03:active .icon-fill,
+.console-button-text.console-button-triad-03:focus .icon-fill {
+    fill: var(--theme-cta-secondary-triad-03-text-active);
+}
+
+.console-button-text.console-button-triad-03 .icon-stroke {
+    stroke: var(--theme-cta-secondary-triad-03-text-idle);
+}
+.console-button-text.console-button-triad-03:hover .icon-stroke {
+    stroke: var(--theme-cta-secondary-triad-03-text-hover);
+}
+.console-button-text.console-button-triad-03:active .icon-stroke,
+.console-button-text.console-button-triad-03:focus .icon-stroke {
+    stroke: var(--theme-cta-secondary-triad-03-text-active);
+}
+
+.console-button-text.console-button-triad-03 .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-triad-03-text-idle);
+    fill: var(--theme-cta-secondary-triad-03-text-idle);
+}
+.console-button-text.console-button-triad-03:hover .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-triad-03-text-hover);
+    fill: var(--theme-cta-secondary-triad-03-text-hover);
+}
+.console-button-text.console-button-triad-03:active .icon-fill-stroke,
+.console-button-text.console-button-triad-03:focus .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-triad-03-text-active);
+    fill: var(--theme-cta-secondary-triad-03-text-active);
 }
 
 /* Yellow */
@@ -4724,4 +4772,41 @@ p.combo-card-description {
 
 .page-section .person-profile {
     margin-left: var(--space3_5);
+}
+
+/* Tech stack
+   ================================================================================================================ */
+.tech-stack {
+    position: relative;
+    display: inline-block;
+}
+
+.tech-stack-content {
+    display: block;
+    font-weight: 400;
+    font-size: var(--t-size-1);
+    color: var(--theme-text-2);
+}
+
+.tech-stack .icon {
+    width: 1.15em;
+    height: 1.15em;
+    vertical-align: -0.2em;
+    margin-right: calc(var(--space1));
+}
+
+.tech-stack .icon-stroke {
+    stroke: var(--theme-text-2);
+}
+
+.tech-stack-content span {
+    color: var(--theme-text-3);
+}
+
+.tech-stack .tooltip {
+    width: auto;
+}
+
+.tech-stack .tooltip-content p {
+    white-space: nowrap;
 }
