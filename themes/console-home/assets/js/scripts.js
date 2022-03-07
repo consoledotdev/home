@@ -35,7 +35,6 @@ let bindTooltips = (() => {
                 tooltip.style.width = w + "px";
                 rect = tooltip.getBoundingClientRect();
             } else {
-                w = 320;
                 tooltip.style.width = w + "px";
             }
             let r = offset.x + w;
