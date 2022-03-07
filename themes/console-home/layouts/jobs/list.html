@@ -47,10 +47,6 @@
 							{{ partial "icons/rss.html" }}
 							<span>Feed</span>
 						</a>
-						<a onclick="blur();" href="" class="console-button-text console-button-small icon-right view-all-link" title="View all in category" data-view-all-link>
-							<span>View all</span>
-							{{ partial "icons/arrow-right.html" }}
-						</a>
 					</div>
 				</div>
 				<div class="feature-items" data-feature-items>
@@ -67,9 +63,19 @@
 		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
 	</section>
 
+	{{ $categories := "" }}
+	{{range $index, $element := $.Site.Data.jobsfilters.categoryItems}}
+        {{if eq $index 0}}
+			{{ $categories = (print $categories $element.label "|" $element.name ) }}
+		{{ end }}
+        {{if not (eq $index 0)}}
+			{{ $categories = (print $categories "," $element.label "|" $element.name ) }}
+		{{ end }}
+    {{ end }}
+
 	{{ $pageTypeJS := resources.Get "/js/page-type/feature.js" }}
     {{ if hugo.IsProduction }}{{ $pageTypeJS = $pageTypeJS | resources.Minify | resources.Fingerprint }}{{ end }}
-	<script id="feature-js" src="{{ $pageTypeJS.Permalink }}"></script>
+	<script id="feature-js" src="{{ $pageTypeJS.Permalink }}" data-categories="{{ $categories }}"></script>
 
 	{{ $pagejs := resources.Get "/js/jobs.js" }}
     {{ if hugo.IsProduction }}{{ $pagejs = $pagejs | resources.Minify | resources.Fingerprint }}{{ end }}

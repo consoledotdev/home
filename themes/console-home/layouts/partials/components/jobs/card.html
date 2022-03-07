@@ -6,7 +6,7 @@
 {{- $tag := .Params.companyInfo.type -}}
 {{- $filterTaxonomy := .Params.companyInfo.filterTaxonomy -}}
 {{- $defaultGroup := "dsa" -}}
-<div class="jobs-card" data-card data-date="{{ $showDate }}" data-name="{{ $name }}" data-taxonomy="{{ $filterTaxonomy }}" data-category="{{ $topcategory }}" data-default-group="{{ $defaultGroup }}">
+<div class="jobs-card" data-card data-date="{{ $showDate }}" data-name="{{ $name }}" data-taxonomy="{{ $filterTaxonomy }}" data-category="{{ $topcategory }}" data-default-group="all-companies">
 	<div class="jobs-card-content">
 		<div class="top">
             <a onclick="blur();" class="card-link" href="{{ .RelPermalink }}"><span>View</span></a>

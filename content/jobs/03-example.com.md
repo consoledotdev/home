@@ -1,12 +1,12 @@
 ---
 title: "Example.com"
-date: 2022-03-07T11:37:04+01:00
+date: 2022-03-07T11:39:04+01:00
 draft: false
 summary: Company jobs profile for example.com
 headerType: fixed
 isPage: jobs
 companyInfo:
-  name: Company name
+  name: Company name 03
   favicon: /img/favicons/www.example.com.png
   URL: https://www.example.com
   jobsURL: https://example.com/careers
