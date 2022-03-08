@@ -2,9 +2,17 @@
 title: "Example.com"
 date: 2022-03-07T11:43:04+01:00
 draft: false
-summary: Company jobs profile for example.com
+summary: Next-gen open source observability software for cloud environments.
+metaDescription:
+  Next-gen open source observability software for cloud environments.
 headerType: fixed
-isPage: jobs
+hideLines: true
+hidePlanes: true
+isSubpage: company-profile
+pageType: company-profile
+customPageStyle: true
+xlViewport:
+  largeText: true
 companyInfo:
   name: Company name 07
   favicon: /img/favicons/www.example.com.png
@@ -32,15 +40,31 @@ companyInfo:
     - label: "Founded"
       value: 2009
     - label: "CEO"
-      value: "Jane Appleseed"
+      value:
+        links:
+          - href: "http://janeappleseed.com"
+            text: "Jane Appleseed"
+            iconRight: "external-link"
     - label: "Employees"
       value: "100-250"
     - label: "Stage"
       value: "Late-stage startup"
     - label: "Customers"
       value:
-        - "Apple, Google, Microsoft, Amazon, Tesla, Samsung, Toyota, Intel."
-        - ', <a href="https://www.example.com/all-customers">See all</a>'
+        - "Apple, Google, Microsoft, Amazon, Tesla, Samsung, Toyota, Intel., "
+        - links:
+            - href: "https://example.com/all-customers"
+              text: "Yes"
+              iconRight: "external-link"
+    - label: "Social"
+      value:
+        links:
+          - href: "#"
+            text: "Twitter"
+            iconLeft: "twitter"
+          - href: "#"
+            text: "LinkedIn"
+            iconLeft: "linkedin"
   customerCaseStudies:
     - "Tesla is using Example to monitor their EV telemetry platform. Hosted on
       AWS, Tesla vehicles report large volumes of performance data which helps
