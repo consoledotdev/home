@@ -60,6 +60,8 @@ companyInfo:
   topCategory: "Database"
   subCategory: "Time series database"
   filterTaxonomy: "database, saas, c-cplusplus, react, ruby"
+interview:
+podcast:
 review: /
 ---
 

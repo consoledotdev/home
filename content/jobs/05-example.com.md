@@ -60,6 +60,7 @@ companyInfo:
   subCategory: "CDN"
   filterTaxonomy: "cloud, open-source, elm, postgres"
 interview: /
+podcast:
 review: /
 ---
 

@@ -60,6 +60,7 @@ companyInfo:
   subCategory: "Source control"
   filterTaxonomy: "developer-tools, open-source, python"
 interview: /
+podcast:
 review: /
 ---
 

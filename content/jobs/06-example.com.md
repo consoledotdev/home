@@ -63,6 +63,7 @@ companyInfo:
   filterTaxonomy: "devops, saas, python, typescript, aws"
 interview: /
 podcast: /
+review:
 ---
 
 ### Development profile

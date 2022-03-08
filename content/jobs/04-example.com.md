@@ -63,6 +63,8 @@ companyInfo:
   subCategory: "Vulnerability management"
   filterTaxonomy: "security, other, go, elm, postgres, aws"
 interview: /
+podcast:
+review:
 ---
 
 ### Development profile
