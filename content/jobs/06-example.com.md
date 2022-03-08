@@ -15,7 +15,7 @@ xlViewport:
   largeText: true
 companyInfo:
   name: Company name 06
-  favicon: /img/favicons/www.example.com.png
+  favicon: /img/favicons/wasp-lang.dev.png
   URL: https://www.example.com
   jobsURL: https://example.com/careers
   location: London

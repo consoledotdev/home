@@ -15,7 +15,7 @@ xlViewport:
   largeText: true
 companyInfo:
   name: Company name 05
-  favicon: /img/favicons/www.example.com.png
+  favicon: /img/favicons/buf.build.jpg
   URL: https://www.example.com
   jobsURL: https://example.com/careers
   location: Rome
