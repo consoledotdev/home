@@ -377,6 +377,24 @@
     stroke: var(--theme-link-text-active);
 }
 
+.link.icon-left {
+    margin-left: 1em;
+}
+
+.link.icon-left .icon {
+    margin-left: -1em;
+    margin-right: calc(var(--space1) + var(--space0));
+}
+
+.link.icon-right {
+    margin-right: 1em;
+}
+
+.link.icon-right .icon {
+    margin-right: -1em;
+    margin-left: calc(var(--space1) + var(--space0));
+}
+
 /* Menu Item
    ================================================================================================================ */
 .menu-item,
