@@ -118,7 +118,7 @@ html {
 }
 
 .page-vendor-review .title.title-1 {
-    margin-top: 0;
+    margin-top: var(--space4);
     align-items: flex-start;
 }
 

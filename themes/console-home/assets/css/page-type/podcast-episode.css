@@ -34,7 +34,7 @@ html {
 }
 
 .page-podcast-episode .title.title-1 {
-    margin-top: var(--space2);
+    margin-top: var(--space4);
     margin-bottom: var(--space2);
 }
 

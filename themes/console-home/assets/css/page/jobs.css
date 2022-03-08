@@ -19,6 +19,10 @@
     display: none;
 }
 
+.jobs-card-content {
+    min-width: 100%;
+}
+
 .jobs-card .top {
     position: relative;
     display: flex;

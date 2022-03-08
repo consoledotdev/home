@@ -7,13 +7,16 @@
             {{- $schemaFile := print "/content/" .Params.subcategory.name "/schema-" .Params.isSubpage ".json" }}
             {{ readFile $schemaFile | safeJS }}
         </script>
-
-        <h2 class="title title-1 rich-title">
-            {{ partial "components/thumbnail-vendor.html" (dict "name" .Params.title "image" .Params.thumbnail "category" .Params.category ) }}
-            <span>{{ .Params.title }}</span>
-        </h2>
         <div class="top">
             <div class="left">
+                <a href="/{{ .Params.subcategory.name }}/" class="console-button-text console-button-triad-02 icon-left">
+                    {{ partial (print "icons/" .Params.category ".html") }}
+                    <span>Review</span>
+                </a>
+                <h2 class="title title-1 rich-title">
+                    {{ partial "components/thumbnail-vendor.html" (dict "name" .Params.title "image" .Params.thumbnail "category" .Params.category ) }}
+                    <span>{{ .Params.title }}</span>
+                </h2>
                 <div class="page-meta">
                     <p class="small">
                         {{ $categoryData := (dict "category" .Params.category "subcategory" (dict "label" .Params.subcategory.label "name" .Params.subcategory.name)) }}
