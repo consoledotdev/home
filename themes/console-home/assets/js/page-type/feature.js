@@ -126,6 +126,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         let footerHeight = document.querySelector("[data-footer]").getBoundingClientRect().height;
         let safetyBottomOffset = contentBottomPadding + footerHeight + 48;
         asideContentHeight = asideContentWrapper.getBoundingClientRect().height;
+        let splitWrapper = document.querySelector("[data-content-split]");
 
         let style = {};
         let compute = function () {
@@ -145,6 +146,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     style.marginTop = "100px";
                     style.paddingTop = "28px";
                     style.overflow = "auto";
+                    if (splitWrapper) {
+                        let asideStyle = getComputedStyle(asideContentWrapper);
+                        let asideMarginsAndPaddings = parseInt(asideStyle.getPropertyValue("padding-top")) + parseInt(asideStyle.getPropertyValue("margin-top")) + parseInt(asideStyle.getPropertyValue("padding-bottom")) + parseInt(asideStyle.getPropertyValue("margin-bottom"));
+                        let minContentHeight = window.innerHeight - asideMarginsAndPaddings;
+                        splitWrapper.style.minHeight = minContentHeight + "px";
+                    }
                 }
             } else {
                 style.position = null;
@@ -365,6 +372,9 @@ class Filter {
         this.setButtonsAllVisibility();
         this.updateInfo();
         this.filter();
+
+        // triggers marked-scrollable borders
+        window.dispatchEvent(new Event("resize"));
     }
 
     clearAll(e) {
@@ -373,6 +383,9 @@ class Filter {
         this.setButtonsAllVisibility();
         this.updateInfo();
         this.filter();
+
+        // triggers marked-scrollable borders
+        window.dispatchEvent(new Event("resize"));
     }
 
     selectAll(e) {
@@ -381,6 +394,9 @@ class Filter {
         this.setButtonsAllVisibility();
         this.updateInfo();
         this.filter();
+
+        // triggers marked-scrollable borders
+        window.dispatchEvent(new Event("resize"));
     }
 
     setButtonsAllVisibility() {
