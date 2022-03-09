@@ -14,7 +14,6 @@ customPageStyle: true
 xlViewport:
   largeText: true
 companyInfo:
-  name: Company name 01
   favicon: /img/favicons/github.com.png
   URL: https://www.example.com
   jobsURL: https://example.com/careers
@@ -54,7 +53,7 @@ companyInfo:
         - "Apple, Google, Microsoft, Amazon, Tesla, Samsung, Toyota, Intel., "
         - links:
             - href: "https://example.com/all-customers"
-              text: "Yes"
+              text: "See all"
               iconRight: "external-link"
     - label: "Social"
       value:
