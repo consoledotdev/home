@@ -3,10 +3,10 @@ title: Interview with Ido Shamun, Daily.dev
 who: Ido Shamun
 role: CTO
 org: Daily.dev
-what: Developer news aggregator.
+what: Feed for developer news.
 tags: ['News']
 date: 2022-01-27T12:00:00Z
-draft: true
+draft: false
 headerType: fixed
 summary: Interview with Ido Shamun, CTO, Daily.dev
 isPage: interviews
@@ -175,6 +175,6 @@ teacher. When I have time I’ll also play games with friends.
 
 ### Find out more
 
-[Daily.Dev](https://daily.dev) is a developer news aggregator. It was featured
-as an "Interesting Tool" in the [Console newsletter](https://console.dev) on 3
-Mar 2022. This interview was conducted on 27 Jan 2022.
+[Daily.Dev](https://daily.dev) is a feed for developer news. It was featured as
+an "Interesting Tool" in the [Console newsletter](https://console.dev) on 10 Mar
+2022. This interview was conducted on 27 Jan 2022.
