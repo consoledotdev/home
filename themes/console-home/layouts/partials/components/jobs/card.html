@@ -11,7 +11,7 @@
 		<div class="top">
             <a onclick="blur();" class="card-link" href="{{ .RelPermalink }}"><span>View</span></a>
             <div class="left">
-            	{{ partial "components/thumbnail-vendor.html" (dict "name" $name "image" (print "/" .Params.companyInfo.favicon ) "category" (replace (lower $topcategory) " " "-") ) }}
+            	{{ partial "components/thumbnail-vendor.html" (dict "name" $name "image" .Params.companyInfo.favicon "category" (replace (lower $topcategory) " " "-") ) }}
                 <div class="title-location"><h4 data-searchable class="title title-3">{{ $name }}</h4><p class="jobs-card-location">{{ .Params.companyInfo.location }}</p></div>
 			</div>
 			<div class="right">
