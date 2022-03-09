@@ -96,6 +96,8 @@ podcast:
 review: /
 ---
 
+{{< nav-wrapper--open id="wrapper-1" anchor-name="development-profile" >}}
+
 {{< rich-title-3 icon="checklist" id="key-features" >}} Development profile
 {{</ rich-title-3 >}}
 
@@ -189,6 +191,10 @@ week on-call rotation every 6-8 weeks and we report out of hours incidents to
 senior management on a monthly basis, with time allocated as part of development
 cycles to fix any tech debt or issues waking people up.
 
+{{< div--close >}}
+
+{{< nav-wrapper--open id="wrapper-2" anchor-name="hiring-process" >}}
+
 {{< rich-title-3 icon="checklist" id="key-features" >}} Hiring process
 {{</ rich-title-3 >}}
 
@@ -214,3 +220,5 @@ for their team and there is also an independent company-wide bonus scheme based
 on company metrics, which we share on a quarterly basis. We do formal annual
 reviews which are tied to goals that your manager discusses with you at each one
 to one (monthly).
+
+{{< div--close >}}
