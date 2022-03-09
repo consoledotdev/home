@@ -21,6 +21,10 @@ companyInfo:
   description:
     "Example is building the next generation of open source observability
     software for cloud-native environments."
+  images:
+    - url: /img/jobs/example.com-01.jpg
+    - url: /img/jobs/example.com-02.jpg
+    - url: /img/jobs/example.com-03.jpg
   product:
     name: "Example"
     description:

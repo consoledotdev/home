@@ -1,0 +1,81 @@
+{{ define "main" }}
+	{{ $CTATitle := "Subscribe to the weekly Console newsletter" }}
+	{{ $CTADescription := "Our free weekly newsletter features the latest interesting tools." }}
+
+    <section class="page-section page-section-company-profile opening">
+        <div class="top">
+            <div class="left">
+                <a href="/jobs/" class="console-button-text console-button-yellow icon-left">
+                    {{ partial "icons/jobs.html" }}
+                    <span>DevTools Jobs</span>
+                </a>
+                <div class="company-heading">
+                    {{ partial "components/thumbnail-vendor.html" (dict "name" .Params.title "image" .Params.companyInfo.favicon "category" (replace (lower .Params.companyInfo.topCategory) " " "-") ) }} 
+                    <div class="company-heading-text">
+                        <h2 class="title title-1">{{ .Params.title }}</h2>
+                        <a href="{{ .Params.companyInfo.URL }}" target="_blank" rel="noopener" class="link icon-left">
+                            {{ partial "icons/link.html" -}}
+                            {{- replace (replace .Params.companyInfo.URL "https://" "") "http://" "" }}
+                        </a>
+                    </div>
+                </div>
+                <p class="intro">{{ .Params.companyInfo.description }}</p>
+                <a class="console-button console-button-medium icon-right" href="{{ .Params.companyInfo.jobsURL }}" title="See all jobs at {{ .Params.companyInfo.jobsURL }}" target="_blank"
+                    rel="noopener"><span>See all jobs</span>
+                    {{ partial "icons/external-link.html" }}</a>
+            </div>
+            <div class="right">
+                <div class="framed-section framed-section-default">
+                    {{ partial "components/simple-table.html" .Params.companyInfo.meta }}
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            {{ $title := .Params.title }}
+            {{ range .Params.companyInfo.images }}
+                {{ $nextGenImgSrc := partial "components/processed-img.html" (dict "src" .url "width" "1400" "nextGen" "true") }}
+                {{ $imgSrc := partial "components/processed-img.html" (dict "src" .url "width" "1400") }}
+                <a href="#" class="modal-link"
+                    data-modal-link
+                    data-modal-type="screen"
+                    data-modal-type-screen="{{ $imgSrc }}">
+                        {{with $nextGenImgSrc }}<picture><source srcset="{{ . }}" type="image/webp">{{ end }}
+                            <img loading="lazy" class="image" src="{{ $imgSrc }}" alt="{{ $title }}" />
+                        {{with $nextGenImgSrc }}</picture>{{ end }}
+            {{ end }}
+        </div>
+    </section>
+    <div data-content-split class="content-split">
+		<aside data-aside-wrapper class="aside-wrapper">
+            <div data-aside-content-wrapper class="aside-content-wrapper">
+                <div data-aside-content class="aside-content">
+                    <div class="aside-block">
+                        <div class="page-section-heading">
+                            <h5 class="title title-4">
+                                More on Console
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="aside-block">
+                        <div class="page-section-heading">
+                            <h5 class="title title-4">Contents</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</aside>
+		<div class="main-content-wrapper">
+            <section class="page-section page-section-company-profile notes">
+                {{ .Content }}
+            </section>
+            <section class="page-section page-section-company-profile about">
+                {{ partial "components/about-console.html" }}
+                {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" ) }}
+            </section>
+        </div>
+    </div>
+
+	{{ $js := resources.Get "/js/company-profile.js" }}
+    {{ if hugo.IsProduction }}{{ $js = $js | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script src="{{ $js.Permalink }}"></script>
+{{ end }}
