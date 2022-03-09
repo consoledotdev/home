@@ -33,15 +33,18 @@
         <div class="bottom">
             {{ $title := .Params.title }}
             {{ range .Params.companyInfo.images }}
-                {{ $nextGenImgSrc := partial "components/processed-img.html" (dict "src" .url "width" "1400" "nextGen" "true") }}
-                {{ $imgSrc := partial "components/processed-img.html" (dict "src" .url "width" "1400") }}
-                <a href="#" class="modal-link"
-                    data-modal-link
-                    data-modal-type="screen"
-                    data-modal-type-screen="{{ $imgSrc }}">
-                        {{with $nextGenImgSrc }}<picture><source srcset="{{ . }}" type="image/webp">{{ end }}
-                            <img loading="lazy" class="image" src="{{ $imgSrc }}" alt="{{ $title }}" />
-                        {{with $nextGenImgSrc }}</picture>{{ end }}
+                <div class="company-shot">
+                    {{ $nextGenImgSrc := partial "components/processed-img.html" (dict "src" .url "width" "1400" "nextGen" "true") }}
+                    {{ $imgSrc := partial "components/processed-img.html" (dict "src" .url "width" "1400") }}
+                    <a href="#" class="modal-link"
+                        data-modal-link
+                        data-modal-type="screen"
+                        data-modal-type-screen="{{ $imgSrc }}">
+                            {{with $nextGenImgSrc }}<picture><source srcset="{{ . }}" type="image/webp">{{ end }}
+                                <img loading="lazy" class="image" src="{{ $imgSrc }}" alt="{{ $title }}" />
+                            {{with $nextGenImgSrc }}</picture>{{ end }}
+                    </a>
+                </div>
             {{ end }}
         </div>
     </section>

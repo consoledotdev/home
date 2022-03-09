@@ -4559,10 +4559,12 @@ p.combo-card-description {
     box-shadow: var(--theme-shadow-3);
     transition: all var(--a-modal-time) var(--a-modal-easing);
     transition-delay: 0s;
+    opacity: 0;
 }
 
 .is-visible .modal {
     transition-delay: 0s;
+    opacity: 1;
 }
 
 .modal > * {
@@ -4577,7 +4579,7 @@ p.combo-card-description {
     text-decoration: none;
     border: 1px solid transparent;
     background: transparent;
-    border-radius: var(--corners-mid);
+    border-radius: calc(var(--corners-mid) + 1px);
     transition: var(--a-controls);
 }
 

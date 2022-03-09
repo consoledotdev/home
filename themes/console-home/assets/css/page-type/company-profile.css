@@ -99,6 +99,25 @@ html {
     }
 }
 
+.main-company-profile .page-section.opening .bottom {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    gap: var(--space3_5);
+}
+
+.main-company-profile .page-section.opening .bottom .company-shot {
+    position: relative;
+}
+
+.main-company-profile .page-section.opening .bottom .modal-link {
+    padding-bottom: 48%;
+}
+
+.main-company-profile .page-section.opening .bottom .modal-link .image {
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+}
+
 .main-company-profile .page-section.opening .company-heading {
     display: flex;
     flex-flow: row nowrap;
