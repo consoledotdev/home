@@ -449,10 +449,6 @@ html {
     flex: 0 0 auto;
 }
 
-.page-vendor-review .framed-section-attention .framed-section-item p {
-    font-size: var(--t-size0);
-}
-
 .page-vendor-review .rich-title.title-2 .icon-like {
     stroke: var(--theme-signaling-positive);
     width: var(--space4);

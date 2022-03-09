@@ -3209,6 +3209,10 @@ p.combo-card-description {
     border-top: var(--theme-framed-section-default-item-border);
 }
 
+.framed-section.framed-section-default > p {
+    color: var(--theme-text-1);
+}
+
 .framed-section.framed-section-attention .framed-section-item {
     border-top: var(--theme-framed-section-attention-item-border);
 }
@@ -4796,6 +4800,7 @@ p.combo-card-description {
 
 /* Tech stack
    ================================================================================================================ */
+/* Inline list display */
 .tech-stack {
     position: relative;
     display: inline-block;
@@ -4806,13 +4811,14 @@ p.combo-card-description {
     font-weight: 400;
     font-size: var(--t-size-1);
     color: var(--theme-text-2);
+    letter-spacing: 0.12em;
 }
 
 .tech-stack .icon {
     width: 1.15em;
     height: 1.15em;
     vertical-align: -0.2em;
-    margin-right: calc(var(--space1));
+    margin-right: calc(var(--space2));
 }
 
 .tech-stack .icon-stroke {
@@ -4829,4 +4835,12 @@ p.combo-card-description {
 
 .tech-stack .tooltip-content p {
     white-space: nowrap;
+}
+
+/* Individual items display */
+.tech-stack-item {
+    font-weight: 400;
+    font-size: var(--t-size-1);
+    color: var(--theme-text-2);
+    letter-spacing: 0.12em;
 }

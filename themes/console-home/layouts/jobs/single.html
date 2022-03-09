@@ -58,6 +58,21 @@
                                 More on Console
                             </h5>
                         </div>
+                        {{ with .Params.podcast }}
+                            {{ . }}
+                        {{ end }}
+                        {{ with .Params.interview }}
+                            {{ . }}
+                        {{ end }}
+                        {{ with .Params.review }}
+                            {{ . }}
+                        {{ end }}
+                        {{ with .Params.toolReview }}
+                            {{ . }}
+                        {{ end }}
+                        {{ with .Params.betaListing }}
+                            {{ . }}
+                        {{ end }}
                     </div>
                     <div class="aside-block">
                         <div class="page-section-heading">
@@ -68,8 +83,42 @@
             </div>
 		</aside>
 		<div class="main-content-wrapper">
-            <section class="page-section page-section-company-profile notes">
+            <section class="page-section page-section-company-profile product">
+                <div class="framed-section framed-section-default">
+                    <h3 class="title title-2">{{ .Params.companyInfo.product.name }}</h3>
+                    <p>{{ .Params.companyInfo.product.description }}</p>
+                    <div class="framed-section-item">
+                        <h5 class="title title-4 rich-title">
+                            {{ partial "icons/tech-stack.html" }}
+                            <span class="rich-title-text">Tech stack</span>
+                        </h5>
+                        <p class="company-tech-stack">
+                            {{ range .Params.companyInfo.techStack }}
+                                <span class="tech-stack-item">{{ . }}</span>
+                            {{ end }}
+                        </p>
+                    </div>
+                    <div class="framed-section-item">
+                        <h5 class="title title-4 rich-title">
+                            {{ partial "icons/social.html" }}
+                            <span class="rich-title-text">Customer case studies</span>
+                        </h5>
+                        {{ range .Params.companyInfo.customerCaseStudies }}
+                            <p class="company-case-study"><span>{{ .client }}</span> {{ .text }}</p>
+                        {{ end }}
+                    </div>
+                </div>
+            </section>
+            <section class="page-section page-section-company-profile markdown-body">
                 {{ .Content }}
+            </section>
+            <section class="page-section page-section-company-profile jobs-link">
+                <h3 class="title title-2">Jobs</h3>
+                <p>
+                    <a class="console-button console-button-medium icon-right" href="{{ .Params.companyInfo.jobsURL }}" title="See all jobs at {{ .Params.companyInfo.jobsURL }}" target="_blank"
+                        rel="noopener"><span>See all jobs</span>
+                        {{ partial "icons/external-link.html" }}</a>
+                </p>
             </section>
             <section class="page-section page-section-company-profile about">
                 {{ partial "components/about-console.html" }}

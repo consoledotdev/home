@@ -1,5 +1,5 @@
 ---
-title: "Example.com"
+title: "Example.com 7"
 date: 2022-03-07T11:43:04+01:00
 draft: false
 summary: Next-gen open source observability software for cloud environments.
@@ -14,7 +14,6 @@ customPageStyle: true
 xlViewport:
   largeText: true
 companyInfo:
-  name: Company name 07
   favicon: /img/favicons/www.example.com.png
   URL: https://www.example.com
   jobsURL: https://example.com/careers
@@ -22,6 +21,10 @@ companyInfo:
   description:
     "Example is building the next generation of open source observability
     software for cloud-native environments."
+  images:
+    - url: /img/jobs/example.com-01.jpg
+    - url: /img/jobs/example.com-02.jpg
+    - url: /img/jobs/example.com-03.jpg
   product:
     name: "Example"
     description:
@@ -66,18 +69,22 @@ companyInfo:
             text: "LinkedIn"
             iconLeft: "linkedin"
   customerCaseStudies:
-    - "Tesla is using Example to monitor their EV telemetry platform. Hosted on
-      AWS, Tesla vehicles report large volumes of performance data which helps
-      with performance improvements and debugging issues reported by customers.
-      Example was integrated into their C++ code using our SDK which reports
-      sample code traces back to the Tesla-controlled infrastructure. Privacy
-      and security are particularly important for Tesla, which is why they opted
-      to deploy our Enterprise Edition to their own cloud environment."
-    - "Samsung engineers deployed Example to one of their consumer-facing
-      applications to help debug a specific error that was surfacing in
-      particular edge cases. They were able to integrate the Java SDK into their
-      mobile application within just a few hours, making use of the infinite
-      scalability of our cloud service."
+    - client: "Tesla"
+      text:
+        "is using Example to monitor their EV telemetry platform. Hosted on AWS,
+        Tesla vehicles report large volumes of performance data which helps with
+        performance improvements and debugging issues reported by customers.
+        Example was integrated into their C++ code using our SDK which reports
+        sample code traces back to the Tesla-controlled infrastructure. Privacy
+        and security are particularly important for Tesla, which is why they
+        opted to deploy our Enterprise Edition to their own cloud environment."
+    - client: "Samsung"
+      text:
+        "engineers deployed Example to one of their consumer-facing applications
+        to help debug a specific error that was surfacing in particular edge
+        cases. They were able to integrate the Java SDK into their mobile
+        application within just a few hours, making use of the infinite
+        scalability of our cloud service."
   type: "Open Source"
   category: "Developer Tools - Backend framework"
   topCategory: "Developer Tools"
@@ -88,7 +95,8 @@ podcast: /
 review: /
 ---
 
-### Development profile
+{{< rich-title-3 icon="checklist" id="key-features" >}} Development profile
+{{</ rich-title-3 >}}
 
 #### How are the teams structured?
 
@@ -180,7 +188,8 @@ week on-call rotation every 6-8 weeks and we report out of hours incidents to
 senior management on a monthly basis, with time allocated as part of development
 cycles to fix any tech debt or issues waking people up.
 
-### Hiring process
+{{< rich-title-3 icon="checklist" id="key-features" >}} Hiring process
+{{</ rich-title-3 >}}
 
 #### How does the application process work? What are the stages and what is the timeline?
 

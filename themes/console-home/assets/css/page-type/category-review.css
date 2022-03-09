@@ -320,10 +320,6 @@ html {
     margin-bottom: var(--space4);
 }
 
-.category-review-tool-card .framed-section-item p {
-    font-size: var(--t-size0);
-}
-
 .page-category-review .framed-section-item .title.title-3 {
     margin-bottom: var(--space3);
 }

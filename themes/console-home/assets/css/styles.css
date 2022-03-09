@@ -1372,6 +1372,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
     font-size: var(--t-size2);
     font-weight: 500;
     margin-bottom: var(--space3);
+    line-height: var(--t-lH3);
 }
 
 .title.title-3:not(:first-child) {
@@ -1392,6 +1393,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
     font-weight: 500;
     margin-bottom: var(--space3);
     letter-spacing: 0.15em;
+    line-height: var(--t-lH2);
 }
 
 .title.title-4:not(:first-child) {
@@ -1757,6 +1759,10 @@ p.x-small {
     }
 
     .xl-viewport-large-text .title-6 {
+        font-size: var(--t-size0);
+    }
+
+    .xl-viewport-large-text .framed-section-item p {
         font-size: var(--t-size0);
     }
 

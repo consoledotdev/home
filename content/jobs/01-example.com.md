@@ -69,18 +69,22 @@ companyInfo:
             text: "LinkedIn"
             iconLeft: "linkedin"
   customerCaseStudies:
-    - "Tesla is using Example to monitor their EV telemetry platform. Hosted on
-      AWS, Tesla vehicles report large volumes of performance data which helps
-      with performance improvements and debugging issues reported by customers.
-      Example was integrated into their C++ code using our SDK which reports
-      sample code traces back to the Tesla-controlled infrastructure. Privacy
-      and security are particularly important for Tesla, which is why they opted
-      to deploy our Enterprise Edition to their own cloud environment."
-    - "Samsung engineers deployed Example to one of their consumer-facing
-      applications to help debug a specific error that was surfacing in
-      particular edge cases. They were able to integrate the Java SDK into their
-      mobile application within just a few hours, making use of the infinite
-      scalability of our cloud service."
+    - client: "Tesla"
+      text:
+        "is using Example to monitor their EV telemetry platform. Hosted on AWS,
+        Tesla vehicles report large volumes of performance data which helps with
+        performance improvements and debugging issues reported by customers.
+        Example was integrated into their C++ code using our SDK which reports
+        sample code traces back to the Tesla-controlled infrastructure. Privacy
+        and security are particularly important for Tesla, which is why they
+        opted to deploy our Enterprise Edition to their own cloud environment."
+    - client: "Samsung"
+      text:
+        "engineers deployed Example to one of their consumer-facing applications
+        to help debug a specific error that was surfacing in particular edge
+        cases. They were able to integrate the Java SDK into their mobile
+        application within just a few hours, making use of the infinite
+        scalability of our cloud service."
   type: "Open Source"
   category: "Developer Tools - Backend framework"
   topCategory: "Developer Tools"
@@ -91,7 +95,8 @@ podcast: /
 review:
 ---
 
-### Development profile
+{{< rich-title-3 icon="checklist" id="key-features" >}} Development profile
+{{</ rich-title-3 >}}
 
 #### How are the teams structured?
 
@@ -183,7 +188,15 @@ week on-call rotation every 6-8 weeks and we report out of hours incidents to
 senior management on a monthly basis, with time allocated as part of development
 cycles to fix any tech debt or issues waking people up.
 
-### Hiring process
+{{< empty-placeholder >}}
+
+Something missing?
+{{< a-button size="medium" icon-left="send" title="dsasa" text="Ask us a question" url="mailto:hello@console.dev" is-text="true" >}}
+
+{{</ empty-placeholder >}}
+
+{{< rich-title-3 icon="checklist" id="key-features" >}} Hiring process
+{{</ rich-title-3 >}}
 
 #### How does the application process work? What are the stages and what is the timeline?
 
@@ -207,3 +220,10 @@ for their team and there is also an independent company-wide bonus scheme based
 on company metrics, which we share on a quarterly basis. We do formal annual
 reviews which are tied to goals that your manager discusses with you at each one
 to one (monthly).
+
+{{< empty-placeholder >}}
+
+Something missing?
+{{< a-button size="medium" icon-left="send" title="dsasa" text="Ask us a question" url="mailto:hello@console.dev" is-text="true" >}}
+
+{{</ empty-placeholder >}}
