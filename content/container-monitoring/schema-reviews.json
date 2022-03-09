@@ -1,0 +1,231 @@
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "The best best container monitoring tools for developers",
+    "numberOfItems": 6,
+    "itemListOrder": "Ascending",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Datadog",
+            "item": {
+                "@type": "Product",
+                "name": "Datadog",
+                "description": "Container monitoring tool.",
+                "url": "https://www.datadoghq.com/",
+                "image": [
+                    "https://console.dev/img/favicons/www.datadoghq.com.png"
+                ],
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "Datadog is an infrastructure monitoring tool. It offers an extensive set of integrations and features which makes it powerful.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2022-03-08T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Elasticsearch, Logstash, and Kibana",
+            "item": {
+                "@type": "Product",
+                "name": "Elasticsearch, Logstash, and Kibana",
+                "description": "Container monitoring tool.",
+                "url": "https://www.elastic.co/elastic-stack/",
+                "image": [
+                    "https://console.dev/img/favicons/www.elastic.co.png"
+                ],
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "ELK stack consists of three open source projects: Elasticsearch (a search and analytics engine), Logstash (a data processing pipeline), and Kibana (for visualizing data with charts).",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4.8",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2022-03-08T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Grafana + cAdvisor + Prometheus",
+            "item": {
+                "@type": "Product",
+                "name": "Grafana + cAdvisor + Prometheus",
+                "description": "Container monitoring tool.",
+                "url": "https://grafana.com/",
+                "image": [
+                    "https://console.dev/img/favicons/grafana.com.png"
+                ],
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "Grafana is an excellent open source metrics visualization and dashboarding tool if you want to plug different systems and manage it yourself (or use Grafana Cloud). It integrates multiple data source backends, such as Prometheus, which can receive container metrics from cAdvisor.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4.2",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2022-03-08T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Dynatrace",
+            "item": {
+                "@type": "Product",
+                "name": "Dynatrace",
+                "description": "Container monitoring tool.",
+                "url": "https://www.dynatrace.com/solutions/container-monitoring/",
+                "image": [
+                    "https://console.dev/img/favicons/www.dynatrace.com.png"
+                ],
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "Dynatrace started as an application performance monitoring tool and expanded to cover other aspects of infrastructure monitoring. It can monitor various docker metrics and plot them as charts and bar graphs.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "3.8",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2022-03-08T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Sematext",
+            "item": {
+                "@type": "Product",
+                "name": "Sematext",
+                "description": "Container monitoring tool.",
+                "url": "https://sematext.com/container-monitoring/",
+                "image": [
+                    "https://console.dev/img/favicons/sematext.com.svg"
+                ],
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "Sematext Docker monitoring supports Docker Swarm and can be set up with a “docker run” or “docker compose” command. It offers a unique split-screen feature for inspecting multiple views of logs and metrics, which is useful for smaller screen sizes such as laptops. Not every incident is always debugged from a desktop with a large monitor!",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "3.8",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2022-03-08T12:00:00+00:00"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Sumo Logic",
+            "item": {
+                "@type": "Product",
+                "name": "Sumo Logic",
+                "description": "Container monitoring tool.",
+                "url": "https://www.sumologic.com/",
+                "image": [
+                    "https://console.dev/img/favicons/www.sumologic.com.jpg"
+                ],
+                "review": {
+                    "@type": "Review",
+                    "reviewBody": "Sumo Logic can monitor Docker containers and system logs. Its custom query language allows users to run advanced queries and fetch data that can be further used to plot charts.",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "3.5",
+                        "bestRating": "5",
+                        "worstRating": "0"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Naman Singhal",
+                        "email": "naman@console.dev",
+                        "description": "Naman has a background in computer science and has published research with IEEE on predicting software bugs using machine learning models.",
+                        "image": "https://console.dev/img/naman.jpg"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Console",
+                        "url": "https://console.dev"
+                    },
+                    "datePublished": "2022-03-08T12:00:00+00:00"
+                }
+            }
+        }
+    ]
+}
