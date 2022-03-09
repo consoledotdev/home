@@ -359,6 +359,10 @@ html {
     color: var(--theme-text-4);
 }
 
+.other-episode-title-extras p:first-child {
+    font-weight: 500;
+}
+
 .other-episode-title-extras p:last-child {
     font-size: var(--t-size-3);
     font-style: italic;

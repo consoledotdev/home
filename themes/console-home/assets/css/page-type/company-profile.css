@@ -334,42 +334,184 @@ html {
     margin-bottom: var(--space4);
 }
 
-.aside-content-wrapper .other-episodes,
-.aside-content-wrapper .other-episode:not(:first-child) {
+.aside-content-wrapper .aside-items,
+.aside-content-wrapper .aside-item:not(:first-child) {
     margin-top: var(--space3_5);
 }
 
-.other-episode .title.title-6 {
+.aside-item .title.title-6 {
     font-size: var(--t-size1);
 }
 
-.other-episode .title.title-6,
-.other-episode p {
+.aside-item .title.title-6,
+.aside-item p {
     margin-bottom: var(--space0);
 }
 
-.other-episode-title-extras .title,
-.other-episode-title-extras .small,
-.other-episode-title-extras a.link:not(:hover):not(:focus):not(:active) {
+.aside-item-title-extras .title,
+.aside-item-title-extras .small,
+.aside-item-title-extras a.link:not(:hover):not(:focus):not(:active) {
     color: var(--theme-text-4);
 }
 
-.other-episode-title-extras p:last-child {
+.aside-item-title-extras p:first-child {
+    font-weight: 500;
+}
+
+.aside-item-title-extras p:last-child:not(:first-child) {
     font-size: var(--t-size-3);
     font-style: italic;
 }
 
-.other-episode-meta {
+.aside-item-meta {
     margin-top: var(--space2);
 }
 
-.other-episode-meta p {
+.aside-item-meta p {
     color: var(--theme-text-3);
     font-size: var(--t-size-2);
 }
 
-.other-episode-meta .episode-no {
+.aside-item-meta .episode-no {
     font-style: italic;
+}
+
+.aside-item.podcast .title a:link,
+.aside-item.podcast .title a:visited,
+.aside-item.interview .title a:link,
+.aside-item.interview .title a:visited {
+    color: var(--theme-cta-secondary-triad-03-text-idle);
+}
+
+.aside-item.podcast .title a:link .icon-stroke,
+.aside-item.podcast .title a:visited .icon-stroke,
+.aside-item.interview .title a:link .icon-stroke,
+.aside-item.interview .title a:visited .icon-stroke {
+    stroke: var(--theme-cta-secondary-triad-03-text-idle);
+}
+
+.aside-item.podcast .title a:link .icon-fill,
+.aside-item.podcast .title a:visited .icon-fill,
+.aside-item.interview .title a:link .icon-fill,
+.aside-item.interview .title a:visited .icon-fill {
+    fill: var(--theme-cta-secondary-triad-03-text-idle);
+}
+
+.aside-item.podcast .title a:link .icon-fill-stroke,
+.aside-item.podcast .title a:visited .icon-fill-stroke,
+.aside-item.interview .title a:link .icon-fill-stroke,
+.aside-item.interview .title a:visited .icon-fill-stroke {
+    fill: var(--theme-cta-secondary-triad-03-text-idle);
+    stroke: var(--theme-cta-secondary-triad-03-text-idle);
+}
+
+.aside-item.podcast .title a:focus,
+.aside-item.podcast .title a:hover,
+.aside-item.interview .title a:focus,
+.aside-item.interview .title a:hover {
+    color: var(--theme-cta-secondary-triad-03-text-hover);
+}
+
+.aside-item.podcast .title a:focus .icon-stroke,
+.aside-item.podcast .title a:hover .icon-stroke,
+.aside-item.interview .title a:focus .icon-stroke,
+.aside-item.interview .title a:hover .icon-stroke {
+    stroke: var(--theme-cta-secondary-triad-03-text-hover);
+}
+
+.aside-item.podcast .title a:focus .icon-fill,
+.aside-item.podcast .title a:hover .icon-fill,
+.aside-item.interview .title a:focus .icon-fill,
+.aside-item.interview .title a:hover .icon-fill {
+    fill: var(--theme-cta-secondary-triad-03-text-hover);
+}
+
+.aside-item.podcast .title a:focus .icon-fill-stroke,
+.aside-item.podcast .title a:hover .icon-fill-stroke,
+.aside-item.interview .title a:focus .icon-fill-stroke,
+.aside-item.interview .title a:hover .icon-fill-stroke {
+    fill: var(--theme-cta-secondary-triad-03-text-hover);
+    stroke: var(--theme-cta-secondary-triad-03-text-hover);
+}
+
+.aside-item.podcast .title a:active,
+.aside-item.interview .title a:active {
+    color: var(--theme-cta-secondary-triad-03-text-active);
+}
+
+.aside-item.podcast .title a:active .icon-stroke,
+.aside-item.interview .title a:active .icon-stroke {
+    stroke: var(--theme-cta-secondary-triad-03-text-active);
+}
+
+.aside-item.podcast .title a:active .icon-fill,
+.aside-item.interview .title a:active .icon-fill {
+    fill: var(--theme-cta-secondary-triad-03-text-active);
+}
+
+.aside-item.podcast .title a:active .icon-fill-stroke,
+.aside-item.interview .title a:active .icon-fill-stroke {
+    fill: var(--theme-cta-secondary-triad-03-text-active);
+    stroke: var(--theme-cta-secondary-triad-03-text-active);
+}
+
+.aside-item.review .title a:link,
+.aside-item.review .title a:visited {
+    color: var(--theme-cta-secondary-triad-02-text-idle);
+}
+
+.aside-item.review .title a:link .icon-stroke,
+.aside-item.review .title a:visited .icon-stroke {
+    stroke: var(--theme-cta-secondary-triad-02-text-idle);
+}
+
+.aside-item.review .title a:link .icon-fill,
+.aside-item.review .title a:visited .icon-fill {
+    fill: var(--theme-cta-secondary-triad-02-text-idle);
+}
+
+.aside-item.review .title a:link .icon-fill-stroke,
+.aside-item.review .title a:visited .icon-fill-stroke {
+    fill: var(--theme-cta-secondary-triad-02-text-idle);
+    stroke: var(--theme-cta-secondary-triad-02-text-idle);
+}
+
+.aside-item.review .title a:focus,
+.aside-item.review .title a:hover {
+    color: var(--theme-cta-secondary-triad-02-text-hover);
+}
+
+.aside-item.review .title a:focus .icon-stroke,
+.aside-item.review .title a:hover .icon-stroke {
+    stroke: var(--theme-cta-secondary-triad-02-text-hover);
+}
+
+.aside-item.review .title a:focus .icon-fill,
+.aside-item.review .title a:hover .icon-fill {
+    fill: var(--theme-cta-secondary-triad-02-text-hover);
+}
+
+.aside-item.review .title a:focus .icon-fill-stroke,
+.aside-item.review .title a:hover .icon-fill-stroke {
+    fill: var(--theme-cta-secondary-triad-02-text-hover);
+    stroke: var(--theme-cta-secondary-triad-02-text-hover);
+}
+
+.aside-item.review .title a:active {
+    color: var(--theme-cta-secondary-triad-02-text-active);
+}
+
+.aside-item.review .title a:active .icon-stroke {
+    stroke: var(--theme-cta-secondary-triad-02-text-active);
+}
+
+.aside-item.review .title a:active .icon-fill {
+    fill: var(--theme-cta-secondary-triad-02-text-active);
+}
+
+.aside-item.review .title a:active .icon-fill-stroke {
+    fill: var(--theme-cta-secondary-triad-02-text-active);
+    stroke: var(--theme-cta-secondary-triad-02-text-active);
 }
 
 /* Subscribe CTA ------------------------------------------------------------- */
@@ -389,15 +531,15 @@ html {
 }
 
 @media (min-width: 1280px) {
-    .xl-viewport-large-text .other-episode .title.title-6 {
+    .xl-viewport-large-text .aside-item .title.title-6 {
         font-size: var(--t-size2);
     }
 
-    .xl-viewport-large-text .other-episode-title-extras p:last-child {
+    .xl-viewport-large-text .aside-item-title-extras p:last-child:not(:first-child) {
         font-size: var(--t-size-2);
     }
 
-    .xl-viewport-large-text .other-episode-meta p {
+    .xl-viewport-large-text .aside-item-meta p {
         font-size: var(--t-size-1);
     }
 

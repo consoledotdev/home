@@ -88,11 +88,11 @@ companyInfo:
   type: "Open Source"
   category: "Developer Tools - Backend framework"
   topCategory: "Developer Tools"
-  subCategory: "Backend framework"
+  subCategory: "Browser testing"
   filterTaxonomy: "developer-tools, open-source, go, typescript"
-interview: /
-podcast: /
-review:
+interview: firehydrant-robert-ross
+podcast: s02e09-designing-dev-products-ellen-chisa-boldstart
+review: browser-testing/lambdatest
 ---
 
 {{< rich-title-3 icon="checklist" id="key-features" >}} Development profile
