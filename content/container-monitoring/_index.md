@@ -57,10 +57,10 @@ in {{< year >}} are:
 6. [Sumo Logic](#sumo-logic)
 
 In this review, we consider the best container monitoring tools for developers.
-In several cases there is overlap with server monitoring functionality where the
-newer generation of monitoring tools have adapted to or been built with
-containers in mind. In other cases, specialist container monitoring products
-have been considered.
+In several cases there is overlap with [server monitoring](/server-monitoring/)
+functionality where the newer generation of monitoring tools have adapted to or
+been built with containers in mind. In other cases, specialist container
+monitoring products have been considered.
 
 Traditional server monitoring applications do not work well for monitoring
 containers because the model of long-running servers or VMs is flipped to one
@@ -562,9 +562,9 @@ Prometheus by using its functional query language,
 [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/). Fetched
 data can be visualized in multiple formats - such as maps, clocks, pie charts,
 lists, and more. It is also possible to plot metrics from different sources on
-the same graph. Grafana has a large collection of
-community-built[ dashboards](https://grafana.com/grafana/dashboards/?category=docker)
-that can be imported and tweaked according to needs.
+the same graph. Grafana has a large collection of community-built
+[dashboards](https://grafana.com/grafana/dashboards/?category=docker) that can
+be imported and tweaked according to needs.
 
 Grafana Logs uses [Loki](https://grafana.com/oss/loki/), a log aggregation
 system inspired by Prometheus. There aren't any ingestion log formatting
