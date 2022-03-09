@@ -130,49 +130,64 @@
                             {{ end }}
                         </div>
                     </div>
+                    <div class="aside-block" data-toc-anchor>
+                        <div class="toc toc-left" data-toc>
+                            <h5 class="title title-4">Contents</h5>
+                            <ul>
+                                <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-0" href="#example">Example</a></li>
+                                <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-1" href="#development-profile">Development profile</a></li>
+                                <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-2" href="#hiring-process">Hiring process</a></li>
+                                <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-3" href="#jobs">Jobs</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
 		</aside>
 		<div class="main-content-wrapper">
-            <section class="page-section page-section-company-profile product">
-                <div class="framed-section framed-section-default">
-                    <h3 class="title title-2">{{ .Params.companyInfo.product.name }}</h3>
-                    <p>{{ .Params.companyInfo.product.description }}</p>
-                    <div class="framed-section-item">
-                        <h5 class="title title-4 rich-title">
-                            {{ partial "icons/tech-stack.html" }}
-                            <span class="rich-title-text">Tech stack</span>
-                        </h5>
-                        <p class="company-tech-stack">
-                            {{ range .Params.companyInfo.techStack }}
-                                <span class="tech-stack-item">{{ . }}</span>
+            <div class="nav-wrapper" id="wrapper-0">
+                <span class="nav-wrapper-anchor" id="example"></span>
+                <section class="page-section page-section-company-profile product">
+                    <div class="framed-section framed-section-default">
+                        <h3 class="title title-2">{{ .Params.companyInfo.product.name }}</h3>
+                        <p>{{ .Params.companyInfo.product.description }}</p>
+                        <div class="framed-section-item">
+                            <h5 class="title title-4 rich-title">
+                                {{ partial "icons/tech-stack.html" }}
+                                <span class="rich-title-text">Tech stack</span>
+                            </h5>
+                            <p class="company-tech-stack">
+                                {{ range .Params.companyInfo.techStack }}
+                                    <span class="tech-stack-item">{{ . }}</span>
+                                {{ end }}
+                            </p>
+                        </div>
+                        <div class="framed-section-item">
+                            <h5 class="title title-4 rich-title">
+                                {{ partial "icons/social.html" }}
+                                <span class="rich-title-text">Customer case studies</span>
+                            </h5>
+                            {{ range .Params.companyInfo.customerCaseStudies }}
+                                <p class="company-case-study"><span>{{ .client }}</span> {{ .text }}</p>
                             {{ end }}
-                        </p>
+                        </div>
                     </div>
-                    <div class="framed-section-item">
-                        <h5 class="title title-4 rich-title">
-                            {{ partial "icons/social.html" }}
-                            <span class="rich-title-text">Customer case studies</span>
-                        </h5>
-                        {{ range .Params.companyInfo.customerCaseStudies }}
-                            <p class="company-case-study"><span>{{ .client }}</span> {{ .text }}</p>
-                        {{ end }}
-                    </div>
-                </div>
-            </section>
+                </section>
+            </div>
             <section class="page-section page-section-company-profile markdown-body">
                 {{ .Content }}
             </section>
-            <section class="page-section page-section-company-profile jobs-link">
-                <h3 class="title title-2">Jobs</h3>
-                <p>
-                    <a class="console-button console-button-medium icon-right" href="{{ .Params.companyInfo.jobsURL }}" title="See all jobs at {{ .Params.companyInfo.jobsURL }}" target="_blank"
-                        rel="noopener"><span>See all jobs</span>
-                        {{ partial "icons/external-link.html" }}</a>
-                </p>
-            </section>
+            <div class="nav-wrapper" id="wrapper-3">
+                <span class="nav-wrapper-anchor" id="jobs"></span>
+                <section class="page-section page-section-company-profile jobs-link">
+                    <h3 class="title title-2">Jobs</h3>
+                    <p>
+                        <a class="console-button console-button-medium icon-right" href="{{ .Params.companyInfo.jobsURL }}" title="See all jobs at {{ .Params.companyInfo.jobsURL }}" target="_blank"
+                            rel="noopener"><span>See all jobs</span>
+                            {{ partial "icons/external-link.html" }}</a>
+                    </p>
+                </section>
+            </div>
             <section class="page-section page-section-company-profile about">
                 {{ partial "components/about-console.html" }}
                 {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" ) }}

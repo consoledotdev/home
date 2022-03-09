@@ -2940,8 +2940,6 @@ p.combo-card-description {
 .toc ul {
     margin: 0;
     padding: 0;
-    padding-right: var(--space3);
-    border-right: 1px solid var(--theme-text-4);
 }
 
 .toc ul li {
@@ -2963,9 +2961,7 @@ p.combo-card-description {
     margin-bottom: var(--space1);
 }
 
-.toc-link,
 .toc-link {
-    text-align: right;
     display: inline-block;
     width: 100%;
     text-decoration: none;
@@ -2990,7 +2986,6 @@ p.combo-card-description {
 .toc-item-sub .toc-link:focus,
 .toc-item-sub .toc-link:hover {
     color: var(--theme-text-1);
-    transform: translateX(calc(var(--space1) * -1));
     transition: var(--a-micro-active);
     outline: none;
 }
@@ -3028,6 +3023,48 @@ p.combo-card-description {
     .toc-item.toc-item-sub {
         font-size: var(--t-size-1);
     }
+}
+
+/* TOC left aligned */
+.toc-left {
+    align-items: flex-start;
+}
+
+.toc-left ul {
+    padding-left: var(--space3);
+    border-left: 1px solid var(--theme-text-4);
+}
+
+.toc-left .toc-link {
+    text-align: left;
+}
+
+.toc-left .toc-link:focus,
+.toc-left .toc-link:hover,
+.toc-left .toc-item-sub .toc-link:focus,
+.toc-left .toc-item-sub .toc-link:hover {
+    transform: translateX(var(--space1));
+}
+
+/* TOC right aligned */
+.toc-right {
+    align-items: flex-end;
+}
+
+.toc-right ul {
+    padding-right: var(--space3);
+    border-right: 1px solid var(--theme-text-4);
+}
+
+.toc-right .toc-link {
+    text-align: right;
+}
+
+.toc-right .toc-link:focus,
+.toc-right .toc-link:hover,
+.toc-right .toc-item-sub .toc-link:focus,
+.toc-right .toc-item-sub .toc-link:hover {
+    transform: translateX(calc(var(--space1) * -1));
 }
 
 /* Plane Picture

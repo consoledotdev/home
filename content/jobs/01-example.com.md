@@ -95,6 +95,8 @@ podcast: s02e09-designing-dev-products-ellen-chisa-boldstart
 review: browser-testing/lambdatest
 ---
 
+{{< nav-wrapper--open id="wrapper-1" anchor-name="development-profile" >}}
+
 {{< rich-title-3 icon="checklist" id="key-features" >}} Development profile
 {{</ rich-title-3 >}}
 
@@ -195,6 +197,10 @@ Something missing?
 
 {{</ empty-placeholder >}}
 
+{{< div--close >}}
+
+{{< nav-wrapper--open id="wrapper-2" anchor-name="hiring-process" >}}
+
 {{< rich-title-3 icon="checklist" id="key-features" >}} Hiring process
 {{</ rich-title-3 >}}
 
@@ -227,3 +233,5 @@ Something missing?
 {{< a-button size="medium" icon-left="send" title="dsasa" text="Ask us a question" url="mailto:hello@console.dev" is-text="true" >}}
 
 {{</ empty-placeholder >}}
+
+{{< div--close >}}
