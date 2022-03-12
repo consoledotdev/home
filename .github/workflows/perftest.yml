@@ -49,22 +49,6 @@ jobs:
                   CF_CLIENT_ID: ${{ secrets.CF_CLIENT_ID }}
                   CF_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET }}
 
-            - name: k6 test (browser-testing)
-              uses: k6io/action@v0.2.0
-              with:
-                  filename: tests/browser-testing.js
-              env:
-                  CF_CLIENT_ID: ${{ secrets.CF_CLIENT_ID }}
-                  CF_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET }}
-
-            - name: k6 test (browser-testing-browserstack)
-              uses: k6io/action@v0.2.0
-              with:
-                  filename: tests/browser-testing-browserstack.js
-              env:
-                  CF_CLIENT_ID: ${{ secrets.CF_CLIENT_ID }}
-                  CF_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET }}
-
             - name: k6 test (podcast-s02e01)
               uses: k6io/action@v0.2.0
               with:

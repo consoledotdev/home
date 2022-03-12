@@ -78,35 +78,6 @@
 		</div>
 		{{ partial "components/notice-disclosure.html" }}
 	</section>
-	<section class="page-section page-section-feature-root">
-		<div class="page-section-heading">
-			<div class="left">
-				<h3 class="title title-2"><span data-feature-section-name>Category reviews</span></h3>
-			</div>
-		</div>
-		<div class="category-reviews">
-			<div class="category-reviews-item">
-				{{ $categoryData := (dict "category" "developer-tools" "subcategory" (dict "label" "Browser testing" "name" "browser-testing")) }}
-				{{ partial "components/category.html" (dict "categoryData" $categoryData "clickable" "true" "large" "true" )  }}
-			</div>
-			<div class="category-reviews-item">
-				{{ $categoryData := (dict "category" "developer-tools" "subcategory" (dict "label" "Code collaboration & pair programming" "name" "code-collaboration-pair-programming")) }}
-				{{ partial "components/category.html" (dict "categoryData" $categoryData "clickable" "true" "large" "true" )  }}
-			</div>
-			<div class="category-reviews-item">
-				{{ $categoryData := (dict "category" "devops" "subcategory" (dict "label" "Server monitoring" "name" "server-monitoring")) }}
-				{{ partial "components/category.html" (dict "categoryData" $categoryData "clickable" "true" "large" "true" )  }}
-			</div>
-			<div class="category-reviews-item">
-				{{ $categoryData := (dict "category" "devops" "subcategory" (dict "label" "Website monitoring" "name" "website-monitoring")) }}
-				{{ partial "components/category.html" (dict "categoryData" $categoryData "clickable" "true" "large" "true" )  }}
-			</div>
-			<div class="category-reviews-item">
-				{{ $categoryData := (dict "category" "devops" "subcategory" (dict "label" "Container monitoring" "name" "container-monitoring")) }}
-				{{ partial "components/category.html" (dict "categoryData" $categoryData "clickable" "true" "large" "true" )  }}
-			</div>
-		</div>
-	</section>
 	<section class="page-section page-section-feature-root inline-cta-wrapper" data-inline-cta-wrapper>
 		<div class="feature-collapsible-cta" data-feature-cta>
 			{{ $subscribeCopyAfter := (printf "Join %s developers" $.Site.Params.consoleSubscribers) }}
