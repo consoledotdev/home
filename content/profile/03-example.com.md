@@ -93,7 +93,6 @@ companyInfo:
   filterTaxonomy: "database, saas, c-cplusplus, react, ruby"
 interview:
 podcast:
-review: /
 ---
 
 {{< nav-wrapper--open id="wrapper-1" anchor-name="development-profile" >}}

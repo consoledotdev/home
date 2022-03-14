@@ -2174,6 +2174,7 @@ body:not(.mobile) .console-control:hover:before {
     height: var(--t-size-2);
     flex: 0 0 auto;
     margin-right: calc(var(--space2_5) / 2);
+    margin-top: 0.15em;
 }
 
 .categories.large .icon,

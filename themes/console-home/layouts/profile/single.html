@@ -1,6 +1,8 @@
 {{ define "main" }}
 	{{ $CTATitle := "Subscribe to the weekly Console newsletter" }}
 	{{ $CTADescription := "Our free weekly newsletter features the latest interesting tools." }}
+    {{ $podcast := .Site.GetPage (print .Params.podcast) }}
+    {{ $interview := .Site.GetPage (print .Params.interview) }}
 
     {{ $companyTopCategoryName := (replace (lower .Params.companyInfo.topCategory) " " "-") }}
     <section class="page-section page-section-company-profile opening">
@@ -56,83 +58,57 @@
 		<aside data-aside-wrapper class="aside-wrapper">
             <div data-aside-content-wrapper class="aside-content-wrapper">
                 <div data-aside-content class="aside-content">
-                    <div class="aside-block">
-                        <div class="page-section-heading">
-                            <h5 class="title title-4">
-                                More on Console
-                            </h5>
+                    {{ if or $podcast $interview }}
+                        <div class="aside-block">
+                            <div class="page-section-heading">
+                                <h5 class="title title-4">
+                                    More on Console
+                                </h5>
+                            </div>
+                            <div class="aside-items">
+                                {{ with $podcast }}
+                                    <div class="aside-item podcast">
+                                        <h6 class="title title-6"><a class="link icon-left" href="{{ .RelPermalink }}" title="{{ .RelPermalink }}" rel="noopener">
+                                            {{ partial "icons/podcast.html" }}Podcast
+                                        </a></h6>
+                                        <div class="aside-item-title-extras">
+                                            <p class="small">
+                                                with {{ .Params.who }}
+                                            </p>
+                                            <p class="small">
+                                                {{ with .Params.role }}{{ . }}{{end}}
+                                            </p>
+                                        </div>
+                                        <div class="aside-item-meta">
+                                            <p class="small date">
+                                                {{ .Date.Format "2006-01-02" }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                {{ end }}
+                                {{ with $interview }}
+                                    <div class="aside-item interview">
+                                        <h6 class="title title-6"><a class="link icon-left" href="{{ .RelPermalink }}" title="{{ .RelPermalink }}" rel="noopener">
+                                            {{ partial "icons/console-interview.html" }}Interview
+                                        </a></h6>
+                                        <div class="aside-item-title-extras">
+                                            <p class="small">
+                                                with {{ .Params.who }}
+                                            </p>
+                                            <p class="small">
+                                                {{ with .Params.role }}{{ . }}{{end}}
+                                            </p>
+                                        </div>
+                                        <div class="aside-item-meta">
+                                            <p class="small date">
+                                                {{ .Date.Format "2006-01-02" }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                {{ end }}
+                            </div>
                         </div>
-                        <div class="aside-items">
-
-                            {{ with .Site.GetPage (print .Params.podcast) }}
-                                <div class="aside-item podcast">
-                                    <h6 class="title title-6"><a class="link icon-left" href="{{ .RelPermalink }}" title="{{ .RelPermalink }}" rel="noopener">
-                                        {{ partial "icons/podcast.html" }}Podcast
-                                    </a></h6>
-                                    <div class="aside-item-title-extras">
-                                        <p class="small">
-                                            with {{ .Params.who }}
-                                        </p>
-                                        <p class="small">
-                                            {{ with .Params.role }}{{ . }}{{end}}
-                                        </p>
-                                    </div>
-                                    <div class="aside-item-meta">
-                                        <p class="small date">
-                                            {{ .Date.Format "2006-01-02" }}
-                                        </p>
-                                    </div>
-                                </div>
-                            {{ end }}
-
-                            {{ with .Site.GetPage (print .Params.interview) }}
-                                <div class="aside-item interview">
-                                    <h6 class="title title-6"><a class="link icon-left" href="{{ .RelPermalink }}" title="{{ .RelPermalink }}" rel="noopener">
-                                        {{ partial "icons/console-interview.html" }}Interview
-                                    </a></h6>
-                                    <div class="aside-item-title-extras">
-                                        <p class="small">
-                                            with {{ .Params.who }}
-                                        </p>
-                                        <p class="small">
-                                            {{ with .Params.role }}{{ . }}{{end}}
-                                        </p>
-                                    </div>
-                                    <div class="aside-item-meta">
-                                        <p class="small date">
-                                            {{ .Date.Format "2006-01-02" }}
-                                        </p>
-                                    </div>
-                                </div>
-                            {{ end }}
-
-                            {{ $subCategory := .Params.companyInfo.subCategory }}
-                            {{ with .Site.GetPage (print .Params.review) }}
-                                <div class="aside-item review">
-                                    <h6 class="title title-6"><a class="link icon-left" href="{{ .RelPermalink }}" title="{{ .RelPermalink }}" rel="noopener">
-                                        {{ partial (print "icons/" $companyTopCategoryName ".html") }}Review
-                                    </a></h6>
-                                    <div class="aside-item-title-extras">
-                                        <p class="small">
-                                            in {{ $subCategory }}
-                                        </p>
-                                    </div>
-                                    <div class="aside-item-meta">
-                                        <p class="small date">
-                                            {{ .Date.Format "2006-01-02" }}
-                                        </p>
-                                    </div>
-                                </div>
-                            {{ end }}
-                            
-                            {{ with .Params.toolReview }}
-                                {{ . }}
-                            {{ end }}
-                            {{ with .Params.betaListing }}
-                                {{ . }}
-                            {{ end }}
-                        </div>
-                    </div>
+                    {{ end }}
                     <div class="aside-block the-toc" data-toc-anchor>
                         <div class="toc toc-left" data-toc>
                             <h5 class="title title-4">Contents</h5>

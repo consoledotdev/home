@@ -53,12 +53,6 @@
                             <span>DevTools Podcast</span>
                         </a>
                     {{- end }}
-                    {{ if .Params.review -}}
-                        <a onclick="blur();" href="{{ .Params.review }}" class="console-button-text console-button-small console-button-triad-02 icon-left" title="Read the Console review with {{ $name }}">
-                            {{ partial (print "icons/" (replace (lower $topcategory) " " "-") ".html") }}
-                            <span>Console review</span>
-                        </a>
-                    {{- end }}
                 </div>
 			</div>
 		</div>

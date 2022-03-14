@@ -343,6 +343,16 @@ html {
     margin-top: var(--space4);
 }
 
+.page-section.more-on-console {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .page-section.more-on-console {
+        display: block;
+    }
+}
+
 /* About */
 .main-company-profile .page-section.about {
     margin-top: calc(var(--space5) + var(--space4_5));

@@ -92,7 +92,6 @@ companyInfo:
   filterTaxonomy: "developer-tools, open-source, python"
 interview: /
 podcast:
-review: /
 ---
 
 {{< nav-wrapper--open id="wrapper-1" anchor-name="development-profile" >}}

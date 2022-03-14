@@ -92,7 +92,6 @@ companyInfo:
   filterTaxonomy: "developer-tools, open-source, go, typescript"
 interview: firehydrant-robert-ross
 podcast: s02e09-designing-dev-products-ellen-chisa-boldstart
-review: browser-testing/lambdatest
 ---
 
 {{< nav-wrapper--open id="wrapper-1" anchor-name="development-profile" >}}

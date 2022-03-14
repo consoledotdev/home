@@ -95,7 +95,6 @@ companyInfo:
   filterTaxonomy: "security, other, go, elm, postgres, aws"
 interview: /
 podcast:
-review:
 ---
 
 {{< nav-wrapper--open id="wrapper-1" anchor-name="development-profile" >}}
