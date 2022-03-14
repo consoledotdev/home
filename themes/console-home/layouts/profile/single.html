@@ -190,9 +190,11 @@
                 </section>
                 <section class="page-section page-section-company-profile about">
                     {{ partial "components/about-console.html" }}
-                    {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" ) }}
                 </section>
             </div>
+            <section class="page-section page-section-company-profile subscribe">
+                {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" ) }}
+            </section>
         </div>
     </div>
 
