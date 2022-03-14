@@ -219,7 +219,6 @@ nearby.
 ### Find out more
 
 [LambdaTest](https://www.lambdatest.com/) is a cross browser testing tool. It
-was featured as an "Interesting Tool" in the
-[Console newsletter](https://console.dev) on 14 Oct 2021 and in our
-[review of the best browser testing tools](/browser-testing/). This
-interview was conducted on 12 Oct 2021.
+was featured as an "Interesting Tool" in the [Console
+newsletter](https://console.dev) on 14 Oct 2021. This interview was conducted on
+12 Oct 2021.
