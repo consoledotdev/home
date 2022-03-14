@@ -50,7 +50,9 @@
 					</div>
 				</div>
 				<div class="feature-items" data-feature-items>
-                    {{ range .Pages.ByPublishDate.Reverse }}
+					{{ $section := .Site.GetPage "section" "profile" }}
+					{{ $pages := $section.Pages }}
+                    {{ range $pages.ByPublishDate.Reverse }}
                         {{ partial "components/jobs/card.html" . }}
                     {{ end }}
 					{{ partial "components/feature/card-empty.html" (dict "context" . "itemName" "Tools" ) }}
