@@ -60,7 +60,7 @@ let computeTOCPos = (() => {
         };
         let observer = new IntersectionObserver(handleIntersect, {
             root: null,
-            rootMargin: "0% 0% -95%",
+            rootMargin: "0% 0% -100%",
             threshold: 0,
         });
         observer.observe(lastBlock);
