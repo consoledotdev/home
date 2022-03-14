@@ -29,6 +29,9 @@
                 <div class="framed-section framed-section-default">
                     {{ partial "components/simple-table.html" .Params.companyInfo.meta }}
                 </div>
+                <a class="console-button console-button-medium icon-right" href="{{ .Params.companyInfo.jobsURL }}" title="See all jobs at {{ .Params.companyInfo.jobsURL }}" target="_blank"
+                    rel="noopener"><span>See all jobs</span>
+                    {{ partial "icons/external-link.html" }}</a>
             </div>
         </div>
         <div class="bottom">
@@ -130,7 +133,7 @@
                             {{ end }}
                         </div>
                     </div>
-                    <div class="aside-block" data-toc-anchor>
+                    <div class="aside-block the-toc" data-toc-anchor>
                         <div class="toc toc-left" data-toc>
                             <h5 class="title title-4">Contents</h5>
                             <span data-toc-indicator class="toc-indicator"></span>
@@ -187,6 +190,10 @@
                             rel="noopener"><span>See all jobs at {{ .Title }}</span>
                             {{ partial "icons/external-link.html" }}</a>
                     </p>
+                </section>
+                <section class="page-section page-section-company-profile more-on-console">
+                    <h3 class="title title-2">More on Console</h3>
+                    <div data-inline-aside-content-wrapper></div>
                 </section>
                 <section class="page-section page-section-company-profile about">
                     {{ partial "components/about-console.html" }}
