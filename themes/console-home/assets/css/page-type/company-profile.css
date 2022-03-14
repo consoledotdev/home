@@ -546,4 +546,8 @@ html {
     .xl-viewport-large-text .main-company-profile .page-section.product .company-tech-stack .tech-stack-item {
         font-size: var(--t-size1);
     }
+
+    .xl-viewport-large-text .simple-table-grid .cell {
+        font-size: var(--t-size-1);
+    }
 }

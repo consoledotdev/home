@@ -146,9 +146,9 @@
             </div>
 		</aside>
 		<div class="main-content-wrapper">
-            <div class="nav-wrapper" id="wrapper-0">
-                <span class="nav-wrapper-anchor" id="example"></span>
-                <section class="page-section page-section-company-profile product">
+            <section class="page-section page-section-company-profile product">
+                <div class="nav-wrapper" id="wrapper-0">
+                    <span class="nav-wrapper-anchor" id="example"></span>
                     <div class="framed-section framed-section-default">
                         <h3 class="title title-2">{{ .Params.companyInfo.product.name }}</h3>
                         <p>{{ .Params.companyInfo.product.description }}</p>
@@ -173,8 +173,8 @@
                             {{ end }}
                         </div>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
             <section class="page-section page-section-company-profile markdown-body">
                 {{ .Content }}
             </section>
