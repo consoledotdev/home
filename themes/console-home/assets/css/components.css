@@ -2925,6 +2925,7 @@ p.combo-card-description {
 /* Table of Contents
    ================================================================================================================ */
 .toc {
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-end;
@@ -2940,6 +2941,19 @@ p.combo-card-description {
 .toc ul {
     margin: 0;
     padding: 0;
+    font-size: var(--t-size-2);
+}
+
+.toc-indicator {
+    content: "";
+    position: absolute;
+    display: block;
+    background: var(--theme-text-1);
+    width: calc(var(--space2) - 1px);
+    height: calc(var(--space2) - 1px);
+    margin-top: calc(var(--t-lH2) + var(--space3));
+    top: 0;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%, 50% 0);
 }
 
 .toc ul li {
@@ -3030,6 +3044,10 @@ p.combo-card-description {
     align-items: flex-start;
 }
 
+.toc-left .toc-indicator {
+    left: calc((var(--space0) + 1px) * -1);
+}
+
 .toc-left ul {
     padding-left: var(--space3);
     border-left: 1px solid var(--theme-text-4);
@@ -3049,6 +3067,10 @@ p.combo-card-description {
 /* TOC right aligned */
 .toc-right {
     align-items: flex-end;
+}
+
+.toc-right .toc-indicator {
+    right: calc((var(--space0) + 1px) * -1);
 }
 
 .toc-right ul {

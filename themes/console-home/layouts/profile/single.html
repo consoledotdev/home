@@ -133,7 +133,8 @@
                     <div class="aside-block" data-toc-anchor>
                         <div class="toc toc-left" data-toc>
                             <h5 class="title title-4">Contents</h5>
-                            <ul>
+                            <span data-toc-indicator class="toc-indicator"></span>
+                            <ul data-scroll-track>
                                 <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-0" href="#example">Example</a></li>
                                 <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-1" href="#development-profile">Development profile</a></li>
                                 <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-2" href="#hiring-process">Hiring process</a></li>
@@ -187,11 +188,11 @@
                             {{ partial "icons/external-link.html" }}</a>
                     </p>
                 </section>
+                <section class="page-section page-section-company-profile about">
+                    {{ partial "components/about-console.html" }}
+                    {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" ) }}
+                </section>
             </div>
-            <section class="page-section page-section-company-profile about">
-                {{ partial "components/about-console.html" }}
-                {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" ) }}
-            </section>
         </div>
     </div>
 
