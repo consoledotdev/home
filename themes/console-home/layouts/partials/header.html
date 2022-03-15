@@ -35,7 +35,7 @@
                             <a class="menu-item menu-item-primary" onclick="blur();" href="/podcast/">Podcast</a>
                         </li>
                         <li>
-                            <a data-popup-toggle="more-nav" class="menu-item menu-item-primary icon-left" onclick="blur(); toggleMoreNavPopup()" href="#">{{ partial "icons/console-more.html" }}</a>
+                            <a data-popup-toggle="more-nav" class="menu-item menu-item-primary icon-left" onclick="blur();" href="#">{{ partial "icons/console-more.html" }}</a>
                             <div data-popup-wrapper class="popup-wrapper right bottom">
                                 <div data-popup="more-nav" class="popup popup-top-down">
                                     <ul>                        
@@ -50,27 +50,27 @@
                     <button onclick="blur(); toggleTheme()" class="console-control theme-switcher no-popup" aria-label="Switch theme">
                         {{ partial "icons/theme.html" }}
                     </button>
-                    <div class="menu-popup-wrapper">
-                        <div id="menu-popup" class="popup popup-top-down">
+                    <div data-popup-wrapper class="popup-wrapper right bottom">
+                        <div data-popup="mobile-nav" class="popup popup-top-down">
                             <ul>
                                 <li{{ if eq .context.Params.isPage "tools" }} class="is-selected"{{ end }}>
-                                    <a class="menu-item menu-item-primary" onclick="blur(); toggleMenuPopup()" href="/tools/">Tools</a>
+                                    <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary" onclick="blur();" href="/tools/">Tools</a>
                                 </li>
                                 <li{{ if eq .context.Params.isPage "betas" }} class="is-selected"{{ end }}>
-                                    <a class="menu-item menu-item-primary" onclick="blur(); toggleMenuPopup()" href="/betas/">Betas</a>
+                                    <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary" onclick="blur();" href="/betas/">Betas</a>
                                 </li>
                                 <li{{ if eq .context.Params.isPage "interviews" }} class="is-selected"{{ end }}>
-                                    <a class="menu-item menu-item-primary" onclick="blur(); toggleMenuPopup()" href="/interviews/">Interviews</a>
+                                    <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary" onclick="blur();" href="/interviews/">Interviews</a>
                                 </li>
                                 <li{{ if eq .context.Params.isPage "latest" }} class="is-selected"{{ end }}>
-                                    <a class="menu-item menu-item-primary" onclick="blur(); toggleMenuPopup()" href="/latest/">Newsletter</a>
+                                    <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary" onclick="blur();" href="/latest/">Newsletter</a>
                                 </li>      
                                 <li{{ if eq .context.Params.isPage "research" }} class="is-hidden"{{ end }}>
-                                    <a class="menu-item menu-item-primary icon-right menu-item-mars" onclick="blur(); toggleMenuPopup()" href="/research/mars/"><span>Mars</span>{{ partial "components/research/mars/shared/the-mars.html" }}</a>
+                                    <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary icon-right menu-item-mars" onclick="blur();" href="/research/mars/"><span>Mars</span>{{ partial "components/research/mars/shared/the-mars.html" }}</a>
                                 </li>                             
                             </ul>
                             <div class="separator"></div>
-                            <button onclick="blur(); toggleTheme(); toggleMenuPopup()" class="console-control icon-right theme-switcher" aria-label="Switch theme">
+                            <button data-popup-toggle-noactive="mobile-nav" onclick="blur(); toggleTheme();" class="console-control icon-right theme-switcher" aria-label="Switch theme">
                                 <span>Switch theme</span>{{ partial "icons/theme.html" }}
                             </button>
                         </div>

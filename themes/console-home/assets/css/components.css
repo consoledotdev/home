@@ -2375,7 +2375,6 @@ body:not(.mobile) .console-control:hover:before {
     overflow: hidden;
 }
 
-.is-visible .popup,
 .popup.is-visible {
     opacity: 1;
     height: auto;
@@ -2383,12 +2382,10 @@ body:not(.mobile) .console-control:hover:before {
 }
 
 .popup.popup-top-down,
-.is-visible > .popup.popup-bottom-up,
 .popup.popup-bottom-up.is-visible {
     transform: translateY(calc(var(--space4) * -1));
 }
 
-.is-visible .popup.popup-top-down,
 .popup.popup-top-down.is-visible,
 .popup.popup-bottom-up {
     transform: translateY(0);

@@ -1,45 +1,43 @@
-let toggleMenuPopup = (e) => {
-    let el = document.getElementById("menu-toggle");
-    if (el.classList.contains("is-active")) {
-        el.classList.remove("is-active");
-    } else {
-        el.classList.add("is-active");
-    }
-
-    var p = "menu-popup";
-    var pState = "is-visible";
-    var pEl = document.getElementById(p);
-    if (pEl.classList.contains(pState)) {
-        pEl.classList.remove(pState);
-        pEl.style.pointerEvents = "none";
-    } else {
-        pEl.classList.add(pState);
-        pEl.style.pointerEvents = "all";
-    }
-};
-
 class Popup {
     constructor(wrapper) {
         this.bindThisMethods();
         this.wrapper = wrapper;
         this.el = wrapper.querySelector("[data-popup]");
-        this.control = document.querySelector("[data-popup-toggle='" + this.el.dataset.popup + "']");
+        this.controls = document.querySelectorAll("[data-popup-toggle='" + this.el.dataset.popup + "']");
+        this.controlsNoActive = document.querySelectorAll("[data-popup-toggle-noactive='" + this.el.dataset.popup + "']");
         this.visible = false;
 
         this.bind();
     }
 
     bind() {
-        this.control.addEventListener("mousedown", this.toggle);
+        this.controls.forEach((c) => {
+            c.addEventListener("mouseup", this.toggle);
+        });
+        this.controlsNoActive.forEach((c) => {
+            c.addEventListener("mouseup", this.toggle);
+        });
     }
 
-    toggle() {
+    toggle(e) {
         if (this.visible) {
-            this.wrapper.classList.remove("is-visible");
-            this.control.classList.remove("is-active");
+            this.el.classList.remove("is-visible");
+            setTimeout(() => {
+                this.wrapper.classList.remove("is-visible");
+            }, 300);
+            this.controls.forEach((c) => {
+                c.classList.remove("is-active");
+            });
+            this.wrapper.style.pointerEvents = "none";
+            this.el.style.pointerEvents = "none";
         } else {
+            this.el.classList.add("is-visible");
             this.wrapper.classList.add("is-visible");
-            this.control.classList.add("is-active");
+            this.controls.forEach((c) => {
+                c.classList.add("is-active");
+            });
+            this.wrapper.style.pointerEvents = "all";
+            this.el.style.pointerEvents = "all";
         }
         this.visible = !this.visible;
     }
