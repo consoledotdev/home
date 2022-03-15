@@ -2323,7 +2323,45 @@ body:not(.mobile) .console-control:hover:before {
 }
 
 /* Popup
-   ================================================================================================================ */
+   ================================================================================================================
+   Positioning:
+        .popup-wrapper: .left || .right - to align left or right.
+        .popup-wrapper: .top || .bottom - to show above or below.
+        .popup: .popup-top-down || .popup-bottom-up - to animate down or up when opening/closing.
+   */
+.popup-wrapper {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    transition: var(--a-elements);
+    overflow: hidden;
+}
+
+.popup-wrapper.is-visible {
+    opacity: 1;
+    height: auto;
+    width: auto;
+    transition: var(--a-elements-active);
+    overflow: visible;
+}
+
+.popup-wrapper.left {
+    left: 0;
+}
+
+.popup-wrapper.right {
+    right: 0;
+}
+
+.popup-wrapper.top {
+    bottom: 100%;
+}
+
+.popup-wrapper.bottom {
+    top: 100%;
+}
+
 .popup {
     position: relative;
     background-color: var(--theme-content-bg-4);
@@ -2337,6 +2375,7 @@ body:not(.mobile) .console-control:hover:before {
     overflow: hidden;
 }
 
+.is-visible .popup,
 .popup.is-visible {
     opacity: 1;
     height: auto;
@@ -2344,10 +2383,12 @@ body:not(.mobile) .console-control:hover:before {
 }
 
 .popup.popup-top-down,
+.is-visible > .popup.popup-bottom-up,
 .popup.popup-bottom-up.is-visible {
     transform: translateY(calc(var(--space4) * -1));
 }
 
+.is-visible .popup.popup-top-down,
 .popup.popup-top-down.is-visible,
 .popup.popup-bottom-up {
     transform: translateY(0);

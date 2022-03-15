@@ -773,18 +773,6 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
     background: var(--c-blue-06-main);
 }
 
-.main-nav .menu-popup-wrapper {
-    display: none;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 0;
-}
-
-.main-nav .menu-popup-wrapper .popup {
-    z-index: 1;
-}
-
 .main-nav ul {
     padding: 0;
     padding-top: 11px; /* align to logo baseline */
@@ -811,21 +799,37 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
     display: none;
 }
 
-.main-nav .menu-popup-wrapper ul {
+.main-nav .menu-popup-wrapper {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 0;
+}
+
+.main-nav .menu-popup-wrapper .popup {
+    z-index: 1;
+}
+
+.main-nav .popup ul {
     flex-flow: column nowrap;
     align-items: flex-end;
     padding-top: 0;
     margin: 0;
 }
 
-.main-nav .menu-popup-wrapper ul li {
+.main-nav .popup ul li {
     padding: var(--space1) var(--space1);
     width: 100%;
     text-align: right;
 }
 
-.main-nav .menu-popup-wrapper ul li:not(:last-child) {
+.main-nav .popup ul li:not(:last-child) {
     margin-bottom: var(--space3);
+}
+
+.main-nav .popup .theme-switcher {
+    margin: var(--space3) var(--space2) 0;
 }
 
 .main-nav ul li .badge {
@@ -835,10 +839,6 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
 .main-nav .theme-switcher {
     margin-left: var(--space4);
     margin-top: 9px; /* align to logo baseline */
-}
-
-.main-nav .menu-popup-wrapper .theme-switcher {
-    margin: var(--space3) var(--space2) 0;
 }
 
 /* Menu Item: Mars */

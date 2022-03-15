@@ -18,6 +18,37 @@ let toggleMenuPopup = (e) => {
     }
 };
 
+class Popup {
+    constructor(wrapper) {
+        this.bindThisMethods();
+        this.wrapper = wrapper;
+        this.el = wrapper.querySelector("[data-popup]");
+        this.control = document.querySelector("[data-popup-toggle='" + this.el.dataset.popup + "']");
+        this.visible = false;
+
+        this.bind();
+    }
+
+    bind() {
+        this.control.addEventListener("mousedown", this.toggle);
+    }
+
+    toggle() {
+        if (this.visible) {
+            this.wrapper.classList.remove("is-visible");
+            this.control.classList.remove("is-active");
+        } else {
+            this.wrapper.classList.add("is-visible");
+            this.control.classList.add("is-active");
+        }
+        this.visible = !this.visible;
+    }
+
+    bindThisMethods() {
+        this.toggle = this.toggle.bind(this);
+    }
+}
+
 let bindTooltips = (() => {
     let handles = document.querySelectorAll("[data-tooltip-handle]");
 
@@ -482,4 +513,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
             new ComboBox(b);
         });
     }
+
+    let popups = document.querySelectorAll("[data-popup-wrapper]");
+    popups.forEach((p) => {
+        new Popup(p);
+    });
 });

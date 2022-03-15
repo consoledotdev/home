@@ -16,21 +16,36 @@
                 <nav class="main-nav">
                     {{ partial "components/menu-toggle.html" }}
                     <ul class="no-popup">
+                        <li{{ if eq .context.Params.isPage "latest" }} class="is-selected"{{ end }}>
+                            <a class="menu-item menu-item-primary" onclick="blur();" href="/latest/">Newsletter</a>
+                        </li>  
                         <li{{ if eq .context.Params.isPage "tools" }} class="is-selected"{{ end }}>
                             <a class="menu-item menu-item-primary" onclick="blur();" href="/tools/">Tools</a>
                         </li>
                         <li{{ if eq .context.Params.isPage "betas" }} class="is-selected"{{ end }}>
                             <a class="menu-item menu-item-primary" onclick="blur();" href="/betas/">Betas</a>
                         </li>
+                        <li{{ if eq .context.Params.isPage "jobs" }} class="is-selected"{{ end }}>
+                            <a class="menu-item menu-item-primary" onclick="blur();" href="/jobs/">Jobs</a>
+                        </li>
                         <li{{ if eq .context.Params.isPage "interviews" }} class="is-selected"{{ end }}>
                             <a class="menu-item menu-item-primary" onclick="blur();" href="/interviews/">Interviews</a>
                         </li>
-                        <li{{ if eq .context.Params.isPage "latest" }} class="is-selected"{{ end }}>
-                            <a class="menu-item menu-item-primary" onclick="blur();" href="/latest/">Newsletter</a>
-                        </li>  
+                        <li{{ if eq .context.Params.isPage "podcast" }} class="is-selected"{{ end }}>
+                            <a class="menu-item menu-item-primary" onclick="blur();" href="/podcast/">Podcast</a>
+                        </li>
+                        <li>
+                            <a data-popup-toggle="more-nav" class="menu-item menu-item-primary icon-left" onclick="blur(); toggleMoreNavPopup()" href="#">{{ partial "icons/console-more.html" }}</a>
+                            <div data-popup-wrapper class="popup-wrapper right bottom">
+                                <div data-popup="more-nav" class="popup popup-top-down">
+                                    <ul>                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>   
                         <li{{ if eq .context.Params.isPage "research" }} class="is-hidden"{{ end }}>
                             <a class="menu-item menu-item-primary icon-right menu-item-mars" onclick="blur();" href="/research/mars/"><span>Mars</span>{{ partial "components/research/mars/shared/the-mars.html" }}</a>
-                        </li>                    
+                        </li>             
                     </ul>
                     <button onclick="blur(); toggleTheme()" class="console-control theme-switcher no-popup" aria-label="Switch theme">
                         {{ partial "icons/theme.html" }}
