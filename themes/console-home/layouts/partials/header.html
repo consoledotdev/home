@@ -15,7 +15,7 @@
                 </h1>
                 <nav class="main-nav">
                     {{ partial "components/menu-toggle.html" }}
-                    <ul data-show-more-nav="main-nav" class="no-popup">
+                    <ul data-show-more-nav="main-nav" class="show-more-nav no-popup">
                         <li{{ if eq .context.Params.isPage "latest" }} class="is-selected"{{ end }}>
                             <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary" onclick="blur();" href="/latest/">Newsletter</a>
                         </li>  

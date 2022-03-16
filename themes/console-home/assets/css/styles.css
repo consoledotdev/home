@@ -836,6 +836,10 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
     flex: 0 0 auto;
 }
 /* Show More Control */
+.show-more-nav {
+    opacity: 0;
+}
+
 .show-more-nav-control {
     display: none;
 }

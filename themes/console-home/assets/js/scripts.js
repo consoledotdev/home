@@ -73,6 +73,8 @@ class ShowMoreNav {
     checkTruncation(e) {
         if (this.isMobileNav()) this.W = undefined;
         else {
+            this.el.style.opacity = 1;
+
             this.W = this.computeWidths();
 
             if (this.W) {
