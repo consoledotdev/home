@@ -67,7 +67,7 @@ class ShowMoreNav {
     }
 
     isMobileNav() {
-        return Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0) <= 640;
+        return Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0) < 640;
     }
 
     checkTruncation(e) {
@@ -77,12 +77,12 @@ class ShowMoreNav {
 
             if (this.W) {
                 // compute how many items can fit
-                let maxFitIdx = this.children.length - 1;
-                let initial = 32; // starts sum with a safety margin so that items don't fit tight
+                let maxFitIdx = -1;
+                let initial = 64; // starts sum with a safety margin so that items don't fit tight
                 this.W.items.reduce((previous, current, idx) => {
-                    let sum = previous + (current || 52); // min item width, catches control being 0 instead of ~52 because is hidden at start
+                    let sum = previous + current;
                     if (previous < this.W.available) {
-                        maxFitIdx = idx - 1 >= 0 ? idx - 1 : 0;
+                        maxFitIdx = idx - 1;
                     }
                     if (sum < this.W.available) {
                         maxFitIdx = idx;
@@ -98,7 +98,7 @@ class ShowMoreNav {
                 let controlIdx = this.children.indexOf(this.control);
                 this.children.forEach((c, i) => {
                     if (i < controlIdx) {
-                        if (i < maxFitIdx) {
+                        if (i <= maxFitIdx) {
                             this.el.insertBefore(c, this.control);
                         } else {
                             this.popupContainer.append(c);
@@ -139,7 +139,15 @@ class ShowMoreNav {
         if (!i) {
             i = [];
             this.children.forEach((c) => {
+                c.style.position = "absolute";
+                c.style.visibility = "hidden";
+                document.body.prepend(c);
+
                 i.push(c.clientWidth);
+
+                c.style.position = null;
+                c.style.visibility = null;
+                this.el.append(c);
             });
         }
 
