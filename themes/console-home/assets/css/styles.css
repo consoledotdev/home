@@ -776,7 +776,7 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
 
 .main-nav ul {
     padding: 0;
-    padding-top: 10px; /* align to logo baseline */
+    padding-top: 9px; /* align to logo baseline */
     display: flex;
     flex-flow: row nowrap;
     flex: 0 1 auto;
