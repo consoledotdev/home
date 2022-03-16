@@ -76,31 +76,6 @@ class ShowMoreNav {
             this.W = this.computeWidths();
 
             if (this.W) {
-                // let checkAndRearrange = () => {
-                //     let currentWRequired = this.el.clientWidth + 50;
-                //     let visibleChildren = Array.prototype.slice.call(this.el.children);
-                //     let controlIdxInVisible = visibleChildren.indexOf(this.control);
-                //     let hideable = visibleChildren[controlIdxInVisible - 1];
-                //     let showable = this.popupContainer.querySelector(":first-child");
-
-                //     if (hideable && this.W.available <= currentWRequired) {
-                //         this.popupContainer.prepend(hideable);
-                //         this.toggleControl();
-                //         checkAndRearrange();
-                //     } else if (showable) {
-                //         let showableIdxAbsolute = this.children.indexOf(showable);
-                //         const showableW = this.W.items[showableIdxAbsolute];
-                //         let newCurrentWRequired = currentWRequired + showableW;
-                //         if (this.W.available > newCurrentWRequired) {
-                //             this.el.insertBefore(showable, this.control);
-                //             checkAndRearrange();
-                //         }
-                //     } else {
-                //         this.toggleControl(false);
-                //     }
-                // };
-                // checkAndRearrange();
-
                 // compute how many items can fit
                 let maxFitIdx = this.children.length - 1;
                 let initial = 32; // starts sum with a safety margin so that items don't fit tight
@@ -115,9 +90,11 @@ class ShowMoreNav {
                     return sum;
                 }, initial);
 
+                // truncation control visibility
                 if (maxFitIdx < this.children.length - 2) this.toggleControl();
                 else this.toggleControl(false);
 
+                // rearrange items
                 let controlIdx = this.children.indexOf(this.control);
                 this.children.forEach((c, i) => {
                     if (i < controlIdx) {
@@ -158,20 +135,16 @@ class ShowMoreNav {
             });
         }
 
-        // let r = this.W?.required;
         let i = this.W?.items;
-        if (!r && !i) {
-            // r = 0;
+        if (!i) {
             i = [];
             this.children.forEach((c) => {
-                // r += c.clientWidth;
                 i.push(c.clientWidth);
             });
         }
 
         return {
             available: w,
-            // required: r,
             items: i,
         };
     }
