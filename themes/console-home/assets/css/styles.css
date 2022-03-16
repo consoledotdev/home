@@ -393,6 +393,7 @@ body.show-planes:after {
 .header {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-between;
     z-index: 20;
 }
 
@@ -422,11 +423,11 @@ body.show-planes:after {
 }
 
 .header .logo-wrapper {
-    flex: 1 0 auto;
+    flex: 0 0 auto;
 }
 
 .header .main-nav {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -775,10 +776,11 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
 
 .main-nav ul {
     padding: 0;
-    padding-top: 11px; /* align to logo baseline */
+    padding-top: 10px; /* align to logo baseline */
     display: flex;
-    flex-flow: row wrap;
-    margin: calc(var(--space2) * -1) calc(var(--space3) * -1);
+    flex-flow: row nowrap;
+    flex: 0 1 auto;
+    margin: 0;
 }
 
 .main-nav ul li {
@@ -831,6 +833,44 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
 .main-nav .theme-switcher {
     margin-left: var(--space4);
     margin-top: 9px; /* align to logo baseline */
+    flex: 0 0 auto;
+}
+/* Show More Control */
+.show-more-nav-control {
+    display: none;
+}
+
+.show-more-nav-control.is-visible {
+    display: initial;
+}
+
+.show-more-nav-control .icon,
+.show-more-nav-control .menu-item .icon {
+    width: 1.25em;
+    height: 1.25em;
+    vertical-align: -0.3em;
+}
+
+.show-more-nav-control .menu-item.menu-item-primary:link.is-active .icon.icon-fill {
+    fill: var(--theme-nav-primary-link-text-focus);
+}
+
+/* Mobile icon menu switch */
+@media (max-width: 640px) {
+    .main-nav > ul,
+    .main-nav > .theme-switcher {
+        display: none;
+    }
+
+    .main-nav .menu-toggle {
+        display: block;
+    }
+
+    @media (max-width: 480px) {
+        .main-nav .popup ul li {
+            font-size: var(--t-size1);
+        }
+    }
 }
 
 /* Menu Item: Mars */
@@ -1626,15 +1666,6 @@ p.x-small {
         padding-top: var(--space4);
     }
 
-    .main-nav > ul,
-    .main-nav > .theme-switcher {
-        display: none;
-    }
-
-    .main-nav .menu-toggle {
-        display: block;
-    }
-
     @media (max-width: 540px) {
         .main {
             min-height: 0;
@@ -1645,10 +1676,6 @@ p.x-small {
     @media (max-width: 480px) {
         .main .console-form {
             margin: var(--space4) 0;
-        }
-
-        .main-nav .popup ul li {
-            font-size: var(--t-size1);
         }
     }
 

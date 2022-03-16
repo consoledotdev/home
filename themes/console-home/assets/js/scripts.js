@@ -47,6 +47,140 @@ class Popup {
     }
 }
 
+class ShowMoreNav {
+    constructor(name) {
+        this.bindThisMethods();
+
+        this.areaWidth = document.querySelector("[data-show-more-nav-space-width='" + name + "']");
+        this.el = document.querySelector("[data-show-more-nav='" + name + "']");
+        this.siblings = document.querySelectorAll("[data-show-more-nav-sibling='" + name + "']");
+        this.children = Array.prototype.slice.call(this.el.children);
+        this.control = this.el.querySelector("[data-show-more-nav-control]");
+        this.popupContainer = this.el.querySelector("[data-show-more-nav-popup-container]");
+
+        this.bind();
+        this.checkTruncation();
+    }
+
+    bind() {
+        window.addEventListener("resize", this.checkTruncation);
+    }
+
+    isMobileNav() {
+        return Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0) <= 640;
+    }
+
+    checkTruncation(e) {
+        if (this.isMobileNav()) this.W = undefined;
+        else {
+            this.W = this.computeWidths();
+
+            if (this.W) {
+                // let checkAndRearrange = () => {
+                //     let currentWRequired = this.el.clientWidth + 50;
+                //     let visibleChildren = Array.prototype.slice.call(this.el.children);
+                //     let controlIdxInVisible = visibleChildren.indexOf(this.control);
+                //     let hideable = visibleChildren[controlIdxInVisible - 1];
+                //     let showable = this.popupContainer.querySelector(":first-child");
+
+                //     if (hideable && this.W.available <= currentWRequired) {
+                //         this.popupContainer.prepend(hideable);
+                //         this.toggleControl();
+                //         checkAndRearrange();
+                //     } else if (showable) {
+                //         let showableIdxAbsolute = this.children.indexOf(showable);
+                //         const showableW = this.W.items[showableIdxAbsolute];
+                //         let newCurrentWRequired = currentWRequired + showableW;
+                //         if (this.W.available > newCurrentWRequired) {
+                //             this.el.insertBefore(showable, this.control);
+                //             checkAndRearrange();
+                //         }
+                //     } else {
+                //         this.toggleControl(false);
+                //     }
+                // };
+                // checkAndRearrange();
+
+                // compute how many items can fit
+                let maxFitIdx = this.children.length - 1;
+                let initial = 32; // starts sum with a safety margin so that items don't fit tight
+                this.W.items.reduce((previous, current, idx) => {
+                    let sum = previous + (current || 52); // min item width, catches control being 0 instead of ~52 because is hidden at start
+                    if (previous < this.W.available) {
+                        maxFitIdx = idx - 1 >= 0 ? idx - 1 : 0;
+                    }
+                    if (sum < this.W.available) {
+                        maxFitIdx = idx;
+                    }
+                    return sum;
+                }, initial);
+
+                if (maxFitIdx < this.children.length - 2) this.toggleControl();
+                else this.toggleControl(false);
+
+                let controlIdx = this.children.indexOf(this.control);
+                this.children.forEach((c, i) => {
+                    if (i < controlIdx) {
+                        if (i < maxFitIdx) {
+                            this.el.insertBefore(c, this.control);
+                        } else {
+                            this.popupContainer.append(c);
+                        }
+                    }
+                });
+            }
+        }
+    }
+
+    toggleControl(show = true) {
+        if (show) {
+            if (!this.control.classList.contains("is-visible")) this.control.classList.add("is-visible");
+        } else {
+            if (this.control.classList.contains("is-visible")) this.control.classList.remove("is-visible");
+        }
+    }
+
+    computeWidths() {
+        let w = undefined;
+        if (this.areaWidth) {
+            w = 0;
+            w += this.areaWidth.clientWidth;
+            let style = getComputedStyle(this.areaWidth);
+            w -= parseInt(style.borderLeftWidth) || 0;
+            w -= parseInt(style.borderRightWidth) || 0;
+            w -= parseInt(style.paddingLeft) || 0;
+            w -= parseInt(style.paddingRight) || 0;
+            this.siblings.forEach((s) => {
+                w -= s.clientWidth;
+                let style = getComputedStyle(s);
+                w -= parseInt(style.marginLeft) || 0;
+                w -= parseInt(style.marginRight) || 0;
+            });
+        }
+
+        // let r = this.W?.required;
+        let i = this.W?.items;
+        if (!r && !i) {
+            // r = 0;
+            i = [];
+            this.children.forEach((c) => {
+                // r += c.clientWidth;
+                i.push(c.clientWidth);
+            });
+        }
+
+        return {
+            available: w,
+            // required: r,
+            items: i,
+        };
+    }
+
+    bindThisMethods() {
+        this.checkTruncation = this.checkTruncation.bind(this);
+    }
+}
+
 let bindTooltips = (() => {
     let handles = document.querySelectorAll("[data-tooltip-handle]");
 
@@ -516,4 +650,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     popups.forEach((p) => {
         new Popup(p);
     });
+
+    new ShowMoreNav("main-nav");
 });
