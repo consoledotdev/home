@@ -79,8 +79,7 @@
     fill: var(--c-white-00-absolute);
 }
 
-.content-split .console-filters.is-showing-all .select-all,
-.content-split .console-filters:not(.is-showing-all) .clear-all {
+.content-split .console-filters.is-showing-all .select-all {
     display: none;
 }
 

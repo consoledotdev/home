@@ -346,7 +346,6 @@ class Filter {
         this.sections = sections;
         this.form = document.querySelector("[data-feature-filters-form]");
         this.toggles = this.form.querySelectorAll("[data-filter='toggle']");
-        this.buttonClearAll = this.form.querySelector("[data-filter='clear-all']");
         this.buttonSelectAll = this.form.querySelector("[data-filter='select-all']");
         this.collapsedInfo = document.querySelector("[data-inline-filters-wrapper] [data-box-collapsible-info]");
         this.collapsedTitle = document.querySelector("[data-inline-filters-wrapper] [data-box-collapsible-title]");
@@ -355,6 +354,7 @@ class Filter {
         this.dictionary = {
             tag: ["tag", "tags"],
             category: ["category", "categories"],
+            tech: ["tech", "techs"],
         };
         this.bindActions();
         this.selectAll();
@@ -362,24 +362,16 @@ class Filter {
 
     bindActions() {
         this.toggles.forEach((t) => {
+            t.willGoSolo = true;
             t.addEventListener("click", this.toggledCheck.bind(this));
         });
-        this.buttonClearAll.addEventListener("click", this.clearAll.bind(this));
         this.buttonSelectAll.addEventListener("click", this.selectAll.bind(this));
     }
 
-    toggledCheck() {
-        this.setButtonsAllVisibility();
-        this.updateInfo();
-        this.filter();
-
-        // triggers marked-scrollable borders
-        window.dispatchEvent(new Event("resize"));
-    }
-
-    clearAll(e) {
-        if (e) e.preventDefault();
-        for (let t of this.toggles) t.checked = false;
+    toggledCheck(e) {
+        this.checkFirstClicked(e);
+        this.checkFullGroup(e);
+        this.checkEmptyGroup();
         this.setButtonsAllVisibility();
         this.updateInfo();
         this.filter();
@@ -390,13 +382,53 @@ class Filter {
 
     selectAll(e) {
         if (e) e.preventDefault();
-        for (let t of this.toggles) t.checked = true;
+        for (let t of this.toggles) {
+            t.checked = true;
+            t.willGoSolo = true;
+        }
         this.setButtonsAllVisibility();
         this.updateInfo();
         this.filter();
 
         // triggers marked-scrollable borders
         window.dispatchEvent(new Event("resize"));
+    }
+
+    checkFullGroup(e) {
+        const toggle = e.currentTarget;
+        let activeFilterValues = this.getActiveFilterValues().byGroup;
+        let allTogglesForGroup = Array.prototype.slice.call(this.toggles);
+        allTogglesForGroup = allTogglesForGroup.filter((t) => t.dataset.filterGroup == toggle.dataset.filterGroup);
+        if (activeFilterValues[toggle.dataset.filterGroup].length == allTogglesForGroup.length) {
+            for (let t of allTogglesForGroup) {
+                t.willGoSolo = true;
+            }
+        }
+    }
+
+    checkFirstClicked(e) {
+        const toggle = e.currentTarget;
+        if (toggle.willGoSolo) {
+            for (let t of this.toggles) {
+                if (t.dataset.filterGroup == toggle.dataset.filterGroup) {
+                    if (t == toggle) t.checked = true;
+                    else t.checked = false;
+                    t.willGoSolo = false;
+                }
+            }
+        }
+    }
+
+    checkEmptyGroup() {
+        let activeFilterValues = this.getActiveFilterValues().byGroup;
+        Object.keys(activeFilterValues).forEach((group) => {
+            if (activeFilterValues[group].length == 0) {
+                for (let t of this.toggles) {
+                    t.willGoSolo = true;
+                    if (t.dataset.filterGroup == group) t.checked = true;
+                }
+            }
+        });
     }
 
     setButtonsAllVisibility() {
@@ -446,15 +478,34 @@ class Filter {
     }
 
     filter() {
-        let allActiveFilterValues = this.getActiveFilterValues().all;
+        let activeFilterValues;
+        const type = "AND";
+        if (type == "AND") activeFilterValues = this.getActiveFilterValues().byGroup;
+        if (type == "OR") activeFilterValues = this.getActiveFilterValues().all;
+
         for (let section of this.sections.public().getFilterables()) {
             for (let item of section.items) {
                 let taxonomy = item.dataset.taxonomy;
                 let match = false;
 
-                for (let value of allActiveFilterValues) {
-                    match = taxonomy.indexOf(value.name) >= 0 && true;
-                    if (match) break;
+                if (type == "OR") {
+                    for (let value of activeFilterValues) {
+                        match = taxonomy.indexOf(value.name) >= 0 && true;
+                        if (match) break;
+                    }
+                }
+
+                if (type == "AND") {
+                    Object.keys(activeFilterValues).forEach((group, i) => {
+                        if (i == 0 || (i > 0 && match)) {
+                            for (let value of activeFilterValues[group]) {
+                                match = taxonomy.indexOf(value.name) >= 0 && true;
+                                if (match) break;
+                            }
+                        } else {
+                            match = false;
+                        }
+                    });
                 }
 
                 if (match) {
