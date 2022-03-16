@@ -17,6 +17,13 @@ class Popup {
         this.controlsNoActive.forEach((c) => {
             c.addEventListener("mouseup", this.toggle);
         });
+
+        document.addEventListener("click", this.checkClickOutside);
+        document.addEventListener("keyup", this.handleKeypress);
+    }
+
+    handleKeypress(e) {
+        if (e.key == "Escape" && this.visible) this.toggle();
     }
 
     toggle(e) {
@@ -40,10 +47,24 @@ class Popup {
             this.el.style.pointerEvents = "all";
         }
         this.visible = !this.visible;
+
+        this.justChanged = true;
+        setTimeout(() => {
+            this.justChanged = false;
+        }, 100);
+    }
+
+    checkClickOutside(e) {
+        if (!this.justChanged) {
+            const inside = this.el.contains(e.target);
+            if (!inside && this.visible) this.toggle();
+        }
     }
 
     bindThisMethods() {
         this.toggle = this.toggle.bind(this);
+        this.checkClickOutside = this.checkClickOutside.bind(this);
+        this.handleKeypress = this.handleKeypress.bind(this);
     }
 }
 
