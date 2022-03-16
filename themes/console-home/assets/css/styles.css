@@ -831,7 +831,7 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
 }
 
 .main-nav .theme-switcher {
-    margin-left: var(--space4);
+    margin-left: var(--space3_5);
     margin-top: 9px; /* align to logo baseline */
     flex: 0 0 auto;
 }
