@@ -4476,7 +4476,7 @@ p.combo-card-description {
     padding: 0;
     margin: calc(var(--space4_5) + var(--space2)) 0 calc(var(--space5) + var(--space3));
     padding: 0;
-    overflow-x: scroll;
+    overflow-x: auto;
     transition: var(--a-micro);
     box-shadow: inset 1px 0 0 0px transparent, inset -1px 0 0 0px transparent;
 }
