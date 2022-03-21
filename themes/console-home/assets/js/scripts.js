@@ -15,7 +15,7 @@ class Popup {
             c.addEventListener("mouseup", this.toggle);
         });
         this.controlsNoActive.forEach((c) => {
-            c.addEventListener("mouseup", this.toggle);
+            c.addEventListener("mouseup", this.noActiveToggle);
         });
 
         document.addEventListener("click", this.checkClickOutside);
@@ -54,6 +54,10 @@ class Popup {
         }, 100);
     }
 
+    noActiveToggle(e) {
+        if (e.currentTarget.closest("[data-popup-wrapper]")) this.toggle();
+    }
+
     checkClickOutside(e) {
         if (!this.justChanged) {
             const inside = this.el.contains(e.target);
@@ -62,6 +66,7 @@ class Popup {
     }
 
     bindThisMethods() {
+        this.noActiveToggle = this.noActiveToggle.bind(this);
         this.toggle = this.toggle.bind(this);
         this.checkClickOutside = this.checkClickOutside.bind(this);
         this.handleKeypress = this.handleKeypress.bind(this);

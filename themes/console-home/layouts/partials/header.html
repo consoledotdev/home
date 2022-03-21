@@ -17,22 +17,22 @@
                     {{ partial "components/menu-toggle.html" }}
                     <ul data-show-more-nav="main-nav" class="show-more-nav no-popup">
                         <li{{ if eq .context.Params.isPage "latest" }} class="is-selected"{{ end }}>
-                            <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary" onclick="blur();" href="/latest/">Newsletter</a>
+                            <a data-popup-toggle-noactive="more-nav" class="menu-item menu-item-primary" onclick="blur();" >Newsletter</a>
                         </li>  
                         <li{{ if eq .context.Params.isPage "tools" }} class="is-selected"{{ end }}>
-                            <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary" onclick="blur();" href="/tools/">Tools</a>
+                            <a data-popup-toggle-noactive="more-nav" class="menu-item menu-item-primary" onclick="blur();" >Tools</a>
                         </li>
                         <li{{ if eq .context.Params.isPage "betas" }} class="is-selected"{{ end }}>
-                            <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary" onclick="blur();" href="/betas/">Betas</a>
+                            <a data-popup-toggle-noactive="more-nav" class="menu-item menu-item-primary" onclick="blur();" >Betas</a>
                         </li>
                         <li{{ if eq .context.Params.isPage "jobs" }} class="is-selected"{{ end }}>
-                            <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary" onclick="blur();" href="/jobs/">Jobs</a>
+                            <a data-popup-toggle-noactive="more-nav" class="menu-item menu-item-primary" onclick="blur();" >Jobs</a>
                         </li>
                         <li{{ if eq .context.Params.isPage "interviews" }} class="is-selected"{{ end }}>
-                            <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary" onclick="blur();" href="/interviews/">Interviews</a>
+                            <a data-popup-toggle-noactive="more-nav" class="menu-item menu-item-primary" onclick="blur();" >Interviews</a>
                         </li>
                         <li{{ if eq .context.Params.isPage "podcast" }} class="is-selected"{{ end }}>
-                            <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary" onclick="blur();" href="/podcast/">Podcast</a>
+                            <a data-popup-toggle-noactive="more-nav" class="menu-item menu-item-primary" onclick="blur();" >Podcast</a>
                         </li>
                         <li data-show-more-nav-control class="show-more-nav-control">
                             <a data-popup-toggle="more-nav" class="menu-item menu-item-primary icon-left" onclick="blur();" href="#">{{ partial "icons/console-more.html" }}</a>
