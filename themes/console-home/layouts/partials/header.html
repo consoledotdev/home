@@ -16,25 +16,25 @@
                 <nav class="main-nav">
                     {{ partial "components/menu-toggle.html" }}
                     <ul data-show-more-nav="main-nav" class="show-more-nav no-popup">
-                        <li{{ if eq .context.Params.isPage "latest" }} class="is-selected"{{ end }}>
+                        <li class="main-nav-item{{ if eq .context.Params.isPage "latest" }} is-selected{{ end }}">
                             <a data-popup-toggle-noactive="more-nav" class="menu-item menu-item-primary" onclick="blur();" href="/latest/">Newsletter</a>
                         </li>  
-                        <li{{ if eq .context.Params.isPage "tools" }} class="is-selected"{{ end }}>
+                        <li class="main-nav-item{{ if eq .context.Params.isPage "tools" }} is-selected{{ end }}">
                             <a data-popup-toggle-noactive="more-nav" class="menu-item menu-item-primary" onclick="blur();" href="/tools/">Tools</a>
                         </li>
-                        <li{{ if eq .context.Params.isPage "betas" }} class="is-selected"{{ end }}>
+                        <li class="main-nav-item{{ if eq .context.Params.isPage "betas" }} is-selected{{ end }}">
                             <a data-popup-toggle-noactive="more-nav" class="menu-item menu-item-primary" onclick="blur();" href="/betas/">Betas</a>
                         </li>
-                        <li{{ if eq .context.Params.isPage "jobs" }} class="is-selected"{{ end }}>
+                        <li class="main-nav-item{{ if eq .context.Params.isPage "jobs" }} is-selected{{ end }}">
                             <a data-popup-toggle-noactive="more-nav" class="menu-item menu-item-primary" onclick="blur();" href="/jobs/">Jobs</a>
                         </li>
-                        <li{{ if eq .context.Params.isPage "interviews" }} class="is-selected"{{ end }}>
+                        <li class="main-nav-item{{ if eq .context.Params.isPage "interviews" }} is-selected{{ end }}">
                             <a data-popup-toggle-noactive="more-nav" class="menu-item menu-item-primary" onclick="blur();" href="/interviews/">Interviews</a>
                         </li>
-                        <li{{ if eq .context.Params.isPage "podcast" }} class="is-selected"{{ end }}>
+                        <li class="main-nav-item{{ if eq .context.Params.isPage "podcast" }} is-selected{{ end }}">
                             <a data-popup-toggle-noactive="more-nav" class="menu-item menu-item-primary" onclick="blur();" href="/podcast/">Podcast</a>
                         </li>
-                        <li data-show-more-nav-control class="show-more-nav-control">
+                        <li data-show-more-nav-sibling="main-nav" data-show-more-nav-control class="main-nav-item show-more-nav-control">
                             <a data-popup-toggle="more-nav" class="menu-item menu-item-primary icon-left" onclick="blur();" href="#">{{ partial "icons/console-more.html" }}</a>
                             <div data-popup-wrapper class="popup-wrapper right bottom">
                                 <div data-popup="more-nav" class="popup popup-top-down">
@@ -43,7 +43,7 @@
                                 </div>
                             </div>
                         </li>   
-                        <li{{ if eq .context.Params.isPage "research" }} class="is-hidden"{{ end }}>
+                        <li data-show-more-nav-sibling="main-nav" class="main-nav-item{{ if eq .context.Params.isPage "research" }} is-hidden{{ end }}">
                             <a class="menu-item menu-item-primary icon-right menu-item-mars" onclick="blur();" href="/research/mars/"><span>Mars</span>{{ partial "components/research/mars/shared/the-mars.html" }}</a>
                         </li>             
                     </ul>
@@ -53,25 +53,25 @@
                     <div data-popup-wrapper class="popup-wrapper right bottom">
                         <div data-popup="mobile-nav" class="popup popup-top-down">
                             <ul>
-                                <li{{ if eq .context.Params.isPage "latest" }} class="is-selected"{{ end }}>
+                                <li class="main-nav-item{{ if eq .context.Params.isPage "latest" }} is-selected{{ end }}">
                                     <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary" onclick="blur();" href="/latest/">Newsletter</a>
                                 </li>    
-                                <li{{ if eq .context.Params.isPage "tools" }} class="is-selected"{{ end }}>
+                                <li class="main-nav-item{{ if eq .context.Params.isPage "tools" }} is-selected{{ end }}">
                                     <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary" onclick="blur();" href="/tools/">Tools</a>
                                 </li>
-                                <li{{ if eq .context.Params.isPage "betas" }} class="is-selected"{{ end }}>
+                                <li class="main-nav-item{{ if eq .context.Params.isPage "betas" }} is-selected{{ end }}">
                                     <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary" onclick="blur();" href="/betas/">Betas</a>
                                 </li>
-                                <li{{ if eq .context.Params.isPage "jobs" }} class="is-selected"{{ end }}>
+                                <li class="main-nav-item{{ if eq .context.Params.isPage "jobs" }} is-selected{{ end }}">
                                     <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary" onclick="blur();" href="/jobs/">Jobs</a>
                                 </li>
-                                <li{{ if eq .context.Params.isPage "interviews" }} class="is-selected"{{ end }}>
+                                <li class="main-nav-item{{ if eq .context.Params.isPage "interviews" }} is-selected{{ end }}">
                                     <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary" onclick="blur();" href="/interviews/">Interviews</a>
                                 </li>  
-                                <li{{ if eq .context.Params.isPage "podcast" }} class="is-selected"{{ end }}>
+                                <li class="main-nav-item{{ if eq .context.Params.isPage "podcast" }} is-selected{{ end }}">
                                     <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary" onclick="blur();" href="/podcast/">Podcast</a>
                                 </li>  
-                                <li{{ if eq .context.Params.isPage "research" }} class="is-hidden"{{ end }}>
+                                <li class="main-nav-item{{ if eq .context.Params.isPage "research" }} is-hidden{{ end }}">
                                     <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary icon-right menu-item-mars" onclick="blur();" href="/research/mars/"><span>Mars</span>{{ partial "components/research/mars/shared/the-mars.html" }}</a>
                                 </li>                             
                             </ul>

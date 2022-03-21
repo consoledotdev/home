@@ -104,26 +104,30 @@ class ShowMoreNav {
             this.W = this.computeWidths();
 
             if (this.W) {
+                // get control index to use as calculation limit
+                let controlIdx = this.children.indexOf(this.control);
+
                 // compute how many items can fit
                 let maxFitIdx = -1;
                 let initial = 64; // starts sum with a safety margin so that items don't fit tight
                 this.W.items.reduce((previous, current, idx) => {
-                    let sum = previous + current;
-                    if (previous < this.W.available) {
-                        maxFitIdx = idx - 1;
+                    if (idx < controlIdx) {
+                        let sum = previous + current;
+                        if (previous < this.W.available) {
+                            maxFitIdx = idx - 1;
+                        }
+                        if (sum < this.W.available) {
+                            maxFitIdx = idx;
+                        }
+                        return sum;
                     }
-                    if (sum < this.W.available) {
-                        maxFitIdx = idx;
-                    }
-                    return sum;
                 }, initial);
 
                 // truncation control visibility
-                if (maxFitIdx < this.children.length - 2) this.toggleControl();
+                if (maxFitIdx < this.children.length - 3) this.toggleControl();
                 else this.toggleControl(false);
 
                 // rearrange items
-                let controlIdx = this.children.indexOf(this.control);
                 this.children.forEach((c, i) => {
                     if (i < controlIdx) {
                         if (i <= maxFitIdx) {
@@ -156,7 +160,9 @@ class ShowMoreNav {
             w -= parseInt(style.paddingLeft) || 0;
             w -= parseInt(style.paddingRight) || 0;
             this.siblings.forEach((s) => {
+                s.style.display = "initial";
                 w -= s.clientWidth;
+                s.style.display = null;
                 let style = getComputedStyle(s);
                 w -= parseInt(style.marginLeft) || 0;
                 w -= parseInt(style.marginRight) || 0;
@@ -169,12 +175,14 @@ class ShowMoreNav {
             this.children.forEach((c) => {
                 c.style.position = "absolute";
                 c.style.visibility = "hidden";
+                c.style.display = "initial";
                 document.body.prepend(c);
 
                 i.push(c.clientWidth);
 
                 c.style.position = null;
                 c.style.visibility = null;
+                c.style.display = null;
                 this.el.append(c);
             });
         }
