@@ -4826,6 +4826,7 @@ p.combo-card-description {
     padding-bottom: var(--space4);
     padding-left: var(--space0);
     bottom: 0;
+    overscroll-behavior: none;
 }
 
 .aside-content-wrapper .page-section-heading {

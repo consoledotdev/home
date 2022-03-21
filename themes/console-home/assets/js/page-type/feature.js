@@ -42,13 +42,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
         let setPos = () => {
             contentSplits.forEach((split) => {
                 let el = split.querySelector("[data-aside-content]");
-                let asideWrapper = split.querySelector("[data-aside-content-wrapper]");
+                let asideContentWrapper = split.querySelector("[data-aside-content-wrapper]");
                 let inlineWrapper = split.querySelector("[data-inline-aside-content-wrapper]");
                 let trailerEl = el.querySelector("[data-trailer-player]");
                 if (window.innerWidth >= 1025) {
                     if (!inlineWrapper.classList.contains("player-prepended")) {
                         el.insertBefore(trailerEl, el.firstChild);
-                        asideWrapper.appendChild(el);
+                        asideContentWrapper.appendChild(el);
                         inlineWrapper.classList.add("is-hidden");
                         inlineWrapper.classList.add("player-prepended");
                     }
@@ -152,6 +152,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         let minContentHeight = window.innerHeight - asideMarginsAndPaddings;
                         splitWrapper.style.minHeight = minContentHeight + "px";
                     }
+                } else {
+                    asideContentWrapper.scrollTop = 0;
                 }
             } else {
                 style.position = null;
