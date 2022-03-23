@@ -175,26 +175,36 @@
     <span data-checkpoint-work-with-us id="work-with-us"></span>
 
     <section class="page-section page-section-advertise work-with-us">
+        <div class="neon-planes-wrapper" data-neon-planes-wrapper data-packages>
+            {{ partial "components/neon-planes.html" (dict "context" . "type" "one-three" ) }}
+        </div>
         <h2 class="title title-1">How to work <br />with us</h2>
         <p class="intro">
             Planning a new release or product launch? Looking to reach new customers? We put you in front of experienced developers specifically looking to try new tools. We can help increase signups by coordinating a campaign to meet your goals.
         </p>
         <div class="work-with-us-packages">
-            <div class="neon-planes-wrapper" data-neon-planes-wrapper data-packages>
-                {{ partial "components/neon-planes.html" (dict "context" . "type" "one-three" ) }}
-            </div>
             <div class="framed-section framed-section-triad-01">
                 <div class="top">
                     <div class="left">
                         <h3 class="title title-2">
-                            <span>Console sponsored</span>
+                            <span>Console sponsored package</span>
                             {{ partial "illustrations/console-sponsor.html" }}
                         </h3>
-                        <p data-package-intro>
+                        <p>
                             We only feature 3 tools each week, and our audience knows that only the best tools make it into our newsletter. We feature just one sponsored tool in each newsletter and sponsored reviews appear at the top of the email as the lead review.
                         </p>
                     </div>
                     {{ partial "illustrations/console-sponsor.html" }}
+                </div>
+                <div class="top">
+                    <div class="left">
+                        <h4 class="title title-3">
+                            <span>Reach & engagement</span>
+                        </h4>
+                        <p>
+                            Console is a privacy-first company so we do not track opens, but we do track clicks. In 2022 sponsored partners have averaged 1,320 high intent clicks per campaign within 7 days of launch.  Expected conversion will vary by tool type. Partners typically see conversion rate of 5-10%, although we have seen as high as 20%.
+                        </p>
+                    </div>
                 </div>
                 <div class="framed-section-item">
                     <p>The benefits of our sponsored package include:</p>
@@ -208,27 +218,72 @@
                             <p class="small">Supporting Q&A interview to tell the story of your product.</p>
                             <h5 class="title title-4 rich-title">{{ partial "icons/link.html" }}<span>Context</span></h5>
                             <p class="small">Include a link to a blog post or technical article to go deeper into your release.</p>
-                            <h5 class="title title-4 rich-title">{{ partial "icons/tool.html" }}<span>Website</span></h5>
-                            <p class="small">Inclusion of your tool in the Console Tools list.</p>
                         </div>
                         <div>
+                            <h5 class="title title-4 rich-title">{{ partial "icons/tool.html" }}<span>Website</span></h5>
+                            <p class="small">Inclusion of your tool in the Console Tools list.</p>
                             <h5 class="title title-4 rich-title">{{ partial "icons/social.html" }}<span>Social</span></h5>
                             <p class="small">Promotion of the launch on social media.</p>
                             <h5 class="title title-4 rich-title">{{ partial "icons/console-offer.html" }}<span>Offer</span></h5>
                             <p class="small">Opportunity to provide an exclusive offer to our audience e.g. early access, invite codes, bonus credits, discounts.</p>
                             <h5 class="title title-4 rich-title">{{ partial "icons/badges.html" }}<span>Badges</span></h5>
                             <p class="small">Access to custom badges for your website and marketing materials to showcase that you’ve been featured as a Console Developer Tool of the Week.</p>
-                            <h5 class="title title-4 rich-title">{{ partial "icons/email.html" }}<span>Welcome</span></h5>
-                            <p class="small">Optional additional placement in our “welcome email” for 30 days. This goes out to 50-100 new Console subscribers every day.</p>
                         </div>
                     </div>
                     <p>Tell us about your tool and campaign goals.</p>
                     <a onclick="blur();" href="mailto:hello@console.dev" class="console-button icon-left">{{ partial "icons/send.html" }}<span>Get in touch</span></a>
                 </div>
             </div>
+            <div class="framed-section framed-section-triad-01">
+                <div class="top">
+                    <div class="left">
+                        <h3 class="title title-2">
+                            <span>Welcome email promotion</span>
+                            {{ partial "illustrations/console-welcome-2.html" }}
+                        </h3>
+                        <p>
+                            Our welcome email promotion is a great way to reach all our new subscribers looking to check out new tools. Promotion secures placement in our “welcome email” for 30 days. This goes out to 50-100 new Console subscribers every day.
+                        </p>
+                    </div>
+                    {{ partial "illustrations/console-welcome-2.html" }}
+                </div>
+                <a onclick="blur();" href="mailto:hello@console.dev" class="console-button icon-left">{{ partial "icons/send.html" }}<span>Get in touch</span></a>
+            </div>
+            <div class="framed-section framed-section-triad-01">
+                <div class="top">
+                    <div class="left">
+                        <h3 class="title title-2">
+                            <span>Sponsored jobs</span>
+                            {{ partial "illustrations/console-sponsored-jobs.html" }}
+                        </h3>
+                        <p>
+                            Each week we profile 3 of the best dev tools companies currently hiring. Each company must meet our selection criteria to be featured. Sponsored partners receive e a full company profile on the Console website.
+                        </p>
+                        <a onclick="blur();" href="#company-profiles" class="console-button-text icon-right"><span>More on Company Profiles</span>{{ partial "icons/arrow-right.html" }}</a>
+                    </div>
+                    {{ partial "illustrations/console-sponsored-jobs.html" }}
+                </div>
+                <div class="framed-section-item">
+                    <p>The benefits of our sponsored jobs also include:</p>
+                    <div class="benefits">
+                        <div>
+                            <h5 class="title title-4 rich-title">{{ partial "icons/console-mini-filled.html" }}<span>Newsletter listing</span></h5>
+                            <h6 class="title title-5"><span>Reach 20k+ developers</span></h6>
+                            <p class="small">Sponsored company profile receive a listing in the Console Weekly newsletter reaching 20,000+ opt-in subscribers.</p>
+                        </div>
+                        <div>
+                            <h5 class="title title-4 rich-title">{{ partial "icons/bypass.html" }}<span>Application bypass</span></h5>
+                            <p class="small">Opportunity to include an email address or link for candidates to bypass some of your standard application procedures.</p>
+                        </div>
+                    </div>
+                    <p>Tell us about your hiring process and goals.</p>
+                    <a onclick="blur();" href="mailto:hello@console.dev" class="console-button icon-left">{{ partial "icons/send.html" }}<span>Get in touch</span></a>
+                </div>
+            </div>
         </div>
     </section>
 
+    <span data-checkpoint-campaigns></span>
 
     <section class="page-section page-section-advertise campaigns">
         <h3 class="title title-2">Recent campaigns</h3>
