@@ -49,8 +49,8 @@ window.CNSL.AudioPlayer =
             this.audioEl.onloadedmetadata = this.onLoadedMetadata;
             this.titleWrapper.addEventListener("mouseover", this.hoverScrollTitle);
             this.titleWrapper.addEventListener("mouseout", this.hoverScrollTitleStop);
-            this.titleWrapper.addEventListener("mouseover", this.hoverScrollTitleAlt);
-            this.titleWrapper.addEventListener("mouseout", this.hoverScrollTitleAltStop);
+            if (this.titleAlt) this.titleWrapper.addEventListener("mouseover", this.hoverScrollTitleAlt);
+            if (this.titleAlt) this.titleWrapper.addEventListener("mouseout", this.hoverScrollTitleAltStop);
         }
 
         dragTime(e) {
