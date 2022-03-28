@@ -3,10 +3,10 @@ title: Interview with Adam Kamor, Tonic
 who: Adam Kamor
 role: Co-Founder
 org: Tonic
-what: Data generation for testing.
+what: Fake data modeled from production.
 tags: ["Fake data"]
 date: 2022-03-09T12:00:00Z
-draft: true
+draft: false
 headerType: fixed
 summary: Interview with Adam Kamor, Co-Founder, Tonic
 isPage: interviews
@@ -37,7 +37,7 @@ effortlessly.
 We built Tonic because it is a problem we have all faced in our former
 professional lives. It was a problem that my co-founders and I thought we were
 particularly well suited to solve, given our backgrounds all coming from data
-companies.  I worked previously at [Tableau](https://www.tableau.com/), which is
+companies. I worked previously at [Tableau](https://www.tableau.com/), which is
 a data visualization company, as did my co-founder Ian Coe. Customers would
 sometimes email saying, this workbook isn't working, what's going on? You'd ask
 for data as we need data to reproduce the issue, but oftentimes they couldn't
@@ -84,7 +84,7 @@ What ends up happening when you build an in-house solution is that you create a
 test data generation application that contains all the logic of your actual
 business application and that is clearly not a tenable place to be.
 
-### What does a "day in the life" look like for you?
+### What does a "day in the life" look like?
 
 I spend a tremendous amount of time trying to grow the engineering team by
 meeting potential candidates, conducting interview and doing general outreach.
@@ -104,7 +104,7 @@ Otherwise, during the day when I'm not recruiting, I'm doing one-on-ones, and
 roadmap planning, and other founder related odds and ends. I'm also in a lot of
 sales calls talking to customers which is maybe my favorite activity.
 
-### What is the team structure around Tonic
+### What is the team structure around Tonic?
 
 We have 70 employees. A third are on the product team - engineers, designers,
 product managers. Within the product team, 20 of them are engineers and they all
@@ -131,11 +131,11 @@ course
 
 For my undergrad I studied physics, which involved a lot of numerical stuff. I
 was writing a lot of C and MATLAB. I followed up with a PhD in physics, focusing
-on non-linear dynamics as it relates to atomic physics.  Even though the work
+on non-linear dynamics as it relates to atomic physics. Even though the work
 was theoretical there was still a lot of numerical number crunching in that as
 well, where I continued to use MATLAB and C.
 
-### What is the most interesting development challenge you've faced working on Tonic.ai?
+### What is the most interesting development challenge you've faced working on Tonic?
 
 I think there are two. The first is related to the privacy aspects of what we
 do. It's easy to write code that will transform data from A to B. It is more
@@ -202,7 +202,7 @@ processes on Spark. It is a serialization layer that serializes data back and
 forth between your Java process, where the data is and then the .NET process
 where the transformation is.
 
-### Describe your computer hardware setup.
+### Describe your computer hardware setup
 
 I have an [LG Ultrawide](https://www.lg.com/ultrawide-monitors) 34 inch monitor
 that I use with a
