@@ -1,0 +1,51 @@
+<div class="feature-filters" data-feature-filters>
+	<form action="" class="console-filters is-showing-all" data-feature-filters-form>
+		<div class="search">
+			<label for="search-feature-items" class="console-label console-label-small">Search</label>
+			<div class="search-feature-items-input-wrapper" style="display: inline-block; position: relative;">
+				<input id="search-feature-items" name="search-string" class="console-input-text console-input-small" type="text" placeholder="Search..." data-search-feature-items-input />
+				<span onmousedown="event.preventDefault(); input = this.previousElementSibling; input.focus(); input.value = ''; input.dispatchEvent(new Event('change'));" class="console-input-text-cancel">{{ partial "icons/cancel.html"}}</span>
+			</div>
+		</div>
+		<div class="sort-by">
+			<label for="sort-feature-items" class="console-label console-label-small">Sort by</label>
+			<select class="console-select console-input-small" name="" id="sort-feature-items" data-sort-feature-items-select onchange="blur()">
+				<option value="date" selected>Date</option>
+				<option value="name">Name</option>
+			</select>
+		</div>
+		<div class="group-by">
+			<label for="group-feature-items" class="console-label console-label-small">Group by</label>
+			<select class="console-select console-input-small" name="" id="group-feature-items" data-group-feature-items-select onchange="blur()">
+				<option value="category">Category</option>
+				<option value="none" selected>None</option>
+			</select>
+		</div>
+		<div class="show-by">
+			<label class="console-label console-label-small">Category</label>
+			{{ range .dot.categoryItems }}
+				{{ $details := merge . (dict "color" "blue") }}
+				{{ partial "components/checkbutton.html" (dict "context" $details "action" "filtering.toggledCheck" "dataFilter" "toggle" "dataFilterGroup" "category" ) }}
+			{{ end }}
+		</div>
+		<div class="show-by">
+			<label class="console-label console-label-small">Tag</label>
+			{{ range .dot.tagItems }}
+				{{ $details := merge . (dict "color" "blue") }}
+				{{ partial "components/checkbutton.html" (dict "context" $details "action" "filtering.toggledCheck" "dataFilter" "toggle" "dataFilterGroup" "tag" ) }}
+			{{ end }}
+		</div>
+		<div class="show-by">
+			<label class="console-label console-label-small">Tech</label>
+			{{ range .dot.techStackItems }}
+				{{ $details := merge . (dict "color" "blue") }}
+				{{ partial "components/checkbutton.html" (dict "context" $details "action" "filtering.toggledCheck" "dataFilter" "toggle" "dataFilterGroup" "tech" ) }}
+			{{ end }}
+		</div>
+		<div>
+			<button data-filter="select-all" onclick="blur()" class="console-button-text console-button-small select-all" title="Select all">
+				<span>Select all</span>
+			</button>
+		</div>
+	</form>
+</div>

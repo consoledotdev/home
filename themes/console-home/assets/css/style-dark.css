@@ -21,9 +21,13 @@
     --theme-cta-secondary-text-hover: var(--c-blue-04);
     --theme-cta-secondary-text-active: var(--c-blue-06-main);
 
-    --theme-cta-secondary-green-text-idle: var(--c-green-05-main);
-    --theme-cta-secondary-green-text-hover: var(--c-green-06);
-    --theme-cta-secondary-green-text-active: var(--c-green-07);
+    --theme-cta-secondary-triad-02-text-idle: var(--c-fuchsia-04);
+    --theme-cta-secondary-triad-02-text-hover: var(--c-fuchsia-05-main);
+    --theme-cta-secondary-triad-02-text-active: var(--c-fuchsia-06);
+
+    --theme-cta-secondary-triad-03-text-idle: var(--c-green-05-main);
+    --theme-cta-secondary-triad-03-text-hover: var(--c-green-06);
+    --theme-cta-secondary-triad-03-text-active: var(--c-green-07);
 
     --theme-cta-secondary-yellow-text-idle: var(--c-yellow-04-main);
     --theme-cta-secondary-yellow-text-hover: var(--c-yellow-05);

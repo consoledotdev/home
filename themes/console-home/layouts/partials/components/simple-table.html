@@ -1,0 +1,48 @@
+{{ $content := . }}
+
+{{ define "partials/cell-content" }}
+    {{- if reflect.IsMap . -}}
+            {{- with .links -}}
+                {{- range . -}}
+                    <a class="link link-icon" title="{{ with .href }}{{ . }}{{ end }}" href="{{ with .href }}{{ . }}{{ end }}" target="_blank" rel="noopener">
+                        {{- with .iconLeft }}
+                            {{ partial (print "icons/" . ".html") }}
+                        {{ end -}}
+                        <span>{{ .text | safeHTML }}</span>
+                        {{- with .iconRight }}
+                            {{ partial (print "icons/" . ".html") }}
+                        {{ end -}}
+                    </a>
+                {{- end -}}
+            {{- end -}}
+            {{- with .icon -}}
+                {{ partial (print "icons/" . ".html") }}
+            {{- end -}} 
+    {{- else -}}
+        {{ . | safeHTML }}
+    {{- end -}}
+{{ end }}
+
+<div data-marked-scrollable-h class="simple-table marked-scrollable-h">
+    <div class="simple-table-grid">
+        {{ range $content }}
+            <div data-table-row class="row">
+                {{ with .label }}
+                    <span class="cell cell-meta">{{ . }}</span>
+                {{ end }}
+                {{ with .value }}
+                    <span class="cell">
+                        {{ if reflect.IsSlice . }}
+                            {{- range . -}}
+                                {{ partial "cell-content" . }}
+                            {{- end -}}
+                        {{- else -}}
+                            {{ partial "cell-content" . }}
+                        {{- end -}}
+                    </span>
+                {{ end }}
+            </div>
+        {{ end }}
+    </div>
+</div>
+

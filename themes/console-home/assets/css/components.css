@@ -377,6 +377,24 @@
     stroke: var(--theme-link-text-active);
 }
 
+.link.icon-left {
+    margin-left: 1em;
+}
+
+.link.icon-left .icon {
+    margin-left: -1em;
+    margin-right: calc(var(--space1) + var(--space0));
+}
+
+.link.icon-right {
+    margin-right: 1em;
+}
+
+.link.icon-right .icon {
+    margin-right: -1em;
+    margin-left: calc(var(--space1) + var(--space0));
+}
+
 /* Menu Item
    ================================================================================================================ */
 .menu-item,
@@ -1019,52 +1037,100 @@
     fill: var(--theme-cta-secondary-text-active);
 }
 
-/* Green */
-.console-button-text.console-button-green {
-    color: var(--theme-cta-secondary-green-text-idle);
+/* Triad 02 (Fuchsia) */
+.console-button-text.console-button-triad-02 {
+    color: var(--theme-cta-secondary-triad-02-text-idle);
 }
-.console-button-text.console-button-green:hover {
-    color: var(--theme-cta-secondary-green-text-hover);
+.console-button-text.console-button-triad-02:hover {
+    color: var(--theme-cta-secondary-triad-02-text-hover);
 }
-.console-button-text.console-button-green:active,
-.console-button-text.console-button-green:focus {
-    color: var(--theme-cta-secondary-green-text-active);
-}
-
-.console-button-text.console-button-green .icon-fill {
-    fill: var(--theme-cta-secondary-green-text-idle);
-}
-.console-button-text.console-button-green:hover .icon-fill {
-    fill: var(--theme-cta-secondary-green-text-hover);
-}
-.console-button-text.console-button-green:active .icon-fill,
-.console-button-text.console-button-green:focus .icon-fill {
-    fill: var(--theme-cta-secondary-green-text-active);
+.console-button-text.console-button-triad-02:active,
+.console-button-text.console-button-triad-02:focus {
+    color: var(--theme-cta-secondary-triad-02-text-active);
 }
 
-.console-button-text.console-button-green .icon-stroke {
-    stroke: var(--theme-cta-secondary-green-text-idle);
+.console-button-text.console-button-triad-02 .icon-fill {
+    fill: var(--theme-cta-secondary-triad-02-text-idle);
 }
-.console-button-text.console-button-green:hover .icon-stroke {
-    stroke: var(--theme-cta-secondary-green-text-hover);
+.console-button-text.console-button-triad-02:hover .icon-fill {
+    fill: var(--theme-cta-secondary-triad-02-text-hover);
 }
-.console-button-text.console-button-green:active .icon-stroke,
-.console-button-text.console-button-green:focus .icon-stroke {
-    stroke: var(--theme-cta-secondary-green-text-active);
+.console-button-text.console-button-triad-02:active .icon-fill,
+.console-button-text.console-button-triad-02:focus .icon-fill {
+    fill: var(--theme-cta-secondary-triad-02-text-active);
 }
 
-.console-button-text.console-button-green .icon-fill-stroke {
-    stroke: var(--theme-cta-secondary-green-text-idle);
-    fill: var(--theme-cta-secondary-green-text-idle);
+.console-button-text.console-button-triad-02 .icon-stroke {
+    stroke: var(--theme-cta-secondary-triad-02-text-idle);
 }
-.console-button-text.console-button-green:hover .icon-fill-stroke {
-    stroke: var(--theme-cta-secondary-green-text-hover);
-    fill: var(--theme-cta-secondary-green-text-hover);
+.console-button-text.console-button-triad-02:hover .icon-stroke {
+    stroke: var(--theme-cta-secondary-triad-02-text-hover);
 }
-.console-button-text.console-button-green:active .icon-fill-stroke,
-.console-button-text.console-button-green:focus .icon-fill-stroke {
-    stroke: var(--theme-cta-secondary-green-text-active);
-    fill: var(--theme-cta-secondary-green-text-active);
+.console-button-text.console-button-triad-02:active .icon-stroke,
+.console-button-text.console-button-triad-02:focus .icon-stroke {
+    stroke: var(--theme-cta-secondary-triad-02-text-active);
+}
+
+.console-button-text.console-button-triad-02 .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-triad-02-text-idle);
+    fill: var(--theme-cta-secondary-triad-02-text-idle);
+}
+.console-button-text.console-button-triad-02:hover .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-triad-02-text-hover);
+    fill: var(--theme-cta-secondary-triad-02-text-hover);
+}
+.console-button-text.console-button-triad-02:active .icon-fill-stroke,
+.console-button-text.console-button-triad-02:focus .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-triad-02-text-active);
+    fill: var(--theme-cta-secondary-triad-02-text-active);
+}
+
+/* Triad-03 (Green) */
+.console-button-text.console-button-triad-03 {
+    color: var(--theme-cta-secondary-triad-03-text-idle);
+}
+.console-button-text.console-button-triad-03:hover {
+    color: var(--theme-cta-secondary-triad-03-text-hover);
+}
+.console-button-text.console-button-triad-03:active,
+.console-button-text.console-button-triad-03:focus {
+    color: var(--theme-cta-secondary-triad-03-text-active);
+}
+
+.console-button-text.console-button-triad-03 .icon-fill {
+    fill: var(--theme-cta-secondary-triad-03-text-idle);
+}
+.console-button-text.console-button-triad-03:hover .icon-fill {
+    fill: var(--theme-cta-secondary-triad-03-text-hover);
+}
+.console-button-text.console-button-triad-03:active .icon-fill,
+.console-button-text.console-button-triad-03:focus .icon-fill {
+    fill: var(--theme-cta-secondary-triad-03-text-active);
+}
+
+.console-button-text.console-button-triad-03 .icon-stroke {
+    stroke: var(--theme-cta-secondary-triad-03-text-idle);
+}
+.console-button-text.console-button-triad-03:hover .icon-stroke {
+    stroke: var(--theme-cta-secondary-triad-03-text-hover);
+}
+.console-button-text.console-button-triad-03:active .icon-stroke,
+.console-button-text.console-button-triad-03:focus .icon-stroke {
+    stroke: var(--theme-cta-secondary-triad-03-text-active);
+}
+
+.console-button-text.console-button-triad-03 .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-triad-03-text-idle);
+    fill: var(--theme-cta-secondary-triad-03-text-idle);
+}
+.console-button-text.console-button-triad-03:hover .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-triad-03-text-hover);
+    fill: var(--theme-cta-secondary-triad-03-text-hover);
+}
+.console-button-text.console-button-triad-03:active .icon-fill-stroke,
+.console-button-text.console-button-triad-03:focus .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-triad-03-text-active);
+    fill: var(--theme-cta-secondary-triad-03-text-active);
 }
 
 /* Yellow */
@@ -2108,6 +2174,7 @@ body:not(.mobile) .console-control:hover:before {
     height: var(--t-size-2);
     flex: 0 0 auto;
     margin-right: calc(var(--space2_5) / 2);
+    margin-top: 0.15em;
 }
 
 .categories.large .icon,
@@ -2256,7 +2323,45 @@ body:not(.mobile) .console-control:hover:before {
 }
 
 /* Popup
-   ================================================================================================================ */
+   ================================================================================================================
+   Positioning:
+        .popup-wrapper: .left || .right - to align left or right.
+        .popup-wrapper: .top || .bottom - to show above or below.
+        .popup: .popup-top-down || .popup-bottom-up - to animate down or up when opening/closing.
+   */
+.popup-wrapper {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    transition: var(--a-elements);
+    overflow: hidden;
+}
+
+.popup-wrapper.is-visible {
+    opacity: 1;
+    height: auto;
+    width: auto;
+    transition: var(--a-elements-active);
+    overflow: visible;
+}
+
+.popup-wrapper.left {
+    left: 0;
+}
+
+.popup-wrapper.right {
+    right: 0;
+}
+
+.popup-wrapper.top {
+    bottom: 100%;
+}
+
+.popup-wrapper.bottom {
+    top: 100%;
+}
+
 .popup {
     position: relative;
     background-color: var(--theme-content-bg-4);
@@ -2859,6 +2964,7 @@ p.combo-card-description {
 /* Table of Contents
    ================================================================================================================ */
 .toc {
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-end;
@@ -2874,8 +2980,19 @@ p.combo-card-description {
 .toc ul {
     margin: 0;
     padding: 0;
-    padding-right: var(--space3);
-    border-right: 1px solid var(--theme-text-4);
+    font-size: var(--t-size-2);
+}
+
+.toc-indicator {
+    content: "";
+    position: absolute;
+    display: block;
+    background: var(--theme-text-1);
+    width: calc(var(--space2) - 1px);
+    height: calc(var(--space2) - 1px);
+    margin-top: calc(var(--t-lH2) + var(--space3));
+    top: 0;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%, 50% 0);
 }
 
 .toc ul li {
@@ -2897,9 +3014,7 @@ p.combo-card-description {
     margin-bottom: var(--space1);
 }
 
-.toc-link,
 .toc-link {
-    text-align: right;
     display: inline-block;
     width: 100%;
     text-decoration: none;
@@ -2924,7 +3039,6 @@ p.combo-card-description {
 .toc-item-sub .toc-link:focus,
 .toc-item-sub .toc-link:hover {
     color: var(--theme-text-1);
-    transform: translateX(calc(var(--space1) * -1));
     transition: var(--a-micro-active);
     outline: none;
 }
@@ -2962,6 +3076,56 @@ p.combo-card-description {
     .toc-item.toc-item-sub {
         font-size: var(--t-size-1);
     }
+}
+
+/* TOC left aligned */
+.toc-left {
+    align-items: flex-start;
+}
+
+.toc-left .toc-indicator {
+    left: calc((var(--space0) + 1px) * -1);
+}
+
+.toc-left ul {
+    padding-left: var(--space3);
+    border-left: 1px solid var(--theme-text-4);
+}
+
+.toc-left .toc-link {
+    text-align: left;
+}
+
+.toc-left .toc-link:focus,
+.toc-left .toc-link:hover,
+.toc-left .toc-item-sub .toc-link:focus,
+.toc-left .toc-item-sub .toc-link:hover {
+    transform: translateX(var(--space1));
+}
+
+/* TOC right aligned */
+.toc-right {
+    align-items: flex-end;
+}
+
+.toc-right .toc-indicator {
+    right: calc((var(--space0) + 1px) * -1);
+}
+
+.toc-right ul {
+    padding-right: var(--space3);
+    border-right: 1px solid var(--theme-text-4);
+}
+
+.toc-right .toc-link {
+    text-align: right;
+}
+
+.toc-right .toc-link:focus,
+.toc-right .toc-link:hover,
+.toc-right .toc-item-sub .toc-link:focus,
+.toc-right .toc-item-sub .toc-link:hover {
+    transform: translateX(calc(var(--space1) * -1));
 }
 
 /* Plane Picture
@@ -3141,6 +3305,10 @@ p.combo-card-description {
 
 .framed-section.framed-section-default .framed-section-item {
     border-top: var(--theme-framed-section-default-item-border);
+}
+
+.framed-section.framed-section-default > p {
+    color: var(--theme-text-1);
 }
 
 .framed-section.framed-section-attention .framed-section-item {
@@ -4308,7 +4476,7 @@ p.combo-card-description {
     padding: 0;
     margin: calc(var(--space4_5) + var(--space2)) 0 calc(var(--space5) + var(--space3));
     padding: 0;
-    overflow-x: scroll;
+    overflow-x: auto;
     transition: var(--a-micro);
     box-shadow: inset 1px 0 0 0px transparent, inset -1px 0 0 0px transparent;
 }
@@ -4493,10 +4661,12 @@ p.combo-card-description {
     box-shadow: var(--theme-shadow-3);
     transition: all var(--a-modal-time) var(--a-modal-easing);
     transition-delay: 0s;
+    opacity: 0;
 }
 
 .is-visible .modal {
     transition-delay: 0s;
+    opacity: 1;
 }
 
 .modal > * {
@@ -4511,7 +4681,7 @@ p.combo-card-description {
     text-decoration: none;
     border: 1px solid transparent;
     background: transparent;
-    border-radius: var(--corners-mid);
+    border-radius: calc(var(--corners-mid) + 1px);
     transition: var(--a-controls);
 }
 
@@ -4656,6 +4826,7 @@ p.combo-card-description {
     padding-bottom: var(--space4);
     padding-left: var(--space0);
     bottom: 0;
+    overscroll-behavior: none;
 }
 
 .aside-content-wrapper .page-section-heading {
@@ -4724,4 +4895,51 @@ p.combo-card-description {
 
 .page-section .person-profile {
     margin-left: var(--space3_5);
+}
+
+/* Tech stack
+   ================================================================================================================ */
+/* Inline list display */
+.tech-stack {
+    position: relative;
+    display: inline-block;
+}
+
+.tech-stack-content {
+    display: block;
+    font-weight: 400;
+    font-size: var(--t-size-1);
+    color: var(--theme-text-2);
+    letter-spacing: 0.12em;
+}
+
+.tech-stack .icon {
+    width: 1.15em;
+    height: 1.15em;
+    vertical-align: -0.2em;
+    margin-right: calc(var(--space2));
+}
+
+.tech-stack .icon-stroke {
+    stroke: var(--theme-text-2);
+}
+
+.tech-stack-content span {
+    color: var(--theme-text-3);
+}
+
+.tech-stack .tooltip {
+    width: auto;
+}
+
+.tech-stack .tooltip-content p {
+    white-space: nowrap;
+}
+
+/* Individual items display */
+.tech-stack-item {
+    font-weight: 400;
+    font-size: var(--t-size-1);
+    color: var(--theme-text-2);
+    letter-spacing: 0.12em;
 }

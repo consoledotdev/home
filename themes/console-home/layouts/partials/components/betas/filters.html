@@ -25,7 +25,7 @@
 			<label class="console-label console-label-small">Category</label>
 			{{ range .dot.categoryItems }}
 				{{ $details := merge . (dict "color" "blue") }}
-				{{ partial "components/checkbutton.html" (dict "context" $details "action" "filtering.toggledCheck" "dataFilter" "toggle" "dataFilterGroup" "tag" ) }}
+				{{ partial "components/checkbutton.html" (dict "context" $details "action" "filtering.toggledCheck" "dataFilter" "toggle" "dataFilterGroup" "category" ) }}
 			{{ end }}
 		</div>
 		<div class="show-by">
@@ -41,9 +41,6 @@
 		<div>
 			<button data-filter="select-all" onclick="blur()" class="console-button-text console-button-small select-all" title="Select all">
 				<span>Select all</span>
-			</button>
-			<button data-filter="clear-all" onclick="blur()" class="console-button-text console-button-small clear-all" title="Clear all">
-				<span>Clear all</span>
 			</button>
 		</div>
 	</form>

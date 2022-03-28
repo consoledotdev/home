@@ -1,22 +1,202 @@
-let toggleMenuPopup = (e) => {
-    let el = document.getElementById("menu-toggle");
-    if (el.classList.contains("is-active")) {
-        el.classList.remove("is-active");
-    } else {
-        el.classList.add("is-active");
+class Popup {
+    constructor(wrapper) {
+        this.bindThisMethods();
+        this.wrapper = wrapper;
+        this.el = wrapper.querySelector("[data-popup]");
+        this.controls = document.querySelectorAll("[data-popup-toggle='" + this.el.dataset.popup + "']");
+        this.controlsNoActive = document.querySelectorAll("[data-popup-toggle-noactive='" + this.el.dataset.popup + "']");
+        this.visible = false;
+
+        this.bind();
     }
 
-    var p = "menu-popup";
-    var pState = "is-visible";
-    var pEl = document.getElementById(p);
-    if (pEl.classList.contains(pState)) {
-        pEl.classList.remove(pState);
-        pEl.style.pointerEvents = "none";
-    } else {
-        pEl.classList.add(pState);
-        pEl.style.pointerEvents = "all";
+    bind() {
+        this.controls.forEach((c) => {
+            c.addEventListener("mouseup", this.toggle);
+        });
+        this.controlsNoActive.forEach((c) => {
+            c.addEventListener("mouseup", this.noActiveToggle);
+        });
+
+        document.addEventListener("click", this.checkClickOutside);
+        document.addEventListener("keyup", this.handleKeypress);
     }
-};
+
+    handleKeypress(e) {
+        if (e.key == "Escape" && this.visible) this.toggle();
+    }
+
+    toggle(e) {
+        if (this.visible) {
+            this.el.classList.remove("is-visible");
+            setTimeout(() => {
+                this.wrapper.classList.remove("is-visible");
+            }, 300);
+            this.controls.forEach((c) => {
+                c.classList.remove("is-active");
+            });
+            this.wrapper.style.pointerEvents = "none";
+            this.el.style.pointerEvents = "none";
+        } else {
+            this.el.classList.add("is-visible");
+            this.wrapper.classList.add("is-visible");
+            this.controls.forEach((c) => {
+                c.classList.add("is-active");
+            });
+            this.wrapper.style.pointerEvents = "all";
+            this.el.style.pointerEvents = "all";
+        }
+        this.visible = !this.visible;
+
+        this.justChanged = true;
+        setTimeout(() => {
+            this.justChanged = false;
+        }, 100);
+    }
+
+    noActiveToggle(e) {
+        if (e.currentTarget.closest("[data-popup-wrapper]")) this.toggle();
+    }
+
+    checkClickOutside(e) {
+        if (!this.justChanged) {
+            const inside = this.el.contains(e.target);
+            if (!inside && this.visible) this.toggle();
+        }
+    }
+
+    bindThisMethods() {
+        this.noActiveToggle = this.noActiveToggle.bind(this);
+        this.toggle = this.toggle.bind(this);
+        this.checkClickOutside = this.checkClickOutside.bind(this);
+        this.handleKeypress = this.handleKeypress.bind(this);
+    }
+}
+
+class ShowMoreNav {
+    constructor(name) {
+        this.bindThisMethods();
+
+        this.areaWidth = document.querySelector("[data-show-more-nav-space-width='" + name + "']");
+        this.el = document.querySelector("[data-show-more-nav='" + name + "']");
+        this.siblings = document.querySelectorAll("[data-show-more-nav-sibling='" + name + "']");
+        this.children = Array.prototype.slice.call(this.el.children);
+        this.control = this.el.querySelector("[data-show-more-nav-control]");
+        this.popupContainer = this.el.querySelector("[data-show-more-nav-popup-container]");
+
+        this.bind();
+        this.checkTruncation();
+    }
+
+    bind() {
+        window.addEventListener("resize", this.checkTruncation);
+    }
+
+    isMobileNav() {
+        return Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0) < 640;
+    }
+
+    checkTruncation(e) {
+        if (this.isMobileNav()) this.W = undefined;
+        else {
+            this.el.style.opacity = 1;
+
+            this.W = this.computeWidths();
+
+            if (this.W) {
+                // get control index to use as calculation limit
+                let controlIdx = this.children.indexOf(this.control);
+
+                // compute how many items can fit
+                let maxFitIdx = -1;
+                let initial = 64; // starts sum with a safety margin so that items don't fit tight
+                this.W.items.reduce((previous, current, idx) => {
+                    if (idx < controlIdx) {
+                        let sum = previous + current;
+                        if (previous < this.W.available) {
+                            maxFitIdx = idx - 1;
+                        }
+                        if (sum < this.W.available) {
+                            maxFitIdx = idx;
+                        }
+                        return sum;
+                    }
+                }, initial);
+
+                // truncation control visibility
+                if (maxFitIdx < this.children.length - 3) this.toggleControl();
+                else this.toggleControl(false);
+
+                // rearrange items
+                this.children.forEach((c, i) => {
+                    if (i < controlIdx) {
+                        if (i <= maxFitIdx) {
+                            this.el.insertBefore(c, this.control);
+                        } else {
+                            this.popupContainer.append(c);
+                        }
+                    }
+                });
+            }
+        }
+    }
+
+    toggleControl(show = true) {
+        if (show) {
+            if (!this.control.classList.contains("is-visible")) this.control.classList.add("is-visible");
+        } else {
+            if (this.control.classList.contains("is-visible")) this.control.classList.remove("is-visible");
+        }
+    }
+
+    computeWidths() {
+        let w = undefined;
+        if (this.areaWidth) {
+            w = 0;
+            w += this.areaWidth.clientWidth;
+            let style = getComputedStyle(this.areaWidth);
+            w -= parseInt(style.borderLeftWidth) || 0;
+            w -= parseInt(style.borderRightWidth) || 0;
+            w -= parseInt(style.paddingLeft) || 0;
+            w -= parseInt(style.paddingRight) || 0;
+            this.siblings.forEach((s) => {
+                s.style.display = "initial";
+                w -= s.clientWidth;
+                s.style.display = null;
+                let style = getComputedStyle(s);
+                w -= parseInt(style.marginLeft) || 0;
+                w -= parseInt(style.marginRight) || 0;
+            });
+        }
+
+        let i = this.W?.items;
+        if (!i) {
+            i = [];
+            this.children.forEach((c) => {
+                c.style.position = "absolute";
+                c.style.visibility = "hidden";
+                c.style.display = "initial";
+                document.body.prepend(c);
+
+                i.push(c.clientWidth);
+
+                c.style.position = null;
+                c.style.visibility = null;
+                c.style.display = null;
+                this.el.append(c);
+            });
+        }
+
+        return {
+            available: w,
+            items: i,
+        };
+    }
+
+    bindThisMethods() {
+        this.checkTruncation = this.checkTruncation.bind(this);
+    }
+}
 
 let bindTooltips = (() => {
     let handles = document.querySelectorAll("[data-tooltip-handle]");
@@ -35,7 +215,6 @@ let bindTooltips = (() => {
                 tooltip.style.width = w + "px";
                 rect = tooltip.getBoundingClientRect();
             } else {
-                w = 320;
                 tooltip.style.width = w + "px";
             }
             let r = offset.x + w;
@@ -483,4 +662,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
             new ComboBox(b);
         });
     }
+
+    let popups = document.querySelectorAll("[data-popup-wrapper]");
+    popups.forEach((p) => {
+        new Popup(p);
+    });
+
+    new ShowMoreNav("main-nav");
 });

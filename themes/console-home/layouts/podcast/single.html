@@ -5,7 +5,7 @@
     <section class="page-section page-section-podcast-episode opening">
         <div class="top">
             <div class="left">
-                <a href="/podcast/" class="console-button-text console-button-green icon-left">
+                <a href="/podcast/" class="console-button-text console-button-triad-03 icon-left">
                     {{ partial "icons/podcast.html" }}
                     <span>DevTools Podcast</span>
                 </a>
@@ -103,16 +103,12 @@
                                 <div class="other-episode">
                                     <h6 class="title title-6"><a class="link" href="{{ .RelPermalink }}" title="{{ .RelPermalink }}" rel="noopener">{{ .Title }}</a></h6>
                                     <div class="other-episode-title-extras">
-                                        <p class="small">with
-                                            {{ with .Params.whoLink }}{{ end }}
-                                                {{ .Params.who }}
-                                            {{ with .Params.whoLink }}{{ end }}
+                                        <p class="small">
+                                            with {{ .Params.who }}
                                         </p>
                                         <p class="small">
                                             {{ with .Params.role }}{{ . }},{{end}}
-                                            {{ with .Params.orgLink }}{{ end }}
-                                                {{ .Params.org }}
-                                            {{ with .Params.orgLink }}{{ end }}
+                                            {{ .Params.org }}
                                         </p>
                                     </div>
                                     <div class="other-episode-meta">

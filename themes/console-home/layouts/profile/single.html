@@ -1,0 +1,187 @@
+{{ define "main" }}
+	{{ $CTATitle := "Subscribe to the weekly Console newsletter" }}
+	{{ $CTADescription := "Our free weekly newsletter features the latest interesting tools." }}
+    {{ $podcast := .Site.GetPage (print .Params.podcast) }}
+    {{ $interview := .Site.GetPage (print .Params.interview) }}
+
+    {{ $companyTopCategoryName := (replace (lower .Params.companyInfo.topCategory) " " "-") }}
+    <section class="page-section page-section-company-profile opening">
+        <div class="top">
+            <div class="left">
+                <a href="/jobs/" class="console-button-text console-button-yellow icon-left">
+                    {{ partial "icons/jobs.html" }}
+                    <span>DevTools Jobs</span>
+                </a>
+                <div class="company-heading">
+                    {{ partial "components/thumbnail-vendor.html" (dict "name" .Params.title "image" .Params.companyInfo.favicon "category" $companyTopCategoryName ) }} 
+                    <div class="company-heading-text">
+                        <h2 class="title title-1">{{ .Params.title }}</h2>
+                        <a href="{{ .Params.companyInfo.URL }}" target="_blank" rel="noopener" class="link icon-left">
+                            {{ partial "icons/link.html" -}}
+                            {{- replace (replace .Params.companyInfo.URL "https://" "") "http://" "" }}
+                        </a>
+                    </div>
+                </div>
+                <p class="intro">{{ .Params.companyInfo.description }}</p>
+                <a class="console-button console-button-medium icon-right" href="{{ .Params.companyInfo.jobsURL }}" title="See all jobs at {{ .Params.companyInfo.jobsURL }}" target="_blank"
+                    rel="noopener"><span>See all jobs</span>
+                    {{ partial "icons/external-link.html" }}</a>
+            </div>
+            <div class="right">
+                <div class="framed-section framed-section-default">
+                    {{ partial "components/simple-table.html" .Params.companyInfo.meta }}
+                </div>
+                <a class="console-button console-button-medium icon-right" href="{{ .Params.companyInfo.jobsURL }}" title="See all jobs at {{ .Params.companyInfo.jobsURL }}" target="_blank"
+                    rel="noopener"><span>See all jobs</span>
+                    {{ partial "icons/external-link.html" }}</a>
+            </div>
+        </div>
+        <div class="bottom">
+            {{ $title := .Params.title }}
+            {{ range .Params.companyInfo.images }}
+                <div class="company-shot">
+                    {{ $nextGenImgSrc := partial "components/processed-img.html" (dict "src" .url "width" "1400" "nextGen" "true") }}
+                    {{ $imgSrc := partial "components/processed-img.html" (dict "src" .url "width" "1400") }}
+                    <a href="#" class="modal-link"
+                        data-modal-link
+                        data-modal-type="screen"
+                        data-modal-type-screen="{{ $imgSrc }}">
+                            {{with $nextGenImgSrc }}<picture><source srcset="{{ . }}" type="image/webp">{{ end }}
+                                <img loading="lazy" class="image" src="{{ $imgSrc }}" alt="{{ $title }}" />
+                            {{with $nextGenImgSrc }}</picture>{{ end }}
+                    </a>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+    <div data-content-split class="content-split">
+		<aside data-aside-wrapper class="aside-wrapper">
+            <div data-aside-content-wrapper class="aside-content-wrapper">
+                <div data-aside-content class="aside-content">
+                    {{ if or $podcast $interview }}
+                        <div class="aside-block">
+                            <div class="page-section-heading">
+                                <h5 class="title title-4">
+                                    More on Console
+                                </h5>
+                            </div>
+                            <div class="aside-items">
+                                {{ with $podcast }}
+                                    <div class="aside-item podcast">
+                                        <h6 class="title title-6"><a class="link icon-left" href="{{ .RelPermalink }}" title="{{ .RelPermalink }}" rel="noopener">
+                                            {{ partial "icons/podcast.html" }}Podcast
+                                        </a></h6>
+                                        <div class="aside-item-title-extras">
+                                            <p class="small">
+                                                with {{ .Params.who }}
+                                            </p>
+                                            <p class="small">
+                                                {{ with .Params.role }}{{ . }}{{end}}
+                                            </p>
+                                        </div>
+                                        <div class="aside-item-meta">
+                                            <p class="small date">
+                                                {{ .Date.Format "2006-01-02" }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                {{ end }}
+                                {{ with $interview }}
+                                    <div class="aside-item interview">
+                                        <h6 class="title title-6"><a class="link icon-left" href="{{ .RelPermalink }}" title="{{ .RelPermalink }}" rel="noopener">
+                                            {{ partial "icons/console-interview.html" }}Interview
+                                        </a></h6>
+                                        <div class="aside-item-title-extras">
+                                            <p class="small">
+                                                with {{ .Params.who }}
+                                            </p>
+                                            <p class="small">
+                                                {{ with .Params.role }}{{ . }}{{end}}
+                                            </p>
+                                        </div>
+                                        <div class="aside-item-meta">
+                                            <p class="small date">
+                                                {{ .Date.Format "2006-01-02" }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                {{ end }}
+                            </div>
+                        </div>
+                    {{ end }}
+                    <div class="aside-block the-toc" data-toc-anchor>
+                        <div class="toc toc-left" data-toc>
+                            <h5 class="title title-4">Contents</h5>
+                            <span data-toc-indicator class="toc-indicator"></span>
+                            <ul data-scroll-track>
+                                <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-0" href="#example">Example</a></li>
+                                <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-1" href="#development-profile">Development profile</a></li>
+                                <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-2" href="#hiring-process">Hiring process</a></li>
+                                <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-3" href="#jobs">Jobs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</aside>
+		<div class="main-content-wrapper">
+            <section class="page-section page-section-company-profile product">
+                <div class="nav-wrapper" id="wrapper-0">
+                    <span class="nav-wrapper-anchor" id="example"></span>
+                    <div class="framed-section framed-section-default">
+                        <h3 class="title title-2">{{ .Params.companyInfo.product.name }}</h3>
+                        <p>{{ .Params.companyInfo.product.description }}</p>
+                        <div class="framed-section-item">
+                            <h5 class="title title-4 rich-title">
+                                {{ partial "icons/tech-stack.html" }}
+                                <span class="rich-title-text">Tech stack</span>
+                            </h5>
+                            <p class="company-tech-stack">
+                                {{ range .Params.companyInfo.techStack }}
+                                    <span class="tech-stack-item">{{ . }}</span>
+                                {{ end }}
+                            </p>
+                        </div>
+                        <div class="framed-section-item">
+                            <h5 class="title title-4 rich-title">
+                                {{ partial "icons/social.html" }}
+                                <span class="rich-title-text">Customer case studies</span>
+                            </h5>
+                            {{ range .Params.companyInfo.customerCaseStudies }}
+                                <p class="company-case-study"><span>{{ .client }}</span> {{ .text }}</p>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page-section page-section-company-profile markdown-body">
+                {{ .Content }}
+            </section>
+            <div class="nav-wrapper" id="wrapper-3">
+                <span class="nav-wrapper-anchor" id="jobs"></span>
+                <section class="page-section page-section-company-profile jobs-link">
+                    <h3 class="title title-2">Jobs</h3>
+                    <p>
+                        <a class="console-button console-button-medium icon-right" href="{{ .Params.companyInfo.jobsURL }}" title="See all jobs at {{ .Params.companyInfo.jobsURL }}" target="_blank"
+                            rel="noopener"><span>See all jobs at {{ .Title }}</span>
+                            {{ partial "icons/external-link.html" }}</a>
+                    </p>
+                </section>
+                <section class="page-section page-section-company-profile more-on-console">
+                    <h3 class="title title-2">More on Console</h3>
+                    <div data-inline-aside-content-wrapper></div>
+                </section>
+                <section class="page-section page-section-company-profile about">
+                    {{ partial "components/about-console.html" }}
+                </section>
+            </div>
+            <section class="page-section page-section-company-profile subscribe">
+                {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" ) }}
+            </section>
+        </div>
+    </div>
+
+	{{ $js := resources.Get "/js/company-profile.js" }}
+    {{ if hugo.IsProduction }}{{ $js = $js | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script src="{{ $js.Permalink }}"></script>
+{{ end }}

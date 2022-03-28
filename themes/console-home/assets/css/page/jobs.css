@@ -1,0 +1,260 @@
+/* Console Tools
+   ========================================================================== */
+.inline-filters-wrapper .box-collapsible.is-expanded .box-collapsible-content {
+    max-height: 540px;
+}
+
+.jobs-card {
+    position: relative;
+    box-shadow: var(--theme-shadow-1);
+    transition: var(--a-micro);
+    border-radius: var(--corners-mid);
+}
+
+.jobs-card.is-hidden-by-buttons {
+    display: none;
+}
+
+.jobs-card.is-hidden-by-search {
+    display: none;
+}
+
+.jobs-card-content {
+    min-width: 100%;
+}
+
+.jobs-card .top {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: var(--space3) var(--space4);
+    border-bottom: var(--theme-border-2);
+    background-color: var(--theme-content-bg-0);
+    border-top-left-radius: var(--corners-mid);
+    border-top-right-radius: var(--corners-mid);
+}
+
+.jobs-card .top > .left {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.jobs-card .top > .left .title-location {
+    display: none;
+}
+
+.jobs-card .top > .right {
+    flex-grow: 1;
+}
+
+.vendor-thumbnail {
+    flex-shrink: 0;
+    width: calc(var(--space4) + var(--space3));
+    height: calc(var(--space4) + var(--space3));
+    margin-right: var(--space3_5);
+    margin-top: calc(var(--space) / 2);
+}
+
+.jobs-card .title-location {
+    margin-bottom: var(--space1);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+}
+
+.jobs-card .title {
+    margin-bottom: 0;
+    margin-right: var(--space2_5);
+}
+
+.jobs-card-location {
+    flex: 0 0 auto;
+    color: var(--theme-text-4);
+    font-size: var(--t-size-3);
+    font-style: italic;
+    flex: 0 1 auto;
+}
+
+p.jobs-card-description {
+    margin: 0;
+}
+
+.jobs-card .bottom {
+    background: var(--theme-content-bg-1);
+    padding: var(--space3) var(--space4);
+    border-bottom-left-radius: var(--corners-mid);
+    border-bottom-right-radius: var(--corners-mid);
+}
+
+.jobs-card-content .top > .right > .taxonomy {
+    display: flex;
+    margin-top: var(--space2);
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: calc(var(--space2) * -1);
+}
+
+.jobs-card-content .top > .right > .taxonomy > * {
+    margin-bottom: var(--space2);
+}
+
+.jobs-card-content .top > .right > .taxonomy > *:not(:last-child) {
+    margin-right: var(--space3);
+}
+
+.jobs-card .bottom .details {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: calc(var(--space3_5) * -1);
+}
+
+.jobs-card .bottom .details > * {
+    margin-top: var(--space3_5);
+}
+
+.jobs-card .bottom .details .left {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: var(--space4);
+}
+
+.jobs-card .bottom .details .left .date {
+    margin-right: var(--space2_5);
+    display: none;
+}
+
+.jobs-card .bottom .details .right {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: calc(var(--space3_5) - var(--space2_5));
+}
+
+.jobs-card .bottom .details .right > *:not(:last-child) {
+    margin-right: var(--space3);
+}
+
+.jobs-card .bottom .details .right > * {
+    margin-top: var(--space2_5);
+}
+
+@media (max-width: 768px) {
+    .jobs-card > *:not(:last-child):not(:first-child) {
+        margin-bottom: var(--space2_5);
+    }
+
+    .jobs-card-content .top > *:not(:last-child):not(.card-link) {
+        margin-bottom: var(--space2_5);
+    }
+
+    p.jobs-card-description {
+        margin-bottom: var(--space2_5);
+    }
+
+    .jobs-card-content .top {
+        flex-flow: column nowrap;
+        align-items: flex-start;
+    }
+
+    .jobs-card-content .top > .right > *:not(:last-child) {
+        margin-bottom: var(--space2_5);
+    }
+
+    .vendor-thumbnail {
+        margin-right: var(--space3);
+    }
+
+    .jobs-card-content .top > .left .title-location {
+        display: block;
+        margin: 0;
+    }
+
+    .jobs-card-content .top > .right .title-location {
+        display: none;
+    }
+
+    @media (max-width: 600px) {
+        .jobs-card .top {
+            padding-left: var(--space3_5);
+            padding-right: var(--space3_5);
+        }
+
+        .jobs-card .bottom {
+            padding-left: var(--space3_5);
+            padding-right: var(--space3_5);
+        }
+
+        .jobs-card .bottom .details {
+            flex-flow: column nowrap;
+            align-items: flex-start;
+        }
+    }
+
+    @media (min-width: 601px) {
+        .jobs-card > *:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .jobs-card {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    .jobs-card > *:not(:last-child):not(:first-child) {
+        margin-right: var(--space4);
+    }
+
+    .jobs-card-content .top {
+        flex: 1 1 auto;
+    }
+
+    p.jobs-card-description {
+        margin-bottom: var(--space1);
+    }
+
+    @media (min-width: 954px) and (max-width: 1024px), (min-width: 1360px) {
+        .jobs-card-content .top > .right {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .jobs-card-content .top > .right > .left {
+            flex: 1 1 auto;
+            margin-right: var(--space4_5);
+        }
+
+        .jobs-card-content .top > .right > .taxonomy {
+            flex: 0 0 auto;
+            max-width: 40%;
+            flex-flow: column nowrap;
+            align-items: flex-end;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+
+        .jobs-card-content .top > .right > .taxonomy > * {
+            margin-bottom: 0;
+        }
+
+        .jobs-card-content .top > .right > .taxonomy > *:not(:last-child) {
+            margin-right: 0;
+        }
+
+        .jobs-card-content .top > .right > .taxonomy > *:not(:first-child) {
+            margin-top: var(--space1);
+        }
+
+        p.jobs-card-description {
+            margin-bottom: 0;
+        }
+    }
+}

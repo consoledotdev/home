@@ -1,0 +1,11 @@
+{{ $items := . }}
+<div class="tech-stack">
+    <span class="tech-stack-content" data-tooltip-handle>{{ partial "icons/tech-stack.html" }}{{ range $i, $v := $items }}{{ if $i }}<span>, </span>{{ end }}{{ $v }}{{ end }}</span>
+    <div class="tooltip-hook tooltip-top-down tooltip-small">
+        <div data-tooltip class="tooltip">
+            <div class="tooltip-content">
+                <p class="x-small">The company tech stack.</p>
+            </div>
+        </div>
+    </div>
+</div>

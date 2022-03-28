@@ -210,12 +210,6 @@ p.tool-card-description {
         }
     }
 
-    @media (max-width: 480px) {
-        .beta-card-content > .left .title {
-            word-break: break-word;
-        }
-    }
-
     @media (min-width: 601px) {
         .tool-card > *:not(:last-child) {
             margin-bottom: 0;

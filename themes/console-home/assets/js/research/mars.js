@@ -99,3 +99,42 @@ let createObserver = (() => {
         observer.observe(el);
     });
 })();
+
+class TOC {
+    constructor(selector) {
+        this.bindThisFunctions();
+        this.bind();
+
+        this.el = document.querySelector(selector);
+        this.indicator = this.el.querySelector("[data-toc-indicator]");
+        this.scrollTrack = this.el.querySelector("[data-scroll-track]");
+        this.scrollWrapper = document.querySelector("[data-scroll-wrapper]");
+    }
+
+    bind() {
+        document.addEventListener("scroll", this.adjustIndicator);
+        document.addEventListener("resize", this.adjustIndicator);
+    }
+
+    bindThisFunctions() {
+        this.adjustIndicator = this.adjustIndicator.bind(this);
+    }
+
+    adjustIndicator(e) {
+        const trackHeight = this.scrollTrack.offsetHeight - this.indicator.offsetHeight;
+
+        const contentHeight = this.scrollWrapper.offsetHeight;
+        const visibleHeight = document.body.offsetHeight;
+        const scrollableHeight = contentHeight - visibleHeight;
+        const scrolledAbsolute = window.pageYOffset;
+        const scrolledNormalized = scrolledAbsolute / scrollableHeight;
+
+        const offset = scrolledNormalized * trackHeight;
+
+        this.indicator.style.transform = "translateY(" + offset + "px)";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    const toc = new TOC("[data-toc]");
+});
