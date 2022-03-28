@@ -21,9 +21,10 @@ ogImg: /img/interviews/quickwit-paul-masurel-desk.jpg
 so-called "append-only" data. This includes application logs, system logs, user
 action logs... but also emails, chats, and audit trails of all kinds.
 
-We observed some frustration from users indexing logs in Elasticsearch. The two
-common complaints we heard were how difficult and time-consuming it is to manage
-a cluster, and how costly it can be.
+We observed some frustration from users indexing logs in
+[Elasticsearch](https://www.elastic.co/). The two common complaints we heard
+were how difficult and time-consuming it is to manage a cluster, and how costly
+it can be.
 
 Generally Elasticsearch's architecture is a good one-size-fits-all solution to
 search, but it is not really tailored for logs.
@@ -72,10 +73,10 @@ I was born in 1982. When I was a kid we had a computer at home, which was very
 rare at the time. There was no internet and having a PC at home did not have
 much use apart from playing video games.
 
-One day, I taught myself QBasic out of boredom. It was a popular entry point to
-programming at that time. I recall that my first program was something that was
-computing the tides using the rule of twelfths. It was silly, but I was too
-young to know about cosine.
+One day, I taught myself [QBasic](https://en.wikipedia.org/wiki/QBasic) out of
+boredom. It was a popular entry point to programming at that time. I recall that
+my first program was something that was computing the tides using the rule of
+twelfths. It was silly, but I was too young to know about cosine.
 
 ### What languages have you learned over time?
 
@@ -119,20 +120,24 @@ optimize my code in a nice deterministic way.
 ### What is the most interesting tech tool are you playing around with at the moment?
 
 I read a lot of source code and these days I've been interested in a Rust
-project called DataFusion. It is a dataframe library that supports SQL querying.
-It can read Parquet files. It is very modular and its creator -Andy Grove- even
-implemented a distributed column database on top of it called Ballista. We might
-at some point try to plug it with Quickwit.
+project called [DataFusion](https://cloud.google.com/data-fusion). It is a
+dataframe library that supports SQL querying. It can read Parquet files. It is
+very modular and its creator - Andy Grove - even implemented a distributed
+column database on top of it called
+[Ballista](https://github.com/apache/arrow-datafusion/tree/master/ballista). We
+might at some point try to plug it with Quickwit.
 
 ### Describe your computer hardware setup
 
-I use a Lenovo ThinkPad T14s. At home, I use a Leopold keyboard and a wide
-external monitor. For meetings I have a Blue Yeti microphone and a Logitech
-camera.
+I use a
+[Lenovo ThinkPad T14s](https://www.lenovo.com/us/en/laptops/thinkpad/t-series/ThinkPad-T14-G1/p/22TPT14T4N1).
+At home, I use a Leopold keyboard and a wide external monitor. For meetings I
+have a [Blue Yeti microphone](https://www.bluemic.com/en-us/products/yeti/) and
+a [Logitech](https://www.logitech.com/) camera.
 
 ### Describe your computer software setup
 
-**OS:** Pop!\_OS.
+**OS:** [Pop!\_OS](https://pop.system76.com/).
 
 **Browser:** Brave.
 
