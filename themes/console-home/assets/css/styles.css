@@ -470,6 +470,29 @@ body.show-planes:after {
     }
 }
 
+.page-home .subscribers-count {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: var(--t-size-2);
+    color: var(--theme-text-2);
+    margin-top: var(--space4);
+    margin-bottom: calc(var(--space4) * -1);
+}
+
+.page-home .subscribers-count .icon {
+    fill: var(--theme-text-2);
+    margin-right: var(--space1);
+}
+
+@media (max-width: 480px) {
+    .page-home .subscribers-count {
+        margin-bottom: calc(var(--space3) * -1);
+    }
+}
+
 .main-article,
 .main-feature {
     z-index: 30;

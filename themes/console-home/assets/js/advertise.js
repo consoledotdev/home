@@ -19,57 +19,57 @@ let handlePodcastEmbedTheme = (() => {
     setTheme();
 })();
 
-document.addEventListener("DOMContentLoaded", (event) => {
-    let levelPackageIntros = (() => {
-        let setSize = () => {
-            let paragraphs = document.querySelectorAll("[data-package-intro]");
-            let heights = [];
-            paragraphs.forEach((p) => {
-                p.style.height = null;
-                heights.push(p.getBoundingClientRect().height);
-            });
-            paragraphs.forEach((p) => {
-                if (heights[0] >= heights[1]) p.style.height = heights[0] + "px";
-                else p.style.height = heights[1] + "px";
-            });
-        };
-        setSize();
-        window.addEventListener("resize", setSize);
-        const resizeObserver = new ResizeObserver((entries) => {
-            setTimeout(() => {
-                setSize();
-            }, 100);
-        });
-        resizeObserver.observe(document.body);
-    })();
+// document.addEventListener("DOMContentLoaded", (event) => {
+//     let levelPackageIntros = (() => {
+//         let setSize = () => {
+//             let paragraphs = document.querySelectorAll("[data-package-intro]");
+//             let heights = [];
+//             paragraphs.forEach((p) => {
+//                 p.style.height = null;
+//                 heights.push(p.getBoundingClientRect().height);
+//             });
+//             paragraphs.forEach((p) => {
+//                 if (heights[0] >= heights[1]) p.style.height = heights[0] + "px";
+//                 else p.style.height = heights[1] + "px";
+//             });
+//         };
+//         setSize();
+//         window.addEventListener("resize", setSize);
+//         const resizeObserver = new ResizeObserver((entries) => {
+//             setTimeout(() => {
+//                 setSize();
+//             }, 100);
+//         });
+//         resizeObserver.observe(document.body);
+//     })();
 
-    let resizeNeonPlanes = (() => {
-        let setSize = () => {
-            let planesWrappers = document.querySelectorAll("[data-neon-planes-wrapper]");
-            planesWrappers.forEach((pW) => {
-                let parent = pW.parentElement;
-                let resizeRatio;
+//     let resizeNeonPlanes = (() => {
+//         let setSize = () => {
+//             let planesWrappers = document.querySelectorAll("[data-neon-planes-wrapper]");
+//             planesWrappers.forEach((pW) => {
+//                 let parent = pW.parentElement;
+//                 let resizeRatio;
 
-                if (pW.dataset.packages != undefined) {
-                    if (window.innerWidth < 840) {
-                        resizeRatio = (parent.offsetHeight * 0.9) / pW.offsetHeight;
-                        pW.style.transform = "translate(-50%, -50%) scale(" + resizeRatio + ")";
-                    } else {
-                        pW.style.transform = null;
-                    }
-                }
-            });
-        };
-        setSize();
-        window.addEventListener("resize", setSize);
-        const resizeObserver = new ResizeObserver((entries) => {
-            setTimeout(() => {
-                setSize();
-            }, 100);
-        });
-        resizeObserver.observe(document.body);
-    })();
-});
+//                 if (pW.dataset.packages != undefined) {
+//                     if (window.innerWidth < 840) {
+//                         resizeRatio = (parent.offsetHeight * 0.9) / pW.offsetHeight;
+//                         pW.style.transform = "translate(-50%, -50%) scale(" + resizeRatio + ")";
+//                     } else {
+//                         pW.style.transform = null;
+//                     }
+//                 }
+//             });
+//         };
+//         setSize();
+//         window.addEventListener("resize", setSize);
+//         const resizeObserver = new ResizeObserver((entries) => {
+//             setTimeout(() => {
+//                 setSize();
+//             }, 100);
+//         });
+//         resizeObserver.observe(document.body);
+//     })();
+// });
 
 let handleScrollAppearance = (() => {
     let handleIntersect = (intersections) => {
@@ -98,6 +98,15 @@ let handleScrollAppearance = (() => {
                 }
                 if (!i.isIntersecting) {
                     if (i.boundingClientRect.top > 0) document.body.classList.remove("checkpoint-work-with-us");
+                }
+            }
+
+            if ("checkpointSponsoredPackage" in i.target.dataset) {
+                if (i.isIntersecting || (!i.isIntersecting && i.boundingClientRect.top < 0)) {
+                    document.body.classList.add("checkpoint-sponsored-package");
+                }
+                if (!i.isIntersecting) {
+                    if (i.boundingClientRect.top > 0) document.body.classList.remove("checkpoint-sponsored-package");
                 }
             }
 
@@ -130,7 +139,7 @@ let handleScrollAppearance = (() => {
         });
     };
 
-    let observed1 = ["data-checkpoint-site", "data-checkpoint-work-with-us", "data-checkpoint-campaigns", "data-checkpoint-contact"].map((str) => {
+    let observed1 = ["data-checkpoint-site", "data-checkpoint-campaigns", "data-checkpoint-contact"].map((str) => {
         return document.querySelector("[" + str + "]");
     });
 
@@ -144,7 +153,7 @@ let handleScrollAppearance = (() => {
         observer1.observe(el);
     });
 
-    let observed2 = ["data-checkpoint-podcast", "data-checkpoint-neon-planes"].map((str) => {
+    let observed2 = ["data-checkpoint-podcast", "data-checkpoint-neon-planes", "data-checkpoint-work-with-us"].map((str) => {
         return document.querySelector("[" + str + "]");
     });
 
