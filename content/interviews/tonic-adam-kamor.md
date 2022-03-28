@@ -164,7 +164,7 @@ the speed, but it gets you some amount more speed. It's been a challenge saying
 no to code changes that will get you a couple % extra speed, but it's twice as
 complicated as it was before. It's often not worth it.
 
-### Describe your computer hardware setup
+### What is your tech stack?
 
 Our front end is React with TypeScript and our back end is all .NET. We are on
 the latest version of .NET 6. About half our development team is Windows and
