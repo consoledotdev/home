@@ -38,6 +38,10 @@ html {
     margin-bottom: var(--space2);
 }
 
+.page-podcast-episode .title.title-2 {
+    margin-bottom: var(--space4);
+}
+
 .page-podcast-episode .title.title-2:not(:first-child) {
     margin-top: var(--space5);
 }
@@ -234,17 +238,7 @@ html {
     }
 }
 
-@media (max-width: 768px) {
-    .main-podcast-episode .aside-block.more-episodes {
-        display: none;
-    }
-}
-
 /* Notes */
-.main-podcast-episode .page-section.notes {
-    margin-bottom: var(--space5_5);
-}
-
 .main-podcast-episode .page-section.notes .title-4.rich-title {
     display: block;
     text-indent: calc(var(--space4) * -1);
@@ -301,6 +295,7 @@ html {
 /* Transcript */
 .podcast-transcript {
     margin-top: var(--space5);
+    margin-bottom: var(--space5);
 }
 
 .main-podcast-episode .box-collapsible {
@@ -323,7 +318,22 @@ html {
     color: var(--theme-interviewee-name);
 }
 
+/* More episodes */
+.main-podcast-episode .page-section.more-episodes {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .main-podcast-episode .page-section.more-episodes {
+        display: block;
+    }
+}
+
 /* About */
+.main-podcast-episode .page-section.about {
+    margin-top: var(--space5_5);
+}
+
 .main-podcast-episode .page-section.about > * {
     margin-top: var(--space4_5);
 }
@@ -333,52 +343,16 @@ html {
 }
 
 /* Aside */
+@media (max-width: 768px) {
+    .main-podcast-episode .aside-block .page-section-heading {
+        display: none;
+    }
+}
+
 .main-podcast-episode .aside-content-wrapper {
     margin-left: max(var(--space4_5), 3vw);
     width: auto;
     max-width: none;
-}
-
-.aside-content-wrapper .other-episodes,
-.aside-content-wrapper .other-episode:not(:first-child) {
-    margin-top: var(--space3_5);
-}
-
-.other-episode .title.title-6 {
-    font-size: var(--t-size1);
-}
-
-.other-episode .title.title-6,
-.other-episode p {
-    margin-bottom: var(--space0);
-}
-
-.other-episode-title-extras .title,
-.other-episode-title-extras .small,
-.other-episode-title-extras a.link:not(:hover):not(:focus):not(:active) {
-    color: var(--theme-text-4);
-}
-
-.other-episode-title-extras p:first-child {
-    font-weight: 500;
-}
-
-.other-episode-title-extras p:last-child {
-    font-size: var(--t-size-3);
-    font-style: italic;
-}
-
-.other-episode-meta {
-    margin-top: var(--space2);
-}
-
-.other-episode-meta p {
-    color: var(--theme-text-3);
-    font-size: var(--t-size-2);
-}
-
-.other-episode-meta .episode-no {
-    font-style: italic;
 }
 
 .main-podcast-episode .aside.appended {

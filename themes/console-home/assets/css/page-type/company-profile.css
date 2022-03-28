@@ -388,79 +388,9 @@ html {
     margin-bottom: var(--space4);
 }
 
-.aside-items:not(:first-child),
-.aside-item:not(:first-child) {
-    margin-top: var(--space3_5);
-}
-
-.aside-item-title-extras .title,
-.aside-item-title-extras .small,
-.aside-item-title-extras a.link:not(:hover):not(:focus):not(:active) {
-    color: var(--theme-text-4);
-}
-
-.aside-item-title-extras p:first-child {
-    font-weight: 500;
-}
-
-.aside-item-title-extras p:last-child:not(:first-child) {
-    font-style: italic;
-}
-
-.aside-item-meta {
-    margin-top: var(--space2);
-}
-
-.aside-item-meta p {
-    color: var(--theme-text-3);
-}
-
 .aside-item-meta .episode-no {
     font-style: italic;
 }
-
-@media (min-width: 769px) {
-    .aside-item .title.title-6 {
-        font-size: var(--t-size1);
-    }
-
-    .aside-item-title-extras p:last-child:not(:first-child) {
-        font-size: var(--t-size-3);
-    }
-
-    .aside-item-meta p {
-        font-size: var(--t-size-2);
-    }
-
-    .aside-item .title.title-6,
-    .aside-item p {
-        margin-bottom: var(--space0);
-    }
-}
-
-@media (max-width: 768px) {
-    .aside-item .title.title-6 {
-        font-size: var(--t-size2);
-    }
-
-    .aside-item p.small {
-        font-size: var(--t-size0);
-    }
-
-    .aside-item-title-extras p:last-child:not(:first-child) {
-        font-size: var(--t-size-2);
-    }
-
-    .aside-item-meta p {
-        font-size: var(--t-size-1);
-    }
-
-    .aside-item .title.title-6,
-    .aside-item p {
-        margin-bottom: var(--space1);
-    }
-}
-
 .aside-item.podcast .title a:link,
 .aside-item.podcast .title a:visited,
 .aside-item.interview .title a:link,

@@ -58,7 +58,7 @@
 		<aside data-aside-wrapper class="aside-wrapper">
             <div data-aside-content-wrapper class="aside-content-wrapper">
                 <div data-aside-content class="aside-content">
-                    <div class="aside-block">
+                    <div data-aside-sub-content="host" class="aside-block">
                         <div class="page-section-heading">
                             <h5 class="title title-4">
                                 {{ if eq .Params.season 1 }}
@@ -90,19 +90,19 @@
 
                         {{ if eq .Params.season 1 }}</div>{{ end }}
                     </div>
-                    <div class="aside-block more-episodes">
+                    <div data-aside-sub-content="episodes" class="aside-block more-episodes">
                         <div class="page-section-heading">
                             <h5 class="title title-4">More episodes</h5>
                         </div>
-                        <div class="other-episodes">
+                        <div class="aside-items">
                             {{ $section := .Site.GetPage "section" "podcast" }}
                             {{ $pages := $section.Pages }}
                             {{ $pageTitle := .Params.title }}
                             {{ range (where $pages.ByPublishDate.Reverse "Params.season" .Params.season) }}
                                 {{ if not (eq .Title $pageTitle) }}
-                                <div class="other-episode">
+                                <div class="aside-item">
                                     <h6 class="title title-6"><a class="link" href="{{ .RelPermalink }}" title="{{ .RelPermalink }}" rel="noopener">{{ .Title }}</a></h6>
-                                    <div class="other-episode-title-extras">
+                                    <div class="aside-item-title-extras">
                                         <p class="small">
                                             with {{ .Params.who }}
                                         </p>
@@ -111,7 +111,7 @@
                                             {{ .Params.org }}
                                         </p>
                                     </div>
-                                    <div class="other-episode-meta">
+                                    <div class="aside-item-meta">
                                         <p class="small episode-no">
                                             {{ $s := .Params.season }}
                                             {{ $e := .Params.episode }}
@@ -129,6 +129,10 @@
 		<div class="main-content-wrapper">
             <section class="page-section page-section-podcast-episode notes">
                 {{ .Content }}
+            </section>
+            <section class="page-section page-section-podcast-episode more-episodes">
+                <h3 class="title title-2">More episodes</h3>
+                <div data-inline-aside-content-wrapper></div>
             </section>
             <section class="page-section page-section-podcast-episode about">
                 <div name="david-mytton">{{ partial "components/author.html" (dict "context" . "bio" .Params.authorBio "img" .Params.authorImg "name" .Params.authorName "url" .Params.authorURL ) }}</div>

@@ -17,20 +17,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let contentSplits = document.querySelectorAll("[data-content-split]");
     let setPos = () => {
         contentSplits.forEach((split) => {
-            let el = split.querySelector("[data-aside-content]");
-            let asideWrapper = split.querySelector("[data-aside-content-wrapper]");
-            let inlineWrapper = split.querySelector("[data-inline-aside-content-wrapper]");
+            let el1 = split.querySelector("[data-aside-sub-content='host']");
+            let el2 = split.querySelector("[data-aside-sub-content='episodes']");
+            let asideContent = split.querySelector("[data-aside-content]");
+            let inlineWrapper1 = split.querySelector(".notes [data-inline-aside-content-wrapper]");
+            let inlineWrapper2 = split.querySelector(".more-episodes [data-inline-aside-content-wrapper]");
             if (window.innerWidth >= 769) {
-                if (inlineWrapper.classList.contains("appended")) {
-                    asideWrapper.appendChild(el);
-                    inlineWrapper.classList.add("is-hidden");
-                    inlineWrapper.classList.remove("appended");
+                if (inlineWrapper1.classList.contains("appended")) {
+                    asideContent.appendChild(el1);
+                    asideContent.appendChild(el2);
+                    inlineWrapper1.classList.add("is-hidden");
+                    inlineWrapper1.classList.remove("appended");
                 }
             } else {
-                if (!inlineWrapper.classList.contains("appended")) {
-                    inlineWrapper.appendChild(el);
-                    inlineWrapper.classList.remove("is-hidden");
-                    inlineWrapper.classList.add("appended");
+                if (!inlineWrapper1.classList.contains("appended")) {
+                    inlineWrapper1.appendChild(el1);
+                    inlineWrapper1.classList.remove("is-hidden");
+                    inlineWrapper1.classList.add("appended");
+                    inlineWrapper2.appendChild(el2);
+                    inlineWrapper2.classList.remove("is-hidden");
+                    inlineWrapper2.classList.add("appended");
                 }
             }
         });
