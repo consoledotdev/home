@@ -257,7 +257,7 @@
                             {{ partial "illustrations/console-sponsored-jobs.html" }}
                         </h3>
                         <p>
-                            Each week we profile 3 of the best dev tools companies currently hiring. Each company must meet our selection criteria to be featured. Sponsored partners receive e a full company profile on the Console website.
+                            Each week we profile 3 of the best dev tools companies currently hiring. Each company must meet our selection criteria to be featured. Sponsored partners receive a full company profile on the Console website.
                         </p>
                     </div>
                     {{ partial "illustrations/console-sponsored-jobs.html" }}
@@ -275,8 +275,8 @@
                     <div class="benefits">
                         <div>
                             <h5 class="title title-4 rich-title">{{ partial "icons/console-mini-filled.html" }}<span>Newsletter listing</span></h5>
-                            <h6 class="title title-5"><span>Reach 20k+ developers</span></h6>
-                            <p class="small">Sponsored company profile receive a listing in the Console Weekly newsletter reaching 20,000+ opt-in subscribers.</p>
+                            <h6 class="title title-5"><span>Reach {{ $.Site.Params.consoleSubscribers }} developers</span></h6>
+                            <p class="small">Sponsored company profile receive a listing in the Console Weekly newsletter reaching {{ $.Site.Params.consoleSubscribers }} opt-in subscribers.</p>
                         </div>
                         <div>
                             <h5 class="title title-4 rich-title">{{ partial "icons/bypass.html" }}<span>Application bypass</span></h5>
