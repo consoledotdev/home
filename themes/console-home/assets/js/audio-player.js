@@ -95,7 +95,7 @@ window.CNSL.AudioPlayer =
                 this.wrapper.classList.add("is-playing");
                 this.wrapper.classList.remove("is-loading");
                 this.scrollTitle();
-                this.scrollTitleAlt();
+                if (this.titleAlt) this.scrollTitleAlt();
             } catch (err) {
                 this.wrapper.classList.remove("is-playing");
                 this.wrapper.classList.remove("is-loading");
@@ -108,7 +108,7 @@ window.CNSL.AudioPlayer =
             this.wrapper.classList.remove("is-playing");
             this.wrapper.classList.add("is-paused");
             this.scrollTitleStop();
-            this.scrollTitleAltStop();
+            if (this.titleAlt) this.scrollTitleAltStop();
         }
 
         checkOtherPlayers() {
