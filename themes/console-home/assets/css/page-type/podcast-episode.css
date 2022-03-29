@@ -206,23 +206,6 @@ html {
     }
 }
 
-.main-podcast-episode .podcast-widget.large,
-.main-podcast-episode .podcast-widget.small {
-    display: none;
-}
-
-@media (min-width: 512px) {
-    .main-podcast-episode .podcast-widget.large {
-        display: block;
-    }
-}
-
-@media (max-width: 511px) {
-    .main-podcast-episode .podcast-widget.small {
-        display: block;
-    }
-}
-
 /* Content split ------------------------------------------------------------- */
 @media (min-width: 769px) {
     .content-split {

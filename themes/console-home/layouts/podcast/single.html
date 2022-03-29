@@ -48,8 +48,7 @@
             <div data-podcast-widget class="podcast-widget-wrapper">
                 <!-- Podcast embed -->
                 {{ $playerAttrs := (dict "title" "Play the episode" "titleAlt" .Title "classes" "show-time" ) }}
-                {{ partial "components/podcast-widget.html" (dict "classes" "large" "style" "alt" "podcast" . "art" "header" "links" "body" "hideArt" "true" "hideHeader" "true" "playerAttrs" $playerAttrs) }}
-                {{ partial "components/podcast-widget.html" (dict "classes" "small" "style" "alt" "podcast" . "art" "header" "links" "footer" "hideArt" "true" "hideHeader" "true" "playerAttrs" $playerAttrs) }}
+                {{ partial "components/podcast-widget.html" (dict "style" "alt" "podcast" . "art" "header" "links" "body" "hideArt" "true" "hideHeader" "true" "playerAttrs" $playerAttrs) }}
                 <!-- end -->
             </div>
         </div>
