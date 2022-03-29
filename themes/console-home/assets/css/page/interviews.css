@@ -218,17 +218,8 @@ p.interviews-card-description {
     margin-bottom: var(--space4_5);
 }
 
-.podcast-launch .podcast-widget.large,
-.podcast-launch .podcast-widget.mid,
-.podcast-launch .podcast-widget.small {
-    display: none;
-}
-
+/* podcast large */
 @media (min-width: 769px) {
-    .podcast-launch .podcast-widget.large {
-        display: block;
-    }
-
     @media (max-width: 1024px) {
         .podcast-launch .podcast-widget .podcast-widget-links > .link {
             display: none;
@@ -236,18 +227,13 @@ p.interviews-card-description {
     }
 }
 
-@media (min-width: 541px) and (max-width: 768px) {
-    .podcast-launch .podcast-widget.mid {
-        display: block;
-    }
+/* podcast mid */
+@media (min-width: 541px) {
 }
 
+/* podcast small */
 @media (max-width: 540px) {
-    .podcast-launch .podcast-widget.small {
-        display: block;
-    }
-
-    .podcast-launch .podcast-widget.small .podcast-widget-heading .title {
+    .podcast-launch .podcast-widget .podcast-widget-heading .title {
         display: none;
     }
 
