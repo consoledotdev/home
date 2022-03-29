@@ -154,7 +154,7 @@ class TOC {
 
     bind() {
         document.addEventListener("scroll", this.adjustIndicator);
-        document.addEventListener("resize", this.adjustIndicator);
+        window.addEventListener("resize", this.adjustIndicator);
     }
 
     bindThisFunctions() {

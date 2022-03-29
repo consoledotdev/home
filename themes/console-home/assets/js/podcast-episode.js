@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     };
     setPlayer();
     document.addEventListener("scroll", setPlayer);
-    document.addEventListener("resize", setPlayer);
+    window.addEventListener("resize", setPlayer);
 
     /* manage clippings playback */
     let clippingPlayers = document.querySelectorAll("[data-play-at-time]");
