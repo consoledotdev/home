@@ -26,20 +26,20 @@
     <section class="page-section page-section-interviews-root podcast-launch">
         <p>Listen to more interviews on the&nbsp;
             <a href="/podcast/" class="console-button-text console-button-triad-03 icon-left">{{ partial "icons/podcast.html"}}<span>Console DevTools Podcast</span></a>.</p>
-    
-        <!-- Podcast embed -->
-        {{ $section := .Site.GetPage "section" "podcast" }}
-        {{ $pages := $section.Pages }}
-        {{ $podcast := index (where $pages.ByPublishDate.Reverse "Params.season" 2) 0 }}
+        
+        <div data-podcast-widget>
+            <!-- Podcast embed -->
+            {{ $section := .Site.GetPage "section" "podcast" }}
+            {{ $pages := $section.Pages }}
+            {{ $podcast := index (where $pages.ByPublishDate.Reverse "Params.season" 2) 0 }}
 
-        {{ $playerTitle := print $podcast.Title ", with " $podcast.Params.who }}
-        {{ with $podcast.Params.org }}{{ $playerTitle = print $playerTitle " (" $podcast.Params.org ")" }}{{ end }}
-        {{ $playerAttrs := (dict "title" $playerTitle "classes" "show-time" ) }}
+            {{ $playerTitle := print $podcast.Title ", with " $podcast.Params.who }}
+            {{ with $podcast.Params.org }}{{ $playerTitle = print $playerTitle " (" $podcast.Params.org ")" }}{{ end }}
+            {{ $playerAttrs := (dict "title" $playerTitle "classes" "show-time" ) }}
 
-        {{ partial "components/podcast-widget.html" (dict "classes" "large" "podcast" $podcast "art" "body" "links" "body" "hideHeader" "true" "playerAttrs" $playerAttrs) }}
-        {{ partial "components/podcast-widget.html" (dict "classes" "mid" "podcast" $podcast "art" "body" "links" "footer" "hideHeader" "true" "playerAttrs" $playerAttrs) }}
-        {{ partial "components/podcast-widget.html" (dict "classes" "small" "podcast" $podcast "art" "header" "links" "footer" "playerAttrs" $playerAttrs) }}
-        <!-- end -->
+            {{ partial "components/podcast-widget.html" (dict "podcast" $podcast "art" "body" "links" "body" "hideHeader" "true" "playerAttrs" $playerAttrs) }}
+            <!-- end -->
+        </div>
         
         <p>Keep reading our interviews:</p>
     </section>
@@ -64,4 +64,7 @@
 		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" ) }}
 	</section>
 
+	{{ $js := resources.Get "/js/interviews.js" }}
+    {{ if hugo.IsProduction }}{{ $js = $js | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script src="{{ $js.Permalink }}"></script>
 {{ end }}
