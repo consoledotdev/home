@@ -66,12 +66,12 @@
         {{ if .playerAttrs.titleAlt }}{{ $playerTitleAlt = .playerAttrs.titleAlt }}{{ end }}
         {{ partial "components/audio-player.html" (dict "src" .podcast.Params.episodeURL "title" $playerTitle "titleAlt" $playerTitleAlt "classes" .playerAttrs.classes "duration" .podcast.Params.duration )}}
 
-        {{ if and (eq .links "body") (not .hideLinks) }}
+        {{ if (not .hideLinks) }}
             {{ $links }}
         {{ end }}
     </div>
 
-    {{ if and (eq .links "footer") (not .hideLinks) }} 
+    {{ if (not .hideLinks) }} 
         <div class="podcast-widget-footer">
             {{ $links }}
         </div>
