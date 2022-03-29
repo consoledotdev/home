@@ -4110,12 +4110,6 @@ p.combo-card-description {
     overflow: hidden;
 }
 
-.podcast-widget > div:last-child {
-    border-bottom-left-radius: var(--corners-mid);
-    border-bottom-right-radius: var(--corners-mid);
-    overflow: hidden;
-}
-
 /* Header -------------------------------------------------------------------------------- */
 .podcast-widget-header {
     display: flex;
@@ -4183,6 +4177,12 @@ p.combo-card-description {
     flex: 1 1 auto;
 }
 
+.podcast-widget.links-body .podcast-widget-body {
+    border-bottom-left-radius: var(--corners-mid);
+    border-bottom-right-radius: var(--corners-mid);
+    overflow: hidden;
+}
+
 /* Footer -------------------------------------------------------------------------------- */
 .podcast-widget.art-body .podcast-widget-footer {
     padding: var(--space3);
@@ -4190,6 +4190,16 @@ p.combo-card-description {
 
 .podcast-widget.art-header .podcast-widget-footer {
     padding: var(--space2) var(--space3) var(--space3);
+}
+
+.podcast-widget.links-body .podcast-widget-footer {
+    display: none;
+}
+
+.podcast-widget.links-footer .podcast-widget-footer {
+    border-bottom-left-radius: var(--corners-mid);
+    border-bottom-right-radius: var(--corners-mid);
+    overflow: hidden;
 }
 
 /* Combo box -------------------------------------------------------------------------------- */
@@ -4210,10 +4220,10 @@ p.combo-card-description {
 
 /* Links -------------------------------------------------------------------------------- */
 .podcast-widget-links {
-    display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
+    display: none;
 }
 
 .podcast-widget-links > .link {
@@ -4228,21 +4238,27 @@ p.combo-card-description {
     flex: 0 0 auto;
 }
 
-.podcast-widget.links-body .podcast-widget-links {
+.podcast-widget.links-body .podcast-widget-body .podcast-widget-links {
+    display: flex;
     flex: 0 0 auto;
     flex-direction: row-reverse;
 }
 
-.podcast-widget.links-footer .podcast-widget-links > .link {
-    margin-right: var(--space3_5);
-}
-
-.podcast-widget.links-body .podcast-widget-links > .link {
+.podcast-widget.links-body .podcast-widget-body .podcast-widget-links > .link {
     margin-left: var(--space3_5);
 }
 
-.podcast-widget.links-body .podcast-widget-links {
+.podcast-widget.links-body .podcast-widget-body .podcast-widget-links {
     margin-left: var(--space3);
+    margin-right: var(--space3_5);
+}
+
+.podcast-widget.links-footer .podcast-widget-footer .podcast-widget-links {
+    display: flex;
+    margin-right: var(--space3_5);
+}
+
+.podcast-widget.links-footer .podcast-widget-footer .podcast-widget-links > .link {
     margin-right: var(--space3_5);
 }
 
