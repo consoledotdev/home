@@ -71,4 +71,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
         };
         p.addEventListener("click", playAtTime);
     });
+
+    /* manage audio player style on resize */
+    let playerEl = document.querySelector("[data-podcast-widget] .podcast-widget");
+    let setPlayerStyle = function () {
+        if (window.innerWidth >= 769) {
+            playerEl.classList.remove("links-footer");
+            playerEl.classList.add("links-body");
+        } else {
+            playerEl.classList.add("links-footer");
+            playerEl.classList.remove("links-body");
+        }
+    };
+    setPlayerStyle();
+    window.addEventListener("resize", setPlayerStyle);
 });
