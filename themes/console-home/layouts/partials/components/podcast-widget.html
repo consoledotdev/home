@@ -27,38 +27,35 @@
     {{- with .art}} art-{{ . }}{{ end }}
     {{- with .links}} links-{{ . }}{{ end }}
     {{- with .classes}} {{ . }}{{ end }}
-    {{- with .style}} style-{{ . }}{{ else }} style-default{{ end }}">
+    {{- with .style}} style-{{ . }}{{ else }} style-default{{ end }}
+    {{- with .hideHeader}} hide-header{{ end }}
+    {{- with .hideArt}} hide-art{{ end }}
+    {{- with .hideLinks}} hide-links{{ end }}">
     
-    {{ if not .hideHeader }}
-        <div class="podcast-widget-header">
-            <div class="podcast-widget-heading">
-                <h6 class="title title-6 rich-title">
-                    {{ partial "icons/podcast.html" }}
-                    <span></span>
-                </h6>
-                <div class="podcast-widget-meta">
-                    <p class="small episode-no">
-                        {{ $s := .podcast.Params.season }}
-                        {{ $e := .podcast.Params.episode }}
-                        S{{ if lt $s 10 }}0{{ end }}{{ $s }} E{{ if lt $e 10 }}0{{ end }}{{ $e }}
-                    </p>
-                    <p class="small date">
-                        <span class="page-meta-separator">&mdash;</span>
-                        <span>{{ .podcast.Date.Format "2006-01-02" }}</span>
-                    </p>
-                </div>
+    <div class="podcast-widget-header">
+        <div class="podcast-widget-heading">
+            <h6 class="title title-6 rich-title">
+                {{ partial "icons/podcast.html" }}
+                <span></span>
+            </h6>
+            <div class="podcast-widget-meta">
+                <p class="small episode-no">
+                    {{ $s := .podcast.Params.season }}
+                    {{ $e := .podcast.Params.episode }}
+                    S{{ if lt $s 10 }}0{{ end }}{{ $s }} E{{ if lt $e 10 }}0{{ end }}{{ $e }}
+                </p>
+                <p class="small date">
+                    <span class="page-meta-separator">&mdash;</span>
+                    <span>{{ .podcast.Date.Format "2006-01-02" }}</span>
+                </p>
             </div>
-
-            {{ if and (eq .art "header") (not .hideArt) }}
-                {{ $art }}
-            {{ end }}
         </div>
-    {{ end }}
+
+        {{ $art }}
+    </div>
 
     <div class="podcast-widget-body">
-        {{ if and (eq .art "body") (not .hideArt) }}
-            {{ $art }}
-        {{ end }}
+        {{ $art }}
 
         {{ $playerTitle := .podcast.Title }}
         {{ if .playerAttrs.title }}{{ $playerTitle = .playerAttrs.title }}{{ end }}
@@ -71,10 +68,8 @@
         {{ end }}
     </div>
 
-    {{ if (not .hideLinks) }} 
-        <div class="podcast-widget-footer">
-            {{ $links }}
-        </div>
-    {{ end }}
+    <div class="podcast-widget-footer">
+        {{ $links }}
+    </div>
 
 </div>

@@ -4104,10 +4104,22 @@ p.combo-card-description {
     border-radius: var(--corners-mid);
 }
 
-.podcast-widget > div:first-child {
-    border-top-left-radius: var(--corners-mid);
-    border-top-right-radius: var(--corners-mid);
-    overflow: hidden;
+.podcast-widget .combo-box {
+    display: none;
+}
+
+.podcast-widget.hide-art .podcast-widget-header .combo-box,
+.podcast-widget.hide-art .podcast-widget-body .combo-box {
+    display: none;
+}
+
+.podcast-widget.hide-header .podcast-widget-header {
+    display: none;
+}
+
+.podcast-widget.hide-links .podcast-widget-footer,
+.podcast-widget.hide-links .podcast-widget-links {
+    display: none;
 }
 
 /* Header -------------------------------------------------------------------------------- */
@@ -4118,6 +4130,9 @@ p.combo-card-description {
     align-items: center;
     padding: 0 var(--space3);
     min-height: calc(var(--space4) + var(--space2));
+    border-top-left-radius: var(--corners-mid);
+    border-top-right-radius: var(--corners-mid);
+    overflow: hidden;
 }
 
 .podcast-widget.art-header .podcast-widget-header {
@@ -4161,11 +4176,19 @@ p.combo-card-description {
     flex: 0 0 auto;
 }
 
+.podcast-widget.art-header:not(.hide-art) .podcast-widget-header .combo-box {
+    display: flex;
+}
+
 /* Body -------------------------------------------------------------------------------- */
 .podcast-widget .podcast-widget-body {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+}
+
+.podcast-widget.art-body:not(.hide-art) .podcast-widget-body .combo-box {
+    display: flex;
 }
 
 .podcast-widget .console-player {
@@ -4177,6 +4200,13 @@ p.combo-card-description {
     flex: 1 1 auto;
 }
 
+.podcast-widget.hide-header .podcast-widget-body {
+    border-top-left-radius: var(--corners-mid);
+    border-top-right-radius: var(--corners-mid);
+    overflow: hidden;
+}
+
+.podcast-widget.hide-links .podcast-widget-body,
 .podcast-widget.links-body .podcast-widget-body {
     border-bottom-left-radius: var(--corners-mid);
     border-bottom-right-radius: var(--corners-mid);
@@ -4196,7 +4226,7 @@ p.combo-card-description {
     display: none;
 }
 
-.podcast-widget.links-footer .podcast-widget-footer {
+.podcast-widget .podcast-widget-footer {
     border-bottom-left-radius: var(--corners-mid);
     border-bottom-right-radius: var(--corners-mid);
     overflow: hidden;
@@ -4255,7 +4285,6 @@ p.combo-card-description {
 
 .podcast-widget.links-footer .podcast-widget-footer .podcast-widget-links {
     display: flex;
-    margin-right: var(--space3_5);
 }
 
 .podcast-widget.links-footer .podcast-widget-footer .podcast-widget-links > .link {
