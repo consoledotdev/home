@@ -860,6 +860,10 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
     display: none;
 }
 
+.show-more-nav-control .menu-item {
+    cursor: pointer;
+}
+
 .show-more-nav-control.is-visible {
     display: initial;
 }
@@ -871,7 +875,7 @@ body:not(.mobile) .main-nav .menu-toggle:hover [class*=" icon-menu-shape-"] {
     vertical-align: -0.3em;
 }
 
-.show-more-nav-control .menu-item.menu-item-primary:link.is-active .icon.icon-fill {
+.show-more-nav-control .menu-item.menu-item-primary.is-active .icon.icon-fill {
     fill: var(--theme-nav-primary-link-text-focus);
 }
 
