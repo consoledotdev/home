@@ -142,6 +142,7 @@
                                 {{ end }}
                             </p>
                         </div>
+                        {{ if .Params.companyInfo.customerCaseStudies }}
                         <div class="framed-section-item">
                             <h5 class="title title-4 rich-title">
                                 {{ partial "icons/social.html" }}
@@ -151,6 +152,7 @@
                                 <p class="company-case-study"><span>{{ .client }}</span> {{ .text }}</p>
                             {{ end }}
                         </div>
+                        {{ end }}
                     </div>
                 </div>
             </section>
