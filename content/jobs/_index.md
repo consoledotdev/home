@@ -1,8 +1,8 @@
 ---
-title: "Devtools Jobs - Console"
-date: 2022-03-07T11:21:51+01:00
-draft: true
-summary: The best devtools companies currently hiring.
+title: "DevTools Jobs - Console"
+date: 2022-04-04T12:00:00+00:00
+draft: false
+summary: The best dev tools companies currently hiring.
 isPage: jobs
 customStyle: true
 pageType: feature
