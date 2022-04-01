@@ -847,10 +847,6 @@ body.page-advertise.checkpoint-campaigns {
     }
 }
 
-.advertise-site-item.advertise-site-jobs {
-    display: none;
-}
-
 /* Podcast */
 .page-section-advertise.podcast {
     margin-top: calc(var(--space6) + var(--space5) + var(--space4_5));

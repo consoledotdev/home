@@ -1,7 +1,7 @@
 ---
 title: "CodeSee"
 date: 2022-04-04T12:00:00+00:00
-draft: true
+draft: false
 summary: Visualize your code.
 metaTitle: CodeSee - Console devtools jobs profile
 metaDescription:

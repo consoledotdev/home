@@ -1,7 +1,7 @@
 ---
 title: "Oso"
 date: 2022-04-04T12:00:00+00:00
-draft: true
+draft: false
 summary: Batteries-included authorization.
 metaTitle: Oso - Console devtools jobs profile
 metaDescription:
