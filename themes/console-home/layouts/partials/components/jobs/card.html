@@ -42,7 +42,7 @@
 				</div>
                 <div class="right">
                     {{ if .Params.interview -}}
-                        <a onclick="blur();" href="{{ .Params.interview }}" class="console-button-text console-button-small console-button-triad-03 icon-left" title="Read the Console interview with {{ $name }}">
+                        <a onclick="blur();" href="/interviews/{{ .Params.interview }}/" class="console-button-text console-button-small console-button-triad-03 icon-left" title="Read the Console interview with {{ $name }}">
                             {{ partial "icons/console-interview.html" }}
                             <span>Console interview</span>
                         </a>
