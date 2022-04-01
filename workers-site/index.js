@@ -85,6 +85,7 @@ async function handleEvent(event) {
             ["/betas", "https://console.dev/betas/"],
             ["/beta", "https://console.dev/betas/"],
             ["/beta/", "https://console.dev/betas/"],
+            ["/jobs", "https://console.dev/jobs/"],
             ["/jobs/rss.xml", "https://console.dev/profiles/rss.xml"],
             ["/landing", "https://console.dev/"],
             ["/landing/", "https://console.dev/"],
