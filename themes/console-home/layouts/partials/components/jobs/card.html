@@ -48,7 +48,7 @@
                         </a>
                     {{- end }}
                     {{ if .Params.podcast -}}
-                        <a onclick="blur();" href="{{ .Params.podcast }}" class="console-button-text console-button-small console-button-triad-03 icon-left" title="Listen to the Console Podcast with {{ $name }}">
+                        <a onclick="blur();" href="/podcast/{{ .Params.podcast }}/" class="console-button-text console-button-small console-button-triad-03 icon-left" title="Listen to the Console Podcast with {{ $name }}">
                             {{ partial "icons/podcast.html" }}
                             <span>DevTools Podcast</span>
                         </a>
