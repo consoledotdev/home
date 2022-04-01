@@ -16,7 +16,7 @@ xlViewport:
   largeText: true
 companyInfo:
   favicon: /img/favicons/www.codesee.io.png
-  URL: https://CodeSee.io
+  URL: https://codesee.io
   jobsURL: https://jobs.lever.co/codesee
   location: San Francisco, Remote (North America)
   description: "Visualize your code."

@@ -16,7 +16,7 @@ xlViewport:
   largeText: true
 companyInfo:
   favicon: /img/favicons/www.osohq.com.png
-  URL: https://www.osohq.com/
+  URL: https://www.osohq.com
   jobsURL: https://www.osohq.com/company/jobs
   location: NYC or Remote
   description: Batteries-included authorization.
