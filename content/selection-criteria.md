@@ -41,7 +41,7 @@ the best, most interesting set of tools each week:
 - Does it have any negative impact on security or privacy?
 - How would I feel recommending this to my friends? Would I tweet a link to it?
 
-### DevTools jobs
+### Devtools jobs
 
 Each month we feature 3 devtools companies in the Console
 [newsletter](/newsletter/) who are hiring for technical roles. We feature
