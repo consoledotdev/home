@@ -19,6 +19,12 @@
             "checked": true
         },
         {
+            "name": "on-prem",
+            "label": "On-prem",
+            "showsIcon": false,
+            "checked": true
+        },
+        {
             "name": "other",
             "label": "Other",
             "showsIcon": false,
@@ -77,8 +83,14 @@
     ],
     "techStackItems": [
         {
-            "name": "typescript",
-            "label": "TypeScript",
+            "name": "c-cplusplus",
+            "label": "C/C++",
+            "showsIcon": false,
+            "checked": true
+        },
+        {
+            "name": "elm",
+            "label": "Elm",
             "showsIcon": false,
             "checked": true
         },
@@ -95,8 +107,8 @@
             "checked": true
         },
         {
-            "name": "c-cplusplus",
-            "label": "C/C++",
+            "name": "postgres",
+            "label": "Postgres",
             "showsIcon": false,
             "checked": true
         },
@@ -113,20 +125,14 @@
             "checked": true
         },
         {
-            "name": "elm",
-            "label": "Elm",
+            "name": "rust",
+            "label": "Rust",
             "showsIcon": false,
             "checked": true
         },
         {
-            "name": "postgres",
-            "label": "Postgres",
-            "showsIcon": false,
-            "checked": true
-        },
-        {
-            "name": "aws",
-            "label": "AWS",
+            "name": "typescript",
+            "label": "TypeScript",
             "showsIcon": false,
             "checked": true
         }

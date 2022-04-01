@@ -1,8 +1,9 @@
 ---
 title: "CodeSee"
-date: 2022-03-30T12:00:00+00:00
+date: 2022-04-04T12:00:00+00:00
 draft: true
 summary: Visualize your code.
+metaTitle: CodeSee - Console devtools jobs profile
 metaDescription:
   Console profile of CodeSee - visualize your code.
 headerType: fixed
@@ -118,7 +119,7 @@ branch, they open a pull request. CI runs. At least one other engineer will
 review the code and then it will be merged into main. We have good test coverage
 and automated builds. With feature flags we can roll new code out gradually to
 our cloud users. We do single click push button deploys meaning we deploy
-multiple times a day. 
+multiple times a day.
 
 #### What is the QA process?
 
@@ -163,12 +164,11 @@ We have a multi-step process:
    the job.
 3. 2 hour - System Design discussion. We’ll talk through a project that you’ve
    spent a lot of time on, your methods and thought processes.
-3. 2 Hour - Top Grade: A top grade is an interview to understand you, your
+4. 2 Hour - Top Grade: A top grade is an interview to understand you, your
    motivations and how you would be as an employee. We all are human beings.
-5. Offer. 
+5. Offer.
 
 We aim to get through the whole process within 2 weeks, but can go
 much faster if necessary and the candidate's schedule permits.
-
 
 {{< div--close >}}

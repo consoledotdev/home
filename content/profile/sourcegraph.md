@@ -1,8 +1,9 @@
 ---
 title: "Sourcegraph"
-date: 2022-03-29T12:00:00+00:00
+date: 2022-04-04T12:00:00+00:00
 draft: true
 summary: Universal code search for every developer.
+metaTitle: SourceGraph - Console devtools jobs profile
 metaDescription:
   Console profile of Sourcegraph - universal code search for every developer.
 headerType: fixed
@@ -18,8 +19,7 @@ companyInfo:
   URL: https://about.sourcegraph.com
   jobsURL: https://about.sourcegraph.com/jobs/
   location: Global (remote)
-  description:
-    "Universal code search for every developer."
+  description: Universal code search for every developer.
   images:
     - url: /img/profiles/sourcegraph-profile-1.png
     - url: /img/profiles/sourcegraph-profile-2.jpg
@@ -32,8 +32,6 @@ companyInfo:
     - Go
     - JS
     - Typescript (React)
-    - k8s & Docker
-    - Python
   meta:
     - label: "Founded"
       value: 2013
@@ -60,7 +58,7 @@ companyInfo:
           - href: "https://twitter.com/sourcegraph"
             text: "Twitter"
             iconLeft: "twitter"
-          - href: "[#](https://www.linkedin.com/company/sourcegraph/)"
+          - href: "https://www.linkedin.com/company/sourcegraph/"
             text: "LinkedIn"
             iconLeft: "linkedin"
   customerCaseStudies:
