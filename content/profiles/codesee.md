@@ -153,6 +153,11 @@ week on-call rotation every 8 weeks (one week you are the primary and the second
 week you are the secondary). Any big incidents we pull in other members of the
 team to support one another.
 
+{{< nav-wrapper--open id="wrapper-2" anchor-name="hiring-process" >}}
+
+{{< rich-title-3 icon="checklist" id="key-features" >}} Hiring process
+{{</ rich-title-3 >}}
+
 #### How does the application process work? What are the stages and what is the timeline?
 
 We have a multi-step process:

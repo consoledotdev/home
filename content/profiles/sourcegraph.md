@@ -158,6 +158,11 @@ night, because we distribute the rotation to our teammates around the world
 {{< rich-title-3 icon="checklist" id="key-features" >}} Hiring process
 {{</ rich-title-3 >}}
 
+{{< nav-wrapper--open id="wrapper-2" anchor-name="hiring-process" >}}
+
+{{< rich-title-3 icon="checklist" id="key-features" >}} Hiring process
+{{</ rich-title-3 >}}
+
 #### How does the application process work? What are the stages and what is the timeline?
 
 Applications are received through our careers page and we have a standardized

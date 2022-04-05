@@ -118,6 +118,11 @@ not getting woken up at 2 am ever. If anything is on fire our CTO, CEO, and VP
 of tech rotate every week to deal with any P1s... We do a lot of testing so we
 very very rarely have these.
 
+{{< nav-wrapper--open id="wrapper-2" anchor-name="hiring-process" >}}
+
+{{< rich-title-3 icon="checklist" id="key-features" >}} Hiring process
+{{</ rich-title-3 >}}
+
 #### How does the application process work? What are the stages and what is the timeline?
 
 For the moment, the application process is to send the CEO an email and he’ll do
