@@ -127,7 +127,7 @@
     {{ end -}}
     <!-- https://developer.yoast.com/features/opengraph/functional-specification -->
     <meta property="og:site_name" content="Console" />
-    <meta property="og:title" content="{{ .Title }}{{if eq .Params.pageType "podcast-episode"}} - Console DevTools Podcast{{end}}" />
+    <meta property="og:title" content="{{if .Params.metaTitle}}{{ .Params.metaTitle}}{{else}}{{ .Title }}{{if eq .Params.pageType "podcast-episode"}} - Console DevTools Podcast{{end}}{{end}}" />
     {{ if not .Params.metaDescription -}}
     <meta property="og:description" content="{{ .Summary }}" />
     {{- else -}}
