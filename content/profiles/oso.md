@@ -63,7 +63,7 @@ companyInfo:
   customerCaseStudies:
     - client: "Fiddler"
       text:
-        "dopted Oso as a way to retrofit access control to their existing product. The documentation, examples and the support provided on the slack channels is just plain awesome."
+        "adopted Oso as a way to retrofit access control to their existing product. The documentation, examples and the support provided on the slack channels is just plain awesome."
     - client: "Wayfair"
       text:
         "spent that first week implementing and quickly had our design implemented using the Oso framework. This let us write an authorization policy in their declarative language, Polar."
