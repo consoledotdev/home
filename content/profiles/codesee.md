@@ -3,9 +3,10 @@ title: "CodeSee"
 date: 2022-04-04T12:00:00+00:00
 draft: false
 summary: Visualize your code.
-metaTitle: CodeSee - Console devtools jobs profile
+metaTitle: Working at CodeSee - Console profile
 metaDescription:
-  Console profile of CodeSee - visualize your code.
+  What is it like to work at CodeSee? Console profile behind the scenes at 
+  CodeSee - visualize your code.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -25,7 +26,7 @@ companyInfo:
     - url: /img/profiles/codesee-profile-2.png
     - url: /img/profiles/codesee-profile-3.png
   product:
-    name: "CodeSee Maps"
+    name: "CodeSee"
     description:
       "CodeSee is a developer tool that visualizes how your code works for codebase onboarding, planning, and code reviews."
   techStack:
@@ -63,9 +64,9 @@ companyInfo:
 interview: codesee-shanea-leven
 ---
 
-{{< nav-wrapper--open id="wrapper-1" anchor-name="development-profile" >}}
+{{< nav-wrapper--open id="wrapper-1" anchor-name="how-engineering-works" >}}
 
-{{< rich-title-3 icon="checklist" id="key-features" >}} Development profile
+{{< rich-title-3 icon="checklist" id="how-engineering-works" >}} How engineering works
 {{</ rich-title-3 >}}
 
 #### How are the teams structured?

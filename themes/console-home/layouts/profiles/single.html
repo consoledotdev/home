@@ -8,9 +8,9 @@
     <section class="page-section page-section-company-profile opening">
         <div class="top">
             <div class="left">
-                <a href="/jobs/" class="console-button-text console-button-yellow icon-left">
+                <a href="/profiles/" class="console-button-text console-button-yellow icon-left">
                     {{ partial "icons/jobs.html" }}
-                    <span>Devtools Jobs</span>
+                    <span>Behind the scenes</span>
                 </a>
                 <div class="company-heading">
                     {{ partial "components/thumbnail-vendor.html" (dict "name" .Params.title "image" .Params.companyInfo.favicon "category" $companyTopCategoryName ) }} 
@@ -89,7 +89,7 @@
                                 {{ with $interview }}
                                     <div class="aside-item interview">
                                         <h6 class="title title-6"><a class="link icon-left" href="{{ .RelPermalink }}" title="{{ .RelPermalink }}" rel="noopener">
-                                            {{ partial "icons/console-interview.html" }}Interview
+                                            {{ partial "icons/console-interview.html" }}Q&A
                                         </a></h6>
                                         <div class="aside-item-title-extras">
                                             <p class="small">
@@ -114,7 +114,7 @@
                             <h5 class="title title-4">Contents</h5>
                             <span data-toc-indicator class="toc-indicator"></span>
                             <ul data-scroll-track>
-                                 <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-1" href="#development-profile">Development profile</a></li>
+                                 <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-1" href="#how-engineering-works">How engineering works</a></li>
                                 <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-2" href="#hiring-process">Hiring process</a></li>
                                 <li class="toc-item"><a data-toc-link class="toc-link" data-toc-wrapper="wrapper-3" href="#jobs">Jobs</a></li>
                             </ul>
@@ -128,7 +128,7 @@
                 <div class="nav-wrapper" id="wrapper-0">
                     <span class="nav-wrapper-anchor" id="example"></span>
                     <div class="framed-section framed-section-default">
-                        <h3 class="title title-2">{{ .Params.companyInfo.product.name }}</h3>
+                        <h3 class="title title-2">Working at {{ .Params.companyInfo.product.name }}</h3>
                         <p>{{ .Params.companyInfo.product.description }}</p>
                         <div class="framed-section-item">
                             <h5 class="title title-4 rich-title">

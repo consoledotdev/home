@@ -6,18 +6,18 @@
 {{- $tag := .Params.companyInfo.type -}}
 {{- $filterTaxonomy := .Params.companyInfo.filterTaxonomy -}}
 {{- $defaultGroup := "dsa" -}}
-<div class="jobs-card" data-card data-date="{{ $showDate }}" data-name="{{ $name }}" data-taxonomy="{{ $filterTaxonomy }}" data-category="{{ $topcategory }}" data-default-group="all-companies">
-	<div class="jobs-card-content">
+<div class="profiles-card" data-card data-date="{{ $showDate }}" data-name="{{ $name }}" data-taxonomy="{{ $filterTaxonomy }}" data-category="{{ $topcategory }}" data-default-group="all-companies">
+	<div class="profiles-card-content">
 		<div class="top">
             <a onclick="blur();" class="card-link" href="{{ .RelPermalink }}"><span>View</span></a>
             <div class="left">
             	{{ partial "components/thumbnail-vendor.html" (dict "name" $name "image" .Params.companyInfo.favicon "category" (replace (lower $topcategory) " " "-") ) }}
-                <div class="title-location"><h4 data-searchable class="title title-3">{{ $name }}</h4><p class="jobs-card-location">{{ .Params.companyInfo.location }}</p></div>
+                <div class="title-location"><h4 data-searchable class="title title-3">{{ $name }}</h4><p class="profiles-card-location">{{ .Params.companyInfo.location }}</p></div>
 			</div>
 			<div class="right">
 				<div class="left">
-                    <div class="title-location"><h4 data-searchable class="title title-3">{{ $name }}</h4><p class="jobs-card-location">{{ .Params.companyInfo.location }}</p></div>
-					<p data-searchable class="jobs-card-description">{{ .Params.summary }}</p>
+                    <div class="title-location"><h4 data-searchable class="title title-3">{{ $name }}</h4><p class="profiles-card-location">{{ .Params.companyInfo.location }}</p></div>
+					<p data-searchable class="profiles-card-description">{{ .Params.summary }}</p>
 				</div>
 				<div class="taxonomy">
 					<div class="categories">
@@ -44,7 +44,7 @@
                     {{ if .Params.interview -}}
                         <a onclick="blur();" href="/interviews/{{ .Params.interview }}/" class="console-button-text console-button-small console-button-triad-03 icon-left" title="Read the Console interview with {{ $name }}">
                             {{ partial "icons/console-interview.html" }}
-                            <span>Console interview</span>
+                            <span>Console Q&A</span>
                         </a>
                     {{- end }}
                     {{ if .Params.podcast -}}

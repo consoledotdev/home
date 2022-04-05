@@ -341,7 +341,7 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
     background-color: var(--theme-content-bg-0);
 }
 
-.theme .jobs-card .bottom {
+.theme .profiles-card .bottom {
     background-color: var(--theme-content-bg-0);
 }
 

@@ -3,9 +3,10 @@ title: "Oso"
 date: 2022-04-04T12:00:00+00:00
 draft: false
 summary: Batteries-included authorization.
-metaTitle: Oso - Console devtools jobs profile
+metaTitle: Working at Oso - Console profile
 metaDescription:
-  Console profile of Oso - batteries-included authorization.
+  What is it like to work at Oso? Console profile behind the scenes at Oso - 
+  batteries-included authorization.
 headerType: fixed
 hideLines: true
 hidePlanes: true

@@ -13,12 +13,12 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
     <channel>
-        <title>Console - Devtools jobs profiles</title>
+        <title>Console - Behind the scenes profiles</title>
         <link>{{ .Permalink }}</link>
-        <description>The best devtools companies currently hiring.</description>
+        <description>Profiles of what it's like to work at the best devtools companies.</description>
         <image>
-            <title>Console Devtools jobs profiles</title>
-            <link>https://console.dev/jobs/</link>
+            <title>Console - Behind the scenes profiles</title>
+            <link>https://console.dev/profiles/</link>
             <url>https://console.dev/img/console-mark-256.png</url>
         </image>
         {{ with .Site.LanguageCode }}<language>{{.}}</language>{{end}}

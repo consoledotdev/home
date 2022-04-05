@@ -3,20 +3,8 @@
 	{{ $CTADescription := "Our free weekly newsletter picks out the 2-3 most interesting tools. " }}
 
 	<section class="page-section page-section-feature-root">
-		<h2 class="title title-1">Devtools jobs</h2>
-		<p class="description">The best devtools companies currently hiring.</p>
-        <div class="page-meta">
-            <p class="small">
-				<span>Are you hiring?</span>
-			</p>
-            <p class="small">
-                &nbsp;&nbsp;
-				<a onclick="blur();" href="mailto:hello@console.dev" class="console-button-text console-button-small icon-left submit-company" title="Submit Company">
-					{{ partial "icons/jobs.html" }}
-					<span>Submit Company</span>
-				</a>
-			</p>
-		</div>
+		<h2 class="title title-1">Behind the scenes</h2>
+		<p class="description">Profiles of the best devtools companies.</p>
 	</section>
 
 	<section class="page-section page-section-feature-root inline-cta-wrapper" data-inline-cta-wrapper>
@@ -34,7 +22,7 @@
 		</aside>
 		<div data-aside-anchor data-main-content-wrapper class="main-content-wrapper">
             <section data-inline-filters-wrapper class="page-section inline-filters-wrapper">
-				{{ $filters := partial "components/jobs/filters.html" (dict "dot" $.Site.Data.jobsfilters ) }}
+				{{ $filters := partial "components/profiles/filters.html" (dict "dot" $.Site.Data.profilesfilters ) }}
 				{{ partial "components/box-collapsible.html" (dict "title" "Filters" "icon" "filter.html" "content" $filters) }}
 			</section>
 			<section class="page-section" data-feature-items-section="all-companies">
@@ -53,7 +41,7 @@
 					{{ $section := .Site.GetPage "section" "profiles" }}
 					{{ $pages := $section.Pages }}
                     {{ range $pages.ByPublishDate.Reverse }}
-                        {{ partial "components/jobs/card.html" . }}
+                        {{ partial "components/profiles/card.html" . }}
                     {{ end }}
 					{{ partial "components/feature/card-empty.html" (dict "context" . "itemName" "Tools" ) }}
 				</div>
@@ -66,7 +54,7 @@
 	</section>
 
 	{{ $categories := "" }}
-	{{range $index, $element := $.Site.Data.jobsfilters.categoryItems}}
+	{{range $index, $element := $.Site.Data.profilesfilters.categoryItems}}
         {{if eq $index 0}}
 			{{ $categories = (print $categories $element.label "|" $element.name ) }}
 		{{ end }}
@@ -79,7 +67,7 @@
     {{ if hugo.IsProduction }}{{ $pageTypeJS = $pageTypeJS | resources.Minify | resources.Fingerprint }}{{ end }}
 	<script id="feature-js" src="{{ $pageTypeJS.Permalink }}" data-categories="{{ $categories }}"></script>
 
-	{{ $pagejs := resources.Get "/js/jobs.js" }}
+	{{ $pagejs := resources.Get "/js/profiles.js" }}
     {{ if hugo.IsProduction }}{{ $pagejs = $pagejs | resources.Minify | resources.Fingerprint }}{{ end }}
 	<script src="{{ $pagejs.Permalink }}"></script>
 {{ end }}

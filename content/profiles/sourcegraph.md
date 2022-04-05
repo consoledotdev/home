@@ -3,9 +3,10 @@ title: "Sourcegraph"
 date: 2022-04-04T12:00:00+00:00
 draft: false
 summary: Universal code search for every developer.
-metaTitle: SourceGraph - Console devtools jobs profile
+metaTitle: Working at Sourcegraph - Console profile
 metaDescription:
-  Console profile of Sourcegraph - universal code search for every developer.
+  What is it like to work at Sourcegraph? Console profile behind the scenes
+  at Sourcegraph - universal code search for every developer.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -77,9 +78,9 @@ interview: sourcegraph-beyang-liu
 podcast: s01e07-sourcegraph-hoppscotch
 ---
 
-{{< nav-wrapper--open id="wrapper-1" anchor-name="development-profile" >}}
+{{< nav-wrapper--open id="wrapper-1" anchor-name="how-engineering-works" >}}
 
-{{< rich-title-3 icon="checklist" id="key-features" >}} Development profile
+{{< rich-title-3 icon="checklist" id="how-engineering-works" >}} How engineering works
 {{</ rich-title-3 >}}
 
 #### How are the teams structured?
@@ -152,11 +153,6 @@ responding to incidents.
 - We have an on-call rotation, but no one gets woken up in the middle of the
 night, because we distribute the rotation to our teammates around the world
 (fully remote).
-
-{{< nav-wrapper--open id="wrapper-2" anchor-name="hiring-process" >}}
-
-{{< rich-title-3 icon="checklist" id="key-features" >}} Hiring process
-{{</ rich-title-3 >}}
 
 {{< nav-wrapper--open id="wrapper-2" anchor-name="hiring-process" >}}
 

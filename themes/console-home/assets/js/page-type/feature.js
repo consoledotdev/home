@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         window.addEventListener("resize", setPos);
     }
 
-    if (document.body.classList.contains("page-tools") || document.body.classList.contains("page-betas") || document.body.classList.contains("page-jobs")) {
+    if (document.body.classList.contains("page-tools") || document.body.classList.contains("page-betas") || document.body.classList.contains("page-profiles")) {
         let asideContentWrapper = document.querySelector("[data-aside-content-wrapper]");
 
         /* manage CTA position */
