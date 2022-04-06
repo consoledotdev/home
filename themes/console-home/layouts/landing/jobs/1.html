@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+    <section class="page-section page-section-landing-jobs opening">
+        <div class="left">
+            <div>
+                <h2 class="title title-1">The best developer jobs you weren’t looking for</h2>
+                <p class="description">A free email digest of jobs that actually suit you.</p>
+
+                <button onclick="blur()" class="console-button icon-left" title="Signup">
+                    {{ partial "icons/send.html" }}
+                    <span>Sign Up</span>
+                </button>
+            </div>
+            <p class="small ownership">{{partial "icons/console-mini-filled.html" }}Brought to you by the team behind the Console devtools newsletter ({{ $.Site.Params.consoleSubscribers }} subscribers)</p>
+        </div>
+        <div class="right">
+            <div class="canvas-wrapper">
+                <canvas data-artwork-canvas class="developer-jobs-artwork"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/vendor/three-0.139.2.min.js"></script>
+
+	{{ $landingJS := resources.Get "/js/page-type/landing-jobs.js" }}
+    {{ if hugo.IsProduction }}{{ $landingJS = $landingJS | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script src="{{ $landingJS.Permalink }}"></script>
+{{ end }}
