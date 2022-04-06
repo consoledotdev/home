@@ -1,0 +1,16 @@
+/* Page Stylesheet - Console Landing 1 for DevTools Jobs
+   ========================================================================== */
+
+.main-landing-jobs .canvas-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 120%;
+}
+
+.main-landing-jobs .developer-jobs-artwork {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
