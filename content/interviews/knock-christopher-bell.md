@@ -6,13 +6,13 @@ org: Knock
 what: Product notifications infrastructure.
 tags: ["Notification"]
 date: 2022-03-30T12:00:00Z
-draft: true
+draft: false
 headerType: fixed
 summary: Interview with Christopher Bell, CTO, Knock
 isPage: interviews
 topImg1Src: /img/interviews/knock-christopher-bell-profile.webp
 topImg2Src: /img/favicons/knock.app.png
-ogImg: /img/interviews/knock-christopher-bell-desk.webp
+ogImg: /img/interviews/knock-christopher-bell-desk.jpeg
 ---
 
 ### What is Knock? Why did you build it?
@@ -73,7 +73,7 @@ Knock. Giving you a reliable, scalable piece of infrastructure you can leverage
 to send high quality notifications to your customers with little engineering
 effort.
 
-### What does a "day in the life" look like for you?
+### What does a "day in the life" look like?
 
 I still code, about 30% of my day. My days are mostly spent fixing small bugs
 for the team. I try not to take on too big feature work anymore, because as we
@@ -219,7 +219,7 @@ a [Logitech MX mouse](https://www.logitech.com/en-us/mx/master-series.html).
 
 ### Describe your desk setup
 
-{{< img-center src="/img/interviews/knock-christopher-bell-desk.webp" alt="The desk of Christopher Bell, Knock" width="100%" >}}
+{{< img-center src="/img/interviews/knock-christopher-bell-desk.jpeg" alt="The desk of Christopher Bell, Knock" width="100%" >}}
 
 I'm on the road, so it's basically a laptop stand. I got one of those very small
 collapsible laptop stands that I can put in my backpack, then I carry my split
