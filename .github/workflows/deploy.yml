@@ -47,7 +47,7 @@ jobs:
                   echo "$RESULTS" > data/toolsallraw.json
 
             - name: "Upload Artifact"
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v3
               with:
                   name: tools-all-raw
                   path: data/toolsallraw.json
@@ -79,7 +79,7 @@ jobs:
                   echo "$RESULTS" > data/betasallraw.json
 
             - name: "Upload Artifact"
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v3
               with:
                   name: betas-all-raw
                   path: data/betasallraw.json
@@ -101,35 +101,35 @@ jobs:
                   --beta-json data/betasallraw.json
 
             - name: "Upload Artifact"
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v3
               with:
                   name: betas-ga
                   path: data/betasga.json
                   retention-days: 1
 
             - name: "Upload Artifact"
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v3
               with:
                   name: betas-latest
                   path: data/betaslatest.json
                   retention-days: 1
 
             - name: "Upload Artifact"
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v3
               with:
                   name: betas-live
                   path: data/betaslive.json
                   retention-days: 1
 
             - name: "Upload Artifact"
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v3
               with:
                   name: tools-latest
                   path: data/toolslatest.json
                   retention-days: 1
 
             - name: "Upload Artifact"
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v3
               with:
                   name: tools-reviewed
                   path: data/toolsreviewed.json
