@@ -257,7 +257,6 @@
 .box-collapsible.is-expanded .box-collapsible-content {
     padding: var(--space3);
     max-height: 200px;
-    transition: var(--a-elements-active);
 }
 
 .box-collapsible .subscribe-cta {
@@ -2013,7 +2012,6 @@ body:not(.mobile) .console-control:hover:before {
     border: var(--theme-control-button-inactive-border-hover);
     background: var(--theme-control-button-inactive-background-hover);
     color: var(--theme-control-button-inactive-text-hover);
-    transition: var(--a-elements-active);
 }
 
 .console-checkbutton input + label .icon {
@@ -2028,7 +2026,6 @@ body:not(.mobile) .console-control:hover:before {
 .console-checkbutton input + label:hover .icon,
 .console-checkbutton input:focus + label .icon {
     fill: var(--theme-control-button-inactive-text-hover);
-    transition: var(--a-elements-active);
 }
 
 .console-checkbutton input + label .icon-plus,
@@ -2342,7 +2339,6 @@ body:not(.mobile) .console-control:hover:before {
     opacity: 1;
     height: auto;
     width: auto;
-    transition: var(--a-elements-active);
     overflow: visible;
 }
 
@@ -2378,7 +2374,6 @@ body:not(.mobile) .console-control:hover:before {
 .popup.is-visible {
     opacity: 1;
     height: auto;
-    transition: var(--a-elements-active);
 }
 
 .popup.popup-top-down,
