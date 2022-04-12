@@ -405,7 +405,9 @@ body.show-planes:after {
     padding: calc(var(--space2) + var(--space4)) 6.25vw;
     z-index: 40;
     border-bottom: 1px solid rgba(0, 0, 0, 0);
-    transition: var(--a-elements);
+    transition-property: padding-top, padding-bottom, background, backdrop-filter, -webkit-backdrop-filter, border-bottom;
+    transition-duration: var(--a-elements-time);
+    transition-timing-function: var(--a-elements-easing);
 }
 
 .is-scrolled .header.header-fixed {
@@ -414,7 +416,6 @@ body.show-planes:after {
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
     border-bottom: var(--theme-border-1);
-    transition: var(--a-elements-active);
 }
 @-moz-document url-prefix() {
     .is-scrolled .header.header-fixed {
