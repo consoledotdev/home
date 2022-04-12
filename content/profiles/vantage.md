@@ -1,6 +1,6 @@
 ---
 title: "Vantage"
-date: 2022-04-12T12:00:00+00:00
+date: 2022-04-11T12:00:00+00:00
 draft: false
 summary: Cloud infrastructure cost optimization.
 metaTitle: Working at Vantage - Console profile
