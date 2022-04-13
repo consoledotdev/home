@@ -1,80 +1,173 @@
-console.log("landing for devtools jobs");
+class JobsArt {
+    constructor(selector) {
+        this.bindFuncs();
 
-function main() {
-    const canvas = document.querySelector("[data-artwork-canvas]");
-    const renderer = new THREE.WebGLRenderer({ canvas });
-    renderer.setClearColor(0xffffff, 0);
+        const canvas = document.querySelector(selector);
+        this.renderer = new THREE.WebGLRenderer({ canvas });
+        this.scene = new THREE.Scene();
 
-    const fov = 75;
-    const aspect = 2; // the canvas default
-    const near = 0.1;
-    const far = 5;
-    const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    camera.position.z = 3;
+        this.cams = this.makeCams();
+        this.lights = this.makeLights();
+        this.objs = this.makeObjs();
 
-    const scene = new THREE.Scene();
+        this.setup();
 
-    {
+        requestAnimationFrame(this.render);
+    }
+
+    bindFuncs() {
+        this.render = this.render.bind(this);
+    }
+
+    setup() {
+        this.renderer.setClearColor(0xffffff, 0);
+        this.selectCam(1);
+        this.lights.forEach((l) => {
+            this.scene.add(l);
+        });
+    }
+
+    makeCams() {
+        let cams = [];
+        cams.push(this.makeCamOne());
+        return cams;
+    }
+
+    makeCamOne() {
+        const fov = 25;
+        const aspect = 2;
+        const near = 0.1;
+        const far = 100;
+        const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+        camera.position.z = 3;
+        return camera;
+    }
+
+    selectCam(n) {
+        this.cam = this.cams[n - 1];
+    }
+
+    makeLights() {
+        let lights = [];
+        lights.push(this.makeLightOne());
+        return lights;
+    }
+
+    makeLightOne() {
         const color = 0xffffff;
         const intensity = 1;
         const light = new THREE.DirectionalLight(color, intensity);
         light.position.set(-1, 2, 4);
-        scene.add(light);
+        return light;
     }
 
-    const boxWidth = 1;
-    const boxHeight = 1;
-    const boxDepth = 1;
-    const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+    makeObjs() {
+        let objs = {};
 
-    function makeInstance(geometry, color, x) {
-        const material = new THREE.MeshPhongMaterial({ color });
+        const container = new THREE.Object3D();
+        container.position.z = -7;
+        container.rotation.z = -Math.PI / 4;
+        container.scale.set(1.5, 1.5, 1.5);
+        this.scene.add(container);
+        objs.container = container;
 
-        const cube = new THREE.Mesh(geometry, material);
-        scene.add(cube);
+        const makeDiamond = (cfg) => {
+            let t = 0.005; // thickness
+            const square = new THREE.Shape();
+            square.moveTo(0, 0);
+            square.lineTo(1, 0);
+            square.lineTo(1, 1);
+            square.lineTo(0, 1);
 
-        cube.position.x = x;
+            const hole = new THREE.Shape();
+            hole.moveTo(t, t);
+            hole.lineTo(1 - t, t);
+            hole.lineTo(1 - t, 1 - t);
+            hole.lineTo(t, 1 - t);
+            square.holes.push(hole);
 
-        return cube;
+            const extrudeSettings = { depth: t, bevelEnabled: true, bevelSegments: 2, steps: 2, bevelSize: t, bevelThickness: t };
+            const geometry = new THREE.ExtrudeGeometry(square, extrudeSettings);
+            const diamond = new THREE.Mesh(geometry, new THREE.MeshPhongMaterial({ color: cfg.color }));
+            diamond.position.x = -0.5;
+            diamond.position.y = -0.5;
+            // objs.push(diamond);
+
+            const wrapper = new THREE.Object3D();
+            wrapper.position.x = cfg.position.x;
+            wrapper.position.y = cfg.position.y;
+            // wrapper.rotation.z = Math.PI / 4;
+            wrapper.add(diamond);
+
+            return wrapper;
+        };
+
+        let configs = [
+            {
+                color: 0xe57d62,
+                position: { x: -0.175, y: -0.175 },
+            },
+            {
+                color: 0xffcc55,
+                position: { x: 0.175, y: 0 },
+            },
+            {
+                color: 0xe4718a,
+                position: { x: 0, y: 0.175 },
+            },
+        ];
+
+        objs.diamonds = [];
+        configs.forEach((cfg) => {
+            let d = makeDiamond(cfg);
+            container.add(d);
+            objs.diamonds.push(d);
+        });
+
+        {
+            // sphere
+            const sphereGeometry = new THREE.SphereGeometry(0.12, 64, 32);
+            const material = new THREE.MeshPhongMaterial({ emissive: 0xffa800, emissiveIntensity: 1.0 });
+            const obj = new THREE.Mesh(sphereGeometry, material);
+            container.add(obj);
+            objs.globe = obj;
+        }
+
+        return objs;
     }
 
-    const cubes = [makeInstance(geometry, 0x44aa88, 0), makeInstance(geometry, 0x8844aa, -2), makeInstance(geometry, 0xaa8844, 2)];
+    render(time) {
+        time *= 0.001; // convert time to seconds
+        this.checkResizeRendererToDisplaySize();
 
-    function resizeRendererToDisplaySize(renderer) {
-        const canvas = renderer.domElement;
+        this.objs.diamonds.forEach((obj, idx) => {
+            const speed = 1 + idx * 0.1;
+            const rot = time * speed;
+            obj.rotateOnAxis(new THREE.Vector3(-0.5, 0.5, 0).normalize(), 0.01 * (Math.PI / 4) * (idx + 1));
+        });
+
+        this.renderer.render(this.scene, this.cam);
+        requestAnimationFrame(this.render);
+    }
+
+    checkResizeRendererToDisplaySize() {
+        const canvas = this.renderer.domElement;
         const pixelRatio = window.devicePixelRatio;
         const width = (canvas.clientWidth * pixelRatio) | 0;
         const height = (canvas.clientHeight * pixelRatio) | 0;
         const needResize = canvas.width !== width || canvas.height !== height;
         if (needResize) {
-            renderer.setSize(width, height, false);
+            this.renderer.setSize(width, height, false);
+            this.cams.forEach((c) => {
+                c.aspect = canvas.clientWidth / canvas.clientHeight;
+                c.updateProjectionMatrix();
+            });
         }
-        return needResize;
     }
-
-    function render(time) {
-        time *= 0.001; // convert time to seconds
-
-        if (resizeRendererToDisplaySize(renderer)) {
-            const canvas = renderer.domElement;
-            camera.aspect = canvas.clientWidth / canvas.clientHeight;
-            camera.updateProjectionMatrix();
-        }
-
-        cubes.forEach((cube, ndx) => {
-            const speed = 1 + ndx * 0.1;
-            const rot = time * speed;
-            cube.rotation.x = rot;
-            cube.rotation.y = rot;
-        });
-
-        renderer.render(scene, camera);
-
-        requestAnimationFrame(render);
-    }
-    requestAnimationFrame(render);
 }
 
 document.addEventListener("DOMContentLoaded", (e) => {
-    main();
+    // main();
+
+    const jobsArt = new JobsArt("[data-artwork-canvas]");
 });
