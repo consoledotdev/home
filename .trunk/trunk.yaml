@@ -5,6 +5,8 @@ lint:
     ignore:
         - linters: [ALL]
           paths:
+              # Ignore VS Code container
+              - .devcontainer/Dockerfile
               # Ignore test data
               - themes/console-home/data/**
               # Ignore vendored JS
