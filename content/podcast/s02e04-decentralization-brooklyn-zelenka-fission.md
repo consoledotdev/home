@@ -4,11 +4,11 @@ who: Brooklyn Zelenka
 whoLink: https://twitter.com/expede
 org: Fission
 orgLink: https://fission.codes/
-what: 
- We discuss the relevance of blockchain to web3 and decentralized web apps, 
- why developers should avoid managing backend servers, the challenges of doing 
- authentication and identity with local clients, and why web browser APIs are 
- the place to build, not the native operating system.
+what:
+  We discuss the relevance of blockchain to web3 and decentralized web apps, why
+  developers should avoid managing backend servers, the challenges of doing
+  authentication and identity with local clients, and why web browser APIs are
+  the place to build, not the native operating system.
 season: 2
 episode: 4
 date: 2022-01-27T06:00:00Z
@@ -16,10 +16,10 @@ duration: 29:39
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/21114878-64c4-4605-95ba-81c946feaa77/audio/32a8188f-0a02-4847-95f8-b8f007ef3a34/default_tc.mp3
 draft: false
 summary:
-  Decentralization - a devtools discussion with Brooklyn Zelenka (Fission). 
+  Decentralization - a devtools discussion with Brooklyn Zelenka (Fission).
   Episode 4 (Season 2) of the Console DevTools Podcast.
 metaDescription:
-  Decentralization - a devtools discussion with Brooklyn Zelenka (Fission). 
+  Decentralization - a devtools discussion with Brooklyn Zelenka (Fission).
   Episode 4 (Season 2) of the Console DevTools Podcast.
 headerType: fixed
 hideLines: true
@@ -83,7 +83,8 @@ Things mentioned:
 - [ElixirConf](https://www.elixirconf.com/)
 - [Discord](https://discord.com/)
 
-{{< rich-title-5 icon="future-head" >}}About Brooklyn Zelenka{{</ rich-title-5 >}}
+{{< rich-title-5 icon="future-head" >}}About Brooklyn
+Zelenka{{</ rich-title-5 >}}
 
 Brooklyn is the Co-Founder and CTO at Fission, where her team is building the
 next generation of web dev tools for the future of computing on the edge -
@@ -98,9 +99,9 @@ with standards like UCAN auth and the Webnative File System.
 
 {{< podcast-episode/clipping time="02:08"  >}}
 
-**Brooklyn Zelenka:** At Fission, we set ourselves a constraint right at the beginning
-that everything had to work directly in a browser with no extensions, no
-plugins, any of that stuff. That immediately ruled out blockchain. So we're
+**Brooklyn Zelenka:** At Fission, we set ourselves a constraint right at the
+beginning that everything had to work directly in a browser with no extensions,
+no plugins, any of that stuff. That immediately ruled out blockchain. So we're
 saying, "Well, how can we apply a lot of these techniques to get the same sort
 of user and benefits of decentralization, interoperable data, permissionless,
 the option to exit, to self-host, and not to rely on a single provider in the

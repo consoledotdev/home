@@ -54,12 +54,7 @@ your users trust you to do so.
 There's a need for developers to embrace this new responsibility. The end result
 is a safer digital world for all of us.
 
-{{< img-center
-src="/img/interviews/snyk-guy-podjarny-product.jpeg"
-alt="Snyk product screenshot"
-width="100%"
-caption="Security vulnerability dashboard."
->}}
+{{< img-center src="/img/interviews/snyk-guy-podjarny-product.jpeg" alt="Snyk product screenshot" width="100%" caption="Security vulnerability dashboard." >}}
 
 ### How were developers solving this problem before?
 
@@ -158,12 +153,11 @@ and accessibility. We also have a group focused on the engines - the core
 algorithmic and data components of our system.
 
 Then we have the product line, which has the actual complete products in them:
-[Code](https://snyk.io/product/snyk-code/), [Open
-Source](https://snyk.io/product/open-source-security-management/),
+[Code](https://snyk.io/product/snyk-code/),
+[Open Source](https://snyk.io/product/open-source-security-management/),
 [Containers](https://snyk.io/product/container-vulnerability-management/) and
-[Infrastructure as
-Code](https://snyk.io/product/infrastructure-as-code-security/). The product
-organization mostly mimics that, plus a design organization.
+[Infrastructure as Code](https://snyk.io/product/infrastructure-as-code-security/).
+The product organization mostly mimics that, plus a design organization.
 
 Personally, I run a small labs team, which helps us explore things that are a
 little bit further out. We work with the rest of the organization to ensure that
@@ -286,12 +280,7 @@ world, and also for my podcast.
 I use an Apple wireless keyboard. I like touch pads, not mouse, so I have a
 Bluetooth trackpad.
 
-{{< img-center
-src="/img/interviews/snyk-guy-podjarny-desk.jpg"
-alt="The desk of Guy Podjarny, Snyk"
-width="100%"
-caption="iMac 27 inch, Samsung 34 inch curved screen (21:9 ratio), Bluetooth keyboard & trackpad, Shure SM7B Microphone with a Focusrite Scarlett 2i2 box and a Fethead booster (seen in the connection to the Focusrite box), Sony Alpha 6500 Mirrorless camera, iPad Pro, used typically for social or secondary things, Vitra standing electric desk, a piano stool behind the desk to lift my feet, whiteboard hung in the background, for ideation and highlighting notes, an eraseable rocketbook with a Pilot Frixion pen for analog note taking."
->}}
+{{< img-center src="/img/interviews/snyk-guy-podjarny-desk.jpg" alt="The desk of Guy Podjarny, Snyk" width="100%" caption="iMac 27 inch, Samsung 34 inch curved screen (21:9 ratio), Bluetooth keyboard & trackpad, Shure SM7B Microphone with a Focusrite Scarlett 2i2 box and a Fethead booster (seen in the connection to the Focusrite box), Sony Alpha 6500 Mirrorless camera, iPad Pro, used typically for social or secondary things, Vitra standing electric desk, a piano stool behind the desk to lift my feet, whiteboard hung in the background, for ideation and highlighting notes, an eraseable rocketbook with a Pilot Frixion pen for analog note taking." >}}
 
 ### Describe your computer software setup
 

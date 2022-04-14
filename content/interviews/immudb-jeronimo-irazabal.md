@@ -22,9 +22,9 @@ multilayer database. This is often assumed to mean immutable, but whilst immudb
 is indeed immutable, it’s also important to highlight that everything that is
 written into immudb can be verified by a client application later on.
 
-You can use immudb for logging events which can then be retrieved by the event 
-identifier and verified, however, immudb can be used as a standard key-value 
-store and as a relational SQL database, with the added benefit that everything 
+You can use immudb for logging events which can then be retrieved by the event
+identifier and verified, however, immudb can be used as a standard key-value
+store and as a relational SQL database, with the added benefit that everything
 is verifiable.
 
 This allows client apps to check whether the data has been tampered with, even
@@ -36,10 +36,10 @@ differences when comparing immudb to blockchain. With blockchain, ownership is
 decentralized, whereas immudb can run on a single server. Clients do not need to
 trust the server because of the underlying verification capabilities.
 
-When I started to work on immudb, there was nothing else that allowed for single 
-ownership with verification. The only alternative was to use a blockchain 
-platform, but that comes with much more complexity, such as smart contracts, 
-limited throughput, wallets etc. 
+When I started to work on immudb, there was nothing else that allowed for single
+ownership with verification. The only alternative was to use a blockchain
+platform, but that comes with much more complexity, such as smart contracts,
+limited throughput, wallets etc.
 
 Another factor was the focus on use cases. When you look at the general database
 landscape, none were being built from scratch with immutability in mind. Today,
@@ -48,9 +48,9 @@ offered high scalability, ease of use, and cryptographic verification, as well
 as the ability to travel through the change data in time.
 
 This retention of history makes immudb very suitable for regulated
-organizations, where they don’t want or can’t use a blockchain. I thought people 
-want to have a database, they don't want a blockchain. They want to store rich 
-data, not just hashes for transactions. They want to trust the whole database 
+organizations, where they don’t want or can’t use a blockchain. I thought people
+want to have a database, they don't want a blockchain. They want to store rich
+data, not just hashes for transactions. They want to trust the whole database
 content. That is why I started working on immudb.
 
 Over time, immudb users showed us lots of new use cases. For example, protecting
@@ -76,12 +76,12 @@ manner, so this has been the type of task I’ve been involved in for the last t
 months or so.
 
 I’ve been working from home long before the pandemic, so my home was already
-prepared and I have my own home office. My daughters usually come in
-just to say hi or to play a little bit - if I’m not solving something that
-requires my exclusive attention, I spend a few minutes with them and then I
-continue working. As we live in a very small city - around 15,000 people -
-distances can be measured with the fingers of one hand, giving me the chance to
-bring them to school during lunch time.
+prepared and I have my own home office. My daughters usually come in just to say
+hi or to play a little bit - if I’m not solving something that requires my
+exclusive attention, I spend a few minutes with them and then I continue
+working. As we live in a very small city - around 15,000 people - distances can
+be measured with the fingers of one hand, giving me the chance to bring them to
+school during lunch time.
 
 During afternoons, my home is as quiet as in the first hours of the day, so I
 have a lot of time to make progress and extend our time-zone availability for
@@ -123,7 +123,7 @@ first time I dealt with some kind of machine learning.
 I started in Basic and Pascal, once in university I moved onto functional and
 object oriented languages like Haskell and Smalltalk. I was mainly coding in
 Java during my professional career but discovered Go when contributing to the
-[Hyperledger Fabric](https://www.hyperledger.org/) project. Since I joined 
+[Hyperledger Fabric](https://www.hyperledger.org/) project. Since I joined
 CodeNotary, it’s my language of choice.
 
 ### What has been the most interesting challenge building immudb?
@@ -171,11 +171,7 @@ that I find really comfortable, and I miss it when I travel. It's a 32-inch
 Samsung monitor. I do have a second one, but I couldn’t find any practical use
 of it.
 
-{{< 
-img-center src="/img/interviews/immudb-jeronimo-irazabal-desk.jpg" 
-alt="The desk of Jerónimo Irazábal, immudb" 
-width="100%"
->}}
+{{< img-center src="/img/interviews/immudb-jeronimo-irazabal-desk.jpg" alt="The desk of Jerónimo Irazábal, immudb" width="100%" >}}
 
 ### Describe your computer software setup
 

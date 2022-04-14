@@ -4,7 +4,7 @@ who: Zach Lloyd
 role: Founder
 org: Warp
 what: GPU accelerated terminal.
-tags: ['Terminal']
+tags: ["Terminal"]
 date: 2022-03-31T12:00:00Z
 draft: false
 headerType: fixed
@@ -113,9 +113,8 @@ You have to go through a very thin Objective-C binding where you basically pass
 in a shader program. The Metal APIs are in Objective-C, but it's a very thin
 layer.
 
-The most interesting thing in our usage of Rust is that [we've built a full UI
-framework to do the rendering of
-Warp](https://www.warp.dev/blog/how-to-draw-styled-rectangles-using-the-gpu-and-metal).
+The most interesting thing in our usage of Rust is that
+[we've built a full UI framework to do the rendering of Warp](https://www.warp.dev/blog/how-to-draw-styled-rectangles-using-the-gpu-and-metal).
 We are not using one of the existing ones. That UI framework is something that
 we will open source in the future - it’s kind of inspired by
 [Flutter](https://flutter.dev/). We had some early help from Nathan Sobo, the
@@ -281,15 +280,11 @@ MacBook Pro M1!
 ### Describe your desk setup
 
 Nothing fancy. I do have this nice office chair that I have been using since I
-was at Google, called the [Okamura
-Contessa](https://teknionstore.com/products/nuova-contessa-all-mesh-task-chair-polished-aluminum-frame-base?variant=39317836955782).
+was at Google, called the
+[Okamura Contessa](https://teknionstore.com/products/nuova-contessa-all-mesh-task-chair-polished-aluminum-frame-base?variant=39317836955782).
 I'm a big fan of the Contessa chair.
 
-{{< img-center
-src="/img/interviews/warp-zach-lloyd-desk.jpeg"
-alt="The desk of Zach Lloyd, Warp"
-width="100%"
->}}
+{{< img-center src="/img/interviews/warp-zach-lloyd-desk.jpeg" alt="The desk of Zach Lloyd, Warp" width="100%" >}}
 
 ### When coding
 
@@ -306,12 +301,12 @@ golf.
 
 At the moment, I’m watching a lot of these startup failure dramedies now, such
 as WeCrashed and the Droput. Otherwise, I like watching football and to bet on
-it, through a [Survivor
-Pool](https://www.teamrankings.com/nfl-survivor-pool-picks/) every year. I also
-like to hang out with my dog, Blue.
+it, through a
+[Survivor Pool](https://www.teamrankings.com/nfl-survivor-pool-picks/) every
+year. I also like to hang out with my dog, Blue.
 
 ### Find out more
 
 [Warp](https://warp.dev/) is a GPU accelerated terminal. It was featured as an
-"Interesting Tool" in the [Console newsletter](https://console.dev) on 14 Apr
-2022. This interview was conducted on 31 Mar 2022.
+"Interesting Tool" in the [Console newsletter](https://console.dev) on 14
+Apr 2022. This interview was conducted on 31 Mar 2022.

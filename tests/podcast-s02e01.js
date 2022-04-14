@@ -1,7 +1,7 @@
 import http from "k6/http";
 import { check, sleep } from "k6";
 import { Rate } from "k6/metrics";
-import { parseHTML } from 'k6/html';
+import { parseHTML } from "k6/html";
 
 export let errorRate = new Rate("errors");
 export const options = {
@@ -18,8 +18,8 @@ export default function () {
     const res = http.get("https://test.console.dev/podcast/s02e01-dev-infrastructure-john-graham-cumming-cloudflare/", {
         headers: {
             "CF-Access-Client-Id": `${__ENV.CF_CLIENT_ID}`,
-            "CF-Access-Client-Secret": `${__ENV.CF_CLIENT_SECRET}`
-        }
+            "CF-Access-Client-Secret": `${__ENV.CF_CLIENT_SECRET}`,
+        },
     });
     //const res = http.get("http://localhost:1313/");
 
@@ -43,9 +43,9 @@ export default function () {
     const twitterPlayerHeight = doc.find("meta[name='twitter:player:height']").attr("content");
 
     // What are we expecting?
-    const expectedCanonical = "https://console.dev/podcast/s02e01-dev-infrastructure-john-graham-cumming-cloudflare/"
+    const expectedCanonical = "https://console.dev/podcast/s02e01-dev-infrastructure-john-graham-cumming-cloudflare/";
     const expectedTitle = "Dev infrastructure, with John Graham Cumming - Console DevTools Podcast";
-    const expectedOgTitle = "Dev infrastructure - Console DevTools Podcast"
+    const expectedOgTitle = "Dev infrastructure - Console DevTools Podcast";
     const expectedDescription = "Dev infrastructure - a devtools discussion with John Graham-Cumming (Cloudflare). Episode 1 (Season 2) of the Console DevTools Podcast.";
     const expectedPlayer = "https://player.simplecast.com/a810f07c-1df0-4198-bd2f-a2629d3eeee3?dark=true";
 

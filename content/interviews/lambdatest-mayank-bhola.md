@@ -167,11 +167,7 @@ etc
 
 ### Describe your computer hardware setup
 
-{{< img-center
-src="/img/interviews/lambdatest-mayank-bhola-desk.jpg"
-alt="The desk of Mayank Bhola, LambdaTest"
-width="100%"
->}}
+{{< img-center src="/img/interviews/lambdatest-mayank-bhola-desk.jpg" alt="The desk of Mayank Bhola, LambdaTest" width="100%" >}}
 
 Right now, I'm using an M1 MacBook Pro with a 27 inch
 [4K LG display](https://www.lg.com/4k-monitors). I use a
@@ -219,6 +215,6 @@ nearby.
 ### Find out more
 
 [LambdaTest](https://www.lambdatest.com/) is a cross browser testing tool. It
-was featured as an "Interesting Tool" in the [Console
-newsletter](https://console.dev) on 14 Oct 2021. This interview was conducted on
-12 Oct 2021.
+was featured as an "Interesting Tool" in the
+[Console newsletter](https://console.dev) on 14 Oct 2021. This interview was
+conducted on 12 Oct 2021.

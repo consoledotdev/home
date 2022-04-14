@@ -11,27 +11,27 @@ assetDir = "assets"
 disableKinds = ["taxonomy", "term"]
 
 [taxonomies]
-    category = "categories"
-    tag = "tags"
+category = "categories"
+tag = "tags"
 
 [frontmatter]
 date = ["date", "publishDate", "lastmod"]
 lastmod = ["lastmod", ":git", "date", "publishDate"]
 
 [markup]
-    [markup.goldmark]
-        [markup.goldmark.parser]
-            [markup.goldmark.parser.attribute]
-                block = true
+[markup.goldmark]
+[markup.goldmark.parser]
+[markup.goldmark.parser.attribute]
+block = true
 
 [outputs]
-home = [ "HTML" ]
-section = [ "HTML", "RSS" ]
+home = ["HTML"]
+section = ["HTML", "RSS"]
 
 [outputFormats]
 [outputFormats.RSS]
-    mediatype = "application/rss"
-    baseName = "rss"
+mediatype = "application/rss"
+baseName = "rss"
 
 [params]
 consoleSubscribers = "21k+"

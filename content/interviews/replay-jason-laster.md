@@ -4,7 +4,7 @@ who: Jason Laster
 role: CEO
 org: Replay
 what: Time travel debugger.
-tags: ['Debugger']
+tags: ["Debugger"]
 date: 2022-02-02T12:00:00Z
 draft: false
 headerType: fixed
@@ -22,10 +22,11 @@ the web. Replay helps you record a bug and share it with your team so that
 anyone can debug it after the fact.
 
 Time travel debugging is something I have been fascinated by for 10 years, ever
-since I watched [Bret Victor’s](http://worrydream.com/) '[Inventing On
-Principle](https://www.youtube.com/watch?v=PUv66718DII)' and saw him demo Mario
-running and jumping over the bridge, then rewinding and seeing the path that
-Mario took. I have wanted to work on something like Replay ever since.
+since I watched [Bret Victor’s](http://worrydream.com/)
+'[Inventing On Principle](https://www.youtube.com/watch?v=PUv66718DII)' and saw
+him demo Mario running and jumping over the bridge, then rewinding and seeing
+the path that Mario took. I have wanted to work on something like Replay ever
+since.
 
 When I joined Mozilla in 2016 to work on the Firefox debugger, I thought this
 was my chance. I didn’t realize that they had actually already built the first
@@ -38,11 +39,11 @@ was the killer feature - add a breakpoint and then rewind to the last time it
 was hit or fast forward to the next time it is hit. The question has always
 been, could we build something similar for web developers?
 
-It is a really hard problem to solve. [Brian
-Hackett](https://www.linkedin.com/in/brian-hackett-0969a070/), who ultimately
-became my co-founder and CTO at Replay, had spent five years with Mozilla trying
-to solve this problem. We thought we should go for it, which led us to starting
-Replay.
+It is a really hard problem to solve.
+[Brian Hackett](https://www.linkedin.com/in/brian-hackett-0969a070/), who
+ultimately became my co-founder and CTO at Replay, had spent five years with
+Mozilla trying to solve this problem. We thought we should go for it, which led
+us to starting Replay.
 
 ### What do developers use currently to do this?
 
@@ -88,8 +89,8 @@ panel and network monitor.
 ### How did you first get into software development?
 
 I’ve always enjoyed building. When I was in college, I picked up Ruby on Rails.
-Out of college, I did this program by the [Recurse
-Center](https://www.recurse.com/), which is a three-month retreat for
+Out of college, I did this program by the
+[Recurse Center](https://www.recurse.com/), which is a three-month retreat for
 programming. I wanted to work on an open source library like Rails with the
 thought that if I understood how Ruby on Rails worked. I would be better at
 debugging. I ended up spending the full three months working on the Ruby REPL,
@@ -159,8 +160,8 @@ what I'm going to focus on.
 
 ### Describe your computer hardware setup
 
-I have got a MacBook Pro with a Dell 24 inch monitor and a fun [Kinesis
-Ergonomic Keyboard](https://kinesis-ergo.com/).
+I have got a MacBook Pro with a Dell 24 inch monitor and a fun
+[Kinesis Ergonomic Keyboard](https://kinesis-ergo.com/).
 
 One of the nicest things we have done is move all of the backend development
 into the cloud. I can have VS Code running, make a change that then goes up to
@@ -187,11 +188,7 @@ community to join.
 
 I have a really nice live edge desk with a standing desk base.
 
-{{< img-center
-src="/img/interviews/replay-jason-laster-desk.jpeg"
-alt="The desk of Jason Laster, Replay"
-width="100%"
->}}
+{{< img-center src="/img/interviews/replay-jason-laster-desk.jpeg" alt="The desk of Jason Laster, Replay" width="100%" >}}
 
 ### When coding
 
@@ -212,5 +209,5 @@ figure out a way to make it work.
 ### Find out more
 
 [Replay](https://www.replay.io) is a time travel debugger. It was featured as an
-"Interesting Tool" in the [Console newsletter](https://console.dev) on 17 Feb
-2022. This interview was conducted on 2 Feb 2022.
+"Interesting Tool" in the [Console newsletter](https://console.dev) on 17
+Feb 2022. This interview was conducted on 2 Feb 2022.

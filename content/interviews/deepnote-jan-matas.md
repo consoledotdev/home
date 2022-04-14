@@ -4,7 +4,7 @@ who: Jan Matas
 role: CTO
 org: Deepnote
 what: A platform for collaborative Jupyter notebooks.
-tags: ['Data Science']
+tags: ["Data Science"]
 date: 2021-05-12T12:00:00Z
 draft: false
 headerType: fixed
@@ -25,27 +25,27 @@ you can see the story of your data and your analysis. You can write notes, run
 the code and examine the results. This makes it the ideal environment to do any
 sort of data analytics.
 
-Readers might be familiar with [Jupyter Notebook](https://jupyter.org/).
-Jupyter is amazing, and we are excited about all the developments in the
-ecosystem, but it has some shortcomings. We built Deepnote to try to improve on
-some of those aspects in three main areas.
+Readers might be familiar with [Jupyter Notebook](https://jupyter.org/). Jupyter
+is amazing, and we are excited about all the developments in the ecosystem, but
+it has some shortcomings. We built Deepnote to try to improve on some of those
+aspects in three main areas.
 
 Firstly, collaboration. We are making it extremely easy for you to share your
 work with both your technical colleagues and non-technical stakeholders. With
 Deepnote, when you do any sort of data analysis, it suddenly becomes accessible
 to the whole organization.
 
-Secondly,  ease of setup. It only takes a couple of clicks to get a full
-fledged data science analytics environment. You don't need to mess with virtual
+Secondly, ease of setup. It only takes a couple of clicks to get a full fledged
+data science analytics environment. You don't need to mess with virtual
 environments. You don't need to install libraries or make SSH tunnels. You can
 just do your analysis and focus on the stuff that is important for you.
 
-Finally, the integrations. You probably have your existing data science stack
-or you have your data somewhere. We are trying to make sure that wherever it is
-we integrate with this tooling and we make it easy for you to build the
-integration. You don't need to move everything to Deepnote. You can use
-Deepnote for the computational analysis itself, but you don't need to move the
-data. You can connect to whatever source you have right now.
+Finally, the integrations. You probably have your existing data science stack or
+you have your data somewhere. We are trying to make sure that wherever it is we
+integrate with this tooling and we make it easy for you to build the
+integration. You don't need to move everything to Deepnote. You can use Deepnote
+for the computational analysis itself, but you don't need to move the data. You
+can connect to whatever source you have right now.
 
 Before working on Deepnote I did some research on deep reinforcement learning
 and robotics. It was about teaching robots to do different manipulation tasks,
@@ -53,9 +53,9 @@ for example, hanging clothes on a hanger. I was using mostly computational
 notebooks for this, but I had a lot of trouble trying to share my work with
 people around the lab because we were sending the notebooks back and forth. We
 tried using Git but it’s not ideal for rich data. There were some videos, there
-were some images and the diffs were massive. By the end, we had switched back
-to vanilla scripts and generated the outputs elsewhere that were just direct,
-like single blobs of JPEGs inside the repo.
+were some images and the diffs were massive. By the end, we had switched back to
+vanilla scripts and generated the outputs elsewhere that were just direct, like
+single blobs of JPEGs inside the repo.
 
 Later, I worked in a hedge fund where I was building a platform for financial
 modeling. This was also built around computation notebooks similar to Deepnote.
@@ -74,12 +74,7 @@ it to other teams like marketing or sales, for example. We are making hundreds
 of data science teams more productive, and are super excited to see the growth
 continue.
 
-{{< img-center
-src="/img/interviews/deepnote-jan-matas-product.png"
-alt="Deepnote product screenshot"
-width="100%"
-caption="Collaboratively editing a notebook in Deepnote."
->}}
+{{< img-center src="/img/interviews/deepnote-jan-matas-product.png" alt="Deepnote product screenshot" width="100%" caption="Collaboratively editing a notebook in Deepnote." >}}
 
 ### How do you see your relationship with the Jupyter Notebook project?
 
@@ -93,8 +88,8 @@ Jupyter is a great tool and the leadership of the community is built like a
 steering committee. They're all amazing engineers, but sometimes they have a
 conflict of interest because some companies want to build one feature, and
 another company wants to build a different feature. It's much harder being an
-open source community to iterate quickly. When we decided to do the hard fork
-we can just do discussions internally. We believe we can move much faster.
+open source community to iterate quickly. When we decided to do the hard fork we
+can just do discussions internally. We believe we can move much faster.
 
 ### What does a "day in the life" look like?
 
@@ -118,27 +113,27 @@ engineers and we are spread all over the world, working remotely. We have built
 an amazing team because we all come from different parts of life.
 
 There are people that were leading data science teams, people working in
-laboratories that were actually using the Jupyter notebooks full time, or
-people building platforms for academic publishing and collaborative platforms.
-There is a lot of different expertise in the team and all those points of view
-merged really help with the Deepnote product direction. There is a lot of
-diversity of experiences in the team.
+laboratories that were actually using the Jupyter notebooks full time, or people
+building platforms for academic publishing and collaborative platforms. There is
+a lot of different expertise in the team and all those points of view merged
+really help with the Deepnote product direction. There is a lot of diversity of
+experiences in the team.
 
 We don't have too much of a structure. There is no separate backend and devops
 teams. There are some people that naturally focus more on specific things, but
 we like the approach of owning a project end-to-end.
 
-If anyone’s interested, [we’re hiring at the
-moment](https://deepnote.com/join-us).
+If anyone’s interested,
+[we’re hiring at the moment](https://deepnote.com/join-us).
 
 ### How do you think about UX and design?
 
-The original founding team was four people, and two out of those were
-designers. We use Figma to do the designs and the pipeline is pretty simple -
-they start with a design, then do a bunch of user interviews to iterate. There
-is a bit of a handover when they communicate with the engineer that it is going
-to implement the feature end to end, then they follow up with a couple more
-user interviews before finishing the release.
+The original founding team was four people, and two out of those were designers.
+We use Figma to do the designs and the pipeline is pretty simple - they start
+with a design, then do a bunch of user interviews to iterate. There is a bit of
+a handover when they communicate with the engineer that it is going to implement
+the feature end to end, then they follow up with a couple more user interviews
+before finishing the release.
 
 Figma is an inspiration for Deepnote because they are doing the same thing for
 design that we are doing for data science. If you use Figma, you know that you
@@ -148,18 +143,18 @@ and review while editing in real time.
 ### How did you first get into software development?
 
 When I was in elementary school, I visited a robotic competition that was in my
-hometown. I was super excited to see kids my age building cool stuff. The
-robots were simple, but very exciting. They were things like small cars that
-were doing different tasks. There was no robotic team around my hometown or
-even in the region, so I asked a friend to start a robotics team. We raised
-some money from local companies, met all the executives to make them understand
-what we were doing, and managed to raise the money!
+hometown. I was super excited to see kids my age building cool stuff. The robots
+were simple, but very exciting. They were things like small cars that were doing
+different tasks. There was no robotic team around my hometown or even in the
+region, so I asked a friend to start a robotics team. We raised some money from
+local companies, met all the executives to make them understand what we were
+doing, and managed to raise the money!
 
 It was a super successful endeavor because we ended up winning the world
 championship three years later in robotics. Although we started in C++ I later
 learned about Python. Switching from C++ to Python was a great experience.
-Everything was suddenly so much simpler, a tiny bit slower, but we bought
-better CPUs and didn't care at that point!
+Everything was suddenly so much simpler, a tiny bit slower, but we bought better
+CPUs and didn't care at that point!
 
 Next, we bought cameras and started doing computer vision, and I pretty much
 continued with this until college when I started doing AI for robotics. Later I
@@ -169,8 +164,8 @@ for robotics, but I realized that the tooling is just not there yet.
 ### What is the Deepnote tech stack?
 
 We have a Kubernetes cluster that is doing all the orchestration for the user
-compute environments and the microservices behind the scenes. They’re written
-in Node.js with TypeScript.
+compute environments and the microservices behind the scenes. They’re written in
+Node.js with TypeScript.
 
 TypeScript was a great choice because as the team ecosystem grows, it makes it
 easier to do refactoring and improve our code quality. It is also easier to
@@ -179,9 +174,9 @@ document the code while we are writing.
 We are running a multi-cloud, so we’ve got something in GCP, and something in
 AWS. Everything is built to be cloud agnostic, because we are planning to start
 doing on-premise deployments as well as cloud. So we need to make sure that
-everything works regardless of the environment. The plan is to be able to run
-on any Kubernetes cluster that is available on the common public clouds.
-Kubernetes is always going to be there.
+everything works regardless of the environment. The plan is to be able to run on
+any Kubernetes cluster that is available on the common public clouds. Kubernetes
+is always going to be there.
 
 ### What has been the most interesting technical challenge building Deepnote?
 
@@ -193,8 +188,8 @@ to merge the chunks.
 
 We also found some open source libraries to help pull things together, but we
 ended up with our own engine for operational transformations. The big challenge
-is with performance and the number of requests going through our load
-balancers. We often see spikes of traffic.
+is with performance and the number of requests going through our load balancers.
+We often see spikes of traffic.
 
 Now we’re thinking about how to break down the collaboration even further, so
 that certain blocks, such as code, have very tight transformations to ensure
@@ -228,10 +223,10 @@ makes it easy to build these complex features.
 
 It's all really standard. I've got a MacBook Pro that is connected to a wide
 screen LG monitor. I really like that MacBook keyboard everyone was complaining
-about! I know that is a bit controversial, but I like it. I even enjoy using
-the touchpad, so I don't even have an external mouse and keyboard. There's an
-added benefit that when I'm traveling, I have my whole set-up (apart from the
-monitor) always on me.
+about! I know that is a bit controversial, but I like it. I even enjoy using the
+touchpad, so I don't even have an external mouse and keyboard. There's an added
+benefit that when I'm traveling, I have my whole set-up (apart from the monitor)
+always on me.
 
 ### Describe your computer software setup
 
@@ -251,17 +246,13 @@ find information. So we moved it to Circle whilst still using Slack internally.
 
 ### Describe your desk setup
 
-{{< img-center
-src="/img/interviews/deepnote-jan-matas-desk.jpg"
-alt="The desk of Jan Matas, Deepnote"
-width="100%"
->}}
+{{< img-center src="/img/interviews/deepnote-jan-matas-desk.jpg" alt="The desk of Jan Matas, Deepnote" width="100%" >}}
 
 I’ve got the same Ikea standing desk at home and in the office. I prefer to be
-in the office personally, but Deepnote itself is more of a remote first
-company. Out of the sixteen people right now, two or three of us usually come
-to the office. It's pretty empty. Pre-pandemic it was a bit better, maybe five
-or six people would be in the office.
+in the office personally, but Deepnote itself is more of a remote first company.
+Out of the sixteen people right now, two or three of us usually come to the
+office. It's pretty empty. Pre-pandemic it was a bit better, maybe five or six
+people would be in the office.
 
 ### When coding
 
@@ -281,6 +272,6 @@ places to disconnect for a while before jumping back to working at Deepnote.
 ### Find out more
 
 [Deepnote](https://www.deepnote.com) is a platform for collaborative Jupyter
-notebooks. It was featured as an "Interesting Tool" in the [Console
-newsletter](https://console.dev) on 13 May 2021. This interview was conducted
-on 12 May 2021.
+notebooks. It was featured as an "Interesting Tool" in the
+[Console newsletter](https://console.dev) on 13 May 2021. This interview was
+conducted on 12 May 2021.

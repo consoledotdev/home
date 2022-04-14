@@ -9,10 +9,10 @@ isPage: articles
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorBio:
-  David Mytton is co-founder of Console. From 2009-2018, David was CEO at Server 
-  Density, a SaaS monitoring startup used by hundreds of customers to collect 
-  billions of time series metrics. He is also a researcher in sustainable 
-  computing at Uptime Institute and affiliated with Imperial College London. 
+  David Mytton is co-founder of Console. From 2009-2018, David was CEO at Server
+  Density, a SaaS monitoring startup used by hundreds of customers to collect
+  billions of time series metrics. He is also a researcher in sustainable
+  computing at Uptime Institute and affiliated with Imperial College London.
   David has been a developer for 15+ years.
 ogImg: /img/articles/neovim-best-code-editor-ide-for-developers-neovim.png
 tags: [Articles, Code Editors, IDE]
@@ -253,10 +253,10 @@ easier to get set up. Regardless, a text-based terminal life is the way forward.
 #### (Neo)Vim plugins I use
 
 With the release of Neovim 0.5 I was able to remove most of my language plugins
-and just use Treesitter + LSP. I followed [Takuya Matsuyama's
-guide](https://blog.inkdrop.info/how-to-set-up-neovim-0-5-modern-plugins-lsp-treesitter-etc-542c3d9c9887)
-for most of it and you can see the result in [my vimrc
-file](https://github.com/davidmytton/dotfiles/blob/79ab4739d8971387d62f90866f7f9d5c900dda61/vim/.vimrc).
+and just use Treesitter + LSP. I followed
+[Takuya Matsuyama's guide](https://blog.inkdrop.info/how-to-set-up-neovim-0-5-modern-plugins-lsp-treesitter-etc-542c3d9c9887)
+for most of it and you can see the result in
+[my vimrc file](https://github.com/davidmytton/dotfiles/blob/79ab4739d8971387d62f90866f7f9d5c900dda61/vim/.vimrc).
 Here are a few crucial ones:
 
 - [vim-gitgutter](https://github.com/airblade/vim-gitgutter): Shows git diff in

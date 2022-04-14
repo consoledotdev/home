@@ -5,8 +5,8 @@ draft: false
 summary: Universal code search for every developer.
 metaTitle: Working at Sourcegraph - Console profile
 metaDescription:
-  What is it like to work at Sourcegraph? Console profile behind the scenes
-  at Sourcegraph - universal code search for every developer.
+  What is it like to work at Sourcegraph? Console profile behind the scenes at
+  Sourcegraph - universal code search for every developer.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -28,7 +28,11 @@ companyInfo:
   product:
     name: "Sourcegraph"
     description:
-      "Sourcegraph is building universal code search for every developer and company so they can innovate faster on the software we use every day. Sourcegraph lets you onboard to a new codebase quickly, make large-scale refactors, find and reuse code, increase dev efficiency, address security risks, root-cause incidents, and find and fix issues across all your code."
+      "Sourcegraph is building universal code search for every developer and
+      company so they can innovate faster on the software we use every day.
+      Sourcegraph lets you onboard to a new codebase quickly, make large-scale
+      refactors, find and reuse code, increase dev efficiency, address security
+      risks, root-cause incidents, and find and fix issues across all your code."
   techStack:
     - Go
     - JS
@@ -48,7 +52,8 @@ companyInfo:
       value: "Late-stage startup"
     - label: "Customers"
       value:
-        - "Dropbox, Uber, Lyft, Twitter, Amazon, Reddit, Workiva, Quantcast, GE, Plaid, Factset, F5, Segment, SoFi, Cloudflare "
+        - "Dropbox, Uber, Lyft, Twitter, Amazon, Reddit, Workiva, Quantcast, GE,
+          Plaid, Factset, F5, Segment, SoFi, Cloudflare "
         - links:
             - href: "https://about.sourcegraph.com/case-studies"
               text: "See all"
@@ -65,10 +70,22 @@ companyInfo:
   customerCaseStudies:
     - client: "Cloudflare"
       text:
-        "solve the big code problems they face every day with Sourcegraph. For example, engineers can quickly identify out-of-date code libraries by only searching certain repositories, while excluding specific file types. And it’s easier to search for error logs. As a result, the team can refactor and debug faster and feel confident they've addressed each issue."
+        "solve the big code problems they face every day with Sourcegraph. For
+        example, engineers can quickly identify out-of-date code libraries by
+        only searching certain repositories, while excluding specific file
+        types. And it’s easier to search for error logs. As a result, the team
+        can refactor and debug faster and feel confident they've addressed each
+        issue."
     - client: "CERN's"
       text:
-        "Large Hadron Collider (LHC) features five-year operational periods and the software must be stable during this time. Sourcegraph helps developers make small, backward-compatible changes and ensures that any change made by a given team to one part of the codebase doesn't break (or require adaptations of) dependent code written by other people. It’s essential that these changes are done correctly, as mistakes can stop the operation of the CERN accelerators and waste precious time for physics research."
+        "Large Hadron Collider (LHC) features five-year operational periods and
+        the software must be stable during this time. Sourcegraph helps
+        developers make small, backward-compatible changes and ensures that any
+        change made by a given team to one part of the codebase doesn't break
+        (or require adaptations of) dependent code written by other people. It’s
+        essential that these changes are done correctly, as mistakes can stop
+        the operation of the CERN accelerators and waste precious time for
+        physics research."
   type: "On-prem / SaaS"
   category: "Developer Tools - Code search"
   topCategory: "Developer Tools"
@@ -80,14 +97,14 @@ podcast: s01e07-sourcegraph-hoppscotch
 
 {{< nav-wrapper--open id="wrapper-1" anchor-name="how-engineering-works" >}}
 
-{{< rich-title-3 icon="checklist" id="how-engineering-works" >}} How engineering works
-{{</ rich-title-3 >}}
+{{< rich-title-3 icon="checklist" id="how-engineering-works" >}} How engineering
+works {{</ rich-title-3 >}}
 
 #### How are the teams structured?
 
 Teams are split into different groups, including Engineering, Product, Customer
-Support, Customer Engineering, Tech Ops and others. The org chart is [available
-on the Sourcegraph website](https://handbook.sourcegraph.com/team/org_chart/).
+Support, Customer Engineering, Tech Ops and others. The org chart is
+[available on the Sourcegraph website](https://handbook.sourcegraph.com/team/org_chart/).
 
 #### What tools do engineers use?
 
@@ -138,21 +155,21 @@ Automated CI using Buildkite, with automated end-to-end tests.
   managing the Sourcegraph dev environment
 - Sub-repository permissions: enforcing code permissions within repositories.
 - Scaling up our infrastructure to support millions of open-source repositories
-  and [private code on
-  sourcegraph.com](https://about.sourcegraph.com/cloud-beta/).
-- Both [Notebooks](https://docs.sourcegraph.com/notebooks) and [Code
-  Insights](https://about.sourcegraph.com/code-insights/) were created as hack
-  projects to help with onboarding, documenting code investigations and
+  and
+  [private code on sourcegraph.com](https://about.sourcegraph.com/cloud-beta/).
+- Both [Notebooks](https://docs.sourcegraph.com/notebooks) and
+  [Code Insights](https://about.sourcegraph.com/code-insights/) were created as
+  hack projects to help with onboarding, documenting code investigations and
   understanding high-level trends in our code, but they worked so well, we ended
   up productizing it and releasing them to our customers.
 
 #### How does on-call work?
 
 - OpsGenie for handling and routing alerts. Incident.io for collaboratively
-responding to incidents.
+  responding to incidents.
 - We have an on-call rotation, but no one gets woken up in the middle of the
-night, because we distribute the rotation to our teammates around the world
-(fully remote).
+  night, because we distribute the rotation to our teammates around the world
+  (fully remote).
 
 {{< nav-wrapper--open id="wrapper-2" anchor-name="hiring-process" >}}
 
@@ -171,29 +188,25 @@ or less.
 
 The process typically looks like this:
 
-1. [Recruiter
-   screen](https://handbook.sourcegraph.com/departments/talent/process/types_of_interviews/#recruiter-screen)
+1. [Recruiter screen](https://handbook.sourcegraph.com/departments/talent/process/types_of_interviews/#recruiter-screen)
    (30m).
-2. [Hiring Manager
-   Screen](https://handbook.sourcegraph.com/departments/talent/process/types_of_interviews/#hiring-manager-screen)
+2. [Hiring Manager Screen](https://handbook.sourcegraph.com/departments/talent/process/types_of_interviews/#hiring-manager-screen)
    (30-60m).
-3. Team interviews - [technical
-   interview](https://handbook.sourcegraph.com/departments/talent/process/engineering_interview_process_candidates/#types-of-interviews)
-   (60m) + [cross-functional team collaboration
-   interview](https://handbook.sourcegraph.com/departments/talent/process/types_of_interviews/#cross-functional-team-collaboration-interview)
+3. Team interviews -
+   [technical interview](https://handbook.sourcegraph.com/departments/talent/process/engineering_interview_process_candidates/#types-of-interviews)
+   (60m) +
+   [cross-functional team collaboration interview](https://handbook.sourcegraph.com/departments/talent/process/types_of_interviews/#cross-functional-team-collaboration-interview)
    (60m).
-4. [Values
-   interview](https://handbook.sourcegraph.com/departments/talent/process/types_of_interviews/#values-interview)
+4. [Values interview](https://handbook.sourcegraph.com/departments/talent/process/types_of_interviews/#values-interview)
    (30m).
-5. [Leadership
-   interview](https://handbook.sourcegraph.com/departments/talent/process/types_of_interviews/#leadership-interview)
+5. [Leadership interview](https://handbook.sourcegraph.com/departments/talent/process/types_of_interviews/#leadership-interview)
    (30m).
 
 #### What is the career progression framework? How are promotions and performance reviews managed?
 
-Our handbook documents [our career development
-framework](https://handbook.sourcegraph.com/departments/product-engineering/engineering/career-development/framework/)
-and [how performance reviews are
-managed](https://handbook.sourcegraph.com/departments/product-engineering/engineering/career-development/talent-review-process/).
+Our handbook documents
+[our career development framework](https://handbook.sourcegraph.com/departments/product-engineering/engineering/career-development/framework/)
+and
+[how performance reviews are managed](https://handbook.sourcegraph.com/departments/product-engineering/engineering/career-development/talent-review-process/).
 
 {{< div--close >}}

@@ -6,7 +6,7 @@ summary: Subscription confirmed.
 robotsDisallow: true
 ---
 
-You are now subscribed to the weekly Console newsletter. 
+You are now subscribed to the weekly Console newsletter.
 {.description}
 
 **Every Thursday** we will send you the most interesting developer tools and

@@ -131,9 +131,9 @@ course
 
 For my undergrad I studied physics, which involved a lot of numerical stuff. I
 was writing a lot of C and MATLAB. I followed up with a PhD in physics, focusing
-on non-linear dynamics as it relates to atomic physics. Even though the work
-was theoretical there was still a lot of numerical number crunching in that as
-well, where I continued to use MATLAB and C.
+on non-linear dynamics as it relates to atomic physics. Even though the work was
+theoretical there was still a lot of numerical number crunching in that as well,
+where I continued to use MATLAB and C.
 
 ### What is the most interesting development challenge you've faced working on Tonic?
 

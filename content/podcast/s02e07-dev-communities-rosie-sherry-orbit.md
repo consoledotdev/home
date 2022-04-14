@@ -4,10 +4,10 @@ who: Rosie Sherry
 whoLink: https://twitter.com/rosiesherry
 org: Orbit
 orgLink: https://orbit.love/
-what: 
- We discuss why community is not marketing, how devrel and community are 
- different, who owns community and what that might mean with web3 & 
- decentralization, and what essential tools you need for managing communities.
+what:
+  We discuss why community is not marketing, how devrel and community are
+  different, who owns community and what that might mean with web3 &
+  decentralization, and what essential tools you need for managing communities.
 season: 2
 episode: 7
 date: 2022-02-17T06:00:00Z
@@ -15,11 +15,11 @@ duration: 28:10
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/fa34a600-4345-4f17-b64b-ec5cf09c22f8/audio/e06049c7-ba55-493f-9716-9a0d3605a3d9/default_tc.mp3
 draft: false
 summary:
- Dev communities - a devtools discussion with Rosie Sherry (Orbit). Episode 7 
- (Season 2) of the Console DevTools Podcast.
+  Dev communities - a devtools discussion with Rosie Sherry (Orbit). Episode 7
+  (Season 2) of the Console DevTools Podcast.
 metaDescription:
- Dev communities - a devtools discussion with Rosie Sherry (Orbit). Episode 7 
- (Season 2) of the Console DevTools Podcast.
+  Dev communities - a devtools discussion with Rosie Sherry (Orbit). Episode 7
+  (Season 2) of the Console DevTools Podcast.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -27,7 +27,7 @@ isSubpage: podcast-episode
 pageType: podcast-episode
 customPageStyle: true
 xlViewport:
- largeText: true
+  largeText: true
 topImg1Src: /img/podcast/orbit-rosie-sherry-profile.jpg
 topImg2Src: /img/favicons/orbit.love.png
 ogImg: /img/podcast/podcast-cover.jpeg
@@ -36,11 +36,11 @@ authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
 authorBio:
- is co-founder of Console. From 2009-2018, David was CEO at Server Density, a
- SaaS server monitoring startup used by hundreds of customers to collect
- billions of time series metrics from millions of servers. He is also a
- researcher in sustainable computing at Uptime Institute and affiliated with
- Imperial College London. David has been a developer for 15+ years.
+  is co-founder of Console. From 2009-2018, David was CEO at Server Density, a
+  SaaS server monitoring startup used by hundreds of customers to collect
+  billions of time series metrics from millions of servers. He is also a
+  researcher in sustainable computing at Uptime Institute and affiliated with
+  Imperial College London. David has been a developer for 15+ years.
 ---
 
 ### Episode notes
@@ -75,7 +75,7 @@ Ministry of Testing - and led community at Indie Hackers.
 
 {{< podcast-episode/clipping time="05:24" >}}
 
-**Rosie:**  I have this gripe, this is only since the pandemic, because the
+**Rosie:** I have this gripe, this is only since the pandemic, because the
 pandemic has brought on this huge interest in community. What’s happened, as a
 result is business people, marketing people are saying, “oh, community’s a new
 thing. We have to invest in community.” They end up saying community is a new
@@ -87,11 +87,10 @@ community is not to sell a product.
 
 {{< podcast-episode/clipping time="19:00" >}}
 
-**Rosie:** I have this belief that members don't always know what they
-want. You know, it's like the mom test. They think they know what they want, but
-they don't and they'll shout out some random stuff and say, "this would be
-great. I want this." But actually, the reality of what they want is not the
-actual thing.
+**Rosie:** I have this belief that members don't always know what they want. You
+know, it's like the mom test. They think they know what they want, but they
+don't and they'll shout out some random stuff and say, "this would be great. I
+want this." But actually, the reality of what they want is not the actual thing.
 
 {{</ podcast-episode/clipping >}}
 

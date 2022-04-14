@@ -39,12 +39,7 @@ You can get what might take the order of weeks in just hours, and be set up with
 a tool and process that works out of the box. It's also beautiful, elegant, and
 a lot easier than writing everything from ground up.
 
-{{< img-center
-src="/img/interviews/retool-snir-kodesh-product.gif"
-alt="Retool product screenshot"
-width="100%"
-caption="Building interfaces in Retool."
->}}
+{{< img-center src="/img/interviews/retool-snir-kodesh-product.gif" alt="Retool product screenshot" width="100%" caption="Building interfaces in Retool." >}}
 
 ### How have you seen developers solve this in the past?
 
@@ -231,11 +226,7 @@ team made fun of me, and called me a dinosaur, so I adopted
 
 ### Describe your desk setup
 
-{{< img-center
-src="/img/interviews/retool-snir-kodesh-desk.jpg"
-alt="The desk of Snir Kodesh, Retool"
-width="100%"
->}}
+{{< img-center src="/img/interviews/retool-snir-kodesh-desk.jpg" alt="The desk of Snir Kodesh, Retool" width="100%" >}}
 
 I just got a sit-stand desk. For two decades, I was using the same IKEA sheet of
 glass held by two planks, so I got a grown-up desk for a change. That's about

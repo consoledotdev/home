@@ -4,7 +4,7 @@ who: Ellie Huxtable
 role: Creator
 org: Atuin
 what: Shell history search and sync.
-tags: ['Shell Tools']
+tags: ["Shell Tools"]
 date: 2021-05-18T12:00:00Z
 draft: false
 headerType: fixed
@@ -30,28 +30,23 @@ quite remember, but I want to find it again." I want to try and make that
 easier.
 
 [SQLite](https://sqlite.org/index.html) is one of my most favorite pieces of
-software, so I went straight for that. It’s the database behind Atuin. I've
-used it before for various side projects, and it’s never failed me for
-anything. It's always really reliable.
+software, so I went straight for that. It’s the database behind Atuin. I've used
+it before for various side projects, and it’s never failed me for anything. It's
+always really reliable.
 
 I’m still working on all the features so it’s not all there yet, but I want to
 be able to take all your shell history from all your machines and put it in one
 place. Then you’ll be able to see trends in what you like to do, the sorts of
 commands you run that pass and fail. That’s the idea for Atuin
 
-{{< img-center
-src="/img/interviews/atuin-ellie-huxtable-product.gif"
-alt="Atuin product screenshot"
-width="100%"
-caption="Searching shell history with Atuin."
->}}
+{{< img-center src="/img/interviews/atuin-ellie-huxtable-product.gif" alt="Atuin product screenshot" width="100%" caption="Searching shell history with Atuin." >}}
 
 ### What does a “day-in-the-life” look like?
 
 I work remotely on the [Coinbase](https://www.coinbase.com) infrastructure team
-doing dev prod stuff, and probably will stick with being mostly remote even
-when offices open again. I try to get out for a walk during my lunch break,
-usually through the park. I grab a coffee, come home and finish up with work.
+doing dev prod stuff, and probably will stick with being mostly remote even when
+offices open again. I try to get out for a walk during my lunch break, usually
+through the park. I grab a coffee, come home and finish up with work.
 
 Atuin is entirely separate from my day job - it’s just me scratching a brain
 itch that happens to be useful to other people. I've open sourced some other
@@ -78,20 +73,20 @@ It's both really cool, and also a weird responsibility. As of a few days ago,
 does a Brew update, the update actually appears on their laptop.
 
 If I screwed up before it's fine, it's just my laptop, whereas now I have to
-make sure I do releases properly. Atuin has a sync feature which by default
-uses a server I run (you can choose to run your own). Before I made it public I
-read through the encryption code many times and got a bunch of friends to
-check: "I'm certain this code works, but can you just confirm that I'm not
-doing something silly." It's my nightmare to have to make a tweet shortly
-afterwards and announce: "so all your history wasn't actually encrypted." So I
-have to make sure everything is properly tested.
+make sure I do releases properly. Atuin has a sync feature which by default uses
+a server I run (you can choose to run your own). Before I made it public I read
+through the encryption code many times and got a bunch of friends to check: "I'm
+certain this code works, but can you just confirm that I'm not doing something
+silly." It's my nightmare to have to make a tweet shortly afterwards and
+announce: "so all your history wasn't actually encrypted." So I have to make
+sure everything is properly tested.
 
 I enjoy it, but there’s an extra level of making sure things are okay for
 everyone.
 
 ### Do you consider the sync server a separate project?
 
-They're the same. Without the sync it's still useful -  I used it without sync
+They're the same. Without the sync it's still useful - I used it without sync
 for a while before I implemented it, but there are already a lot of projects
 that make shell history nicer. There aren't any that I could find that
 aggregated it all and shared it all between multiple machines. So this is what
@@ -105,18 +100,19 @@ would handle the frequency of updates.
 ### How did you first get into software development?
 
 Software development has been most of my life at this point, which is kind of
-freaky. When I was a kid, my parents bought me a [LEGO Mindstorms
-set](https://www.lego.com/en-gb/themes/mindstorms). It's a little programmable
-LEGO with sensors and motors. I'd always loved building things - just wanting
-something to exist and then making it. Then I found that software was
-limitless. If you want to do something mechanical, you have to buy parts, and
-if you do something wrong, like if you break them, you have to order more.
+freaky. When I was a kid, my parents bought me a
+[LEGO Mindstorms set](https://www.lego.com/en-gb/themes/mindstorms). It's a
+little programmable LEGO with sensors and motors. I'd always loved building
+things - just wanting something to exist and then making it. Then I found that
+software was limitless. If you want to do something mechanical, you have to buy
+parts, and if you do something wrong, like if you break them, you have to order
+more.
 
-With software, you can just do anything and it's almost always free. That got
-me going. I got into modding games and I spent ages writing game engines and
-little games that I never finished or published. I spent most of my time as a
-teenager doing that. I went to university to study computer science, and then
-found a job two months after starting writing software.
+With software, you can just do anything and it's almost always free. That got me
+going. I got into modding games and I spent ages writing game engines and little
+games that I never finished or published. I spent most of my time as a teenager
+doing that. I went to university to study computer science, and then found a job
+two months after starting writing software.
 
 I didn't really attend university after I got the job. I went to the bare
 minimum of classes. They were teaching Java and I could already code, and had a
@@ -139,20 +135,20 @@ more than working hours at work, so I didn't have much time for side projects.
 Unfortunately I’ve never been able to use Rust professionally because my past
 jobs have tended to be startups. They tended to prefer speed of iteration, and
 Rust just takes more time because you’re investing in code quality up-front.
-Trying to convince people to learn Rust didn't really work. Rust is my free
-time language, work is mostly Go.
+Trying to convince people to learn Rust didn't really work. Rust is my free time
+language, work is mostly Go.
 
 ### Why do you prefer Rust?
 
 In the past I’ve spent a lot of time modding, which was usually in C++. Rust is
-obviously really different but some of the concepts carry over. For example,
-the move semantics and something kinda similar to the borrowing rules are there
-in modern C++, but Rust takes them to another level.
+obviously really different but some of the concepts carry over. For example, the
+move semantics and something kinda similar to the borrowing rules are there in
+modern C++, but Rust takes them to another level.
 
-The compiler is also super helpful. It's the first time I've ever had a
-compiler actually teach you rather than just shout at you, so that's been nice.
-And [Clippy](https://github.com/rust-lang/rust-clippy) is there to tidy
-everything up for you.
+The compiler is also super helpful. It's the first time I've ever had a compiler
+actually teach you rather than just shout at you, so that's been nice. And
+[Clippy](https://github.com/rust-lang/rust-clippy) is there to tidy everything
+up for you.
 
 The Rust tooling blows my mind, especially as a compiled language. With Python,
 your scripts will often work in most places but there can be a lot of problems
@@ -184,14 +180,12 @@ processes! So that’s been fun to build.
 
 ### What interesting tech have you been playing around with recently?
 
-I'm trying to get a home network properly set up and I want to get a lab
-running in my garage. I want to have loads of storage and ZFS set up. That’d be
-fun.
+I'm trying to get a home network properly set up and I want to get a lab running
+in my garage. I want to have loads of storage and ZFS set up. That’d be fun.
 
-To keep the noise down I’ve capped myself at a 4U rack but I’ve started
-ordering things. I’m starting with a skeleton so I can have it all laid out,
-and I’m trying to figure out the most financially efficient way of ordering
-disk drives.
+To keep the noise down I’ve capped myself at a 4U rack but I’ve started ordering
+things. I’m starting with a skeleton so I can have it all laid out, and I’m
+trying to figure out the most financially efficient way of ordering disk drives.
 
 I’m sure there will be lots of VMs but experimenting with things that would end
 up being too expensive on public cloud is the plan, particularly playing around
@@ -209,23 +203,23 @@ works, which was surprising. I've got a USB webcam.
 
 I built my keyboard myself. It’s really compact. I learned this layout a few
 years ago, and it fits in a backpack. You can take it with you everywhere, it's
-great. It's got a lid so it kind of comes off. I [wrote a blog post about
-it](https://elliehuxtable.com/my-planck-keyboard/).
+great. It's got a lid so it kind of comes off. I
+[wrote a blog post about it](https://elliehuxtable.com/my-planck-keyboard/).
 
-My screen is a Dell Ultra Wide. I like having plenty of space but try not to get too much stuff.
+My screen is a Dell Ultra Wide. I like having plenty of space but try not to get
+too much stuff.
 
 ### Describe your computer software setup
 
-**OS:** [Manjaro Linux](https://manjaro.org). I used to run Arch in the past
-but it’s a lot of hassle, so Manjaro is a nice balance.
+**OS:** [Manjaro Linux](https://manjaro.org). I used to run Arch in the past but
+it’s a lot of hassle, so Manjaro is a nice balance.
 
 **Browser:** Firefox.
 
 **Email:** Gmail.
 
 **Chat:** Mostly Telegram, I try to convince friends to use it, but I end up
-having most popular chat apps installed in order to match everyone’s
-preference.
+having most popular chat apps installed in order to match everyone’s preference.
 
 **IDE:** Neovim.
 
@@ -233,15 +227,11 @@ preference.
 
 ### Describe your desk setup
 
-{{< img-center
-src="/img/interviews/atuin-ellie-huxtable-desk.jpeg"
-alt="The desk of Ellie Huxtable, Atuin"
-width="100%"
->}}
+{{< img-center src="/img/interviews/atuin-ellie-huxtable-desk.jpeg" alt="The desk of Ellie Huxtable, Atuin" width="100%" >}}
 
 I just moved house and everything's all over the place at the moment! Nothing
-particularly fancy - I don't have one of those cool standing desks or
-something. It's just an Ikea wooden desk. My chair is by Herman Miller.
+particularly fancy - I don't have one of those cool standing desks or something.
+It's just an Ikea wooden desk. My chair is by Herman Miller.
 
 ### When coding
 
@@ -259,7 +249,7 @@ the city too, but it's not the most fun in winter.
 
 ### Find out more
 
-[Atuin](https://github.com/ellie/atuin) is a tool for shell history
-search/sync. It was featured as an "interesting tool" in the [Console
-newsletter](https://console.dev) on 20 May 2021. This interview was conducted
-on 18 May 2021.
+[Atuin](https://github.com/ellie/atuin) is a tool for shell history search/sync.
+It was featured as an "interesting tool" in the
+[Console newsletter](https://console.dev) on 20 May 2021. This interview was
+conducted on 18 May 2021.

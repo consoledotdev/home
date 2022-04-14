@@ -89,12 +89,7 @@ want my application to do? Who should have access to what? These are the fun
 problems like ‘This person needs to have this role in an organization, which
 allows them to see these resources.’
 
-{{< img-center
-src="/img/interviews/oso-sam-scott-product.png"
-alt="Oso product screenshot"
-width="100%"
-caption="Oso Polar policy language and an example denied request."
->}}
+{{< img-center src="/img/interviews/oso-sam-scott-product.png" alt="Oso product screenshot" width="100%" caption="Oso Polar policy language and an example denied request." >}}
 
 ### Why did you choose Rust for the core engine?
 
@@ -314,11 +309,7 @@ get to build up what you want on top of it.
 
 ### Describe your desk setup
 
-{{< img-center
-src="/img/interviews/oso-sam-scott-desk.jpg"
-alt="The desk of Sam Scott, Oso"
-width="100%"
->}}
+{{< img-center src="/img/interviews/oso-sam-scott-desk.jpg" alt="The desk of Sam Scott, Oso" width="100%" >}}
 
 My desk setup is a little monitor propped up on a box. I got myself a nice
 Herman Miller chair a few months ago, because I was getting some terrible
@@ -345,7 +336,7 @@ enjoy indoor climbing and bouldering.
 ### Find out more
 
 [Oso](https://www.osohq.com) is a declarative application authorization
-framework. It was originally featured as an "Interesting Tool" in the [Console
-newsletter](https://console.dev) on 18 Feb 2021. The 0.20 release was featured
-again on 15 Sep 2021. This interview was originally conducted on 23 Feb 2021,
-but updated on 15 Sep 2021.
+framework. It was originally featured as an "Interesting Tool" in the
+[Console newsletter](https://console.dev) on 18 Feb 2021. The 0.20 release was
+featured again on 15 Sep 2021. This interview was originally conducted on 23 Feb
+2021, but updated on 15 Sep 2021.

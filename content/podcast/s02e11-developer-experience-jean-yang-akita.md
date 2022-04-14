@@ -4,11 +4,11 @@ who: Jean Yang
 whoLink: https://twitter.com/jeanqasaur
 org: Akita
 orgLink: https://www.akitasoftware.com/
-what: 
-    We discuss the software heterogeneity problem, why it isn't better to 
-    rewrite in rust and how the language wars have actually been won. We also 
-    explore how the big fight today is about infrastructure and why 
-    microservices are the solution to the ever-growing complexity of software.
+what:
+  We discuss the software heterogeneity problem, why it isn't better to rewrite
+  in rust and how the language wars have actually been won. We also explore how
+  the big fight today is about infrastructure and why microservices are the
+  solution to the ever-growing complexity of software.
 season: 2
 episode: 11
 date: 2022-03-17T06:00:00Z
@@ -16,11 +16,11 @@ duration: 33:51
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/b8afcf2e-a50a-46ad-8088-7a8f771a7f8c/audio/304e9877-5489-4d64-bd5d-c6b3cab57264/default_tc.mp3
 draft: false
 summary:
- Developer experience - a devtools discussion with Jean Yang (Akita). Episode 11 
- (Season 2) of the Console DevTools Podcast.
+  Developer experience - a devtools discussion with Jean Yang (Akita). Episode
+  11 (Season 2) of the Console DevTools Podcast.
 metaDescription:
- Developer experience - a devtools discussion with Jean Yang (Akita). Episode 11 
- (Season 2) of the Console DevTools Podcast.
+  Developer experience - a devtools discussion with Jean Yang (Akita). Episode
+  11 (Season 2) of the Console DevTools Podcast.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -28,7 +28,7 @@ isSubpage: podcast-episode
 pageType: podcast-episode
 customPageStyle: true
 xlViewport:
- largeText: true
+  largeText: true
 topImg1Src: /img/podcast/akita-jean-yang-profile.jpg
 topImg2Src: /img/favicons/www.akitasoftware.com.png
 ogImg: /img/podcast/podcast-cover.jpeg
@@ -37,11 +37,11 @@ authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
 authorBio:
- is co-founder of Console. From 2009-2018, David was CEO at Server Density, a
- SaaS server monitoring startup used by hundreds of customers to collect
- billions of time series metrics from millions of servers. He is also a
- researcher in sustainable computing at Uptime Institute and affiliated with
- Imperial College London. David has been a developer for 15+ years.
+  is co-founder of Console. From 2009-2018, David was CEO at Server Density, a
+  SaaS server monitoring startup used by hundreds of customers to collect
+  billions of time series metrics from millions of servers. He is also a
+  researcher in sustainable computing at Uptime Institute and affiliated with
+  Imperial College London. David has been a developer for 15+ years.
 ---
 
 ### Episode notes
@@ -49,31 +49,30 @@ authorBio:
 {{< div-custom class="aside" data="data-inline-aside-content-wrapper" >}}
 {{< div--close >}}
 
-In this episode we speak with Jean Yang, CEO of [Akita
-Software](https://www.akitasoftware.com/), an API observability startup, which
-she founded after leaving her role in academia as a computer science professor.
-We discussed the software heterogeneity problem, why it isn't better to rewrite
-in rust and how the language wars have actually been won. We also explore how
-the big fight today is about infrastructure and why microservices are the
-solution to the ever-growing complexity of software.
+In this episode we speak with Jean Yang, CEO of
+[Akita Software](https://www.akitasoftware.com/), an API observability startup,
+which she founded after leaving her role in academia as a computer science
+professor. We discussed the software heterogeneity problem, why it isn't better
+to rewrite in rust and how the language wars have actually been won. We also
+explore how the big fight today is about infrastructure and why microservices
+are the solution to the ever-growing complexity of software.
 
 Things mentioned:
 
-* [Zenoss](https://www.zenoss.com/)
-* [Taming Go’s Memory Usage, or How We Avoided Rewriting Our Client in
-  Rust](https://www.akitasoftware.com/blog-posts/taming-gos-memory-usage-or-how-we-avoided-rewriting-our-client-in-rust)
-* [Splunk](https://www.splunk.com/)
-* [Datadog](https://www.datadoghq.com/)
-* [Prometheus](https://prometheus.io/)
-* [Grafana](https://grafana.com/)
-* [The Everything store](https://en.wikipedia.org/wiki/The_Everything_Store)
-* [Zapier](https://zapier.com/)
-* [Clay](https://www.clay.com/)
-* [Zoom Bachelor](https://www.zoombachelor.com/) \-
+- [Zenoss](https://www.zenoss.com/)
+- [Taming Go’s Memory Usage, or How We Avoided Rewriting Our Client in Rust](https://www.akitasoftware.com/blog-posts/taming-gos-memory-usage-or-how-we-avoided-rewriting-our-client-in-rust)
+- [Splunk](https://www.splunk.com/)
+- [Datadog](https://www.datadoghq.com/)
+- [Prometheus](https://prometheus.io/)
+- [Grafana](https://grafana.com/)
+- [The Everything store](https://en.wikipedia.org/wiki/The_Everything_Store)
+- [Zapier](https://zapier.com/)
+- [Clay](https://www.clay.com/)
+- [Zoom Bachelor](https://www.zoombachelor.com/) \-
   [https://www.zoombachelor.com/](https://www.zoombachelor.com/)
-* [Zoom bachelorette](https://www.zoombachelorette.com/)
-* [Vim](https://www.vim.org/)
-* [#PLTalk](https://www.twitch.tv/jeanqasaur)
+- [Zoom bachelorette](https://www.zoombachelorette.com/)
+- [Vim](https://www.vim.org/)
+- [#PLTalk](https://www.twitch.tv/jeanqasaur)
 
 {{< rich-title-5 icon="future-head" >}}About Jean Yang{{</ rich-title-5 >}}
 
@@ -101,12 +100,11 @@ it?
 
 {{< podcast-episode/clipping time="18:07" >}}
 
-**Jean:** There's a lot of quiet power shifting. Who owns the
-infrastructure and who owns data about your production deployments? That's who
-is getting to call the shots about the tooling of the future. It's not the
-languages, it's not the language creators, it is for sure, not the steering
-committees of the languages. I don't know. I would love to see more fights
-around that stuff.
+**Jean:** There's a lot of quiet power shifting. Who owns the infrastructure and
+who owns data about your production deployments? That's who is getting to call
+the shots about the tooling of the future. It's not the languages, it's not the
+language creators, it is for sure, not the steering committees of the languages.
+I don't know. I would love to see more fights around that stuff.
 
 {{</ podcast-episode/clipping >}}
 

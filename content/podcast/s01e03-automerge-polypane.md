@@ -4,7 +4,7 @@ who: David Mytton & Jean Yang
 what:
   "Episode 3 of the Console DevTools Podcast, a devtools discussion with David
   Mytton (Co-founder, Console) and Jean Yang (CEO, Akita Software). Tools
-  discussed: Automerge (conflict-free JSON-like data structure), Polypane 
+  discussed: Automerge (conflict-free JSON-like data structure), Polypane
   (browser testing tool)"
 season: 1
 episode: 3
@@ -13,11 +13,11 @@ duration: 13:51
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/22fd22c3-cb5a-4bb8-9c30-7b8fb9d8c9cc/audio/f77cbcea-985a-4050-8743-56fc850fe9aa/default_tc.mp3
 draft: false
 summary:
-  Automerge (conflict-free JSON-like data structure) & Polypane 
-  (browser testing tool), a devtools discussion with David Mytton and Jean Yang.
+  Automerge (conflict-free JSON-like data structure) & Polypane (browser testing
+  tool), a devtools discussion with David Mytton and Jean Yang.
 metaDescription:
-   Automerge (conflict-free JSON-like data structure) & Polypane 
-  (browser testing tool), a devtools discussion with David Mytton and Jean Yang.
+  Automerge (conflict-free JSON-like data structure) & Polypane (browser testing
+  tool), a devtools discussion with David Mytton and Jean Yang.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -65,8 +65,7 @@ Tools discussed:
 
 Other things mentioned
 
-- [Local-First Software - academic
-  paper](https://martin.kleppmann.com/papers/local-first.pdf)
+- [Local-First Software - academic paper](https://martin.kleppmann.com/papers/local-first.pdf)
 - [Syncthing](https://syncthing.net/)
 - [vim](https://www.vim.org/)
 - [Javascript](https://www.javascript.com/)

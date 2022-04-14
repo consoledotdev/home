@@ -294,15 +294,15 @@ campaigns:
     img: /img/favicons/www.autocloud.dev.png
     intro:
       - Following a successful campaign to promote AutoCloud’s GraphQL API for
-        the cloud (CloudGraph), AutoCloud returned to promote their core product, 
-        AutoCloud. Alongside their tool review, Console interviewed their CPO,
-        Evelyn LaTour. The campaign delivered a strong ROI, out performing many 
-        other industry alternatives.
+        the cloud (CloudGraph), AutoCloud returned to promote their core
+        product, AutoCloud. Alongside their tool review, Console interviewed
+        their CPO, Evelyn LaTour. The campaign delivered a strong ROI, out
+        performing many other industry alternatives.
     quote:
-      “Console enabled us to quickly reach a large, highly targeted audience, 
-      many of whom decided to sign up for our platform and who are in the 
-      process of converting to paid users. We've advertised in a couple of of 
-      other trade/industry publications before, but Console was the most 
+      “Console enabled us to quickly reach a large, highly targeted audience,
+      many of whom decided to sign up for our platform and who are in the
+      process of converting to paid users. We've advertised in a couple of of
+      other trade/industry publications before, but Console was the most
       effective in terms of ROI.” <span>Tyson Kunovsky, CEO, AutoCloud</span>
     howItWorked:
       - icon: console-interview

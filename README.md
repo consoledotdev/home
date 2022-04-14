@@ -3,7 +3,7 @@
 Generated using [Hugo](https://gohugo.io) and deployed to [Cloudflare Workers
 Sites](https://developers.cloudflare.com/workers/platform/sites).
 
-**Links**
+## Links
 
 - Production website: <https://console.dev>
 - Test environment: <https://test.console.dev> (behind Cloudflare Access)
@@ -23,18 +23,31 @@ you only need Hugo:
 3. Launch the URL in your browser. It will watch for changes and auto refresh
    the browser.
 
+### Trunk & linting
+
+We use Trunk to handle linting across all files. This runs in CI but you can
+install it as a Git hook:
+
+```shell
+cat >>.git/hooks/pre-push <<EOF
+# This is required to accept user input from the keyboard.
+exec < /dev/tty
+trunk check --trigger=git-push
+EOF
+```
+
 ## Image specs
 
 ### Interviews
 
-**Profile Pic**
+#### Profile Pic
 
 - .jpg
 - 1600x1600px
 - 300kb max
 - Centered subject, square ratio (if possible)
 
-**Logo**
+#### Logo
 
 - .svg, .png, .jpg
 - 1600x1600px
@@ -71,15 +84,15 @@ There are several custom [Hugo
 shortcodes](https://gohugo.io/templates/shortcode-templates/) that can be used
 in templates:
 
-| Shortcode      | Example                                                                                                                                                                                             |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Link           | `{{< a-link url="consoledotdev" text="see what we're building" icon-left="github" icon-right="github" >}}`                                                                                          |
-| Button         | `{{< a-button url="/about/" text="About" title="View About page" is-text="true" size="null (large)\|\|medium\|\|small" icon-left="arrow-right" icon-right="arrow-right" >}}`                            |
-| Caption Div    | `{{< div-caption >}}Markdown formatted text to appear in the caption.{{< /div-caption >}}`                                                                                                          |
-| Centered Image | `{{< img-center src="/img/interviews/stackhawk-scott-gerlach-product.png" alt="StackHawk product screenshot" width="100%" caption="The StackHawk vulnerability scanning dashboard." >}}` (Caption optional) |
-| 2-column Image | `{{< img-2col src1="/img/david.jpg" alt1="David Mytton" src2="/img/max.jpg" alt2="Max Jennings">}}`                                                                                                 |
-| Subscribe Box  | `{{< section-subscribe> }}`                                                                                                                                                                         |
-| Image Modal    | `{{< modal-custom type="screen" type-screen="/img/browser-testing/browserstack-webtesting.png" >}}{{< img-custom class="content-image" src="/img/browser-testing/browserstack-webtesting.png" alt="Screenshot of web testing with BrowserStack." >}}{{< a--close >}}`|
+| Shortcode      | Example                                                                                                                                                                                                                                                               |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Link           | `{{< a-link url="consoledotdev" text="see what we're building" icon-left="github" icon-right="github" >}}`                                                                                                                                                            |
+| Button         | `{{< a-button url="/about/" text="About" title="View About page" is-text="true" size="null (large)\|\|medium\|\|small" icon-left="arrow-right" icon-right="arrow-right" >}}`                                                                                          |
+| Caption Div    | `{{< div-caption >}}Markdown formatted text to appear in the caption.{{< /div-caption >}}`                                                                                                                                                                            |
+| Centered Image | `{{< img-center src="/img/interviews/stackhawk-scott-gerlach-product.png" alt="StackHawk product screenshot" width="100%" caption="The StackHawk vulnerability scanning dashboard." >}}` (Caption optional)                                                           |
+| 2-column Image | `{{< img-2col src1="/img/david.jpg" alt1="David Mytton" src2="/img/max.jpg" alt2="Max Jennings">}}`                                                                                                                                                                   |
+| Subscribe Box  | `{{< section-subscribe> }}`                                                                                                                                                                                                                                           |
+| Image Modal    | `{{< modal-custom type="screen" type-screen="/img/browser-testing/browserstack-webtesting.png" >}}{{< img-custom class="content-image" src="/img/browser-testing/browserstack-webtesting.png" alt="Screenshot of web testing with BrowserStack." >}}{{< a--close >}}` |
 
 ## Parsing tools JSON for `/latest/`
 

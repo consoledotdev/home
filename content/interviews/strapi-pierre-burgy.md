@@ -4,7 +4,7 @@ who: Pierre Burgy
 role: CEO
 org: Strapi
 what: An open source headless CMS.
-tags: ['Headless CMS']
+tags: ["Headless CMS"]
 date: 2022-02-21T12:00:00Z
 draft: false
 headerType: fixed
@@ -146,17 +146,17 @@ and performance.
 
 I use a [16 inch Macbook Pro](https://www.apple.com/macbook-pro/), and I also
 have a 29 inch 4K monitor, and a vertical mouse. I have a very special keyboard,
-because I’ve had to deal with a lot of issues using a keyboard that started in
-2015. I even thought about stopping everything around the computer and doing
+because I’ve had to deal with a lot of issues using a keyboard that started
+in 2015. I even thought about stopping everything around the computer and doing
 something else.
 
-Finally, I found a solution. I use a vertical mouse, which is a [Deluxe
-mouse](https://www.deluxworld.com/en-pro-show-5.html), and then I use a BEPO
-keyboard, which is a [TypeMatrix keyboard](http://typematrix.com/bepo/), so it's
-not a QWERTY keyboard. I almost don’t move my hands when using it, but only my
-fingers. I even use a trackpad for my left hand, that way I don't put everything
-on the right hand. If anyone wants to ask questions, I would be happy to answer
-and feel free to reach out.
+Finally, I found a solution. I use a vertical mouse, which is a
+[Deluxe mouse](https://www.deluxworld.com/en-pro-show-5.html), and then I use a
+BEPO keyboard, which is a [TypeMatrix keyboard](http://typematrix.com/bepo/), so
+it's not a QWERTY keyboard. I almost don’t move my hands when using it, but only
+my fingers. I even use a trackpad for my left hand, that way I don't put
+everything on the right hand. If anyone wants to ask questions, I would be happy
+to answer and feel free to reach out.
 
 ### Describe your computer software setup
 
@@ -177,14 +177,10 @@ and feel free to reach out.
 I have a standing desk but to be honest, I almost never use it to stand up. I
 actually put it very low in terms of height because I do consider it important
 to have the feet flat on the floor, and so I can put my chair at its lowest
-level. My chair is a [Herman Miller Aeron
-chair](https://www.hermanmiller.com/en_gb/products/seating/office-chairs/aeron-chairs/).
+level. My chair is a
+[Herman Miller Aeron chair](https://www.hermanmiller.com/en_gb/products/seating/office-chairs/aeron-chairs/).
 
-{{< img-center
-src="/img/interviews/strapi-pierre-burgy-desk.jpeg"
-alt="The desk of Pierre Burgy, Strapi"
-width="100%"
->}}
+{{< img-center src="/img/interviews/strapi-pierre-burgy-desk.jpeg" alt="The desk of Pierre Burgy, Strapi" width="100%" >}}
 
 ### When coding
 

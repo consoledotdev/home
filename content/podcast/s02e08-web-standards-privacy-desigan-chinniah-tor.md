@@ -5,10 +5,10 @@ whoLink: https://twitter.com/cyberdees
 org: Tor / Ex-Mozilla
 orgLink: https://www.torproject.org/
 what:
- We discuss the evolution of web tech from websites to complex decentralized
- applications running on browser APIs, the competitiveness of the browser
- rendering engine versus the UX layer and how developers think about privacy.
- Does it live in browser settings, extensions or on the protocol core level?
+  We discuss the evolution of web tech from websites to complex decentralized
+  applications running on browser APIs, the competitiveness of the browser
+  rendering engine versus the UX layer and how developers think about privacy.
+  Does it live in browser settings, extensions or on the protocol core level?
 season: 2
 episode: 8
 date: 2022-02-24T06:00:00Z
@@ -16,11 +16,11 @@ duration: 32:47
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/b6380552-15dc-4bd0-bc45-286a4a498733/audio/b67a47d6-0c97-4ca6-801b-f37ddf75c59b/default_tc.mp3
 draft: false
 summary:
- Web standards & privacy - a devtools discussion with Dees Chinniah (ex-Mozilla / 
- Tor). Episode 8 (Season 2) of the Console DevTools Podcast.
+  Web standards & privacy - a devtools discussion with Dees Chinniah (ex-Mozilla
+  / Tor). Episode 8 (Season 2) of the Console DevTools Podcast.
 metaDescription:
- Web standards & privacy - a devtools discussion with Dees Chinniah (ex-Mozilla / 
- Tor). Episode 8 (Season 2) of the Console DevTools Podcast.
+  Web standards & privacy - a devtools discussion with Dees Chinniah (ex-Mozilla
+  / Tor). Episode 8 (Season 2) of the Console DevTools Podcast.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -28,7 +28,7 @@ isSubpage: podcast-episode
 pageType: podcast-episode
 customPageStyle: true
 xlViewport:
- largeText: true
+  largeText: true
 topImg1Src: /img/podcast/tor-desigan-chinniah-profile.jpeg
 topImg2Src: /img/favicons/www.torproject.org.png
 ogImg: /img/podcast/podcast-cover.jpeg
@@ -37,11 +37,11 @@ authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
 authorBio:
- is co-founder of Console. From 2009-2018, David was CEO at Server Density, a
- SaaS server monitoring startup used by hundreds of customers to collect
- billions of time series metrics from millions of servers. He is also a
- researcher in sustainable computing at Uptime Institute and affiliated with
- Imperial College London. David has been a developer for 15+ years.
+  is co-founder of Console. From 2009-2018, David was CEO at Server Density, a
+  SaaS server monitoring startup used by hundreds of customers to collect
+  billions of time series metrics from millions of servers. He is also a
+  researcher in sustainable computing at Uptime Institute and affiliated with
+  Imperial College London. David has been a developer for 15+ years.
 ---
 
 ### Episode notes
@@ -58,21 +58,21 @@ Does it live in browser settings, extensions or on the protocol core level?
 
 Things mentioned:
 
-* [Mozilla](https://www.mozilla.org/)
-* [Figma](https://www.figma.com/)
-* [VS Code](https://code.visualstudio.com/)
-* [HTML5](https://en.wikipedia.org/wiki/HTML5)
-* [Gecko](https://hg.mozilla.org/mozilla-central/)
-* [WebKit](https://webkit.org/)
-* [Brave](https://brave.com/)
-* [Firefox](https://www.mozilla.org/firefox/new/)
-* [Opera](https://www.opera.com/)
-* [Edge](https://www.microsoft.com/en-us/edge)
-* [Homomorphic encryption](https://en.wikipedia.org/wiki/Homomorphic_encryption)
-* [Replay](https://www.replay.io/)
-* [Glitch](https://glitch.com/)
-* [Sourcegraph](https://about.sourcegraph.com/)
-* [Desiganchinniah.com](https://about.me/cyberdees)
+- [Mozilla](https://www.mozilla.org/)
+- [Figma](https://www.figma.com/)
+- [VS Code](https://code.visualstudio.com/)
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [Gecko](https://hg.mozilla.org/mozilla-central/)
+- [WebKit](https://webkit.org/)
+- [Brave](https://brave.com/)
+- [Firefox](https://www.mozilla.org/firefox/new/)
+- [Opera](https://www.opera.com/)
+- [Edge](https://www.microsoft.com/en-us/edge)
+- [Homomorphic encryption](https://en.wikipedia.org/wiki/Homomorphic_encryption)
+- [Replay](https://www.replay.io/)
+- [Glitch](https://glitch.com/)
+- [Sourcegraph](https://about.sourcegraph.com/)
+- [Desiganchinniah.com](https://about.me/cyberdees)
 
 {{< rich-title-5 icon="future-head" >}}About Dees Chinniah{{</ rich-title-5 >}}
 
@@ -86,18 +86,18 @@ and Seedcamp
 
 {{< podcast-episode/clipping time="18:44" >}}
 
-**Desigan:** Does a content creator need to be paid through some token
-or cryptocurrency? No. I'm sure if you just offer them good old fiat they'd be
-more than willing to do that. But will it help with discovery and new business
-models that they could monetize their content? Almost certainly.
+**Desigan:** Does a content creator need to be paid through some token or
+cryptocurrency? No. I'm sure if you just offer them good old fiat they'd be more
+than willing to do that. But will it help with discovery and new business models
+that they could monetize their content? Almost certainly.
 
 {{</ podcast-episode/clipping >}}
 
 {{< podcast-episode/clipping time="18:44" >}}
 
-**Desigan:** Historically where content creators have made, let's say
-most of their revenue it's historically been on ad networks or the like and even
-then there was this discrimination depending on where you were in the world.
+**Desigan:** Historically where content creators have made, let's say most of
+their revenue it's historically been on ad networks or the like and even then
+there was this discrimination depending on where you were in the world.
 
 The amount of revenue you could generate from your CPMs or what have you,
 depending on if you were in North America or you were in some part of Latin

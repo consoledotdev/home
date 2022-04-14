@@ -41,7 +41,7 @@ class ElementHandler {
             element.setAttribute("value", this.referrer);
             // If not empty, prepend the referrer to the existing value
         } else {
-            const newValue = this.referrer + "_" + currentValue
+            const newValue = this.referrer + "_" + currentValue;
             element.setAttribute("value", newValue);
         }
     }
@@ -146,7 +146,7 @@ async function handleEvent(event) {
             ["/qa/akita-jean-yang/", "https://console.dev/interviews/akita-jean-yang/"],
             ["/tools", "https://console.dev/tools/"],
             ["/podcast", "https://console.dev/podcast/"],
-        ])
+        ]);
 
         const path = url.pathname;
         const match = redirectMap.get(path);
@@ -184,7 +184,7 @@ async function handleEvent(event) {
                     ...notFoundResponse,
                     status: 404,
                 });
-            } catch (e) { }
+            } catch (e) {}
         }
 
         return new Response(e.message || e.toString(), { status: 500 });

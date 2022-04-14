@@ -4,11 +4,11 @@ who: Ellen Chisa
 whoLink: https://twitter.com/ellenchisa
 org: Boldstart
 orgLink: https://boldstart.vc/
-what: 
-    We discuss whether that is the right way to think about coding, where no 
-    code or low code fits into the modern development stack, how developers should 
-    think about open source and the challenges of building dev tools versus getting 
-    developers to actually use them.
+what:
+  We discuss whether that is the right way to think about coding, where no code
+  or low code fits into the modern development stack, how developers should
+  think about open source and the challenges of building dev tools versus
+  getting developers to actually use them.
 season: 2
 episode: 9
 date: 2022-03-03T06:00:00Z
@@ -16,11 +16,11 @@ duration: 32:45
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/428ff543-da40-40c3-9772-31c5496cac63/audio/a98e5b20-4bed-44a2-87f5-acf98c8dfb40/default_tc.mp3
 draft: false
 summary:
- Designing dev products - a devtools discussion with Ellen Chisa (Boldstart). 
- Episode 9 (Season 2) of the Console DevTools Podcast.
+  Designing dev products - a devtools discussion with Ellen Chisa (Boldstart).
+  Episode 9 (Season 2) of the Console DevTools Podcast.
 metaDescription:
- Designing dev products - a devtools discussion with Ellen Chisa (Boldstart). 
- Episode 9 (Season 2) of the Console DevTools Podcast.
+  Designing dev products - a devtools discussion with Ellen Chisa (Boldstart).
+  Episode 9 (Season 2) of the Console DevTools Podcast.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -28,7 +28,7 @@ isSubpage: podcast-episode
 pageType: podcast-episode
 customPageStyle: true
 xlViewport:
- largeText: true
+  largeText: true
 topImg1Src: /img/podcast/boldstart-ellen-chisa-profile.png
 topImg2Src: /img/favicons/boldstart.vc.png
 ogImg: /img/podcast/podcast-cover.jpeg
@@ -37,11 +37,11 @@ authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
 authorBio:
- is co-founder of Console. From 2009-2018, David was CEO at Server Density, a
- SaaS server monitoring startup used by hundreds of customers to collect
- billions of time series metrics from millions of servers. He is also a
- researcher in sustainable computing at Uptime Institute and affiliated with
- Imperial College London. David has been a developer for 15+ years.
+  is co-founder of Console. From 2009-2018, David was CEO at Server Density, a
+  SaaS server monitoring startup used by hundreds of customers to collect
+  billions of time series metrics from millions of servers. He is also a
+  researcher in sustainable computing at Uptime Institute and affiliated with
+  Imperial College London. David has been a developer for 15+ years.
 ---
 
 ### Episode notes
@@ -59,19 +59,18 @@ getting developers to actually use them.
 
 Things mentioned:
 
-* [The Self Provisioning Runtime - Shawn
-  Wang](https://www.swyx.io/self-provisioning-runtime/)
-* [Bret Victor](http://worrydream.com/)
-* [Chris Granger](https://twitter.com/ibdknox)
-* [Lambdragon](https://twitter.com/thelambdragon)
-* [Future of Coding](https://futureofcoding.org/)
-* [Steve Krouse](https://stevekrouse.com/)
-* [Dark](https://darklang.com/)
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [Azure](https://azure.microsoft.com/en-gb/)
-* [Red Hat](https://www.redhat.com/en)
-* [MongoDB](https://www.mongodb.com/)
-* [Elastic](https://www.elastic.co/)
+- [The Self Provisioning Runtime - Shawn Wang](https://www.swyx.io/self-provisioning-runtime/)
+- [Bret Victor](http://worrydream.com/)
+- [Chris Granger](https://twitter.com/ibdknox)
+- [Lambdragon](https://twitter.com/thelambdragon)
+- [Future of Coding](https://futureofcoding.org/)
+- [Steve Krouse](https://stevekrouse.com/)
+- [Dark](https://darklang.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Azure](https://azure.microsoft.com/en-gb/)
+- [Red Hat](https://www.redhat.com/en)
+- [MongoDB](https://www.mongodb.com/)
+- [Elastic](https://www.elastic.co/)
 
 {{< rich-title-5 icon="future-head" >}}About Ellen Chisa{{</ rich-title-5 >}}
 

@@ -5,7 +5,7 @@ draft: false
 summary: Visualize your code.
 metaTitle: Working at CodeSee - Console profile
 metaDescription:
-  What is it like to work at CodeSee? Console profile behind the scenes at 
+  What is it like to work at CodeSee? Console profile behind the scenes at
   CodeSee - visualize your code.
 headerType: fixed
 hideLines: true
@@ -28,7 +28,8 @@ companyInfo:
   product:
     name: "CodeSee"
     description:
-      "CodeSee is a developer tool that visualizes how your code works for codebase onboarding, planning, and code reviews."
+      "CodeSee is a developer tool that visualizes how your code works for
+      codebase onboarding, planning, and code reviews."
   techStack:
     - Typescript
     - Node
@@ -66,8 +67,8 @@ interview: codesee-shanea-leven
 
 {{< nav-wrapper--open id="wrapper-1" anchor-name="how-engineering-works" >}}
 
-{{< rich-title-3 icon="checklist" id="how-engineering-works" >}} How engineering works
-{{</ rich-title-3 >}}
+{{< rich-title-3 icon="checklist" id="how-engineering-works" >}} How engineering
+works {{</ rich-title-3 >}}
 
 #### How are the teams structured?
 
@@ -174,7 +175,7 @@ We have a multi-step process:
    motivations and how you would be as an employee. We all are human beings.
 5. Offer.
 
-We aim to get through the whole process within 2 weeks, but can go
-much faster if necessary and the candidate's schedule permits.
+We aim to get through the whole process within 2 weeks, but can go much faster
+if necessary and the candidate's schedule permits.
 
 {{< div--close >}}

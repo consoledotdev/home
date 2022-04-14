@@ -5,8 +5,8 @@ draft: false
 summary: Consistent & compliant DevOps.
 metaTitle: Working at AutoCloud - Console profile
 metaDescription:
-  What is it like to work at AutoCloud?  Console profile behind the scenes 
-  at AutoCloud - consistent & compliant DevOps.
+  What is it like to work at AutoCloud?  Console profile behind the scenes at
+  AutoCloud - consistent & compliant DevOps.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -28,7 +28,11 @@ companyInfo:
   product:
     name: "AutoCloud"
     description:
-      "At AutoCloud our mission is to make DevOps as effortless as possible so that Ops teams can automatically generate secure, production-ready infrastructure as code that is customized to their business. Once workloads are deployed, AutoCloud gives users multi-cloud visibility and ensures that every cloud resource is aligned with their business."
+      "At AutoCloud our mission is to make DevOps as effortless as possible so
+      that Ops teams can automatically generate secure, production-ready
+      infrastructure as code that is customized to their business. Once
+      workloads are deployed, AutoCloud gives users multi-cloud visibility and
+      ensures that every cloud resource is aligned with their business."
   techStack:
     - Typescript
     - React
@@ -66,8 +70,8 @@ interview: autocloud-evelyn-latour
 
 {{< nav-wrapper--open id="wrapper-1" anchor-name="how-engineering-works" >}}
 
-{{< rich-title-3 icon="checklist" id="how-engineering-works" >}} How engineering works
-{{</ rich-title-3 >}}
+{{< rich-title-3 icon="checklist" id="how-engineering-works" >}} How engineering
+works {{</ rich-title-3 >}}
 
 #### How are the teams structured?
 

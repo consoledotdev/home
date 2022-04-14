@@ -4,7 +4,7 @@ who: Alex Omeyer
 role: CEO
 org: Stepsize
 what: Tracking issues linked to code.
-tags: ['Issue tracking']
+tags: ["Issue tracking"]
 date: 2022-02-23T12:00:00Z
 draft: false
 headerType: fixed
@@ -85,8 +85,8 @@ else would later refactor. Since then, we've hired professionals.
 
 ### What is the team structure around Stepsize?
 
-I have three co-founders. There's my brother, [Nick
-Omeyer](https://twitter.com/nickomeyer), who takes care of the product.
+I have three co-founders. There's my brother,
+[Nick Omeyer](https://twitter.com/nickomeyer), who takes care of the product.
 [Matthieu Louis](https://www.linkedin.com/in/jared-burgess-47556677/) who is our
 CTO, and [Jared Burgess](https://www.linkedin.com/in/jared-burgess-47556677/)
 who ships code and design. They spend a lot of time working with our team of
@@ -154,19 +154,15 @@ I'm not much of a hardware guy, but I have ended up with a nice setup over the
 years. I have a standing desk that goes up and down. It's one of these
 adjustable ones because I'm fidgety and need to move to be able to think. With
 that, I have a couple of [Asus](https://www.asus.com/) screens that are propped
-up by a stand holding onto the desk, and a desk keyboard with a [Razer
-mouse](https://www.razer.com/pc/gaming-mice).
+up by a stand holding onto the desk, and a desk keyboard with a
+[Razer mouse](https://www.razer.com/pc/gaming-mice).
 
-At the beginning of the pandemic, I built a [CyberPower
-UK](https://www.cyberpowersystem.co.uk/) prebuilt PC. Previously, I'd always
-worked with a Mac. I use my [MacBook](https://www.apple.com/macbook-pro/)
-whenever I'm on the go.
+At the beginning of the pandemic, I built a
+[CyberPower UK](https://www.cyberpowersystem.co.uk/) prebuilt PC. Previously,
+I'd always worked with a Mac. I use my
+[MacBook](https://www.apple.com/macbook-pro/) whenever I'm on the go.
 
-{{< img-center
-src="/img/interviews/stepsize-alex-omeyer-desk.jpeg"
-alt="The desk of Alex Omeyer, Stepsize"
-width="100%"
->}}
+{{< img-center src="/img/interviews/stepsize-alex-omeyer-desk.jpeg" alt="The desk of Alex Omeyer, Stepsize" width="100%" >}}
 
 ### Describe your computer software setup
 
@@ -199,6 +195,6 @@ make meditation a regular practice.
 ### Find out more
 
 [Stepsize](https://www.stepsize.com/) is a tool for tracking issues linked to
-code. It was featured as an "Interesting Tool" in the [Console
-newsletter](https://console.dev) on 3 Mar 2022. This interview was conducted on
-23 Feb 2022.
+code. It was featured as an "Interesting Tool" in the
+[Console newsletter](https://console.dev) on 3 Mar 2022. This interview was
+conducted on 23 Feb 2022.

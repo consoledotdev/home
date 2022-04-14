@@ -44,19 +44,14 @@ because the auth roles need to be updated after the production migration.
 
 Fission helps you use frontend skills to ship full apps, without needing to
 build and maintain servers. It empowers teams to ship more with less, and “make
-the right thing the easy thing”. 
+the right thing the easy thing”.
 
 Our hope is that we could let people do more with less. Let smaller teams
 compete with larger teams, and let people, even individuals, own their own data,
 build little websites, have small businesses, maintain things and not need a
 team of 30 engineers to get going.
 
-{{< img-center
-src="/img/interviews/fission-brooklyn-zelenka-product.png"
-alt="Fission product screenshot"
-width="100%"
-caption="Fission Drive for user data storage."
->}}
+{{< img-center src="/img/interviews/fission-brooklyn-zelenka-product.png" alt="Fission product screenshot" width="100%" caption="Fission Drive for user data storage." >}}
 
 ### How do developers approach building with Fission?
 
@@ -75,21 +70,21 @@ start looking at performance in applications.
 If I'm going to send something to a server to pull some data out of a database,
 process it and send it back to me, the long part isn't the computation, it's
 sending stuff over the wire. If we can take network latency to zero as a
-default, things will move very quickly. 
+default, things will move very quickly.
 
 My iPhone has way more computing power than my first laptop ever did. These
 things are very, very powerful, capable devices. Other than data locality,
 there's no reason to ship data around, so we got rid of the data locality
 requirement. We deal with the vast majority of compute locally. Aside from
 checking if this person is actually allowed to push this new data, we
-essentially do nothing on the server. Everything's done directly on the device. 
+essentially do nothing on the server. Everything's done directly on the device.
 
-### What are the use cases for Fission? 
+### What are the use cases for Fission?
 
 Like all emerging or new technologies, they take some time to catch up, and then
 surpass what's there. For anything that's more of a transactional process or if
 you want to make a post on social media, that kind of thing. All of that's
-doable today. 
+doable today.
 
 Fission lets you ship apps 10x faster. It lowers barriers to entry by only
 requiring frontend skills. It helps you focus on the parts that are absolutely
@@ -133,11 +128,11 @@ I don't know if I have a typical day. I end up bouncing between a lot of tasks
 and contexts, switching quite a lot, which took some getting used to. For deep
 work, I still try to defragment my calendar, so I'll usually try to take the
 afternoon with as few interruptions as possible. I split my time between coding,
-research and calls where I do team check-ins and talk to investors. 
+research and calls where I do team check-ins and talk to investors.
 
-We participate in some standards bodies for the tech that we use, such as [The
-Decentralized Identity Foundation](https://identity.foundation/). A lot of our
-stuff is a really nice fit for a lot of the other members. We're looking at
+We participate in some standards bodies for the tech that we use, such as
+[The Decentralized Identity Foundation](https://identity.foundation/). A lot of
+our stuff is a really nice fit for a lot of the other members. We're looking at
 standardizing a lot of what we’re building.
 
 Boris, my co-founder, handles most of the external facing stuff so I'm more
@@ -145,7 +140,7 @@ internal facing. I try to get chunks of unbroken time to do code or review PRs,
 but the most valuable time is doing the research part of R&D and figuring out,
 "Okay. Well, we don't have a central server. How are we actually going to make
 the data sync up? What's the most efficient way to transmit changes in some
-data?" 
+data?"
 
 We're fundamentally rethinking how web apps can be built. That means big chunks
 of this time is spent trying things out: prototyping, writing a spec, talking to
@@ -185,7 +180,7 @@ developer experience, someone that's more research focused and two that are
 responsible for building the actual SDK and sample apps, so that people can get
 a sense of how to use these things. Everyone wears a lot of hats at Fission, but
 we’re roughly split between raw R&D to solve the underlying problems, and making
-it a good experience for teams to adopt. 
+it a good experience for teams to adopt.
 
 ### How did you first get into software development?
 
@@ -239,7 +234,7 @@ way to refer to data when there’s no database primary key.
 
 [Nix / NixOS](https://nixos.org/). We've ended up using it at Fission as well,
 even though this was more a side thing for me. Some of the other engineers also
-got interested in it. and so we've just adopted it now. 
+got interested in it. and so we've just adopted it now.
 
 It’s essentially a declarative package manager, but it also plugs into build
 tools and scripts and ops. It is, by far, the best of that suite of tools I've
@@ -262,11 +257,11 @@ The other setup is actually the one that I prefer. Whenever possible, I
 using an app called [Blink](https://blink.sh/), using
 [Tailscale](https://tailscale.com/). I have an Anne Pro 2 mechanical keyboard
 with the really clicky blue switches which drives everyone around me to rage,
-and a [Microsoft
-Arc](https://www.microsoft.com/en-us/d/microsoft-arc-mouse-black/8mwhbv8qvskr)
+and a
+[Microsoft Arc](https://www.microsoft.com/en-us/d/microsoft-arc-mouse-black/8mwhbv8qvskr)
 mouse, which is a little bit like a slap bracelet in mouse form. The M1 Air is
 just a spectacular machine, but the iPad setup has been my favorite, partly
-because I have a little stand for it, which is so adjustable. 
+because I have a little stand for it, which is so adjustable.
 
 I have an old neck injury, and so being in a more upright position really helps.
 I can also switch modalities to the Apple Pencil if I need to take some notes or
@@ -288,9 +283,9 @@ on both.
 
 **OS:** macOS and NixOS.
 
-**Browser:** Firefox Developer Edition with [Vim
-Vixen](https://addons.mozilla.org/en-GB/firefox/addon/vim-vixen/) so I get the
-Vim bindings.
+**Browser:** Firefox Developer Edition with
+[Vim Vixen](https://addons.mozilla.org/en-GB/firefox/addon/vim-vixen/) so I get
+the Vim bindings.
 
 **Email:** Gmail, plugged into [Missive](https://missiveapp.com/).
 
@@ -317,13 +312,9 @@ This has been surprisingly good for me physically. As I mentioned before, I have
 this neck injury of a compressed disc in my neck. For almost a year, I couldn't
 look fully to the right, and keeping my neck in a still position was required,
 but that made everything very stiff. I'm finding even just the change throughout
-the day has been very helpful. 
+the day has been very helpful.
 
-{{< img-center
-src="/img/interviews/fission-brooklyn-zelenka-desk.jpeg"
-alt="The desk of Brooklyn Zelenka, Fission"
-width="100%"
->}}
+{{< img-center src="/img/interviews/fission-brooklyn-zelenka-desk.jpeg" alt="The desk of Brooklyn Zelenka, Fission" width="100%" >}}
 
 ### When coding
 

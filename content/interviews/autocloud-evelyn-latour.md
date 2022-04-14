@@ -4,7 +4,7 @@ who: Evelyn LaTour
 role: CPO
 org: AutoCloud
 what: Viualize cloud resources.
-tags: ['Cloud']
+tags: ["Cloud"]
 date: 2022-01-10T12:00:00Z
 draft: false
 headerType: fixed
@@ -117,7 +117,7 @@ that we need from the cloud provider SDKs and then sends it over to AutoCloud.
 AutoCloud is formatting it for the diagram layouts, the compliance and security
 scans, the drift comparisons and things like that. They share the same GraphQL
 API, but AutoCloud has a more managed version. Each of those teams has its own
-separate sprint planning and scrums ceremonies.  
+separate sprint planning and scrums ceremonies.
 
 Lastly, we have our infrastructure team who are responsible for keeping all of
 our systems up and running, maintaining our SOC compliance, CI/CD pipelines,
@@ -156,8 +156,8 @@ a lot.
 I then moved over to Motorola and was leading user research there for the
 cameras on the phones. That was super fun, but as everyone knows, Motorola
 Mobility was not doing super well. While at Motorola, I had the chance to do a
-software development boot camp at [Fullstack
-Academy](https://www.fullstackacademy.com/) in Chicago.
+software development boot camp at
+[Fullstack Academy](https://www.fullstackacademy.com/) in Chicago.
 
 I learned everything I needed to get started and then went to work for a prop
 trading firm, but found that I wanted something different working there. Having
@@ -187,8 +187,8 @@ me everything that I have?
 We knew how to get all the data but we didn't really have a way to visually lay
 it out. Coming from design, UX, and then also software development, I felt this
 was an interesting problem to tackle. We did it in 3D to take it to the next
-level. I had to learn the 3D environment API and we leveraged [Amazon
-Sumerian](https://aws.amazon.com/sumerian/) under the hood for the 3D
+level. I had to learn the 3D environment API and we leveraged
+[Amazon Sumerian](https://aws.amazon.com/sumerian/) under the hood for the 3D
 environment. Sumerian has its own special way of creating meshes, handling
 asynchronous and synchronous actions, like how do I create this mesh, and then I
 have to move it and I have to copy it.
@@ -215,8 +215,8 @@ handles all this stuff for you. It's a really great tool.
 
 However, you're still writing React components and spending a lot of time on
 something that maybe isn't the core of your business, especially since for us,
-should not be spending all my time writing a landing page from scratch. Most
-it was just our landing page. You have to think, we've got a couple of people, I
+should not be spending all my time writing a landing page from scratch. Most it
+was just our landing page. You have to think, we've got a couple of people, I
 startups shouldn't be doing that unless they're using Gatsby for their actual
 product. I was pushed over to Webflow and it is so much better than using
 something like WordPress or Squarespace.
@@ -243,15 +243,15 @@ Node.js in the backend, and then we have GraphQL and
 
 ### Describe your computer hardware setup
 
-I've been using the same 15-inch [MacBook
-Pro](https://www.apple.com/macbook-pro/) since 2017. It has been a workhorse,
-but as of late, there have been some difficulties with it keeping up with all of
-the memory-intensive applications. Try running Adobe Illustrator, Figma, a 3D
-environment and a Zoom call at the same time. The computer just shuts down.. I
-think I'll upgrade this soon.
+I've been using the same 15-inch
+[MacBook Pro](https://www.apple.com/macbook-pro/) since 2017. It has been a
+workhorse, but as of late, there have been some difficulties with it keeping up
+with all of the memory-intensive applications. Try running Adobe Illustrator,
+Figma, a 3D environment and a Zoom call at the same time. The computer just
+shuts down.. I think I'll upgrade this soon.
 
-In terms of monitors, I've got a [34'' Samsung Ultrawide
-QHD](https://www.samsung.com/us/computing/monitors/uhd-and-wqhd/34-sj55w-ultra-wqhd-monitor-ls34j550wqnxza/),
+In terms of monitors, I've got a
+[34'' Samsung Ultrawide QHD](https://www.samsung.com/us/computing/monitors/uhd-and-wqhd/34-sj55w-ultra-wqhd-monitor-ls34j550wqnxza/),
 so that I could have enough space horizontally to have three files open on VS
 Code at the same time.
 
@@ -262,18 +262,18 @@ color depth on the IPS panels is amazing. Eventually, I'd like to have two of
 those, having the VA panel and the IPS side by side is not recommended since
 their colors are completely different.
 
-Mouse-wise, I have the [Logitech MX Master
-3](https://www.logitech.com/en-gb/products/mice/mx-master-3.html), which is
-perfect for development or design work, and it has the perfect FreeWheel
-scrolling. You can go through thousands of lines of code in one swipe and stop
-on a dime. It has horizontal scrolling and everything is customizable and is
-mapped to macOS, so I can just go to mission control and switch between screens
-really quickly. I have endless fights between myself and the CEO who still uses
-the Magic Mouse from Apple without a right-click button. Although I'm still
-using the Apple keyboard with the number pad on it, hopefully, we'll upgrade
-that at some point, because the ergonomics are not the best. Headphones wise, I
-use [BOSE QC wireless active noise
-canceling](https://www.bose.com/en_us/products/headphones/noise_cancelling_headphones/noise-cancelling-headphones-700-conferencing.html#v=noise_cancelling_headphones_700_conferencing_black%E2%80%9D%20with%20%E2%80%9Chttps://www.bose.com/en_us/products/headphones/earbuds/quietcomfort-earbuds.html#v=qc_earbuds_black)
+Mouse-wise, I have the
+[Logitech MX Master 3](https://www.logitech.com/en-gb/products/mice/mx-master-3.html),
+which is perfect for development or design work, and it has the perfect
+FreeWheel scrolling. You can go through thousands of lines of code in one swipe
+and stop on a dime. It has horizontal scrolling and everything is customizable
+and is mapped to macOS, so I can just go to mission control and switch between
+screens really quickly. I have endless fights between myself and the CEO who
+still uses the Magic Mouse from Apple without a right-click button. Although I'm
+still using the Apple keyboard with the number pad on it, hopefully, we'll
+upgrade that at some point, because the ergonomics are not the best. Headphones
+wise, I use
+[BOSE QC wireless active noise canceling](https://www.bose.com/en_us/products/headphones/noise_cancelling_headphones/noise-cancelling-headphones-700-conferencing.html#v=noise_cancelling_headphones_700_conferencing_black%E2%80%9D%20with%20%E2%80%9Chttps://www.bose.com/en_us/products/headphones/earbuds/quietcomfort-earbuds.html#v=qc_earbuds_black)
 earbuds, which are nice.
 
 ### Describe your computer software setup
@@ -298,11 +298,7 @@ leg over an arm. So I had to find one that had flared arms that were just part
 of the chair and also cushioned. I found one on Amazon and I haven't looked back
 ever since. Other than that, I don’t have anything special.
 
-{{< img-center
-src="/img/interviews/autocloud-evelyn-latour-desk.jpg"
-alt="The desk of Evelyn LaTour, AutoCloud"
-width="100%"
->}}
+{{< img-center src="/img/interviews/autocloud-evelyn-latour-desk.jpg" alt="The desk of Evelyn LaTour, AutoCloud" width="100%" >}}
 
 ### When coding
 
@@ -310,7 +306,8 @@ width="100%"
 
 **Tea or coffee?** Coffee.
 
-**Silence or music?** Silence or podcasts, depending upon how much thinking the work that I'm doing requires.
+**Silence or music?** Silence or podcasts, depending upon how much thinking the
+work that I'm doing requires.
 
 ### What non-tech activities do you like to do?
 
@@ -324,6 +321,6 @@ has gotten me into skiing and scuba diving. I'd love to get certified one day.
 ### Find out more
 
 [AutoCloud](https://www.autocloud.dev/) allows you to visualize your cloud
-resources. It was featured as an "Interesting Tool" in the [Console
-newsletter](https://console.dev) on 13 Jan 2022. This interview was conducted on
-10 Jan 2022.
+resources. It was featured as an "Interesting Tool" in the
+[Console newsletter](https://console.dev) on 13 Jan 2022. This interview was
+conducted on 10 Jan 2022.

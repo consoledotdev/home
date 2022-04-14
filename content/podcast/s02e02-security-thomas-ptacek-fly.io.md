@@ -5,12 +5,12 @@ whoLink: https://twitter.com/tqbf
 role: Developer
 org: Fly.io
 orgLink: https://fly.io/
-what: 
- We discuss the state of software security in sectors like energy and 
- healthcare, how software developers should think about supply chain risk, and 
- what they should do about securing their dependencies. We also explore how 
- security threats have changed over the years, and what developers working on 
- open source should do to improve their own security.
+what:
+  We discuss the state of software security in sectors like energy and
+  healthcare, how software developers should think about supply chain risk, and
+  what they should do about securing their dependencies. We also explore how
+  security threats have changed over the years, and what developers working on
+  open source should do to improve their own security.
 season: 2
 episode: 2
 date: 2022-01-13T06:00:00Z
@@ -18,11 +18,11 @@ duration: 32:13
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/34131858-ecea-45c6-b5db-64c5ec8bd0ff/audio/f61fc39a-7b0f-45f2-8e31-d507c5254572/default_tc.mp3
 draft: false
 summary:
- Security - a devtools discussion with Thomas Ptacek (Fly.io). Episode 2
- (Season 2) of the Console DevTools Podcast.
+  Security - a devtools discussion with Thomas Ptacek (Fly.io). Episode 2
+  (Season 2) of the Console DevTools Podcast.
 metaDescription:
- Security - a devtools discussion with Thomas Ptacek (Fly.io). Episode 2
- (Season 2) of the Console DevTools Podcast.
+  Security - a devtools discussion with Thomas Ptacek (Fly.io). Episode 2
+  (Season 2) of the Console DevTools Podcast.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -30,7 +30,7 @@ isSubpage: podcast-episode
 pageType: podcast-episode
 customPageStyle: true
 xlViewport:
- largeText: true
+  largeText: true
 topImg1Src: /img/podcast/fly.io-thomas-ptacek-profile.jpg
 topImg2Src: /img/favicons/fly.io.png
 ogImg: /img/podcast/podcast-cover.jpeg
@@ -39,11 +39,11 @@ authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
 authorBio:
- is co-founder of Console. From 2009-2018, David was CEO at Server Density, a
- SaaS server monitoring startup used by hundreds of customers to collect
- billions of time series metrics from millions of servers. He is also a
- researcher in sustainable computing at Uptime Institute and affiliated with
- Imperial College London. David has been a developer for 15+ years.
+  is co-founder of Console. From 2009-2018, David was CEO at Server Density, a
+  SaaS server monitoring startup used by hundreds of customers to collect
+  billions of time series metrics from millions of servers. He is also a
+  researcher in sustainable computing at Uptime Institute and affiliated with
+  Imperial College London. David has been a developer for 15+ years.
 ---
 
 ### Episode notes
@@ -70,8 +70,7 @@ Things mentioned:
 - [Google cloud authentication](https://cloud.google.com/docs/authentication)
 - [Tailscale](https://tailscale.com/)
 - [WireGuard](https://www.wireguard.com/)
-- [Server-side request
- forgery](https://en.wikipedia.org/wiki/Server-side_request_forgery)
+- [Server-side request forgery](https://en.wikipedia.org/wiki/Server-side_request_forgery)
 - [Burp Suite](https://portswigger.net/burp)
 - [Black Hat](https://www.blackhat.com/)
 - [Emacs Tramp Mode](https://www.emacswiki.org/emacs/TrampMode)
@@ -120,26 +119,26 @@ don't have these problems.
 
 {{< box-collapsible title="Full transcript" class="podcast-transcript is-expanded" >}}
 
-**David:** Welcome to the Console Podcast. I'm David Mytton, co-founder
-of Console.dev, a free weekly newsletter highlighting the best and most
-interesting tools for developers. In this episode, I speak with Thomas Ptacek ,
-currently a software engineer at Fly.io and previously a co-founder at security
-firms Latacora and Matasano Security. We discuss the state of software security
-in sectors like energy and healthcare. How software developers should think
-about supply chain risk and securing their dependencies. How security threats
-have changed over the years. And what developers working on open source should
-do to improve their own security. We're keeping this to 30 minutes, so let's get
+**David:** Welcome to the Console Podcast. I'm David Mytton, co-founder of
+Console.dev, a free weekly newsletter highlighting the best and most interesting
+tools for developers. In this episode, I speak with Thomas Ptacek , currently a
+software engineer at Fly.io and previously a co-founder at security firms
+Latacora and Matasano Security. We discuss the state of software security in
+sectors like energy and healthcare. How software developers should think about
+supply chain risk and securing their dependencies. How security threats have
+changed over the years. And what developers working on open source should do to
+improve their own security. We're keeping this to 30 minutes, so let's get
 started. I'm here with Thomas Ptacek: . Thomas, thanks for joining the Console
 Podcast.
 
 **Thomas:** Thanks for having me on the Console Podcast.
 
-**David:** Let's start with a brief background. Tell us a little bit
-about what you're currently doing and how you got here.
+**David:** Let's start with a brief background. Tell us a little bit about what
+you're currently doing and how you got here.
 
-**Thomas:** I'm an engineer. I'm a developer at a company called Fly.io.
-We're a fun way of running applications in the cloud, close to users. I can talk
-more about what Fly does. I get the sense that when people want to hear from me,
+**Thomas:** I'm an engineer. I'm a developer at a company called Fly.io. We're a
+fun way of running applications in the cloud, close to users. I can talk more
+about what Fly does. I get the sense that when people want to hear from me,
 they're generally interested in security stuff. I've been doing software
 security since the mid 1990's. So, as a vulnerability researcher and as a
 security consultant and doing lots of security work for startups as well. So, my
@@ -148,10 +147,10 @@ especially small tech companies to kind of navigate that whole space and figure
 out what to do about that whole landscape of things. Everything's being broken
 everywhere and all software being garbage. That's kind of my portfolio.
 
-**David:**So, when we think of tech companies, we generally think of the
-big names like Apple, Google, Microsoft, and Amazon. These are companies that
-build software as part of their core business. And even though they invest
-billions of dollars into security every year, there are regular major security
+**David:**So, when we think of tech companies, we generally think of the big
+names like Apple, Google, Microsoft, and Amazon. These are companies that build
+software as part of their core business. And even though they invest billions of
+dollars into security every year, there are regular major security
 vulnerabilities in their products. I wanted to start a little bit outside of
 this and talking about companies that use technology and software, but to help
 them deliver on some of their core business like energy, transports, or
@@ -159,32 +158,32 @@ healthcares. Sectors where they might not have billions of dollars to spend on
 security. What's your take on the current state of security in these types of
 industries?
 
-**Thomas:** I guess it's a bit of good news and a bit of bad news. Right?
-The bad news is kind of the same bad news no matter who we're talking about,
-which is, again, computers are garbage. Especially software. All software is
-trash. So, the basic problem that everyone faces is no matter kind of what
-industry you're working in, even if it's a heavily regulated industry, even if
-it's kind of inconceivable that you could have terrible vulnerabilities and the
-sky would not be falling or whatever, they're all built on the same basic couple
-of software stacks. And those stacks were all generally kind of conceived of in
-the 1990's and early 2000's. And they're riddled with security vulnerabilities.
+**Thomas:** I guess it's a bit of good news and a bit of bad news. Right? The
+bad news is kind of the same bad news no matter who we're talking about, which
+is, again, computers are garbage. Especially software. All software is trash.
+So, the basic problem that everyone faces is no matter kind of what industry
+you're working in, even if it's a heavily regulated industry, even if it's kind
+of inconceivable that you could have terrible vulnerabilities and the sky would
+not be falling or whatever, they're all built on the same basic couple of
+software stacks. And those stacks were all generally kind of conceived of in the
+1990's and early 2000's. And they're riddled with security vulnerabilities.
 We've barely kind of come to grips with how to build software with even a
 modicum of just basic security promises. Like if I can talk to it, I can't run
 remote code on it. Right?
 
-**Thomas:** That's a problem we've barely figured out how to deal with.
-The bad news is that if you're working on infrastructure or a regulated
-business, or especially in places like energy or utilities or things like that,
-you're facing a lot of the same problems, basically all of the same problems,
-that everyone else does. But the kind of the subtext I get there is those are
-places where technology is kind of a cost center. It's not the core thing that
-people are building. It's something that people are taking advantage of to
-reduce costs and things like that. And what that tends to mean is that those
-companies, don't staff. Less so security people and more the kind of developer
-that keeps kind of abreast of changes in how we're building software to make it
-more resilient. So, in my previous life as a security consultant, I did kind of
-a fair bit of work with large regulated companies, financial exchanges, energy
-companies, and things like that.
+**Thomas:** That's a problem we've barely figured out how to deal with. The bad
+news is that if you're working on infrastructure or a regulated business, or
+especially in places like energy or utilities or things like that, you're facing
+a lot of the same problems, basically all of the same problems, that everyone
+else does. But the kind of the subtext I get there is those are places where
+technology is kind of a cost center. It's not the core thing that people are
+building. It's something that people are taking advantage of to reduce costs and
+things like that. And what that tends to mean is that those companies, don't
+staff. Less so security people and more the kind of developer that keeps kind of
+abreast of changes in how we're building software to make it more resilient. So,
+in my previous life as a security consultant, I did kind of a fair bit of work
+with large regulated companies, financial exchanges, energy companies, and
+things like that.
 
 And they're not less exposed to vulnerabilities than smaller tech companies. The
 good news kind of is those companies tend to have more resources than a typical
@@ -196,23 +195,23 @@ particular kind company in that space that you're thinking of? What's the model
 of the small company that doesn't have ten million dollars to spend on security
 consulting this year?
 
-**David:** Right. So, I suppose we're hearing all the time about state
-sponsored cybersecurity on critical infrastructure and that often centers around
-the idea of shutting down the electricity grid is the big catastrophe that's
-potentially out there. Do you think that is the right thing to be focusing on?
+**David:** Right. So, I suppose we're hearing all the time about state sponsored
+cybersecurity on critical infrastructure and that often centers around the idea
+of shutting down the electricity grid is the big catastrophe that's potentially
+out there. Do you think that is the right thing to be focusing on?
 
-**Thomas:** I'll say two things. Right? The second thing I'll say is
-something that everyone's heard already before, and I don't have any real unique
-insight to offer for it. The little bit of insight I can say here is that when
-we think about things like shutting the electricity grid down, that's not an
-overblown theory of what could happen. Right? There's good reason to believe
-that attacks like that are totally viable. They're probably more viable than we
-think they are. They're probably more viable today than they were 10 years ago.
-So, like 10 years ago, when we were thinking about shutting electricity grids
-down, we might have been thinking about somehow infiltrating the network of a
-power grid operator and then blowing up a transformer by getting a remote code
-execution on a controller somewhere. Or hitting directly a bunch of smart meters
-and doing a remote shutoff on every smart meter in the area.
+**Thomas:** I'll say two things. Right? The second thing I'll say is something
+that everyone's heard already before, and I don't have any real unique insight
+to offer for it. The little bit of insight I can say here is that when we think
+about things like shutting the electricity grid down, that's not an overblown
+theory of what could happen. Right? There's good reason to believe that attacks
+like that are totally viable. They're probably more viable than we think they
+are. They're probably more viable today than they were 10 years ago. So, like 10
+years ago, when we were thinking about shutting electricity grids down, we might
+have been thinking about somehow infiltrating the network of a power grid
+operator and then blowing up a transformer by getting a remote code execution on
+a controller somewhere. Or hitting directly a bunch of smart meters and doing a
+remote shutoff on every smart meter in the area.
 
 Those attacks were probably viable. They were certainly viable 10 years ago.
 Maybe they're less viable now, but what we see now is back office attacks.
@@ -245,16 +244,16 @@ harder if you're like a corporate IT person or an IT security person. And the
 best you can do is get a consultant to kick the tires on something before you
 buy it and operationalize it.
 
-**David:** Right. So, it's more likely that it's going to be a ransomware
-attack that's led into someone who's non-technical on the network rather than
-some highly elaborate zero day and some control plane somewhere.
+**David:** Right. So, it's more likely that it's going to be a ransomware attack
+that's led into someone who's non-technical on the network rather than some
+highly elaborate zero day and some control plane somewhere.
 
-**Thomas:** I think both are possible, but I think the ransomware style
-attack is more straightforward. It's more lucrative. I think it's more likely to
-be the way we see it going down.
+**Thomas:** I think both are possible, but I think the ransomware style attack
+is more straightforward. It's more lucrative. I think it's more likely to be the
+way we see it going down.
 
-**David:** But how should the broader tech industry think about this
-systemic risk, for example, will running our code in data centers that require
+**David:** But how should the broader tech industry think about this systemic
+risk, for example, will running our code in data centers that require
 electricity?
 
 **Thomas:** Yeah. Your guess is as good as mine. If the question is about
@@ -265,16 +264,16 @@ assurance for what they're delivering, I have no no freaking idea. I'm totally
 lost. Someday the power is going to go down and I'm just going to live with it
 until it comes back on.
 
-**David:** Well, that's actually a good link into discussing open source
-and our dependencies on a huge supply chain and all of those libraries that
-we're all importing to our code that we can, in theory, look at the source code
-for but very few people are doing. How should software developers think about
-that supply chain risk with all the dependencies and the dependencies,
-dependencies, and so on?
+**David:** Well, that's actually a good link into discussing open source and our
+dependencies on a huge supply chain and all of those libraries that we're all
+importing to our code that we can, in theory, look at the source code for but
+very few people are doing. How should software developers think about that
+supply chain risk with all the dependencies and the dependencies, dependencies,
+and so on?
 
-**Thomas:** It's a real problem. So, from, I think, around 2016 to 2020,
-I was a principle at a company called Lata Quora. And that company still exists,
-I'm just at Fly now. We'd set up security teams for startups that were mostly
+**Thomas:** It's a real problem. So, from, I think, around 2016 to 2020, I was a
+principle at a company called Lata Quora. And that company still exists, I'm
+just at Fly now. We'd set up security teams for startups that were mostly
 building on top of typical open source software stacks. Jango or a lot of
 Node.js, A lot of NPM ecosystem stuff. Right? And we went in thinking that it
 was going to be kind of straightforward for us to just vet packages and follow
@@ -285,17 +284,17 @@ possible piece of software and into its own package. And those packages have a
 weird web of dependencies and maintainers, and I think it's basically hopeless
 to keep up with are changes being introduced maliciously?
 
-**Thomas:** My odds of detecting that are really minimal. Right? There's
-so much code in an NPM and a node setup. There's so much code that you're
-pulling in through dependencies and in each of those dependencies you're using
-so little of it and keeping a good map of which parts of which packages you're
-working with is very difficult. I think the best advice I can kind of give there
-is to be conscientious. Again, I think this is kind of straightforward. I think
-people probably get this already, but to be conscientious about what depths
-you're pulling in. I think if you're serious about being resilient against
-supply chain attacks, for instance, if that's a real tenant of how you're
-running your engineering team, you're going to make sacrifices in order to kind
-of live up to that tenant. Right?
+**Thomas:** My odds of detecting that are really minimal. Right? There's so much
+code in an NPM and a node setup. There's so much code that you're pulling in
+through dependencies and in each of those dependencies you're using so little of
+it and keeping a good map of which parts of which packages you're working with
+is very difficult. I think the best advice I can kind of give there is to be
+conscientious. Again, I think this is kind of straightforward. I think people
+probably get this already, but to be conscientious about what depths you're
+pulling in. I think if you're serious about being resilient against supply chain
+attacks, for instance, if that's a real tenant of how you're running your
+engineering team, you're going to make sacrifices in order to kind of live up to
+that tenant. Right?
 
 So, you might pick different dependencies. You might choose to build on
 different and less shiny possible stacks just to avoid your exposure to left pad
@@ -332,9 +331,9 @@ like the idea of being prepared to rebuild your own dependencies from scratch.
 At least the big ones. You might remember, I think it was back in 2012, I'm
 trying to remember the dates for Heartbleed. Right around the time of the
 Heartbleed vulnerability in open SSL, the consulting company I was at at the
-time, Monsanto Security, we were on an engagement and we found
-almost identical vulnerability in nginx. So, it wasn't in open SSL. It was in
-the web server itself.
+time, Monsanto Security, we were on an engagement and we found almost identical
+vulnerability in nginx. So, it wasn't in open SSL. It was in the web server
+itself.
 
 You could send a request to nginx and if it had a null character somewhere and a
 header, I'm remembering this weirdly, but you could send a malformed header and
@@ -405,16 +404,16 @@ with that are worth investing in, but that a lot of it is not worth spending a
 lot of effort on. I don't know if that sounded incoherent or not, but that's a
 shotgun blast of my answer there.
 
-**David:** That all makes sense. So, what are the things that those
-companies in between one or two people and 50, what should they focus on first?
+**David:** That all makes sense. So, what are the things that those companies in
+between one or two people and 50, what should they focus on first?
 
-**Thomas:** As people are probably aware, there is a huge industry of
-products that are intended to increase security for networks or for software.
-There are things that kind of will promise to watch your application to detect
-attacks or block attacks or scan your code for vulnerabilities and things like
-that. I'm not a big believer in any of those things. I think, in general, your
-first reaction to any security product should be it's not for us. It's not going
-to work here. It's intended for big companies with big IT staffs that might get
+**Thomas:** As people are probably aware, there is a huge industry of products
+that are intended to increase security for networks or for software. There are
+things that kind of will promise to watch your application to detect attacks or
+block attacks or scan your code for vulnerabilities and things like that. I'm
+not a big believer in any of those things. I think, in general, your first
+reaction to any security product should be it's not for us. It's not going to
+work here. It's intended for big companies with big IT staffs that might get
 some 5% value from deploying it, but that's good enough for them. And it's not
 going to work for you at all. Security products in general, I'm very down on.
 With, I think, two exceptions. Right? One thing I think people could get right
@@ -499,12 +498,12 @@ think that people tend to put off getting single sign on set up and the earlier
 you do that, the easier it is to scale it across your company. You really want
 that set up early. So, I'm a big fan of doing things like that.
 
-**David:** Flipping it over to developers working on open source, then on
-their own projects, what can they do to improve the security of those projects
-for their users?
+**David:** Flipping it over to developers working on open source, then on their
+own projects, what can they do to improve the security of those projects for
+their users?
 
-**Thomas:** Well, I don't want to be too patronizing, but the first thing
-I'd say is work in a memory safe language. So, I think there are big classes of
+**Thomas:** Well, I don't want to be too patronizing, but the first thing I'd
+say is work in a memory safe language. So, I think there are big classes of
 vulnerabilities that you can get around just by working in modern languages that
 don't have these problems. In my head right now, I'm trying to think of what the
 unique risks of being on an open source project are. And I think they're kind of
@@ -546,23 +545,22 @@ but that's the first thing off the top of my head is just thinking more in terms
 of vulnerabilities and how you're getting your head around with the
 vulnerabilities are that you're trying to mitigate.
 
-**David:** How do you think that's changed over the time you've been in
-the industry? Or how do you think the vulnerabilities or the security issues
+**David:** How do you think that's changed over the time you've been in the
+industry? Or how do you think the vulnerabilities or the security issues
 developers have to face and mitigate have changed? Or is everyone just making
 the same mistakes?
 
-**Thomas:**  We're making new mistakes. When I started the default
-language that almost any open source project would be built in was C and
-thankfully C is now a rarity. Good bit of advice for people thinking about
-adding dependencies to their stack is to avoid the dependencies that are written
-in C. We're on our way towards eliminating memory corruption vulnerabilities. I
-think that's increasingly a problem for Google and Apple, where they have tens
-of millions of lines invested in memory unsafe code, and they can't get rid of
-them. And they just have to keep playing cat and mouse with people who are
-finding ways to weaponize memory corruption vulnerabilities. And if you're a
-smaller company or an open source project, you don't have that problem. You can
-just use Go or use Python or use Rust. And those are all great decisions. And
-you should do that.
+**Thomas:**  We're making new mistakes. When I started the default language that
+almost any open source project would be built in was C and thankfully C is now a
+rarity. Good bit of advice for people thinking about adding dependencies to
+their stack is to avoid the dependencies that are written in C. We're on our way
+towards eliminating memory corruption vulnerabilities. I think that's
+increasingly a problem for Google and Apple, where they have tens of millions of
+lines invested in memory unsafe code, and they can't get rid of them. And they
+just have to keep playing cat and mouse with people who are finding ways to
+weaponize memory corruption vulnerabilities. And if you're a smaller company or
+an open source project, you don't have that problem. You can just use Go or use
+Python or use Rust. And those are all great decisions. And you should do that.
 
 I've been doing this since the '90s and when I started the vulnerabilities that
 I'd mostly care about would be buffer overflows. Would be things I could write
@@ -603,19 +601,19 @@ And every single year, there's a talk from the PortSwigger people on some new
 vulnerability they've discovered. Sounds kind of silly when I say it, but pay
 attention to PortSwigger. A bit of advice I have there.
 
-**David:** Would you say that a lot of the attack surface has now
-essentially been outsourced to the cloud providers, given that we're running, at
-least a lot of new projects are deployed, on the cloud? Is that how developers
-should think about that?
+**David:** Would you say that a lot of the attack surface has now essentially
+been outsourced to the cloud providers, given that we're running, at least a lot
+of new projects are deployed, on the cloud? Is that how developers should think
+about that?
 
-**Thomas:** I'm a hundred percent biased here. Right? Fly.io is a cloud
-hosting provider. Right? We're doing essentially the same things that AWS does.
-We run some of AWS's code in that we run Firecracker for virtual machines.
-Speaking against my own interests. Right? There's definitely a big sense in
-which when you deploy things on cloud providers, you are handing over a lot of
-security decisions to those providers. And your default assumptions about what
-those providers might or might not be doing for security are... I trust Amazon a
-lot. I trust AWS a lot for security stuff. They have just an army of very smart
+**Thomas:** I'm a hundred percent biased here. Right? Fly.io is a cloud hosting
+provider. Right? We're doing essentially the same things that AWS does. We run
+some of AWS's code in that we run Firecracker for virtual machines. Speaking
+against my own interests. Right? There's definitely a big sense in which when
+you deploy things on cloud providers, you are handing over a lot of security
+decisions to those providers. And your default assumptions about what those
+providers might or might not be doing for security are... I trust Amazon a lot.
+I trust AWS a lot for security stuff. They have just an army of very smart
 people just working on security problems there. When you're working with smaller
 companies, and we're a smaller company, you should think about how they're
 keeping up with that same work with far fewer people doing security work there.
@@ -629,21 +627,21 @@ It's worth asking that question and getting a sense of it. There is something to
 the idea of you're trusting the engineering team for that hosting provider to
 provide a big part of your application security.
 
-**David:** Before we wrap up that then, I have two quick fire questions
-for you. So, first is what is the current favorite dev tool that you're using at
-the moment?
+**David:** Before we wrap up that then, I have two quick fire questions for you.
+So, first is what is the current favorite dev tool that you're using at the
+moment?
 
-**Thomas:** I will tell you, but it's a terrible answer. Right? So the
-favorite dev tool that I've kind of adopted over the last year is Emacs Tramp.
-Emacs' the editor everyone knows. Emacs' the list operating system that is also
-an editor. Has a feature called Tramp, which has been around forever but I've
-only been using it for the past year. I'm in a place now where my daily driver
-is a MacBook, but a lot of the software that I build now is very Linux specific.
-So, for instance, kernel BPF code to do network management and stuff like that.
-That code is very difficult to test even in a virtual machine on my MacBook. So,
-I have a dev machine, which is like an Intel Nuc that sits there running
-precisely the version of Linux that we run in production. And I build all my
-software there.
+**Thomas:** I will tell you, but it's a terrible answer. Right? So the favorite
+dev tool that I've kind of adopted over the last year is Emacs Tramp. Emacs' the
+editor everyone knows. Emacs' the list operating system that is also an editor.
+Has a feature called Tramp, which has been around forever but I've only been
+using it for the past year. I'm in a place now where my daily driver is a
+MacBook, but a lot of the software that I build now is very Linux specific. So,
+for instance, kernel BPF code to do network management and stuff like that. That
+code is very difficult to test even in a virtual machine on my MacBook. So, I
+have a dev machine, which is like an Intel Nuc that sits there running precisely
+the version of Linux that we run in production. And I build all my software
+there.
 
 And Tramp makes it completely transparent to edit code on that Nuc as if it was
 on my local daily driver dev machine. Everyone that's ever used Emacs
@@ -658,41 +656,41 @@ it still blows my mind that that works. So, my recommendation is switch to Emacs
 because it's the best possible editor and then use Tramp because Tramp is
 amazing.
 
-**David:** You partially answered my second question, which is what is
-your current tech setup? Hardware and software that you're using on your daily
+**David:** You partially answered my second question, which is what is your
+current tech setup? Hardware and software that you're using on your daily
 driver?
 
-**Thomas:**  I have a MacBook. It runs Emacs and it runs terminal
-Windows. It could be any MacBook. It would be just fine for me. So, I'm typing
-right now on a 2018 Intel, 15 inch MacBook. And my keyboard reads Q, W, 6, B, T,
-Y. I've gradually harvested keys from other computers that I have in my office
-as the keys on this one fail and just looking at the new keyboard I'm super
-psyched. So, I maxed out a new... It's pretty ridiculous. I have no use for
-almost anything in the new computer, but I've got a maxed out 16 inch MacBook
-coming to me next Tuesday. I'm very excited to have a keyboard where the keys
-will actually be the keys that I'm typing on. But really it's almost just a dumb
+**Thomas:**  I have a MacBook. It runs Emacs and it runs terminal Windows. It
+could be any MacBook. It would be just fine for me. So, I'm typing right now on
+a 2018 Intel, 15 inch MacBook. And my keyboard reads Q, W, 6, B, T, Y. I've
+gradually harvested keys from other computers that I have in my office as the
+keys on this one fail and just looking at the new keyboard I'm super psyched.
+So, I maxed out a new... It's pretty ridiculous. I have no use for almost
+anything in the new computer, but I've got a maxed out 16 inch MacBook coming to
+me next Tuesday. I'm very excited to have a keyboard where the keys will
+actually be the keys that I'm typing on. But really it's almost just a dumb
 terminal for me. Right? I just need Emacs to work. I need Emacs and Twitter to
 work and then I'm kind of off to the races. So, I'm pretty easy.
 
 **David:** Excellent. Where can people find you online?
 
-**Thomas:**  I'm noisy on Twitter. My Twitter name is TQBF, the quick
-brown fox on Twitter. I'm pretty easy to find there. There's a site many people
-are familiar with called Hacker News. I think if you took the three highest
-karma, kind of biggest losers, on Hacker News and combined them, they still
-would not be as big of a Hacker News loser as I am. By a factor of three I'm the
-highest karma person on Hacker News. Which is where I waste a lot of time. So
-I'm tptacek on Hacker News if you want to see me ranting about
-random legal things or the tech industry there as well. So, Hacker News and
-Twitter are where to find me, unfortunately.
+**Thomas:**  I'm noisy on Twitter. My Twitter name is TQBF, the quick brown fox
+on Twitter. I'm pretty easy to find there. There's a site many people are
+familiar with called Hacker News. I think if you took the three highest karma,
+kind of biggest losers, on Hacker News and combined them, they still would not
+be as big of a Hacker News loser as I am. By a factor of three I'm the highest
+karma person on Hacker News. Which is where I waste a lot of time. So I'm
+tptacek on Hacker News if you want to see me ranting about random legal things
+or the tech industry there as well. So, Hacker News and Twitter are where to
+find me, unfortunately.
 
-**David:** Excellent. Well, that's all we have time for today. Thanks
-very much for joining the Console Podcast.
+**David:** Excellent. Well, that's all we have time for today. Thanks very much
+for joining the Console Podcast.
 
 **Thomas:** Thank you very much for having me. I appreciate it.
 
-**David:** Thanks for listening to the Console Dev Tools Podcast. Please
-let us know what you think on Twitter. I'm @DavidMytton and you can follow
+**David:** Thanks for listening to the Console Dev Tools Podcast. Please let us
+know what you think on Twitter. I'm @DavidMytton and you can follow
 @consoledotdev. Don't forget to subscribe and rate us in your podcast player.
 And if you are playing around with, or building, any interesting dev tools,
 please get in touch. Our email's in the show notes. See you next time.

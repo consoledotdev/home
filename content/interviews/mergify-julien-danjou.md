@@ -4,7 +4,7 @@ who: Julien Danjou
 role: CEO
 org: Mergify
 what: A tool for automating GitHub pull requests.
-tags: ['Code review']
+tags: ["Code review"]
 date: 2021-10-28T12:00:00Z
 draft: false
 headerType: fixed
@@ -32,8 +32,8 @@ process, then we switched one of our projects from this platform,
 [OpenDev](https://opendev.org/) to GitHub. When we arrived on GitHub, we were a
 bit frustrated because there was nothing like the automation, work queue, or
 merge queue, so we decided to scratch our own itch, and ended up building
-Mergify out of that. Funnily enough, [GitHub recently
-announced](https://github.blog/changelog/2021-10-27-pull-request-merge-queue-limited-beta/)
+Mergify out of that. Funnily enough,
+[GitHub recently announced](https://github.blog/changelog/2021-10-27-pull-request-merge-queue-limited-beta/)
 that as a feature in beta!
 
 We started with auto-merge which enables you to merge a pull request as soon as
@@ -154,11 +154,7 @@ I'm using a 13” MacBook Pro, but I should upgrade to a new M1 soon because thi
 one is getting slow. I use my laptop with two screens and a standard Apple
 keyboard and a mouse.
 
-{{< img-center
-src="/img/interviews/mergify-julien-danjou-desk.jpg"
-alt="The desk of Julien Danjou, Mergify"
-width="100%"
->}}
+{{< img-center src="/img/interviews/mergify-julien-danjou-desk.jpg" alt="The desk of Julien Danjou, Mergify" width="100%" >}}
 
 ### Describe your computer software setup
 
@@ -189,11 +185,12 @@ but nothing else special right now.
 
 ### What non-tech activities do you like to do?
 
-I run, which I do as often as I can, and I enjoy cooking a lot, usually spending an hour or so every day cooking something.
+I run, which I do as often as I can, and I enjoy cooking a lot, usually spending
+an hour or so every day cooking something.
 
 ### Find out more
 
 [Mergify](https://mergify.com/) is a tool for automating GitHub pull requests.
-It was originally featured as an "Interesting Tool" in the [Console
-newsletter](https://console.dev) on 25 Nov 2021. This interview was conducted on
-28 Oct 2021.
+It was originally featured as an "Interesting Tool" in the
+[Console newsletter](https://console.dev) on 25 Nov 2021. This interview was
+conducted on 28 Oct 2021.

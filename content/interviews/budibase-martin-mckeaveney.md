@@ -17,9 +17,9 @@ ogImg: /img/interviews/budibase-martin-mckeaveney-desk.jpeg
 
 ### What is Budibase? Why did you build it?
 
-[Budibase](https://budibase.com/) is an [open
-source](https://github.com/Budibase/budibase), low-code platform for building
-business applications and internal tools. We make it easy and fast for
+[Budibase](https://budibase.com/) is an
+[open source](https://github.com/Budibase/budibase), low-code platform for
+building business applications and internal tools. We make it easy and fast for
 developers and IT professionals to create their own software, by providing a
 visual app building experience with three main pillars: data, design, and
 automation.
@@ -34,7 +34,7 @@ databases, or you can have Budibase automatically generate and map from your
 database schemas and generate the queries for you. You can also convert your
 existing database into a fully functioning web application with just a few
 clicks. The data UI is also responsible for authorization and role based access
-management.  
+management.
 
 The design part is the UI of your application, where you create screens to
 display and visualize your data and perform CRUD operations on it, as well as
@@ -117,13 +117,13 @@ or more over the next year.
 
 ### How do you think about the balance between the open source code base and your cloud product?
 
-The whole team works on [the Open Source
-product](https://github.com/Budibase/budibase), and the code base is shared
-between the two. We do have things in there, like conditionals for certain
-things that are in the cloud product, but there's not really any features that
-are enabled on the cloud side that you can't do in the self-hosted version. The
-only difference is, some of the ones in the self-hosted solution, you'd need to
-configure yourself, like sending emails, for example.
+The whole team works on
+[the Open Source product](https://github.com/Budibase/budibase), and the code
+base is shared between the two. We do have things in there, like conditionals
+for certain things that are in the cloud product, but there's not really any
+features that are enabled on the cloud side that you can't do in the self-hosted
+version. The only difference is, some of the ones in the self-hosted solution,
+you'd need to configure yourself, like sending emails, for example.
 
 The way we think about it is if something's going to be widely useful for the
 whole community, that'll be part of the open source product. Right now, we don't
@@ -164,8 +164,8 @@ learning lots of different programming languages and tools. I picked up
 some more functional languages, like [Haskell](https://www.haskell.org/), just
 for fun. I always enjoyed the different rules and paradigms of each language and
 learning different styles of programming. I finally decided to go deep on
-JavaScript, due to the fact it was so versatile.  
-  
+JavaScript, due to the fact it was so versatile.
+
 Later, I got into Linux and worked a lot with infrastructure and automation
 tools as well, mainly on AWS. I loved the automation of infrastructure, and with
 tools like [Terraform](https://www.terraform.io/) and
@@ -256,18 +256,18 @@ be created in the browser are incredible.
 ### Describe your computer hardware setup
 
 I'm using a 15” MacBook Pro at the moment, but I have a new one waiting for me
-at home, which I'm looking forward to getting. I have [Bose
-Quietcomfort](https://www.bose.com/en_us/products/headphones/over_ear_headphones/quietcomfort-35-wireless-ii.html#v=qc35_ii_silver)
-headphones that are essential for focus, a 27”, [144Hz BenQ
-monitor](https://www.benq.com/en-us/monitor/gaming/ex2780q.html), and a [Filco
-Majestouch](http://www.filcokeyboards.co.uk/) keyboard that's been likened to a
-drum kit by the team, because it's very loud.
+at home, which I'm looking forward to getting. I have
+[Bose Quietcomfort](https://www.bose.com/en_us/products/headphones/over_ear_headphones/quietcomfort-35-wireless-ii.html#v=qc35_ii_silver)
+headphones that are essential for focus, a 27”,
+[144Hz BenQ monitor](https://www.benq.com/en-us/monitor/gaming/ex2780q.html),
+and a [Filco Majestouch](http://www.filcokeyboards.co.uk/) keyboard that's been
+likened to a drum kit by the team, because it's very loud.
 
 ### Describe your computer software setup
 
 **OS:** macOS Catalina.
 
-**Browser:** Firefox.  
+**Browser:** Firefox.
 
 **Email:** [Spark](https://sparkmailapp.com/).
 
@@ -290,11 +290,7 @@ talking about strategy and planning. The main benefit is really just to get the
 team together and spend some time in real life. We will have an office very soon
 in Belfast, which I'll try to go to when I'm home.
 
-{{< img-center
-src="/img/interviews/budibase-martin-mckeaveney-desk.jpeg"
-alt="The desk of Martin McKeaveney, Co-Founder, Budibase"
-width="100%"
->}}
+{{< img-center src="/img/interviews/budibase-martin-mckeaveney-desk.jpeg" alt="The desk of Martin McKeaveney, Co-Founder, Budibase" width="100%" >}}
 
 ### When coding
 
@@ -315,6 +311,6 @@ writing as well.
 ### Find out more
 
 [Budibase](https://budibase.com/) is an open source low-code platform. It was
-featured as an "Interesting Tool" in the [Console
-newsletter](https://console.dev) on 3 Feb 2022. This interview was conducted on
-16 Dec 2021.
+featured as an "Interesting Tool" in the
+[Console newsletter](https://console.dev) on 3 Feb 2022. This interview was
+conducted on 16 Dec 2021.

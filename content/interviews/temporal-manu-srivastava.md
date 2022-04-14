@@ -4,7 +4,7 @@ who: Manu Srivastava
 role: Engineer
 org: Temporal
 what: A workflow orchestration platform.
-tags: ['Workflow']
+tags: ["Workflow"]
 date: 2021-03-24T12:00:00+00:00
 draft: false
 headerType: fixed
@@ -18,22 +18,21 @@ ogImg: /img/interviews/temporal-manu-srivastava-desk.jpg
 ### What is Temporal? Why did you build it?
 
 [Temporal](https://temporal.io/) is a workflow orchestration platform. It deals
-with everything needed to run a task - reliability, retries, redundancy - so
-you can focus on the task itself.
+with everything needed to run a task - reliability, retries, redundancy - so you
+can focus on the task itself.
 
-I met the CTO, Samar, at Microsoft where he was building a code replay
-workflow engine. I was initially skeptical of its value as I thought anyone
-could write their code to persist checkpoints and deal with retries. However it
-turned out to be much more complex at scale! We ended up using this engine
-quite a bit at Microsoft, such as for Azure resource provisioning.
+I met the CTO, Samar, at Microsoft where he was building a code replay workflow
+engine. I was initially skeptical of its value as I thought anyone could write
+their code to persist checkpoints and deal with retries. However it turned out
+to be much more complex at scale! We ended up using this engine quite a bit at
+Microsoft, such as for Azure resource provisioning.
 
 Samar met our CEO, Maxim, at Amazon where they were working on the AWS Simple
 Workflow Service. However, the three of us actually met ten years later at Uber
-where they had created an extensive workflow engine called Cadence. Our team
-was using [Cadence](https://cadenceworkflow.io/) for compliance workflows and
-it was this that highlighted the real value: checkpoints, handling messaging
-and state management across multiple systems. It meant we had to write less
-code.
+where they had created an extensive workflow engine called Cadence. Our team was
+using [Cadence](https://cadenceworkflow.io/) for compliance workflows and it was
+this that highlighted the real value: checkpoints, handling messaging and state
+management across multiple systems. It meant we had to write less code.
 
 This is what inspired Temporal. We wanted to build something that any developer
 could use, whilst adding extra functionality around execution history, logging,
@@ -47,11 +46,11 @@ experience.
 
 Operating a Temporal cluster requires dealing with upgrades, making sure you're
 scaled appropriately and debugging potential issues. This will take a team of
-five to ten people. We've spoken to other companies who've said, "Hey, let's
-try self-hosting." They've gotten the estimate and they've come back and also
-said, "Yeah, this will take too many people. Can you host it for us?" People
-want to use it, but they don't want to run it. Just like people want to use a
-database, they don't really want to operate and run it themselves.
+five to ten people. We've spoken to other companies who've said, "Hey, let's try
+self-hosting." They've gotten the estimate and they've come back and also said,
+"Yeah, this will take too many people. Can you host it for us?" People want to
+use it, but they don't want to run it. Just like people want to use a database,
+they don't really want to operate and run it themselves.
 
 ### What does a "day in the life" look like?
 
@@ -70,29 +69,29 @@ employee, and right now we're a team of twenty people.
 As we are a remote first company, our toolset and our development process is
 oriented around that. We do bi-weekly sprint planning and sprint-close retros.
 We use [Notion](https://www.notion.so), which has been really good for
-collaborating. We do all our task management in it, and all our notes and
-design documents live in there.
+collaborating. We do all our task management in it, and all our notes and design
+documents live in there.
 
 ### How did you first get into software development?
 
 My dad was a software engineer. Growing up, in addition to teaching me math, he
-introduced me to computer science. I realized I was really into computing when
-I just started to break stuff. My mom had a PhD thesis on her Tandem computer,
-which I accidentally formatted when I was seven years old...she was not happy.
-I remember that day vividly!
+introduced me to computer science. I realized I was really into computing when I
+just started to break stuff. My mom had a PhD thesis on her Tandem computer,
+which I accidentally formatted when I was seven years old...she was not happy. I
+remember that day vividly!
 
-In middle school (before malware detection was a common thing in the late 90s)
-I found some keylogger software. I put it on a school computer and lo and
-behold, anything that people typed, it would just stream to a text file. To
-prank some friends in middle school, I installed it and got into a significant
-amount of trouble.
+In middle school (before malware detection was a common thing in the late 90s) I
+found some keylogger software. I put it on a school computer and lo and behold,
+anything that people typed, it would just stream to a text file. To prank some
+friends in middle school, I installed it and got into a significant amount of
+trouble.
 
 My first programming language was QBasic, then at high school I moved on to
 Java. In the US there is an advanced placement curriculum course you can take
 that was pretty much all in Java. At Microsoft everything was .NET and C#. At
-Uber, it just happened to be Go. I am most comfortable with those two
-languages: Go and C#. I also know Python and sometimes play around with some
-bash scripting.
+Uber, it just happened to be Go. I am most comfortable with those two languages:
+Go and C#. I also know Python and sometimes play around with some bash
+scripting.
 
 I always knew that I liked messing around with computers, breaking them, and
 then hopefully fixing them. Along with my dad's influence, that is how I got
@@ -100,9 +99,9 @@ into computing.
 
 ### What is the most interesting challenge you’ve faced working on Temporal?
 
-When I joined Temporal we hadn't released v1 of the open-source product yet.
-The first priorities were focussed on stabilisation, fixing bugs, stress
-testing and validation etc.
+When I joined Temporal we hadn't released v1 of the open-source product yet. The
+first priorities were focussed on stabilisation, fixing bugs, stress testing and
+validation etc.
 
 One of the issues we faced was dealing with an activity heartbeat. The idea is
 that you launch Temporal and it deals with the task management. If the machine
@@ -112,47 +111,44 @@ during high load, the heartbeat would expire but the task wasn’t getting
 rescheduled to another machine.
 
 Solving this problem required me to go extremely deep into the task dispatch
-logic, getting into the Cassandra persistence layer and piecing it together
-from the bottom up. We discovered the issue reproduced on a Temporal server
-reboot. The timer deduplication logic was incorrectly dropping certain
-heartbeat timers on server startup due to an initial cursor value that was too
-high. The fix was simple - on reboot, set the cursor value to zero, as it's
-okay to initially process duplicates. Figuring this out was challenging, but
-incredibly satisfying.
+logic, getting into the Cassandra persistence layer and piecing it together from
+the bottom up. We discovered the issue reproduced on a Temporal server reboot.
+The timer deduplication logic was incorrectly dropping certain heartbeat timers
+on server startup due to an initial cursor value that was too high. The fix was
+simple - on reboot, set the cursor value to zero, as it's okay to initially
+process duplicates. Figuring this out was challenging, but incredibly
+satisfying.
 
 ### What is the tech stack?
 
-There are three engineering teams at Temporal, and they use different
-technology suited to the use cases:
+There are three engineering teams at Temporal, and they use different technology
+suited to the use cases:
 
-* The open source server team primarily build in Go.
-* The client SDK team works across the various languages we support. We're
+- The open source server team primarily build in Go.
+- The client SDK team works across the various languages we support. We're
   creating a Rust core because there is a lot of shared logic for the workflow
   state management, which can be pretty complex, and Rust has great
-  interoperability with other languages. The replay semantics and having to
-  deal with cancellation and other edge cases also need to be handled robustly.
-* The cloud service team where we use Terraform, EKS, and Docker. We started
+  interoperability with other languages. The replay semantics and having to deal
+  with cancellation and other edge cases also need to be handled robustly.
+- The cloud service team where we use Terraform, EKS, and Docker. We started
   with a lot of bash scripts but have been refactoring and automating the
   control plane.
 
 ### Describe your computer hardware setup
 
-{{< img-center
-src="/img/interviews/temporal-manu-srivastava-desk.jpg"
-alt="The desk of Manu Srivastava, Temporal."
-width="100%"
->}}
+{{< img-center src="/img/interviews/temporal-manu-srivastava-desk.jpg" alt="The desk of Manu Srivastava, Temporal." width="100%" >}}
 
-The desktop itself is something I ordered from [Origin
-PC](https://www.originpc.com/) five years ago so it's a pretty old machine now.
-I use it with an [Acer Predator Gaming X34 Curved 34" UltraWide QHD
-monitor](https://www.amazon.com/Acer-X34-Pbmiphzx-UltraWide-Technology/dp/B079FV8S5M/),
+The desktop itself is something I ordered from
+[Origin PC](https://www.originpc.com/) five years ago so it's a pretty old
+machine now. I use it with an
+[Acer Predator Gaming X34 Curved 34" UltraWide QHD monitor](https://www.amazon.com/Acer-X34-Pbmiphzx-UltraWide-Technology/dp/B079FV8S5M/),
 which I can split screen.
 
-For the camera I have a standard [Logitech
-1080p](https://www.logitech.com/en-gb/products/webcams/c922-pro-stream-webcam.960-001088.html).
-My microphone is an [Audio Technica ATR 2500 X
-USB](https://www.audio-technica.com/en-gb/atr2500x-usb), and my keyboard is a
+For the camera I have a standard
+[Logitech 1080p](https://www.logitech.com/en-gb/products/webcams/c922-pro-stream-webcam.960-001088.html).
+My microphone is an
+[Audio Technica ATR 2500 X USB](https://www.audio-technica.com/en-gb/atr2500x-usb),
+and my keyboard is a
 [Razer](https://www.razer.com/gb-en/gaming-keyboards-and-keypads) BlackWindow
 with green mechanical switches. I'm not even a gamer, but I like keyboards that
 make large sounds and have good tactile feedback. Then as a bonus with this one
@@ -161,8 +157,7 @@ Razer DeathAdder Chroma - Multi-Color Ergonomic Gaming Mouse.
 
 ### Describe your computer software setup
 
-**OS:** Windows, but all my development happens in a virtual box running
-Ubuntu.
+**OS:** Windows, but all my development happens in a virtual box running Ubuntu.
 
 **Browser:** Chrome.
 
@@ -177,10 +172,10 @@ Z? Or can we talk about this pull request?"
 
 ### Describe your desk setup
 
-My desk is a [BDI Sequel adjustable standing
-desk](https://www.woodleys.com/bdi-sequel-6052-lift-standing-desk-66x30/6052-1729/iteminformation.aspx),
-so it can go up or down if need be. The chair is a [BDI Powell Office
-Chair](https://www.kasala.com/catalog/product/bdi-home-sale/bdi-powell-office-chair-fabric/).
+My desk is a
+[BDI Sequel adjustable standing desk](https://www.woodleys.com/bdi-sequel-6052-lift-standing-desk-66x30/6052-1729/iteminformation.aspx),
+so it can go up or down if need be. The chair is a
+[BDI Powell Office Chair](https://www.kasala.com/catalog/product/bdi-home-sale/bdi-powell-office-chair-fabric/).
 
 ### When coding
 
@@ -194,12 +189,12 @@ That's where the caffeine will come from!
 ### What non-tech activities do you like to do?
 
 I'm an instrument-rated private pilot, and right now I fly once per month to
-stay current. I also enjoy playing piano but I haven't practiced it in a year
-or so. Swimming is something I do regularly too.
+stay current. I also enjoy playing piano but I haven't practiced it in a year or
+so. Swimming is something I do regularly too.
 
 ### Find out more
 
 [Temporal](https://temporal.io/) is a workflow orchestration platform. It was
-featured as an "Interesting Tool" in the [Console
-Newsletter](https://console.dev) on 1 Apr 2021.  This interview was conducted
-on 24 Mar 2021.
+featured as an "Interesting Tool" in the
+[Console Newsletter](https://console.dev) on 1 Apr 2021. This interview was
+conducted on 24 Mar 2021.

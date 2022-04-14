@@ -22,9 +22,9 @@ It offers a unified developer-friendly approach for all release artifacts. It
 doesn't matter what the language or infrastructure is, we can take any package,
 any language, and deliver it to any infrastructure.
 
-It was originally built by [Joe
-Damato](https://www.linkedin.com/in/joe-damato-683b053/), who created it as a
-side project. He had developed and distributed software, but was always
+It was originally built by
+[Joe Damato](https://www.linkedin.com/in/joe-damato-683b053/), who created it as
+a side project. He had developed and distributed software, but was always
 challenged with getting packages built, managed, and transmitted effectively and
 efficiently.
 
@@ -160,8 +160,7 @@ secure?
 
 It's probably the one that we probably haven't released yet, and are working on
 it right now. We started the project off the back of a really interesting
-[article on dependency confusion by Alex
-Birson](https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610).
+[article on dependency confusion by Alex Birson](https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610).
 
 Alex highlighted a novel way of conducting supply chain attacks where he was
 able to start looking for software that was calling out to private repositories,
@@ -170,8 +169,8 @@ cases, the language of frameworks would default to the public repositories,
 which allowed him to immediately access software in the wild, and potentially
 drop in malicious code or other scripts.
 
-Thankfully he was a white hat hacker, and he reached out to these companies,
-and they started patching this issue. Our concern was, it's great if you're an
+Thankfully he was a white hat hacker, and he reached out to these companies, and
+they started patching this issue. Our concern was, it's great if you're an
 Apple, Netflix, or Google, because you have a massive team, but what about the
 small start ups, or the independent developer that's releasing software? How are
 they being protected from this sort of attack?
@@ -184,10 +183,10 @@ digitally verified with the proper authors and contributors? Can we scan it for
 known vulnerabilities?
 
 Ultimately, can we make sure that someone can't do what Alex did and hijack
-someone's software. We've worked a lot with Google and the [Open Source Security
-Foundation](https://openssf.org/), who are building a framework called
-[Supply-chain Levels for Software
-Artifacts](https://security.googleblog.com/2021/06/introducing-slsa-end-to-end-framework.html)
+someone's software. We've worked a lot with Google and the
+[Open Source Security Foundation](https://openssf.org/), who are building a
+framework called
+[Supply-chain Levels for Software Artifacts](https://security.googleblog.com/2021/06/introducing-slsa-end-to-end-framework.html)
 (SLSA). They have built a framework and shared the things that you need to do to
 protect it.
 
@@ -216,11 +215,11 @@ We're on Ruby on Rails and AWS.
 
 ### What’s the most interesting tool or tech you’re currently playing around with?
 
-Every year, I work heavily with [Stanford's Hacking for Defense
-program](https://www.h4d.us/). It’s a cool program in the United States where
-they take the lean method that startups use to find product market fit and
-analyse customer discovery, and then apply it to the Department of Defense and
-intelligence community problem sets.
+Every year, I work heavily with
+[Stanford's Hacking for Defense program](https://www.h4d.us/). It’s a cool
+program in the United States where they take the lean method that startups use
+to find product market fit and analyse customer discovery, and then apply it to
+the Department of Defense and intelligence community problem sets.
 
 For example, you take a problem that the military and intelligence community
 either couldn't figure out, or was working on, but hasn't quite got to where
@@ -240,11 +239,7 @@ and makes sure that we're tracking some of the new technologies out there.
 I'm on a MacBook Pro with a large Dell screen connected to it. I have it set up
 with two laptops, and a bluetooth keyboard and trackpad.
 
-{{< img-center
-src="/img/interviews/packagecloud-donnie-hasseltine-desk.jpg"
-alt="The desk of Donnie Hasseltine, PackageCloud"
-width="100%"
->}}
+{{< img-center src="/img/interviews/packagecloud-donnie-hasseltine-desk.jpg" alt="The desk of Donnie Hasseltine, PackageCloud" width="100%" >}}
 
 ### Describe your computer software setup
 
@@ -285,6 +280,6 @@ little bit to reset. Stuff in nature.
 ### Find out more
 
 [PackageCloud](https://packagecloud.io/) is a hosted package repository service.
-It was featured as an "Interesting Tool" in the [Console
-newsletter](https://console.dev) on 18 Nov 2021. This interview was conducted on
-4 Nov 2021.
+It was featured as an "Interesting Tool" in the
+[Console newsletter](https://console.dev) on 18 Nov 2021. This interview was
+conducted on 4 Nov 2021.

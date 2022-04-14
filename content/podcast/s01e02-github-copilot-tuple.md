@@ -4,7 +4,7 @@ who: David Mytton & Jean Yang
 what:
   "Episode 3 of the Console DevTools Podcast, a devtools discussion with David
   Mytton (Co-founder, Console) and Jean Yang (CEO, Akita Software). Tools
-  discussed: GitHub Copilot (AI pair programming) & Tuple (screen sharing for 
+  discussed: GitHub Copilot (AI pair programming) & Tuple (screen sharing for
   developers)"
 season: 1
 episode: 2
@@ -13,10 +13,10 @@ duration: 15:30
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/67ba5a7c-dd85-447d-971a-b8c4e7be8ab6/audio/7c924548-6977-46c0-b1aa-940f4f94fb30/default_tc.mp3
 draft: false
 summary:
-  GitHub Copilot (AI pair programming) & Tuple (screen sharing for developers), 
+  GitHub Copilot (AI pair programming) & Tuple (screen sharing for developers),
   a devtools discussion with David Mytton and Jean Yang.
 metaDescription:
-  GitHub Copilot (AI pair programming) & Tuple (screen sharing for developers), 
+  GitHub Copilot (AI pair programming) & Tuple (screen sharing for developers),
   a devtools discussion with David Mytton and Jean Yang.
 headerType: fixed
 hideLines: true
@@ -67,13 +67,11 @@ Other things mentioned:
 
 - [Computer Aided Programming Group at MIT](https://groups.csail.mit.edu/cap/).
 - [Jean’s programming language research](http://jeanyang.com/).
-- [GNU General Public License
-  (GPL)](https://www.gnu.org/licenses/gpl-3.0.en.html).
+- [GNU General Public License (GPL)](https://www.gnu.org/licenses/gpl-3.0.en.html).
 - [Django](https://www.djangoproject.com/).
 - [Ruby on Rails](https://rubyonrails.org/).
 - [Bootstrap](https://getbootstrap.com/).
-- [David’s sustainable computing
-  research](https://davidmytton.blog/publications/).
+- [David’s sustainable computing research](https://davidmytton.blog/publications/).
 - [Jean’s Twitch channel](https://www.twitch.tv/jeanqasaur).
 
 {{< box-collapsible title="Full transcript" class="podcast-transcript is-expanded" >}}

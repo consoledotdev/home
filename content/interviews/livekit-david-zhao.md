@@ -195,11 +195,7 @@ also have a standard Apple trackpad.
 I typically don't use headphones at home. I have a Sonos nearby for music and
 sometimes I'll turn that on.
 
-{{< img-center
-src="/img/interviews/livekit-david-zhao-desk.jpeg"
-alt="The desk of David Zhao, LiveKit"
-width="100%"
->}}
+{{< img-center src="/img/interviews/livekit-david-zhao-desk.jpeg" alt="The desk of David Zhao, LiveKit" width="100%" >}}
 
 ### Describe your computer software setup
 

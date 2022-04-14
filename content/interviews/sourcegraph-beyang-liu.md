@@ -41,11 +41,7 @@ type of functionality. You can seamlessly jump to any point in the world of code
 and navigate the code as if you're navigating the web, with hyperlinks that you
 can just click on to build a deep working understanding of code.
 
-{{< img-center
-src="/img/interviews/sourcegraph-beyang-liu-product.png"
-alt="Sourcegraph product screenshot"
-width="100%"
->}}
+{{< img-center src="/img/interviews/sourcegraph-beyang-liu-product.png" alt="Sourcegraph product screenshot" width="100%" >}}
 
 ### How were developers solving this before Sourcegraph?
 
@@ -312,11 +308,7 @@ actual app.
 
 ### Describe your computer hardware setup
 
-{{< img-center
-src="/img/interviews/sourcegraph-beyang-liu-desk.jpg"
-alt="The desk of Beyang Liu, Sourcegraph"
-width="100%"
->}}
+{{< img-center src="/img/interviews/sourcegraph-beyang-liu-desk.jpg" alt="The desk of Beyang Liu, Sourcegraph" width="100%" >}}
 
 My main machine is a
 [Dell XPS 15](https://www.dell.com/en-us/shop/dell-laptops/xps-15-laptop/spd/xps-15-9500-laptop/xn9500cto200s)

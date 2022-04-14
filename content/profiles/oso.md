@@ -5,7 +5,7 @@ draft: false
 summary: Batteries-included authorization.
 metaTitle: Working at Oso - Console profile
 metaDescription:
-  What is it like to work at Oso? Console profile behind the scenes at Oso - 
+  What is it like to work at Oso? Console profile behind the scenes at Oso -
   batteries-included authorization.
 headerType: fixed
 hideLines: true
@@ -28,7 +28,13 @@ companyInfo:
   product:
     name: "Oso"
     description:
-      "At Oso, we're building the first batteries-included system for authorization so developers don't have to roll it on their own anymore. We're building slick APIs so they can get started quickly, and a fully-fledged policy language under the hood so they can customize their system however they need. We don't rely on product managers to spec out projects–the engineers on the team take big problems, experiment with solutions and ship a superhuman experience for our users."
+      "At Oso, we're building the first batteries-included system for
+      authorization so developers don't have to roll it on their own anymore.
+      We're building slick APIs so they can get started quickly, and a
+      fully-fledged policy language under the hood so they can customize their
+      system however they need. We don't rely on product managers to spec out
+      projects–the engineers on the team take big problems, experiment with
+      solutions and ship a superhuman experience for our users."
   techStack:
     - Rust
   meta:
@@ -63,10 +69,14 @@ companyInfo:
   customerCaseStudies:
     - client: "Fiddler"
       text:
-        "adopted Oso as a way to retrofit access control to their existing product. The documentation, examples and the support provided on the slack channels is just plain awesome."
+        "adopted Oso as a way to retrofit access control to their existing
+        product. The documentation, examples and the support provided on the
+        slack channels is just plain awesome."
     - client: "Wayfair"
       text:
-        "spent that first week implementing and quickly had our design implemented using the Oso framework. This let us write an authorization policy in their declarative language, Polar."
+        "spent that first week implementing and quickly had our design
+        implemented using the Oso framework. This let us write an authorization
+        policy in their declarative language, Polar."
   type: "Open source"
   category: "Developer Tools - Authorization"
   topCategory: "Developer Tools"
@@ -135,9 +145,9 @@ Some examples of things we’ve worked on are:
   [tracing](https://docs.osohq.com/python/reference/tooling/tracing.html) to
   help users understand their policies and improve our internal development
   process.
-- We tracked down [a memory leak in our Go
-  library](https://github.com/osohq/oso/issues/944) by looking at a user’s
-  memory usage charts from Datadog.
+- We tracked down
+  [a memory leak in our Go library](https://github.com/osohq/oso/issues/944) by
+  looking at a user’s memory usage charts from Datadog.
 
 #### How does on-call work?
 
@@ -151,9 +161,9 @@ Github issues.
 
 #### How does the application process work? What are the stages and what is the timeline?
 
-Our interview process is posted on [our career’s page
-FAQ](https://www.osohq.com/company/jobs), which includes detailed information on
-the specific questions we ask.
+Our interview process is posted on
+[our career’s page FAQ](https://www.osohq.com/company/jobs), which includes
+detailed information on the specific questions we ask.
 
 Stages: Initial screening, debugging exercise, onsite interview, references,
 offer Timeline: We work with each applicant’s timeline and needs as it relates

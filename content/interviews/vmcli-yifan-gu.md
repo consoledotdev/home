@@ -4,7 +4,7 @@ who: Yifan Gu
 role: Creator
 org: vmcli
 what: A set of utilities to help you run Linux VMs on M1 Macs.
-tags: ['CLI']
+tags: ["CLI"]
 date: 2021-03-02T12:00:00Z
 draft: false
 headerType: fixed
@@ -24,33 +24,26 @@ I need to be able to work with a Linux VM, working inside Linux from time to
 time. When I use Windows, I would use Windows Subsystem for Linux, which nicely
 bridges Linux and Windows together, however, I couldn't find such a lightweight
 approach to run Linux VMs on a Mac. The only other options are Parallels and
-QEMU, but Parallels is not free and QEMU can be a bit heavyweight for my
-liking.
+QEMU, but Parallels is not free and QEMU can be a bit heavyweight for my liking.
 
-I happened to run across the [Docker M1 tech
-preview](https://www.docker.com/blog/download-and-try-the-tech-preview-of-docker-desktop-for-m1/),
-which talks about how to seamlessly utilize the visualization of the new [Apple
-Virtualization
-Framework](https://developer.apple.com/documentation/virtualization). Upon
-further investigation it didn't seem to be too hard to use, and there had
+I happened to run across the
+[Docker M1 tech preview](https://www.docker.com/blog/download-and-try-the-tech-preview-of-docker-desktop-for-m1/),
+which talks about how to seamlessly utilize the visualization of the new
+[Apple Virtualization Framework](https://developer.apple.com/documentation/virtualization).
+Upon further investigation it didn't seem to be too hard to use, and there had
 already been a few proof of concepts. This encouraged me to build my own
 solution over a weekend.
 
-{{< img-center
-src="/img/interviews/vmcli-yifan-gu-product.svg"
-alt="vmcli product screenshot"
-width="100%"
-caption="Setting up a VM with vmcli."
->}}
+{{< img-center src="/img/interviews/vmcli-yifan-gu-product.svg" alt="vmcli product screenshot" width="100%" caption="Setting up a VM with vmcli." >}}
 
 ### How did you find working in Swift?
 
 It was my first time using Swift. There was a bit of a learning curve to get
 used to it. The Swift language didn't hold me back, it was trying to make
 something that directly interfaces with macOS that was challenging - especially
-with [Grand Central
-Dispatch](https://en.wikipedia.org/wiki/Grand_Central_Dispatch). The Swift
-language in my opinion is good.
+with
+[Grand Central Dispatch](https://en.wikipedia.org/wiki/Grand_Central_Dispatch).
+The Swift language in my opinion is good.
 
 The company where I work usually uses Golang and TypeScript, so in my day job I
 tend to use these two languages. In my own projects more recently I've been
@@ -103,26 +96,22 @@ machine learning jobs on, so when we purchased them for the company, I bought a
 few at the same time for personal use. As the Ethereum price is at a high point
 again, I've been using these cards to mine cryptocurrency. I have an Ethereum
 mining rig in my basement which is generating around $10 per day, a bit more
-than [my recent experiment mining ethereum on my M1 Mac
-GPU](https://blog.yifangu.com/2021/02/26/mining-ethereum-on-a-m1-mac-gpu/)! I'm
-also trying to reimplement the ethash algorithm in HLSL, as a DirectCompute
+than
+[my recent experiment mining ethereum on my M1 Mac GPU](https://blog.yifangu.com/2021/02/26/mining-ethereum-on-a-m1-mac-gpu/)!
+I'm also trying to reimplement the ethash algorithm in HLSL, as a DirectCompute
 shader.
 
 ### Describe your computer hardware setup
 
-{{< img-center
-src="/img/interviews/vmcli-yifan-gu-desk.jpg"
-alt="The desk of Yifan, vmcli"
-width="100%"
->}}
+{{< img-center src="/img/interviews/vmcli-yifan-gu-desk.jpg" alt="The desk of Yifan, vmcli" width="100%" >}}
 
 **Keyboard:** A no-brand, blue-switched, mechanical keyboard.
 
 **Monitors:** A refurbished Dell monitor and an ultra wide
 [Sceptre](https://www.amazon.com/Monitors-Sceptre-Computers-Accessories/s?rh=n%3A1292115011%2Cp_89%3ASceptre).
 
-**Mouse:** [Logitech
-G502](https://www.logitechg.com/en-gb/products/gaming-mice/g502-hero-gaming-mouse.html).
+**Mouse:**
+[Logitech G502](https://www.logitechg.com/en-gb/products/gaming-mice/g502-hero-gaming-mouse.html).
 
 **Computer:** [OVERPOWERED PC](https://www.walmart.com/ip/66JOIO7GH9ZB).
 
@@ -149,23 +138,23 @@ common to see.
 
 I enjoy cycling, but because I live in Pittsburgh there's a lot of mountains.
 The steepest street in the United States is actually about ten blocks from me,
-which makes cycling extremely hard (and fun when you’re going down the hills).
-I also like to hike on the weekends.
+which makes cycling extremely hard (and fun when you’re going down the hills). I
+also like to hike on the weekends.
 
-Otherwise, I spend most of my time doing tech-related activities. I have a
-laser cutter in my basement and a 3D-printer. One of the things I made with my
-laser cutter is a map coaster. I drew the map of Pittsburgh onto a piece of
-wood to make the perfect coaster.
+Otherwise, I spend most of my time doing tech-related activities. I have a laser
+cutter in my basement and a 3D-printer. One of the things I made with my laser
+cutter is a map coaster. I drew the map of Pittsburgh onto a piece of wood to
+make the perfect coaster.
 
 For the 3D-printer, it's mostly just random parts of things. I printed a part
 for my washing machine. I've also printed a door handle. The house I live in is
-quite old and I wanted to install a smart lock, but unsurprisingly it
-didn't come with an adapter for a lock that's made in the 1940s, so I
-printed my own adapter for that lock and my own door handle to work with it.
+quite old and I wanted to install a smart lock, but unsurprisingly it didn't
+come with an adapter for a lock that's made in the 1940s, so I printed my own
+adapter for that lock and my own door handle to work with it.
 
 ### Find out more
 
 [vmcli](https://github.com/gyf304/vmcli) is a set of utilities to help you run
-Linux VMs on M1 Macs. It was featured as an "Interesting Tool" in the [Console
-newsletter](https://console.dev) on 21 Jan 2021. This interview was conducted
-on 2 Mar 2021.
+Linux VMs on M1 Macs. It was featured as an "Interesting Tool" in the
+[Console newsletter](https://console.dev) on 21 Jan 2021. This interview was
+conducted on 2 Mar 2021.

@@ -12,10 +12,10 @@ duration: 15:30
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/34cade96-6fc7-489e-b7f0-8df02409e8de/audio/56dd0d20-b394-4b54-bd5c-6c68f1fed108/default_tc.mp3
 draft: false
 summary:
-  Waypoint (build, deploy, release) & Zellij (terminal workspace), a devtools 
+  Waypoint (build, deploy, release) & Zellij (terminal workspace), a devtools
   discussion with David Mytton and Jean Yang.
 metaDescription:
-  Waypoint (build, deploy, release) & Zellij (terminal workspace), a devtools 
+  Waypoint (build, deploy, release) & Zellij (terminal workspace), a devtools
   discussion with David Mytton and Jean Yang.
 headerType: fixed
 hideLines: true

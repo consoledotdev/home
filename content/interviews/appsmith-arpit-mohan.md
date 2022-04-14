@@ -36,12 +36,7 @@ beyond me. So the other driver behind Appsmith was for engineers like me, who
 are not very good with HTML or CSS, to be able to build admin panels and
 dashboards very quickly and easily.
 
-{{< img-center
-src="/img/interviews/appsmith-arpit-mohan-product.gif"
-alt="Appsmith product screenshot"
-width="100%"
-caption="Create dynamic views."
->}}
+{{< img-center src="/img/interviews/appsmith-arpit-mohan-product.gif" alt="Appsmith product screenshot" width="100%" caption="Create dynamic views." >}}
 
 ### Why did you decide to make Appsmith open source?
 
@@ -194,11 +189,7 @@ hand-built his own standing desk. It's a very fun table to work with and he has
 a Herman Miller chair. He likes to hand-build his stuff! For me, it's just a
 regular desk, and an old office chair.
 
-{{< img-center
-src="/img/interviews/appsmith-arpit-mohan-desk.jpg"
-alt="The desk of Arpit Mohan, Appsmith"
-width="100%"
->}}
+{{< img-center src="/img/interviews/appsmith-arpit-mohan-desk.jpg" alt="The desk of Arpit Mohan, Appsmith" width="100%" >}}
 
 ### When coding
 
@@ -219,6 +210,6 @@ Either, I'm playing the flute or I'm going out on a run.
 ### Find out more
 
 [Appsmith](https://www.appsmith.com/) is an open source internal tool builder.
-It was featured as an "Interesting Tool" in the [Console
-newsletter](https://console.dev) on 12 Aug 2021. This interview was conducted on
-30 Jul 2021.
+It was featured as an "Interesting Tool" in the
+[Console newsletter](https://console.dev) on 12 Aug 2021. This interview was
+conducted on 30 Jul 2021.

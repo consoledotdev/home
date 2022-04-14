@@ -4,7 +4,7 @@ who: Tom Hacohen
 role: CEO
 org: Svix
 what: Webhooks sending-as-a-service.
-tags: ['API']
+tags: ["API"]
 date: 2021-05-27T12:00:00Z
 draft: false
 headerType: fixed
@@ -22,22 +22,17 @@ or SendGrid, but for Webhooks.
 
 I originally had the idea when I was working on a different project called
 [Etebase](https://www.etebase.com/), which is an SDK for building end-to-end
-encrypted applications. Our users kept on asking us for webhooks, but we kept
-on deferring doing it. The thing is: we had built a beautiful API at Etebase
-that had taken a long time to get right, but our webhook feature wasn’t going
-to be anywhere near as polished. There was so much to deal with - exponential
-backoff, retries, payload formats, management UI - that we just didn’t have
-time to build it to the level of quality we wanted. Especially since webhooks
-were not our core business. However, it was only when a friend of mine asked
-about how she should go about adding webhooks to her own product, that I
-realized "Oh, maybe there's a business here."
+encrypted applications. Our users kept on asking us for webhooks, but we kept on
+deferring doing it. The thing is: we had built a beautiful API at Etebase that
+had taken a long time to get right, but our webhook feature wasn’t going to be
+anywhere near as polished. There was so much to deal with - exponential backoff,
+retries, payload formats, management UI - that we just didn’t have time to build
+it to the level of quality we wanted. Especially since webhooks were not our
+core business. However, it was only when a friend of mine asked about how she
+should go about adding webhooks to her own product, that I realized "Oh, maybe
+there's a business here."
 
-{{< img-center
-src="/img/interviews/svix-tom-hacohen-product.png"
-alt="Svix product screenshot"
-width="100%"
-caption="Svix webhook management UI."
->}}
+{{< img-center src="/img/interviews/svix-tom-hacohen-product.png" alt="Svix product screenshot" width="100%" caption="Svix webhook management UI." >}}
 
 ### What was the idea behind Etebase?
 
@@ -56,7 +51,7 @@ I ended up joining Samsung and started working on
 everyone’s data is stored unencrypted on the cloud.
 
 Eventually I decided to quit my job, and build an encrypted app for encrypting
-your contacts, calendars, tasks, and notes. I thought: "Okay,  the cloud is
+your contacts, calendars, tasks, and notes. I thought: "Okay, the cloud is
 great, but I don't want an unsafe cloud. Let's use the cloud, but encrypt
 everything on the device." That was [EteSync](https://www.etesync.com).
 
@@ -75,9 +70,9 @@ your devices, then stored encrypted on the cloud.
 I’m based in Israel but the team is in the US so I try to wake up late.
 Unfortunately I never manage to. So I typically wake up early, work on Svix and
 then go to sleep late because the team is up and still working on Svix. Which
-reminds me [we are looking for a technical writer / developer
-advocate](https://www.svix.com/careers/), so reach out if you would like to
-join us!
+reminds me
+[we are looking for a technical writer / developer advocate](https://www.svix.com/careers/),
+so reach out if you would like to join us!
 
 We have a strong team that is taking care of everything, but there's still some
 stuff that I can help with, so I still spend time coding, just not as much as I
@@ -95,8 +90,8 @@ coding.
 Our CTO is on Pacific time, our development team is in the east coast. The
 company is officially running on Eastern Time, to make things easier. I worked
 remotely for most of my career, most of it at Samsung with teams in Korea,
-India, the US, Europe and in Israel. I'm used to it, love it, and wouldn’t
-trade it for the world.
+India, the US, Europe and in Israel. I'm used to it, love it, and wouldn’t trade
+it for the world.
 
 ### How did you first get into software development?
 
@@ -126,29 +121,29 @@ too.
 ### What's the most interesting development challenge you faced with Svix?
 
 Things were different when I first started coding. Back then it was common to
-re-implement linked-lists, you would re-implemented a lot of things. At least
-in the Linux world, you would be using the glib and other utility libraries,
-but you would still reinvent the wheel quite a lot. Though nowadays, we've got
-this boom of open source package-management and a lot of reusability and
-connecting things together. This was with using services to do the heavy
-lifting, with services such as Stripe, Twilio, SendGrid and so on.
+re-implement linked-lists, you would re-implemented a lot of things. At least in
+the Linux world, you would be using the glib and other utility libraries, but
+you would still reinvent the wheel quite a lot. Though nowadays, we've got this
+boom of open source package-management and a lot of reusability and connecting
+things together. This was with using services to do the heavy lifting, with
+services such as Stripe, Twilio, SendGrid and so on.
 
 The problem with services though, is that the gap between a network request and
-local request, however, is still quite large. There’s a lot that can go wrong
-in between. We are focusing on extreme reliability to try to eliminate this
-gap. This extreme reliability has been the biggest challenge because we’ve set
-the bar high for ourselves. For example, we spend a lot of time working on how
-we deploy our application to multiple regions and cloud providers to ensure
-that we can provide great reliability even in the event of network failures.
+local request, however, is still quite large. There’s a lot that can go wrong in
+between. We are focusing on extreme reliability to try to eliminate this gap.
+This extreme reliability has been the biggest challenge because we’ve set the
+bar high for ourselves. For example, we spend a lot of time working on how we
+deploy our application to multiple regions and cloud providers to ensure that we
+can provide great reliability even in the event of network failures.
 
 ### What's your tech stack?
 
 That is changing at the moment. It was FastAPI, Docker Swarm, Redis and
-PostgreSQL and SQLAlchemy. Now it's changed to AWS: SQS and DynamoDB, and all
-of those. We realized it was better to offload the operational overhead to AWS
+PostgreSQL and SQLAlchemy. Now it's changed to AWS: SQS and DynamoDB, and all of
+those. We realized it was better to offload the operational overhead to AWS
 rather than having a full devops team working on it. This is not a long-term
-solution. We're probably going to switch back to our own once things are
-running and we're able to have people focusing on it.
+solution. We're probably going to switch back to our own once things are running
+and we're able to have people focusing on it.
 
 ### What's the most interesting tech that you've been playing with recently?
 
@@ -160,21 +155,21 @@ support Linux.
 
 ### Describe your computer hardware setup?
 
-I used to live a lot on the road. I have a [OnePlus 8T
-phone](https://www.oneplus.com/8t), which is running
-[LineageOS](https://lineageos.org), which I absolutely love. I actually do a
-lot from that even when just sitting on the couch, it's easier for me to run on
-my phone.
+I used to live a lot on the road. I have a
+[OnePlus 8T phone](https://www.oneplus.com/8t), which is running
+[LineageOS](https://lineageos.org), which I absolutely love. I actually do a lot
+from that even when just sitting on the couch, it's easier for me to run on my
+phone.
 
-For my laptop, I have an ancient, but powerful [Lenovo
-Y50-70](https://www.lenovo.com/gb/en/laptops/lenovo/y-series/y50/). It has a
-15” 4k screen, 16GB of RAM and 4th Generation Intel i7, but it still gets me
-through the day.
+For my laptop, I have an ancient, but powerful
+[Lenovo Y50-70](https://www.lenovo.com/gb/en/laptops/lenovo/y-series/y50/). It
+has a 15” 4k screen, 16GB of RAM and 4th Generation Intel i7, but it still gets
+me through the day.
 
-I have always touch-typed, and changing to even slightly higher keys or any
-kind of different configuration makes me do a lot of typos. That’s why I want
-to use the same setup everywhere, which is why I don’t have a separate keyboard
-or mouse.
+I have always touch-typed, and changing to even slightly higher keys or any kind
+of different configuration makes me do a lot of typos. That’s why I want to use
+the same setup everywhere, which is why I don’t have a separate keyboard or
+mouse.
 
 ### Describe your computer software setup
 
@@ -195,11 +190,7 @@ its usage at Samsung.
 
 ### Describe your desk setup
 
-{{< img-center
-src="/img/interviews/svix-tom-hacohen-desk.jpg"
-alt="The desk of Tom Hacohen, Svix"
-width="100%"
->}}
+{{< img-center src="/img/interviews/svix-tom-hacohen-desk.jpg" alt="The desk of Tom Hacohen, Svix" width="100%" >}}
 
 I used to have a standing desk. Not since I moved to Israel - it's still in
 London, in storage. I sit on a yoga ball every now and then, but not always.
@@ -222,6 +213,6 @@ skateboard, though much less nowadays. And hikes and stuff like that.
 ### Find out more
 
 [Svix](https://www.svix.com) provides a webhooks sending-as-a-service. It was
-featured as an "Interesting Tool" in the [Console
-newsletter](https://console.dev/) on 8 Apr 2021. This interview was conducted
-on 27 May 2021.
+featured as an "Interesting Tool" in the
+[Console newsletter](https://console.dev/) on 8 Apr 2021. This interview was
+conducted on 27 May 2021.

@@ -4,12 +4,12 @@ who: Michelle Lim & Zach Lloyd
 whoLink: https://twitter.com/warpdotdev
 org: Warp
 orgLink: https://www.warp.dev/
-what: 
-    We discuss the historical significance of physical terminals, terminal 
-    emulators, pseudo-terminals and the shell. We also explore why Rust is a 
-    better technology choice than Electron for building a new terminal, why GPU 
-    acceleration matters, how it works with the macOS Metal APIs, and discuss 
-    the challenges garbage collection brings to high performance UIs.
+what:
+  We discuss the historical significance of physical terminals, terminal
+  emulators, pseudo-terminals and the shell. We also explore why Rust is a
+  better technology choice than Electron for building a new terminal, why GPU
+  acceleration matters, how it works with the macOS Metal APIs, and discuss the
+  challenges garbage collection brings to high performance UIs.
 season: 2
 episode: 10
 date: 2022-03-10T06:00:00Z
@@ -17,11 +17,11 @@ duration: 28:07
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/18f6d195-23a1-4b52-b9b5-42693c26967e/audio/eceae148-5838-405f-91ea-c613069fc4ac/default_tc.mp3
 draft: false
 summary:
- Terminal tools - a devtools discussion with Michelle Lim & Zach Lloyd (Warp). 
- Episode 10 (Season 2) of the Console DevTools Podcast.
+  Terminal tools - a devtools discussion with Michelle Lim & Zach Lloyd (Warp).
+  Episode 10 (Season 2) of the Console DevTools Podcast.
 metaDescription:
- Terminal tools - a devtools discussion with Michelle Lim & Zach Lloyd (Warp). 
- Episode 10 (Season 2) of the Console DevTools Podcast.
+  Terminal tools - a devtools discussion with Michelle Lim & Zach Lloyd (Warp).
+  Episode 10 (Season 2) of the Console DevTools Podcast.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -29,7 +29,7 @@ isSubpage: podcast-episode
 pageType: podcast-episode
 customPageStyle: true
 xlViewport:
- largeText: true
+  largeText: true
 topImg1Src: /img/podcast/warp-michelle-lim-zach-lloyd-profile.jpg
 topImg2Src: /img/favicons/www.warp.dev.png
 ogImg: /img/podcast/podcast-cover.jpeg
@@ -38,11 +38,11 @@ authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
 authorBio:
- is co-founder of Console. From 2009-2018, David was CEO at Server Density, a
- SaaS server monitoring startup used by hundreds of customers to collect
- billions of time series metrics from millions of servers. He is also a
- researcher in sustainable computing at Uptime Institute and affiliated with
- Imperial College London. David has been a developer for 15+ years.
+  is co-founder of Console. From 2009-2018, David was CEO at Server Density, a
+  SaaS server monitoring startup used by hundreds of customers to collect
+  billions of time series metrics from millions of servers. He is also a
+  researcher in sustainable computing at Uptime Institute and affiliated with
+  Imperial College London. David has been a developer for 15+ years.
 ---
 
 ### Episode notes
@@ -60,28 +60,27 @@ challenges garbage collection brings to high performance UIs.
 
 **Things mentioned:**
 
-* [iTerm](http://iterm.sourceforge.net/)
-* [VT100](https://en.wikipedia.org/wiki/VT100)
-* [tmux](https://en.wikipedia.org/wiki/Tmux)
-* [Fish](https://fishshell.com/)
-* [SSH](https://en.wikipedia.org/wiki/Secure_Shell)
-* [bash](https://git.savannah.gnu.org/cgit/bash.git)
-* [GitHub Actions](https://github.com/features/actions)
-* [Rust](https://www.rust-lang.org/)
-* [Electron](https://www.electronjs.org/)
-* [Garbage
-  collection](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science))
-* [OpenAl](https://openai.com/)
-* [Metal](https://developer.apple.com/metal/)
-* [Xcode](https://developer.apple.com/xcode/)
-* [OpenAi Codex](https://openai.com/blog/openai-codex/)
-* [Retool](https://retool.com/)
-* [Keyron](https://www.keychron.com/)
-* [CLion](https://www.jetbrains.com/clion/)
-* [Logitech Ergo
-  K8060](https://www.logitech.com/en-us/products/keyboards/k860-split-ergonomic.920-009166.html)
+- [iTerm](http://iterm.sourceforge.net/)
+- [VT100](https://en.wikipedia.org/wiki/VT100)
+- [tmux](https://en.wikipedia.org/wiki/Tmux)
+- [Fish](https://fishshell.com/)
+- [SSH](https://en.wikipedia.org/wiki/Secure_Shell)
+- [bash](https://git.savannah.gnu.org/cgit/bash.git)
+- [GitHub Actions](https://github.com/features/actions)
+- [Rust](https://www.rust-lang.org/)
+- [Electron](https://www.electronjs.org/)
+- [Garbage collection](<https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)>)
+- [OpenAl](https://openai.com/)
+- [Metal](https://developer.apple.com/metal/)
+- [Xcode](https://developer.apple.com/xcode/)
+- [OpenAi Codex](https://openai.com/blog/openai-codex/)
+- [Retool](https://retool.com/)
+- [Keyron](https://www.keychron.com/)
+- [CLion](https://www.jetbrains.com/clion/)
+- [Logitech Ergo K8060](https://www.logitech.com/en-us/products/keyboards/k860-split-ergonomic.920-009166.html)
 
-{{< rich-title-5 icon="future-head" >}}About Michelle Lim & Zach Lloyd{{</ rich-title-5 >}}
+{{< rich-title-5 icon="future-head" >}}About Michelle Lim & Zach
+Lloyd{{</ rich-title-5 >}}
 
 Zach Lloyd is the founder and CEO of Warp, a Rust-based terminal for developers.
 Michelle is a software engineer who joined early on. Prior to Warp Zach
@@ -93,12 +92,12 @@ and Facebook.
 
 {{< podcast-episode/clipping time="03:30" >}}
 
-**Zach:** When you run a terminal today on your modern Mac, you're
-actually running a terminal emulator like you said, and that's a piece of
-software that is copying the behavior of that hardware. And so the terminal
-emulator, when you run terminal.app or Warp or iTerm, it's an actual sort of
-native GUI app that runs on your Mac. It's pretending to be this piece of
-hardware. And it's pretending to do that at a pretty deep level.
+**Zach:** When you run a terminal today on your modern Mac, you're actually
+running a terminal emulator like you said, and that's a piece of software that
+is copying the behavior of that hardware. And so the terminal emulator, when you
+run terminal.app or Warp or iTerm, it's an actual sort of native GUI app that
+runs on your Mac. It's pretending to be this piece of hardware. And it's
+pretending to do that at a pretty deep level.
 
 {{</ podcast-episode/clipping >}}
 
@@ -106,8 +105,8 @@ hardware. And it's pretending to do that at a pretty deep level.
 
 **David:** Welcome to the Console Podcast. I'm David Mytton, co-founder of
 console.dev; a free weekly newsletter highlighting the best and most interesting
-tools for developers. In this episode, I speak with Michelle Limand Zach Lloyd
-, both of Warp; a terminal designed to make developer workflows more productive.
+tools for developers. In this episode, I speak with Michelle Limand Zach Lloyd ,
+both of Warp; a terminal designed to make developer workflows more productive.
 We discuss the historical significance of physical terminals, terminal
 emulators, pseudo-terminals and the shell. Why rust is a better technology
 choice than Electron for building a new terminal. Why GPU acceleration matters,
@@ -194,9 +193,8 @@ memorize a lot of keyboard shortcuts and commands and Flex, but once you do
 master it, you can be very efficient. And that's probably why it's still stuck
 around.
 
-**David:** You mentioned the idea of it being a platform. What does that mean
-to you? Why do you think that application should be built on top of the
-terminal?
+**David:** You mentioned the idea of it being a platform. What does that mean to
+you? Why do you think that application should be built on top of the terminal?
 
 **Zach:** The things that Michelle said touch on a lot of it. Text based apps
 have a lot of these inherent advantages of being composable and scriptable and

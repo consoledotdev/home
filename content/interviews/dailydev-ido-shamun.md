@@ -4,7 +4,7 @@ who: Ido Shamun
 role: CTO
 org: Daily.dev
 what: Feed for developer news.
-tags: ['News']
+tags: ["News"]
 date: 2022-01-27T12:00:00Z
 draft: false
 headerType: fixed
@@ -121,16 +121,12 @@ iterate fast.
 ### Describe your computer hardware setup
 
 I recently got the latest Apple M1 Macbook Pro. I have two monitors, 24-inch, a
-mechanical [Das keyboard](https://www.daskeyboard.com/) and a [Logitech MX
-3](https://www.logitech.com/en-us/products/mice/mx-master-3.910-005647.html).
+mechanical [Das keyboard](https://www.daskeyboard.com/) and a
+[Logitech MX 3](https://www.logitech.com/en-us/products/mice/mx-master-3.910-005647.html).
 I'm trying to keep my desktop clean and without anything besides my notebook,
 and a whiteboard in the room. I work from a standing desk.
 
-{{< img-center
-src="/img/interviews/dailydev-ido-shamun-desk.jpg"
-alt="The desk of Ido Shamun, Daily.dev"
-width="100%"
->}}
+{{< img-center src="/img/interviews/dailydev-ido-shamun-desk.jpg" alt="The desk of Ido Shamun, Daily.dev" width="100%" >}}
 
 ### Describe your computer software setup
 
@@ -176,5 +172,5 @@ teacher. When I have time I’ll also play games with friends.
 ### Find out more
 
 [Daily.Dev](https://daily.dev) is a feed for developer news. It was featured as
-an "Interesting Tool" in the [Console newsletter](https://console.dev) on 10 Mar
-2022. This interview was conducted on 27 Jan 2022.
+an "Interesting Tool" in the [Console newsletter](https://console.dev) on 10
+Mar 2022. This interview was conducted on 27 Jan 2022.

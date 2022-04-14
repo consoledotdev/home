@@ -27,9 +27,9 @@ focus on what you do best. Building.
 
 David Mytton is Co-founder & CEO of Console. From 2009-2018, David was CEO at
 Server Density, a SaaS monitoring startup used by hundreds of customers to
-collect billions of time series metrics. He is also [a
-researcher](https://davidmytton.blog/publications/) in sustainable computing and
-affiliated with Imperial College London. David has been a developer for 15+
+collect billions of time series metrics. He is also
+[a researcher](https://davidmytton.blog/publications/) in sustainable computing
+and affiliated with Imperial College London. David has been a developer for 15+
 years.
 
 Max has 20+ years tech experience building online businesses. Previous start-ups
@@ -51,20 +51,20 @@ Over time our goal is to **build a community where developers can find the best
 tools**. This will include long form research, discussion, and exclusive deals
 and/or early access to beta programs and new releases.
 
-We aim to support Console through this last one - [partnering with
-vendors](/advertise/) to connect with our audience, such as by syncing reviews
-with new releases or offering exclusives such as access to beta programs or
-bonus credits. We may be paid for these. However, our editorial process is
-independent from our vendor partnerships. All partners must first fit our
-[selection criteria](/selection-criteria/) before we consider working with them.
+We aim to support Console through this last one -
+[partnering with vendors](/advertise/) to connect with our audience, such as by
+syncing reviews with new releases or offering exclusives such as access to beta
+programs or bonus credits. We may be paid for these. However, our editorial
+process is independent from our vendor partnerships. All partners must first fit
+our [selection criteria](/selection-criteria/) before we consider working with
+them.
 
 To learn more about Console, check out the Console blog where you can follow our
-progress. To start, we recommend reading our thoughts on the '[Age of the
-Developer](https://blog.console.dev/focusing-on-developers/)'. We aim to be open
-and transparent so everyone can {{< a-link
-url="https://github.com/consoledotdev" text="see what we're building"
-icon-right="github" >}} so we publish [monthly status
-updates](https://blog.console.dev/tag/status-update/) about our progress.
+progress. To start, we recommend reading our thoughts on the
+'[Age of the Developer](https://blog.console.dev/focusing-on-developers/)'. We
+aim to be open and transparent so everyone can {{< a-link url="https://github.com/consoledotdev" text="see what we're building" icon-right="github" >}} so we publish
+[monthly status updates](https://blog.console.dev/tag/status-update/) about our
+progress.
 
 Interested? Subscribe to our weekly newsletter below! And if you spot (or are
 working on) something you think we should include, email us:

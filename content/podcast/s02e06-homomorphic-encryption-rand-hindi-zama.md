@@ -4,12 +4,12 @@ who: Rand Hindi
 whoLink: https://twitter.com/randhindi
 org: Zama
 orgLink: https://zama.ai/
-what: 
- We discuss the principles behind encryption, homomorphic encryption, and 
- programmable bootstrapping, how these technologies can ensure user data 
- privacy, what is changing that is making them more relevant to today, and how 
- developers should be thinking about building on new protocols from HTTP to 
- HTTPS to HTTPZ.
+what:
+  We discuss the principles behind encryption, homomorphic encryption, and
+  programmable bootstrapping, how these technologies can ensure user data
+  privacy, what is changing that is making them more relevant to today, and how
+  developers should be thinking about building on new protocols from HTTP to
+  HTTPS to HTTPZ.
 season: 2
 episode: 6
 date: 2022-02-10T06:00:00Z
@@ -17,10 +17,10 @@ duration: 28:28
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/0684a0d5-f177-4c80-a9a6-d69652c9fb59/audio/a1adb2a1-a854-483f-a0bd-c32d672ffa10/default_tc.mp3
 draft: false
 summary:
-  Homomorphic encryption, a devtools discussion with Rand Hindi (Zama). Episode 
+  Homomorphic encryption, a devtools discussion with Rand Hindi (Zama). Episode
   6 (Season 2) of the Console DevTools Podcast.
 metaDescription:
-  Homomorphic encryption, a devtools discussion with Rand Hindi (Zama). Episode 
+  Homomorphic encryption, a devtools discussion with Rand Hindi (Zama). Episode
   6 (Season 2) of the Console DevTools Podcast.
 headerType: fixed
 hideLines: true
@@ -87,12 +87,12 @@ where he focused on AI and Privacy issues.
 
 {{< podcast-episode/clipping time="15:36"  >}}
 
-**Rand:** So how do you convince companies to adopt homomorphic
-encryption? Well, it turns out that companies increasingly differentiate between
-the data and the usage of the data, and it turns out that the data itself is
-often a liability because you get government surveillance, so you become a
-honeypot for data breaches and hackers. There is a whole bunch of potential
-privacy scandals that can emerge.
+**Rand:** So how do you convince companies to adopt homomorphic encryption?
+Well, it turns out that companies increasingly differentiate between the data
+and the usage of the data, and it turns out that the data itself is often a
+liability because you get government surveillance, so you become a honeypot for
+data breaches and hackers. There is a whole bunch of potential privacy scandals
+that can emerge.
 
 If anything, companies don't want to store user data. What they want is to use
 the data to do some meaningful, maybe train a neural network or do analytics or
@@ -104,11 +104,11 @@ data. That's the whole point.
 
 {{< podcast-episode/clipping time="23:55"  >}}
 
-**Rand:** If you can't pull the thread of homomorphic encryption all the
-way to consumer applications and web apps and things like that, it's pretty
-obvious that at some point the user is going to need to manage their FHE keys
-when they're accessing their services, because you need to encrypt and decrypt
-the data and contrary to SSL, TLS, you are the one keeping the keys. You should
+**Rand:** If you can't pull the thread of homomorphic encryption all the way to
+consumer applications and web apps and things like that, it's pretty obvious
+that at some point the user is going to need to manage their FHE keys when
+they're accessing their services, because you need to encrypt and decrypt the
+data and contrary to SSL, TLS, you are the one keeping the keys. You should
 never send it to the service provider.
 
 {{</ podcast-episode/clipping >}}
@@ -152,20 +152,19 @@ do it by hand and with computers, we've had things like RSA, AES that have been
 used in everything from communications to this little lock on your browser when
 you connect to our website securely.
 
-**Rand:** Homomorphic encryption is the ability to compute on the encrypted
-data itself without having to decrypt it. So you still encrypt the data the same
-way you've always done it. It's still gibberish, but the way you've encrypted
-it, preserved the structure of the mathematical operations on the encrypted
-data, so you can addition or multiply encrypted data. The result will be
-encrypted as well and if you decrypt it, you get the same result as if you had
-done it on the data itself. And so this is idea of homomorphisms in mathematics
-is, you're keeping the same structure, even though you're changing the way it
-looks.
+**Rand:** Homomorphic encryption is the ability to compute on the encrypted data
+itself without having to decrypt it. So you still encrypt the data the same way
+you've always done it. It's still gibberish, but the way you've encrypted it,
+preserved the structure of the mathematical operations on the encrypted data, so
+you can addition or multiply encrypted data. The result will be encrypted as
+well and if you decrypt it, you get the same result as if you had done it on the
+data itself. And so this is idea of homomorphisms in mathematics is, you're
+keeping the same structure, even though you're changing the way it looks.
 
 **David:** Makes sense. And where does fully homomorphic encryption come into
 that?
 
-**Rand:**  I would say that today, homomorphic encryption and fully homomorphic
+**Rand:** I would say that today, homomorphic encryption and fully homomorphic
 encryption are the same. It's just that traditionally you could only do some
 very specific operations on encrypted data. You could do either only additions
 or only multiplications, but you couldn't really do both. The problem is, if you
@@ -177,7 +176,7 @@ and you can run it on encrypted data without any problem.
 
 **David:**What would the use cases be for this, then?
 
-**Rand:**  There are many use cases for homomorphic encryption. Some of them
+**Rand:** There are many use cases for homomorphic encryption. Some of them
 exist today. A lot of people are thinking about it from the data sharing
 perspective, so how can different companies collaborate on a data set that they
 don't want to share? I think that's interesting, but it's missing the big
@@ -369,9 +368,9 @@ or providing a service, all of which you can do with homomorphic encryption.
 Homomorphic encryption enables you to use the data without actually seeing the
 data. That's the whole point.
 
-**David:** This kind of links into the idea of decentralization and Web 3 and how
-that is changing, how people think about the ownership of data, but also where
-processing is, whether that's local or using browser technologies like
+**David:** This kind of links into the idea of decentralization and Web 3 and
+how that is changing, how people think about the ownership of data, but also
+where processing is, whether that's local or using browser technologies like
 WebAssembly and some of the local data stores. How are you thinking about how
 this integrates into that future of web tech?
 
@@ -552,8 +551,8 @@ then when I have to work in the cloud, just basically the traditional stuff.
 Where can people find you online?
 
 **Rand:** I'm very easy to find online, despite my focus on privacy. You can
-find me on Twitter mostly, @RandHindi. I also have a SubStack
-newsletter, randhindi.substack.com, and of course, Zama, zama.ai.
+find me on Twitter mostly, @RandHindi. I also have a SubStack newsletter,
+randhindi.substack.com, and of course, Zama, zama.ai.
 
 **David:** Great. Well, thanks for joining the Console Podcast.
 

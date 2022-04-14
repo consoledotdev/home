@@ -4,7 +4,7 @@ who: Maarten Masschelein
 role: CEO
 org: Soda
 what: A tool for data observability.
-tags: ['Data Observability']
+tags: ["Data Observability"]
 date: 2021-11-25T12:00:00Z
 draft: false
 headerType: fixed
@@ -161,11 +161,11 @@ Python. I also love trial and error, low code experiences like editing YAML
 configuration files.
 
 I grew up in a rural area, so the software world often felt quite far away, but
-we were lucky to have a company called [Lernout &
-Hauspie](https://en.wikipedia.org/wiki/Lernout_%26_Hauspie) that was in my
-region. It specialized in speech recognition. I found what they did fascinating
-and still cherish my experience of going there for the first time. They managed
-to IPO, but unfortunately weren’t around for very long after.
+we were lucky to have a company called
+[Lernout & Hauspie](https://en.wikipedia.org/wiki/Lernout_%26_Hauspie) that was
+in my region. It specialized in speech recognition. I found what they did
+fascinating and still cherish my experience of going there for the first time.
+They managed to IPO, but unfortunately weren’t around for very long after.
 
 After my studies I decided that I didn't really want to be developing and
 building products as an engineer every day. I wanted to explore the business
@@ -224,15 +224,14 @@ both OpenTelemetry and dbt.
 
 At home, I have a desktop and then I use my laptop on the go. I'm an occasional
 gamer so I have a gaming machine, and was fortunate enough to do my setup right
-before prices skyrocketed (thanks crypto!). I have an [RTX
-2070](https://www.nvidia.com/en-gb/geforce/graphics-cards/rtx-2070/), a
-[Logitech
-G502](https://www.logitechg.com/en-gb/products/gaming-mice/g502-hero-gaming-mouse.910-005471.html)
+before prices skyrocketed (thanks crypto!). I have an
+[RTX 2070](https://www.nvidia.com/en-gb/geforce/graphics-cards/rtx-2070/), a
+[Logitech G502](https://www.logitechg.com/en-gb/products/gaming-mice/g502-hero-gaming-mouse.910-005471.html)
 mouse, and a [Ducky keyboard](https://www.duckychannel.com.tw/en/Keyboards).
 
 For my laptop, I really choose practicality and power, but it needs to be a
-small device. For the last decade I’ve been using a 13 inch [MacBook
-Pro](https://www.apple.com/shop/buy-mac/macbook-pro/13-inch).
+small device. For the last decade I’ve been using a 13 inch
+[MacBook Pro](https://www.apple.com/shop/buy-mac/macbook-pro/13-inch).
 
 ### Describe your computer software setup
 
@@ -244,8 +243,8 @@ Pro](https://www.apple.com/shop/buy-mac/macbook-pro/13-inch).
 moment
 
 **Chat:** Slack.
-  
-**IDE:** Pycharm.  
+
+**IDE:** Pycharm.
 
 **Source control:** Git.
 

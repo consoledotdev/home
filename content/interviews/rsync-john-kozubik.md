@@ -4,7 +4,7 @@ who: John Kozubik
 role: CEO
 org: rsync.net
 what: Cloud storage in the form of a UNIX filesystem available over SSH.
-tags: ['Cloud']
+tags: ["Cloud"]
 date: 2021-03-12T12:00:00Z
 draft: false
 headerType: fixed
@@ -20,18 +20,18 @@ ogImg: /img/interviews/rsync-john-kozubik-desk.png
 [rsync.net](https://rsync.net/) is a cloud storage provider focused on offsite
 backup. I like to think of it as a safe-deposit box for data.
 
-What makes rsync.net special is that there is no app or API - we simply give
-you an empty UNIX filesystem accessible with any SSH tool.
+What makes rsync.net special is that there is no app or API - we simply give you
+an empty UNIX filesystem accessible with any SSH tool.
 
 ### What problem does rsync.net solve?
 
-Originally - in 2005 - the problem was simply "cloud storage" and the ability
-to make offsite backups easy for people that didn't have their own colocation
-or datacenter assets.
+Originally - in 2005 - the problem was simply "cloud storage" and the ability to
+make offsite backups easy for people that didn't have their own colocation or
+datacenter assets.
 
-Now, of course, there are lots of cloud storage providers - the problem we
-solve in 2021 is interfacing with cloud storage directly on the UNIX command
-line using UNIX tools and practices.
+Now, of course, there are lots of cloud storage providers - the problem we solve
+in 2021 is interfacing with cloud storage directly on the UNIX command line
+using UNIX tools and practices.
 
 Sometimes people just want to rsync or sftp a file somewhere without installing
 new tools. At the same time, we now support a number of very exciting tools
@@ -45,27 +45,27 @@ own platform. Our storage arrays, as we call them, are 2U "head units" with x16
 
 ZFS makes good use of fast cache storage so, after using up two drive slots for
 our boot mirror (which is always a mix of two totally different SSDs) we have
-room for up to 14 more SSDs for read (L2ARC) and write (SLOG) cache. ZFS is
-also RAM hungry so we choose a motherboard that can support up to 2TB of RAM.
+room for up to 14 more SSDs for read (L2ARC) and write (SLOG) cache. ZFS is also
+RAM hungry so we choose a motherboard that can support up to 2TB of RAM.
 
 Attached to these head units, externally, are one or more JBOD chassis filled
-with hard drives. JBOD stands for "just a bunch of disks" and they are
-typically 4U chassis containing 45 or 60 drives that attach back to the head
-unit with SAS cables.
+with hard drives. JBOD stands for "just a bunch of disks" and they are typically
+4U chassis containing 45 or 60 drives that attach back to the head unit with SAS
+cables.
 
-rsync.net has no firewalls and no routers. In each location we connect to our
-IP provider with a dumb, unmanaged switch.
+rsync.net has no firewalls and no routers. In each location we connect to our IP
+provider with a dumb, unmanaged switch.
 
-This might seem odd, but consider:  if an rsync.net storage array is a FreeBSD
+This might seem odd, but consider: if an rsync.net storage array is a FreeBSD
 system running only OpenSSH, what would the firewall be ? It would be another
 FreeBSD system with only port 22 open. That would introduce more failure modes,
 fragility and complexity without gaining any security.
 
 ### What does a "day in the life" look like?
 
-I start the day with a short walk outdoors. I don't want the first thing my
-eyes see to be print, and I don't want the first thing my body does to be
-sitting. So I walk a bit.
+I start the day with a short walk outdoors. I don't want the first thing my eyes
+see to be print, and I don't want the first thing my body does to be sitting. So
+I walk a bit.
 
 Then I sit down and read hackernews with some coffee.
 
@@ -86,14 +86,14 @@ I usually spend about two hours with these tools before lunch - checking Key
 Performance Indicators (both corporate and computational) in our management
 system and having email conversations with potential and existing customers.
 
-At some point in the morning I will have a phonecall with my lead engineer,
-Dave Boodman, and we'll have a very high bandwidth discussion about all aspects
-of operations. Dave then delegates the results of these conversations to
-everyone on our team at all of our locations.
+At some point in the morning I will have a phonecall with my lead engineer, Dave
+Boodman, and we'll have a very high bandwidth discussion about all aspects of
+operations. Dave then delegates the results of these conversations to everyone
+on our team at all of our locations.
 
-Finally, if I am lucky and all of the housekeeping and firefighting can be
-taken care of, I spend the afternoon working on longer term development
-projects and strategic initiatives, etc.
+Finally, if I am lucky and all of the housekeeping and firefighting can be taken
+care of, I spend the afternoon working on longer term development projects and
+strategic initiatives, etc.
 
 ### What is the team structure around rsync.net?
 
@@ -114,21 +114,21 @@ work is as a systems designer or systems engineer. If we're not using fancy
 titles I am really just a UNIX sysadmin.
 
 I got started with UNIX in 1992 when my father loaded ESIX onto his 386 from 50
-floppy disks. The next year I got a dial-up login to the umn.edu SunOS
-system(s) and promptly got myself banned from irc.
+floppy disks. The next year I got a dial-up login to the umn.edu SunOS system(s)
+and promptly got myself banned from irc.
 
-At some point along the way I settled on FreeBSD as server OS of choice and
-have built every one of my startups entirely on that platform - including
-rsync.net which runs solely on FreeBSD.
+At some point along the way I settled on FreeBSD as server OS of choice and have
+built every one of my startups entirely on that platform - including rsync.net
+which runs solely on FreeBSD.
 
 ### What is the most interesting development challenge you've faced working on rsync.net?
 
-When rsync.net began, in 2001, we were using UFS2 filesystems on top of
-hardware RAID arrays built from 80 and 120 GB hard drives. We ran this way
-using RAID6 arrays on 3ware controllers for many years and it was a very simple
-and elegant platform. In the past it has always pleased me, from the standpoint
-of simplicity, that the RAID controller presents a single device to the OS and
-the OS thinks it just has one big giant disk.
+When rsync.net began, in 2001, we were using UFS2 filesystems on top of hardware
+RAID arrays built from 80 and 120 GB hard drives. We ran this way using RAID6
+arrays on 3ware controllers for many years and it was a very simple and elegant
+platform. In the past it has always pleased me, from the standpoint of
+simplicity, that the RAID controller presents a single device to the OS and the
+OS thinks it just has one big giant disk.
 
 Problems began to arise as early as 2008, however, as we began to push the
 boundaries of UFS2 - both in terms of filesystem size and number of inodes
@@ -142,14 +142,14 @@ having as we pushed UFS2 well beyond its design ... and he simply said "use
 [ZFS](https://en.wikipedia.org/wiki/ZFS)".
 
 So we embarked on a two year testing and development project to stress test and
-deploy ZFS which culminated in our first production ZFS systems in 2013. It
-took another four years before we migrated the final UFS2 storage array to ZFS.
+deploy ZFS which culminated in our first production ZFS systems in 2013. It took
+another four years before we migrated the final UFS2 storage array to ZFS.
 
 This was a relatively large undertaking for us and was, in essence, a complete
 reworking of our cloud storage platform. It was well worth it as ZFS, as
 McKusick predicted, solved all of our problems. Further, it enabled new
-use-cases for us as the point-in-time snapshots that ZFS can create and
-maintain are now a critical feature for our users.
+use-cases for us as the point-in-time snapshots that ZFS can create and maintain
+are now a critical feature for our users.
 
 ### What is the most interesting tech you are playing around with at the moment?
 
@@ -177,8 +177,8 @@ display and into the next room ...
 
 ### Describe your computer software setup
 
-**OS:** macOS. I have no data stored, locally, on my workstation - everything
-is on a server I keep at a datacenter so I initiate my work in the terminal by
+**OS:** macOS. I have no data stored, locally, on my workstation - everything is
+on a server I keep at a datacenter so I initiate my work in the terminal by
 port-knocking, logging in over SSH and attaching to my GNU screen session. When
 I login, one of those Twilio scripts sends an SMS alert notifying me of that
 fact.
@@ -197,16 +197,16 @@ use an mp3 player as my backup tool so I have purchased a license for
 the iPhone like a filesystem.
 
 Finally, I use Rich Somerfields
-[TextBar](http://richsomerfield.com/apps/textbar/) app to put a few,
-scriptable, pieces of information into my macOS menu bar. Specifically, I like
-to see what wireless AP (SSID) I am connected to and what IP address I appear
-to be browsing from. I have specific expectations about those two and I want to
-see, immediately, if they are different than I expect them to be.
+[TextBar](http://richsomerfield.com/apps/textbar/) app to put a few, scriptable,
+pieces of information into my macOS menu bar. Specifically, I like to see what
+wireless AP (SSID) I am connected to and what IP address I appear to be browsing
+from. I have specific expectations about those two and I want to see,
+immediately, if they are different than I expect them to be.
 
 When I bought my current workstation, 12 years ago, I felt that it was indeed a
-UNIX-like system. I do a lot of basic use and maintenance on the command line
-of macOS using commands like 'airport' and 'drutil' and 'diskutil', etc.  I'm
-also quite happy with [Homebrew](https://brew.sh/) for package management.
+UNIX-like system. I do a lot of basic use and maintenance on the command line of
+macOS using commands like 'airport' and 'drutil' and 'diskutil', etc. I'm also
+quite happy with [Homebrew](https://brew.sh/) for package management.
 
 However, I can see the shell environment becoming more and more restricted as
 macOS continues to lock down actions and disallows even root from controlling
@@ -247,11 +247,7 @@ but not disastrous.
 
 ### Describe your desk setup
 
-{{< img-center
-src="/img/interviews/rsync-john-kozubik-desk.png"
-alt="The desk of John Kozubik, rsync.net"
-width="100%"
->}}
+{{< img-center src="/img/interviews/rsync-john-kozubik-desk.png" alt="The desk of John Kozubik, rsync.net" width="100%" >}}
 
 I work at a standing desk that is a slab of old bowling alley. The desk is
 height adjustable using Linak actuators but I very seldom lower it. If I don't
@@ -260,7 +256,7 @@ want to stand I will just lie on the couch with a laptop.
 ### When coding
 
 **Daytime or nighttime?** In terms of motivation and aesthetic preference I
-would *much rather* do actual development work late at night - perhaps 10pm to
+would _much rather_ do actual development work late at night - perhaps 10pm to
 2am. Historically, my best and most valuable work was done at that time.
 
 However, I have three children and many responsibilities at home so that time
@@ -269,8 +265,8 @@ development it is in the afternoon after all of the housekeeping and
 firefighting are over.
 
 **Tea or coffee?** Coffee. We have such tremendous, wonderful coffee in the bay
-area and I appreciate every bit of it. I especially like Equator Coffee which
-is based here in Marin County.
+area and I appreciate every bit of it. I especially like Equator Coffee which is
+based here in Marin County.
 
 **Silence or music?** It depends. If I need to concentrate and think through
 complex issues I prefer silence. If I am doing housekeeping activities or
@@ -287,7 +283,7 @@ fire department.
 
 ### Find out more
 
-[rsync.net](https://rsync.net) is cloud storage in the form of a UNIX
-filesystem available over SSH. It was featured as an "Interesting Tool" in the
-[Console newsletter](https://console.dev) on 28 Jan 2021.  This interview was
+[rsync.net](https://rsync.net) is cloud storage in the form of a UNIX filesystem
+available over SSH. It was featured as an "Interesting Tool" in the
+[Console newsletter](https://console.dev) on 28 Jan 2021. This interview was
 conducted on 12 Mar 2021.

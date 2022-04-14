@@ -63,7 +63,7 @@ What if I need a different type of access? If I have interns and software
 engineers, what is the difference between those two? I would argue this is not
 just for big enterprises, even if you're a tiny company of five people and you
 bring in a contractor, how do you manage the key for that contractor?
-  
+
 This is the problem that Teleport solves. We're basically saying: "No, SSH keys
 are not secure." Keys of any kind, passwords, keys - so-called static
 credentials - are not secure. Teleport enforces only certificate-based
@@ -189,8 +189,8 @@ spend much time in front of computers at school.
 
 Eventually, as probably most of the kids who are really into programming, I
 tried building my own games. From there I went to C and then C++, and then I
-started my professional career as a C++ engineer at a company called [National
-Instruments](https://www.ni.com/) in Austin.
+started my professional career as a C++ engineer at a company called
+[National Instruments](https://www.ni.com/) in Austin.
 
 ### What is the most interesting development challenge you've faced working on Teleport?
 
@@ -325,11 +325,10 @@ machine that people say, "Yeah, Ev, this is absolutely crazy”, but then after
 three or four years they'll say, "Hey, that's a retro technology you are
 running."
 
-At the moment my machine is what used to be a powerful [10 core Intel i9 7900x
-Intel
-CPU](https://www.intel.com/content/www/us/en/products/sku/123613/intel-core-i97900x-xseries-processor-13-75m-cache-up-to-4-30-ghz/specifications.html),
-64 gigs of RAM and a bunch of SSDs. It's still pretty snappy. It has a [NVIDIA
-1080Ti](https://www.nvidia.com/en-sg/geforce/products/10series/geforce-gtx-1080-ti/)
+At the moment my machine is what used to be a powerful
+[10 core Intel i9 7900x Intel CPU](https://www.intel.com/content/www/us/en/products/sku/123613/intel-core-i97900x-xseries-processor-13-75m-cache-up-to-4-30-ghz/specifications.html),
+64 gigs of RAM and a bunch of SSDs. It's still pretty snappy. It has a
+[NVIDIA 1080Ti](https://www.nvidia.com/en-sg/geforce/products/10series/geforce-gtx-1080-ti/)
 graphics card, which used to be top of the line back in the day, with a wide
 34-inch monitor, a high resolution mouse and a mechanical tenkeyless keyboard.
 
@@ -345,7 +344,7 @@ OS: Both. I dual boot. Everything work-related is Linux first. Unfortunately,
 Linux is not a great platform for photography, and as photography is my hobby,
 lots of tools that I use work better on Windows. I've been running on
 [Ubuntu](https://ubuntu.com/) with Gnome, with an occasional switch back to
-[Arch Linux](https://archlinux.org/).  
+[Arch Linux](https://archlinux.org/).
 
 **Browser:** Firefox.
 
@@ -372,11 +371,7 @@ I have a standing desk, but I never stand. I'm tall, so most desks just feel too
 low for me. It's a standing desk which I'm using as a sitting desk, but it's
 really high.
 
-{{< img-center
-src="/img/interviews/teleport-ev-kontsevoy-desk.jpg"
-alt="The desk of Ev Kontsevoy, Teleport"
-width="100%"
->}}
+{{< img-center src="/img/interviews/teleport-ev-kontsevoy-desk.jpg" alt="The desk of Ev Kontsevoy, Teleport" width="100%" >}}
 
 ### When coding
 
@@ -404,6 +399,6 @@ piece needs lubrication.
 ### Find out more
 
 [Teleport](https://goteleport.com//) is an open source access control plane. It
-was featured as an "Interesting Tool" in the [Console
-newsletter](https://console.dev) on 16 Dec 2021. This interview was conducted on
-29 Nov 2021.
+was featured as an "Interesting Tool" in the
+[Console newsletter](https://console.dev) on 16 Dec 2021. This interview was
+conducted on 29 Nov 2021.

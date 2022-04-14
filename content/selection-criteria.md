@@ -2,7 +2,9 @@
 title: "Console Selection Criteria"
 date: 2021-12-14T12:00:00Z
 draft: false
-summary: The selection criteria used at Console to select and review the best tools for developers.
+summary:
+  The selection criteria used at Console to select and review the best tools for
+  developers.
 headerType: fixed
 ---
 

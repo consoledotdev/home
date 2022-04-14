@@ -1,7 +1,7 @@
 import http from "k6/http";
 import { check, sleep } from "k6";
 import { Rate } from "k6/metrics";
-import { parseHTML } from 'k6/html';
+import { parseHTML } from "k6/html";
 
 export let errorRate = new Rate("errors");
 export const options = {
@@ -18,8 +18,8 @@ export default function () {
     const res = http.get("https://test.console.dev/tools/", {
         headers: {
             "CF-Access-Client-Id": `${__ENV.CF_CLIENT_ID}`,
-            "CF-Access-Client-Secret": `${__ENV.CF_CLIENT_SECRET}`
-        }
+            "CF-Access-Client-Secret": `${__ENV.CF_CLIENT_SECRET}`,
+        },
     });
     //const res = http.get("http://localhost:1313/");
 
@@ -35,7 +35,7 @@ export default function () {
     const ogURL = doc.find("meta[property='og:url']").attr("content");
 
     // What are we expecting?
-    const expectedCanonical = "https://console.dev/tools/"
+    const expectedCanonical = "https://console.dev/tools/";
     const expectedTitle = "The best developer tools - Console";
     const expectedDescription = "Each week Console reviews the best tools for developers.";
 

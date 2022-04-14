@@ -4,8 +4,8 @@ who: David Mytton & Jean Yang
 what:
   "Episode 4 of the Console DevTools Podcast, a devtools discussion with David
   Mytton (Co-founder, Console) and Jean Yang (CEO, Akita Software). Tools
-  discussed: Liveblocks (real-time collaboration API), Livekit (open source 
-  live video and audio API)"
+  discussed: Liveblocks (real-time collaboration API), Livekit (open source live
+  video and audio API)"
 season: 1
 episode: 4
 date: 2021-07-29T08:00:00Z
@@ -13,13 +13,11 @@ duration: 15:59
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/ae6ee861-bca1-411f-b24d-a4c1ac9478c6/audio/ebc71baa-911f-4587-8768-b6ca83e2e5db/default_tc.mp3
 draft: false
 summary:
-  Liveblocks (real-time collaboration API) & Livekit (open source 
-  live video and audio API), a devtools discussion with David Mytton and Jean 
-  Yang.
+  Liveblocks (real-time collaboration API) & Livekit (open source live video and
+  audio API), a devtools discussion with David Mytton and Jean Yang.
 metaDescription:
-  Liveblocks (real-time collaboration API) & Livekit (open source 
-  live video and audio API), a devtools discussion with David Mytton and Jean 
-  Yang.
+  Liveblocks (real-time collaboration API) & Livekit (open source live video and
+  audio API), a devtools discussion with David Mytton and Jean Yang.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -82,8 +80,7 @@ Other things mentioned:
 - [Notion.](https://www.notion.so/)
 - [Clubhouse.](https://www.joinclubhouse.com/)
 - [Discord.](https://discord.com/)
-- [A16Z - The Cost of
-  Cloud](https://a16z.com/2021/05/27/cost-of-cloud-paradox-market-cap-cloud-lifecycle-scale-growth-repatriation-optimization/).
+- [A16Z - The Cost of Cloud](https://a16z.com/2021/05/27/cost-of-cloud-paradox-market-cap-cloud-lifecycle-scale-growth-repatriation-optimization/).
 
 {{< box-collapsible title="Full transcript" class="podcast-transcript is-expanded" >}}
 

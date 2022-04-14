@@ -37,10 +37,10 @@ foo(x)
 Semgrep should match as well.
 
 One of our early employees was the first program analysis hire at Facebook. He
-was an early engineer there, and that's where Semgrep originated. [Yoann
-Padioleau](https://github.com/aryx) built it at Facebook where it was called
-`sgrep`. Even there, it was the successor to a system that he worked on at
-Inria, the research institute in France called
+was an early engineer there, and that's where Semgrep originated.
+[Yoann Padioleau](https://github.com/aryx) built it at Facebook where it was
+called `sgrep`. Even there, it was the successor to a system that he worked on
+at Inria, the research institute in France called
 [Coccinelle](https://coccinelle.gitlabpages.inria.fr/website/), which it
 described as a system for semantic patching.
 
@@ -115,7 +115,7 @@ much more precise in the context of your company, which is not something that
 you can do with a traditional security tool since they tend to be more black
 box.
 
-## What does a "day in the life" look like for you?
+### What does a "day in the life" look like for you?
 
 I always wanted to be the CTO of a startup, not the CEO! When I was talking with
 my co-founder right after I signed the incorporation paperwork, we decided that
@@ -182,10 +182,10 @@ programs in C. Now knowing what I know, no one should ever use C for
 cryptography!
 
 These days, we use a lot of TypeScript for Semgrep, which is fantastic. I feel
-like Typescript is the ultimate proof of [Donald
-Knuth](https://en.wikipedia.org/wiki/Donald_Knuth)'s aphorism that programming
-languages are just another form of pop culture. JavaScript became so popular
-because of the web, even though objectively it had so many failings as a
+like Typescript is the ultimate proof of
+[Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth)'s aphorism that
+programming languages are just another form of pop culture. JavaScript became so
+popular because of the web, even though objectively it had so many failings as a
 language. It has now created a community that has the resources to do incredible
 things like the TypeScript compiler, which I would describe as state of the art
 in both type theory as well as user experience.
@@ -214,9 +214,9 @@ limitations compared to the traditional world of static analysis tools.
 We were doing that, and we knew that we wanted to go very broad, so we wanted to
 add support for as many languages as possible and not just traditional
 programming languages. We wanted to be able to write rules for Docker files,
-Bash scripts and Terraform configs. We had some cool moments where [Mitchell
-Hashimoto](https://twitter.com/mitchellh?lang=en) from Terraform, actually
-contributed grammar to the parser library that we're using.
+Bash scripts and Terraform configs. We had some cool moments where
+[Mitchell Hashimoto](https://twitter.com/mitchellh?lang=en) from Terraform,
+actually contributed grammar to the parser library that we're using.
 
 We originally supported four languages, and now we support 27 without creating
 an incredible maintenance burden as languages evolve and add new features. How?
@@ -236,12 +236,12 @@ to support 27 languages, you have to install 27 different runtimes.
 If there's a different version of the Ruby spec, you may need to have multiple
 versions of it installed in order to perform the parsing. Tree-Sitter allows you
 to define grammar in a DSL, and then Tree Sitter compiles it into a C program.
-We link against the C programs via an [OCaml to C
-bridge](https://github.com/returntocorp/ocaml-tree-sitter-core) that we wrote.
-It has also been just a fantastic source of collaboration with GitHub. The
-Neovim community it turns out are big users, as well as many other very, very
-talented contributors. Switching from the Facebook era parsers to that was a
-very difficult undertaking.
+We link against the C programs via an
+[OCaml to C bridge](https://github.com/returntocorp/ocaml-tree-sitter-core) that
+we wrote. It has also been just a fantastic source of collaboration with GitHub.
+The Neovim community it turns out are big users, as well as many other very,
+very talented contributors. Switching from the Facebook era parsers to that was
+a very difficult undertaking.
 
 ### What is the most interesting tool or product that you've been playing around with recently?
 
@@ -273,9 +273,9 @@ I've been a digital nomad during the pandemic, so I've given up a lot of the
 niceties of my original setup in exchange for a much more portable setup. No
 external display, no external keyboard, but I do have a very nice large 16 inch
 [M1 MacBook Pro](https://www.apple.com/uk/shop/buy-mac/macbook-pro), which is
-great. I also carry around a nice [Logitech
-mouse](https://www.logitech.com/en-us/products/mice.html) that I can just throw
-into a backpack.
+great. I also carry around a nice
+[Logitech mouse](https://www.logitech.com/en-us/products/mice.html) that I can
+just throw into a backpack.
 
 We spent some time with my parents, and then my wife's parents. We road-tripped
 west to east across the US a few months after the outbreak started, then, we
@@ -302,9 +302,9 @@ want macros.
 Since we're a security company, there's some additional special software that I
 use for security purposes.
 
-I use [1Password](https://1password.com/) as a password manager, [Little
-Snitch](https://www.obdev.at/products/littlesnitch/index.html), which is a
-host-based firewall for macOS, and I use
+I use [1Password](https://1password.com/) as a password manager,
+[Little Snitch](https://www.obdev.at/products/littlesnitch/index.html), which is
+a host-based firewall for macOS, and I use
 [Parallels](https://www.parallels.com/pd/virtual-machines-for-mac/) for VMs. I
 have a strict policy around just not installing third party software unless I
 can absolutely help it. So I will run it in Parallels. I will run it in Docker,
@@ -325,11 +325,7 @@ cardboard boxes in a garage for a few months, which I actually liked. I think
 adjustable standing desks are the best, and the key to a happy work setup, for
 myself.
 
-{{< img-center
-src="/img/interviews/semgrep-isaac-evans-desk.png"
-alt="The desk of Isaac Evans, Semgrep"
-width="100%"
->}}
+{{< img-center src="/img/interviews/semgrep-isaac-evans-desk.png" alt="The desk of Isaac Evans, Semgrep" width="100%" >}}
 
 ### When coding
 

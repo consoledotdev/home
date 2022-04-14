@@ -36,12 +36,7 @@ Slim.AI makes them production-ready by building better containers that can go
 straight from the developer's desk into production. We give them the tools they
 need.
 
-{{< img-center
-src="/img/interviews/slimai-john-amaral-product.png"
-alt="Slim.AI product screenshot"
-width="100%"
-caption="Slim.AI container analysis."
->}}
+{{< img-center src="/img/interviews/slimai-john-amaral-product.png" alt="Slim.AI product screenshot" width="100%" caption="Slim.AI container analysis." >}}
 
 ### What is a “better” container?
 
@@ -235,11 +230,7 @@ anywhere. I often move it around with me to hotel rooms and to my apartment near
 the sea. I never work without multiple monitors. At least two, and mostly three;
 sometimes six.
 
-{{< img-center
-src="/img/interviews/slimai-john-amaral-setup.png"
-alt="The desk of John Amaral, Slim.AI"
-width="100%"
->}}
+{{< img-center src="/img/interviews/slimai-john-amaral-setup.png" alt="The desk of John Amaral, Slim.AI" width="100%" >}}
 
 **Portable Monitor:** Gechic 1503H 15.6 inch IPS 1080p Portable Monitor with
 HDMI.

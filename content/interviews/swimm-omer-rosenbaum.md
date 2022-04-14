@@ -69,8 +69,8 @@ documentation.
 ### So it works as a plugin for VS Code and IntelliJ etc?
 
 Exactly. Currently, we support all JetBrains products and have a VS Code plugin.
-We also have integrations for CI/CD providers like GitLab and GitHub.  
-  
+We also have integrations for CI/CD providers like GitLab and GitHub.
+
 When a new pull request is issued, we have a check that makes sure all the
 documentation is up to date. If it is, it tells you everything is up to date and
 all is good. If it's not, it tells you that the current PR makes this
@@ -155,8 +155,8 @@ review in the document.
 ### How did you first get into software development?
 
 When I was in 10th grade, I took a
-[Pascal](https://en.wikipedia.org/wiki/Pascal_(programming_language)) course. I
-don't even remember how I heard about it. I think my parents may have sent me
+[Pascal](<https://en.wikipedia.org/wiki/Pascal_(programming_language)>) course.
+I don't even remember how I heard about it. I think my parents may have sent me
 there, but I really liked it. I loved learning how to create small games. Of
 course, Pascal is not so useful nowadays, but it was a good starting point. I
 got into software much more seriously when I accidentally installed a virus on
@@ -249,11 +249,7 @@ a [Yeti microphone](https://www.bluemic.com/en-us/products/yeti/). My phone is a
 most likely find the small espresso cup by my keyboard at all times. It's
 essentially a part of the computer setup, I guess.
 
-{{< img-center
-src="/img/interviews/swimm-omer-rosenbaum-desk.jpg"
-alt="The desk of Omer Rosenbaum, Swimm"
-width="100%"
->}}
+{{< img-center src="/img/interviews/swimm-omer-rosenbaum-desk.jpg" alt="The desk of Omer Rosenbaum, Swimm" width="100%" >}}
 
 ### Describe your computer software setup
 
@@ -301,16 +297,16 @@ colors: C-A-F-F-E 7.
 I like having coffee with people and making my own coffee. Coffee is definitely
 a hobby. I also enjoy taking walks, especially with my wife and my dog.
 
-I also like creating content for people to enjoy. I got to write a [textbook
-about computer networks](https://data.cyber.org.il/networks/networks.pdf), and I
-also have a [YouTube
-channel](https://www.youtube.com/channel/UCgIxN1uPgvn5ItMOD2fUU-w) where I post
-mostly about Git or computer networks. I also play freestyle Frisbee and enjoy
-reading books.
+I also like creating content for people to enjoy. I got to write a
+[textbook about computer networks](https://data.cyber.org.il/networks/networks.pdf),
+and I also have a
+[YouTube channel](https://www.youtube.com/channel/UCgIxN1uPgvn5ItMOD2fUU-w)
+where I post mostly about Git or computer networks. I also play freestyle
+Frisbee and enjoy reading books.
 
 ### Find out more
 
 [Swimm](https://swimm.io/) is a platform for continuous documentation. It was
-featured as an "Interesting Tool" in the [Console
-newsletter](https://console.dev) on 20 Jan 2022. This interview was conducted on
-13 Dec 2021.
+featured as an "Interesting Tool" in the
+[Console newsletter](https://console.dev) on 20 Jan 2022. This interview was
+conducted on 13 Dec 2021.

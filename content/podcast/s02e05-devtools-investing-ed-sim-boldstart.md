@@ -4,10 +4,10 @@ who: Ed Sim
 whoLink: https://twitter.com/edsim
 org: Boldstart
 orgLink: https://boldstart.vc/
-what: 
- We discuss what engineers should think about when working on side projects, 
- when and if they should seek out investors, how to pick the good
- ones, whether raising money is even needed, and what the role of open source is.
+what:
+  We discuss what engineers should think about when working on side projects,
+  when and if they should seek out investors, how to pick the good ones, whether
+  raising money is even needed, and what the role of open source is.
 season: 2
 episode: 5
 date: 2022-02-03T06:00:00Z
@@ -15,10 +15,10 @@ duration: 30:38
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/72a312a7-0768-4faa-a902-3bf9b9634fd0/audio/5fce0eb5-f702-49b3-abf4-a78c89e2d00c/default_tc.mp3
 draft: false
 summary:
-  Devtools investing - a devtools discussion with Ed Sim (Boldstart). Episode 5 
+  Devtools investing - a devtools discussion with Ed Sim (Boldstart). Episode 5
   (Season 2) of the Console DevTools Podcast.
 metaDescription:
-  Devtools investing - a devtools discussion with Ed Sim (Boldstart). Episode 5 
+  Devtools investing - a devtools discussion with Ed Sim (Boldstart). Episode 5
   (Season 2) of the Console DevTools Podcast.
 headerType: fixed
 hideLines: true
@@ -75,13 +75,11 @@ Things mentioned:
 - [Eucalyptus](https://www.eucalyptus.cloud/)
 - [Cape Privacy](https://capeprivacy.com/)
 - [Gavin Uhma](https://twitter.com/gavinuhma?lang=en)
-- [Dropout
-  Labs](https://medium.com/dropoutlabs/introducing-dropout-labs-d1b96f638ae2)
+- [Dropout Labs](https://medium.com/dropoutlabs/introducing-dropout-labs-d1b96f638ae2)
 - [TensorFlow encrypted](https://tf-encrypted.io/)
 - [MongoDB](https://www.mongodb.com/)
 - [Elasticsearch](https://www.elastic.co/)
-- [Red Hat
-  JBoss](https://www.redhat.com/en/technologies/jboss-middleware/application-platform)
+- [Red Hat JBoss](https://www.redhat.com/en/technologies/jboss-middleware/application-platform)
 - [Boldstart.vc](https://boldstart.vc/)
 - [What’s Hot in Enterprise IT/VC](https://whatshot.substack.com/)
 
@@ -116,9 +114,9 @@ It doesn't matter what you do. There's no company.
 
 {{< podcast-episode/clipping time="03:27"  >}}
 
-**Ed:** The best investors will understand how one user becomes 10 users,
-and then a hundred users, and then a thousand users. And they will not force you
-to try to get revenue too early. And we can go through that whole thing later,
+**Ed:** The best investors will understand how one user becomes 10 users, and
+then a hundred users, and then a thousand users. And they will not force you to
+try to get revenue too early. And we can go through that whole thing later,
 David, about why getting revenue too early can screw up a company. But that's
 what we look for. We look for that obsession. And we know, the second we meet
 these founders, when they talk about the problem, and the user, and the pain

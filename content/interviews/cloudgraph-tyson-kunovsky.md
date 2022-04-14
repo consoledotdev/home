@@ -88,7 +88,7 @@ can still be a tiny bit hands-on and contribute a little bit here and there.
 
 From a hierarchy perspective, we are a very flat organization. I was previously
 the head of technology at a large consulting company where we had many different
-levels of engineers:  senior engineer, architect, senior architect, director,
+levels of engineers: senior engineer, architect, senior architect, director,
 principal, etc.
 
 At [AutoCloud](https://www.autocloud.dev/) we've been lucky with our hiring
@@ -135,12 +135,12 @@ has researched couples relationships. They can actually predict with 94%
 accuracy, whether a couple will stay together or get divorced just by watching
 them fight for 15 minutes.
 
-There's a lot of fascinating maths and there's something called [Specific Affect
-Coding System](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1770839/) or,
-"SPAFF", that analyzes the dominant effect on people's faces and can give you
-certainty of how stable this couple is. At the time, the company didn't really
-have an idea of how to digitize its business. There were a lot of forms, a lot
-of seminars, and a lot of workshops.
+There's a lot of fascinating maths and there's something called
+[Specific Affect Coding System](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1770839/)
+or, "SPAFF", that analyzes the dominant effect on people's faces and can give
+you certainty of how stable this couple is. At the time, the company didn't
+really have an idea of how to digitize its business. There were a lot of forms,
+a lot of seminars, and a lot of workshops.
 
 My first coding was in relation to that. They needed help with websites. I
 taught myself a bit of coding in high school and they had this interesting
@@ -193,9 +193,9 @@ that people can extend and have a lot more flexibility, using and operating on.
 
 ### How do you handle querying the historical state?
 
-The cloud is living and breathing. Maybe you're using something like [Auto
-Scaling](https://aws.amazon.com/autoscaling/), where you have different nodes or
-pods or instances being spun up and down. What we're trying to do with
+The cloud is living and breathing. Maybe you're using something like
+[Auto Scaling](https://aws.amazon.com/autoscaling/), where you have different
+nodes or pods or instances being spun up and down. What we're trying to do with
 CloudGraph is allow people to look at their cloud at any point in time. To that
 end, we create different versions and in each of our versions we have the entire
 representation of that footprint. We're working on an ability for the open
@@ -267,11 +267,7 @@ I have this massive screen real estate with the ability to see so much. When
 you're working across a complex project, with many different repos and code
 windows having that context is useful. I use the standard Apple keyboard.
 
-{{< img-center
-src="/img/interviews/cloudgraph-tyson-kunovsky-desk.jpg"
-alt="The desk of Tyson Kunovsky, CloudGraph"
-width="100%"
->}}
+{{< img-center src="/img/interviews/cloudgraph-tyson-kunovsky-desk.jpg" alt="The desk of Tyson Kunovsky, CloudGraph" width="100%" >}}
 
 ### Describe your computer software setup
 
@@ -314,6 +310,6 @@ CrossFit. Those are kind of my big three.
 ### Find out more
 
 [CloudGraph](https://github.com/cloudgraphdev/cli) gives your cloud resources a
-GraphQL API. It was featured as an "Interesting Tool" in the [Console
-newsletter](https://console.dev) on 11 Nov 2021. This interview was conducted on
-27 Oct 2021.
+GraphQL API. It was featured as an "Interesting Tool" in the
+[Console newsletter](https://console.dev) on 11 Nov 2021. This interview was
+conducted on 27 Oct 2021.

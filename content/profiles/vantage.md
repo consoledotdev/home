@@ -5,8 +5,8 @@ draft: false
 summary: Cloud infrastructure cost optimization.
 metaTitle: Working at Vantage - Console profile
 metaDescription:
-  What is it like to work at Vantage? Console profile behind the scenes
-  at Vantage - cloud infrastructure cost optimization.
+  What is it like to work at Vantage? Console profile behind the scenes at
+  Vantage - cloud infrastructure cost optimization.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -28,7 +28,11 @@ companyInfo:
   product:
     name: "Vantage"
     description:
-      "Vantage gives engineering and finance teams the tools they need to get visibility on and optimize cloud infrastructure costs across AWS, GCP and soon Azure. Vantage provides a self-service business intelligence platform for teams to create dashboards to analyze, optimize and collaborate over cloud infrastructure costs."
+      "Vantage gives engineering and finance teams the tools they need to get
+      visibility on and optimize cloud infrastructure costs across AWS, GCP and
+      soon Azure. Vantage provides a self-service business intelligence platform
+      for teams to create dashboards to analyze, optimize and collaborate over
+      cloud infrastructure costs."
   techStack:
     - Ruby
     - Rails
@@ -68,8 +72,8 @@ interview: vantage-ben-schaechter
 
 {{< nav-wrapper--open id="wrapper-1" anchor-name="how-engineering-works" >}}
 
-{{< rich-title-3 icon="checklist" id="how-engineering-works" >}} How engineering works
-{{</ rich-title-3 >}}
+{{< rich-title-3 icon="checklist" id="how-engineering-works" >}} How engineering
+works {{</ rich-title-3 >}}
 
 #### How are the teams structured?
 
