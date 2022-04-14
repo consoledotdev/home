@@ -34,6 +34,7 @@ cat >>.git/hooks/pre-push <<EOF
 exec < /dev/tty
 trunk check --trigger=git-push
 EOF
+chmod +x .git/hooks/pre-push
 ```
 
 ## Image specs
