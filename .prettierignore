@@ -9,4 +9,5 @@ resources/*
 # template language, so we exclude them
 themes/console-home/layouts/*
 
-README.md
+# Doesn't really get Markdown
+*.md
