@@ -9,6 +9,12 @@ lint:
               - themes/console-home/data/**
               # Ignore vendored JS
               - themes/console-home/static/js/vendor/**
+              # Ignore images
+              - assets/img/**
+              - static/img/**
+              - themes/console-home/assets/img/**
+              - themes/console-home/static/fonts/**
+              - themes/console-home/static/img/**
     enabled:
         - actionlint@1.6.9
         - black@22.3.0
