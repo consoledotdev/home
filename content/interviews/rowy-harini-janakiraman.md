@@ -6,7 +6,7 @@ org: Rowy
 what: Low-code backend development platform.
 tags: ["Low-code", "backend"]
 date: 2022-03-17T12:00:00Z
-draft: true
+draft: false
 headerType: fixed
 summary: Interview with Harini Janakiraman, Co-founder & CEO, Rowy
 isPage: interviews
@@ -121,7 +121,7 @@ like GPT3 to generate poems when we give it a word. We do experiments all the
 time with different tech, you can check out the gallery of such live demos
 [here](https://demo.rowy.io/).
 
-### Tell me about your computer hardware setup.
+### Describe your compute hardware setup
 
 The laptop I'm using is a 14 inch
 [M1 MacBook Pro](https://www.apple.com/shop/buy-mac/macbook-pro). I use it with
