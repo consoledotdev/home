@@ -54,7 +54,7 @@ companyInfo:
       value:
         - "Fiddler, Intercom, Wayfair, Visa, Codecademy "
         - links:
-            - href: "https://www.osohq.com/company/jobs"
+            - href: "https://www.osohq.com/use-cases"
               text: "See all"
               iconRight: "external-link"
     - label: "Social"
