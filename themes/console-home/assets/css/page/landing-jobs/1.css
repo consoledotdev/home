@@ -1,16 +1,303 @@
 /* Page Stylesheet - Console Landing 1 for DevTools Jobs
    ========================================================================== */
 
-.main-landing-jobs .canvas-wrapper {
+.page-landing-jobs .content {
+    height: auto;
+    min-height: 100vh;
+}
+
+.main-landing-jobs {
+    position: relative;
+    margin-top: var(--space4_5);
+}
+
+@media (min-width: 769px) {
+    .page-section-landing-jobs {
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .page-section-landing-jobs {
+        max-width: 700px;
+    }
+}
+
+/* Opening -------------------------------------------------------------------- */
+.main-landing-jobs .page-section.opening {
+    max-width: none;
+    margin-bottom: calc(var(--space5) + var(--space3));
+    display: grid;
+    gap: var(--space5);
+    height: calc(100vh - var(--space4_5) - var(--space4_5) - (calc(var(--space2) + var(--space4))));
+    background: linear-gradient(180deg, rgba(14, 15, 95, 0) 0%, rgba(14, 15, 95, 0.3) 78%), #0a0a0b;
+
+    width: 100vw;
+    margin-left: -6.25vw;
+    margin-right: -6.25vw;
+    padding-left: 6.25vw;
+    padding-right: 6.25vw;
+    margin-bottom: var(--space4_5);
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .main-landing-jobs .page-section.opening {
+        margin-left: -8vw;
+        margin-right: -8vw;
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+}
+
+@media (min-width: 1371px) {
+    .main-landing-jobs .page-section.opening {
+        margin-left: calc((100vw - 1200px) / 2 * -1);
+        margin-right: calc((100vw - 1200px) / 2 * -1);
+        padding-left: calc((100vw - 1200px) / 2);
+        padding-right: calc((100vw - 1200px) / 2);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-landing-jobs .page-section.opening {
+        gap: var(--space4_5);
+    }
+}
+
+@media (max-width: 480px) {
+    .main-landing-jobs .page-section.opening {
+        gap: var(--space4);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1160px) {
+    .main-landing-jobs .page-section.opening {
+        grid-auto-flow: column;
+        grid-auto-columns: 45% 1fr;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1161px) {
+    .main-landing-jobs .page-section.opening {
+        grid-auto-flow: column;
+        grid-auto-columns: 50% 1fr;
+        align-items: center;
+    }
+}
+
+.main-landing-jobs .page-section.opening .left {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main-landing-jobs .page-section.opening .left > *,
+.main-landing-jobs .page-section.opening .right > * {
+    margin-top: calc(var(--space5) * -1);
+}
+
+@media (max-width: 768px) {
+    @media (max-width: 414px) {
+        .main-landing-jobs .page-section.opening .title-1,
+        .main-landing-jobs .page-section.opening .description {
+            width: 100%;
+            max-width: none;
+        }
+    }
+}
+
+.page-landing-jobs .title.title-1 {
+    margin-bottom: var(--space2);
+}
+
+.main-landing-jobs .page-section.opening .console-button {
+    display: flex;
+    margin-top: var(--space4_5);
+}
+
+.main-landing-jobs .ownership {
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: var(--t-size-2);
+    color: var(--theme-text-2);
+    bottom: var(--space4);
+    left: 0;
+    width: 100%;
+}
+
+.main-landing-jobs .ownership .icon {
+    fill: var(--theme-text-2);
+    margin-right: var(--space1);
+}
+
+/* Artwork */
+.artwork-wrapper {
     position: relative;
     width: 100%;
     padding-bottom: 120%;
+    z-index: 0;
 }
 
-.main-landing-jobs .developer-jobs-artwork {
+.artwork {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 15%;
+    left: 10%;
+    width: 80%;
+    height: 70%;
+    margin: 0;
+    z-index: 50;
+}
+
+.artwork-interactives {
+    position: absolute;
     width: 100%;
     height: 100%;
+    z-index: 100;
+}
+
+.artwork-interactives .item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: var(--a-elements-time), 0.08s;
+    transition-timing-function: var(--a-elements-easing);
+}
+
+.artwork-interactives:hover .item {
+    opacity: 1;
+    transition-duration: var(--a-elements-time), var(--a-elements-time);
+}
+
+.artwork-interactives:hover .item-01 {
+    transform: translate(-20%, -40%);
+}
+
+.artwork-interactives:hover .item-02 {
+    transform: translate(-50%, -10%);
+}
+
+.artwork-interactives:hover .item-03 {
+    transform: translate(-35%, 30%);
+}
+
+.artwork-interactives:hover .item-04 {
+    transform: translate(20%, 40%);
+}
+
+.artwork-interactives:hover .item-05 {
+    transform: translate(50%, 10%);
+}
+
+.artwork-interactives:hover .item-06 {
+    transform: translate(35%, -30%);
+}
+
+.artwork-interactives .item .inner {
+    position: absolute;
+    white-space: nowrap;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: all;
+
+    /* temp */
+    padding: 2px 4px;
+    background: var(--c-grey-07);
+}
+
+.artwork-interactives .item .inner:hover {
+    background: var(--c-grey-05);
+}
+
+/* Features */
+.page-section-landing-jobs.features {
+    max-width: none;
+    margin: 0;
+    padding-top: calc(var(--space6_5) - var(--space4_5));
+    padding-bottom: var(--space6_5);
+}
+
+.page-section-landing-jobs.features .page-section-heading {
+    margin: 0;
+}
+
+.page-section-landing-jobs.features .separator {
+    margin: var(--space4_5) 0 var(--space5);
+}
+
+.page-section-landing-jobs.features .cols {
+    display: grid;
+    gap: var(--space5);
+}
+
+@media (max-width: 768px) {
+    .page-section-landing-jobs.features .cols {
+        gap: var(--space4_5);
+    }
+}
+
+@media (min-width: 769px) {
+    .page-section-landing-jobs.features .cols {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        align-items: start;
+    }
+}
+
+.page-section-landing-jobs.features .cols .col .icon,
+.page-section-landing-jobs.features .cols .col .illustration {
+    width: var(--space5);
+    height: var(--space5);
+}
+
+.page-section-landing-jobs.features .icon-jobs circle {
+    fill: var(--c-yellow-04-main);
+}
+
+.page-section-landing-jobs.features .illustration-console-company-profile .background-stroke {
+    stroke: var(--c-berry-05-main);
+    opacity: 1;
+}
+
+.page-section-landing-jobs.features .illustration-no-spam circle.background-fill {
+    fill: var(--c-sunset-00);
+    opacity: 1;
+}
+
+.page-section-landing-jobs.features .cols .col .title {
+    margin-top: var(--space4);
+}
+
+.page-section-landing-jobs.features .cols .col p {
+    font-size: var(--t-size1);
+    margin-top: var(--space4);
+}
+
+@media (max-width: 768px) {
+    .page-section-landing-jobs.features .cols .col .title {
+        margin-top: var(--space3_5);
+    }
+
+    .page-section-landing-jobs.features .cols .col p {
+        margin-top: var(--space3);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .page-section-landing-jobs.features .cols .col .title {
+        margin-top: var(--space3_5);
+    }
+
+    .page-section-landing-jobs.features .cols .col p {
+        margin-top: var(--space3_5);
+    }
 }

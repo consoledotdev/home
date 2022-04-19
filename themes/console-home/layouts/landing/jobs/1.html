@@ -14,15 +14,46 @@
             <p class="small ownership">{{partial "icons/console-mini-filled.html" }}Brought to you by the team behind the Console devtools newsletter ({{ $.Site.Params.consoleSubscribers }} subscribers)</p>
         </div>
         <div class="right">
-            <div class="canvas-wrapper">
-                <canvas data-artwork-canvas class="developer-jobs-artwork"></canvas>
+            <div class="artwork-wrapper">
+                <canvas data-artwork-canvas class="artwork"></canvas>
+                <div class="artwork-interactives">
+                    <div data-gravitating-items class="item item-01"><span class="inner">Front end</span></div>
+                    <div data-gravitating-items class="item item-02"><span class="inner">Back end</span></div>
+                    <div data-gravitating-items class="item item-03"><span class="inner">Mobile</span></div>
+                    <div data-gravitating-items class="item item-04"><span class="inner">Design</span></div>
+                    <div data-gravitating-items class="item item-05"><span class="inner">Security</span></div>
+                    <div data-gravitating-items class="item item-06"><span class="inner">DevOps</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page-section page-section-landing-jobs features">
+        <div class="page-section-heading">
+            <h3 class="title title-2">The best engineers rarely look for a new job</h3>
+        </div>
+        <div class="separator light"></div>
+        <div class="cols">
+            <div class="col">
+                {{ partial "icons/jobs.html" }}
+                <h4 class="title title-3"><span>Email digest of matches.</span> <span>And only matches.</span></h4>
+                <p>We only send relevant roles filtered based on your preferences. And no email when nothing fits.</p>
+            </div>
+            <div class="col">
+                {{ partial "illustrations/console-company-profile.html" }}
+                <h4 class="title title-3">Company profiles about how they run engineering</h4>
+                <p>An inside look at the best companies explaining why you might be tempted to join.</p>
+            </div>
+            <div class="col">
+                {{ partial "illustrations/no-spam.html" }}
+                <h4 class="title title-3"><span></span>Not another profile.</span> <span></span>No recruiter spam.</h4>
+                <p>Your preferences are private. Flag interest in a role to trigger an intro. Otherwise ignore the email.</p>
             </div>
         </div>
     </section>
 
     <script src="/js/vendor/three-0.139.2.min.js"></script>
 
-	{{ $landingJS := resources.Get "/js/page-type/landing-jobs.js" }}
-    {{ if hugo.IsProduction }}{{ $landingJS = $landingJS | resources.Minify | resources.Fingerprint }}{{ end }}
-	<script src="{{ $landingJS.Permalink }}"></script>
+	{{ $js := resources.Get "/js/landing/jobs/1.js" }}
+    {{ if hugo.IsProduction }}{{ $js = $js | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script src="{{ $js.Permalink }}"></script>
 {{ end }}
