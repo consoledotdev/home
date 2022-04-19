@@ -350,3 +350,12 @@
 .theme .main-landing img.dark {
     display: initial;
 }
+
+/* Landing page specific */
+.theme .main-landing-jobs img.light {
+    display: none;
+}
+
+.theme .main-landing-jobs img.dark {
+    display: initial;
+}

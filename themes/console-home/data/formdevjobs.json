@@ -1,0 +1,230 @@
+{
+    "email": {
+        "type": "input",
+        "inputs": [
+            {
+                "name": "email",
+                "label": "Your email"
+            }
+        ]
+    },
+    "role": {
+        "type": "radio",
+        "inputs": [
+            {
+                "name": "front-end",
+                "label": "Front end",
+                "checked": true,
+                "required": true
+            },
+            {
+                "name": "back-end",
+                "label": "Back end"
+            },
+            {
+                "name": "mobile",
+                "label": "Mobile"
+            },
+            {
+                "name": "design",
+                "label": "Design"
+            },
+            {
+                "name": "security",
+                "label": "Security"
+            },
+            {
+                "name": "devops",
+                "label": "DevOps"
+            }
+        ]
+    },
+    "locations": {
+        "type": "checkbox",
+        "inputs": [
+            {
+                "name": "anywhere",
+                "label": "Anywhere",
+                "checked": true
+            },
+            {
+                "name": "remote",
+                "label": "Remote"
+            },
+            {
+                "name": "north-america",
+                "label": "North America"
+            },
+            {
+                "name": "new-york",
+                "label": "New York",
+                "parent": "north-america"
+            },
+            {
+                "name": "san-francisco",
+                "label": "San Francisco",
+                "parent": "north-america"
+            },
+            {
+                "name": "seattle",
+                "label": "Seattle",
+                "parent": "north-america"
+            },
+            {
+                "name": "austin",
+                "label": "Austin",
+                "parent": "north-america"
+            },
+            {
+                "name": "miami",
+                "label": "Miami",
+                "parent": "north-america"
+            },
+            {
+                "name": "europe",
+                "label": "Europe"
+            },
+            {
+                "name": "europe",
+                "label": "Europe"
+            },
+            {
+                "name": "amsterdam",
+                "label": "Amsterdam",
+                "parent": "europe"
+            },
+            {
+                "name": "london",
+                "label": "London",
+                "parent": "europe"
+            },
+            {
+                "name": "berlin",
+                "label": "Berlin",
+                "parent": "europe"
+            },
+            {
+                "name": "lisbon",
+                "label": "Lisbon",
+                "parent": "europe"
+            },
+            {
+                "name": "india",
+                "label": "India"
+            },
+            {
+                "name": "asia",
+                "label": "Asia"
+            },
+            {
+                "name": "australia",
+                "label": "Australia",
+                "parent": "asia"
+            },
+            {
+                "name": "south-america",
+                "label": "South America"
+            },
+            {
+                "name": "africa",
+                "label": "Africa"
+            }
+        ]
+    },
+    "tech": {
+        "type": "checkbox",
+        "inputs": [
+            {
+                "name": "react",
+                "label": "React",
+                "icon": "react"
+            },
+            {
+                "name": "ruby",
+                "label": "Ruby",
+                "icon": "ruby"
+            },
+            {
+                "name": "typescript",
+                "label": "Typescript",
+                "icon": "typescript"
+            },
+            {
+                "name": "php",
+                "label": "PHP",
+                "icon": "php"
+            },
+            {
+                "name": "javascript",
+                "label": "Javascript",
+                "icon": "javascript"
+            },
+            {
+                "name": "python",
+                "label": "Python",
+                "icon": "python"
+            },
+            {
+                "name": "go",
+                "label": "Go",
+                "icon": "go"
+            },
+            {
+                "name": "rust",
+                "label": "Rust",
+                "icon": "rust"
+            },
+            {
+                "name": "java",
+                "label": "Java",
+                "icon": "java"
+            }
+        ]
+    },
+    "exp": {
+        "type": "radio",
+        "inputs": [
+            {
+                "name": "2",
+                "label": "< 2 years",
+                "checked": true,
+                "required": true
+            },
+            {
+                "name": "2-5",
+                "label": "2-5 years"
+            },
+            {
+                "name": "5-10",
+                "label": "5-10 years"
+            },
+            {
+                "name": "10",
+                "label": "> 10 years"
+            }
+        ]
+    },
+    "salary": {
+        "type": "radio",
+        "inputs": [
+            {
+                "name": "100k",
+                "label": "< $100k",
+                "checked": true,
+                "required": true
+            },
+            {
+                "name": "100-150k",
+                "label": "$100-150k"
+            },
+            {
+                "name": "150-250k",
+                "label": "$150-250k"
+            },
+            {
+                "name": "250k",
+                "label": "> $250k"
+            }
+        ]
+    }
+}

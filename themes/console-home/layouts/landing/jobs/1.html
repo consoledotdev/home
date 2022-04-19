@@ -1,4 +1,5 @@
 {{ define "main" }}
+    {{ $formData := $.Site.Data.formdevjobs }}
 
     <section class="page-section page-section-landing-jobs opening">
         <div class="left">
@@ -29,7 +30,7 @@
     </section>
     <section class="page-section page-section-landing-jobs features">
         <div class="page-section-heading">
-            <h3 class="title title-2">The best engineers rarely look for a new job</h3>
+            <h3 class="title title-2">The <b>best engineers</b> rarely look for a new job</h3>
         </div>
         <div class="separator light"></div>
         <div class="cols">
@@ -49,6 +50,137 @@
                 <p>Your preferences are private. Flag interest in a role to trigger an intro. Otherwise ignore the email.</p>
             </div>
         </div>
+    </section>
+    <section class="page-section page-section-landing-jobs profiled-companies">
+        <div class="page-section-heading">
+            <h3 class="title title-2">Recently profiled companies</h3>
+        </div>
+        <div class="logo-cloud-artwork">
+            <div class="logo-cloud">
+                <img loading="lazy" class="dark" src="/img/landing/reached-company-logo-github-dark.png" alt="GitHub">
+                <img loading="lazy" class="dark" src="/img/landing/reached-company-logo-atlassian-dark.png" alt="Atlassian">
+                <img loading="lazy" class="dark" src="/img/landing/reached-company-logo-microsoft-dark.png" alt="Microsoft">
+                <img loading="lazy" class="dark" src="/img/landing/reached-company-logo-cloudflare-dark.png" alt="Cloudflare">
+                <img loading="lazy" class="dark" src="/img/landing/reached-company-logo-adobe-dark.png" alt="Adobe">
+                <img loading="lazy" class="dark" src="/img/landing/reached-company-logo-sourcegraph-dark.png" alt="Sourcegraph">
+                <img loading="lazy" class="dark" src="/img/landing/reached-company-logo-twilio-dark.png" alt="Twilio">
+                <img loading="lazy" class="dark" src="/img/landing/reached-company-logo-snyk-dark.png" alt="Snyk">
+                <img loading="lazy" class="light" src="/img/landing/reached-company-logo-github-light.png" alt="GitHub">
+                <img loading="lazy" class="light" src="/img/landing/reached-company-logo-atlassian-light.png" alt="Atlassian">
+                <img loading="lazy" class="light" src="/img/landing/reached-company-logo-microsoft-light.png" alt="Microsoft">
+                <img loading="lazy" class="light" src="/img/landing/reached-company-logo-cloudflare-light.png" alt="Cloudflare">
+                <img loading="lazy" class="light" src="/img/landing/reached-company-logo-adobe-light.png" alt="Adobe">
+                <img loading="lazy" class="light" src="/img/landing/reached-company-logo-sourcegraph-light.png" alt="Sourcegraph">
+                <img loading="lazy" class="light" src="/img/landing/reached-company-logo-twilio-light.png" alt="Twilio">
+                <img loading="lazy" class="light" src="/img/landing/reached-company-logo-snyk-light.png" alt="Snyk">
+            </div>
+            <div class="vapor-globe"></div>
+        </div>
+    </section>
+    <section class="page-section page-section-landing-jobs signup">
+        <div class="page-section-heading">
+            <h3 class="title title-2">Sign Up</h3>
+        </div>
+        <p class="description">A free email digest of jobs that actually suit you. No more than 1 per week.</p>
+        <div class="separator light"></div>
+        <form action="">
+            <fieldset>
+                <legend>
+                    <h4 class="title title-3">Your email</h4>
+                    <p class="small">We’ll only send an email when we have an offer you should really consider.</p>
+                </legend>
+                <input id="form-email" name="form-email" class="console-input-text" type="email" placeholder="Your email" title="Email" required />
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <h4 class="title title-3">Roles of interest</h4>
+                    <p class="small">We will exact match you with any matching using an <em>OR</em> filter.</p>
+                </legend>
+                <div>
+                    {{ range $formData.role.inputs }}
+                        <div>
+                            <input class="console-input-{{ $formData.role.type }}" type="{{ $formData.role.type }}" name="form-role" id="form-role-{{ .name }}" value="{{ .name }}" {{ with .checked}} checked{{end }} {{ with .required}} required{{end }} />
+                            <label for="form-role-{{ .name }}">
+                                <span class="check"></span> {{ .label }}
+                            </label>
+                        </div>
+                    {{ end }}
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <h4 class="title title-3">Where you’d like to work</h4>
+                    <p class="small">Some description of the fields group.</p>
+                </legend>
+                <div>
+                    {{ range $formData.locations.inputs }}
+                        <div>
+                            <input class="console-input-{{ $formData.locations.type }}" type="{{ $formData.locations.type }}" name="form-locations" id="form-locations-{{ .name }}" value="{{ .name }}" {{ with .checked}} checked{{end }} {{ with .required}} required{{end }} />
+                            <label for="form-locations-{{ .name }}">
+                                <span class="check"></span> {{ .label }}
+                            </label>
+                        </div>
+                    {{ end }}
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <h4 class="title title-3">Preferred tech stack</h4>
+                    <p class="small">Some description of the fields group.</p>
+                </legend>
+                <div>
+                    {{ range $formData.tech.inputs }}
+                        <div>
+                            <input class="console-input-{{ $formData.tech.type }}" type="{{ $formData.tech.type }}" name="form-tech" id="form-tech-{{ .name }}" value="{{ .name }}" {{ with .checked}} checked{{end }} {{ with .required}} required{{end }} />
+                            {{ partial (print "icons/tech/" .icon ".html" ) }}
+                            <label for="form-tech-{{ .name }}">
+                                <span class="check"></span> {{ .label }}
+                            </label>
+                        </div>
+                    {{ end }}
+                </div>
+            </fieldset>
+            <h6 class="title title-5">About yourself</h6>
+            <fieldset>
+                <legend>
+                    <h4 class="title title-3">Your experience</h4>
+                    <p class="small">Some description of the fields group.</p>
+                </legend>
+                <div>
+                    {{ range $formData.exp.inputs }}
+                        <div>
+                            <input class="console-input-{{ $formData.exp.type }}" type="{{ $formData.exp.type }}" name="form-exp" id="form-exp-{{ .name }}" value="{{ .name }}" {{ with .checked}} checked{{end }} {{ with .required}} required{{end }} />
+                            <label for="form-exp-{{ .name }}">
+                                <span class="check"></span> {{ .label }}
+                            </label>
+                        </div>
+                    {{ end }}
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <h4 class="title title-3">Your desired salary</h4>
+                    <p class="small">Some description of the fields group.</p>
+                </legend>
+                <div>
+                    {{ range $formData.salary.inputs }}
+                        <div>
+                            <input class="console-input-{{ $formData.salary.type }}" type="{{ $formData.salary.type }}" name="form-salary" id="form-salary-{{ .name }}" value="{{ .name }}" {{ with .checked}} checked{{end }} {{ with .required}} required{{end }} />
+                            <label for="form-salary-{{ .name }}">
+                                <span class="check"></span> {{ .label }}
+                            </label>
+                        </div>
+                    {{ end }}
+                </div>
+            </fieldset>
+
+            <h6 class="title title-5">{{partial "icons/jobs.html" }} Get the best jobs in your inbox</h6>
+
+            <button onclick="blur()" class="console-button icon-left" type="submit" title="Signup">
+                {{ partial "icons/send.html" }}
+                <span>Sign Up</span>
+            </button>
+        </form>
     </section>
 
     <script src="/js/vendor/three-0.139.2.min.js"></script>

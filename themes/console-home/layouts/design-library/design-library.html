@@ -3,12 +3,15 @@
 	{{ $url := "icons" }}
 	{{ $files := readDir "/themes/console-home/layouts/partials/icons" }}
 	{{ range $files }}
-	<div class="icon-display">
-		{{ $parts := split .Name "." }}
-		{{ $name := index $parts 0 }}
-		{{ partial (printf "%s/%s" $url $name ) }}
-		<p class="icon-label">{{$url}}/{{.Name | urlize }}</p>
-	</div>
+		{{ if .IsDir }}
+		{{ else }}
+			<div class="icon-display">
+				{{ $parts := split .Name "." }}
+				{{ $name := index $parts 0 }}
+					{{ partial (printf "%s/%s" $url $name ) }}
+					<p class="icon-label">{{$url}}/{{.Name | urlize }}</p>
+			</div>
+		{{ end }}
 	{{ end }}
 </section>
 <section class="page-section colors">
