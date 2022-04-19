@@ -1,5 +1,5 @@
 {
-  "devDependencies": {
-    "@trunkio/launcher": "^1.0.4"
-  }
+    "devDependencies": {
+        "@trunkio/launcher": "^1.0.4"
+    }
 }
