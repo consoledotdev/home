@@ -6,7 +6,7 @@ org: Meilisearch
 what: Open-source search engine for websites and applications.
 tags: ["SDK", "Search"]
 date: 2022-01-28T12:00:00Z
-draft: true
+draft: false
 headerType: fixed
 summary: Interview with Quentin de Quelen, CEO, Meilisearch.
 isPage: interviews
@@ -215,5 +215,5 @@ finished my Millenium Falcon, which I’m proud of!
 
 [Meilisearch](https://www.meilisearch.com/) is an open-source search engine for
 websites and applications. It was featured as an "Interesting Tool" in the
-[Console newsletter](/) on xx xxx 2022. This interview was conducted on 28
+[Console newsletter](/) on 28 Apr 2022. This interview was conducted on 28
 Jan 2022.
