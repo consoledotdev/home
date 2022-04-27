@@ -83,7 +83,7 @@
         </div>
         <p class="description">A free email digest of jobs that actually suit you. No more than 1 per week.</p>
         <div class="separator light"></div>
-        <form action="">
+        <form data-signup-form class="landing-jobs-signup-form" action="">
             <fieldset>
                 <legend>
                     <h4 class="title title-3">Your email</h4>
@@ -98,7 +98,7 @@
                 </legend>
                 <div>
                     {{ range $formData.role.inputs }}
-                        <div>
+                        <div class="input-wrapper">
                             <input class="console-input-{{ $formData.role.type }}" type="{{ $formData.role.type }}" name="form-role" id="form-role-{{ .name }}" value="{{ .name }}" {{ with .checked}} checked{{end }} {{ with .required}} required{{end }} />
                             <label for="form-role-{{ .name }}">
                                 <span class="check"></span> {{ .label }}
@@ -113,12 +113,49 @@
                     <p class="small">Some description of the fields group.</p>
                 </legend>
                 <div>
-                    {{ range $formData.locations.inputs }}
-                        <div>
-                            <input class="console-input-{{ $formData.locations.type }}" type="{{ $formData.locations.type }}" name="form-locations" id="form-locations-{{ .name }}" value="{{ .name }}" {{ with .checked}} checked{{end }} {{ with .required}} required{{end }} />
-                            <label for="form-locations-{{ .name }}">
-                                <span class="check"></span> {{ .label }}
-                            </label>
+                    {{ range first 1 $formData.locations.inputs }}
+                        <div class="input-wrapper{{ with .parent }} sub{{ end }}">
+                                <input
+                                    class="console-input-{{ $formData.locations.type }} attention"
+                                    type="{{ $formData.locations.type }}"
+                                    name="form-locations"
+                                    id="form-locations-{{ .name }}"
+                                    value="{{ .name }}"
+                                    {{ with .checked }} checked{{ end }}
+                                    {{ with .required}} required{{end }}
+                                    data-item="{{ .name }}"
+                                    {{ with .parent }} data-child="{{ . }}"{{ end }}
+                                    {{ with .hasChildren }} data-parent{{ end }}
+                                    {{ with .selectAll }} data-select-all{{ end }}
+                                    {{ with .disableOthers }} data-disable-others{{ end }} />
+                                <label for="form-locations-{{ .name }}">
+                                    <span class="check">
+                                        {{ if eq $formData.locations.type "checkbox" }}{{ partial (print "icons/checkmark.html" ) }}{{ end }}
+                                    </span> {{ .label }}
+                                </label>
+                        </div>
+                    {{ end }}
+                    <div class="separator light"></div>
+                    {{ range after 1 $formData.locations.inputs }}
+                        <div class="input-wrapper{{ with .parent }} sub{{ end }}">
+                                <input
+                                    class="console-input-{{ $formData.locations.type }} attention"
+                                    type="{{ $formData.locations.type }}"
+                                    name="form-locations"
+                                    id="form-locations-{{ .name }}"
+                                    value="{{ .name }}"
+                                    {{ with .checked }} checked{{ end }}
+                                    {{ with .required}} required{{end }}
+                                    data-item="{{ .name }}"
+                                    {{ with .parent }} data-child="{{ . }}"{{ end }}
+                                    {{ with .hasChildren }} data-parent{{ end }}
+                                    {{ with .selectAll }} data-select-all{{ end }}
+                                    {{ with .disableOthers }} data-disable-others{{ end }} />
+                                <label for="form-locations-{{ .name }}">
+                                    <span class="check">
+                                        {{ if eq $formData.locations.type "checkbox" }}{{ partial (print "icons/checkmark.html" ) }}{{ end }}
+                                    </span> {{ .label }}
+                                </label>
                         </div>
                     {{ end }}
                 </div>
@@ -130,7 +167,7 @@
                 </legend>
                 <div>
                     {{ range $formData.tech.inputs }}
-                        <div>
+                        <div class="input-wrapper">
                             <input class="console-input-{{ $formData.tech.type }}" type="{{ $formData.tech.type }}" name="form-tech" id="form-tech-{{ .name }}" value="{{ .name }}" {{ with .checked}} checked{{end }} {{ with .required}} required{{end }} />
                             {{ partial (print "icons/tech/" .icon ".html" ) }}
                             <label for="form-tech-{{ .name }}">

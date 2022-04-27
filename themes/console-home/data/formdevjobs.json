@@ -45,7 +45,9 @@
             {
                 "name": "anywhere",
                 "label": "Anywhere",
-                "checked": true
+                "checked": true,
+                "selectAll": true,
+                "disableOthers": true
             },
             {
                 "name": "remote",
@@ -53,7 +55,8 @@
             },
             {
                 "name": "north-america",
-                "label": "North America"
+                "label": "North America",
+                "hasChildren": true
             },
             {
                 "name": "new-york",
@@ -82,11 +85,8 @@
             },
             {
                 "name": "europe",
-                "label": "Europe"
-            },
-            {
-                "name": "europe",
-                "label": "Europe"
+                "label": "Europe",
+                "hasChildren": true
             },
             {
                 "name": "amsterdam",
@@ -114,7 +114,8 @@
             },
             {
                 "name": "asia",
-                "label": "Asia"
+                "label": "Asia",
+                "hasChildren": true
             },
             {
                 "name": "australia",

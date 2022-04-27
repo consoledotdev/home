@@ -90,6 +90,7 @@
 
     --theme-input-checkable-off: var(--c-grey-04-whites-neutral);
     --theme-input-checkable-on: var(--c-white-00-absolute);
+    --theme-input-checkable-on-subtract: var(--c-black-02-main);
     --theme-input-checkable-on-hover: var(--c-white-00-absolute);
     --theme-input-checkable-off-bg-hover: rgba(255, 255, 255, 0.08);
     --theme-input-checkable-on-bg-hover: rgba(255, 255, 255, 0.12);
@@ -105,6 +106,10 @@
     --theme-input-checkable-triad-03-on: var(--c-green-05-main);
     --theme-input-checkable-triad-03-on-hover: var(--c-green-04);
     --theme-input-checkable-triad-03-on-bg-hover: rgba(67, 222, 193, 0.14);
+
+    --theme-input-checkable-attention-on: var(--c-yellow-04-main);
+    --theme-input-checkable-attention-on-hover: var(--c-yellow-03);
+    --theme-input-checkable-attention-on-bg-hover: rgba(255, 204, 85, 0.14);
 
     --theme-input-checkable-disabled: var(--c-grey-06-blacks-neutral);
 

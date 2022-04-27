@@ -287,8 +287,99 @@ class GravitatingItems {
     }
 }
 
+class FormHelper {
+    constructor(selector) {
+        this.bindFuncs();
+
+        this.form = document.querySelector(selector);
+        this.bindParentCheckboxes();
+        this.bindChildrenCheckboxes();
+        this.bindSelectAll();
+        this.bindDisableOthers();
+    }
+
+    bindFuncs() {
+        this.toggleAllSiblings = this.toggleAllSiblings.bind(this);
+        this.toggleParentCheckbox = this.toggleParentCheckbox.bind(this);
+        this.toggleChildrenCheckboxes = this.toggleChildrenCheckboxes.bind(this);
+    }
+
+    bindParentCheckboxes() {
+        const inputs = this.form.querySelectorAll("[data-parent]");
+        inputs.forEach((input) => {
+            input.addEventListener("change", this.toggleChildrenCheckboxes);
+            this.toggleChildrenCheckboxes({ currentTarget: input });
+        });
+    }
+
+    bindChildrenCheckboxes() {
+        const inputs = this.form.querySelectorAll("[data-child]");
+        inputs.forEach((input) => {
+            input.addEventListener("change", this.toggleParentCheckbox);
+            this.toggleParentCheckbox({ currentTarget: input });
+        });
+    }
+
+    bindSelectAll() {
+        const inputs = this.form.querySelectorAll("[data-select-all]");
+        inputs.forEach((input) => {
+            input.addEventListener("change", this.toggleAllSiblings);
+            this.toggleAllSiblings({ currentTarget: input });
+        });
+    }
+
+    bindDisableOthers() {
+        const inputs = this.form.querySelectorAll("[data-disable-others]");
+        inputs.forEach((input) => {
+            input.addEventListener("change", this.toggleDisableSiblings);
+            this.toggleDisableSiblings({ currentTarget: input });
+        });
+    }
+
+    toggleParentCheckbox(e) {
+        const parent = this.form.querySelector("[data-item='" + e.currentTarget.dataset.child + "']");
+        const siblings = this.form.querySelectorAll("[data-child='" + e.currentTarget.dataset.child + "']");
+        let checkedAmt = 0;
+        siblings.forEach((s) => (s.checked ? checkedAmt++ : null));
+        if (checkedAmt == siblings.length) {
+            parent.checked = true;
+            parent.indeterminate = false;
+        } else if (checkedAmt > 0) {
+            parent.checked = false;
+            parent.indeterminate = true;
+        } else {
+            parent.indeterminate = false;
+            parent.checked = false;
+        }
+    }
+
+    toggleChildrenCheckboxes(e) {
+        const children = this.form.querySelectorAll("[data-child='" + e.currentTarget.dataset.item + "']");
+        children.forEach((c) => (c.checked = e.currentTarget.checked));
+    }
+
+    toggleAllSiblings(e) {
+        const fieldset = e.currentTarget.closest("fieldset");
+        const siblings = fieldset.querySelectorAll("[data-item]");
+        siblings.forEach((s) => {
+            s.indeterminate = false;
+            s.checked = e.currentTarget.checked;
+        });
+    }
+
+    toggleDisableSiblings(e) {
+        const fieldset = e.currentTarget.closest("fieldset");
+        const siblings = fieldset.querySelectorAll("[data-item]");
+        siblings.forEach((s) => {
+            if (s != e.currentTarget) s.disabled = s.checked;
+        });
+    }
+}
+
 document.addEventListener("DOMContentLoaded", (e) => {
     const jobsArt = new JobsArt("[data-artwork-canvas]");
     const jobsArtItems = new GravitatingItems("[data-gravitating-items]");
     jobsArtItems._artwork = jobsArt;
+
+    const formHelper = new FormHelper("[data-signup-form]");
 });
