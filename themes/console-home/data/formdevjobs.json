@@ -1,6 +1,6 @@
 {
     "email": {
-        "type": "input",
+        "type": "text",
         "inputs": [
             {
                 "name": "email",
@@ -10,6 +10,7 @@
     },
     "role": {
         "type": "radio",
+        "consoleType": "radio",
         "inputs": [
             {
                 "name": "front-end",
@@ -41,6 +42,7 @@
     },
     "locations": {
         "type": "checkbox",
+        "consoleType": "checkbox",
         "inputs": [
             {
                 "name": "anywhere",
@@ -134,6 +136,7 @@
     },
     "tech": {
         "type": "checkbox",
+        "consoleType": "chip",
         "inputs": [
             {
                 "name": "react",
@@ -184,6 +187,7 @@
     },
     "exp": {
         "type": "radio",
+        "consoleType": "segmented-bar",
         "inputs": [
             {
                 "name": "2",
@@ -207,6 +211,7 @@
     },
     "salary": {
         "type": "radio",
+        "consoleType": "segmented-bar",
         "inputs": [
             {
                 "name": "100k",

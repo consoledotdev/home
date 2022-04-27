@@ -454,11 +454,14 @@
     margin-top: calc(var(--space4) + var(--space2_5));
 }
 
-.landing-jobs-signup-form .input-wrapper:not(:first-child) {
-    margin-top: var(--space2);
+.main-landing-jobs .page-section.signup form legend + * {
+    margin-top: calc(var(--space4) + var(--space2_5));
 }
 
-.landing-jobs-signup-form .input-wrapper.sub {
-    margin-left: var(--space2_5);
-    margin-top: var(--space1);
+.main-landing-jobs .page-section.signup fieldset > p {
+    margin-top: var(--space4_5);
+}
+
+.main-landing-jobs .page-section.signup fieldset > p .console-button-text {
+    margin-left: var(--space2);
 }
