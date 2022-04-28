@@ -225,6 +225,12 @@
     margin: 0;
 }
 
+@media (max-width: 540px) {
+    .page-section-landing-jobs.features .page-section-heading .title {
+        text-align: center;
+    }
+}
+
 .page-section-landing-jobs.features .cols {
     display: grid;
     gap: var(--space5);
@@ -236,11 +242,40 @@
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 901px) {
     .page-section-landing-jobs.features .cols {
         grid-auto-flow: column;
         grid-auto-columns: 1fr;
         align-items: start;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 900px) {
+    .page-section-landing-jobs.features .cols .col {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .page-section-landing-jobs.features .cols .col > *:first-child {
+        flex: 0 0 auto;
+        margin-right: var(--space4);
+    }
+
+    .page-section-landing-jobs.features .cols .col > *:not(:first-child) {
+        flex: 1 1 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-section-landing-jobs.features .cols {
+        gap: var(--space5);
+    }
+
+    .page-section-landing-jobs.features .cols .col {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        text-align: center;
     }
 }
 
@@ -268,26 +303,34 @@
     margin-top: var(--space4);
 }
 
+@media (min-width: 481px) and (max-width: 900px) {
+    .page-section-landing-jobs.features .cols .col .title {
+        margin-top: var(--space2);
+    }
+
+    .page-section-landing-jobs.features .cols .col .title span {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-section-landing-jobs.features .cols .col .title {
+        margin-bottom: var(--space4);
+    }
+}
+
 .page-section-landing-jobs.features .cols .col p {
     font-size: var(--t-size1);
     margin-top: var(--space4);
 }
 
 @media (max-width: 768px) {
-    .page-section-landing-jobs.features .cols .col .title {
-        margin-top: var(--space3_5);
-    }
-
     .page-section-landing-jobs.features .cols .col p {
         margin-top: var(--space3);
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .page-section-landing-jobs.features .cols .col .title {
-        margin-top: var(--space3_5);
-    }
-
     .page-section-landing-jobs.features .cols .col p {
         margin-top: var(--space3_5);
     }
@@ -340,12 +383,6 @@
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-}
-
-@media (min-width: 769px) {
-    .page-section-landing-jobs.profiled-companies .logo-cloud {
-        justify-content: center;
-    }
 }
 
 .page-section-landing-jobs.profiled-companies .logo-cloud img {
@@ -475,6 +512,7 @@
 
 .main-landing-jobs .page-section.signup .fieldset input {
     max-width: 330px;
+    width: 100%;
 }
 
 .main-landing-jobs .form-cols {
