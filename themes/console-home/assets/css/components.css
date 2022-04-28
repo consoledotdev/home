@@ -2596,7 +2596,8 @@ input.console-input-segmented-bar + label {
     font-weight: 400;
     color: var(--theme-input-checkable-off);
     transition: var(--a-controls-long);
-    width: 100%;
+    width: calc(100% + 2px);
+    margin: 0 -1px;
 }
 
 input:not(:disabled):not(:checked).console-input-segmented-bar + label {
@@ -2691,6 +2692,47 @@ input.console-input-segmented-bar + label .check-bar .icon-checkmark {
 input:checked.console-input-segmented-bar + label .check-bar .icon-checkmark {
     transform: translate(-50%, -50%) scale(1);
     transition: var(--a-controls-long-active);
+}
+
+/* layout: vertical */
+.segmented-bar.vertical {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+.segmented-bar.vertical input.console-input-segmented-bar + label {
+    position: relative;
+    display: inline-flex;
+    vertical-align: top;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 100%;
+    min-height: var(--space5);
+    width: auto;
+}
+
+.segmented-bar.vertical input.console-input-segmented-bar + label .check-bar {
+    position: relative;
+    display: block;
+    height: 100%;
+    min-height: var(--space5);
+    width: calc(var(--space3) + var(--space1));
+    margin-right: var(--space2);
+    margin-bottom: 0;
+}
+
+.segmented-bar.vertical input.console-input-segmented-bar + label .check-bar:before {
+    height: auto;
+    position: absolute;
+    width: var(--space0);
+    left: 50%;
+    top: -1px;
+    bottom: -1px;
+    transform: translateX(-50%);
+}
+
+.segmented-bar.vertical input:checked.console-input-segmented-bar + label .check-bar:before {
+    margin: var(--space2) 0;
 }
 
 /* style: default */

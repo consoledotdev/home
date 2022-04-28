@@ -426,7 +426,7 @@
     max-width: none;
     margin: 0;
     padding-top: var(--space5_5);
-    padding-bottom: var(--space5_5);
+    padding-bottom: var(--space6);
 }
 
 .main-landing-jobs .page-section.signup p.description {
@@ -439,25 +439,6 @@
     border: none;
 }
 
-@media (min-width: 769px) {
-    .main-landing-jobs .page-section.signup .fieldset {
-        position: relative;
-        display: flex;
-        flex-flow: row nowrap;
-    }
-
-    .main-landing-jobs .page-section.signup .fieldset legend {
-        width: 30%;
-        flex: 0 0 auto;
-    }
-
-    .main-landing-jobs .page-section.signup .fieldset > div,
-    .main-landing-jobs .page-section.signup .fieldset > input {
-        flex: 1 1 auto;
-        margin-left: var(--space5_5);
-    }
-}
-
 .main-landing-jobs .page-section.signup .fieldset + .fieldset {
     margin-top: calc(var(--space5) + var(--space3));
 }
@@ -468,21 +449,24 @@
     color: var(--theme-text-2);
 }
 
+.main-landing-jobs .page-section.signup .fieldset + .title .icon {
+    width: 1.125em;
+    height: 1.125em;
+}
+
+.main-landing-jobs .page-section.signup .fieldset + .title .icon-fill-stroke {
+    fill: var(--theme-text-2);
+    stroke: var(--theme-text-2);
+}
+
 .main-landing-jobs .page-section.signup .fieldset legend {
     position: relative;
     display: block;
 }
 
-.main-landing-jobs .page-section.signup .fieldset legend + * {
-    margin-top: calc(var(--space4) + var(--space2_5));
-}
-
-.main-landing-jobs .page-section.signup .fieldset legend + * {
-    margin-top: calc(var(--space4) + var(--space2_5));
-}
-
+.main-landing-jobs .page-section.signup .fieldset legend + *,
 .main-landing-jobs .page-section.signup .fieldset > div > p {
-    margin-top: var(--space4_5);
+    margin-top: var(--space4);
 }
 
 .main-landing-jobs .page-section.signup .fieldset > p .console-button-text {
@@ -501,4 +485,32 @@
     /* -webkit-column-break-inside: avoid; */
     /* page-break-inside: avoid; */
     break-inside: avoid;
+}
+
+@media (min-width: 891px) {
+    .main-landing-jobs .page-section.signup .fieldset {
+        position: relative;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+    }
+
+    .main-landing-jobs .page-section.signup .fieldset legend {
+        width: 30%;
+        flex: 0 0 auto;
+    }
+
+    .main-landing-jobs .page-section.signup .fieldset > div,
+    .main-landing-jobs .page-section.signup .fieldset > input {
+        flex: 1 1 auto;
+        margin-left: var(--space5_5);
+    }
+
+    .main-landing-jobs .page-section.signup .fieldset legend + * {
+        margin-top: calc(var(--space4) + var(--space2_5));
+    }
+
+    .main-landing-jobs .page-section.signup .fieldset > div > p {
+        margin-top: var(--space4_5);
+    }
 }

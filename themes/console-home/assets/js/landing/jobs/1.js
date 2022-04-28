@@ -403,4 +403,18 @@ document.addEventListener("DOMContentLoaded", (e) => {
             document.querySelector("[data-anchor-signup]").scrollIntoView();
         });
     });
+
+    /* manage segmented bar input responsiveness */
+    let bars = document.querySelectorAll("[data-segmented-bar]");
+    let setSegmentedBarLayout = () => {
+        bars.forEach((w) => {
+            if (window.innerWidth >= 540) {
+                w.classList.remove("vertical");
+            } else {
+                w.classList.add("vertical");
+            }
+        });
+    };
+    setSegmentedBarLayout();
+    window.addEventListener("resize", setSegmentedBarLayout);
 });

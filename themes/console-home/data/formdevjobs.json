@@ -10,7 +10,7 @@
     },
     "role": {
         "type": "radio",
-        "consoleType": "radio",
+        "consoleType": "chip",
         "inputs": [
             {
                 "name": "front-end",

@@ -117,7 +117,7 @@
                                 {{ with .checked }} checked{{ end }}
                                 {{ with .required }} required{{ end }} />
                             <label for="form-role-{{ .name }}">
-                                <span class="check"></span> {{ .label }}
+                                {{ .label }}
                             </label>
                         </div>
                     {{ end }}
@@ -196,8 +196,7 @@
                                     id="form-tech-{{ .name }}"
                                     value="{{ .name }}"
                                     {{ with .checked}} checked{{end }}
-                                    {{ with .required}} required{{end }}
-                                    data-item="{{ .name }}" />
+                                    {{ with .required}} required{{end }} />
                                 <label class="tech-stack-item" for="form-tech-{{ .name }}">
                                     {{ if eq $formData.tech.consoleType "chip" }}{{ partial (print "icons/tech/" .icon ".html" ) }}{{ end }}
                                     {{ .label }}
@@ -220,7 +219,7 @@
                     <h4 class="title title-3">Your experience</h4>
                     <p class="small">Some description of the fields group.</p>
                 </legend>
-                <div class="segmented-bar">
+                <div data-segmented-bar class="segmented-bar">
                     {{ range $formData.exp.inputs }}
                         <div>
                             <input
@@ -244,7 +243,7 @@
                     <h4 class="title title-3">Your desired salary</h4>
                     <p class="small">Some description of the fields group.</p>
                 </legend>
-                <div class="segmented-bar">
+                <div data-segmented-bar class="segmented-bar">
                     {{ range $formData.salary.inputs }}
                         <div>
                             <input class="console-input-{{ $formData.salary.consoleType }} attention"
@@ -263,7 +262,7 @@
                 </div>
             </div>
 
-            <h6 class="title title-5">{{partial "icons/jobs.html" }} Get the best jobs in your inbox</h6>
+            <h6 class="title title-5 rich-title">{{partial "icons/jobs.html" }} Get the best jobs in your inbox</h6>
 
             <button onclick="blur()" class="console-button icon-left" type="submit" title="Signup">
                 {{ partial "icons/send.html" }}
