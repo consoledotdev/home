@@ -433,41 +433,64 @@
     color: var(--theme-text-2);
 }
 
-.main-landing-jobs .page-section.signup fieldset {
+.main-landing-jobs .page-section.signup .fieldset {
     margin: 0;
     padding: 0;
     border: none;
 }
 
-.main-landing-jobs .page-section.signup fieldset + fieldset {
+@media (min-width: 769px) {
+    .main-landing-jobs .page-section.signup .fieldset {
+        position: relative;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .main-landing-jobs .page-section.signup .fieldset legend {
+        width: 30%;
+        flex: 0 0 auto;
+    }
+
+    .main-landing-jobs .page-section.signup .fieldset > div,
+    .main-landing-jobs .page-section.signup .fieldset > input {
+        flex: 1 1 auto;
+        margin-left: var(--space5_5);
+    }
+}
+
+.main-landing-jobs .page-section.signup .fieldset + .fieldset {
     margin-top: calc(var(--space5) + var(--space3));
 }
 
-.main-landing-jobs .page-section.signup fieldset + .title {
+.main-landing-jobs .page-section.signup .fieldset + .title {
     margin-top: calc(var(--space5) + var(--space3));
     margin-bottom: calc(var(--space4) + var(--space2));
     color: var(--theme-text-2);
 }
 
-.main-landing-jobs .page-section.signup fieldset legend {
+.main-landing-jobs .page-section.signup .fieldset legend {
     position: relative;
     display: block;
 }
 
-.main-landing-jobs .page-section.signup fieldset legend + * {
+.main-landing-jobs .page-section.signup .fieldset legend + * {
     margin-top: calc(var(--space4) + var(--space2_5));
 }
 
-.main-landing-jobs .page-section.signup fieldset legend + * {
+.main-landing-jobs .page-section.signup .fieldset legend + * {
     margin-top: calc(var(--space4) + var(--space2_5));
 }
 
-.main-landing-jobs .page-section.signup fieldset > div > p {
+.main-landing-jobs .page-section.signup .fieldset > div > p {
     margin-top: var(--space4_5);
 }
 
-.main-landing-jobs .page-section.signup fieldset > p .console-button-text {
+.main-landing-jobs .page-section.signup .fieldset > p .console-button-text {
     margin-left: var(--space2);
+}
+
+.main-landing-jobs .page-section.signup .fieldset input {
+    max-width: 330px;
 }
 
 .main-landing-jobs .form-cols {
