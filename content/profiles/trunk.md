@@ -49,6 +49,9 @@ companyInfo:
       value: "10-20"
     - label: "Stage"
       value: "Early-stage startup"
+    - label: "Customers"
+      value:
+        - "Doordash, Waabi, Voxel, Hashicorp"
     - label: "Social"
       value:
         links:
