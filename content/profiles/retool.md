@@ -68,9 +68,9 @@ companyInfo:
             text: "LinkedIn"
             iconLeft: "linkedin"
   type: "SaaS / CLI"
-  category: "Developer Tools - Code management"
+  category: "Developer Tools - Internal tools"
   topCategory: "Developer Tools"
-  subCategory: "Code management"
+  subCategory: "Internal tools"
   filterTaxonomy: "saas, cli, typescript, react, cplusplus"
 interview: retool-snir-kodesh
 podcast: s01e06-appsmith-retool
@@ -78,8 +78,8 @@ podcast: s01e06-appsmith-retool
 
 {{< nav-wrapper--open id="wrapper-1" anchor-name="how-engineering-works" >}}
 
-{{< rich-title-3 icon="checklist" id="how-engineering-works" >}} How engineering
-works {{</ rich-title-3 >}}
+{{< rich-title-3 icon="checklist" id="how-engineering-works" >}}How engineering
+works at Retool{{</ rich-title-3 >}}
 
 #### How are the teams structured?
 
@@ -178,7 +178,7 @@ with secondary support.
 
 {{< nav-wrapper--open id="wrapper-2" anchor-name="hiring-process" >}}
 
-{{< rich-title-3 icon="checklist" id="key-features" >}} Hiring process
+{{< rich-title-3 icon="checklist" id="key-features" >}}Hiring process at Retool
 {{</ rich-title-3 >}}
 
 #### How does the application process work? What are the stages and what is the timeline?

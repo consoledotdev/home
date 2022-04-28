@@ -73,7 +73,7 @@ interview: vantage-ben-schaechter
 {{< nav-wrapper--open id="wrapper-1" anchor-name="how-engineering-works" >}}
 
 {{< rich-title-3 icon="checklist" id="how-engineering-works" >}} How engineering
-works {{</ rich-title-3 >}}
+works at Vantage{{</ rich-title-3 >}}
 
 #### How are the teams structured?
 
@@ -128,7 +128,7 @@ dollars for our customers.
 
 {{< nav-wrapper--open id="wrapper-2" anchor-name="hiring-process" >}}
 
-{{< rich-title-3 icon="checklist" id="key-features" >}} Hiring process
+{{< rich-title-3 icon="checklist" id="key-features" >}}Hiring process at Vantage
 {{</ rich-title-3 >}}
 
 #### How does the application process work? What are the stages and what is the timeline?

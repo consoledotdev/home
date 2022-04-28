@@ -98,7 +98,7 @@ podcast: s01e07-sourcegraph-hoppscotch
 {{< nav-wrapper--open id="wrapper-1" anchor-name="how-engineering-works" >}}
 
 {{< rich-title-3 icon="checklist" id="how-engineering-works" >}} How engineering
-works {{</ rich-title-3 >}}
+works at Sourcegraph{{</ rich-title-3 >}}
 
 #### How are the teams structured?
 
@@ -173,7 +173,7 @@ Automated CI using Buildkite, with automated end-to-end tests.
 
 {{< nav-wrapper--open id="wrapper-2" anchor-name="hiring-process" >}}
 
-{{< rich-title-3 icon="checklist" id="key-features" >}} Hiring process
+{{< rich-title-3 icon="checklist" id="key-features" >}}Hiring process at Sourcegraph
 {{</ rich-title-3 >}}
 
 #### How does the application process work? What are the stages and what is the timeline?

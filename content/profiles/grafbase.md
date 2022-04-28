@@ -26,7 +26,7 @@ companyInfo:
     - url: /img/profiles/grafbase-profile-2.png
     - url: /img/profiles/grafbase-profile-3.png
   product:
-    name: "Retool"
+    name: "Grafbase"
     description:
       "At Grafbase, we aim to accelerate back-end development with next 
       generation tooling. We want developers to be able to deploy APIs globally 
@@ -68,8 +68,8 @@ companyInfo:
 
 {{< nav-wrapper--open id="wrapper-1" anchor-name="how-engineering-works" >}}
 
-{{< rich-title-3 icon="checklist" id="how-engineering-works" >}} How engineering
-works {{</ rich-title-3 >}}
+{{< rich-title-3 icon="checklist" id="how-engineering-works" >}}How engineering
+works at Grafbase{{</ rich-title-3 >}}
 
 #### How are the teams structured?
 
@@ -151,7 +151,7 @@ rotate weekly.
 
 {{< nav-wrapper--open id="wrapper-2" anchor-name="hiring-process" >}}
 
-{{< rich-title-3 icon="checklist" id="key-features" >}} Hiring process
+{{< rich-title-3 icon="checklist" id="key-features" >}}Hiring process at Grafbase
 {{</ rich-title-3 >}}
 
 #### How does the application process work? What are the stages and what is the timeline?
