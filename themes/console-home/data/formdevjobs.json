@@ -15,28 +15,34 @@
             {
                 "name": "front-end",
                 "label": "Front end",
+                "icon": "developer-tools",
                 "checked": true,
                 "required": true
             },
             {
                 "name": "back-end",
-                "label": "Back end"
+                "label": "Back end",
+                "icon": "database"
             },
             {
                 "name": "mobile",
-                "label": "Mobile"
+                "label": "Mobile",
+                "icon": "mobile"
             },
             {
                 "name": "design",
-                "label": "Design"
+                "label": "Design",
+                "icon": "placeholder"
             },
             {
                 "name": "security",
-                "label": "Security"
+                "label": "Security",
+                "icon": "security"
             },
             {
                 "name": "devops",
-                "label": "DevOps"
+                "label": "DevOps",
+                "icon": "devops"
             }
         ]
     },

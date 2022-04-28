@@ -123,6 +123,7 @@
                                 {{ with .checked }} checked{{ end }}
                                 {{ with .required }} required{{ end }} />
                             <label for="form-role-{{ .name }}">
+                                {{ if eq $formData.role.consoleType "chip" }}{{ partial (print "icons/" .icon ".html" ) }}{{ end }}
                                 {{ .label }}
                             </label>
                         </div>
