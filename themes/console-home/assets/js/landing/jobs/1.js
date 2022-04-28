@@ -359,7 +359,7 @@ class FormHelper {
     }
 
     toggleAllSiblings(e) {
-        const fieldset = e.currentTarget.closest("fieldset");
+        const fieldset = e.currentTarget.closest(".fieldset");
         const siblings = fieldset.querySelectorAll("[data-item]");
         siblings.forEach((s) => {
             s.indeterminate = false;
@@ -368,7 +368,7 @@ class FormHelper {
     }
 
     toggleDisableSiblings(e) {
-        const fieldset = e.currentTarget.closest("fieldset");
+        const fieldset = e.currentTarget.closest(".fieldset");
         const siblings = fieldset.querySelectorAll("[data-item]");
         siblings.forEach((s) => {
             if (s != e.currentTarget) s.disabled = s.checked;
