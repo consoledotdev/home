@@ -186,7 +186,7 @@
                     </div>
                 </div>
             </div>
-            <div class="fieldset">
+            <div class="fieldset fieldset-tech-stack">
                 <legend>
                     <h4 class="title title-3">Preferred tech stack</h4>
                     <p class="small">Some description of the fields group.</p>
@@ -210,13 +210,24 @@
                             </div>
                         {{ end }}
                     </div>
-                    <p class="small">
+                    <p data-content-extension-launch="other-tech" class="content-extension-launch small">
                         Using something else?
-                        <a class="console-button-text console-button-medium icon-left" href="/latest/" title="See the latest email" rel="noopener">
+                        <a data-content-extension-toggle="other-tech" class="console-button-text console-button-medium icon-left" title="Add other tool or tech">
                             {{ partial "icons/plus.html" }}
                             <span>Add other tool or tech</span>
                         </a>
                     </p>
+                    <div data-content-extension="other-tech" class="content-extension is-hidden">
+                        <h6 class="title title-5">Other tool or tech</h6>
+                        <p class="small">Separate items with a comma.</p>
+                        <div>
+                            <input id="form-other-tech" name="form-other-tech" class="console-input-text console-input-small" type="text" placeholder="Add tool or tech" title="Other tool or tech" />
+                            <a data-content-extension-toggle="other-tech" class="console-button-text console-button-medium icon-left" title="Cancel adding other tool or tech">
+                                {{ partial "icons/cancel.html" }}
+                                <span>Cancel</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <h6 class="title title-5">About yourself</h6>

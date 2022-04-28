@@ -501,12 +501,20 @@
     display: block;
 }
 
-.main-landing-jobs .page-section.signup .fieldset legend + *,
-.main-landing-jobs .page-section.signup .fieldset > div > p {
+.main-landing-jobs .page-section.signup .fieldset legend + * {
     margin-top: var(--space4);
 }
 
-.main-landing-jobs .page-section.signup .fieldset > p .console-button-text {
+.main-landing-jobs .page-section.signup .fieldset-tech-stack .form-cols {
+    margin-bottom: var(--space4);
+}
+
+.main-landing-jobs .page-section.signup .fieldset .content-extension-launch,
+.main-landing-jobs .page-section.signup .fieldset .content-extension {
+    margin: 0;
+}
+
+.main-landing-jobs .page-section.signup .fieldset .content-extension-launch .console-button-text {
     margin-left: var(--space2);
 }
 
@@ -515,14 +523,37 @@
     width: 100%;
 }
 
-.main-landing-jobs .form-cols {
+.main-landing-jobs .page-section.signup .form-cols {
     columns: 3 200px;
 }
 
-.main-landing-jobs .form-cols > * {
+.main-landing-jobs .page-section.signup .form-cols > * {
     /* -webkit-column-break-inside: avoid; */
     /* page-break-inside: avoid; */
     break-inside: avoid;
+}
+
+.main-landing-jobs .page-section.signup .content-extension .title {
+    margin-bottom: var(--space3);
+}
+
+.main-landing-jobs .page-section.signup .content-extension p.small {
+    margin-bottom: var(--space3_5);
+}
+
+.main-landing-jobs .page-section.signup .content-extension div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.main-landing-jobs .page-section.signup .content-extension div .console-input-text {
+    flex: 1 1 auto;
+}
+
+.main-landing-jobs .page-section.signup .content-extension div .console-button-text {
+    flex: 0 0 auto;
+    margin-left: var(--space3_5);
 }
 
 @media (min-width: 891px) {
@@ -548,7 +579,7 @@
         margin-top: calc(var(--space4) + var(--space2_5));
     }
 
-    .main-landing-jobs .page-section.signup .fieldset > div > p {
-        margin-top: var(--space4_5);
+    .main-landing-jobs .page-section.signup .fieldset-tech-stack .form-cols {
+        margin-bottom: var(--space4_5);
     }
 }

@@ -6009,3 +6009,21 @@ p.combo-card-description {
     color: var(--theme-text-2);
     letter-spacing: 0.12em;
 }
+
+/* Content Extension
+   ================================================================================================================ */
+.content-extension,
+.content-extension-launch {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    opacity: 1;
+    max-height: 120px;
+    transition: var(--a-elements-simple);
+}
+
+.content-extension.is-hidden,
+.content-extension-launch.is-hidden {
+    max-height: 0px;
+    opacity: 0;
+}

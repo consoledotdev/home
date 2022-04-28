@@ -118,6 +118,7 @@
     --a-elements-time: 0.2s;
     --a-elements-easing: cubic-bezier(0.09, 0.33, 0.12, 1.26);
     --a-elements: all 0.2s cubic-bezier(0.09, 0.33, 0.12, 1.26);
+    --a-elements-simple: all 0.2s ease-in-out;
 
     --a-layout: all 1s cubic-bezier(0.09, 0.33, 0.12, 1.26);
     --a-layout-active: all 1s cubic-bezier(0.09, 0.33, 0.12, 1.26);

@@ -381,6 +381,50 @@ class FormHelper {
     }
 }
 
+class ContentExtensionHelper {
+    constructor() {
+        this.bindFuncs();
+
+        this.contents = this.getContents();
+        this.bindToggles();
+    }
+
+    bindFuncs() {
+        this.toggleContent = this.toggleContent.bind(this);
+    }
+
+    getContents() {
+        const contents = [];
+        document.querySelectorAll("[data-content-extension]").forEach((c) => {
+            const l = document.querySelector("[data-content-extension-launch='" + c.dataset.contentExtension + "']");
+            const ts = document.querySelectorAll("[data-content-extension-toggle='" + c.dataset.contentExtension + "']");
+            contents.push({
+                content: c,
+                launch: l,
+                toggles: ts,
+            });
+        });
+        return contents;
+    }
+
+    bindToggles() {
+        this.contents.forEach((c) => {
+            c.toggles.forEach((t) => {
+                t.addEventListener("click", this.toggleContent);
+            });
+        });
+    }
+
+    toggleContent(e) {
+        const c = this.contents.filter((c) => {
+            return c.content.dataset.contentExtension == e.currentTarget.dataset.contentExtensionToggle;
+        });
+        console.log(c);
+        c[0].content.classList.toggle("is-hidden");
+        c[0].launch.classList.toggle("is-hidden");
+    }
+}
+
 document.addEventListener("DOMContentLoaded", (e) => {
     const jobsArt = new JobsArt("[data-artwork-canvas]");
     const jobsArtItems = new GravitatingItems("[data-gravitating-items]");
@@ -388,6 +432,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
     const formHelper = new FormHelper("[data-signup-form]");
 
+    const contentExtensionHelper = new ContentExtensionHelper();
+
+    /* bind opening section actions */
     document.querySelectorAll("[data-launch-signup]").forEach((l) => {
         l.addEventListener("click", (e) => {
             if (e.currentTarget.type == "radio") {
