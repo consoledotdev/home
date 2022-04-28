@@ -7,7 +7,7 @@
                 <h2 class="title title-1">The best developer jobs you weren’t looking for</h2>
                 <p class="description">A free email digest of jobs that actually suit you.</p>
 
-                <button onclick="blur()" class="console-button icon-left" title="Signup">
+                <button data-launch-signup="email" onclick="blur();" class="console-button icon-left" title="Signup">
                     {{ partial "icons/send.html" }}
                     <span>Sign Up</span>
                 </button>
@@ -18,12 +18,20 @@
             <div class="artwork-wrapper">
                 <canvas data-artwork-canvas class="artwork"></canvas>
                 <div class="artwork-interactives">
-                    <div data-gravitating-items class="item item-01"><span class="inner">Front end</span></div>
-                    <div data-gravitating-items class="item item-02"><span class="inner">Back end</span></div>
-                    <div data-gravitating-items class="item item-03"><span class="inner">Mobile</span></div>
-                    <div data-gravitating-items class="item item-04"><span class="inner">Design</span></div>
-                    <div data-gravitating-items class="item item-05"><span class="inner">Security</span></div>
-                    <div data-gravitating-items class="item item-06"><span class="inner">DevOps</span></div>
+                    {{ range $idx, $item := $formData.role.inputs }}
+                        <div data-gravitating-items class="item item-{{ $idx }}">
+                            <input
+                                data-launch-signup="{{ $item.name }}"
+                                class="console-input-chip attention"
+                                type="{{ $formData.role.type }}"
+                                id="launch-{{ $item.name }}"
+                                value="{{ $item.name }}"
+                                checked />
+                            <label for="launch-{{ $item.name }}">
+                                <span class="check"></span> {{ $item.label }}
+                            </label>
+                        </div>
+                    {{ end }}
                 </div>
             </div>
         </div>
@@ -77,6 +85,7 @@
             <div class="vapor-globe"></div>
         </div>
     </section>
+    <span data-anchor-signup></span>
     <section class="page-section page-section-landing-jobs signup">
         <div class="page-section-heading">
             <h3 class="title title-2">Sign Up</h3>
@@ -99,7 +108,14 @@
                 <div>
                     {{ range $formData.role.inputs }}
                         <div class="input-wrapper">
-                            <input class="console-input-{{ $formData.role.consoleType }} attention" type="{{ $formData.role.type }}" name="form-role" id="form-role-{{ .name }}" value="{{ .name }}" {{ with .checked}} checked{{end }} {{ with .required}} required{{end }} />
+                            <input
+                                class="console-input-{{ $formData.role.consoleType }} attention"
+                                type="{{ $formData.role.type }}"
+                                name="form-role"
+                                id="form-role-{{ .name }}"
+                                value="{{ .name }}"
+                                {{ with .checked }} checked{{ end }}
+                                {{ with .required }} required{{ end }} />
                             <label for="form-role-{{ .name }}">
                                 <span class="check"></span> {{ .label }}
                             </label>

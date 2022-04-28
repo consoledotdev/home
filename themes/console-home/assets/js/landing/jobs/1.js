@@ -374,6 +374,11 @@ class FormHelper {
             if (s != e.currentTarget) s.disabled = s.checked;
         });
     }
+
+    _setInput(data) {
+        const input = this.form.querySelector("[type='" + data.type + "'][id='" + data.id + "']");
+        input[data.state[0]] = data.state[1];
+    }
 }
 
 document.addEventListener("DOMContentLoaded", (e) => {
@@ -382,4 +387,20 @@ document.addEventListener("DOMContentLoaded", (e) => {
     jobsArtItems._artwork = jobsArt;
 
     const formHelper = new FormHelper("[data-signup-form]");
+
+    document.querySelectorAll("[data-launch-signup]").forEach((l) => {
+        l.addEventListener("click", (e) => {
+            if (e.currentTarget.type == "radio") {
+                const value = e.currentTarget.dataset.launchSignup;
+                formHelper._setInput({
+                    type: "radio",
+                    id: "form-role-" + value,
+                    state: ["checked", true],
+                });
+            }
+
+            document.querySelector("#form-email").focus();
+            document.querySelector("[data-anchor-signup]").scrollIntoView();
+        });
+    });
 });

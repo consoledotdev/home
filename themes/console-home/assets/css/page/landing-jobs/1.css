@@ -180,45 +180,37 @@
     transition-duration: var(--a-elements-time), var(--a-elements-time);
 }
 
-.artwork-interactives:hover .item-01 {
+.artwork-interactives:hover .item-0 {
     transform: translate(-20%, -40%);
 }
 
-.artwork-interactives:hover .item-02 {
+.artwork-interactives:hover .item-1 {
     transform: translate(-50%, -10%);
 }
 
-.artwork-interactives:hover .item-03 {
+.artwork-interactives:hover .item-2 {
     transform: translate(-35%, 30%);
 }
 
-.artwork-interactives:hover .item-04 {
+.artwork-interactives:hover .item-3 {
     transform: translate(20%, 40%);
 }
 
-.artwork-interactives:hover .item-05 {
+.artwork-interactives:hover .item-4 {
     transform: translate(50%, 10%);
 }
 
-.artwork-interactives:hover .item-06 {
+.artwork-interactives:hover .item-5 {
     transform: translate(35%, -30%);
 }
 
-.artwork-interactives .item .inner {
+.artwork-interactives .item > * {
     position: absolute;
     white-space: nowrap;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: all;
-
-    /* temp */
-    padding: 2px 4px;
-    background: var(--c-grey-07);
-}
-
-.artwork-interactives .item .inner:hover {
-    background: var(--c-grey-05);
 }
 
 /* Features */
@@ -423,6 +415,13 @@
 }
 
 /* Sign up */
+[data-anchor-signup=""] {
+    position: absolute;
+    display: block;
+    height: 0;
+    margin-top: calc(var(--space4) * -1);
+}
+
 .main-landing-jobs .page-section.signup {
     max-width: none;
     margin: 0;
