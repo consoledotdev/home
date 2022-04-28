@@ -105,7 +105,7 @@
                     <h4 class="title title-3">Roles of interest</h4>
                     <p class="small">We will exact match you with any matching using an <em>OR</em> filter.</p>
                 </legend>
-                <div>
+                <div class="form-cols">
                     {{ range $formData.role.inputs }}
                         <div class="input-wrapper">
                             <input
@@ -151,27 +151,33 @@
                         </div>
                     {{ end }}
                     <div class="form-separator"><p class="small">or</p></div>
-                    {{ range after 1 $formData.locations.inputs }}
-                        <div class="input-wrapper{{ with .parent }} sub{{ end }}">
-                                <input
-                                    class="console-input-{{ $formData.locations.consoleType }} attention"
-                                    type="{{ $formData.locations.type }}"
-                                    name="form-locations"
-                                    id="form-locations-{{ .name }}"
-                                    value="{{ .name }}"
-                                    {{ with .checked }} checked{{ end }}
-                                    {{ with .required}} required{{end }}
-                                    data-item="{{ .name }}"
-                                    {{ with .parent }} data-child="{{ . }}"{{ end }}
-                                    {{ with .hasChildren }} data-parent{{ end }}
-                                    {{ with .selectAll }} data-select-all{{ end }}
-                                    {{ with .disableOthers }} data-disable-others{{ end }} />
-                                <label for="form-locations-{{ .name }}">
-                                    {{ if eq $formData.locations.consoleType "checkbox" }}<span class="check">{{ partial (print "icons/checkmark.html" ) }}</span>{{ end }}
-                                    {{ .label }}
-                                </label>
-                        </div>
-                    {{ end }}
+                    <div class="form-cols">
+                        {{ $prevHasParent := false }}
+                        {{ range $idx, $item := after 1 $formData.locations.inputs }}
+                            {{ if not $item.parent }}{{ with $prevHasParent }}</div>{{ end }}{{ end }}
+                            {{ with $item.hasChildren }}<div>{{ end }}
+                                <div class="input-wrapper{{ with $item.parent }} sub{{ end }}">
+                                    <input
+                                        class="console-input-{{ $formData.locations.consoleType }} attention"
+                                        type="{{ $formData.locations.type }}"
+                                        name="form-locations"
+                                        id="form-locations-{{ $item.name }}"
+                                        value="{{ $item.name }}"
+                                        {{ with $item.checked }} checked{{ end }}
+                                        {{ with $item.required}} required{{end }}
+                                        data-item="{{ $item.name }}"
+                                        {{ with $item.parent }} data-child="{{ . }}"{{ end }}
+                                        {{ with $item.hasChildren }} data-parent{{ end }}
+                                        {{ with $item.selectAll }} data-select-all{{ end }}
+                                        {{ with $item.disableOthers }} data-disable-others{{ end }} />
+                                    <label for="form-locations-{{ $item.name }}">
+                                        {{ if eq $formData.locations.consoleType "checkbox" }}<span class="check">{{ partial (print "icons/checkmark.html" ) }}</span>{{ end }}
+                                        {{ $item.label }}
+                                    </label>
+                                </div>
+                            {{ with $item.parent }}{{ $prevHasParent = true }}{{ else }}{{ $prevHasParent = false }}{{ end }}
+                        {{ end }}
+                    </div>
                 </div>
             </fieldset>
             <fieldset>
@@ -180,31 +186,33 @@
                     <p class="small">Some description of the fields group.</p>
                 </legend>
                 <div>
-                    {{ range $formData.tech.inputs }}
-                        <div class="input-wrapper">
-                            <input
-                                class="console-input-{{ $formData.tech.consoleType }} attention"
-                                type="{{ $formData.tech.type }}"
-                                name="form-tech"
-                                id="form-tech-{{ .name }}"
-                                value="{{ .name }}"
-                                {{ with .checked}} checked{{end }}
-                                {{ with .required}} required{{end }}
-                                data-item="{{ .name }}" />
-                            <label class="tech-stack-item" for="form-tech-{{ .name }}">
-                                {{ if eq $formData.tech.consoleType "chip" }}{{ partial (print "icons/tech/" .icon ".html" ) }}{{ end }}
-                                {{ .label }}
-                            </label>
-                        </div>
-                    {{ end }}
+                    <div class="form-cols">
+                        {{ range $formData.tech.inputs }}
+                            <div class="input-wrapper">
+                                <input
+                                    class="console-input-{{ $formData.tech.consoleType }} attention"
+                                    type="{{ $formData.tech.type }}"
+                                    name="form-tech"
+                                    id="form-tech-{{ .name }}"
+                                    value="{{ .name }}"
+                                    {{ with .checked}} checked{{end }}
+                                    {{ with .required}} required{{end }}
+                                    data-item="{{ .name }}" />
+                                <label class="tech-stack-item" for="form-tech-{{ .name }}">
+                                    {{ if eq $formData.tech.consoleType "chip" }}{{ partial (print "icons/tech/" .icon ".html" ) }}{{ end }}
+                                    {{ .label }}
+                                </label>
+                            </div>
+                        {{ end }}
+                    </div>
+                    <p class="small">
+                        Using something else?
+                        <a class="console-button-text console-button-medium icon-left" href="/latest/" title="See the latest email" rel="noopener">
+                            {{ partial "icons/plus.html" }}
+                            <span>Add other tool or tech</span>
+                        </a>
+                    </p>
                 </div>
-                <p class="small">
-                    Using something else?
-                    <a class="console-button-text console-button-medium icon-left" href="/latest/" title="See the latest email" rel="noopener">
-                        {{ partial "icons/plus.html" }}
-                        <span>Add other tool or tech</span>
-                    </a>
-                </p>
             </fieldset>
             <h6 class="title title-5">About yourself</h6>
             <fieldset>
