@@ -196,21 +196,21 @@
         "consoleType": "segmented-bar",
         "inputs": [
             {
-                "name": "2",
+                "name": "2y",
                 "label": "< 2 years",
                 "checked": true,
                 "required": true
             },
             {
-                "name": "2-5",
+                "name": "2-5y",
                 "label": "2-5 years"
             },
             {
-                "name": "5-10",
+                "name": "5-10y",
                 "label": "5-10 years"
             },
             {
-                "name": "10",
+                "name": "10y",
                 "label": "> 10 years"
             }
         ]

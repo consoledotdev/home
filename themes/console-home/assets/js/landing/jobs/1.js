@@ -268,7 +268,7 @@ class GravitatingItems {
 
     rotate() {
         this.rotateInterval = setInterval(() => {
-            this.offset += 0.0001;
+            this.offset += 0.0002;
         }, 10);
     }
 

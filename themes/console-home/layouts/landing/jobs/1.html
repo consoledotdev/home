@@ -28,7 +28,8 @@
                                 value="{{ $item.name }}"
                                 checked />
                             <label for="launch-{{ $item.name }}">
-                                <span class="check"></span> {{ $item.label }}
+                                {{ if eq $formData.role.consoleType "chip" }}{{ partial (print "icons/" $item.icon ".html" ) }}{{ end }}
+                                {{ $item.label }}
                             </label>
                         </div>
                     {{ end }}
