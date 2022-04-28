@@ -45,6 +45,12 @@
             "checked": true
         },
         {
+            "name": "cli",
+            "label": "CLI",
+            "showsIcon": false,
+            "checked": true
+        },
+        {
             "name": "database",
             "label": "Database",
             "showsIcon": false,
@@ -83,8 +89,8 @@
     ],
     "techStackItems": [
         {
-            "name": "c-cplusplus",
-            "label": "C/C++",
+            "name": "cplusplus",
+            "label": "C++",
             "showsIcon": false,
             "checked": true
         },
@@ -97,6 +103,12 @@
         {
             "name": "go",
             "label": "Go",
+            "showsIcon": false,
+            "checked": true
+        },
+        {
+            "name": "graphql",
+            "label": "GraphQL",
             "showsIcon": false,
             "checked": true
         },
@@ -133,6 +145,12 @@
         {
             "name": "typescript",
             "label": "TypeScript",
+            "showsIcon": false,
+            "checked": true
+        },
+        {
+            "name": "webassembly",
+            "label": "WebAssembly",
             "showsIcon": false,
             "checked": true
         }

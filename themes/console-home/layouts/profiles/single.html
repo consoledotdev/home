@@ -36,6 +36,7 @@
                     {{ partial "icons/external-link.html" }}</a>
             </div>
         </div>
+        {{ if .Params.companyInfo.images }}
         <div class="bottom">
             {{ $title := .Params.title }}
             {{ range .Params.companyInfo.images }}
@@ -53,6 +54,7 @@
                 </div>
             {{ end }}
         </div>
+        {{ end}}
     </section>
     <div data-content-split class="content-split">
 		<aside data-aside-wrapper class="aside-wrapper">

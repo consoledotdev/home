@@ -67,8 +67,8 @@ interview: codesee-shanea-leven
 
 {{< nav-wrapper--open id="wrapper-1" anchor-name="how-engineering-works" >}}
 
-{{< rich-title-3 icon="checklist" id="how-engineering-works" >}} How engineering
-works {{</ rich-title-3 >}}
+{{< rich-title-3 icon="checklist" id="how-engineering-works" >}}How engineering
+works at CodeSee{{</ rich-title-3 >}}
 
 #### How are the teams structured?
 
@@ -157,7 +157,7 @@ team to support one another.
 
 {{< nav-wrapper--open id="wrapper-2" anchor-name="hiring-process" >}}
 
-{{< rich-title-3 icon="checklist" id="key-features" >}} Hiring process
+{{< rich-title-3 icon="checklist" id="key-features" >}}Hiring process at CodeSee
 {{</ rich-title-3 >}}
 
 #### How does the application process work? What are the stages and what is the timeline?
