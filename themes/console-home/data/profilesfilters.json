@@ -45,6 +45,12 @@
             "checked": true
         },
         {
+            "name": "cli",
+            "label": "CLI",
+            "showsIcon": false,
+            "checked": true
+        },
+        {
             "name": "database",
             "label": "Database",
             "showsIcon": false,
@@ -83,8 +89,8 @@
     ],
     "techStackItems": [
         {
-            "name": "c-cplusplus",
-            "label": "C/C++",
+            "name": "cplusplus",
+            "label": "C++",
             "showsIcon": false,
             "checked": true
         },
