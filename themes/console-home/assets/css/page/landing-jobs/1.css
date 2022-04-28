@@ -509,6 +509,12 @@
     margin-bottom: var(--space4);
 }
 
+.main-landing-jobs .page-section.signup .fieldset .content-extension:not(.is-hidden),
+.main-landing-jobs .page-section.signup .fieldset .content-extension-launch:not(.is-hidden) {
+    max-height: 120px;
+    padding-bottom: 2px;
+}
+
 .main-landing-jobs .page-section.signup .fieldset .content-extension-launch,
 .main-landing-jobs .page-section.signup .fieldset .content-extension {
     margin: 0;
