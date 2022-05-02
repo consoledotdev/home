@@ -213,6 +213,13 @@
     pointer-events: all;
 }
 
+.artwork-interactives .console-input-chip + label {
+    font-size: var(--t-size0);
+    min-height: calc(var(--space3) + var(--space3));
+    border-radius: calc((var(--space3) + var(--space3)) / 2);
+    padding: 0 calc(var(--space2) + var(--space1));
+}
+
 /* Features */
 .page-section-landing-jobs.features {
     max-width: none;

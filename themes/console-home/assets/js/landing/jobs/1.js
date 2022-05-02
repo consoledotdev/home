@@ -102,7 +102,7 @@ class JobsArt {
         const color = 0xffffff;
         const intensity = 1;
         const light = new THREE.DirectionalLight(color, intensity);
-        light.position.set(-1, 2, 4);
+        light.position.set(2, 0, 4);
         return light;
     }
 
@@ -121,7 +121,7 @@ class JobsArt {
         objs.container = container;
 
         const makeDiamond = (cfg) => {
-            let t = 0.005; // thickness
+            let t = 0.003; // thickness
             const square = new THREE.Shape();
             square.moveTo(0, 0);
             square.lineTo(1, 0);
@@ -135,7 +135,7 @@ class JobsArt {
             hole.lineTo(t, 1 - t);
             square.holes.push(hole);
 
-            const extrudeSettings = { depth: t, bevelEnabled: true, bevelSegments: 2, steps: 2, bevelSize: t, bevelThickness: t };
+            const extrudeSettings = { depth: t * 2, bevelEnabled: true, bevelSegments: 2, steps: 6, bevelSize: t, bevelThickness: t };
             const geometry = new THREE.ExtrudeGeometry(square, extrudeSettings);
             const diamond = new THREE.Mesh(geometry, new THREE.MeshPhongMaterial({ color: cfg.color }));
             diamond.position.x = -0.5;
@@ -177,7 +177,7 @@ class JobsArt {
         {
             // sphere
             const sphereGeometry = new THREE.SphereGeometry(0.12, 64, 32);
-            const material = new THREE.MeshPhongMaterial({ emissive: 0xffa800, emissiveIntensity: 1.0 });
+            const material = new THREE.MeshPhongMaterial({ emissive: 0xff9900, emissiveIntensity: 1.0 });
             const obj = new THREE.Mesh(sphereGeometry, material);
             container.add(obj);
             objs.globe = obj;
@@ -251,7 +251,7 @@ class GravitatingItems {
         this.bindFuncs();
 
         this.offset = 1;
-        this.radius = 45; // percent
+        this.radius = 46; // percent
         this.currentRadius = 0;
         this.items = document.querySelectorAll(selector);
         this.parent = this.items[0].parentElement;
