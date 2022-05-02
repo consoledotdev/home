@@ -291,13 +291,6 @@
     </section>
 
     <script src="/js/vendor/three-0.139.2.min.js"></script>
-    <script src="/js/vendor/three-0.139.2-EffectComposer.js"></script>
-    <script src="/js/vendor/three-0.139.2-RenderPass.js"></script>
-    <script src="/js/vendor/three-0.139.2-Pass.js"></script>
-    <script src="/js/vendor/three-0.139.2-ShaderPass.js"></script>
-    <script src="/js/vendor/three-0.139.2-CopyShader.js"></script>
-    <script src="/js/vendor/three-0.139.2-BokehShader.js"></script>
-    <script src="/js/vendor/three-0.139.2-BokehPass.js"></script>
 
 	{{ $js := resources.Get "/js/landing/jobs/1.js" }}
     {{ if hugo.IsProduction }}{{ $js = $js | resources.Minify | resources.Fingerprint }}{{ end }}

@@ -33,10 +33,7 @@ class JobsArt {
         this.lights = this.makeLights();
         this.objs = this.makeObjs();
 
-        this.postProcessing = {};
-
         this.setup();
-        this.postProcess();
 
         requestAnimationFrame(this.render);
     }
@@ -56,8 +53,8 @@ class JobsArt {
     getSpeeds() {
         return {
             rotation: {
-                fast: 0.001,
-                slow: 0.0005,
+                fast: 0.01,
+                slow: 0.005,
             },
         };
     }
@@ -87,7 +84,7 @@ class JobsArt {
         const near = 0.1;
         const far = 100;
         const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-        camera.position.z = 50;
+        camera.position.z = 0;
         return camera;
     }
 
@@ -119,7 +116,7 @@ class JobsArt {
         const container = new THREE.Object3D();
         container.position.z = -7;
         container.rotation.z = -Math.PI / 4;
-        container.scale.set(15, 15, 15);
+        container.scale.set(1.5, 1.5, 1.5);
         this.scene.add(container);
         objs.container = container;
 
@@ -203,10 +200,7 @@ class JobsArt {
         });
 
         this.renderer.render(this.scene, this.cam);
-        // this.postProcessing.bokeh.uniforms.aperture.value = this.mouse.x / window.innerWidth / 1000;
-        this.postProcessing.bokeh.uniforms.focus.value = (this.mouse.x - window.innerWidth / 2) / 20;
-        console.log(this.postProcessing.bokeh.uniforms.aperture.value, this.postProcessing.bokeh.uniforms.focus.value);
-        this.postProcessing.composer.render(0.1);
+
         requestAnimationFrame(this.render);
     }
 
@@ -216,7 +210,6 @@ class JobsArt {
         const needResize = canvas.width !== width || canvas.height !== height;
         if (needResize) {
             this.renderer.setSize(width, height, false);
-            this.postProcessing.composer.setSize(width, height);
             this.cams.forEach((c) => {
                 c.aspect = canvas.clientWidth / canvas.clientHeight;
                 c.updateProjectionMatrix();
@@ -230,33 +223,6 @@ class JobsArt {
         const width = (canvas.clientWidth * pixelRatio) | 0;
         const height = (canvas.clientHeight * pixelRatio) | 0;
         return [width, height];
-    }
-
-    postProcess() {
-        const renderPass = new THREE.RenderPass(this.scene, this.cam);
-        renderPass.clearColor = new THREE.Color(0, 0, 0);
-        renderPass.clearAlpha = 0;
-
-        const [width, height] = this.getWidthAndHeight();
-        const bokehPass = new THREE.BokehPass(this.scene, this.cam, {
-            focus: 50.0,
-            aperture: 0.1,
-            maxblur: 0.01,
-
-            width: width,
-            height: height,
-        });
-        6;
-
-        var parameters = { minFilter: THREE.LinearFilter, magFilter: THREE.LinearFilter, format: THREE.RGBAFormat, stencilBuffer: false };
-        var renderTarget = new THREE.WebGLRenderTarget(width, height, parameters);
-        const composer = new THREE.EffectComposer(this.renderer, renderTarget);
-
-        composer.addPass(renderPass);
-        composer.addPass(bokehPass);
-
-        this.postProcessing.composer = composer;
-        this.postProcessing.bokeh = bokehPass;
     }
 
     _hover() {
