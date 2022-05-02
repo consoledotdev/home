@@ -386,10 +386,10 @@
 }
 
 .page-section-landing-jobs.profiled-companies .logo-cloud img {
-    height: var(--space4_5);
+    height: var(--space5);
     width: auto;
-    margin-bottom: var(--space3);
-    margin-right: var(--space4_5);
+    margin-bottom: var(--space4);
+    margin-right: calc(var(--space5) + var(--space2));
 }
 
 @media (max-width: 768px) {
@@ -428,7 +428,18 @@
 @media (min-width: 769px) and (max-width: 920px) {
     .page-section-landing-jobs.profiled-companies .logo-cloud img {
         --shrink: calc(calc(920px - 100vw) * 0.05);
-        height: calc(var(--space4_5) - var(--shrink));
+        height: calc(var(--space4_5) + var(--space2) - var(--shrink));
+        --shrinkV: calc(calc(920px - 100vw) * 0.03);
+        margin-bottom: calc(var(--space3) - var(--shrinkV));
+        --shrinkH: calc(calc(920px - 100vw) * 0.03);
+        margin-right: calc(var(--space4_5) - var(--shrinkH));
+    }
+}
+
+@media (min-width: 921px) and (max-width: 1200px) {
+    .page-section-landing-jobs.profiled-companies .logo-cloud img {
+        --shrink: calc(calc(920px - 100vw) * 0.05);
+        height: calc(var(--space5) - var(--shrink));
         --shrinkV: calc(calc(920px - 100vw) * 0.03);
         margin-bottom: calc(var(--space3) - var(--shrinkV));
         --shrinkH: calc(calc(920px - 100vw) * 0.03);

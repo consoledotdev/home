@@ -415,6 +415,15 @@ body.theme.page-advertise.checkpoint-contact {
     display: none;
 }
 
+/* Jobs landing page specific */
+.theme .main-landing-jobs img.light {
+    display: initial;
+}
+
+.theme .main-landing-jobs img.dark {
+    display: none;
+}
+
 body.theme.page-landing.checkpoint-other-content {
     background: var(--theme-content-bg-0);
 }
