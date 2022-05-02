@@ -3,10 +3,10 @@ title: Interview with Paul Masurel, Quickwit
 who: Paul Masurel
 role: CEO
 org: Quickwit
-what: Search engine for logs and chat.
+what: Append-only data search backend.
 tags: ["Search engine"]
 date: 2022-02-24T12:00:00Z
-draft: true
+draft: false
 headerType: fixed
 summary: Interview with Paul Masurel, CEO, Quickwit
 isPage: interviews
@@ -172,6 +172,5 @@ can learn French too :).
 ### Find out more
 
 [Quickwit](https://quickwit.io/) is search engine that specializes in
-append-only data. It was featured as an "Interesting Tool" in the
-[Console newsletter](/) on xx xxx 2022. This interview was conducted on 24
-Feb 2022.
+append-only data. It was featured as an "Interesting Tool" in the [Console
+newsletter](/) on 5 May 2022. This interview was conducted on 24 Feb 2022.
