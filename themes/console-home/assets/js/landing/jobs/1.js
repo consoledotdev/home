@@ -195,17 +195,6 @@ class JobsArt {
             objs.circle = obj;
         }
 
-        // {
-        //     // dashed circle - can't set thickness
-        //     const geo = new THREE.EdgesGeometry(new THREE.CircleGeometry(0.12, 20), 1);
-        //     const material = new THREE.LineDashedMaterial({ color: 0xee6666, dashSize: 0.02, gapSize: 0.02 });
-        //     const obj = new THREE.Line(geo, material);
-        //     obj.computeLineDistances();
-
-        //     container.add(obj);
-        //     objs.circle = obj;
-        // }
-
         return objs;
     }
 
