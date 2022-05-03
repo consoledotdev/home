@@ -185,6 +185,27 @@ class JobsArt {
             objs.globe = obj;
         }
 
+        {
+            // circle
+            const geo = new THREE.EdgesGeometry(new THREE.CircleGeometry(0.12, 20), 1);
+            const material = new THREE.PointsMaterial({ color: 0x95969f, sizeAttenuation: false, size: 3.5 });
+            material.transparent = true;
+            const obj = new THREE.Points(geo, material);
+            container.add(obj);
+            objs.circle = obj;
+        }
+
+        // {
+        //     // dashed circle - can't set thickness
+        //     const geo = new THREE.EdgesGeometry(new THREE.CircleGeometry(0.12, 20), 1);
+        //     const material = new THREE.LineDashedMaterial({ color: 0xee6666, dashSize: 0.02, gapSize: 0.02 });
+        //     const obj = new THREE.Line(geo, material);
+        //     obj.computeLineDistances();
+
+        //     container.add(obj);
+        //     objs.circle = obj;
+        // }
+
         return objs;
     }
 
@@ -202,6 +223,9 @@ class JobsArt {
         });
 
         this.objs.globe.material.opacity = this.currentGlobeOpacity;
+
+        this.objs.circle.rotation.z = time * -0.4;
+        this.objs.circle.material.opacity = 1 - this.currentGlobeOpacity;
 
         this.renderer.render(this.scene, this.cam);
 
