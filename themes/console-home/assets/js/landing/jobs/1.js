@@ -21,10 +21,19 @@ class JobsArt {
         this.mouse = { x: 0, y: 0 };
         document.addEventListener("mousemove", this.setMouse);
 
-        this.shift = 0.175;
-        this.currentShift = this.shift;
-        this.currentRotationSpeed = this.getSpeeds().rotation.fast;
-        this.currentGlobeOpacity = 1;
+        this.hoveredOnce = false;
+        this.outedOnce = false;
+
+        this.animations = {
+            fold: { tween: new TWEEN.Tween(), timeIn: 200, timeOut: 250 },
+            spread: { tween: new TWEEN.Tween(), timeIn: 200, timeOut: 250 },
+        };
+        this.animationParams = {
+            shift: 0.175,
+            currentShift: 0.175,
+            currentGlobeOpacity: 1,
+            currentRotationSpeed: this.getSpeeds().rotation.fast,
+        };
 
         const canvas = document.querySelector(selector);
         this.renderer = new THREE.WebGLRenderer({ canvas });
@@ -41,9 +50,9 @@ class JobsArt {
 
     getDiamondPositions() {
         return [
-            { x: -this.currentShift, y: -this.currentShift },
-            { x: this.currentShift, y: 0 },
-            { x: 0, y: this.currentShift },
+            { x: -this.animationParams.currentShift, y: -this.animationParams.currentShift },
+            { x: this.animationParams.currentShift, y: 0 },
+            { x: 0, y: this.animationParams.currentShift },
         ];
     }
 
@@ -196,6 +205,7 @@ class JobsArt {
             const geo = new THREE.EdgesGeometry(new THREE.CircleGeometry(0.12, 20), 1);
             const material = new THREE.PointsMaterial({ color: 0x95969f, sizeAttenuation: false, size: 3, depthTest: false });
             material.transparent = true;
+            material.opacity = 0;
             const obj = new THREE.Points(geo, material);
             container.add(obj);
             objs.circle = obj;
@@ -207,6 +217,7 @@ class JobsArt {
     render(time) {
         time *= 0.001; // convert time to seconds
         this.checkResizeRendererToDisplaySize();
+        TWEEN.update();
 
         const positions = this.getDiamondPositions();
         this.objs.diamonds.forEach((obj, idx) => {
@@ -214,13 +225,13 @@ class JobsArt {
             const rot = time * speed;
             obj.position.x = positions[idx].x;
             obj.position.y = positions[idx].y;
-            obj.rotateOnAxis(new THREE.Vector3(-0.5, 0.5, 0).normalize(), this.currentRotationSpeed * (Math.PI / 4) * (idx + 1));
+            obj.rotateOnAxis(new THREE.Vector3(-0.5, 0.5, 0).normalize(), this.animationParams.currentRotationSpeed * (Math.PI / 4) * (idx + 1));
         });
 
-        this.objs.globe.material.opacity = this.currentGlobeOpacity;
+        this.objs.globe.material.opacity = this.animationParams.currentGlobeOpacity;
 
         this.objs.circle.rotation.z = time * -0.4;
-        this.objs.circle.material.opacity = 1 - this.currentGlobeOpacity;
+        this.objs.circle.material.opacity = 1 - this.animationParams.currentGlobeOpacity;
 
         this.renderer.render(this.scene, this.cam);
 
@@ -248,38 +259,72 @@ class JobsArt {
         return [width, height];
     }
 
-    _hover() {
-        clearInterval(this.outInterval);
-        this.currentRotationSpeed = this.getSpeeds().rotation.slow;
-        this.hoverInterval = setInterval(() => {
-            if (this.currentShift > 0) {
-                this.currentShift -= 0.01;
-            } else this.currentShift = 0;
-        }, 10);
+    _hoverOnce() {
+        if (!this.hoveredOnce) {
+            this.hoveredOnce = true;
+            this.outedOnce = false;
 
-        clearInterval(this.globeFadeInInterval);
-        this.globeFadeOutInterval = setInterval(() => {
-            if (this.currentGlobeOpacity > 0) {
-                this.currentGlobeOpacity -= 0.08;
-            } else this.currentGlobeOpacity = 0;
-        }, 10);
+            {
+                this.animationParams.currentRotationSpeed = this.getSpeeds().rotation.slow;
+
+                this.animations.spread.tween.stop();
+                let values = {
+                    globeOpacity: this.animationParams.currentGlobeOpacity,
+                    shift: this.animationParams.currentShift,
+                };
+                this.animations.fold.tween = new TWEEN.Tween(values)
+                    .to(
+                        {
+                            globeOpacity: 0,
+                            shift: 0,
+                        },
+                        this.animations.spread.timeIn
+                    )
+                    .easing(TWEEN.Easing.Cubic.InOut)
+                    .onUpdate(() => {
+                        this.animationParams.currentGlobeOpacity = values.globeOpacity;
+                        this.animationParams.currentShift = values.shift;
+                    })
+                    .onComplete(() => {
+                        this.hoveredOnce = false;
+                    })
+                    .start();
+            }
+        }
     }
 
-    _out() {
-        clearInterval(this.hoverInterval);
-        this.currentRotationSpeed = this.getSpeeds().rotation.fast;
-        this.outInterval = setInterval(() => {
-            if (this.currentShift < this.shift) {
-                this.currentShift += 0.01;
-            } else this.currentShift = this.shift;
-        }, 10);
+    _outOnce() {
+        if (!this.outedOnce) {
+            this.outedOnce = true;
+            this.hoveredOnce = false;
 
-        clearInterval(this.globeFadeOutInterval);
-        this.globeFadeInInterval = setInterval(() => {
-            if (this.currentGlobeOpacity < 1) {
-                this.currentGlobeOpacity += 0.08;
-            } else this.currentGlobeOpacity = 1;
-        }, 10);
+            {
+                this.animationParams.currentRotationSpeed = this.getSpeeds().rotation.fast;
+
+                this.animations.fold.tween.stop();
+                let values = {
+                    globeOpacity: this.animationParams.currentGlobeOpacity,
+                    shift: this.animationParams.currentShift,
+                };
+                this.animations.spread.tween = new TWEEN.Tween(values)
+                    .to(
+                        {
+                            globeOpacity: 1,
+                            shift: this.animationParams.shift,
+                        },
+                        this.animations.spread.timeOut
+                    )
+                    .easing(TWEEN.Easing.Cubic.InOut)
+                    .onUpdate(() => {
+                        this.animationParams.currentGlobeOpacity = values.globeOpacity;
+                        this.animationParams.currentShift = values.shift;
+                    })
+                    .onComplete(() => {
+                        this.hoveredOnce = false;
+                    })
+                    .start();
+            }
+        }
     }
 }
 
@@ -310,12 +355,12 @@ class GravitatingItems {
 
     spread() {
         this.currentRadius = this.radius;
-        this._artwork._hover();
+        this._artwork._hoverOnce();
     }
 
     fold() {
         this.currentRadius = 0;
-        this._artwork._out();
+        this._artwork._outOnce();
     }
 
     rotate() {
