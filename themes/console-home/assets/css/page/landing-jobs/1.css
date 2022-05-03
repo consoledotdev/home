@@ -220,6 +220,29 @@
     padding: 0 calc(var(--space2) + var(--space1));
 }
 
+.artwork-interactives input:checked.console-input-chip + label:hover {
+    border: 1px solid transparent;
+    background: var(--theme-input-checkable-attention-on);
+    color: var(--theme-input-checkable-on-subtract);
+}
+
+.artwork-interactives input:checked.console-input-chip + label:hover .icon-stroke {
+    stroke: var(--theme-input-checkable-on-subtract);
+}
+
+.artwork-interactives input:checked.console-input-chip + label:hover .icon-fill {
+    fill: var(--theme-input-checkable-on-subtract);
+}
+
+.artwork-interactives input:checked.console-input-chip + label:hover .icon-fill-stroke {
+    stroke: var(--theme-input-checkable-on-subtract);
+    fill: var(--theme-input-checkable-on-subtract);
+}
+
+.artwork-interactives input:checked.console-input-chip + label:active {
+    background: var(--theme-text-1);
+}
+
 /* Features */
 .page-section-landing-jobs.features {
     max-width: none;
