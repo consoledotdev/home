@@ -6023,7 +6023,30 @@ p.combo-card-description {
 }
 
 .content-extension.is-hidden,
-.content-extension-launch.is-hidden {
+.content-extension-launch.is-disabled + .content-extension,
+.content-extension-launch:not(.is-disabled).is-hidden {
     max-height: 0px;
     opacity: 0;
+}
+
+.content-extension-launch.is-disabled {
+    pointer-events: none;
+    color: var(--theme-input-checkable-disabled);
+}
+
+.content-extension-launch.is-disabled > * {
+    color: var(--theme-input-checkable-disabled);
+}
+
+.content-extension-launch.is-disabled .icon-fill {
+    fill: var(--theme-input-checkable-disabled);
+}
+
+.content-extension-launch.is-disabled .icon-stroke {
+    stroke: var(--theme-input-checkable-disabled);
+}
+
+.content-extension-launch.is-disabled .icon-fill-stroke {
+    fill: var(--theme-input-checkable-disabled);
+    stroke: var(--theme-input-checkable-disabled);
 }

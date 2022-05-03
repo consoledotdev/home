@@ -414,10 +414,13 @@ class FormHelper {
     }
 
     toggleDisableSiblings(e) {
-        const fieldset = e.currentTarget.closest(".fieldset");
-        const siblings = fieldset.querySelectorAll("[data-item]");
-        siblings.forEach((s) => {
-            if (s != e.currentTarget) s.disabled = s.checked;
+        const name = e.currentTarget.dataset.disableOthers;
+        const toDisable = this.form.querySelectorAll("[data-can-be-disabled-by='" + name + "']");
+        toDisable.forEach((s) => {
+            if (s.disabled != undefined) s.disabled = e.currentTarget.checked;
+            else {
+                e.currentTarget.checked ? s.classList.add("is-disabled") : s.classList.remove("is-disabled");
+            }
         });
     }
 

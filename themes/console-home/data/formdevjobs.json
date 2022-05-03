@@ -69,88 +69,105 @@
                 "label": "Anywhere",
                 "checked": true,
                 "selectAll": true,
-                "disableOthers": true
+                "disableOthers": "anywhere"
             },
             {
                 "name": "remote",
-                "label": "Remote"
+                "label": "Remote",
+                "canBeDisabledBy": "anywhere"
             },
             {
                 "name": "north-america",
                 "label": "North America",
-                "hasChildren": true
+                "hasChildren": true,
+                "canBeDisabledBy": "anywhere"
             },
             {
                 "name": "new-york",
                 "label": "New York",
-                "parent": "north-america"
+                "parent": "north-america",
+                "canBeDisabledBy": "anywhere"
             },
             {
                 "name": "san-francisco",
                 "label": "San Francisco",
-                "parent": "north-america"
+                "parent": "north-america",
+                "canBeDisabledBy": "anywhere"
             },
             {
                 "name": "seattle",
                 "label": "Seattle",
-                "parent": "north-america"
+                "parent": "north-america",
+                "canBeDisabledBy": "anywhere"
             },
             {
                 "name": "austin",
                 "label": "Austin",
-                "parent": "north-america"
+                "parent": "north-america",
+                "canBeDisabledBy": "anywhere"
             },
             {
                 "name": "miami",
                 "label": "Miami",
-                "parent": "north-america"
+                "parent": "north-america",
+                "canBeDisabledBy": "anywhere"
             },
             {
                 "name": "europe",
                 "label": "Europe",
-                "hasChildren": true
+                "hasChildren": true,
+                "canBeDisabledBy": "anywhere"
             },
             {
                 "name": "amsterdam",
                 "label": "Amsterdam",
-                "parent": "europe"
+                "parent": "europe",
+                "canBeDisabledBy": "anywhere"
             },
             {
                 "name": "london",
                 "label": "London",
-                "parent": "europe"
+                "parent": "europe",
+                "canBeDisabledBy": "anywhere"
             },
             {
                 "name": "berlin",
                 "label": "Berlin",
-                "parent": "europe"
+                "parent": "europe",
+                "canBeDisabledBy": "anywhere"
             },
             {
                 "name": "lisbon",
                 "label": "Lisbon",
-                "parent": "europe"
+                "parent": "europe",
+                "canBeDisabledBy": "anywhere"
             },
             {
                 "name": "india",
-                "label": "India"
+                "label": "India",
+                "canBeDisabledBy": "anywhere"
             },
             {
                 "name": "asia",
                 "label": "Asia",
-                "hasChildren": true
+                "hasChildren": true,
+                "canBeDisabledBy": "anywhere"
             },
             {
                 "name": "australia",
                 "label": "Australia",
-                "parent": "asia"
+                "parent": "asia",
+                "canBeDisabledBy": "anywhere"
             },
             {
                 "name": "south-america",
-                "label": "South America"
+                "label": "South America",
+                "canBeDisabledBy": "anywhere"
             },
             {
                 "name": "africa",
-                "label": "Africa"
+                "label": "Africa",
+                "canBeDisabledBy": "anywhere"
             }
         ]
     },

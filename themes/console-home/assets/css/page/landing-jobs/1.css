@@ -546,6 +546,7 @@
     margin-top: var(--space4);
 }
 
+.main-landing-jobs .page-section.signup .fieldset-locations .form-cols,
 .main-landing-jobs .page-section.signup .fieldset-tech-stack .form-cols {
     margin-bottom: var(--space4);
 }
@@ -626,6 +627,7 @@
         margin-top: calc(var(--space4) + var(--space2_5));
     }
 
+    .main-landing-jobs .page-section.signup .fieldset-locations .form-cols,
     .main-landing-jobs .page-section.signup .fieldset-tech-stack .form-cols {
         margin-bottom: var(--space4_5);
     }

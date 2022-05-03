@@ -131,7 +131,7 @@
                     {{ end }}
                 </div>
             </div>
-            <div class="fieldset">
+            <div class="fieldset fieldset-locations">
                 <legend>
                     <h4 class="title title-3">Where you’d like to work</h4>
                     <p class="small">Some description of the fields group.</p>
@@ -151,7 +151,7 @@
                                     {{ with .parent }} data-child="{{ . }}"{{ end }}
                                     {{ with .hasChildren }} data-parent{{ end }}
                                     {{ with .selectAll }} data-select-all{{ end }}
-                                    {{ with .disableOthers }} data-disable-others{{ end }} />
+                                    {{ with .disableOthers }} data-disable-others="{{ . }}"{{ end }} />
                                 <label for="form-locations-{{ .name }}">
                                     {{ if eq $formData.locations.consoleType "checkbox" }}<span class="check">{{ partial (print "icons/checkmark.html" ) }}</span>{{ end }}
                                     {{ .label }}
@@ -177,7 +177,7 @@
                                         {{ with $item.parent }} data-child="{{ . }}"{{ end }}
                                         {{ with $item.hasChildren }} data-parent{{ end }}
                                         {{ with $item.selectAll }} data-select-all{{ end }}
-                                        {{ with $item.disableOthers }} data-disable-others{{ end }} />
+                                        {{ with $item.canBeDisabledBy }} data-can-be-disabled-by="{{ . }}"{{ end }} />
                                     <label for="form-locations-{{ $item.name }}">
                                         {{ if eq $formData.locations.consoleType "checkbox" }}<span class="check">{{ partial (print "icons/checkmark.html" ) }}</span>{{ end }}
                                         {{ $item.label }}
@@ -185,6 +185,24 @@
                                 </div>
                             {{ with $item.parent }}{{ $prevHasParent = true }}{{ else }}{{ $prevHasParent = false }}{{ end }}
                         {{ end }}
+                    </div>
+                    <p data-content-extension-launch="other-locations" class="content-extension-launch small" data-can-be-disabled-by="anywhere">
+                        Based somewhere else?
+                        <a data-content-extension-toggle="other-locations" class="console-button-text console-button-medium icon-left" title="Add other locations">
+                            {{ partial "icons/plus.html" }}
+                            <span>Add other locations</span>
+                        </a>
+                    </p>
+                    <div data-content-extension="other-locations" class="content-extension is-hidden">
+                        <h6 class="title title-5">Other locations</h6>
+                        <p class="small">Separate items with a comma.</p>
+                        <div>
+                            <input id="form-other-locations" name="form-other-locations" class="console-input-text console-input-small" type="text" placeholder="Add other locations" title="Other locations" />
+                            <a data-content-extension-toggle="other-locations" class="console-button-text console-button-medium icon-left" title="Cancel adding locations">
+                                {{ partial "icons/cancel.html" }}
+                                <span>Cancel</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
