@@ -567,8 +567,17 @@
     margin: 0;
 }
 
-.main-landing-jobs .page-section.signup .fieldset .content-extension-launch .console-button-text {
-    margin-left: var(--space2);
+.main-landing-jobs .page-section.signup .fieldset .content-extension-launch:not(.is-hidden) {
+    margin-top: calc(var(--space2) * -1);
+}
+
+.main-landing-jobs .page-section.signup .fieldset .content-extension-launch > * {
+    margin-top: var(--space2);
+}
+
+.main-landing-jobs .page-section.signup .fieldset .content-extension-launch > span {
+    display: inline-block;
+    margin-right: var(--space2);
 }
 
 .main-landing-jobs .page-section.signup .fieldset input {
