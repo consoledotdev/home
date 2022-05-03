@@ -101,7 +101,7 @@ class JobsArt {
 
     makeLightOne() {
         const color = 0xffffff;
-        const intensity = 1;
+        const intensity = 1.25;
         const light = new THREE.DirectionalLight(color, intensity);
         light.position.set(2, 0, 4);
         return light;
@@ -138,15 +138,17 @@ class JobsArt {
 
             const extrudeSettings = { depth: t * 2, bevelEnabled: true, bevelSegments: 2, steps: 6, bevelSize: t, bevelThickness: t };
             const geometry = new THREE.ExtrudeGeometry(square, extrudeSettings);
-            const diamond = new THREE.Mesh(geometry, new THREE.MeshPhongMaterial({ color: cfg.color }));
+            const diamond = new THREE.Mesh(geometry, new THREE.MeshPhysicalMaterial({ color: cfg.color }));
             diamond.position.x = -0.5;
             diamond.position.y = -0.5;
-            // objs.push(diamond);
+            diamond.material.roughness = 1;
+            diamond.material.metalness = 0;
+            diamond.material.clearcoat = 0;
+            diamond.material.clearcoatRoughness = 0;
 
             const wrapper = new THREE.Object3D();
             wrapper.position.x = cfg.position.x;
             wrapper.position.y = cfg.position.y;
-            // wrapper.rotation.z = Math.PI / 4;
             wrapper.add(diamond);
 
             return wrapper;
@@ -178,9 +180,13 @@ class JobsArt {
         {
             // sphere
             const sphereGeometry = new THREE.SphereGeometry(0.12, 64, 32);
-            const material = new THREE.MeshPhongMaterial({ emissive: 0xff9900, emissiveIntensity: 1.0 });
+            const material = new THREE.MeshPhysicalMaterial({ emissive: 0xffbb22, emissiveIntensity: 1 });
             material.transparent = true;
             const obj = new THREE.Mesh(sphereGeometry, material);
+            obj.material.roughness = 1;
+            obj.material.metalness = 0.6;
+            obj.material.clearcoat = 0.5;
+            obj.material.clearcoatRoughness = 0.5;
             container.add(obj);
             objs.globe = obj;
         }
@@ -188,7 +194,7 @@ class JobsArt {
         {
             // circle
             const geo = new THREE.EdgesGeometry(new THREE.CircleGeometry(0.12, 20), 1);
-            const material = new THREE.PointsMaterial({ color: 0x95969f, sizeAttenuation: false, size: 3.5 });
+            const material = new THREE.PointsMaterial({ color: 0x95969f, sizeAttenuation: false, size: 3, depthTest: false });
             material.transparent = true;
             const obj = new THREE.Points(geo, material);
             container.add(obj);
