@@ -213,7 +213,7 @@
                 </legend>
                 <div>
                     <div class="form-cols">
-                        {{ range $formData.tech.inputs }}
+                        {{ range sort $formData.tech.inputs "name" "asc" }}
                             <div class="input-wrapper">
                                 <input
                                     class="console-input-{{ $formData.tech.consoleType }} attention"

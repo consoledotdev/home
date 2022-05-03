@@ -219,6 +219,56 @@
                 "name": "java",
                 "label": "Java",
                 "icon": "java"
+            },
+            {
+                "name": "ccplusplus",
+                "label": "C/C++",
+                "icon": "c"
+            },
+            {
+                "name": "csharp",
+                "label": "C#",
+                "icon": "csharp"
+            },
+            {
+                "name": "swift",
+                "label": "Swift",
+                "icon": "swift"
+            },
+            {
+                "name": "obj-c",
+                "label": "Objective C",
+                "icon": "objective-c"
+            },
+            {
+                "name": "perl",
+                "label": "Perl",
+                "icon": "perl"
+            },
+            {
+                "name": "kotlin",
+                "label": "Kotlin",
+                "icon": "kotlin"
+            },
+            {
+                "name": "r",
+                "label": "R",
+                "icon": "r"
+            },
+            {
+                "name": "matlab",
+                "label": "Matlab",
+                "icon": "matlab"
+            },
+            {
+                "name": "elixir",
+                "label": "Elixir",
+                "icon": "elixir"
+            },
+            {
+                "name": "julia",
+                "label": "Julia",
+                "icon": "julia"
             }
         ]
     },
