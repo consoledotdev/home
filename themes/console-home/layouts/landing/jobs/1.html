@@ -137,7 +137,7 @@
                     <p class="small">Some description of the fields group.</p>
                 </legend>
                 <div>
-                    {{ range first 1 $formData.locations.inputs }}
+                    {{ range first 2 $formData.locations.inputs }}
                         <div class="input-wrapper{{ with .parent }} sub{{ end }}">
                                 <input
                                     class="console-input-{{ $formData.locations.consoleType }} attention"
@@ -148,9 +148,7 @@
                                     {{ with .checked }} checked{{ end }}
                                     {{ with .required}} required{{end }}
                                     data-item="{{ .name }}"
-                                    {{ with .parent }} data-child="{{ . }}"{{ end }}
-                                    {{ with .hasChildren }} data-parent{{ end }}
-                                    {{ with .selectAll }} data-select-all{{ end }}
+                                    {{ with .selectAll }} data-select-all="{{ . }}"{{ end }}
                                     {{ with .disableOthers }} data-disable-others="{{ . }}"{{ end }} />
                                 <label for="form-locations-{{ .name }}">
                                     {{ if eq $formData.locations.consoleType "checkbox" }}<span class="check">{{ partial (print "icons/checkmark.html" ) }}</span>{{ end }}
@@ -161,7 +159,7 @@
                     <div class="form-separator"><p class="small">or</p></div>
                     <div class="form-cols">
                         {{ $prevHasParent := false }}
-                        {{ range $idx, $item := after 1 $formData.locations.inputs }}
+                        {{ range $idx, $item := after 2 $formData.locations.inputs }}
                             {{ if not $item.parent }}{{ with $prevHasParent }}</div>{{ end }}{{ end }}
                             {{ with $item.hasChildren }}<div>{{ end }}
                                 <div class="input-wrapper{{ with $item.parent }} sub{{ end }}">
@@ -177,7 +175,8 @@
                                         {{ with $item.parent }} data-child="{{ . }}"{{ end }}
                                         {{ with $item.hasChildren }} data-parent{{ end }}
                                         {{ with $item.selectAll }} data-select-all{{ end }}
-                                        {{ with $item.canBeDisabledBy }} data-can-be-disabled-by="{{ . }}"{{ end }} />
+                                        {{ with $item.canBeDisabledBy }} data-can-be-disabled-by="{{ . }}"{{ end }}
+                                        {{ with $item.canBeSelectedBy }} data-can-be-selected-by="{{ . }}"{{ end }} />
                                     <label for="form-locations-{{ $item.name }}">
                                         {{ if eq $formData.locations.consoleType "checkbox" }}<span class="check">{{ partial (print "icons/checkmark.html" ) }}</span>{{ end }}
                                         {{ $item.label }}

@@ -547,6 +547,11 @@
 }
 
 .main-landing-jobs .page-section.signup .fieldset-locations .form-cols,
+.main-landing-jobs .page-section.signup .fieldset-locations .form-separator {
+    margin-left: var(--space2_5);
+}
+
+.main-landing-jobs .page-section.signup .fieldset-locations .form-cols,
 .main-landing-jobs .page-section.signup .fieldset-tech-stack .form-cols {
     margin-bottom: var(--space4);
 }

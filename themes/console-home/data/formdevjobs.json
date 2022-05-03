@@ -65,109 +65,125 @@
         "consoleType": "checkbox",
         "inputs": [
             {
+                "name": "remote",
+                "label": "Remote",
+                "checked": true
+            },
+            {
                 "name": "anywhere",
                 "label": "Anywhere",
                 "checked": true,
-                "selectAll": true,
+                "selectAll": "anywhere",
                 "disableOthers": "anywhere"
-            },
-            {
-                "name": "remote",
-                "label": "Remote",
-                "canBeDisabledBy": "anywhere"
             },
             {
                 "name": "north-america",
                 "label": "North America",
                 "hasChildren": true,
-                "canBeDisabledBy": "anywhere"
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
             },
             {
                 "name": "new-york",
                 "label": "New York",
                 "parent": "north-america",
-                "canBeDisabledBy": "anywhere"
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
             },
             {
                 "name": "san-francisco",
                 "label": "San Francisco",
                 "parent": "north-america",
-                "canBeDisabledBy": "anywhere"
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
             },
             {
                 "name": "seattle",
                 "label": "Seattle",
                 "parent": "north-america",
-                "canBeDisabledBy": "anywhere"
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
             },
             {
                 "name": "austin",
                 "label": "Austin",
                 "parent": "north-america",
-                "canBeDisabledBy": "anywhere"
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
             },
             {
                 "name": "miami",
                 "label": "Miami",
                 "parent": "north-america",
-                "canBeDisabledBy": "anywhere"
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
             },
             {
                 "name": "europe",
                 "label": "Europe",
                 "hasChildren": true,
-                "canBeDisabledBy": "anywhere"
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
             },
             {
                 "name": "amsterdam",
                 "label": "Amsterdam",
                 "parent": "europe",
-                "canBeDisabledBy": "anywhere"
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
             },
             {
                 "name": "london",
                 "label": "London",
                 "parent": "europe",
-                "canBeDisabledBy": "anywhere"
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
             },
             {
                 "name": "berlin",
                 "label": "Berlin",
                 "parent": "europe",
-                "canBeDisabledBy": "anywhere"
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
             },
             {
                 "name": "lisbon",
                 "label": "Lisbon",
                 "parent": "europe",
-                "canBeDisabledBy": "anywhere"
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
             },
             {
                 "name": "india",
                 "label": "India",
-                "canBeDisabledBy": "anywhere"
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
             },
             {
                 "name": "asia",
                 "label": "Asia",
                 "hasChildren": true,
-                "canBeDisabledBy": "anywhere"
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
             },
             {
                 "name": "australia",
                 "label": "Australia",
                 "parent": "asia",
-                "canBeDisabledBy": "anywhere"
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
             },
             {
                 "name": "south-america",
                 "label": "South America",
-                "canBeDisabledBy": "anywhere"
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
             },
             {
                 "name": "africa",
                 "label": "Africa",
-                "canBeDisabledBy": "anywhere"
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
             }
         ]
     },

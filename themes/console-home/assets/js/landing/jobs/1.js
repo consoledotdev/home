@@ -405,9 +405,9 @@ class FormHelper {
     }
 
     toggleAllSiblings(e) {
-        const fieldset = e.currentTarget.closest(".fieldset");
-        const siblings = fieldset.querySelectorAll("[data-item]");
-        siblings.forEach((s) => {
+        const name = e.currentTarget.dataset.selectAll;
+        const toSelect = this.form.querySelectorAll("[data-can-be-selected-by='" + name + "']");
+        toSelect.forEach((s) => {
             s.indeterminate = false;
             s.checked = e.currentTarget.checked;
         });
