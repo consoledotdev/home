@@ -421,7 +421,8 @@ class FormHelper {
         });
     }
 
-    _setInput(data) {
+    _setInput(e, data) {
+        e.preventDefault();
         const input = this.form.querySelector("[type='" + data.type + "'][id='" + data.id + "']");
         input[data.state[0]] = data.state[1];
     }
@@ -483,10 +484,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
     /* bind opening section actions */
     document.querySelectorAll("[data-launch-signup]").forEach((l) => {
         l.addEventListener("click", (e) => {
-            if (e.currentTarget.type == "radio") {
+            if (e.currentTarget.type == "checkbox") {
                 const value = e.currentTarget.dataset.launchSignup;
-                formHelper._setInput({
-                    type: "radio",
+                formHelper._setInput(e, {
+                    type: "checkbox",
                     id: "form-role-" + value,
                     state: ["checked", true],
                 });

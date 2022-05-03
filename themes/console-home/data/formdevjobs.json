@@ -9,14 +9,18 @@
         ]
     },
     "role": {
-        "type": "radio",
+        "type": "checkbox",
         "consoleType": "chip",
         "inputs": [
+            {
+                "name": "full-stack",
+                "label": "Full stack",
+                "icon": "full-stack"
+            },
             {
                 "name": "front-end",
                 "label": "Front end",
                 "icon": "developer-tools",
-                "checked": true,
                 "required": true
             },
             {
@@ -43,6 +47,16 @@
                 "name": "devops",
                 "label": "DevOps",
                 "icon": "devops"
+            },
+            {
+                "name": "devrel",
+                "label": "Devrel",
+                "icon": "devrel"
+            },
+            {
+                "name": "manager",
+                "label": "Manager",
+                "icon": "manager"
             }
         ]
     },
