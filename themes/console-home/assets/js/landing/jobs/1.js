@@ -281,7 +281,7 @@ class GravitatingItems {
     constructor(selector) {
         this.bindFuncs();
 
-        this.offset = 1;
+        this.offset = Math.PI * 0.7 * -1;
         this.radius = 46; // percent
         this.currentRadius = 0;
         this.items = document.querySelectorAll(selector);
