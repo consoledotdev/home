@@ -62,6 +62,12 @@
             "label": "DevOps",
             "showsIcon": false,
             "checked": true
+        },
+        {
+            "name": "security",
+            "label": "Security",
+            "showsIcon": false,
+            "checked": true
         }
     ]
 }
