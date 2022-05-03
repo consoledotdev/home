@@ -24,6 +24,7 @@ class JobsArt {
         this.shift = 0.175;
         this.currentShift = this.shift;
         this.currentRotationSpeed = this.getSpeeds().rotation.fast;
+        this.currentGlobeOpacity = 1;
 
         const canvas = document.querySelector(selector);
         this.renderer = new THREE.WebGLRenderer({ canvas });
@@ -53,8 +54,8 @@ class JobsArt {
     getSpeeds() {
         return {
             rotation: {
-                fast: 0.01,
-                slow: 0.005,
+                fast: 0.008,
+                slow: 0.003,
             },
         };
     }
@@ -178,6 +179,7 @@ class JobsArt {
             // sphere
             const sphereGeometry = new THREE.SphereGeometry(0.12, 64, 32);
             const material = new THREE.MeshPhongMaterial({ emissive: 0xff9900, emissiveIntensity: 1.0 });
+            material.transparent = true;
             const obj = new THREE.Mesh(sphereGeometry, material);
             container.add(obj);
             objs.globe = obj;
@@ -198,6 +200,8 @@ class JobsArt {
             obj.position.y = positions[idx].y;
             obj.rotateOnAxis(new THREE.Vector3(-0.5, 0.5, 0).normalize(), this.currentRotationSpeed * (Math.PI / 4) * (idx + 1));
         });
+
+        this.objs.globe.material.opacity = this.currentGlobeOpacity;
 
         this.renderer.render(this.scene, this.cam);
 
@@ -233,6 +237,13 @@ class JobsArt {
                 this.currentShift -= 0.01;
             } else this.currentShift = 0;
         }, 10);
+
+        clearInterval(this.globeFadeInInterval);
+        this.globeFadeOutInterval = setInterval(() => {
+            if (this.currentGlobeOpacity > 0) {
+                this.currentGlobeOpacity -= 0.08;
+            } else this.currentGlobeOpacity = 0;
+        }, 10);
     }
 
     _out() {
@@ -242,6 +253,13 @@ class JobsArt {
             if (this.currentShift < this.shift) {
                 this.currentShift += 0.01;
             } else this.currentShift = this.shift;
+        }, 10);
+
+        clearInterval(this.globeFadeOutInterval);
+        this.globeFadeInInterval = setInterval(() => {
+            if (this.currentGlobeOpacity < 1) {
+                this.currentGlobeOpacity += 0.08;
+            } else this.currentGlobeOpacity = 1;
         }, 10);
     }
 }
