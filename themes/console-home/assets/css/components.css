@@ -1371,6 +1371,10 @@ select.console-select:focus {
     transition: var(--a-controls-active);
 }
 
+input.console-input-text:not(:focus):not(:placeholder-shown):invalid {
+    box-shadow: 0 0 0 2px var(--theme-signaling-error);
+}
+
 input.console-input-text::placeholder {
     color: var(--theme-input-text);
     opacity: 0.3;
@@ -1457,8 +1461,10 @@ input.console-input-text:not(:placeholder-shown):focus + .console-input-text-can
 /* Label
    ================================================================================================================ */
 .console-label {
+    display: block;
     font-size: var(--t-size0);
     color: var(--theme-text-2);
+    transition: var(--a--micro);
 }
 
 .console-label.console-label-medium {
@@ -1467,6 +1473,16 @@ input.console-input-text:not(:placeholder-shown):focus + .console-input-text-can
 
 .console-label.console-label-small {
     font-size: var(--t-size-2);
+}
+
+.console-label-error {
+    position: absolute;
+    color: var(--theme-signaling-error);
+    opacity: 0;
+}
+
+input.console-input-text:not(:focus):not(:placeholder-shown):invalid + .console-label-error {
+    opacity: 1;
 }
 
 /* Input Radio
@@ -1514,7 +1530,8 @@ input.console-input-radio + label .check {
 }
 
 input:not(:disabled):not(:checked).console-input-radio + label:hover .check,
-input:not(:disabled):not(:checked).console-input-radio + label:active .check {
+input:not(:disabled):not(:checked).console-input-radio + label:active .check,
+input:not(:disabled):not(:checked).console-input-radio:focus + label .check {
     background: var(--theme-input-checkable-off-bg-hover);
     transition: var(--a-layout-active);
 }
@@ -1693,7 +1710,8 @@ input.console-input-checkbox + label .check {
 }
 
 input:not(:disabled).console-input-checkbox + label:hover .check,
-input:not(:disabled).console-input-checkbox + label:active .check {
+input:not(:disabled).console-input-checkbox + label:active .check,
+input:not(:disabled).console-input-checkbox:focus + label .check {
     background: var(--theme-input-checkable-off-bg-hover);
     transition: var(--a-layout-active);
 }
@@ -1760,12 +1778,14 @@ input:checked.console-input-checkbox + label {
 }
 
 input:checked.console-input-checkbox + label:hover,
-input:checked.console-input-checkbox + label:active {
+input:checked.console-input-checkbox + label:active,
+input:checked.console-input-checkbox:focus + label {
     color: var(--theme-input-checkable-on-hover);
 }
 
 input:checked.console-input-checkbox + label:hover .check,
-input:checked.console-input-checkbox + label:active .check {
+input:checked.console-input-checkbox + label:active .check,
+input:checked.console-input-checkbox:focus + label .check {
     background: var(--theme-input-checkable-on-bg-hover);
 }
 
@@ -1775,7 +1795,8 @@ input:checked.console-input-checkbox + label .check:before {
 }
 
 input:checked.console-input-checkbox + label:hover .check:before,
-input:checked.console-input-checkbox + label:active .check:before {
+input:checked.console-input-checkbox + label:active .check:before,
+input:checked.console-input-checkbox:focus + label .check:before {
     background: var(--theme-input-checkable-on-hover);
 }
 
@@ -1784,7 +1805,8 @@ input:indeterminate.console-input-checkbox + label .check:after {
 }
 
 input:indeterminate.console-input-checkbox + label:hover .check:after,
-input:indeterminate.console-input-checkbox + label:active .check:after {
+input:indeterminate.console-input-checkbox + label:active .check:after,
+input:indeterminate.console-input-checkbox:focus + label .check:after {
     background: var(--theme-input-checkable-on-hover);
 }
 
@@ -1794,12 +1816,14 @@ input:checked.console-input-checkbox.triad-01 + label {
 }
 
 input:checked.console-input-checkbox.triad-01 + label:hover,
-input:checked.console-input-checkbox.triad-01 + label:active {
+input:checked.console-input-checkbox.triad-01 + label:active,
+input:checked.console-input-checkbox.triad-01:focus + label {
     color: var(--theme-input-checkable-triad-01-on-hover);
 }
 
 input:checked.console-input-checkbox.triad-01 + label:hover .check,
-input:checked.console-input-checkbox.triad-01 + label:active .check {
+input:checked.console-input-checkbox.triad-01 + label:active .check,
+input:checked.console-input-checkbox.triad-01:focus + label .check {
     background: var(--theme-input-checkable-triad-01-on-bg-hover);
 }
 
@@ -1809,7 +1833,8 @@ input:checked.console-input-checkbox.triad-01 + label .check:before {
 }
 
 input:checked.console-input-checkbox.triad-01 + label:hover .check:before,
-input:checked.console-input-checkbox.triad-01 + label:active .check:before {
+input:checked.console-input-checkbox.triad-01 + label:active .check:before,
+input:checked.console-input-checkbox.triad-01:focus + label .check:before {
     background: var(--theme-input-checkable-triad-01-on-hover);
 }
 
@@ -1818,7 +1843,8 @@ input:indeterminate.console-input-checkbox.triad-01 + label .check:after {
 }
 
 input:indeterminate.console-input-checkbox.triad-01 + label:hover .check:after,
-input:indeterminate.console-input-checkbox.triad-01 + label:active .check:after {
+input:indeterminate.console-input-checkbox.triad-01 + label:active .check:after,
+input:indeterminate.console-input-checkbox.triad-01:focus + label .check:after {
     background: var(--theme-input-checkable-triad-01-on-hover);
 }
 
@@ -1828,12 +1854,14 @@ input:checked.console-input-checkbox.triad-02 + label {
 }
 
 input:checked.console-input-checkbox.triad-02 + label:hover,
-input:checked.console-input-checkbox.triad-02 + label:active {
+input:checked.console-input-checkbox.triad-02 + label:active,
+input:checked.console-input-checkbox.triad-02:focus + label {
     color: var(--theme-input-checkable-triad-02-on-hover);
 }
 
 input:checked.console-input-checkbox.triad-02 + label:hover .check,
-input:checked.console-input-checkbox.triad-02 + label:active .check {
+input:checked.console-input-checkbox.triad-02 + label:active .check,
+input:checked.console-input-checkbox.triad-02:focus + label .check {
     background: var(--theme-input-checkable-triad-02-on-bg-hover);
 }
 
@@ -1843,7 +1871,8 @@ input:checked.console-input-checkbox.triad-02 + label .check:before {
 }
 
 input:checked.console-input-checkbox.triad-02 + label:hover .check:before,
-input:checked.console-input-checkbox.triad-02 + label:active .check:before {
+input:checked.console-input-checkbox.triad-02 + label:active .check:before,
+input:checked.console-input-checkbox.triad-02:focus + label .check:before {
     background: var(--theme-input-checkable-triad-02-on-hover);
 }
 
@@ -1852,7 +1881,8 @@ input:indeterminate.console-input-checkbox.triad-02 + label .check:after {
 }
 
 input:indeterminate.console-input-checkbox.triad-02 + label:hover .check:after,
-input:indeterminate.console-input-checkbox.triad-02 + label:active .check:after {
+input:indeterminate.console-input-checkbox.triad-02 + label:active .check:after,
+input:indeterminate.console-input-checkbox.triad-02:focus + label .check:after {
     background: var(--theme-input-checkable-triad-02-on-hover);
 }
 
@@ -1862,12 +1892,14 @@ input:checked.console-input-checkbox.triad-03 + label {
 }
 
 input:checked.console-input-checkbox.triad-03 + label:hover,
-input:checked.console-input-checkbox.triad-03 + label:active {
+input:checked.console-input-checkbox.triad-03 + label:active,
+input:checked.console-input-checkbox.triad-03:focus + label {
     color: var(--theme-input-checkable-triad-03-on-hover);
 }
 
 input:checked.console-input-checkbox.triad-03 + label:hover .check,
-input:checked.console-input-checkbox.triad-03 + label:active .check {
+input:checked.console-input-checkbox.triad-03 + label:active .check,
+input:checked.console-input-checkbox.triad-03:focus + label .check {
     background: var(--theme-input-checkable-triad-03-on-bg-hover);
 }
 
@@ -1877,7 +1909,8 @@ input:checked.console-input-checkbox.triad-03 + label .check:before {
 }
 
 input:checked.console-input-checkbox.triad-03 + label:hover .check:before,
-input:checked.console-input-checkbox.triad-03 + label:active .check:before {
+input:checked.console-input-checkbox.triad-03 + label:active .check:before,
+input:checked.console-input-checkbox.triad-03:focus + label .check:before {
     background: var(--theme-input-checkable-triad-03-on-hover);
 }
 
@@ -1886,7 +1919,8 @@ input:indeterminate.console-input-checkbox.triad-03 + label .check:after {
 }
 
 input:indeterminate.console-input-checkbox.triad-03 + label:hover .check:after,
-input:indeterminate.console-input-checkbox.triad-03 + label:active .check:after {
+input:indeterminate.console-input-checkbox.triad-03 + label:active .check:after,
+input:indeterminate.console-input-checkbox.triad-03:focus + label .check:after {
     background: var(--theme-input-checkable-triad-03-on-hover);
 }
 
@@ -1896,12 +1930,14 @@ input:checked.console-input-checkbox.attention + label {
 }
 
 input:checked.console-input-checkbox.attention + label:hover,
-input:checked.console-input-checkbox.attention + label:active {
+input:checked.console-input-checkbox.attention + label:active,
+input:checked.console-input-checkbox.attention:focus + label {
     color: var(--theme-input-checkable-attention-on-hover);
 }
 
 input:checked.console-input-checkbox.attention + label:hover .check,
-input:checked.console-input-checkbox.attention + label:active .check {
+input:checked.console-input-checkbox.attention + label:active .check,
+input:checked.console-input-checkbox.attention:focus + label .check {
     background: var(--theme-input-checkable-attention-on-bg-hover);
 }
 
@@ -1911,7 +1947,8 @@ input:checked.console-input-checkbox.attention + label .check:before {
 }
 
 input:checked.console-input-checkbox.attention + label:hover .check:before,
-input:checked.console-input-checkbox.attention + label:active .check:before {
+input:checked.console-input-checkbox.attention + label:active .check:before,
+input:checked.console-input-checkbox.attention:focus + label .check:before {
     background: var(--theme-input-checkable-attention-on-hover);
 }
 
@@ -1920,7 +1957,8 @@ input:indeterminate.console-input-checkbox.attention + label .check:after {
 }
 
 input:indeterminate.console-input-checkbox.attention + label:hover .check:after,
-input:indeterminate.console-input-checkbox.attention + label:active .check:after {
+input:indeterminate.console-input-checkbox.attention + label:active .check:after,
+input:indeterminate.console-input-checkbox.attention:focus + label .check:after {
     background: var(--theme-input-checkable-attention-on-hover);
 }
 
@@ -1941,8 +1979,10 @@ input:indeterminate:disabled.console-input-checkbox.attention + label {
 
 input:disabled.console-input-checkbox + label:hover .check,
 input:disabled.console-input-checkbox + label:active .check,
+input:disabled.console-input-checkbox:focus + label .check,
 input:checked:disabled.console-input-checkbox + label:hover .check,
-input:checked:disabled.console-input-checkbox + label:active .check {
+input:checked:disabled.console-input-checkbox + label:active .check,
+input:checked:disabled.console-input-checkbox:focus + label .check {
     background: none;
 }
 
@@ -1996,7 +2036,8 @@ input.console-input-chip + label {
 }
 
 input.console-input-chip + label:hover,
-input.console-input-chip + label:active {
+input.console-input-chip + label:active,
+input.console-input-chip:focus + label {
     background: var(--theme-input-checkable-off-bg-hover);
 }
 
@@ -2044,7 +2085,8 @@ input:checked.console-input-chip + label {
 }
 
 input:checked.console-input-chip + label:hover,
-input:checked.console-input-chip + label:active {
+input:checked.console-input-chip + label:active,
+input:checked.console-input-chip:focus + label {
     color: var(--theme-input-checkable-on-hover);
     background: var(--theme-input-checkable-off-bg-hover);
 }
@@ -2063,17 +2105,20 @@ input:checked.console-input-chip + label .icon-fill-stroke {
 }
 
 input:checked.console-input-chip + label:hover .icon-fill,
-input:checked.console-input-chip + label:active .icon-fill {
+input:checked.console-input-chip + label:active .icon-fill,
+input:checked.console-input-chip:focus + label .icon-fill {
     fill: var(--theme-input-checkable-on-hover);
 }
 
 input:checked.console-input-chip + label:hover .icon-stroke,
-input:checked.console-input-chip + label:active .icon-stroke {
+input:checked.console-input-chip + label:active .icon-stroke,
+input:checked.console-input-chip:focus + label .icon-stroke {
     stroke: var(--theme-input-checkable-on-hover);
 }
 
 input:checked.console-input-chip + label:hover .icon-fill-stroke,
-input:checked.console-input-chip + label:active .icon-fill-stroke {
+input:checked.console-input-chip + label:active .icon-fill-stroke,
+input:checked.console-input-chip:focus + label .icon-fill-stroke {
     fill: var(--theme-input-checkable-on-hover);
     stroke: var(--theme-input-checkable-on-hover);
 }
@@ -2086,7 +2131,8 @@ input:checked.console-input-chip.triad-01 + label {
 }
 
 input:checked.console-input-chip.triad-01 + label:hover,
-input:checked.console-input-chip.triad-01 + label:active {
+input:checked.console-input-chip.triad-01 + label:active,
+input:checked.console-input-chip.triad-01:focus + label {
     color: var(--theme-input-checkable-triad-01-on-hover);
     background: var(--theme-input-checkable-triad-01-on-bg-hover);
     border: 1px solid var(--theme-input-checkable-triad-01-on-muted-hover);
@@ -2106,17 +2152,20 @@ input:checked.console-input-chip.triad-01 + label .icon-fill-stroke {
 }
 
 input:checked.console-input-chip.triad-01 + label:hover .icon-fill,
-input:checked.console-input-chip.triad-01 + label:active .icon-fill {
+input:checked.console-input-chip.triad-01 + label:active .icon-fill,
+input:checked.console-input-chip.triad-01:focus + label .icon-fill {
     fill: var(--theme-input-checkable-triad-01-on-hover);
 }
 
 input:checked.console-input-chip.triad-01 + label:hover .icon-stroke,
-input:checked.console-input-chip.triad-01 + label:active .icon-stroke {
+input:checked.console-input-chip.triad-01 + label:active .icon-stroke,
+input:checked.console-input-chip.triad-01:focus + label .icon-stroke {
     stroke: var(--theme-input-checkable-triad-01-on-hover);
 }
 
 input:checked.console-input-chip.triad-01 + label:hover .icon-fill-stroke,
-input:checked.console-input-chip.triad-01 + label:active .icon-fill-stroke {
+input:checked.console-input-chip.triad-01 + label:active .icon-fill-stroke,
+input:checked.console-input-chip.triad-01:focus + label .icon-fill-stroke {
     fill: var(--theme-input-checkable-triad-01-on-hover);
     stroke: var(--theme-input-checkable-triad-01-on-hover);
 }
@@ -2129,7 +2178,8 @@ input:checked.console-input-chip.triad-02 + label {
 }
 
 input:checked.console-input-chip.triad-02 + label:hover,
-input:checked.console-input-chip.triad-02 + label:active {
+input:checked.console-input-chip.triad-02 + label:active,
+input:checked.console-input-chip.triad-02:focus + label {
     color: var(--theme-input-checkable-triad-02-on-hover);
     background: var(--theme-input-checkable-triad-02-on-bg-hover);
     border: 1px solid var(--theme-input-checkable-triad-02-on-muted-hover);
@@ -2149,17 +2199,20 @@ input:checked.console-input-chip.triad-02 + label .icon-fill-stroke {
 }
 
 input:checked.console-input-chip.triad-02 + label:hover .icon-fill,
-input:checked.console-input-chip.triad-02 + label:active .icon-fill {
+input:checked.console-input-chip.triad-02 + label:active .icon-fill,
+input:checked.console-input-chip.triad-02:focus + label .icon-fill {
     fill: var(--theme-input-checkable-triad-02-on-hover);
 }
 
 input:checked.console-input-chip.triad-02 + label:hover .icon-stroke,
-input:checked.console-input-chip.triad-02 + label:active .icon-stroke {
+input:checked.console-input-chip.triad-02 + label:active .icon-stroke,
+input:checked.console-input-chip.triad-02:focus + label .icon-stroke {
     stroke: var(--theme-input-checkable-triad-02-on-hover);
 }
 
 input:checked.console-input-chip.triad-02 + label:hover .icon-fill-stroke,
-input:checked.console-input-chip.triad-02 + label:active .icon-fill-stroke {
+input:checked.console-input-chip.triad-02 + label:active .icon-fill-stroke,
+input:checked.console-input-chip.triad-02:focus + label .icon-fill-stroke {
     fill: var(--theme-input-checkable-triad-02-on-hover);
     stroke: var(--theme-input-checkable-triad-02-on-hover);
 }
@@ -2172,7 +2225,8 @@ input:checked.console-input-chip.triad-03 + label {
 }
 
 input:checked.console-input-chip.triad-03 + label:hover,
-input:checked.console-input-chip.triad-03 + label:active {
+input:checked.console-input-chip.triad-03 + label:active,
+input:checked.console-input-chip.triad-03:focus + label {
     color: var(--theme-input-checkable-triad-03-on-hover);
     background: var(--theme-input-checkable-triad-03-on-bg-hover);
     border: 1px solid var(--theme-input-checkable-triad-03-on-muted-hover);
@@ -2192,17 +2246,20 @@ input:checked.console-input-chip.triad-03 + label .icon-fill-stroke {
 }
 
 input:checked.console-input-chip.triad-03 + label:hover .icon-fill,
-input:checked.console-input-chip.triad-03 + label:active .icon-fill {
+input:checked.console-input-chip.triad-03 + label:active .icon-fill,
+input:checked.console-input-chip.triad-03:focus + label .icon-fill {
     fill: var(--theme-input-checkable-triad-03-on-hover);
 }
 
 input:checked.console-input-chip.triad-03 + label:hover .icon-stroke,
-input:checked.console-input-chip.triad-03 + label:active .icon-stroke {
+input:checked.console-input-chip.triad-03 + label:active .icon-stroke,
+input:checked.console-input-chip.triad-03:focus + label .icon-stroke {
     stroke: var(--theme-input-checkable-triad-03-on-hover);
 }
 
 input:checked.console-input-chip.triad-03 + label:hover .icon-fill-stroke,
-input:checked.console-input-chip.triad-03 + label:active .icon-fill-stroke {
+input:checked.console-input-chip.triad-03 + label:active .icon-fill-stroke,
+input:checked.console-input-chip.triad-03:focus + label .icon-fill-stroke {
     fill: var(--theme-input-checkable-triad-03-on-hover);
     stroke: var(--theme-input-checkable-triad-03-on-hover);
 }
@@ -2215,7 +2272,8 @@ input:checked.console-input-chip.attention + label {
 }
 
 input:checked.console-input-chip.attention + label:hover,
-input:checked.console-input-chip.attention + label:active {
+input:checked.console-input-chip.attention + label:active,
+input:checked.console-input-chip.attention:focus + label {
     color: var(--theme-input-checkable-attention-on-hover);
     background: var(--theme-input-checkable-attention-on-bg-hover);
     border: 1px solid var(--theme-input-checkable-attention-on-muted-hover);
@@ -2235,17 +2293,20 @@ input:checked.console-input-chip.attention + label .icon-fill-stroke {
 }
 
 input:checked.console-input-chip.attention + label:hover .icon-fill,
-input:checked.console-input-chip.attention + label:active .icon-fill {
+input:checked.console-input-chip.attention + label:active .icon-fill,
+input:checked.console-input-chip.attention:focus + label .icon-fill {
     fill: var(--theme-input-checkable-attention-on-hover);
 }
 
 input:checked.console-input-chip.attention + label:hover .icon-stroke,
-input:checked.console-input-chip.attention + label:active .icon-stroke {
+input:checked.console-input-chip.attention + label:active .icon-stroke,
+input:checked.console-input-chip.attention:focus + label .icon-stroke {
     stroke: var(--theme-input-checkable-attention-on-hover);
 }
 
 input:checked.console-input-chip.attention + label:hover .icon-fill-stroke,
-input:checked.console-input-chip.attention + label:active .icon-fill-stroke {
+input:checked.console-input-chip.attention + label:active .icon-fill-stroke,
+input:checked.console-input-chip.attention:focus + label .icon-fill-stroke {
     fill: var(--theme-input-checkable-attention-on-hover);
     stroke: var(--theme-input-checkable-attention-on-hover);
 }
@@ -2267,8 +2328,10 @@ input:checked:disabled.console-input-chip.attention + label {
 
 input:disabled.console-input-chip + label:hover,
 input:disabled.console-input-chip + label:active,
+input:disabled:focus.console-input-chip + label,
 input:checked:disabled.console-input-chip + label:hover,
-input:checked:disabled.console-input-chip + label:active {
+input:checked:disabled.console-input-chip + label:active,
+input:checked:disabled:focus.console-input-chip + label {
     background: none;
 }
 
@@ -2328,7 +2391,8 @@ input.console-input-toggle + label .check {
 }
 
 input:not(:disabled).console-input-toggle + label:hover .check,
-input:not(:disabled).console-input-toggle + label:active .check {
+input:not(:disabled).console-input-toggle + label:active .check,
+input:not(:disabled).console-input-toggle:focus + label .check {
     background: var(--theme-input-checkable-off-bg-hover);
     transition: var(--a-layout-active);
 }
@@ -2372,12 +2436,14 @@ input:checked.console-input-toggle + label {
 }
 
 input:checked.console-input-toggle + label:hover,
-input:checked.console-input-toggle + label:active {
+input:checked.console-input-toggle + label:active,
+input:checked.console-input-toggle:focus + label {
     color: var(--theme-input-checkable-on-hover);
 }
 
 input:checked.console-input-toggle + label:hover .check,
-input:checked.console-input-toggle + label:active .check {
+input:checked.console-input-toggle + label:active .check,
+input:checked.console-input-toggle:focus + label .check {
     background: var(--theme-input-checkable-on-bg-hover);
 }
 
@@ -2386,7 +2452,8 @@ input:checked.console-input-toggle + label .check:before {
 }
 
 input:checked.console-input-toggle + label:hover .check:before,
-input:checked.console-input-toggle + label:active .check:before {
+input:checked.console-input-toggle + label:active .check:before,
+input:checked.console-input-toggle:focus + label .check:before {
     border: 1px solid var(--theme-input-checkable-on-hover);
 }
 
@@ -2395,7 +2462,8 @@ input:checked.console-input-toggle + label .check:after {
 }
 
 input:checked.console-input-toggle + label:hover .check:after,
-input:checked.console-input-toggle + label:active .check:after {
+input:checked.console-input-toggle + label:active .check:after,
+input:checked.console-input-toggle:focus + label .check:after {
     background: var(--theme-input-checkable-on-hover);
 }
 
@@ -2405,12 +2473,14 @@ input:checked.console-input-toggle.triad-01 + label {
 }
 
 input:checked.console-input-toggle.triad-01 + label:hover,
-input:checked.console-input-toggle.triad-01 + label:active {
+input:checked.console-input-toggle.triad-01 + label:active,
+input:checked.console-input-toggle.triad-01:focus + label {
     color: var(--theme-input-checkable-triad-01-on-hover);
 }
 
 input:checked.console-input-toggle.triad-01 + label:hover .check,
-input:checked.console-input-toggle.triad-01 + label:active .check {
+input:checked.console-input-toggle.triad-01 + label:active .check,
+input:checked.console-input-toggle.triad-01:focus + label .check {
     background: var(--theme-input-checkable-triad-01-on-bg-hover);
 }
 
@@ -2419,7 +2489,8 @@ input:checked.console-input-toggle.triad-01 + label .check:before {
 }
 
 input:checked.console-input-toggle.triad-01 + label:hover .check:before,
-input:checked.console-input-toggle.triad-01 + label:active .check:before {
+input:checked.console-input-toggle.triad-01 + label:active .check:before,
+input:checked.console-input-toggle.triad-01:focus + label .check:before {
     border: 1px solid var(--theme-input-checkable-triad-01-on-hover);
 }
 
@@ -2428,7 +2499,8 @@ input:checked.console-input-toggle.triad-01 + label .check:after {
 }
 
 input:checked.console-input-toggle.triad-01 + label:hover .check:after,
-input:checked.console-input-toggle.triad-01 + label:active .check:after {
+input:checked.console-input-toggle.triad-01 + label:active .check:after,
+input:checked.console-input-toggle.triad-01:focus + label .check:after {
     background: var(--theme-input-checkable-triad-01-on-hover);
 }
 
@@ -2438,12 +2510,14 @@ input:checked.console-input-toggle.triad-02 + label {
 }
 
 input:checked.console-input-toggle.triad-02 + label:hover,
-input:checked.console-input-toggle.triad-02 + label:active {
+input:checked.console-input-toggle.triad-02 + label:active,
+input:checked.console-input-toggle.triad-02:focus + label {
     color: var(--theme-input-checkable-triad-02-on-hover);
 }
 
 input:checked.console-input-toggle.triad-02 + label:hover .check,
-input:checked.console-input-toggle.triad-02 + label:active .check {
+input:checked.console-input-toggle.triad-02 + label:active .check,
+input:checked.console-input-toggle.triad-02:focus + label .check {
     background: var(--theme-input-checkable-triad-02-on-bg-hover);
 }
 
@@ -2452,7 +2526,8 @@ input:checked.console-input-toggle.triad-02 + label .check:before {
 }
 
 input:checked.console-input-toggle.triad-02 + label:hover .check:before,
-input:checked.console-input-toggle.triad-02 + label:active .check:before {
+input:checked.console-input-toggle.triad-02 + label:active .check:before,
+input:checked.console-input-toggle.triad-02:focus + label .check:before {
     border: 1px solid var(--theme-input-checkable-triad-02-on-hover);
 }
 
@@ -2461,7 +2536,8 @@ input:checked.console-input-toggle.triad-02 + label .check:after {
 }
 
 input:checked.console-input-toggle.triad-02 + label:hover .check:after,
-input:checked.console-input-toggle.triad-02 + label:active .check:after {
+input:checked.console-input-toggle.triad-02 + label:active .check:after,
+input:checked.console-input-toggle.triad-02:focus + label .check:after {
     background: var(--theme-input-checkable-triad-02-on-hover);
 }
 
@@ -2471,12 +2547,14 @@ input:checked.console-input-toggle.triad-03 + label {
 }
 
 input:checked.console-input-toggle.triad-03 + label:hover,
-input:checked.console-input-toggle.triad-03 + label:active {
+input:checked.console-input-toggle.triad-03 + label:active,
+input:checked.console-input-toggle.triad-03:focus + label {
     color: var(--theme-input-checkable-triad-03-on-hover);
 }
 
 input:checked.console-input-toggle.triad-03 + label:hover .check,
-input:checked.console-input-toggle.triad-03 + label:active .check {
+input:checked.console-input-toggle.triad-03 + label:active .check,
+input:checked.console-input-toggle.triad-03:focus + label .check {
     background: var(--theme-input-checkable-triad-03-on-bg-hover);
 }
 
@@ -2485,7 +2563,8 @@ input:checked.console-input-toggle.triad-03 + label .check:before {
 }
 
 input:checked.console-input-toggle.triad-03 + label:hover .check:before,
-input:checked.console-input-toggle.triad-03 + label:active .check:before {
+input:checked.console-input-toggle.triad-03 + label:active .check:before,
+input:checked.console-input-toggle.triad-03:focus + label .check:before {
     border: 1px solid var(--theme-input-checkable-triad-03-on-hover);
 }
 
@@ -2494,7 +2573,8 @@ input:checked.console-input-toggle.triad-03 + label .check:after {
 }
 
 input:checked.console-input-toggle.triad-03 + label:hover .check:after,
-input:checked.console-input-toggle.triad-03 + label:active .check:after {
+input:checked.console-input-toggle.triad-03 + label:active .check:after,
+input:checked.console-input-toggle.triad-03:focus + label .check:after {
     background: var(--theme-input-checkable-triad-03-on-hover);
 }
 
@@ -2516,7 +2596,12 @@ input:checked.console-input-toggle.triad-03 + label:active .check,
 input:disabled:checked.console-input-toggle + label:active .check,
 input:disabled:checked.console-input-toggle.triad-01 + label:active .check,
 input:disabled:checked.console-input-toggle.triad-02 + label:active .check,
-input:disabled:checked.console-input-toggle.triad-03 + label:active .check {
+input:disabled:checked.console-input-toggle.triad-03 + label:active .check,
+input:checked.console-input-toggle.triad-03:focus + label .check,
+input:disabled:checked.console-input-toggle:focus + label .check,
+input:disabled:checked.console-input-toggle.triad-01:focus + label .check,
+input:disabled:checked.console-input-toggle.triad-02:focus + label .check,
+input:disabled:checked.console-input-toggle.triad-03:focus + label .check {
     background: transparent;
 }
 
@@ -2627,7 +2712,8 @@ input.console-input-segmented-bar + label .check-bar .hover {
 }
 
 input.console-input-segmented-bar + label:hover .check-bar .hover,
-input.console-input-segmented-bar + label:active .check-bar .hover {
+input.console-input-segmented-bar + label:active .check-bar .hover,
+input.console-input-segmented-bar:focus + label .check-bar .hover {
     transform: translate(-50%, -50%) scale(1);
 }
 
@@ -2665,7 +2751,8 @@ input.console-input-segmented-bar + label .check-bar:after {
 }
 
 input:not(:disabled):not(:checked).console-input-segmented-bar + label:hover .check-bar:after,
-input:not(:disabled):not(:checked).console-input-segmented-bar + label:active .check-bar:after {
+input:not(:disabled):not(:checked).console-input-segmented-bar + label:active .check-bar:after,
+input:not(:disabled):not(:checked).console-input-segmented-bar:focus + label .check-bar:after {
     height: var(--space2_5);
     width: var(--space2_5);
 }
