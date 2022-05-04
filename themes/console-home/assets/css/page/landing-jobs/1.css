@@ -181,27 +181,39 @@
 }
 
 .artwork-interactives:hover .item-0 {
-    transform: translate(-20%, -40%);
+    transform: translate(-25.01%, -32.82%);
 }
 
 .artwork-interactives:hover .item-1 {
-    transform: translate(-50%, -10%);
+    transform: translate(5.66%, -38.8%);
 }
 
 .artwork-interactives:hover .item-2 {
-    transform: translate(-35%, 30%);
+    transform: translate(33.68%, -26.63%);
 }
 
 .artwork-interactives:hover .item-3 {
-    transform: translate(20%, 40%);
+    transform: translate(45.94%, -2%);
 }
 
 .artwork-interactives:hover .item-4 {
-    transform: translate(50%, 10%);
+    transform: translate(36.7%, 23.57%);
 }
 
 .artwork-interactives:hover .item-5 {
-    transform: translate(35%, -30%);
+    transform: translate(10.29%, 38.11%);
+}
+
+.artwork-interactives:hover .item-6 {
+    transform: translate(-20.93%, 34.82%);
+}
+
+.artwork-interactives:hover .item-7 {
+    transform: translate(-42.37%, 15.23%);
+}
+
+.artwork-interactives:hover .item-8 {
+    transform: translate(-43.97%, -11.48%);
 }
 
 .artwork-interactives .item > * {
