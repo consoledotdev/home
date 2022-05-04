@@ -1371,7 +1371,8 @@ select.console-select:focus {
     transition: var(--a-controls-active);
 }
 
-input.console-input-text:not(:focus):not(:placeholder-shown):invalid {
+input.console-input-text:not(:focus):not(:placeholder-shown):invalid,
+.form-generic .fieldset.is-invalid input.console-input-text:invalid {
     box-shadow: 0 0 0 2px var(--theme-signaling-error);
 }
 
@@ -1481,7 +1482,9 @@ input.console-input-text:not(:placeholder-shown):focus + .console-input-text-can
     opacity: 0;
 }
 
-input.console-input-text:not(:focus):not(:placeholder-shown):invalid + .console-label-error {
+input.console-input-text:not(:focus):not(:placeholder-shown):invalid + .console-label-error,
+.form-generic .fieldset.is-invalid input.console-input-text:invalid + .console-label-error,
+.form-generic .fieldset.is-invalid .console-label-error {
     opacity: 1;
 }
 
@@ -2835,6 +2838,18 @@ input:checked.console-input-segmented-bar + label .check-bar:after {
     background: var(--theme-input-checkable-on);
 }
 
+input:checked.console-input-segmented-bar:focus + label {
+    color: var(--theme-input-checkable-on-hover);
+}
+
+input:checked.console-input-segmented-bar:focus + label .check-bar:before {
+    background: var(--theme-input-checkable-on-hover);
+}
+
+input:checked.console-input-segmented-bar:focus + label .check-bar:after {
+    background: var(--theme-input-checkable-on-hover);
+}
+
 /* style: triad-01 */
 input:checked.console-input-segmented-bar.triad-01 + label {
     color: var(--theme-input-checkable-triad-01-on);
@@ -2846,6 +2861,18 @@ input:checked.console-input-segmented-bar.triad-01 + label .check-bar:before {
 
 input:checked.console-input-segmented-bar.triad-01 + label .check-bar:after {
     background: var(--theme-input-checkable-triad-01-on);
+}
+
+input:checked.console-input-segmented-bar.triad-01:focus + label {
+    color: var(--theme-input-checkable-triad-01-on-hover);
+}
+
+input:checked.console-input-segmented-bar.triad-01:focus + label .check-bar:before {
+    background: var(--theme-input-checkable-triad-01-on-hover);
+}
+
+input:checked.console-input-segmented-bar.triad-01:focus + label .check-bar:after {
+    background: var(--theme-input-checkable-triad-01-on-hover);
 }
 
 /* style: triad-02 */
@@ -2861,6 +2888,18 @@ input:checked.console-input-segmented-bar.triad-02 + label .check-bar:after {
     background: var(--theme-input-checkable-triad-02-on);
 }
 
+input:checked.console-input-segmented-bar.triad-02:focus + label {
+    color: var(--theme-input-checkable-triad-02-on-hover);
+}
+
+input:checked.console-input-segmented-bar.triad-02:focus + label .check-bar:before {
+    background: var(--theme-input-checkable-triad-02-on-hover);
+}
+
+input:checked.console-input-segmented-bar.triad-02:focus + label .check-bar:after {
+    background: var(--theme-input-checkable-triad-02-on-hover);
+}
+
 /* style: triad-03 */
 input:checked.console-input-segmented-bar.triad-03 + label {
     color: var(--theme-input-checkable-triad-03-on);
@@ -2874,6 +2913,18 @@ input:checked.console-input-segmented-bar.triad-03 + label .check-bar:after {
     background: var(--theme-input-checkable-triad-03-on);
 }
 
+input:checked.console-input-segmented-bar.triad-03:focus + label {
+    color: var(--theme-input-checkable-triad-03-on-hover);
+}
+
+input:checked.console-input-segmented-bar.triad-03:focus + label .check-bar:before {
+    background: var(--theme-input-checkable-triad-03-on-hover);
+}
+
+input:checked.console-input-segmented-bar.triad-03:focus + label .check-bar:after {
+    background: var(--theme-input-checkable-triad-03-on-hover);
+}
+
 /* style: attention */
 input:checked.console-input-segmented-bar.attention + label {
     color: var(--theme-input-checkable-attention-on);
@@ -2885,6 +2936,18 @@ input:checked.console-input-segmented-bar.attention + label .check-bar:before {
 
 input:checked.console-input-segmented-bar.attention + label .check-bar:after {
     background: var(--theme-input-checkable-attention-on);
+}
+
+input:checked.console-input-segmented-bar.attention:focus + label {
+    color: var(--theme-input-checkable-attention-on-hover);
+}
+
+input:checked.console-input-segmented-bar.attention:focus + label .check-bar:before {
+    background: var(--theme-input-checkable-attention-on-hover);
+}
+
+input:checked.console-input-segmented-bar.attention:focus + label .check-bar:after {
+    background: var(--theme-input-checkable-attention-on-hover);
 }
 
 /* style: disabled */

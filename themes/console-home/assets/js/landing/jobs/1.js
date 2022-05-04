@@ -375,7 +375,6 @@ class GravitatingItems {
             this.items.forEach((item, idx) => {
                 let a = angle * idx + this.offset;
                 if (a > 2 * Math.PI) a -= 2 * Math.PI;
-                // if (idx == 0) console.log(a);
                 const x = +(Math.cos(a) * this.currentRadius).toFixed(2);
                 const y = +(Math.sin(a) * 0.85 * this.currentRadius).toFixed(2);
                 item.style.transform = "translate(" + x + "%," + y + "%)";
@@ -389,6 +388,10 @@ class FormHelper {
         this.bindFuncs();
 
         this.form = document.querySelector(selector);
+        this.bindForm();
+        this.bindRequiredCheckboxGroups();
+        this.bindRequiredInputs();
+        this.bindRequiredAltInputs();
         this.bindParentCheckboxes();
         this.bindChildrenCheckboxes();
         this.bindSelectAll();
@@ -399,6 +402,39 @@ class FormHelper {
         this.toggleAllSiblings = this.toggleAllSiblings.bind(this);
         this.toggleParentCheckbox = this.toggleParentCheckbox.bind(this);
         this.toggleChildrenCheckboxes = this.toggleChildrenCheckboxes.bind(this);
+        this.toggleRequiredGroup = this.toggleRequiredGroup.bind(this);
+        this.checkTextInput = this.checkTextInput.bind(this);
+        this.checkEmailInput = this.checkEmailInput.bind(this);
+        this.checkRequiredAltInput = this.checkRequiredAltInput.bind(this);
+        this.validate = this.validate.bind(this);
+        this.submit = this.submit.bind(this);
+    }
+
+    bindForm() {
+        this.form.addEventListener("invalid", this.validate, true);
+        this.form.addEventListener("submit", this.submit);
+    }
+
+    bindRequiredCheckboxGroups() {
+        this.form.querySelectorAll("[data-required-checkbox-group]").forEach((c) => {
+            c.required = true;
+            c.addEventListener("change", this.toggleRequiredGroup);
+        });
+    }
+
+    bindRequiredInputs() {
+        this.form.querySelectorAll("input[type='text']:required").forEach((c) => {
+            i.addEventListener("keyup", this.checkTextInput);
+        });
+        this.form.querySelectorAll("input[type='email']:required").forEach((i) => {
+            i.addEventListener("keyup", this.checkEmailInput);
+        });
+    }
+
+    bindRequiredAltInputs() {
+        this.form.querySelectorAll("[data-required-alt]").forEach((i) => {
+            i.addEventListener("keyup", this.checkRequiredAltInput);
+        });
     }
 
     bindParentCheckboxes() {
@@ -431,6 +467,45 @@ class FormHelper {
             input.addEventListener("change", this.toggleDisableSiblings);
             this.toggleDisableSiblings({ currentTarget: input });
         });
+    }
+
+    checkEmailInput(e) {
+        let valid = false;
+        if (e.currentTarget.validity.valid) valid = true;
+        this.validateFieldset(e.currentTarget.closest(".fieldset"), valid);
+    }
+
+    checkTextInput(e) {
+        let valid = false;
+        if (e.currentTarget.value != "" && e.currentTarget.value != undefined) valid = true;
+        this.validateFieldset(e.currentTarget.closest(".fieldset"), valid);
+    }
+
+    checkRequiredAltInput(e) {
+        let valid = false;
+        if (e.currentTarget.value != "" && e.currentTarget.value != undefined) valid = true;
+        let invalidParent = e.currentTarget.closest(".fieldset.is-invalid");
+        if (invalidParent) this.validateFieldset(invalidParent, valid);
+    }
+
+    toggleRequiredGroup(e) {
+        const checkboxes = this.form.querySelectorAll("[data-required-checkbox-group='" + e.currentTarget.dataset.requiredCheckboxGroup + "']");
+        let checkedAmt = 0;
+        checkboxes.forEach((c) => (c.checked ? checkedAmt++ : null));
+        if (checkedAmt > 0) {
+            checkboxes.forEach((c) => (c.required = false));
+        } else {
+            checkboxes.forEach((c) => (c.required = true));
+        }
+
+        let valid = checkedAmt;
+        let altField = this.form.querySelectorAll("[data-required-alt='" + e.currentTarget.dataset.requiredCheckboxGroup + "']");
+        altField.forEach((af) => {
+            if (af.value != "" && af.value != undefined) {
+                valid = 1;
+            }
+        });
+        this.validateFieldset(e.currentTarget.closest(".fieldset"), valid);
     }
 
     toggleParentCheckbox(e) {
@@ -473,6 +548,33 @@ class FormHelper {
                 e.currentTarget.checked ? s.classList.add("is-disabled") : s.classList.remove("is-disabled");
             }
         });
+    }
+
+    validate(e) {
+        this.validateFieldset(e.target.closest(".fieldset"), false);
+    }
+
+    validateFieldset(fieldset, valid) {
+        if (valid) fieldset.classList.remove("is-invalid");
+        else fieldset.classList.add("is-invalid");
+    }
+
+    submit(e) {
+        e.preventDefault();
+    }
+
+    sanitizeInput(value) {
+        const escapes = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#x27;",
+            "/": "&#x2F;",
+            "`": "&grave;",
+        };
+        const reg = /[&<>"'`/]/gi;
+        return value.replace(reg, (match) => escapes[match]);
     }
 
     _setInput(e, data) {
@@ -520,7 +622,6 @@ class ContentExtensionHelper {
         const c = this.contents.filter((c) => {
             return c.content.dataset.contentExtension == e.currentTarget.dataset.contentExtensionToggle;
         });
-        console.log(c);
         c[0].content.classList.toggle("is-hidden");
         c[0].launch.classList.toggle("is-hidden");
     }

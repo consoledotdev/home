@@ -500,6 +500,10 @@
     margin-top: calc(var(--space4) * -1);
 }
 
+.console-label {
+    font-size: var(--t-size-1);
+}
+
 .main-landing-jobs .page-section.signup {
     max-width: none;
     margin: 0;
@@ -542,8 +546,25 @@
     display: block;
 }
 
+.main-landing-jobs .page-section.signup .fieldset > div {
+    position: relative;
+}
+
 .main-landing-jobs .page-section.signup .fieldset legend + * {
     margin-top: var(--space4);
+}
+
+.console-label[for="form-email"] {
+    margin-top: var(--space2_5);
+}
+
+.console-label[for="form-roles"],
+.console-label[for="form-locations"],
+.console-label[for="form-tech-stack"] {
+    margin-top: calc((var(--space4) + var(--space2)) * -1);
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .main-landing-jobs .page-section.signup .fieldset-locations .form-cols,

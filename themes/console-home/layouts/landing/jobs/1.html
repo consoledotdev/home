@@ -105,7 +105,10 @@
                     <h4 class="title title-3">Your email</h4>
                     <p class="small">We’ll only send an email when we have an offer you should really consider.</p>
                 </legend>
-                <input id="form-email" name="form-email" class="console-input-text" type="email" placeholder="Your email" title="Email" required />
+                <div>
+                    <input id="form-email" name="form-email" class="console-input-text" type="email" placeholder="Your email" title="Email" required />
+                    <label for="form-email" class="console-label console-label-error">Please enter a valid email address.</label>
+                </div>
             </div>
             <div class="fieldset">
                 <legend>
@@ -121,14 +124,15 @@
                                 name="form-role"
                                 id="form-role-{{ .name }}"
                                 value="{{ .name }}"
-                                {{ with .checked }} checked{{ end }}
-                                {{ with .required }} required{{ end }} />
+                                data-required-checkbox-group="form-role"
+                                {{ with .checked }} checked{{ end }} />
                             <label for="form-role-{{ .name }}">
                                 {{ if eq $formData.role.consoleType "chip" }}{{ partial (print "icons/" .icon ".html" ) }}{{ end }}
                                 {{ .label }}
                             </label>
                         </div>
                     {{ end }}
+                    <label for="form-roles" class="console-label console-label-error">Please select at least one role.</label>
                 </div>
             </div>
             <div class="fieldset fieldset-locations">
@@ -145,8 +149,8 @@
                                     name="form-locations"
                                     id="form-locations-{{ .name }}"
                                     value="{{ .name }}"
+                                    data-required-checkbox-group="form-locations"
                                     {{ with .checked }} checked{{ end }}
-                                    {{ with .required}} required{{end }}
                                     data-item="{{ .name }}"
                                     {{ with .selectAll }} data-select-all="{{ . }}"{{ end }}
                                     {{ with .disableOthers }} data-disable-others="{{ . }}"{{ end }} />
@@ -169,8 +173,8 @@
                                         name="form-locations"
                                         id="form-locations-{{ $item.name }}"
                                         value="{{ $item.name }}"
+                                        data-required-checkbox-group="form-locations"
                                         {{ with $item.checked }} checked{{ end }}
-                                        {{ with $item.required}} required{{end }}
                                         data-item="{{ $item.name }}"
                                         {{ with $item.parent }} data-child="{{ . }}"{{ end }}
                                         {{ with $item.hasChildren }} data-parent{{ end }}
@@ -196,13 +200,14 @@
                         <h6 class="title title-5">Other locations</h6>
                         <p class="small">Separate items with a comma.</p>
                         <div>
-                            <input id="form-other-locations" name="form-other-locations" class="console-input-text console-input-small" type="text" placeholder="Add other locations" title="Other locations" />
+                            <input data-required-alt="form-locations" id="form-other-locations" name="form-other-locations" class="console-input-text console-input-small" type="text" placeholder="Add other locations" title="Other locations" />
                             <a data-content-extension-toggle="other-locations" class="console-button-text console-button-medium icon-left" title="Cancel adding locations">
                                 {{ partial "icons/cancel.html" }}
                                 <span>Cancel</span>
                             </a>
                         </div>
                     </div>
+                    <label for="form-locations" class="console-label console-label-error">Please select at least one location.</label>
                 </div>
             </div>
             <div class="fieldset fieldset-tech-stack">
@@ -220,8 +225,8 @@
                                     name="form-tech"
                                     id="form-tech-{{ .name }}"
                                     value="{{ .name }}"
-                                    {{ with .checked}} checked{{end }}
-                                    {{ with .required}} required{{end }} />
+                                    data-required-checkbox-group="form-tech-stack"
+                                    {{ with .checked}} checked{{end }} />
                                 <label class="tech-stack-item" for="form-tech-{{ .name }}">
                                     {{ if eq $formData.tech.consoleType "chip" }}{{ partial (print "icons/tech/" .icon ".html" ) }}{{ end }}
                                     {{ .label }}
@@ -240,13 +245,14 @@
                         <h6 class="title title-5">Other tool or tech</h6>
                         <p class="small">Separate items with a comma.</p>
                         <div>
-                            <input id="form-other-tech" name="form-other-tech" class="console-input-text console-input-small" type="text" placeholder="Add tool or tech" title="Other tool or tech" />
+                            <input data-required-alt="form-tech-stack" id="form-other-tech" name="form-other-tech" class="console-input-text console-input-small" type="text" placeholder="Add tool or tech" title="Other tool or tech" />
                             <a data-content-extension-toggle="other-tech" class="console-button-text console-button-medium icon-left" title="Cancel adding other tool or tech">
                                 {{ partial "icons/cancel.html" }}
                                 <span>Cancel</span>
                             </a>
                         </div>
                     </div>
+                    <label for="form-tech-stack" class="console-label console-label-error">Please select at least one tech.</label>
                 </div>
             </div>
             <h6 class="title title-5">About yourself</h6>
