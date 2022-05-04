@@ -774,6 +774,26 @@
     margin-left: var(--space2);
 }
 
+input.console-input-text:not(:focus):not(:placeholder-shown):invalid + .console-label-error,
+.form-generic .fieldset.is-invalid input.console-input-text:invalid + .console-label-error,
+.form-generic .fieldset.is-invalid .console-label-error {
+    opacity: 1;
+}
+
+.form-generic .console-button[type="submit"] .icon-loader,
+.form-generic.is-submitting .console-button[type="submit"] .icon {
+    display: none;
+}
+
+.form-generic.is-submitting .console-button[type="submit"] .icon-loader {
+    display: inline-block;
+}
+
+.form-generic.is-submit-error .console-label-error[for="submit"] {
+    margin-top: var(--space3);
+    opacity: 1;
+}
+
 /* Subscribe CTA
    ================================================================================================================ */
 .subscribe-cta {
@@ -1480,12 +1500,6 @@ input.console-input-text:not(:placeholder-shown):focus + .console-input-text-can
     position: absolute;
     color: var(--theme-signaling-error);
     opacity: 0;
-}
-
-input.console-input-text:not(:focus):not(:placeholder-shown):invalid + .console-label-error,
-.form-generic .fieldset.is-invalid input.console-input-text:invalid + .console-label-error,
-.form-generic .fieldset.is-invalid .console-label-error {
-    opacity: 1;
 }
 
 /* Input Radio

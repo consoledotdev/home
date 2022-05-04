@@ -561,6 +561,23 @@ class FormHelper {
 
     submit(e) {
         e.preventDefault();
+        this.form.classList.remove("is-submit-error");
+        this.form.classList.add("is-submitting");
+
+        const data = new FormData(this.form);
+        const XHR = new XMLHttpRequest();
+
+        XHR.addEventListener("load", (e) => {
+            this.form.classList.remove("is-submitting");
+        });
+
+        XHR.addEventListener("error", (e) => {
+            this.form.classList.add("is-submit-error");
+            this.form.classList.remove("is-submitting");
+        });
+
+        XHR.open("POST", this.form.action);
+        XHR.send(data);
     }
 
     sanitizeInput(value) {
