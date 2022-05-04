@@ -1,19 +1,3 @@
-// Easing helper
-const doubleExponentialSeat = (x, a) => {
-    let epsilon = 0.00001;
-    let min_param_a = 0.0 + epsilon;
-    let max_param_a = 1.0 - epsilon;
-    a = Math.min(max_param_a, Math.max(min_param_a, a));
-
-    let y = 0;
-    if (x <= 0.5) {
-        y = Math.pow(2.0 * x, 1 - a) / 2.0;
-    } else {
-        y = 1.0 - Math.pow(2.0 * (1.0 - x), 1 - a) / 2.0;
-    }
-    return y;
-};
-
 class JobsArt {
     constructor(selector) {
         this.bindFuncs();
