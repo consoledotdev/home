@@ -5,12 +5,20 @@ draft: false
 summary: Jobs subscription confirmed.
 robotsDisallow: true
 type: confirm-jobs
+isPage: confirm-jobs
+customStyle: true
 ---
 
 You are now subscribed to the Console Jobs newsletter.
 {.description}
 
 We'll periodically send you a free email digest of jobs that actually suit you. **No more than 1 per week.**
+
+###### Your subscription preferences
+{{< div-custom class="simple-table" >}}
+{{< div-custom class="simple-table-grid" data="data-subscription-data" >}}
+{{< div--close >}}
+{{< div--close >}}
 
 ### Console is more
 We also issue a free weekly email digest of the best tools and beta releases for developers.

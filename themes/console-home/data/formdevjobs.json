@@ -292,7 +292,7 @@
         "consoleType": "segmented-bar",
         "inputs": [
             {
-                "name": "2y",
+                "name": "less2y",
                 "label": "< 2 years",
                 "checked": true,
                 "required": true
@@ -306,7 +306,7 @@
                 "label": "5-10 years"
             },
             {
-                "name": "10y",
+                "name": "more10y",
                 "label": "> 10 years"
             }
         ]
@@ -316,7 +316,7 @@
         "consoleType": "segmented-bar",
         "inputs": [
             {
-                "name": "100k",
+                "name": "less100k",
                 "label": "< $100k",
                 "checked": true,
                 "required": true
@@ -330,7 +330,7 @@
                 "label": "$150-250k"
             },
             {
-                "name": "250k",
+                "name": "more250k",
                 "label": "> $250k"
             }
         ]

@@ -549,10 +549,20 @@ class FormHelper {
         this.form.classList.add("is-submitting");
 
         const data = new FormData(this.form);
+
+        let dataObj = {};
+        data.forEach((value, key) => {
+            value = this.sanitizeInput(sanitizeInputvalue);
+            if (dataObj[key]) dataObj[key] += ", " + value;
+            else dataObj[key] = value;
+        });
+        const query = new URLSearchParams(dataObj).toString();
+
         const XHR = new XMLHttpRequest();
 
         XHR.addEventListener("load", (e) => {
             this.form.classList.remove("is-submitting");
+            window.location.href = "/confirm-jobs?" + query;
         });
 
         XHR.addEventListener("error", (e) => {
