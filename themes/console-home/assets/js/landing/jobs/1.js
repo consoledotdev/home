@@ -552,7 +552,7 @@ class FormHelper {
 
         let dataObj = {};
         data.forEach((value, key) => {
-            value = this.sanitizeInput(sanitizeInputvalue);
+            value = this.sanitizeInput(value);
             if (dataObj[key]) dataObj[key] += ", " + value;
             else dataObj[key] = value;
         });
