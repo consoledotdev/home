@@ -16,10 +16,11 @@ and new releases. **We keep track of everything - dev tools, devops, cloud, and
 APIs - so you don't have to.**
 
 Our recommendations are made through years of experience and research, bringing
-a deep practical understanding of the needs of experienced developers. **We
-pride ourselves on being transparent in our editorial approach.** It’s our job
-to do the filtering, so you can stay up-to-date with the tools that matter, and
-focus on what you do best. Building.
+a deep practical understanding of the needs of experienced developers. We pride
+ourselves on [being transparent in our editorial
+approach](/selection-criteria/). It’s our job to do the filtering, so you can
+stay up-to-date with the tools that matter, and focus on what you do best.
+Building.
 
 {{< img-2col src1="/img/david.jpg" alt1="David Mytton" src2="/img/max.jpg" alt2="Max Jennings">}}
 
@@ -27,9 +28,9 @@ focus on what you do best. Building.
 
 David Mytton is Co-founder & CEO of Console. From 2009-2018, David was CEO at
 Server Density, a SaaS monitoring startup used by hundreds of customers to
-collect billions of time series metrics. He is also
-[a researcher](https://davidmytton.blog/publications/) in sustainable computing
-and affiliated with Imperial College London. David has been a developer for 15+
+collect billions of time series metrics. He is also [a
+researcher](https://davidmytton.blog/publications/) in sustainable computing and
+affiliated with the University of Oxford. David has been a developer for 15+
 years.
 
 Max has 20+ years tech experience building online businesses. Previous start-ups
@@ -47,17 +48,17 @@ what appears in the Console newsletter each week.
 
 ### Beyond the newsletter
 
-Over time our goal is to **build a community where developers can find the best
-tools**. This will include long form research, discussion, and exclusive deals
-and/or early access to beta programs and new releases.
+Having launched in early-2021, over time our goal is to **build a community of
+experienced developers**. This will include reviews of the best developer tools,
+profiles of interesting companies, interviews with people building devtools, and
+helping developers find the best places to work.
 
-We aim to support Console through this last one -
-[partnering with vendors](/advertise/) to connect with our audience, such as by
-syncing reviews with new releases or offering exclusives such as access to beta
-programs or bonus credits. We may be paid for these. However, our editorial
-process is independent from our vendor partnerships. All partners must first fit
-our [selection criteria](/selection-criteria/) before we consider working with
-them.
+Console generates revenue by [partnering with vendors](/advertise/) to connect
+with our audience, such as by syncing reviews with new releases or offering
+exclusives such as access to beta programs. We may be paid for these. However,
+our editorial process is independent from our vendor partnerships. All partners
+must first fit our [selection criteria](/selection-criteria/) before we consider
+working with them. The same applies to [the startups we invest in](/zero/).
 
 To learn more about Console, check out the Console blog where you can follow our
 progress. To start, we recommend reading our thoughts on the
