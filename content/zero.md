@@ -32,7 +32,7 @@ an equally massive growth in the opportunity for developer tools.
 So if you're building something that would be a fit for our audience [get in
 touch](mailto:david@console.dev).
 
-### Console investment portfolio
+### Portfolio
 
 * [Cased](https://cased.com/)
 * [Cyscale](https://cyscale.com/)
@@ -43,6 +43,7 @@ touch](mailto:david@console.dev).
 * [Liveblocks](https://liveblocks.io/)
 * [Memphis](https://memphis.dev/)
 * [Moving Parts](https://movingparts.io/)
+* [Primer](https://primer.io/)
 * [Rowy](https://www.rowy.io/)
 * [Snaplet](https://www.snaplet.dev/)
 * [Signoz](https://signoz.io/)
