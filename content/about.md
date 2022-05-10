@@ -55,10 +55,13 @@ helping developers find the best places to work.
 
 Console generates revenue by [partnering with vendors](/advertise/) to connect
 with our audience, such as by syncing reviews with new releases or offering
-exclusives such as access to beta programs. We may be paid for these. However,
-our editorial process is independent from our vendor partnerships. All partners
+exclusives such as access to beta programs. We may be paid for these.
+
+Our editorial process is independent from our vendor partnerships. All partners
 must first fit our [selection criteria](/selection-criteria/) before we consider
-working with them. The same applies to [the startups we invest in](/zero/).
+working with them. The same applies to [the startups we invest in](/zero/). In
+both cases, reviews of products where we have a commercial or investment
+relationship are marked as sponsored in the newsletter and on the website.
 
 To learn more about Console, check out the Console blog where you can follow our
 progress. To start, we recommend reading our thoughts on the
