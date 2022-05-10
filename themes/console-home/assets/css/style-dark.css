@@ -288,6 +288,15 @@
     --theme-artwork-triad-01-glow: rgba(82, 105, 255, 0.28);
     --theme-artwork-triad-02-glow: rgba(245, 97, 245, 0.24);
     --theme-artwork-triad-03-glow: rgba(1, 188, 144, 0.24);
+
+    /* Jobs */
+    --theme-jobs-triad-01: var(--c-yellow-04-main);
+    --theme-jobs-triad-02: var(--c-berry-05-main);
+    --theme-jobs-triad-03: var(--c-sunset-05-main);
+    --theme-jobs-circle: var(--c-grey-04-whites-neutral);
+
+    /* Jobs landing page specific */
+    --theme-jobs-core-background: linear-gradient(180deg, rgba(14, 15, 95, 0) 0%, rgba(14, 15, 95, 0.3) 78%), var(--c-black-02-main);
 }
 
 .theme.page-article,

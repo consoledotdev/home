@@ -34,7 +34,7 @@
     display: grid;
     gap: var(--space5);
     height: calc(100vh - var(--space4_5) - var(--space4_5) - (calc(var(--space2) + var(--space4))));
-    background: linear-gradient(180deg, rgba(14, 15, 95, 0) 0%, rgba(14, 15, 95, 0.3) 78%), #0a0a0b;
+    background: var(--theme-jobs-core-background);
     overflow: hidden;
     z-index: 10;
 
@@ -378,16 +378,16 @@
 }
 
 .page-section-landing-jobs.features .icon-jobs circle {
-    fill: var(--c-yellow-04-main);
+    fill: var(--theme-jobs-triad-01);
 }
 
 .page-section-landing-jobs.features .illustration-console-company-profile .background-stroke {
-    stroke: var(--c-berry-05-main);
+    stroke: var(--theme-jobs-triad-02);
     opacity: 1;
 }
 
 .page-section-landing-jobs.features .illustration-no-spam circle.background-fill {
-    fill: var(--c-sunset-00);
+    fill: var(--c-jobs-triad-03);
     opacity: 1;
 }
 

@@ -2,6 +2,8 @@ class JobsArt {
     constructor(selector) {
         this.bindFuncs();
 
+        this.colors = this.getColors();
+
         this.mouse = { x: 0, y: 0 };
         document.addEventListener("mousemove", this.setMouse);
 
@@ -30,6 +32,16 @@ class JobsArt {
         this.setup();
 
         requestAnimationFrame(this.render);
+    }
+
+    getColors() {
+        let style = getComputedStyle(document.documentElement);
+        return {
+            triad01: style.getPropertyValue("--theme-jobs-triad-01").trim(),
+            triad02: style.getPropertyValue("--theme-jobs-triad-02").trim(),
+            triad03: style.getPropertyValue("--theme-jobs-triad-03").trim(),
+            circle: style.getPropertyValue("--theme-jobs-circle").trim(),
+        };
     }
 
     getDiamondPositions() {
@@ -150,15 +162,15 @@ class JobsArt {
         const positions = this.getDiamondPositions();
         let configs = [
             {
-                color: 0xe57d62,
+                color: this.colors.triad03,
                 position: positions[0],
             },
             {
-                color: 0xffcc55,
+                color: this.colors.triad01,
                 position: positions[1],
             },
             {
-                color: 0xe4718a,
+                color: this.colors.triad02,
                 position: positions[2],
             },
         ];
@@ -187,7 +199,7 @@ class JobsArt {
         {
             // circle
             const geo = new THREE.EdgesGeometry(new THREE.CircleGeometry(0.12, 20), 1);
-            const material = new THREE.PointsMaterial({ color: 0x95969f, sizeAttenuation: false, size: 3, depthTest: false });
+            const material = new THREE.PointsMaterial({ color: this.colors.circle, sizeAttenuation: false, size: 3, depthTest: false });
             material.transparent = true;
             material.opacity = 0;
             const obj = new THREE.Points(geo, material);
