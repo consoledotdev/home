@@ -392,8 +392,12 @@
 }
 
 .page-section-landing-jobs.features .illustration-no-spam circle.background-fill {
-    fill: var(--c-jobs-triad-03);
+    fill: var(--theme-jobs-triad-03);
     opacity: 1;
+}
+
+.page-section-landing-jobs.features .illustration-no-spam .background-stroke {
+    stroke: var(--theme-text-5);
 }
 
 .page-section-landing-jobs.features .cols .col .title {
@@ -439,7 +443,7 @@
     margin: 0;
     padding-top: calc(var(--space6) + var(--space4));
     padding-bottom: var(--space6);
-    background: linear-gradient(180deg, rgba(41, 8, 11, 1) 22%, rgba(41, 8, 11, 0) 100%), #0a0a0b;
+    background: var(--theme-jobs-trust-background);
 
     width: 100vw;
     margin-left: -6.25vw;
@@ -548,7 +552,7 @@
     width: calc(var(--space6) + var(--space3));
     height: calc(var(--space6) + var(--space3));
     border-radius: calc(var(--space5) + var(--space2));
-    background: var(--theme-vapor-globe-blue-1);
+    background: var(--theme-jobs-vapor-globe);
 }
 
 .page-section-landing-jobs.profiled-companies .vapor-globe {

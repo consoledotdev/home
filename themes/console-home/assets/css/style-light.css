@@ -237,6 +237,7 @@
     --theme-section-plane-right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 126 256'%3E%3Cpath d='M0 256L2.23802e-05 0L126 1.10153e-05L0 256Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
 
     --theme-vapor-globe-blue-1: linear-gradient(180deg, var(--c-blue-02), var(--c-blue-04));
+    --theme-vapor-globe-sunset-1: linear-gradient(180deg, var(--c-sunset-04), var(--c-sunset-06));
 
     --theme-interviewer-name: var(--theme-text-1);
     --theme-interviewee-name: var(--c-green-06);
@@ -299,6 +300,8 @@
     --theme-jobs-core-background: linear-gradient(180deg, rgba(var(--c-grey-05-RGB), 0) 0%, rgba(var(--c-grey-05-RGB), 0.04) 78%), var(--c-grey-01-white-03);
     --theme-jobs-bg-diamonds: var(--c-white-00-absolute);
     --theme-jobs-bg-diamonds-opacity: 0.22;
+    --theme-jobs-trust-background: linear-gradient(180deg, rgba(252, 213, 220, 1) 22%, rgba(252, 213, 220, 0) 100%), var(--c-white-01-main);
+    --theme-jobs-vapor-globe: var(--theme-vapor-globe-sunset-1);
 }
 
 .theme.page-article,
@@ -437,4 +440,12 @@ body.theme.page-advertise.checkpoint-contact {
 
 body.theme.page-landing.checkpoint-other-content {
     background: var(--theme-content-bg-0);
+}
+
+.theme .page-section-landing-jobs.features .illustration-console-company-profile .background-stroke {
+    stroke: var(--theme-text-1);
+}
+
+.theme .page-section-landing-jobs.features .illustration-console-company-profile .foreground {
+    fill: var(--theme-jobs-triad-02);
 }
