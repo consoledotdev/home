@@ -497,17 +497,14 @@
     .page-section-landing-jobs.profiled-companies .logo-cloud img {
         height: var(--space4_5);
         margin-bottom: var(--space3);
-        margin-right: var(--space4);
+        margin-right: calc(var(--space4) + 11px);
     }
 
     @media (max-width: 320px) {
         .page-section-landing-jobs.profiled-companies .logo-cloud img {
             height: calc(var(--space4_5) - 10px);
             margin-bottom: calc(var(--space3) - 6px);
-            margin-right: calc(var(--space4) - 21px);
-        }
-        .page-section-landing-jobs.profiled-companies .logo-cloud img:nth-child(even) {
-            margin-right: 0;
+            margin-right: calc(var(--space4) - 11px);
         }
     }
 
@@ -517,11 +514,6 @@
             height: calc(var(--space4_5) - var(--shrink));
             --shrinkV: calc(calc(460px - 100vw) * 0.04);
             margin-bottom: calc(var(--space3) - var(--shrinkV));
-            --shrinkH: calc(calc(460px - 100vw) * 0.15);
-            margin-right: calc(var(--space4) - var(--shrinkH));
-        }
-        .page-section-landing-jobs.profiled-companies .logo-cloud img:nth-child(even) {
-            margin-right: 0;
         }
     }
 }
