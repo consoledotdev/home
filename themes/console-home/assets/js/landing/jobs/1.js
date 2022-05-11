@@ -32,7 +32,6 @@ class JobsArt {
         this.setup();
 
         this.shouldRotate = false;
-        this.bindMediaQuery();
 
         requestAnimationFrame(this.render);
     }
@@ -71,27 +70,6 @@ class JobsArt {
     bindFuncs() {
         this.render = this.render.bind(this);
         this.setMouse = this.setMouse.bind(this);
-    }
-
-    bindMediaQuery() {
-        let mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-        if (mediaQuery) {
-            if (!mediaQuery.matches) this.shouldRotate = true;
-
-            if (mediaQuery.addEventListener) {
-                mediaQuery.addEventListener("change", () => {
-                    mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-                    if (!mediaQuery.matches) this.shouldRotate = true;
-                    else this.shouldRotate = false;
-                });
-            } else {
-                mediaQuery.addListener(() => {
-                    mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-                    if (!mediaQuery.matches) this.shouldRotate = true;
-                    else this.shouldRotate = false;
-                });
-            }
-        }
     }
 
     setup() {
@@ -350,6 +328,10 @@ class JobsArt {
             }
         }
     }
+
+    _setRotate(state) {
+        this.shouldRotate = state;
+    }
 }
 
 class GravitatingItems {
@@ -357,7 +339,6 @@ class GravitatingItems {
         this.bindFuncs();
 
         this.shouldRotate = false;
-        this.bindMediaQuery();
 
         this.offset = Math.PI * 0.7 * -1;
         this.radius = 46; // percent
@@ -378,27 +359,6 @@ class GravitatingItems {
     bind() {
         this.parent.addEventListener("mouseover", this.spread);
         this.parent.addEventListener("mouseout", this.fold);
-    }
-
-    bindMediaQuery() {
-        let mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-        if (mediaQuery) {
-            if (!mediaQuery.matches) this.shouldRotate = true;
-
-            if (mediaQuery.addEventListener) {
-                mediaQuery.addEventListener("change", () => {
-                    mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-                    if (!mediaQuery.matches) this.shouldRotate = true;
-                    else this.shouldRotate = false;
-                });
-            } else {
-                mediaQuery.addListener(() => {
-                    mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-                    if (!mediaQuery.matches) this.shouldRotate = true;
-                    else this.shouldRotate = false;
-                });
-            }
-        }
     }
 
     spread() {
@@ -429,6 +389,10 @@ class GravitatingItems {
                 item.style.transform = "translate(" + x + "%," + y + "%)";
             }, 10);
         });
+    }
+
+    _setRotate(state) {
+        this.shouldRotate = state;
     }
 }
 
@@ -742,4 +706,24 @@ document.addEventListener("DOMContentLoaded", (e) => {
     };
     setSegmentedBarLayout();
     window.addEventListener("resize", setSegmentedBarLayout);
+
+    /* Handle reduced motion preference */
+    let mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (mediaQuery) {
+        if (!mediaQuery.matches) {
+            jobsArt._setRotate(true);
+            jobsArtItems._setRotate(true);
+        }
+
+        mediaQuery.addEventListener("change", () => {
+            mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+            if (!mediaQuery.matches) {
+                jobsArt._setRotate(true);
+                jobsArtItems._setRotate(true);
+            } else {
+                jobsArt._setRotate(false);
+                jobsArtItems._setRotate(false);
+            }
+        });
+    }
 });
