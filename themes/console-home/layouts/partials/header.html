@@ -16,9 +16,11 @@
                 <nav class="main-nav">
                     {{ partial "components/menu-toggle.html" }}
                     <ul data-show-more-nav="main-nav" class="show-more-nav no-popup">
-                        <li class="main-nav-item{{ if eq .context.Params.isPage "latest" }} is-selected{{ end }}">
-                            <a data-popup-toggle-noactive="more-nav" class="menu-item menu-item-primary" onclick="blur();" href="/latest/">Newsletter</a>
-                        </li>  
+                        {{ if ne .context.Params.isPage "landing-jobs" }} 
+                            <li class="main-nav-item{{ if eq .context.Params.isPage "latest" }} is-selected{{ end }}">
+                                <a data-popup-toggle-noactive="more-nav" class="menu-item menu-item-primary" onclick="blur();" href="/latest/">Newsletter</a>
+                            </li>  
+                        {{ end }}
                         <li class="main-nav-item{{ if eq .context.Params.isPage "tools" }} is-selected{{ end }}">
                             <a data-popup-toggle-noactive="more-nav" class="menu-item menu-item-primary" onclick="blur();" href="/tools/">Tools</a>
                         </li>
@@ -53,9 +55,11 @@
                     <div data-popup-wrapper class="popup-wrapper right bottom">
                         <div data-popup="mobile-nav" class="popup popup-top-down">
                             <ul>
-                                <li class="main-nav-item{{ if eq .context.Params.isPage "latest" }} is-selected{{ end }}">
-                                    <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary" onclick="blur();" href="/latest/">Newsletter</a>
-                                </li>    
+                                {{ if ne .context.Params.isPage "landing-jobs" }} 
+                                    <li class="main-nav-item{{ if eq .context.Params.isPage "latest" }} is-selected{{ end }}">
+                                        <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary" onclick="blur();" href="/latest/">Newsletter</a>
+                                    </li>    
+                                {{ end }}
                                 <li class="main-nav-item{{ if eq .context.Params.isPage "tools" }} is-selected{{ end }}">
                                     <a data-popup-toggle-noactive="mobile-nav" class="menu-item menu-item-primary" onclick="blur();" href="/tools/">Tools</a>
                                 </li>

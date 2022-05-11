@@ -257,7 +257,6 @@
 .box-collapsible.is-expanded .box-collapsible-content {
     padding: var(--space3);
     max-height: 200px;
-    transition: var(--a-elements-active);
 }
 
 .box-collapsible .subscribe-cta {
@@ -737,6 +736,62 @@
             margin-top: var(--space3);
         }
     }
+}
+
+/* Form Generic
+   ================================================================================================================ */
+.form-generic .input-wrapper:not(:first-child) {
+    margin-top: var(--space2);
+}
+
+.form-generic .input-wrapper.sub {
+    margin-left: var(--space2_5);
+    margin-top: var(--space1);
+}
+
+.form-separator {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 0 calc(var(--space1) + var(--space0));
+    margin: var(--space2_5) 0;
+}
+
+.form-separator p {
+    flex: 0 0 auto;
+    text-transform: uppercase;
+    font-style: italic;
+    color: var(--theme-text-5);
+}
+
+.form-separator:after {
+    flex: 1 1 auto;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    padding: 0;
+    background: var(--theme-separator-2);
+    margin-left: var(--space2);
+}
+
+input.console-input-text:not(:focus):not(:placeholder-shown):invalid + .console-label-error,
+.form-generic .fieldset.is-invalid input.console-input-text:invalid + .console-label-error,
+.form-generic .fieldset.is-invalid .console-label-error {
+    opacity: 1;
+}
+
+.form-generic .console-button[type="submit"] .icon-loader,
+.form-generic.is-submitting .console-button[type="submit"] .icon {
+    display: none;
+}
+
+.form-generic.is-submitting .console-button[type="submit"] .icon-loader {
+    display: inline-block;
+}
+
+.form-generic.is-submit-error .console-label-error[for="submit"] {
+    margin-top: var(--space3);
+    opacity: 1;
 }
 
 /* Subscribe CTA
@@ -1336,6 +1391,11 @@ select.console-select:focus {
     transition: var(--a-controls-active);
 }
 
+input.console-input-text:not(:focus):not(:placeholder-shown):invalid,
+.form-generic .fieldset.is-invalid input.console-input-text:invalid {
+    box-shadow: 0 0 0 2px var(--theme-signaling-error);
+}
+
 input.console-input-text::placeholder {
     color: var(--theme-input-text);
     opacity: 0.3;
@@ -1422,8 +1482,10 @@ input.console-input-text:not(:placeholder-shown):focus + .console-input-text-can
 /* Label
    ================================================================================================================ */
 .console-label {
+    display: block;
     font-size: var(--t-size0);
     color: var(--theme-text-2);
+    transition: var(--a--micro);
 }
 
 .console-label.console-label-medium {
@@ -1432,6 +1494,12 @@ input.console-input-text:not(:placeholder-shown):focus + .console-input-text-can
 
 .console-label.console-label-small {
     font-size: var(--t-size-2);
+}
+
+.console-label-error {
+    position: absolute;
+    color: var(--theme-signaling-error);
+    opacity: 0;
 }
 
 /* Input Radio
@@ -1479,7 +1547,8 @@ input.console-input-radio + label .check {
 }
 
 input:not(:disabled):not(:checked).console-input-radio + label:hover .check,
-input:not(:disabled):not(:checked).console-input-radio + label:active .check {
+input:not(:disabled):not(:checked).console-input-radio + label:active .check,
+input:not(:disabled):not(:checked).console-input-radio:focus + label .check {
     background: var(--theme-input-checkable-off-bg-hover);
     transition: var(--a-layout-active);
 }
@@ -1574,6 +1643,19 @@ input:checked.console-input-radio.triad-03 + label .check:after {
     background: var(--theme-input-checkable-triad-03-on);
 }
 
+/* style: attention */
+input:checked.console-input-radio.attention + label {
+    color: var(--theme-input-checkable-attention-on);
+}
+
+input:checked.console-input-radio.attention + label .check:before {
+    border: 1px solid var(--theme-input-checkable-attention-on);
+}
+
+input:checked.console-input-radio.attention + label .check:after {
+    background: var(--theme-input-checkable-attention-on);
+}
+
 /* style: disabled */
 input:disabled.console-input-radio + label,
 input:checked:disabled.console-input-radio + label,
@@ -1598,6 +1680,692 @@ input:checked:disabled.console-input-radio.triad-02 + label .check:after,
 input:checked:disabled.console-input-radio.triad-03 + label .check:after {
     background: transparent;
     border: 1px solid var(--theme-input-checkable-disabled);
+}
+
+/* Input Checkbox
+   ================================================================================================================ */
+input.console-input-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+input.console-input-checkbox + label {
+    position: relative;
+    display: inline-flex;
+    vertical-align: top;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: var(--t-size-2);
+    line-height: var(--t-lH4);
+    font-weight: 400;
+    color: var(--theme-input-checkable-off);
+    min-height: calc(var(--space2_5) + var(--space3));
+    transition: var(--a-controls-long);
+}
+
+input:checked.console-input-checkbox + label {
+    transition: var(--a-controls-long-active);
+}
+
+input:not(:disabled).console-input-checkbox + label {
+    cursor: pointer;
+}
+
+input.console-input-checkbox + label .check {
+    position: relative;
+    display: inline-block;
+    flex: 0 0 auto;
+    width: calc(var(--space2_5) + var(--space3));
+    height: calc(var(--space2_5) + var(--space3));
+    background: transparent;
+    border-radius: var(--corners-mid);
+    margin-right: calc(var(--space1) / 2);
+    transition: var(--a-layout);
+}
+
+input:not(:disabled).console-input-checkbox + label:hover .check,
+input:not(:disabled).console-input-checkbox + label:active .check,
+input:not(:disabled).console-input-checkbox:focus + label .check {
+    background: var(--theme-input-checkable-off-bg-hover);
+    transition: var(--a-layout-active);
+}
+
+input.console-input-checkbox + label .check:before {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: var(--space3);
+    height: var(--space3);
+    border: 1px solid var(--theme-input-checkable-off);
+    background: transparent;
+    border-radius: var(--corners-x-small);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: var(--a-controls-long);
+}
+
+input:checked.console-input-checkbox + label .check:before {
+    transition: var(--a-controls-long-active);
+}
+
+input.console-input-checkbox + label .check:after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: calc(var(--space0) + var(--space1));
+    height: calc(var(--space0) + var(--space1));
+    background: transparent;
+    border-radius: 1px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: var(--a-controls-long);
+}
+
+input:indeterminate.console-input-checkbox + label .check:after {
+    background: var(--theme-input-checkable-off);
+    transform: translate(-50%, -50%) scale(1);
+    transition: var(--a-controls-long-active);
+}
+
+input.console-input-checkbox + label .check .icon-checkmark {
+    position: absolute;
+    display: inline-block;
+    width: var(--space3);
+    height: var(--space3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: var(--a-controls-long);
+}
+
+input:checked.console-input-checkbox + label .check .icon-checkmark {
+    transform: translate(-50%, -50%) scale(1);
+    transition: var(--a-controls-long-active);
+    fill: var(--theme-input-checkable-on-subtract);
+}
+
+/* style: default */
+input:checked.console-input-checkbox + label {
+    color: var(--theme-input-checkable-on);
+}
+
+input:checked.console-input-checkbox + label:hover,
+input:checked.console-input-checkbox + label:active,
+input:checked.console-input-checkbox:focus + label {
+    color: var(--theme-input-checkable-on-hover);
+}
+
+input:checked.console-input-checkbox + label:hover .check,
+input:checked.console-input-checkbox + label:active .check,
+input:checked.console-input-checkbox:focus + label .check {
+    background: var(--theme-input-checkable-on-bg-hover);
+}
+
+input:checked.console-input-checkbox + label .check:before {
+    border: 1px solid transparent;
+    background: var(--theme-input-checkable-on);
+}
+
+input:checked.console-input-checkbox + label:hover .check:before,
+input:checked.console-input-checkbox + label:active .check:before,
+input:checked.console-input-checkbox:focus + label .check:before {
+    background: var(--theme-input-checkable-on-hover);
+}
+
+input:indeterminate.console-input-checkbox + label .check:after {
+    background: var(--theme-input-checkable-on);
+}
+
+input:indeterminate.console-input-checkbox + label:hover .check:after,
+input:indeterminate.console-input-checkbox + label:active .check:after,
+input:indeterminate.console-input-checkbox:focus + label .check:after {
+    background: var(--theme-input-checkable-on-hover);
+}
+
+/* style: triad-01 */
+input:checked.console-input-checkbox.triad-01 + label {
+    color: var(--theme-input-checkable-triad-01-on);
+}
+
+input:checked.console-input-checkbox.triad-01 + label:hover,
+input:checked.console-input-checkbox.triad-01 + label:active,
+input:checked.console-input-checkbox.triad-01:focus + label {
+    color: var(--theme-input-checkable-triad-01-on-hover);
+}
+
+input:checked.console-input-checkbox.triad-01 + label:hover .check,
+input:checked.console-input-checkbox.triad-01 + label:active .check,
+input:checked.console-input-checkbox.triad-01:focus + label .check {
+    background: var(--theme-input-checkable-triad-01-on-bg-hover);
+}
+
+input:checked.console-input-checkbox.triad-01 + label .check:before {
+    border: 1px solid transparent;
+    background: var(--theme-input-checkable-triad-01-on);
+}
+
+input:checked.console-input-checkbox.triad-01 + label:hover .check:before,
+input:checked.console-input-checkbox.triad-01 + label:active .check:before,
+input:checked.console-input-checkbox.triad-01:focus + label .check:before {
+    background: var(--theme-input-checkable-triad-01-on-hover);
+}
+
+input:indeterminate.console-input-checkbox.triad-01 + label .check:after {
+    background: var(--theme-input-checkable-triad-01-on);
+}
+
+input:indeterminate.console-input-checkbox.triad-01 + label:hover .check:after,
+input:indeterminate.console-input-checkbox.triad-01 + label:active .check:after,
+input:indeterminate.console-input-checkbox.triad-01:focus + label .check:after {
+    background: var(--theme-input-checkable-triad-01-on-hover);
+}
+
+/* style: triad-02 */
+input:checked.console-input-checkbox.triad-02 + label {
+    color: var(--theme-input-checkable-triad-02-on);
+}
+
+input:checked.console-input-checkbox.triad-02 + label:hover,
+input:checked.console-input-checkbox.triad-02 + label:active,
+input:checked.console-input-checkbox.triad-02:focus + label {
+    color: var(--theme-input-checkable-triad-02-on-hover);
+}
+
+input:checked.console-input-checkbox.triad-02 + label:hover .check,
+input:checked.console-input-checkbox.triad-02 + label:active .check,
+input:checked.console-input-checkbox.triad-02:focus + label .check {
+    background: var(--theme-input-checkable-triad-02-on-bg-hover);
+}
+
+input:checked.console-input-checkbox.triad-02 + label .check:before {
+    border: 1px solid transparent;
+    background: var(--theme-input-checkable-triad-02-on);
+}
+
+input:checked.console-input-checkbox.triad-02 + label:hover .check:before,
+input:checked.console-input-checkbox.triad-02 + label:active .check:before,
+input:checked.console-input-checkbox.triad-02:focus + label .check:before {
+    background: var(--theme-input-checkable-triad-02-on-hover);
+}
+
+input:indeterminate.console-input-checkbox.triad-02 + label .check:after {
+    background: var(--theme-input-checkable-triad-02-on);
+}
+
+input:indeterminate.console-input-checkbox.triad-02 + label:hover .check:after,
+input:indeterminate.console-input-checkbox.triad-02 + label:active .check:after,
+input:indeterminate.console-input-checkbox.triad-02:focus + label .check:after {
+    background: var(--theme-input-checkable-triad-02-on-hover);
+}
+
+/* style: triad-03 */
+input:checked.console-input-checkbox.triad-03 + label {
+    color: var(--theme-input-checkable-triad-03-on);
+}
+
+input:checked.console-input-checkbox.triad-03 + label:hover,
+input:checked.console-input-checkbox.triad-03 + label:active,
+input:checked.console-input-checkbox.triad-03:focus + label {
+    color: var(--theme-input-checkable-triad-03-on-hover);
+}
+
+input:checked.console-input-checkbox.triad-03 + label:hover .check,
+input:checked.console-input-checkbox.triad-03 + label:active .check,
+input:checked.console-input-checkbox.triad-03:focus + label .check {
+    background: var(--theme-input-checkable-triad-03-on-bg-hover);
+}
+
+input:checked.console-input-checkbox.triad-03 + label .check:before {
+    border: 1px solid transparent;
+    background: var(--theme-input-checkable-triad-03-on);
+}
+
+input:checked.console-input-checkbox.triad-03 + label:hover .check:before,
+input:checked.console-input-checkbox.triad-03 + label:active .check:before,
+input:checked.console-input-checkbox.triad-03:focus + label .check:before {
+    background: var(--theme-input-checkable-triad-03-on-hover);
+}
+
+input:indeterminate.console-input-checkbox.triad-03 + label .check:after {
+    background: var(--theme-input-checkable-triad-03-on);
+}
+
+input:indeterminate.console-input-checkbox.triad-03 + label:hover .check:after,
+input:indeterminate.console-input-checkbox.triad-03 + label:active .check:after,
+input:indeterminate.console-input-checkbox.triad-03:focus + label .check:after {
+    background: var(--theme-input-checkable-triad-03-on-hover);
+}
+
+/* style: attention */
+input:checked.console-input-checkbox.attention + label {
+    color: var(--theme-input-checkable-attention-on);
+}
+
+input:checked.console-input-checkbox.attention + label:hover,
+input:checked.console-input-checkbox.attention + label:active,
+input:checked.console-input-checkbox.attention:focus + label {
+    color: var(--theme-input-checkable-attention-on-hover);
+}
+
+input:checked.console-input-checkbox.attention + label:hover .check,
+input:checked.console-input-checkbox.attention + label:active .check,
+input:checked.console-input-checkbox.attention:focus + label .check {
+    background: var(--theme-input-checkable-attention-on-bg-hover);
+}
+
+input:checked.console-input-checkbox.attention + label .check:before {
+    border: 1px solid transparent;
+    background: var(--theme-input-checkable-attention-on);
+}
+
+input:checked.console-input-checkbox.attention + label:hover .check:before,
+input:checked.console-input-checkbox.attention + label:active .check:before,
+input:checked.console-input-checkbox.attention:focus + label .check:before {
+    background: var(--theme-input-checkable-attention-on-hover);
+}
+
+input:indeterminate.console-input-checkbox.attention + label .check:after {
+    background: var(--theme-input-checkable-attention-on);
+}
+
+input:indeterminate.console-input-checkbox.attention + label:hover .check:after,
+input:indeterminate.console-input-checkbox.attention + label:active .check:after,
+input:indeterminate.console-input-checkbox.attention:focus + label .check:after {
+    background: var(--theme-input-checkable-attention-on-hover);
+}
+
+/* style: disabled */
+input:disabled.console-input-checkbox + label,
+input:checked:disabled.console-input-checkbox + label,
+input:checked:disabled.console-input-checkbox.triad-01 + label,
+input:checked:disabled.console-input-checkbox.triad-02 + label,
+input:checked:disabled.console-input-checkbox.triad-03 + label,
+input:checked:disabled.console-input-checkbox.attention + label,
+input:indeterminate:disabled.console-input-checkbox + label,
+input:indeterminate:disabled.console-input-checkbox.triad-01 + label,
+input:indeterminate:disabled.console-input-checkbox.triad-02 + label,
+input:indeterminate:disabled.console-input-checkbox.triad-03 + label,
+input:indeterminate:disabled.console-input-checkbox.attention + label {
+    color: var(--theme-input-checkable-disabled);
+}
+
+input:disabled.console-input-checkbox + label:hover .check,
+input:disabled.console-input-checkbox + label:active .check,
+input:disabled.console-input-checkbox:focus + label .check,
+input:checked:disabled.console-input-checkbox + label:hover .check,
+input:checked:disabled.console-input-checkbox + label:active .check,
+input:checked:disabled.console-input-checkbox:focus + label .check {
+    background: none;
+}
+
+input:disabled.console-input-checkbox + label .check:before {
+    border: 1px solid var(--theme-input-checkable-disabled);
+}
+
+input:checked:disabled.console-input-checkbox + label .check:before,
+input:checked:disabled.console-input-checkbox.triad-01 + label .check:before,
+input:checked:disabled.console-input-checkbox.triad-02 + label .check:before,
+input:checked:disabled.console-input-checkbox.triad-03 + label .check:before,
+input:checked:disabled.console-input-checkbox.attention + label .check:before {
+    border: 1px solid transparent;
+    background: var(--theme-input-checkable-disabled);
+}
+
+input:indeterminate:disabled.console-input-checkbox + label .check:after,
+input:indeterminate:disabled.console-input-checkbox.triad-01 + label .check:after,
+input:indeterminate:disabled.console-input-checkbox.triad-02 + label .check:after,
+input:indeterminate:disabled.console-input-checkbox.triad-03 + label .check:after,
+input:indeterminate:disabled.console-input-checkbox.attention + label .check:after {
+    background: transparent;
+    border: 1px solid var(--theme-input-checkable-disabled);
+}
+
+/* Input Chip
+   ================================================================================================================ */
+input.console-input-chip {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+input.console-input-chip + label {
+    position: relative;
+    display: inline-flex;
+    vertical-align: top;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: var(--t-size-1);
+    line-height: var(--t-lH4);
+    font-weight: 400;
+    color: var(--theme-input-checkable-off);
+    min-height: calc(var(--space2_5) + var(--space3));
+    transition: var(--a-controls-long);
+    padding: 0 calc(var(--space2) + var(--space0));
+    border-radius: calc((var(--space2_5) + var(--space3)) / 2);
+    border: 1px solid transparent;
+}
+
+input.console-input-chip + label:hover,
+input.console-input-chip + label:active,
+input.console-input-chip:focus + label {
+    background: var(--theme-input-checkable-off-bg-hover);
+}
+
+input:checked.console-input-chip + label {
+    transition: var(--a-controls-long-active);
+}
+
+input:not(:disabled).console-input-chip + label {
+    cursor: pointer;
+}
+
+input.console-input-chip + label .icon {
+    position: relative;
+    display: inline-block;
+    flex: 0 0 auto;
+    width: var(--space3);
+    height: var(--space3);
+    margin-right: var(--space2);
+    transition: var(--a-layout);
+}
+
+input:not(:disabled).console-input-chip + label .icon-fill {
+    fill: var(--theme-input-checkable-off);
+}
+
+input:not(:disabled).console-input-chip + label .icon-stroke {
+    stroke: var(--theme-input-checkable-off);
+}
+
+input:not(:disabled).console-input-chip + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-off);
+    stroke: var(--theme-input-checkable-off);
+}
+
+input:not(:disabled).console-input-chip + label:hover .icon,
+input:not(:disabled).console-input-chip + label:active .icon {
+    transition: var(--a-layout-active);
+}
+
+/* style: default */
+input:checked.console-input-chip + label {
+    color: var(--theme-input-checkable-on);
+    background: var(--theme-input-checkable-on-bg-hover);
+    border: 1px solid var(--theme-input-checkable-off);
+}
+
+input:checked.console-input-chip + label:hover,
+input:checked.console-input-chip + label:active,
+input:checked.console-input-chip:focus + label {
+    color: var(--theme-input-checkable-on-hover);
+    background: var(--theme-input-checkable-off-bg-hover);
+}
+
+input:checked.console-input-chip + label .icon-fill {
+    fill: var(--theme-input-checkable-on);
+}
+
+input:checked.console-input-chip + label .icon-stroke {
+    stroke: var(--theme-input-checkable-on);
+}
+
+input:checked.console-input-chip + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-on);
+    stroke: var(--theme-input-checkable-on);
+}
+
+input:checked.console-input-chip + label:hover .icon-fill,
+input:checked.console-input-chip + label:active .icon-fill,
+input:checked.console-input-chip:focus + label .icon-fill {
+    fill: var(--theme-input-checkable-on-hover);
+}
+
+input:checked.console-input-chip + label:hover .icon-stroke,
+input:checked.console-input-chip + label:active .icon-stroke,
+input:checked.console-input-chip:focus + label .icon-stroke {
+    stroke: var(--theme-input-checkable-on-hover);
+}
+
+input:checked.console-input-chip + label:hover .icon-fill-stroke,
+input:checked.console-input-chip + label:active .icon-fill-stroke,
+input:checked.console-input-chip:focus + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-on-hover);
+    stroke: var(--theme-input-checkable-on-hover);
+}
+
+/* style: triad-01 */
+input:checked.console-input-chip.triad-01 + label {
+    color: var(--theme-input-checkable-triad-01-on);
+    background: var(--theme-input-checkable-triad-01-on-bg-hover);
+    border: 1px solid var(--theme-input-checkable-triad-01-on-muted);
+}
+
+input:checked.console-input-chip.triad-01 + label:hover,
+input:checked.console-input-chip.triad-01 + label:active,
+input:checked.console-input-chip.triad-01:focus + label {
+    color: var(--theme-input-checkable-triad-01-on-hover);
+    background: var(--theme-input-checkable-triad-01-on-bg-hover);
+    border: 1px solid var(--theme-input-checkable-triad-01-on-muted-hover);
+}
+
+input:checked.console-input-chip.triad-01 + label .icon-fill {
+    fill: var(--theme-input-checkable-triad-01-on);
+}
+
+input:checked.console-input-chip.triad-01 + label .icon-stroke {
+    stroke: var(--theme-input-checkable-triad-01-on);
+}
+
+input:checked.console-input-chip.triad-01 + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-triad-01-on);
+    stroke: var(--theme-input-checkable-triad-01-on);
+}
+
+input:checked.console-input-chip.triad-01 + label:hover .icon-fill,
+input:checked.console-input-chip.triad-01 + label:active .icon-fill,
+input:checked.console-input-chip.triad-01:focus + label .icon-fill {
+    fill: var(--theme-input-checkable-triad-01-on-hover);
+}
+
+input:checked.console-input-chip.triad-01 + label:hover .icon-stroke,
+input:checked.console-input-chip.triad-01 + label:active .icon-stroke,
+input:checked.console-input-chip.triad-01:focus + label .icon-stroke {
+    stroke: var(--theme-input-checkable-triad-01-on-hover);
+}
+
+input:checked.console-input-chip.triad-01 + label:hover .icon-fill-stroke,
+input:checked.console-input-chip.triad-01 + label:active .icon-fill-stroke,
+input:checked.console-input-chip.triad-01:focus + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-triad-01-on-hover);
+    stroke: var(--theme-input-checkable-triad-01-on-hover);
+}
+
+/* style: triad-02 */
+input:checked.console-input-chip.triad-02 + label {
+    color: var(--theme-input-checkable-triad-02-on);
+    background: var(--theme-input-checkable-triad-02-on-bg-hover);
+    border: 1px solid var(--theme-input-checkable-triad-02-on-muted);
+}
+
+input:checked.console-input-chip.triad-02 + label:hover,
+input:checked.console-input-chip.triad-02 + label:active,
+input:checked.console-input-chip.triad-02:focus + label {
+    color: var(--theme-input-checkable-triad-02-on-hover);
+    background: var(--theme-input-checkable-triad-02-on-bg-hover);
+    border: 1px solid var(--theme-input-checkable-triad-02-on-muted-hover);
+}
+
+input:checked.console-input-chip.triad-02 + label .icon-fill {
+    fill: var(--theme-input-checkable-triad-02-on);
+}
+
+input:checked.console-input-chip.triad-02 + label .icon-stroke {
+    stroke: var(--theme-input-checkable-triad-02-on);
+}
+
+input:checked.console-input-chip.triad-02 + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-triad-02-on);
+    stroke: var(--theme-input-checkable-triad-02-on);
+}
+
+input:checked.console-input-chip.triad-02 + label:hover .icon-fill,
+input:checked.console-input-chip.triad-02 + label:active .icon-fill,
+input:checked.console-input-chip.triad-02:focus + label .icon-fill {
+    fill: var(--theme-input-checkable-triad-02-on-hover);
+}
+
+input:checked.console-input-chip.triad-02 + label:hover .icon-stroke,
+input:checked.console-input-chip.triad-02 + label:active .icon-stroke,
+input:checked.console-input-chip.triad-02:focus + label .icon-stroke {
+    stroke: var(--theme-input-checkable-triad-02-on-hover);
+}
+
+input:checked.console-input-chip.triad-02 + label:hover .icon-fill-stroke,
+input:checked.console-input-chip.triad-02 + label:active .icon-fill-stroke,
+input:checked.console-input-chip.triad-02:focus + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-triad-02-on-hover);
+    stroke: var(--theme-input-checkable-triad-02-on-hover);
+}
+
+/* style: triad-03 */
+input:checked.console-input-chip.triad-03 + label {
+    color: var(--theme-input-checkable-triad-03-on);
+    background: var(--theme-input-checkable-triad-03-on-bg-hover);
+    border: 1px solid var(--theme-input-checkable-triad-03-on-muted);
+}
+
+input:checked.console-input-chip.triad-03 + label:hover,
+input:checked.console-input-chip.triad-03 + label:active,
+input:checked.console-input-chip.triad-03:focus + label {
+    color: var(--theme-input-checkable-triad-03-on-hover);
+    background: var(--theme-input-checkable-triad-03-on-bg-hover);
+    border: 1px solid var(--theme-input-checkable-triad-03-on-muted-hover);
+}
+
+input:checked.console-input-chip.triad-03 + label .icon-fill {
+    fill: var(--theme-input-checkable-triad-03-on);
+}
+
+input:checked.console-input-chip.triad-03 + label .icon-stroke {
+    stroke: var(--theme-input-checkable-triad-03-on);
+}
+
+input:checked.console-input-chip.triad-03 + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-triad-03-on);
+    stroke: var(--theme-input-checkable-triad-03-on);
+}
+
+input:checked.console-input-chip.triad-03 + label:hover .icon-fill,
+input:checked.console-input-chip.triad-03 + label:active .icon-fill,
+input:checked.console-input-chip.triad-03:focus + label .icon-fill {
+    fill: var(--theme-input-checkable-triad-03-on-hover);
+}
+
+input:checked.console-input-chip.triad-03 + label:hover .icon-stroke,
+input:checked.console-input-chip.triad-03 + label:active .icon-stroke,
+input:checked.console-input-chip.triad-03:focus + label .icon-stroke {
+    stroke: var(--theme-input-checkable-triad-03-on-hover);
+}
+
+input:checked.console-input-chip.triad-03 + label:hover .icon-fill-stroke,
+input:checked.console-input-chip.triad-03 + label:active .icon-fill-stroke,
+input:checked.console-input-chip.triad-03:focus + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-triad-03-on-hover);
+    stroke: var(--theme-input-checkable-triad-03-on-hover);
+}
+
+/* style: attention */
+input:checked.console-input-chip.attention + label {
+    color: var(--theme-input-checkable-attention-on);
+    background: var(--theme-input-checkable-attention-on-bg-hover);
+    border: 1px solid var(--theme-input-checkable-attention-on-muted);
+}
+
+input:checked.console-input-chip.attention + label:hover,
+input:checked.console-input-chip.attention + label:active,
+input:checked.console-input-chip.attention:focus + label {
+    color: var(--theme-input-checkable-attention-on-hover);
+    background: var(--theme-input-checkable-attention-on-bg-hover);
+    border: 1px solid var(--theme-input-checkable-attention-on-muted-hover);
+}
+
+input:checked.console-input-chip.attention + label .icon-fill {
+    fill: var(--theme-input-checkable-attention-on);
+}
+
+input:checked.console-input-chip.attention + label .icon-stroke {
+    stroke: var(--theme-input-checkable-attention-on);
+}
+
+input:checked.console-input-chip.attention + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-attention-on);
+    stroke: var(--theme-input-checkable-attention-on);
+}
+
+input:checked.console-input-chip.attention + label:hover .icon-fill,
+input:checked.console-input-chip.attention + label:active .icon-fill,
+input:checked.console-input-chip.attention:focus + label .icon-fill {
+    fill: var(--theme-input-checkable-attention-on-hover);
+}
+
+input:checked.console-input-chip.attention + label:hover .icon-stroke,
+input:checked.console-input-chip.attention + label:active .icon-stroke,
+input:checked.console-input-chip.attention:focus + label .icon-stroke {
+    stroke: var(--theme-input-checkable-attention-on-hover);
+}
+
+input:checked.console-input-chip.attention + label:hover .icon-fill-stroke,
+input:checked.console-input-chip.attention + label:active .icon-fill-stroke,
+input:checked.console-input-chip.attention:focus + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-attention-on-hover);
+    stroke: var(--theme-input-checkable-attention-on-hover);
+}
+
+/* style: disabled */
+input:disabled.console-input-chip + label {
+    color: var(--theme-input-checkable-disabled);
+}
+
+input:checked:disabled.console-input-chip + label,
+input:checked:disabled.console-input-chip.triad-01 + label,
+input:checked:disabled.console-input-chip.triad-02 + label,
+input:checked:disabled.console-input-chip.triad-03 + label,
+input:checked:disabled.console-input-chip.attention + label {
+    color: var(--theme-input-checkable-disabled);
+    background: transparent;
+    border: 1px solid var(--theme-input-checkable-disabled-muted);
+}
+
+input:disabled.console-input-chip + label:hover,
+input:disabled.console-input-chip + label:active,
+input:disabled:focus.console-input-chip + label,
+input:checked:disabled.console-input-chip + label:hover,
+input:checked:disabled.console-input-chip + label:active,
+input:checked:disabled:focus.console-input-chip + label {
+    background: none;
+}
+
+input:disabled.console-input-chip.attention + label .icon-fill,
+input:checked:disabled.console-input-chip.attention + label .icon-fill {
+    fill: var(--theme-input-checkable-disabled);
+}
+
+input:disabled.console-input-chip.attention + label .icon-stroke,
+input:checked:disabled.console-input-chip.attention + label .icon-stroke {
+    stroke: var(--theme-input-checkable-disabled);
+}
+
+input:disabled.console-input-chip.attention + label .icon-fill-stroke,
+input:checked:disabled.console-input-chip.attention + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-disabled);
+    stroke: var(--theme-input-checkable-disabled);
 }
 
 /* Input Toggle
@@ -1640,7 +2408,8 @@ input.console-input-toggle + label .check {
 }
 
 input:not(:disabled).console-input-toggle + label:hover .check,
-input:not(:disabled).console-input-toggle + label:active .check {
+input:not(:disabled).console-input-toggle + label:active .check,
+input:not(:disabled).console-input-toggle:focus + label .check {
     background: var(--theme-input-checkable-off-bg-hover);
     transition: var(--a-layout-active);
 }
@@ -1684,12 +2453,14 @@ input:checked.console-input-toggle + label {
 }
 
 input:checked.console-input-toggle + label:hover,
-input:checked.console-input-toggle + label:active {
+input:checked.console-input-toggle + label:active,
+input:checked.console-input-toggle:focus + label {
     color: var(--theme-input-checkable-on-hover);
 }
 
 input:checked.console-input-toggle + label:hover .check,
-input:checked.console-input-toggle + label:active .check {
+input:checked.console-input-toggle + label:active .check,
+input:checked.console-input-toggle:focus + label .check {
     background: var(--theme-input-checkable-on-bg-hover);
 }
 
@@ -1698,7 +2469,8 @@ input:checked.console-input-toggle + label .check:before {
 }
 
 input:checked.console-input-toggle + label:hover .check:before,
-input:checked.console-input-toggle + label:active .check:before {
+input:checked.console-input-toggle + label:active .check:before,
+input:checked.console-input-toggle:focus + label .check:before {
     border: 1px solid var(--theme-input-checkable-on-hover);
 }
 
@@ -1707,7 +2479,8 @@ input:checked.console-input-toggle + label .check:after {
 }
 
 input:checked.console-input-toggle + label:hover .check:after,
-input:checked.console-input-toggle + label:active .check:after {
+input:checked.console-input-toggle + label:active .check:after,
+input:checked.console-input-toggle:focus + label .check:after {
     background: var(--theme-input-checkable-on-hover);
 }
 
@@ -1717,12 +2490,14 @@ input:checked.console-input-toggle.triad-01 + label {
 }
 
 input:checked.console-input-toggle.triad-01 + label:hover,
-input:checked.console-input-toggle.triad-01 + label:active {
+input:checked.console-input-toggle.triad-01 + label:active,
+input:checked.console-input-toggle.triad-01:focus + label {
     color: var(--theme-input-checkable-triad-01-on-hover);
 }
 
 input:checked.console-input-toggle.triad-01 + label:hover .check,
-input:checked.console-input-toggle.triad-01 + label:active .check {
+input:checked.console-input-toggle.triad-01 + label:active .check,
+input:checked.console-input-toggle.triad-01:focus + label .check {
     background: var(--theme-input-checkable-triad-01-on-bg-hover);
 }
 
@@ -1731,7 +2506,8 @@ input:checked.console-input-toggle.triad-01 + label .check:before {
 }
 
 input:checked.console-input-toggle.triad-01 + label:hover .check:before,
-input:checked.console-input-toggle.triad-01 + label:active .check:before {
+input:checked.console-input-toggle.triad-01 + label:active .check:before,
+input:checked.console-input-toggle.triad-01:focus + label .check:before {
     border: 1px solid var(--theme-input-checkable-triad-01-on-hover);
 }
 
@@ -1740,7 +2516,8 @@ input:checked.console-input-toggle.triad-01 + label .check:after {
 }
 
 input:checked.console-input-toggle.triad-01 + label:hover .check:after,
-input:checked.console-input-toggle.triad-01 + label:active .check:after {
+input:checked.console-input-toggle.triad-01 + label:active .check:after,
+input:checked.console-input-toggle.triad-01:focus + label .check:after {
     background: var(--theme-input-checkable-triad-01-on-hover);
 }
 
@@ -1750,12 +2527,14 @@ input:checked.console-input-toggle.triad-02 + label {
 }
 
 input:checked.console-input-toggle.triad-02 + label:hover,
-input:checked.console-input-toggle.triad-02 + label:active {
+input:checked.console-input-toggle.triad-02 + label:active,
+input:checked.console-input-toggle.triad-02:focus + label {
     color: var(--theme-input-checkable-triad-02-on-hover);
 }
 
 input:checked.console-input-toggle.triad-02 + label:hover .check,
-input:checked.console-input-toggle.triad-02 + label:active .check {
+input:checked.console-input-toggle.triad-02 + label:active .check,
+input:checked.console-input-toggle.triad-02:focus + label .check {
     background: var(--theme-input-checkable-triad-02-on-bg-hover);
 }
 
@@ -1764,7 +2543,8 @@ input:checked.console-input-toggle.triad-02 + label .check:before {
 }
 
 input:checked.console-input-toggle.triad-02 + label:hover .check:before,
-input:checked.console-input-toggle.triad-02 + label:active .check:before {
+input:checked.console-input-toggle.triad-02 + label:active .check:before,
+input:checked.console-input-toggle.triad-02:focus + label .check:before {
     border: 1px solid var(--theme-input-checkable-triad-02-on-hover);
 }
 
@@ -1773,7 +2553,8 @@ input:checked.console-input-toggle.triad-02 + label .check:after {
 }
 
 input:checked.console-input-toggle.triad-02 + label:hover .check:after,
-input:checked.console-input-toggle.triad-02 + label:active .check:after {
+input:checked.console-input-toggle.triad-02 + label:active .check:after,
+input:checked.console-input-toggle.triad-02:focus + label .check:after {
     background: var(--theme-input-checkable-triad-02-on-hover);
 }
 
@@ -1783,12 +2564,14 @@ input:checked.console-input-toggle.triad-03 + label {
 }
 
 input:checked.console-input-toggle.triad-03 + label:hover,
-input:checked.console-input-toggle.triad-03 + label:active {
+input:checked.console-input-toggle.triad-03 + label:active,
+input:checked.console-input-toggle.triad-03:focus + label {
     color: var(--theme-input-checkable-triad-03-on-hover);
 }
 
 input:checked.console-input-toggle.triad-03 + label:hover .check,
-input:checked.console-input-toggle.triad-03 + label:active .check {
+input:checked.console-input-toggle.triad-03 + label:active .check,
+input:checked.console-input-toggle.triad-03:focus + label .check {
     background: var(--theme-input-checkable-triad-03-on-bg-hover);
 }
 
@@ -1797,7 +2580,8 @@ input:checked.console-input-toggle.triad-03 + label .check:before {
 }
 
 input:checked.console-input-toggle.triad-03 + label:hover .check:before,
-input:checked.console-input-toggle.triad-03 + label:active .check:before {
+input:checked.console-input-toggle.triad-03 + label:active .check:before,
+input:checked.console-input-toggle.triad-03:focus + label .check:before {
     border: 1px solid var(--theme-input-checkable-triad-03-on-hover);
 }
 
@@ -1806,7 +2590,8 @@ input:checked.console-input-toggle.triad-03 + label .check:after {
 }
 
 input:checked.console-input-toggle.triad-03 + label:hover .check:after,
-input:checked.console-input-toggle.triad-03 + label:active .check:after {
+input:checked.console-input-toggle.triad-03 + label:active .check:after,
+input:checked.console-input-toggle.triad-03:focus + label .check:after {
     background: var(--theme-input-checkable-triad-03-on-hover);
 }
 
@@ -1828,7 +2613,12 @@ input:checked.console-input-toggle.triad-03 + label:active .check,
 input:disabled:checked.console-input-toggle + label:active .check,
 input:disabled:checked.console-input-toggle.triad-01 + label:active .check,
 input:disabled:checked.console-input-toggle.triad-02 + label:active .check,
-input:disabled:checked.console-input-toggle.triad-03 + label:active .check {
+input:disabled:checked.console-input-toggle.triad-03 + label:active .check,
+input:checked.console-input-toggle.triad-03:focus + label .check,
+input:disabled:checked.console-input-toggle:focus + label .check,
+input:disabled:checked.console-input-toggle.triad-01:focus + label .check,
+input:disabled:checked.console-input-toggle.triad-02:focus + label .check,
+input:disabled:checked.console-input-toggle.triad-03:focus + label .check {
     background: transparent;
 }
 
@@ -1875,6 +2665,335 @@ input:checked:disabled.console-input-toggle.triad-03 + label .check:after {
     left: 0;
     background: var(--theme-text-5);
     margin-left: calc(var(--space2) * -1);
+}
+
+/* Segmented Bar
+   ================================================================================================================ */
+.segmented-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.segmented-bar > * {
+    flex: 1 1 auto;
+}
+
+input.console-input-segmented-bar {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+input.console-input-segmented-bar + label {
+    position: relative;
+    display: inline-flex;
+    vertical-align: top;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-size: var(--t-size-2);
+    line-height: var(--t-lH4);
+    font-weight: 400;
+    color: var(--theme-input-checkable-off);
+    transition: var(--a-controls-long);
+    width: calc(100% + 2px);
+    margin: 0 -1px;
+}
+
+input:not(:disabled):not(:checked).console-input-segmented-bar + label {
+    cursor: pointer;
+}
+
+input.console-input-segmented-bar + label .check-bar {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: calc(var(--space3) + var(--space1));
+    margin-bottom: var(--space2);
+}
+
+input.console-input-segmented-bar + label .check-bar .hover {
+    position: absolute;
+    display: block;
+    height: calc(var(--space3) + var(--space2));
+    width: calc(var(--space3) + var(--space2));
+    border-radius: 50%;
+    background: var(--theme-input-checkable-off-bg-hover);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 10;
+    transition: var(--a-controls-long);
+}
+
+input.console-input-segmented-bar + label:hover .check-bar .hover,
+input.console-input-segmented-bar + label:active .check-bar .hover,
+input.console-input-segmented-bar:focus + label .check-bar .hover {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+input.console-input-segmented-bar + label .check-bar:before {
+    content: "";
+    position: relative;
+    display: block;
+    height: var(--space0);
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 1px;
+    background: var(--theme-input-checkable-off-dark);
+    z-index: 20;
+    transition: var(--a-controls-long);
+}
+
+input:checked.console-input-segmented-bar + label .check-bar:before {
+    transition: var(--a-controls-long-active);
+    margin: 0 var(--space2);
+}
+
+input.console-input-segmented-bar + label .check-bar:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: var(--space2);
+    width: var(--space2);
+    border-radius: 50%;
+    background: var(--theme-input-checkable-off-dark);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    transition: var(--a-controls-long);
+}
+
+input:not(:disabled):not(:checked).console-input-segmented-bar + label:hover .check-bar:after,
+input:not(:disabled):not(:checked).console-input-segmented-bar + label:active .check-bar:after,
+input:not(:disabled):not(:checked).console-input-segmented-bar:focus + label .check-bar:after {
+    height: var(--space2_5);
+    width: var(--space2_5);
+}
+
+input:checked.console-input-segmented-bar + label .check-bar:after {
+    transition: var(--a-controls-long-active);
+    height: calc(var(--space3) + var(--space1));
+    width: calc(var(--space3) + var(--space1));
+}
+
+input.console-input-segmented-bar + label .check-bar .icon-checkmark {
+    position: absolute;
+    display: block;
+    height: var(--space3);
+    width: var(--space3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 40;
+    fill: var(--theme-input-checkable-on-subtract);
+    transition: var(--a-controls-long);
+}
+
+input:checked.console-input-segmented-bar + label .check-bar .icon-checkmark {
+    transform: translate(-50%, -50%) scale(1);
+    transition: var(--a-controls-long-active);
+}
+
+/* layout: vertical */
+.segmented-bar.vertical {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+.segmented-bar.vertical input.console-input-segmented-bar + label {
+    position: relative;
+    display: inline-flex;
+    vertical-align: top;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 100%;
+    min-height: var(--space5);
+    width: auto;
+}
+
+.segmented-bar.vertical input.console-input-segmented-bar + label .check-bar {
+    position: relative;
+    display: block;
+    height: 100%;
+    min-height: var(--space5);
+    width: calc(var(--space3) + var(--space1));
+    margin-right: var(--space2);
+    margin-bottom: 0;
+}
+
+.segmented-bar.vertical input.console-input-segmented-bar + label .check-bar:before {
+    height: auto;
+    position: absolute;
+    width: var(--space0);
+    left: 50%;
+    top: -1px;
+    bottom: -1px;
+    transform: translateX(-50%);
+}
+
+.segmented-bar.vertical input:checked.console-input-segmented-bar + label .check-bar:before {
+    margin: var(--space2) 0;
+}
+
+/* style: default */
+input:checked.console-input-segmented-bar + label {
+    color: var(--theme-input-checkable-on);
+}
+
+input:checked.console-input-segmented-bar + label .check-bar:before {
+    background: var(--theme-input-checkable-on);
+}
+
+input:checked.console-input-segmented-bar + label .check-bar:after {
+    background: var(--theme-input-checkable-on);
+}
+
+input:checked.console-input-segmented-bar:focus + label {
+    color: var(--theme-input-checkable-on-hover);
+}
+
+input:checked.console-input-segmented-bar:focus + label .check-bar:before {
+    background: var(--theme-input-checkable-on-hover);
+}
+
+input:checked.console-input-segmented-bar:focus + label .check-bar:after {
+    background: var(--theme-input-checkable-on-hover);
+}
+
+/* style: triad-01 */
+input:checked.console-input-segmented-bar.triad-01 + label {
+    color: var(--theme-input-checkable-triad-01-on);
+}
+
+input:checked.console-input-segmented-bar.triad-01 + label .check-bar:before {
+    background: var(--theme-input-checkable-triad-01-on);
+}
+
+input:checked.console-input-segmented-bar.triad-01 + label .check-bar:after {
+    background: var(--theme-input-checkable-triad-01-on);
+}
+
+input:checked.console-input-segmented-bar.triad-01:focus + label {
+    color: var(--theme-input-checkable-triad-01-on-hover);
+}
+
+input:checked.console-input-segmented-bar.triad-01:focus + label .check-bar:before {
+    background: var(--theme-input-checkable-triad-01-on-hover);
+}
+
+input:checked.console-input-segmented-bar.triad-01:focus + label .check-bar:after {
+    background: var(--theme-input-checkable-triad-01-on-hover);
+}
+
+/* style: triad-02 */
+input:checked.console-input-segmented-bar.triad-02 + label {
+    color: var(--theme-input-checkable-triad-02-on);
+}
+
+input:checked.console-input-segmented-bar.triad-02 + label .check-bar:before {
+    background: var(--theme-input-checkable-triad-02-on);
+}
+
+input:checked.console-input-segmented-bar.triad-02 + label .check-bar:after {
+    background: var(--theme-input-checkable-triad-02-on);
+}
+
+input:checked.console-input-segmented-bar.triad-02:focus + label {
+    color: var(--theme-input-checkable-triad-02-on-hover);
+}
+
+input:checked.console-input-segmented-bar.triad-02:focus + label .check-bar:before {
+    background: var(--theme-input-checkable-triad-02-on-hover);
+}
+
+input:checked.console-input-segmented-bar.triad-02:focus + label .check-bar:after {
+    background: var(--theme-input-checkable-triad-02-on-hover);
+}
+
+/* style: triad-03 */
+input:checked.console-input-segmented-bar.triad-03 + label {
+    color: var(--theme-input-checkable-triad-03-on);
+}
+
+input:checked.console-input-segmented-bar.triad-03 + label .check-bar:before {
+    background: var(--theme-input-checkable-triad-03-on);
+}
+
+input:checked.console-input-segmented-bar.triad-03 + label .check-bar:after {
+    background: var(--theme-input-checkable-triad-03-on);
+}
+
+input:checked.console-input-segmented-bar.triad-03:focus + label {
+    color: var(--theme-input-checkable-triad-03-on-hover);
+}
+
+input:checked.console-input-segmented-bar.triad-03:focus + label .check-bar:before {
+    background: var(--theme-input-checkable-triad-03-on-hover);
+}
+
+input:checked.console-input-segmented-bar.triad-03:focus + label .check-bar:after {
+    background: var(--theme-input-checkable-triad-03-on-hover);
+}
+
+/* style: attention */
+input:checked.console-input-segmented-bar.attention + label {
+    color: var(--theme-input-checkable-attention-on);
+}
+
+input:checked.console-input-segmented-bar.attention + label .check-bar:before {
+    background: var(--theme-input-checkable-attention-on);
+}
+
+input:checked.console-input-segmented-bar.attention + label .check-bar:after {
+    background: var(--theme-input-checkable-attention-on);
+}
+
+input:checked.console-input-segmented-bar.attention:focus + label {
+    color: var(--theme-input-checkable-attention-on-hover);
+}
+
+input:checked.console-input-segmented-bar.attention:focus + label .check-bar:before {
+    background: var(--theme-input-checkable-attention-on-hover);
+}
+
+input:checked.console-input-segmented-bar.attention:focus + label .check-bar:after {
+    background: var(--theme-input-checkable-attention-on-hover);
+}
+
+/* style: disabled */
+input:disabled.console-input-segmented-bar + label,
+input:checked:disabled.console-input-segmented-bar + label,
+input:checked:disabled.console-input-segmented-bar.triad-01 + label,
+input:checked:disabled.console-input-segmented-bar.triad-02 + label,
+input:checked:disabled.console-input-segmented-bar.triad-03 + label,
+input:checked:disabled.console-input-segmented-bar.attention + label {
+    color: var(--theme-input-checkable-disabled);
+}
+
+input:disabled.console-input-segmented-bar + label:hover .check-bar .hover,
+input:disabled.console-input-segmented-bar + label:active .check-bar .hover,
+input:checked:disabled.console-input-segmented-bar + label:hover .check-bar .hover,
+input:checked:disabled.console-input-segmented-bar + label:active .check-bar .hover {
+    display: none;
+}
+
+input:disabled.console-input-segmented-bar + label .check-bar:before,
+input:checked:disabled.console-input-segmented-bar + label .check-bar:before,
+input:checked:disabled.console-input-segmented-bar.triad-01 + label .check-bar:before,
+input:checked:disabled.console-input-segmented-bar.triad-02 + label .check-bar:before,
+input:checked:disabled.console-input-segmented-bar.triad-03 + label .check-bar:before,
+input:checked:disabled.console-input-segmented-bar.attention + label .check-bar:before,
+input:disabled.console-input-segmented-bar + label .check-bar:after,
+input:checked:disabled.console-input-segmented-bar + label .check-bar:after,
+input:checked:disabled.console-input-segmented-bar.triad-01 + label .check-bar:after,
+input:checked:disabled.console-input-segmented-bar.triad-02 + label .check-bar:after,
+input:checked:disabled.console-input-segmented-bar.triad-03 + label .check-bar:after,
+input:checked:disabled.console-input-segmented-bar.attention + label .check-bar:after {
+    background: var(--theme-input-checkable-disabled-muted);
 }
 
 /* Control
@@ -2013,7 +3132,6 @@ body:not(.mobile) .console-control:hover:before {
     border: var(--theme-control-button-inactive-border-hover);
     background: var(--theme-control-button-inactive-background-hover);
     color: var(--theme-control-button-inactive-text-hover);
-    transition: var(--a-elements-active);
 }
 
 .console-checkbutton input + label .icon {
@@ -2028,7 +3146,6 @@ body:not(.mobile) .console-control:hover:before {
 .console-checkbutton input + label:hover .icon,
 .console-checkbutton input:focus + label .icon {
     fill: var(--theme-control-button-inactive-text-hover);
-    transition: var(--a-elements-active);
 }
 
 .console-checkbutton input + label .icon-plus,
@@ -2342,7 +3459,6 @@ body:not(.mobile) .console-control:hover:before {
     opacity: 1;
     height: auto;
     width: auto;
-    transition: var(--a-elements-active);
     overflow: visible;
 }
 
@@ -2378,7 +3494,6 @@ body:not(.mobile) .console-control:hover:before {
 .popup.is-visible {
     opacity: 1;
     height: auto;
-    transition: var(--a-elements-active);
 }
 
 .popup.popup-top-down,
@@ -5057,4 +6172,45 @@ p.combo-card-description {
     font-size: var(--t-size-1);
     color: var(--theme-text-2);
     letter-spacing: 0.12em;
+}
+
+/* Content Extension
+   ================================================================================================================ */
+.content-extension,
+.content-extension-launch {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    opacity: 1;
+    max-height: 100px;
+    transition: var(--a-elements-simple);
+}
+
+.content-extension.is-hidden,
+.content-extension-launch.is-disabled + .content-extension,
+.content-extension-launch:not(.is-disabled).is-hidden {
+    max-height: 0px;
+    opacity: 0;
+}
+
+.content-extension-launch.is-disabled {
+    pointer-events: none;
+    color: var(--theme-input-checkable-disabled);
+}
+
+.content-extension-launch.is-disabled > * {
+    color: var(--theme-input-checkable-disabled);
+}
+
+.content-extension-launch.is-disabled .icon-fill {
+    fill: var(--theme-input-checkable-disabled);
+}
+
+.content-extension-launch.is-disabled .icon-stroke {
+    stroke: var(--theme-input-checkable-disabled);
+}
+
+.content-extension-launch.is-disabled .icon-fill-stroke {
+    fill: var(--theme-input-checkable-disabled);
+    stroke: var(--theme-input-checkable-disabled);
 }

@@ -1,0 +1,338 @@
+{
+    "email": {
+        "type": "text",
+        "inputs": [
+            {
+                "name": "email",
+                "label": "Your email"
+            }
+        ]
+    },
+    "role": {
+        "type": "checkbox",
+        "consoleType": "chip",
+        "inputs": [
+            {
+                "name": "full-stack",
+                "label": "Full stack",
+                "icon": "full-stack"
+            },
+            {
+                "name": "front-end",
+                "label": "Front end",
+                "icon": "developer-tools"
+            },
+            {
+                "name": "back-end",
+                "label": "Back end",
+                "icon": "database"
+            },
+            {
+                "name": "mobile",
+                "label": "Mobile",
+                "icon": "mobile"
+            },
+            {
+                "name": "design",
+                "label": "Design",
+                "icon": "design"
+            },
+            {
+                "name": "security",
+                "label": "Security",
+                "icon": "security"
+            },
+            {
+                "name": "devops",
+                "label": "DevOps",
+                "icon": "devops"
+            },
+            {
+                "name": "devrel",
+                "label": "Devrel",
+                "icon": "devrel"
+            },
+            {
+                "name": "manager",
+                "label": "Management",
+                "icon": "manager"
+            }
+        ]
+    },
+    "locations": {
+        "type": "checkbox",
+        "consoleType": "checkbox",
+        "inputs": [
+            {
+                "name": "remote",
+                "label": "Remote",
+                "checked": true
+            },
+            {
+                "name": "anywhere",
+                "label": "Anywhere",
+                "checked": true,
+                "selectAll": "anywhere",
+                "disableOthers": "anywhere"
+            },
+            {
+                "name": "north-america",
+                "label": "North America",
+                "hasChildren": true,
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
+            },
+            {
+                "name": "new-york",
+                "label": "New York",
+                "parent": "north-america",
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
+            },
+            {
+                "name": "san-francisco",
+                "label": "San Francisco",
+                "parent": "north-america",
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
+            },
+            {
+                "name": "seattle",
+                "label": "Seattle",
+                "parent": "north-america",
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
+            },
+            {
+                "name": "austin",
+                "label": "Austin",
+                "parent": "north-america",
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
+            },
+            {
+                "name": "miami",
+                "label": "Miami",
+                "parent": "north-america",
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
+            },
+            {
+                "name": "europe",
+                "label": "Europe",
+                "hasChildren": true,
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
+            },
+            {
+                "name": "amsterdam",
+                "label": "Amsterdam",
+                "parent": "europe",
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
+            },
+            {
+                "name": "london",
+                "label": "London",
+                "parent": "europe",
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
+            },
+            {
+                "name": "berlin",
+                "label": "Berlin",
+                "parent": "europe",
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
+            },
+            {
+                "name": "lisbon",
+                "label": "Lisbon",
+                "parent": "europe",
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
+            },
+            {
+                "name": "india",
+                "label": "India",
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
+            },
+            {
+                "name": "asia",
+                "label": "Asia",
+                "hasChildren": true,
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
+            },
+            {
+                "name": "australia",
+                "label": "Australia",
+                "parent": "asia",
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
+            },
+            {
+                "name": "south-america",
+                "label": "South America",
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
+            },
+            {
+                "name": "africa",
+                "label": "Africa",
+                "canBeDisabledBy": "anywhere",
+                "canBeSelectedBy": "anywhere"
+            }
+        ]
+    },
+    "tech": {
+        "type": "checkbox",
+        "consoleType": "chip",
+        "inputs": [
+            {
+                "name": "react",
+                "label": "React",
+                "icon": "react"
+            },
+            {
+                "name": "ruby",
+                "label": "Ruby",
+                "icon": "ruby"
+            },
+            {
+                "name": "typescript",
+                "label": "Typescript",
+                "icon": "typescript"
+            },
+            {
+                "name": "php",
+                "label": "PHP",
+                "icon": "php"
+            },
+            {
+                "name": "javascript",
+                "label": "Javascript",
+                "icon": "javascript"
+            },
+            {
+                "name": "python",
+                "label": "Python",
+                "icon": "python"
+            },
+            {
+                "name": "go",
+                "label": "Go",
+                "icon": "go"
+            },
+            {
+                "name": "rust",
+                "label": "Rust",
+                "icon": "rust"
+            },
+            {
+                "name": "java",
+                "label": "Java",
+                "icon": "java"
+            },
+            {
+                "name": "ccplusplus",
+                "label": "C/C++",
+                "icon": "c"
+            },
+            {
+                "name": "csharp",
+                "label": "C#",
+                "icon": "csharp"
+            },
+            {
+                "name": "swift",
+                "label": "Swift",
+                "icon": "swift"
+            },
+            {
+                "name": "obj-c",
+                "label": "Objective C",
+                "icon": "objective-c"
+            },
+            {
+                "name": "perl",
+                "label": "Perl",
+                "icon": "perl"
+            },
+            {
+                "name": "kotlin",
+                "label": "Kotlin",
+                "icon": "kotlin"
+            },
+            {
+                "name": "r",
+                "label": "R",
+                "icon": "r"
+            },
+            {
+                "name": "matlab",
+                "label": "Matlab",
+                "icon": "matlab"
+            },
+            {
+                "name": "elixir",
+                "label": "Elixir",
+                "icon": "elixir"
+            },
+            {
+                "name": "julia",
+                "label": "Julia",
+                "icon": "julia"
+            }
+        ]
+    },
+    "exp": {
+        "type": "radio",
+        "consoleType": "segmented-bar",
+        "inputs": [
+            {
+                "name": "less2y",
+                "label": "< 2 years",
+                "required": true
+            },
+            {
+                "name": "2-5y",
+                "checked": true,
+                "label": "2-5 years"
+            },
+            {
+                "name": "5-10y",
+                "label": "5-10 years"
+            },
+            {
+                "name": "more10y",
+                "label": "> 10 years"
+            }
+        ]
+    },
+    "salary": {
+        "type": "radio",
+        "consoleType": "segmented-bar",
+        "inputs": [
+            {
+                "name": "less100k",
+                "label": "< $100k",
+                "required": true
+            },
+            {
+                "name": "100-150k",
+                "checked": true,
+                "label": "$100-150k"
+            },
+            {
+                "name": "150-250k",
+                "label": "$150-250k"
+            },
+            {
+                "name": "more250k",
+                "label": "> $250k"
+            }
+        ]
+    }
+}

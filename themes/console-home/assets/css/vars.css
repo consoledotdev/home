@@ -71,6 +71,30 @@
     --c-yellow-10: #452001;
     --c-yellow-11: #210f01;
 
+    --c-berry-01: #f7f7f7;
+    --c-berry-02: #fae7ea;
+    --c-berry-03: #fcd5dc;
+    --c-berry-04: #f8b1bf;
+    --c-berry-05-main: #e4718a;
+    --c-berry-06: #c0455c;
+    --c-berry-07: #9c2a3d;
+    --c-berry-08: #781a27;
+    --c-berry-09: #541018;
+    --c-berry-10: #3e0c11;
+    --c-berry-11: #29080b;
+
+    --c-sunset-01: #f8f7f7;
+    --c-sunset-02: #fae7e3;
+    --c-sunset-03: #fdd8cf;
+    --c-sunset-04: #f8b7a6;
+    --c-sunset-05-main: #e57d62;
+    --c-sunset-06: #c15038;
+    --c-sunset-07: #9c311f;
+    --c-sunset-08: #781e12;
+    --c-sunset-09: #54120b;
+    --c-sunset-10: #3e0d09;
+    --c-sunset-11: #290806;
+
     --c-signaling-positive-01: #00cc55;
     --c-signaling-positive-02: #009c46;
 
@@ -104,7 +128,7 @@
     --a-elements-time: 0.2s;
     --a-elements-easing: cubic-bezier(0.09, 0.33, 0.12, 1.26);
     --a-elements: all 0.2s cubic-bezier(0.09, 0.33, 0.12, 1.26);
-    --a-elements-active: all 0.2s cubic-bezier(0.09, 0.33, 0.12, 1.26);
+    --a-elements-simple: all 0.2s ease-in-out;
 
     --a-layout: all 1s cubic-bezier(0.09, 0.33, 0.12, 1.26);
     --a-layout-active: all 1s cubic-bezier(0.09, 0.33, 0.12, 1.26);

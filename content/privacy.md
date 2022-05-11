@@ -83,6 +83,8 @@ transfer personal data to or through these services:
 
 - [Cloudflare](https://www.cloudflare.com/): Where run our websites and
   infrastructure.
+- [DocuSign](https://www.docusign.com/): If you are a customer, we manage
+  contracts using DocuSign.
 - [Google](https://www.google.com/): We use Google Workspace for our email, docs
   and general business collaboration/productivity. We also use Google Cloud
   services for our websites and infrastructure.
@@ -98,6 +100,11 @@ transfer personal data to or through these services:
   use Reddit's tools to track if you then sign up to Console.
 - [Twitter](https://twitter.com/): If you click through from a Twitter ad, we
   use Twitter's tools to track if you then sign up to Console.
+- [Xero](https://www.xero.com/): Used for invoices and financial management if
+  you are a supplier or customer.
+- [Zapier](https://zapier.com/): Used for some automations, such as form
+  submissions and internal task workflows like generating invoices and
+  contracts. 
 
 We may transfer your personal data outside of the EU on the basis of an adequacy
 decision by the European Commission under Article 45 of the UK GDPR.
