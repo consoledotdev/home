@@ -33,7 +33,9 @@
     margin-bottom: calc(var(--space5) + var(--space3));
     display: grid;
     gap: var(--space5);
-    height: calc(100vh - var(--space4_5) - var(--space4_5) - (calc(var(--space2) + var(--space4))));
+    height: calc(100vh - var(--space4_5));
+    margin-bottom: var(--space4_5);
+    margin-top: calc((var(--space4_5) + var(--space4) + var(--space2)) * -1);
     background: var(--theme-jobs-core-background);
     overflow: hidden;
     z-index: 10;
@@ -43,7 +45,6 @@
     margin-right: -6.25vw;
     padding-left: 6.25vw;
     padding-right: 6.25vw;
-    margin-bottom: var(--space4_5);
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
@@ -76,15 +77,7 @@
     }
 }
 
-@media (min-width: 769px) and (max-width: 1160px) {
-    .main-landing-jobs .page-section.opening {
-        grid-auto-flow: column;
-        grid-auto-columns: 45% 1fr;
-        align-items: center;
-    }
-}
-
-@media (min-width: 1161px) {
+@media (min-width: 769px) {
     .main-landing-jobs .page-section.opening {
         grid-auto-flow: column;
         grid-auto-columns: 50% 1fr;
@@ -148,14 +141,14 @@
 }
 
 .artwork-bg {
-    background: var(--c-white-00-absolute);
+    background: var(--theme-jobs-bg-diamonds);
     mix-blend-mode: overlay;
-    opacity: 0.16;
+    opacity: var(--theme-jobs-bg-diamonds-opacity);
     -webkit-filter: blur(3px);
     filter: blur(3px);
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: calc(50% - var(--space4));
+    left: calc(50vw + 21.875vw + var(--space4));
     transform: translate(-50%, -50%) rotate(45deg);
     width: 80%;
     padding-bottom: 80%;
@@ -163,28 +156,40 @@
     z-index: 10;
 }
 
+@media (min-width: 1371px) {
+    .artwork-bg {
+        left: calc(50vw + var(--space5) + 268px);
+    }
+}
+
+@media (max-width: 768px) {
+    .artwork-bg {
+        left: 50vw;
+    }
+}
+
 .artwork-bg-1 {
-    transform: translate(10%, -50%) rotate(45deg);
+    transform: translate(-13%, -50%) rotate(45deg);
 }
 
 .artwork-bg-2 {
-    transform: translate(-60%, -50%) rotate(45deg);
+    transform: translate(-87%, -50%) rotate(45deg);
     -webkit-filter: blur(10px);
     filter: blur(6px);
 }
 
 .artwork-bg-3 {
-    transform: translate(-105%, 25%) rotate(45deg);
-    width: 35%;
-    padding-bottom: 35%;
+    transform: translate(-200%, 40%) rotate(45deg);
+    width: 32%;
+    padding-bottom: 32%;
     -webkit-filter: blur(4px);
     filter: blur(4px);
 }
 
 .artwork-bg-4 {
-    transform: translate(-100%, -200%) rotate(45deg);
-    width: 22%;
-    padding-bottom: 22%;
+    transform: translate(-240%, -210%) rotate(45deg);
+    width: 17%;
+    padding-bottom: 17%;
     -webkit-filter: blur(4px);
     filter: blur(4px);
 }

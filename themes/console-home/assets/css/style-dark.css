@@ -297,6 +297,8 @@
 
     /* Jobs landing page specific */
     --theme-jobs-core-background: linear-gradient(180deg, rgba(14, 15, 95, 0) 0%, rgba(14, 15, 95, 0.3) 78%), var(--c-black-02-main);
+    --theme-jobs-bg-diamonds: var(--c-white-00-absolute);
+    --theme-jobs-bg-diamonds-opacity: 0.16;
 }
 
 .theme.page-article,

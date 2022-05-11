@@ -296,7 +296,9 @@
     --theme-jobs-circle: var(--c-grey-06-blacks-neutral);
 
     /* Jobs landing page specific */
-    --theme-jobs-core-background: linear-gradient(180deg, rgba(181, 201, 255, 0) 0%, rgba(181, 201, 255, 0.3) 78%), var(--c-white-01-main);
+    --theme-jobs-core-background: linear-gradient(180deg, rgba(var(--c-grey-05-RGB), 0) 0%, rgba(var(--c-grey-05-RGB), 0.04) 78%), var(--c-grey-01-white-03);
+    --theme-jobs-bg-diamonds: var(--c-white-00-absolute);
+    --theme-jobs-bg-diamonds-opacity: 0.22;
 }
 
 .theme.page-article,
