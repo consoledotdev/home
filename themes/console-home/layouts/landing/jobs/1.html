@@ -8,7 +8,7 @@
         <div class="artwork-bg artwork-bg-4"></div>
         <div class="left">
             <div>
-                <h2 class="title title-1">The best developer jobs you weren’t looking for</h2>
+                <h2 class="title title-1">The best developer jobs<br class="break"> you weren’t looking for</h2>
                 <p class="description">A free email digest of jobs that actually suit you.</p>
 
                 <button data-launch-signup="email" onclick="blur();" class="console-button icon-left" title="Signup">
@@ -39,6 +39,13 @@
                     {{ end }}
                 </div>
             </div>
+        </div>
+        <div class="bottom">
+            <button data-launch-signup="email" onclick="blur();" class="console-button icon-left" title="Signup">
+                {{ partial "icons/send.html" }}
+                <span>Sign Up</span>
+            </button>
+            <p class="small ownership">{{partial "icons/console-mini-filled.html" }}Brought to you by the team behind the Console devtools newsletter ({{ $.Site.Params.consoleSubscribers }} subscribers)</p>
         </div>
     </section>
     <section class="page-section page-section-landing-jobs features">

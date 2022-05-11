@@ -359,6 +359,7 @@ class GravitatingItems {
         this.bindFuncs();
 
         this.shouldRotate = false;
+        this.shouldSpread = false;
 
         this.offset = Math.PI * 0.7 * -1;
         this.radius = 46; // percent
@@ -374,21 +375,29 @@ class GravitatingItems {
     bindFuncs() {
         this.spread = this.spread.bind(this);
         this.fold = this.fold.bind(this);
+        this.setResponsiveness = this.setResponsiveness.bind(this);
     }
 
     bind() {
         this.parent.addEventListener("mouseover", this.spread);
         this.parent.addEventListener("mouseout", this.fold);
+
+        this.setResponsiveness();
+        window.addEventListener("resize", this.setResponsiveness);
     }
 
     spread() {
-        this.currentRadius = this.radius;
-        this._artwork._hoverOnce();
+        if (this.shouldSpread) {
+            this.currentRadius = this.radius;
+            this._artwork._hoverOnce();
+        }
     }
 
     fold() {
-        this.currentRadius = 0;
-        this._artwork._outOnce();
+        if (this.shouldSpread) {
+            this.currentRadius = 0;
+            this._artwork._outOnce();
+        }
     }
 
     rotate() {
@@ -405,10 +414,18 @@ class GravitatingItems {
                 let a = angle * idx + this.offset;
                 if (a > 2 * Math.PI) a -= 2 * Math.PI;
                 const x = +(Math.cos(a) * this.currentRadius).toFixed(2);
-                const y = +(Math.sin(a) * 0.85 * this.currentRadius).toFixed(2);
+                const y = +(Math.sin(a) * 0.82 * this.currentRadius).toFixed(2);
                 item.style.transform = "translate(" + x + "%," + y + "%)";
             }, 10);
         });
+    }
+
+    setResponsiveness() {
+        if (window.innerWidth >= 600) {
+            this.shouldSpread = true;
+        } else {
+            this.shouldSpread = false;
+        }
     }
 
     _setRotate(state) {

@@ -26,12 +26,24 @@
     margin: var(--space4_5) 0 var(--space5);
 }
 
+@media (max-width: 600px) {
+    br.break {
+        display: none;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    br.break {
+        display: none;
+    }
+}
+
 /* Opening -------------------------------------------------------------------- */
 .main-landing-jobs .page-section.opening {
     position: relative;
+    display: grid;
     max-width: none;
     margin-bottom: calc(var(--space5) + var(--space3));
-    display: grid;
     gap: var(--space5);
     height: calc(100vh - var(--space4_5));
     margin-bottom: var(--space4_5);
@@ -71,17 +83,42 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 1025px) {
     .main-landing-jobs .page-section.opening {
-        gap: var(--space4);
+        grid-auto-flow: column;
+        grid-auto-columns: 45% 1fr;
+        align-items: center;
+    }
+
+    .main-landing-jobs .page-section.opening {
+        max-height: 100vw;
+    }
+
+    @media (max-width: 1180px) {
+        .main-landing-jobs .page-section.opening {
+            grid-auto-flow: column;
+            grid-auto-columns: 45% 1fr;
+            align-items: center;
+        }
+    }
+
+    @media (min-width: 1181px) {
+        .main-landing-jobs .page-section.opening {
+            grid-auto-columns: 50% 1fr;
+        }
     }
 }
 
-@media (min-width: 769px) {
+@media (max-width: 1024px) {
     .main-landing-jobs .page-section.opening {
-        grid-auto-flow: column;
-        grid-auto-columns: 50% 1fr;
-        align-items: center;
+        padding-top: calc(var(--space6) + var(--space4) + var(--space2));
+        height: auto;
+    }
+
+    @media (max-width: 600px) {
+        .main-landing-jobs .page-section.opening {
+            gap: var(--space3_5);
+        }
     }
 }
 
@@ -97,9 +134,54 @@
     align-items: center;
 }
 
-.main-landing-jobs .page-section.opening .left > *,
-.main-landing-jobs .page-section.opening .right > * {
-    margin-top: calc(var(--space5) * -1);
+@media (max-width: 1024px) {
+    .main-landing-jobs .page-section.opening .left {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .main-landing-jobs .page-section.opening .right > * {
+        margin-top: calc(var(--space4_5) * -1);
+        margin-bottom: calc(var(--space4_5) * -1);
+    }
+
+    @media (max-width: 600px) {
+        .main-landing-jobs .page-section.opening .left {
+            padding-top: 63%;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .main-landing-jobs .page-section.opening .left {
+            padding-top: 73%;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .main-landing-jobs .page-section.opening .left {
+            padding-top: 83%;
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    .main-landing-jobs .page-section.opening .left > *,
+    .main-landing-jobs .page-section.opening .right > * {
+        margin-top: calc(var(--space5) * -1);
+    }
+}
+
+.main-landing-jobs .page-section.opening .bottom {
+    display: none;
+    flex-flow: column nowrap;
+    align-items: center;
+    z-index: 100;
+}
+
+@media (max-width: 1024px) {
+    .main-landing-jobs .page-section.opening .bottom {
+        display: flex;
+    }
 }
 
 @media (max-width: 768px) {
@@ -116,13 +198,16 @@
     margin-bottom: var(--space2);
 }
 
-.main-landing-jobs .page-section.opening .console-button {
+.main-landing-jobs .page-section.opening .left .console-button {
     display: flex;
     margin-top: var(--space4_5);
 }
 
-.main-landing-jobs .ownership {
+.main-landing-jobs .left .ownership {
     position: absolute;
+}
+
+.main-landing-jobs .ownership {
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-start;
@@ -138,6 +223,25 @@
 .main-landing-jobs .ownership .icon {
     fill: var(--theme-text-2);
     margin-right: var(--space1);
+}
+
+@media (max-width: 1024px) {
+    .main-landing-jobs .page-section.opening .left .console-button,
+    .main-landing-jobs .page-section.opening .left .ownership {
+        display: none;
+    }
+
+    .main-landing-jobs .page-section.opening .bottom .ownership {
+        margin-top: var(--space5);
+        margin-bottom: var(--space4);
+        text-align: center;
+        display: inline-block;
+        max-width: calc(var(--space7_5) + var(--space4));
+    }
+
+    .main-landing-jobs .page-section.opening .bottom .ownership .icon {
+        vertical-align: -0.45em;
+    }
 }
 
 .artwork-bg {
@@ -195,14 +299,63 @@
 }
 
 /* Artwork */
-.artwork-wrapper {
+.main-landing-jobs .artwork-wrapper {
     position: relative;
     width: 100%;
     padding-bottom: 120%;
     z-index: 0;
 }
 
-.artwork {
+@media (max-width: 1024px) {
+    .main-landing-jobs .artwork-wrapper {
+        margin: 0 auto;
+        width: 70%;
+        padding-bottom: 70%;
+    }
+
+    @media (max-width: 800px) {
+        .main-landing-jobs .artwork-wrapper {
+            width: 80%;
+            padding-bottom: 80%;
+        }
+    }
+
+    @media (max-width: 650px) {
+        .main-landing-jobs .artwork-wrapper {
+            width: 90%;
+            padding-bottom: 100%;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .main-landing-jobs .artwork-wrapper {
+            width: 100%;
+            padding-bottom: 80%;
+            position: absolute;
+            top: calc(var(--space5) + var(--space4_5));
+            left: 0;
+            margin: 0;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .main-landing-jobs .artwork-wrapper {
+            width: 100%;
+            padding-bottom: 85%;
+            top: calc(var(--space5) + var(--space5));
+        }
+    }
+
+    @media (max-width: 420px) {
+        .main-landing-jobs .artwork-wrapper {
+            width: 100%;
+            padding-bottom: 95%;
+            top: calc(var(--space5) + var(--space5) + var(--space3_5));
+        }
+    }
+}
+
+.main-landing-jobs .artwork {
     position: absolute;
     top: 15%;
     left: 10%;
@@ -212,14 +365,14 @@
     z-index: 50;
 }
 
-.artwork-interactives {
+.main-landing-jobs .artwork-interactives {
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 100;
 }
 
-.artwork-interactives .item {
+.main-landing-jobs .artwork-interactives .item {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -230,48 +383,58 @@
     transition-timing-function: var(--a-elements-easing);
 }
 
-.artwork-interactives:hover .item {
-    opacity: 1;
-    transition-duration: var(--a-elements-time), var(--a-elements-time);
+.main-landing-jobs .artwork-interactives .item label {
+    cursor: default;
 }
 
-.artwork-interactives:hover .item-0 {
-    transform: translate(-25.01%, -32.82%);
+@media (min-width: 601px) {
+    .main-landing-jobs .artwork-interactives .item label {
+        cursor: pointer;
+    }
+
+    .main-landing-jobs .artwork-interactives:hover .item {
+        opacity: 1;
+        transition-duration: var(--a-elements-time), var(--a-elements-time);
+    }
+
+    .main-landing-jobs .artwork-interactives:hover .item-0 {
+        transform: translate(-25.01%, -32.82%);
+    }
+
+    .main-landing-jobs .artwork-interactives:hover .item-1 {
+        transform: translate(5.66%, -38.8%);
+    }
+
+    .main-landing-jobs .artwork-interactives:hover .item-2 {
+        transform: translate(33.68%, -26.63%);
+    }
+
+    .main-landing-jobs .artwork-interactives:hover .item-3 {
+        transform: translate(45.94%, -2%);
+    }
+
+    .main-landing-jobs .artwork-interactives:hover .item-4 {
+        transform: translate(36.7%, 23.57%);
+    }
+
+    .main-landing-jobs .artwork-interactives:hover .item-5 {
+        transform: translate(10.29%, 38.11%);
+    }
+
+    .main-landing-jobs .artwork-interactives:hover .item-6 {
+        transform: translate(-20.93%, 34.82%);
+    }
+
+    .main-landing-jobs .artwork-interactives:hover .item-7 {
+        transform: translate(-42.37%, 15.23%);
+    }
+
+    .main-landing-jobs .artwork-interactives:hover .item-8 {
+        transform: translate(-43.97%, -11.48%);
+    }
 }
 
-.artwork-interactives:hover .item-1 {
-    transform: translate(5.66%, -38.8%);
-}
-
-.artwork-interactives:hover .item-2 {
-    transform: translate(33.68%, -26.63%);
-}
-
-.artwork-interactives:hover .item-3 {
-    transform: translate(45.94%, -2%);
-}
-
-.artwork-interactives:hover .item-4 {
-    transform: translate(36.7%, 23.57%);
-}
-
-.artwork-interactives:hover .item-5 {
-    transform: translate(10.29%, 38.11%);
-}
-
-.artwork-interactives:hover .item-6 {
-    transform: translate(-20.93%, 34.82%);
-}
-
-.artwork-interactives:hover .item-7 {
-    transform: translate(-42.37%, 15.23%);
-}
-
-.artwork-interactives:hover .item-8 {
-    transform: translate(-43.97%, -11.48%);
-}
-
-.artwork-interactives .item > * {
+.main-landing-jobs .artwork-interactives .item > * {
     position: absolute;
     white-space: nowrap;
     top: 50%;
@@ -280,33 +443,33 @@
     pointer-events: all;
 }
 
-.artwork-interactives .console-input-chip + label {
+.main-landing-jobs .artwork-interactives .console-input-chip + label {
     font-size: var(--t-size0);
     min-height: calc(var(--space3) + var(--space3));
     border-radius: calc((var(--space3) + var(--space3)) / 2);
     padding: 0 calc(var(--space2) + var(--space1));
 }
 
-.artwork-interactives input:checked.console-input-chip + label:hover {
+.main-landing-jobs .artwork-interactives input:checked.console-input-chip + label:hover {
     border: 1px solid transparent;
     background: var(--theme-input-checkable-attention-on);
     color: var(--theme-input-checkable-on-subtract);
 }
 
-.artwork-interactives input:checked.console-input-chip + label:hover .icon-stroke {
+.main-landing-jobs .artwork-interactives input:checked.console-input-chip + label:hover .icon-stroke {
     stroke: var(--theme-input-checkable-on-subtract);
 }
 
-.artwork-interactives input:checked.console-input-chip + label:hover .icon-fill {
+.main-landing-jobs .artwork-interactives input:checked.console-input-chip + label:hover .icon-fill {
     fill: var(--theme-input-checkable-on-subtract);
 }
 
-.artwork-interactives input:checked.console-input-chip + label:hover .icon-fill-stroke {
+.main-landing-jobs .artwork-interactives input:checked.console-input-chip + label:hover .icon-fill-stroke {
     stroke: var(--theme-input-checkable-on-subtract);
     fill: var(--theme-input-checkable-on-subtract);
 }
 
-.artwork-interactives input:checked.console-input-chip + label:active {
+.main-landing-jobs .artwork-interactives input:checked.console-input-chip + label:active {
     background: var(--theme-text-1);
 }
 
