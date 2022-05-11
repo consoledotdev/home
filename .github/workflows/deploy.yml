@@ -160,7 +160,7 @@ jobs:
                   # Pin wrangler to avoid bugs like this
                   # https://github.com/cloudflare/wrangler/issues/2224
                   # We should upgrade it deliberately
-                  wranglerVersion: "1.19.11"
+                  wranglerVersion: "1.19.12"
 
             - name: Deploy to Cloudflare (environment input)
               uses: cloudflare/wrangler-action@2.0.0
@@ -171,4 +171,4 @@ jobs:
                   # Pin wrangler to avoid bugs like this
                   # https://github.com/cloudflare/wrangler/issues/2224
                   # We should upgrade it deliberately
-                  wranglerVersion: "1.19.11"
+                  wranglerVersion: "1.19.12"
