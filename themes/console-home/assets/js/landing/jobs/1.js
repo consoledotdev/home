@@ -195,13 +195,13 @@ class JobsArt {
         {
             // sphere
             const sphereGeometry = new THREE.SphereGeometry(0.12, 64, 32);
-            const material = new THREE.MeshPhysicalMaterial({ emissive: 0xffbb22, emissiveIntensity: 1 });
+            const material = new THREE.MeshPhysicalMaterial({ emissive: 0xffbb33, emissiveIntensity: 0.95 });
             material.transparent = true;
             const obj = new THREE.Mesh(sphereGeometry, material);
             obj.material.roughness = 1;
-            obj.material.metalness = 0.6;
-            obj.material.clearcoat = 0.5;
-            obj.material.clearcoatRoughness = 0.5;
+            obj.material.metalness = 1;
+            obj.material.clearcoat = 0.2;
+            obj.material.clearcoatRoughness = 0.8;
             container.add(obj);
             objs.globe = obj;
         }
@@ -347,8 +347,8 @@ class JobsArt {
             this.lights.direct.intensity = 1.25;
             this.objs.diamonds[2].children[0].material.color.set(this.colors.triad01);
         } else {
-            this.lights.ambient.intensity = 0.6;
-            this.lights.direct.intensity = 0.7;
+            this.lights.ambient.intensity = 0.7;
+            this.lights.direct.intensity = 0.55;
             this.objs.diamonds[2].children[0].material.color.set(this.colors.triad01Light);
         }
     }
