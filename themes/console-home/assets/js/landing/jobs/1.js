@@ -341,7 +341,6 @@ class JobsArt {
     }
 
     _updateForTheme(theme) {
-        console.log(theme);
         if (theme == "dark") {
             this.lights.ambient.intensity = 0.0;
             this.lights.direct.intensity = 1.25;
