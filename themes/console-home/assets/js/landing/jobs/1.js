@@ -31,6 +31,9 @@ class JobsArt {
 
         this.setup();
 
+        this.shouldRotate = false;
+        this.bindMediaQuery();
+
         requestAnimationFrame(this.render);
     }
 
@@ -68,6 +71,27 @@ class JobsArt {
     bindFuncs() {
         this.render = this.render.bind(this);
         this.setMouse = this.setMouse.bind(this);
+    }
+
+    bindMediaQuery() {
+        let mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+        if (mediaQuery) {
+            if (!mediaQuery.matches) this.shouldRotate = true;
+
+            if (mediaQuery.addEventListener) {
+                mediaQuery.addEventListener("change", () => {
+                    mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+                    if (!mediaQuery.matches) this.shouldRotate = true;
+                    else this.shouldRotate = false;
+                });
+            } else {
+                mediaQuery.addListener(() => {
+                    mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+                    if (!mediaQuery.matches) this.shouldRotate = true;
+                    else this.shouldRotate = false;
+                });
+            }
+        }
     }
 
     setup() {
@@ -166,12 +190,12 @@ class JobsArt {
                 position: positions[0],
             },
             {
-                color: this.colors.triad01,
-                position: positions[1],
-            },
-            {
                 color: this.colors.triad02,
                 position: positions[2],
+            },
+            {
+                color: this.colors.triad01,
+                position: positions[1],
             },
         ];
 
@@ -218,15 +242,19 @@ class JobsArt {
         const positions = this.getDiamondPositions();
         this.objs.diamonds.forEach((obj, idx) => {
             const speed = 1 + idx * 0.1;
-            const rot = time * speed;
             obj.position.x = positions[idx].x;
             obj.position.y = positions[idx].y;
-            obj.rotateOnAxis(new THREE.Vector3(-0.5, 0.5, 0).normalize(), this.animationParams.currentRotationSpeed * (Math.PI / 4) * (idx + 1));
+            if (this.shouldRotate) obj.rotateOnAxis(new THREE.Vector3(-0.5, 0.5, 0).normalize(), this.animationParams.currentRotationSpeed * (Math.PI / 4) * (idx + 1));
+            else {
+                obj.rotation.x = 0;
+                obj.rotation.y = 0;
+                obj.rotation.z = 0;
+            }
         });
 
         this.objs.globe.material.opacity = this.animationParams.currentGlobeOpacity;
 
-        this.objs.circle.rotation.z = time * -0.4;
+        if (this.shouldRotate) this.objs.circle.rotation.z = time * -0.4;
         this.objs.circle.material.opacity = 1 - this.animationParams.currentGlobeOpacity;
 
         this.renderer.render(this.scene, this.cam);
@@ -328,6 +356,9 @@ class GravitatingItems {
     constructor(selector) {
         this.bindFuncs();
 
+        this.shouldRotate = false;
+        this.bindMediaQuery();
+
         this.offset = Math.PI * 0.7 * -1;
         this.radius = 46; // percent
         this.currentRadius = 0;
@@ -349,6 +380,27 @@ class GravitatingItems {
         this.parent.addEventListener("mouseout", this.fold);
     }
 
+    bindMediaQuery() {
+        let mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+        if (mediaQuery) {
+            if (!mediaQuery.matches) this.shouldRotate = true;
+
+            if (mediaQuery.addEventListener) {
+                mediaQuery.addEventListener("change", () => {
+                    mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+                    if (!mediaQuery.matches) this.shouldRotate = true;
+                    else this.shouldRotate = false;
+                });
+            } else {
+                mediaQuery.addListener(() => {
+                    mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+                    if (!mediaQuery.matches) this.shouldRotate = true;
+                    else this.shouldRotate = false;
+                });
+            }
+        }
+    }
+
     spread() {
         this.currentRadius = this.radius;
         this._artwork._hoverOnce();
@@ -361,7 +413,8 @@ class GravitatingItems {
 
     rotate() {
         this.rotateInterval = setInterval(() => {
-            this.offset += 0.0002;
+            if (this.shouldRotate) this.offset += 0.0002;
+            else this.offset = 0;
         }, 10);
     }
 
