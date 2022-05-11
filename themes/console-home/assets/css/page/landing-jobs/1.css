@@ -88,6 +88,7 @@
         grid-auto-flow: column;
         grid-auto-columns: 45% 1fr;
         align-items: center;
+        min-height: 800px;
     }
 
     .main-landing-jobs .page-section.opening {
@@ -385,11 +386,13 @@
 
 .main-landing-jobs .artwork-interactives .item label {
     cursor: default;
+    pointer-events: none;
 }
 
 @media (min-width: 601px) {
     .main-landing-jobs .artwork-interactives .item label {
         cursor: pointer;
+        pointer-events: all;
     }
 
     .main-landing-jobs .artwork-interactives:hover .item {
@@ -479,6 +482,27 @@
     margin: 0;
     padding-top: calc(var(--space6_5) - var(--space4_5));
     padding-bottom: var(--space6_5);
+}
+
+@media (max-width: 1024px) {
+    .page-section-landing-jobs.features {
+        padding-top: calc(var(--space6_5) - var(--space5_5));
+        padding-bottom: var(--space6);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-section-landing-jobs.features {
+        padding-top: var(--space5);
+        padding-bottom: calc(var(--space6) - var(--space3));
+    }
+}
+
+@media (max-width: 520px) {
+    .page-section-landing-jobs.features {
+        padding-top: var(--space4);
+        padding-bottom: var(--space5_5);
+    }
 }
 
 .page-section-landing-jobs.features .page-section-heading {
@@ -615,6 +639,20 @@
     padding-right: 6.25vw;
 }
 
+@media (max-width: 768px) {
+    .main-landing-jobs .page-section.profiled-companies {
+        padding-top: var(--space6);
+        padding-bottom: var(--space5);
+    }
+}
+
+@media (max-width: 520px) {
+    .main-landing-jobs .page-section.profiled-companies {
+        padding-top: calc(var(--space5_5) + var(--space3));
+        padding-bottom: var(--space4);
+    }
+}
+
 @media (min-width: 481px) and (max-width: 768px) {
     .main-landing-jobs .page-section.profiled-companies {
         margin-left: -8vw;
@@ -735,6 +773,12 @@
     margin: 0;
     padding-top: var(--space5_5);
     padding-bottom: var(--space6);
+}
+
+@media (max-width: 768px) {
+    .main-landing-jobs .page-section.signup {
+        padding-bottom: var(--space5_5);
+    }
 }
 
 .main-landing-jobs .page-section.signup p.description {
