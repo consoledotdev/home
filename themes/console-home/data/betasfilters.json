@@ -19,6 +19,12 @@
             "checked": true
         },
         {
+            "name": "proprietary",
+            "label": "Proprietary",
+            "showsIcon": false,
+            "checked": true
+        },
+        {
             "name": "weekly-pick",
             "label": "Console Newsletter Pick",
             "showsIcon": false,
