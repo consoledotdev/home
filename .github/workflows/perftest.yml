@@ -21,6 +21,10 @@ jobs:
               with:
                   apiToken: ${{ secrets.CF_API_TOKEN }}
                   environment: test
+                  # Pin wrangler to avoid bugs like this
+                  # https://github.com/cloudflare/wrangler/issues/2224
+                  # We should upgrade it deliberately
+                  wranglerVersion: "1.19.12"
 
             # Allows Cloudflare deploy to propagate
             - name: Sleep for 10 seconds
