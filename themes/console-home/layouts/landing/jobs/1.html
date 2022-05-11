@@ -16,7 +16,7 @@
                     <span>Sign Up</span>
                 </button>
             </div>
-            <p class="small ownership">{{partial "icons/console-mini-filled.html" }}Brought to you by the team behind the Console devtools newsletter ({{ $.Site.Params.consoleSubscribers }} subscribers)</p>
+            <p class="small ownership">{{partial "icons/console-mini-filled.html" }}By the team behind the Console devtools newsletter ({{ $.Site.Params.consoleSubscribers }} subscribers)</p>
         </div>
         <div class="right">
             <div class="artwork-wrapper">
@@ -57,8 +57,8 @@
             <div class="col">
                 {{ partial "icons/jobs.html" }}
                 <div>
-                    <h4 class="title title-3"><span>Email digest of matches.</span> <span>And only matches.</span></h4>
-                    <p>We only send relevant roles filtered based on your preferences. And no email when nothing fits.</p>
+                    <h4 class="title title-3"><span>An email digest of matches.</span> <span>And only matches.</span></h4>
+                    <p>No more than 1 email per week (by default) with the 2-3 most relevant roles. If nothing fits, no email.</p>
                 </div>
             </div>
             <div class="col">
@@ -71,8 +71,8 @@
             <div class="col">
                 {{ partial "illustrations/no-spam.html" }}
                 <div>
-                    <h4 class="title title-3"><span></span>Not another profile.</span> <span></span>No recruiter spam.</h4>
-                    <p>Your preferences are private. Flag interest in a role to trigger an intro. Otherwise ignore the email.</p>
+                    <h4 class="title title-3"><span></span>Your details are private.</span> <span></span>No recruiter spam. Double opt-in.</h4>
+                    <p>Privately flag interesting roles, then if the company is also interested we connect you via email.</p>
                 </div>
             </div>
         </div>
@@ -108,13 +108,13 @@
         <div class="page-section-heading">
             <h3 class="title title-2">Sign Up</h3>
         </div>
-        <p class="description">A free email digest of jobs that actually suit you. No more than 1 per week.</p>
+        <p class="description">A free email digest of 2-3 jobs that actually suit you. No more than 1 per week. If nothing fits, no email.</p>
         <div class="separator light"></div>
         <form data-signup-form class="form-generic landing-jobs-signup-form" action="https://hooks.zapier.com/hooks/catch/12432677/bkhb3el" enctype="multipart/form-data">
             <div class="fieldset">
                 <legend>
                     <h4 class="title title-3">Your email</h4>
-                    <p class="small">We’ll only send an email when we have an offer you should really consider.</p>
+                    <p class="small">We only send an email when we have a role at a company you should really consider.</p>
                 </legend>
                 <div>
                     <input id="form-email" name="form-email" class="console-input-text" type="email" placeholder="Your email" title="Email" required />
@@ -124,7 +124,7 @@
             <div class="fieldset">
                 <legend>
                     <h4 class="title title-3">Roles of interest</h4>
-                    <p class="small">We will exact match you with any matching using an <em>OR</em> filter.</p>
+                    <p class="small">We normalize titles across these broad areas and send matches using an <em>OR</em> filter.</p>
                 </legend>
                 <div class="form-cols">
                     {{ range $formData.role.inputs }}
@@ -148,8 +148,8 @@
             </div>
             <div class="fieldset fieldset-locations">
                 <legend>
-                    <h4 class="title title-3">Where you’d like to work</h4>
-                    <p class="small">Some description of the fields group.</p>
+                    <h4 class="title title-3">Where you&apos;d like to work</h4>
+                    <p class="small">We match based on a high level region and city, if selected. Remote will match anywhere unless you specify a region.</p>
                 </legend>
                 <div>
                     {{ range first 2 $formData.locations.inputs }}
@@ -224,7 +224,7 @@
             <div class="fieldset fieldset-tech-stack">
                 <legend>
                     <h4 class="title title-3">Preferred tech stack</h4>
-                    <p class="small">Some description of the fields group.</p>
+                    <p class="small">What do you like to work with? These match with an <em>OR</em> filter.</p>
                 </legend>
                 <div>
                     <div class="form-cols">
@@ -263,14 +263,14 @@
                             </a>
                         </div>
                     </div>
-                    <label for="form-tech-stack" class="console-label console-label-error">Please select at least one tech.</label>
+                    <label for="form-tech-stack" class="console-label console-label-error">Please select at least one techology.</label>
                 </div>
             </div>
             <h6 class="title title-5">About yourself</h6>
             <div class="fieldset">
                 <legend>
                     <h4 class="title title-3">Your experience</h4>
-                    <p class="small">Some description of the fields group.</p>
+                    <p class="small">How long have you been in this industry? We match based on the range, not below (or above).</p>
                 </legend>
                 <div data-segmented-bar class="segmented-bar">
                     {{ range $formData.exp.inputs }}
@@ -294,7 +294,7 @@
             <div class="fieldset">
                 <legend>
                     <h4 class="title title-3">Your desired salary</h4>
-                    <p class="small">Some description of the fields group.</p>
+                    <p class="small">What is your base salary expectation? All our jobs have salary ranges and we won&apos;t send anything below your preference.</p>
                 </legend>
                 <div data-segmented-bar class="segmented-bar">
                     {{ range $formData.salary.inputs }}
@@ -315,7 +315,7 @@
                 </div>
             </div>
 
-            <h6 class="title title-5 rich-title">{{partial "icons/jobs.html" }} Get the best jobs in your inbox</h6>
+            <h6 class="title title-5 rich-title">{{partial "icons/jobs.html" }} That&apos;s it - click to subscribe</h6>
             
             <button onclick="blur()" class="console-button icon-left" type="submit" title="Signup">
                 {{ partial "icons/send.html" }}

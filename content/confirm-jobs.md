@@ -1,5 +1,5 @@
 ---
-title: "Thanks for joining Console Jobs"
+title: "Jobs Console"
 date: 2022-05-04T16:50:39+02:00
 draft: false
 summary: Jobs subscription confirmed.
@@ -9,10 +9,13 @@ isPage: confirm-jobs
 customStyle: true
 ---
 
-You are now subscribed to the Console Jobs newsletter.
+You have signed up to Jobs Console.
 {.description}
 
-We'll periodically send you a free email digest of jobs that actually suit you. **No more than 1 per week.**
+You&apos;ll get your first email when we have a matching job, which might be
+some time. **And never more than 1 per week.** 
+
+In the meantime, [check out the profiles](/profiles/) of the companies we might match you with.
 
 ###### Your subscription preferences
 {{< div-custom class="simple-table" >}}
@@ -21,7 +24,8 @@ We'll periodically send you a free email digest of jobs that actually suit you. 
 {{< div--close >}}
 
 ### Console is more
-We also issue a free weekly email digest of the best tools and beta releases for developers.
+We also send a free weekly email digest of the best tools and beta releases for
+developers.
 
 Interested?
 {{< a-link icon-left="send" url="/" text="Sign up" >}}.

@@ -294,11 +294,11 @@
             {
                 "name": "less2y",
                 "label": "< 2 years",
-                "checked": true,
                 "required": true
             },
             {
                 "name": "2-5y",
+                "checked": true,
                 "label": "2-5 years"
             },
             {
@@ -318,11 +318,11 @@
             {
                 "name": "less100k",
                 "label": "< $100k",
-                "checked": true,
                 "required": true
             },
             {
                 "name": "100-150k",
+                "checked": true,
                 "label": "$100-150k"
             },
             {
