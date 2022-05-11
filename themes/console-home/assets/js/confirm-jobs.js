@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         value: Helper.beautify(tech),
     });
 
-    let exp = Helper.getUrlParam("form-salary");
+    let exp = Helper.getUrlParam("form-exp");
     if (exp.indexOf("less") >= 0) exp = Helper.beautify(exp.replace("less", "less than "));
     else if (exp.indexOf("more") >= 0) exp = Helper.beautify(exp.replace("more", "more than "));
     fields.push({
