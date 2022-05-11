@@ -40,6 +40,7 @@ class JobsArt {
         let style = getComputedStyle(document.documentElement);
         return {
             triad01: style.getPropertyValue("--theme-jobs-triad-01").trim(),
+            triad01Light: style.getPropertyValue("--c-yellow-05").trim(),
             triad02: style.getPropertyValue("--theme-jobs-triad-02").trim(),
             triad03: style.getPropertyValue("--theme-jobs-triad-03").trim(),
             circle: style.getPropertyValue("--theme-jobs-circle").trim(),
@@ -344,9 +345,11 @@ class JobsArt {
         if (theme == "dark") {
             this.lights.ambient.intensity = 0.0;
             this.lights.direct.intensity = 1.25;
+            this.objs.diamonds[2].children[0].material.color.set(this.colors.triad01);
         } else {
             this.lights.ambient.intensity = 0.6;
             this.lights.direct.intensity = 0.7;
+            this.objs.diamonds[2].children[0].material.color.set(this.colors.triad01Light);
         }
     }
 }
