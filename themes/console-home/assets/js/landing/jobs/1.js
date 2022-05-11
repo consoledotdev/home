@@ -75,9 +75,8 @@ class JobsArt {
     setup() {
         this.renderer.setClearColor(0xffffff, 0);
         this.selectCam(1);
-        this.lights.forEach((l) => {
-            this.scene.add(l);
-        });
+        this.scene.add(this.lights.ambient);
+        this.scene.add(this.lights.direct);
     }
 
     makeCams() {
@@ -101,14 +100,22 @@ class JobsArt {
     }
 
     makeLights() {
-        let lights = [];
-        lights.push(this.makeLightOne());
+        let lights = {};
+        lights.ambient = this.makeAmbientLight();
+        lights.direct = this.makeDirectionalLight();
         return lights;
     }
 
-    makeLightOne() {
+    makeAmbientLight() {
         const color = 0xffffff;
-        const intensity = 1.25;
+        const intensity = 0; // 0.7 light theme
+        const light = new THREE.AmbientLight(color, intensity);
+        return light;
+    }
+
+    makeDirectionalLight() {
+        const color = 0xffffff;
+        const intensity = 1.25; // 0.6 light theme
         const light = new THREE.DirectionalLight(color, intensity);
         light.position.set(2, 0, 4);
         return light;
@@ -331,6 +338,17 @@ class JobsArt {
 
     _setRotate(state) {
         this.shouldRotate = state;
+    }
+
+    _updateForTheme(theme) {
+        console.log(theme);
+        if (theme == "dark") {
+            this.lights.ambient.intensity = 0.0;
+            this.lights.direct.intensity = 1.25;
+        } else {
+            this.lights.ambient.intensity = 0.6;
+            this.lights.direct.intensity = 0.7;
+        }
     }
 }
 
@@ -706,6 +724,20 @@ document.addEventListener("DOMContentLoaded", (e) => {
     };
     setSegmentedBarLayout();
     window.addEventListener("resize", setSegmentedBarLayout);
+
+    /* Handle theme switch */
+    let updateForTheme = (e) => {
+        let theme;
+        if (e) theme = e.detail.theme;
+        else theme = getTheme().name;
+        if (theme == "dark") {
+            jobsArt._updateForTheme("dark");
+        } else {
+            jobsArt._updateForTheme("light");
+        }
+    };
+    document.body.addEventListener("themeChange", updateForTheme, false);
+    updateForTheme();
 
     /* Handle reduced motion preference */
     let mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
