@@ -1,7 +1,7 @@
 ---
 title: "Snaplet"
 date: 2022-05-11T12:00:00+00:00
-draft: true
+draft: false
 summary: Safely code against actual data.
 metaTitle: Working at Snaplet - Console profile
 metaDescription:
@@ -21,6 +21,11 @@ companyInfo:
   jobsURL: https://www.snaplet.dev/careers
   location: Remote
   description: "Safely code against actual data."
+  images:
+    - url: /img/profiles/snaplet-profile-1.jpg
+    - url: /img/profiles/snaplet-profile-2.jpg
+    - url: /img/profiles/snaplet-profile-3.jpg
+  
   product:
     name: "Snaplet"
     description:
