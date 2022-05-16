@@ -131,6 +131,7 @@
                     {{ range $formData.role.inputs }}
                         <div class="input-wrapper">
                             <input
+                                onclick="blur();" 
                                 class="console-input-{{ $formData.role.consoleType }} attention"
                                 type="{{ $formData.role.type }}"
                                 name="form-role"
@@ -156,6 +157,7 @@
                     {{ range first 2 $formData.locations.inputs }}
                         <div class="input-wrapper{{ with .parent }} sub{{ end }}">
                                 <input
+                                    onclick="blur();" 
                                     class="console-input-{{ $formData.locations.consoleType }} attention"
                                     type="{{ $formData.locations.type }}"
                                     name="form-locations"
@@ -180,6 +182,7 @@
                             {{ with $item.hasChildren }}<div>{{ end }}
                                 <div class="input-wrapper{{ with $item.parent }} sub{{ end }}">
                                     <input
+                                        onclick="blur();" 
                                         class="console-input-{{ $formData.locations.consoleType }} attention"
                                         type="{{ $formData.locations.type }}"
                                         name="form-locations"
@@ -232,6 +235,7 @@
                         {{ range sort $formData.tech.inputs "name" "asc" }}
                             <div class="input-wrapper">
                                 <input
+                                    onclick="blur();" 
                                     class="console-input-{{ $formData.tech.consoleType }} attention"
                                     type="{{ $formData.tech.type }}"
                                     name="form-tech"
@@ -277,6 +281,7 @@
                     {{ range $formData.exp.inputs }}
                         <div>
                             <input
+                                onclick="blur();" 
                                 class="console-input-{{ $formData.exp.consoleType }} attention"
                                 type="{{ $formData.exp.type }}"
                                 name="form-exp"
@@ -300,7 +305,9 @@
                 <div data-segmented-bar class="segmented-bar">
                     {{ range $formData.salary.inputs }}
                         <div>
-                            <input class="console-input-{{ $formData.salary.consoleType }} attention"
+                            <input
+                            onclick="blur();"
+                            class="console-input-{{ $formData.salary.consoleType }} attention"
                             type="{{ $formData.salary.type }}"
                             name="form-salary"
                             id="form-salary-{{ .name }}"
