@@ -726,6 +726,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
             }
 
             document.querySelector("#form-email").focus();
+
+            /* block potentially scroll blocking events */
             document.querySelector("body").classList.add("lock-select", "lock-pointer", "lock-scroll");
             setTimeout(() => {
                 document.querySelector("body").classList.remove("lock-select", "lock-pointer", "lock-scroll");
