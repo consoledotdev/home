@@ -135,7 +135,7 @@ campaigns:
         application.
       - 'To promote a product release, Oso worked with Console to scheduled a
         review, an interview with their CTO, and promotion of a blog post on <a
-        onclick="blur();" target="_blank" rel="noopener"
+        data-onclickblur target="_blank" rel="noopener"
         href="https://www.osohq.com/post/why-authorization-is-hard"
         class="link">Why Authorization is Hard</a>'
     quote:

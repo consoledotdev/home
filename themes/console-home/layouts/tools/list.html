@@ -70,7 +70,7 @@
 			</p>
             <p class="small">
                 <span class="page-meta-separator">&mdash;</span>
-				<a onclick="blur();" href="mailto:hello@console.dev" class="console-button-text console-button-small icon-left submit-tool" title="Submit Tool">
+				<a data-onclickblur href="mailto:hello@console.dev" class="console-button-text console-button-small icon-left submit-tool" title="Submit Tool">
 					{{ partial "icons/tool.html" }}
 					<span>Submit Tool</span>
 				</a>
@@ -101,11 +101,11 @@
 						<h3 class="title title-2"><span data-feature-section-name>Latest Tools</span><span class="count" data-feature-items-count></span></h3>
 					</div>
 					<div class="right">
-						<a onclick="blur();" href="/tools/rss.xml" class="console-button-text console-button-small icon-left" title="RSS Feed">
+						<a data-onclickblur href="/tools/rss.xml" class="console-button-text console-button-small icon-left" title="RSS Feed">
 							{{ partial "icons/rss.html" }}
 							<span>Feed</span>
 						</a>
-						<a onclick="blur();" href="" class="console-button-text console-button-small icon-right view-all-link" title="View all in category" data-view-all-link>
+						<a data-onclickblur href="" class="console-button-text console-button-small icon-right view-all-link" title="View all in category" data-view-all-link>
 							<span>View all</span>
 							{{ partial "icons/arrow-right.html" }}
 						</a>

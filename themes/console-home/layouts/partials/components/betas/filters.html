@@ -9,14 +9,14 @@
 		</div>
 		<div class="sort-by">
 			<label for="sort-feature-items" class="console-label console-label-small">Sort by</label>
-			<select class="console-select console-input-small" name="" id="sort-feature-items" data-sort-feature-items-select onchange="blur()">
+			<select class="console-select console-input-small" name="" id="sort-feature-items" data-sort-feature-items-select data-onchangeblur>
 				<option value="date" selected>Date</option>
 				<option value="name">Name</option>
 			</select>
 		</div>
 		<div class="group-by">
 			<label for="group-feature-items" class="console-label console-label-small">Group by</label>
-			<select class="console-select console-input-small" name="" id="group-feature-items" data-group-feature-items-select onchange="blur()">
+			<select class="console-select console-input-small" name="" id="group-feature-items" data-group-feature-items-select data-onchangeblur>
 				<option value="category">Category</option>
 				<option value="none" selected>Active/GA</option>
 			</select>
@@ -39,7 +39,7 @@
 			{{ end }}
 		</div>
 		<div>
-			<button data-filter="select-all" onclick="blur()" class="console-button-text console-button-small select-all" title="Select all">
+			<button data-filter="select-all" data-onclickblur class="console-button-text console-button-small select-all" title="Select all">
 				<span>Select all</span>
 			</button>
 		</div>

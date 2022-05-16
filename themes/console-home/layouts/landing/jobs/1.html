@@ -11,7 +11,7 @@
                 <h2 class="title title-1">The best developer jobs<br class="break"> you weren’t looking for</h2>
                 <p class="description">A free email digest of jobs that actually suit you.</p>
 
-                <button data-launch-signup="email" onclick="blur();" class="console-button icon-left" title="Signup">
+                <button data-launch-signup="email" data-onclickblur class="console-button icon-left" title="Signup">
                     {{ partial "icons/send.html" }}
                     <span>Sign Up</span>
                 </button>
@@ -41,7 +41,7 @@
             </div>
         </div>
         <div class="bottom">
-            <button data-launch-signup="email" onclick="blur();" class="console-button icon-left" title="Signup">
+            <button data-launch-signup="email" data-onclickblur class="console-button icon-left" title="Signup">
                 {{ partial "icons/send.html" }}
                 <span>Sign Up</span>
             </button>
@@ -130,6 +130,7 @@
                     {{ range $formData.role.inputs }}
                         <div class="input-wrapper">
                             <input
+                                data-onclickblur 
                                 class="console-input-{{ $formData.role.consoleType }} attention"
                                 type="{{ $formData.role.type }}"
                                 name="form-role"
@@ -155,6 +156,7 @@
                     {{ range first 2 $formData.locations.inputs }}
                         <div class="input-wrapper{{ with .parent }} sub{{ end }}">
                                 <input
+                                    data-onclickblur 
                                     class="console-input-{{ $formData.locations.consoleType }} attention"
                                     type="{{ $formData.locations.type }}"
                                     name="form-locations"
@@ -179,6 +181,7 @@
                             {{ with $item.hasChildren }}<div>{{ end }}
                                 <div class="input-wrapper{{ with $item.parent }} sub{{ end }}">
                                     <input
+                                        data-onclickblur 
                                         class="console-input-{{ $formData.locations.consoleType }} attention"
                                         type="{{ $formData.locations.type }}"
                                         name="form-locations"
@@ -231,6 +234,7 @@
                         {{ range sort $formData.tech.inputs "name" "asc" }}
                             <div class="input-wrapper">
                                 <input
+                                    data-onclickblur 
                                     class="console-input-{{ $formData.tech.consoleType }} attention"
                                     type="{{ $formData.tech.type }}"
                                     name="form-tech"
@@ -276,6 +280,7 @@
                     {{ range $formData.exp.inputs }}
                         <div>
                             <input
+                                data-onclickblur 
                                 class="console-input-{{ $formData.exp.consoleType }} attention"
                                 type="{{ $formData.exp.type }}"
                                 name="form-exp"
@@ -299,7 +304,9 @@
                 <div data-segmented-bar class="segmented-bar">
                     {{ range $formData.salary.inputs }}
                         <div>
-                            <input class="console-input-{{ $formData.salary.consoleType }} attention"
+                            <input
+                            data-onclickblur
+                            class="console-input-{{ $formData.salary.consoleType }} attention"
                             type="{{ $formData.salary.type }}"
                             name="form-salary"
                             id="form-salary-{{ .name }}"
@@ -317,7 +324,7 @@
 
             <h6 class="title title-5 rich-title">{{partial "icons/jobs.html" }} That&apos;s it - click to subscribe</h6>
             
-            <button onclick="blur()" class="console-button icon-left" type="submit" title="Signup">
+            <button data-onclickblur class="console-button icon-left" type="submit" title="Signup">
                 {{ partial "icons/send.html" }}
                 {{ partial "icons/loader.html" }}
                 <span>Sign Up</span>

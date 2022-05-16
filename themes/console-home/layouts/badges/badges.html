@@ -80,8 +80,8 @@
             <div class="left">
                 <p>Download:</p>
                 <div class="selector-ctas">
-                    <button data-download-png onclick="blur();" class="console-button console-button-medium icon-left" title="Download .png">{{ partial "icons/download.html" }}<span>.png</span></button>
-                    <button data-download-svg onclick="blur();" class="console-button console-button-medium icon-left" title="Download .svg">{{ partial "icons/download.html" }}<span>.svg</span></button>
+                    <button data-download-png data-onclickblur class="console-button console-button-medium icon-left" title="Download .png">{{ partial "icons/download.html" }}<span>.png</span></button>
+                    <button data-download-svg data-onclickblur class="console-button console-button-medium icon-left" title="Download .svg">{{ partial "icons/download.html" }}<span>.svg</span></button>
                 </div>
             </div>
             <div class="right">
@@ -95,7 +95,7 @@
                 </div>
                 <div class="embed-code-wrapper">
                     <pre id="embed-code-pre" data-embed-code class="pre"></pre>
-                    <button data-clipboard-copy data-clipboard-target="#embed-code-pre" onclick="blur();" class="console-button-text console-button-small console-button-copy icon-left" title="Copy code">{{ partial "icons/copy.html" }}{{ partial "icons/checkmark.html" }}<span class="idle">Copy</span><span class="success">Copied</span></button>
+                    <button data-clipboard-copy data-clipboard-target="#embed-code-pre" data-onclickblur class="console-button-text console-button-small console-button-copy icon-left" title="Copy code">{{ partial "icons/copy.html" }}{{ partial "icons/checkmark.html" }}<span class="idle">Copy</span><span class="success">Copied</span></button>
                 </div>
                 
             </div>

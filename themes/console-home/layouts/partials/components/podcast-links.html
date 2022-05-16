@@ -5,16 +5,16 @@
 {{ end -}}
         <div class="podcast-links">
             {{ with .apple }}
-                <a class="link" onclick="blur();" target="_blank" rel="noopener" href="https://podcasts.apple.com/us/podcast/console-devtools/id1572448316" title="Listen on Apple Podcasts"><img loading="lazy" src="/img/icon-podcast-apple.svg" alt="Apple Podcasts" width="32" height="32"></a>
+                <a class="link" data-onclickblur target="_blank" rel="noopener" href="https://podcasts.apple.com/us/podcast/console-devtools/id1572448316" title="Listen on Apple Podcasts"><img loading="lazy" src="/img/icon-podcast-apple.svg" alt="Apple Podcasts" width="32" height="32"></a>
             {{ end }}
             {{ with .spotify }}
-                <a class="link" onclick="blur();" target="_blank" rel="noopener" href="https://open.spotify.com/show/1yec5zbVfGPQUlH80tDIOW" title="Listen on Spotify"><img loading="lazy" src="/img/icon-podcast-spotify.svg" alt="Spotify" width="32" height="32"></a>
+                <a class="link" data-onclickblur target="_blank" rel="noopener" href="https://open.spotify.com/show/1yec5zbVfGPQUlH80tDIOW" title="Listen on Spotify"><img loading="lazy" src="/img/icon-podcast-spotify.svg" alt="Spotify" width="32" height="32"></a>
             {{ end }}
             {{ with .google }}
-                <a class="link" onclick="blur();" target="_blank" rel="noopener" href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zaW1wbGVjYXN0LmNvbS9UODBDSndsbg==" title="Listen on Google Podcasts"><img loading="lazy" src="/img/icon-podcast-google.svg" alt="Google Podcasts" width="32" height="32"></a>
+                <a class="link" data-onclickblur target="_blank" rel="noopener" href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zaW1wbGVjYXN0LmNvbS9UODBDSndsbg==" title="Listen on Google Podcasts"><img loading="lazy" src="/img/icon-podcast-google.svg" alt="Google Podcasts" width="32" height="32"></a>
             {{ end }}
             {{ with .overcast }}
-                <a class="link" onclick="blur();" target="_blank" rel="noopener" href="https://overcast.fm/itunes1572448316" title="Listen on Overcast"><img loading="lazy" src="/img/icon-podcast-overcast.svg" alt="Overcast" width="32" height="32"></a>
+                <a class="link" data-onclickblur target="_blank" rel="noopener" href="https://overcast.fm/itunes1572448316" title="Listen on Overcast"><img loading="lazy" src="/img/icon-podcast-overcast.svg" alt="Overcast" width="32" height="32"></a>
             {{ end }}
         </div>
 {{- with .title }}
