@@ -299,6 +299,36 @@
     filter: blur(4px);
 }
 
+.artwork-bg-5 {
+    transform: translate(-250%, -50%) rotate(45deg);
+    width: 52%;
+    padding-bottom: 52%;
+    -webkit-filter: blur(4px);
+}
+
+@media (min-width: 1371px) {
+    .artwork-bg-1,
+    .artwork-bg-2 {
+        width: 1096px;
+        padding-bottom: 1096px;
+    }
+
+    .artwork-bg-3 {
+        width: 438px;
+        padding-bottom: 438px;
+    }
+
+    .artwork-bg-4 {
+        width: 234px;
+        padding-bottom: 234px;
+    }
+
+    .artwork-bg-5 {
+        width: 712px;
+        padding-bottom: 712px;
+    }
+}
+
 /* Artwork */
 .main-landing-jobs .artwork-wrapper {
     position: relative;
