@@ -15,6 +15,26 @@ body {
     letter-spacing: 0.06em;
 }
 
+body.lock-select {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    /*
+     Introduced in Internet Explorer 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body.lock-pointer {
+    pointer-events: none;
+}
+
+body.lock-scroll {
+    overflow-y: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -1366,6 +1386,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
    ================================================================================================================ */
 
 .title {
+    --sizeMult: 1;
     font-weight: 300;
     margin: 0;
     line-height: var(--t-lH1);
@@ -1385,7 +1406,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
 
 /* title 1 */
 .title.title-1 {
-    font-size: var(--t-size8);
+    font-size: calc(var(--t-size8) * var(--sizeMult));
     margin-bottom: var(--space4);
 }
 
@@ -1401,7 +1422,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
 
 /* title 2 */
 .title.title-2 {
-    font-size: var(--t-size5);
+    font-size: calc(var(--t-size5) * var(--sizeMult));
     margin-bottom: var(--space3);
 }
 
@@ -1422,7 +1443,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
 
 /* title 3 */
 .title.title-3 {
-    font-size: var(--t-size2);
+    font-size: calc(var(--t-size2) * var(--sizeMult));
     font-weight: 500;
     margin-bottom: var(--space3);
     line-height: var(--t-lH3);
@@ -1440,7 +1461,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
 
 /* title 4 */
 .title.title-4 {
-    font-size: var(--t-size0);
+    font-size: calc(var(--t-size0) * var(--sizeMult));
     text-transform: uppercase;
     font-style: italic;
     font-weight: 500;
@@ -1461,7 +1482,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
 
 /* title 5 */
 .title.title-5 {
-    font-size: var(--t-size-1);
+    font-size: calc(var(--t-size-1) * var(--sizeMult));
     text-transform: uppercase;
     font-style: italic;
     font-weight: 400;
@@ -1480,7 +1501,7 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
 
 /* title 6 */
 .title.title-6 {
-    font-size: var(--t-size0);
+    font-size: calc(var(--t-size0) * var(--sizeMult));
     font-weight: 500;
     margin-bottom: var(--space2_5);
 }
@@ -1493,6 +1514,16 @@ body:not(.is-same-origin) .logo-svg-animated-explode .prompt {
     width: var(--space3);
     height: var(--space3);
     margin-right: var(--space2_5);
+}
+
+@media (max-width: 480px) {
+    .title.title-1,
+    .title.title-2 {
+        --sizeMult: 0.9;
+    }
+    .title.title-3 {
+        --sizeMult: 0.95;
+    }
 }
 
 /* Text
