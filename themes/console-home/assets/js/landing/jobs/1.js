@@ -379,8 +379,11 @@ class GravitatingItems {
     }
 
     bind() {
-        this.parent.addEventListener("mouseover", this.spread);
-        this.parent.addEventListener("mouseout", this.fold);
+        this.parent.addEventListener("mouseenter", this.spread);
+        this.parent.addEventListener("mouseleave", this.fold);
+        this.items.forEach((i) => {
+            i.addEventListener("click", this.fold);
+        });
 
         this.setResponsiveness();
         window.addEventListener("resize", this.setResponsiveness);
@@ -388,8 +391,10 @@ class GravitatingItems {
 
     spread() {
         if (this.shouldSpread) {
-            this.currentRadius = this.radius;
             this._artwork._hoverOnce();
+            setTimeout(() => {
+                this.currentRadius = this.radius;
+            }, 100);
         }
     }
 
@@ -725,16 +730,15 @@ document.addEventListener("DOMContentLoaded", (e) => {
                 });
             }
 
-            document.querySelector("#form-email").focus();
-
             /* block potentially scroll blocking events */
             document.querySelector("body").classList.add("lock-select", "lock-pointer", "lock-scroll");
             setTimeout(() => {
                 document.querySelector("body").classList.remove("lock-select", "lock-pointer", "lock-scroll");
-            }, 1500);
+            }, 1000);
             setTimeout(() => {
                 document.querySelector("[data-anchor-signup]").scrollIntoView();
-            }, 1);
+                document.querySelector("#form-email").focus();
+            }, 100);
         });
     });
 

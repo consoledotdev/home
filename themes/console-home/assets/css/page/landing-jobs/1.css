@@ -459,7 +459,7 @@
     opacity: 0;
     transition-property: transform, opacity;
     transition-duration: var(--a-elements-time), 0.08s;
-    transition-timing-function: var(--a-elements-easing);
+    transition-timing-function: var(--a-elements-easing), ease-in-out;
 }
 
 .main-landing-jobs .artwork-interactives .item label {
@@ -476,6 +476,7 @@
     .main-landing-jobs .artwork-interactives:hover .item {
         opacity: 1;
         transition-duration: var(--a-elements-time), var(--a-elements-time);
+        transition-delay: 0s, 100ms;
     }
 
     .main-landing-jobs .artwork-interactives:hover .item-0 {
