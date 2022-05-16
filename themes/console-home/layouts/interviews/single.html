@@ -1,5 +1,9 @@
 {{ define "main" }}
 <section class="page-section">
+    <a href="/profiles/" class="console-button-text console-button-triad-03 icon-left">
+        {{ partial "icons/console-interview.html" }}
+        <span>Developer interviews</span>
+    </a>
     <h2 class="title title-1">Interview with {{ .Params.who }}</h2>
     <p class="description">{{ .Params.role }}, {{ .Params.org }} - {{ .Params.what }}</p>
     <div class="col-2">
