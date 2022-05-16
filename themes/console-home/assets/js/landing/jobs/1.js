@@ -726,7 +726,13 @@ document.addEventListener("DOMContentLoaded", (e) => {
             }
 
             document.querySelector("#form-email").focus();
-            document.querySelector("[data-anchor-signup]").scrollIntoView();
+            document.querySelector("body").classList.add("lock-select", "lock-pointer", "lock-scroll");
+            setTimeout(() => {
+                document.querySelector("body").classList.remove("lock-select", "lock-pointer", "lock-scroll");
+            }, 1500);
+            setTimeout(() => {
+                document.querySelector("[data-anchor-signup]").scrollIntoView();
+            }, 1);
         });
     });
 

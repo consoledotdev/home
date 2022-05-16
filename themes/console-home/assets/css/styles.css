@@ -15,6 +15,26 @@ body {
     letter-spacing: 0.06em;
 }
 
+body.lock-select {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    /*
+     Introduced in Internet Explorer 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body.lock-pointer {
+    pointer-events: none;
+}
+
+body.lock-scroll {
+    overflow-y: hidden;
+}
+
 h1,
 h2,
 h3,
