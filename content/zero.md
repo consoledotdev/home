@@ -10,7 +10,8 @@ headerType: fixed
 
 Console's mission is to help developers find the best tools. As part of that, we
 angel invest in developer-first startups who meet [our selection
-criteria](/selection-criteria/).
+criteria](/selection-criteria/) and [stand out amongst all the other
+devtools](https://blog.console.dev/devtools-startups-standing-out-to-investors/).
 
 Console has a large audience of experienced developers who trust us to provide
 recommendations about the tools they should try out. If we'd feature the tool in
@@ -34,7 +35,9 @@ touch](mailto:david@console.dev).
 
 ### Portfolio
 
+* [AppFlowy](https://www.appflowy.io/)
 * [Cased](https://cased.com/)
+* [CloudQuery](https://www.cloudquery.io/)
 * [Cyscale](https://cyscale.com/)
 * [Daily.dev](https://daily.dev/)
 * [Drifting In Space](https://driftingin.space/)
@@ -44,6 +47,7 @@ touch](mailto:david@console.dev).
 * [Memphis](https://memphis.dev/)
 * [Moving Parts](https://movingparts.io/)
 * [Primer](https://primer.io/)
+* [Railway](https://railway.app/)
 * [Rowy](https://www.rowy.io/)
 * [Snaplet](https://www.snaplet.dev/)
 * [Signoz](https://signoz.io/)
