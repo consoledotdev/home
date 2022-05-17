@@ -138,13 +138,13 @@ jobs:
             # No drafts in prod. Kept at 0.96 until
             # https://github.com/actions/checkout/issues/760 is fixed
             - name: "hugo build (prod)"
-              uses: jakejarvis/hugo-build-action@v0.96.0
+              uses: jakejarvis/hugo-build-action@v0.99.0
               if: github.event.inputs.environment != 'test'
 
             # Build drafts in the test environment. Kept at 0.96 until
             # https://github.com/actions/checkout/issues/760 is fixed
             - name: "hugo build (test)"
-              uses: jakejarvis/hugo-build-action@v0.96.0
+              uses: jakejarvis/hugo-build-action@v0.99.0
               if: github.event.inputs.environment == 'test'
               with:
                   args: --buildDrafts --environment test
