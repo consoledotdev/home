@@ -1,4 +1,4 @@
-<a onclick="blur()"
+<a data-onclickblur
     href="{{ .Get "url" }}"{{ if ( .Get "nofollow" ) }} rel="nofollow"{{ end }}
     class="console-button
         {{- if ( .Get "is-text" ) }}-text{{ end -}}

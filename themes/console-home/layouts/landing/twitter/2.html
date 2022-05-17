@@ -11,7 +11,7 @@
                 <input type="hidden" value="{{ .Page.RelPermalink }}" name="REFERRER" id="mc-referrer" />
                 <div style="position: absolute; left: -5000px" aria-hidden="true"><input type="text" name="b_f8c3cd14ee8d63c53d0986a48_267911a165" tabindex="-1" value="" /><!-- Anti spam field --></div>
 
-                <button onclick="blur()" class="console-button icon-left" type="submit" title="Signup">
+                <button data-onclickblur class="console-button icon-left" type="submit" title="Signup">
                     {{ partial "icons/send.html" }}
                     <span>Sign Up</span>
                 </button>
@@ -43,7 +43,7 @@
             </script>
             <p>
                 Every Thursday.
-                <a onclick="blur();" class="console-button-text icon-right" href="#latest-newsletter" title="Read the latest email" rel="noopener"><span>Read the latest email</span>
+                <a data-onclickblur class="console-button-text icon-right" href="#latest-newsletter" title="Read the latest email" rel="noopener"><span>Read the latest email</span>
                     {{ partial "icons/scroll-down.html" }}</a>
             </p>
         </div>
@@ -98,7 +98,7 @@
                 <li>3-5 interesting new beta releases.</li>
                 <li>Interviews with the people behind the tools.</li>
             </ul>
-            <a onclick="blur();" class="console-button-text icon-right" href="/tools/" title="See all developer tool reviews" rel="noopener"><span class="long">Check out all our past reviews</span><span class="short">See past reviews</span>
+            <a data-onclickblur class="console-button-text icon-right" href="/tools/" title="See all developer tool reviews" rel="noopener"><span class="long">Check out all our past reviews</span><span class="short">See past reviews</span>
                 {{ partial "icons/arrow-right.html" }}</a>
         </div>
         <div class="bottom">

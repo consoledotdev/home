@@ -9,7 +9,7 @@
 <div class="profiles-card" data-card data-date="{{ $showDate }}" data-name="{{ $name }}" data-taxonomy="{{ $filterTaxonomy }}" data-category="{{ $topcategory }}" data-default-group="all-companies">
 	<div class="profiles-card-content">
 		<div class="top">
-            <a onclick="blur();" class="card-link" href="{{ .RelPermalink }}"><span>View</span></a>
+            <a data-onclickblur class="card-link" href="{{ .RelPermalink }}"><span>View</span></a>
             <div class="left">
             	{{ partial "components/thumbnail-vendor.html" (dict "name" $name "image" .Params.companyInfo.favicon "category" (replace (lower $topcategory) " " "-") ) }}
                 <div class="title-location"><h4 data-searchable class="title title-3">{{ $name }}</h4><p class="profiles-card-location">{{ .Params.companyInfo.location }}</p></div>
@@ -42,13 +42,13 @@
 				</div>
                 <div class="right">
                     {{ if .Params.interview -}}
-                        <a onclick="blur();" href="/interviews/{{ .Params.interview }}/" class="console-button-text console-button-small console-button-triad-03 icon-left" title="Read the Console interview with {{ $name }}">
+                        <a data-onclickblur href="/interviews/{{ .Params.interview }}/" class="console-button-text console-button-small console-button-triad-03 icon-left" title="Read the Console interview with {{ $name }}">
                             {{ partial "icons/console-interview.html" }}
                             <span>Console Q&A</span>
                         </a>
                     {{- end }}
                     {{ if .Params.podcast -}}
-                        <a onclick="blur();" href="/podcast/{{ .Params.podcast }}/" class="console-button-text console-button-small console-button-triad-03 icon-left" title="Listen to the Console Podcast with {{ $name }}">
+                        <a data-onclickblur href="/podcast/{{ .Params.podcast }}/" class="console-button-text console-button-small console-button-triad-03 icon-left" title="Listen to the Console Podcast with {{ $name }}">
                             {{ partial "icons/podcast.html" }}
                             <span>DevTools Podcast</span>
                         </a>

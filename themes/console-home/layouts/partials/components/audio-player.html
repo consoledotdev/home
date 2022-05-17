@@ -11,8 +11,8 @@
     <audio data-console-player-audio style="display: none;" preload="none" src="{{ .src }}"></audio>
     <div class="console-player-top">
         {{ partial "icons/loader.html" }}
-        <button data-play onclick="blur();" class="console-button-text play" aria-label="Play">{{ partial "icons/play.html" }}</button>
-        <button data-pause onclick="blur();" class="console-button-text pause" aria-label="Pause">{{ partial "icons/pause.html" }}</button>
+        <button data-play data-onclickblur class="console-button-text play" aria-label="Play">{{ partial "icons/play.html" }}</button>
+        <button data-pause data-onclickblur class="console-button-text pause" aria-label="Pause">{{ partial "icons/pause.html" }}</button>
         <h6 data-title-wrapper class="title title-5" title="{{ .title }}">
             <span class="title-loading">Loading&hellip;</span>
             {{ with .titleAlt }}<span data-title-alt class="title-alt">{{ . }}</span>{{ end }}

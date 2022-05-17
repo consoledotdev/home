@@ -645,6 +645,33 @@ class ComboBox {
     }
 }
 
+class HelperClickables {
+    constructor() {
+        this.bindFuncs();
+
+        this.onclickBlurs = document.querySelectorAll("[data-onclickblur]");
+        this.onchangeBlurs = document.querySelectorAll("[data-onchangeblur]");
+        this.bindBlur();
+    }
+
+    bindFuncs() {
+        this.blur = this.blur.bind(this);
+    }
+
+    bindBlur() {
+        this.onclickBlurs.forEach((el) => {
+            el.addEventListener("click", this.blur);
+        });
+        this.onchangeBlurs.forEach((el) => {
+            el.addEventListener("change", this.blur);
+        });
+    }
+
+    blur(e) {
+        e.currentTarget.blur();
+    }
+}
+
 document.addEventListener("DOMContentLoaded", (event) => {
     let modalLinks = document.querySelectorAll("[data-modal-link]");
     if (modalLinks) new Modal(modalLinks);
@@ -669,4 +696,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
     new ShowMoreNav("main-nav");
+
+    new HelperClickables();
 });
