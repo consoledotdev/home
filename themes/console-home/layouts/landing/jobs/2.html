@@ -1,0 +1,353 @@
+{{ define "main" }}
+    {{ $formData := $.Site.Data.formdevjobs }}
+
+    <section class="page-section page-section-landing-jobs opening">
+        <div class="artwork-bg artwork-bg-1"></div>
+        <div class="artwork-bg artwork-bg-2"></div>
+        <div class="artwork-bg artwork-bg-3"></div>
+        <div class="artwork-bg artwork-bg-4"></div>
+        <div class="artwork-bg artwork-bg-5"></div>
+        <div class="left">
+            <div>
+                <h2 class="title title-1">The best developer jobs<br class="break"> you weren’t looking for</h2>
+                <p class="description">A free email digest of jobs that actually suit you.</p>
+
+                <button data-launch-signup="email" data-onclickblur class="console-button icon-left" title="Signup">
+                    {{ partial "icons/send.html" }}
+                    <span>Sign Up</span>
+                </button>
+            </div>
+            <p class="small ownership">{{partial "icons/console-mini-filled.html" }}By the team behind the Console devtools newsletter ({{ $.Site.Params.consoleSubscribers }} subscribers)</p>
+        </div>
+        <div class="right">
+            <div class="artwork-wrapper">
+                <canvas data-artwork-canvas class="artwork"></canvas>
+                <div class="artwork-interactives">
+                    {{ range $idx, $item := $formData.role.inputs }}
+                        <div data-gravitating-items class="item item-{{ $idx }}">
+                            <input
+                                data-launch-signup="{{ $item.name }}"
+                                class="console-input-chip attention"
+                                type="{{ $formData.role.type }}"
+                                id="launch-{{ $item.name }}"
+                                value="{{ $item.name }}"
+                                checked />
+                            <label for="launch-{{ $item.name }}">
+                                {{ if eq $formData.role.consoleType "chip" }}{{ partial (print "icons/" $item.icon ".html" ) }}{{ end }}
+                                {{ $item.label }}
+                            </label>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <button data-launch-signup="email" data-onclickblur class="console-button icon-left" title="Signup">
+                {{ partial "icons/send.html" }}
+                <span>Sign Up</span>
+            </button>
+            <p class="small ownership">{{partial "icons/console-mini-filled.html" }}By the team behind the Console devtools newsletter ({{ $.Site.Params.consoleSubscribers }} subscribers)</p>
+        </div>
+    </section>
+    <section class="page-section page-section-landing-jobs features">
+        <div class="page-section-heading">
+            <h3 class="title title-2">The <b>best engineers</b> rarely look for a new job</h3>
+        </div>
+        <div class="separator light"></div>
+        <div class="cols">
+            <div class="col">
+                {{ partial "icons/jobs.html" }}
+                <div>
+                    <h4 class="title title-3"><span>An email digest of matches.</span> <span>And only matches.</span></h4>
+                    <p>No more than 1 email per week (by default) with the 2-3 most relevant roles. If nothing fits, no email.</p>
+                </div>
+            </div>
+            <div class="col">
+                {{ partial "illustrations/console-company-profile.html" }}
+                <div>
+                    <h4 class="title title-3"><span>Company profiles about</span> <span>how they run engineering</span></h4>
+                    <p>An inside look at the best companies explaining why you might be tempted to join.</p>
+                </div>
+            </div>
+            <div class="col">
+                {{ partial "illustrations/no-spam.html" }}
+                <div>
+                    <h4 class="title title-3"><span></span>Your details are private.</span> <span></span>No recruiter spam. Double opt-in.</h4>
+                    <p>Flag interesting roles, then if the company is also interested we connect you via email. Not interested? Ignore.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page-section page-section-landing-jobs profiled-companies">
+        <div class="page-section-heading">
+            <h3 class="title title-2">Recently profiled companies</h3>
+        </div>
+        <div class="logo-cloud-artwork">
+            <div class="logo-cloud">
+                <img loading="lazy" class="dark" src="/img/landing/company-logo-grafbase-dark.png" alt="Grafbase">
+                <img loading="lazy" class="dark" src="/img/landing/company-logo-codesee-dark.png" alt="CodeSee">
+                <img loading="lazy" class="dark" src="/img/landing/company-logo-autocloud-dark.png" alt="AutoCloud">
+                <img loading="lazy" class="dark" src="/img/landing/company-logo-oso-dark.png" alt="Oso">
+                <img loading="lazy" class="dark" src="/img/landing/company-logo-retool-dark.png" alt="Retool">
+                <img loading="lazy" class="dark" src="/img/landing/company-logo-sourcegraph-dark.png" alt="Sourcegraph">
+                <img loading="lazy" class="dark" src="/img/landing/company-logo-trunk-dark.png" alt="Trunk">
+                <img loading="lazy" class="dark" src="/img/landing/company-logo-vantage-dark.png" alt="Vantage">
+                <img loading="lazy" class="light" src="/img/landing/company-logo-grafbase-light.png" alt="Grafbase">
+                <img loading="lazy" class="light" src="/img/landing/company-logo-codesee-light.png" alt="CodeSee">
+                <img loading="lazy" class="light" src="/img/landing/company-logo-autocloud-light.png" alt="AutoCloud">
+                <img loading="lazy" class="light" src="/img/landing/company-logo-oso-light.png" alt="Oso">
+                <img loading="lazy" class="light" src="/img/landing/company-logo-retool-light.png" alt="Retool">
+                <img loading="lazy" class="light" src="/img/landing/company-logo-sourcegraph-light.png" alt="Sourcegraph">
+                <img loading="lazy" class="light" src="/img/landing/company-logo-trunk-light.png" alt="Trunk">
+                <img loading="lazy" class="light" src="/img/landing/company-logo-vantage-light.png" alt="Vantage">
+            </div>
+            <div class="vapor-globe"></div>
+        </div>
+    </section>
+    <span data-anchor-signup></span>
+    <section class="page-section page-section-landing-jobs signup">
+        <div class="page-section-heading">
+            <h3 class="title title-2">Sign Up</h3>
+        </div>
+        <p class="description">A free email digest of 2-3 jobs that actually suit you. No more than 1 per week. If nothing fits, no email.</p>
+        <div class="separator light"></div>
+        <form data-signup-form class="form-generic landing-jobs-signup-form" action="https://hooks.zapier.com/hooks/catch/12432677/bf6157m/" enctype="multipart/form-data">
+            <div class="fieldset">
+                <legend>
+                    <h4 class="title title-3">Your email</h4>
+                    <p class="small">We only send an email when we have a role at a company you should really consider.</p>
+                </legend>
+                <div>
+                    <input id="form-email" name="form-email" class="console-input-text" type="email" placeholder="Your email" title="Email" required />
+                    <label for="form-email" class="console-label console-label-error">Please enter a valid email address.</label>
+                </div>
+            </div>
+            <div class="fieldset">
+                <legend>
+                    <h4 class="title title-3">Roles of interest</h4>
+                    <p class="small">We normalize titles across these broad areas and send matches using an <em>OR</em> filter.</p>
+                </legend>
+                <div class="form-cols">
+                    {{ range $formData.role.inputs }}
+                        <div class="input-wrapper">
+                            <input
+                                data-onclickblur 
+                                class="console-input-{{ $formData.role.consoleType }} attention"
+                                type="{{ $formData.role.type }}"
+                                name="form-role"
+                                id="form-role-{{ .name }}"
+                                value="{{ .name }}"
+                                data-required-checkbox-group="form-role"
+                                {{ with .checked }} checked{{ end }} />
+                            <label for="form-role-{{ .name }}">
+                                {{ if eq $formData.role.consoleType "chip" }}{{ partial (print "icons/" .icon ".html" ) }}{{ end }}
+                                {{ .label }}
+                            </label>
+                        </div>
+                    {{ end }}
+                    <label for="form-roles" class="console-label console-label-error">Please select at least one role.</label>
+                </div>
+            </div>
+            <div class="fieldset fieldset-locations">
+                <legend>
+                    <h4 class="title title-3">Where you&apos;d like to work</h4>
+                    <p class="small">We match based on a high level region and city, if selected. Remote will match anywhere unless you specify a region.</p>
+                </legend>
+                <div>
+                    {{ range first 2 $formData.locations.inputs }}
+                        <div class="input-wrapper{{ with .parent }} sub{{ end }}">
+                                <input
+                                    data-onclickblur 
+                                    class="console-input-{{ $formData.locations.consoleType }} attention"
+                                    type="{{ $formData.locations.type }}"
+                                    name="form-locations"
+                                    id="form-locations-{{ .name }}"
+                                    value="{{ .name }}"
+                                    data-required-checkbox-group="form-locations"
+                                    {{ with .checked }} checked{{ end }}
+                                    data-item="{{ .name }}"
+                                    {{ with .selectAll }} data-select-all="{{ . }}"{{ end }}
+                                    {{ with .disableOthers }} data-disable-others="{{ . }}"{{ end }} />
+                                <label for="form-locations-{{ .name }}">
+                                    {{ if eq $formData.locations.consoleType "checkbox" }}<span class="check">{{ partial (print "icons/checkmark.html" ) }}</span>{{ end }}
+                                    {{ .label }}
+                                </label>
+                        </div>
+                    {{ end }}
+                    <div class="form-separator"><p class="small">or</p></div>
+                    <div class="form-cols">
+                        {{ $prevHasParent := false }}
+                        {{ range $idx, $item := after 2 $formData.locations.inputs }}
+                            {{ if not $item.parent }}{{ with $prevHasParent }}</div>{{ end }}{{ end }}
+                            {{ with $item.hasChildren }}<div>{{ end }}
+                                <div class="input-wrapper{{ with $item.parent }} sub{{ end }}">
+                                    <input
+                                        data-onclickblur 
+                                        class="console-input-{{ $formData.locations.consoleType }} attention"
+                                        type="{{ $formData.locations.type }}"
+                                        name="form-locations"
+                                        id="form-locations-{{ $item.name }}"
+                                        value="{{ $item.name }}"
+                                        data-required-checkbox-group="form-locations"
+                                        {{ with $item.checked }} checked{{ end }}
+                                        data-item="{{ $item.name }}"
+                                        {{ with $item.parent }} data-child="{{ . }}"{{ end }}
+                                        {{ with $item.hasChildren }} data-parent{{ end }}
+                                        {{ with $item.selectAll }} data-select-all{{ end }}
+                                        {{ with $item.canBeDisabledBy }} data-can-be-disabled-by="{{ . }}"{{ end }}
+                                        {{ with $item.canBeSelectedBy }} data-can-be-selected-by="{{ . }}"{{ end }} />
+                                    <label for="form-locations-{{ $item.name }}">
+                                        {{ if eq $formData.locations.consoleType "checkbox" }}<span class="check">{{ partial (print "icons/checkmark.html" ) }}</span>{{ end }}
+                                        {{ $item.label }}
+                                    </label>
+                                </div>
+                            {{ with $item.parent }}{{ $prevHasParent = true }}{{ else }}{{ $prevHasParent = false }}{{ end }}
+                        {{ end }}
+                    </div>
+                    <p data-content-extension-launch="other-locations" class="content-extension-launch small" data-can-be-disabled-by="anywhere">
+                        <span>Wish for somewhere else?</span>
+                        <a data-content-extension-toggle="other-locations" class="console-button-text console-button-medium icon-left" title="Add other locations">
+                            {{ partial "icons/plus.html" }}
+                            <span>Add other locations</span>
+                        </a>
+                    </p>
+                    <div data-content-extension="other-locations" class="content-extension is-hidden">
+                        <h6 class="title title-5">Other locations</h6>
+                        <p class="small">Separate items with a comma.</p>
+                        <div>
+                            <input data-required-alt="form-locations" id="form-other-locations" name="form-other-locations" class="console-input-text console-input-small" type="text" placeholder="Add other locations" title="Other locations" />
+                            <a data-content-extension-toggle="other-locations" class="console-button-text console-button-medium icon-left" title="Cancel adding locations">
+                                {{ partial "icons/cancel.html" }}
+                                <span>Cancel</span>
+                            </a>
+                        </div>
+                    </div>
+                    <label for="form-locations" class="console-label console-label-error">Please select at least one location.</label>
+                </div>
+            </div>
+            <div class="fieldset fieldset-tech-stack">
+                <legend>
+                    <h4 class="title title-3">Preferred tech stack</h4>
+                    <p class="small">What do you like to work with? These match with an <em>OR</em> filter.</p>
+                </legend>
+                <div>
+                    <div class="form-cols">
+                        {{ range sort $formData.tech.inputs "name" "asc" }}
+                            <div class="input-wrapper">
+                                <input
+                                    data-onclickblur 
+                                    class="console-input-{{ $formData.tech.consoleType }} attention"
+                                    type="{{ $formData.tech.type }}"
+                                    name="form-tech"
+                                    id="form-tech-{{ .name }}"
+                                    value="{{ .name }}"
+                                    data-required-checkbox-group="form-tech-stack"
+                                    {{ with .checked}} checked{{end }} />
+                                <label class="tech-stack-item" for="form-tech-{{ .name }}">
+                                    {{ if eq $formData.tech.consoleType "chip" }}{{ partial (print "icons/tech/" .icon ".html" ) }}{{ end }}
+                                    {{ .label }}
+                                </label>
+                            </div>
+                        {{ end }}
+                    </div>
+                    <p data-content-extension-launch="other-tech" class="content-extension-launch small">
+                        <span>Using something else?</span>
+                        <a data-content-extension-toggle="other-tech" class="console-button-text console-button-medium icon-left" title="Add other tool or tech">
+                            {{ partial "icons/plus.html" }}
+                            <span>Add other tool or tech</span>
+                        </a>
+                    </p>
+                    <div data-content-extension="other-tech" class="content-extension is-hidden">
+                        <h6 class="title title-5">Other tool or tech</h6>
+                        <p class="small">Separate items with a comma.</p>
+                        <div>
+                            <input data-required-alt="form-tech-stack" id="form-other-tech" name="form-other-tech" class="console-input-text console-input-small" type="text" placeholder="Add tool or tech" title="Other tool or tech" />
+                            <a data-content-extension-toggle="other-tech" class="console-button-text console-button-medium icon-left" title="Cancel adding other tool or tech">
+                                {{ partial "icons/cancel.html" }}
+                                <span>Cancel</span>
+                            </a>
+                        </div>
+                    </div>
+                    <label for="form-tech-stack" class="console-label console-label-error">Please select at least one techology.</label>
+                </div>
+            </div>
+            <h6 class="title title-5">About yourself</h6>
+            <div class="fieldset">
+                <legend>
+                    <h4 class="title title-3">Your experience</h4>
+                    <p class="small">How long have you been in this industry? We match based on the range, not below (or above).</p>
+                </legend>
+                <div data-segmented-bar class="segmented-bar">
+                    {{ range $formData.exp.inputs }}
+                        <div>
+                            <input
+                                data-onclickblur 
+                                class="console-input-{{ $formData.exp.consoleType }} attention"
+                                type="{{ $formData.exp.type }}"
+                                name="form-exp"
+                                id="form-exp-{{ .name }}"
+                                value="{{ .name }}"
+                                {{ with .checked }} checked{{ end }}
+                                {{ with .required }} required{{ end }} />
+                            <label for="form-exp-{{ .name }}">
+                                {{ if eq $formData.exp.consoleType "segmented-bar" }}<span class="check-bar"><span class="hover"></span>{{ partial (print "icons/checkmark.html" ) }}</span>{{ end }}
+                                {{ .label }}
+                            </label>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="fieldset">
+                <legend>
+                    <h4 class="title title-3">Your desired salary</h4>
+                    <p class="small">What is your base salary expectation? All our jobs have salary ranges and we won&apos;t send anything below your preference.</p>
+                </legend>
+                <div data-segmented-bar class="segmented-bar">
+                    {{ range $formData.salary.inputs }}
+                        <div>
+                            <input
+                            data-onclickblur
+                            class="console-input-{{ $formData.salary.consoleType }} attention"
+                            type="{{ $formData.salary.type }}"
+                            name="form-salary"
+                            id="form-salary-{{ .name }}"
+                            value="{{ .name }}"
+                            {{ with .checked }} checked{{ end }}
+                            {{ with .required }} required{{ end }} />
+                            <label for="form-salary-{{ .name }}">
+                                {{ if eq $formData.exp.consoleType "segmented-bar" }}<span class="check-bar"><span class="hover"></span>{{ partial (print "icons/checkmark.html" ) }}</span>{{ end }}
+                                {{ .label }}
+                            </label>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="fieldset">
+                <legend>
+                    <h4 class="title title-3">Current employer (optional)</h4>
+                    <p class="small">This pre-fills the intro email to the hiring org if you indicate interest in a role. Update it at any time.</p>
+                </legend>
+                <div>
+                    <input id="form-current-employer" name="form-current-employer" class="console-input-text" type="text" placeholder="Current employer" title="Current role" />
+                </div>
+            </div>
+
+            <h6 class="title title-5 rich-title">{{partial "icons/jobs.html" }} That&apos;s it - click to subscribe</h6>
+            
+            <button data-onclickblur class="console-button icon-left" type="submit" title="Signup">
+                {{ partial "icons/send.html" }}
+                {{ partial "icons/loader.html" }}
+                <span>Sign Up</span>
+            </button>
+
+            <label for="submit" class="console-label console-label-error">Something went wrong, please try again later.</label>
+        </form>
+    </section>
+
+    <script src="/js/vendor/tween-16.3.5.min.js"></script>
+    <script src="/js/vendor/three-0.139.2.min.js"></script>
+
+	{{ $js := resources.Get "/js/landing/jobs/1.js" }}
+    {{ if hugo.IsProduction }}{{ $js = $js | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script src="{{ $js.Permalink }}"></script>
+{{ end }}
