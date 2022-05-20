@@ -3,8 +3,8 @@ title: Interview with Chris Evans, incident.io
 who: Chris Evans
 role: Co-founder
 org: incident.io
-what: Automate incident processes and fix vulnerabilities.
-tags: ["incident management"]
+what: Manage incidents in Slack.
+tags: ["Incident management"]
 date: 2022-05-12T12:00:00Z
 draft: true
 headerType: fixed
@@ -222,7 +222,7 @@ and it's connected via an
 
 **Browser:** Chrome.
 
-**Email:** (Superhuman)[https://superhuman.com/].
+**Email:** [Superhuman](https://superhuman.com/).
 
 **Chat:** Zoom and Slack.
 
