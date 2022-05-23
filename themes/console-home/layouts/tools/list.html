@@ -92,7 +92,7 @@
 		</aside>
 		<div data-aside-anchor data-main-content-wrapper class="main-content-wrapper">
             <section data-inline-filters-wrapper class="page-section inline-filters-wrapper">
-				{{ $filters := partial "components/tools/filters.html" (dict "dot" $.Site.Data.toolsfilters ) }}
+				{{ $filters := partial "components/tools/filters.html" (dict "dot" $.Site.Data.featurefilters ) }}
 				{{ partial "components/box-collapsible.html" (dict "title" "Filters" "icon" "filter.html" "content" $filters) }}
 			</section>
 			<section class="page-section" data-feature-items-section="latest-tools">
@@ -125,19 +125,19 @@
 		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle "description" $CTADescription ) }}
 	</section>
 
-	{{ $.Scratch.Set "categories" "" }}
-	{{range $index, $element := $.Site.Data.toolsfilters.categoryItems}}
+	{{ $categories := "" }}
+	{{range $index, $element := where $.Site.Data.featurefilters.categoryItems "excludeFromTools" nil }}
         {{if eq $index 0}}
-			{{ $.Scratch.Set "categories" (print ($.Scratch.Get "categories") $element.label "|" $element.name ) }}
+			{{ $categories = (print $categories $element.label "|" $element.name ) }}
 		{{ end }}
         {{if not (eq $index 0)}}
-			{{ $.Scratch.Set "categories" (print ($.Scratch.Get "categories") "," $element.label "|" $element.name ) }}
+			{{ $categories = (print $categories "," $element.label "|" $element.name ) }}
 		{{ end }}
     {{ end }}
 
 	{{ $pageTypeJS := resources.Get "/js/page-type/feature.js" }}
     {{ if hugo.IsProduction }}{{ $pageTypeJS = $pageTypeJS | resources.Minify | resources.Fingerprint }}{{ end }}
-	<script id="feature-js" src="{{ $pageTypeJS.Permalink }}" data-categories="{{ $.Scratch.Get "categories" }}"></script>
+	<script id="feature-js" src="{{ $pageTypeJS.Permalink }}" data-categories="{{ $categories }}"></script>
 
 	{{ $betasJS := resources.Get "/js/tools.js" }}
     {{ if hugo.IsProduction }}{{ $betasJS = $betasJS | resources.Minify | resources.Fingerprint }}{{ end }}
