@@ -6,7 +6,7 @@ org: incident.io
 what: Manage incidents in Slack.
 tags: ["Incident management"]
 date: 2022-05-12T12:00:00Z
-draft: true
+draft: false
 headerType: fixed
 summary: Interview with Chris Evans, Co-founder, incident.io.
 isPage: interviews
