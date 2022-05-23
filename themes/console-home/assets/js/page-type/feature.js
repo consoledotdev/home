@@ -89,14 +89,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 asideContentWrapper.insertBefore(ctaEl, asideContentWrapper.firstChild);
                 inlineCTAWrapper.classList.add("is-hidden");
             } else {
-                ctaEl.classList.remove("layout-small", "size-small", "sidebar");
                 ctaEl.classList.add("layout-wide", "size-medium");
-                title.classList.remove("title-5");
+                ctaEl.classList.remove("layout-small", "size-small", "sidebar");
                 title.classList.add("title-4");
-                input.classList.remove("console-input-small");
+                title.classList.remove("title-5");
                 input.classList.add("console-input-medium");
-                button.classList.remove("console-button-small");
+                input.classList.remove("console-input-small");
                 button.classList.add("console-button-medium");
+                button.classList.remove("console-button-small");
                 inlineCTAWrapperCollapsible.appendChild(ctaEl);
                 inlineCTAWrapper.classList.remove("is-hidden");
             }
