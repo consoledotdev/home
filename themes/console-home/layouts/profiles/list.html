@@ -22,7 +22,7 @@
 		</aside>
 		<div data-aside-anchor data-main-content-wrapper class="main-content-wrapper">
             <section data-inline-filters-wrapper class="page-section inline-filters-wrapper">
-				{{ $filters := partial "components/profiles/filters.html" (dict "dot" $.Site.Data.profilesfilters ) }}
+				{{ $filters := partial "components/profiles/filters.html" (dict "dot" $.Site.Data.featurefilters ) }}
 				{{ partial "components/box-collapsible.html" (dict "title" "Filters" "icon" "filter.html" "content" $filters) }}
 			</section>
 			<section class="page-section" data-feature-items-section="all-companies">
@@ -54,7 +54,7 @@
 	</section>
 
 	{{ $categories := "" }}
-	{{range $index, $element := $.Site.Data.profilesfilters.categoryItems}}
+	{{range $index, $element := where $.Site.Data.featurefilters.categoryItems "excludeFromProfiles" nil }}
         {{if eq $index 0}}
 			{{ $categories = (print $categories $element.label "|" $element.name ) }}
 		{{ end }}

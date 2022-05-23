@@ -42,7 +42,7 @@
 		</aside>
 		<div class="main-content-wrapper" data-aside-anchor data-main-content-wrapper>
             <section class="page-section inline-filters-wrapper" data-inline-filters-wrapper>
-				{{ $filters := partial "components/betas/filters.html" (dict "dot" $.Site.Data.betasfilters ) }}
+				{{ $filters := partial "components/betas/filters.html" (dict "dot" $.Site.Data.featurefilters ) }}
 				{{ partial "components/box-collapsible.html" (dict "title" "Filters" "icon" "filter.html" "content" $filters) }}
 			</section>
 			<section class="page-section" data-feature-items-section="latest-betas">
@@ -81,19 +81,19 @@
 		{{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" "title" $CTATitle ) }}
 	</section>
 
-	{{ $.Scratch.Set "categories" "" }}
-	{{range $index, $element := $.Site.Data.betasfilters.categoryItems}}
+	{{ $categories := "" }}
+	{{range $index, $element := where $.Site.Data.featurefilters.categoryItems "excludeFromBetas" nil }}
         {{if eq $index 0}}
-			{{ $.Scratch.Set "categories" (print ($.Scratch.Get "categories") $element.label "|" $element.name ) }}
+			{{ $categories = (print $categories $element.label "|" $element.name ) }}
 		{{ end }}
         {{if not (eq $index 0)}}
-			{{ $.Scratch.Set "categories" (print ($.Scratch.Get "categories") "," $element.label "|" $element.name ) }}
+			{{ $categories = (print $categories "," $element.label "|" $element.name ) }}
 		{{ end }}
     {{ end }}
 
 	{{ $pageTypeJS := resources.Get "/js/page-type/feature.js" }}
     {{ if hugo.IsProduction }}{{ $pageTypeJS = $pageTypeJS | resources.Minify | resources.Fingerprint }}{{ end }}
-	<script id="feature-js" src="{{ $pageTypeJS.Permalink }}" data-categories="{{ $.Scratch.Get "categories" }}"></script>
+	<script id="feature-js" src="{{ $pageTypeJS.Permalink }}" data-categories="{{ $categories }}"></script>
 
 	{{ $betasJS := resources.Get "/js/betas.js" }}
     {{ if hugo.IsProduction }}{{ $betasJS = $betasJS | resources.Minify | resources.Fingerprint }}{{ end }}
