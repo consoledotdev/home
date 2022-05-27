@@ -354,7 +354,7 @@ used to host my own email server in my own basement back in the day, but then it
 became harder to do. I'm a strong believer in paying for a premium email
 service, because email is where most hacks happen. I've been moving around. I
 used to be on Rackspace's private hosted email, and then I was on
-[Proton](https://protonmail.com/) and [Fastmail](https://www.fastmail.com/). At
+[Proton](https://proton.me/mail) and [Fastmail](https://www.fastmail.com/). At
 work, we use Google Apps for everything, so it's Gmail.
 
 **Chat:** Slack.
