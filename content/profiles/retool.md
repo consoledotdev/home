@@ -18,7 +18,7 @@ xlViewport:
 companyInfo:
   favicon: /img/favicons/retool.com.jpg
   URL: https://retool.com
-  jobsURL:  https://retool.com/careers
+  jobsURL:  https://grnh.se/fafcf1fb5us
   location: Remote, NYC, SF
   description: "Build internal tools remarkably fast."
   images:
