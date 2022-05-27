@@ -67,11 +67,11 @@ companyInfo:
           - href: "https://www.linkedin.com/company/tryretool/"
             text: "LinkedIn"
             iconLeft: "linkedin"
-  type: "SaaS / CLI"
+  type: "SaaS"
   category: "Developer Tools - Internal tools"
   topCategory: "Developer Tools"
   subCategory: "Internal tools"
-  filterTaxonomy: "saas, cli, typescript, react, cplusplus"
+  filterTaxonomy: "developer-tools, saas, typescript, react, cplusplus"
 interview: retool-snir-kodesh
 podcast: s01e06-appsmith-retool
 ---

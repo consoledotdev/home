@@ -61,11 +61,11 @@ companyInfo:
           - href: "https://www.linkedin.com/company/trunkio"
             text: "LinkedIn"
             iconLeft: "linkedin"
-  type: "SaaS / CLI"
+  type: "CLI"
   category: "Developer Tools - Code management"
   topCategory: "Developer Tools"
   subCategory: "Code management"
-  filterTaxonomy: "saas, cli, typescript, react, cplusplus"
+  filterTaxonomy: "developer-tools, saas, typescript, react, cplusplus"
 ---
 
 {{< nav-wrapper--open id="wrapper-1" anchor-name="how-engineering-works" >}}
