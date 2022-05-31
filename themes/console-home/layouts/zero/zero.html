@@ -1,0 +1,33 @@
+{{ define "main" }}
+    {{ $formData := $.Site.Data.formdevjobs }}
+
+    <section class="page-section page-section-zero opening">
+        <div class="horizon-lines" data-horizon-lines="13"></div>
+        <div class="left">
+            <div>
+                <h5 class="title title-4"><span>Grow</span> in our ecosystem</h5>
+                <h2 class="title title-1">Console Zero</h2>
+                <p class="description">Our pitch is simple - access to our community of experienced developers to get in front of early users, hire your early team, and get advice through our connections within the developer community.</p>
+
+                <button data-launch-signup="email" data-onclickblur class="console-button-text icon-right" title="Signup">
+                    <span>Read more</span>
+                    {{ partial "icons/scroll-down.html" }}
+                </button>
+            </div>
+        </div>
+        <div class="right">
+            <div class="artwork-wrapper">
+                <div class="artwork">
+                    <div class="zero-circle zero-circle-01"></div>
+                    <div class="zero-circle zero-circle-02"></div>
+                    <div class="zero-circle zero-circle-03"></div>
+                    {{ partial "icons/console-mini-filled.html" }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+	{{ $js := resources.Get "/js/zero.js" }}
+    {{ if hugo.IsProduction }}{{ $js = $js | resources.Minify | resources.Fingerprint }}{{ end }}
+	<script src="{{ $js.Permalink }}"></script>
+{{ end }}

@@ -1,0 +1,287 @@
+/* Page Stylesheet - Console Zero page
+   ========================================================================== */
+.page-zero .content {
+    height: auto;
+    min-height: 100vh;
+}
+
+.main-zero {
+    position: relative;
+    margin-top: var(--space4_5);
+}
+
+@media (min-width: 769px) {
+    .page-section-zero {
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .page-section-zero {
+        max-width: 700px;
+    }
+}
+
+.main-zero .page-section .separator {
+    margin: var(--space4_5) 0 var(--space5);
+}
+
+/* Opening -------------------------------------------------------------------- */
+.main-zero .page-section.opening {
+    position: relative;
+    display: grid;
+    max-width: none;
+    margin-bottom: calc(var(--space5) + var(--space3));
+    gap: var(--space5);
+    height: calc(100vh - var(--space4_5));
+    margin-bottom: var(--space4_5);
+    margin-top: calc((var(--space4_5) + var(--space4) + var(--space2)) * -1);
+    overflow: hidden;
+    z-index: 10;
+
+    width: 100vw;
+    margin-left: -6.25vw;
+    margin-right: -6.25vw;
+    padding-left: 6.25vw;
+    padding-right: 6.25vw;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .main-zero .page-section.opening {
+        margin-left: -8vw;
+        margin-right: -8vw;
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+}
+
+@media (min-width: 1371px) {
+    .main-zero .page-section.opening {
+        margin-left: calc((100vw - 1200px) / 2 * -1);
+        margin-right: calc((100vw - 1200px) / 2 * -1);
+        padding-left: calc((100vw - 1200px) / 2);
+        padding-right: calc((100vw - 1200px) / 2);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-zero .page-section.opening {
+        gap: var(--space4_5);
+    }
+}
+
+@media (min-width: 1025px) {
+    .main-zero .page-section.opening {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr 1fr;
+        align-items: center;
+        min-height: 800px;
+    }
+
+    .main-zero .page-section.opening {
+        max-height: 100vw;
+    }
+
+    @media (max-width: 1180px) {
+        .main-zero .page-section.opening {
+            grid-auto-flow: column;
+            grid-auto-columns: 1fr 1fr;
+            align-items: center;
+        }
+    }
+
+    @media (min-width: 1181px) {
+        .main-zero .page-section.opening {
+            grid-auto-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-zero .page-section.opening {
+        padding-top: calc(var(--space6) + var(--space4) + var(--space2));
+        height: auto;
+    }
+
+    @media (max-width: 600px) {
+        .main-zero .page-section.opening {
+            gap: var(--space3_5);
+        }
+    }
+}
+
+.main-zero .page-section.opening .left,
+.main-zero .page-section.opening .right {
+    z-index: 50;
+}
+
+.main-zero .page-section.opening .left {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .main-zero .page-section.opening .left {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .main-zero .page-section.opening .right > * {
+        margin-top: calc(var(--space4_5) * -1);
+        margin-bottom: calc(var(--space4_5) * -1);
+    }
+
+    @media (max-width: 600px) {
+        .main-zero .page-section.opening .left {
+            padding-top: 63%;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .main-zero .page-section.opening .left {
+            padding-top: 73%;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .main-zero .page-section.opening .left {
+            padding-top: 83%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    @media (max-width: 414px) {
+        .main-zero .page-section.opening .title-1,
+        .main-zero .page-section.opening .description {
+            width: 100%;
+            max-width: none;
+        }
+    }
+}
+
+.page-zero .title.title-1 {
+    margin-bottom: var(--space2);
+}
+
+.main-zero .page-section.opening .left .console-button {
+    display: flex;
+    margin-top: var(--space4_5);
+}
+
+/* Horizon Lines */
+.horizon-lines {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    height: 55%;
+    width: 100%;
+    transform: scaleY(-1);
+}
+
+.horizon-line {
+    background: var(--c-blue-11);
+}
+
+/* Artwork */
+.main-zero .artwork-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    z-index: 0;
+}
+
+@media (max-width: 1024px) {
+    .main-zero .artwork-wrapper {
+        margin: 0 auto;
+        width: 70%;
+        padding-bottom: 70%;
+    }
+
+    @media (max-width: 800px) {
+        .main-zero .artwork-wrapper {
+            width: 80%;
+            padding-bottom: 80%;
+        }
+    }
+
+    @media (max-width: 650px) {
+        .main-zero .artwork-wrapper {
+            width: 100%;
+            padding-bottom: 100%;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .main-zero .artwork-wrapper {
+            width: 100%;
+            padding-bottom: 100%;
+            position: absolute;
+            top: calc(var(--space5) + var(--space4_5));
+            left: 0;
+            margin: 0;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .main-zero .artwork-wrapper {
+            width: 100%;
+            padding-bottom: 100%;
+            top: calc(var(--space5) + var(--space5));
+        }
+    }
+
+    @media (max-width: 420px) {
+        .main-zero .artwork-wrapper {
+            width: 100%;
+            padding-bottom: 100%;
+            top: calc(var(--space5) + var(--space5) + var(--space3_5));
+        }
+    }
+}
+
+.main-zero .artwork {
+    --artworkSize: 75.54%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--artworkSize);
+    height: var(--artworkSize);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    z-index: 50;
+}
+
+.main-zero .artwork .icon-console-mini-filled {
+    position: absolute;
+    width: 42%;
+    height: 42%;
+    left: 25.56%;
+    top: 30.37%;
+}
+
+.main-zero .artwork .zero-circle {
+    --zeroCircleWidth: 84.96%;
+    position: absolute;
+    width: var(--zeroCircleWidth);
+    height: var(--zeroCircleWidth);
+    border-radius: 50%;
+    border: 1px solid;
+}
+
+.main-zero .artwork .zero-circle-01 {
+    border-color: var(--c-blue-06-main);
+    top: calc((100% - var(--zeroCircleWidth)) / 2);
+    left: calc(100% - var(--zeroCircleWidth));
+}
+
+.main-zero .artwork .zero-circle-02 {
+    border-color: var(--c-fuchsia-05-main);
+}
+
+.main-zero .artwork .zero-circle-03 {
+    border-color: var(--c-green-05-main);
+    top: calc(100% - var(--zeroCircleWidth));
+}
