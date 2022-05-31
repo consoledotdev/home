@@ -27,6 +27,8 @@
         </div>
     </section>
 
+    <script src="/js/vendor/tween-16.3.5.min.js"></script>
+    
 	{{ $js := resources.Get "/js/zero.js" }}
     {{ if hugo.IsProduction }}{{ $js = $js | resources.Minify | resources.Fingerprint }}{{ end }}
 	<script src="{{ $js.Permalink }}"></script>

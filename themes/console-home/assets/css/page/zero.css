@@ -185,6 +185,10 @@
     background: var(--c-blue-11);
 }
 
+.horizon-line-ghost {
+    background: transparent;
+}
+
 /* Artwork */
 .main-zero .artwork-wrapper {
     position: relative;
