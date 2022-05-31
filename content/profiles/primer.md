@@ -2,11 +2,11 @@
 title: "Primer"
 date: 2022-05-30T12:00:00+00:00
 draft: false
-summary: Automation platform for payments and commerce
+summary: Automation platform for payments and commerce.
 metaTitle: Working at Primer - Console profile
 metaDescription:
   What is it like to work at Primer?  Console profile behind the scenes at
-  Primer - automation platform for payments and commerce
+  Primer - automation platform for payments and commerce.
 headerType: fixed
 hideLines: true
 hidePlanes: true
