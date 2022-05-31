@@ -27,8 +27,8 @@ the best, most interesting set of tools each week:
 - Is the primary user a developer? A developer might use it, but is it built
   specifically with developers in mind?
 - Is there a self-service signup? A demo or speaking to sales may be an option,
-  but an individual developer must be able to try it themselves without speaking
-  to anyone.
+  but an individual developer should be able to try it themselves without
+  speaking to anyone.
 - Would this form part of a regular-use set of developer tools? Does it fit into
   the development cycle? Is it a part of the development flow?
 - Does it make me a better developer? Does it help me reduce/manage bugs,
@@ -48,4 +48,6 @@ the best, most interesting set of tools each week:
 [Console works with vendors](/advertise/) who want to reach our audience of
 experienced developers. We pride ourselves on being transparent in our editorial
 approach and all potential partners must meet the above selection criteria
-before we will work with them.
+before we will work with them. Partners are able to choose the date of their
+review, which will appear first in the newsletter, but they do not get to
+influence or even read the review before it is published.
