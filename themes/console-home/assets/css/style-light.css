@@ -314,6 +314,7 @@
 
     /* Zero landing page specific */
     --theme-horizon-lines-color: var(--c-blue-02);
+    --theme-zero-moon-color: var(--c-blue-03);
 }
 
 .theme.page-article,
