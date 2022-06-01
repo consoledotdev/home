@@ -180,6 +180,29 @@
     --t-size15: 5.875rem; /* 94 */
     --t-size16: 6.56rem; /* 105 */
 
+    --t-esize-5: 0.56rem; /* 9 */
+    --t-esize-4: 0.625rem; /* 10 */
+    --t-esize-3: 0.69rem; /* 11 */
+    --t-esize-2: 0.81rem; /* 13 */
+    --t-esize-1: 0.875rem; /* 14 */
+    --t-esize0: 1rem; /* 16 */
+    --t-esize1: 1.11rem; /* 18 */
+    --t-esize2: 1.25rem; /* 20 */
+    --t-esize3: 1.44rem; /* 23 */
+    --t-esize4: 1.625rem; /* 26 */
+    --t-esize5: 1.81rem; /* 29 */
+    --t-esize6: 2rem; /* 32 */
+    --t-esize7: 2.25rem; /* 36 */
+    --t-esize8: 2.56rem; /* 41 */
+    --t-esize9: 2.875rem; /* 46 */
+    --t-esize10: 3.25rem; /* 52 */
+    --t-esize11: 3.625rem; /* 58 */
+    --t-esize12: 4.125rem; /* 66 */
+    --t-esize13: 4.625rem; /* 74 */
+    --t-esize14: 5.19rem; /* 83 */
+    --t-esize15: 5.875rem; /* 94 */
+    --t-esize16: 6.56rem; /* 105 */
+
     --t-lH1: 1.2em;
     --t-lH2: 1.3em;
     --t-lH3: 1.4em;

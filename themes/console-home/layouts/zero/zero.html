@@ -1,7 +1,7 @@
 {{ define "main" }}
     {{ $formData := $.Site.Data.formdevjobs }}
 
-    <section class="page-section page-section-zero opening">
+    <section class="page-section page-section-zero full-width opening">
         <div class="horizon-lines" data-horizon-lines="14"></div>
         <div class="left">
             <div>
@@ -12,7 +12,7 @@
                 </h2>
                 <p class="description">Our pitch is simple - access to our community of experienced developers to get in front of early users, hire your early team, and get advice through our connections within the developer community.</p>
 
-                <button data-launch-signup="email" data-onclickblur class="console-button-text console-button-sunset icon-right" title="Signup">
+                <button data-onclickblur class="console-button-text console-button-sunset icon-right" title="Read more">
                     <span>Read more</span>
                     {{ partial "icons/scroll-down.html" }}
                 </button>
@@ -28,6 +28,102 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="page-section page-section-zero full-width features">
+        <div class="page-section-heading">
+            <h3 class="title title-2">We helps <b>developers</b> find the best tools</h3>
+        </div>
+        <div class="separator light"></div>
+        <div class="cols">
+            <div class="col">
+                {{ partial "illustrations/invest.html" }}
+                <div>
+                    <h4 class="title title-3">We invest</h4>
+                    <p>As part of our mission, we angel invest in developer-first startups who meet
+                        <a class="link" href="/selection-criteria/">our selection criteria</a> and <a href="https://blog.console.dev/devtools-startups-standing-out-to-investors/" target="_blank" rel="noopener" class="link">stand out amongst all the other devtools</a>.</p>
+                </div>
+            </div>
+            <div class="col">
+                {{ partial "icons/broadcast.html" }}
+                <div>
+                    <h4 class="title title-3">We have a large audience</h4>
+                    <p><span class="special">21k+</span> experienced developers who trust us to provide recommendati-ons about the tools they should try out. If we’d feature the tool in the newsletter, we’d also consider investing.</p>
+                </div>
+            </div>
+            <div class="col">
+                {{ partial "icons/rating.html" }}
+                <div>
+                    <h4 class="title title-3">We are experienced</h4>
+                    <p>With <a class="link" href="/about/">years of experience</a> running venture backed startups building software products for technical audiences, we can bring a deep practical understanding of the needs of experienced developers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section page-section-zero full-width investors">
+        <div class="top">
+            <div class="left">
+                <div class="page-section-heading">
+                    <h5 class="title title-4">Our lead investor</h5>
+                    <h3 class="title title-2">David Mytton</h3>
+                </div>
+                {{ with .Params.author }}
+                    {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" .img "imgSize" "328" "alt" (print "Photo of " .name) ) }}
+                {{ end }}
+            </div>
+            {{ with .Params.author }}
+                <p>{{ .bio }}</p>
+            {{ end }}
+        </div>
+
+        <div class="middle">
+            <p class="description">Content from David Mytton:</p>
+            <div class="col-2-css">
+                <a href="https://blog.console.dev/focusing-on-developers/" target="_blank" class="link icon-link" title="https://blog.console.dev/focusing-on-developers/"><span>Focusing on developers</span> {{ partial "icons/external-link.html" }}</a>
+                <a href="https://blog.console.dev/devtools-startups-standing-out-to-investors/" target="_blank" class="link icon-link" title="https://blog.console.dev/devtools-startups-standing-out-to-investors/"><span>Devtools startups - standing out to investors</span> {{ partial "icons/external-link.html" }}</a>
+                <a href="https://davidmytton.blog/how-much-energy-do-data-centers-use/" target="_blank" class="link icon-link" title="https://davidmytton.blog/how-much-energy-do-data-centers-use/"><span>How much energy do data centers use?</span> {{ partial "icons/external-link.html" }}</a>
+                <a href="https://davidmytton.blog/a-guide-to-remote-working-for-startups/" target="_blank" class="link icon-link" title="https://davidmytton.blog/a-guide-to-remote-working-for-startups/"><span>A guide to remote working for startups</span> {{ partial "icons/external-link.html" }}</a>
+                <a href="https://seedcamp.com/resources/how-to-hire-engineers-sourcing-candidates/" target="_blank" class="link icon-link" title="https://seedcamp.com/resources/how-to-hire-engineers-sourcing-candidates/"><span>How to hire engineers: sourcing candidates</span> {{ partial "icons/external-link.html" }}</a>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <p>
+                Have something interesting to tell us?
+                <a data-onclickblur href="mailto:hello@console.dev" class="console-button-text console-button-sunset icon-left" title="Get in touch">
+                    {{ partial "icons/send.html" }}
+                    <span>Get in touch</span>
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <section class="page-section page-section-zero full-width portfolio">
+        <div class="page-section-heading">
+            <h3 class="title title-2">Portfolio</h3>
+        </div>
+        <div class="separator light"></div>
+        <div class="grid">
+            {{ range .Params.portfolio }}
+                <div class="framed-section framed-section-default mid portfolio-item">
+                    {{ partial "components/thumbnail-vendor.html" (dict "name" .name "image" (print "/" .favicon) "category" "misc" ) }}
+                    <h4 class="title title-3"><a class="link" href="{{ .URL }}" target="_blank" rel="noopener">{{ .name }}</a></h4>
+                    <span class="date">{{ .yearOfInvestment }}</span>
+                </div>
+            {{ end }}
+        </div>
+        <p>&hellip; plus several others not yet public.</p>
+    </section>
+
+    <section class="page-section page-section-zero get-in-touch">
+        <div class="page-section-heading">
+            <h3 class="title title-2">Are you building something that would be a fit for our audience?</h3>
+        </div>
+        <a data-onclickblur href="mailto:hello@console.dev" class="console-button icon-left" title="Get in touch">
+            {{ partial "icons/send.html" }}
+            <span>Get in touch</span>
+        </a>
     </section>
 
     <script src="/js/vendor/tween-16.3.5.min.js"></script>

@@ -31,37 +31,11 @@
     position: relative;
     display: grid;
     max-width: none;
-    margin-bottom: calc(var(--space5) + var(--space3));
     gap: var(--space5);
     height: calc(100vh - var(--space4_5));
-    margin-bottom: var(--space4_5);
     margin-top: calc((var(--space4_5) + var(--space4) + var(--space2)) * -1);
     overflow: hidden;
     z-index: 10;
-
-    width: 100vw;
-    margin-left: -6.25vw;
-    margin-right: -6.25vw;
-    padding-left: 6.25vw;
-    padding-right: 6.25vw;
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-    .main-zero .page-section.opening {
-        margin-left: -8vw;
-        margin-right: -8vw;
-        padding-left: 8vw;
-        padding-right: 8vw;
-    }
-}
-
-@media (min-width: 1371px) {
-    .main-zero .page-section.opening {
-        margin-left: calc((100vw - 1200px) / 2 * -1);
-        margin-right: calc((100vw - 1200px) / 2 * -1);
-        padding-left: calc((100vw - 1200px) / 2);
-        padding-right: calc((100vw - 1200px) / 2);
-    }
 }
 
 @media (max-width: 768px) {
@@ -303,4 +277,291 @@
 .main-zero .artwork .zero-circle-03 {
     border-color: var(--c-green-05-main);
     top: calc(100% - var(--zeroCircleWidth));
+}
+
+/* Features -------------------------------------------------------------------- */
+.page-section-zero.features {
+    max-width: none;
+    padding-top: calc(var(--space6_5) - var(--space4));
+    padding-bottom: var(--space6_5);
+    background: var(--theme-horizon-lines-color);
+    margin-top: 0;
+}
+
+@media (max-width: 1024px) {
+    .page-section-zero.features {
+        padding-top: calc(var(--space6_5) - var(--space5_5));
+        padding-bottom: var(--space6);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-section-zero.features {
+        padding-top: var(--space5);
+        padding-bottom: calc(var(--space6) - var(--space3));
+    }
+}
+
+@media (max-width: 520px) {
+    .page-section-zero.features {
+        padding-top: var(--space4);
+        padding-bottom: var(--space5_5);
+    }
+}
+
+.page-section-zero.features .page-section-heading {
+    margin: 0;
+}
+
+.page-section-zero.features .page-section-heading .title b {
+    color: var(--theme-text-accent-sunset-strong);
+}
+
+@media (max-width: 540px) {
+    .page-section-zero.features .page-section-heading .title {
+        text-align: center;
+    }
+}
+
+.page-section-zero.features .cols {
+    display: grid;
+    gap: var(--space5);
+}
+
+@media (max-width: 768px) {
+    .page-section-zero.features .cols {
+        gap: var(--space4_5);
+    }
+}
+
+@media (min-width: 901px) {
+    .page-section-zero.features .cols {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        align-items: start;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 900px) {
+    .page-section-zero.features .cols .col {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .page-section-zero.features .cols .col > *:first-child {
+        flex: 0 0 auto;
+        margin-right: var(--space4);
+    }
+
+    .page-section-zero.features .cols .col > *:not(:first-child) {
+        flex: 1 1 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-section-zero.features .cols {
+        gap: var(--space5);
+    }
+
+    .page-section-zero.features .cols .col {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.page-section-zero.features .cols .col .icon,
+.page-section-zero.features .cols .col .illustration {
+    width: var(--space5);
+    height: var(--space5);
+}
+
+.page-section-zero.features .cols .col .title {
+    margin-top: var(--space4);
+}
+
+@media (min-width: 481px) and (max-width: 900px) {
+    .page-section-zero.features .cols .col .title {
+        margin-top: calc(var(--space3) + var(--space1));
+    }
+}
+
+@media (max-width: 480px) {
+    .page-section-zero.features .cols .col .title {
+        margin-bottom: var(--space4);
+    }
+}
+
+.page-section-zero.features .cols .col p {
+    font-size: var(--t-size1);
+    margin-top: var(--space4);
+}
+
+@media (max-width: 768px) {
+    .page-section-zero.features .cols .col p {
+        margin-top: var(--space3);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .page-section-zero.features .cols .col p {
+        margin-top: var(--space3_5);
+    }
+}
+
+.page-section-zero.features .special {
+    font-weight: 400;
+    font-size: 1.6em;
+    color: var(--theme-text-1);
+}
+
+.page-section-zero.features .illustration-invest .foreground-stroke {
+    stroke: var(--theme-text-accent-sunset-strong);
+}
+
+.page-section-zero.features .illustration-invest .foreground-fill {
+    fill: var(--theme-text-accent-sunset-strong);
+}
+
+.page-section-zero.features .icon-broadcast path:first-child {
+    fill: var(--theme-text-1);
+    stroke-width: 0px;
+}
+
+.page-section-zero.features .icon-broadcast path:not(:first-child) {
+    stroke: var(--theme-text-accent-sunset-strong);
+}
+
+.page-section-zero.features .icon-rating path:last-child {
+    fill: var(--theme-text-accent-yellow-strong);
+    stroke-width: 0px;
+}
+
+.page-section-zero.features .icon-rating path:not(:last-child) {
+    stroke: var(--theme-text-5);
+}
+
+/* Investors -------------------------------------------------------------------- */
+.page-section-zero.investors {
+    max-width: none;
+    padding-top: var(--space6_5);
+    padding-bottom: var(--space6_5);
+    margin-top: 0;
+}
+
+.page-section-zero.investors .top {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.page-section-zero.investors .top .left {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-right: var(--space4_5);
+    flex: 0 0 auto;
+}
+
+.page-section-zero.investors .page-section-heading {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    margin-bottom: 0;
+    margin-right: var(--space4_5);
+}
+
+.page-section-zero.investors .page-section-heading .title-2 {
+    margin-top: var(--space3);
+}
+
+.page-section-zero.investors .page-section-heading .title-4 {
+    margin: 0;
+}
+
+.page-section-zero.investors .top .left .plane-picture {
+    width: var(--space6_5);
+}
+
+.page-section-zero.investors .middle {
+    margin: var(--space5_5) 0;
+}
+
+.page-section-zero.investors .middle .col-2-css {
+    margin-top: var(--space4_5);
+}
+
+.page-section-zero.investors .middle .link {
+    display: block;
+    font-size: var(--t-esize2);
+    margin-bottom: var(--space4);
+}
+
+.page-section-zero.investors .bottom .console-button-text {
+    margin-left: var(--space2_5);
+}
+
+/* Portfolio -------------------------------------------------------------------- */
+.page-section-zero.portfolio {
+    max-width: none;
+    padding-top: var(--space6);
+    padding-bottom: var(--space6);
+    margin-top: 0;
+    background: var(--theme-content-bg-3);
+}
+
+.page-section-zero.portfolio .grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space4) var(--space5);
+}
+
+@media (max-width: 1150px) {
+    .page-section-zero.portfolio .grid {
+        gap: var(--space4) var(--space4_5);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-section-zero.portfolio .grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: var(--space4) var(--space4);
+    }
+}
+
+.page-section-zero.portfolio .grid + p {
+    margin-top: var(--space4_5);
+}
+
+.page-section-zero.portfolio .portfolio-item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.page-section-zero.portfolio .portfolio-item .vendor-thumbnail {
+    width: var(--space4_5);
+    height: var(--space4_5);
+    flex: 0 0 auto;
+}
+
+.page-section-zero.portfolio .portfolio-item .title {
+    margin: 0;
+    flex: 1 1 auto;
+    font-size: var(--t-size1);
+}
+
+/* Portfolio -------------------------------------------------------------------- */
+.page-section-zero.get-in-touch {
+    max-width: none;
+    padding-top: var(--space6);
+    padding-bottom: var(--space6);
+    margin-top: 0;
+}
+
+.page-section-zero.get-in-touch .page-section-heading {
+    margin-bottom: 0;
+}
+
+.page-section-zero.get-in-touch .console-button {
+    margin-top: var(--space5);
 }
