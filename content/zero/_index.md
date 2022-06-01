@@ -16,4 +16,91 @@ customStyle: true
 hidePlanes: true
 hideLines: true
 ogType: website
+author:
+  name: David Mytton
+  URL: https://davidmytton.blog/start
+  img: /img/david.jpg
+  bio:
+    Co-founder of Console. From 2009-2018, David was CEO at Server Density, a SaaS server monitoring startup used by hundreds of customers to collect billions of time series metrics from millions of servers. He is also a researcher in sustainable computing at Uptime Institute and affiliated with Imperial College London. David has been a developer for 15+ years.
+portfolio:
+  - name: AppFlowy
+    URL: https://www.appflowy.io/
+    yearOfInvestment: 2019
+    favicon: "img/favicons/appflowy.io.png"
+  - name: Cased
+    URL: https://cased.com/
+    yearOfInvestment: 2019
+    favicon: "img/favicons/cased.com.svg"
+  - name: CloudQuery
+    URL: https://www.cloudquery.io/
+    yearOfInvestment: 2019
+    favicon: "img/favicons/cloudquery.io.svg"
+  - name: Cyscale
+    URL: https://cyscale.com/
+    yearOfInvestment: 2019
+    favicon: "img/favicons/cyscale.com.svg"
+  - name: Daily.dev
+    URL: https://daily.dev/
+    yearOfInvestment: 2019
+    favicon: "img/favicons/daily.dev.jpg"
+  - name: Drifting In Space
+    URL: https://driftingin.space/
+    yearOfInvestment: 2019
+    favicon: "img/favicons/driftingin.space.jpeg"
+  - name: Forward Email
+    URL: https://forwardemail.net/
+    yearOfInvestment: 2019
+    favicon: "img/favicons/forwardemail.net.svg"
+  - name: Grafbase
+    URL: https://grafbase.com/
+    yearOfInvestment: 2019
+    favicon: "img/favicons/grafbase.com.svg"
+  - name: Liveblocks
+    URL: https://liveblocks.io/
+    yearOfInvestment: 2019
+    favicon: "img/favicons/liveblocks.io.png"
+  - name: Memphis
+    URL: https://memphis.dev/
+    yearOfInvestment: 2019
+    favicon: "img/favicons/memphis.dev.svg"
+  - name: Moving Parts
+    URL: https://movingparts.io/
+    yearOfInvestment: 2019
+    favicon: "img/favicons/movingparts.io.svg"
+  - name: Primer
+    URL: https://primer.io/
+    yearOfInvestment: 2019
+    favicon: "img/favicons/primer.io.svg"
+  - name: Railway
+    URL: https://railway.app/
+    yearOfInvestment: 2019
+    favicon: "img/favicons/railway.app.svg"
+  - name: Rowy
+    URL: https://www.rowy.io/
+    yearOfInvestment: 2019
+    favicon: "img/favicons/rowy.io.png"
+  - name: Snaplet
+    URL: https://www.snaplet.dev/
+    yearOfInvestment: 2019
+    favicon: "img/favicons/snaplet.dev.svg"
+  - name: Signoz
+    URL: https://signoz.io/
+    yearOfInvestment: 2019
+    favicon: "img/favicons/signoz.io.svg"
+  - name: Steadybit
+    URL: https://www.steadybit.com/
+    yearOfInvestment: 2019
+    favicon: "img/favicons/steadybit.com.svg"
+  - name: Trunk
+    URL: https://trunk.io/
+    yearOfInvestment: 2019
+    favicon: "img/favicons/trunk.io.png"
+  - name: Utopia
+    URL: https://utopia.app/
+    yearOfInvestment: 2019
+    favicon: "img/favicons/utopia.app.png"
+  - name: Zinc
+    URL: https://zincsearch.com/
+    yearOfInvestment: 2019
+    favicon: "img/favicons/zincsearch.com.svg"
 ---

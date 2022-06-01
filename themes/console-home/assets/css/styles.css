@@ -523,6 +523,40 @@ body.show-planes:after {
     position: relative;
 }
 
+.page-section:not(:first-child) {
+    margin-top: calc(var(--space4) + var(--space3));
+}
+
+.page-section:first-of-type {
+    margin-top: 0;
+}
+
+.page-section.full-width {
+    width: 100vw;
+    margin-left: -6.25vw;
+    margin-right: -6.25vw;
+    padding-left: 6.25vw;
+    padding-right: 6.25vw;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .page-section.full-width {
+        margin-left: -8vw;
+        margin-right: -8vw;
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+}
+
+@media (min-width: 1371px) {
+    .page-section.full-width {
+        margin-left: calc((100vw - 1200px) / 2 * -1);
+        margin-right: calc((100vw - 1200px) / 2 * -1);
+        padding-left: calc((100vw - 1200px) / 2);
+        padding-right: calc((100vw - 1200px) / 2);
+    }
+}
+
 .page-section-plane {
     background: var(--theme-page-section-plane);
     padding: var(--space6) 0;
@@ -580,14 +614,6 @@ body.show-planes:after {
 
 .page-section-heading .right {
     flex: 0 0 auto;
-}
-
-.page-section:not(:first-child) {
-    margin-top: calc(var(--space4) + var(--space3));
-}
-
-.page-section:first-of-type {
-    margin-top: 0;
 }
 
 .page-section ul {
