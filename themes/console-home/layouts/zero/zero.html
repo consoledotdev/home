@@ -5,17 +5,17 @@
         <div class="horizon-lines" data-horizon-lines="14"></div>
         <div class="left">
             <div>
-                <h5 class="title title-4"><span>Grow</span> in our ecosystem</h5>
+                <h5 class="title title-4"><span>Developer-first</span> investors</h5>
                 <h2 class="title title-1">
                     Console Zero
                     {{ partial "icons/console-zero.html" }}
                 </h2>
-                <p class="description">Our pitch is simple - access to our community of experienced developers to get in front of early users, hire your early team, and get advice through our connections within the developer community.</p>
+                <p class="description">Console angel invests in early stage startups building products where developers are the primary user. If we&apos;d recommend it to our {{ $.Site.Params.consoleSubscribers }} devtool newsletter subscribers, we&apos;d also consider investing.</p>
 
-                <button data-onclickblur class="console-button-text console-button-sunset icon-right" title="Read more">
-                    <span>Read more</span>
+                <a data-onclickblur class="console-button-text console-button-sunset icon-right" href="#portfolio" title="See our portfolio">
+                    <span>See our portfolio</span>
                     {{ partial "icons/scroll-down.html" }}
-                </button>
+                </a>
             </div>
         </div>
         <div class="right">
@@ -32,30 +32,29 @@
 
     <section class="page-section page-section-zero full-width features">
         <div class="page-section-heading">
-            <h3 class="title title-2">We helps <b>developers</b> find the best tools</h3>
+            <h3 class="title title-2">We invest in startups where <b>developers</b> are the primary user</h3>
         </div>
         <div class="separator light"></div>
         <div class="cols">
             <div class="col">
                 {{ partial "illustrations/invest.html" }}
                 <div>
-                    <h4 class="title title-3">We invest</h4>
-                    <p>As part of our mission, we angel invest in developer-first startups who meet
-                        <a class="link" href="/selection-criteria/">our selection criteria</a> and <a href="https://blog.console.dev/devtools-startups-standing-out-to-investors/" target="_blank" rel="noopener" class="link">stand out amongst all the other devtools</a>.</p>
+                    <h4 class="title title-3">Early stage investing</h4>
+                    <p>We angel invest in developer-first startups who meet <a class="link" href="/selection-criteria/">our selection criteria</a> and <a href="https://blog.console.dev/devtools-startups-standing-out-to-investors/" target="_blank" rel="noopener" class="link">stand out amongst all the other devtools</a>.</p>
                 </div>
             </div>
             <div class="col">
                 {{ partial "icons/broadcast.html" }}
                 <div>
-                    <h4 class="title title-3">We have a large audience</h4>
-                    <p><span class="special">21k+</span> experienced developers who trust us to provide recommendati-ons about the tools they should try out. If we’d feature the tool in the newsletter, we’d also consider investing.</p>
+                    <h4 class="title title-3">Engaged audience</h4>
+                    <p><span class="special">{{ $.Site.Params.consoleSubscribers }}</span> experienced developers trust us to provide recommendations for tools they should try. If we&apos;d feature a startup in the newsletter, we&apos;d also consider investing.</p>
                 </div>
             </div>
             <div class="col">
                 {{ partial "icons/rating.html" }}
                 <div>
-                    <h4 class="title title-3">We are experienced</h4>
-                    <p>With <a class="link" href="/about/">years of experience</a> running venture backed startups building software products for technical audiences, we can bring a deep practical understanding of the needs of experienced developers.</p>
+                    <h4 class="title title-3">Experienced builders</h4>
+                    <p>With <a class="link" href="/about/">years of experience</a> running venture backed startups creating software products for technical audiences, we can bring a deep understanding of how to build for developers.</p>
                 </div>
             </div>
         </div>
@@ -67,7 +66,7 @@
         <div class="top">
             <div class="left">
                 <div class="page-section-heading">
-                    <h5 class="title title-4">Our lead investor</h5>
+                    <h5 class="title title-4">Console CEO</h5>
                     <h3 class="title title-2">David Mytton</h3>
                 </div>
                 {{ with .Params.author }}
@@ -80,27 +79,30 @@
         </div>
 
         <div class="middle">
-            <p class="description">Content from David Mytton:</p>
+            <p class="description">Articles by David Mytton:</p>
             <div class="col-2-css">
                 <a href="https://blog.console.dev/focusing-on-developers/" target="_blank" class="link icon-link" title="https://blog.console.dev/focusing-on-developers/"><span>Focusing on developers</span> {{ partial "icons/external-link.html" }}</a>
                 <a href="https://blog.console.dev/devtools-startups-standing-out-to-investors/" target="_blank" class="link icon-link" title="https://blog.console.dev/devtools-startups-standing-out-to-investors/"><span>Devtools startups - standing out to investors</span> {{ partial "icons/external-link.html" }}</a>
                 <a href="https://davidmytton.blog/how-much-energy-do-data-centers-use/" target="_blank" class="link icon-link" title="https://davidmytton.blog/how-much-energy-do-data-centers-use/"><span>How much energy do data centers use?</span> {{ partial "icons/external-link.html" }}</a>
                 <a href="https://davidmytton.blog/a-guide-to-remote-working-for-startups/" target="_blank" class="link icon-link" title="https://davidmytton.blog/a-guide-to-remote-working-for-startups/"><span>A guide to remote working for startups</span> {{ partial "icons/external-link.html" }}</a>
                 <a href="https://seedcamp.com/resources/how-to-hire-engineers-sourcing-candidates/" target="_blank" class="link icon-link" title="https://seedcamp.com/resources/how-to-hire-engineers-sourcing-candidates/"><span>How to hire engineers: sourcing candidates</span> {{ partial "icons/external-link.html" }}</a>
+                <a href="https://www.nature.com/articles/s41558-020-0837-6" target="_blank" class="link icon-link" title="https://www.nature.com/articles/s41558-020-0837-6"><span>Hiding greenhouse gas emissions in the cloud</span> {{ partial "icons/external-link.html" }}</a>
             </div>
         </div>
 
         <div class="bottom">
             <p>
-                Have something interesting to tell us?
+                Have something interesting to pitch?
                 <br class="wrap" />
-                <a data-onclickblur href="mailto:hello@console.dev" class="console-button-text console-button-sunset icon-left" title="Get in touch">
+                <a data-onclickblur href="mailto:david@console.dev" class="console-button-text console-button-sunset icon-left" title="Get in touch">
                     {{ partial "icons/send.html" }}
                     <span>Get in touch</span>
                 </a>
             </p>
         </div>
     </section>
+
+    <span data-checkpoint-portfolio id="portfolio"></span>
 
     <section class="page-section page-section-zero full-width portfolio">
         <div class="page-section-heading">
@@ -128,9 +130,9 @@
         </div>
         <div class="bottom">
             <div class="page-section-heading">
-                <h3 class="title title-2">Are you building something that would be a fit for our audience?</h3>
+                <h3 class="title title-2">Are you building something where developers are the primary user?</h3>
             </div>
-            <a data-onclickblur href="mailto:hello@console.dev" class="console-button icon-left" title="Get in touch">
+            <a data-onclickblur href="mailto:david@console.dev" class="console-button icon-left" title="Get in touch">
                 {{ partial "icons/send.html" }}
                 <span>Get in touch</span>
             </a>
