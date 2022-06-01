@@ -1236,6 +1236,54 @@ input.console-input-text:not(:focus):not(:placeholder-shown):invalid + .console-
     fill: var(--theme-cta-secondary-yellow-text-active);
 }
 
+/* Sunset */
+.console-button-text.console-button-sunset {
+    color: var(--theme-cta-secondary-sunset-text-idle);
+}
+.console-button-text.console-button-sunset:hover {
+    color: var(--theme-cta-secondary-sunset-text-hover);
+}
+.console-button-text.console-button-sunset:active,
+.console-button-text.console-button-sunset:focus {
+    color: var(--theme-cta-secondary-sunset-text-active);
+}
+
+.console-button-text.console-button-sunset .icon-fill {
+    fill: var(--theme-cta-secondary-sunset-text-idle);
+}
+.console-button-text.console-button-sunset:hover .icon-fill {
+    fill: var(--theme-cta-secondary-sunset-text-hover);
+}
+.console-button-text.console-button-sunset:active .icon-fill,
+.console-button-text.console-button-sunset:focus .icon-fill {
+    fill: var(--theme-cta-secondary-sunset-text-active);
+}
+
+.console-button-text.console-button-sunset .icon-stroke {
+    stroke: var(--theme-cta-secondary-sunset-text-idle);
+}
+.console-button-text.console-button-sunset:hover .icon-stroke {
+    stroke: var(--theme-cta-secondary-sunset-text-hover);
+}
+.console-button-text.console-button-sunset:active .icon-stroke,
+.console-button-text.console-button-sunset:focus .icon-stroke {
+    stroke: var(--theme-cta-secondary-sunset-text-active);
+}
+
+.console-button-text.console-button-sunset .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-sunset-text-idle);
+    fill: var(--theme-cta-secondary-sunset-text-idle);
+}
+.console-button-text.console-button-sunset:hover .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-sunset-text-hover);
+    fill: var(--theme-cta-secondary-sunset-text-hover);
+}
+.console-button-text.console-button-sunset:active .icon-fill-stroke,
+.console-button-text.console-button-sunset:focus .icon-fill-stroke {
+    stroke: var(--theme-cta-secondary-sunset-text-active);
+    fill: var(--theme-cta-secondary-sunset-text-active);
+}
+
 /* Icon only
     --------------------------------------------------------------- */
 .console-button.icon-only {

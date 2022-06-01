@@ -36,13 +36,13 @@ class HorizonLines {
         let line = {};
         line.ghost = isGhost || false;
         line.div = div;
-        let size = (100 / this.linesAmt) * 0.7;
+        let size = (100 / this.linesAmt) * 0.745;
 
         if (!isGhost) {
             line.height = size;
             line.scale = 1 - (1 / this.linesAmt) * i;
         } else {
-            line.height = size * (1 - (1 / this.linesAmt) * i) * 0.75;
+            line.height = size * (1 - (1 / this.linesAmt) * i) * 0.65;
             line.scale = 1;
         }
 
@@ -57,19 +57,19 @@ class HorizonLines {
     }
 
     animateLines() {
-        let toAnimate = this.lines.filter((l) => l.ghost == false);
-        toAnimate.forEach((line, idx) => {
-            let move = { scale: line.scale, translate: 0 };
-            let scaleEnd = 0;
-            if (idx < toAnimate.length - 1) scaleEnd = toAnimate[idx + 1].scale;
-            const tween = new TWEEN.Tween(move)
-                .to({ scale: scaleEnd, translate: 100 }, 1000)
-                .repeat(Infinity)
-                .onUpdate(() => {
-                    line.div.style.transform = "scaleY(" + move.scale + ") translateY(" + (move.translate * 2) / move.scale + "%)";
-                })
-                .start();
-        });
+        // let toAnimate = this.lines.filter((l) => l.ghost == false);
+        // toAnimate.forEach((line, idx) => {
+        //     let move = { scale: line.scale, translate: 0 };
+        //     let scaleEnd = 0;
+        //     if (idx < toAnimate.length - 1) scaleEnd = toAnimate[idx + 1].scale;
+        //     const tween = new TWEEN.Tween(move)
+        //         .to({ scale: scaleEnd, translate: 100 }, 1000)
+        //         .repeat(Infinity)
+        //         .onUpdate(() => {
+        //             line.div.style.transform = "scaleY(" + move.scale + ") translateY(" + (move.translate * 2) / move.scale + "%)";
+        //         })
+        //         .start();
+        // });
     }
 }
 

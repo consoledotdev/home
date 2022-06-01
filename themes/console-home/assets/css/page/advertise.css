@@ -268,11 +268,11 @@ body.page-advertise.checkpoint-campaigns {
 }
 
 .page-section-advertise.opening .title-4 {
-    color: var(--theme-text-attention-1);
+    color: var(--theme-text-accent-yellow-light);
 }
 
 .page-section-advertise.opening .title-4 span {
-    color: var(--theme-text-attention-2);
+    color: var(--theme-text-accent-yellow-strong);
 }
 
 .page-section-advertise.opening p.description {
@@ -1083,7 +1083,7 @@ body.page-advertise.checkpoint-campaigns {
 }
 
 .page-section-advertise.work-with-us .title-1 {
-    color: var(--theme-text-attention-2);
+    color: var(--theme-text-accent-yellow-strong);
 }
 
 .page-section-advertise.work-with-us .title-1 br {
@@ -1347,7 +1347,7 @@ body.page-advertise.checkpoint-campaigns {
 
 .page-section-advertise.campaigns .framed-section-item > .title {
     margin-bottom: var(--space4);
-    color: var(--theme-text-attention-2);
+    color: var(--theme-text-accent-yellow-strong);
 }
 
 .page-section-advertise.campaigns .framed-section-item .title .icon {
