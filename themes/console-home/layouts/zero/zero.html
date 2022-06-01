@@ -2,14 +2,17 @@
     {{ $formData := $.Site.Data.formdevjobs }}
 
     <section class="page-section page-section-zero opening">
-        <div class="horizon-lines" data-horizon-lines="13"></div>
+        <div class="horizon-lines" data-horizon-lines="14"></div>
         <div class="left">
             <div>
                 <h5 class="title title-4"><span>Grow</span> in our ecosystem</h5>
-                <h2 class="title title-1">Console Zero</h2>
+                <h2 class="title title-1">
+                    Console Zero
+                    {{ partial "icons/console-zero.html" }}
+                </h2>
                 <p class="description">Our pitch is simple - access to our community of experienced developers to get in front of early users, hire your early team, and get advice through our connections within the developer community.</p>
 
-                <button data-launch-signup="email" data-onclickblur class="console-button-text icon-right" title="Signup">
+                <button data-launch-signup="email" data-onclickblur class="console-button-text console-button-sunset icon-right" title="Signup">
                     <span>Read more</span>
                     {{ partial "icons/scroll-down.html" }}
                 </button>

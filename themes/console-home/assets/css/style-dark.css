@@ -10,8 +10,13 @@
     --theme-text-3: var(--c-grey-05);
     --theme-text-4: var(--c-grey-04-whites-neutral);
     --theme-text-5: var(--c-grey-06-blacks-neutral);
-    --theme-text-attention-1: var(--c-yellow-02);
-    --theme-text-attention-2: var(--c-yellow-04-main);
+
+    --theme-text-accent-yellow-strong: var(--c-yellow-04-main);
+    --theme-text-accent-yellow-light: var(--c-yellow-02);
+
+    --theme-text-accent-sunset-strong: var(--c-sunset-05-main);
+    --theme-text-accent-sunset-light: var(--c-sunset-04);
+
     --theme-input-text: var(--c-black-02-main);
     --theme-brand-accent-text-idle: var(--c-blue-04);
     --theme-brand-accent-text-hover: var(--c-blue-05);
@@ -32,6 +37,10 @@
     --theme-cta-secondary-yellow-text-idle: var(--c-yellow-04-main);
     --theme-cta-secondary-yellow-text-hover: var(--c-yellow-05);
     --theme-cta-secondary-yellow-text-active: var(--c-yellow-06);
+
+    --theme-cta-secondary-sunset-text-idle: var(--c-sunset-05-main);
+    --theme-cta-secondary-sunset-text-hover: var(--c-sunset-06);
+    --theme-cta-secondary-sunset-text-active: var(--c-sunset-07);
 
     --theme-content-bg-0: var(--c-black-00-absolute);
     --theme-content-bg-1: var(--c-black-01);
@@ -302,6 +311,9 @@
     --theme-jobs-bg-diamonds-opacity: 0.16;
     --theme-jobs-trust-background: linear-gradient(180deg, rgba(41, 8, 11, 1) 22%, rgba(41, 8, 11, 0) 100%), var(--c-black-02-main);
     --theme-jobs-vapor-globe: var(--theme-vapor-globe-blue-1);
+
+    /* Zero landing page specific */
+    --theme-horizon-lines-color: var(--c-blue-11);
 }
 
 .theme.page-article,
