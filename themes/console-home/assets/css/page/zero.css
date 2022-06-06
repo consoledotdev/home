@@ -1,5 +1,9 @@
 /* Page Stylesheet - Console Zero page
    ========================================================================== */
+html {
+    scroll-behavior: smooth;
+}
+
 .page-zero .content {
     height: auto;
     min-height: 100vh;
@@ -148,9 +152,9 @@
     z-index: 10;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .main-zero .page-section.opening {
-        gap: var(--space4_5);
+        gap: 0;
     }
 }
 
@@ -212,6 +216,18 @@
 
 @media (max-width: 1024px) {
     .main-zero .page-section.opening .left {
+        margin-top: var(--space5);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-zero .page-section.opening .left {
+        margin-top: var(--space4_5);
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-zero .page-section.opening .left {
         text-align: center;
         justify-content: center;
     }
@@ -254,6 +270,10 @@
     color: var(--theme-text-accent-sunset-strong);
 }
 
+.main-zero .page-section.opening .description {
+    margin-bottom: 0;
+}
+
 @media (max-width: 768px) {
     @media (max-width: 414px) {
         .main-zero .page-section.opening .title-1,
@@ -265,7 +285,6 @@
 }
 
 .main-zero .page-section.opening .left .console-button-text {
-    display: flex;
     margin-top: var(--space4_5);
 }
 
