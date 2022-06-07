@@ -34,11 +34,11 @@ authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
 authorBio:
-  is co-founder of Console. From 2009-2018, David was CEO at Server Density, a
-  SaaS server monitoring startup used by hundreds of customers to collect
-  billions of time series metrics from millions of servers. He is also a
-  researcher in sustainable computing at Uptime Institute and affiliated with
-  Imperial College London. David has been a developer for 15+ years.
+  is Co-founder & CEO of Console. In 2009, he founded and was CEO of Server 
+  Density, a SaaS cloud monitoring startup acquired in 2018 by edge compute 
+  and cyber security company, StackPath. He is also researching sustainable 
+  computing in the Department of Engineering Science at the University of 
+  Oxford, and has been a developer for 15+ years.
 author2Name: Jean Yang
 author2URL: https://twitter.com/jeanqasaur
 author2Img: /img/podcast/akita-jean-yang-profile.jpg
