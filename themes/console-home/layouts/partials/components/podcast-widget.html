@@ -14,7 +14,7 @@
 -->
 
 {{ $visualsType := "logo-logo" }}
-{{ if eq .podcast.Params.season 2 }}{{ $visualsType = "logo-profile" }}{{ end }}
+{{ if eq .podcast.Params.season 3}}{{ $visualsType = "logo-profile" }}{{ end }}
 {{ $isVertical := "" }}
 {{ if eq .art "header"}}{{ $isVertical = "true" }}{{ end }}
 {{ $art := partial "components/combo-box.html" (dict "visualsType" $visualsType "content" .podcast "isVertical" $isVertical) }}

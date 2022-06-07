@@ -39,7 +39,7 @@
             <div class="right">
                 {{ if eq .Params.season 1 }}
                     {{ partial "components/combo-box.html" (dict "visualsType" "logo-logo" "isVertical" "true" "content" .) }}
-                {{ else if eq .Params.season 2 }}
+                {{ else }}
                     {{ partial "components/combo-box.html" (dict "visualsType" "logo-profile" "isVertical" "true" "content" .) }}
                 {{ end }}
             </div>
@@ -64,7 +64,7 @@
 
                                     With
 
-                                {{ else if eq .Params.season 2 }}
+                                {{ else }}
 
                                     The host
 
