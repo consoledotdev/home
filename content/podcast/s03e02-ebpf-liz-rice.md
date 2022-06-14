@@ -1,5 +1,5 @@
 ---
-title: Berkeley Packet Filter
+title: eBPF
 who: Liz Rice
 whoLink: https://twitter.com/lizrice
 org: Isovalent
@@ -13,13 +13,13 @@ season: 3
 episode: 2
 date: 2022-06-16T06:00:00Z
 duration: 32:25
-episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/2b5ac6a6-f2cc-47d9-a8e3-3f0fd119d5b8/audio/9144e827-a74c-41d3-a7f1-0c865495835d/default_tc.mp3
+episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/7c610a77-33a4-4c99-8032-4395237cb5cd/audio/1617bfd4-a52e-43cb-969c-2445087346f4/default_tc.mp3
 draft: false
 summary:
-  Berkeley Packet Filter - a devtools discussion with Liz Rice (Isovalent).
+  eBPF - a devtools discussion with Liz Rice (Isovalent).
   Episode 2 (Season 3) of the Console DevTools Podcast.
 metaDescription:
-  Berkeley Packet Filter - a devtools discussion with Liz Rice (Isovalent).
+  eBPF - a devtools discussion with Liz Rice (Isovalent).
   Episode 2 (Season 3) of the Console DevTools Podcast.
 headerType: fixed
 hideLines: true
@@ -32,7 +32,7 @@ xlViewport:
 topImg1Src: /img/podcast/isovalent-liz-rice-profile.webp
 topImg2Src: /img/favicons/isovalent.com.jpg
 ogImg: /img/podcast/podcast-cover.jpeg
-twitterCard: https://player.simplecast.com/2b5ac6a6-f2cc-47d9-a8e3-3f0fd119d5b8
+twitterCard: https://player.simplecast.com/7c610a77-33a4-4c99-8032-4395237cb5cd
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
