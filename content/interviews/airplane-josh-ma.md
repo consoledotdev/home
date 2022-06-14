@@ -5,7 +5,7 @@ role: CTO
 org: Airplane
 what: Platform for internal tools.
 tags: ["DevOps"]
-date: 2022-06-01T12:00:00Z
+date: 2022-06-06T12:00:00Z
 draft: false
 headerType: fixed
 summary: Interview with Josh Ma, CTO, Airplane
@@ -214,4 +214,4 @@ snowboarding.
 
 [Airplane](https://www.airplane.dev/) is a developer platform for internal
 tools. It was featured as an "interesting tool" in the [Console newsletter](/)
-on 15 June 2022. This interview was conducted on 6 June 2022.
+on 16 June 2022. This interview was conducted on 6 June 2022.
