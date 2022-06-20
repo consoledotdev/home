@@ -95,6 +95,10 @@ portfolio:
     URL: https://www.steadybit.com/
     yearOfInvestment: 2021
     favicon: "img/favicons/steadybit.com.svg"
+  - name: Spacedrive
+    URL: https://www.spacedrive.com/
+    yearOfInvestment: 2022
+    favicon: "img/favicons/www.spacedrive.com.png"
   - name: Trunk
     URL: https://trunk.io/
     yearOfInvestment: 2021
