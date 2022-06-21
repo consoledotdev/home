@@ -85,9 +85,13 @@ Things mentioned:
 
 {{< rich-title-5 icon="future-head" >}}About Connor Hicks{{</ rich-title-5 >}}
 
-Connor Hicks is Founder of Suborbital, a company dedicated to building a new
-form of serverless compute based on WebAssembly. Prior to Suborbital, Hicks was
-product discovery lead at 1Password.
+Connor Hicks is based in Ottawa, Canada, and is the founder of Suborbital
+Software Systems. Connor works primarily on security and distributed systems
+projects including the Suborbital family of open source projects, and formerly
+led research and development at 1Password. Connor is a strong believer in
+building security and privacy into the core of all software, and is exploring
+the next iteration of web service development with technologies like
+WebAssembly.
 
 ### Highlights
 
