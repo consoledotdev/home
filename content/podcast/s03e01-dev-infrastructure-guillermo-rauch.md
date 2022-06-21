@@ -54,8 +54,7 @@ In this episode I speak with Guillermo Rauch, CEO of
 We discuss the meaning of “developer experience”, how complexity is managed to
 help developers get started quickly but still be able to scale multiple systems,
 the role of monorepos and monolithic application architectures, and how to think
-about globally deployed serverless databases. We’re keeping this to 30 minutes,
-so let’s get started.
+about globally deployed serverless databases.
 
 Things mentioned:
 
