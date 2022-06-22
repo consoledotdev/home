@@ -12,7 +12,7 @@ season: 3
 episode: 6
 date: 2022-07-14T06:00:00Z
 duration: 32:11
-episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/7c610a77-33a4-4c99-8032-4395237cb5cd/audio/1617bfd4-a52e-43cb-969c-2445087346f4/default_tc.mp3
+episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/60bbffbf-2e83-4246-aca2-1246628e7bc2/audio/098fae55-f768-4760-8a62-312a8c3359fd/default_tc.mp3
 draft: true
 summary:
   Data science - a devtools discussion with Ines Montani (Explosion). Episode 6
@@ -31,7 +31,7 @@ xlViewport:
 topImg1Src: /img/podcast/explosion-ines-montani-profile.jpg
 topImg2Src: /img/favicons/explosion.ai.svg
 ogImg: /img/podcast/podcast-cover.jpeg
-twitterCard: https://player.simplecast.com/7c610a77-33a4-4c99-8032-4395237cb5cd
+twitterCard: https://player.simplecast.com/60bbffbf-2e83-4246-aca2-1246628e7bc2
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg

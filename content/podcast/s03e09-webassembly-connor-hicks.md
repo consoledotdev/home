@@ -13,7 +13,7 @@ season: 3
 episode: 9
 date: 2022-08-04T06:00:00Z
 duration: 30:33
-episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/7c610a77-33a4-4c99-8032-4395237cb5cd/audio/1617bfd4-a52e-43cb-969c-2445087346f4/default_tc.mp3
+episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/8393f510-8ed7-4441-b08f-8e98ff43e631/audio/9204419e-2b6e-4bcb-a093-8d7a8467248c/default_tc.mp3
 draft: true
 summary:
   WebAssembly - a devtools discussion with Connor Hicks (Suborbital). Episode 9
@@ -32,7 +32,7 @@ xlViewport:
 topImg1Src: /img/podcast/suborbital-connor-hicks-profile.jpg
 topImg2Src: /img/favicons/suborbital.dev.png
 ogImg: /img/podcast/podcast-cover.jpeg
-twitterCard: https://player.simplecast.com/7c610a77-33a4-4c99-8032-4395237cb5cd
+twitterCard: https://player.simplecast.com/8393f510-8ed7-4441-b08f-8e98ff43e631
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg

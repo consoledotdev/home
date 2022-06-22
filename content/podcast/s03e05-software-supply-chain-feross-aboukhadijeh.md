@@ -12,7 +12,7 @@ season: 3
 episode: 5
 date: 2022-07-07T06:00:00Z
 duration: 31:45
-episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/7c610a77-33a4-4c99-8032-4395237cb5cd/audio/1617bfd4-a52e-43cb-969c-2445087346f4/default_tc.mp3
+episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/6321d89b-85ae-4572-8c36-c852aacd0480/audio/5857ed10-f2a7-4c4e-91e2-71eaed77cddb/default_tc.mp3?nocache
 draft: true
 summary:
   Security & Software Supply Chain - a devtools discussion with Feross
@@ -31,7 +31,7 @@ xlViewport:
 topImg1Src: /img/podcast/socket-feross-aboukhadijeh-profile.jpg
 topImg2Src: /img/favicons/socket.dev.png
 ogImg: /img/podcast/podcast-cover.jpeg
-twitterCard: https://player.simplecast.com/7c610a77-33a4-4c99-8032-4395237cb5cd
+twitterCard: https://player.simplecast.com/6321d89b-85ae-4572-8c36-c852aacd0480
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg

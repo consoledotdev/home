@@ -13,7 +13,7 @@ season: 3
 episode: 3
 date: 2022-06-23T06:00:00Z
 duration: 30:10
-episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/7c610a77-33a4-4c99-8032-4395237cb5cd/audio/1617bfd4-a52e-43cb-969c-2445087346f4/default_tc.mp3
+episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/661ee96e-9e37-4d40-9a04-0a12125f503e/audio/6bfd7432-8754-4b40-9e39-238e8ac54f0f/default_tc.mp3?nocache
 draft: true
 summary:
   OSS & Investing - a devtools discussion with Joseph Jacks (OSS Capital).
@@ -32,7 +32,7 @@ xlViewport:
 topImg1Src: /img/podcast/oss-capital-joseph-jacks-profile.jpg
 topImg2Src: /img/favicons/oss.capital.png
 ogImg: /img/podcast/podcast-cover.jpeg
-twitterCard: https://player.simplecast.com/7c610a77-33a4-4c99-8032-4395237cb5cd
+twitterCard: https://player.simplecast.com/661ee96e-9e37-4d40-9a04-0a12125f503e
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
@@ -58,7 +58,7 @@ default for all software.
 
 Things mentioned:
 
-- [OSS capital](https://oss.capital/)
+- [OSS Capital](https://oss.capital/)
 - [GitHub](https://github.com/)
 - [SourceForge](https://sourceforge.net/)
 - [Signal](https://signal.org/en/)

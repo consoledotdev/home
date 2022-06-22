@@ -12,7 +12,7 @@ season: 3
 episode: 7
 date: 2022-07-21T06:00:00Z
 duration: 32:45
-episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/7c610a77-33a4-4c99-8032-4395237cb5cd/audio/1617bfd4-a52e-43cb-969c-2445087346f4/default_tc.mp3
+episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/e2229ffc-7acc-4fc1-89d2-0c541e7da75b/audio/2b970953-1fbd-409f-8db7-293e99409fa0/default_tc.mp3?nocache
 draft: true
 summary:
   Containers & Tests - a devtools discussion with Sergei Egorov (Atomic Jar).
@@ -31,7 +31,7 @@ xlViewport:
 topImg1Src: /img/podcast/atomic-jar-sergei-egorov-profile.jpg
 topImg2Src: /img/favicons/www.atomicjar.com.svg
 ogImg: /img/podcast/podcast-cover.jpeg
-twitterCard: https://player.simplecast.com/7c610a77-33a4-4c99-8032-4395237cb5cd
+twitterCard: https://player.simplecast.com/e2229ffc-7acc-4fc1-89d2-0c541e7da75b
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg

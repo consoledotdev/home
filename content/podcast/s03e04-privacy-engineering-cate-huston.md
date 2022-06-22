@@ -13,7 +13,7 @@ season: 3
 episode: 4
 date: 2022-06-30T06:00:00Z
 duration: 24:04
-episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/7c610a77-33a4-4c99-8032-4395237cb5cd/audio/1617bfd4-a52e-43cb-969c-2445087346f4/default_tc.mp3
+episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/4ae93339-59ec-4f39-af13-6e4a274602cc/audio/7862b5b9-aeae-4638-aed8-ee22b2112fe0/default_tc.mp3
 draft: true
 summary:
   Privacy Engineering - a devtools discussion with Cate Huston (DuckDuckGo).
@@ -32,7 +32,7 @@ xlViewport:
 topImg1Src: /img/podcast/duckduckgo-cate-huston-profile.webp
 topImg2Src: /img/favicons/duckduckgo.com.svg
 ogImg: /img/podcast/podcast-cover.jpeg
-twitterCard: https://player.simplecast.com/7c610a77-33a4-4c99-8032-4395237cb5cd
+twitterCard: https://player.simplecast.com/4ae93339-59ec-4f39-af13-6e4a274602cc
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg

@@ -1,7 +1,7 @@
 ---
 title: VR
 who: Elena Kokkinara
-whoLink: https://twitter.com/catehstn
+whoLink: https://twitter.com/redarahel
 org: Inflight VR
 orgLink: https://inflight-vr.com/
 what:
@@ -13,7 +13,7 @@ season: 3
 episode: 8
 date: 2022-07-28T06:00:00Z
 duration: 26:27
-episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/7c610a77-33a4-4c99-8032-4395237cb5cd/audio/1617bfd4-a52e-43cb-969c-2445087346f4/default_tc.mp3
+episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/6c0e5167-086f-4733-93d9-b3c911d16a1b/audio/b2b4c668-7d3b-4857-b769-7a3b26ac79ff/default_tc.mp3
 draft: true
 summary:
   VR - a devtools discussion with Elena Kokkinara (Inflight VR). Episode 8
@@ -32,7 +32,7 @@ xlViewport:
 topImg1Src: /img/podcast/inflight-vr-elena-kokkinara-profile.jpg
 topImg2Src: /img/favicons/inflight-vr.com.svg
 ogImg: /img/podcast/podcast-cover.jpeg
-twitterCard: https://player.simplecast.com/7c610a77-33a4-4c99-8032-4395237cb5cd
+twitterCard: https://player.simplecast.com/6c0e5167-086f-4733-93d9-b3c911d16a1b
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
