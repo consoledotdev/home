@@ -51,11 +51,12 @@ update Jira.
 
 We do all this to help manage all your mundane coding tasks directly from Slack.
 This means that Zigi users start their day with a personalized checklist of all
-the action items that are on their table. We help them streamline collaboration,
-like identifying pull requests with no reviewers and offering it up, reminding
-the team members to complete the review. We also help them as a real-time
-assistant throughout the day with just the right information that they need,
-taking different time zones and work weeks into account. 
+the action items that are on their table. Zigi provides full support for the
+Pull Review process, helping to speed up collaborative tasks, like finding
+reviewers, pinging teammates - I'm proud to say that we managed to decrease the
+waiting time for pull request response to almost zero. We also help them as a
+real-time assistant throughout the day with just the right information that they
+need, taking different time zones and work weeks into account. 
 
 Zigi also takes care of non-coding tasks, like correlating tickets with PRs,
 updating tickets, and many other workflow processes that you usually need to
@@ -136,16 +137,18 @@ about revolutionizing the way that development teams work. 
 
 ### How did you first get into software development?
 
-Both Omri (Zigi’s CTO) and I came to the world of programming out of a love for
-solving complex problems. We both studied computer science in university, and I
-also studied business management, and I’m constantly moving between both
-business and programming. 
+Both [Omri](https://www.linkedin.com/in/omrirotem/) (Zigi’s CTO) and I came to
+the world of programming out of a love for solving complex problems. We both
+studied computer science in university, and I also studied business management,
+and I’m constantly moving between both business and programming. 
 
 When I started my career, it was in C, C#. That was before the internet exploded
 around 2008, 2009. Omri is also a computer science graduate. He grew up in an
 agricultural village in the south - part of a family of farmers who always liked
 to disassemble and assemble things. Omri built his career in networking, cloud
-computing, and deep-learning companies.
+computing, and deep-learning companies, and before Zigi he was
+[Syte's](https://www.syte.ai/) CTO from the first line of code to managing the
+R&D team.
 
 We both connect to the creative process and are passionate about building
 solutions for complex problems. Taking a complex problem and providing a simple,
@@ -153,16 +156,13 @@ straightforward solution that answers that question. 
 
 ### What is the most interesting development challenge you've faced working on Zigi?
 
-Basically what Zigi is doing is creating context. The way we look at it, it's a
-matter of data sources, and we need to catch an event that happens in one
-system, then understand the context, what happened in the other systems, and
-what can we learn from that? Also, who's the specific person that is the user?
-What are their specific workflow and habits? We observe that automatically, and
-we also learn from their past activity. All of that is to provide them with
-actual help, figuring out what’s the next step? 
-
-And we need to be accurate all the time and be always up and running, because
-with the type of help that we are providing, you can't fail.
+Zigi is creating context. So for every event that happens in one system, Zigi
+needs to understand the context: what happened in the other systems? What can we
+learn from that? Who are the stakeholders? What are their specific workflow and
+habits? We observe that automatically, and we also learn from their past
+activity. We do all that to provide them with actual help. figuring out what's
+the next step. And we need to be accurate all the time and be always up and
+running, because with the type of help that we are providing, you can't fail. 
 
 So doing all of that while still having the security level that enables us to
 work with any type of organization, enable every developer that wants to use
