@@ -11,7 +11,7 @@ episode: 10
 date: 2022-08-11T06:00:00Z
 duration: 33:11
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/56d8611f-a46f-493a-940a-26c0b5965905/audio/c5bc187d-9c59-4478-b6cf-5a9b06dd11b9/default_tc.mp3
-draft: true
+draft: false
 summary:
   Engineering Leadership - a devtools discussion with Meri Williams. Episode 10
   (Season 3) of the Console DevTools Podcast.

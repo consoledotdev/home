@@ -14,7 +14,7 @@ episode: 8
 date: 2022-07-28T06:00:00Z
 duration: 26:27
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/6c0e5167-086f-4733-93d9-b3c911d16a1b/audio/b2b4c668-7d3b-4857-b769-7a3b26ac79ff/default_tc.mp3
-draft: true
+draft: false
 summary:
   VR - a devtools discussion with Elena Kokkinara (Inflight VR). Episode 8
   (Season 3) of the Console DevTools Podcast.

@@ -14,7 +14,7 @@ episode: 3
 date: 2022-06-23T06:00:00Z
 duration: 30:10
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/661ee96e-9e37-4d40-9a04-0a12125f503e/audio/6bfd7432-8754-4b40-9e39-238e8ac54f0f/default_tc.mp3?nocache
-draft: true
+draft: false
 summary:
   OSS & Investing - a devtools discussion with Joseph Jacks (OSS Capital).
   Episode 3 (Season 3) of the Console DevTools Podcast.

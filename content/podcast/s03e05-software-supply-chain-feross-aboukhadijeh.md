@@ -13,7 +13,7 @@ episode: 5
 date: 2022-07-07T06:00:00Z
 duration: 31:45
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/6321d89b-85ae-4572-8c36-c852aacd0480/audio/5857ed10-f2a7-4c4e-91e2-71eaed77cddb/default_tc.mp3?nocache
-draft: true
+draft: false
 summary:
   Security & Software Supply Chain - a devtools discussion with Feross
   Aboukhadijeh (Socket). Episode 5 (Season 3) of the Console DevTools Podcast.

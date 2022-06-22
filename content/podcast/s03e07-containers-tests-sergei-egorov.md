@@ -13,7 +13,7 @@ episode: 7
 date: 2022-07-21T06:00:00Z
 duration: 32:45
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/e2229ffc-7acc-4fc1-89d2-0c541e7da75b/audio/2b970953-1fbd-409f-8db7-293e99409fa0/default_tc.mp3?nocache
-draft: true
+draft: false
 summary:
   Containers & Tests - a devtools discussion with Sergei Egorov (Atomic Jar).
   Episode 7 (Season 3) of the Console DevTools Podcast.

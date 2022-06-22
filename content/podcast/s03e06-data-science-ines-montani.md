@@ -13,7 +13,7 @@ episode: 6
 date: 2022-07-14T06:00:00Z
 duration: 32:11
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/60bbffbf-2e83-4246-aca2-1246628e7bc2/audio/098fae55-f768-4760-8a62-312a8c3359fd/default_tc.mp3
-draft: true
+draft: false
 summary:
   Data science - a devtools discussion with Ines Montani (Explosion). Episode 6
   (Season 3) of the Console DevTools Podcast.

@@ -14,7 +14,7 @@ episode: 9
 date: 2022-08-04T06:00:00Z
 duration: 30:33
 episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/8393f510-8ed7-4441-b08f-8e98ff43e631/audio/9204419e-2b6e-4bcb-a093-8d7a8467248c/default_tc.mp3
-draft: true
+draft: false
 summary:
   WebAssembly - a devtools discussion with Connor Hicks (Suborbital). Episode 9
   (Season 3) of the Console DevTools Podcast.
