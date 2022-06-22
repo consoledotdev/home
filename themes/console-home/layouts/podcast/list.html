@@ -120,7 +120,7 @@
                 </div>
                 <div class="page-section-sub">
                     <div class="feature-items" data-feature-items>
-                        {{ range after 1 (where .Pages.ByPublishDate.Reverse "Params.season" 2) }}
+                        {{ range (where .Pages.ByPublishDate.Reverse "Params.season" 2) }}
                             {{ partial "components/podcast/combo-card.html" (dict "visualsType" "logo-profile" "comboBoxVerticalThreshold" "768" "content" .) }}
                         {{ end }}
                     </div>
