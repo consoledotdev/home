@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Nir Benson, CEO, Zigi
 isPage: interviews
 topImg1Src: /img/interviews/zigi-nir-benson-profile.jpg
-topImg2Src: /img/favicons/zigi.ai.jpg
+topImg2Src: /img/favicons/www.zigi.ai.jpg
 ogImg: /img/interviews/zigi-nir-benson-desk.jpeg
 ---
 
