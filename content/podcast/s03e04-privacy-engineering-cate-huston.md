@@ -316,8 +316,7 @@ own implementation of functionality?
 **Cate Huston** (10:49): Yeah. So actually, we have a couple of open source
 projects that other companies can use. So if you deal with external links... So
 for example you have a social feed or a news feed, we have a Smarter Encryption
-data set. So companies like Pinterest use it to make sure that their users view
-the web through encrypted connections, wherever possible.
+data set.
 
 And another data set that we provide is called Tracker Radar. So it gives
 insight into third party domains on the web. And so you can learn how prevalent
