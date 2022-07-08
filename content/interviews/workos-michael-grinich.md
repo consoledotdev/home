@@ -6,7 +6,7 @@ org: WorkOS
 what: Plug & play enterprise features.
 tags: ["Enterprise Features"]
 date: 2022-06-29T12:00:00Z
-draft: false
+draft: true
 headerType: fixed
 summary: Interview with Michael Grinich, CEO, WorkOS
 isPage: interviews
@@ -209,7 +209,7 @@ which I just think is fantastic that he's taking a second swing at this and the
 whole JavaScript ecosystem, and TypeScript ecosystem really will definitely
 benefit from that.
 
-### Describe your computer hardware setup (laptop/desktop, display, keyboard, mouse, phone)
+### Describe your computer hardware setup
 
 My main workstation is an M1 Mac mini, that I actually have mounted underneath
 my desk. I use a LG 5K display, Logitech BRIO webcam. For us audio is really
@@ -265,5 +265,5 @@ usually I can be found out in the wilderness, somewhere in nature.
 ### Find out more
 
 [WorkOS](https://workos.com/) is a platform for enterprise features. It was
-featured as an "Interesting Tool" in the [Console newsletter](/) on 7 July 2022.
+featured as an "Interesting Tool" in the [Console newsletter](/) on 14 July 2022.
 This interview was conducted on 29 Jun 2022.
