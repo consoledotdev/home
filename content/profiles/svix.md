@@ -49,7 +49,7 @@ companyInfo:
       value: "Early-stage startup"
     - label: "Customers"
       value:
-        - "Kitemaker, Segments.ai, acolad, instruqt"
+        - "Brex, Lob, LTSE, Clerk"
     - label: "Social"
       value:
         links:
