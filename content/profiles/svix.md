@@ -75,7 +75,7 @@ works at Svix{{</ rich-title-3 >}}
 
 #### How are the teams structured?
 
-WOur CEO is acting as Head of Product. He directs the general product direction,
+Our CEO is acting as Head of Product. He directs the general product direction,
 which features to work on, and prioritizes bugs as they happen. But other than
 that it's really just everyone reviewing everyone's code, everyone can suggest
 ideas, can influence the roadmap, etc.
