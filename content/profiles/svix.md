@@ -75,11 +75,10 @@ works at Svix{{</ rich-title-3 >}}
 
 #### How are the teams structured?
 
-We are five people at the moment and our CEO is acting as Head of Product. He
-directs the general product direction, which features to work on, and
-prioritizes bugs as they happen. But other than that it's really just everyone
-reviewing everyone's code, everyone can suggest ideas, can influence the
-roadmap, etc.
+WOur CEO is acting as Head of Product. He directs the general product direction,
+which features to work on, and prioritizes bugs as they happen. But other than
+that it's really just everyone reviewing everyone's code, everyone can suggest
+ideas, can influence the roadmap, etc.
 
 Additionally, our core product is open source, which also influences our
 thinking. We have a flat team structure, everyone is aligned with what we are
