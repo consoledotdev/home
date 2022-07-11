@@ -6,7 +6,7 @@ org: WorkOS
 what: Plug & play enterprise features.
 tags: ["Enterprise Features"]
 date: 2022-06-29T12:00:00Z
-draft: true
+draft: false
 headerType: fixed
 summary: Interview with Michael Grinich, CEO, WorkOS
 isPage: interviews
