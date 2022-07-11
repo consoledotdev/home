@@ -2,11 +2,11 @@
 title: "Cased"
 date: 2022-07-07T12:00:00+00:00
 draft: false
-summary: Platform automating everyday production tasks.
+summary: Engineering enablement platform.
 metaTitle: Working at Cased - Console profile
 metaDescription:
   What is it like to work at Cased?  Console profile behind the scenes at Cased
-  - platform automating everyday production tasks.
+  - engineering enablement platform.
 headerType: fixed
 hideLines: true
 hidePlanes: true
@@ -20,7 +20,7 @@ companyInfo:
   URL: https://cased.com
   jobsURL: https://cased.notion.site/Work-at-Cased-b524636ab6e048e6adda1b2f2ace29f8
   location: Remote
-  description: "Platform automating everyday production tasks."
+  description: "Engineering enablement platform."
   product:
     name: "Cased"
     description:
