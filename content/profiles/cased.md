@@ -73,7 +73,7 @@ works at Cased{{</ rich-title-3 >}}
 #### How are the teams structured?
 
 We're a small, early stage startup with an engineering team of five. Right now
-we work as a single teamu can think of it as one pod where there's a lot of
+we work as a single team - you can think of it as one pod where there's a lot of
 collaboration, both between frontend and backend folks. As we grow, we're likely
 going to split the teams on the functional level, let's say, backend
 infrastructure and front end. When we hit about eight engineers, we're going to
