@@ -43,6 +43,18 @@ the best, most interesting set of tools each week:
 - Does it have any negative impact on security or privacy?
 - How would I feel recommending this to my friends? Would I tweet a link to it?
 
+### Betas
+
+We only [list](/betas/) early access, alpha, or beta releases of tools where
+developers are the primary user.
+
+To determine whether something falls under this definition, we
+use [Semver](https://semver.org/) version numbers i.e. the release must be pre
+1.0 and/or have an appropriate label in the version number e.g. `1.0.0-beta`.
+Alternatively, the word "beta", "preview" or similar should appear somewhere
+easily discoverable on the website, release notes, and/or documentation. Any GA
+or stable releases are not eligible.
+
 ### Sponsors
 
 [Console works with vendors](/advertise/) who want to reach our audience of
