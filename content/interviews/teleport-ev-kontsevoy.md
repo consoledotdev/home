@@ -398,7 +398,7 @@ piece needs lubrication.
 
 ### Find out more
 
-[Teleport](https://goteleport.com//) is an open source access control plane. It
-was featured as an "Interesting Tool" in the
-[Console newsletter](https://console.dev) on 16 Dec 2021. This interview was
-conducted on 29 Nov 2021.
+[Teleport](https://goteleport.com/) is an open source access control plane. It
+was featured as an "Interesting Tool" in the [Console
+newsletter](https://console.dev) on 16 Dec 2021 and 28 Jul 2022. This interview
+was conducted on 29 Nov 2021.
