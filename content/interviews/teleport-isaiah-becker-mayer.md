@@ -10,9 +10,9 @@ draft: false
 headerType: fixed
 summary: Interview with Isaiah Becker-Mayer, Fullstack Engineer, Teleport.
 isPage: interviews
-topImg1Src: /img/interviews/teleport-isaiah-becker-mayer-profile.JPG
+topImg1Src: /img/interviews/teleport-isaiah-becker-mayer-profile.jpg
 topImg2Src: /img/favicons/goteleport.com.svg
-ogImg: /img/interviews/teleport-isaiah-becker-mayer-desk.JPG
+ogImg: /img/interviews/teleport-isaiah-becker-mayer-desk.jpg
 ---
 
 ### What is Teleport and why did you build it?
