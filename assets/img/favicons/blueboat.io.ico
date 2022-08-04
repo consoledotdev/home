@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blueboat</title>
+    <meta charset="utf-8">
+    <meta name="description" content=" All-in-one, multi-tenant serverless JavaScript runtime.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+    <script src="js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        
+      <section class="bg-white"><nav class="flex justify-between p-6 px-4"><div class="flex justify-between items-center w-full">
+        <div class="xl:w-1/3">
+          <a class="flex flex-row font-semibold items-center gap-2 max-w-max" href="#">
+            <img class="h-8" src="images/blueboat-icon-v1.svg" alt=""><p>Blueboat</p>
+          </a>
+        </div>
+        <div class="hidden xl:block xl:w-1/3">
+          <ul class="flex justify-center"><li class="mr-12"><a class="text-coolGray-500 hover:text-coolGray-900 font-medium" href="https://github.com/losfair/blueboat">GitHub</a></li>
+            <li><a class="text-coolGray-500 hover:text-coolGray-900 font-medium" href="https://magic.blueboat.io">MagicBoat</a></li>
+          </ul></div>
+        <div class="hidden xl:block xl:w-1/3">
+          <div class="flex items-center justify-end"></div>
+        </div>
+        </div>
+        </nav></section>
+        
+      <section class="overflow-hidden"><div class="relative bg-white overflow-hidden" style="background-image: url('flex-ui-assets/elements/pattern-white.svg'); background-position: center;">
+        <div class="bg-transparent">
+      
+          <div class="navbar-menu hidden fixed top-0 left-0 z-50 w-full h-full bg-coolGray-900 bg-opacity-50">
+            <div class="fixed top-0 left-0 bottom-0 w-full w-4/6 max-w-xs bg-white">
+              <nav class="relative p-6 h-full overflow-y-auto"><div class="flex flex-col justify-between h-full">
+                <a class="inline-block" href="#">
+                  <img class="h-8" src="flex-ui-assets/logos/flex-ui-green.svg" alt=""></a>
+                <ul class="py-6">
+      <li><a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md" href="#">Product</a></li>
+                  <li><a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md" href="#">Features</a></li>
+                  <li><a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md" href="#">Pricing</a></li>
+                  <li><a class="block py-3 px-4 text-coolGray-500 hover:text-coolGray-900 font-medium hover:bg-coolGray-50 rounded-md" href="#">Resources</a></li>
+                </ul>
+      <div class="flex flex-wrap">
+                <div class="w-full mb-2"><a class="inline-block py-2 px-4 w-full text-sm leading-5 text-coolGray-500 hover:text-coolGray-900 bg-transparent font-medium text-center rounded-md" href="#">Log In</a></div>
+                <div class="w-full"><a class="inline-block py-2 px-4 w-full text-sm leading-5 text-white bg-green-500 hover:bg-green-600 font-medium text-center focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md" href="#">Sign Up</a></div>
+                </div>
+                </div>
+              </nav><a class="navbar-close absolute top-5 p-4 right-3" href="#">
+              <svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.94004 6L11.14 1.80667C11.2656 1.68113 11.3361 1.51087 11.3361 1.33333C11.3361 1.1558 11.2656 0.985537 11.14 0.860002C11.0145 0.734466 10.8442 0.66394 10.6667 0.66394C10.4892 0.66394 10.3189 0.734466 10.1934 0.860002L6.00004 5.06L1.80671 0.860002C1.68117 0.734466 1.51091 0.663941 1.33337 0.663941C1.15584 0.663941 0.985576 0.734466 0.860041 0.860002C0.734505 0.985537 0.66398 1.1558 0.66398 1.33333C0.66398 1.51087 0.734505 1.68113 0.860041 1.80667L5.06004 6L0.860041 10.1933C0.797555 10.2553 0.747959 10.329 0.714113 10.4103C0.680267 10.4915 0.662842 10.5787 0.662842 10.6667C0.662842 10.7547 0.680267 10.8418 0.714113 10.9231C0.747959 11.0043 0.797555 11.078 0.860041 11.14C0.922016 11.2025 0.99575 11.2521 1.07699 11.2859C1.15823 11.3198 1.24537 11.3372 1.33337 11.3372C1.42138 11.3372 1.50852 11.3198 1.58976 11.2859C1.671 11.2521 1.74473 11.2025 1.80671 11.14L6.00004 6.94L10.1934 11.14C10.2554 11.2025 10.3291 11.2521 10.4103 11.2859C10.4916 11.3198 10.5787 11.3372 10.6667 11.3372C10.7547 11.3372 10.8419 11.3198 10.9231 11.2859C11.0043 11.2521 11.0781 11.2025 11.14 11.14C11.2025 11.078 11.2521 11.0043 11.286 10.9231C11.3198 10.8418 11.3372 10.7547 11.3372 10.6667C11.3372 10.5787 11.3198 10.4915 11.286 10.4103C11.2521 10.329 11.2025 10.2553 11.14 10.1933L6.94004 6Z" fill="#556987"></path></svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="pt-12 md:pb-28">
+          <div class="container px-4 mx-auto">
+            <div class="mx-auto text-center max-w-3xl">
+              <span class="inline-block py-px px-2 mb-6 text-xs leading-5 text-white uppercase rounded-9xl bg-blue-500">BETA</span>
+              <h1 class="mb-6 text-3xl md:text-5xl lg:text-6xl leading-tight font-bold tracking-tighter">All-in-one serverless JavaScript runtime
+      </h1>
+              <p class="mb-8 mx-auto text-lg md:text-xl text-coolGray-500 font-medium max-w-3xl">
+                We extend the Web Platform to the server side, with enhancements for
+                <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">data-intensive applications</span>
+                and secure &amp; efficient
+                <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">multi-tenant operation</span>.
+              </p>
+              <p class="mb-8 mx-auto text-lg md:text-xl text-coolGray-500 font-medium max-w-3xl text-blue-600">
+                <a href="https://discord.gg/keNJKr2ShE" target="_blank">Join the community on Discord</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="container px-4 py-20 md:pb-32 mx-auto -mt-32 md:-mt-72">
+          <div class="relative mx-auto max-w-max">
+            <img class="absolute z-20 -left-8 -top-8 w-28 md:w-auto" src="flex-ui-assets/elements/wave-green.svg" alt=""><img class="absolute -right-8 -bottom-8 w-28 md:w-auto" src="flex-ui-assets/elements/wave-yellow.svg" alt=""><div class="relative overflow-hidden rounded-7xl">
+      
+      
+            </div>
+          </div>
+        </div>
+      </section>
+        
+      <section class="py-4"><div class="container px-4 mx-auto">
+        <div class="flex flex-wrap -m-3 justify-center gap-4">
+      
+          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
+            <div class="border shadow-dashboard rounded-md px-6 py-6 text-white bg-gray-800">
+              <div class="flex flex-col items-start h-44">
+                <h1 class="text-2xl font-bold pb-4">Self-hosted</h1>
+                <p class="pb-4">Blueboat is open-source software that you can run on your own servers.</p>
+                <div class="flex-grow"></div>
+                <a class="inline-block py-2 px-4 text-sm leading-5 font-medium rounded-md text-black bg-white hover:text-blue-500" href="https://github.com/losfair/blueboat">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
+            <div class="border shadow-dashboard rounded-md px-6 py-6 text-white bg-blue-600">
+              <div class="flex flex-col items-start h-44">
+                <h1 class="text-2xl font-bold pb-4">Cloud</h1>
+                <p class="pb-4">Try MagicBoat, the hosted version of Blueboat.</p>
+                <div class="flex-grow"></div>
+                <a class="inline-block py-2 px-4 text-sm leading-5 font-medium rounded-md text-black bg-white hover:text-blue-500" href="https://magic.blueboat.io">Request Access</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+        
+      <section class="py-24 md:py-32 bg-white overflow-hidden" style="background-image: url('flex-ui-assets/elements/pattern-white.svg'); background-position: center;"><div class="container px-4 mx-auto">
+        <div class="flex flex-wrap lg:items-center -mx-4">
+          <div class="w-full md:w-1/2 px-4 mb-16 md:mb-0">
+            <span class="inline-block py-px px-2 mb-4 text-xs leading-5 font-medium uppercase rounded-full shadow-sm text-blue-500 bg-blue-100">PERFORMANCE</span>
+            <h1 class="mb-8 text-4xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Cold start in
+              <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-indigo-600">17 milliseconds.</span>
+      </h1>
+            <p class="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">We combine Google's state-of-the-art V8 JavaScript engine, process-level snapshots, and Rust to speed up everything from cold start to runtime performance.</p>
+      
+          </div>
+          <div class="w-full md:w-1/2 px-4">
+            <div class="relative mx-auto md:mr-0 max-w-max">
+              <img src="images/Slice-1.svg" alt="">
+      </div>
+          </div>
+        </div>
+        </div>
+      </section>
+        
+      <section class="py-24 md:py-32 bg-white overflow-hidden" style="background-image: url('flex-ui-assets/elements/pattern-white.svg'); background-position: center;"><div class="container px-4 mx-auto">
+          <div class="flex flex-wrap lg:items-center -mx-4">
+            <div class="w-full md:w-1/2 px-4 mb-16 md:mb-0">
+              <span class="inline-block py-px px-2 mb-4 text-xs leading-5 font-medium uppercase rounded-full shadow-sm text-blue-500 bg-blue-100">DATA &amp; API</span>
+              <h1 class="mb-8 text-4xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Handle data and use external APIs, easily.</h1>
+              <p class="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">Blueboat comes with support for encoding, parsing, and transforming different kinds of data, and provides native access to popular external services. All built-in and implemented in Rust, so you don't have to pull in heavy third-party JavaScript libraries.</p>
+              <a class="inline-block py-4 w-full md:w-auto text-base leading-4 font-medium rounded-md shadow-sm text-blue-500" href="https://github.com/losfair/blueboat/issues/65" target="_blank">See an overview of the JavaScript API</a>
+      
+            </div>
+            <div class="w-full md:w-1/2 px-4">
+              <div class="relative mx-auto md:mr-0 max-w-max">
+      
+                <img class="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto text-blue-500" src="flex-ui-assets/elements/dots3-blue.svg" alt=""><img src="images/carbon-4.png" alt="">
+      </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        
+      <section class="py-24 md:py-32 bg-white overflow-hidden" style="background-image: url('flex-ui-assets/elements/pattern-white.svg'); background-position: center;"><div class="container px-4 mx-auto">
+          <div class="flex flex-wrap lg:items-center -mx-4">
+            <div class="w-full md:w-1/2 px-4 mb-16 md:mb-0">
+              <div class="relative mx-auto md:ml-0 max-w-max">
+                <img class="absolute z-10 -left-8 -top-8 w-28 md:w-auto text-yellow-400" src="flex-ui-assets/elements/circle3-yellow.svg" alt=""><img class="absolute z-10 -right-7 -bottom-8 w-28 md:w-auto text-blue-500" src="flex-ui-assets/elements/dots3-blue.svg" alt=""><img src="images/carbon-6.png" alt="">
+      </div>
+            </div>
+            <div class="w-full md:w-1/2 px-4">
+              <span class="inline-block py-px px-2 mb-4 text-xs leading-5 font-medium uppercase rounded-full shadow-sm bg-blue-100 text-blue-500">DISTRIBUTED SYSTEMS</span>
+              <h1 class="mb-8 text-4xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Powerful distributed system primitives.</h1>
+              <p class="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">A transactional key-value store, message queues, and reliable event streaming to the client. All directly accessible from JavaScript.</p>
+              <a class="inline-block py-4 w-full md:w-auto text-base leading-4 font-medium rounded-md shadow-sm text-blue-500" href="https://github.com/losfair/minichat" target="_blank">Demo: Distributed real-time chat in 15 lines of JavaScript</a>
+            </div>
+          </div>
+        </div>
+      </section>
+        
+      <section class="py-24 md:py-32 bg-white overflow-hidden" style="background-image: url('flex-ui-assets/elements/pattern-white.svg'); background-position: center;">
+        <div class="container px-4 mx-auto">
+          <div class="flex flex-wrap lg:items-center -mx-4">
+            <div class="w-full md:w-1/2 px-4 mb-16 md:mb-0">
+              <div class="relative mx-auto md:ml-0 max-w-max">
+                
+                
+                <img src="images/Slice-1-10.png" alt="">
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 px-4">
+              <span class="inline-block py-px px-2 mb-4 text-xs leading-5 font-medium uppercase rounded-full shadow-sm text-blue-500 bg-blue-100">MULTI-TENANCY</span>
+              <h1 class="mb-8 text-4xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter">Secure and efficient multi-tenancy.</h1>
+              <p class="mb-6 text-lg md:text-xl text-coolGray-500 font-medium">Apps are isolated from each other with multiple layers of security: V8 isolates, user and process boundaries, and seccomp. With efficient copy-on-write fork() on Linux, we are able to reduce multi-tenancy overhead to a minimum.</p>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+        
+      <section class="bg-white overflow-hidden" style="background-image: url('flex-ui-assets/elements/pattern-white.svg'); background-position: center;"><div class="container px-4 mx-auto">
+      
+        </div>
+        <div class="border-b border-coolGray-100"></div>
+        <div class="container px-4 mx-auto">
+          <div class="flex flex-wrap items-center py-12 md:pb-32">
+            <div class="w-full md:w-1/2 mb-6 md:mb-0">
+              <p class="text-coolGray-400 font-medium" contenteditable="false">© 2022 <a class="underline" href="https://univalence.me">Heyang Zhou</a>. All rights reserved.</p>
+            </div>
+            <div class="w-full md:w-1/2">
+              <div class="flex flex-wrap md:justify-end -mx-5">
+      
+      
+      
+                <div class="px-5">
+                  <a class="inline-block text-coolGray-300 hover:text-coolGray-400" href="https://github.com/losfair/blueboat">
+                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 0C4.0275 0 0 4.13211 0 9.22838C0 13.3065 2.5785 16.7648 6.15375 17.9841C6.60375 18.0709 6.76875 17.7853 6.76875 17.5403C6.76875 17.3212 6.76125 16.7405 6.7575 15.9712C4.254 16.5277 3.726 14.7332 3.726 14.7332C3.3165 13.6681 2.72475 13.3832 2.72475 13.3832C1.9095 12.8111 2.78775 12.8229 2.78775 12.8229C3.6915 12.887 4.16625 13.7737 4.16625 13.7737C4.96875 15.1847 6.273 14.777 6.7875 14.5414C6.8685 13.9443 7.10025 13.5381 7.3575 13.3073C5.35875 13.0764 3.258 12.2829 3.258 8.74709C3.258 7.73988 3.60675 6.91659 4.18425 6.27095C4.083 6.03774 3.77925 5.0994 4.263 3.82846C4.263 3.82846 5.01675 3.58116 6.738 4.77462C7.458 4.56958 8.223 4.46785 8.988 4.46315C9.753 4.46785 10.518 4.56958 11.238 4.77462C12.948 3.58116 13.7017 3.82846 13.7017 3.82846C14.1855 5.0994 13.8818 6.03774 13.7917 6.27095C14.3655 6.91659 14.7142 7.73988 14.7142 8.74709C14.7142 12.2923 12.6105 13.0725 10.608 13.2995C10.923 13.5765 11.2155 14.1423 11.2155 15.0071C11.2155 16.242 11.2043 17.2344 11.2043 17.5341C11.2043 17.7759 11.3617 18.0647 11.823 17.9723C15.4237 16.7609 18 13.3002 18 9.22838C18 4.13211 13.9703 0 9 0Z" fill="currentColor"></path></svg></a>
+                </div>
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="js/charts-demo.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"73586830980771ae","version":"2022.6.0","r":1,"token":"a131df1a45c542418a8c6d92f2e0118f","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
+
