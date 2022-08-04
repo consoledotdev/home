@@ -315,9 +315,11 @@
                 <div class="top">
                     <div class="heading">
                         <h4 class="title title-3 rich-title">
+                            {{if isset . "img"}}
                             <div class="case-study-thumbnail aspect-ratio aspect-ratio-1-1">
                                 <img loading="lazy" class="image" src="{{ .img }}" alt="{{ .name }} Logo" />
                             </div>
+                            {{end}}
                             <span>{{ .name }}</span>
                         </h4>
                         <span data-checkpoint-campaigns></span>

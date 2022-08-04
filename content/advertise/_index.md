@@ -94,7 +94,6 @@ campaigns:
           new tool.
   - name: IPInfo
     url: https://ipinfo.io/
-    img: /img/favicons/ipinfo.io.png
     intro:
       - IPInfo is a leading API for IP address metadata lookup. They were
         looking for new channels to reach developers, so worked with Console to
