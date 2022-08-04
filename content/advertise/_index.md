@@ -291,7 +291,7 @@ campaigns:
           from our audience.
   - name: AutoCloud
     url: https://www.autocloud.dev/
-    img: /img/favicons/www.autocloud.dev.png
+    img: /img/favicons/www.autocloud.io.png
     intro:
       - Following a successful campaign to promote AutoCloud’s GraphQL API for
         the cloud (CloudGraph), AutoCloud returned to promote their core

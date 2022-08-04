@@ -16,7 +16,7 @@ customPageStyle: true
 xlViewport:
   largeText: true
 companyInfo:
-  favicon: /img/favicons/autocloud.dev.png
+  favicon: /img/favicons/www.autocloud.io.png
   URL: https://autocloud.dev
   jobsURL: https://autocloud.dev/jobs
   location: Remote

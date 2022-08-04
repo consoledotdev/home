@@ -11,7 +11,7 @@ headerType: fixed
 summary: Interview with Evelyn LaTour, CPO, AutoCloud
 isPage: interviews
 topImg1Src: /img/interviews/autocloud-evelyn-latour-profile.jpg
-topImg2Src: /img/favicons/autocloud.dev.png
+topImg2Src: /img/favicons/www.autocloud.io.png
 ogImg: /img/interviews/autocloud-evelyn-latour-desk.jpg
 ---
 
