@@ -45,6 +45,9 @@ On that basis, this is our Privacy Policy:
 
 ### Who are we?
 
+Console Labs, Inc. is a Delaware corporation. 548 Market St, San Francisco,
+California 94104 US.
+
 Console Ltd is registered in England and Wales at RH 115 The Record Hall, 16-16A
 Baldwins Gardens, London, EC1N 7RJ, UK. Our company number is 13016709 and our
 UK Data Protection registration number is

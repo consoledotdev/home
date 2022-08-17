@@ -1,7 +1,7 @@
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
 name = "Console Home"
-license = "Copyright Console Ltd 2021"
+license = "Copyright Console 2022"
 licenselink = ""
 description = "The console.dev website."
 homepage = "https//console.dev"

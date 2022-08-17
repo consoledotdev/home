@@ -76,9 +76,6 @@ working on) something you think we should include, email us:
 
 ### Our company
 
-Console Ltd is registered in England and Wales at RH 115 The Record Hall, 16-16A
-Baldwins Gardens, London, EC1N 7RJ, UK. Our company number is 13016709 and our
-UK Data Protection registration number is
-[ZA837052](https://ico.org.uk/ESDWebPages/Entry/ZA837052).
+Console Labs, Inc. 548 Market St, San Francisco, California 94104 US.
 
 {{< section-subscribe >}}
