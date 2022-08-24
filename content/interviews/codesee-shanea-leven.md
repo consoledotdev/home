@@ -225,7 +225,8 @@ really calm to me, which is where the white noise comes from, I guess.
 
 ### Find out more
 
-[CodeSee](https://www.codesee.io/) is a tool for developers to visually map
-their codebase. The beta release was featured in the
-[Console newsletter](https://console.dev) on 22 Apr 2021. This interview was
-conducted on 16 Apr 2021.
+[CodeSee](https://www.codesee.io/) is a tool for developers to visualize their
+codebase. The beta release was featured in the [Console
+newsletter](https://console.dev) on 22 Apr 2021. It was also featured as an
+"Interesting Tool" on 30 Sep 2021 and 25 Aug 2022. This interview was conducted
+on 16 Apr 2021.
