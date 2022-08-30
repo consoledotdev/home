@@ -15,11 +15,14 @@ jobs:
         name: Deploy
         runs-on: ubuntu-latest
         steps:
+            # Required due to https://github.com/actions/checkout/issues/760
+            - name: Add GITHUB_WORKSPACE to git trust safe.directory
+              run: |
+                git config --global --add safe.directory ${GITHUB_WORKSPACE}
             - name: "Checkout GitHub Action"
               uses: actions/checkout@v3
               with:
                   fetch-depth: 0 # Required to get full history, so hugo :git lastmod works
-                  set-safe-directory: true
 
             - id: "get_data_tools"
               name: Get tools list from Google Sheets
