@@ -18,13 +18,14 @@ lint:
               - themes/console-home/static/fonts/**
               - themes/console-home/static/img/**
     enabled:
-        - actionlint@1.6.15
+        - git-diff-check@SYSTEM
+        - actionlint@1.6.17
         - black@22.6.0
-        - flake8@4.0.1
-        - gitleaks@8.8.11
+        - flake8@5.0.4
+        - gitleaks@8.11.2
         - hadolint@2.10.0
         - isort@5.10.1
-        - markdownlint@0.31.1
+        - markdownlint@0.32.2
         - prettier@2.7.1
         - shellcheck@0.8.0
         - shfmt@3.5.0
