@@ -15,11 +15,6 @@ jobs:
         name: Deploy
         runs-on: ubuntu-latest
         steps:
-            # Required due to https://github.com/actions/checkout/issues/760
-            - name: Add GITHUB_WORKSPACE to git trust safe.directory
-              run: |
-                  git config --global --add safe.directory ${GITHUB_WORKSPACE}
-                  git config --global --add safe.directory /github/workspace
             - name: "Checkout GitHub Action"
               uses: actions/checkout@v3
               with:
@@ -140,14 +135,16 @@ jobs:
                   path: data/toolsreviewed.json
                   retention-days: 1
 
-            # No drafts in prod
+            # No drafts in prod. Kept at 0.96 until
+            # https://github.com/jakejarvis/hugo-build-action/issues/6 is fixed
             - name: "hugo build (prod)"
-              uses: jakejarvis/hugo-build-action@v0.102.1
+              uses: jakejarvis/hugo-build-action@v0.96.0
               if: github.event.inputs.environment != 'test'
 
-            # Build drafts in the test environment
+            # Build drafts in the test environment. Kept at 0.96 until
+            # https://github.com/jakejarvis/hugo-build-action/issues/6 is fixed
             - name: "hugo build (test)"
-              uses: jakejarvis/hugo-build-action@v0.102.1
+              uses: jakejarvis/hugo-build-action@v0.96.0
               if: github.event.inputs.environment == 'test'
               with:
                   args: --buildDrafts --environment test

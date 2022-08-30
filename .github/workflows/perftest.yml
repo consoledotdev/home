@@ -8,19 +8,13 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            # Required due to https://github.com/actions/checkout/issues/760
-            - name: Add GITHUB_WORKSPACE to git trust safe.directory
-              run: |
-                  git config --global --add safe.directory ${GITHUB_WORKSPACE}
-                  git config --global --add safe.directory /github/workspace
-            - name: "Checkout GitHub Action"
+            - name: Checkout
               uses: actions/checkout@v3
-              with:
-                  fetch-depth: 0 # Required to get full history, so hugo :git lastmod works
-                  set-safe-directory: true
 
+            # Kept at 0.96 until
+            # https://github.com/jakejarvis/hugo-build-action/issues/6 is fixed
             - name: "hugo build"
-              uses: jakejarvis/hugo-build-action@v0.102.1
+              uses: jakejarvis/hugo-build-action@v0.96.0
 
             - name: Deploy to Cloudflare
               uses: cloudflare/wrangler-action@2.0.0
