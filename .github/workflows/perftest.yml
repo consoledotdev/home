@@ -11,7 +11,7 @@ jobs:
             # Required due to https://github.com/actions/checkout/issues/760
             - name: Add GITHUB_WORKSPACE to git trust safe.directory
               run: |
-                git config --global --add safe.directory ${GITHUB_WORKSPACE}
+                  git config --global --add safe.directory ${GITHUB_WORKSPACE}
             - name: "Checkout GitHub Action"
               uses: actions/checkout@v3
               with:
