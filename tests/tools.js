@@ -8,7 +8,7 @@ export const options = {
     duration: "5s",
     vus: 5,
     thresholds: {
-        http_req_duration: ["p(95)<1000"],
+        //http_req_duration: ["p(95)<1000"],
         errors: ["rate<0.01"], // <1% errors
     },
 };
@@ -27,12 +27,19 @@ export default function () {
     // https://k6.io/docs/examples/parse-html/
     const doc = parseHTML(res.body); // equivalent to res.html()
     const pageTitle = doc.find("head title").text();
+    console.log("pageTitle", pageTitle);
     const metaDescription = doc.find("meta[name='description']").attr("content");
+    console.log("metaDescription", metaDescription);
     const relCanonical = doc.find("link[rel='canonical']").attr("href");
+    console.log("relCanonical", relCanonical);
     const ogSiteName = doc.find("meta[property='og:site_name']").attr("content");
+    console.log("ogSiteName", ogSiteName);
     const ogTitle = doc.find("meta[property='og:title']").attr("content");
+    console.log("ogTitle", ogTitle);
     const ogDescription = doc.find("meta[property='og:description']").attr("content");
+    console.log("ogDescription", ogDescription);
     const ogURL = doc.find("meta[property='og:url']").attr("content");
+    console.log("ogURL", ogURL);
 
     // What are we expecting?
     const expectedCanonical = "https://console.dev/tools/";

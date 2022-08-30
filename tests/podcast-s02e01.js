@@ -8,7 +8,7 @@ export const options = {
     duration: "5s",
     vus: 5,
     thresholds: {
-        http_req_duration: ["p(95)<500"],
+        //http_req_duration: ["p(95)<500"],
         errors: ["rate<0.01"], // <1% errors
     },
 };
@@ -27,20 +27,35 @@ export default function () {
     // https://k6.io/docs/examples/parse-html/
     const doc = parseHTML(res.body); // equivalent to res.html()
     const pageTitle = doc.find("head title").text();
+    console.log("pageTitle", pageTitle);
     const metaDescription = doc.find("meta[name='description']").attr("content");
+    console.log("metaDescription", metaDescription);
     const relCanonical = doc.find("link[rel='canonical']").attr("href");
+    console.log("metaDescription", metaDescription);
     const ogSiteName = doc.find("meta[property='og:site_name']").attr("content");
+    console.log("ogSiteName", ogSiteName);
     const ogTitle = doc.find("meta[property='og:title']").attr("content");
+    console.log("ogTitle", ogTitle);
     const ogDescription = doc.find("meta[property='og:description']").attr("content");
+    console.log("ogDescription", ogDescription);
     const ogURL = doc.find("meta[property='og:url']").attr("content");
+    console.log("ogURL", ogURL);
     const twitterSite = doc.find("meta[name='twitter:site']").attr("content");
+    console.log("twitterSite", twitterSite);
     const twitterCard = doc.find("meta[name='twitter:card']").attr("content");
+    console.log("twitterCard", twitterCard);
     const twitterTitle = doc.find("meta[name='twitter:title']").attr("content");
+    console.log("twitterTitle", twitterTitle);
     const twitterDescription = doc.find("meta[name='twitter:description']").attr("content");
+    console.log("twitterDescription", twitterDescription);
     const twitterImage = doc.find("meta[name='twitter:image']").attr("content");
+    console.log("twitterImage", twitterImage);
     const twitterPlayer = doc.find("meta[name='twitter:player']").attr("content");
+    console.log("twitterPlayer", twitterPlayer);
     const twitterPlayerWidth = doc.find("meta[name='twitter:player:width']").attr("content");
+    console.log("twitterPlayerWidth", twitterPlayerWidth);
     const twitterPlayerHeight = doc.find("meta[name='twitter:player:height']").attr("content");
+    console.log("twitterPlayerHeight", twitterPlayerHeight);
 
     // What are we expecting?
     const expectedCanonical = "https://console.dev/podcast/s02e01-dev-infrastructure-john-graham-cumming-cloudflare/";
