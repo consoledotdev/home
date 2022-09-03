@@ -46,7 +46,7 @@ do best. Building.
 #### Console Devtools Newsletter
 
 Console started in early-2021 as a [weekly newsletter](/latest/) for experienced
-developers to discover the best tools and beta releases. Now at 24k+
+developers to discover the best tools and beta releases. Now at {{< param consoleSubscribers >}}
 subscribers, 77% with >5 years coding experience, we continue to
 [review](/tools/) the best developer tools, [track](/betas/) the latest beta and
 early access releases, [profile](/profiles/) interesting companies, interview
