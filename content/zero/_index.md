@@ -51,6 +51,10 @@ portfolio:
     URL: https://driftingin.space/
     yearOfInvestment: 2022
     favicon: "img/favicons/driftingin.space.jpeg"
+  - name: Eraser
+    URL: https://www.tryeraser.com/
+    yearOfInvestment: 2022
+    favicon: "img/favicons/www.tryeraser.com.svg"
   - name: Forward Email
     URL: https://forwardemail.net/
     yearOfInvestment: 2022
