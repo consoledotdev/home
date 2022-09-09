@@ -18,6 +18,18 @@ to email us:
 
 {{< framed-section--open classes="framed-section-default" >}}
 
+{{< rich-title-3 icon="jobs" >}} Not looking for a job?{{</ rich-title-3 >}}
+
+Jobs Console sends you the best &lt;= 3 developer jobs each week, because you
+might occasionally consider something new.
+
+{{< a-link icon-right="arrow-right" url="https://jobs.console.dev" text="More details" >}}
+
+{{< div--close >}}
+
+<!--
+{{< framed-section--open classes="framed-section-default" >}}
+
 {{< rich-title-3 icon="tool" >}} Interesting tools{{</ rich-title-3 >}}
 
 We review 2-3 new tools each week in the newsletter.
@@ -57,4 +69,4 @@ We speak with the people behind the tools we feature in our weekly newsletter.
 
 {{< a-link icon-right="arrow-right" url="/interviews/" text="Read interviews" >}}
 
-{{< div--close >}}
+{{< div--close >}} -->
