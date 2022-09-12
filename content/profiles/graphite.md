@@ -74,7 +74,7 @@ works at Graphite{{</ rich-title-3 >}}
 #### How are the teams structured?
 
 We are small enough to operate as a single team right now. Despite there being
-just eight of us, we’re growing quickly, and soon we’ll have to break out into
+just nine of us, we’re growing quickly, and soon we’ll have to break out into
 multiple teams.
 
 Everyone works in person, full-time at our office in New York. We’re a
