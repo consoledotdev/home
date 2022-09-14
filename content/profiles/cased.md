@@ -24,11 +24,10 @@ companyInfo:
   product:
     name: "Cased"
     description:
-      "Cased is a platform for automating complex production tasks. It allows
-      you to specify rules for reviewing and approving commands before running
-      them in production. We believe most downtime is caused by human error and
-      not code, we streamline internal workflows that support, operations,
-      engineering, etc. that reduces mistakes and increases uptime."
+      "Cased is an engineering enablement platform focused on making production
+      work better. It combines a web-based terminal, approval workflows, and
+      runbook automation to improve day-to-day DevOps and support work. Cased
+      also features detailed logging and audit features, to help with compliance."
   techStack:
     - Python
     - JavaScript
@@ -82,7 +81,7 @@ start dividing it up a little bit, by functional role.
 #### What tools do engineers use?
 
 - **Design and Prototyping:** Figma
-- **Issue Tracking:** GitHub
+- **Issue Tracking:** Linear and GitHub
 - **Source Control:** GitHub
 - **Development Environment:** GitHub Codespaces
 - **CI Pipeline:** GitHub Actions
@@ -110,7 +109,7 @@ one people want.
 #### How does the development process work? What's the process for working through bugs, features and tech debt?
 
 Ben, one of the co-founders, wears many hats - product design, product
-management, product everything, future direction etc. Heusually designs things
+management, product everything, future direction etc. He usually designs things
 in Figma, with different levels of fidelity. We tend to do some very basic
 “figuring stuff out” design work in the early stages. We think that this
 idealized model where a designer is someone that comes up with a design, hands
