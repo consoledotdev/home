@@ -58,11 +58,19 @@ history](https://github.com/consoledotdev/home/commits/main/content/privacy.md))
 
 ### Data processing purposes
 
-If you sign up to our devtools newsletter, we collect your personal data for the purpose of sending you the newsletter. We do not use this information for any automated decision-making or profiling based on personal data. 
+If you sign up to our devtools newsletter, we collect your personal data for the
+purpose of sending you the newsletter. We do not use this information for any
+automated decision-making or profiling based on personal data. 
 
-If you sign up to Jobs Console, we collect your personal information for the purposes of matching you with jobs, sending them to you, then connecting you with the hiring manager if you flag your interest. We use the information you provide us to make automated decisions about whether a particular job fits your preferences. You can update your preferences or delete your account at any time by logging in to your account or by contacting us.
+If you sign up to Jobs Console, we collect your personal information for the
+purposes of matching you with jobs, sending them to you, then connecting you
+with the hiring manager if you flag your interest. We use the information you
+provide us to make automated decisions about whether a particular job fits your
+preferences. You can update your preferences or delete your account at any time
+by logging in to your account or by contacting us.
 
-We will never sell your personal data under any circumstances. We do not provide your data to third-parties for marketing purposes.
+We will never sell your personal data under any circumstances. We do not provide
+your data to third-parties for marketing purposes.
 
 ### Lawful purposes for processing
 
@@ -82,11 +90,13 @@ We will never sell your personal data under any circumstances. We do not provide
 - Legitimate interests. We track the links you click within our emails to help
   us improve our selection criteria.
 
-We do not knowingly collect information from children. If you are under the age of 16, please do not submit any personal data.
+We do not knowingly collect information from children. If you are under the age
+of 16, please do not submit any personal data.
 
 ### Recipients of personal data
 
-We work with a number of third-party vendors to help us run Console. We may transfer personal data to or through these services for the following purposes:
+We work with a number of third-party vendors to help us run Console. We may
+transfer personal data to or through these services for the following purposes:
 
 - [Cloudflare](https://www.cloudflare.com/): Where we run some of our websites
   and infrastructure.
