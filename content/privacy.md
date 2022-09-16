@@ -53,7 +53,7 @@ That’s the plain English version. Here are the extra details.
 
 #### Last updated
 
-2022-08-30 ([change
+2022-09-16 ([change
 history](https://github.com/consoledotdev/home/commits/main/content/privacy.md)).
 
 ### Data processing purposes
@@ -91,6 +91,8 @@ We work with a number of third-party vendors to help us run Console. We may tran
 - [Cloudflare](https://www.cloudflare.com/): Where we run some of our websites
   and infrastructure.
 - [Courier](https://www.courier.com/privacy/): Used to manage emails we send.  
+- [Encore](https://encore.dev/): Where we run some of our websites and
+  infrastructure.
 - [DocuSign](https://www.docusign.com/): If you are a customer, we manage
   contracts using DocuSign.
 - [Google](https://www.google.com): We use Google Workspace for our email, docs
@@ -103,6 +105,7 @@ We work with a number of third-party vendors to help us run Console. We may tran
   customer contacts.
 - [Plausible](https://plausible.io/): We track website visits with Plausible
   Analytics which does not use cookies and is designed privacy-first.
+- [Postmark](https://postmarkapp.com/): Used to manage emails we send.
 - [QuickBooks](https://quickbooks.intuit.com/): Used for invoices and financial
   management if you are a supplier or customer.
 - [Reddit](https://www.reddit.com/): If you click through from a Reddit ad, we
