@@ -10,7 +10,7 @@ draft: false
 headerType: fixed
 summary: Interview with Matthew O'Riordan, CEO, Ably
 isPage: interviews
-topImg1Src: /img/interviews/ably-matthew-oriordan-profile.jpg
+topImg1Src: /img/interviews/ably-matthew-oriordan-profile.jpeg
 topImg2Src: /img/favicons/ably.com.png
 ogImg: /img/interviews/ably-matthew-oriordan-desk.jpg
 ---
