@@ -19,7 +19,7 @@ companyInfo:
   favicon: /img/favicons/sourcegraph.com.png
   URL: https://about.sourcegraph.com
   jobsURL: https://grnh.se/938e4f5f4us
-  location: Global (remote)
+  location: Remote (global)
   description: Universal code search for every developer.
   images:
     - url: /img/profiles/sourcegraph-profile-1.png
