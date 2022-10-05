@@ -14,7 +14,7 @@ jobs:
             # Kept at 0.96 until
             # https://github.com/jakejarvis/hugo-build-action/issues/6 is fixed
             - name: "hugo build"
-              uses: jakejarvis/hugo-build-action@v0.96.0
+              uses: jakejarvis/hugo-build-action@v0.104.3
 
             - name: Deploy to Cloudflare
               uses: cloudflare/wrangler-action@2.0.0
