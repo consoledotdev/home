@@ -34,6 +34,6 @@ mediatype = "application/rss"
 baseName = "rss"
 
 [params]
-consoleSubscribers = "24k+"
+consoleSubscribers = "25k+"
 #forceNewsletterDate = "" # YYYY-MM-DD
 #returnNewsletterDate = "" # YYYY-MM-DD
