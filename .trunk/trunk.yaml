@@ -1,8 +1,11 @@
 version: 0.1
 actions:
-  enabled:
-    - trunk-cache-prune
-    - trunk-upgrade-available
+    enabled:
+        - trunk-announce
+        - trunk-cache-prune
+        - trunk-check-pre-push
+        - trunk-fmt-pre-commit
+        - trunk-upgrade-available
 plugins:
     sources:
         - id: trunk
@@ -24,12 +27,12 @@ lint:
               - assets/img/**
               - static/img/**
               - themes/console-home/assets/img/**
-              - themes/console-home/static/fonts/**
-              - themes/console-home/static/img/**
+              - themes/console-home/static/**
     enabled:
+        - svgo@2.8.0
         - git-diff-check@SYSTEM
         - actionlint@1.6.17
-        - black@22.6.0
+        - black@22.10.0
         - flake8@5.0.4
         - gitleaks@8.11.2
         - hadolint@2.10.0
@@ -38,7 +41,6 @@ lint:
         - prettier@2.7.1
         - shellcheck@0.8.0
         - shfmt@3.5.0
-        - taplo@release-taplo-cli-0.6.8
     threshold:
         - linters: [markdownlint]
           level: LEVEL_MEDIUM
