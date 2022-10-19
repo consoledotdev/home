@@ -1,11 +1,15 @@
 version: 0.1
+actions:
+  enabled:
+    - trunk-cache-prune
+    - trunk-upgrade-available
 plugins:
     sources:
         - id: trunk
           ref: v0.0.3
           uri: https://github.com/trunk-io/plugins
 cli:
-    version: 0.17.0-beta
+    version: 0.18.1-beta
 lint:
     ignore:
         - linters: [ALL]
