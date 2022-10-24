@@ -1,4 +1,9 @@
 version: 0.1
+runtimes:
+    enabled:
+        - go@1.18.3
+        - node@16.14.2
+        - python@3.10.3
 actions:
     enabled:
         - trunk-announce
@@ -9,10 +14,10 @@ actions:
 plugins:
     sources:
         - id: trunk
-          ref: v0.0.3
+          ref: v0.0.5
           uri: https://github.com/trunk-io/plugins
 cli:
-    version: 0.18.1-beta
+    version: 1.0.1
 lint:
     ignore:
         - linters: [ALL]
@@ -29,18 +34,19 @@ lint:
               - themes/console-home/assets/img/**
               - themes/console-home/static/**
     enabled:
-        - svgo@2.8.0
-        - git-diff-check@SYSTEM
-        - actionlint@1.6.17
-        - black@22.10.0
-        - flake8@5.0.4
-        - gitleaks@8.11.2
-        - hadolint@2.10.0
-        - isort@5.10.1
-        - markdownlint@0.32.2
-        - prettier@2.7.1
-        - shellcheck@0.8.0
-        - shfmt@3.5.0
+        - taplo@release-taplo-cli-0.7.0
+          - svgo@3.0.0
+          - git-diff-check@SYSTEM
+          - actionlint@1.6.21
+          - black@22.10.0
+          - flake8@5.0.4
+          - gitleaks@8.15.0
+          - hadolint@2.10.0
+          - isort@5.10.1
+          - markdownlint@0.32.2
+          - prettier@2.7.1
+          - shellcheck@0.8.0
+          - shfmt@3.5.0
     threshold:
         - linters: [markdownlint]
           level: LEVEL_MEDIUM
