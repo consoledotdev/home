@@ -1,0 +1,233 @@
+---
+title: "r2c"
+date: 2022-10-24T10:00:00+00:00
+draft: false
+summary: Open-source static analysis for security.
+metaTitle: Working at r2c - Console profile
+metaDescription:
+  What is it like to work at r2c? Console profile behind the scenes at r2c -
+  open-source static analysis for security.
+headerType: fixed
+hideLines: true
+hidePlanes: true
+isSubpage: company-profile
+pageType: company-profile
+customPageStyle: true
+xlViewport:
+  largeText: true
+companyInfo:
+  favicon: /img/favicons/semgrep.dev.png
+  URL: https://r2c.dev
+  jobsURL: https://r2c.dev/team/
+  description: Open-source static analysis for security.
+  product:
+    name: "Semgrep"
+    description:
+      "Semgrep is a fast, open-source, static analysis tool for modern 
+      languages. With 1,000+ existing rules and simple-to-create custom ones, 
+      it finds the bugs that matter. Semgrep can run anywhere: in CI, your 
+      editor, or the command-line. Plus, with dedicated infrastructure from r2c, 
+      it’s easy to deploy, manage, and monitor Semgrep at scale."
+  techStack:
+    - OCaml
+    - Python
+    - Typescript
+    - React
+  meta:
+    - label: "Founded"
+      value: 2017
+    - label: "CEO"
+      value:
+        links:
+          - href: "https://www.linkedin.com/in/isaacevans/"
+            text: "Isaac Evans"
+            iconRight: "external-link"
+    - label: "Employees"
+      value: "<100"
+    - label: "Stage"
+      value: "Startup"
+    - label: "Social"
+      value:
+        links:
+          - href: "https://twitter.com/r2cdev"
+            text: "Twitter"
+            iconLeft: "twitter"
+          - href: "https://www.linkedin.com/company/returntocorp/"
+            text: "LinkedIn"
+            iconLeft: "linkedin"
+  type: "Open source"
+  category: "Developer Tools - Security"
+  topCategory: "Developer Tools"
+  subCategory: "Security"
+  filterTaxonomy:
+    "developer-tools, open-source, python, react, typescript, python"
+interview: semgrep-isaac-evans
+---
+
+{{< nav-wrapper--open id="wrapper-1" anchor-name="how-engineering-works" >}}
+
+{{< rich-title-3 icon="checklist" id="how-engineering-works" >}}How engineering
+works at r2c{{</ rich-title-3 >}}
+
+#### How are the teams structured?
+
+The teams right now are small enough that each of those teams has one engineer
+manager, and then there's about five to nine people on each team. The teams are
+structured based on their technical expertise. We have three main teams:
+
+- Our program analysis team is mostly OCaml wizards who are writing the core
+  parsing and matching engine. 
+- Our security research team consists of software engineers and security experts
+  who are doing a mixture of things, but primarily writing rules and making sure
+  that the tool is producing great results for our customers. 
+- Our application team is a team of product-focused engineers and builds the web
+  product in typed-python, flask, react and typescript.
+
+And then we have one cross-functional team, which focuses on our second product,
+[Semgrep Supply Chain](https://semgrep.dev/products/semgrep-supply-chain), which
+does third party code dependency scanning. That one is a mix where we've pulled
+a couple people from each team.
+
+#### What tools do engineers use?
+
+- **Design:** Figma
+- **Source Control:** GitHub
+- **Issue Tracking:** Linear
+- **Internal Documentation:** Notion 
+- **Incident management:** PagerDuty and Datadog
+- **Monitoring:** Prometheus
+- **Communication:** Slack
+- **Build and Deployment:** GitHub Actions and Argo CD
+- **Component Design:** Storybook
+
+#### Can developers pick their own tools?
+
+We have a well documented path where we give everyone a Mac and gently nudge
+people to use VS Code, but that's mostly just because it's easy to get help from
+other people on the team. It’s not a requirement - many people are on Linux, and
+some use Emacs or Vim or whatever they want.
+
+If someone suggested a new tool that would affect the wider team, it'd be
+considered on a team by team basis. We often enjoy the search for new tools and
+if the team adopts it then it's accepted.
+
+#### How does the development process work? What's the process for working through bugs, features and tech debt?
+
+The engineering manager is responsible for what the team works on. We have a
+loose agreement with our product team that we'd spend about 50% of time on new
+features and 50% of our time on a combination of support and tech debt, which
+seems to work pretty well.
+
+We are a small startup, so we try to do what makes sense. One thing that we do
+is twice a year we have a hackathon or a full hack week where everyone in the
+company from sales to engineering is encouraged to spend that week to try out
+new things and demo that to the company. We have pretty great prizes and then
+usually at least two or three projects from that hack week then get pulled into
+the main work.
+
+We roughly follow an agile framework. We're trying to do one week sprints and
+ship things. Once a month, we do a bug squashing day or bug squashing week, just
+try to push those through. But it's not mandated, managers of the teams to
+figure out what their team needs to do that month.
+
+We do monthly goal setting and quarterly company strategy goals. We have metrics
+and we use the term “singular goal” a lot for the north star metric. We try to
+set SMART goals and try to hold ourselves accountable to make sure we are
+actually creating an impact with our work.
+
+#### How does code get reviewed, merged, and deployed?
+
+To request a code review, engineers use the GitHub code review feature to tag
+people who are relevant. We require all the tests to pass before it can either
+be auto merged or unit merged in. As soon as it is merged, it will be deployed
+to staging. And then approximately once a day, staging automatically gets
+deployed to production; we have one click revert if we need to go back.
+
+There's two ways to do rollbacks. One would be just undoing the change through
+code. We try to have deterministic atomic builds. But database migrations don't
+quite work that way - we try to write up and down migrations and then if need
+be, we use Argo CD to deploy different versions. We can also simply point
+production to old revisions, which are still available if needed.
+
+#### What is the QA process?
+
+We've prioritized end to end and integration testing. We have a few functional
+tests for the core workflows that are essential, as well as other tests that
+check if the website is down or if we can make comments on the core workflows in
+the product.
+
+We’re also just rolling out a new feature to allow customers to opt-in to beta
+releases and get early access to new functionality.
+
+#### What are some recent examples of interesting development challenges solved by internal teams as part of building the product?
+
+We use Treesitter, which is this technology that GitHub wrote to power their
+Atom code editor, and now powers a lot of modern code editors. That's all open
+source, so we were able to bring that in and use that as our parser. That
+allowed us to add 17 languages to Semgrep very quickly. 
+
+In the context of writing rules, we've built a pretty interesting editor
+workflow where people can take other people's rules and collaborate on it, tweak
+it, make it better and share it back. So when the Log4J incident happened, we
+had two actual external community members who were going back and forth together
+working to find the best pattern to accurately detect Log4J with Semgrep.
+
+Another interesting challenge that we faced was when we wanted to implement
+impersonation. We use SpiceDB, which is an open source fine-grained permissions
+database. We built a microservice that lets us do impersonation in a way that's
+auditable and traceable so our customer success engineers can impersonate an
+organization or a user when we need to reproduce issues.
+
+#### How does on-call work?
+
+We have three on-call rotations. For the open source part, there's an on call
+that's mostly doing the release process. Every engineer, including the team
+lead, is part of the on-call rotations - everyone gets a chance to carry a
+little bit of that support, and the same thing is true for the rule writing
+team, our security research team and our application team. When you are on call
+here, you're really mostly just a traffic cop whose job is to fix easy things.
+Otherwise, you're running an incident and you're trying to pull in engineers
+from other teams to help you solve it, and get support from our SREs when
+needed.
+
+That's a pretty standard on-call process. For us, the philosophy of on-call is
+always how do you give engineers freedom and responsibility? As we move down the
+infrastructure, we have individual microservices where it is easy to identify
+the service owner, then that way they get paged first if an incident occurs.
+
+{{< nav-wrapper--open id="wrapper-2" anchor-name="hiring-process" >}}
+
+{{< rich-title-3 icon="checklist" id="key-features" >}} Hiring process at r2c
+{{</ rich-title-3 >}}
+
+#### How does the application process work? What are the stages and what is the timeline?
+
+Candidates apply through our job website. Our team reviews the application
+within two weeks and if we want to move forward, we'll reach out. The
+application process consists of following steps: 
+
+- **Initial call**, usually with a recruiter. 
+- **Chat with the hiring manager**, who evaluates the technical skill of the
+candidate either by a live coding interview or a take home test. 
+- **Virtual onsite interviews** which focus on software design, coding,
+debugging, or mentorship. 
+- **Final interview** with one of the founders where candidates talk about our
+mission and values.
+
+#### What is the career progression framework? How are promotions and performance reviews managed?
+
+We do have a pretty extensive framework on the engineering side. Most engineers
+would come in as an L3 and then get promoted to an L4, L5, L6, etc. 
+
+Performance reviews happen twice a year as that's mostly a check just to make
+sure that we're understanding people's performance. We also do 30, 60, 90 day
+check-ins for new hires. 
+
+We have a formal mentorship program, everybody gets a mentor. Our people team
+has just started with a round robin arrangement but there's a pairing of people,
+even across teams and functionally. For example, a couple of engineers are
+paired up with a sales leader as one of their mentors to talk about professional
+development and career growth. After this program ends, we'll have a mentee
+program where more junior folks will help mentor more senior folks.
+
+{{< div--close >}}
