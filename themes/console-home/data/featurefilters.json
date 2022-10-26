@@ -140,6 +140,12 @@
             "checked": true
         },
         {
+            "name": "node",
+            "label": "NodeJS",
+            "showsIcon": false,
+            "checked": true
+        },
+        {
             "name": "python",
             "label": "Python",
             "showsIcon": false,
