@@ -36,10 +36,9 @@ If you sign up to Jobs Console, we collect your email and information about your
 job preferences. We use this to match you with the best jobs. Your profile is
 private until you decide to engage with one of the organizations looking to
 recruit. If you flag interest in a job we’ve sent you, we pass your profile to
-the hiring manager. This is anonymous by default, but if you add any (optional)
-extra information such as a blog or other portfolio URL, that will also be sent
-and may reveal your identity. We only provide hiring managers with your contact
-details once you have both opted to receive them.
+the hiring manager. You can preview what we'll send before it goes and you must
+opt in to every match. We only provide hiring managers with your contact details
+once you have both opted to receive them.
 
 You can unsubscribe from all our emails at any time using the link in each email
 or by contacting us.
@@ -53,7 +52,7 @@ That’s the plain English version. Here are the extra details.
 
 #### Last updated
 
-2022-09-16 ([change
+2022-11-01 ([change
 history](https://github.com/consoledotdev/home/commits/main/content/privacy.md)).
 
 ### Data processing purposes
