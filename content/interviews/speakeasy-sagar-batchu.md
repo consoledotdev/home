@@ -3,7 +3,7 @@ title: Interview with Sagar Batchu, Sagar Batchu
 who: Sagar Batchu
 role: CEO
 org: Sagar Batchu
-what: Developer experience portal.
+what: Developer experience for APIs.
 tags: ["Devex", "APIs"]
 date: 2022-09-22T12:00:00Z
 draft: false
@@ -205,6 +205,6 @@ somewhere halfway between tennis and table tennis.
 
 ### Find out more
 
-Speakeasy is a developer experience portal. It was featured as an "interesting
+Speakeasy is a developer experience portal for APIs. It was featured as an "interesting
 tool" in the [Console newsletter](/) on 3 Nov 2022. This interview was conducted
 on 22 Sep 2022.
