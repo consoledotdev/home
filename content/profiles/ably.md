@@ -23,7 +23,7 @@ companyInfo:
   product:
     name: "Ably"
     description:
-      "Able is a suite of simple APIs to develop powerful realtime experiences.
+      "Ably is a suite of simple APIs to develop powerful realtime experiences.
       Start with pub/sub messaging that is guaranteed to deliver and 
       automatically translates between protocols. Then add device presence, 
       check stream history, and never worry about abrupt disconnections."
