@@ -1,8 +1,8 @@
 ---
-title: Interview with Sagar Batchu, Sagar Batchu
+title: Interview with Sagar Batchu, Speakeasy
 who: Sagar Batchu
 role: CEO
-org: Sagar Batchu
+org: Speakeasy
 what: Developer experience for APIs.
 tags: ["Devex", "APIs"]
 date: 2022-09-22T12:00:00Z
@@ -17,42 +17,54 @@ ogImg: /img/interviews/speakeasy-sagar-batchu-desk.jpeg
 
 ### What is Speakeasy? Why did you build it?
 
-Today APIs are exploding in popularity. We have so many API-first businesses
-across different verticals. For more and more companies, their success is tied
-closely with API usage - the more your API gets used the higher chance that your
-company is leading the market. But for most APIs today, the status quo of
-integration and usage is still a big bottleneck to growth. Companies continue to
-support a lot of API users with just static documentation. There's a lot of hand
-holding and there's an immense support load andnd a developer's experience
-burden, just using APIs, could be a lot easier than it is today. It hasn't quite
-caught up to how crazy popular they are. 
+Today, APIs are exploding in popularity. There are so many API-first businesses
+across different verticals, or businesses where the API is an important product
+surface - the more your API gets used the higher chance that your company is
+leading the market. But for most APIs today, the status quo of integration and
+usage is still a big bottleneck to growth. Companies continue to support a lot
+of API users with just static documentation. There’s a lot of hand holding and
+an immense support load on builders of APIs. And on the flip side, the devex
+required to use APIs could be a lot easier than it is today. It hasn’t really
+progressed despite how crazy popular they are.
 
-That was the very basic thesis around why we started
+That was the really basic thesis around why we started
 [Speakeasy](https://www.speakeasyapi.dev/). We just wanted to make it really
 simple for developers to both produce and consume APIs.
 
-In terms of products, we do two things today - we provide a set of composable
-developer portal embeds that are powered by an SDK that you put into your API.
-We capture data directly from your API to power experiences like usage
-dashboards and request viewers that enable the end user to unblock themselves
-when using your API without getting on a call with your dev team or sharing logs
-over a ticket. It provides a great devex for your end users, as well as reduces
-work for the API for your team. We're starting with devex today, but in the
-longer term, we really want to address everything about producing and consuming
-APIs
+In terms of products, we do two things today. The first is a developer portal
+that finally lets companies move beyond docs, to make self-service API
+integrations possible. What does that mean? We create embeds that are powered by
+an SDK that you put into your API. The SDK captures data directly from your API
+and powers experiences like usage dashboards and request viewers that enable the
+end user to unblock themselves when using your API without getting on a call
+with your dev team or sharing logs over a ticket. Interestingly, the embeds can
+either be integrated into your existing dev portal – or we can create a
+brandable Developer Experience Portal on your behalf if all you really have is
+docs today for example. Either way, these components provide a best-in-class
+devex for your end users, and reduces work for your API team.
 
-We go beyond the world of documentation and offer a world class developer
-experience portal with very minimal effort. You can think of Speakeasy as the
-API platform team at your company that builds internal tooling that helps
-externalize information to your users in the form of dashboards, client-SDKs,
-tooling, and  documentation. 
+The second product is Client SDKs as a Service that make integrating with your
+API as simple and ergonomic as possible. We built a new set of generators from
+the ground up with a focus on reliability and idiomatic language choices.
+They’re available for Typescript, Go, Python, Java and Rust. We auto-generate
+these client SDKs from your OpenAPI 3.0 spec – so really minimal dev work is
+required – compare this with the current status quo where SDKs either have to be
+hand-rolled from scratch, or you take an open-source generator’s SDK that is
+full of bugs and code that looks like a machine wrote. With these auto-generated
+SDKs, users of your API can guarantee type safety, and through extensions we can
+enable even more value-added features such as auth, pagination, retries, and
+integrating with our Developer Experience Portal for analytics and so on.
 
-We've turned this into API ops - our vision is that developers get to focus 100%
-of their time on the API code itself. And at some point we get to this place
-where you git commit and you have a fantastic devex spun up for your API much in
-the way that we have seamless infrastructure hosting. That's come out of
-companies like Heroku, where you just push your app, you have it hosted. There's
-a similar, analogous story for APIs that's evolving.
+Overall, you can think of Speakeasy as the API platform team at your company
+that builds internal tooling that helps externalize information to your users in
+the form of dashboards, client-SDKs, tooling, and documentation.
+
+Our vision is that developers get to focus 100% of their time on the API code
+itself. And at some point we get to this place where you git commit and you have
+a fantastic devex spun up for your API much in the way that we have seamless
+infrastructure hosting. That’s come out of companies like Heroku, where you just
+push your app, you have it hosted. There’s a similar, analogous story for APIs
+that’s evolving.
 
 We want to wrap that all up into a product that can be used instantaneously with
 your existing APIs. Companies use Speakeasy as a way to provide an interactive
@@ -65,38 +77,39 @@ set the expectations of what a good API is.
 
 The days are long, but the weeks are short! Each day is a fun mix of customer
 calls, standups, and technical deep dives with the team. Then collaborating in
-person with my co-founder Simon, who I'm very lucky to have in this journey to
-make this happen. I'm a developer myself - it’s what I've been doing for a
-number of years. I think in my past, I've been a very regimented person with my
+person with my co-founder Simon, who I’m very lucky to have in this journey to
+make this happen. I’m a developer myself - it’s what I’ve been doing for a
+number of years. I think in my past, I’ve been a very regimented person with my
 schedule. So this has put a lot of stress on me to figure out how to maintain
 that while having an inherently ambiguous job. I do try to maintain a little bit
 of structure, try to get up pretty early around 6am and get a 30 minutes of
 quiet time before the day starts, do the rituals of yoga and coffee and start
-planning up the day. 
+planning up the day.
 
-I have a schedule here written down, but just looking at it, I don't know how
-closely I follow that actually. We have a distributed team that's on the West
-Coast PST in the U.S., and then in London, in the UK. And so we're split, which
+I have a schedule here written down, but just looking at it, I don’t know how
+closely I follow that actually. We have a distributed team that’s on the West
+Coast PST in the U.S., and then in London, in the UK. And so we’re split, which
 means our standup starts pretty early for me - 8:00 AM - and then we have
-collaboration time when we're pretty live online on Slack and Zoom. After that,
+collaboration time when we’re pretty live online on Slack and Zoom. After that,
 the other sides of the day for both time zones of more quiet kind of deep focus,
 quiet time.
 
-That's how the day goes. I try to make sure I do get some amount of reading
-every night. That's not necessarily Speakeasy-related, although APIs are
+That’s how the day goes. I try to make sure I do get some amount of reading
+every night. That’s not necessarily Speakeasy-related, although APIs are
 everywhere.
 
 ### What is the team structure around Speakeasy?
 
-We’re a seven person team right now - five of us doing development (Thomas,
-Tristan, Alexa, Anuraag and myself) , Nolan, who's heading up developer
+We’re a seven person team right now - five of us doing development (Alexa,
+Anuraag, Thomas, Tristan, and myself), Nolan, who’s heading up developer
 relations, content and marketing, and then Simon, my co-founder is doing all
-things - from going to market with products to figuring out how we serve
-enterprise as well. It is a very flat company, there's no hierarchy at the
-moment. [Autonomy and ownership](https://www.speakeasyapi.dev/join-us) are our
-core values. Everyone is trusted to go from user interviews, to design all the
-way to shipping to a customer. Every engineer is their own product manager and
-everyone is owning the complete life cycle of the product.
+sorts of things - from sales and how we go to market, to leading customer
+interviews, collaborating with me on high-level product roadmap and vision,
+finance, and all the other stuff required to run a company. It is a very flat
+company, there’s no hierarchy at the moment. Autonomy and ownership are our core
+values. Everyone is trusted to go from user interviews, to design all the way to
+shipping to a customer. Every engineer is also a product manager and everyone is
+owning the complete life cycle of the product.
 
 One of the awesome things about being a developer focused company is that all
 developers are able to be involved in the full scope of the business all the way
@@ -107,27 +120,27 @@ company.
 
 I studied physics in undergrad, focused a lot on experimental physics and
 spending a lot of time in the lab. I realized that the thing that I enjoyed the
-most was not the time in the lab, but the exercise, after taking that data,
+most was not the time in the lab, but the exercise, after taking that data, of
 building simple software around it to actually make the analysis work and
 actually make a project. In my last year of undergrad I started freaking out
-that I didn't want to do a PhD, and I didn't want to spend more time in the lab.
+that I didn’t want to do a PhD, and I didn’t want to spend more time in the lab.
 So I started to cram in as many CS courses as I could.
 
 When I came out of school, I worked for a couple places, a little bit closer to
-hardware, doing software and firmware and working at an IoT company. That's how
+hardware, doing software and firmware and working at an IoT company. That’s how
 I got into software, with more and more work with software teams working on big
 data APIs, building enterprise software. Most recently I lived in London for a
 number of years, working to help start and grow an engineering team for
 LiveRamp, a U.S. based company out there. Then I moved back to the Bay Area. I
 am really lucky to have an awesome network here. London is amazing but the Bay
-Area has this intensity around startups and entrepreneurship
+Area has this intensity around startups and entrepreneurship.
 
 I spent a number of years coding in Java, I had a little stint with Kotlin too
-which I found super fun to play with. At Speakeasy, we've built the core
+which I found super fun to play with. At Speakeasy, we’ve built the core
 platform in Go, but being a product that plugs into APIs, we have to support a
-variety of languages. These days we're all polyglots, doing everything like JVM,
+variety of languages. These days we’re all polyglots, doing everything like JVM,
 Python, Go, TypeScript, even Rust. So at this point, I hardly think about what
-languages we're using.
+languages we’re using.
 
 ### What is the most interesting development challenge you've faced working on Speakeasy?
 
