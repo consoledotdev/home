@@ -1,0 +1,226 @@
+---
+title: "Hookdeck"
+date: 2022-11-03T12:00:00+00:00
+draft: false
+summary: Webhook infrastructure.
+metaTitle: Working at Hookdeck - Console profile
+metaDescription:
+  What is it like to work at Hookdeck? Console profile behind the scenes at
+  Hookdeck - webhook infrastructure.
+headerType: fixed
+hideLines: true
+hidePlanes: true
+isSubpage: company-profile
+pageType: company-profile
+customPageStyle: true
+xlViewport:
+  largeText: true
+companyInfo:
+  favicon: /img/favicons/hookdeck.com.jpg
+  URL: https://hookdeck.com
+  jobsURL: https://hookdeck.com/careers
+  location: Remote
+  description: Webhook infrastructure
+  product:
+    name: "Hookdeck"
+    description:
+      "Never miss a webhook. Receive webhooks reliably, even after server 
+      outages. Free features like automatic retries and rate limiting keep 
+      your system humming – while developer-friendly tooling and an intuitive 
+      dashboard keep the whole team happy."
+  techStack:
+    - TypeScript
+    - NodeJS
+    - React
+    - Go
+  meta:
+    - label: "Founded"
+      value: 2020
+    - label: "CEO"
+      value:
+        links:
+          - href: "https://twitter.com/AlexBouchardd"
+            text: "Alexandre Bouchard"
+            iconRight: "external-link"
+    - label: "Employees"
+      value: "<10"
+    - label: "Stage"
+      value: "Early-stage startup"
+    - label: "Social"
+      value:
+        links:
+          - href: "https://twitter.com/Hookdeck"
+            text: "Twitter"
+            iconLeft: "twitter"
+          - href: "https://www.linkedin.com/company/hookdeck/"
+            text: "LinkedIn"
+            iconLeft: "linkedin"
+  type: "SaaS"
+  category: "DevOps - Webhooks"
+  topCategory: "DevOps"
+  subCategory: "Webhooks"
+  filterTaxonomy: "devops, saas, typescript, nodejs, go, react"
+interview: hookdeck-alex-bouchard
+---
+
+{{< nav-wrapper--open id="wrapper-1" anchor-name="how-engineering-works" >}}
+
+{{< rich-title-3 icon="checklist" id="how-engineering-works" >}} How engineering
+works at Hookdeck{{</ rich-title-3 >}}
+
+#### How are the teams structured?
+
+We have two engineering teams - the product team and the infrastructure team.
+The product team is multidisciplinary and it works in tandem with designers,
+front-end engineers, and backend engineers. It does everything that you need to
+actually be able to build out the whole surface of the product. This team works
+on the dashboard, the APIs, the CLI.
+
+The infrastructure team is focused on building the core infrastructure for the
+product team to build upon. They work on things like queuing mechanisms, event
+life cycle management, deployment, scalability, data engineering, security and
+more.
+
+#### What tools do engineers use?
+
+- **Data Storage:** Postgres, BigQuery, Elasticsearch 
+- **Message Brokers:** Kafka, Pub/Sub, Redis
+- **Infrastructure:** Cloudflare Workers, Kubernetes (GKE) 
+- **Design:** Figma
+- **Source Control:** Git and GitHub
+- **Issue tracking:** GitHub projects
+- **Documentation:** Notion
+- **Incident management:** Better Uptime
+- **Communication:** Gmail, Slack, Loom
+- **Build and Deployment:** GitHub Actions, Docker
+- **Error Tracking:** Sentry and LogRocket
+- **Monitoring:** Google Cloud Monitoring, Better Uptime
+
+#### Can developers pick their own tools?
+
+Developers can pick whatever tool they want. We're using a monorepo structure
+where we have a repo that you can launch via Docker Compose, but beyond that,
+engineers can use whatever debugger, IDE, Git client, etc.
+
+#### How does the development process work? What's the process for working through bugs, features and tech debt?
+
+We start the development process by developing the theme and the road map for
+the quarter, but it's not strictly set. These are the bigger goals that we're
+trying to achieve. This gets divided into specific projects and those projects
+are prioritized on a two week basis, but it's not a deadline - it's more like an
+opportunity to realign and refocus on what we should be working on. Some
+projects last more than one cycle, we're not working against the clock.
+
+Once the project is in scope, we start working on it. It depends from week to
+week, but generally we try to aim for about 50% of your work that's dedicated to
+that project. Then the other 50% is focused on the issues pipeline. Whenever
+there's bugs or refactoring opportunities, we put them inside our GitHub project
+board and engineers pick bugs at their own discretion. We don't have a systemic
+prioritization there, but we do keep one column that we call “to-do”, it's a
+short list of things that seem more important. 
+
+There's a backlog, but anyone is free at any point to take something from it and
+work on it. We do have a no bug policy where essentially any bug that we find is
+automatically prioritized regardless of the impact or the size of that bug.
+
+#### How does code get reviewed, merged, and deployed?
+
+We're SOC 2 compliant and it's part of our policy to be reviewed by one
+individual from the team affected by that PR. Once your PR is approved, then you
+can merge it at your own discretion at any time into either staging or preview
+environment branches.
+
+When you merge something that requires specific QA, then you request a QA and
+someone from the team will volunteer to QA. We do a rollout if there's no
+pending QA on the branch, it happens mostly automatically, we just have to get
+approval for the rollout from someone else from the team and then it goes out to
+production automatically.
+
+#### What is the QA process?
+
+When someone requests a QA, they basically request it openly and then someone
+from the team checks it. That is still on a very ad hoc basis. QA mostly tends
+to be testing new things on the UX side because everything else is covered by
+integration tests or end to end tests that are run automatically on each change.
+
+#### What are some recent examples of interesting development challenges solved by internal teams as part of building the product?
+
+On the infrastructure front, I think one of the interesting challenges that
+we're dealing with is that we're processing a ton of data which needs to be used
+for multiple use cases. We’re doing data aggregations to be able to give
+statistics to users, but also trigger product events like alerts if a back
+pressure is accumulating on your queues.
+
+We're also trying to give the customer the ability to search through that data
+in a way that's fairly efficient. Users need to slice and dice the data in
+multiple different ways and see the events associated with it. So what you end
+up with is serious data engineering challenges, where you have to move millions
+of rows at a time in a way that's efficient, that doesn't create too much
+replication lag, but also allows us to perform all the operations that we need
+on it. This has led to discussions around which storage technology we should
+use, what the schema should be, etc.
+
+And then there's a crossover in business and engineering concerns where we need
+to do work in a way that's going to be cost efficient for the future. We have
+extremely high up time requirements because people come to us for reliability.
+They come to us because we're going to do it better than them in terms of the
+uptime and reliability of receiving the webhooks. It is unreasonable for a
+company our size to provide 100% uptime, so we have to make a few trade offs. In
+our case, we have optimized for a very high up time, but at a potential cost of
+increased latency. We guarantee that we’ll receive and ingest a webhook, but
+have some leeway where it may not be processed immediately during an outage.
+
+On the product front, the product team was tasked with designing and
+implementing a better way of dealing with errors. Often when something goes
+wrong, multiple errors have the same underlying cause, so we're working on
+systems to be able to identify what those underlying causes are and then provide
+a specific UX around giving you information related to that underlying cause.
+
+#### How does on-call work?
+
+We have on-call rotations and only the members of the core team are on call. We
+have two approaches to how we structure salaries - one where you are on the
+on-call rotation and one where you aren't. There's a calendar of 12 days, and
+everybody does a three day rotation on those 12 days. There are two levels of
+escalation - firstly, the engineer that's on call responds and if they are
+unable to handle it by themselves then they can escalate it to our CTO.
+
+We also have an incident response guide with a list of specific things to do in
+case of an issue, a knowledge base of what are the different things that could
+happen and how to respond to them.
+
+{{< nav-wrapper--open id="wrapper-2" anchor-name="hiring-process" >}}
+
+{{< rich-title-3 icon="checklist" id="key-features" >}}Hiring process at Hookdeck
+{{</ rich-title-3 >}}
+
+#### How does the application process work? What are the stages and what is the timeline?
+
+The interview process goes through following stages:
+
+1. Intro call to see whether our interests align with the candidate and share a
+   little bit more about what Hookdeck is working on.
+2. Follow up call for in-depth introduction, discussing the vision of the
+   company and your role at Hookdeck.
+3. Technical evaluation (90 mins): Candidate discusses some of their previous
+   projects that they have worked upon and explains their thought process. If
+   the candidates are unable to discuss their previous work due to NDAs, they
+   have an option to take a technical test instead.
+4. Team introduction: The candidate meets a few team members and co-founders. 
+
+#### What is the career progression framework? How are promotions and performance reviews managed?
+
+Career progression is based on expertise. We implement a similar system to other
+companies in terms of seniority where each grade is specifically defined. A lot
+of the progression also comes from the growth of the company itself, so as the
+company is growing, you're also taking on more responsibility. Eventually we're
+going to be hiring other people that might, depending on what your intentions
+are, involve more responsibility for you, or not depending if you want to take
+those on.
+
+We do monthly performance sync ups. Our company management structure is pretty
+flat right now but we are going to have a manager with whom you talk about your
+performance. We also do a yearly review where we also look at salary
+adjustments.
+
+{{< div--close >}}
