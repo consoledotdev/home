@@ -88,7 +88,7 @@ done by the integrations team.
 - **Infrastructure:** Google Kubernetes Engine
 - **Logging and Monitoring:** Google Cloud Monitoring
 - **Design:** Figma
-- **Planning and coordination: **Notion and Linear
+- **Planning and coordination:** Notion and Linear
 - **Version Control:** Git and GitHub
 
 #### Can developers pick their own tools?
