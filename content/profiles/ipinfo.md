@@ -33,17 +33,18 @@ companyInfo:
       Nike, DataDog, DemandBase, Clearbit, and many more."
   techStack:
     - NodeJS
+    - Next.js
     - React
     - Go
-    - Python
+    - Kubernetes
   meta:
     - label: "Founded"
       value: 2013
     - label: "CEO"
       value:
         links:
-          - href: "https://www.linkedin.com/company/ipinfo/"
-            text: "Ben Downling"
+          - href: "https://www.linkedin.com/in/bendowling/"
+            text: "Ben Dowling"
             iconRight: "external-link"
     - label: "Employees"
       value: "<50"
@@ -62,7 +63,7 @@ companyInfo:
   category: "Developer Tools - API"
   topCategory: "Developer Tools"
   subCategory: "API"
-  filterTaxonomy: "developer-tools, saas, node, python, go"
+  filterTaxonomy: "developer-tools, saas, node, go"
 ---
 
 {{< nav-wrapper--open id="wrapper-1" anchor-name="how-engineering-works" >}}
