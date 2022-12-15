@@ -35,5 +35,5 @@ baseName = "rss"
 
 [params]
 consoleSubscribers = "25k+"
-#forceNewsletterDate = "" # YYYY-MM-DD
-#returnNewsletterDate = "" # YYYY-MM-DD
+forceNewsletterDate = "2022-12-15"  # YYYY-MM-DD
+returnNewsletterDate = "2023-01-05" # YYYY-MM-DD
