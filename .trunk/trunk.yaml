@@ -4,13 +4,13 @@ cli:
 plugins:
     sources:
         - id: trunk
-          ref: v0.0.6
+          ref: v0.0.8
           uri: https://github.com/trunk-io/plugins
 lint:
     enabled:
         - shellcheck@0.9.0
         - git-diff-check
-        - isort@5.11.1
+        - isort@5.11.3
         - prettier@2.8.1
         - shfmt@3.5.0
         - gitleaks@8.15.2
