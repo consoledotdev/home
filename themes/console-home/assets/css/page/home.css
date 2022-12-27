@@ -1,21 +1,21 @@
 /* Console Home
    ========================================================================== */
-.page-home .main {
-    width: 440px;
-}
-
-@media (max-width: 540px) {
-    .page-home .main {
-        width: 100%;
-        min-height: 0;
-        margin-top: 0;
-    }
+   .page-home .main {
+    z-index: 30;
+    margin: var(--mTop) 0 0;
 }
 
 @media (max-width: 768px) {
     .page-home .main {
-        margin-top: calc(var(--space6) - var(--space4_5));
-        margin-bottom: calc(var(--space6) - var(--space4_5));
+        --mTop: var(--space6);
+        --mBottom: var(--space6);
+    }
+}
+
+@media (min-width: 769px) {
+    .page-home .main {
+        --mTop: max(calc(var(--space6) - var(--space3)), 10vh);
+        --mBottom: calc(var(--space6) - var(--space2));
     }
 }
 
@@ -23,12 +23,56 @@
     cursor: default;
 }
 
+.page-home .page-section {
+    --sectH: 800px;
+    --sectHMax: 100vh;
+    height: var(--sectH);
+    max-height: var(--sectHMax);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.page-home .description {
+    color: var(--theme-text-2);
+    font-size: var(--t-size1);
+    line-height: var(--t-lH4);
+}
+
+/* Opening -------------------------------------------------------------------- */
+.page-home .page-section.opening {
+    justify-content: center;
+    height: calc(var(--sectH) - var(--mTop) - var(--headerTopPadding));
+    max-height: calc(var(--sectHMax) - var(--mTop) - var(--headerTopPadding));
+}
+
+.page-home .page-section.opening .description {
+    font-size: var(--t-esize4);
+}
+
+@media (max-width: 768px) {
+    .page-home .page-section.opening .bottom {
+        margin-top: var(--space5);
+    }
+}
+
+@media (min-width: 769px) {
+    .page-home .page-section.opening {
+        display: grid;
+        grid-template-columns: auto 50%;
+        align-items: center;
+        gap: var(--space5_5);
+    }
+}
+
 .page-home .console-form {
-    margin: var(--space4_5) 0;
+    margin: var(--space3) 0;
 }
 
 @media (max-width: 480px) {
-    .page-home .main .console-form {
+    .page-home .console-form {
         margin: var(--space4) 0;
     }
 }
@@ -41,8 +85,6 @@
     text-transform: uppercase;
     font-size: var(--t-size-2);
     color: var(--theme-text-2);
-    margin-top: var(--space4);
-    margin-bottom: calc(var(--space4) * -1);
 }
 
 .page-home .subscribers-count .icon {
@@ -50,17 +92,67 @@
     margin-right: var(--space1);
 }
 
-@media (max-width: 480px) {
-    .page-home .subscribers-count {
-        margin-bottom: calc(var(--space3) * -1);
+/* Podcast -------------------------------------------------------------------- */
+.page-home .page-section.podcast {
+    justify-content: space-between;
+    padding-top: var(--space6);
+    padding-bottom: var(--space6);
+    background: linear-gradient(transparent 0%, var(--theme-content-bg-1) 80%), transparent;
+}
+
+.page-home .page-section.podcast .top .title {
+    margin-bottom: 0;
+    color: var(--theme-text-accent-triad-03-light);
+}
+
+.page-home .page-section.podcast .top .title .icon {
+    width: calc(var(--space4) + var(--space2));
+    height: calc(var(--space4) + var(--space2));
+}
+
+.page-home .page-section.podcast .top .title .icon-fill-stroke {
+    fill: var(--theme-text-accent-triad-03-light);
+    stroke: var(--theme-text-accent-triad-03-light);
+}
+
+@media (max-width: 768px) {
+    .page-home .page-section.podcast .mid {
+        margin-top: var(--space5);
+        width: 100%;
+    }
+
+    .page-home .page-section.podcast .mid > .right {
+        margin-top: var(--space4);
     }
 }
 
-.page-home .podcast-widget {
-    margin-top: var(--space4_5);
+@media (min-width: 769px) {
+    .page-home .page-section.podcast .mid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: auto 50%;
+        align-items: center;
+        gap: calc(var(--space5) + var(--space3));
+    }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 768px) {
+    .page-home .page-section.podcast .bottom {
+        margin-top: var(--space5);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-home .podcast-widget {
+        margin-top: var(--space4_5);
+    }
+}
+
+.page-home .podcast-widget .podcast-widget-header .title {
+    display: none;
+}
+
+/* @media (max-width: 420px) {
     .page-home .podcast-widget .podcast-widget-header .title span:before {
         content: "Podcast";
     }
@@ -74,4 +166,164 @@
             display: none;
         }
     }
+} */
+
+.page-home .page-section.podcast .bottom {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: calc(var(--space4) * -1);
+}
+
+@media (max-width: 768px) {
+    .page-home .page-section.podcast .bottom {
+        margin-top: calc(var(--space5) + (var(--space4) * -1));
+    }
+}
+
+.page-home .page-section.podcast .bottom > * {
+    margin-top: var(--space4);
+}
+
+.page-home .page-section.podcast .bottom > .link {
+    margin-right: var(--space4);
+}
+
+.page-home .page-section.podcast .podcast-links-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-top: calc(var(--space4) + (var(--space3) * -1));
+}
+
+.page-home .page-section.podcast .podcast-links-wrapper > * {
+    margin-top: var(--space3);
+}
+
+.page-home .page-section.podcast .podcast-links-wrapper .title {
+    margin-bottom: 0;
+    margin-right: var(--space3_5);
+}
+
+.page-home .page-section.podcast .podcast-links-wrapper img {
+    width: calc(var(--space3) + var(--space2_5));
+    height: calc(var(--space3) + var(--space2_5));
+}
+
+/* Jobs -------------------------------------------------------------------- */
+.page-home .page-section.jobs {
+    justify-content: space-between;
+    padding-top: var(--space6);
+    padding-bottom: var(--mBottom);
+    background: linear-gradient(var(--theme-content-bg-1) 0%, var(--theme-content-bg-2) 60%), transparent;
+}
+
+@media (min-width: 769px) {
+    .page-home .page-section.jobs {
+        align-items: center;
+    }
+}
+
+.page-home .page-section.jobs:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 1px;
+    background: var(--theme-content-bg-3);
+}
+
+.page-home .page-section.jobs .top .title:first-child {
+    font-size: var(--t-size6);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.page-home .page-section.jobs .top .title:last-child {
+    margin-top: var(--space3_5);
+    margin-bottom: 0;
+}
+
+.page-home .page-section.jobs .top .title .icon {
+    margin-top: 2px;
+    width: var(--space4);
+    height: var(--space4);
+}
+
+.page-home .page-section.jobs .top .title .icon circle {
+    fill: var(--theme-jobs-triad-01);
+}
+
+@media (min-width: 769px) {
+    .page-home .page-section.jobs .top {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-home .page-section.jobs .mid {
+        margin-top: var(--space5);
+    }
+
+    .page-home .page-section.jobs .mid .right {
+        margin-top: var(--space4);
+    }
+}
+
+@media (min-width: 769px) {
+    .page-home .page-section.jobs .mid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: auto 50%;
+        align-items: center;
+        gap: var(--space5_5);
+    }
+}
+
+.page-home .page-section.jobs .bottom {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-top: calc(var(--space4) * -1);
+}
+
+@media (max-width: 768px) {
+    .page-home .page-section.jobs .bottom {
+        margin-top: calc(var(--space5) + (var(--space4) * -1));
+    }
+}
+
+.page-home .page-section.jobs .bottom > * {
+    margin-top: var(--space4);
+}
+
+.page-home .page-section.jobs .bottom .console-button {
+    margin-right: var(--space4);
+}
+
+.page-home .page-section.jobs .bottom .console-button-text {
+    color: var(--theme-cta-secondary-yellow-text-idle);
+}
+
+.page-home .page-section.jobs .bottom .console-button-text:hover {
+    color: var(--theme-cta-secondary-yellow-text-hover);
+}
+
+.page-home .page-section.jobs .bottom .console-button-text:active {
+    color: var(--theme-cta-secondary-yellow-text-active);
+}
+
+.page-home .page-section.jobs .bottom .console-button-text .icon-fill {
+    fill: var(--theme-cta-secondary-yellow-text-idle);
+}
+
+.page-home .page-section.jobs .bottom .console-button-text:hover .icon-fill {
+    fill: var(--theme-cta-secondary-yellow-text-hover);
+}
+
+.page-home .page-section.jobs .bottom .console-button-text:active .icon-fill {
+    fill: var(--theme-cta-secondary-yellow-text-active);
 }

@@ -8,6 +8,8 @@ summary:
 isPage: home
 pageType: home
 customStyle: true
+headerType: fixed
+hidePlanes: true
 ogType: website
 sitemap:
   changefreq: weekly

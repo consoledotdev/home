@@ -1,53 +1,102 @@
 {{ define "main" }}
-<h2 class="title title-1">Discover the best tools for developers</h2>
-<p class="description">A free weekly email digest of the best tools and beta releases for developers.</p>
-<p class="small subscribers-count">{{partial "icons/console-mini-filled.html" }}Join {{ $.Site.Params.consoleSubscribers }} subscribers</p>
-<form action="https://dev.us7.list-manage.com/subscribe/post?u=f8c3cd14ee8d63c53d0986a48&amp;id=267911a165" method="post" id="console-subscribe" name="console-subscribe" class="console-form">
-    <input id="form-email" name="EMAIL" class="console-input-text" type="email" placeholder="Your email" title="Email" required />
-    <input type="hidden" value="/" name="REFERRER" id="mc-referrer" />
-    <div style="position: absolute; left: -5000px" aria-hidden="true"><input type="text" name="b_f8c3cd14ee8d63c53d0986a48_267911a165" tabindex="-1" value="" /><!-- Anti spam field --></div>
 
-    <button data-onclickblur class="console-button icon-left" type="submit" title="Signup">
-        {{ partial "icons/send.html" }}
-        <span>Sign Up</span>
-    </button>
-</form>
+    <section class="page-section page-section-home opening">
+        <div class="top">
+            <h2 class="title title-1">Discover the best tools for developers</h2>
+            <p class="description">A free weekly email digest of the best tools and beta releases for developers.</p>
+        </div>
+        <div class="bottom">
+            <p class="small subscribers-count">{{partial "icons/console-mini-filled.html" }}{{ $.Site.Params.consoleSubscribers }} subscribers</p>
+            <form action="https://dev.us7.list-manage.com/subscribe/post?u=f8c3cd14ee8d63c53d0986a48&amp;id=267911a165" method="post" id="console-subscribe" name="console-subscribe" class="console-form">
+                <input id="form-email" name="EMAIL" class="console-input-text" type="email" placeholder="Your email" title="Email" required />
+                <input type="hidden" value="/" name="REFERRER" id="mc-referrer" />
+                <div style="position: absolute; left: -5000px" aria-hidden="true"><input type="text" name="b_f8c3cd14ee8d63c53d0986a48_267911a165" tabindex="-1" value="" /><!-- Anti spam field --></div>
 
-{{ `<!-- Plausible Analytics goal tracking for signups -->` | safeHTML }}
-<script>
-    var registerForm = document.querySelector("#console-subscribe");
-    registerForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        setTimeout(submitForm, 1000);
-        var formSubmitted = false;
+                <button data-onclickblur class="console-button icon-left" type="submit" title="Signup">
+                    {{ partial "icons/send.html" }}
+                    <span>Sign Up</span>
+                </button>
+            </form>
 
-        function submitForm() {
-            if (!formSubmitted) {
-                formSubmitted = true;
-                registerForm.submit();
-            }
-        }
+            {{ `<!-- Plausible Analytics goal tracking for signups -->` | safeHTML }}
+            <script>
+                var registerForm = document.querySelector("#console-subscribe");
+                registerForm.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    setTimeout(submitForm, 1000);
+                    var formSubmitted = false;
 
-        plausible("Newsletter Subscribe", {
-            callback: submitForm,
-        });
-    });
-</script>
-<p>
-    Every Thursday.
-    <a class="link" data-onclickblur href="/latest/">See the latest email</a>.
-</p>
+                    function submitForm() {
+                        if (!formSubmitted) {
+                            formSubmitted = true;
+                            registerForm.submit();
+                        }
+                    }
 
-<!-- Podcast embed -->
-{{ $section := .Site.GetPage "section" "podcast" }}
-{{ $pages := $section.Pages }}
-{{ $podcast := index (where $pages.ByPublishDate.Reverse "Params.season" 3) 0 }}
+                    plausible("Newsletter Subscribe", {
+                        callback: submitForm,
+                    });
+                });
+            </script>
+            <p class="small">
+                Every Thursday.
+                <a class="link" data-onclickblur href="/latest/">See latest email</a>
+            </p>
+        </div>
+    </section>
 
-{{ $playerTitle := print $podcast.Title ", with " $podcast.Params.who }}
-{{ with $podcast.Params.org }}{{ $playerTitle = print $playerTitle " (" $podcast.Params.org ")" }}{{ end }}
-{{ $playerAttrs := (dict "title" $playerTitle ) }}
+    <section class="page-section page-section-home podcast full-width">
+        <div class="top">
+            <h3 class="title title-2 rich-title">{{ partial "icons/podcast.html" }}<span>DevTools Podcast</span></h3>
+        </div>
+        <div class="mid">
+            <div class="left">
+                <h4 class="title title-3">Listen to people in the devtools space.</h4>
+                <p class="description">Security, infrastructure, encryption, privacy, ..., all the technical details around devtools.</p>
+            </div>
+            <div class="right">
+                <!-- Podcast embed -->
+                {{ $section := .Site.GetPage "section" "podcast" }}
+                {{ $pages := $section.Pages }}
+                {{ $podcast := index (where $pages.ByPublishDate.Reverse "Params.season" 3) 3 }}
 
-{{ partial "components/podcast-widget.html" (dict "style" "alt" "podcast" $podcast "art" "header" "links" "footer" "playerAttrs" $playerAttrs) }}
-<!-- end -->
+                {{ $playerTitle := print $podcast.Title ", with " $podcast.Params.who }}
+                {{ with $podcast.Params.org }}{{ $playerTitle = print $playerTitle " (" $podcast.Params.org ")" }}{{ end }}
+                {{ $playerAttrs := (dict "title" $playerTitle ) }}
+
+                {{ partial "components/podcast-widget.html" (dict "podcast" $podcast "art" "header" "hideLinks" "true" "playerAttrs" $playerAttrs) }}
+                <!-- end -->
+            </div>
+        </div>
+        <div class="bottom">
+            <a class="link" data-onclickblur href="/podcast/">See all episodes</a>
+            {{ partial "components/podcast-links.html" (dict "apple" "true" "spotify" "true" "google" "true" "overcast" "true" "title" "Listen & subscribe") }}
+        </div>
+    </section>
+
+    <section class="page-section page-section-home jobs full-width">
+        <div class="top">
+            <h3 class="title title-2 rich-title">{{ partial "icons/jobs.html" }}<span class="text-italic"><span class="text-medium">jobs</span>.console</span></h3>
+            <h4 class="title title-3">The best dev jobs you weren't looking for.</h4>
+        </div>
+        <div class="mid">
+            <div class="left">
+                Illustration
+            </div>
+            <div class="right">
+                <p class="description"><span class="text-accent">Matched</span> to your preferences, <span class="text-accent">private</span> by default, with <span class="text-accent">detailed</span> engineering profiles and salary ranges.</p>
+            </div>
+        </div>
+        <div class="bottom">
+            <a data-onclickblur href="https://jobs.console.dev/signup" target="_blank" rel="noopener" class="console-button icon-right" title="Sign Up for Jobs">
+                <span>Sign Up for Jobs</span>
+                {{ partial "icons/arrow-right.html" }}
+            </a>
+            <a data-onclickblur href="https://jobs.console.dev" target="_blank" rel="noopener" class="console-button-text icon-right" title="Jobs Console">
+                <span>Learn how it works</span>
+                {{ partial "icons/console-more.html" }}
+            </a>
+        </div>
+    </section>
 
 {{ end }}
