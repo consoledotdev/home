@@ -6,6 +6,7 @@ summary: Jobs subscription confirmed.
 robotsDisallow: true
 type: confirm-jobs
 isPage: confirm-jobs
+headerType: fixed
 customStyle: true
 ---
 

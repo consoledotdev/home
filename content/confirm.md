@@ -3,6 +3,7 @@ title: "Thanks for joining!"
 date: 2021-03-01T12:00:00Z
 draft: false
 summary: Subscription confirmed.
+headerType: fixed
 robotsDisallow: true
 ---
 

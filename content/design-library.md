@@ -7,4 +7,5 @@ type: design-library
 layout: design-library
 isPage: design-library
 customStyle: true
+headerType: fixed
 ---
