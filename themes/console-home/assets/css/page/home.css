@@ -1,6 +1,6 @@
 /* Console Home
    ========================================================================== */
-   .page-home .main {
+.page-home .main {
     z-index: 30;
     margin: var(--mTop) 0 0;
 }
