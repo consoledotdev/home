@@ -27,7 +27,7 @@
             <main class="main
                 {{- if ne .Params.pageType "home" -}}
                     {{- if .Params.pageType -}}
-                        -{{- . -}}
+                        -{{- .Params.pageType -}}
                     {{- else -}}
                         -article
                     {{- end -}}
