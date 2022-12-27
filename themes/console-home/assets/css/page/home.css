@@ -152,22 +152,6 @@
     display: none;
 }
 
-/* @media (max-width: 420px) {
-    .page-home .podcast-widget .podcast-widget-header .title span:before {
-        content: "Podcast";
-    }
-
-    .page-home .podcast-widget .podcast-widget-links > .link:before {
-        content: "See all";
-    }
-
-    @media (max-width: 380px) {
-        .page-home .podcast-widget .date {
-            display: none;
-        }
-    }
-} */
-
 .page-home .page-section.podcast .bottom {
     width: 100%;
     display: flex;
@@ -231,6 +215,7 @@
     position: absolute;
     top: 0;
     height: 1px;
+    width: 100%;
     background: var(--theme-content-bg-3);
 }
 
