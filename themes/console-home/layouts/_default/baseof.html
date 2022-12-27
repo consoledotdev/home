@@ -26,10 +26,13 @@
             {{ partial "header.html" (dict "context" . "headerType" .Params.headerType "hidePlanes" .Params.hidePlanes "hideLines" .Params.hideLines ) }}
             <main class="main
                 {{- if ne .Params.pageType "home" -}}
-                    {{- if not .Params.pageType }}-article{{ end -}}
-                    {{- with .Params.pageType }}-{{ . }}{{ end -}}
+                    {{- if .Params.pageType -}}
+                        -{{- . -}}
+                    {{- else -}}
+                        -article
+                    {{- end -}}
                 {{- end }}">
-                    {{- block "main" . }}{{- end }}
+                {{- block "main" . }}{{- end }}
             </main>
             {{ partial "footer.html" . }}
         </div>
