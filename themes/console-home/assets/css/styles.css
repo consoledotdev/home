@@ -67,35 +67,35 @@ li {
 }
 
 .text-light {
-  font-weight: 300;
+    font-weight: 300;
 }
 
 .text-regular {
-  font-weight: 400;
+    font-weight: 400;
 }
 
 .text-medium {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 .text-italic {
-  font-style: italic;
+    font-style: italic;
 }
 
 .text-default {
-  color: var(--theme-text-2);
+    color: var(--theme-text-2);
 }
 
 .text-accent {
-  color: var(--theme-text-1);
+    color: var(--theme-text-1);
 }
 
 .text-quiet {
-  color: var(--theme-text-3);
+    color: var(--theme-text-3);
 }
 
 .text-uppercase {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 /* Hero
