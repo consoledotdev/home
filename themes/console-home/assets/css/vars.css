@@ -207,4 +207,7 @@
     --t-lH2: 1.3em;
     --t-lH3: 1.4em;
     --t-lH4: 1.5em;
+
+    --headerTopPadding: calc(var(--space2) + var(--space4));
+    --headerTopPaddingCompact: var(--space3);
 }

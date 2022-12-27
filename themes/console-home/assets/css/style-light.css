@@ -17,6 +17,9 @@
     --theme-text-accent-sunset-strong: var(--c-sunset-06);
     --theme-text-accent-sunset-light: var(--c-sunset-05-main);
 
+    --theme-text-accent-triad-03-strong: var(--c-green-06);
+    --theme-text-accent-triad-03-light: var(--c-green-05-main);
+
     --theme-input-text: var(--c-black-02-main);
     --theme-brand-accent-text-idle: var(--c-blue-08);
     --theme-brand-accent-text-hover: var(--c-blue-09);
