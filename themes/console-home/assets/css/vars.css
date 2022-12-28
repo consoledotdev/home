@@ -24,16 +24,22 @@
     --c-grey-09-black-03: #151517;
 
     --c-blue-01: #f4f8ff;
+    --c-blue-01-RGB: 244, 248, 255;
     --c-blue-02: #e4edff;
+    --c-blue-02-RGB: 228, 237, 255;
     --c-blue-03: #d4e2ff;
+    --c-blue-03-RGB: 212, 226, 255;
     --c-blue-04: #b5c9ff;
     --c-blue-05: #7e97ff;
     --c-blue-06-main: #5269ff;
     --c-blue-07: #3847f3;
     --c-blue-08: #252dd9;
     --c-blue-09: #14168b;
+    --c-blue-09-RGB: 20, 22, 139;
     --c-blue-10: #0e0f5f;
+    --c-blue-10-RGB: 14, 15, 95;
     --c-blue-11: #080833;
+    --c-blue-11-RGB: 8, 8, 51;
 
     --c-fuchsia-01: #fdf4ff;
     --c-fuchsia-02: #ffe1ff;
