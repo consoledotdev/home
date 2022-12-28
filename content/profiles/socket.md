@@ -44,7 +44,7 @@ companyInfo:
             text: "Feross Aboukhadijeh"
             iconRight: "external-link"
     - label: "Employees"
-      value: "10-50"
+      value: "11-50"
     - label: "Stage"
       value: "Early-stage startup"
     - label: "Social"
