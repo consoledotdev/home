@@ -318,6 +318,13 @@
     /* Zero landing page specific */
     --theme-horizon-lines-color: var(--c-blue-11);
     --theme-zero-moon-color: var(--c-blue-10);
+
+    /* Console Rays artwork */
+    --theme-dust-color: var(--c-grey-06-blacks-neutral);
+    --theme-slim-plane-color: var(--c-blue-10);
+    --theme-slim-plane-glow: rgba(var(--c-blue-10-RGB), .5);
+    --theme-wave-word-color: var(--c-green-10);
+    --theme-wave-word-glow: var(--c-green-11);
 }
 
 .theme.page-article,
