@@ -1,6 +1,6 @@
 ---
 title: "Socket"
-date: 2022-12-28T12:00:00+00:00
+date: 2022-12-27T12:00:00+00:00
 draft: false
 summary: Secure your JavaScript supply chain.
 metaTitle: Working at Socket - Console profile
