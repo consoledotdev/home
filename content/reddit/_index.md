@@ -5,8 +5,10 @@ draft: false
 summary:
   A free weekly email digest of the best tools and beta releases for developers.
 isPage: home
-customStyle: true
-ogType: website
 pageType: home
+customStyle: true
+headerType: fixed
+hidePlanes: true
+ogType: website
 robotsDisallow: true
 ---
