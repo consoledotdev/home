@@ -320,11 +320,11 @@
     --theme-zero-moon-color: var(--c-blue-04);
 
     /* Console Rays artwork */
-    --theme-dust-color: var(--c-grey-03); 
+    --theme-dust-color: var(--c-grey-02);
     --theme-slim-plane-color: var(--c-blue-03);
-    --theme-slim-plane-glow: rgba(var(--c-blue-03-RGB), .5);
+    --theme-slim-plane-glow: 4px 1px rgba(var(--c-blue-03-RGB), 0.5);
     --theme-wave-word-color: var(--c-green-03);
-    --theme-wave-word-glow: var(--c-green-02);
+    --theme-wave-word-glow: 4px 0px var(--c-green-02);
 }
 
 .theme.page-article,
@@ -408,6 +408,27 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
 
 .theme .category-review-artwork.dark {
     display: none;
+}
+
+/* Home page specific */
+.theme .main img.light {
+    display: initial;
+}
+
+.theme .main img.dark {
+    display: none;
+}
+
+.theme .main .illustration.light {
+    display: initial;
+}
+
+.theme .main .illustration.dark {
+    display: none;
+}
+
+.theme .main .artwork-wrapper {
+    mix-blend-mode: multiply;
 }
 
 /* Advertise page specific */

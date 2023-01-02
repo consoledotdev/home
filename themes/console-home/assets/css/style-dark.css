@@ -322,9 +322,9 @@
     /* Console Rays artwork */
     --theme-dust-color: var(--c-grey-06-blacks-neutral);
     --theme-slim-plane-color: var(--c-blue-10);
-    --theme-slim-plane-glow: rgba(var(--c-blue-10-RGB), .5);
+    --theme-slim-plane-glow: 6px 2px rgba(var(--c-blue-10-RGB), 0.5);
     --theme-wave-word-color: var(--c-green-10);
-    --theme-wave-word-glow: var(--c-green-11);
+    --theme-wave-word-glow: 6px 2px var(--c-green-11);
 }
 
 .theme.page-article,
@@ -383,6 +383,27 @@
 
 .theme .category-review-artwork.dark {
     display: initial;
+}
+
+/* Home page specific */
+.theme .main img.light {
+    display: none;
+}
+
+.theme .main img.dark {
+    display: initial;
+}
+
+.theme .main .illustration.light {
+    display: none;
+}
+
+.theme .main .illustration.dark {
+    display: initial;
+}
+
+.theme .main .artwork-wrapper {
+    mix-blend-mode: screen;
 }
 
 /* Advertise page specific */
