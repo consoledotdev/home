@@ -123,7 +123,7 @@
                 {{ with $podcast.Params.org }}{{ $playerTitle = print $playerTitle " (" $podcast.Params.org ")" }}{{ end }}
                 {{ $playerAttrs := (dict "title" $playerTitle ) }}
 
-                {{ partial "components/podcast-widget.html" (dict "podcast" $podcast "art" "header" "hideLinks" "true" "playerAttrs" $playerAttrs) }}
+                {{ partial "components/podcast-widget.html" (dict "style" "alt" "podcast" $podcast "art" "header" "hideLinks" "true" "playerAttrs" $playerAttrs) }}
                 <!-- end -->
             </div>
         </div>
