@@ -387,6 +387,13 @@
     z-index: 30;
 }
 
+@media (max-width: 1100px) {
+    .page-home .page-section.podcast {
+        --sectH: 1000px;
+        padding-bottom: var(--space6);
+    }
+}
+
 .page-home .page-section.podcast .top .title {
     margin-bottom: 0;
     color: var(--theme-text-accent-triad-03-light);
