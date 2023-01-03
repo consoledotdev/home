@@ -710,6 +710,13 @@
     margin-left: var(--space3);
 }
 
+.console-form .form-email-input {
+    position: relative;
+    flex: 1 0 auto;
+    display: inline-flex;
+    flex-flow: row nowrap;
+}
+
 @media (max-width: 768px) {
     @media (max-width: 540px) {
         .console-form {

@@ -20,7 +20,10 @@
     </div>
 
     <form action="https://dev.us7.list-manage.com/subscribe/post?u=f8c3cd14ee8d63c53d0986a48&amp;id=267911a165" method="post" id="console-subscribe" name="console-subscribe" class="console-form">
-        <input id="form-email" name="EMAIL" class="console-input-text{{ with .size}} console-input-{{ . }}{{ end }}" type="email" placeholder="Your email" required />
+        <div class="form-email-input">
+            <input id="form-email" name="EMAIL" class="console-input-text{{ with .size}} console-input-{{ . }}{{ end }}" type="email" placeholder="Your email" required />
+            <span onmousedown="event.preventDefault(); input = this.previousElementSibling; input.focus(); input.value = ''; input.dispatchEvent(new Event('change'));" class="console-input-text-cancel">{{ partial "icons/cancel.html"}}</span>
+        </div>
         <input type="hidden" name="REFERRER" value="{{ .context.Page.RelPermalink }}" id="mc-referrer" />
         <div style="position: absolute; left: -5000px" aria-hidden="true"><input type="text" name="b_f8c3cd14ee8d63c53d0986a48_267911a165" tabindex="-1" value="" /><!-- Anti spam field --></div>
 
