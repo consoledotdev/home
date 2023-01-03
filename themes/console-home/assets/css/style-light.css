@@ -438,6 +438,19 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
     mix-blend-mode: multiply;
 }
 
+.theme .main .podcast-widget.style-alt.art-header .podcast-widget-header,
+.theme .main .podcast-widget.style-alt.art-body .podcast-widget-body,
+.theme .main .podcast-widget.style-alt .podcast-widget-header .combo-box-visuals.logo-profile .plane-picture.left,
+.theme .main .podcast-widget.style-alt .podcast-widget-body .combo-box-visuals.logo-profile .plane-picture.left {
+    background: var(--c-white-00-absolute);
+}
+
+.theme .main .podcast-widget.style-alt.art-body .podcast-widget-header,
+.theme .main .podcast-widget.style-alt.art-header .podcast-widget-body,
+.theme .main .podcast-widget.style-alt .podcast-widget-footer {
+    background: var(--c-white-00-absolute);
+}
+
 /* Advertise page specific */
 .theme .main-advertise img.light {
     display: initial;
