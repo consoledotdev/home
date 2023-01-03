@@ -311,7 +311,7 @@ let toggleCollapsible = (e) => {
 };
 
 let animateDynamicPlanes = (() => {
-    if (document.body.classList.contains("page-home")) {
+    if (document.body.classList.contains("page-home") && document.body.classList.contains("show-planes")) {
         let i1, i2, i3, i4, i5, i6;
         let animate = () => {
             let columns = document.querySelectorAll("[data-dynamic-planes-column]");
