@@ -453,6 +453,10 @@
     }
 }
 
+.page-home .podcast-widget {
+    box-shadow: var(--theme-shadow-1);
+}
+
 @media (max-width: 768px) {
     .page-home .podcast-widget {
         margin-top: var(--space4_5);
