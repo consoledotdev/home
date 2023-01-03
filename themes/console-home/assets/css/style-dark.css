@@ -20,7 +20,8 @@
     --theme-text-accent-triad-03-strong: var(--c-green-05-main);
     --theme-text-accent-triad-03-light: var(--c-green-04);
 
-    --theme-input-text: var(--c-black-02-main);
+    --theme-input-text: var(--c-white-00-absolute);
+    --theme-input-placeholder-text: var(--c-grey-06-blacks-neutral);
     --theme-brand-accent-text-idle: var(--c-blue-04);
     --theme-brand-accent-text-hover: var(--c-blue-05);
     --theme-pre-code-text: var(--c-blue-04);
@@ -78,8 +79,13 @@
     --theme-separator-1: var(--c-grey-06-blacks-neutral);
     --theme-separator-2: var(--c-grey-07);
 
-    --theme-input-bg: var(--c-white-00-absolute);
-    --theme-input-border: transparent;
+    --theme-input-bg: var(--c-black-00-absolute);
+    --theme-input-border: var(--c-grey-07);
+    --theme-input-border-focus: 0 0 0 2px var(--c-blue-06-main);
+    --theme-input-border-hover: 0 0 0 2px rgba(var(--c-blue-08-RGB), .8);
+    --theme-input-select-accessory: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128' fill='%23515158'%3E%3Crect x='33.0944' y='81.1482' width='50' height='7' transform='rotate(45 33.0944 81.1482)' /%3E%3Crect x='93.9247' y='81.1674' width='7' height='50' transform='rotate(45 93.9247 81.1674)' /%3E%3Crect x='93.9056' y='46.8518' width='50' height='7' transform='rotate(-135 93.9056 46.8518)' /%3E%3Crect x='33.0753' y='46.8326' width='7' height='50' transform='rotate(-135 33.0753 46.8326)' /%3E%3C/svg%3E"), linear-gradient(to bottom, transparent 0%, transparent 100%);
+    --theme-input-text-accessory-color: var(--c-blue-06-main);
+    --theme-input-text-accessory-color-hover: var(--c-blue-08);
 
     --theme-link-text-idle: var(--theme-text-1);
     --theme-link-text-focus: var(--c-blue-04);
