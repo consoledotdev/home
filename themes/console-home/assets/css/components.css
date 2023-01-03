@@ -781,6 +781,14 @@
     margin-left: var(--space2);
 }
 
+.form-generic .form-email-input,
+.form-generic .form-input {
+    position: relative;
+    flex: 1 0 auto;
+    display: inline-flex;
+    flex-flow: row nowrap;
+}
+
 input.console-input-text:not(:focus):not(:placeholder-shown):invalid + .console-label-error,
 .form-generic .fieldset.is-invalid input.console-input-text:invalid + .console-label-error,
 .form-generic .fieldset.is-invalid .console-label-error {
