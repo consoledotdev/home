@@ -113,10 +113,10 @@
     --c-signaling-error-01: #ff4600;
     --c-signaling-error-02: #de4300;
 
-    --corners-xx-small: 2px;
-    --corners-x-small: 4px;
-    --corners-small: 6px;
-    --corners-mid: 8px;
+    --corners-xx-small: 4px;
+    --corners-x-small: 8px;
+    --corners-small: 10px;
+    --corners-mid: 12px;
 
     --a-micro: all 0.08s ease-in-out;
     --a-micro-active: all 0.06s ease-in-out;
