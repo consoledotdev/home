@@ -1052,7 +1052,8 @@
     margin-right: var(--space2);
 }
 
-.main-landing-jobs .page-section.signup .fieldset input {
+.main-landing-jobs .page-section.signup .fieldset .form-email-input,
+.main-landing-jobs .page-section.signup .fieldset .form-input {
     max-width: 330px;
     width: 100%;
 }

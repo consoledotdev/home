@@ -118,7 +118,10 @@
                     <p class="small">We only send an email when we have a role at a company you should really consider.</p>
                 </legend>
                 <div>
-                    <input id="form-email" name="form-email" class="console-input-text" type="email" placeholder="Your email" title="Email" required />
+                    <div class="form-email-input">
+                        <input id="form-email" name="form-email" class="console-input-text" type="email" placeholder="Your email" title="Email" required />
+                        <span onmousedown="event.preventDefault(); input = this.previousElementSibling; input.focus(); input.value = ''; input.dispatchEvent(new Event('change'));" class="console-input-text-cancel">{{ partial "icons/cancel.html"}}</span>
+                    </div>
                     <label for="form-email" class="console-label console-label-error">Please enter a valid email address.</label>
                 </div>
             </div>
@@ -306,14 +309,14 @@
                     {{ range $formData.salary.inputs }}
                         <div>
                             <input
-                            data-onclickblur
-                            class="console-input-{{ $formData.salary.consoleType }} attention"
-                            type="{{ $formData.salary.type }}"
-                            name="form-salary"
-                            id="form-salary-{{ .name }}"
-                            value="{{ .name }}"
-                            {{ with .checked }} checked{{ end }}
-                            {{ with .required }} required{{ end }} />
+                                data-onclickblur
+                                class="console-input-{{ $formData.salary.consoleType }} attention"
+                                type="{{ $formData.salary.type }}"
+                                name="form-salary"
+                                id="form-salary-{{ .name }}"
+                                value="{{ .name }}"
+                                {{ with .checked }} checked{{ end }}
+                                {{ with .required }} required{{ end }} />
                             <label for="form-salary-{{ .name }}">
                                 {{ if eq $formData.exp.consoleType "segmented-bar" }}<span class="check-bar"><span class="hover"></span>{{ partial (print "icons/checkmark.html" ) }}</span>{{ end }}
                                 {{ .label }}
