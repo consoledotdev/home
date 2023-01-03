@@ -1530,7 +1530,7 @@ input.console-input-text + .console-input-text-cancel .icon {
     vertical-align: top;
     width: var(--space2);
     height: var(--space2);
-    fill: var(--c-white-00-absolute);
+    stroke: var(--c-white-00-absolute);
 }
 
 input.console-input-text:not(:placeholder-shown):focus + .console-input-text-cancel {
