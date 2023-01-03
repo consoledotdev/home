@@ -321,6 +321,7 @@
 
     /* Console Rays artwork */
     --theme-dust-color: var(--c-grey-02);
+    --theme-dust-color-light: var(--c-grey-01);
     --theme-slim-plane-color: var(--c-blue-03);
     --theme-slim-plane-glow: 4px 1px rgba(var(--c-blue-03-RGB), 0.5);
     --theme-wave-word-color: var(--c-green-03);
