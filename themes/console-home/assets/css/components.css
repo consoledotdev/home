@@ -1526,7 +1526,7 @@ input.console-input-text + .console-input-text-cancel .icon {
 }
 
 input.console-input-text:not(:placeholder-shown):focus + .console-input-text-cancel {
-    opacity: .6;
+    opacity: 0.6;
 }
 
 input.console-input-text:not(:placeholder-shown):focus + .console-input-text-cancel:hover {
