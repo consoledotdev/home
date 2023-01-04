@@ -326,6 +326,10 @@
     --theme-zero-moon-color: var(--c-blue-04);
 
     /* Console Rays artwork */
+    --theme-rays-triad-01-color: var(--c-blue-03);
+    --theme-rays-triad-03-color: var(--c-green-03);
+    --theme-rays-jobs-triad-02-color: var(--c-berry-03);
+    --theme-rays-blend: multiply;
     --theme-dust-color: var(--c-grey-02);
     --theme-dust-color-light: var(--c-grey-01);
     --theme-slim-plane-color: var(--c-blue-03);
@@ -449,6 +453,14 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
 .theme .main .podcast-widget.style-alt.art-header .podcast-widget-body,
 .theme .main .podcast-widget.style-alt .podcast-widget-footer {
     background: var(--c-white-00-absolute);
+}
+
+.theme .main .console-rays .ray {
+    opacity: 0.4;
+}
+
+.theme .main  .console-rays.jobs-triad-02 .ray {
+    opacity: 0.6;
 }
 
 /* Advertise page specific */
