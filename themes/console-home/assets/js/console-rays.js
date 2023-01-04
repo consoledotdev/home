@@ -33,7 +33,7 @@ class Rays {
     generateNoiseArray(length, smoothness, offset) {
         let vals = [];
         for (let i = 0; i < length; i++) {
-            vals.push(noise.simplex2(offset + i/smoothness, 0));
+            vals.push(noise.simplex2(offset + i / smoothness, 0));
         }
         return vals;
     }
@@ -50,7 +50,7 @@ class Rays {
         this.rays.forEach((r, idx) => {
             let transform = "";
             // spread
-            let spread = (this.params.spread.base * this.params.spread.amt) * idx;
+            let spread = this.params.spread.base * this.params.spread.amt * idx;
             // shift x
             let shiftX = this.params.x.base[idx] * this.params.x.amt;
             transform += `translateX(${shiftX + spread}%)`;
@@ -64,26 +64,26 @@ class Rays {
             transform += `scaleY(${1 + shiftH})`;
 
             r.style.transform = transform;
-        })
+        });
     }
 
     setupControls() {
         let createEl = (el, attrs) => {
-            let s =  document.createElement(el);
+            let s = document.createElement(el);
             for (const [attr, value] of Object.entries(attrs)) {
                 s[attr] = value;
             }
             return s;
-        }
+        };
 
         this.controls = [];
         for (const [p, props] of Object.entries(this.params)) {
             this.controls.push(
                 createEl("p", {
                     textContent: p,
-                    classList: "x-small"
+                    classList: "x-small",
                 })
-            )
+            );
             this.controls.push(
                 createEl("input", {
                     type: "number",
@@ -92,9 +92,9 @@ class Rays {
                     value: props.offset,
                     onkeydown: this.offsetControlChanged.bind(this),
                     onchange: this.offsetControlChanged.bind(this),
-                    step: 0.1
+                    step: 0.1,
                 })
-            )
+            );
             this.controls.push(
                 createEl("input", {
                     type: "range",
@@ -107,14 +107,14 @@ class Rays {
                     onchange: this.controlChanged.bind(this),
                     step: props.rangeStep || 1,
                 })
-            )
+            );
             this.controls.push(
                 createEl("output", {
                     id: `rays-control-out-${p}`,
                     classList: "control-out range-control-out range-control-out-" + p,
                     value: props.amt,
                 })
-            )
+            );
         }
 
         this.controlsContainer.append(...this.controls);
@@ -170,6 +170,6 @@ class Rays {
                 offset: 2000,
                 smoothness: 1,
             },
-        }
+        };
     }
 }

@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 offset: 2000,
                 smoothness: 1,
             },
-        }
+        },
     });
 
     let rays2 = new Rays({
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 offset: 2014.2,
                 smoothness: 0.94,
             },
-        }
+        },
     });
 
     let rays3 = new Rays({
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 offset: 2006.8,
                 smoothness: 1,
             },
-        }
+        },
     });
 
     rays1.update();

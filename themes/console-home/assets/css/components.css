@@ -6302,7 +6302,7 @@ p.combo-card-description {
     width: 100%;
     height: 0;
     mix-blend-mode: var(--theme-rays-blend);
-    opacity: .6;
+    opacity: 0.6;
 }
 
 .console-rays.triad-01 .ray {
@@ -6330,7 +6330,7 @@ p.combo-card-description {
 }
 
 @media (min-width: 1371px) {
-    .page-section.full-width .console-rays{
+    .page-section.full-width .console-rays {
         margin-left: calc((100vw - 1200px) / 2);
         margin-right: calc((100vw - 1200px) / 2);
     }
@@ -6344,7 +6344,7 @@ p.combo-card-description {
     width: var(--space8);
     z-index: 200;
     padding: 0 var(--space3);
-    line-height: .8em;
+    line-height: 0.8em;
 }
 
 .console-rays-controls.dev {
@@ -6374,7 +6374,7 @@ p.combo-card-description {
     background: var(--theme-input-checkable-off-dark);
     border-radius: 5px;
 }
-  
+
 .console-rays-controls .range-control::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: var(--space2_5);
@@ -6383,12 +6383,12 @@ p.combo-card-description {
     background: var(--theme-text-1);
     cursor: ew-resize;
     box-shadow: 0 0 0 0 transparent;
-    transition: background .3s ease-in-out;
-  }
-  
-.console-rays-controls .range-control::-webkit-slider-runnable-track  {
+    transition: background 0.3s ease-in-out;
+}
+
+.console-rays-controls .range-control::-webkit-slider-runnable-track {
     -webkit-appearance: none;
     box-shadow: none;
     border: none;
     background: transparent;
-  }
+}
