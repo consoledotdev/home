@@ -68,11 +68,36 @@
     z-index: 10;
 }
 
+@keyframes decorator-small-appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /* Plane Dust */
 .plane-dust-wrapper {
     position: absolute;
     display: inline-block;
     z-index: 100;
+}
+
+body:not(.is-same-origin) .plane-dust-wrapper {
+    opacity: 0;
+    animation-duration: 2.5s;
+    animation-delay: 0.8s;
+    animation-name: decorator-small-appear;
+    animation-fill-mode: forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .plane-dust-wrapper,
+    body:not(.is-same-origin) .plane-dust-wrapper {
+        animation: none;
+        opacity: 1;
+    }
 }
 
 .plane-dust-wrapper > * {
@@ -138,6 +163,15 @@
     margin-left: 33px;
 }
 
+@keyframes decorator-big-appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
 /* Slim plane */
 .slim-plane {
     --w: 32px;
@@ -147,8 +181,24 @@
     width: var(--w);
     height: calc(var(--w) * 2.2);
     transform: scaleY(0.8945) skewX(-24.1deg);
-    opacity: 0.5;
     box-shadow: 0 0 var(--theme-slim-plane-glow);
+    opacity: 0.5;
+}
+
+body:not(.is-same-origin) .slim-plane {
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-delay: 2s;
+    animation-name: decorator-big-appear;
+    animation-fill-mode: forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .slim-plane,
+    body:not(.is-same-origin) .slim-plane {
+        animation: none;
+        opacity: 0.5;
+    }
 }
 
 /* Wave word */
@@ -159,6 +209,22 @@
     width: var(--w);
     transform: scaleY(0.8945) skewX(-24.1deg);
     opacity: 0.5;
+}
+
+body:not(.is-same-origin) .wave-word {
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-delay: 2s;
+    animation-name: decorator-big-appear;
+    animation-fill-mode: forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wave-word,
+    body:not(.is-same-origin) .wave-word {
+        animation: none;
+        opacity: 0.5;
+    }
 }
 
 .wave-word .el {
@@ -322,36 +388,42 @@
     --w: 24px;
     top: calc(50% - 50%);
     left: calc(50% - 32%);
+    animation-delay: 2s;
 }
 
 .slim-plane.two {
     --w: 56px;
     top: calc(50% - 48%);
     left: calc(50% - 15%);
+    animation-delay: 2.05s;
 }
 
 .slim-plane.three {
     --w: 20px;
     top: calc(50% - 46%);
     left: calc(50% + 44%);
+    animation-delay: 2.1s;
 }
 
 .slim-plane.four {
     --w: 44px;
     top: calc(50% + 31%);
     left: calc(50% - 12%);
+    animation-delay: 2.15s;
 }
 
 .slim-plane.five {
     --w: 36px;
     top: calc(50% + 26%);
     left: calc(50% + 29.4%);
+    animation-delay: 2.2s;
 }
 
 .slim-plane.six {
     --w: 44px;
     top: calc(50% - 12%);
     left: calc(50% + 69%);
+    animation-delay: 2.25s;
 }
 
 @media (max-width: 540px) {
@@ -538,12 +610,14 @@
     --w: 36px;
     top: calc(50% - 32%);
     left: calc(50% + 15%);
+    animation-delay: 2s;
 }
 
 .wave-word.small {
     --w: 36px;
     top: calc(50% + 33%);
     left: calc(50% - 9.2%);
+    animation-delay: 2.05s;
 }
 
 @media (max-width: 860px) {
@@ -827,7 +901,7 @@
     left: 256px;
 }
 
-.page-home .console-rays.jobs-triad-02 .ray {
+.page-home .console-rays.jobs-triad-02 .ray:not(.is-hidden) {
     opacity: 0.9;
 }
 
