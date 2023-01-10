@@ -185,17 +185,20 @@ class Rays {
         if (animated) {
             let timing = 30;
             setTimeout(() => {
-                this.rays.slice().reverse().forEach((r, idx) => {
-                    setTimeout(() => {
-                        r.classList.remove("is-hidden");
-                    }, timing * idx);
-                })
+                this.rays
+                    .slice()
+                    .reverse()
+                    .forEach((r, idx) => {
+                        setTimeout(() => {
+                            r.classList.remove("is-hidden");
+                        }, timing * idx);
+                    });
             }, 1200);
         } else {
             this.rays.forEach((r) => {
                 r.classList.remove("is-hidden");
                 r.classList.add("fast-show");
-            })
+            });
         }
     }
 
@@ -254,7 +257,7 @@ class Rays {
                 }
             }
             this.controlsContainer.append(...this.controls);
-        }        
+        }
     }
 
     numberControlChanged(e) {
