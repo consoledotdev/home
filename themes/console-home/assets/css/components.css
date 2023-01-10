@@ -6305,6 +6305,8 @@ p.combo-card-description {
     mix-blend-mode: var(--theme-rays-blend);
     opacity: 0.6;
     padding-bottom: 216%;
+    will-change: transform; /* https://stackoverflow.com/a/53295092 */
+    transition: transform 0.1s var(--a-elements-easing);
 }
 
 .console-rays.triad-01 .ray {

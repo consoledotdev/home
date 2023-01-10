@@ -448,6 +448,7 @@ body.show-planes:after {
     transition-property: padding-top, padding-bottom, background, backdrop-filter, -webkit-backdrop-filter, border-bottom;
     transition-duration: var(--a-elements-time);
     transition-timing-function: var(--a-elements-easing);
+    will-change: padding, background, border-bottom, -webkit-backdrop-filter, backdrop-filter;
 }
 
 .is-scrolled .header.header-fixed {

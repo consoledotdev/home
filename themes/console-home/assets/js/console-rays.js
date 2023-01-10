@@ -5,7 +5,20 @@ class Rays {
             type: "triad-01",
             params: {},
         };
+        this.scrollEnd;
+        this.scrollPos = 0;
+        this.setMediaQuery();
         this.setup();
+    }
+
+    setMediaQuery() {
+        this.mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+        if (this.mediaQuery) {
+            this.mediaQuery.addEventListener("change", () => {
+                this.mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+                this.update();
+            });
+        }
     }
 
     setup() {
@@ -15,6 +28,8 @@ class Rays {
         this.initializeParameters();
 
         this.updateRays();
+
+        this.params.parallax && this.handleParallax();
 
         if (this.options.dev) {
             this.controlsContainer.classList.add("dev");
@@ -36,6 +51,8 @@ class Rays {
             y_offset: { ...Rays.defaults().y_offset, ...this.options.params.y_offset },
             h_offset: { ...Rays.defaults().h_offset, ...this.options.params.h_offset },
             hue_out: { ...Rays.defaults().hue_out, ...this.options.params.hue_out },
+            parallax: { ...Rays.defaults().parallax, ...this.options.params.parallax },
+            parallax_offset: { ...Rays.defaults().parallax_offset, ...this.options.params.parallax_offset },
         };
         this.changeSeed();
         this.createNoiseBase();
@@ -105,7 +122,16 @@ class Rays {
 
             // shift y
             let shiftY = this.params.y.base[idx] * this.params.y.value;
-            transform += `translateY(${shiftY}%)`;
+
+            let parallaxShift = 0;
+            if (this.mediaQuery && !this.mediaQuery.matches) {
+                // parallax shift
+                let currentPos = this.scrollPos - this.params.parallax_offset.value;
+                let parallaxAmt = this.params.parallax.value;
+                parallaxShift = currentPos * parallaxAmt * 0.7; /* global parallax */
+                parallaxShift += currentPos * this.params.y.base[idx] * parallaxAmt * 1.6; /* Emphasis per ray */
+            }
+            transform += `translateY(${shiftY + parallaxShift}%)`;
 
             shifty.push(shiftY + "%");
 
@@ -131,6 +157,25 @@ class Rays {
         this.options.dev && console.log("Shift x\n %c%s", "color: #9999ff", shiftx);
         this.options.dev && console.log("Shift y\n %c%s", "color: #9999ff", shifty);
         this.options.dev && console.log("Shift h\n %c%s", "color: #9999ff", shifth);
+    }
+
+    handleParallax() {
+        this.handleScroll();
+    }
+
+    handleScroll() {
+        let onScrollEnd = (e) => {};
+        let onScroll = (e) => {
+            this.scrollPos = window.scrollY;
+            this.update();
+
+            window.clearTimeout(this.scrollEnd);
+            this.scrollEnd = setTimeout(() => {
+                onScrollEnd();
+            }, 50);
+        };
+        window.addEventListener("scroll", onScroll, false);
+        onScroll();
     }
 
     setupControls() {
@@ -313,6 +358,24 @@ class Rays {
                 rangeStep: 0.1,
                 hasNumInput: true,
             },
+            // parallax reactivity
+            parallax: {
+                value: 0,
+                range: [-1, 1],
+                rangeStep: 0.01,
+                hasNumInput: true,
+            },
+            // parallax offset
+            parallax_offset: {
+                value: 0,
+                range: [0, this.scrollHeight()],
+                rangeStep: 1,
+                hasNumInput: true,
+            },
         };
+    }
+
+    static scrollHeight() {
+        return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight);
     }
 }

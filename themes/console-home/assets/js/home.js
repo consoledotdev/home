@@ -28,6 +28,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
             },
             hue_in: { value: null },
             hue_out: { value: null },
+            parallax: {
+                value: 0.03,
+            },
         },
     });
 
@@ -61,6 +64,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
             },
             hue_in: { value: null },
             hue_out: { value: null },
+            parallax: {
+                value: 0.02,
+            },
+            parallax_offset: {
+                value: 680,
+            },
         },
     });
 
@@ -96,10 +105,33 @@ document.addEventListener("DOMContentLoaded", (event) => {
             },
             hue_in: { value: null },
             hue_out: { value: null },
+            parallax: {
+                value: 0.05,
+            },
+            parallax_offset: {
+                value: 1800,
+            },
         },
     });
 
     rays1.update();
     rays2.update();
     rays3.update();
+
+    let setParallaxValues = () => {
+        if (window.innerWidth >= 551) {
+            rays1.params.parallax.value = 0.03;
+            rays2.params.parallax.value = 0.02;
+            rays3.params.parallax.value = 0.05;
+        } else {
+            rays1.params.parallax.value = -0.2;
+            rays2.params.parallax.value = -0.09;
+            rays3.params.parallax.value = 0.2;
+        }
+        rays1.update();
+        rays2.update();
+        rays3.update();
+    };
+    setParallaxValues();
+    window.addEventListener("resize", setParallaxValues);
 });
