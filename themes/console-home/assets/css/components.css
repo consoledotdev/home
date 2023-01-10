@@ -6306,7 +6306,15 @@ p.combo-card-description {
     opacity: 0.6;
     padding-bottom: 216%;
     will-change: transform; /* https://stackoverflow.com/a/53295092 */
-    transition: transform 0.1s var(--a-elements-easing);
+    transition: transform 0.1s var(--a-elements-easing), opacity 1s var(--a-elements-easing);
+}
+
+.console-rays .ray.is-hidden {
+    opacity: 0;
+}
+
+.console-rays .ray.fast-show {
+    transition: all 0s;
 }
 
 .console-rays.triad-01 .ray {

@@ -114,10 +114,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         },
     });
 
-    rays1.update();
-    rays2.update();
-    rays3.update();
-
     let setParallaxValues = () => {
         if (window.innerWidth >= 551) {
             rays1.params.parallax.value = 0.03;

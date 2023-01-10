@@ -9,6 +9,9 @@ class Rays {
         this.scrollPos = 0;
         this.setMediaQuery();
         this.setup();
+        this.update();
+        this.show();
+        this.setupControls();
     }
 
     setMediaQuery() {
@@ -23,18 +26,9 @@ class Rays {
 
     setup() {
         this.container = document.querySelector(`[data-rays="${this.options.type}"]`);
-        this.controlsContainer = document.querySelector(`[data-rays-controls="${this.options.type}"]`);
-
         this.initializeParameters();
-
         this.updateRays();
-
         this.params.parallax && this.handleParallax();
-
-        if (this.options.dev) {
-            this.controlsContainer.classList.add("dev");
-            this.setupControls();
-        }
     }
 
     initializeParameters() {
@@ -90,12 +84,31 @@ class Rays {
         this.rays = [];
         this.container.textContent = "";
         for (let i = 0; i < this.params.amt.value; i++) {
-            let ray = Rays.createEl("div", { classList: "ray" });
+            let ray = Rays.createEl("div", { classList: "ray is-hidden" });
             this.container.append(ray);
             this.rays.push(ray);
         }
 
         this.options.dev && console.log("Rays count %c%s", "color: #9999ff", this.params.amt.value);
+    }
+
+    handleParallax() {
+        this.handleScroll();
+    }
+
+    handleScroll() {
+        let onScrollEnd = (e) => {};
+        let onScroll = (e) => {
+            this.scrollPos = window.scrollY;
+            this.update();
+
+            window.clearTimeout(this.scrollEnd);
+            this.scrollEnd = setTimeout(() => {
+                onScrollEnd();
+            }, 50);
+        };
+        window.addEventListener("scroll", onScroll, false);
+        onScroll();
     }
 
     update() {
@@ -159,78 +172,89 @@ class Rays {
         this.options.dev && console.log("Shift h\n %c%s", "color: #9999ff", shifth);
     }
 
-    handleParallax() {
-        this.handleScroll();
+    show() {
+        let sameOrigin = document.body.classList.contains("is-same-origin");
+        if (this.mediaQuery && !this.mediaQuery.matches && !sameOrigin) {
+            this.appear(true);
+        } else {
+            this.appear();
+        }
     }
 
-    handleScroll() {
-        let onScrollEnd = (e) => {};
-        let onScroll = (e) => {
-            this.scrollPos = window.scrollY;
-            this.update();
-
-            window.clearTimeout(this.scrollEnd);
-            this.scrollEnd = setTimeout(() => {
-                onScrollEnd();
-            }, 50);
-        };
-        window.addEventListener("scroll", onScroll, false);
-        onScroll();
+    appear(animated) {
+        if (animated) {
+            let timing = 30;
+            setTimeout(() => {
+                this.rays.slice().reverse().forEach((r, idx) => {
+                    setTimeout(() => {
+                        r.classList.remove("is-hidden");
+                    }, timing * idx);
+                })
+            }, 1200);
+        } else {
+            this.rays.forEach((r) => {
+                r.classList.remove("is-hidden");
+                r.classList.add("fast-show");
+            })
+        }
     }
 
     setupControls() {
-        this.controls = [];
-        for (const [p, props] of Object.entries(this.params)) {
-            if (props.range != undefined || props.hasNumInput) {
-                this.item = Rays.createEl("div", { classList: p });
-                this.controls.push(this.item);
-                this.item.append(
-                    Rays.createEl("span", {
-                        textContent: p,
-                        classList: "xx-small",
-                    })
-                );
-                if (props.hasNumInput) {
+        this.controlsContainer = document.querySelector(`[data-rays-controls="${this.options.type}"]`);
+        if (this.options.dev) {
+            this.controlsContainer.classList.add("dev");
+            this.controls = [];
+            for (const [p, props] of Object.entries(this.params)) {
+                if (props.range != undefined || props.hasNumInput) {
+                    this.item = Rays.createEl("div", { classList: p });
+                    this.controls.push(this.item);
                     this.item.append(
-                        Rays.createEl("input", {
-                            type: "number",
-                            id: `rays-control-${p}`,
-                            classList: "control number-control number-control-" + p,
-                            value: props.value,
-                            onkeydown: this.numberControlChanged.bind(this),
-                            onchange: this.numberControlChanged.bind(this),
-                            step: props.rangeStep,
+                        Rays.createEl("span", {
+                            textContent: p,
+                            classList: "xx-small",
                         })
                     );
-                } else if (props.range != undefined) {
-                    this.item.append(
-                        Rays.createEl("output", {
-                            id: `rays-control-${p}`,
-                            classList: "control control-out control-out-" + p,
-                            value: props.value,
-                        })
-                    );
-                }
-                this.item.append(Rays.createEl("br"));
-                if (props.range != undefined) {
-                    this.item.append(
-                        Rays.createEl("input", {
-                            type: "range",
-                            id: `rays-control-${p}`,
-                            classList: "control range-control range-control-" + p,
-                            min: props.range[0],
-                            max: props.range[1],
-                            value: props.value,
-                            oninput: this.rangeControlChanged.bind(this),
-                            onchange: this.rangeControlChanged.bind(this),
-                            step: props.rangeStep || 1,
-                        })
-                    );
+                    if (props.hasNumInput) {
+                        this.item.append(
+                            Rays.createEl("input", {
+                                type: "number",
+                                id: `rays-control-${p}`,
+                                classList: "control number-control number-control-" + p,
+                                value: props.value,
+                                onkeydown: this.numberControlChanged.bind(this),
+                                onchange: this.numberControlChanged.bind(this),
+                                step: props.rangeStep,
+                            })
+                        );
+                    } else if (props.range != undefined) {
+                        this.item.append(
+                            Rays.createEl("output", {
+                                id: `rays-control-${p}`,
+                                classList: "control control-out control-out-" + p,
+                                value: props.value,
+                            })
+                        );
+                    }
+                    this.item.append(Rays.createEl("br"));
+                    if (props.range != undefined) {
+                        this.item.append(
+                            Rays.createEl("input", {
+                                type: "range",
+                                id: `rays-control-${p}`,
+                                classList: "control range-control range-control-" + p,
+                                min: props.range[0],
+                                max: props.range[1],
+                                value: props.value,
+                                oninput: this.rangeControlChanged.bind(this),
+                                onchange: this.rangeControlChanged.bind(this),
+                                step: props.rangeStep || 1,
+                            })
+                        );
+                    }
                 }
             }
-        }
-
-        this.controlsContainer.append(...this.controls);
+            this.controlsContainer.append(...this.controls);
+        }        
     }
 
     numberControlChanged(e) {
