@@ -90,7 +90,7 @@ class Rays {
             if (this.params.w.value) {
                 this.container.style.width = this.params.w.value + "px";
                 let resizeAmt = this.params.w.base / this.params.w.value;
-                r.style.paddingBottom = (this.params.w.ratio * resizeAmt * 100) + "%";
+                r.style.paddingBottom = this.params.w.ratio * resizeAmt * 100 + "%";
             }
 
             // Move ------------
@@ -166,9 +166,7 @@ class Rays {
                         })
                     );
                 }
-                this.item.append(
-                    Rays.createEl("br")
-                );
+                this.item.append(Rays.createEl("br"));
                 if (props.range != undefined) {
                     this.item.append(
                         Rays.createEl("input", {
@@ -213,9 +211,10 @@ class Rays {
 
     static createEl(el, attrs) {
         let s = document.createElement(el);
-        if (attrs) for (const [attr, value] of Object.entries(attrs)) {
-            s[attr] = value;
-        }
+        if (attrs)
+            for (const [attr, value] of Object.entries(attrs)) {
+                s[attr] = value;
+            }
         return s;
     }
 
@@ -313,5 +312,5 @@ class Rays {
             rangeStep: 0.1,
             hasNumInput: true,
         },
-    }
+    };
 }
