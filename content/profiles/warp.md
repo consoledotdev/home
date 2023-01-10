@@ -94,7 +94,7 @@ we can continue building on it.
 Right now for instance we have about 5 pods going, focusing on different
 features and infrastructure areas – everything from single-user improvements to
 Teams and cloud infrastructure. [We have a public Notion
-doc](https://rigorous-worm-62d.notion.site/How-We-Divide-Eng-Work-at-Warp-46275bfbaafa4cab9878b1ffd12d6409)
+doc](https://warpdev.notion.site/How-We-Divide-Eng-Work-at-Warp-46275bfbaafa4cab9878b1ffd12d6409)
 that describes our structure in more detail.
 
 #### What tools do engineers use?
@@ -148,7 +148,7 @@ code review very seriously – it’s one of the main tools we have for ensuring
 code and product quality.
 
 Please refer to [How We Code at
-Warp](https://rigorous-worm-62d.notion.site/How-We-Code-at-Warp-257fe43d556e4b3c8dfd42f70004cc72)
+Warp](https://warpdev.notion.site/How-We-Code-at-Warp-257fe43d556e4b3c8dfd42f70004cc72)
 for a very detailed description of our coding processes.
 
 #### What is the QA process?
@@ -221,7 +221,7 @@ Warp {{</ rich-title-3 >}}
    Warp and how they see the opportunity.
 
 A more detailed breakdown of [the process is available in the Warp Notion
-doc](https://rigorous-worm-62d.notion.site/How-We-Hire-Engineers-at-Warp-8431f40209c743c091c18428df560c08).
+doc](https://warpdev.notion.site/How-We-Hire-Engineers-at-Warp-8431f40209c743c091c18428df560c08).
 
 #### What is the career progression framework? How are promotions and performance reviews managed?
 
@@ -230,13 +230,13 @@ very flat, non-hierarchical company. Most engineers report to an engineering
 manager or directly to the CEO (who is an engineer and manager himself).
 Managers focus on giving constructive feedback about how to grow technically,
 culturally, and in user-orientation that is driven by the [Warp Growth
-Rubric](https://rigorous-worm-62d.notion.site/How-Engineers-Grow-at-Warp-3f8cb777b30745548c09057cd1287051).
+Rubric](https://warpdev.notion.site/How-Engineers-Grow-at-Warp-3f8cb777b30745548c09057cd1287051).
 
 We plan on adding a ladder once the company has around 20 engineers. We will do
 this while trying not to create [a promo-oriented
 culture](https://www.warp.dev/blog/problems-with-promotion-oriented-cultures).
 
 See more in the [Warp Notion
-doc](https://rigorous-worm-62d.notion.site/How-Engineers-Grow-at-Warp-3f8cb777b30745548c09057cd1287051).
+doc](https://warpdev.notion.site/How-Engineers-Grow-at-Warp-3f8cb777b30745548c09057cd1287051).
 
 {{< div--close >}}
