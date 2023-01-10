@@ -24,18 +24,18 @@ class Rays {
 
     initializeParameters() {
         this.params = {
-            seed: { ...Rays.defaults.seed, ...this.options.params.seed },
-            amt: { ...Rays.defaults.amt, ...this.options.params.amt },
-            w: { ...Rays.defaults.w, ...this.options.params.w },
-            spread: { ...Rays.defaults.spread, ...this.options.params.spread },
-            x: { ...Rays.defaults.x, ...this.options.params.x },
-            y: { ...Rays.defaults.y, ...this.options.params.y },
-            h: { ...Rays.defaults.h, ...this.options.params.h },
-            hue_in: { ...Rays.defaults.hue_in, ...this.options.params.hue_in },
-            x_offset: { ...Rays.defaults.x_offset, ...this.options.params.x_offset },
-            y_offset: { ...Rays.defaults.y_offset, ...this.options.params.y_offset },
-            h_offset: { ...Rays.defaults.h_offset, ...this.options.params.h_offset },
-            hue_out: { ...Rays.defaults.hue_out, ...this.options.params.hue_out },
+            seed: { ...Rays.defaults().seed, ...this.options.params.seed },
+            amt: { ...Rays.defaults().amt, ...this.options.params.amt },
+            w: { ...Rays.defaults().w, ...this.options.params.w },
+            spread: { ...Rays.defaults().spread, ...this.options.params.spread },
+            x: { ...Rays.defaults().x, ...this.options.params.x },
+            y: { ...Rays.defaults().y, ...this.options.params.y },
+            h: { ...Rays.defaults().h, ...this.options.params.h },
+            hue_in: { ...Rays.defaults().hue_in, ...this.options.params.hue_in },
+            x_offset: { ...Rays.defaults().x_offset, ...this.options.params.x_offset },
+            y_offset: { ...Rays.defaults().y_offset, ...this.options.params.y_offset },
+            h_offset: { ...Rays.defaults().h_offset, ...this.options.params.h_offset },
+            hue_out: { ...Rays.defaults().hue_out, ...this.options.params.hue_out },
         };
         this.changeSeed();
         this.createNoiseBase();
@@ -218,99 +218,101 @@ class Rays {
         return s;
     }
 
-    static defaults = {
-        // seed
-        seed: {
-            value: 123,
-            range: [0, 1000],
-            rangeStep: 1,
-            hasNumInput: true,
-        },
-        // rays amount
-        amt: {
-            value: 20,
-            range: [0, 100],
-            rangeStep: 1,
-            hasNumInput: true,
-        },
-        // width
-        w: {
-            base: 275,
-            value: 275, // set to null to disable
-            range: [0, 512],
-            rangeStep: 1,
-            ratio: 2.16,
-            hasNumInput: true,
-        },
-        // distance between rays
-        spread: {
-            base: 1,
-            value: -70,
-            range: [-100, 100],
-            rangeStep: 0.1,
-            hasNumInput: true,
-        },
-        // horizontal shift
-        x: {
-            base: undefined,
-            value: 44,
-            range: [0, 1000],
-            rangeStep: 0.1,
-            smoothness: 1,
-            hasNumInput: true,
-        },
-        // vertical shift
-        y: {
-            base: undefined,
-            value: 5,
-            range: [0, 100],
-            rangeStep: 0.1,
-            smoothness: 1,
-            hasNumInput: true,
-        },
-        // height shift
-        h: {
-            base: undefined,
-            value: 0.08,
-            range: [-1, 1],
-            rangeStep: 0.01,
-            smoothness: 1,
-            hasNumInput: true,
-        },
-        // hue range in
-        hue_in: {
-            value: 42, // set to null to disable
-            range: [0, 360],
-            rangeStep: 0.1,
-            hasNumInput: true,
-        },
-        // horizontal offset
-        x_offset: {
-            value: 0,
-            range: [0, 100],
-            rangeStep: 0.01,
-            hasNumInput: true,
-        },
-        // vertical offset
-        y_offset: {
-            value: 1000,
-            range: [1000, 1100],
-            rangeStep: 0.01,
-            hasNumInput: true,
-        },
-        // height offset
-        h_offset: {
-            value: 2000,
-            range: [2000, 2100],
-            rangeStep: 0.01,
-            hasNumInput: true,
-        },
-        // hue range out
-        hue_out: {
-            value: 84, // set to null to disable
-            range: [0, 360],
-            rangeStep: 0.1,
-            hasNumInput: true,
-        },
-    };
+    static defaults() {
+        return {
+            // seed
+            seed: {
+                value: 123,
+                range: [0, 1000],
+                rangeStep: 1,
+                hasNumInput: true,
+            },
+            // rays amount
+            amt: {
+                value: 20,
+                range: [0, 100],
+                rangeStep: 1,
+                hasNumInput: true,
+            },
+            // width
+            w: {
+                base: 275,
+                value: 275, // set to null to disable
+                range: [0, 512],
+                rangeStep: 1,
+                ratio: 2.16,
+                hasNumInput: true,
+            },
+            // distance between rays
+            spread: {
+                base: 1,
+                value: -70,
+                range: [-100, 100],
+                rangeStep: 0.1,
+                hasNumInput: true,
+            },
+            // horizontal shift
+            x: {
+                base: undefined,
+                value: 44,
+                range: [0, 1000],
+                rangeStep: 0.1,
+                smoothness: 1,
+                hasNumInput: true,
+            },
+            // vertical shift
+            y: {
+                base: undefined,
+                value: 5,
+                range: [0, 100],
+                rangeStep: 0.1,
+                smoothness: 1,
+                hasNumInput: true,
+            },
+            // height shift
+            h: {
+                base: undefined,
+                value: 0.08,
+                range: [-1, 1],
+                rangeStep: 0.01,
+                smoothness: 1,
+                hasNumInput: true,
+            },
+            // hue range in
+            hue_in: {
+                value: 42, // set to null to disable
+                range: [0, 360],
+                rangeStep: 0.1,
+                hasNumInput: true,
+            },
+            // horizontal offset
+            x_offset: {
+                value: 0,
+                range: [0, 100],
+                rangeStep: 0.01,
+                hasNumInput: true,
+            },
+            // vertical offset
+            y_offset: {
+                value: 1000,
+                range: [1000, 1100],
+                rangeStep: 0.01,
+                hasNumInput: true,
+            },
+            // height offset
+            h_offset: {
+                value: 2000,
+                range: [2000, 2100],
+                rangeStep: 0.01,
+                hasNumInput: true,
+            },
+            // hue range out
+            hue_out: {
+                value: 84, // set to null to disable
+                range: [0, 360],
+                rangeStep: 0.1,
+                hasNumInput: true,
+            },
+        };
+    }
 }
