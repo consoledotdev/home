@@ -326,6 +326,10 @@
     --theme-zero-moon-color: var(--c-blue-10);
 
     /* Console Rays artwork */
+    --theme-rays-triad-01-color: var(--c-blue-11);
+    --theme-rays-triad-03-color: var(--c-green-11);
+    --theme-rays-jobs-triad-02-color: var(--c-berry-11);
+    --theme-rays-blend: plus-lighter;
     --theme-dust-color: var(--c-grey-06-blacks-neutral);
     --theme-dust-color-light: var(--c-grey-07);
     --theme-slim-plane-color: var(--c-blue-10);

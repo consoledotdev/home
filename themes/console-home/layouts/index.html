@@ -1,10 +1,17 @@
 {{ define "main" }}
+    {{ $dynamicArtwork := true }}
 
     <section class="page-section page-section-home opening">
-        <div class="artwork-wrapper-static">
-            <img class="dark" src="/img/home/artwork-static-opening-dark.png" alt="" />
-            <img class="light" src="/img/home/artwork-static-opening-light.png" alt="" />
-        </div>
+        {{ if eq $dynamicArtwork false }}
+            <div class="artwork-wrapper-static">
+                <img class="dark" src="/img/home/artwork-static-opening-dark.png" alt="" />
+                <img class="light" src="/img/home/artwork-static-opening-light.png" alt="" />
+            </div>
+        {{ else }}
+            <div class="artwork-wrapper-dynamic">
+                {{ partial "components/console-rays.html" (dict "type" "triad-01") }}
+            </div>
+        {{ end }}
         <div class="artwork-wrapper">
             <div class="plane-dust-wrapper one">
                 <div class="plane-dust plane-dust-big"></div>
@@ -81,10 +88,16 @@
     </section>
 
     <section class="page-section page-section-home podcast full-width">
-        <div class="artwork-wrapper-static">
-            <img class="dark" src="/img/home/artwork-static-podcast-dark.png" alt="" />
-            <img class="light" src="/img/home/artwork-static-podcast-light.png" alt="" />
-        </div>
+        {{ if eq $dynamicArtwork false }}
+            <div class="artwork-wrapper-static">
+                <img class="dark" src="/img/home/artwork-static-podcast-dark.png" alt="" />
+                <img class="light" src="/img/home/artwork-static-podcast-light.png" alt="" />
+            </div>
+        {{ else }}
+            <div class="artwork-wrapper-dynamic">
+                {{ partial "components/console-rays.html" (dict "type" "triad-03") }}
+            </div>
+        {{ end }}
         <div class="artwork-wrapper">
             <div class="plane-dust-wrapper one">
                 <div class="plane-dust plane-dust-big"></div>
@@ -134,10 +147,16 @@
     </section>
 
     <section class="page-section page-section-home jobs full-width">
-        <div class="artwork-wrapper-static">
-            <img class="dark" src="/img/home/artwork-static-jobs-dark.png" alt="" />
-            <img class="light" src="/img/home/artwork-static-jobs-light.png" alt="" />
-        </div>
+        {{ if eq $dynamicArtwork false }}
+            <div class="artwork-wrapper-static">
+                <img class="dark" src="/img/home/artwork-static-jobs-dark.png" alt="" />
+                <img class="light" src="/img/home/artwork-static-jobs-light.png" alt="" />
+            </div>
+        {{ else }}
+            <div class="artwork-wrapper-dynamic">
+                {{ partial "components/console-rays.html" (dict "type" "jobs-triad-02") }}
+            </div>
+        {{ end }}
         <div class="artwork-wrapper">
             <div class="plane-dust-wrapper three">
                 <div class="plane-dust plane-dust-big"></div>
@@ -173,4 +192,14 @@
         </div>
     </section>
 
+    <script src="/js/vendor/perlin.js"></script>
+
+    {{ $js := resources.Get "/js/console-rays.js" }}
+    {{ if hugo.IsProduction }}{{ $js = $js | resources.Minify | resources.Fingerprint }}{{ end }}
+    <script src="{{ $js.Permalink }}"></script>
+
+    {{ $js := resources.Get "/js/home.js" }}
+    {{ if hugo.IsProduction }}{{ $js = $js | resources.Minify | resources.Fingerprint }}{{ end }}
+    <script src="{{ $js.Permalink }}"></script>
+    
 {{ end }}

@@ -44,7 +44,8 @@
 }
 
 /* Decorations -------------------------------------------------------------------- */
-.page-home .page-section .artwork-wrapper-static {
+.page-home .page-section .artwork-wrapper-static,
+.page-home .page-section .artwork-wrapper-dynamic {
     position: absolute;
     top: 0;
     left: 0;
@@ -60,6 +61,7 @@
     width: 100%;
     height: 100%;
     z-index: 0;
+    pointer-events: none;
 }
 
 .page-home .page-section > *:not(.artwork-wrapper-static) {
@@ -767,7 +769,7 @@
     fill: var(--theme-cta-secondary-yellow-text-active);
 }
 
-/* Jobs artwork */
+/* Jobs artwork -------------------------------------------------------------------------------------------------------------- */
 .page-home .page-section.jobs .artwork-wrapper-static img {
     position: absolute;
     height: 66%;
@@ -809,4 +811,35 @@
     .page-home .page-section.jobs .artwork-wrapper .plane-dust-wrapper.five {
         top: calc(50% + 36.5%);
     }
+}
+
+/* Rays -------------------------------------------- */
+.page-home .console-rays.triad-01 {
+    left: 146px;
+}
+
+.page-home .console-rays.triad-03 {
+    left: -250px;
+}
+
+.page-home .console-rays.jobs-triad-02 {
+    --global-rays-translate: translateY(-22%);
+    left: 256px;
+}
+
+.page-home .console-rays.jobs-triad-02 .ray {
+    opacity: 0.9;
+}
+
+/* Rays controls */
+.console-rays-controls.triad-01 {
+    top: 100px;
+}
+
+.console-rays-controls.triad-03 {
+    top: 350px;
+}
+
+.console-rays-controls.jobs-triad-02 {
+    top: 600px;
 }
