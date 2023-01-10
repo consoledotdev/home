@@ -815,31 +815,19 @@
 
 /* Rays -------------------------------------------- */
 .page-home .console-rays.triad-01 {
-    width: 275px;
     left: 146px;
 }
 
-.page-home .console-rays.triad-01 .ray {
-    padding-bottom: 216%;
-}
-
 .page-home .console-rays.triad-03 {
-    width: 180px;
     left: -250px;
-}
-
-.page-home .console-rays.triad-03 .ray {
-    padding-bottom: 310%;
 }
 
 .page-home .console-rays.jobs-triad-02 {
     --global-rays-translate: translateY(-22%);
-    width: 195px;
     left: 256px;
 }
 
 .page-home .console-rays.jobs-triad-02 .ray {
-    padding-bottom: 216%;
     opacity: 0.9;
 }
 

@@ -6293,6 +6293,7 @@ p.combo-card-description {
     flex-flow: row nowrap;
     transform: var(--global-rays-translate) var(--global-rays-scaleY) var(--global-rays-skew);
     top: 50%;
+    width: 275px;
 }
 
 .console-rays .ray {
@@ -6303,6 +6304,7 @@ p.combo-card-description {
     height: 0;
     mix-blend-mode: var(--theme-rays-blend);
     opacity: 0.6;
+    padding-bottom: 216%;
 }
 
 .console-rays.triad-01 .ray {

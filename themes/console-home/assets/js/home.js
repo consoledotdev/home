@@ -3,36 +3,31 @@ document.addEventListener("DOMContentLoaded", (event) => {
         dev: false,
         type: "triad-01",
         params: {
+            amt: {
+                value: 20,
+            },
+            w: {
+                base: 275,
+                value: 275,
+                ratio: 2.16,
+            },
             spread: {
-                base: undefined,
-                amt: -70,
-                range: [-100, 100],
-                rangeStep: 1,
+                value: -70,
             },
             x: {
-                base: undefined,
-                amt: 44,
-                range: [0, 1000],
-                rangeStep: 1,
-                offset: 8,
-                smoothness: 1,
+                value: 44,
             },
             y: {
-                base: undefined,
-                amt: 5,
-                range: [0, 100],
-                rangeStep: 1,
-                offset: 1000,
-                smoothness: 1,
+                value: 5,
             },
             h: {
-                base: undefined,
-                amt: 0.08,
-                range: [-1, 1],
-                rangeStep: 0.01,
-                offset: 2000,
-                smoothness: 1,
+                value: 0.08,
             },
+            x_offset: {
+                value: 8,
+            },
+            hue_in: { value: null },
+            hue_out: { value: null },
         },
     });
 
@@ -40,36 +35,32 @@ document.addEventListener("DOMContentLoaded", (event) => {
         dev: false,
         type: "triad-03",
         params: {
+            amt: {
+                value: 12,
+            },
+            w: {
+                base: 180,
+                value: 180,
+                ratio: 3.1,
+            },
             spread: {
-                base: undefined,
-                amt: -27,
-                range: [-100, 100],
-                rangeStep: 1,
+                value: -27,
             },
             x: {
-                base: undefined,
-                amt: 68,
-                range: [0, 1000],
-                rangeStep: 1,
-                offset: 0,
-                smoothness: 1,
+                value: 68,
             },
             y: {
-                base: undefined,
-                amt: 40,
-                range: [0, 100],
-                rangeStep: 1,
-                offset: 1000,
-                smoothness: 1,
+                value: 40,
             },
             h: {
-                base: undefined,
-                amt: -0.2,
-                range: [-1, 1],
-                rangeStep: 0.01,
-                offset: 2014.2,
+                value: -0.2,
                 smoothness: 0.94,
             },
+            h_offset: {
+                value: 2014.2,
+            },
+            hue_in: { value: null },
+            hue_out: { value: null },
         },
     });
 
@@ -77,36 +68,34 @@ document.addEventListener("DOMContentLoaded", (event) => {
         dev: false,
         type: "jobs-triad-02",
         params: {
+            amt: {
+                value: 3,
+            },
+            w: {
+                base: 195,
+                value: 195,
+                ratio: 2.16,
+            },
             spread: {
-                base: undefined,
-                amt: 86,
-                range: [-100, 100],
-                rangeStep: 1,
+                value: 86,
             },
             x: {
-                base: undefined,
-                amt: 62,
-                range: [0, 1000],
-                rangeStep: 1,
-                offset: 1,
-                smoothness: 1,
+                value: 62,
+            },
+            x_offset: {
+                value: 1,
             },
             y: {
-                base: undefined,
-                amt: 51,
-                range: [0, 100],
-                rangeStep: 1,
-                offset: 1000,
-                smoothness: 1,
+                value: 51,
             },
             h: {
-                base: undefined,
-                amt: 0,
-                range: [-1, 1],
-                rangeStep: 0.01,
-                offset: 2006.8,
-                smoothness: 1,
+                value: 0,
             },
+            h_offset: {
+                value: 2006.8,
+            },
+            hue_in: { value: null },
+            hue_out: { value: null },
         },
     });
 
