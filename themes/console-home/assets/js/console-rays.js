@@ -27,6 +27,7 @@ class Rays {
     setup() {
         this.container = document.querySelector(`[data-rays="${this.options.type}"]`);
         this.initializeParameters();
+        this.makeMotion();
         this.updateRays();
         this.params.parallax && this.handleParallax();
     }
@@ -50,6 +51,7 @@ class Rays {
         };
         this.changeSeed();
         this.createNoiseBase();
+        this.createOscillationBase();
     }
 
     changeSeed() {
@@ -78,6 +80,20 @@ class Rays {
             vals.push(noise.simplex2(offset + i / smoothness, 0));
         }
         return vals;
+    }
+
+    createOscillationBase() {
+        this.params.x.osc = this.generateNoiseArray(this.params.amt.value, this.params.x.smoothness, this.params.x_offset.value + 100);
+        this.params.x.osc2 = this.generateNoiseArray(this.params.amt.value, this.params.x.smoothness, this.params.x_offset.value + 200);
+    }
+
+    makeMotion() {
+        this.motion = {};
+        setInterval(() => {
+            this.motion.x = Math.sin(Date.now() / 1000);
+            this.motion.x2 = Math.sin(Date.now() / 1330);
+            this.update()
+        }, 30);
     }
 
     updateRays() {
@@ -129,16 +145,21 @@ class Rays {
             let spread = this.params.spread.base * this.params.spread.value * idx;
             // shift x
             let shiftX = this.params.x.base[idx] * this.params.x.value;
-            transform += `translateX(${shiftX + spread}%)`;
+            // motion x
+            let motionX = 0;
+            if (this.mediaQuery && !this.mediaQuery.matches) {
+                motionX = this.params.x.osc[idx] * this.motion.x * 2;
+                motionX += this.params.x.osc2[idx] * this.motion.x2 * 2;
+            }
+            transform += `translateX(${shiftX + spread + motionX}%)`;
 
             shiftx.push(shiftX + spread + "%");
 
             // shift y
             let shiftY = this.params.y.base[idx] * this.params.y.value;
-
+            // parallax shift
             let parallaxShift = 0;
             if (this.mediaQuery && !this.mediaQuery.matches) {
-                // parallax shift
                 let currentPos = this.scrollPos - this.params.parallax_offset.value;
                 let parallaxAmt = this.params.parallax.value;
                 parallaxShift = currentPos * parallaxAmt * 0.7; /* global parallax */
