@@ -92,7 +92,7 @@ class Rays {
         setInterval(() => {
             this.motion.x = Math.sin(Date.now() / 1000);
             this.motion.x2 = Math.sin(Date.now() / 1330);
-            this.update()
+            this.update();
         }, 30);
     }
 
