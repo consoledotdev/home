@@ -329,13 +329,16 @@
     --theme-rays-triad-01-color: var(--c-blue-03);
     --theme-rays-triad-03-color: var(--c-green-03);
     --theme-rays-jobs-triad-02-color: var(--c-berry-03);
+    --theme-rays-triad-01-glow: 0 0 4px 0px rgba(var(--c-blue-03-RGB), 0.45);
+    --theme-rays-triad-03-glow: 0 0 4px 0px rgba(var(--c-green-04-RGB), 0.4);
+    --theme-rays-jobs-triad-02-glow: 0 0 5px 0px rgba(var(--c-berry-03-RGB), 0.6);
     --theme-rays-blend: multiply;
     --theme-dust-color: var(--c-grey-02);
     --theme-dust-color-light: var(--c-grey-01);
     --theme-slim-plane-color: var(--c-blue-03);
-    --theme-slim-plane-glow: 4px 1px rgba(var(--c-blue-03-RGB), 0.5);
+    --theme-slim-plane-glow: 0 0 4px 1px rgba(var(--c-blue-03-RGB), 0.5);
     --theme-wave-word-color: var(--c-green-03);
-    --theme-wave-word-glow: 4px 0px var(--c-green-02);
+    --theme-wave-word-glow: 0 0 4px 0px var(--c-green-02);
 }
 
 .theme.page-article,
@@ -455,11 +458,15 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
     background: var(--c-white-00-absolute);
 }
 
-.theme .main .console-rays .ray {
-    opacity: 0.4;
+.theme .main .console-rays .ray:not(.is-hidden) {
+    opacity: 0.5;
 }
 
-.theme .main .console-rays.jobs-triad-02 .ray {
+.theme .main .console-rays.triad-03 .ray:not(.is-hidden) {
+    opacity: 0.6;
+}
+
+.theme .main .console-rays.jobs-triad-02 .ray:not(.is-hidden) {
     opacity: 0.6;
 }
 

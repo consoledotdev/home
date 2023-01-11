@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let rays1 = new Rays({
         dev: false,
         type: "triad-01",
+        animateIn: true,
         params: {
             amt: {
                 value: 20,
@@ -16,6 +17,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
             },
             x: {
                 value: 44,
+            },
+            x_motion: {
+                value: 3,
             },
             y: {
                 value: 5,
@@ -51,6 +55,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
             },
             x: {
                 value: 68,
+            },
+            x_motion: {
+                value: 4,
             },
             y: {
                 value: 40,
@@ -90,6 +97,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
             },
             x: {
                 value: 62,
+            },
+            x_motion: {
+                value: 5,
             },
             x_offset: {
                 value: 1,
