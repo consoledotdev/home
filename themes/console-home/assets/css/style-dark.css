@@ -329,13 +329,16 @@
     --theme-rays-triad-01-color: var(--c-blue-11);
     --theme-rays-triad-03-color: var(--c-green-11);
     --theme-rays-jobs-triad-02-color: var(--c-berry-11);
+    --theme-rays-triad-01-glow: 0 0 6px 2px rgba(var(--c-blue-11-RGB), 0.25);
+    --theme-rays-triad-03-glow: 0 0 5px 0px rgba(var(--c-green-10-RGB), 0.3);
+    --theme-rays-jobs-triad-02-glow: 0 0 5px 0px rgba(var(--c-berry-10-RGB), 0.3);
     --theme-rays-blend: plus-lighter;
     --theme-dust-color: var(--c-grey-06-blacks-neutral);
     --theme-dust-color-light: var(--c-grey-07);
     --theme-slim-plane-color: var(--c-blue-10);
-    --theme-slim-plane-glow: 6px 2px rgba(var(--c-blue-10-RGB), 0.5);
+    --theme-slim-plane-glow: 0 0 6px 2px rgba(var(--c-blue-10-RGB), 0.5);
     --theme-wave-word-color: var(--c-green-10);
-    --theme-wave-word-glow: 6px 2px var(--c-green-11);
+    --theme-wave-word-glow: 0 0 6px 2px var(--c-green-11);
 }
 
 .theme.page-article,

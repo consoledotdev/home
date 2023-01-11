@@ -3,15 +3,24 @@ class Rays {
         this.options = options || {
             dev: true,
             type: "triad-01",
+            animateIn: false,
             params: {},
         };
         this.scrollEnd;
         this.scrollPos = 0;
+        this.slideInProgress = 0;
+        this.spreadInProgress = 0;
+        this.sameOrigin = document.body.classList.contains("is-same-origin");
         this.setMediaQuery();
         this.setup();
-        this.update();
-        this.show();
+        this.loop();
         this.setupControls();
+    }
+
+    loop() {
+        setInterval(() => {
+            this.update();
+        }, 33);
     }
 
     setMediaQuery() {
@@ -19,7 +28,6 @@ class Rays {
         if (this.mediaQuery) {
             this.mediaQuery.addEventListener("change", () => {
                 this.mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-                this.update();
             });
         }
     }
@@ -27,9 +35,10 @@ class Rays {
     setup() {
         this.container = document.querySelector(`[data-rays="${this.options.type}"]`);
         this.initializeParameters();
-        this.makeMotion();
         this.updateRays();
+
         this.params.parallax && this.handleParallax();
+        this.options.animateIn && this.animateIn(); // do for last
     }
 
     initializeParameters() {
@@ -38,20 +47,24 @@ class Rays {
             amt: { ...Rays.defaults().amt, ...this.options.params.amt },
             w: { ...Rays.defaults().w, ...this.options.params.w },
             spread: { ...Rays.defaults().spread, ...this.options.params.spread },
+            spread_in_amt: { ...Rays.defaults().spread_in_amt, ...this.options.params.spread_in_amt },
+            spread_in_length: { ...Rays.defaults().spread_in_length, ...this.options.params.spread_in_length },
             x: { ...Rays.defaults().x, ...this.options.params.x },
-            y: { ...Rays.defaults().y, ...this.options.params.y },
-            h: { ...Rays.defaults().h, ...this.options.params.h },
-            hue_in: { ...Rays.defaults().hue_in, ...this.options.params.hue_in },
             x_offset: { ...Rays.defaults().x_offset, ...this.options.params.x_offset },
+            x_motion: { ...Rays.defaults().x_motion, ...this.options.params.x_motion },
+            y: { ...Rays.defaults().y, ...this.options.params.y },
             y_offset: { ...Rays.defaults().y_offset, ...this.options.params.y_offset },
+            y_slide_in_amt: { ...Rays.defaults().y_slide_in_amt, ...this.options.params.y_slide_in_amt },
+            y_slide_in_length: { ...Rays.defaults().y_slide_in_length, ...this.options.params.y_slide_in_length },
+            h: { ...Rays.defaults().h, ...this.options.params.h },
             h_offset: { ...Rays.defaults().h_offset, ...this.options.params.h_offset },
+            hue_in: { ...Rays.defaults().hue_in, ...this.options.params.hue_in },
             hue_out: { ...Rays.defaults().hue_out, ...this.options.params.hue_out },
             parallax: { ...Rays.defaults().parallax, ...this.options.params.parallax },
             parallax_offset: { ...Rays.defaults().parallax_offset, ...this.options.params.parallax_offset },
         };
         this.changeSeed();
         this.createNoiseBase();
-        this.createOscillationBase();
     }
 
     changeSeed() {
@@ -64,10 +77,13 @@ class Rays {
         this.params.x.base = this.generateNoiseArray(this.params.amt.value, this.params.x.smoothness, this.params.x_offset.value);
         this.params.y.base = this.generateNoiseArray(this.params.amt.value, this.params.y.smoothness, this.params.y_offset.value);
         this.params.h.base = this.generateNoiseArray(this.params.amt.value, this.params.h.smoothness, this.params.h_offset.value);
+        this.params.x_motion.base = this.generateNoiseArray(this.params.amt.value, this.params.x_motion.smoothness, this.params.x_offset.value + 100);
+        this.params.x_motion.base2 = this.generateNoiseArray(this.params.amt.value, this.params.x_motion.smoothness, this.params.x_offset.value + 200);
 
         this.options.dev && console.log("Noise x\n %c%s", "color: #ff99ff", this.params.x.base);
         this.options.dev && console.log("Noise y\n %c%s", "color: #ff99ff", this.params.y.base);
         this.options.dev && console.log("Noise h\n %c%s", "color: #ff99ff", this.params.h.base);
+        this.options.dev && console.log("Noise x motion\n %c%s", "color: #ff99ff", this.params.x_motion.base);
     }
 
     /* length: amount of values in noise array
@@ -82,20 +98,6 @@ class Rays {
         return vals;
     }
 
-    createOscillationBase() {
-        this.params.x.osc = this.generateNoiseArray(this.params.amt.value, this.params.x.smoothness, this.params.x_offset.value + 100);
-        this.params.x.osc2 = this.generateNoiseArray(this.params.amt.value, this.params.x.smoothness, this.params.x_offset.value + 200);
-    }
-
-    makeMotion() {
-        this.motion = {};
-        setInterval(() => {
-            this.motion.x = Math.sin(Date.now() / 1000);
-            this.motion.x2 = Math.sin(Date.now() / 1330);
-            this.update();
-        }, 30);
-    }
-
     updateRays() {
         this.rays = [];
         this.container.textContent = "";
@@ -104,8 +106,16 @@ class Rays {
             this.container.append(ray);
             this.rays.push(ray);
         }
+        this.show();
 
         this.options.dev && console.log("Rays count %c%s", "color: #9999ff", this.params.amt.value);
+    }
+
+    animateIn() {
+        setTimeout(() => {
+            this.slideInProgress = this.params.y_slide_in_length.value;
+            this.spreadInProgress = this.params.spread_in_length.value;
+        }, 1200);
     }
 
     handleParallax() {
@@ -116,7 +126,6 @@ class Rays {
         let onScrollEnd = (e) => {};
         let onScroll = (e) => {
             this.scrollPos = window.scrollY;
-            this.update();
 
             window.clearTimeout(this.scrollEnd);
             this.scrollEnd = setTimeout(() => {
@@ -141,22 +150,39 @@ class Rays {
 
             // Move ------------
             let transform = "";
+
+            // initial spread in
+            this.spreadInProgress--;
+            if (this.spreadInProgress <= 0) this.spreadInProgress = 0;
+            let spreadIn = 1;
+            if (this.mediaQuery && !this.mediaQuery.matches && !this.sameOrigin) {
+                spreadIn = this.spreadInProgress * this.params.spread_in_amt.value;
+            }
             // spread
-            let spread = this.params.spread.base * this.params.spread.value * idx;
+            let spread = this.params.spread.base * (this.params.spread.value + spreadIn) * idx;
             // shift x
             let shiftX = this.params.x.base[idx] * this.params.x.value;
             // motion x
             let motionX = 0;
             if (this.mediaQuery && !this.mediaQuery.matches) {
-                motionX = this.params.x.osc[idx] * this.motion.x * 2;
-                motionX += this.params.x.osc2[idx] * this.motion.x2 * 2;
+                let motionPos = Math.sin(Date.now() / 1000) + Math.sin(Date.now() / 1330);
+                motionX = this.params.x_motion.base[idx] * Math.sin(Date.now() / 1000);
+                motionX += this.params.x_motion.base2[idx] * Math.sin(Date.now() / 1330);
+                motionX *= this.params.x_motion.value;
             }
             transform += `translateX(${shiftX + spread + motionX}%)`;
 
             shiftx.push(shiftX + spread + "%");
 
+            // initial slide in
+            this.slideInProgress--;
+            if (this.slideInProgress <= 0) this.slideInProgress = 0;
+            let slideIn = 1;
+            if (this.options.animateIn && this.mediaQuery && !this.mediaQuery.matches && !this.sameOrigin) {
+                slideIn = this.slideInProgress * this.params.y_slide_in_amt.value;
+            }
             // shift y
-            let shiftY = this.params.y.base[idx] * this.params.y.value;
+            let shiftY = this.params.y.base[idx] * this.params.y.value * slideIn;
             // parallax shift
             let parallaxShift = 0;
             if (this.mediaQuery && !this.mediaQuery.matches) {
@@ -194,8 +220,7 @@ class Rays {
     }
 
     show() {
-        let sameOrigin = document.body.classList.contains("is-same-origin");
-        if (this.mediaQuery && !this.mediaQuery.matches && !sameOrigin) {
+        if (this.mediaQuery && !this.mediaQuery.matches && !this.sameOrigin) {
             this.appear(true);
         } else {
             this.appear();
@@ -233,9 +258,9 @@ class Rays {
                     this.item = Rays.createEl("div", { classList: p });
                     this.controls.push(this.item);
                     this.item.append(
-                        Rays.createEl("span", {
+                        Rays.createEl("p", {
                             textContent: p,
-                            classList: "xx-small",
+                            classList: "x-small",
                         })
                     );
                     if (props.hasNumInput) {
@@ -298,8 +323,11 @@ class Rays {
     controlChanged(param) {
         if (param == "amt") this.updateRays();
         if (param == "seed") this.changeSeed();
+        if (param == "y_slide_in_amt" || param == "y_slide_in_length" || param == "spread_in_amt" || param == "spread_in_length") {
+            this.animateIn();
+            this.updateRays();
+        };
         this.createNoiseBase();
-        this.update();
     }
 
     static createEl(el, attrs) {
@@ -344,12 +372,43 @@ class Rays {
                 rangeStep: 0.1,
                 hasNumInput: true,
             },
+            // spread in amt
+            spread_in_amt: {
+                value: 0,
+                range: [1, 10],
+                rangeStep: 0.1,
+                hasNumInput: true,
+            },
+            // spread in length
+            spread_in_length: {
+                value: 330,
+                range: [10, 500],
+                rangeStep: 1,
+                hasNumInput: true,
+            },
             // horizontal shift
             x: {
                 base: undefined,
                 value: 44,
                 range: [0, 1000],
                 rangeStep: 0.1,
+                smoothness: 1,
+                hasNumInput: true,
+            },
+            // horizontal offset
+            x_offset: {
+                value: 0,
+                range: [0, 100],
+                rangeStep: 0.01,
+                hasNumInput: true,
+            },
+            // horizontal motion
+            x_motion: {
+                base: undefined,
+                base2: undefined,
+                value: 2,
+                range: [0, 10],
+                rangeStep: 0.01,
                 smoothness: 1,
                 hasNumInput: true,
             },
@@ -362,6 +421,27 @@ class Rays {
                 smoothness: 1,
                 hasNumInput: true,
             },
+            // vertical offset
+            y_offset: {
+                value: 1000,
+                range: [1000, 1100],
+                rangeStep: 0.01,
+                hasNumInput: true,
+            },
+            // vertical slide in amt
+            y_slide_in_amt: {
+                value: 0.5,
+                range: [1, 10],
+                rangeStep: 0.1,
+                hasNumInput: true,
+            },
+            // vertical slide in length
+            y_slide_in_length: {
+                value: 330,
+                range: [10, 500],
+                rangeStep: 1,
+                hasNumInput: true,
+            },
             // height shift
             h: {
                 base: undefined,
@@ -371,32 +451,18 @@ class Rays {
                 smoothness: 1,
                 hasNumInput: true,
             },
-            // hue range in
-            hue_in: {
-                value: 42, // set to null to disable
-                range: [0, 360],
-                rangeStep: 0.1,
-                hasNumInput: true,
-            },
-            // horizontal offset
-            x_offset: {
-                value: 0,
-                range: [0, 100],
-                rangeStep: 0.01,
-                hasNumInput: true,
-            },
-            // vertical offset
-            y_offset: {
-                value: 1000,
-                range: [1000, 1100],
-                rangeStep: 0.01,
-                hasNumInput: true,
-            },
             // height offset
             h_offset: {
                 value: 2000,
                 range: [2000, 2100],
                 rangeStep: 0.01,
+                hasNumInput: true,
+            },
+            // hue range in
+            hue_in: {
+                value: 42, // set to null to disable
+                range: [0, 360],
+                rangeStep: 0.1,
                 hasNumInput: true,
             },
             // hue range out

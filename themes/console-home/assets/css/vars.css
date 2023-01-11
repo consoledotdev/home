@@ -56,15 +56,19 @@
 
     --c-green-01: #dcfff7;
     --c-green-02: #abf7e7;
+    --c-green-02-RGB: 171, 247, 231;
     --c-green-03: #7ceeda;
     --c-green-04: #43dec1;
+    --c-green-04-RGB: 67, 222, 193;
     --c-green-05-main: #01bc90;
     --c-green-06: #009a64;
     --c-green-07: #007842;
     --c-green-08: #005629;
     --c-green-09: #003416;
     --c-green-10: #03230f;
+    --c-green-10-RGB: 3, 35, 15;
     --c-green-11: #031208;
+    --c-green-11-RGB: 3, 18, 8;
 
     --c-yellow-01: #fff7e6;
     --c-yellow-02: #ffefc0;
@@ -81,6 +85,7 @@
     --c-berry-01: #f7f7f7;
     --c-berry-02: #fae7ea;
     --c-berry-03: #fcd5dc;
+    --c-berry-03-RGB: 252, 213, 220;
     --c-berry-04: #f8b1bf;
     --c-berry-05-main: #e4718a;
     --c-berry-06: #c0455c;
@@ -88,7 +93,9 @@
     --c-berry-08: #781a27;
     --c-berry-09: #541018;
     --c-berry-10: #3e0c11;
+    --c-berry-10-RGB: 62, 12, 17;
     --c-berry-11: #29080b;
+    --c-berry-11-RGB: 41, 8, 11;
 
     --c-sunset-01: #f8f7f7;
     --c-sunset-02: #fae7e3;

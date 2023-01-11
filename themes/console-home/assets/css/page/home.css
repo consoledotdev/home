@@ -181,7 +181,7 @@ body:not(.is-same-origin) .plane-dust-wrapper {
     width: var(--w);
     height: calc(var(--w) * 2.2);
     transform: scaleY(0.8945) skewX(-24.1deg);
-    box-shadow: 0 0 var(--theme-slim-plane-glow);
+    box-shadow: var(--theme-slim-plane-glow);
     opacity: 0.5;
 }
 
@@ -234,7 +234,7 @@ body:not(.is-same-origin) .wave-word {
     top: 50%;
     transform: translateY(-50%);
     width: 10%;
-    box-shadow: 0 0 var(--theme-wave-word-glow);
+    box-shadow: var(--theme-wave-word-glow);
 }
 
 .wave-word.mid {
@@ -896,6 +896,10 @@ body:not(.is-same-origin) .wave-word {
     left: -250px;
 }
 
+.page-home .console-rays.triad-03 .ray:not(.is-hidden) {
+    opacity: 0.7;
+}
+
 .page-home .console-rays.jobs-triad-02 {
     --global-rays-translate: translateY(-22%);
     left: 256px;
@@ -903,17 +907,4 @@ body:not(.is-same-origin) .wave-word {
 
 .page-home .console-rays.jobs-triad-02 .ray:not(.is-hidden) {
     opacity: 0.9;
-}
-
-/* Rays controls */
-.console-rays-controls.triad-01 {
-    top: 100px;
-}
-
-.console-rays-controls.triad-03 {
-    top: 350px;
-}
-
-.console-rays-controls.jobs-triad-02 {
-    top: 600px;
 }
