@@ -326,7 +326,7 @@ class Rays {
         if (param == "y_slide_in_amt" || param == "y_slide_in_length" || param == "spread_in_amt" || param == "spread_in_length") {
             this.animateIn();
             this.updateRays();
-        };
+        }
         this.createNoiseBase();
     }
 
