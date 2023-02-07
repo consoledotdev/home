@@ -479,6 +479,14 @@ body:not(.is-same-origin).theme .logo-svg-animated-explode .prompt {
     display: none;
 }
 
+.theme .main-advertise .logo-cloud.light {
+    display: grid;
+}
+
+.theme .main-advertise .logo-cloud.dark {
+    display: none;
+}
+
 .theme .main-advertise .social .quote {
     background: var(--theme-content-bg-2);
 }

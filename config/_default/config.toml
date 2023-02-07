@@ -34,7 +34,7 @@ mediatype = "application/rss"
 baseName = "rss"
 
 [params]
-consoleSubscribers = "25k+"
+consoleSubscribers = "26k+"
 # For the annual end of year countdown, set the forceNewsletterDate to the last
 # newsletter date of the year and the returnNewsletterDate to the first
 # newsletter date of the next year. Comment out when not in use.

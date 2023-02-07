@@ -1372,6 +1372,80 @@ body.page-advertise.checkpoint-campaigns {
     margin-bottom: var(--space3_5);
 }
 
+/* Sponsors */
+.page-section-advertise.sponsors {
+    margin-top: var(--space6);
+    margin-bottom: var(--space6);
+}
+
+.page-section-advertise.sponsors .page-section-heading {
+    display: block;
+    margin-bottom: calc(var(--space5) + var(--space2_5));
+}
+
+.page-section-advertise.sponsors .page-section-heading .title {
+    margin-bottom: var(--space4);
+}
+
+.page-section-advertise.sponsors .logo-cloud-artwork {
+    position: relative;
+}
+
+.page-section-advertise.sponsors .logo-cloud {
+    z-index: 20;
+    position: relative;
+    border-left: var(--theme-border-3);
+    border-right: var(--theme-border-3);
+
+    --grid-layout-gap: 1px;
+    --grid-column-count: 4;
+    --grid-item--min-width: 240px;
+
+    --gap-count: calc(var(--grid-column-count) - 1);
+    --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+    --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+    grid-gap: var(--grid-layout-gap);
+}
+
+.page-section-advertise.sponsors .logo-cloud .grid-item {
+    height: var(--space5);
+    box-sizing: content-box;
+    padding: var(--space3) var(--space3_5);
+    /* outline: var(--theme-border-1); */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-section-advertise.sponsors .logo-cloud img {
+    display: inline-block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@media (max-width: 768px) {
+    .page-section-advertise.sponsors .logo-cloud {
+        --grid-item--min-width: 200px;
+    }
+
+    @media (max-width: 500px) {
+        .page-section-advertise.sponsors .logo-cloud {
+            grid-template-columns: 1fr 1fr;
+            border-left: 0px;
+            border-right: 0px;
+            margin: 0 calc(var(--space3_5) * -1);
+        }
+
+        .page-section-advertise.sponsors .logo-cloud .grid-item {
+            justify-content: flex-start;
+            padding: var(--space2) var(--space3_5);
+        }
+    }
+}
+
 /* Contact */
 .page-section-advertise.contact {
     margin: var(--space7) 0;
