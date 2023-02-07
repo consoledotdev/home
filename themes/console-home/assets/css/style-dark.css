@@ -429,6 +429,14 @@
     display: initial;
 }
 
+.theme .main-advertise .logo-cloud.light {
+    display: none;
+}
+
+.theme .main-advertise .logo-cloud.dark {
+    display: grid;
+}
+
 /* Landing page specific */
 .theme .main-landing img.light {
     display: none;
