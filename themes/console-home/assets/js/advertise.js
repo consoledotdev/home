@@ -218,10 +218,10 @@ class FadeOutGrid {
 
     styleCells() {
         this.cells.forEach((c, idx) => {
-            let row = parseInt(idx/this.gridCols) + 1;
+            let row = parseInt(idx / this.gridCols) + 1;
             c.dataset.inCol = row;
-            c.style.height = `${ 66 - row * (0.6 * (this.gridCols * 1.3)) }px`;
-            c.style.opacity = `${ 1 - row * (0.015 * (this.gridCols * 1.3)) }`;
+            c.style.height = `${66 - row * (0.6 * (this.gridCols * 1.3))}px`;
+            c.style.opacity = `${1 - row * (0.015 * (this.gridCols * 1.3))}`;
         });
     }
 
