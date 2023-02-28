@@ -1,0 +1,220 @@
+---
+title: Interview with Ander Steele, Tonic
+who: Ander Steele
+role: Lead Data Scientist
+org: Tonic
+what: Fake data modeled from production.
+tags: ["Fake data"]
+date: 2023-02-15T12:00:00Z
+draft: false
+headerType: fixed
+summary: Interview with Ander Steele, Lead Data Scientist, Tonic
+isPage: interviews
+topImg1Src: /img/interviews/tonic-ander-steel-profile.png
+topImg2Src: /img/favicons/www.tonic.ai.png
+ogImg: /img/interviews/tonic-ander-steel-desk.jpeg
+---
+
+### What is Tonic? Why did you build it?
+
+[Tonic.ai](https://www.tonic.ai/) is the fake data company. We provide fake data
+so that developers and QA can test their application code against safe,
+de-identified versions of their application database.
+
+Why would you use fake or synthetic data instead of real data? Particularly in
+regulated industries, access to data is very difficult. It may be impossible to
+test against production data. Even outside of regulated industries, you don't
+necessarily want to be working with customer data as a developer. The more
+distance you can get from real sensitive data as a developer or data scientist,
+the safer everyone is.
+
+Recently, we've been building a product,
+[Djinn](https://djinn.tonic.ai/?signup), which is focused on the data-science
+workflow and those use cases. Instead of building an entire de-identified
+production, de-identified application database, the data-science workflow
+typically starts with a dataset, which is some view or table within this
+application database.
+
+The tool takes these views and builds generative models that are capable of
+producing synthetic data, which has the same statistical properties as the real
+data. Synthetic data can be used in place of real data to train machine-learning
+models, build dashboards, to do exploratory data analysis.
+
+This lets the data scientists get started on their job a lot faster than they
+could if they were waiting around for access to real data. This is something
+that we're quite excited about. In addition to the privacy use case,
+increasingly we're seeing people that want to use synthetic data for the data
+augmentation use case.
+
+For example, you've paid for some survey data, which has been quite expensive
+and tedious to gather and that survey data doesn't necessarily represent the
+population of interest that you're trying to study; maybe it skews
+demographically more females than males. Maybe, the data you have is not
+necessarily representative of the populations that you'd wish to analyze or the
+types of questions that you'd like to ask. So one of the things you can do with
+synthetic data, if you have sufficiently rich and expressive synthetic data
+models, is then you can generate as many samples as you want – you can modify
+the distinctions of these various features, and really build alternate versions
+of your real data that are more representative of the populations of interest.
+
+### What does a "day in the life" look like for you?
+
+Tonic.ai is a remote-first company. I'm on the West Coast and we have a lot of
+people on the East Coast. When I wake up, I usually try to catch up on Slack and
+see what's going on - usually, there's a lot of activity by 7:00 AM Pacific
+time. There are typically a few meetings each day with my team, but a lot of my
+time these days is bucketed into R&D — which is trying to improve our models for
+synthetic data generation — or actually writing features, doing development once
+the R&D phase is over. 
+
+### What is the team structure around Tonic?
+
+Tonic.ai employs around eighty people at this point. We've grown fairly quickly.
+I think roughly a third of that is product and engineering, and a significant
+portion of that is engineers.
+
+Within the engineering teams, the teams are organized around areas of code
+ownership. Either features or infrastructure. My team, for example, is focused
+on our synthetic-data product Djinn, which is our tool aimed at data science use
+cases. We have two data scientists in addition to myself plus a couple of
+engineers in this team.
+
+### How did you first get into software development?
+
+I think it was back in middle school when I started playing around with a
+variety of things. I think it was Visual Basic, then one summer course in
+Pascal, which was illuminating.
+
+When I really got excited was on a course in Java during middle school. The most
+exciting thing about that was writing a little program to render the Mandelbrot
+Set and of course, zooming in. That intersected nicely with my two interests at
+the time, which were computers and mathematics. 
+
+In high school I got distracted by mathematics, I fell in love with math and
+pursued an academic career in mathematics for a little while. I still did a lot
+of coding as part of that to test various mathematical conjectures and
+numerically verify that these insane ideas actually work.
+
+I was doing a lot of Python programming, mainly because the most relevant
+software from my area of research was this open-source project called Sage,
+which is a phenomenal piece of software that can do some really sophisticated
+number theory computations and many other things. That was my intro to Python.
+
+At some point, I started playing with machine learning. All the excitement in
+the early 2010s around developments with neural networks and unsupervised
+learning really caught my interest and attention. I found myself back in the
+software space doing machine learning. Today, I’m still doing that intersection
+of mathematics and software.
+
+I don’t use math as much nowadays but It's fun being able to actually sit down,
+read these various papers, work out the calculations myself, and try and make
+sure I really do understand what's going on.
+
+I think most of my R&D work, aside from figuring out what the ideas are that we
+should pursue, is really engineering-focused like building prototypes, coding
+them up, testing them, and doing their whole experimental analysis. 
+
+### What is the most interesting development challenge you've faced working on Tonic?
+
+I've spent most of my time over the past couple of years working on Djinn.
+During that time, the fundamental problem that we faced was how to make
+realistic, synthetic data.
+
+Let me explain with the help of an example. Let's suppose that you want to
+synthesize financial transactions. Imagine you have a large data set of
+customer-financial transactions. Each of these customers tells a story through
+time about what they're doing and when they're doing it. If you look at it, per
+customer is extremely high dimensional because not only do you have, for
+example, the records per observation, but you have all the records per customer.
+So the dimension of these can quickly explode and the complexity of this problem
+becomes increasingly difficult with the dimension.
+
+How do you capture those dynamics? How do you build models that are capable of
+reproducing the statistical properties of these events? We spend a lot of time
+thinking about this particular problem. 
+
+We've landed on one of the ideas that's been floating around in the whole
+generative AI space for a while, which is using variational autoencoders to make
+data generators. The setup is fairly simple and abstract. You have your data.
+What you want to do is you're going to build some neural network that's going to
+take that data, and compress it down into a simpler representation. Take that
+simpler representation and decompress it back to the data. You do this
+unsupervised learning process where your network tries to reproduce these input
+data, passing it through this bottleneck.
+
+You have this encoder and decoder pair – the encoder is taking data, and
+compressing it into a simpler representation. The decoder is taking that simple
+representation and decompressing it back to data. At the end of the day, your
+decoder is a machine for taking noise and producing data, and so that's your
+generative model.
+
+### What is the most interesting tech you are playing around with at the moment?
+
+It's a really exciting time right now in the generative AI space. I think
+everyone has played with one of these very impressive models, either one of the
+GPT variants or one of the image-generation models like [Stable
+Diffusion](https://stablediffusionweb.com/).
+
+I've been playing around with those models a bit. We built a fun demo using
+Stable Diffusion for de-identifying images called
+[imafake](https://imafake.tonic.ai/). In addition to these models, the
+underlying ideas, if you can call that a technology, are very exciting.
+
+There's a lot of excellent tooling now that makes it easy to quickly hack.
+[Hugging Face](https://huggingface.co/), in particular, provides excellent code
+that implements many of these research articles and gives you quick access to
+the cutting edge. 
+
+### Describe your computer hardware setup
+
+I am pretty deep in the Apple ecosystem, I use the Apple Wireless Keyboard and
+the Magic Mouse. My display is an HPZ27, which I absolutely love. I've recently
+switched over to one of the newer M1 MacBook Pros, and that's been impressively
+fast.
+
+### Describe your computer software setup
+
+**OS:** macOS.
+
+**Browser:** Safari.
+
+**Email:** Gmail.
+
+**Chat:** Slack.
+
+**IDE:** VS Code.
+
+**Source control:** GitHub.
+
+**Data Analysis:** Jupyter notebooks & PyTorch
+
+**Experiment Tracking:**  Weights & Biases
+
+### Describe your desk setup
+
+I have a standing desk, which I sit at all the time, and just some old IKEA
+chair that has followed me around a few moves, so nothing fancy there.
+
+{{< img-center src="/img/interviews/tonic-ander-steel-desk.jpeg" alt="The desk of Ander Steel, Tonic" width="100%" >}}
+
+### When coding
+
+**Daytime or nighttime?** Day.
+
+**Tea or coffee?** Coffee.
+
+**Silence or music?** Music.
+
+### What non-tech activities do you like to do?
+
+The hobby I'm most passionate about is mountain biking. There's a lot of
+excellent riding where I live in Santa Cruz, California. Lately, in the interest
+of using my limited time more efficiently, I'm really excited about trail
+running. It's a lot easier to get a good trail run in at an insane hour than it
+is to get a good mountain bike ride in.
+
+### Find out more
+
+[Tonic](https://www.tonic.ai/) generates realistic fake data for testing
+purposes. It was featured as an "Interesting Tool" in the [Console
+newsletter](/) on 2 Mar 2023. This interview was conducted on 15 Feb 2023.
