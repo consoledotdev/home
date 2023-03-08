@@ -6,7 +6,7 @@ org: Dodgeball
 what: Fraud prevention.
 tags: ["Anti-fraud", "Security"]
 date: 2023-02-16T12:00:00Z
-draft: true
+draft: false
 headerType: fixed
 summary: Interview with Patrick Teague, CTO, Dodgeball
 isPage: interviews
