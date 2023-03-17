@@ -18,7 +18,7 @@ xlViewport:
 companyInfo:
   favicon: /img/favicons/www.warp.dev.png
   URL: https://www.warp.dev
-  jobsURL: https://www.warp.dev/careers
+  jobsURL: https://jobs.console.dev/company/warp
   location: Remote (US)
   description: "The terminal for the 21st century."
   images:

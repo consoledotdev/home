@@ -17,7 +17,7 @@ xlViewport:
 companyInfo:
   favicon: /img/favicons/socket.dev.png
   URL: https://socket.dev
-  jobsURL: https://socket.dev/jobs
+  jobsURL: https://jobs.console.dev/company/socket
   description: Secure your JavaScript supply chain.
   product:
     name: "Socket"

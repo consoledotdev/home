@@ -18,7 +18,7 @@ xlViewport:
 companyInfo:
   favicon: /img/favicons/semgrep.dev.png
   URL: https://r2c.dev
-  jobsURL: https://r2c.dev/team/
+  jobsURL: https://jobs.console.dev/company/r2c
   description: Open-source static analysis for security.
   product:
     name: "Semgrep"

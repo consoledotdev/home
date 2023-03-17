@@ -18,7 +18,7 @@ xlViewport:
 companyInfo:
   favicon: /img/favicons/www.grit.io.png
   URL: https://www.grit.io
-  jobsURL: https://getgrit.notion.site/Grit-Job-Board-31942eda7b0e49478ed7b0d6d2361f1f
+  jobsURL: https://jobs.console.dev/company/grit
   location: Remote (Americas)
   description: Fix technical debt automatically.
   product:

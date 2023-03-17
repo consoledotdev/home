@@ -32,14 +32,6 @@ whether our emails are opened, but are interested in which links get clicked so
 we can improve our [selection criteria](selection-criteria/). We also track
 which links are clicked on our website.
 
-If you sign up to Jobs Console, we collect your email and information about your
-job preferences. We use this to match you with the best jobs. Your profile is
-private until you decide to engage with one of the organizations looking to
-recruit. If you flag interest in a job we’ve sent you, we pass your profile to
-the hiring manager. You can preview what we'll send before it goes and you must
-opt in to every match. We only provide hiring managers with your contact details
-once you have both opted to receive them.
-
 You can unsubscribe from all our emails at any time using the link in each email
 or by contacting us.
 
@@ -52,7 +44,7 @@ That’s the plain English version. Here are the extra details.
 
 #### Last updated
 
-2022-11-01 ([change
+2023-03-17 ([change
 history](https://github.com/consoledotdev/home/commits/main/content/privacy.md)).
 
 ### Data processing purposes
@@ -61,31 +53,15 @@ If you sign up to our devtools newsletter, we collect your personal data for the
 purpose of sending you the newsletter. We do not use this information for any
 automated decision-making or profiling based on personal data. 
 
-If you sign up to Jobs Console, we collect your personal information for the
-purposes of matching you with jobs, sending them to you, then connecting you
-with the hiring manager if you flag your interest. We use the information you
-provide us to make automated decisions about whether a particular job fits your
-preferences. You can update your preferences or delete your account at any time
-by logging in to your account or by contacting us.
-
 We will never sell your personal data under any circumstances. We do not provide
 your data to third-parties for marketing purposes.
 
 ### Lawful purposes for processing
 
--   Consent.  
-    -  By signing up to our devtools newsletter you are consenting to receive
-       that newsletter by email. We use double opt-in to ensure we have your
-       consent. You can withdraw your consent at any time by clicking the
-       unsubscribe link in each email or by contacting us by email.
-    -  By signing up to Jobs Console you are consenting to us using your
-       personal information to match you with jobs and send them to you. If you
-       flag your interest in a job, you are consenting to us passing your
-       information to the hiring manager for that job. If the hiring manager is
-       interested in speaking with you, we will then connect you with them via
-       email. You can withdraw your consent at any time by clicking the
-       unsubscribe link in each email, logging into your account, or by
-       contacting us via email.
+-  Consent. By signing up to our devtools newsletter you are consenting to
+   receive that newsletter by email. We use double opt-in to ensure we have your
+   consent. You can withdraw your consent at any time by clicking the
+   unsubscribe link in each email or by contacting us by email.
 - Legitimate interests. We track the links you click within our emails to help
   us improve our selection criteria.
 
@@ -99,9 +75,6 @@ transfer personal data to or through these services for the following purposes:
 
 - [Cloudflare](https://www.cloudflare.com/): Where we run some of our websites
   and infrastructure.
-- [Courier](https://www.courier.com/privacy/): Used to manage emails we send.  
-- [Encore](https://encore.dev/): Where we run some of our websites and
-  infrastructure.
 - [DocuSign](https://www.docusign.com/): If you are a customer, we manage
   contracts using DocuSign.
 - [Google](https://www.google.com): We use Google Workspace for our email, docs
@@ -114,13 +87,8 @@ transfer personal data to or through these services for the following purposes:
   customer contacts.
 - [Plausible](https://plausible.io/): We track website visits with Plausible
   Analytics which does not use cookies and is designed privacy-first.
-- [Postmark](https://postmarkapp.com/): Used to manage emails we send.
-- [QuickBooks](https://quickbooks.intuit.com/): Used for invoices and financial
-  management if you are a supplier or customer.
 - [Reddit](https://www.reddit.com/): If you click through from a Reddit ad, we
   use Reddit’s tools to track if you then sign up to Console.
-- [Retool](https://retool.com/): Used for back-office management.
-- [SendGrid](https://sendgrid.com/): Used to manage emails we send.
 - [Twitter](https://twitter.com/): If you click through from a Twitter ad, we
   use Twitter’s tools to track if you then sign up to Console.
 - [Vercel](https://vercel.com/): Where we run some of our websites and
@@ -145,10 +113,6 @@ If you unsubscribe from our devtools newsletter, we will stop sending you
 emails, but will keep your data for 1 year to help us track unsubscribe rates
 over time. If you wish to delete all your data immediately, please email us.
 
-If you unsubscribe from Jobs Console, we will stop sending you emails, but will
-keep your data for 1 year to allow you to resubscribe. You can delete your data
-at any time by logging into your account or by emailing us.
-
 ### Cookies
 
 We use cookies only for essential purposes.
@@ -156,13 +120,6 @@ We use cookies only for essential purposes.
 If you set your style preferences on our website to either light mode or dark
 mode, we save the preference in your browser local storage. This is anonymous
 and does not track you. The key is `theme`.
-
-If you log into Jobs Console, we set cookies to keep track of your session. This
-is set for 30 days to allow you to automatically log in when you return. The
-name is `jobs-console-session`. If you log in using GitHub, they may set their
-own cookies. See the [GitHub Privacy
-Policy](https://docs.github.com/en/site-policy/privacy-policies) for more
-details.
 
 ### Your rights
 
@@ -172,9 +129,6 @@ rights to all users globally. Email us to request any of these rights.
 
 You can withdraw your consent at any time by clicking the unsubscribe link in
 each email or by contacting us by email.
-
-For Jobs Console subscribers, you can delete your data by logging into your
-account.
 
 For devtools newsletter subscribers, you can also exercise your rights by
 [contacting Mailchimp directly](https://mailchimp.com/en-gb/privacy-rights/).

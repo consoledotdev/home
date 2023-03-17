@@ -18,7 +18,7 @@ xlViewport:
 companyInfo:
   favicon: /img/favicons/trunk.io.png
   URL: https://trunk.io
-  jobsURL: https://trunk.io/jobs
+  jobsURL: https://jobs.console.dev/company/trunk
   location: Remote (US)
   description: "Simplified checking, testing, and merging your code."
   product:

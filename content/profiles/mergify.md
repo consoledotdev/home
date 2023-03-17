@@ -17,7 +17,7 @@ xlViewport:
 companyInfo:
   favicon: /img/favicons/mergify.com.svg
   URL: https://mergify.com
-  jobsURL: https://careers.mergify.com
+  jobsURL: https://jobs.console.dev/company/mergify
   description: Faster & safer code merge.
   images:
     - url: /img/profiles/mergify-profile-1.jpg

@@ -19,10 +19,10 @@ to email us:
 
 {{< framed-section--open classes="framed-section-default" >}}
 
-{{< rich-title-3 icon="jobs" >}} Not looking for a job?{{</ rich-title-3 >}}
+{{< rich-title-3 icon="jobs" >}} Want to work in devtools?{{</ rich-title-3 >}}
 
-Jobs Console sends you the best &lt;= 3 developer jobs each week, because you
-might occasionally consider something new.
+Jobs Console features the best developer jobs at devtools companies, with
+engineering profiles & salaries.
 
 {{< a-link icon-right="arrow-right" url="https://jobs.console.dev" text="More details" >}}
 

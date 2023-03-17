@@ -18,7 +18,7 @@ xlViewport:
 companyInfo:
   favicon: /img/favicons/www.flanksource.com.png
   URL: https://www.flanksource.com
-  jobsURL: https://www.flanksource.com/careers
+  jobsURL: https://jobs.console.dev/company/flanksource
   location: Remote (Worldwide)
   description: Mission Control for Enterprises
   product:

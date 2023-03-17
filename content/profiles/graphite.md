@@ -18,7 +18,7 @@ xlViewport:
 companyInfo:
   favicon: /img/favicons/graphite.dev.png
   URL: https://graphite.dev
-  jobsURL: https://jobs.lever.co/joingraphite
+  jobsURL: https://jobs.console.dev/company/graphite
   location: NYC
   description: "Modern code review."
   images:

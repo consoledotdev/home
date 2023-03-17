@@ -66,23 +66,20 @@ In addition to helping developers find the best tools, [we profile](/profiles/)
 how the most interesting companies run their engineering teams. We believe that
 the best developers rarely look for a new job, but they may be tempted by
 particularly interesting opportunities. This is where [Jobs
-Console](https://jobs.console.dev/) comes in, a weekly email digest of the best
-2-3 jobs that match preferences set by each individual developer. 
+Console](https://jobs.console.dev/) comes in - a devtools specific jobs board,
+with interesting jobs featured in the newsletter each week.
 
-Working with companies who are looking to grow their development team, we only
-send the best, most relevant jobs, and connect developers directly to the hiring
-manager once both sides have flagged their interest.
+#### Devtools investing
 
-#### Console Zero
-
-Console also [invests](/zero/) in early stage startups building products where
+Our CEO, David, is [an active angel
+investor](https://davidmytton.blog/investments/) in early-stage startups where
 developers are the primary user. If we'd recommend it to the developers
-subscribed to our devtools newsletter, we'd also consider investing. 
+subscribed to the newsletter, we'd also [consider
+investing](https://blog.console.dev/devtools-startups-standing-out-to-investors/).
 
-So far we’ve made >20 pre-seed, seed, and series A investments in startups such
-as [CloudQuery](https://www.cloudquery.io/),
-[Liveblocks](https://liveblocks.io/), [Primer](https://primer.io/),
-[Railway](https://railway.app/), and [Trunk](https://trunk.io/).
+Most of our investments are in the US, but we have [>30
+investments](https://davidmytton.blog/investments/#investments) all over the
+world.
 
 #### Find out more
 
@@ -100,6 +97,7 @@ want to work with us, reach out: [hello@console.dev](mailto:hello@console.dev).
 
 ### Our company
 
-Console Labs, Inc. 548 Market St, San Francisco, California 94104 US.
+Console Ltd is registered in England and Wales at RH 115 The Record Hall, 16-16A
+Baldwins Gardens, London, EC1N 7RJ, UK.
 
 {{< section-subscribe >}}

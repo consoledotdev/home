@@ -18,7 +18,7 @@ xlViewport:
 companyInfo:
   favicon: /img/favicons/hookdeck.com.jpg
   URL: https://hookdeck.com
-  jobsURL: https://hookdeck.com/careers
+  jobsURL: https://jobs.console.dev/company/hookdeck
   location: Remote
   description: Webhook infrastructure
   product:
