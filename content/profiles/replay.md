@@ -18,7 +18,7 @@ xlViewport:
 companyInfo:
   favicon: /img/favicons/www.replay.io.png
   URL: https://www.replay.io
-  jobsURL: https://www.replay.io/about#jobs
+  jobsURL: https://jobs.console.dev/company/replay
   location: Remote (US)
   description: Time-travel debugger.
   product:
