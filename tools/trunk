@@ -8,7 +8,7 @@
 
 set -euo pipefail
 
-readonly TRUNK_LAUNCHER_VERSION="1.0.4"  # warning: this line is auto-updated
+readonly TRUNK_LAUNCHER_VERSION="1.2.4"  # warning: this line is auto-updated
 
 readonly SUCCESS_MARK="\033[0;32m✔\033[0m"
 readonly FAIL_MARK="\033[0;31m✘\033[0m"
@@ -17,8 +17,17 @@ readonly PROGRESS_MARKS=("⡿" "⢿" "⣻" "⣽" "⣾" "⣷" "⣯" "⣟")
 # This is how mktemp(1) decides where to create stuff in tmpfs.
 readonly TMPDIR="${TMPDIR:-/tmp}"
 
-PLATFORM=$(uname | tr "[:upper:]" "[:lower:]")
+KERNEL=$(uname | tr "[:upper:]" "[:lower:]")
+readonly KERNEL
+
+MACHINE=$(uname -m)
+readonly MACHINE
+
+PLATFORM="${KERNEL}-${MACHINE}"
 readonly PLATFORM
+
+PLATFORM_UNDERSCORE="${KERNEL}_${MACHINE}"
+readonly PLATFORM_UNDERSCORE
 
 # https://en.wikipedia.org/wiki/ANSI_escape_code#CSI_(Control_Sequence_Introducer)_sequences
 # [nF is "cursor previous line" and moves to the beginning of the nth previous line
@@ -32,6 +41,19 @@ readonly TRUNK_LAUNCHER_DEBUG
 if [[ ${TRUNK_LAUNCHER_QUIET} != false ]]; then
   exec 3>&1 4>&2 &>/dev/null
 fi
+
+
+TRUNK_CACHE="${TRUNK_CACHE:-}"
+if [[ -n "${TRUNK_CACHE}" ]]; then
+  :
+elif [[ -n "${XDG_CACHE_HOME:-}" ]]; then
+  TRUNK_CACHE="${XDG_CACHE_HOME}/trunk"
+else
+  TRUNK_CACHE="${HOME}/.cache/trunk"
+fi
+readonly TRUNK_CACHE
+readonly CLI_DIR="${TRUNK_CACHE}/cli"
+mkdir -p "${CLI_DIR}"
 
 # platform check
 readonly MINIMUM_MACOS_VERSION="10.15"
@@ -51,29 +73,38 @@ check_darwin_version() {
           "(yours is ${osx_version}). See https://docs.trunk.io for more info."
   exit 1
 }
-if [[ ${PLATFORM} == "darwin" ]]; then
+if [[ ${PLATFORM} == "darwin-x86_64" || ${PLATFORM} == "darwin-arm64" ]]; then
   check_darwin_version
-elif [[ ${PLATFORM} == "linux" ]]; then
+elif [[ ${PLATFORM} == "linux-x86_64" ]]; then
   :
 else
-  echo -e "${FAIL_MARK} Trunk is only supported on Linux and MacOS." \
+  echo -e "${FAIL_MARK} Trunk is only supported on Linux (x64_64) and MacOS (x86_64, arm64)." \
           "See https://docs.trunk.io for more info."
   exit 1
 fi
 
-TRUNK_TMPDIR="${TMPDIR}/trunk-$(set -e; id -u)"
+TRUNK_TMPDIR="${TMPDIR}/trunk-$(set -e; id -u)/launcher_logs"
 readonly TRUNK_TMPDIR
+mkdir -p "${TRUNK_TMPDIR}"
+
+# For the `mv $TOOL_TMPDIR/trunk $TOOL_DIR` to be atomic (i.e. just inode renames), the source and destination filesystems need to be the same
+TOOL_TMPDIR=$(mktemp -d "${CLI_DIR}/tmp.XXXXXXXXXX")
+readonly TOOL_TMPDIR
+
+cleanup() {
+  rm -rf "${TOOL_TMPDIR}"
+  if [[ "$1" == "0" ]]; then
+    rm -rf "${TRUNK_TMPDIR}"
+  fi
+}
+trap 'cleanup $?' EXIT
 
 # e.g. 2022-02-16-20-40-31-0800
 dt_str() { date +"%Y-%m-%d-%H-%M-%S%z"; }
 
-LAUNCHER_TMPDIR="${TRUNK_TMPDIR}/launcher-$(set -e; dt_str)"
+LAUNCHER_TMPDIR="${TOOL_TMPDIR}/launcher"
 readonly LAUNCHER_TMPDIR
 mkdir -p "${LAUNCHER_TMPDIR}"
-cleanup() {
-  rm -rf "${LAUNCHER_TMPDIR}"
-}
-trap 'cleanup' EXIT
 
 if [[ -n ${TRUNK_LAUNCHER_DEBUG:-} ]]; then
   set -x
@@ -116,7 +147,7 @@ awk_test
 
 readonly CURL_FLAGS="${CURL_FLAGS:- -vvv --max-time 120 --retry 3 --fail}"
 readonly WGET_FLAGS="${WGET_FLAGS:- --verbose --tries=3 --limit-rate=10M}"
-TMP_DOWNLOAD_LOG="${LAUNCHER_TMPDIR}/download-$(set -e; dt_str).log"
+TMP_DOWNLOAD_LOG="${TRUNK_TMPDIR}/download-$(set -e; dt_str).log"
 readonly TMP_DOWNLOAD_LOG
 
 # Detect whether we should use wget or curl.
@@ -133,13 +164,18 @@ Is Trunk up?: https://status.trunk.io
 WGET_FLAGS: ${WGET_FLAGS}
 
 wget --version:
-$(wget --version)
+$(wget --version 2>&1)
 
 EOF
     # trunk-ignore-end(shellcheck/SC2312)
 
-    # trunk-ignore(shellcheck/SC2086): we deliberately don't quote WGET_FLAGS
-    wget ${WGET_FLAGS} "${url}" --output-document "${output_to}" 2>>"${TMP_DOWNLOAD_LOG}" &
+    # Support BusyBox wget
+    if wget --help 2>&1 | grep BusyBox; then
+      wget "${url}" -O "${output_to}" 2>>"${TMP_DOWNLOAD_LOG}" &
+    else
+      # trunk-ignore(shellcheck/SC2086): we deliberately don't quote WGET_FLAGS
+      wget ${WGET_FLAGS} "${url}" --output-document "${output_to}" 2>>"${TMP_DOWNLOAD_LOG}" &
+    fi
   }
 elif command -v curl &>/dev/null; then
   download_cmd() {
@@ -244,7 +280,7 @@ read_cli_version_from() {
   cli_version="$(set -e; lawk '/[ \t]+version:/{print $2; exit;}' "${config_abspath}")"
   if [[ -z ${cli_version} ]]; then
     echo -e "${FAIL_MARK} Invalid .trunk/trunk.yaml, no cli version found." \
-            "See https://docs.trunk.io for more info."
+            "See https://docs.trunk.io for more info." >&2
     exit 1
   fi
 
@@ -259,8 +295,20 @@ download_cli() {
   readonly TMP_INSTALL_DIR="${LAUNCHER_TMPDIR}/install"
   mkdir -p "${TMP_INSTALL_DIR}"
 
+  TRUNK_NEW_URL_VERSION=0.10.2-beta.1
+  if sort --help 2>&1 | grep BusyBox; then
+    readonly URL="https://trunk.io/releases/${dl_version}/trunk-${dl_version}-${PLATFORM}.tar.gz"
+  else
+    if [[ "$(printf "%s\n%s\n" "${TRUNK_NEW_URL_VERSION}" "${dl_version}" | \
+            sort --version-sort | \
+            head -n 1)" == "${TRUNK_NEW_URL_VERSION}"* ]]; then
+      readonly URL="https://trunk.io/releases/${dl_version}/trunk-${dl_version}-${PLATFORM}.tar.gz"
+      else
+      readonly URL="https://trunk.io/releases/trunk-${dl_version}.${KERNEL}.tar.gz"
+    fi
+  fi
+
   readonly DOWNLOAD_TAR_GZ="${TMP_INSTALL_DIR}/download-${dl_version}.tar.gz"
-  readonly URL="https://trunk.io/releases/trunk-${dl_version}.${PLATFORM}.tar.gz"
 
   download_url "${URL}" "${DOWNLOAD_TAR_GZ}" "Downloading Trunk ${dl_version}"
 
@@ -285,9 +333,16 @@ download_cli() {
   tar --strip-components=1 -C "${TMP_INSTALL_DIR}" -xf "${DOWNLOAD_TAR_GZ}"
   echo -e "${CLEAR_LAST_MSG}${SUCCESS_MARK} ${unpacking_text} done"
 
-  mkdir -p "$(dirname "${TOOL_DIR}")"
   rm -f "${DOWNLOAD_TAR_GZ}"
-  mv -f "${TMP_INSTALL_DIR}" "${TOOL_DIR}"
+  mkdir -p "${TOOL_DIR}"
+  readonly OLD_TOOL_DIR="${CLI_DIR}/${version}"
+  # Create a backwards compatability link for old versions of trunk that want to write their
+  # crashpad_handlers to that dir.
+  if [[ ! -e ${OLD_TOOL_DIR} ]]; then
+    ln -sf "${TOOL_PART}" "${OLD_TOOL_DIR}"
+  fi
+  mv -n "${TMP_INSTALL_DIR}/trunk" "${TOOL_DIR}/" || true
+  rm -rf "${TMP_INSTALL_DIR}"
 }
 
 ###############################################################################
@@ -304,38 +359,20 @@ if [[ -n ${version:-} ]]; then
   :
 elif [[ -f ${CONFIG_ABSPATH} ]]; then
   version="$(set -e; read_cli_version_from "${CONFIG_ABSPATH}")"
-  version_sha256="$(set -e; lawk "/${PLATFORM}_x86_64:/"'{print $2}' "${CONFIG_ABSPATH}")"
+  version_sha256="$(set -e; lawk "/${PLATFORM_UNDERSCORE}:/"'{print $2}' "${CONFIG_ABSPATH}")"
 else
   readonly LATEST_FILE="${LAUNCHER_TMPDIR}/latest"
   download_url "https://trunk.io/releases/latest" "${LATEST_FILE}"
   version=$(set -e; lawk '/version:/{print $2}' "${LATEST_FILE}")
-  version_sha256=$(set -e; lawk "/${PLATFORM}_x86_64:/"'{print $2}' "${LATEST_FILE}")
+  version_sha256=$(set -e; lawk "/${PLATFORM_UNDERSCORE}:/"'{print $2}' "${LATEST_FILE}")
 fi
 
-readonly TOOL_DIR="${HOME}/.cache/trunk/cli/${version}"
+readonly TOOL_PART="${version}-${PLATFORM}"
+readonly TOOL_DIR="${CLI_DIR}/${TOOL_PART}"
 
-if [[ ! -d ${TOOL_DIR} ]]; then
-  if [[ -n ${LATEST_FILE:-} ]]; then
-    read -rp "Would you like to download and run the latest version of trunk? (Y/n) " yn
-    case "${yn}" in
-    Yes | yes | Y | y | "") ;;
-    *) exit 1 ;;
-    esac
-  fi
-
+if [[ ! -e ${TOOL_DIR}/trunk ]]; then
   download_cli "${version}" "${version_sha256:-}"
-
-  # It looks better to have whitespace between the launcher download steps and the CLI invocation:
-  #
-  #   $ trunk check
-  #   ✔ Downloading Trunk 0.7.0-beta... done
-  #   ✔ Verifying Trunk sha256... done
-  #   ✔ Unpacking Trunk... done
-  #
-  #   Checking 100% [=============================================>]  30/30  1.4s
-  #
-  # so we insert an echo here
-  echo
+  echo # add newline between launcher and CLI output
 fi
 
 if [[ ${TRUNK_LAUNCHER_QUIET} != false ]]; then
@@ -347,6 +384,14 @@ fi
 #   CLI invocation                                                            #
 #                                                                             #
 ###############################################################################
+
+if [[ -n ${LATEST_FILE:-} ]]; then
+  mv -n "${LATEST_FILE}" "${TOOL_DIR}/version" || true
+fi
+
+# NOTE: exec will overwrite the process image, so trap will not catch the exit signal.
+# Therefore, run cleanup manually here.
+cleanup 0
 
 exec \
   env TRUNK_LAUNCHER_VERSION="${TRUNK_LAUNCHER_VERSION}" \
