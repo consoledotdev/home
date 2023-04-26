@@ -60,7 +60,7 @@
                     <div data-aside-sub-content="host" class="aside-block">
                         <div class="page-section-heading">
                             <h5 class="title title-4">
-                                {{ if eq .Params.season 1 }}
+                                {{ if or (eq .Params.season 1) (eq .Params.season 4) }}
 
                                     With
 
@@ -71,14 +71,14 @@
                                 {{ end }}
                             </h5>
                         </div>
-                        {{ if eq .Params.season 1 }}<div class="person-profiles">{{ end }}
+                        {{ if or (eq .Params.season 1) (eq .Params.season 4) }}<div class="person-profiles">{{ end }}
 
                             <div class="person-profile">
                                 {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/david.jpg" "imgSize" "128" "alt" "Photo of David Mytton" ) }}
                                 <a href="https://twitter.com/davidmytton" target="_blank" class="link icon-link" title="https://twitter.com/davidmytton"><span>David Mytton</span> {{ partial "icons/external-link.html" }}</a>
                             </div>
 
-                            {{ if eq .Params.season 1 }}
+                            {{ if or (eq .Params.season 1) (eq .Params.season 4) }}
 
                                     <div class="person-profile">
                                         {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/podcast/akita-jean-yang-profile.jpg" "imgSize" "128" "alt" "Photo of Jean Yang" ) }}
@@ -87,7 +87,7 @@
 
                             {{ end }}
 
-                        {{ if eq .Params.season 1 }}</div>{{ end }}
+                            {{ if or (eq .Params.season 1) (eq .Params.season 4) }}</div>{{ end }}
                     </div>
                     <div data-aside-sub-content="episodes" class="aside-block more-episodes">
                         <div class="page-section-heading">
@@ -135,7 +135,7 @@
             </section>
             <section class="page-section page-section-podcast-episode about">
                 <div name="david-mytton">{{ partial "components/author.html" (dict "context" . "bio" .Params.authorBio "img" .Params.authorImg "name" .Params.authorName "url" .Params.authorURL ) }}</div>
-                {{ if eq .Params.season 1 }}<div name="jean-yang">{{ partial "components/author.html" (dict "context" . "bio" .Params.author2Bio "img" .Params.author2Img "name" .Params.author2Name "url" .Params.author2URL ) }}</div>{{ end }}
+                {{ if or (eq .Params.season 1) (eq .Params.season 4) }}<div name="jean-yang">{{ partial "components/author.html" (dict "context" . "bio" .Params.author2Bio "img" .Params.author2Img "name" .Params.author2Name "url" .Params.author2URL ) }}</div>{{ end }}
                 {{ partial "components/about-console.html" }}
                 {{ partial "subscribe.html" (dict "context" . "layout" "wide" "size" "large" ) }}
             </section>

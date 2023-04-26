@@ -130,7 +130,7 @@
                 <!-- Podcast embed -->
                 {{ $section := .Site.GetPage "section" "podcast" }}
                 {{ $pages := $section.Pages }}
-                {{ $podcast := index (where $pages.ByPublishDate.Reverse "Params.season" 3) 3 }}
+                {{ $podcast := index (where $pages.ByPublishDate.Reverse "Params.season" 3) 4 }}
 
                 {{ $playerTitle := print $podcast.Title ", with " $podcast.Params.who }}
                 {{ with $podcast.Params.org }}{{ $playerTitle = print $playerTitle " (" $podcast.Params.org ")" }}{{ end }}

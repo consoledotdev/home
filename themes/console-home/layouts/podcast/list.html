@@ -21,7 +21,7 @@
         </div>
     </section>
     <section class="page-section page-section-feature-root featured">
-        {{ $featured := index (where .Pages.ByPublishDate.Reverse "Params.season" 3) 0 }}
+        {{ $featured := index (where .Pages.ByPublishDate.Reverse "Params.season" 4) 0 }}
         {{ $s := $featured.Params.season }}
         {{ $e := $featured.Params.episode }}
         <h5 class="title title-4">
