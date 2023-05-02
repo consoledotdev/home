@@ -30,7 +30,7 @@ xlViewport:
 topImg1Src: /img/podcast/steven-sinofsky.jpeg
 topImg2Src: /img/favicons/blank-image.svg
 ogImg: /img/podcast/podcast-cover.jpeg
-twitterCard: https://player.simplecast.com/56d8611f-a46f-493a-940a-26c0b5965905
+twitterCard: https://player.simplecast.com/a14a7a17-1fbb-40ec-ae98-fb5f3640068c
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg

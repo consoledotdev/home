@@ -1,0 +1,301 @@
+---
+title: Building Tools Devs Love
+who: Erica Brescia
+whoLink: https://twitter.com/ericabrescia
+what:
+  We discuss what's changed since Erica started her first DevTools company back
+  in the mid-2000s, how to build tools developers love, whether open source is
+  just a marketing strategy, and what she looks for in software investments.
+season: 4
+episode: 2
+date: 2023-05-04T06:00:00Z
+duration: 32:44
+episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/e0d66bf0-6643-4017-a738-564e9f551949/audio/06531c89-526d-487a-9341-5142a797f691/default_tc.mp3
+draft: false
+summary:
+  Building Tools Devs Love - a devtools discussion with Erica Brescia. Episode 2
+  (Season 4) of the Console DevTools Podcast.
+metaDescription:
+  Building Tools Devs Love - a devtools discussion with Erica Brescia. Episode 2
+  (Season 4) of the Console DevTools Podcast.
+headerType: fixed
+hideLines: true
+hidePlanes: true
+isSubpage: podcast-episode
+pageType: podcast-episode
+customPageStyle: true
+xlViewport:
+  largeText: true
+topImg1Src: /img/podcast/redpoint-erica-brescia.jpg
+topImg2Src: /img/favicons/redpoint.com.jpg
+ogImg: /img/podcast/podcast-cover.jpeg
+twitterCard: https://player.simplecast.com/e0d66bf0-6643-4017-a738-564e9f551949
+authorName: David Mytton
+authorURL: https://davidmytton.blog/start
+authorImg: /img/david.jpg
+authorBio:
+  is Co-founder & CEO of Console. In 2009, he founded and was CEO of Server 
+  Density, a SaaS cloud monitoring startup acquired in 2018 by edge compute 
+  and cyber security company, StackPath. He is also researching sustainable 
+  computing in the Department of Engineering Science at the University of 
+  Oxford, and has been a developer for 15+ years.
+author2Name: Jean Yang
+author2URL: https://twitter.com/jeanqasaur
+author2Img: /img/podcast/akita-jean-yang-profile.jpg
+author2Bio:
+  is CEO of Akita Software. Jean earned her PhD in software correctness and
+  programming language design from MIT and then became a professor in computer
+  science at Carnegie Mellon University before she started Akita to build the
+  future of API observability.
+---
+
+### Episode notes
+
+{{< div-custom class="aside" data="data-inline-aside-content-wrapper" >}}
+{{< div--close >}}
+
+In this episode, we speak with [Erica
+Brescia](https://twitter.com/ericabrescia), Managing Director at [Redpoint
+Ventures](https://www.redpoint.com/), and previously COO at GitHub. We discuss
+what's changed since she started her first DevTools company back in the
+mid-2000s, how to build tools developers love, whether open source is just a
+marketing strategy, and what she looks for in software investments. She also
+sheds light on how to get a new product in front of developers, whether or not
+more people should be bootstrapping their companies as she did, and how to scale
+your marketing team as you grow.
+
+Things mentioned:
+
+* [Bitnami](https://bitnami.com/)
+* [Railway](https://railway.app/)
+* [Zed](https://zed.dev/)
+* [Hacker News](https://news.ycombinator.com/)
+* [Dagger](https://dagger.io/)
+* [Xata](https://xata.io/)
+* [Y Combinator](https://www.ycombinator.com/)
+* [Reflect](https://reflect.app/)
+* [ChatGPT](https://chat.openai.com/)
+* [MacBook Pro](https://www.apple.com/macbook-pro-14-and-16/)
+* [Yeti Microphone](https://www.logitechg.com/en-us/products/streaming-gear/yeti-premium-usb-microphone.988-000100.html)
+* [LG UltraWide Monitors](https://www.lg.com/ultra-wide-monitors)
+* [Microsoft Ergonomic Keyboard](https://www.microsoft.com/en/accessories/products/keyboards/microsoft-ergonomic-keyboard?activetab=pivot:overviewtab)
+
+{{< rich-title-5 icon="future-head" >}}About Erica Brescia{{</ rich-title-5 >}}
+
+[Erica Brescia](https://twitter.com/ericabrescia) is the managing director at
+Redpoint Ventures, an early-stage venture fund, investing in primarily,
+enterprise software with a focus on DevTools and open source. Notable
+developer-first companies that they have invested in include HashiCorp,
+Snowflake, Stripe,  Twilio, and LaunchDarkly, among others. Prior to this, she
+spent close to 20 years as a founder and operator. She founded a company called
+Bitnami where she bootstrapped $1 million in funding. She was also the chief
+operating officer at GitHub.
+
+### Highlights
+
+{{< podcast-episode/clipping time="02:11" >}}
+
+**Erica Brescia:** If you look at the very early days of software development
+and open source in particular, we've gone from this real DIY kind of bespoke,
+“The cool thing to do is compile your own kernel,” to a focus on time
+optimization and “How can you build the best thing possible the fastest?” If I
+had to look at a theme, that's a theme that I think about a lot. It's no longer
+about doing everything yourself. Instead, it's about really open source and
+building on the work of others, right? Over 90% of software developed today is
+built on top of open source, and most things that you need, from a building
+blocks perspective, to build a new app already exist in many cases. So now it's
+about, “Hey, what tools are out there? How can I engage with the community? How
+can I learn from others? How can I participate in things whether it's Stack
+Overflow, or building and sharing code on GitHub, or discussing things and
+issues?” It's much more collaborative and intertwined. I think that allows
+people to build new things much more quickly.
+
+{{</ podcast-episode/clipping >}}
+
+{{< podcast-episode/clipping time="16:23" >}}
+
+**Erica Brescia:** I think a lot of companies underestimate the amount of
+effort that is required in building a true open-source community, where you're
+getting folks contributing to the core of that project. That's a material
+investment. A good way to think about it is you're actually taking a lot of what
+you might traditionally spend on marketing and instead investing that in your
+team that supports the growth and health and engagement of this community, which
+is no small feat. Then you can use that to build awareness and a bottoms-up
+adoption of your software in a way that just sheer traditional marketing would
+never allow you to do. Then you can layer a sales motion on top of that.
+
+{{</ podcast-episode/clipping >}}
+
+{{< box-collapsible title="Full transcript" class="podcast-transcript is-expanded" >}}
+
+**David Mytton \[00:00:05\]:** Welcome to another episode of the Console DevTools Podcast. I'm David Mytton, CEO of Console.dev, a free weekly email digest to the best tools and beta releases for experienced developers.
+
+**Jean Yang \[00:00:16\]:** And I'm Jean Yang, CEO of Akita Software, the fastest and easiest way to understand your APIs.
+
+**David Mytton \[00:00:22\]:** In this episode, Jean and I speak with Erica Brescia, Managing Director at Redpoint, and previously COO at GitHub. We discuss what's changed since she started her first DevTools company back in the mid-2000s, how to build tools developers love, whether open source is just a marketing strategy, and what she looks for in software investments. As a disclosure, Erica mentions one of her portfolio companies, Railway, which I'm also an investor in. We're keeping this to 30 minutes, so let's get started!
+
+**David Mytton \[00:00:53\]:** We're here with Erica Brescia. Let's start with a brief background. Tell us a little bit about what you're currently doing and how you got here?
+
+**Erica Brescia \[00:01:00\]:** Yeah, thanks for having me. So I am a Managing Director at Redpoint Ventures. We are an early and early growth stage venture fund. So we invest all the way from seed to about Series C. Primarily, in enterprise software, one of our claims to fame is around DevTools and open source. We've invested in amazing developer-first companies like HashiCorp, and Snowflake, and Stripe, and Twilio, and LaunchDarkly, and many, many others.
+
+That's part of what drew me to Redpoint really was the opportunity to focus on infrastructure, open source DevTools, and of course, now AI, which I'm sure we'll talk about later. But that brought me over to venture after spending close to 20 years as a founder and operator. I don't think I would have made the jump if I couldn't continue working in the same space and really have the opportunity to spend time working with founders and, hopefully, helping coach them and help them learn from all the things that I've learned over the years in my previous experience.
+
+Before moving into venture, I was the Chief Operating Officer at GitHub. Before that, I founded a company called Bitnami in the DevOps and then First Space that was acquired by VMware back in 2019. So that's a quick little bit about me, and I'm sure we'll get into more as we talk through things.
+
+**Jean Yang \[00:02:25\]:** Erica, we've been really excited to have you on because you've been in DevTools for so long. We'd love to hear from you about how you would describe the last 20 years from co-founding Bitnami to where the industry is today. What have been some of the most exciting developments to you, some of the biggest changes?
+
+**Erica Brescia \[00:02:44\]:** Yeah, 20 years in 90 seconds, I'll do my best, I think. When I reflect back, I think if you look at the very early days of kind of software development and open source in particular, we've gone from this real DIY kind of bespoke, “The cool thing to do is compile your own kernel,” to a focus on time optimization and “How can you build the best thing possible the fastest?” If I had to look at a theme, that's a theme that I think about a lot, right? It's no longer about doing everything yourself. Instead, it's about really, I think, open source and building on the work of others, right?
+
+Over 90% of software developed today is built on top of open source, and most things that you need from a building blocks perspective to build a new app already exist in many cases. So now, it's about, “Hey, what tools are out there? How can I engage with the community? How can I learn from others? How can I participate in things?” like whether it's Stack Overflow, or building and sharing code on GitHub, or discussing things and issues, right? It's much more collaborative and intertwined. I think that allows people to build new things much more quickly.
+
+Another big step change on top of open source and collaborative software development that was really ushered in by GitHub is the move to cloud and containers, which I think forced a lot more automation and also made it a lot faster and easier to build something new, right? There are tons of free programs where you can get access to free cloud credits or different online services, where you can go and kind of build in a prototype. Even one of our portfolio companies, Railway, will give you free credits every month. You can kind of spin up pretty complex infrastructure apps in a few minutes and run them for free. That, again, just enables you to do a lot more with a lot less.
+
+Then if we look at what's coming next, I think, obviously, AI is top of mind for everyone. 40% of all code contributions on GitHub now are coming from Copilot. It's just absolutely incredible, and I think we're going to see that continue. A lot of the busy work gets abstracted away for developers, so they can focus on creating net new things that really still require human ingenuity to build. So that's my quick hot take. Twenty years in 90 seconds or whatever is a little tough to summarize. That’s probably the best I can do.
+
+**Jean Yang \[00:05:33\]:** I love that, and it really is the dream of developer tools is abstraction. I love how you describe the last 20 years as being a journey of abstraction.
+
+**David Mytton \[00:05:43\]:** So if it's a lot easier now, and developers are getting things a lot faster, how would you actually go about building something that developers love? What does it take to do that today?
+
+**Erica Brescia \[00:05:52\]:** It's really hard and kind of simple all at the same time. At the end of the day, I think it's really a maniacal focus on the developer experience, right? What are you building into your product in terms of how developers will interact with it, that make their lives better? It could be, to our earlier point around abstraction, like how are you abstracting away complexity? How are you allowing developers to focus on what really matters?
+
+I think one major aspect of that is speed, right? We used to talk about speed as a feature at GitHub. We even, at one point, had a weekly standup, where we had a burn-down chart where we were looking at reducing our P99 and P50 times, right, to allow developers to work that much faster. If you look at – we just announced a new investment, Zed, which is a super cool collaborative code editor that is literally the fastest editor on the planet. It's built in from the ground up in Rust, specifically with speed in mind.
+
+I love this tagline. They have coded the speed of thought, right? Their ideas to abstract away everything that they can to let you just get your code into the editor as quickly as possible. I think they've talked about designing to disappear as well. I think that's really what it's all about is putting yourself in the shoes of a developer and understanding, to that minute detail level, every optimization that you can make in your product to make their lives better. Often, this comes in the form of removing things, right?
+
+This was another thing we talked a lot about at both Bitnami, my startup, as well as at GitHub. How can you remove buttons, remove options, simplify the user experience to allow people to get things done faster? I know I keep – I sound like a broken record. But that's really what it's about, right? Simplicity, speed, and abstraction. Those are the three things.
+
+**David Mytton \[00:08:01\]:** Yes, that makes sense. I'm often surprised that, well, how often things just don't work or they don't work properly.
+
+**Jean Yang \[00:08:07\]:** Another part is people can't see how great your product is if no one knows about it. So I'm curious to hear your thoughts on what's your advice to people on getting a new product or project in front of developers. How has that changed over the course of your career?
+
+**Erica Brescia \[00:08:22\]:** Yes. I was just talking to a founder about this recently. She had founded a company about 10 years ago and sold it, and then had a great run as an operator, and now is starting another company. One of the things she told me is there are a lot of things that are harder about building today. One thing she highlighted was actually just the noise.
+
+I talked in the beginning about how building software has evolved in this explosion of open source, which is amazing. But at the same time, there's so much more getting built that it's really hard to rise above the noise, right? Sometimes, you'll look at categories. If you look at the data stack, I mean, there are just hundreds and hundreds of both open source and proprietary things on the market that are getting built across all these different layers of the stack. I think finding a way to stand out above that is hard.
+
+What I've seen work best is similar to what I've seen in building a product that developers love, and it's really this kind of flight to quality. Quality matters and being hyper-focused and near-obsessive about doing an amazing job on both building the product, but then telling the story is what works. It sounds really simple, and it is simple. It's just not easy to get right.
+
+A few things specifically that I think you need to focus on are telling the story of your product. We’ve seen this work spectacularly well across a number of our portfolio companies that are consistently ending up on the front page of Hacker News. What they've done is they've really invested a lot of time in writing thoughtful and deeply technical posts that talk about what they've built and why they made the design choices that they did.
+
+I think developers love learning from other developers, and they love using products that have been really thoughtfully designed and that they can kind of relate to the design choices, and maybe aspire to make some of the same thoughtful choices themselves. So taking the time to write these posts, I'll give two recent examples.
+
+Both Railway and Zed have both published a number of posts on how they built their own product and why they built it the way that they did and what technology choices they made. That they felt made it better and faster for developers to use. Those posts have been hugely successful and are really driving a material amount of traffic and an intern signups to both of their websites.
+
+But it's not something that you can just slap together, right? They've taken a lot of time to craft these posts and often as a collaboration where maybe one developer will write the post but then they have a content person or another person on the team who really loves writing, who goes through and helps polish it to get it to a point where it's great. I think quality over quantity really matters there.
+
+Then the second thing is I think great demos and use cases really matter, especially when you're talking about infrastructure, products. People want to understand how are developers putting these into action. Dagger does something awesome. Dagger is building a new way to build your CI/CD pipelines. It's from the creators of Docker, originally. Super cool product really designed at helping you build a better experience and more portability and reusability and extensibility around your CI/CD.
+
+Because it's a new concept that people need to get their heads around, they host these weekly community calls where people show up, and demo what they've built, and talk about what they're going to build next, and get ideas from each other. I think providing that forum where you're supporting and encouraging people to share what they're building and learn from others works really well, again, especially when it's a new concept that people need to get their heads around. Then you get all this great content out of that that you can record. They share them on LinkedIn and social networks and get a lot of content that they can turn into blog posts and things like that in writing. I think that works super well.
+
+Then the last thing I'll say is really identifying some of the influencers and thought leaders in whatever space you're building, and spending time building relationships with them, collecting their feedback. Maybe integrating it into the product and kind of turning them into evangelists works really well, as well.
+
+It's a lot of hands-on blocking and tackling all of this, right? There's no one switch that you get to flip that gets everybody excited about your product. It's really taking the time to connect with developers, understand their needs, showcase ways to use the product, helping them connect with each other, and then getting a lot of folks talking about what you're building, hopefully, because they've already fallen in love with it themselves. It takes a lot of time and deliberate effort. But that's what actually helps you rise above that noise that I talked about at the beginning of this section.
+
+**David Mytton \[00:13:50\]:** Yes. The marketing side of things always requires significantly more effort than you expect at the beginning. You can't just throw it on GitHub and then expect people will find it. To what extent do you think open source is just a marketing strategy for a lot of companies these days? Or where does it come in? How important is that do you think?
+
+**Erica Brescia \[00:14:09\]:** It's a great question. I think open source is – it depends on what level of the stack that you're at first. I think it's still very hard to build successful open-source projects at the app layer. You really don't see a lot of those today, and we've never really seen a lot of those, right? I got into open source when the first wave of open-source app companies like SugarCRM and Pentaho and companies like that were getting built.
+
+None of them really became category-defining companies because it's really hard to engage a community around an app, right? It's much easier to engage a community around something that developers are actually using themselves and that is happening at the infrastructure layer, whether it's CI/CD, or whether it's developer tools, or whether it's databases and things like that. So I think being thoughtful about where you are in the stack and how open source fits into that is a really important first step.
+
+I think the second piece, to your point about marketing, is it's really critical that you think about what you're trying to get out of open source. Are you trying to engage a community that's really building the core product itself? Sometimes, that works a bit more with, again, infrastructure pieces like databases and things like that. Or are you trying to build more of a community around peripheral contributions like SDKs and things like that?
+
+For example, we've invested in a company called Xata. It’s a Postgres-based serverless database with built-in search and analytics, super cool product. It's actually not – the core of the product today is not open source. What is open source is all of the SDK is around the product, right? I think making sure that people are able to extend a product through open source is super important. But a lot of the times, the core of a product that's running in the cloud doesn't need to be open source per se, right?
+
+I think a lot of companies underestimate the amount of effort that is required in building a true open-source community, where you're getting folks contributing to the core of that project. That's a material investment. I think a good way to think about it is you're actually taking a lot of what you might traditionally spend on marketing, and instead investing that in your team that supports the growth and health, and engagement of this community, which is no small feat. Then you can use that to build awareness a kind of bottoms-up adoption of your software in a way that just sheer traditional marketing would never allow you to do. Then you can kind of layer a sales motion on top of that.
+
+But it's really – you asked if I think kind of the core of the question is, is open source like a business model? Is it a marketing engine? How do you think about open source as it relates to business? I think it can be a distribution engine that's thinking about building a core community around open source. Or in open source, getting people using, contributing, sharing your projects, right? That helps build awareness that lets you then go sell to a fraction of that audience. But it's not a business model per se, right? It's more of a licensing and distribution model. You need to be thoughtful about where that plays. Is it the core of your product? Or is it something around the periphery that just lets people integrate and extend your product to use it with other things that they're building without necessarily building this thriving community around the product itself?
+
+**Jean Yang \[00:18:11\]:** A related question, Erica, is that it does seem like even if a startup stumbles into viral popularity, they need to start being deliberate about their marketing and their go-to-market as they grow. So I'm curious what advice you have for smaller companies who are looking ahead at how to set themselves up for scaling well there and what to expect going from zero marketing people to their first marketing person, to having a whole go-to-market team.
+
+**Erica Brescia \[00:18:42\]:** When we're talking about really dev-first companies, open source or otherwise, I think the first marketing hire tends to be someone more around product marketing. Really, where they start even before that is with developer advocates that are really out in the community, listening to what developers are looking for or doing with the product, where they're getting the most value, helping them be successful. That's really the first step and it's not – I wouldn't say it's marketing per se. But when you think about getting the word out about your product, I think it's important you start with like the dev advocacy, DevRel-type roles first.
+
+Then what we typically see is somebody learning on a product marketing person that can really help tell the story of the product and the value that it delivers and start to position it in the light that a company and a buyer would receive it, right? What benefits are you going to get? How is this product going to make your life better? Why should you consider paying for it and starting to really develop clear messaging that will resonate with your buyers?
+
+Then we typically see somebody after that often layer in somebody who's more focused on the overall brand and kind of company story. It's funny because you might think that that would come earlier in the process. But when it works best, it's really coming from the founders, right? Founders are playing a really critical role in shaping that message in the early days. Then, again, hiring a dev advocate to kind of get it out there and help refine it by talking to developers. A founder should still be doing that themselves.
+
+Then you layer on this a product marketing person that starts to refine it in a way that will resonate with companies. Then you kind of build in more overall company-wide marketing and start thinking about a strategy, a real marketing strategy, and investing more in tuning your kind of funnels around, first, bringing folks into the product and driving that awareness and doing a lot of content marketing through to the like “How do you actually convert those folks to paying customers?”
+
+Then when you look at the sales side of that, because you mentioned GTM, usually, we're seeing folks hiring. We call it a forward-deployed engineer or kind of a solutions architect profile. That's often really tightly partnered up with the folks doing dev advocacy and the early product marketing. They're going in and identifying those early users that you want to see be successful on the platform or with the product. They engage with them, understand their goals, and help make them successful on the platform. That's really their initial job.
+
+How this is structured varies from company to company. Taking the example of Dagger, they hired in this person. His name is Jeremy, and he's kind of out there working with early customers and also starting to hire the DevRel folks underneath him. So he'll eventually be kind of the head of ecosystem and developer experience, and have some of these early go-to-market roles actually underneath him.
+
+Because it's such a developer-focused company, you want somebody who really has an engineering background, who really understands the needs of developers, who can build the right team to go out and do this early engagement and kind of lay the foundation for what you might think of the more traditional marketing and sales functions that you think of down the road.
+
+**David Mytton \[00:22:24\]:** Yes, that makes sense. To what extent do developers buy today? Because the old idea is that developers don't buy anything. They don't pay for anything. But that may have been true in the past. It might still be true today, I suppose. But they have so much more influence, and they influence the budget holder. Perhaps the budget is somewhere else in the organization. Is that what you see? Or do developers actually buy things?
+
+**Erica Brescia \[00:22:45\]:** Developers buy things, for sure now. You’re right. That used to be the case, right? Everybody is saying, “Oh, developers don't have the money, they just have the influence.” Now, developers buy a lot of things, right? Every company in the world has essentially become a software company, and hiring developers has gotten so challenging. Developers are not inexpensive hires for companies, right? So companies invest a ton of money in making developers productive, and they typically have a reasonable amount of autonomy to go sign up and pay for things, especially like developer tools or things that are consumption-based but kind of low initial cost of ownership. We see developers all the time signing up for things and expensing them, which is a blessing and a curse. Because you can end up with this explosion of tools within an organization that gets really hard to manage. When it comes to security and software supply chain, security can introduce a lot of challenges there.
+
+But as a company selling to developers, I think it's important to understand that developers are often the ones making those initial purchases, especially when you look at how many tools now are like product-led growth, right? You're starting out with using the product. Then maybe you're paying for an upgrade, right? Always a perfect example of this, you can go sign up, get free credits every month to build with.
+
+But then as your app starts getting bigger and more complex, it's time to start paying for it, right? What developers do is just enter a credit card. Then over time, they'll upgrade perhaps to a team plan. That's really when we see a sales motion start to come into play. Developers come, the same thing with GitHub, right? You sign up for a free individual account. Then you might upgrade to a paid account because you want more features. Then you want to connect in with other folks on your team. You can usually do that within the product, right? You upgrade to a team account. You can do this with Railway as well, right? Say, hey, I want to connect with other people on my team and share my environment. It's usually when those teams start growing that then you'll introduce more of an enterprise sales motion to help go from team to company-wide usage or from one team to several teams connected together.
+
+That's like, I would say, almost the standard motion that we're seeing today in most developer companies going from this, developers are the ones who start paying, then in the product, you kind of push them to team. Then you start bringing in a sales conversation after you see adoption at the team level and often multi-team level.
+
+**Jean Yang \[00:25:30\]:** Cool. Something related, Erica, is that your company was, we believe, bootstrapped. Now, it seems like it's really shifted to there's money to be raised for developer tools and infrastructure companies. Do you think that startups should be raising money? Or do you think more companies should be bootstrapping for longer like you did?
+
+**Erica Brescia \[00:25:51\]:** It's a great question, and thanks for doing the research. Yes, we raised about a million bucks, which still, I think, counts as bootstrapping, especially in these days. But we did raise a tiny bit of money. We went through Y Combinator. We didn't raise venture capital. It was all from angel investors and things like that. So we didn't raise institutional dollars.
+
+I think it really depends on what you're building and what your goals are. I love this question because venture is not right for everybody, right? Not every business needs millions of dollars to be built and be successful. Especially today, with the cloud and so many tools, things like whether you're looking at Vercel or Netlify or Railway or all these platforms that you can use to build out real things and run them at a pretty low cost, there are a lot of businesses that can be built that never need venture funding.
+
+One of my favorite apps is called Reflect. It's a note-taking app. It’s not a developer tool, of course. But the founder had built a VC-backed company and went, “You know what? I just don't want to do that. I just want to kind of bootstrap this app.” You don't really need venture capital to build a note-taking app.
+
+At the same time, I would say, if you're building an infrastructure company, I talked about this company, Xata, before, right? First of all, they're operating in a massive, massive market where you can build multibillion-dollar-a-year-in-revenue businesses with tens of billions of dollars in market cap, even in our depressed economic environment right now. When you're building something like that, assuming your ambition is to actually build a company of that scale, which again, is not right for every founder, every product, I think raising venture makes sense because you're often in a race for mindshare and market share, right?
+
+We talked earlier about the need to rise above the noise. If you're building an open source, it still takes a lot of time and energy and just people power to build out and support the growth of a community or to drive adoption of a free product if it's not open source. You really do need funding to build those types of businesses. Because if you look at this PLG motion, that's what most companies are pursuing. You need to be able to invest upfront and building a product and having like a free on-ramp to that product to get people using it, and then be in a position to upsell them, whether that happens within the product or via sales team.
+
+Typically, you need upfront investment to make that happen. It's pretty hard to bootstrap that and be able to keep up with your competitors that are building in the same space that likely have raised venture capital, right? So it's kind of like a time-to-market and time-to-mindshare issue, coupled with the need to get a lot of free or very low-revenue customers that you can later upsell to the bigger commercial product.
+
+That means that you need to take some upfront investment, but you need to be thoughtful about what market are you building in? How much competition is there? What kind of adoption can you drive without taking venture capital? What if you raise money are you actually going to spend that money on, and how is that going to help you win in the market? That's the question that you should be asking.
+
+Again, it's not right for every founder and for every business. I think being really intellectually honest with yourself about what you want and what you're trying to build and how big it can be is a really important first step before deciding whether or not to pursue venture.
+
+**David Mytton \[00:29:44\]:** So before we wrap up then, I have two lightning questions for you. So first is what interesting tools, perhaps DevTools, are you playing around with at the moment?
+
+**Erica Brescia \[00:29:54\]:** Yes. Well, I'm not a developer, which is probably unusual for this podcast. So I can't say that I play myself with a lot of DevTools. I'm really stoked with Zed in the editor because it's so fast. But the thing that I'm playing around with most right now is ChatGPT, which is not a DevTool but I think top of mind for everybody.
+
+**Jean Yang \[00:30:15\]:** Popular, popular answer for this podcast.
+
+**Erica Brescia \[00:30:18\]:** Yes. How could you not? I think it's just amazing what you can do, and it's already changing my search habits, which is super interesting. Like when was the last time you changed the way you searched for things? Yes.
+
+**David Mytton \[00:30:29\]:** Great. Then finally, what is your current tech setup? What hardware and software do you use?
+
+**Erica Brescia \[00:30:34\]:** Also super boring. I use a MacBook Pro. I love my Yeti mic. I have a pretty cool curved LG screen because I have a rounded desk that I love. I could not tell you what model it is. But I'm a big fan of the very, very, very wide and long screen because I work in Docs and do a lot of things side by side. So that's important to me. I have a keyboard that everybody makes fun of me for. It's one of those split Microsoft ergonomics keyboards. I've been using –
+
+**Jean Yang \[00:31:03\]:** I have that same keyboard.
+
+**Erica Brescia \[00:31:04\]:** Do you?
+
+**Jean Yang \[00:31:05\]:** It's the best keyboard.
+
+**Erica Brescia \[00:31:06\]:** It is the best keyboard. I've been using it for like 10 years. I need to get a new one.
+
+**Jean Yang \[00:31:10\]:** Yes. I’m on my third one. Yes.
+
+**Erica Brescia \[00:31:12\]:** Yes, me too.
+
+**Jean Yang \[00:31:12\]:** Well, the problem is a Bluetooth is a little finicky, but it's the best keyboard.
+
+**Erica Brescia \[00:31:16\]:** Yes, totally. There's another guy I work with on the team. Jordan and I both get made fun of.
+
+**Jean Yang \[00:31:22\]:** It’s the most ergonomic.
+
+**Erica Brescia \[00:31:23\]:** It is. It's a great keyboard. So, yes, I love my – yes. I don't have any super cool stuff. I have a key light that I love. I have kind of a boring setup. But I'm mostly looking at pitch decks and browser tabs and Google Docs and demos.
+
+**Jean Yang \[00:31:39\]:** Yes. No, I have a very similar setup. It's just once I set it up this way, I could work so much longer.
+
+**Erica Brescia \[00:31:45\]:** Yes, yes, definitely. The side-by-side monitor is key. Oh, my. So I have two monitors, and one of them is super long. Whenever I just have to work on my laptop now, it drives me up the wall because it's so hard to be productive.
+
+**Jean Yang \[00:31:59\]:** I can only work two-thirds the number of hours a day on my laptop, one-half, something like that.
+
+**Erica Brescia \[00:32:04\]:** Exactly. Well, I'm not alone. That's good to hear.
+
+**Jean Yang \[00:32:06\]:** Yeah.
+
+**David Mytton \[00:32:08\]:** Well, unfortunately, that's all we've got time for. Thanks for joining us, Erica.
+
+**Erica Brescia \[00:32:12\]:** Thank you for having me.
+
+**\[00:32:15\] DM:** Thanks for listening to the Console DevTools Podcast. Please let us know what you think on Twitter. I'm @davidmytton and you can follow @consoledotdev. Don't forget to subscribe and rate us in your podcast player. If you're playing around with or building any interesting DevTools, please get in touch. Our email is in the show notes. See you next time.
+
+\[END\]
+
+{{</ box-collapsible >}}
