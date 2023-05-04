@@ -32,7 +32,7 @@ jobs:
               shell: bash
 
             - name: k6 test (home)
-              uses: k6io/action@v0.2.0
+              uses: k6io/action@v0.3.0
               with:
                   filename: tests/home.js
               env:
@@ -40,7 +40,7 @@ jobs:
                   CF_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET }}
 
             - name: k6 test (tools)
-              uses: k6io/action@v0.2.0
+              uses: k6io/action@v0.3.0
               with:
                   filename: tests/tools.js
               env:
@@ -48,7 +48,7 @@ jobs:
                   CF_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET }}
 
             - name: k6 test (betas)
-              uses: k6io/action@v0.2.0
+              uses: k6io/action@v0.3.0
               with:
                   filename: tests/betas.js
               env:
@@ -56,7 +56,7 @@ jobs:
                   CF_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET }}
 
             - name: k6 test (podcast-s02e01)
-              uses: k6io/action@v0.2.0
+              uses: k6io/action@v0.3.0
               with:
                   filename: tests/podcast-s02e01.js
               env:
