@@ -34,7 +34,62 @@
 			<div data-aside-content-wrapper class="aside-content-wrapper"></div>
 		</aside>
 		<div class="main-content-wrapper">
-			<section class="page-section" data-feature-items-section="season-2">
+			<section class="page-section" data-feature-items-section="season-4">
+				<div class="page-section-heading">
+                    <h3 class="title title-2">Season 4</h3>
+				</div>
+                <div data-inline-aside-content-wrapper class="page-section-sub aside">
+                    <div data-aside-content class="aside-content">
+                        <div class="aside-block">
+                            <div class="page-section-heading">
+                                <h5 class="title title-4">With</h5>
+                            </div>
+                            <div class="person-profiles">
+                                <div class="person-profile">
+                                    {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/david.jpg" "imgSize" "128" "alt" "Photo of David Mytton" ) }}
+                                    <a href="https://twitter.com/davidmytton" target="_blank" class="link icon-link" title="https://twitter.com/davidmytton"><span>David Mytton</span> {{ partial "icons/external-link.html" }}</a>
+                                </div>
+                                <div class="person-profile">
+                                    {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" "/img/podcast/akita-jean-yang-profile.jpg" "imgSize" "128" "alt" "Photo of Jean Yang" ) }}
+                                    <a href="https://twitter.com/jeanqasaur" target="_blank" class="link icon-link" title="https://twitter.com/jeanqasaur"><span>Jean Yang</span> {{ partial "icons/external-link.html" }}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aside-block guests">
+                            <div class="page-section-heading">
+                                <h5 class="title title-4">Guests</h5>
+                            </div>
+                            <div class="person-profiles">
+                                {{ range (where .Pages.ByPublishDate.Reverse "Params.season" 4) }}
+                                    <div class="person-profile">
+                                        {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" .Params.topImg1Src "imgSize" "128" "alt" (print "Photo of " .Params.who) ) }}
+                                        <span>{{ .Params.who }}</span>
+                                    </div>
+                                {{ end }}
+                            </div>
+                        </div>
+                        <div class="aside-block" data-trailer-player></div>
+                    </div>
+                </div>
+                <div class="page-section-sub">
+                    <div class="page-section-heading">
+                        <h5 class="title title-4">Other episodes</h5>
+                    </div>
+                    <div class="feature-items" data-feature-items>
+                        {{ range after 1 (where .Pages.ByPublishDate.Reverse "Params.season" 4) }}
+                            {{ partial "components/podcast/combo-card.html" (dict "visualsType" "logo-profile" "comboBoxVerticalThreshold" "768" "content" .) }}
+                        {{ end }}
+                    </div>
+                </div>
+			</section>
+		</div>
+	</div>
+    <div class="content-split" data-content-split>
+		<aside data-aside-wrapper class="aside-wrapper">
+			<div data-aside-content-wrapper class="aside-content-wrapper"></div>
+		</aside>
+		<div class="main-content-wrapper">
+			<section class="page-section" data-feature-items-section="season-3">
 				<div class="page-section-heading">
                     <h3 class="title title-2">Season 3</h3>
 				</div>
@@ -68,11 +123,8 @@
                     </div>
                 </div>
                 <div class="page-section-sub">
-                    <div class="page-section-heading">
-                        <h5 class="title title-4">Other episodes</h5>
-                    </div>
                     <div class="feature-items" data-feature-items>
-                        {{ range after 1 (where .Pages.ByPublishDate.Reverse "Params.season" 3) }}
+                        {{ range (where .Pages.ByPublishDate.Reverse "Params.season" 3) }}
                             {{ partial "components/podcast/combo-card.html" (dict "visualsType" "logo-profile" "comboBoxVerticalThreshold" "768" "content" .) }}
                         {{ end }}
                     </div>
