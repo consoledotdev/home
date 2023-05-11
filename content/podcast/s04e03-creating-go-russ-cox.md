@@ -16,7 +16,7 @@ summary:
   Creating Go - a devtools discussion with Russ Cox. Episode 3
   (Season 4) of the Console DevTools Podcast.
 metaDescription:
-  Creating Goe - a devtools discussion with Russ Cox. Episode 3
+  Creating Go - a devtools discussion with Russ Cox. Episode 3
   (Season 4) of the Console DevTools Podcast.
 headerType: fixed
 hideLines: true
