@@ -29,7 +29,7 @@ xlViewport:
 topImg1Src: /img/podcast/google-russ-cox.png
 topImg2Src: /img/favicons/go.dev.png
 ogImg: /img/podcast/podcast-cover.jpeg
-twitterCard: https://player.simplecast.com/e0d66bf0-6643-4017-a738-564e9f551949
+twitterCard: https://player.simplecast.com/ab716a24-2911-4353-a3e6-2f0feb3cb189
 authorName: David Mytton
 authorURL: https://davidmytton.blog/start
 authorImg: /img/david.jpg
