@@ -12,6 +12,21 @@ const nextConfig = {
     async redirects() {
         return [
             {
+                source: "/articles/neovim-best-code-editor-ide-for-developers",
+                destination: "/",
+                permanent: true,
+            },
+            {
+                source: "/articles/ssh-alternatives-for-mobile-high-latency-unreliable-connections",
+                destination: "/",
+                permanent: true,
+            },
+            {
+                source: "/articles/private-p2p-encrypted-file-sync-syncthing-tailscale",
+                destination: "/",
+                permanent: true,
+            },
+            {
                 source: "/beta",
                 destination: "/betas",
                 permanent: true,
