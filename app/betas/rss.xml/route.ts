@@ -32,7 +32,7 @@ export async function GET() {
     // Limit to 20 items
     sortedItems.slice(0, 20).forEach((item: any) => {
         feed.item({
-            title: item.title,
+            title: item.name,
             description: item.description,
             url: item.url,
             guid: item.url,

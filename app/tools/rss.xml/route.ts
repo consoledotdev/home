@@ -36,7 +36,7 @@ export async function GET() {
         content += `<p><strong>What we dislike:</strong> ${item.dislike}</p>`;
 
         feed.item({
-            title: item.title,
+            title: item.name,
             description: content,
             url: `https://console.dev/tools/${item.slug}`,
             guid: item.slug,
