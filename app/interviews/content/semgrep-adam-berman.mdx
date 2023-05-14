@@ -1,0 +1,314 @@
+---
+title: Interview with Adam Berman, Semgrep
+who: Adam Berman
+role: Lead Product Engineer
+org: Semgrep
+what: Vulnerability analysis.
+tags: ["Security", "Dependency Management"]
+date: 2022-09-29T12:00:00Z
+draft: false
+headerType: fixed
+summary: Interview with Adam Berman, Lead Product Engineer, Semgrep.
+isPage: interviews
+topImg1Src: /img/interviews/semgrep-adam-berman-profile.jpeg
+topImg2Src: /img/favicons/semgrep.dev.png
+ogImg: /img/interviews/semgrep-adam-berman-desk.jpg
+---
+
+### What is Semgrep Supply Chain?
+
+[Semgrep](https://semgrep.dev/) is a code scanning tool. It's able to work on a
+number of different languages, and the underlying technology is open source. The
+primary use cases are around security, and its superpower is that it's easy for
+folks to write rules really fast. Semgrep is like a spell check for code - you
+can run it in your development environment and get the feedback quickly.
+
+Hearing from security engineers about what problems they face, supply chain
+security and vulnerability management is top of mind for everybody. No one wants
+to be tomorrow's headline news story. It's not just about the reputational
+damage, it's also about these common attack vectors. The rate of disclosure of
+vulnerabilities is going up, attackers need to be less sophisticated, so it’s
+becoming easier because mature exploits are circulated all over the web. We also
+hear that existing tools aren't very useful. They surface a lot of
+vulnerabilities and the vulnerabilities are frequently not exploitable, take a
+lot of time to triage, and are difficult to upgrade. Difficulty of an upgrade is
+something that you're going to face eventually. But we found that security teams
+need to do this frontline triage work to identify which vulnerabilities present
+real security issues.
+
+Whenever you hear someone doing a repeatable process over and over and over, you
+start thinking how can we automate this? We started to realize that Semgrep’s
+static analysis engine could be a huge advantage. Determining if you're using a
+package that has a vulnerability is pretty simple from a technical perspective -
+you scan a lockfile and check the packages against a database of known
+vulnerable versions - the difficulty is knowing whether you’re using the
+vulnerable code or not, and thus if you can potentially use the package safely.
+
+That’s what we can do with [Semgrep Supply
+Chain](https://semgrep.dev/products/semgrep-supply-chain). It scans for
+lockfiles, sees what vulnerabilities you have in your packages, and then it
+scans your code to determine if you're using the packages in a vulnerable way.
+There's no magic here - we're not doing machine learning or anything that's
+using a black box. These are Semgrep static analysis rules, the same kind of
+rules that existing users are familiar with. The Semgrep research team is
+researching these vulnerabilities and seeing what are the ways that people can
+exploit the vulnerability. Then they build rules that identify whether or not
+the vulnerability is reachable.
+
+### If a library uses another library which has vulnerable code, can you detect it?
+
+Not right now, but we want to get there eventually. Security folks tell us that
+the degree of difficulty of an exploit jumps approximately an order of magnitude
+with every level. So if it's a direct dependency, it's not that hard to exploit.
+If it's a second level it becomes very challenging, third and below becomes
+really-really hard. So we've decided the juice isn't worth the squeeze here for
+us, at least with the first version of Semgrep Supply Chain. We also asked
+security folks to tell us about a time when they actually were impacted or were
+potentially impacted by something that was further down in the dependency tree
+The answer is always: I don't think so.
+
+I will add a caveat to that, there have been a couple of instances where the
+exploit of the package (a direct dependency) has been so easy that it's almost
+as if it is a direct dependency. Log4j is the example that comes to mind, and in
+instances like that, we try to just say, reachability analysis actually doesn't
+matter here. We call this an upgrade only rule, just upgrade your way out of
+this because this vulnerability is so pervasive. But it occurs seldom, and the
+rest of the time you should be focusing on trying to differentiate between
+vulnerabilities and reachable vulnerabilities.
+
+We did an analysis of the open source ecosystem and found that about 2% of these
+vulnerabilities are reachable. So while you’ll get this huge backlog with 500
+vulnerabilities, there's 10 that you should be focusing on. That's a much more
+reasonable problem.
+
+### What does a "day in the life" look like for you?
+
+The answer is a cliche, “there's no two days that are the same”. I started on
+this project wearing a joint IC and PM hat, building prototypes and talking to
+security engineers every day. These days I'm running the Semgrep Supply Chain
+team. I'm spending most of my time talking to security engineers. We have a
+community on Slack that is thriving and we try to find out directly from folks
+in there.
+
+I'm always amazed that folks are surprisingly willing to hop on a Zoom call and
+show me what they're building. The community of security engineers has been
+really, really forthcoming with the problems they’re facing and helping us see
+whether we can solve it. It feels like such a beneficial partnership - they say
+“Build me a tool that helps me solve this problem” and we're like, we can build
+that, tell me more!. And it's a very virtuous cycle.
+
+### What is the team structure around Semgrep Supply Chain?
+
+We have a couple software engineers who have worked on Semgrep since the
+beginning. They’re helping to make sure that it's not just powerful but also
+exceptionally easy to use. We're trying to be really opinionated about this
+because with a tool that gives you a lot of flexibility, people are going to end
+up using it to solve all kinds of vulnerability problems. We want to be really
+opinionated and push people towards the highest impact things. We have a couple
+of folks who are strong in that - there are six in total, including myself.
+
+One of our program analysis engineers, who is writing part of the core of
+Semgrep, helped build the lock file tracking system, because the complexity of
+that will continue to grow as we add additional lock files. The syntax is pretty
+simple, especially compared to code, but the systems that generate them are very
+complex. We’re reading the output of those systems and inferring what the system
+is trying to tell us. So there's a lot of interesting complexity in build
+systems and in interpreting lock files correctly. For example, there are lock
+files where the file looks the same but small indicators help you interpret the
+lock file and the manifest files together, particularly across a project.
+
+We also have a staff security researcher who runs rule generation systems. We
+build a lot of tooling internally to make sure that when vulnerabilities are
+disclosed we quickly jump on them. We also make sure that the rules are
+consistent and have all the data that customers need to be able to get good
+findings and fix them. He's been  sure that we can write high quality rules
+quickly, get them to customers quickly and ensure that there aren't bugs along
+the way. Sometimes there are rules that say there is no upgrade path, there are
+other libraries that you can switch to, or this package is no longer maintained.
+
+And then we have a PM who has been really integral to helping us figure out the
+story around the workflow. For example, we've realized smaller companies want to
+be in our tool, day over day, triaging their issues in our system. Larger
+companies are often centralizing their findings from a variety of issue
+management systems. So we want to support both of these use cases, and make sure
+we do that in a way that can help companies grow.
+
+### How did you first get into software development?
+
+I have a non-traditional background in tech, but if you'd asked people I grew up
+with or maybe my parents, they probably wouldn't be surprised. I was a math kid
+in high school and did freelance web developments in high school to build static
+HTML pages for small businesses in my town. But I never realized that software
+development could be a profession even though I grew up just outside of Silicon
+Valley. I was really interested in law and philosophy and went to school for
+philosophy undergrad. I went to a liberal arts college, Dickinson College in
+Pennsylvania and I had to take science classes to fulfill lab requirements so I
+took a couple of CS classes and I remember it felt like it really clicked with
+me.
+
+I felt that this is the practical implementation of the logic theory I've been
+studying in philosophy. I asked my career counselor, is there such a thing for
+people who want to be doctors but for computer science? And they pointed me
+towards Microsoft Office certifications and things like that, which was the
+wrong thing, but I happened to see an interview on NPR about boot camps so I
+ended up doing a bootcamp called App Academy, which taught me Ruby on Rails and
+React. Then I ended up at a company called Meraki after graduating, which had
+just been acquired by Cisco. It turned out to be this incredible place to learn,
+filled with a bunch of really experienced software engineers, but the company
+still only had about 50 software engineers.
+
+Post acquisition, we supported a ton of customers and a bunch of promises had
+been made, but there were way too few engineers. So you were just handed
+projects way out of the scope of what you were capable of. And so I had this
+amazing opportunity to grow within Meraki, became a tech lead within a couple of
+years and then helped build a new product from zero to one. I realized, okay,
+this is the most fun I've ever had, building a product from scratch. So once
+that had happened and I became a manager and grew a team, I realized I want to
+go do this again so I started to put out my feelers and a couple of my previous
+Meraki coworkers had come over here to r2c.
+
+Early in my career, I felt a lot of friction with security so I was not excited
+at first to join a security focused company. I had been the developer who spent
+a year on a Rails upgrade and going from Ruby on Rails 2 to Ruby on Rails 3
+because we were so far behind. I dealt with a bunch of security issues that felt
+like black boxes and I'd been there during the time where we turned on our first
+static analysis tool.
+
+At r2c our cloud stack is pretty straightforward - Flask in the back end,
+TypeScript in the front end. We try to take the perspective of simple, boring
+technologies that help us just focus on solving business problems. We have a
+strong program analysis team, so TypeScript and Mypy type checking for Python is
+something that we adopted pretty early, and has helped us avoid a ton of bugs,
+which has been nice.
+
+The non-boring technology we've chosen is OCaml. It’s the preferred language of
+Semgrep’s core and our program analysis team really likes it because it allows
+you to represent the data structures of programming languages really well. It's
+a different paradigm than I was used to but we have some really, really
+brilliant people here who live and breathe it.
+
+### What is the most interesting development challenge you've faced working on Semgrep Supply Chain?
+
+There's a bunch of pieces of this that are really hard. One of them is the
+breadth of build systems that exist, the complexity of each and that no one
+looks the same. Understanding Gradle or Maven build systems that are very
+different from some modern build systems, like Poetry. These dependency
+management tools are really different. So that's been one really interesting
+challenge.
+
+Another has been the rule creation. There's a long backlog of vulnerabilities
+from Dependabot and an advanced GitHub security database. I think it has had
+4,000 or 5,000 high or critical vulnerabilities in the last few years. NVD has
+20,000 new vulnerabilities so far this year, so that's probably a backlog of a
+hundred thousand vulnerabilities. We do not have reachability rules for all
+these vulnerabilities so backfilling that is really challenging. We're thinking
+about a variety of approaches to solve this going forward. Do we hire a rule
+writing army to help us backfill these? Do we do machine learning or can we look
+at the diffs and auto generate these tools?
+
+Something else we’ve been working on is multiple vulnerabilities related to a
+single package in the lock file. For example, you can upgrade your way out of
+three findings with one code change because really they all stem from the same
+problem with the same package. Being able to represent that in an easily
+understandable way but without building a totally separate system is an
+interesting technical challenge.
+
+### What is the most interesting tech tool you are playing around with at the moment?
+
+The most recent language I played around with was Go and I had a lot of fun. I
+didn't even have a good use case for it, I just felt really nice. One thing I
+didn't love about Scala was that it seems like there are 20 ways to do any
+particular thing. So it made it difficult to just learn the language because
+there were so many different syntactic things in it, but also difficult to know
+if you were using the right paradigm at the right time. One of the nice things
+about Go is that it's really simple and it allows you to do pretty complicated
+stuff pretty easily. It's pretty easy for someone else to go into Go code and
+read about it.
+
+I remember at the end of my time at Meraki, I started writing a couple of
+services in Go, some things that were higher throughput but pretty simple. So
+during my time off between changing jobs, I played around with Go. I was looking
+at new apartments and I was doing some personal finance apps on my own for no
+good reason at all. I'm sure it would've been simpler to do in a spreadsheet,
+but I don't know, it was just fun to do.
+
+New tools that we've been using internally that I've come to really love are a
+newish JavaScript component library called [Mantine](https://mantine.dev/) we've
+been using to slowly transform the front end. And there's this new tool that we
+actually ended up hiring the creator of, internally, called
+[LocatorJS](https://www.locatorjs.com/), which helps you locate a frontend
+component in your codebase by clicking it in the UI. It takes you into VS Code
+and to the place where it's from, which really speeds up the development. You
+don't have to go search around in your code to figure out how the UI was built.
+
+I really like getting into the nuts and bolts of how things work and so the act
+of exploring the different build systems, learning about the internals of Yarn
+and Poetry, has been really interesting as well. We’ve been adopting many of
+these tools in-house so we can be users of our own product. That way we can
+really feel like we can build for ourselves and talk to other people to find
+shared experiences.
+
+### Describe your computer hardware setup
+
+I use a Macbook Pro, but I do my compute intensive work on an AWS EC2 instance
+so I don't have a super strong opinion on the hardware itself - it seems to do
+the job fine. Though, one thing that I tend to care about the most is probably
+my keyboard. I have a Das keyboard with the red cherry keys, I love the feeling
+of a mechanical keyboard, it's just a visceral nice thing. But I'm sure whoever
+sits next to me at my desk hates me.
+
+### Describe your computer software setup
+
+**OS:** macOS.
+
+**Browser:** Chrome for work, Firefox on my own time.
+
+**Email:** Gmail.
+
+**Chat:** Slack.
+
+**IDE:** VS Code.
+
+**Source control:** Git and GitHub.
+
+### Describe your desk setup
+
+At home I have a standing desk and it has a motor, which is kind of nice to go
+up and down in a couple of preset settings. That was my pandemic splurge for my
+desk set up. I bought a used Herman Miller office chair because a lot of people
+liquidated their offices and you could get second hand Herman Miller chairs for
+pretty cheap. I have a second monitor on one of those moving arms, I open
+documentation on one and use the other for coding.
+
+<ImageProvider center src="/img/interviews/semgrep-adam-berman-desk.jpg" alt="The desk of Adam Berman, Semgrep" />
+
+### When coding
+
+**Daytime or nighttime?** Night.
+
+**Tea or coffee?** Coffee.
+
+**Silence or music?** I play music that I've heard before when I'm coding.
+
+### What non-tech activities do you like to do?
+
+I play Ultimate Frisbee pretty competitively. I played on traveling club teams
+and I find it's a really fun mix of competitive and really challenging which
+helps me stay in shape. It’s also a really fun community where you end up on a
+team and the team becomes very social. These teams often stay together for
+years. I love to get out into the mountains and go on hikes; we're only a couple
+hours here in San Francisco from Lake Tahoe, where there's beautiful hiking and
+biking tracks.
+
+I like music a lot too and have spent 20 years in different kinds of choirs.
+We've had some new folks join the company recently that are very musically
+inclined. And so I think there's been some opportunities to jam and have people
+who are much better at music than I am, I've been really in awe of their talent.
+
+### Find out more
+
+[Semgrep](https://semgrep.dev/) is a static code analysis tool. The new [Semgrep
+Supply Chain](https://semgrep.dev/products/semgrep-supply-chain) functionality
+was featured as an "Interesting Tool" in the [Console
+newsletter](https://console.dev) on 13 Oct 2022. This interview was conducted on
+29 Sep 2022.

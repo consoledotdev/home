@@ -1,0 +1,12 @@
+#### What are some recent examples of interesting development challenges?
+
+We have Mac runners that run tests all day long, deployed on
+[MacStadium](https://www.macstadium.com/). They don't spin up and spin down,
+which tends to accrue garbage if you have processes not shutting down cleanly.
+
+Recently we upgraded to a new version of LLVM. On Rosetta, the x86 binaries were
+taking 10 seconds to build instead of 3 seconds. Our tests all basically assume
+that the system will connect up within three seconds, but that was timing out.
+These timeouts meant the Trunk daemon kept respawning so we ended up with
+thousands of them. This crashed the kernel of the OS and the system would
+reboot. Tracking this down was complicated!

@@ -1,0 +1,198 @@
+---
+title: "Svix"
+date: 2022-07-07T12:00:00+00:00
+draft: false
+summary: Webhooks as a Service.
+metaTitle: Working at Svix - Console profile
+metaDescription: What is it like to work at Svix? Console profile behind the scenes at Svix -
+    webhooks as a service.
+headerType: fixed
+hideLines: true
+hidePlanes: true
+isSubpage: company-profile
+pageType: company-profile
+customPageStyle: true
+xlViewport:
+    largeText: true
+companyInfo:
+    favicon: /img/favicons/www.svix.com.svg
+    URL: https://www.svix.com
+    jobsURL: https://www.svix.com/careers/
+    description: Webhooks as a Service.
+    product:
+        name: "Svix"
+        description: "At Svix, our mission is to make webhooks easy and ubiquitous. We enable
+            companies of all sizes to send webhooks easily and transform software
+            products from useful applications into critical, real-time data
+            infrastructure. We are a team of passionate and seasoned developers
+            looking to make it easy for everyone to offer a world-class webhooks
+            experience."
+    techStack:
+        - Rust
+        - React
+        - Typescript
+        - Python
+    meta:
+        - label: "Founded"
+          value: 2021
+        - label: "CEO"
+          value:
+              links:
+                  - href: "https://www.linkedin.com/in/tomhacohen/"
+                    text: "Tom Hacohen"
+                    iconRight: "external-link"
+        - label: "Employees"
+          value: "<10"
+        - label: "Stage"
+          value: "Early-stage startup"
+        - label: "Customers"
+          value:
+              - "Brex, Lob, LTSE, Clerk"
+        - label: "Social"
+          value:
+              links:
+                  - href: "https://twitter.com/SvixHQ"
+                    text: "Twitter"
+                    iconLeft: "twitter"
+                  - href: "https://www.linkedin.com/company/svix/"
+                    text: "LinkedIn"
+                    iconLeft: "linkedin"
+    type: "Open source"
+    category: "Developer Tools - DevOps"
+    topCategory: "Developer Tools"
+    subCategory: "DevOps"
+    filterTaxonomy: "developer-tools, open-source, rust, react, typescript, python"
+interview: svix-tom-hacohen
+---
+
+<span id="wrapper-1" className="nav-anchor" anchor-name="how-engineering-works"></span>
+
+<RichTitle tag="h3" icon={{ group: "generic", name: "checklist" }} id="how-engineering-works" text="How engineering works at Svix" />
+
+#### How are the teams structured?
+
+Our CEO is acting as Head of Product. He directs the general product direction,
+which features to work on, and prioritizes bugs as they happen. But other than
+that it's really just everyone reviewing everyone's code, everyone can suggest
+ideas, can influence the roadmap, etc.
+
+Additionally, our core product is open source, which also influences our
+thinking. We have a flat team structure, everyone is aligned with what we are
+trying to do, and is committed to help the company succeed.
+
+#### What tools do engineers use?
+
+-   **Version control:** GitHub
+-   **Project Management:** GitHub
+-   **Bug tracking:** Bugsnag
+-   **Communication:** Slack and Google Meet
+-   **Infrastructure:** AWS
+-   **Monitoring:** Cloudwatch and PagerDuty
+
+#### Can developers pick their own tools?
+
+Yes they can.. Some of the team is on Macs, others are on Linux. Some use VS
+Code, others use Vim. There's just one small constraint - due to compliance
+reasons (we're SOC 2 certified), tools need to undergo review to ensure that
+they don’t put our customers, product and code at risk.
+
+#### How does the development process work? What's the process for working through bugs, features and tech debt?
+
+We have a sprint planning meeting once every two weeks,where we talk about the
+plans for the next few months, and derive from them the plans for the next
+couple of weeks (the sprint). Our customers trust us with powering their
+webhooks, a customer facing and core feature of their products. We take this
+trust seriously and always prioritize bugs adversely affecting customers. We
+care a lot about the uptime, scalability, and the robustness of our service.
+Everything else flows back from that.
+
+#### How does code get reviewed, merged, and deployed?
+
+As mentioned above, we take the uptime of our service, and our compliance
+obligations very seriously. Every PR needs to be reviewed by at least one other
+team member. In addition, sensitive parts of the code have to be reviewed by
+their respective code owners. All of the code is automatically tested, linted,
+and scanned using CI, and once merged it’s automatically deployed to a staging
+environment.
+
+We also run the full test suite against the real staging environment, to ensure
+everything works correctly also against real infrastructure. Once the dust has
+settled, approved team members can decide to promote a staging deployment to
+production. We also have smoke tests that just run all the time and mimic user
+behavior to make sure that everything is operational, both for staging and prod.
+
+Deployments happen using terraform, and our dev, staging and production
+environments are therefore identical, other than the amount of the minimum
+provisioned resources. Everything is monitored using CloudWatch, as well as
+other external tools that ensure the uptime of our services.
+
+#### What are some recent examples of interesting development challenges solved by internal teams as part of building the product?
+
+We hold ourselves to a very high standard. This means that we can never go down,
+have to be fast, have to be reliable, and have to scale with our customers’ ever
+increasing scale and demands. Because of the nature of our business, every time
+we onboard a large customer we have to deal with their whole scale, which can be
+immense.
+
+We are currently using a single cloud provider. Though in the long term, we want
+to be in every data center in the world, to reduce latency and potential network
+issues between ourselves and our customers. But for now, staying in AWS and
+being multi region has worked well because, and when there's a large enough
+customer, we just deploy to the same region as them - if things go bad for them,
+it goes bad for us as well, so it's kind of in sync.
+
+Within the region, we have multiple availability zones and a lot of redundancy
+cross service. We use DynamoDB and Postgres, and we have fallbacks in place. If
+DynamoDB is having issues, we can fall back to our backup database, for example.
+
+One thing that we are currently working on is what we call transformations which
+is essentially an embedded JavaScript engine that lets you transform webhooks
+before they hit the customer endpoint. Customers can do whatever they want with
+a webhook before it's sent. We use Deno and an entirely separate microservice to
+ensure full isolation because you don't want environment variables or anything
+like that to leak, even though Deno promises you it's not going to be the case,
+you still want that double layer of protection.
+
+#### How does on-call work?
+
+Because we're geographically distributed, it's actually less painful than it can
+be. During the week someone is always up, so it's distributed like that. The
+system has been voluntary so far - people just say if they're up for it, and
+when they are available.
+
+<span id="wrapper-2" className="nav-anchor" anchor-name="hiring-process"></span>
+
+<RichTitle tag="h3" icon={{ group: "generic", name: "checklist" }} id="key-features">
+    {" "}
+    Hiring process at Svix
+</RichTitle>
+
+#### How does the application process work? What are the stages and what is the timeline?
+
+It varies slightly depending on the individual. Sometimes we meet the applicant
+once and we get a lot of very high signals that can shorten the process. We try
+to be very transparent about our requirements and what working at Svix is like.
+The process is broadly divided into following parts:
+
+-   **Introductory call (30 mins):** Learn about background motivation and
+    relevant experience.
+-   **Technical interview (90 mins):** Candidates can use their own IDE with any
+    extensions that might be installed for the coding interview. Though following
+    feedback from candidates, we are currently exploring eliminating this and
+    focusing on a take-home task instead.
+-   **Take home task (2-3 hours):** Candidates can either write code for an open
+    source project of their choice, or ask us to suggest a task instead, work on
+    it at home, and when ready we jump on a call and discuss their work.
+    Alternatively, if a candidate has made significant open source contributions,
+    we can just review those instead.
+-   **Team introduction:** Candidates meet the team members to ensure there is a
+    mutual fit.
+
+#### What is the career progression framework? How are promotions and performance reviews managed?
+
+It is too early for us to have something structured (e.g. levels) for
+this.Though we have weekly one-on-ones where we keep constant feedback and help
+people improve. I think the team has already improved significantly since they
+joined and I want that to continue.
+
+{/* {{< div--close >}} */}

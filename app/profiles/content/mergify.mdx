@@ -1,0 +1,227 @@
+---
+title: "Mergify"
+date: 2022-12-19T12:00:00+00:00
+draft: false
+summary: Faster & safer code merge.
+metaTitle: Working at Mergify - Console profile
+metaDescription: What is it like to work at Mergify? Console profile behind the scenes at Mergify - faster & safer code merge.
+headerType: fixed
+hideLines: true
+hidePlanes: true
+isSubpage: company-profile
+pageType: company-profile
+customPageStyle: true
+xlViewport:
+    largeText: true
+companyInfo:
+    favicon: /img/favicons/mergify.com.svg
+    URL: https://mergify.com
+    jobsURL: https://jobs.console.dev/company/mergify
+    description: Faster & safer code merge.
+    images:
+        - url: /img/profiles/mergify-profile-1.jpg
+        - url: /img/profiles/mergify-profile-2.jpg
+        - url: /img/profiles/mergify-profile-3.jpg
+    product:
+        name: "Mergify"
+        description: "Mergify is an automation tool for GitHub pull requests, with a merge tool
+            behind it. Automate your pull requests and leverage merge queues."
+    techStack:
+        - Python
+        - React
+        - TypeScript
+        - Docker
+    meta:
+        - label: "Founded"
+          value: 2018
+        - label: "CEO"
+          value:
+              links:
+                  - href: "https://twitter.com/juldanjou"
+                    text: "Julien Danjou"
+                    iconRight: "external-link"
+        - label: "Employees"
+          value: "<10"
+        - label: "Stage"
+          value: "Early-stage business"
+        - label: "Social"
+          value:
+              links:
+                  - href: "https://twitter.com/Mergifyio"
+                    text: "Twitter"
+                    iconLeft: "twitter"
+                  - href: "https://www.linkedin.com/company/mergify/"
+                    text: "LinkedIn"
+                    iconLeft: "linkedin"
+    type: "SaaS"
+    category: "Developer Tools - Git"
+    topCategory: "Developer Tools"
+    subCategory: "Git"
+    filterTaxonomy: "developer-tools, saas, python, react, typescript"
+interview: mergify-julien-danjou
+---
+
+<span id="wrapper-1" className="nav-anchor" anchor-name="how-engineering-works"></span>
+
+<RichTitle tag="h3" icon={{ group: "generic", name: "checklist" }} id="how-engineering-works" text="How engineering works at Mergify" />
+
+#### How are the teams structured?
+
+We’re all technical, so we currently only have one engineering team. We are a
+remote first company and communicate with each other daily through Slack. We
+hold weekly meetings where we review the Linear tasks we have completed and plan
+for the tasks we will do next. Our work is largely asynchronous, with GitHub
+Reviews used for code reviews and the whole team reviewing each other's work
+daily. We do not have large, structured roles and instead, each engineer works
+on features and is responsible for addressing any issues that may arise with
+those features.
+
+#### What tools do engineers use?
+
+-   **Source Control:** GitHub
+-   **CI/CD:** GitHub Actions
+-   **Ticketing:** Linear
+-   **Design & Mockups:** Figma
+-   **Cloud Infrastructure:** Heroku
+-   **Monitoring:** Datadog
+-   **Incident Management:** Incident.io
+
+#### Can developers pick their own tools?
+
+For their local development environment, developers can use whatever tools they
+prefer. However, we have a strong CI/CD process and high standards for code
+changes, which must be thoroughly reviewed, and tested, before being merged.
+Once a code change meets our policy requirements, the candidate is free to use
+whatever methods they prefer to implement it.
+
+#### How does the development process work? What's the process for working through bugs, features and tech debt?
+
+For our development process, we maintain a list of backlog items, including both
+bugs and new features. We plan out which tickets to work on for the current week
+and review our progress at the end of the week. In addition to this day-to-day
+development workflow, we also receive feature requests from customers. Two team
+members handle project management and gather additional information about the
+request using Linear.
+
+We then hold a meeting with the engineering team to discuss the use case and
+create a detailed plan in Notion, including technical considerations. This
+results in a number of more specific, technical tickets that can be taken on by
+engineers who are interested in the subject. We encourage our engineers to "own"
+the features they build and to address any necessary refactoring or maintenance
+work as part of the development process in order to minimize technical debt.
+
+#### How does code get reviewed, merged, and deployed?
+
+For code reviews, the engineering team reviews each other's work on a daily
+basis. We recommend that people push their changes to GitHub as soon as they are
+ready to do so, as the code is rarely perfect on the first try and will require
+iteration.
+
+When everyone agrees that the code is ready to be merged, we run a suite of
+automated tests on the pull request, including unit testing, functional testing,
+and informational testing, to ensure that the code is working as intended. If
+all of the CI tests pass and all of the reviews have been completed, the code
+can be automatically merged and deployed to production through our CI/CD
+pipeline. The quality of our code is extremely important to us, as we rely on
+automation to deploy our code efficiently.
+
+#### What is the QA process?
+
+We prefer to minimize manual testing and aim to have as many functional tests as
+possible in order to maintain a high level of quality. We use a variety of
+tools, including automatic linters, to ensure that our codebase is consistent
+and follows our standards. We sometimes discuss with other engineers about
+adding new linters or other tools to enforce certain conventions or avoid
+certain language features. By automating these checks, we can reduce the burden
+on code reviewers and ensure that code that meets our standards is automatically
+approved.
+
+The rest of the QA is done via functional testing. There is nothing that is
+manually tested at any point. Engineers write scenarios that are run in the CI
+system all day long, making sure nothing’s ever broken.
+
+#### What are some recent examples of interesting development challenges solved by internal teams as part of building the product?
+
+We rely heavily on the GitHub API for our application, which presents some
+challenges in terms of following the API's rules and avoiding being banned or
+rate-limited. This requires us to carefully consider the number of API calls we
+make and try to minimize them wherever possible.
+
+Recently, we developed a new feature for more precise statistics, but it
+resulted in a significant increase in API calls to GitHub. As a result, we had
+to revert the change and come up with a new solution that would be more
+efficient in terms of API usage. This is just one example of the challenges we
+face when working with the GitHub API and trying to balance the needs of our
+customers with the need to be mindful of API usage.
+
+#### How does on-call work?
+
+During office hours, every engineer monitors a Slack channel for production
+alerts or exceptions reported through Sentry. If an engineer wants to take on an
+issue, they can use the incident.io tool to report it and work on a solution.
+Incidents are prioritized based on their importance and impact, and it is up to
+the assigned engineer to resolve the issue.
+
+If necessary, the engineer can discuss potential solutions with their colleagues
+over Slack. We try to resolve incidents as quickly as possible, often by
+reverting changes and rolling back to a previous version of the software. We
+document the incident and any steps taken to resolve it using incident.io and
+create new tests in Linear to prevent similar issues from occurring in the
+future.
+
+The lead engineer for the incident writes a post-mortem report, which is
+published in incident.io and on Notion. When we are out of the office, this
+process is similar, with a limited number of engineers available to handle
+incidents outside of regular office hours.
+
+<span id="wrapper-2" className="nav-anchor" anchor-name="hiring-process"></span>
+
+<RichTitle tag="h3" icon={{ group: "generic", name: "checklist" }} id="key-features">
+    {" "}
+    Hiring process at Mergify
+</RichTitle>
+
+#### How does the application process work? What are the stages and what is the timeline?
+
+For the application process, we aim to be efficient and move quickly. We try to
+complete all the interviews within a two weeks timeframe. The application
+process for our company has three steps.
+
+-   **The first step** is a call where we present the company, our product, and
+    information about the candidate, including their background and why they are
+    interested in working for our company. If the first call goes well, we send
+    the candidate a small software exercise to complete. This exercise is tailored
+    to the specific engineering role they are applying for and may involve
+    spinning up an API server or making requests to the GitHub API.
+-   **In the second step**, we review the completed exercise and discuss it with
+    the candidate from a technical perspective, focusing on Python and the
+    software architecture.
+-   **The final step** of our application process is a cultural values interview,
+    during which we discuss our company's values and vision with the candidate. We
+    provide them with a document to read beforehand and answer any questions they
+    have about our values and the way we operate as a company. This is also an
+    opportunity for the candidate to ask any non-technical questions about the
+    company, the product, and the role they are applying for. It is important for
+    us to ensure that the candidate is a good fit with our culture, especially
+    since we are a remote company and it is important for them to be comfortable
+    working from home.
+
+After the interviews, we also conduct reference checks, which can take some time
+if people are slow to respond to emails. Our goal is to be as fast as possible
+in order to be respectful of the candidate's time and provide a conclusive
+answer as soon as we can.
+
+#### What is the career progression framework? How are promotions and performance reviews managed?
+
+As a small company, we have a simple process in place for career progression. We
+conduct annual reviews, where each employee does a self-review of their work and
+shares it with us. The manager also does a review and another engineer from the
+team is chosen to provide their perspective as well.
+
+We have a meeting to discuss if everything is going as expected, or if an
+employee is exceeding our expectations. We highly value ownership and encourage
+employees to take on additional responsibilities outside of their job
+description if they are interested. Everything is documented in Notion, and we
+appreciate when employees take on additional roles such as marketing.
+
+{/* {{< div--close >}} */}

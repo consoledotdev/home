@@ -1,6 +1,0 @@
-<div class="related-categories">
-    {{ range .Page.Params.relatedCategories }}
-        {{ partial "components/category.html" (dict "categoryData" . "clickable" "true" "large" "true" )  }}
-    {{ end }}
-</div>
-

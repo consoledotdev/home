@@ -1,0 +1,24 @@
+**Russ Cox:** All the Go code in the world was in one source repository,
+which meant that if we did want to make some sort of major change to the way
+things looked or even sometimes the way things worked, we knew where all the
+code was that had to be updated. There were a couple of times when we were going
+to change something syntactically, and we thought we knew what it was going to
+be and how to implement it, and we said, “Well, let's go see what it looks
+like.” We’d get everyone to just sort of crowd around one computer, usually
+mine. I'd open up an editor and open up literally every single file, Go source
+file, in the world, then just do some global search and replace kind of things
+in the editor. They'd watch the files changing on the screen, and everyone would
+be like, “Oh, yes. That looks good.” We read it all out and \[would\] go back to
+our desks.
+
+**Russ Cox:** We just discovered that for the last six releases, we had
+this kind of bug where you couldn't actually build a Go program without an Xcode
+installed, totally unintended, and no one noticed. If we had any sort of
+telemetry or tracking of what is the build cache hit rate on things like the
+standard library? — Which is a continual thing that we actually do run into
+problems with. — What’s the hit rate on the build cache? If we knew that when we
+looked at how it was going and then after a new release came out, and all of a
+sudden, it was much closer to 0 than 100, all of a sudden, you would say, “Oh, I
+wonder why,” and you would look into that. But without that kind of visibility,
+we just can't. So telemetry really is about how do we get the information that
+makes us better as software developers.

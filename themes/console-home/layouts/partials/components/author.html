@@ -1,8 +1,0 @@
-<div class="author-box">
-    {{ partial "components/plane-picture.html" (dict "type" "by-width" "img" .img "imgSize" "328" "alt" (print "Photo of " .name) ) }}
-    <span class="nav-wrapper-anchor" id="author"></span>
-    <div class="author-box-content">
-        <h6 class="title title-5">About the author</h6>
-        <p class="small">{{ if .url }}<a class="link author-name" href="{{ .url }}" rel="me">{{ end }}{{ .name }}{{ if .url }}</a>{{ end }} {{ .bio }}</p>
-    </div>
-</div>

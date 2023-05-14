@@ -1,0 +1,253 @@
+---
+title: "Graphite"
+date: 2022-08-17T12:00:00+00:00
+draft: false
+summary: Modern code review.
+metaTitle: Working at Graphite - Console profile
+metaDescription: What is it like to work at Graphite? Console profile behind the scenes at
+    Graphite - modern code review.
+headerType: fixed
+hideLines: true
+hidePlanes: true
+isSubpage: company-profile
+pageType: company-profile
+customPageStyle: true
+xlViewport:
+    largeText: true
+companyInfo:
+    favicon: /img/favicons/graphite.dev.png
+    URL: https://graphite.dev
+    jobsURL: https://jobs.console.dev/company/graphite
+    location: NYC
+    description: "Modern code review."
+    images:
+        - url: /img/profiles/graphite-profile-1.jpg
+        - url: /img/profiles/graphite-profile-2.jpg
+        - url: /img/profiles/graphite-profile-3.jpg
+    product:
+        name: "Graphite"
+        description: "Graphite is an open-source CLI and a code review dashboard built for
+            engineers who want to write and review smaller pull requests, stay
+            unblocked, and ship faster."
+    techStack:
+        - Typescript
+        - React
+        - Express
+        - Postgres
+        - AWS
+    meta:
+        - label: "Founded"
+          value: 2020
+        - label: "CEO"
+          value:
+              links:
+                  - href: "https://www.linkedin.com/in/merrill-lutsky/"
+                    text: "Merrill Lutsky "
+                    iconRight: "external-link"
+        - label: "Employees"
+          value: "<10"
+        - label: "Stage"
+          value: "Early-stage startup"
+        - label: "Social"
+          value:
+              links:
+                  - href: "https://twitter.com/withgraphite"
+                    text: "Twitter"
+                    iconLeft: "twitter"
+                  - href: "https://www.linkedin.com/company/withgraphite/"
+                    text: "LinkedIn"
+                    iconLeft: "linkedin"
+    type: "SaaS"
+    category: "Developer Tools - Code review"
+    topCategory: "Developer Tools"
+    subCategory: "Code review"
+    filterTaxonomy: "developer-tools, saas, typescript, react"
+---
+
+<span id="wrapper-1" className="nav-anchor" anchor-name="how-engineering-works"></span>
+
+<RichTitle tag="h3" icon={{ group: "generic", name: "checklist" }} id="how-engineering-works" text="How engineering works at Graphite" />
+
+#### How are the teams structured?
+
+We are small enough to operate as a single team right now. Despite there being
+just nine of us, we’re growing quickly, and soon we’ll have to break out into
+multiple teams.
+
+Everyone works in person, full-time at our office in New York. We’re a
+tight-knit team who value the ability to huddle over the same desk to check out
+a new product or gather around the same whiteboard to tackle a tricky
+engineering problem. And when it’s time to take a break, we enjoy lunches in the
+neighborhood and one-on-one meetings at local coffee shops, all fully paid for
+by our company.
+
+Each quarter, we plan a product roadmap based on user feedback, team ideas, and
+business needs. Everyone at Graphite has a say, and engineers can take
+individual ownership of goals that fall outside of the roadmap and refine their
+own timelines. Our designer and PM work to bring cohesion and support to those
+engineers.
+
+#### What tools do engineers use?
+
+-   **Communication:** Slack, Zoom
+-   **Internal docs:** Notion
+-   **Product planning:** Linear
+-   **Version Control:** GitHub
+-   **Infrastructure:** AWS
+-   **Deployment:** Github Actions, AWS CodePipelines
+-   **Design:** Figma
+-   **Monitoring and Alerting:** Datadog, PagerDuty
+-   **Code Review:** Graphite
+
+#### Can developers pick their own tools?
+
+Yes! Bring what you want! Some folks like VSCode, others like heavily customized
+Vim. Our only ask is that you use Graphite for code review :)
+
+#### How does the development process work? What's the process for working through bugs, features and tech debt?
+
+The team meets weekly for a brief “sprint planning” meeting where each of us
+calls out the features they’ll be working on that week, as well as bugs that
+need to be prioritized. Collaborative input helps us decide how we spend our
+time.
+
+Datadog monitoring quickly alerts us to critical bugs while our bustling Slack
+community steers our attention toward smaller bugs and feature requests. We’re
+used to people telling us within five minutes of a deployment if they feel like
+something’s wrong or could be better. We also have a list where people can add
+requests and upvote existing items built into the product. On top of this, we
+dogfood Graphite to build Graphite itself.
+
+Across these various inputs, we have a good sense of what bugs need to be worked
+on. If it's critical, the team member who has the most knowledge on the issue
+will take the lead and get a fix out. If it's not critical, we'll fit it into
+weekly sprint planning.
+
+We’re usually aware of common feature requests, thanks to our active and
+empowered user base. In the rare case that it's a feature request we've never
+heard of, we get a conversation going with the users that raised it. At
+Graphite, we believe it’s important to talk to people, understand the
+fundamental need that they're bringing to life, and then prioritize it as a
+project in context with other work.
+
+We spend about 15 percent of our time continuously tidying as we build to
+address tech debt. We aim to continuously leave the codebase slightly nicer than
+we found it rather than letting complexity grow and snowball to a breaking
+point.
+
+#### How does code get reviewed, merged, and deployed?
+
+When engineers create a task, they log it in Linear. At Graphite, you set your
+tasks and are responsible for the timelines you set.
+
+When submitting pull requests, engineers use Graphite to create stacks of small
+changes. Reviews move fast, and by the time someone submits a new PR, their
+previous change likely already has feedback.
+
+We create a continuous flow of small changes that are very quickly merged. It's
+the ethos of our product, but it shows up in how Graphite engineers each and
+every one of its features.
+
+#### What is the QA process?
+
+Instead of manual QA, at Graphite we practice continuous integration (CI) and
+test-on-prod.
+
+Every code change is subjected to unit and integration tests prior to merging.
+We have reasonable test coverage and use Coveralls to avoid blindspots.
+Post-merge, changes trigger a blue-green deployment where we monitor for
+increases in errors before committing to the rollout.
+
+Most new features are released behind feature flags. This allows for changes to
+be tested first against employees, then select user groups, and finally
+everyone. The benefit of building a code review tool is that our own usage
+creates sizable canary traffic, and we can often spot bugs before they roll out
+to users.
+
+Some companies deploy to QA environments and make engineers manually inspect
+their changes while holding up deploy trains. At Graphite, we keep deploy trains
+unblocked by either poking features before merge or, after merge behind the
+safety of feature flags.
+
+Lastly, if a bug does make its way to users, Datadog monitoring or user reports
+in our community Slack alert us to the fact almost immediately. We can either
+rollback changes instantly with feature flags or within five minutes on the
+server. We could probably move slower and prioritize extreme stability, but at
+our current stage we prefer to stay fast and focus on iteration speed.
+
+#### What are some recent examples of interesting development challenges solved by internal teams as part of building the product?
+
+1. Displaying massive pull requests used to crush the front-end react rendering
+   performance. Interactivity, like dragging comment selections and unfurling
+   files, caused heavy lag. In response, we built custom virtualization (also
+   referred to as ‘windowing’) into pull request files. This way, Graphite only
+   renders lines of code visible in the viewport. The result is fewer total DOM
+   nodes and render performance that’s fast enough for smooth interactivity.
+2. Another recent challenge involved computing code change dependency graphs.
+   Graphite lets you stack your code changes. That means that any pull request,
+   open or closed, can link to any other change. For larger repositories, this
+   might mean traversing hundreds of thousands of changes. Unfortunately, GitHub's
+   API only vends PRs at about 10 per second. Our solution was to asynchronously
+   cache-pull request metadata for repositories. Now, Graphite can decouple network
+   requests from Github and render change graphs instantly.
+3. As a final example, let’s talk about commenting. With Graphite, we extend
+   existing code review functionality. On GitHub you can't comment on a line that
+   wasn't changed in that diff. We think that's silly. You should be able to
+   comment on any line you want in that file. The challenge with commenting on
+   unchanged lines is how to sync back to GitHub. We’ve built a system where you
+   can comment on any line you want on Graphite, but we leave the real comment on
+   the closest line on GitHub's end. Within the GitHub comment, we include an
+   invisible HTML comment containing JSON encoded metadata. On Graphite, we can use
+   the comment metadata to seamlessly render the comment at its intended location.
+
+#### How does on-call work?
+
+We use PagerDuty to rotate on-call duty across our small engineering team. We
+have thorough observability and monitoring, but we’re strict on keeping page
+volume to a minimum. If someone is paged, we’ve made sure it’s critical and
+actionable. If it’s not, it should simply be a warning. In practice, that
+results in about one page per week. We also constantly respond to users in our
+community Slack, but currently, the workload isn't high enough to require a
+formal rotation.
+
+<span id="wrapper-2" className="nav-anchor" anchor-name="hiring-process"></span>
+
+<RichTitle tag="h3" icon={{ group: "generic", name: "checklist" }} id="key-features" text="Hiring process at Graphite" />
+
+#### How does the application process work? What are the stages and what is the timeline?
+
+We have a standard process for hiring. The whole process can run as fast as
+seven days or as slow as a month. It’s entirely dependent on what the candidate
+prefers.
+
+-   **Phone screen:** Merrill Lutsky, our CEO and co-founder, introduces Graphite
+    and talks through some of the applicant's early questions. We also use the
+    moment to get to know what the candidate has worked on and what they’re
+    passionate about.
+-   **Coffee walk:** We have the candidate drop by the office (if possible) and
+    walk to grab a cup of coffee with the other co-founders. It’s a good moment to
+    cover the nitty-gritty of what we're building and how we're building it.
+    Depending on the candidate’s timeline, we’ll either have them over for lunch
+    to meet the team or move straight into interviews.
+-   **Interview:** We take half a day to run a series of interviews and collect
+    signal. The interviews can be broken up across multiple days or run over Zoom
+    depending on the candidate’s preference. We publish a detailed Notion guide
+    outlining what a candidate can expect from the interviews and we also offer a
+    take-home alternative to our coding questions. We want to respect the
+    candidate’s time while also collecting enough signal to make a hiring
+    decision.
+-   **Reference check:** Lastly, we conduct reference checks while simultaneously
+    introducing the candidate to our investors. If all goes well, we then present
+    an offer and continue meeting to answer any remaining questions.
+
+#### What’s the career progression framework? How are promotions and performance reviews managed?
+
+We’re big believers in lazy-loading in processes. For now, we're small enough
+where the expectations of our engineers are comparable and therefore we don't
+have promotions and tiers within the engineering team. That being said, we know
+roles expand over time and we believe compensation should expand to match.
+Currently, we sit down twice a year to review raises. In the near future, as we
+reach closer to 15 to 20 employees, we’ll work with the existing team to decide
+on a formalized system for feedback both to and from employees.
+
+{/* {{< div--close >}} */}

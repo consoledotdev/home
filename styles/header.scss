@@ -1,0 +1,315 @@
+.header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 20;
+}
+
+.header.header-fixed {
+    --currentHeaderPadding: var(--headerTopPadding);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: var(--currentHeaderPadding) var(--contentMarginH);
+    z-index: 40;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    transition-property: padding-top, padding-bottom, background, backdrop-filter, -webkit-backdrop-filter, border-bottom;
+    transition-duration: var(--a-elements-time);
+    transition-timing-function: var(--a-elements-easing);
+    will-change: padding, background, border-bottom, -webkit-backdrop-filter, backdrop-filter;
+}
+
+.header.header-fixed.is-scrolled {
+    --currentHeaderPadding: var(--headerTopPaddingCompact);
+    padding: var(--currentHeaderPadding) var(--contentMarginH);
+    background: var(--theme-translucent);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: var(--theme-border-1);
+}
+@-moz-document url-prefix() {
+    .header.header-fixed.is-scrolled {
+        background: var(--theme-translucent-firefox);
+    }
+}
+
+.header .logo-wrapper {
+    flex: 0 0 auto;
+}
+
+@media (max-width: 768px) {
+    @media (min-width: 481px) {
+        .header.header-fixed,
+        .header.header-fixed.is-scrolled {
+            padding-left: var(--contentMarginH);
+            padding-right: var(--contentMarginH);
+        }
+    }
+}
+
+/* 1200px + left & right margin (6.25vw) */
+@media (min-width: 1371px) {
+    .header.header-fixed,
+    .header.header-fixed.is-scrolled {
+        padding-left: var(--contentMarginH);
+        padding-right: var(--contentMarginH);
+    }
+}
+
+.header .icon.icon-menu {
+    margin-top: var(--space1);
+    width: calc(var(--space4) + var(--space2_5));
+    height: calc(var(--space4) + var(--space2_5));
+}
+
+.header .header-nav {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    min-width: var(--space6_5);
+    opacity: 0;
+    height: 0;
+    padding-top: 11px;
+}
+
+.header .header-nav > .menu-item:not(:first-child),
+.header .header-nav > .console-button-text {
+    margin-left: var(--space2);
+}
+
+.header .header-nav > .console-button-text {
+    padding: var(--space1) var(--space2_5);
+}
+
+/* Collapsible nav -------------------------------------------------------------------------------- */
+.header.is-desktop .header-nav {
+    opacity: 1;
+    height: auto;
+    width: auto;
+}
+
+body:not(.is-same-origin) .header.is-desktop .header-nav {
+    animation-name: header-nav-appear;
+    animation-delay: 0.1s;
+    animation-duration: 0.2s;
+    animation-timing-function: cubic-bezier(0.41, 0.14, 0.35, 0.99);
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes header-nav-appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.header.is-mobile .header-nav {
+    position: absolute;
+    transition: var(--a-elements);
+    right: var(--contentMarginH);
+    top: calc(100% + var(--space2) - var(--currentHeaderPadding));
+    padding-top: 0;
+    width: min-content;
+
+    overflow: hidden;
+    transform: translateY(-16px);
+}
+
+.header.is-mobile.is-active .header-nav {
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+    transform: translateY(0px);
+
+    top: calc(100% - var(--currentHeaderPadding));
+}
+
+.header.is-mobile.is-active .icon-menu .icon-background {
+    background: var(--theme-nav-primary-link-text-focus);
+}
+
+.header:not(.is-mobile) .icon-menu {
+    opacity: 0;
+    transition: none;
+}
+
+/* Menu overlay -------------------------------------------------------------------------------- */
+.header .framed-section.overlay {
+    background: var(--theme-content-bg-4);
+}
+
+[data-theme="light"] .header .framed-section.overlay {
+    background: var(--theme-content-bg-2);
+}
+
+.header .framed-section.wide {
+    width: 100%;
+    box-shadow: var(--theme-shadow-3);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    padding: var(--space4);
+}
+
+.header .framed-section.wide .menu-item {
+    margin: 0 var(--space1);
+    margin-bottom: var(--space3);
+}
+
+.header .framed-section.wide .menu-item:first-child {
+    margin-top: 0;
+}
+
+.header .framed-section.wide .menu-item:last-of-type,
+.header .framed-section.wide .menu-item.menu-item-mars {
+    margin-bottom: 0;
+}
+
+.header .framed-section.wide .menu-item {
+    white-space: nowrap;
+}
+
+.header .framed-section.wide .console-separator {
+    width: 100%;
+    margin: var(--space3) 0;
+}
+
+@media (max-width: 480px) {
+    .header .framed-section.wide .menu-item:not(:last-child) {
+        font-size: var(--t-size1);
+    }
+}
+
+/* Truncated nav -------------------------------------------------------------------------------- */
+.header > .framed-section.wide {
+    position: absolute;
+    transition: var(--a-elements);
+    right: calc(var(--contentMarginH) + 48px);
+    top: calc(100% + var(--space2) - var(--currentHeaderPadding));
+    width: auto;
+    opacity: 0;
+    height: 0;
+
+    overflow: hidden;
+    transform: translateY(-16px);
+}
+
+.header.is-desktop.is-truncated-active .framed-section.wide {
+    top: calc(100% - var(--currentHeaderPadding));
+
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+    transform: translateY(0px);
+}
+
+/* Mars menu item -------------------------------------------------------------------------------- */
+.header .menu-item-mars .mars-illustration-mars {
+    font-size: var(--t-size-1);
+    display: inline-block;
+    vertical-align: -0.1em;
+    transition: var(--a-controls);
+}
+
+.header .menu-item-mars:hover .mars-illustration-mars,
+.header .menu-item-mars:focus .mars-illustration-mars {
+    box-shadow: var(--theme-mars-mars-halo-large-white);
+    transition: var(--a-controls-active);
+}
+
+.header .menu-item-mars:active .mars-illustration-mars {
+    box-shadow: var(--theme-mars-mars-halo-large);
+}
+
+.header .no-popup .menu-item-mars > span {
+    display: none;
+}
+
+.header .menu-item-mars.icon-right > span {
+    margin-right: 0.5em;
+}
+
+.header .menu-item-mars:hover > span,
+.header .menu-item-mars:focus > span {
+    color: var(--theme-mars-text-link-hover);
+}
+
+.header .menu-item-mars:active > span {
+    color: var(--theme-mars-text-link-active);
+}
+
+/* More menu item -------------------------------------------------------------------------------- */
+.header .menu-item-more .icon {
+    width: 1.25em;
+    height: 1.25em;
+    vertical-align: -0.3em;
+}
+
+/* Switch theme menu item -------------------------------------------------------------------------------- */
+.header .header-nav > .menu-item.menu-item-switch-theme {
+    margin-left: var(--space3);
+    padding: var(--space2);
+}
+
+.header.is-mobile .menu-item-switch-theme > span {
+    margin-right: calc(var(--space2) + var(--space1));
+    margin-bottom: -2px;
+}
+
+.header .menu-item-primary.menu-item-switch-theme .icon {
+    width: var(--space3);
+    height: var(--space3);
+}
+
+.header .menu-item-primary.menu-item-switch-theme:hover > span {
+    color: var(--theme-text-1);
+}
+
+.header .menu-item-primary.menu-item-switch-theme:hover .icon-fill {
+    fill: var(--theme-text-1);
+}
+
+.header .menu-item-primary.menu-item-switch-theme:hover .icon-stroke {
+    stroke: var(--theme-text-1);
+}
+
+.header .menu-item-primary.menu-item-switch-theme:hover .icon-fill-stroke {
+    fill: var(--theme-text-1);
+    stroke: var(--theme-text-1);
+}
+
+/* Icon color */
+.menu-item.menu-item-primary.menu-item-switch-theme:hover .icon.icon-stroke,
+.menu-item.menu-item-primary.menu-item-switch-theme:focus .icon.icon-stroke {
+    stroke: var(--theme-control-text);
+}
+
+.menu-item.menu-item-primary.menu-item-switch-theme:hover .icon.icon-fill,
+.menu-item.menu-item-primary.menu-item-switch-theme:focus .icon.icon-fill {
+    fill: var(--theme-control-text);
+}
+
+.menu-item.menu-item-primary.menu-item-switch-theme:hover .icon.icon-fill-stroke,
+.menu-item.menu-item-primary.menu-item-switch-theme:focus .icon.icon-fill-stroke {
+    stroke: var(--theme-control-text);
+    fill: var(--theme-control-text);
+}
+
+.menu-item.menu-item-primary.menu-item-switch-theme:active .icon.icon-stroke {
+    stroke: var(--theme-control-text-pressed);
+}
+
+.menu-item.menu-item-primary.menu-item-switch-theme:active .icon.icon-fill {
+    fill: var(--theme-control-text-pressed);
+}
+
+.menu-item.menu-item-primary.menu-item-switch-theme:active .icon.icon-fill-stroke {
+    stroke: var(--theme-control-text-pressed);
+    fill: var(--theme-control-text-pressed);
+}

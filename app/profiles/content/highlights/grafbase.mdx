@@ -1,0 +1,14 @@
+### What are some recent examples of interesting development challenges?
+
+We are deploying the whole back-end to the edge, so, there’s a lot of unknowns
+and a lot of things you have to fix and do on your own. For example, the AWS SDK
+is not WebAssembly ready. It has been challenging to make that work with our
+tech stack.
+
+Most people think of the edge as lightweight, redirect feature flagging,
+routing. But we’re actually deploying the whole back-end to the edge. We’re
+dogfooding that approach. We are betting that for a lot of use cases, it makes a
+lot of sense to be close to users - there’s no cold start, it’s serverless, and
+it’s also regionless, so it’s fast for everyone. But it’s a fairly new piece of
+technology, so things are not perfect. It’s like EC2 in 2006, that’s where we
+are.

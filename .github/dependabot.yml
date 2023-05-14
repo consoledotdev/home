@@ -5,10 +5,6 @@ updates:
       schedule:
           interval: "daily"
     - package-ecosystem: "npm"
-      directory: "workers-site/"
-      schedule:
-          interval: "daily"
-    - package-ecosystem: "pip"
       directory: "/"
       schedule:
           interval: "daily"

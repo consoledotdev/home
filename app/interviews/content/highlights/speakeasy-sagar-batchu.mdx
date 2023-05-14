@@ -1,0 +1,57 @@
+### What is Speakeasy? Why did you build it?
+
+Today, APIs are exploding in popularity. There are so many API-first businesses
+across different verticals, or businesses where the API is an important product
+surface - the more your API gets used the higher chance that your company is
+leading the market. But for most APIs today, the status quo of integration and
+usage is still a big bottleneck to growth. Companies continue to support a lot
+of API users with just static documentation. There’s a lot of hand holding and
+an immense support load on builders of APIs. And on the flip side, the devex
+required to use APIs could be a lot easier than it is today. It hasn’t really
+progressed despite how crazy popular they are.
+
+That was the really basic thesis around why we started
+[Speakeasy](https://www.speakeasyapi.dev/). We just wanted to make it really
+simple for developers to both produce and consume APIs.
+
+In terms of products, we do two things today. The first is a developer portal
+that finally lets companies move beyond docs, to make self-service API
+integrations possible. What does that mean? We create embeds that are powered by
+an SDK that you put into your API. The SDK captures data directly from your API
+and powers experiences like usage dashboards and request viewers that enable the
+end user to unblock themselves when using your API without getting on a call
+with your dev team or sharing logs over a ticket. Interestingly, the embeds can
+either be integrated into your existing dev portal – or we can create a
+brandable Developer Experience Portal on your behalf if all you really have is
+docs today for example. Either way, these components provide a best-in-class
+devex for your end users, and reduces work for your API team.
+
+The second product is Client SDKs as a Service that make integrating with your
+API as simple and ergonomic as possible. We built a new set of generators from
+the ground up with a focus on reliability and idiomatic language choices.
+They’re available for Typescript, Go, Python, Java and Rust. We auto-generate
+these client SDKs from your OpenAPI 3.0 spec – so really minimal dev work is
+required – compare this with the current status quo where SDKs either have to be
+hand-rolled from scratch, or you take an open-source generator’s SDK that is
+full of bugs and code that looks like a machine wrote. With these auto-generated
+SDKs, users of your API can guarantee type safety, and through extensions we can
+enable even more value-added features such as auth, pagination, retries, and
+integrating with our Developer Experience Portal for analytics and so on.
+
+Overall, you can think of Speakeasy as the API platform team at your company
+that builds internal tooling that helps externalize information to your users in
+the form of dashboards, client-SDKs, tooling, and documentation.
+
+Our vision is that developers get to focus 100% of their time on the API code
+itself. And at some point we get to this place where you git commit and you have
+a fantastic devex spun up for your API much in the way that we have seamless
+infrastructure hosting. That’s come out of companies like Heroku, where you just
+push your app, you have it hosted. There’s a similar, analogous story for APIs
+that’s evolving.
+
+We want to wrap that all up into a product that can be used instantaneously with
+your existing APIs. Companies use Speakeasy as a way to provide an interactive
+and powerful developer portal experience as well as client SDKs for the users to
+actually consume those APIs. So it really just comes down to spending less of
+your dev time on support. The success of companies like Twilio and Stripe has
+set the expectations of what a good API is.

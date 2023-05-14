@@ -1,9 +1,0 @@
-<div class="related-reviews">
-    {{ range .Page.Params.relatedReviews }}
-        <a class="link" href="{{ .url }}">
-            {{ partial "components/thumbnail-vendor.html" (dict "image" .thumbnail "name" .name "category" .category ) }}
-            <span>{{ .name }}</span>
-        </a>
-    {{ end }}
-</div>
-

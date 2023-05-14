@@ -1,0 +1,8 @@
+### What are some recent examples of interesting development challenges?
+
+Displaying massive pull requests used to crush the front-end react rendering
+performance. Interactivity, like dragging comment selections and unfurling
+files, caused heavy lag. In response, we built custom virtualization (also
+referred to as ‘windowing’) into pull request files. This way, Graphite only
+renders lines of code visible in the viewport. The result is fewer total DOM
+nodes and render performance that’s fast enough for smooth interactivity.

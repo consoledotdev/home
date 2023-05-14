@@ -1,0 +1,3 @@
+Contact: mailto:security@console.dev
+Expires: 2025-01-03T09:00:00.000Z
+Preferred-Languages: en

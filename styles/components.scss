@@ -1,0 +1,2759 @@
+/* Icons
+   ================================================================================================================ */
+.icon {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.icon-fill {
+    fill: var(--theme-text-1);
+}
+
+.icon-stroke {
+    fill: none;
+    stroke-width: 1px;
+    stroke: var(--theme-text-1);
+}
+
+.icon-fill-stroke {
+    fill: var(--theme-text-1);
+    stroke-width: 1px;
+    stroke: var(--theme-text-1);
+}
+
+/* Illustrations
+   ================================================================================================================ */
+.illustration {
+    position: relative;
+    display: inline-block;
+    width: 128px;
+    height: 128px;
+}
+
+.theme .illustration [fill="white"] {
+    fill: var(--theme-text-1);
+}
+
+.theme .illustration [stroke="white"] {
+    stroke: var(--theme-text-1);
+}
+
+/* Links
+   ================================================================================================================ */
+.link:link,
+.link:visited {
+    display: inline-block;
+    color: var(--theme-link-text-idle);
+    font-weight: 400;
+    transition: var(--a-controls);
+    outline: none;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(var(--theme-link-text-idle-RGB), 0.55);
+    text-underline-offset: var(--space0);
+}
+
+p .link:link {
+    display: inline;
+}
+
+.link.link-icon:link,
+.link.link-icon:visited {
+    text-decoration-color: transparent;
+}
+
+.title-3 a:link {
+    font-weight: 500;
+}
+
+.title-6 a:link {
+    font-weight: 500;
+}
+
+.link:hover,
+.link:focus {
+    color: var(--theme-link-text-focus);
+    text-decoration-color: transparent;
+}
+
+.link:active {
+    color: var(--theme-link-text-active);
+    text-decoration-color: transparent;
+    transition: var(--a-controls-active);
+}
+
+.link.link-icon:link span,
+.link.link-icon:visited span {
+    text-decoration: underline;
+}
+
+.link.link-icon:hover span,
+.link.link-icon:focus span,
+.link.link-icon:active span {
+    text-decoration: none;
+}
+
+.link:link .icon,
+.link:visited .icon {
+    transition: var(--a-controls);
+    vertical-align: -0.2em;
+    width: 1em;
+    height: 1em;
+}
+
+.link:active .icon {
+    transition: var(--a-controls-active);
+}
+
+.link:link .icon-stroke,
+.link:visited .icon-stroke {
+    stroke: var(--theme-link-text-idle);
+}
+
+.link:hover .icon-stroke,
+.link:focus .icon-stroke {
+    stroke: var(--theme-link-text-focus);
+}
+
+.link:active .icon-stroke {
+    stroke: var(--theme-link-text-active);
+}
+
+.link:link .icon-fill,
+.link:visited .icon-fill {
+    fill: var(--theme-link-text-idle);
+}
+
+.link:hover .icon-fill,
+.link:focus .icon-fill {
+    fill: var(--theme-link-text-focus);
+}
+
+.link:active .icon-fill {
+    fill: var(--theme-link-text-active);
+}
+
+.link:link .icon-fill-stroke,
+.link:visited .icon-fill-stroke {
+    fill: var(--theme-link-text-idle);
+    stroke: var(--theme-link-text-idle);
+}
+
+.link:hover .icon-fill-stroke,
+.link:focus .icon-fill-stroke {
+    fill: var(--theme-link-text-focus);
+    stroke: var(--theme-link-text-focus);
+}
+
+.link:active .icon-fill-stroke {
+    fill: var(--theme-link-text-active);
+    stroke: var(--theme-link-text-active);
+}
+
+.link.icon-left .icon {
+    margin-right: calc(var(--space1) + var(--space0));
+}
+
+.link.icon-right .icon {
+    margin-left: calc(var(--space1) + var(--space0));
+}
+
+/* Menu Item
+   ================================================================================================================ */
+.menu-item,
+.menu-item:link,
+.menu-item:visited {
+    text-decoration: none;
+    outline: none;
+    transition: var(--a-controls);
+    padding: var(--space1) var(--space2_5);
+    letter-spacing: 0.08em;
+}
+
+.menu-item .icon {
+    transition: var(--a-controls);
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+}
+
+.menu-item.icon-left > span {
+    margin-left: 0.25em;
+}
+
+.menu-item.icon-right > span {
+    margin-right: 0.25em;
+}
+
+.menu-item:hover,
+.menu-item:focus {
+    text-decoration: none;
+}
+
+.menu-item:active {
+    text-decoration: none;
+    transition: var(--a-controls-active);
+}
+
+.is-selected .menu-item,
+.menu-item.is-selected {
+    cursor: default;
+}
+
+/* Menu Item Primary */
+.menu-item.menu-item-primary,
+.menu-item.menu-item-primary:link,
+.menu-item.menu-item-primary:visited {
+    color: var(--theme-nav-primary-link-text-idle);
+    font-weight: 500;
+}
+
+.menu-item.menu-item-primary .icon.icon-stroke,
+.menu-item.menu-item-primary:link .icon.icon-stroke,
+.menu-item.menu-item-primary:visited .icon.icon-stroke {
+    stroke: var(--theme-nav-primary-link-text-idle);
+}
+
+.menu-item.menu-item-primary .icon.icon-fill,
+.menu-item.menu-item-primary:link .icon.icon-fill,
+.menu-item.menu-item-primary:visited .icon.icon-fill {
+    fill: var(--theme-nav-primary-link-text-idle);
+}
+
+.menu-item.menu-item-primary .icon.icon-fill-stroke,
+.menu-item.menu-item-primary:link .icon.icon-fill-stroke,
+.menu-item.menu-item-primary:visited .icon.icon-fill-stroke {
+    stroke: var(--theme-nav-primary-link-text-idle);
+    fill: var(--theme-nav-primary-link-text-idle);
+}
+
+.menu-item.menu-item-primary:hover,
+.menu-item.menu-item-primary:focus {
+    color: var(--theme-nav-primary-link-text-focus);
+}
+
+.menu-item.menu-item-primary:hover .icon.icon-stroke,
+.menu-item.menu-item-primary:focus .icon.icon-stroke {
+    stroke: var(--theme-nav-primary-link-text-focus);
+}
+
+.menu-item.menu-item-primary:hover .icon.icon-fill,
+.menu-item.menu-item-primary:focus .icon.icon-fill {
+    fill: var(--theme-nav-primary-link-text-focus);
+}
+
+.menu-item.menu-item-primary:hover .icon.icon-fill-stroke,
+.menu-item.menu-item-primary:focus .icon.icon-fill-stroke {
+    stroke: var(--theme-nav-primary-link-text-focus);
+    fill: var(--theme-nav-primary-link-text-focus);
+}
+
+.menu-item.menu-item-primary:active {
+    color: var(--theme-nav-primary-link-text-active);
+}
+
+.menu-item.menu-item-primary:active .icon.icon-stroke {
+    stroke: var(--theme-nav-primary-link-text-active);
+}
+
+.menu-item.menu-item-primary:active .icon.icon-fill {
+    fill: var(--theme-nav-primary-link-text-active);
+}
+
+.menu-item.menu-item-primary:active .icon.icon-fill-stroke {
+    stroke: var(--theme-nav-primary-link-text-active);
+    fill: var(--theme-nav-primary-link-text-active);
+}
+
+.is-selected .menu-item.menu-item-primary,
+.menu-item.menu-item-primary.is-selected {
+    color: var(--theme-nav-primary-link-text-selected);
+}
+
+.is-selected .menu-item.menu-item-primary .icon.icon-stroke,
+.menu-item.menu-item-primary.is-selected .icon.icon-stroke {
+    stroke: var(--theme-nav-primary-link-text-selected);
+}
+
+.is-selected .menu-item.menu-item-primary .icon.icon-fill,
+.menu-item.menu-item-primary.is-selected .icon.icon-fill {
+    fill: var(--theme-nav-primary-link-text-selected);
+}
+
+.is-selected .menu-item.menu-item-primary .icon.icon-fill-stroke,
+.menu-item.menu-item-primary.is-selected .icon.icon-fill-stroke {
+    stroke: var(--theme-nav-primary-link-text-selected);
+    fill: var(--theme-nav-primary-link-text-selected);
+}
+
+/* Menu Item Secondary */
+.menu-item.menu-item-secondary,
+.menu-item.menu-item-secondary:link,
+.menu-item.menu-item-secondary:visited {
+    color: var(--theme-nav-secondary-link-text-idle);
+    font-weight: 500;
+    font-size: var(--t-size-1);
+}
+
+.menu-item.menu-item-secondary .icon.icon-stroke,
+.menu-item.menu-item-secondary:link .icon.icon-stroke,
+.menu-item.menu-item-secondary:visited .icon.icon-stroke {
+    stroke: var(--theme-nav-secondary-link-text-idle);
+}
+
+.menu-item.menu-item-secondary .icon.icon-fill,
+.menu-item.menu-item-secondary:link .icon.icon-fill,
+.menu-item.menu-item-secondary:visited .icon.icon-fill {
+    fill: var(--theme-nav-secondary-link-text-idle);
+}
+
+.menu-item.menu-item-secondary .icon.icon-fill-stroke,
+.menu-item.menu-item-secondary:link .icon.icon-fill-stroke,
+.menu-item.menu-item-secondary:visited .icon.icon-fill-stroke {
+    stroke: var(--theme-nav-secondary-link-text-idle);
+    fill: var(--theme-nav-secondary-link-text-idle);
+}
+
+.menu-item.menu-item-secondary:hover,
+.menu-item.menu-item-secondary:focus {
+    color: var(--theme-nav-secondary-link-text-focus);
+}
+
+.menu-item.menu-item-secondary:hover .icon.icon-stroke,
+.menu-item.menu-item-secondary:focus .icon.icon-stroke {
+    stroke: var(--theme-nav-secondary-link-text-focus);
+}
+
+.menu-item.menu-item-secondary:hover .icon.icon-fill,
+.menu-item.menu-item-secondary:focus .icon.icon-fill {
+    fill: var(--theme-nav-secondary-link-text-focus);
+}
+
+.menu-item.menu-item-secondary:hover .icon.icon-fill-stroke,
+.menu-item.menu-item-secondary:focus .icon.icon-fill-stroke {
+    stroke: var(--theme-nav-secondary-link-text-focus);
+    fill: var(--theme-nav-secondary-link-text-focus);
+}
+
+.menu-item.menu-item-secondary:active {
+    color: var(--theme-nav-secondary-link-text-active);
+}
+
+.menu-item.menu-item-secondary:active .icon.icon-stroke {
+    stroke: var(--theme-nav-secondary-link-text-active);
+}
+
+.menu-item.menu-item-secondary:active .icon.icon-fill {
+    fill: var(--theme-nav-secondary-link-text-active);
+}
+
+.menu-item.menu-item-secondary:active .icon.icon-fill-stroke {
+    stroke: var(--theme-nav-secondary-link-text-active);
+    fill: var(--theme-nav-secondary-link-text-active);
+}
+
+.is-selected .menu-item.menu-item-secondary,
+.menu-item.menu-item-secondary.is-selected {
+    color: var(--theme-nav-secondary-link-text-selected);
+}
+
+.is-selected .menu-item.menu-item-secondary .icon.icon-stroke,
+.menu-item.menu-item-secondary.is-selected .icon.icon-stroke {
+    stroke: var(--theme-nav-secondary-link-text-selected);
+}
+
+.is-selected .menu-item.menu-item-secondary .icon.icon-fill,
+.menu-item.menu-item-secondary.is-selected .icon.icon-fill {
+    fill: var(--theme-nav-secondary-link-text-selected);
+}
+
+.is-selected .menu-item.menu-item-secondary .icon.icon-fill-stroke,
+.menu-item.menu-item-secondary.is-selected .icon.icon-fill-stroke {
+    stroke: var(--theme-nav-secondary-link-text-selected);
+    fill: var(--theme-nav-secondary-link-text-selected);
+}
+
+/* Menu Item Tertiary */
+.menu-item.menu-item-tertiary,
+.menu-item.menu-item-tertiary:link,
+.menu-item.menu-item-tertiary:visited {
+    color: var(--theme-nav-tertiary-link-text-idle);
+    font-weight: 400;
+    font-size: var(--t-size-1);
+}
+
+.menu-item.menu-item-tertiary .icon.icon-stroke,
+.menu-item.menu-item-tertiary:link .icon.icon-stroke,
+.menu-item.menu-item-tertiary:visited .icon.icon-stroke {
+    stroke: var(--theme-nav-tertiary-link-text-idle);
+}
+
+.menu-item.menu-item-tertiary .icon.icon-fill,
+.menu-item.menu-item-tertiary:link .icon.icon-fill,
+.menu-item.menu-item-tertiary:visited .icon.icon-fill {
+    fill: var(--theme-nav-tertiary-link-text-idle);
+}
+
+.menu-item.menu-item-tertiary .icon.icon-fill-stroke,
+.menu-item.menu-item-tertiary:link .icon.icon-fill-stroke,
+.menu-item.menu-item-tertiary:visited .icon.icon-fill-stroke {
+    stroke: var(--theme-nav-tertiary-link-text-idle);
+    fill: var(--theme-nav-tertiary-link-text-idle);
+}
+
+.menu-item.menu-item-tertiary:hover,
+.menu-item.menu-item-tertiary:focus {
+    color: var(--theme-nav-tertiary-link-text-focus);
+}
+
+.menu-item.menu-item-tertiary:hover .icon.icon-stroke,
+.menu-item.menu-item-tertiary:focus .icon.icon-stroke {
+    stroke: var(--theme-nav-tertiary-link-text-focus);
+}
+
+.menu-item.menu-item-tertiary:hover .icon.icon-fill,
+.menu-item.menu-item-tertiary:focus .icon.icon-fill {
+    fill: var(--theme-nav-tertiary-link-text-focus);
+}
+
+.menu-item.menu-item-tertiary:hover .icon.icon-fill-stroke,
+.menu-item.menu-item-tertiary:focus .icon.icon-fill-stroke {
+    stroke: var(--theme-nav-tertiary-link-text-focus);
+    fill: var(--theme-nav-tertiary-link-text-focus);
+}
+
+.menu-item.menu-item-tertiary:active {
+    color: var(--theme-nav-tertiary-link-text-active);
+}
+
+.menu-item.menu-item-tertiary:active .icon.icon-stroke {
+    stroke: var(--theme-nav-tertiary-link-text-active);
+}
+
+.menu-item.menu-item-tertiary:active .icon.icon-fill {
+    fill: var(--theme-nav-tertiary-link-text-active);
+}
+
+.menu-item.menu-item-tertiary:active .icon.icon-fill-stroke {
+    stroke: var(--theme-nav-tertiary-link-text-active);
+    fill: var(--theme-nav-tertiary-link-text-active);
+}
+
+.is-selected .menu-item.menu-item-tertiary,
+.menu-item.menu-item-tertiary.is-selected {
+    color: var(--theme-nav-tertiary-link-text-selected);
+}
+
+.is-selected .menu-item.menu-item-tertiary .icon.icon-stroke,
+.menu-item.menu-item-tertiary.is-selected .icon.icon-stroke {
+    stroke: var(--theme-nav-tertiary-link-text-selected);
+}
+
+.is-selected .menu-item.menu-item-tertiary .icon.icon-fill,
+.menu-item.menu-item-tertiary.is-selected .icon.icon-fill {
+    fill: var(--theme-nav-tertiary-link-text-selected);
+}
+
+.is-selected .menu-item.menu-item-tertiary .icon.icon-fill-stroke,
+.menu-item.menu-item-tertiary.is-selected .icon.icon-fill-stroke {
+    stroke: var(--theme-nav-tertiary-link-text-selected);
+    fill: var(--theme-nav-tertiary-link-text-selected);
+}
+
+/* Form Generic
+   ================================================================================================================ */
+.form-generic .input-wrapper:not(:first-child) {
+    margin-top: var(--space2);
+}
+
+.form-generic .input-wrapper.sub {
+    margin-left: var(--space2_5);
+    margin-top: var(--space1);
+}
+
+.form-separator {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 0 calc(var(--space1) + var(--space0));
+    margin: var(--space2_5) 0;
+}
+
+.form-separator p {
+    flex: 0 0 auto;
+    text-transform: uppercase;
+    font-style: italic;
+    color: var(--theme-text-5);
+}
+
+.form-separator:after {
+    flex: 1 1 auto;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    padding: 0;
+    background: var(--theme-separator-2);
+    margin-left: var(--space2);
+}
+
+.form-generic .form-email-input,
+.form-generic .form-input {
+    position: relative;
+    flex: 1 0 auto;
+    display: inline-flex;
+    flex-flow: row nowrap;
+}
+
+input.console-input-text:not(:focus):not(:placeholder-shown):invalid + .console-label-error,
+.form-generic .fieldset.is-invalid input.console-input-text:invalid + .console-label-error,
+.form-generic .fieldset.is-invalid .console-label-error {
+    opacity: 1;
+}
+
+.form-generic .console-button[type="submit"] .icon-loader,
+.form-generic.is-submitting .console-button[type="submit"] .icon {
+    display: none;
+}
+
+.form-generic.is-submitting .console-button[type="submit"] .icon-loader {
+    display: inline-block;
+}
+
+.form-generic.is-submit-error .console-label-error[for="submit"] {
+    margin-top: var(--space3);
+    opacity: 1;
+}
+
+/* Copy Button
+   ================================================================================================================ */
+.console-button-copy .icon-copy {
+    opacity: 1;
+    transition: opacity var(--a-controls-time-easing) 0.1s, color var(--a-controls-time-easing), fill var(--a-controls-time-easing), stroke var(--a-controls-time-easing);
+}
+
+.console-button-copy .icon-checkmark {
+    margin-left: -1.2em;
+    opacity: 0;
+}
+
+.console-button-copy .idle {
+    max-height: 50px;
+    opacity: 1;
+    transition: opacity var(--a-controls-time-easing) 0.1s, max-height var(--a-controls-time-easing) 0.1s, color var(--a-controls-time-easing), fill var(--a-controls-time-easing), stroke var(--a-controls-time-easing);
+}
+
+.console-button-copy .success {
+    margin-left: -2.5em !important;
+    max-height: 0;
+    opacity: 0;
+}
+
+.console-button-copy.is-success {
+    pointer-events: none;
+}
+
+.console-button-copy.is-success .icon-copy {
+    opacity: 0;
+    transition: opacity var(--a-controls-time-easing) 0s, color var(--a-controls-time-easing), fill var(--a-controls-time-easing), stroke var(--a-controls-time-easing);
+}
+
+.console-button-copy.is-success .icon-checkmark {
+    opacity: 1;
+    transition: opacity var(--a-controls-time-easing) 0.1s, color var(--a-controls-time-easing), fill var(--a-controls-time-easing), stroke var(--a-controls-time-easing);
+}
+
+.console-button-copy.is-success .idle {
+    max-height: 0;
+    opacity: 0;
+    transition: opacity var(--a-controls-time-easing) 0s, max-height var(--a-controls-time-easing) 0s, color var(--a-controls-time-easing), fill var(--a-controls-time-easing), stroke var(--a-controls-time-easing);
+}
+
+.console-button-copy.is-success .success {
+    max-height: 50px;
+    opacity: 1;
+    transition: opacity var(--a-controls-time-easing) 0.1s, max-height var(--a-controls-time-easing) 0.1s, color var(--a-controls-time-easing), fill var(--a-controls-time-easing), stroke var(--a-controls-time-easing);
+}
+
+/* Label
+   ================================================================================================================ */
+.console-label-error {
+    position: absolute;
+    color: var(--theme-signaling-error);
+    opacity: 0;
+}
+
+/* Input Checkbox
+   ================================================================================================================ */
+input.console-input-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+input.console-input-checkbox + label {
+    position: relative;
+    display: inline-flex;
+    vertical-align: top;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: var(--t-size-2);
+    line-height: var(--t-lH4);
+    font-weight: 400;
+    color: var(--theme-input-checkable-off);
+    min-height: calc(var(--space2_5) + var(--space3));
+    transition: var(--a-controls-long);
+}
+
+input:checked.console-input-checkbox + label {
+    transition: var(--a-controls-long-active);
+}
+
+input:not(:disabled).console-input-checkbox + label {
+    cursor: pointer;
+}
+
+input.console-input-checkbox + label .check {
+    position: relative;
+    display: inline-block;
+    flex: 0 0 auto;
+    width: calc(var(--space2_5) + var(--space3));
+    height: calc(var(--space2_5) + var(--space3));
+    background: transparent;
+    border-radius: var(--corners-mid);
+    margin-right: calc(var(--space1) / 2);
+    transition: var(--a-layout);
+}
+
+input:not(:disabled).console-input-checkbox + label:hover .check,
+input:not(:disabled).console-input-checkbox + label:active .check,
+input:not(:disabled).console-input-checkbox:focus + label .check {
+    background: var(--theme-input-checkable-off-bg-hover);
+    transition: var(--a-layout-active);
+}
+
+input.console-input-checkbox + label .check:before {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: var(--space3);
+    height: var(--space3);
+    border: 1px solid var(--theme-input-checkable-off);
+    background: transparent;
+    border-radius: var(--corners-x-small);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: var(--a-controls-long);
+}
+
+input:checked.console-input-checkbox + label .check:before {
+    transition: var(--a-controls-long-active);
+}
+
+input.console-input-checkbox + label .check:after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: calc(var(--space0) + var(--space1));
+    height: calc(var(--space0) + var(--space1));
+    background: transparent;
+    border-radius: 1px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: var(--a-controls-long);
+}
+
+input:indeterminate.console-input-checkbox + label .check:after {
+    background: var(--theme-input-checkable-off);
+    transform: translate(-50%, -50%) scale(1);
+    transition: var(--a-controls-long-active);
+}
+
+input.console-input-checkbox + label .check .icon-checkmark {
+    position: absolute;
+    display: inline-block;
+    width: var(--space3);
+    height: var(--space3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: var(--a-controls-long);
+}
+
+input:checked.console-input-checkbox + label .check .icon-checkmark {
+    transform: translate(-50%, -50%) scale(1);
+    transition: var(--a-controls-long-active);
+    fill: var(--theme-input-checkable-on-subtract);
+}
+
+/* style: default */
+input:checked.console-input-checkbox + label {
+    color: var(--theme-input-checkable-on);
+}
+
+input:checked.console-input-checkbox + label:hover,
+input:checked.console-input-checkbox + label:active,
+input:checked.console-input-checkbox:focus + label {
+    color: var(--theme-input-checkable-on-hover);
+}
+
+input:checked.console-input-checkbox + label:hover .check,
+input:checked.console-input-checkbox + label:active .check,
+input:checked.console-input-checkbox:focus + label .check {
+    background: var(--theme-input-checkable-on-bg-hover);
+}
+
+input:checked.console-input-checkbox + label .check:before {
+    border: 1px solid transparent;
+    background: var(--theme-input-checkable-on);
+}
+
+input:checked.console-input-checkbox + label:hover .check:before,
+input:checked.console-input-checkbox + label:active .check:before,
+input:checked.console-input-checkbox:focus + label .check:before {
+    background: var(--theme-input-checkable-on-hover);
+}
+
+input:indeterminate.console-input-checkbox + label .check:after {
+    background: var(--theme-input-checkable-on);
+}
+
+input:indeterminate.console-input-checkbox + label:hover .check:after,
+input:indeterminate.console-input-checkbox + label:active .check:after,
+input:indeterminate.console-input-checkbox:focus + label .check:after {
+    background: var(--theme-input-checkable-on-hover);
+}
+
+/* style: triad-01 */
+input:checked.console-input-checkbox.triad-01 + label {
+    color: var(--theme-input-checkable-triad-01-on);
+}
+
+input:checked.console-input-checkbox.triad-01 + label:hover,
+input:checked.console-input-checkbox.triad-01 + label:active,
+input:checked.console-input-checkbox.triad-01:focus + label {
+    color: var(--theme-input-checkable-triad-01-on-hover);
+}
+
+input:checked.console-input-checkbox.triad-01 + label:hover .check,
+input:checked.console-input-checkbox.triad-01 + label:active .check,
+input:checked.console-input-checkbox.triad-01:focus + label .check {
+    background: var(--theme-input-checkable-triad-01-on-bg-hover);
+}
+
+input:checked.console-input-checkbox.triad-01 + label .check:before {
+    border: 1px solid transparent;
+    background: var(--theme-input-checkable-triad-01-on);
+}
+
+input:checked.console-input-checkbox.triad-01 + label:hover .check:before,
+input:checked.console-input-checkbox.triad-01 + label:active .check:before,
+input:checked.console-input-checkbox.triad-01:focus + label .check:before {
+    background: var(--theme-input-checkable-triad-01-on-hover);
+}
+
+input:indeterminate.console-input-checkbox.triad-01 + label .check:after {
+    background: var(--theme-input-checkable-triad-01-on);
+}
+
+input:indeterminate.console-input-checkbox.triad-01 + label:hover .check:after,
+input:indeterminate.console-input-checkbox.triad-01 + label:active .check:after,
+input:indeterminate.console-input-checkbox.triad-01:focus + label .check:after {
+    background: var(--theme-input-checkable-triad-01-on-hover);
+}
+
+/* style: triad-02 */
+input:checked.console-input-checkbox.triad-02 + label {
+    color: var(--theme-input-checkable-triad-02-on);
+}
+
+input:checked.console-input-checkbox.triad-02 + label:hover,
+input:checked.console-input-checkbox.triad-02 + label:active,
+input:checked.console-input-checkbox.triad-02:focus + label {
+    color: var(--theme-input-checkable-triad-02-on-hover);
+}
+
+input:checked.console-input-checkbox.triad-02 + label:hover .check,
+input:checked.console-input-checkbox.triad-02 + label:active .check,
+input:checked.console-input-checkbox.triad-02:focus + label .check {
+    background: var(--theme-input-checkable-triad-02-on-bg-hover);
+}
+
+input:checked.console-input-checkbox.triad-02 + label .check:before {
+    border: 1px solid transparent;
+    background: var(--theme-input-checkable-triad-02-on);
+}
+
+input:checked.console-input-checkbox.triad-02 + label:hover .check:before,
+input:checked.console-input-checkbox.triad-02 + label:active .check:before,
+input:checked.console-input-checkbox.triad-02:focus + label .check:before {
+    background: var(--theme-input-checkable-triad-02-on-hover);
+}
+
+input:indeterminate.console-input-checkbox.triad-02 + label .check:after {
+    background: var(--theme-input-checkable-triad-02-on);
+}
+
+input:indeterminate.console-input-checkbox.triad-02 + label:hover .check:after,
+input:indeterminate.console-input-checkbox.triad-02 + label:active .check:after,
+input:indeterminate.console-input-checkbox.triad-02:focus + label .check:after {
+    background: var(--theme-input-checkable-triad-02-on-hover);
+}
+
+/* style: triad-03 */
+input:checked.console-input-checkbox.triad-03 + label {
+    color: var(--theme-input-checkable-triad-03-on);
+}
+
+input:checked.console-input-checkbox.triad-03 + label:hover,
+input:checked.console-input-checkbox.triad-03 + label:active,
+input:checked.console-input-checkbox.triad-03:focus + label {
+    color: var(--theme-input-checkable-triad-03-on-hover);
+}
+
+input:checked.console-input-checkbox.triad-03 + label:hover .check,
+input:checked.console-input-checkbox.triad-03 + label:active .check,
+input:checked.console-input-checkbox.triad-03:focus + label .check {
+    background: var(--theme-input-checkable-triad-03-on-bg-hover);
+}
+
+input:checked.console-input-checkbox.triad-03 + label .check:before {
+    border: 1px solid transparent;
+    background: var(--theme-input-checkable-triad-03-on);
+}
+
+input:checked.console-input-checkbox.triad-03 + label:hover .check:before,
+input:checked.console-input-checkbox.triad-03 + label:active .check:before,
+input:checked.console-input-checkbox.triad-03:focus + label .check:before {
+    background: var(--theme-input-checkable-triad-03-on-hover);
+}
+
+input:indeterminate.console-input-checkbox.triad-03 + label .check:after {
+    background: var(--theme-input-checkable-triad-03-on);
+}
+
+input:indeterminate.console-input-checkbox.triad-03 + label:hover .check:after,
+input:indeterminate.console-input-checkbox.triad-03 + label:active .check:after,
+input:indeterminate.console-input-checkbox.triad-03:focus + label .check:after {
+    background: var(--theme-input-checkable-triad-03-on-hover);
+}
+
+/* style: attention */
+input:checked.console-input-checkbox.attention + label {
+    color: var(--theme-input-checkable-attention-on);
+}
+
+input:checked.console-input-checkbox.attention + label:hover,
+input:checked.console-input-checkbox.attention + label:active,
+input:checked.console-input-checkbox.attention:focus + label {
+    color: var(--theme-input-checkable-attention-on-hover);
+}
+
+input:checked.console-input-checkbox.attention + label:hover .check,
+input:checked.console-input-checkbox.attention + label:active .check,
+input:checked.console-input-checkbox.attention:focus + label .check {
+    background: var(--theme-input-checkable-attention-on-bg-hover);
+}
+
+input:checked.console-input-checkbox.attention + label .check:before {
+    border: 1px solid transparent;
+    background: var(--theme-input-checkable-attention-on);
+}
+
+input:checked.console-input-checkbox.attention + label:hover .check:before,
+input:checked.console-input-checkbox.attention + label:active .check:before,
+input:checked.console-input-checkbox.attention:focus + label .check:before {
+    background: var(--theme-input-checkable-attention-on-hover);
+}
+
+input:indeterminate.console-input-checkbox.attention + label .check:after {
+    background: var(--theme-input-checkable-attention-on);
+}
+
+input:indeterminate.console-input-checkbox.attention + label:hover .check:after,
+input:indeterminate.console-input-checkbox.attention + label:active .check:after,
+input:indeterminate.console-input-checkbox.attention:focus + label .check:after {
+    background: var(--theme-input-checkable-attention-on-hover);
+}
+
+/* style: disabled */
+input:disabled.console-input-checkbox + label,
+input:checked:disabled.console-input-checkbox + label,
+input:checked:disabled.console-input-checkbox.triad-01 + label,
+input:checked:disabled.console-input-checkbox.triad-02 + label,
+input:checked:disabled.console-input-checkbox.triad-03 + label,
+input:checked:disabled.console-input-checkbox.attention + label,
+input:indeterminate:disabled.console-input-checkbox + label,
+input:indeterminate:disabled.console-input-checkbox.triad-01 + label,
+input:indeterminate:disabled.console-input-checkbox.triad-02 + label,
+input:indeterminate:disabled.console-input-checkbox.triad-03 + label,
+input:indeterminate:disabled.console-input-checkbox.attention + label {
+    color: var(--theme-input-checkable-disabled);
+}
+
+input:disabled.console-input-checkbox + label:hover .check,
+input:disabled.console-input-checkbox + label:active .check,
+input:disabled.console-input-checkbox:focus + label .check,
+input:checked:disabled.console-input-checkbox + label:hover .check,
+input:checked:disabled.console-input-checkbox + label:active .check,
+input:checked:disabled.console-input-checkbox:focus + label .check {
+    background: none;
+}
+
+input:disabled.console-input-checkbox + label .check:before {
+    border: 1px solid var(--theme-input-checkable-disabled);
+}
+
+input:checked:disabled.console-input-checkbox + label .check:before,
+input:checked:disabled.console-input-checkbox.triad-01 + label .check:before,
+input:checked:disabled.console-input-checkbox.triad-02 + label .check:before,
+input:checked:disabled.console-input-checkbox.triad-03 + label .check:before,
+input:checked:disabled.console-input-checkbox.attention + label .check:before {
+    border: 1px solid transparent;
+    background: var(--theme-input-checkable-disabled);
+}
+
+input:indeterminate:disabled.console-input-checkbox + label .check:after,
+input:indeterminate:disabled.console-input-checkbox.triad-01 + label .check:after,
+input:indeterminate:disabled.console-input-checkbox.triad-02 + label .check:after,
+input:indeterminate:disabled.console-input-checkbox.triad-03 + label .check:after,
+input:indeterminate:disabled.console-input-checkbox.attention + label .check:after {
+    background: transparent;
+    border: 1px solid var(--theme-input-checkable-disabled);
+}
+
+/* Input Chip
+   ================================================================================================================ */
+input.console-input-chip {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+input.console-input-chip + label {
+    position: relative;
+    display: inline-flex;
+    vertical-align: top;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: var(--t-size-1);
+    line-height: var(--t-lH4);
+    font-weight: 400;
+    color: var(--theme-input-checkable-off);
+    min-height: calc(var(--space2_5) + var(--space3));
+    transition: var(--a-controls-long);
+    padding: 0 calc(var(--space2) + var(--space0));
+    border-radius: calc((var(--space2_5) + var(--space3)) / 2);
+    border: 1px solid transparent;
+}
+
+input.console-input-chip + label:hover,
+input.console-input-chip + label:active,
+input.console-input-chip:focus + label {
+    background: var(--theme-input-checkable-off-bg-hover);
+}
+
+input:checked.console-input-chip + label {
+    transition: var(--a-controls-long-active);
+}
+
+input:not(:disabled).console-input-chip + label {
+    cursor: pointer;
+}
+
+input.console-input-chip + label .icon {
+    position: relative;
+    display: inline-block;
+    flex: 0 0 auto;
+    width: var(--space3);
+    height: var(--space3);
+    margin-right: var(--space2);
+    transition: var(--a-layout);
+}
+
+input:not(:disabled).console-input-chip + label .icon-fill {
+    fill: var(--theme-input-checkable-off);
+}
+
+input:not(:disabled).console-input-chip + label .icon-stroke {
+    stroke: var(--theme-input-checkable-off);
+}
+
+input:not(:disabled).console-input-chip + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-off);
+    stroke: var(--theme-input-checkable-off);
+}
+
+input:not(:disabled).console-input-chip + label:hover .icon,
+input:not(:disabled).console-input-chip + label:active .icon {
+    transition: var(--a-layout-active);
+}
+
+/* style: default */
+input:checked.console-input-chip + label {
+    color: var(--theme-input-checkable-on);
+    background: var(--theme-input-checkable-on-bg-hover);
+    border: 1px solid var(--theme-input-checkable-off);
+}
+
+input:checked.console-input-chip + label:hover,
+input:checked.console-input-chip + label:active,
+input:checked.console-input-chip:focus + label {
+    color: var(--theme-input-checkable-on-hover);
+    background: var(--theme-input-checkable-off-bg-hover);
+}
+
+input:checked.console-input-chip + label .icon-fill {
+    fill: var(--theme-input-checkable-on);
+}
+
+input:checked.console-input-chip + label .icon-stroke {
+    stroke: var(--theme-input-checkable-on);
+}
+
+input:checked.console-input-chip + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-on);
+    stroke: var(--theme-input-checkable-on);
+}
+
+input:checked.console-input-chip + label:hover .icon-fill,
+input:checked.console-input-chip + label:active .icon-fill,
+input:checked.console-input-chip:focus + label .icon-fill {
+    fill: var(--theme-input-checkable-on-hover);
+}
+
+input:checked.console-input-chip + label:hover .icon-stroke,
+input:checked.console-input-chip + label:active .icon-stroke,
+input:checked.console-input-chip:focus + label .icon-stroke {
+    stroke: var(--theme-input-checkable-on-hover);
+}
+
+input:checked.console-input-chip + label:hover .icon-fill-stroke,
+input:checked.console-input-chip + label:active .icon-fill-stroke,
+input:checked.console-input-chip:focus + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-on-hover);
+    stroke: var(--theme-input-checkable-on-hover);
+}
+
+/* style: triad-01 */
+input:checked.console-input-chip.triad-01 + label {
+    color: var(--theme-input-checkable-triad-01-on);
+    background: var(--theme-input-checkable-triad-01-on-bg-hover);
+    border: 1px solid var(--theme-input-checkable-triad-01-on-muted);
+}
+
+input:checked.console-input-chip.triad-01 + label:hover,
+input:checked.console-input-chip.triad-01 + label:active,
+input:checked.console-input-chip.triad-01:focus + label {
+    color: var(--theme-input-checkable-triad-01-on-hover);
+    background: var(--theme-input-checkable-triad-01-on-bg-hover);
+    border: 1px solid var(--theme-input-checkable-triad-01-on-muted-hover);
+}
+
+input:checked.console-input-chip.triad-01 + label .icon-fill {
+    fill: var(--theme-input-checkable-triad-01-on);
+}
+
+input:checked.console-input-chip.triad-01 + label .icon-stroke {
+    stroke: var(--theme-input-checkable-triad-01-on);
+}
+
+input:checked.console-input-chip.triad-01 + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-triad-01-on);
+    stroke: var(--theme-input-checkable-triad-01-on);
+}
+
+input:checked.console-input-chip.triad-01 + label:hover .icon-fill,
+input:checked.console-input-chip.triad-01 + label:active .icon-fill,
+input:checked.console-input-chip.triad-01:focus + label .icon-fill {
+    fill: var(--theme-input-checkable-triad-01-on-hover);
+}
+
+input:checked.console-input-chip.triad-01 + label:hover .icon-stroke,
+input:checked.console-input-chip.triad-01 + label:active .icon-stroke,
+input:checked.console-input-chip.triad-01:focus + label .icon-stroke {
+    stroke: var(--theme-input-checkable-triad-01-on-hover);
+}
+
+input:checked.console-input-chip.triad-01 + label:hover .icon-fill-stroke,
+input:checked.console-input-chip.triad-01 + label:active .icon-fill-stroke,
+input:checked.console-input-chip.triad-01:focus + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-triad-01-on-hover);
+    stroke: var(--theme-input-checkable-triad-01-on-hover);
+}
+
+/* style: triad-02 */
+input:checked.console-input-chip.triad-02 + label {
+    color: var(--theme-input-checkable-triad-02-on);
+    background: var(--theme-input-checkable-triad-02-on-bg-hover);
+    border: 1px solid var(--theme-input-checkable-triad-02-on-muted);
+}
+
+input:checked.console-input-chip.triad-02 + label:hover,
+input:checked.console-input-chip.triad-02 + label:active,
+input:checked.console-input-chip.triad-02:focus + label {
+    color: var(--theme-input-checkable-triad-02-on-hover);
+    background: var(--theme-input-checkable-triad-02-on-bg-hover);
+    border: 1px solid var(--theme-input-checkable-triad-02-on-muted-hover);
+}
+
+input:checked.console-input-chip.triad-02 + label .icon-fill {
+    fill: var(--theme-input-checkable-triad-02-on);
+}
+
+input:checked.console-input-chip.triad-02 + label .icon-stroke {
+    stroke: var(--theme-input-checkable-triad-02-on);
+}
+
+input:checked.console-input-chip.triad-02 + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-triad-02-on);
+    stroke: var(--theme-input-checkable-triad-02-on);
+}
+
+input:checked.console-input-chip.triad-02 + label:hover .icon-fill,
+input:checked.console-input-chip.triad-02 + label:active .icon-fill,
+input:checked.console-input-chip.triad-02:focus + label .icon-fill {
+    fill: var(--theme-input-checkable-triad-02-on-hover);
+}
+
+input:checked.console-input-chip.triad-02 + label:hover .icon-stroke,
+input:checked.console-input-chip.triad-02 + label:active .icon-stroke,
+input:checked.console-input-chip.triad-02:focus + label .icon-stroke {
+    stroke: var(--theme-input-checkable-triad-02-on-hover);
+}
+
+input:checked.console-input-chip.triad-02 + label:hover .icon-fill-stroke,
+input:checked.console-input-chip.triad-02 + label:active .icon-fill-stroke,
+input:checked.console-input-chip.triad-02:focus + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-triad-02-on-hover);
+    stroke: var(--theme-input-checkable-triad-02-on-hover);
+}
+
+/* style: triad-03 */
+input:checked.console-input-chip.triad-03 + label {
+    color: var(--theme-input-checkable-triad-03-on);
+    background: var(--theme-input-checkable-triad-03-on-bg-hover);
+    border: 1px solid var(--theme-input-checkable-triad-03-on-muted);
+}
+
+input:checked.console-input-chip.triad-03 + label:hover,
+input:checked.console-input-chip.triad-03 + label:active,
+input:checked.console-input-chip.triad-03:focus + label {
+    color: var(--theme-input-checkable-triad-03-on-hover);
+    background: var(--theme-input-checkable-triad-03-on-bg-hover);
+    border: 1px solid var(--theme-input-checkable-triad-03-on-muted-hover);
+}
+
+input:checked.console-input-chip.triad-03 + label .icon-fill {
+    fill: var(--theme-input-checkable-triad-03-on);
+}
+
+input:checked.console-input-chip.triad-03 + label .icon-stroke {
+    stroke: var(--theme-input-checkable-triad-03-on);
+}
+
+input:checked.console-input-chip.triad-03 + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-triad-03-on);
+    stroke: var(--theme-input-checkable-triad-03-on);
+}
+
+input:checked.console-input-chip.triad-03 + label:hover .icon-fill,
+input:checked.console-input-chip.triad-03 + label:active .icon-fill,
+input:checked.console-input-chip.triad-03:focus + label .icon-fill {
+    fill: var(--theme-input-checkable-triad-03-on-hover);
+}
+
+input:checked.console-input-chip.triad-03 + label:hover .icon-stroke,
+input:checked.console-input-chip.triad-03 + label:active .icon-stroke,
+input:checked.console-input-chip.triad-03:focus + label .icon-stroke {
+    stroke: var(--theme-input-checkable-triad-03-on-hover);
+}
+
+input:checked.console-input-chip.triad-03 + label:hover .icon-fill-stroke,
+input:checked.console-input-chip.triad-03 + label:active .icon-fill-stroke,
+input:checked.console-input-chip.triad-03:focus + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-triad-03-on-hover);
+    stroke: var(--theme-input-checkable-triad-03-on-hover);
+}
+
+/* style: attention */
+input:checked.console-input-chip.attention + label {
+    color: var(--theme-input-checkable-attention-on);
+    background: var(--theme-input-checkable-attention-on-bg-hover);
+    border: 1px solid var(--theme-input-checkable-attention-on-muted);
+}
+
+input:checked.console-input-chip.attention + label:hover,
+input:checked.console-input-chip.attention + label:active,
+input:checked.console-input-chip.attention:focus + label {
+    color: var(--theme-input-checkable-attention-on-hover);
+    background: var(--theme-input-checkable-attention-on-bg-hover);
+    border: 1px solid var(--theme-input-checkable-attention-on-muted-hover);
+}
+
+input:checked.console-input-chip.attention + label .icon-fill {
+    fill: var(--theme-input-checkable-attention-on);
+}
+
+input:checked.console-input-chip.attention + label .icon-stroke {
+    stroke: var(--theme-input-checkable-attention-on);
+}
+
+input:checked.console-input-chip.attention + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-attention-on);
+    stroke: var(--theme-input-checkable-attention-on);
+}
+
+input:checked.console-input-chip.attention + label:hover .icon-fill,
+input:checked.console-input-chip.attention + label:active .icon-fill,
+input:checked.console-input-chip.attention:focus + label .icon-fill {
+    fill: var(--theme-input-checkable-attention-on-hover);
+}
+
+input:checked.console-input-chip.attention + label:hover .icon-stroke,
+input:checked.console-input-chip.attention + label:active .icon-stroke,
+input:checked.console-input-chip.attention:focus + label .icon-stroke {
+    stroke: var(--theme-input-checkable-attention-on-hover);
+}
+
+input:checked.console-input-chip.attention + label:hover .icon-fill-stroke,
+input:checked.console-input-chip.attention + label:active .icon-fill-stroke,
+input:checked.console-input-chip.attention:focus + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-attention-on-hover);
+    stroke: var(--theme-input-checkable-attention-on-hover);
+}
+
+/* style: disabled */
+input:disabled.console-input-chip + label {
+    color: var(--theme-input-checkable-disabled);
+}
+
+input:checked:disabled.console-input-chip + label,
+input:checked:disabled.console-input-chip.triad-01 + label,
+input:checked:disabled.console-input-chip.triad-02 + label,
+input:checked:disabled.console-input-chip.triad-03 + label,
+input:checked:disabled.console-input-chip.attention + label {
+    color: var(--theme-input-checkable-disabled);
+    background: transparent;
+    border: 1px solid var(--theme-input-checkable-disabled-muted);
+}
+
+input:disabled.console-input-chip + label:hover,
+input:disabled.console-input-chip + label:active,
+input:disabled:focus.console-input-chip + label,
+input:checked:disabled.console-input-chip + label:hover,
+input:checked:disabled.console-input-chip + label:active,
+input:checked:disabled:focus.console-input-chip + label {
+    background: none;
+}
+
+input:disabled.console-input-chip.attention + label .icon-fill,
+input:checked:disabled.console-input-chip.attention + label .icon-fill {
+    fill: var(--theme-input-checkable-disabled);
+}
+
+input:disabled.console-input-chip.attention + label .icon-stroke,
+input:checked:disabled.console-input-chip.attention + label .icon-stroke {
+    stroke: var(--theme-input-checkable-disabled);
+}
+
+input:disabled.console-input-chip.attention + label .icon-fill-stroke,
+input:checked:disabled.console-input-chip.attention + label .icon-fill-stroke {
+    fill: var(--theme-input-checkable-disabled);
+    stroke: var(--theme-input-checkable-disabled);
+}
+
+/* Segmented Bar
+   ================================================================================================================ */
+.segmented-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.segmented-bar > * {
+    flex: 1 1 auto;
+}
+
+input.console-input-segmented-bar {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+input.console-input-segmented-bar + label {
+    position: relative;
+    display: inline-flex;
+    vertical-align: top;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-size: var(--t-size-2);
+    line-height: var(--t-lH4);
+    font-weight: 400;
+    color: var(--theme-input-checkable-off);
+    transition: var(--a-controls-long);
+    width: calc(100% + 2px);
+    margin: 0 -1px;
+}
+
+input:not(:disabled):not(:checked).console-input-segmented-bar + label {
+    cursor: pointer;
+}
+
+input.console-input-segmented-bar + label .check-bar {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: calc(var(--space3) + var(--space1));
+    margin-bottom: var(--space2);
+}
+
+input.console-input-segmented-bar + label .check-bar .hover {
+    position: absolute;
+    display: block;
+    height: calc(var(--space3) + var(--space2));
+    width: calc(var(--space3) + var(--space2));
+    border-radius: 50%;
+    background: var(--theme-input-checkable-off-bg-hover);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 10;
+    transition: var(--a-controls-long);
+}
+
+input.console-input-segmented-bar + label:hover .check-bar .hover,
+input.console-input-segmented-bar + label:active .check-bar .hover,
+input.console-input-segmented-bar:focus + label .check-bar .hover {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+input.console-input-segmented-bar + label .check-bar:before {
+    content: "";
+    position: relative;
+    display: block;
+    height: var(--space0);
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 1px;
+    background: var(--theme-input-checkable-off-dark);
+    z-index: 20;
+    transition: var(--a-controls-long);
+}
+
+input:checked.console-input-segmented-bar + label .check-bar:before {
+    transition: var(--a-controls-long-active);
+    margin: 0 var(--space2);
+}
+
+input.console-input-segmented-bar + label .check-bar:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: var(--space2);
+    width: var(--space2);
+    border-radius: 50%;
+    background: var(--theme-input-checkable-off-dark);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    transition: var(--a-controls-long);
+}
+
+input:not(:disabled):not(:checked).console-input-segmented-bar + label:hover .check-bar:after,
+input:not(:disabled):not(:checked).console-input-segmented-bar + label:active .check-bar:after,
+input:not(:disabled):not(:checked).console-input-segmented-bar:focus + label .check-bar:after {
+    height: var(--space2_5);
+    width: var(--space2_5);
+}
+
+input:checked.console-input-segmented-bar + label .check-bar:after {
+    transition: var(--a-controls-long-active);
+    height: calc(var(--space3) + var(--space1));
+    width: calc(var(--space3) + var(--space1));
+}
+
+input.console-input-segmented-bar + label .check-bar .icon-checkmark {
+    position: absolute;
+    display: block;
+    height: var(--space3);
+    width: var(--space3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 40;
+    fill: var(--theme-input-checkable-on-subtract);
+    transition: var(--a-controls-long);
+}
+
+input:checked.console-input-segmented-bar + label .check-bar .icon-checkmark {
+    transform: translate(-50%, -50%) scale(1);
+    transition: var(--a-controls-long-active);
+}
+
+/* layout: vertical */
+.segmented-bar.vertical {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+.segmented-bar.vertical input.console-input-segmented-bar + label {
+    position: relative;
+    display: inline-flex;
+    vertical-align: top;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 100%;
+    min-height: var(--space5);
+    width: auto;
+}
+
+.segmented-bar.vertical input.console-input-segmented-bar + label .check-bar {
+    position: relative;
+    display: block;
+    height: 100%;
+    min-height: var(--space5);
+    width: calc(var(--space3) + var(--space1));
+    margin-right: var(--space2);
+    margin-bottom: 0;
+}
+
+.segmented-bar.vertical input.console-input-segmented-bar + label .check-bar:before {
+    height: auto;
+    position: absolute;
+    width: var(--space0);
+    left: 50%;
+    top: -1px;
+    bottom: -1px;
+    transform: translateX(-50%);
+}
+
+.segmented-bar.vertical input:checked.console-input-segmented-bar + label .check-bar:before {
+    margin: var(--space2) 0;
+}
+
+/* style: default */
+input:checked.console-input-segmented-bar + label {
+    color: var(--theme-input-checkable-on);
+}
+
+input:checked.console-input-segmented-bar + label .check-bar:before {
+    background: var(--theme-input-checkable-on);
+}
+
+input:checked.console-input-segmented-bar + label .check-bar:after {
+    background: var(--theme-input-checkable-on);
+}
+
+input:checked.console-input-segmented-bar:focus + label {
+    color: var(--theme-input-checkable-on-hover);
+}
+
+input:checked.console-input-segmented-bar:focus + label .check-bar:before {
+    background: var(--theme-input-checkable-on-hover);
+}
+
+input:checked.console-input-segmented-bar:focus + label .check-bar:after {
+    background: var(--theme-input-checkable-on-hover);
+}
+
+/* style: triad-01 */
+input:checked.console-input-segmented-bar.triad-01 + label {
+    color: var(--theme-input-checkable-triad-01-on);
+}
+
+input:checked.console-input-segmented-bar.triad-01 + label .check-bar:before {
+    background: var(--theme-input-checkable-triad-01-on);
+}
+
+input:checked.console-input-segmented-bar.triad-01 + label .check-bar:after {
+    background: var(--theme-input-checkable-triad-01-on);
+}
+
+input:checked.console-input-segmented-bar.triad-01:focus + label {
+    color: var(--theme-input-checkable-triad-01-on-hover);
+}
+
+input:checked.console-input-segmented-bar.triad-01:focus + label .check-bar:before {
+    background: var(--theme-input-checkable-triad-01-on-hover);
+}
+
+input:checked.console-input-segmented-bar.triad-01:focus + label .check-bar:after {
+    background: var(--theme-input-checkable-triad-01-on-hover);
+}
+
+/* style: triad-02 */
+input:checked.console-input-segmented-bar.triad-02 + label {
+    color: var(--theme-input-checkable-triad-02-on);
+}
+
+input:checked.console-input-segmented-bar.triad-02 + label .check-bar:before {
+    background: var(--theme-input-checkable-triad-02-on);
+}
+
+input:checked.console-input-segmented-bar.triad-02 + label .check-bar:after {
+    background: var(--theme-input-checkable-triad-02-on);
+}
+
+input:checked.console-input-segmented-bar.triad-02:focus + label {
+    color: var(--theme-input-checkable-triad-02-on-hover);
+}
+
+input:checked.console-input-segmented-bar.triad-02:focus + label .check-bar:before {
+    background: var(--theme-input-checkable-triad-02-on-hover);
+}
+
+input:checked.console-input-segmented-bar.triad-02:focus + label .check-bar:after {
+    background: var(--theme-input-checkable-triad-02-on-hover);
+}
+
+/* style: triad-03 */
+input:checked.console-input-segmented-bar.triad-03 + label {
+    color: var(--theme-input-checkable-triad-03-on);
+}
+
+input:checked.console-input-segmented-bar.triad-03 + label .check-bar:before {
+    background: var(--theme-input-checkable-triad-03-on);
+}
+
+input:checked.console-input-segmented-bar.triad-03 + label .check-bar:after {
+    background: var(--theme-input-checkable-triad-03-on);
+}
+
+input:checked.console-input-segmented-bar.triad-03:focus + label {
+    color: var(--theme-input-checkable-triad-03-on-hover);
+}
+
+input:checked.console-input-segmented-bar.triad-03:focus + label .check-bar:before {
+    background: var(--theme-input-checkable-triad-03-on-hover);
+}
+
+input:checked.console-input-segmented-bar.triad-03:focus + label .check-bar:after {
+    background: var(--theme-input-checkable-triad-03-on-hover);
+}
+
+/* style: attention */
+input:checked.console-input-segmented-bar.attention + label {
+    color: var(--theme-input-checkable-attention-on);
+}
+
+input:checked.console-input-segmented-bar.attention + label .check-bar:before {
+    background: var(--theme-input-checkable-attention-on);
+}
+
+input:checked.console-input-segmented-bar.attention + label .check-bar:after {
+    background: var(--theme-input-checkable-attention-on);
+}
+
+input:checked.console-input-segmented-bar.attention:focus + label {
+    color: var(--theme-input-checkable-attention-on-hover);
+}
+
+input:checked.console-input-segmented-bar.attention:focus + label .check-bar:before {
+    background: var(--theme-input-checkable-attention-on-hover);
+}
+
+input:checked.console-input-segmented-bar.attention:focus + label .check-bar:after {
+    background: var(--theme-input-checkable-attention-on-hover);
+}
+
+/* style: disabled */
+input:disabled.console-input-segmented-bar + label,
+input:checked:disabled.console-input-segmented-bar + label,
+input:checked:disabled.console-input-segmented-bar.triad-01 + label,
+input:checked:disabled.console-input-segmented-bar.triad-02 + label,
+input:checked:disabled.console-input-segmented-bar.triad-03 + label,
+input:checked:disabled.console-input-segmented-bar.attention + label {
+    color: var(--theme-input-checkable-disabled);
+}
+
+input:disabled.console-input-segmented-bar + label:hover .check-bar .hover,
+input:disabled.console-input-segmented-bar + label:active .check-bar .hover,
+input:checked:disabled.console-input-segmented-bar + label:hover .check-bar .hover,
+input:checked:disabled.console-input-segmented-bar + label:active .check-bar .hover {
+    display: none;
+}
+
+input:disabled.console-input-segmented-bar + label .check-bar:before,
+input:checked:disabled.console-input-segmented-bar + label .check-bar:before,
+input:checked:disabled.console-input-segmented-bar.triad-01 + label .check-bar:before,
+input:checked:disabled.console-input-segmented-bar.triad-02 + label .check-bar:before,
+input:checked:disabled.console-input-segmented-bar.triad-03 + label .check-bar:before,
+input:checked:disabled.console-input-segmented-bar.attention + label .check-bar:before,
+input:disabled.console-input-segmented-bar + label .check-bar:after,
+input:checked:disabled.console-input-segmented-bar + label .check-bar:after,
+input:checked:disabled.console-input-segmented-bar.triad-01 + label .check-bar:after,
+input:checked:disabled.console-input-segmented-bar.triad-02 + label .check-bar:after,
+input:checked:disabled.console-input-segmented-bar.triad-03 + label .check-bar:after,
+input:checked:disabled.console-input-segmented-bar.attention + label .check-bar:after {
+    background: var(--theme-input-checkable-disabled-muted);
+}
+
+/* Control
+   ================================================================================================================ */
+.console-control,
+.menu-item:link.console-control {
+    --paddingV: var(--space2);
+    --paddingH: var(--space2);
+    --lineHeightHalf: calc(var(--t-lH3) / 2);
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    border: 0;
+    outline: none;
+    flex: 0 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    background: transparent;
+    color: var(--theme-control-text);
+    padding: var(--paddingV) var(--paddingH);
+    font-size: var(--t-size-3);
+    line-height: var(--t-lH3);
+    border-radius: calc(var(--paddingV) + var(--lineHeightHalf));
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--a-controls);
+}
+
+body:not(.mobile) .console-control:hover {
+    background: var(--theme-content-bg-4);
+}
+
+.console-control:active,
+.console-control:focus {
+    color: var(--theme-control-text-pressed);
+    background: var(--theme-control-border);
+    transition: var(--a-controls-active);
+}
+
+.console-control:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent;
+    border-radius: calc(var(--paddingV) + var(--lineHeightHalf));
+    transition: var(--a-controls);
+}
+
+body:not(.mobile) .console-control:hover:before {
+    border: 1px solid var(--theme-control-border);
+}
+
+.console-control:active:before,
+.console-control:focus:before {
+    transition: var(--a-controls-active);
+}
+
+.console-control span {
+    display: inline-block;
+    flex: 0 0 auto;
+}
+
+.console-control.icon-left span {
+    margin-left: calc(var(--space2) + var(--space1));
+    margin-right: var(--space1);
+}
+
+.console-control.icon-right span {
+    margin-right: calc(var(--space2) + var(--space1));
+    margin-left: var(--space1);
+}
+
+.console-control img,
+.console-control svg {
+    flex: 0 0 auto;
+}
+
+.console-control svg {
+    fill: var(--theme-control-text);
+    width: 16px;
+    height: 16px;
+    transition: var(--a-controls);
+}
+
+.console-control:active svg,
+.console-control:focus svg {
+    fill: var(--theme-control-text-pressed);
+    transition: var(--a-controls-active);
+}
+
+/* Separator
+   ================================================================================================================ */
+.console-separator {
+    display: block;
+    height: 1px;
+    margin: var(--space4) 0 var(--space3);
+    padding: 0;
+    background: var(--theme-separator-1);
+}
+.console-separator.light {
+    background: var(--theme-separator-2);
+}
+
+/* Badge
+   ================================================================================================================ */
+.badge {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-100%);
+    background: var(--theme-badge-bg);
+    color: var(--theme-badge-text);
+    border-radius: var(--corners-xx-small);
+    font-size: calc(var(--t-size-5) * 0.9);
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.2em;
+    padding: 0.1em 0.3em;
+}
+
+.badge.inline {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    font-size: inherit;
+}
+
+/* Popup
+   ================================================================================================================
+   Positioning:
+        .popup-wrapper: .left || .right - to align left or right.
+        .popup-wrapper: .top || .bottom - to show above or below.
+        .popup: .popup-top-down || .popup-bottom-up - to animate down or up when opening/closing.
+   */
+.popup-wrapper {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    transition: var(--a-elements);
+    overflow: hidden;
+}
+
+.popup-wrapper.is-visible {
+    opacity: 1;
+    height: auto;
+    width: auto;
+    overflow: visible;
+}
+
+.popup-wrapper.left {
+    left: 0;
+}
+
+.popup-wrapper.right {
+    right: 0;
+}
+
+.popup-wrapper.top {
+    bottom: 100%;
+}
+
+.popup-wrapper.bottom {
+    top: 100%;
+}
+
+.popup {
+    position: relative;
+    background-color: var(--theme-content-bg-4);
+    border-radius: var(--corners-mid);
+    padding: var(--space4);
+    display: block;
+    opacity: 0;
+    height: 0;
+    box-shadow: var(--theme-shadow-3);
+    transition: var(--a-elements);
+    overflow: hidden;
+}
+
+.popup.is-visible {
+    opacity: 1;
+    height: auto;
+}
+
+.popup.popup-top-down,
+.popup.popup-bottom-up.is-visible {
+    transform: translateY(calc(var(--space4) * -1));
+}
+
+.popup.popup-top-down.is-visible,
+.popup.popup-bottom-up {
+    transform: translateY(0);
+}
+
+/* Tooltip
+   ================================================================================================================ */
+.tooltip-hook {
+    position: absolute;
+    left: 0;
+    height: 0;
+    z-index: 30;
+}
+
+.tooltip-hook.tooltip-top-down {
+    bottom: 0;
+}
+
+.tooltip-hook.tooltip-bottom-up {
+    top: 0;
+}
+
+.tooltip {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--a-elements);
+    width: 320px;
+}
+
+.tooltip.is-visible {
+    pointer-events: all;
+    opacity: 1;
+    transition: transform var(--a-elements-time) var(--a-elements-easing);
+}
+
+.tooltip-hook.tooltip-top-down .tooltip {
+    padding-top: var(--space1);
+}
+
+.tooltip-hook.tooltip-bottom-up .tooltip {
+    padding-bottom: var(--space1);
+    bottom: 0;
+}
+
+.tooltip-hook.tooltip-top-down .tooltip {
+    transform: translateY(calc(var(--space4) * -1));
+}
+
+.tooltip-hook.tooltip-bottom-up .tooltip {
+    transform: translateY(var(--space4));
+}
+
+.tooltip-hook.tooltip-top-down .tooltip.is-visible,
+.tooltip-hook.tooltip-bottom-up .tooltip.is-visible {
+    transform: translateY(0);
+}
+
+.tooltip-content {
+    display: block;
+    background-color: var(--theme-content-bg-4);
+    border-radius: var(--corners-mid);
+    padding: var(--space4);
+    box-shadow: var(--theme-shadow-3);
+    width: 100%;
+}
+
+.tooltip-hook.tooltip-small .tooltip-content {
+    padding: var(--space3);
+}
+
+/* Card
+   ================================================================================================================ */
+.console-card {
+    position: relative;
+    background-color: var(--theme-content-bg-0);
+    box-shadow: var(--theme-shadow-1);
+    border-radius: var(--corners-mid);
+    padding: var(--space3) var(--space4);
+}
+
+.console-card.miniature-card {
+    padding: var(--space2_5) var(--space3);
+}
+
+.console-card .title .link {
+    text-decoration: none;
+}
+
+/* Category Thumbnail
+   ================================================================================================================ */
+.category-thumbnail-generic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--corners-mid);
+    border: 1px solid var(--theme-text-5);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-thumbnail-generic .icon {
+    width: var(--t-size4);
+    height: var(--t-size4);
+}
+
+.category-thumbnail-generic .icon-fill {
+    fill: var(--theme-text-5);
+}
+
+.category-thumbnail-generic .icon-stroke {
+    stroke: var(--theme-text-5);
+}
+
+.category-thumbnail-generic .icon-fill-stroke {
+    fill: var(--theme-text-5);
+    stroke: var(--theme-text-5);
+}
+
+/* Illustrated Text
+   ================================================================================================================ */
+.illustrated-text {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.illustrated-text .illustration {
+    width: 128px;
+    height: 128px;
+    flex: 0 0 auto;
+    margin-right: var(--space4);
+}
+
+.illustrated-text p {
+    flex: 1 1 auto;
+    display: inline-block;
+}
+
+@media (max-width: 440px) {
+    .illustrated-text {
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+
+    .illustrated-text .illustration {
+        width: 60%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: var(--space4);
+    }
+
+    .illustrated-text p {
+        text-align: center;
+    }
+}
+
+/* Feature Article Artwork
+   ================================================================================================================ */
+.artwork {
+    position: relative;
+    height: auto;
+    left: 0;
+    right: 0;
+    margin-top: calc(calc(var(--space4) + var(--space2)) * -1);
+    overflow: hidden;
+    z-index: 10;
+    margin: var(--space4_5) 0 var(--space5);
+}
+
+.artwork-background {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.artwork-story {
+    position: relative;
+    z-index: 20;
+}
+
+@media (max-width: 768px) {
+    .artwork {
+        margin-left: calc(var(--contentMarginH) * -1);
+        margin-right: calc(var(--contentMarginH) * -1);
+    }
+
+    @media (max-width: 480px) {
+        .artwork {
+            margin-bottom: var(--space4_5);
+        }
+    }
+
+    @media (min-width: 481px) {
+        .artwork {
+            margin-left: calc(var(--contentMarginH) * -1);
+            margin-right: calc(var(--contentMarginH) * -1);
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .artwork {
+        margin-left: calc(var(--contentMarginH) * -1);
+        margin-right: calc(var(--contentMarginH) * -1);
+    }
+}
+
+@media (min-width: 1371px) {
+    .artwork {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* Console Score
+   ================================================================================================================ */
+.console-score {
+    color: var(--theme-text-2);
+    font-size: var(--t-size-2);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.console-score .console-score-text {
+    line-height: var(--t-lH4);
+    vertical-align: top;
+}
+
+.console-score .score-bar {
+    position: relative;
+    display: inline-block;
+    margin-left: var(--space2);
+    height: 5px;
+    width: 38px;
+}
+
+/* Score Bar
+   ================================================================================================================ */
+.score-bar {
+    transform: skewX(-26.56deg);
+}
+
+.score-bar meter {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: none;
+}
+
+.score-bar .score-bar-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--theme-score-background);
+    width: 100%;
+    height: 100%;
+    clip-path: path("M0 0H6V5H0V0Z M8 0H14V5H8V0Z M16 0H22V5H16V0Z M24 0H30V5H24V0Z M32 0H38V5H32V0Z");
+}
+
+.score-bar .score-bar-foreground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--theme-score-foreground);
+    width: 100%;
+    height: 100%;
+    clip-path: path("M0 0H6V5H0V0Z M8 0H14V5H8V0Z M16 0H22V5H16V0Z M24 0H30V5H24V0Z M32 0H38V5H32V0Z");
+}
+
+/* Media
+   ================================================================================================================ */
+
+.console-media {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 default */
+}
+
+.console-media > * {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Tools Grid
+   ================================================================================================================ */
+.dynamic-planes {
+    -webkit-backface-visibility: hidden; /* fix border animation flash glitch */
+    backface-visibility: hidden; /* fix border animation flash glitch */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    transform: scaleY(0.8945) skewX(-24.1deg);
+}
+
+.dynamic-planes-column:nth-child(1) {
+    width: 17%;
+}
+
+.dynamic-planes-column:nth-child(2) {
+    width: 8.5%;
+    margin-top: 12%;
+}
+
+.dynamic-planes-column:nth-child(3) {
+    width: 17%;
+    margin-top: 26%;
+}
+
+.dynamic-planes-column:nth-child(4) {
+    width: 11.4%;
+    margin-top: 33%;
+}
+
+.dynamic-planes-column:nth-child(5) {
+    width: 17%;
+}
+
+.dynamic-planes-column:nth-child(6) {
+    width: 11.4%;
+}
+
+.dynamic-planes-column {
+    position: relative;
+}
+
+.dynamic-planes-column-items.first {
+    position: absolute;
+    width: 100%;
+    bottom: 100%;
+}
+
+.dynamic-planes-item {
+    width: 100%;
+    height: 100%;
+}
+
+.dynamic-planes-column:nth-child(1) .dynamic-planes-item,
+.dynamic-planes-column:nth-child(3) .dynamic-planes-item,
+.dynamic-planes-column:nth-child(5) .dynamic-planes-item {
+    margin-top: 20.6%;
+}
+
+.dynamic-planes-column:nth-child(2) .dynamic-planes-item {
+    margin-top: 41.27%;
+}
+
+.dynamic-planes-column:nth-child(4) .dynamic-planes-item,
+.dynamic-planes-column:nth-child(6) .dynamic-planes-item {
+    margin-top: 30.7%;
+}
+
+.dynamic-planes-column .dynamic-planes-column-items.last .dynamic-planes-item:last-child {
+    margin-top: 0;
+}
+
+.dynamic-planes-item-border,
+.dynamic-planes-item-bg,
+.dynamic-planes-item-glow,
+.dynamic-planes-item-border-selected,
+.dynamic-planes-item-bg-selected {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity 0.5s cubic-bezier(0.41, 0.14, 0.35, 0.99);
+}
+
+.dynamic-planes-item-bg {
+    background: var(--theme-planes-background);
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.dynamic-planes-item-border {
+    border: 1px solid var(--theme-planes-off-stroke);
+    opacity: 0.078;
+    z-index: 2;
+}
+
+.dynamic-planes-item-glow {
+    opacity: 1;
+    z-index: 4;
+}
+
+.dynamic-planes-item.triad-01 .dynamic-planes-item-glow {
+    box-shadow: var(--theme-planes-triad-01-shadow);
+}
+
+.dynamic-planes-item.triad-02 .dynamic-planes-item-glow {
+    box-shadow: var(--theme-planes-triad-02-shadow);
+}
+
+.dynamic-planes-item.triad-03 .dynamic-planes-item-glow {
+    box-shadow: var(--theme-planes-triad-03-shadow);
+}
+
+.dynamic-planes-item-bg-selected {
+    background: var(--theme-planes-background);
+    opacity: 0.7;
+    z-index: 5;
+}
+
+.dynamic-planes-item-border-selected {
+    opacity: 1;
+    z-index: 6;
+}
+
+.dynamic-planes-item.triad-01 .dynamic-planes-item-border-selected {
+    border: 1px solid var(--theme-neon-planes-triad-01-stroke);
+}
+
+.dynamic-planes-item.triad-02 .dynamic-planes-item-border-selected {
+    border: 1px solid var(--theme-neon-planes-triad-02-stroke);
+}
+
+.dynamic-planes-item.triad-03 .dynamic-planes-item-border-selected {
+    border: 1px solid var(--theme-neon-planes-triad-03-stroke);
+}
+
+.dynamic-planes-item.selected .dynamic-planes-item-border,
+.dynamic-planes-item.selected .dynamic-planes-item-bg,
+.dynamic-planes-item:not(.selected) .dynamic-planes-item-glow,
+.dynamic-planes-item:not(.selected) .dynamic-planes-item-border-selected,
+.dynamic-planes-item:not(.selected) .dynamic-planes-item-bg-selected {
+    opacity: 0;
+}
+
+.dynamic-planes-item-icon,
+.dynamic-planes-item-icon-selected {
+    position: absolute;
+    display: inline-block;
+    width: 12%;
+    max-width: var(--space4_5);
+    height: auto;
+    margin: 50% 0 0 50%;
+    z-index: 6;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s cubic-bezier(0.41, 0.14, 0.35, 0.99);
+}
+
+.dynamic-planes-item-icon .icon,
+.dynamic-planes-item-icon-selected .icon {
+    width: 100%;
+    height: auto;
+}
+
+.dynamic-planes-item-icon {
+    opacity: 0.05;
+    z-index: 3;
+}
+
+.dynamic-planes-item-icon-selected {
+    opacity: 1;
+    z-index: 7;
+}
+
+.dynamic-planes-item.selected .dynamic-planes-item-icon,
+.dynamic-planes-item:not(.selected) .dynamic-planes-item-icon-selected {
+    opacity: 0;
+}
+
+.dynamic-planes-item.selected .icon-fill,
+.dynamic-planes-item.selected .icon-stroke,
+.dynamic-planes-item.selected .icon-fill-stroke {
+    opacity: 1;
+}
+
+.dynamic-planes-item.triad-01 .dynamic-planes-item-icon-selected .icon-fill {
+    fill: var(--theme-neon-planes-triad-01-stroke);
+}
+
+.dynamic-planes-item.triad-02 .dynamic-planes-item-icon-selected .icon-fill {
+    fill: var(--theme-neon-planes-triad-02-stroke);
+}
+
+.dynamic-planes-item.triad-03 .dynamic-planes-item-icon-selected .icon-fill {
+    fill: var(--theme-neon-planes-triad-03-stroke);
+}
+
+.dynamic-planes-item.triad-01 .dynamic-planes-item-icon-selected .icon-stroke {
+    stroke: var(--theme-neon-planes-triad-01-stroke);
+}
+
+.dynamic-planes-item.triad-02 .dynamic-planes-item-icon-selected .icon-stroke {
+    stroke: var(--theme-neon-planes-triad-02-stroke);
+}
+
+.dynamic-planes-item.triad-03 .dynamic-planes-item-icon-selected .icon-stroke {
+    stroke: var(--theme-neon-planes-triad-03-stroke);
+}
+
+.dynamic-planes-item.triad-01 .dynamic-planes-item-icon-selected .icon-fill-stroke {
+    fill: var(--theme-neon-planes-triad-01-stroke);
+    stroke: var(--theme-neon-planes-triad-01-stroke);
+}
+
+.dynamic-planes-item.triad-02 .dynamic-planes-item-icon-selected .icon-fill-stroke {
+    fill: var(--theme-neon-planes-triad-02-stroke);
+    stroke: var(--theme-neon-planes-triad-02-stroke);
+}
+
+.dynamic-planes-item.triad-03 .dynamic-planes-item-icon-selected .icon-fill-stroke {
+    fill: var(--theme-neon-planes-triad-03-stroke);
+    stroke: var(--theme-neon-planes-triad-03-stroke);
+}
+
+/* Page Meta
+   ================================================================================================================ */
+.page-meta {
+    font-size: var(--t-size-2);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-top: calc(var(--space2) * -1);
+    overflow: hidden;
+}
+
+.page-meta p {
+    margin-top: var(--space2);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-left: calc(calc(var(--space3) + 0.75em) * -1);
+    margin-right: calc(var(--space3) + 0.75em);
+}
+
+.page-meta p:first-child {
+    margin-left: 0;
+}
+
+.page-meta p:not(:last-child) {
+    margin-bottom: 0;
+}
+
+.page-meta p > * {
+    flex: 0 0 auto;
+}
+
+.page-meta p > *:not(:last-child) {
+    margin-right: 0.3em;
+}
+
+.page-meta .console-button-text {
+    display: inline-flex;
+}
+
+.page-meta p > .page-meta-separator {
+    display: inline-block;
+    margin-left: var(--space2);
+    margin-right: var(--space2);
+}
+
+.page-meta .plane-picture {
+    height: 16px;
+    margin-right: var(--space2);
+}
+
+.page-meta-detail {
+    margin-top: var(--space2);
+}
+
+.page-meta-detail p {
+    font-size: var(--t-size-2);
+    font-style: italic;
+}
+
+/* Console Bar Chart
+   ================================================================================================================ */
+.console-bar-chart {
+    position: relative;
+}
+
+.console-bar-chart.always-show-border {
+    border-bottom: 1px solid var(--theme-datavis-axis);
+}
+
+.console-bar-chart.always-show-border .console-bar-chart-item {
+    border-bottom: none;
+}
+
+.console-bar-chart-item-bar {
+    height: calc(var(--space2) - 1px);
+    background: var(--theme-text-1);
+}
+
+.console-bar-chart.blue .console-bar-chart-item:nth-child(1) .console-bar-chart-item-bar {
+    background: var(--theme-datavis-blue-item0);
+}
+
+.console-bar-chart.blue .console-bar-chart-item:nth-child(2) .console-bar-chart-item-bar {
+    background: var(--theme-datavis-blue-item-1);
+}
+
+.console-bar-chart.blue .console-bar-chart-item:nth-child(3) .console-bar-chart-item-bar {
+    background: var(--theme-datavis-blue-item-2);
+}
+
+.console-bar-chart.blue .console-bar-chart-item:nth-child(4) .console-bar-chart-item-bar {
+    background: var(--theme-datavis-blue-item-3);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .console-bar-chart {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space4) var(--space5);
+    }
+}
+
+@media (min-width: 1025px) {
+    .console-bar-chart {
+        display: flex;
+        flex-flow: row nowrap;
+        border-bottom: 1px solid var(--theme-datavis-axis);
+    }
+
+    .console-bar-chart-item:not(:last-child) .console-bar-chart-item-bar {
+        width: calc(100% - var(--space1)) !important;
+    }
+
+    .console-bar-chart-item:last-child .console-bar-chart-item-bar {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .console-bar-chart-item {
+        width: 100% !important;
+        border-bottom: 1px solid var(--theme-datavis-axis);
+    }
+}
+
+/* Section Plane
+   ================================================================================================================ */
+.section-plane {
+    position: absolute;
+    background: var(--theme-section-plane);
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.section-plane * {
+    z-index: 1;
+}
+
+.section-plane:before,
+.section-plane:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    z-index: 0;
+}
+
+.section-plane:before {
+    left: -100%;
+    background-position: calc(100% + 0.5px);
+    background-image: var(--theme-section-plane-left);
+}
+
+.section-plane:after {
+    left: 100%;
+    background-position: left;
+    background-image: var(--theme-section-plane-right);
+}
+
+@media (max-width: 520px) {
+    .section-plane:before {
+        margin-left: 0.5px;
+    }
+
+    .section-plane:after {
+        margin-left: -0.5px;
+    }
+}
+
+/* Marked Scrollable
+   ================================================================================================================ */
+.marked-scrollable-h:not(.is-fully-scrolled) {
+    box-shadow: inset 1px 0 0 transparent, inset -1px 0 0 var(--theme-border-3-color);
+}
+.marked-scrollable-h.is-scrolled {
+    box-shadow: inset 1px 0 0 var(--theme-border-3-color), inset -1px 0 0 var(--theme-border-3-color);
+}
+.marked-scrollable-h.is-scrolled.is-fully-scrolled {
+    box-shadow: inset 1px 0 0 var(--theme-border-3-color), inset -1px 0 0 transparent;
+}
+
+.marked-scrollable-v:not(.is-fully-scrolled) {
+    box-shadow: inset 0 1px 0 transparent, inset 0 -1px 0 var(--theme-border-3-color);
+}
+.marked-scrollable-v.is-scrolled {
+    box-shadow: inset 0 1px 0 var(--theme-border-3-color), inset 0 -1px 0 var(--theme-border-3-color);
+}
+.marked-scrollable-v.is-scrolled.is-fully-scrolled {
+    box-shadow: inset 0 1px 0 var(--theme-border-3-color), inset 0 -1px 0 transparent;
+}
+
+/* Vendor Ranking
+   ================================================================================================================ */
+
+.vendor-ranking {
+    font-weight: 500;
+    font-style: italic;
+    text-transform: uppercase;
+    color: var(--theme-text-1);
+    display: inline-block;
+}
+
+.vendor-ranking span {
+    font-weight: 300;
+    color: var(--theme-text-3);
+}
+
+/* Related Articles
+    --------------------------------------------------------------- */
+.related-articles {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+.related-articles > *:not(:first-child) {
+    margin-top: var(--space3);
+}
+
+.related-articles > .link {
+    font-size: var(--t-size-1);
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    line-height: var(--t-lH4);
+    white-space: nowrap;
+}
+
+.related-articles > .link span {
+    text-decoration: none;
+}
+
+/* Related Reviews
+    --------------------------------------------------------------- */
+.related-reviews {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+.related-reviews > *:not(:first-child) {
+    margin-top: var(--space3);
+}
+
+.related-reviews > .link {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    line-height: var(--t-lH4);
+    white-space: nowrap;
+}
+
+.related-reviews > .link span {
+    text-decoration: none;
+}
+
+.related-reviews > .link .vendor-thumbnail {
+    width: var(--t-size6);
+    height: var(--t-size6);
+    margin-right: var(--space2_5);
+}
+
+.related-reviews > .link span {
+    font-weight: 500;
+}
+
+/* Modal
+   ================================================================================================================ */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.modal-backdrop:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--theme-translucent);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    opacity: 0;
+    transition: opacity var(--a-modal-time) var(--a-modal-easing);
+}
+
+.modal-backdrop.is-visible:before {
+    opacity: 1;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 0px;
+    transform: translate(-50%, -50%);
+    background-color: var(--theme-content-bg-4);
+    border-radius: var(--corners-mid);
+    padding: 0px;
+    box-shadow: var(--theme-shadow-3);
+    transition: all var(--a-modal-time) var(--a-modal-easing);
+    transition-delay: 0s;
+    opacity: 0;
+}
+
+.is-visible .modal {
+    transition-delay: 0s;
+    opacity: 1;
+}
+
+.modal > * {
+    display: block;
+    width: 100%;
+    border-radius: var(--corners-mid);
+}
+
+.modal-link:link,
+.modal-link:visited {
+    display: block;
+    text-decoration: none;
+    border: 1px solid transparent;
+    background: transparent;
+    border-radius: calc(var(--corners-mid) + 1px);
+    transition: var(--a-controls);
+}
+
+.modal-link:hover,
+.modal-link:focus {
+    transition: var(--a-controls-active);
+    border: var(--theme-actionable-box-border-focus);
+    background: var(--theme-actionable-box-bg-focus);
+    outline: none;
+}
+
+.modal-link:active {
+    border: var(--theme-actionable-box-border-active);
+    background: var(--theme-actionable-box-bg-active);
+}
+
+/* Wide Block
+   ================================================================================================================ */
+.wide-block {
+    position: relative;
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    min-width: 300px;
+}
+
+.wide-block > * {
+    position: relative;
+    margin: 0 auto;
+    width: 87.5%;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .wide-block > * {
+        width: 84%;
+    }
+}
+
+/* Aside
+   ================================================================================================================ */
+.aside-wrapper {
+    flex: 0 0 auto;
+    width: 26vw;
+    max-width: 400px;
+}
+
+.aside-wrapper.is-hidden {
+    display: none;
+}
+
+.aside-content-wrapper {
+    margin-left: 5vw;
+    width: 21vw;
+    max-width: calc(400px - 5vw);
+    padding-bottom: var(--space4);
+    padding-left: var(--space0);
+    bottom: 0;
+    overscroll-behavior: none;
+}
+
+/* Content Extension
+   ================================================================================================================ */
+.content-extension,
+.content-extension-launch {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    opacity: 1;
+    max-height: 100px;
+    transition: var(--a-elements-simple);
+}
+
+.content-extension.is-hidden,
+.content-extension-launch.is-disabled + .content-extension,
+.content-extension-launch:not(.is-disabled).is-hidden {
+    max-height: 0px;
+    opacity: 0;
+}
+
+.content-extension-launch.is-disabled {
+    pointer-events: none;
+    color: var(--theme-input-checkable-disabled);
+}
+
+.content-extension-launch.is-disabled > * {
+    color: var(--theme-input-checkable-disabled);
+}
+
+.content-extension-launch.is-disabled .icon-fill {
+    fill: var(--theme-input-checkable-disabled);
+}
+
+.content-extension-launch.is-disabled .icon-stroke {
+    stroke: var(--theme-input-checkable-disabled);
+}
+
+.content-extension-launch.is-disabled .icon-fill-stroke {
+    fill: var(--theme-input-checkable-disabled);
+    stroke: var(--theme-input-checkable-disabled);
+}

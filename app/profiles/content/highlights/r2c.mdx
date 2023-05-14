@@ -1,0 +1,18 @@
+### What are some recent examples of interesting development challenges?
+
+We use Treesitter, which is this technology that GitHub wrote to power their
+Atom code editor, and now powers a lot of modern code editors. That’s all open
+source, so we were able to bring that in and use that as our parser. That
+allowed us to add 17 languages to Semgrep very quickly.
+
+In the context of writing rules, we’ve built a pretty interesting editor
+workflow where people can take other people’s rules and collaborate on it, tweak
+it, make it better and share it back. So when the Log4J incident happened, we
+had two actual external community members who were going back and forth together
+working to find the best pattern to accurately detect Log4J with Semgrep.
+
+Another interesting challenge that we faced was when we wanted to implement
+impersonation. We use SpiceDB, which is an open source fine-grained permissions
+database. We built a microservice that lets us do impersonation in a way that’s
+auditable and traceable so our customer success engineers can impersonate an
+organization or a user when we need to reproduce issues.

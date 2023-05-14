@@ -4,50 +4,45 @@ cli:
 plugins:
     sources:
         - id: trunk
-          ref: v0.0.16
+          ref: v0.0.17
           uri: https://github.com/trunk-io/plugins
 lint:
+    disabled:
+        - oxipng
     enabled:
-        - ruff@0.0.265
         - yamllint@1.31.0
         - shellcheck@0.9.0
-        - git-diff-check
-        - isort@5.12.0
-        - prettier@2.8.8
         - shfmt@3.5.0
-        - gitleaks@8.16.3
         - svgo@3.0.2
-        - taplo@0.7.0
-        - hadolint@2.12.0
+        - gitleaks@8.16.3
+        - git-diff-check
+        - eslint@8.40.0
         - markdownlint@0.34.0
-        - black@23.3.0
-        - actionlint@1.6.24
-        - flake8@6.0.0
-    ignore:
-        - linters: [ALL]
-          paths:
-              # Ignore VS Code container
-              - .devcontainer/Dockerfile
-              # Ignore test data
-              - themes/console-home/data/**
-              # Ignore vendored JS
-              - themes/console-home/static/js/vendor/**
-              # Ignore images
-              - assets/img/**
-              - static/img/**
-              - themes/console-home/assets/img/**
-              - themes/console-home/static/**
+        - prettier@2.8.8
     threshold:
         - linters: [markdownlint]
-          level: LEVEL_MEDIUM
-runtimes:
-    enabled:
-        - go@1.19.5
-        - node@18.12.1
-        - python@3.10.8
+          level: medium
+    ignore:
+        - linters: [svgo]
+          paths:
+              - public/img/favicons/**
+              - public/img/interviews/**
+              - public/img/badges/**
+              - public/img/podcast-providers/**
+        - linters: [markdownlint]
+          paths:
+              - app/interviews/content/highlights/**
+              - app/profiles/content/highlights/**
+              - app/podcast/content/highlights/**
+              - .env-example
 actions:
     enabled:
         - trunk-announce
         - trunk-check-pre-push
         - trunk-fmt-pre-commit
         - trunk-upgrade-available
+runtimes:
+    enabled:
+        - python@3.10.8
+        - go@1.19.5
+        - node@18.12.1

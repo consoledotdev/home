@@ -1,4 +1,0 @@
-<h5 {{ with .Get "id"}}id="{{ . }}" {{ end }}class="title title-4 rich-title">
-    {{ with .Get "icon"}}{{ partial (print "icons/" . ".html") }}{{ end }}
-    <span class="rich-title-text">{{ .Inner | .Page.RenderString }}</span>
-</h5>

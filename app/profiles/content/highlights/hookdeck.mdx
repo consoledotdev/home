@@ -1,0 +1,16 @@
+### What are some recent examples of interesting development challenges?
+
+On the infrastructure front, I think one of the interesting challenges that
+we’re dealing with is that we’re processing a ton of data which needs to be used
+for multiple use cases. We’re doing data aggregations to be able to give
+statistics to users, but also trigger product events like alerts if a back
+pressure is accumulating on your queues.
+
+We’re also trying to give the customer the ability to search through that data
+in a way that’s fairly efficient. Users need to slice and dice the data in
+multiple different ways and see the events associated with it. So what you end
+up with is serious data engineering challenges, where you have to move millions
+of rows at a time in a way that’s efficient, that doesn’t create too much
+replication lag, but also allows us to perform all the operations that we need
+on it. This has led to discussions around which storage technology we should
+use, what the schema should be, etc.

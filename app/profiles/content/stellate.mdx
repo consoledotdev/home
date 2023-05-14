@@ -1,0 +1,212 @@
+---
+title: "Stellate"
+date: 2022-08-30T12:00:00+00:00
+draft: false
+summary: GraphQL CDN.
+metaTitle: Working at Stellate - Console profile
+metaDescription: What is it like to work at Stellate?  Console profile behind the scenes at
+    Stellate - GraphQL CDN.
+headerType: fixed
+hideLines: true
+hidePlanes: true
+isSubpage: company-profile
+pageType: company-profile
+customPageStyle: true
+xlViewport:
+    largeText: true
+companyInfo:
+    favicon: /img/favicons/stellate.co.svg
+    URL: https://stellate.co
+    jobsURL: https://stellate.co/careers
+    location: Remote
+    description: "GraphQL CDN."
+    # images:
+    #   - url: /img/profiles/airplane-profile-1.png
+    #   - url: /img/profiles/airplane-profile-2.jpeg
+    #   - url: /img/profiles/airplane-profile-3.jpeg
+    product:
+        name: "Stellate"
+        description: "Our first product at Stellate is a GraphQL CDN. We offer rich caching,
+            so people can cache their GraphQL APIs in about 70 locations worldwide.
+            We also have analytics, performance monitoring and error tracking."
+    techStack:
+        - Rust
+        - WebAssembly
+        - TypeScript
+        - NodeJS
+        - GraphQL
+    meta:
+        - label: "Founded"
+          value: 2020
+        - label: "CEO"
+          value:
+              links:
+                  - href: "https://twitter.com/mxstbr"
+                    text: "Max Stoiber"
+                    iconRight: "external-link"
+        - label: "Employees"
+          value: "10"
+        - label: "Stage"
+          value: "Early-stage startup"
+        - label: "Social"
+          value:
+              links:
+                  - href: "https://twitter.com/stellate"
+                    text: "Twitter"
+                    iconLeft: "twitter"
+                  - href: "https://www.linkedin.com/company/stellatehq/"
+                    text: "LinkedIn"
+                    iconLeft: "linkedin"
+    type: "SaaS"
+    category: "DevOps - GraphQL"
+    topCategory: "DevOps"
+    subCategory: "GraphQL"
+    filterTaxonomy: "devops, saas, rust, typescript, graphql"
+interview: stellate-max-stoiber
+---
+
+<span id="wrapper-1" className="nav-anchor" anchor-name="how-engineering-works"></span>
+
+<RichTitle tag="h3" icon={{ group: "generic", name: "checklist" }} id="how-engineering-works" text="How engineering works at Stellate" />
+
+#### How are the teams structured?
+
+We’re still a small company so there's currently only one product team. We
+expect to split teams out into design, engineering, and documentation in the
+future but right now everyone is still working together as a cross-functional
+team. A cross-functional team consists of a product manager, product designer,
+junior manager, and then five to ten engineers.
+
+Currently, we have five engineers full time which will be growing to 12 over the
+coming few months. That will be the point when we start splitting.
+
+#### What tools do engineers use?
+
+-   **Project Management:** Linear, Notion
+-   **Source Control:** GitHub
+-   **Documentation:** ReadMe
+-   **DevOps:** GitHub Actions
+-   **Infrastructure:** Terraform, AWS
+-   **Monitoring and Error-tracking:** Datadog
+-   **Alerting:** Grafana, Checkly
+-   **Incidents:** PagerDuty, incident.io
+-   I**nternal Dashboards:** Retool
+
+#### Can developers pick their own tools?
+
+Yes, if it just affects you then you can go ahead and use whatever you like.
+However, once it starts to affect the rest of the team that’s when we ask
+everyone to agree first. For example we have a consensus on which languages we
+write code in.
+
+If it's a tool that just affects you, you can use what you want. That's not even
+a question of, “do I have the budget for it or not?” You just buy it. We have a
+company credit card, so if you want to have your own task tracker or a tool to
+record videos, we don't care. Anything that is team related, we want the team to
+agree on.
+
+#### How does the development process work? What's the process for working through bugs, features and tech debt?
+
+We have a biweekly sprint planning which we start with a backlog refinement
+discussion where we make sure that the whole team owns all the issues and that
+we clean things up together. We’re firm believers that the team should own that
+together rather than it falling to a single person and nobody else knows what’s
+happening.
+
+We have a pre-planning session where different stakeholders provide their needs
+for the next sprint. For example, customer success might need some changes,
+marketing has some needs, and so on.
+
+Product needs are given certain priorities in the meetings. After that,
+engineers can raise technical debt issues and the fixes they want to do. In
+pre-planning, everyone gets a good picture of what we want to do. We use
+asynchronous Scrum Poker in Slack to run a blind voting system where people
+don’t know what other people are voting so they are not biased towards a certain
+topic.
+
+In an optimal world, which does not always happen, everything is ready for the
+sprint planning, so we can mostly talk about who wants to take which area and
+work on which tickets. If a bug report is filed by a customer that our product
+is broken, we usually mark it as urgent and then work through reports in
+decreasing order of urgency.
+
+#### How does code get reviewed, merged, and deployed?
+
+We are on the path to SOC 2 compliance, and we have had mandatory code reviews
+for a while now. Basically, the engineer who implemented it is responsible for
+fully testing it, but gets support from the team to do so. For some features, we
+have full featured preview URLs where we can see the changes before merging
+them. For example, a blog post or a UI change in the dashboard.
+
+#### What is the QA process?
+
+The most effective trick is breaking down PRs in smaller pieces, so it's easier
+to review for everyone involved. If it's a continuous stream of work, being able
+to do a PR of a PR helps people to break things down. Apart from that, it always
+depends on what is being implemented.
+
+Design QA is also important. We recently launched a new dashboard. And so, our
+designer went through the whole dashboard and created a list of things that
+needed doing, consulting with the engineering team. In this case, we broke tasks
+down into small pieces which were discussed on calls involving the designer each
+step of the way. This helped to make sure that the end product is what the
+designer actually imagined it to look like.
+
+Of course we also use automation. We use Chromatic for visual regression
+testing. We use Storybook for our UI components. We have basic integration tests
+for the API. For our CDN, we have a lot of unit and end to end tests that
+actually make sure that everything works as expected.
+
+#### What are some recent examples of interesting development challenges solved by internal teams as part of building the product?
+
+We're currently rewriting some of our performance critical logic from TypeScript
+to Rust. That is an interesting challenge, as you can't just copy the logic line
+by line and need to change how you write code to make sure it's idiomatic Rust.
+
+#### How does on-call work?
+
+We use PagerDuty to manage our rotations, but are looking into incident.io as an
+alternative approach to managing things. We have one engineer per week, but this
+will change as we grow the team where we have eight engineers, with each team
+covering half of the day. Until then, we work on a weekly basis and always have
+a backup person assigned.
+
+We also have basic runbooks in PagerDuty mostly created by old incidents.
+Someone who does not know that part of the codebase should also be able to work
+with that runbook just by reading it.
+
+<span id="wrapper-2" className="nav-anchor" anchor-name="hiring-process"></span>
+
+<RichTitle tag="h3" icon={{ group: "generic", name: "checklist" }} id="key-features">
+    {" "}
+    Hiring process at Stellate{" "}
+</RichTitle>
+
+#### How does the application process work? What are the stages and what is the timeline?
+
+The hiring process is fairly simple and can be completed in one day, but usually is spread over a week, it depends on the candidate’s availability. The process works as follows:
+
+-   Initial screening call with an internal recruiter (30 mins)
+-   Screening call with hiring manager for that specific role (30 mins)
+-   Our values and employee handbook is public, anyone can look it up. We conduct a interview focused on those values (60 mins)
+-   Technical assessment
+    -   Live coding assessment on a video call (60 mins): Candidates build a new product
+    -   Technical discussion (60 mins): Discussion about code created in the last round and what to expect after joining our team.
+
+#### What is the career progression framework? How are promotions and performance reviews managed?
+
+This is typically something that larger companies would implement, but we are
+currently in the process of establishing our framework because it’s something we
+care about. We have a one job, one pay compensation philosophy - meaning you
+will get the same salary for the same job whether you are in India, or in San
+Francisco. We are currently in the intermediate state, it's not perfect yet and
+we are in the process of rolling out levels company-wide that are actually
+department agnostic.
+
+This will be mostly about how people work - we will have an individual
+contributor track and a manager track in there. We are trying to implement a
+similar philosophy as many FAANG companies these days, you don't need to become
+a manager in order to progress. We don't want to push anyone to be a manager if
+that’s not what they want to do. All of that is being formalized right now.
+
+{/* {{< div--close >}} */}
