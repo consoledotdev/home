@@ -13,6 +13,7 @@
         "@mdx-js/react": "2.3.0",
         "@next/mdx": "13.4.2",
         "@notionhq/client": "2.2.5",
+        "@vercel/analytics": "1.0.1",
         "@vercel/og": "0.5.4",
         "dotenv": "16.0.3",
         "gray-matter": "4.0.3",

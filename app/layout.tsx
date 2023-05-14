@@ -1,23 +1,21 @@
-import { ServerThemeProvider } from "next-themes";
-import ThemeProvider from "@/components/providers/theme-provider";
-import OriginProvider from "@/components/providers/origin-provider";
-import PlausibleProvider from "next-plausible";
-import Header from "@/components/compositions/header";
 import Footer from "@/components/compositions/footer";
+import Header from "@/components/compositions/header";
 import PageWrapper from "@/components/elements/page-wrapper";
-
+import OriginProvider from "@/components/providers/origin-provider";
 import StyledJsxRegistry from "@/components/providers/registry";
-
+import ThemeProvider from "@/components/providers/theme-provider";
+import "@/styles/components.scss";
+import "@/styles/dark.scss";
+import "@/styles/footer.scss";
+import "@/styles/header.scss";
+import "@/styles/light.scss";
+import "@/styles/logo.scss";
+import "@/styles/main.scss";
 import "@/styles/normalize.css";
 import "@/styles/vars.scss";
-import "@/styles/dark.scss";
-import "@/styles/light.scss";
-import "@/styles/main.scss";
-import "@/styles/components.scss";
-import "@/styles/header.scss";
-import "@/styles/footer.scss";
-import "@/styles/logo.scss";
-
+import { Analytics } from "@vercel/analytics/react";
+import PlausibleProvider from "next-plausible";
+import { ServerThemeProvider } from "next-themes";
 import { Rubik } from "next/font/google";
 
 const rubik = Rubik({
@@ -134,6 +132,7 @@ export default function RootLayout({
                             </OriginProvider>
                         </ThemeProvider>
                     </StyledJsxRegistry>
+                    <Analytics />
                 </body>
             </html>
         </ServerThemeProvider>
