@@ -5,6 +5,9 @@ import ClientPage from "./client-page";
 export const metadata = {
     title: "Console Devtools Podcast",
     description: "Interviews with interesting people in the devtools space.",
+    alternates: {
+        canonical: "https://console.dev/podcast",
+    },
 };
 
 export default async function Page() {

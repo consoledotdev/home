@@ -25,7 +25,7 @@ const rubik = Rubik({
     display: "swap",
 });
 
-// https://beta.nextjs.org/docs/api-reference/metadata
+// https://nextjs.org/docs/app/api-reference/functions/generate-metadata
 export const metadata = {
     title: "Console Newsletter - The best tools for developers",
     description: "A free weekly email digest of the best tools for developers.",

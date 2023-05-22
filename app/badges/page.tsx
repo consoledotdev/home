@@ -9,6 +9,9 @@ import ClientPage from "./client-page";
 export const metadata = {
     title: "Console Badges",
     description: "Download a Console Badge to showcase your feature on the Console Weekly newsletter.",
+    alternates: {
+        canonical: "https://console.dev/badges",
+    },
 };
 
 export default async function Page() {

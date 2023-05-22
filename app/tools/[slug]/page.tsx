@@ -38,6 +38,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     return {
         title,
         description,
+        alternates: {
+            canonical: "https://console.dev/tools/" + tool.slug,
+        },
         openGraph: {
             title,
             description,

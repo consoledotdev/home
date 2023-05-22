@@ -8,6 +8,9 @@ export const revalidate = 3600; // 1 hour
 export const metadata = {
     title: "Devtool reviews by Console",
     description: "Each week Console reviews the best tools for developers.",
+    alternates: {
+        canonical: "https://console.dev/tools",
+    },
 };
 
 export default async function Page() {

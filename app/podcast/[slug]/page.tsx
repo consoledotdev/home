@@ -17,6 +17,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     return {
         title,
         description,
+        alternates: {
+            canonical: "https://console.dev/podcast/" + params.slug,
+        },
         openGraph: {
             title: ogTitle,
             description,

@@ -20,6 +20,16 @@ export async function generateStaticParams() {
     }));
 }
 
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+    const { slug } = params;
+
+    return {
+        alternates: {
+            canonical: "https://console.dev/profiles/" + slug,
+        },
+    };
+}
+
 export default async function Page({ params }: { params: { slug: string } }) {
     const { meta, content } = await getProfileItem(params.slug);
 

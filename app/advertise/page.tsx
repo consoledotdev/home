@@ -9,6 +9,9 @@ import ClientPage from "./client-page";
 export const metadata = {
     title: "Developer advertising with Console",
     description: "Advertise to experienced developers with Console.",
+    alternates: {
+        canonical: "https://console.dev/advertise",
+    },
 };
 
 export default async function Page() {

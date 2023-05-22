@@ -12,6 +12,9 @@ import ClientPage from "./client-page";
 export const metadata = {
     title: "Latest Console newsletter",
     description: "The latest edition of the Console Newsletter. A free weekly email digest of the best tools and beta releases for developers.",
+    alternates: {
+        canonical: "https://console.dev/latest",
+    },
 };
 
 export default async function Page() {

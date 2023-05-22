@@ -5,6 +5,9 @@ import ClientPage from "./client-page";
 export const metadata = {
     title: "Devtools company profiles",
     description: "Behind the scenes of how the best devtools companies run engineering.",
+    alternates: {
+        canonical: "https://console.dev/profiles",
+    },
 };
 
 export default async function Page() {

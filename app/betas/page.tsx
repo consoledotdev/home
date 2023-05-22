@@ -8,6 +8,9 @@ export const revalidate = 3600; // 1 hour
 export const metadata = {
     title: "Beta Console - developer tools beta releases",
     description: "A live list of every developer tool beta & early access release.",
+    alternates: {
+        canonical: "https://console.dev/betas",
+    },
 };
 
 export default async function Page() {
