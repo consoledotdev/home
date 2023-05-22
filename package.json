@@ -38,7 +38,7 @@
         "eslint": "8.40.0",
         "eslint-config-next": "13.4.2",
         "react-markdown": "8.0.7",
-        "react-svg": "16.1.12",
+        "react-svg": "16.1.13",
         "sass": "1.62.1",
         "typescript": "5.0.4"
     }
