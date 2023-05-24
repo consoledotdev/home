@@ -6,6 +6,7 @@ import type { PodcastMeta } from "@/app/lib/podcasts";
 
 import { GetTheme } from "@/components/providers/theme-provider";
 import { useMediaQuery } from "@/components/effects/use-media-query";
+import { settings } from "@/app/lib/settings";
 
 import PageSection from "@/components/elements/page-section";
 import FormSubscribe from "@/components/compositions/form-subscribe";
@@ -75,7 +76,7 @@ export default function Page({ podcastItems, ...props }: Props) {
                     <div className="form-wrapper">
                         <p className="small subscribers-count">
                             <IconProvider group="generic" name="console-mini-filled" />
-                            26k+ subscribers
+                            {settings.subscribersCount}+ subscribers
                         </p>
                         <FormSubscribe layout={max1024 ? (max768 ? (max480 ? "block" : "inline") : "block") : "inline"} />
                         <p className="small">

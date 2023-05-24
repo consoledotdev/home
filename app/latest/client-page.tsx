@@ -70,7 +70,7 @@ export default function Page({ page, toolItems, betaItems, ...props }: Props) {
                         <div className="form-wrapper">
                             <p className="small subscribers-count">
                                 <IconProvider group="generic" name="console-mini-filled" />
-                                26k+ subscribers
+                                {settings.subscribersCount}+ subscribers
                             </p>
                             <FormSubscribe layout={max1024 ? (max768 ? (max480 ? "block" : "inline") : "block") : "inline"} />
                             <p className="small">Every Thursday.</p>

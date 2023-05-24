@@ -5,7 +5,7 @@ type Settings = {
 };
 
 export const settings: Settings = {
-    subscribersCount: "26k",
+    subscribersCount: "27k",
 
     /**
      * For the annual end of year countdown, set the forceNewsletterDate to the last
