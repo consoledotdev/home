@@ -36,7 +36,7 @@
         "@types/rss": "0.0.30",
         "encoding": "0.1.13",
         "eslint": "8.41.0",
-        "eslint-config-next": "13.4.3",
+        "eslint-config-next": "13.4.4",
         "react-markdown": "8.0.7",
         "react-svg": "16.1.13",
         "sass": "1.62.1",
