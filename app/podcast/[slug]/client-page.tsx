@@ -336,6 +336,7 @@ export default function Page({ podcast, allPodcasts, ...props }: Props) {
                     <PageSection classes={["markdown-body"]}>
                         <MDXRemote
                             {...podcast.content}
+                            // @ts-ignore
                             components={{
                                 ...components,
                                 h3: (props: any) => <h4 className="title title-2" {...props} />,

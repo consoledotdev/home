@@ -336,6 +336,7 @@ export default function Page({ profile, podcast, interview, ...props }: Props) {
 
                         <MDXRemote
                             {...profile.content}
+                            // @ts-ignore
                             components={{
                                 ...components,
                                 h4: (props: any) => <h4 className="title title-3" {...props} />,

@@ -112,6 +112,7 @@ export default function Page({ interview, ...props }: Props) {
                     <PageSection classes={["markdown-body"]}>
                         <MDXRemote
                             {...interview.content}
+                            // @ts-ignore
                             components={{
                                 ...components,
                                 h3: (props: any) => <h3 className="title title-2" {...props} />,

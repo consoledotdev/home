@@ -230,6 +230,7 @@ export default function Page({ tool, podcast, interview, profile, ...props }: Pr
                                         {...podcast.highlights}
                                         components={{
                                             ...customMDXComponents,
+                                            // @ts-ignore
                                             ImageProvider,
                                             p: (props: any) => <p className="small text-default" {...props} />,
                                         }}
@@ -287,6 +288,7 @@ export default function Page({ tool, podcast, interview, profile, ...props }: Pr
                                         {...interview.highlights}
                                         components={{
                                             ...customMDXComponents,
+                                            // @ts-ignore
                                             ImageProvider,
                                             p: (props: any) => <p className="small text-default" {...props} />,
                                             h3: (props: any) => h5(props),
@@ -359,6 +361,7 @@ export default function Page({ tool, podcast, interview, profile, ...props }: Pr
                                         {...profile.highlights}
                                         components={{
                                             ...customMDXComponents,
+                                            // @ts-ignore
                                             ImageProvider,
                                             p: (props: any) => <p className="small text-default" {...props} />,
                                             h3: (props: any) => h5(props),
