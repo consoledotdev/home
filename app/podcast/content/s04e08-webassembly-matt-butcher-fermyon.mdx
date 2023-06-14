@@ -1,0 +1,790 @@
+---
+title: WebAssembly
+who: Matt Butcher
+whoLink: https://twitter.com/technosophos
+what: We discuss the four use cases for WebAssembly, why Wasm’s sandboxed
+    approach is so secure, whether there's any danger retrofitting other use
+    cases onto a language that was originally designed for the web, and how
+    limitations like the lack of full networking support are going to be
+    resolved.
+season: 4
+episode: 8
+date: 2023-06-15T06:00:00Z
+duration: "37:46"
+episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/8ba62269-801d-4591-8c8b-62982a1b3ca8/audio/b85700ec-aeb3-435f-8e5e-bec25116f901/default_tc.mp3
+draft: false
+summary: "WebAssembly - a devtools discussion with Matt Butcher (Fermyon).
+    Console Devtools Podcast: Episode 8 (Season 4)."
+metaDescription: "WebAssembly - a devtools discussion with Matt Butcher (Fermyon).
+    Console Devtools Podcast: Episode 8 (Season 4)."
+headerType: fixed
+hideLines: true
+hidePlanes: true
+isSubpage: podcast-episode
+pageType: podcast-episode
+customPageStyle: true
+xlViewport:
+    largeText: true
+topImg1Src: /img/podcast/fermyon-matt-butcher.jpeg
+topImg2Src: /img/favicons/www.fermyon.com.png
+ogImg: /img/podcast/podcast-cover.jpeg
+twitterCard: https://player.simplecast.com/9c510109-d09f-4911-85ae-dc3ade746979
+authorName: David Mytton
+authorURL: https://davidmytton.blog/start
+authorImg: /img/david.jpg
+authorBio: is Co-founder & CEO of Console. In 2009, he founded and was CEO of Server
+    Density, a SaaS cloud monitoring startup acquired in 2018 by edge compute
+    and cyber security company, StackPath. He is also researching sustainable
+    computing in the Department of Engineering Science at the University of
+    Oxford, and has been a developer for 15+ years.
+author2Name: Jean Yang
+author2URL: https://twitter.com/jeanqasaur
+author2Img: /img/podcast/akita-jean-yang-profile.jpg
+author2Bio: is CEO of Akita Software. Jean earned her PhD in software correctness and
+    programming language design from MIT and then became a professor in computer
+    science at Carnegie Mellon University before she started Akita to build the
+    future of API observability.
+---
+
+### Episode notes
+
+In this episode, we speak with [Matt Butcher](https://twitter.com/technosophos),
+CEO at Fermyon. We discuss the four use cases for WebAssembly, why Wasm’s
+sandboxed approach is so secure, whether there's any danger retrofitting other
+use cases onto a language that was originally designed for the web, and how
+limitations like the lack of full networking support are going to be resolved.
+
+**Things mentioned:**
+
+-   [OpenStack](https://www.openstack.org/)
+-   [Kubernetes](https://kubernetes.io/)
+-   [Docker](https://www.docker.com/)
+-   [Helm](https://helm.sh/)
+-   [_The Illustrated Children's Guide to Kubernetes_](https://www.cncf.io/phippy/the-childrens-illustrated-guide-to-kubernetes/)
+-   [Microsoft](https://www.microsoft.com/)
+-   [SingleStore](https://www.singlestore.com/)
+-   [Shopify](https://www.shopify.com/)
+-   [VMware](https://www.vmware.com/)
+-   [Fermyon Spin](https://www.fermyon.com/spin)
+-   [Fermyon Cloud](https://www.fermyon.com/cloud)
+-   [Wizer](https://github.com/bytecodealliance/wizer)
+-   [wasm-opt](https://github.com/WebAssembly/binaryen)
+-   [MacBook Pro](https://www.apple.com/za/macbook-pro-13/)
+-   [Dell Ultrawide Monitor](https://www.dell.com/en-us/lp/ultrawide-monitors)
+-   [iPad](https://www.apple.com/ipad/)
+
+<RichTitle tag="h5" icon={{ group: "generic", name: "future-head" }} text="About Matt Butcher" />
+
+Matt Butcher is the CEO of Fermyon. He is also a software engineer, tech author,
+speaker, and ex-professor. Formerly a principal software development engineer
+for Microsoft, he led a team of engineers that built open-source tools for
+cloud-native computing. They were responsible for Helm, Draft, OAM, Brigade,
+Krustlet, CNAB, Porter, Duffle, the VS Code Kubernetes Extension, and many
+others. Together with a team of 10 people from Deis Labs at Microsoft, he
+started Fermyon, a lighter, faster, and truly serverless cloud, architected to
+compile and ship code as Wasm binaries.
+
+### Highlights
+
+<PodcastEpisodeClipping atTime="13:36">
+
+**Matt Butcher**: When Luke wrote his first blog post and said, “This is for a
+web browser,” it was built to not be particularly web-browser specific. It
+really just defined a machine code format in a way to execute that format. That
+was what kind of drew us to it as a technology. In the core WebAssembly 1.0
+specification, there's nothing in there that binds you to a web browser
+environment, it’s just a straight-up runtime definition. So it was fairly easy
+to sort of pluck out a WebAssembly runtime and drop it somewhere else. In fact,
+there are several different WebAssembly runtimes that are not based on the
+browser at all.
+
+</PodcastEpisodeClipping>
+
+<PodcastEpisodeClipping atTime="27:57">
+
+**Matt Butcher:** If I were thinking about writing a new database, a new
+high-performance, multithreaded database, WebAssembly would not be the format I
+would target for this, right? Because there, you want to be able to do a lot of
+low-level management. Every little microsecond that you can tease out of IO and
+process manipulation is valuable. So I don't think we'll see those kinds of
+highly, highly IO-intensive tasks really land in WebAssembly for years because
+it's going to take the ecosystem a long time to really tune up and be
+fine-grained enough to deal with those things without compromising on security.
+It is possible that maybe never will we really want to write the kind of
+high-performance databases or high-performance number-crunching computing kinds
+of systems in WebAssembly.
+
+</PodcastEpisodeClipping>
+
+<BoxCollapsible expanded title="Full transcript"
+  classes={["podcast-transcript"]}>
+
+**David Mytton \[00:00:05\]:** Welcome to another episode of the Console
+DevTools Podcast. I'm David Mytton, CEO of Console.dev, a free weekly email
+digest to the best tools and beta releases for experienced developers.
+
+**Jean Yang \[00:00:16\]:** And I'm Jean Yang, CEO of Akita Software, the
+fastest and easiest way to understand your APIs.
+
+**David Mytton \[00:00:23\]:** In this episode, Jean and I speak with Matt
+Butcher, CEO at Fermyon. We discuss the four use cases for WebAssembly, why
+Wasm’s sandboxed approach is so secure, whether there's any danger retrofitting
+other use cases onto a language that was originally designed for the web, and
+how limitations like the lack of full networking support are going to be
+resolved. We're keeping this to 30 minutes. So let's get started.
+
+**David Mytton \[00:00:48\]:** We're here with Matt Butcher. Let's start with a
+brief background; tell us a little bit about what you're currently doing and how
+you got here.
+
+**Matt Butcher \[00:00:56\]:** Yeah. I am currently the CEO of Fermyon. I've
+been in the cloud world for quite a while. I think OpenStack was really kind of
+my first foray into cloud computing, really fell in love with it then, worked my
+way into the container ecosystem and into Kubernetes and Docker. I spent a lot
+of time there. I did some interesting things like building Helm and co-writing
+The Illustrated Children's Guide to Kubernetes.
+
+Then close to about a year and a half ago, 10 of us left Microsoft altogether.
+Ten of us who were in Deis Labs at Microsoft left and started Fermyon because we
+really kind of had this vision for how we wanted to build the next wave of cloud
+computing. I think we'll get to talk about that a little bit here today.
+
+**Jean Yang \[00:01:35\]:** Cool. So, Matt, you're big in WebAssembly. I was
+hoping you could talk about what are the use cases for it. When would you really
+want to use it? When would you avoid it? Give our audience a sense of why are
+people so excited about it.
+
+**Matt Butcher \[00:01:50\]:** So WebAssembly came out around 2015. That was
+when sort of Luke Wagner made the first public announcement that Mozilla,
+Microsoft, Google, and Apple were all working together to build this new
+specification. The original use case that they had in mind was to build a
+technology that – kind of a virtual machine. Like a language virtual machine on
+Java or .Net, where different programming languages, different existing
+programming languages like C and Rust and maybe Python and JavaScript could all
+be sort of compiled into a neutral format that can execute inside the browser.
+So it was really another way to kind of extend a browser computing beyond just
+JavaScript.
+
+Now, that was the original goal. As we know from being technologists, the
+original goals often change, right? Scopes change. Sometimes, they expand.
+Sometimes, they contract. Java was originally an embedded programming language.
+It went well beyond that. Ruby was a system language that for about 10 years,
+very few people knew about. Then Ruby on Rails landed. All of a sudden, it was a
+web development language. WebAssembly is landing.
+
+I think that there are four major domains where we're seeing a lot of traction.
+Of course, I'm very excited about one in particular and do feel like it's the
+one where WebAssembly is going to shine. But I'll talk through all four. I mean,
+the browser's the first one, right? We've seen Figma, Adobe, places like that,
+pick up on WebAssembly because it helps them optimize for certain things. So
+Figma, the graphics design tool, they wrote a lot of code in C++. It was very
+high-performance graphics code that they could then compile to WebAssembly and
+hook it up to the rest of the browser model with JavaScript.
+
+A second example of a good place to apply WebAssembly would be systems that are
+more resource-constrained. WebAssembly is built very intentionally to be able to
+run in low-resource environments. It can be run in sort of an interpreter mode,
+which means, really, you can run it on – Raspberry Pi would be large for what
+you would need to run WebAssembly, right? You can even go down to very small
+embedded systems and be able to execute WebAssembly there.
+
+I think three media companies that I know of now have chosen to use WebAssembly
+as a format for executing their video streaming services. So Disney+, Amazon
+Prime, and BBC have all chosen to write their players inside of WebAssembly. The
+reason why is because WebAssembly is so cross-platform, cross-architecture.
+There's support for so many different platforms that they can support  — there’s
+thousands of different skews; Roku, Apple TVs, every Samsung, LG, whatever TV
+out there. They can write an application once and really run it in all those
+different environments. That's the second domain, browser then IoT.
+
+I think another really promising one is this idea that WebAssembly may be the
+last plugin model that any of us ever need to know. Steve Manuel, who's a good
+friend of mine, coined that phrase a while back. And, you know, a word is not
+the last of anything in software development. We’ll always keep reinventing the
+wheel, and nothing can stop us. But it is a really, really good plugin model, a
+really good way to extend an existing platform to be able to do more.
+
+SingleStore, which is a database company, showed a very novel way of doing this
+when they said, “Okay. Instead of having to write your in-database functions in
+some kind of PL/SQL, we could just expose a WebAssembly runtime so that,
+essentially, you could declare a method. I'm going to declare a new SQL method
+called “stagger”. Then I'm going to implement that inside of WebAssembly.
+Instead of having to suck data out of the database, run it through
+transformations outside, and then insert it back in, you could run these
+particular WebAssembly functions inside of the database close to the data.
+That's one example.
+
+Another example would be the kinds of things Shopify is doing where they are
+launching projects that will allow platform extension developers to write
+extensions to Shopify and WebAssembly, and upload it, and have it run on their
+infrastructure.
+
+So I think that plugin model is looking really interesting as well. But the one
+that I'm the most excited about is cloud. That's really – we found WebAssembly
+because we had identified some issues with cloud and we said, “There's got to be
+a way to solve these problems.”
+
+We worked inside of Azure, got a peek behind the curtain, and we're saying,
+“Hey, wow. A lot of this stuff is done very well. Virtual machines have a really
+strong position to run kind of a full operating system. Containers are great for
+things like databases. But there are some cases here where the amount of compute
+used to run these things seem disproportionately high. While at the same time,
+the performance of these same things seemed disproportionately low.” One of the
+areas we were really excited about was serverless functions, right? So Lambda
+comes along, Azure Functions, Google functions. Everybody's got a functions
+platform, but all of them are based on an older technology that means entire
+virtual machines have to be sort of pre-queued up in order to execute these
+things. So you've got stuff sitting around, idly running, costing everybody
+money, consuming electricity. Then at the last second or last millisecond, you
+drop a workload on it and execute that and that's slow because it takes a while
+to dump the code on and execute it.
+
+You started looking at systems that cost a lot to keep them idle, couldn't scale
+quite as fast as they ought to be able to, and had cold start times of around
+200 milliseconds up to half a second or a second or even longer. We looked at
+those particular cloud workloads and went, “If we could find a really fast cloud
+runtime that could start instantly, execute applications from all kinds of
+different languages, and then be able to complete this kind of execution very
+quickly, and shut back down, then we should be able to come up with a better
+platform for writing serverless functions than what exists currently.”
+
+That was kind of what led us to WebAssembly. So I think that's why the fourth
+category that I'm really excited about for WebAssembly is this whole kind of
+cloud environment where we can do things like scale to zero, scale up to tens of
+thousands nearly instantly because of the runtime profile of WebAssembly.
+
+**David Mytton \[00:07:52\]:** So how do you actually compile it first? Can it
+live alongside existing applications? Does it go inside frameworks like Next.js?
+What about on those serverless platforms like Lambda because their examples are
+all in Node and Go and Rust and those kind of languages?
+
+**Matt Butcher \[00:08:07\]:** So the key to executing WebAssembly, the key to
+getting something into the WebAssembly format is really to be able to compile
+something to the WebAssembly bytecode format. So as soon as I start saying
+“compile”, we're all thinking, “Okay. Well, compile is a part of the development
+tool chain that I'm relatively used to or execution in the case of a scripting
+language.” Let's start with a compiled language. Let's go to a scripting
+language, right?
+
+A compiled language like Rust or C or Java, in your development process, you
+write the code, and then you compile it into a binary artifact. For something
+like Rust or C, you're compiling it to execute on your particular processor
+architecture in your particular operating system. So in order to get a language
+like that and execute it inside of WebAssembly, what you really need is a
+compiler that compiles from your source language directly into the WebAssembly
+format. So their primary way to do this is to beg your compiler companies or
+your compiler organizations to add support for this, which is exactly what we're
+seeing happen.
+
+Rust has support inside of the Rust compiler. C# and .Net now have support
+inside of those C#, .Net toolchain. LLVM has support for it, which means you can
+compile C to it. Zig has added some fantastic support on top of that. It's
+actually easier, by the way, to compile C code using the Zig toolchain, C to
+WebAssembly, than it is to use the regular C toolchain. So the Zig compiler is
+just a really impressive piece of engineering. It can compile the Zig
+programming language. It can compile the C programming language and a number of
+those things into WebAssembly.
+
+With compiler languages, we're really talking about, hopefully, ideally, getting
+the core project to introduce support for WebAssembly. Now, some like Swift, a
+community initiative basically took over when the Apple team wasn't ready to
+build a WebAssembly compiler. So there's a SwiftWasm project that's completely
+community-maintained, 100% compatible with Swift toolchain, but has been really
+pushed by external community members, rather than by the core Swift language
+team. I'm not entirely sure that that will always be the case. I think the Swift
+core team will pretty soon say, “Oh, well. Yes, let's just roll this right in,”
+and the Swift community has asked for that. So there are some cases where
+community has sort of filled in.
+
+VMware is another good example of a company that has stepped in to try and fill
+in some gaps. That'll lead us into scripting languages here. So a scripting
+language executes differently, right? We don't necessarily have to compile a
+scripting language into a binary format in order to execute it. Instead, we
+interpret the source code kind of in real-time. So the simplest way to add
+scripting language support to WebAssembly is to compile the interpreter itself
+from whatever its source languages into WebAssembly, and then just feed source
+code files in that way.
+
+This is what Python and Ruby did. The C Python project and the C Ruby projects,
+both core projects in their respective language ecosystems, developers worked on
+a target so that they could compile the Python interpreter itself and the Ruby
+interpreter itself into WebAssembly. We use it for our cat game, Finicky
+Whiskers. We use Ruby to do a lot of that. Basically, what we did was we take
+the ruby.wasm file, which executes Ruby, and just feed it in the Ruby source
+files and let it execute as it goes.
+
+**David Mytton \[00:11:19\]:** Does that add loads of overhead?
+
+**Matt Butcher \[00:11:21\]:** Yes, yes. I mean, it’s no more than you have with
+your regular Ruby or Python interpreter. But it's a substantially different
+proposition than running a single compiled binary, right? You can get a Rust
+binary down to a few 100k, right? But when you need to load a few dozen
+scripting Python files just to get Python executing, then there's a little more
+overhead. We've learned an interesting way around that. But before getting
+there, I'll talk about what VMware is working on.
+
+VMware has kind of stepped in, the Wasm Labs at VMware, and said, “Okay. Well,
+we can work on building just the stuff to help scripting language environments
+easily move over to WebAssembly.” So they started with PHP. They compiled the
+PHP runtime into WebAssembly. Now, they're working on tools for Python and for
+Ruby as well. They're working with the upstream language communities in those
+cases. The scripting languages have kind of moved along, and they've moved along
+a little slower than the compiled languages. But there is – getting back, David,
+to your one point there, right?
+
+Let's think for a moment about how we start up a scripting environment, right?
+So I start up my Python environment, it loads a bunch of system Python files,
+and then eventually gets to executing my particular supply script as well,
+right? So there's this loading step there that we know is going to be relatively
+consistent and is going to happen with each invocation. So it should be
+possible. Then, indeed, we're doing a lot of work to do this. That's possible to
+be able to sort of preload everything, freeze the WebAssembly sort of in flight
+because the format allows you to freeze it mid-execution and then say, “Okay.”
+
+Now, the next invocation, just start from this frozen point. So I don't have to
+reload all of those same Python standard libraries or core libraries. I can just
+start from executing directly. So there is hope that if we do this well,
+WebAssembly will actually make some of these environments faster to execute than
+they would be in their native format.
+
+**David Mytton \[00:13:11\]:** Very interesting. So I suppose going back to what
+WebAssembly was designed for which, from my understanding, is for the web, does
+that mean all these other use cases that you've been describing are retrofitting
+onto that? Is that a good idea?
+
+**Matt Butcher \[00:13:26\]:** That is a great question because it really kind
+of gets to how is WebAssembly built. So WebAssembly was built to be – in spite
+of the fact that it was targeted, right? The original design. When Luke wrote
+his first blog post said, “This is for a web browser,” It was built to not be
+particularly web-browser specific. It really just defined a machine code format
+in a way to execute that format. That was what kind of drew us to it as a
+technology. In the core WebAssembly 1.0 specification, there's nothing in there
+that binds you to a web browser environment, it’s just a straight-up runtime
+definition. So it was fairly easy to sort of pluck out a WebAssembly runtime and
+drop it somewhere else. In fact, there are several different WebAssembly
+runtimes that are not based on the browser at all, so Wasmtime, WAMR, WasmEdge,
+Wasm3. There are probably 12 all told. Each of them sort of designed to target a
+particular case, right?
+
+WAMR is the WebAssembly micro runtime. It comes from Intel. It's designed very
+much to handle embedded cases, right? So it's a very compact WebAssembly
+interpreter that can be put in very, very small devices. Wasmtime, which is done
+by the Bytecode Alliance, which is sort of a consortium group that works on the
+specification, is designed to illustrate sort of the cutting edge parts of the
+specification, but also to be a high-performance runtime for larger
+installations, right? So we use that one for our cloud computing because it
+might not be the most svelte code-wise, and it might not be the most efficient
+memory-wise. But when you drop it on a server that has plenty of RAM and plenty
+of processing power compared to an embedded device, it can make use of all of
+those features and really crank through on the performance. We've chosen that
+one to use as the background for Fermyon’s Spin open-source platform and also
+for Fermyon Cloud. Because the performance we're getting out of it is just
+really good.
+
+It also has some features that an interpreter doesn't have. As we learned from
+kind of the Java world, the original Java bytecode runtime was sort of an
+interpreter. It read through the bytes and ran them as they came in. Soon after,
+they added a JIT compiler that could kind of just in time, JIT, recompile the
+bytecode, and optimize it into native code. Then sort of along the way, over the
+last 20-some years of Java development, the idea of ahead-of-time compiling has
+caught some traction too, where you can say, “All right, I know what the
+destination environment is exactly, so I'm just going to pre-compile this to the
+native executable format whenever it makes sense. Then I can execute it at
+native speed, right?”
+
+Wasmtime as a WebAssembly runtime has all three modes supported. You can run it
+as an interpreter. You can run it as a JITed interpreter, or you can ahead of
+time compile and execute it that way. So environments like that mean you have
+all kinds of knobs and dials you can twist and turn in order to really squeeze
+out the exact performance profile that you're looking for.
+
+There are several of these that have been sort of lifted. The specification has
+been implemented outside of the browser. The V8 engine, which is the browser, it
+also exists in Node, in Deno, and places like that and so those environments,
+too, they tend to use the same WebAssembly runtime that you would normally see
+in the web browser. So really, we kind of run the gamut.
+
+I think what you're kind of asking behind that question is so are we faking a
+browser environment, or are we using the technology kind of as it was intended
+to be used? The answer is that we are using the technology as it was intended to
+be used, as a generic bytecode runtime. In the browser world, we have to connect
+it to things like the DOM or the JavaScript execution environment and basically
+say, “Hey, JavaScript. Here's how you deal with the WebAssembly code that's
+executing inside of the same environment you are.” Likewise, when we get to
+cases like building microservices and functions the way we do in Spin or
+building a plugin the way that Shopify does, then we need to expose a different
+set of facilities, right? So the specification called WASI. There are so many W
+terms in here, right? WASI, the WebAssembly system interface, is an attempt to
+say, “Hey, here's what an operating system-like or POSIX-like model would look
+like inside of WebAssembly. We can expose an API for files. It looks exactly
+like every other file API we've ever seen, an API for environment variables, one
+to get the clock time.
+
+We have sort of like a standardized layer that you can add on to WebAssembly so
+that developers like me can say, “Hey, I just want to read and write some files,
+I want to read some environment variables, and I can use my regular programming
+language facilities to do that,” and know that the WebAssembly runtime is going
+to be able to say, “Oh, Matt's asking for an environment variable. Here's a
+thing that looks like the environment variable Matt is asking for.”
+
+**Jean Yang \[00:18:06\]:** Thanks, Matt. That's really interesting. A related
+question is what leads a team like yours to choose to build on top of Wasm,
+instead of natively compiling code? Is it the portability? Is it the libraries?
+Is it performance? Is it the community, some combination of the above?
+
+**Matt Butcher \[00:18:26\]:** It is a combination, plus a few others. So let's
+start with, what, cloud compute. So I should probably start by saying, well,
+what's our interest, right? Fermyon is trying to build a cloud-computing layer
+that stands alongside of virtual machines and containers. So a virtual machine,
+when you think about what a virtual machine does, it takes a prepackaged
+operating system instance, and it runs it on rented hardware in somebody's
+cloud, right? So I'm loading my virtual machine image up into AWS, I'm renting
+their servers, and I'm running my operating system on their servers. The kind of
+unit of measure there is operating system.
+
+These things are large. They're six gig or more. But at the core, then what we
+worry about is can I securely upload this image, execute it there without
+worrying that somebody else can do something nefarious to my operating system
+while it's running there? So security is a key piece of what it takes to have a
+cloud runtime. So if we scoot over to the right a little bit and look at Docker
+containers, we see a very similar story. Docker containers are really designed
+to run a specific application with its file system and its utilities in a kind
+of isolated environment.
+
+So we've scoped it down from operating system to really sort of like server
+demon, plus all of its utilities and files. It’s going to be a smaller image
+size, and it's going to require a little less to push these things up into the
+AWS or Azure, whoever you're running inside of, and it's going to consume
+somewhat fewer resources than a full virtual machine. We've gone from sort of
+like the heavyweight virtual machine class to sort of like a middle-weight
+application-focused class.
+
+What got us interested was saying, “Okay. Well, it seems like if I just want to
+write something like a serverless function, something that's going to get
+started up and executed very quickly and shut down, then I'm going to need the
+same level of security that these other technologies have.” So security is story
+number one. I need an isolated runtime where I can say, “Hey, I can safely run
+my particular application on somebody else's hosted environment without worrying
+that somebody else running there will be able to attack my application.”
+
+WebAssembly has that, right? This is the first thing that caught our attention.
+The browser is our portal to a very scary Internet, right? We frequently load
+web pages that we know nothing about the authors, nothing about the creators,
+have no understanding of what code they're executing on our system when that
+JavaScript downloads and executes. When the WebAssembly team specified
+WebAssembly, they did so, knowing that they not only needed a sandbox as
+controlled as JavaScript, they needed something a little bit tighter because
+they had to make sure that if you're downloading a binary, the binary then can't
+be used to attack the JavaScript that's running outside of it. So it was an even
+stricter sandbox.
+
+When we took a look at that sandbox, we said, “That's the kind of sandbox that
+our cloud environment needs.” It's the kind of sandbox layer that's actually a
+little bit stronger than Docker, a little bit weaker than Virtual Machines. So
+that was the first thing that really attracted us to WebAssembly.
+
+**Jean Yang \[00:21:39\]:** So what you're saying is the portability of
+WebAssembly is really powerful because of the sandboxing that it has.
+
+**Matt Butcher \[00:21:47\]:** Yes.
+
+**Jean Yang \[00:21:47\]:** It's not just our web browsers. You can basically
+build anything else. You can just think of it as a sandbox runtime. That's –
+
+**Matt Butcher \[00:21:53\]:** Yes.
+
+**Jean Yang \[00:21:53\]:** Yes, okay. Cool.
+
+**Matt Butcher \[00:21:54\]:** For people who are familiar with CLR or .Net or
+Java, right? They both execute in a sandboxed environment. But in both of those
+environments, sort of the default disposition of the sandbox is trust, right?
+The runtime says, “Oh, a developer gave me a piece of code. They're a
+trustworthy person. I'm going to execute it. They can access files. They can
+access the network. Sure, they can access the process table,” right?
+
+The default disposition of the WebAssembly sandbox is “Don't trust anything,
+unless the person operating the sandbox says, ‘Okay, it's okay for you to allow
+them to access this particular file or these five files or this environment
+variable.’” So it's almost like a reverse security posture, right? It's like
+deny by default.
+
+**Jean Yang \[00:22:37\]:** This is the clearest articulation I've heard about
+why people are really excited about Wasm as a runtime, like a non-browser
+runtime. This is really interesting. Thanks.
+
+**Matt Butcher \[00:22:46\]:** It has a bunch of other good virtues, right? It
+is cross-platform and cross-architecture, which is really important. I can
+compile it once. Again thinking about Docker, when I build a Docker image, I
+have to say this is going to run on a Linux box running an Intel architecture.
+Or this is running on a Windows box, running on an ARM architecture. If I want
+to support multiple operating systems and architectures, I essentially have to
+build multiple container images.
+
+What got us excited about WebAssembly here was that you can compile at once, and
+it can run not just on Linux and Windows and not just on Intel and ARM but on a
+huge variety of operating systems down to RTOSes, and it's native on Mac OS. You
+don't need a virtual machine there to run it and a huge variety of different
+architectures as well, in addition to Intel and ARM.
+
+That's really cool because when you're thinking about – again, and I'm most
+excited about the cloud world but you can substitute it in the IoT here while
+I'm talking and hear the same value props, right? So on a cloud, I will want to
+run on whatever the cheapest OS and architecture combination I can get is. I
+don't necessarily want to have to tell the developers every time, “Oh, ARM’s
+cheaper now, so I'm going to – y'all need to recompile the ARM.” That would be a
+horrible, horrible cloud experience for people.
+
+The idea that we could provide a single binary format and say as long as you
+compile it into this format, we will be able to execute it, and we will continue
+working to find a faster, better, cheaper way to execute it, and that won't
+translate back to you having to rewrite your app.
+
+**Jean Yang \[00:24:10\]:** Cool. Yeah, I mean, I've always wondered why .Net
+wasn't bigger because I – part of me has always been like, “Is Wasm just a
+sexier rebranded .Net?” But you make a really good case for why there's actually
+more functionality. This trust model is more practical for the real world, and
+it does seem like this is accessible across a way bigger set of platforms than
+CIL.
+
+**Matt Butcher \[00:24:34\]:** The .Net team has been very enthusiastic about
+WebAssembly, perhaps one of the most enthusiastic language communities. They
+introduced Blazor a couple of years ago, which was browser-specific. Now,
+they're working on the new version of .Net. It can merely just compile into
+WebAssembly so that they can execute on –
+
+**Jean Yang \[00:24:51\]:** That's super cool. Yes. Something I had wondered for
+years was why isn't the .Net model more universal? It seems like WebAssembly
+really is that.
+
+**Matt Butcher \[00:24:59\]:** Yeah, yeah. WebAssembly, I think, is the right
+runtime, even though I love some of the .Net languages like C# and F#, and it's
+good to see those languages then be able to execute at this kind of environment,
+in addition to their native environment.
+
+**Jean Yang \[00:25:10\]:** Cool.
+
+**David Mytton \[00:25:11\]:** What about the limitations then? Because it can’t
+all be good, right? So one of the things I've spotted as the networking side of
+things, you can do HTTP. That seems to be fine, but there is no access to any
+other kind of networking sockets or anything like that. Is that accurate, and is
+that going to change?
+
+**Matt Butcher \[00:25:28\]:** It is accurate. Every time anyone asked me this
+question, I'm like, “This is the Ford’s question about what color can I get my
+car,” and you can get your car in any color as long as it's black, right? There
+are some very firm limitations on what can be done with WebAssembly, some of
+which will disappear within months, some of which may persist for years. I'm
+enthusiastic about the cloud use case. But, again, you can take some of these
+things and substitute in for other cases.
+
+Things that tend to start up and run fairly quickly and execute fairly quickly
+and shut down are an easy fit for WebAssembly. Things that are very long-running
+are a harder fit for WebAssembly. The reason why really has to do with more with
+what features are present and which features are missing from WebAssembly
+currently.
+
+As you noted, networking, not quite there yet. More importantly than that,
+concurrency and multithreading, not there yet. There are a number of resource
+bindings that require the sandbox to have access to lower-level system pieces
+that we tend not to want to grant it access to. That means, for example,
+WebAssembly is not and probably never will be a great language for trying to
+manage the low-level processes on your system because that would require
+puncturing the security sandbox so much that at that point, you're completely
+giving up on the security properties of the WebAssembly sandbox, right?
+
+Some of these things will change very rapidly. Networking is a great example. In
+the current iteration of WebAssembly and then the WebAssembly system interface,
+WASI — that we talked about a little bit earlier — file system, environment
+variables, clock, random number generator, all that stuff is well-supported, but
+networking is not. And part of the reason why was that you’ve got to start
+somewhere and increment from there. Part of the reason networking got dropped is
+networking is a very hard problem to do well and to do securely.
+
+However, it's made a lot of progress over the last few years. The new preview of
+WASI that we'll be shipping in the next couple of months will include
+networking. So in just a couple of months, we'll get a huge, huge chunk of very,
+very important work dropping into the specifications such that everybody can
+implement it, and we'll have a standard and secure way of adding networking.
+
+Concurrency is a little bit farther out. I think kind of we're thinking about
+concurrency is likely landing in the end of this year, mainly in the form of
+async support. Because if you can do async support, then a runtime that’s
+single-threaded and a runtime that's multithreaded can each kind of optimize to
+their particular use cases. So that'll be coming later on, I think, probably
+toward the end of this year.
+
+But even so, I think, if I were thinking about writing a new database, a new
+high-performance, multithreaded database, WebAssembly would not be the format I
+would target for this, right? Because there, you want to be able to do a lot of
+low-level management. Every little microsecond that you can kind of tease out of
+IO and process manipulation is valuable. So I don't think we'll see those kinds
+of highly, highly IO-intensive tasks really land in WebAssembly for years
+because it's going to take the ecosystem a long time to really tune up and be
+fine-grained enough to deal with those things without compromising on security.
+
+It is possible that maybe never will we really want to write the kind of
+high-performance databases or high-performance number-crunching computing kinds
+of systems in WebAssembly.
+
+But for now, at least, I think the sweet spot for WebAssembly are any of these
+kinds of applications that can benefit from short-term single-process execution.
+Again, a great example of this is serverless functions, where a serverless
+function tends to require that it start up nearly instantly, but also that the
+workload be done in five minutes or less. That's a really good model for
+WebAssembly, particularly because oftentimes, serverless functions don't need
+things like concurrency because instead of running one function that then has
+five threads in it, you just run five instances of the same function.
+
+Microservices are another good example of this. There are a lot of patterns out
+there that I think are very amenable to the WebAssembly model, as it is today,
+even before kind of the full networking and concurrency and all of those kinds
+of features end up dropping. So I think there are plenty of useful and usable
+kinds of applications that can be built now using WebAssembly and will always
+kind of be the sweet spot for WebAssembly.
+
+**Jean Yang \[00:29:47\]:** Matt, following up on that, if people are writing
+network-heavy applications, should they see it more as WebAssembly allows them
+to do it better because of the sandboxing? Or they have to open up so many
+thanks exceptions and inroads into that sandbox model that it's not actually
+practical?
+
+**Matt Butcher \[00:30:05\]:** So this is a great question because it gets to
+the underlying architecture of the thing that's running WebAssembly. So I don't
+tend to think about WebAssembly as kind of the thing you execute on the command
+line, where you’re just kind of like, “There are plenty of runners.” Wasmtime is
+one. Or you can do wasmtime food.wasm, and let it execute it as if it were a
+command line tool, just like Python or Ruby, when you do Python food.py or Ruby
+food.rb.
+
+I think where WebAssembly shines is in its ability to drop it into host
+frameworks, right? So a host framework is a system where it governs some of the
+external elements of an application and then delegates specific things to the
+WebAssembly binary. Spin is an example of this. So Spin is an open-source tool
+that you can write microservices, serverless functions in. Basically, the way
+you do it is your unit of code is going to be a request handler, right?
+
+Say you're listening on a Redis queue. Then you want to say, okay, each time a
+new message comes in on this Redis queue, start up this WebAssembly module, hand
+it the payload, and let the WebAssembly module turn over this and then spit back
+the response into whatever the next step on the application topology is.
+
+Another good example is HTTP, right? I'm going to write a handler, and all it's
+going to do is accept a request, deal with the request, send the response. It's
+not going to stand up an HTTP server, not going to worry about TLS, not going to
+worry about process management, and what happens if a kill signal comes in or
+anything like that. All of that is done outside in the Spin framework itself.
+
+Essentially, we've embedded WebAssembly inside of something that functions as a
+cloud runtime. In that case, then we can get this ridiculously amazing network
+throughput and stuff like that because all of that is handled outside in the
+Rust code and we're just kind of parallelizing all of the requests across
+hundreds, thousands, tens of thousands of WebAssembly modules.
+
+So you can take a technique like that, and the way we tend to articulate this is
+you can take the host environment and expose these features in the host
+environment. Then just add a framework that calls into the WebAssembly and says,
+“Okay, your core unit of concern is a request and a response, a request handler
+function.” Or “Your core unit of concern is a message from a Pub/Sub.” Then the
+developer is just writing that little chunk of code. They never have to worry
+about the network key part of it and consequently, the fact that networking is
+not part of WebAssembly doesn't even necessarily bubble up to the top of the
+developer’s set of concerns, right? If you're using that model, then not so
+much, right? You don't really have to worry so much about the fact that those
+things aren't present in WebAssembly itself.
+
+If you wanted to write, say, an HTTP server in WebAssembly where you started
+from the command line and have it run long-term, then the absence of those
+networking features is going to be a pretty big hindrance and your only solution
+is, like you said, to kind of hack in a networking stack that might not
+necessarily follow the same security paradigm that the specification would. You
+can do that, and I've seen people successfully do that. We tend to shy away from
+that to the greatest extent possible because we feel like the more holes you
+poke in a sandbox, the more in danger you are of opening up— well, you are, in
+fact, opening up attack vectors each time you poke a hole in a sandbox like
+that.
+
+**Jean Yang \[00:33:33\]:** Thanks, Matt. This makes a lot of sense. I didn't
+realize that inner wrap and wrapping WebAssembly was so smooth. That's really
+cool to know.
+
+**Matt Butcher \[00:33:40\]:** Yes. I think it is one of those features of
+WebAssembly that it was developed for but that people maybe don't necessarily
+bring to the top of the queue when they're talking about it because it – those
+who have worked in it in the browser environment, in fact, go, “ Yeah. Well, you
+know, I have to be able to export my JavaScript functions and import my
+WebAssembly functions, and that's just the way of it.”
+
+But anybody who's done embedding before knows that that is actually a very
+difficult problem to solve and solve well. There are a few languages like Lua
+that have done it, but those are few and far between. Oftentimes, the act of
+embedding one language inside of another runtime is one of those time-sucking
+endeavors that most of us hate to do.
+
+**Jean Yang \[00:34:18\]:** Yes. No, that's huge and something, as not a Wasm
+person, I was not aware of at all.
+
+**David Mytton \[00:34:23\]:** Well, before we wrap up then, I have two
+lightning questions for you. First, is what interesting DevTools or tools
+generally are you playing around with at the moment?
+
+**Matt Butcher \[00:34:33\]:** I almost spoiled my answer earlier because my
+current favorite is this tool called Wizer, W-I-Z-E-R, that comes out of the
+Bytecode Alliance. It is, of course, a WebAssembly tool, but it is one where you
+can – that allows you to sort of declare, “run as much code, and then freeze the
+resulting binary at this point.” Then you treat that as a new WebAssembly
+binary. So we have been playing around with using this, and now we've deployed a
+couple of SDKs so that for languages like JavaScript and Python, it can read in
+all of the core source files, get to the point where it's interpreted them,
+freeze them back out as a WebAssembly module, and then you don't need to move
+around these large libraries of Python source files or .JS files, in addition to
+your WebAssembly binary. It has been a lot of fun.
+
+Another optimization tool in the WebAssembly world that I like is called
+wasm-opt, W-A-S-M-O-P-T. It’s just a tool that can shave off unused pieces of
+code that can optimize loops, that can do all the kind of general optimization
+things you want to do, but it operates on a WebAssembly binary. So you don't
+even necessarily have to have the source version of this. The coolest instance
+of this is I built an application in Swift, came in at 90-meg. It was a 90-meg
+Wasm file. I ran it through wasm-opt, and it spit out an eight-meg file. So it
+had removed 82 meg of unnecessary code. I'm like, “That is pretty much bordering
+on magic.”
+
+**David Mytton \[00:35:59\]:** Excellent. Then the second question is what is
+your current tech setup? What hardware and software do you use every day?
+
+**Matt Butcher \[00:36:05\]:** There's the Matt who likes to consider himself a
+developer, even though he doesn't get to do very much development. That is the
+Matt who uses a Mac. I've got a 13-inch M1 that I really like. I have a gigantic
+Dell monitor that I do most of my coding on when I'm doing coding. There's also
+a Matt that's the CEO Matt. Matt the CEO Matt uses an iPad for everything. I
+actually came back from a two-week trip in which I only had my iPad and felt
+100% productive on that.
+
+That actually is kind of exciting because it is so easy to travel with such a
+small device and know that from pretty much anywhere in the world, I can get
+done all the things I need to do, as long as I don't have to write code because
+I have yet to figure out a good way to write code on an iPad. But that, for me,
+I'm pretty happy with that. It's a good arrangement.
+
+**Jean Yang \[00:36:50\]:** Wow, that's even more extreme than me.
+
+**Matt Butcher \[00:36:53\]:** What do you use?
+
+**Jean Yang \[00:36:54\]:** Oh, I was going to say I never code anymore. I
+mostly code in – Zapier is my most coding I do most days, but still got to do
+that on my MacBook Pro. I can't use the iPad yet.
+
+**David Mytton \[00:37:07\]:** Excellent. Well, unfortunately, that's all we got
+time for. Thanks for joining us.
+
+**Matt Butcher \[00:37:11\]:** Yes, thanks so much for having me.
+
+**David Mytton \[00:37:14\]:** Thanks for listening to the Console DevTools
+Podcast. Please let us know what you think on Twitter. I'm @davidmytton and you
+can follow @consoledotdev. Don't forget to subscribe and rate us in your podcast
+player. If you're playing around with or building any interesting DevTools,
+please get in touch. Our email is in the show notes. See you next time.
+
+\[END\]
+
+</BoxCollapsible>
