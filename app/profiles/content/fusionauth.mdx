@@ -1,0 +1,306 @@
+---
+title: "FusionAuth"
+date: 2023-06T14:00:00+00:00
+draft: false
+summary: Auth built for devs.
+metaTitle: Working at FusionAuth - Console profile
+metaDescription: What is it like to work at FusionAuth? Console profile behind the scenes at
+    FusionAuth - auth built for devs.
+headerType: fixed
+hideLines: true
+hidePlanes: true
+isSubpage: company-profile
+pageType: company-profile
+customPageStyle: true
+xlViewport:
+    largeText: true
+companyInfo:
+    favicon: /img/favicons/fusionauth.io.jpg
+    URL: https://fusionauth.io/
+    jobsURL: https://fusionauth.io/jobs
+    location: Denver CO or Remote
+    description: Auth built for devs.
+    product:
+        name: "FusionAuth"
+        description: "FusionAuth adds login, registration, SSO, MFA, and a
+            bazillion other features to your app in days – not months."
+    techStack:
+        - Java
+    meta:
+        - label: "Founded"
+          value: 2009
+        - label: "CEO"
+          value:
+              links:
+                  - href: "https://www.linkedin.com/in/voidmain"
+                    text: "Brian Pontarelli"
+                    iconRight: "external-link"
+        - label: "Employees"
+          value: "<30"
+        - label: "Stage"
+          value: "Mid-stage startup"
+        - label: "Social"
+          value:
+              links:
+                  - href: "https://www.linkedin.com/company/fusionauth/"
+                    text: "LinkedIn"
+                    iconLeft: "linkedin"
+    type: "Open Source"
+    category: "DevOps - Security"
+    topCategory: "DevOps"
+    subCategory: "Security"
+    filterTaxonomy: "devops, security, java"
+---
+
+<span id="wrapper-1" className="nav-anchor" anchor-name="how-engineering-works"></span>
+
+<RichTitle tag="h3" icon={{ group: "generic", name: "checklist" }} id="how-engineering-works" text="How engineering works at FusionAuth" />
+
+#### How are the teams structured?
+
+We have a small and agile dev team of about 8 people. We don’t divide ourselves
+into rigid teams or roles, but rather work collaboratively on every aspect of a
+feature, from design to implementation to testing to documentation. We also take
+turns to handle customer support, both on Zendesk and Slack, and to be on-call
+for any urgent issues. This way, we get to know their customers better and
+understand their needs and challenges. We believe this makes us more empathetic
+and effective as developers.
+
+#### What tools do engineers use?
+
+-   **Product Design:** Markdown files and GitHub Issues
+-   **Issue Tracking:** GitHub Issues
+-   **Internal Documentation:** GitHub Wiki and Markdown files
+-   **External Documentation:** AsciiDoc, Markdown, Astro
+-   **Incident Management:** Zendesk and Slack
+-   **Internal Communication:** Slack and Email
+-   **Build Pipeline:** JetBrains TeamCity
+-   **Deployments:** GitHub Actions
+-   **Monitoring:** Prometheus, AWS CloudWatch, Grafana, and StatusCake
+
+#### Can developers pick their own tools?
+
+The developers do have some flexibility in choosing tools, but we also have some
+standards to ensure consistency. For the core product development, we all use
+JetBrains IntelliJ as our IDE and each developer is issued a Macbook Pro for
+their dev machine. This makes it easier for us to train and pair with new
+engineers and to collaborate on the primary codebase.
+
+The DevRel team, which works on various other languages and projects can use
+whatever tools they prefer, such as Visual Studio, Vim or any other text editor.
+We also don’t restrict anyone from installing other tools on their laptops if
+they find them useful. We try to balance the freedom of choice with the
+efficiency of teamwork.
+
+#### How does the development process work? What's the process for working through bugs, features and tech debt?
+
+We have a flexible and customer-driven development process. We use GitHub for
+issue tracking and a simple kanban board for prioritization. As developers
+finish tasks, we assign them new ones or they can pick something themselves. We
+always try to prioritize bugs – if an engineer needs a break while doing
+feature dev they may shelve those changes and quickly fix a bug for a quick
+dopamine hit.
+
+For everything else, both our customers and community help drive our priority.
+For instance, if we're going to sign a big customer and they say, "Hey, it'd be
+really nice if the product did X-Y or Z," and the X-Y or Z was already on the
+roadmap anyway, that's a pretty easy decision to prioritize this work for that
+customer. If a security researcher lets us know that they found a vulnerability,
+that's always a super high priority.
+
+We always have a roadmap of the next six to twelve months of development work
+that we'd like to do, but it is pretty fluid because there's lots of things that
+can be prioritized ahead of anything on the roadmap. From a core engineering
+perspective, I don’t love roadmaps because you can plan all you want and
+priorities often change.
+
+#### How does code get reviewed, merged, and deployed?
+
+When a developer picks up a bug, fixes it, puts up a pull request, one or more
+developers will review that pull request. A code owner has to sign-off, so there
+could be one or many reviews, but ultimately myself or another code owner has to
+provide final approval. At that point it's approved and we can merge that into
+the master branch.
+
+Once coe is in the mainline build, it'll just go out when we cut that next
+release – releases are all automated. Once released, this new version will show
+up on the customer's dashboard in FusionAuth Cloud as an upgrade target, so they
+could then choose to make that upgrade.
+
+If the bug was reported by a customer that we're working with, we would then
+communicate, "Hey, this is available for you to test now." We might even
+volunteer to upgrade their environments for them so that they can begin testing
+and confirming that that bug has been resolved before they roll it to their
+production.
+
+If you're a customer and you choose to have us host for you, which means you're
+in FusionAuth Cloud, you might think we pool resources to serve multiple
+customers, but we never commingle – if you host in FusionAuth Cloud, you get
+dedicated compute, storage and database within your own security group. In a
+typical SaaS offering that uses a continuous integration deployment mode,
+software is always upgrading and you may not even notice. But if you're hosting
+in FusionAuth Cloud, you have to opt into an upgrade. There are pros and cons to
+this strategy, but we find most larger clients prefer this opt-in approach.
+
+We do oftentimes help our larger customers to give them more of a white glove
+service, but fundamentally it's just a self service option. You can log into
+FusionAuth Cloud and say, "I want to upgrade," and you pick your version.
+
+For those that do want to use FusionAuth Cloud as a traditional SaaS offering
+and not even worry about upgrades, we plan to roll out a fully managed option
+yet this year.
+
+#### What is the QA process?
+
+We don't have an official QA team. We basically put this responsibility on every
+developer – a developer can't just write code and throw it over the fence to
+another team and say, "Make sure it works." We write an extraordinary amount of
+tests. So we've actually spent a significant amount of time and energy into how
+we write tests, particularly for the core product. The HTTP server and the MVC
+software that we run are all open source, but we own them, and we contribute to
+them. We've built what we call a simulator, but it's not even really a
+simulator, it's just a test harness that provides an HTTP server, HTTP client,
+and a User-Agent.
+
+All of our tests are written from the end user perspective, which is to say we
+don't test internal services, we only test APIs or front end workflows. Tests
+are usually like, "Set this environment up, call this API with this input, and
+expect this result in a JSON output, and then also then assert the database
+state." FusionAuth is fundamentally users and applications and logins, users
+logging into applications, so we write tests using a fluent API that uses these
+same nouns and verbs.
+
+Every time we run a test, nothing is mocked. We're calling the real API over
+HTTP, we're opening sockets to an HTTP server that accepts that request, calls
+a database, and then makes an assertion. That level of comprehensive testing
+allows us to be confident when we ship a feature that we have not introduced
+regression.
+
+We clearly communicate to every developer that there are no fences, and each
+feature must be comprehensively tested.
+
+Each test that we write functionally becomes a specification. If I have a user
+API that says I have to validate an email address, there's a test that calls the
+user API and validates the email address in every possible validation
+methodology we have in the API. The goal is to build a fully comprehensive test
+suite.
+
+#### What are some recent examples of interesting development challenges solved by internal teams as part of building the product?
+
+As we've expanded the company, our code base has expanded as well – we have the
+core product, but then we also have FusionAuth account management to manage
+licenses and payment, and FusionAuth Cloud that's interacting with AWS which
+manages the lifecycle of a FusionAuth instance in the cloud.
+
+Today, if you buy FusionAuth Cloud and you want your own custom URL, we kick off
+a job that will create you a certificate then assign that to your service. We do
+that all through AWS cloud services, however Amazon puts quotas and limits on
+every possible thing you can think of. We have customers that white label
+FusionAuth, so they have one-to-many custom URLs per client so they may require
+thousands or hundreds of thousands of URLs. This scale quickly breaks down
+within the AWS quota model.
+
+To solve this, we built a micro service that replaces Amazon services such as
+ACM and ALBs so that we can offer our clients one to many thousands of
+certificates and names per service. We built this solution on top of Caddy which
+is a popular open source HTTP server written in Go. We love supporting software
+that we use, so FusionAuth is now sponsoring Caddy to support their continued
+development.
+
+Implementing this was fun and way more complicated than you’d think. The basics
+were really simple but the devil was in the details due to the DNS and routing
+requirements when switching service between AWS regions in a disaster recovery
+scenario. But the final solution is great and it allows us to dynamically
+provision certificates for new URLs.
+
+For clients that will utilize this new capability, they can just log into their
+FusionAuth account, create a new record indicating the URL they wish to utilize.
+That’s it, now the first time we see that traffic on that URL, it is routed
+through FusionAuth Cloud and the certificate is dynamically provisioned using
+Let's Encrypt. It's an extremely low friction way for customers to add new
+service URLs in FusionAuth Cloud.
+
+#### How does on-call work?
+
+I know every developer kind of hates being on-call. But we are just up-front
+during the hiring process to let the candidate know, "You're going to be on-call
+and that's just part of the gig." I'm the CTO, and I’m still on-call, nobody
+gets a free pass. Everybody has to participate.
+
+The way it works is, you're basically on-call every sixth or seventh week and
+that means during the day you're helping the support engineer, you're looking at
+Slack, helping customers through their issues.
+
+If you have downtime, we don't really want that developer to be doing feature
+dev work during that week because then your head's not in the game for customer
+support. But if you have downtime, the goal is for that engineer to either fix a
+small bug or go fix some documentation or work on smaller items on the backlog
+just to stay busy.
+
+I think it has a huge benefit, every engineer we've ever had, even though they
+might not enjoy it, has provided excellent feedback about how much it's both
+helped them be confident with the customer and just how much more quickly they
+learn about the product
+
+You can be on feature dev duty for months and still only work in one part of the
+codebase, but when you're trying to help a customer integrate FusionAuth into
+their business, you're looking everywhere because now they're using dozens of
+APIs and you're having to figure out how they work together. It's a great
+learning experience. I don't want to separate support and engineering because I
+think it makes us better engineers; it's otherwise too easy as an engineer to
+just write code and then ignore the voice of the customer. The customer may not
+always be right, but you still have to have empathy and go through that process
+with them.
+
+<span id="wrapper-2" className="nav-anchor" anchor-name="hiring-process"></span>
+
+<RichTitle tag="h3" icon={{ group: "generic", name: "checklist" }} id="key-features">
+    {" "}
+    Hiring process at FusionAuth
+</RichTitle>
+
+#### How does the application process work? What are the stages and what is the timeline?
+
+The job application process is broadly divided into following steps:
+
+-   Initial call to check fit and expectations
+-   Technical screen with Java and object oriented questions
+-   Take home test or pairing exercise based on preference of the applicant
+-   In-person whiteboarding and meet and greet. This helps us get to know the
+    candidate, and see how they think and solve problems. We put an emphasis on
+    communication skills because every engineer has to participate in customer
+    support. If someone is uncomfortable with that, then it is a disqualifier. If
+    the developer is remote, we would generally fly them to Denver for this final
+    step of the interview.
+
+#### What is the career progression framework? How are promotions and performance reviews managed?
+
+We do have a framework in practice, the average tenure of an engineer is short
+enough where most people never progress. In my experience, most engineers don't
+stay more than two years.
+
+Internally we’ve created a document that outlines every title of an engineer and
+expectations and growth areas and inhibitors. An inhibitor might be like, "Hey,
+if you're a staff level engineer and you're not helping your peers, that's going
+to be an inhibitor to you progressing."
+
+We've outlined each promotion level and what's expected, so that way we can walk
+that through with engineers during one-on-ones and review cycles just so they
+know what's expected of them.
+
+In practice, everybody still participates in most aspects, which is to say even
+if you're a staff level or a junior, you're still going to be doing design work,
+which is good for the engineer. It's just that you're probably not going to be
+doing it alone – you're going to be working with a more senior engineer to work
+with you.
+
+We really don't have any entry level engineers. Our support engineer is more of
+an entry level code school grad. They primarily perform customer support and if
+possible complete smaller coding projects just to work their way up. Our core
+engineering team are all very experienced.
+
+So in theory, we do have a progression framework, but in practice everybody's in
+a similar bucket where everyone's expected to be able to do design and
+implementation and work successfully with the team.
+
+{/* {{< div--close >}} */}
