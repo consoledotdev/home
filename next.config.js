@@ -32,6 +32,11 @@ const nextConfig = {
                 permanent: true,
             },
             {
+                source: "/podcast/s04e08-webassembly-matt-butcher-fermyon",
+                destination: "/podcast/s04e08-webassembly-matt-butcher",
+                permanent: true,
+            },
+            {
                 source: "/qa",
                 destination: "/interviews",
                 permanent: true,
