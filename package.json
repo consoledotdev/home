@@ -11,7 +11,7 @@
     },
     "dependencies": {
         "@mdx-js/react": "2.3.0",
-        "@next/mdx": "13.4.5",
+        "@next/mdx": "13.4.6",
         "@notionhq/client": "2.2.5",
         "@vercel/analytics": "1.0.1",
         "@vercel/og": "0.5.7",
