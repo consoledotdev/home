@@ -14,7 +14,7 @@ lint:
         - shellcheck@0.9.0
         - shfmt@3.5.0
         - svgo@3.0.2
-        - gitleaks@8.16.4
+        - gitleaks@8.17.0
         - git-diff-check
         - eslint@8.42.0
         - markdownlint@0.34.0
