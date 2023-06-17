@@ -1,4 +1,4 @@
-import { getLatestItems as getLatestToolItems, Tool } from "@/app/lib/tools";
+import { getLatestItems as getLatestToolItems } from "@/app/lib/tools";
 import { getLatestItems as getLatestBetasItems } from "@/app/lib/betas";
 import { notFound } from "next/navigation";
 
@@ -164,10 +164,80 @@ export default async function Page() {
 
     preview += ` - the best tools for developers.`;
 
+    // Create the draft campaign email
+    const client = require("@mailchimp/mailchimp_marketing");
+
+    client.setConfig({
+        apiKey: process.env.MC_API_KEY,
+        server: process.env.MC_SERVER,
+    });
+
+    // Get the date of the next Thursday
+    let nextThursday = new Date();
+    const now = new Date();
+    const currentDay = now.getDay(); // Day of week 0-6, 0 is Sunday.
+    const daysUntilNextThursday = (11 - currentDay) % 7;
+
+    // Set the date to today + the number of days until next Thursday.
+    nextThursday.setDate(now.getDate() + daysUntilNextThursday);
+
+    const mcCreate = await client.campaigns.create({
+        type: "regular",
+        recipients: {
+            list_id: "267911a165", // Main list
+            segment_opts: {
+                saved_segment_id: 3577267, // Confirmed
+            },
+        },
+        settings: {
+            subject_line: "This Week's Best Developer Tools & Betas",
+            preview_text: preview,
+            title: `Weekly Newsletter - ${nextThursday.toISOString().slice(0, 10)}`,
+            from_name: "Console",
+            reply_to: "weekly@console.dev",
+            use_conversation: false,
+            template_id: 13612434,
+        },
+        tracking: {
+            opens: false,
+            html_clicks: true,
+            text_clicks: true,
+            ecomm360: false,
+        },
+        content_type: "template",
+    });
+
+    console.debug("Mailchimp: ", mcCreate);
+
+    if (!mcCreate) {
+        console.error("Mailchimp: Campaign not created");
+        return notFound();
+    }
+
+    const mcUrl = `https://${process.env.MC_SERVER}.admin.mailchimp.com/campaigns/show/?id=${mcCreate.web_id}`;
+
+    // This doesn't work for non custom HTML templates
+    /*const mcContent = await client.campaigns.setContent(mcCreate.id, {
+        template: {
+            sections: {
+                "contents": contents,
+                "tools": tools,
+                "betas": betas,
+            },
+            id: 13612434,
+        },
+    });*/
+
     return (
         <>
             <h1>Newsletter generator</h1>
-            <p>Use this page to generate the newsletter.</p>
+            <p>
+                Newsletter{" "}
+                <a href={mcUrl} className="link">
+                    {mcCreate.web_id}
+                </a>{" "}
+                generated in Mailchimp. Past in the contents below:
+            </p>
             <h2>Preview</h2>
             <textarea rows={2} cols={100} value={preview} spellCheck={false} />
             <h2>Contents</h2>
