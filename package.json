@@ -16,7 +16,7 @@
         "@notionhq/client": "2.2.5",
         "@vercel/analytics": "1.0.1",
         "@vercel/og": "0.5.7",
-        "dotenv": "16.3.0",
+        "dotenv": "16.3.1",
         "gray-matter": "4.0.3",
         "next": "13.4.6",
         "next-mdx-remote": "4.4.1",
@@ -32,15 +32,15 @@
     "devDependencies": {
         "@types/mdx": "2.0.5",
         "@types/node": "20.3.1",
-        "@types/react": "18.2.12",
-        "@types/react-dom": "18.2.5",
+        "@types/react": "18.2.13",
+        "@types/react-dom": "18.2.6",
         "@types/rss": "0.0.30",
         "encoding": "0.1.13",
         "eslint": "8.43.0",
         "eslint-config-next": "13.4.6",
         "react-markdown": "8.0.7",
-        "react-svg": "16.1.16",
-        "sass": "1.63.4",
+        "react-svg": "16.1.17",
+        "sass": "1.63.5",
         "typescript": "5.1.3"
     }
 }
