@@ -323,6 +323,52 @@ export const getLatestItems = cache(async () => {
     }
 });
 
+export const getNextItems = cache(async () => {
+    console.debug("Betas getNextItems");
+    let items = [];
+
+    const xDaysAgo = new Date();
+    xDaysAgo.setDate(xDaysAgo.getDate() + 7);
+
+    try {
+        for await (const page of iteratePaginatedAPI(notion.databases.query, {
+            database_id: databaseId,
+            filter: {
+                and: [
+                    {
+                        property: "Newsletter",
+                        date: {
+                            after: new Date().toISOString(),
+                        },
+                    },
+                    {
+                        property: "Newsletter",
+                        date: {
+                            before: xDaysAgo.toISOString(),
+                        },
+                    },
+                ],
+            },
+        })) {
+            if (!isFullPage(page)) {
+                continue;
+            }
+
+            const { properties } = page;
+
+            const item = await createItem(page.id, properties);
+
+            if (item) {
+                items.push(item);
+            }
+        }
+
+        return items;
+    } catch (error) {
+        console.error("Betas getLatestItems error: ", error);
+    }
+});
+
 async function textFetcher(url: string): Promise<string> {
     return await fetch(resolveUrl(url)).then((res) => res.text());
 }

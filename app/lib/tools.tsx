@@ -419,6 +419,66 @@ export const getLatestItems = cache(async () => {
     }
 });
 
+export const getNextItems = cache(async () => {
+    console.debug("Tools getNextItems");
+
+    let items = [];
+
+    const xDaysAgo = new Date();
+    xDaysAgo.setDate(xDaysAgo.getDate() + 7);
+
+    try {
+        const response = await notion.databases.query({
+            database_id: databaseId,
+            filter: {
+                and: [
+                    {
+                        property: "Status",
+                        status: {
+                            equals: "Selected",
+                        },
+                    },
+                    {
+                        property: "Newsletter",
+                        date: {
+                            after: new Date().toISOString(),
+                        },
+                    },
+                    {
+                        property: "Newsletter",
+                        date: {
+                            before: xDaysAgo.toISOString(),
+                        },
+                    },
+                ],
+            },
+            sorts: [
+                { property: "Newsletter", direction: "descending" },
+                { property: "Position", direction: "descending" },
+            ],
+        });
+
+        // Loop through each response and create object
+        for (const page of response.results) {
+            if (!isFullPage(page)) {
+                continue;
+            }
+
+            const { properties } = page;
+
+            const item = await createItem(page.id, properties);
+
+            if (item && item.slug != "") {
+                items.push(item);
+            }
+        }
+
+        return items;
+    } catch (error) {
+        console.error("Tools error: " + error);
+    }
+});
+
 async function textFetcher(url: string): Promise<string> {
     return await fetch(resolveUrl(url)).then((res) => res.text());
 }

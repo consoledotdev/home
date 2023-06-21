@@ -1,5 +1,5 @@
-import { getLatestItems as getLatestToolItems } from "@/app/lib/tools";
-import { getLatestItems as getLatestBetasItems } from "@/app/lib/betas";
+import { getNextItems as getNextToolItems } from "@/app/lib/tools";
+import { getNextItems as getNextBetasItems } from "@/app/lib/betas";
 import { notFound } from "next/navigation";
 
 export default async function Page() {
@@ -7,8 +7,8 @@ export default async function Page() {
         return notFound();
     }
 
-    // Get the latest tools
-    const toolItems = await getLatestToolItems();
+    // Get the next tools
+    const toolItems = await getNextToolItems();
     if (!toolItems) {
         console.error("Latest tools not found");
         return notFound();
@@ -19,8 +19,8 @@ export default async function Page() {
         })
         .reverse();
 
-    // Get the latest betas
-    const betasItems = await getLatestBetasItems();
+    // Get the next betas
+    const betasItems = await getNextBetasItems();
     if (!betasItems) {
         console.error("Latest betas not found");
         return notFound();
