@@ -1,0 +1,737 @@
+---
+title: Creating Julia
+who: Jeff Bezanson
+whoLink: https://twitter.com/technosophos
+what: We start with the history of Julia and why it took a while to take off,
+    the key principles behind the language, how it provides the speed of C with
+    the ease of Python, and what it's been like running such a large open-source
+    project. He sheds light on the original motivation for Julia, the process of
+    creating it, and its involvement in AI.
+season: 4
+episode: 9
+date: 2023-06-22T06:00:00Z
+duration: "31:49"
+episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/090fdcf8-4e23-49aa-8f91-27e9f2b72415/audio/62dc9dd8-5ed4-4152-bb67-f000da27b1d6/default_tc.mp3
+draft: false
+summary: "Creating Julia - a devtools discussion with Jeff Bezanson (JuliaHub).
+    Console Devtools Podcast: Episode 9 (Season 4)."
+metaDescription: "Creating Juliay - a devtools discussion with Jeff Bezanson (JuliaHub).
+    Console Devtools Podcast: Episode 9 (Season 4)."
+headerType: fixed
+hideLines: true
+hidePlanes: true
+isSubpage: podcast-episode
+pageType: podcast-episode
+customPageStyle: true
+xlViewport:
+    largeText: true
+topImg1Src: /img/podcast/juliahub-jeff-bezanson.jpeg
+topImg2Src: /img/favicons/juliahub.com.jpg
+ogImg: /img/podcast/podcast-cover.jpeg
+twitterCard: https://player.simplecast.com/090fdcf8-4e23-49aa-8f91-27e9f2b72415
+authorName: David Mytton
+authorURL: https://davidmytton.blog/start
+authorImg: /img/david.jpg
+authorBio: is Co-founder & CEO of Console. In 2009, he founded and was CEO of Server
+    Density, a SaaS cloud monitoring startup acquired in 2018 by edge compute
+    and cyber security company, StackPath. He is also researching sustainable
+    computing in the Department of Engineering Science at the University of
+    Oxford, and has been a developer for 15+ years.
+author2Name: Jean Yang
+author2URL: https://twitter.com/jeanqasaur
+author2Img: /img/podcast/akita-jean-yang-profile.jpg
+author2Bio: is CEO of Akita Software. Jean earned her PhD in software correctness and
+    programming language design from MIT and then became a professor in computer
+    science at Carnegie Mellon University before she started Akita to build the
+    future of API observability.
+---
+
+### Episode notes
+
+In this episode, we speak with [Jeff
+Bezanson](https://twitter.com/JeffBezanson), one of the co-creators of the Julia
+programming language and the CTO of [JuliaHub](https://juliahub.com/). We start
+with the history of Julia and why it took a while to take off, the key
+principles behind the language, how it provides the speed of C with the ease of
+Python, and what it's been like running such a large open-source project. He
+sheds light on the original motivation for Julia, the process of creating it,
+and its involvement in AI.
+
+**Things mentioned:**
+
+-   "[Telescoping Languages by Ken
+    Kennedy](https://www.sciencedirect.com/science/article/abs/pii/S0743731501917241)"
+-   “[Julia: Dynamism and Performance Reconciled by
+    Design](https://dl.acm.org/doi/pdf/10.1145/3276490)”
+-   [Donald Fischer](https://www.linkedin.com/in/donaldfischer/)
+-   [Chris Rackauckas: "A Julia Library for Neural Differential
+    Equations"](https://paperswithcode.com/paper/diffeqfluxjl-a-julia-library-for-neural)
+-   [RR: Record and Replay Framework](https://github.com/rr-debugger/rr)
+-   [Dell XPS laptop preloaded with
+    Ubuntu](https://ubuntu.com/blog/dell-xps-13-plus-developer-edition-now-certified-with-ubuntu-22-04-lts)
+
+<RichTitle tag="h5" icon={{ group: "generic", name: "future-head" }} text="About Jeff Bezanson" />
+
+Jeff Bezanson is one of the co-creators of the Julia programming language, along
+with Stefan Karpinski, Alan Edelman, and Viral B. Shah. He is also a co-founder
+of JuliaHub, a company that grew out of this project. He has a Ph.D. from MIT
+where he worked as a research scientist and he has authored a number of academic
+papers on the Julia language. The intention behind the creation of Julia was to
+establish a language that was both high-level and fast. His work on it has
+earned Jeff the J. H. Wilkinson Prize for Numerical Software.
+
+### Highlights
+
+<PodcastEpisodeClipping atTime="02:59">
+
+**Jeff Bezanson:** You had to give up performance. That was just a law of
+the universe that they all learned. Then if you wanted performance, you had to
+use C or Fortran or something. This was just the way it was. I got introduced to
+that world of thinking in college and I thought it was really surprising because
+I knew that high-level languages could be fast. I knew there were good Lisp
+implementations, you had the ML family languages, there were really good
+high-level languages that had really, really good compilers and could be fast.
+And nobody seemed to be using them, which I just thought was amazing. I made it
+this mission to “Can we get all these people to realize that high-level
+languages can be fast, and they should be using a high-level language that's
+fast?” So \[Julia\] is my attempt to do that.
+
+</PodcastEpisodeClipping>
+
+<PodcastEpisodeClipping atTime="13:18">
+
+**Jeff Bezanson:** People have been trying to speed up dynamic languages of
+various kinds for a long time. That's been one of the long-running research
+threads in computer sciences, starting with a language like Smalltalk, for
+instance. How do you make it run fast? There's a whole zoo of both dynamic and
+static techniques. There are some really cool stuff people have invented to take
+these languages that you can't necessarily statically analyze using standard
+compiler techniques, and yet, nevertheless, generate fast code from them. It’s a
+fun game to play is how do we compile these languages that are not cooperative?
+So that makes it a challenge, which makes it a good research problem. But to me,
+it's kind of annoying because why do you always have to fight the language
+design? So instead, I approached it from the opposite direction and said, “All
+right. What are all the techniques that are known and available for doing this?
+Then how would you design a language to make those techniques work well?”
+
+</PodcastEpisodeClipping>
+
+<BoxCollapsible expanded title="Full transcript"
+  classes={["podcast-transcript"]}>
+
+**David Mytton \[00:00:04\]:** Welcome to another episode of the Console
+DevTools Podcast. I'm David Mytton, CEO of Console.dev, a free weekly email
+digest of the best tools and beta releases for experienced developers.
+
+**Jean Yang \[00:00:15\]:** And I'm Jean Yang, CEO of Akita Software, the
+fastest and easiest way to understand your APIs.
+
+**David Mytton \[00:00:22\]:** In this episode, Jean and I speak with Jeff
+Bezanson, one of the co-creators of the Julia programming language. We start
+with the history of Julia and why it took a while to take off, the key
+principles behind the language, how it provides the speed of C with the ease of
+Python, and what it's been like running such a large open-source project. We're
+keeping this to 30 minutes. So let's get started.
+
+**David Mytton \[00:00:43\]:** We're here with Jeff Bezanson. Let's start with a
+brief background. Tell us a little bit about what you're currently doing and how
+you got here.
+
+**Jeff Bezanson \[00:00:51\]:** Hi. Thank you, David. Great to be here. So I'm
+Jeff Bezanson. I'm one of the creators of the Julia programming language.
+Developing that is most of what I do. I'm also a Co-Founder of JuliaHub, which
+is a company that grew out of that project. That's pretty much the rest of what
+I do.
+
+**Jean Yang \[00:01:09\]:** Cool. Well, Jeff, I'm really excited that you can be
+on this podcast with us. I'd love to start by just talking about the original
+motivation for working on Julia. I mean, I still remember when we were teaching
+fellows together, and you were doing side jobs and working on Julia on the side.
+So can you tell us about the state of the world before Julia, and what gave you
+the motivation to start working and keep working on it?
+
+**Jeff Bezanson \[00:01:35\]:** I think back to the nineties and the early
+2000s, which was kind of the heyday of Moore's law, right? I remember there was
+a big culture among programmers that it would be silly to worry about
+performance because the hardware will give you free performance. So everybody
+was kind of rushing to try to trade away as much performance as possible. That
+was sort of the en-vogue thing to do, and that's where we got these kinds of
+scripting languages that became really popular.
+
+It was – and people might disagree with this. But the way I've always seen it is
+like people are almost trying to make them as slow as possible because that was
+sort of in fashion. If you weren't giving up performance, you didn't understand
+Moore's law.
+
+**David Mytton \[00:02:14\]:** Any particular languages you're referring to
+there? Or do you want them to remain nameless?
+
+**Jeff Bezanson \[00:02:18\]:** Oh, there's a whole host of them on everything
+from Tcl, Python, Perl. You name it. There's a whole bunch of them. The result
+of that was that people in certain programming communities ended up using
+certain languages, right? Because you tend to use the same language as the
+people you work with. So you get these network effects, and you ended up with
+these communities and bubbles of language users.
+
+In the scientific realm, that certainly happened. People ended up using mostly
+MATLAB, R, and Python. It became kind of an article of faith in those worlds
+that they were sort of the fun-to-use productive languages that they enjoyed
+using and worked really well for them but were slow. You had to give up
+performance. That was just a law of the universe that they all learned. Then if
+you wanted performance, you had to use C or Fortran or something. This was just
+the way it was.
+
+I got introduced to that world of thinking in college and I thought it was
+really surprising because I knew that high-level languages could be fast. I knew
+there were good Lisp implementations, you had the ML family languages, there
+were really good high-level languages that had really, really good compilers and
+could be fast. And nobody seemed to be using them, which I just thought was
+amazing.
+
+I made it this mission to “Can we get all these people to realize that
+high-level languages can be fast, and they should be using a high-level language
+that's fast?” So this is my attempt to do that. I wasn't really able to do it
+until I kind of learned a lot of stuff and met the right people to figure out
+what the design should really be and how to position it, which took quite a few
+years to get into that position where I could actually do that.
+
+**David Mytton \[00:03:58\]:** Right. That makes sense. So I suppose several
+years. What was it like going through that journey? How did you keep yourself
+motivated? Then I suppose what was it that you learned from those people that
+made things change for you?
+
+**Jeff Bezanson \[00:04:12\]:** I learned a lot more about how R and MATLAB
+worked. So I was mostly a computer science person. I didn't do that much with
+applied math kind of stuff. So I didn't spend as much time on MATLAB, R, Fortran
+languages as most of the applied math people who would have been my user
+audience. So I happen to learn a lot more about those. For example, at my job at
+Interactive Supercomputing, which was a kind of short-lived startup out of MIT
+that did a parallel computing platform, and I learned a lot about MATLAB and
+what those kinds of programmers were looking for and wanted. It's a group that
+is very, very focused on notation. If a\*b doesn't do matrix multiply, they
+won't use your language, one simple example.
+
+**Jean Yang \[00:05:01\]:** Something I find very inspiring about the Julia
+story, especially in the age when people talk about this ChatGPT app became an
+instant multi-million user super hit overnight, literally, is how long it took
+you to really get Julia right, you and the team. So I was hoping you could walk
+us through the timeline of what was it like when you started. I think that a lot
+of the years really were necessary to get the right idea, have the world be
+ready for it. So I'd love to just walk through that whole story.
+
+**Jeff Bezanson \[00:05:37\]:** That's a really good point because now, I'm
+actually worrying that it took so long that we no longer maybe need programming
+languages or system software of any kind. The ChatGPT thing, it almost makes me
+think the concept of reuse that has been sort of one of the guiding stars of
+computer science for decades might just be over now. I think it could go that
+far. So I'm kind of worried about is there any future in system software at all.
+
+**Jean Yang \[00:06:06\]:** Well, I think if there's any language well-poised
+for ChatGPT, it seems like Julia, with its reuse and high-level scripting
+nature, would be at the forefront of being ChatGPT. So it's a feature.
+
+**Jeff Bezanson \[00:06:20\]:** Well, that’s certainly an optimistic spin.
+
+**Jean Yang \[00:06:22\]:** I love your retellings of the story of like, “Well,
+first, we did this, and we did this, and this is when Julia finally took off.”
+
+**Jeff Bezanson \[00:06:29\]:** I was working at Interactive Supercomputing.
+Well, actually, even before that, I had a summer job as a research programmer
+starting at the end of high school. I had seen what the work was like when you
+had to take in a bunch of data and look at images and make lots of plots and
+write programs to process them. People, actually, in that group mostly used C,
+and it was just incredibly inefficient. Yet I saw that it's, at that time, that
+was quite a while ago, the whole Python and NumPy toolchain was not nearly where
+it is today. So this was quite a long time ago. There wasn't really anything out
+there that could have handled it a lot better.
+
+That's one of the things that got me thinking that, boy, there's this entire
+programming that is so inconvenient to do. All the other programming I had done
+fits neatly in the available tools of the C toolchain, essentially, because that
+was – for doing systems and most application stuff, it worked fine. For this
+stuff, it was just clearly the wrong level of abstraction. So that's one of the
+things that got me thinking about needing some totally different kind of
+platform.
+
+Then many years later, I ended up in Interactive Supercomputing. I mean, I
+applied for that job because I said, “Aha, this is a place I can go that I can
+maybe solve this problem. These are people who are working on this, so I should
+go there,” which is why I was interested in it. But, of course, we're working on
+MATLAB and Python, and R in that shop.
+
+Python is a pretty good language. But I really don't care for R and MATLAB very
+much. So I was sort of constantly ranting at everyone there about how it's too
+bad that we have to shoehorn our parallel computing platform into MATLAB and R
+because it's the – if we just had a good language, it would be a lot easier. I
+would just sort of rant to people about this.
+
+There was this one guy there, Verald, who wouldn’t listen to me about it, and he
+said, “You sound a lot like this guy, Stefan. He says the same things that you
+say. You guys should talk to each other.” So he put us in touch and we started
+this furious email exchange where we were sending our ideas back and forth about
+how it should be. “It should work like this. If everything was just like this,
+then these problems wouldn't exist.” There was just thousands of emails or
+something over a couple of years where we started talking about this and hashing
+it out and starting to design a language.
+
+**Jean Yang \[00:08:37\]:** Yes. I remember Jeff was the one who taught me about
+how bad MATLAB was. I just accepted it, and I just thought that it was supposed
+to be slow if you're doing such computationally-intensive things. But I love
+that story.
+
+**Jeff Bezanson \[00:08:51\]:** My favorite story about that is I've heard
+people talk about their MATLAB programs and it’s a – how long it takes to run as
+a feature because they talk about, “Our simulation is so sophisticated, it has
+to run for two days to produce a result." It never occurred to me that that
+would be a good thing to someone. So it's just as kind of surprising the things
+you find out.
+
+But then, oh, of course, I should add the next step that was crucial is that
+when that company was acquired, I had to look for something to do next. Viral
+suggested I talk to Alan Edelman, who I could pitch on this whole project. I
+showed him what we were talking about and what we wanted to do. He thought it
+seemed like a pretty crazy and hopeless idea so he decided to support it.
+
+**Jean Yang \[00:09:33\]:** Yeah, I was very happy when I showed up to grad
+school one year and Jeff was there, and he was there working on Julia.
+
+**David Mytton \[00:09:43\]:** What are the core principles behind the language,
+for someone who hasn't seen it perhaps or has only used Python or I suppose R as
+well? If you're in an academic circle, what are the principles behind it?
+
+**Jeff Bezanson \[00:09:53\]:** The principle is, in these kinds of technical
+computing platforms, there's a lot of kind of polymorphism and objects and types
+that have these really kind of complex behaviors that you don't get in some
+other domains. If you think about something like units, for instance, units are
+very much like numbers in many ways. But they're not closed under
+multiplication, for example. Or you have matrices where you've got
+multiplication is now not commutative. The size of the matrices goes into
+whether they're compatible. There are also lots of different kinds of structured
+matrices. There's a whole zoo of matrix structures like bi-diagonal,
+tri-diagonal.
+
+So you just have such a large diversity of objects and combinations that are
+possible. It leads to these kinds of libraries that have lots of very complex
+behaviors built into them. Yet the compiler wants to know about it because the
+compiler would like to be able to reason about all of these things, usually, for
+performance, I mean, because some people, of course, would want to check the
+program. But we knew that performance is what sells, so we were really only
+interested in compiling for performance at first when we looked at these kinds
+of complicated library behaviors.
+
+The other thing about it is that not everyone wants the same thing. So in
+different domains, people use different definitions of things. There's one Julia
+package called Infinite Arrays, where it has – it gives you array types where
+some of the dimensions can be infinity. To a lot of people, the size of an array
+dimension better be an integer, and infinity is not an integer. So that can
+potentially break a lot of things.
+
+Depending on who you talk to, that may or may not make sense for that to exist,
+right? So there's this great diversity of kinds of objects you might want. You
+can't just build it into one standard library and then say, “There, it’s good.”
+Not even to the level of just the type signatures, right? You can't even say the
+size of an array dimension must be an int, which is something we'd all be used
+to. Of course, that's a reasonable constraint to have, right? Well, no. There's
+just this great diversity of possible behaviors. So, therefore, they can't be
+built into the language because you can't just set them once and for all. They
+all have to be written in libraries. The guiding principle was that you could
+just write all of these behaviors as libraries, and then let the compiler figure
+it out.
+
+There was a research program that did something kind of like this for compiling
+MATLAB programs. It was called Telescoping Languages by Ken Kennedy, I think. It
+was a research project many years ago. I heard about that, and that kind of
+inspired some of this thinking where the idea was that they would take libraries
+of MATLAB code, and annotate them with types in various ways, and analyze them
+thoroughly using program analysis techniques, and sort of turn those libraries
+into a compiler where you could then compile other programs against those
+libraries. We do a similar kind of specialization where the idea is to just
+analyze the libraries thoroughly to be able to compile code against things that
+have these kind of potentially wacky behaviors.
+
+**Jean Yang \[00:12:46\]:** Cool. So, Jeff, you have this tagline, “The speed of
+C with the ease of use of Python.” I love to dig in on is there a core way to
+summarize what Julia does differently from other languages that enables this? Or
+is it really just a series of good, smart decisions and language design and
+implementation?
+
+**Jeff Bezanson \[00:13:08\]:** It's based on design decisions. There was a
+paper from Northeastern where we tried to write some of this up called “Dynamism
+and Performance Reconciled by Design”. What we did was that people have been
+trying to speed up dynamic languages of various kinds for a long time. That's
+been one of the long-running research threads in computer sciences, starting
+with a language like Smalltalk, for instance. How do you make it run fast?
+
+There's a whole zoo of both dynamic and static techniques. There are some really
+cool stuff people have invented to take these languages that you can't
+necessarily statically analyze using standard compiler techniques, and yet,
+nevertheless, generate fast code from them. It’s a fun game to play is how do we
+compile these languages that are not cooperative? So that makes it a challenge,
+which makes it a good research problem.
+
+But to me, it's kind of annoying because why do you always have to fight the
+language design? So instead, I approached it from the opposite direction and
+said, “All right. What are all the techniques that are known and available for
+doing this? Then how would you design a language to make those techniques work
+well, right?” Because those techniques aren't perfect, right? They work pretty
+well in practice.
+
+But you often run up against things where, okay, not every program can be
+optimized. You might get unlucky, and you don't hit the fast path. So we said,
+“Okay, we're going to be using these techniques. What can we do to make them
+work as well as possible?” We kind of cheated because we could just design it
+from the beginning so that we'd be able to optimize programs better.
+
+**Jean Yang \[00:14:37\]:** Yeah, I love that.
+
+**David Mytton \[00:14:38\]:** Do you have any specific examples that could help
+illustrate the kinds of techniques you've used?
+
+**Jeff Bezanson \[00:14:43\]:** There are certain things you want to avoid. So
+definitely, you want to enable local reasoning. You want to minimize the impact
+of possible action at a distance kinds of things. For example, if I have a
+variable on one line, maybe I've figured out its type, and then I call a
+completely unknown function on the next line, right? Because these kinds of
+analyses are going to be approximate. You're not guaranteed to ever get any
+information about something, right?
+
+You might hit a bad case where there's totally unknown function call. We don't
+know what happens. Then on the next line after that, do I still know anything
+about the variable that I set before that? Is it possible, for instance, that
+that totally unknown function might have reached into my local scope and changed
+that variable, for example? Because if so, now, I have to throw out that
+information. So that would be bad. You want to avoid those kinds of effects so
+that you can have a partially analyzed program and still be able to kind of keep
+the information you have as much as possible.
+
+**David Mytton \[00:15:43\]:** Okay. Yes, that makes sense.
+
+**Jean Yang \[00:15:45\]:** That makes sense.
+
+**David Mytton \[00:15:46\]:** How does this lead into Julia's use for parallel
+and distributed computing and the optimizations there and why Julia is a
+particularly good language for that kind of workload?
+
+**Jeff Bezanson \[00:15:57\]:** The parallel and distributed cases are pretty
+different. I mean, you can kind of do distributed in any language because you
+can just start up processes on lots of machines, and you send messages, and
+that's that. So it's sort of equally impossible in every language, right?
+
+**ean Yang \[00:16:13\]:** And, unfortunately, equally too easy.
+
+**Jeff Bezanson \[00:16:16\]:** Yeah, yeah. There are some things we could do.
+We knew we wanted to do distributed computing very early on. So we've always had
+a pretty good serialization library. So we know we at least could send any
+object around. But any language can do that, really. I don't know if there's
+anything that distributed-specific.
+
+But in terms of the parallel, I think it does help that the language is kind of
+function-oriented, I would say. It's not purely functional, but it's very
+function-oriented. So people tend to write purely functional code anyway, a lot
+of the stuff. We were adding threads several years ago in the beginning, even
+before everything was sort of thread-safe. Stuff, by luck, sort of ended up
+working because people tend not to randomly mutate things and stuff like that,
+just because the design of the language lends itself to it.
+
+**Jean Yang \[00:17:01\]:** Cool. Jeff, something I want to dig into is the
+formation of JuliaHub because it seems like Julia has gone through many stages.
+There was the pre-academia stage. There was a period of time when you were in
+grad school, and Julia was an MIT project. Then you formed a company, and then
+you took VC funding for the company. What was the transition from forming a
+company to taking funding like? I'd love to just hear more about that.
+
+**Jeff Bezanson \[00:17:29\]:** Things really picked up quite a bit very soon
+after we released it in 2012. So pretty much since that point, we've all been
+really, really busy developing the language and helping people use the language.
+To me, it sometimes just feels like since that first blog post by Stefan where
+we released it, it’s just been that all day, every day, on some level.
+
+We did get consulting requests within a couple of years. So we started doing
+consulting, helping people adopt the language in various environments to help
+them get the most out of it. That's how it started, of course. Then this
+investor, Donald Fischer, showed up. He showed up at Alan Edelman's office one
+day. It turned out he was an investor who specialized in open-source languages,
+and he had been watching. He somehow saw all of this that was going on, and he
+showed up to talk to us. We were kind of confused about what if we don't really
+have a company? What’s – he said, “Oh, no, no. There's something here. Trust
+me.” So he was quite early to it. It’s quite impressive. Yeah, I had no idea at
+what an early stage some of these investors smell what's happening and jump in.
+So it was pretty amazing.
+
+**David Mytton \[00:18:40\]:** He just turned up at your office unannounced?
+
+**Jeff Bezanson \[00:18:43\]:** Probably wasn’t unannounced. I mean, that's –
+the way I remember it is he just sort of walked in, but I'm sure it was –
+
+**Jean Yang \[00:18:51\]:** Somebody got announced to. It wasn't you.
+
+**David Mytton \[00:18:56\]:** What about the open source side of things? What
+have you learned running a project that's used by so many people?
+
+**Jeff Bezanson \[00:19:03\]:** It is a fun thing to do. I mean, I do like it
+working with all these people all over the place, many of whom I don't even know
+who they are. It's kind of fun. But it's getting pretty busy. It gets pretty
+chaotic. Many days, I am not really sure how we're able to keep it working as
+well as it does. There is just a lot of activity. I can't really keep up with it
+anymore.
+
+For me, personally, I'm going through kind of a difficult transition. Whereas
+for a surprising amount of time, I could kind of keep my head above water and
+sort of know everything that was going on, now, it’s just really not possible.
+So I'm still learning how to cope with that. Lots of changes coming in.
+Sometimes, I open up the source file and, “Oh, what happened here since I last
+looked at this?” That makes it difficult. Hopefully, ChatGPT is faster at
+understanding large code bases than I am, which I suspect it is. So maybe
+that'll save the day.
+
+**David Mytton \[00:19:57\]:** So become like your assistant, your product
+manager who will feed everything back to you in a summarized form.
+
+**Jean Yang \[00:20:03\]:** Yes. It sounds like a hard problem. Good one to
+have.
+
+**Jeff Bezanson \[00:20:05\]:** That would be the hope.
+
+**Jean Yang \[00:20:07\]:** So, Jeff, have there been tensions between the
+desire to keep the open-source community happy and the commercial needs of
+Julia?
+
+**Jeff Bezanson \[00:20:17\]:** Yeah, we’ve never really thought so because the
+open-source community is the base of the pyramid for everything we do. It’s the
+base of the pyramid of my career at this point. So that's always been something
+that is going to remain as it is. Of course, the project and the core language
+itself and the community around it, keeping that working the way it does now is
+at a very high priority. Everyone involved can have a voice in that, and that's
+still going. We'd never give that up for any commercial reason.
+
+So then it's on us to find a way to fund the whole thing under those principles,
+which we think is fully possible. It's not so easy, but we think it's completely
+possible by just having a very clear separation between the things that are for
+particular markets that they would be willing to pay for versus just a language.
+
+**David Mytton \[00:21:03\]:** Is that the large-scale data processing and
+machine learning-type applications that you advertised on the JuliaHub website?
+Is that where you feel like the commercialization opportunity is?
+
+**Jeff Bezanson \[00:21:14\]:** Yes. It's a little more targeted than that. It's
+focused in particular areas of modeling and simulation, specifically. So pharma
+simulations or physical systems, and now, hopefully, soon circuits.
+
+**David Mytton \[00:21:26\]:** Interesting. What's the infrastructure behind the
+scenes for that? Have you built a custom platform? What does that look like?
+
+**Jeff Bezanson \[00:21:32\]:** Our kind of library-oriented design that I was
+talking about, that really was successful. It worked much better than we
+expected because there were a lot of people out there who had what you call the
+domain expertise to write, say, differential equation solvers. But it would be
+very difficult to do it in C++.
+
+Especially, not only is the language harder to use, but if you – once you want
+to add very advanced capabilities, lots of really fancy features, it just
+becomes kind of untenable to use a low-level language. So a lot of people like
+that were able to pick up Julia in lots of areas like image processing, various
+things. Were able to pick up Julia, write the libraries they needed that had the
+features they needed, then the performance was basically just more or less
+automatic. So already good performance and you have more capabilities than you
+ever had before.
+
+One of the more illustrious of those efforts was Chris Rackauckas’ differential
+equation libraries, which I think now we have the best in class libraries for
+that stuff. There's just really incredibly productive toolchain for writing down
+equation systems in a very high-level mathematical notation, and that will just
+go all the way to some of the fastest solvers out there with just very little
+effort.
+
+**Jean Yang \[00:22:46\]:** Cool. Jeff, we've talked about this at various
+points along the way, but I'd love to hear about some of the lessons you've
+learned from working with a long-running open-source project. How have you
+evolved with your community, and what are some of the things you've learned from
+working with your community?
+
+**Jeff Bezanson \[00:23:04\]:** Well, testing is certainly really important. I
+can say that. I mean, everybody knows this, but it always feels like you're
+learning it over and over again. Anything that is not tested is going to break.
+There are a lot of things that don't seem like they could be easily tested, but
+you nevertheless have to find a way to test it, or it is going to break. So
+that's just really, really important. That's, I think, what sort of keeps us
+going, at this point.
+
+**Jean Yang \[00:23:33\]:** Have the people who showed up been different in
+profile over the years, or is it just a larger number of the same kind of
+people?
+
+**Jeff Bezanson \[00:23:40\]:** The profile has changed a little bit. Of course,
+it's still the typical Julia developer is still probably in applied math or
+sciences in some way. But there's certainly been a greater diversity of people
+from the initial small number of early adopters, I think. It's a little bit hard
+to characterize because, actually, in many cases, as I said, I don't even know
+who the people are. Some people just use GitHub usernames. Yes, sometimes, I
+don't even know who they are. So it's a little bit hard to have informal
+demographic data, I guess. It's hard to say anecdotally.
+
+We do have a developer survey that we send out every year. The results of that
+will kind of tell you maybe. That's probably the best information we have. And
+there has been a slight increase in the diversity of kinds of people.
+
+**Jean Yang \[00:24:26\]:** Jeff, I'm going to go off-script with this question
+but now that Applied Math is everywhere with ChatGPT and AI everywhere, is Julia
+getting into the AI game?
+
+**Jeff Bezanson \[00:24:37\]:** We're kind of in the AI game. There are
+certainly frameworks for doing AI machine learning in Julia. In fact, one place
+where we've been a little bit ahead of the curve is in this SciML toolchain as
+it's called, where the program is to integrate the traditional kinds of
+scientific knowledge — it's based on equations and deterministic rules — with
+machine learning so that you can get the best of both worlds.
+
+Because if you have an agent that's trying to learn to do something in a
+physical environment, say, you can try to have it learn everything but why not
+just also tell it what we know about physics? Then that will give it a huge leg
+up in which it turns out that does indeed work. If you let an agent like that
+just already know the laws of physics, it improves much, much more rapidly than
+having to reconstruct absolutely everything.
+
+There's very various things you can do as well like using machine learning
+techniques to develop fast surrogates for components of simulations. It's a
+really fancy way to optimize a function effectively by just learning a neural
+net approximation of it that runs incredibly fast. So there's a whole SciML
+ecosystem, and Julia has lots of tools for doing that. So I think if you want to
+combine those kinds of traditional mathematical models with machine learning
+techniques, that's actually the best package of stuff out there. But as far as I
+know, people are not using that to build, say, ChatGPT.
+
+**David Mytton \[00:25:57\]:** You kind of alluded to it at the beginning of the
+episode about how you think programming, in general, is going to be changed by
+the likes of ChatGPT. Are you optimistic or pessimistic? Because it wasn't
+entirely clear from your answer of which view you take.
+
+**Jeff Bezanson \[00:26:12\]:** Everyone always asks the question is, are you
+optimistic or pessimistic? But I think it really has to be broken down to the
+technical question and kind of the moral question, right? Do I think the
+technology works and will be effective? Then, yes. In that sense, I'm
+optimistic. I do think it works. People are going to be using these coding
+assistance at the very least, plus things that maybe we can't even imagine yet.
+
+I'm very curious how it's going to work out for maintenance programming because
+I mostly do maintenance programming. I wish my job was to sit down and write a
+program that does X. That would be great, but I don't really get to do that. I
+do maintenance programming. I'll ask you, have you seen any exploration of using
+ChatGPT for maintenance programming kind of tasks and not just “write a function
+that does X” kind of tasks?
+
+**Jean Yang \[00:27:00\]:** So my sense is that Copilot should be able to help
+with some of this.
+
+**Jeff Bezanson \[00:27:00\]:** Maybe. I haven't tried it, unfortunately.
+
+**Jean Yang \[00:27:07\]:** I would say from first principles, a lot of the
+people I worked with in program synthesis when I was in research, maintenance
+programming was one of the use cases because the goal of program synthesis is to
+drive down boilerplate. So when you have boilerplate, when you have to visit a
+pattern something a lot, when you have to do maintenance programming, I feel
+like those are the two big cases or when you have to string together lots of
+APIs. Those are the three big situations where you want to do automatic
+programming.
+
+In the research area, I feel like Copilot is adjacent too. There should be a lot
+of AI for maintenance programming. But as for how effective it is, I'm not sure.
+I've never personally tried to use Copilot for maintenance programming.
+
+**Jeff Bezanson \[00:27:49\]:** I'm curious what happens if you try to ask it to
+do a complicated refactoring, say.
+
+**Jean Yang \[00:27:54\]:** Oh, interesting. Yes. In my mind, maintenance
+programming is sort of like you change one data type, and you got to thread that
+through your entire system. I feel like Copilot would be great for that. But a
+refactor would be harder.
+
+**David Mytton \[00:28:07\]:** So at the moment, it’s just generating, it’s
+almost like advanced autocomplete when it's in your editor and that's pretty
+helpful for the boilerplate stuff. But I suppose when it can understand a bug
+report and propose a solution, I haven't seen anything that can do that yet, but
+I have seen things like “convert this code into a different language”, so from
+one language to another. That seems –
+
+**Jean Yang \[00:28:28\]:** Yes, transpiling.
+
+**David Mytton \[00:28:29\]:** Yes, the translation and stuff.
+
+**Jean Yang \[00:28:31\]:** Any refactor, that's a transpile, I feel like, this
+AI stuff is good for. But anything that needs a core fundamental understanding
+of the underlying programming semantics, I feel like there would be some weird
+stuff going on.
+
+**Jeff Bezanson \[00:28:44\]:** Yes, that's kind of true. Actually, the use case
+of converting code from one language to another is actually – was the first
+thing I was super excited about with this because this is actually the perfect
+technology, in my opinion, for doing that. Because when you are converting from
+one language to another, which we encounter a lot because we have, of course,
+when you're trying to sell a language, a lot of people need to port their code
+from C++ or Python or MATLAB to your language. So that's the first thing that
+comes up.
+
+This is a really particular kind of task that's really well-suited to this
+because you actually – in a way, you want to kind of do it approximately because
+you don't want a compiler. If you tried to use like a C++ to Julia compiler, you
+would not get very nice code out.
+
+**Jean Yang \[00:29:25\]:** Yeah, yeah. So, Jeff, see, this ChatGPT business can
+help.
+
+**Jeff Bezanson \[00:29:30\]:** It probably would not work very well. You
+wouldn't like the results.
+
+**David Mytton \[00:29:34\]:** Yes. Well, before we wrap up then, I have two
+lightning questions for you. So the first is what interesting DevTools or tools
+generally are you playing around with at the moment?
+
+**Jeff Bezanson \[00:29:46\]:** My favorite toy by far is RR, the record and
+replay framework.
+
+**Jean Yang \[00:29:50\]:** Oh, cool.
+
+**Jeff Bezanson \[00:29:51\]:** That has been the biggest life-changer
+game-changer thing that I've encountered in quite a few years. You can just do
+things that you couldn't do otherwise. A lot of things are kind of timesaver
+kind of tools. Even, I think, most of the stuff in the IDE, it’s convenient. But
+if you look at how much time does it actually save you, it's like a few seconds
+here and there, which is maybe worthwhile because it adds up. But this is just
+like a tool that comes pretty close to just finding the bug for you in five
+minutes, instead of hours of frustration. It's a major step up.
+
+**David Mytton \[00:30:22\]:** Okay, great. Then what is your current tech
+setup? What hardware and software do you use each day?
+
+**Jeff Bezanson \[00:30:29\]:** My tech setup, I got to admit, is pretty old
+school at this point. I mean, I have a – I use a Dell XPS laptop that comes
+preloaded with Ubuntu. I've used those for a long time because it has – yeah, it
+comes with Ubuntu preloaded. So I like those, and it's a nice machine.
+
+**Jean Yang \[00:30:44\]:** It’s gotten increasingly hard to install Ubuntu,
+given the BIOS setup, so these modern machines.
+
+**Jeff Bezanson \[00:30:51\]:** I've been using Linux for, I don't know what, a
+very long time, more than 20 years. So the idea of a laptop preloaded with it is
+still sort of like novel in some part of my brain. Other than that, it's pretty
+old school. It's like Emacs, and terminal is most of it.
+
+**David Mytton \[00:30:51\]:** Which version of Ubuntu are you on? Do you stay
+up to date?
+
+**Jeff Bezanson \[00:31:07\]:** Yes, I stay pretty up-to-date. I've got 2204
+right now.
+
+**David Mytton \[00:31:11\]:** Yes, that's pretty recent. Excellent. Well,
+unfortunately, that's all we've got time for. Thanks for joining us.
+
+**Jeff Bezanson \[00:31:17\]:** Yeah, certainly.
+
+**\[00:31:20\] DM:** Thanks for listening to the Console DevTools Podcast.
+Please let us know what you think on Twitter. I'm @davidmytton and you can
+follow @consoledotdev. Don't forget to subscribe and rate us in your podcast
+player. If you're playing around with or building any interesting DevTools,
+please get in touch. Our email is in the show notes. See you next time.
+
+\[END\]
+
+</BoxCollapsible>
