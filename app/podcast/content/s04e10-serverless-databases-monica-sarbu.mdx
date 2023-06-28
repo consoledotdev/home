@@ -1,0 +1,606 @@
+---
+title: Serverless databases
+who: Monica Sarbu
+whoLink: https://twitter.com/monicasarbu
+what: We start with the philosophy behind serverless databases, why developers
+    shouldn't need to think about relational databases, search, and analytics,
+    whether the performance hit of accessing a database over HTTP matters, and
+    how database branching works.
+season: 4
+episode: 10
+date: 2023-06-29T06:00:00Z
+duration: "29:02"
+episodeURL: https://cdn.simplecast.com/audio/10488ddf-3ca4-4300-9391-c2967d806334/episodes/76eda8cc-b16e-47f7-b598-e235f466f74b/audio/2c230867-fdbf-4396-a67b-c83ddfd3ff57/default_tc.mp3
+draft: false
+summary: "Serverless databases - a devtools discussion with Monica Sarbu (Xata).
+    Console Devtools Podcast: Episode 10 (Season 4)."
+metaDescription: "Serverless databases - a devtools discussion with Monica Sarbu
+    (Xata). Console Devtools Podcast: Episode 10 (Season 4)."
+headerType: fixed
+hideLines: true
+hidePlanes: true
+isSubpage: podcast-episode
+pageType: podcast-episode
+customPageStyle: true
+xlViewport:
+    largeText: true
+topImg1Src: /img/podcast/xata-monica-sarbu.jpg
+topImg2Src: /img/favicons/www.xata.io.png
+ogImg: /img/podcast/podcast-cover.jpeg
+twitterCard: https://player.simplecast.com/76eda8cc-b16e-47f7-b598-e235f466f74b
+authorName: David Mytton
+authorURL: https://davidmytton.blog/start
+authorImg: /img/david.jpg
+authorBio: is Co-founder & CEO of Console. In 2009, he founded and was CEO of Server
+    Density, a SaaS cloud monitoring startup acquired in 2018 by edge compute
+    and cyber security company, StackPath. He is also researching sustainable
+    computing in the Department of Engineering Science at the University of
+    Oxford, and has been a developer for 15+ years.
+author2Name: Jean Yang
+author2URL: https://twitter.com/jeanqasaur
+author2Img: /img/podcast/akita-jean-yang-profile.jpg
+author2Bio: is CEO of Akita Software. Jean earned her PhD in software correctness and
+    programming language design from MIT and then became a professor in computer
+    science at Carnegie Mellon University before she started Akita to build the
+    future of API observability.
+---
+
+### Episode notes
+
+In this episode, we speak with Monica Sarbu, CEO of [Xata](https://xata.io/). We
+start with the philosophy behind serverless databases, why developers shouldn't
+need to think about relational databases, search, and analytics, whether the
+performance hit of accessing a database over HTTP matters, and how database
+branching works. She also talks about Xata’s plans for a global database, the
+company’s focus on UI developers, and what other databases are doing wrong.
+
+**Things mentioned:**
+
+-   [Xata](https://xata.io/)
+-   [tupu.io](http://tupu.io)
+-   [Elastic](https://www.elastic.co/)
+-   [PlanetScale](https://planetscale.com/)
+-   [Quicker serverless Postgres
+    connections](https://neon.tech/blog/quicker-serverless-postgres)
+-   [Cloudflare Workers](https://workers.cloudflare.com/)
+-   [Airtable](https://www.airtable.com/)
+-   [Xata ChatGPT integration](https://xata.io/chatgpt)
+-   [Apple Mac](https://www.apple.com/mac/)
+
+<RichTitle tag="h5" icon={{ group: "generic", name: "future-head" }} text="About Monica Sarbu" />
+
+Monica Sarbu is the Founder and CEO of [Xata](https://xata.io/), a serverless
+database built for modern development. Prior to that, she worked on an
+open-source monitoring solution called Packetbeat which was acquired by
+[Elastic](https://www.elastic.co/) in 2015. She is also the co-founder of
+[tupu.io](http://tupu.io), a non-profit initiative that offers free mentorship
+to women, people of color, and other underrepresented groups in the tech
+industry.
+
+### Highlights
+
+<PodcastEpisodeClipping atTime="05:14">
+
+**Monica Sarbu:** The idea of a single API is that because, like I said,
+this scenario happens in every company out there; when they start a new web
+application, they need to build this data platform internally. My thinking was
+why \[does\] every company out there need to reinvent the wheel when we can
+provide all this functionality: database, search functionality, analytics, time
+series data as well, and under a single API? This was the main purpose of having
+a single API.
+
+</PodcastEpisodeClipping>
+
+<PodcastEpisodeClipping atTime="25:12">
+
+**Monica Sarbu:** I've seen that there are so many companies out there that are
+building their data platform on top of Airtable and they are developers. The
+reason behind that was that it's easier to use, and they had– While I was
+speaking with so many companies, I've seen so many hacks because they had
+hundreds of Airtables. They were synchronizing between them because you cannot
+really store a lot of data in one Airtable. My idea is — especially with
+serverless applications — that when you're building a web application, you have
+most of your logic in a lambda function so you cannot really use any of these
+databases and services that are out there, right? So Airtable was an easy-to-use
+approach but Airtable was not really meant to be built as a database. I've seen
+that there is a huge opportunity to build something that is as easy to use as
+Airtable but as scalable as a traditional database and also powerful as a
+traditional database.
+
+</PodcastEpisodeClipping>
+
+<BoxCollapsible expanded title="Full transcript"
+  classes={["podcast-transcript"]}>
+
+**David Mytton \[00:00:04\]:** Welcome to another episode of the Console
+DevTools Podcast. I'm David Mytton, CEO of Console.dev, a free weekly email
+digest of the best tools and beta releases for experienced developers.
+
+**Jean Yang \[00:00:15\]:** And I'm Jean Yang, CEO of Akita Software, the
+fastest and easiest way to understand your APIs.
+
+**David Mytton \[00:00:22\]:** In this episode, Jean and I speak with Monica
+Sarbu, CEO of Xata. We start with the philosophy behind serverless databases,
+why developers shouldn't need to think about relational databases, search, and
+analytics, whether the performance hit of accessing a database over HTTP
+matters, and how database branching works. We're keeping this to 30 minutes. So
+let's get started.
+
+**David Mytton \[00:00:45\]:** We're here with Monica Sarbu. Let's start with a
+brief background. Tell us a little bit about what you're currently doing and how
+you got here.
+
+**Monica Sarbu \[00:00:52\]:** Hey. Hi, everyone. Thanks for inviting me. So I
+am currently the CEO and Founder of a company called Xata, and we are building a
+database company. The idea of the company came up unexpectedly for me. I can
+share a bit more about this. Before that, my first company where I was building
+an open-source monitoring solution was called Packetbeat and was acquired by
+Elastic in 2015.
+
+**Jean Yang \[00:01:17\]:** That's great. Thanks, Monica. Before we get into the
+specifics of what you're building at Xata, we'd love to chat about the
+philosophy behind serverless databases. Let's start with why you think
+serverless is the right model for data? Or even what is a serverless database?
+
+**Monica Sarbu \[00:01:33\]:** Yes. So I think databases today are really
+complicated, and they leave quite a lot of things for developers to worry about.
+Even if you are using a database, a managed database service provided by one of
+these big cloud companies, you still have a lot of things to do. So you have to
+configure and create a new instance. You have to worry about how much CPU memory
+I need to have. You have to worry about replications, scaling. You have to worry
+about setting up monitoring. You also have to worry about things like how I'm
+going to do the schema migrations and things like this.
+
+With platforms like Netlify and Vercel that basically are serverless platforms
+and also with growth for serverless applications, it becomes more of a need of
+having a serverless database as well. Currently, with the current approach of
+databases, this is a bit hard to achieve.
+
+**David Mytton \[00:02:31\]:** It’s more than just serverless databases, right?
+You're building a combination of relational databases, a search engine,
+analytics as a single API. Why are you building all of these things into a
+single product?
+
+**Monica Sarbu \[00:02:45\]:** So I think nowadays, more than web application,
+they require you to have more than a database. The way it happens is that the
+first thing when you start a new application, you have to decide what kind of
+database you need to use. Then as you add more functionality to your
+application, for example, search because nowadays, all applications, web
+application have search integrated, then you have to add another service,
+something like Elasticsearch, for example. You have to synchronize the data from
+your database to Elasticsearch. This probably requires you to have a Kafka in
+between.
+
+It’s a lot of things that you need to set up just for having this particular
+feature. Also, as your application grows, you probably also have to add caching.
+Also, you have to know because currently databases, they support very basic data
+types, I will say. But usually, more than applications require more advanced
+data types like arrays, images, attachments, JSON, and things like this.
+
+This is something that I got the same like we were building this mentorship
+platform at the beginning of the pandemic. It’s called Tupu.io, and we are
+offering a free mentorship for underrepresented groups in tech.
+
+When we were building this mentorship platform, we realized that there isn't any
+database out there that can fulfill all these requirements. So we didn't really
+have higher requirements. We needed a relational database where we can store the
+relations between mentors and mentees. We also needed a way to be able to search
+as a mentee for the right mentor.
+
+For example, if you are in marketing, you want to search for a mentor in
+marketing. We also want you to be fully managed because we want you to spend as
+much time as possible on building the monitoring platform, not building the
+infrastructure. This is how, basically, I realized there is a huge opportunity
+on the market, and this made me decide to start Xata. Because web applications,
+they need more than just a database.
+
+**Jean Yang \[00:05:01\]:** Thank you, Monica. That sounds very, very
+compelling. Next, I'd like to dig into why is it important to provide this under
+a single API. What's the vision there?
+
+**Monica Sarbu \[00:05:13\]:** Yeah, so basically, the idea of a single API is
+that because, like I said, this scenario happens in every company out there.
+When they start a new web application, they need to build this data platform
+internally. My thinking was why every company out there needs to reinvent the
+wheel when we can provide all this functionality, database, search
+functionality, analytics, time series data as well, and under a single API? This
+was the main purpose of having a single API.
+
+But also, having a single API allows us to build functionality that other
+database services that provide PostgreSQL as a service, they stick to the SQL
+wire protocol. They cannot have, for example, because we control the schema. For
+example, we can show the user the logical schema, and we can have the physical
+schema from PostgreSQL. We can have it basically hidden by the user. So we can
+have hidden columns that allows us to build functionality like zero-time
+migrations that others can’t, right? That's also an important aspect.
+
+Also, in terms of data types, we can provide more advanced data types than the
+basic ones that a database can provide. So now, for example, we are working on
+providing images, attachments. Something like this we can easily provide by
+having a single API.
+
+Another advantage of having a single API is that you as a developer, you don't
+have to learn different SQL if you have to interact with the database like HTTP
+if you have to interact with this and other services. So basically, you cannot
+have a uniform way how you can interact with your data.
+
+**David Mytton \[00:07:11\]:** Is there an argument to say that separating all
+these is the best way to do it because you're going to be able to choose the
+best product for each thing? How do you tackle that when someone says, “Well, I
+want to use each of these products individually.”?
+
+**Monica Sarbu \[00:07:24\]:** Yes. That's a very good question. So we didn't
+really get this question from our customers. I think it's – of course, we could,
+for example, we are using internally Elasticsearch. So we consider the idea of
+giving direct access to Elasticsearch. We are also building a SQL proxy in order
+for us to also speak the SQL protocol companies or developers are used to. So a
+secret protocol, it's something that developers are still using, and it's easier
+for them to migrate from existing applications to something to say that we're
+just using our own API.
+
+**David Mytton \[00:08:09\]:** Right. So you're building an abstraction on top
+of these individual technologies. But because they're often used together,
+you're able to build interesting ways to integrate them and solve a lot of the
+things that developers would have to build themselves otherwise.
+
+**Monica Sarbu \[00:08:22\]:** Exactly. Yes.
+
+**Jean Yang \[00:08:24\]:** Yes, that makes a lot of sense. It sounds like a
+portable ORM that has more than what a normal ORM provides, is that accurate?
+
+**Monica Sarbu \[00:08:34\]:** So we are not really doing only ORMs. I will say
+we are building a database, plus ORM, if you want. So basically, companies,
+usually, they use the database. For example, they use PlanetScale, and they use
+Prisma as an ORM. Basically, we have everything under the same roof. We also
+have our own SDKs and, basically, different ways how you can interact with the
+product through the UI, but also with the CLI and also for the SDKs, like I
+said.
+
+**Jean Yang \[00:09:07\]:** A follow-up question I have is did you consider
+keeping an existing database, say SQL, and just building the API layer? What was
+the motivation to build everything?
+
+**Monica Sarbu \[00:09:19\]:** Yeah, I think it's very important to offer a very
+good developer experience to the users and our goal was to build innovation and
+try to change the way developers work with data. Because, usually, I mean,
+currently it's very stressful, I think, for developers to work with data. They
+have to do a lot of workarounds. It's very difficult to do migrations.
+
+When we started the company, we thought about how we can provide the ideal
+scenario for the developer, how to allow them to not think about building the
+data platform that they need to build a data application but concentrate on
+building the product itself. Because, usually, for example, UI developers, they
+cannot really build web applications end-to-end by themselves. They need to rely
+on a back-end team to provide them with the right APIs and also, on the data
+platform team, to provide them with all the services, glue them together, and
+provide all the functionality that they need to build a web application. So our
+goal was to give superpowers to UI developers to allow them to build end-to-end
+applications by using Xata.
+
+**David Mytton \[00:10:40\]:** The serverless model makes sense because no one
+should ever run their own database, right?
+
+**Monica Sarbu \[00:10:46\]:** Yes.
+
+**David Mytton \[00:10:47\]:** Yes. I suppose people are used to using RDS from
+Amazon and the other similar cloud products. It's still the database instance.
+So you get access to Amazon's managing the underlying server that it's running
+on, but you still have to manage Postgres. Whereas, I suppose your argument and
+I suppose the likes of Neon do Postgres and also PlanetScale for MySQL, they’re
+saying that they were going to manage everything for you?
+
+**Monica Sarbu \[00:11:10\]:** Exactly, yes.
+
+**David Mytton \[00:11:11\]:** Okay. In terms of access to SQL then, are you
+abstracting that completely? You said you're currently building that out because
+it is a common interface. Developers are used to using that.
+
+**Monica Sarbu \[00:11:22\]:** Yes. So we are building just a proxy in front, so
+a SQL proxy in front. But we want to encourage users to use our API. Because
+with our API, you can get more functionality than with just a basic SQL, right?
+You can get extended data types. You can get zero-time migrations. You can get
+branching functionality. So you can get much more over the API.
+
+**David Mytton \[00:11:50\]:** How does the branching functionality work? That's
+something I saw for the first time, I think, with PlanetScale. The developer
+experience there was like doing a code pull request on the database. Can you
+explain how that works and the underlying technology behind it?
+
+**Monica Sarbu \[00:12:05\]:** So basically, every time you create a branch, you
+create a new database. What's interesting is that we have zero cold starts when
+we create a branch, and you have the option to basically copy a subset of the
+data from the main branch to your current branch or transform the data if, for
+example, for privacy reasons, you don't want to copy all the data.
+
+It’s very important when you test your, let’s say, new branch. It’s important,
+you don't really need all the data from the main database. You just need a
+subset to be able to test with that. Then what's also interesting there,
+basically, you can do migrations, and we offer zero-time migrations.
+
+**Jean Yang \[00:12:51\]:** So, Monica, a follow-up question. Something I'm
+wondering about is from building high throughput applications in the past, you
+previously want the data to live close to the application. But these days, a lot
+of this is happening across HTTP REST. So this sounds a lot slower. Are there
+things that you have to do to mitigate this? Is this just the future? Do you see
+this changing?
+
+**Monica Sarbu \[00:13:16\]:** Yes. I mean, a counter-example is DynamoDB that
+is functioning over HTTP. I think it's a good example because it has a high
+throughput but a low latency. Basically, with databases, with PostgreSQL, MySQL,
+wire protocol, it’s faster once you have a connection. But for serverless
+applications, you have to do a connection every time. So then it's slower than
+HTTP.
+
+I think this model, I mean, it's interesting that PostgreSQL is there for like
+40 years or so. But I think with serverless application and with this approach,
+then it's not a good fit anymore.
+
+**Jean Yang \[00:13:59\]:** That makes sense.
+
+**David Mytton \[00:14:01\]:** So I suppose those applications, do you think
+there's going to be a development in how connection pooling is done for
+serverless? I think the team at Neon recently posted a blog post about this and
+how they have been able to reduce the number of hops in a connection request
+through some really interesting optimizations. Do you think the platforms will
+do that, like Vercel and Netlify? Or do you think it's just an inherent
+limitation of how serverless works?
+
+**Monica Sarbu \[00:14:28\]:** Yeah, that’s a very good question. Yeah, I think
+it's still up in the air. I think many companies are trying to figure out, for
+example, also how Edge will work. We are also exploring with this as well, so I
+don't know how it will be.
+
+**David Mytton \[00:14:45\]:** Interesting. I suppose when you say “edge”, I
+mean, you could put a copy of the database in every single edge location, so the
+user is just going – doesn't need to go back to that central location.
+
+**Monica Sarbu \[00:14:57\]:** Yes. I mean, the way we do because we also have
+edge workers and, for example, the way we do it is just that you have the option
+to cache with your query. Basically, we have these edge workers that you can
+deploy in your Cloudflare Workers. This is useful for applications, for example,
+in something like Hacker News that most of your users from that region are
+basically calling the same query. Let's say the main page of Hacker News or so.
+
+Another example can be an e-commerce website where you have, for example, a deal
+page or something like an offering, something like this that many people will
+look kind of query the same page. I think it's useful for those cases. But, yes,
+not for all the scenarios will work.
+
+**David Mytton \[00:15:50\]:** Right. So do you think there'll be tiers of
+query? So certain queries will be resolved by the Edge, but other queries will
+have to go back to the central primary instance, and those will just be slower?
+
+**Monica Sarbu \[00:16:02\]:** Yes, yes. I mean, this is something that it's
+interesting because there were quite a lot of videos recently about how we're
+going to solve the problem with edge. I think there isn't any answer yet. So we
+are also planning to build a global database. Currently, you have to choose the
+region where you deploy, but I think it will be an interesting challenge how
+we're going to solve this.
+
+**David Mytton \[00:16:27\]:** Can you say anything about what you've thought
+about for that global database so far? I suppose the challenge is replication
+lag. Is there anything that you can reveal at the moment?
+
+**Monica Sarbu \[00:16:36\]:** Yeah, I mean, it's not fully baked, let's say. So
+we didn't even start working on this, but the idea is that you're going to have
+a write replica, one, and then you'll have a lot of read replicas closer to your
+users.
+
+**Jean Yang \[00:16:51\]:** Monica, how is this working behind the scenes at
+Xata? What are you building on top of? What building blocks have been the most
+useful?
+
+**Monica Sarbu \[00:16:59\]:** Yes. So this was an evolution. So we went back
+and forth since we started the company. What we knew is that we didn't want to
+start a database from scratch so we decided to build a platform on top of
+existing technologies, and we decided to build on top of Postgres SQL and
+Elasticsearch.
+
+Of course, we are using Kafka to replicate the data from the database to
+Elasticsearch. In the future, also, we plan to add Redis. We are also using a
+DynamoDB a bit. But, yes, that's mainly what we are using now.
+
+**Jean Yang \[00:17:34\]:** That makes a lot of sense. Thank you.
+
+**David Mytton \[00:17:37\]:** Do you think there will come a time when you have
+to write your own components, like your own data store or storage layer or
+something like that?
+
+**Monica Sarbu \[00:17:44\]:** Yes. I think that's a very interesting question.
+I think it's important for us to put out there all the functionality, all the
+features that we had in mind and see what is the interest from the users. Then
+along the way, I think it will also be – I'm sure it will be a time when we're
+going to see if it's worth starting a database from scratch or rewrite some of
+the parts in order to be more efficient. But, yes, currently, we are trying to
+concentrate on the functionality that we are building, but yeah.
+
+**David Mytton \[00:18:18\]:** Right. They're all open-source projects, I
+suppose. So you can always contribute a small part of the code or build it out
+and then submit it upstream, just to keep those projects improving, so you don't
+have to start from scratch?
+
+**Monica Sarbu \[00:18:31\]:** Yes, definitely.
+
+**Jean Yang \[00:18:33\]:** Yeah. Okay. Well, so Monica, one thing that would be
+fun to dig into is what does developer experience mean to you? Because for
+databases, it's typically meant something potentially different than for
+app-level tools.
+
+**Monica Sarbu \[00:18:45\]:** Yes, definitely. I think for me, a good developer
+experience is not that when you have to spend two days in reading documentation
+in order to figure out how to use a database and also learn about database
+internals. So a developer experience, basically, in my opinion, is something
+that provides all the functionality that you need. So you don't have to worry
+about building the infrastructure yourself, manage the database yourself, and
+try to concentrate more on building the product because, in the end, this is
+what your user sees, they see features in your product, not how much resources
+you spend on underlying technology, on like the data platform, as they call it,
+right? So I think this is important. Getting starting experience and
+documentation is very important as well.
+
+**Jean Yang \[00:19:35\]:** Do you have any views on database developer
+experience that you think are controversial? What are other databases doing
+wrong?
+
+**Monica Sarbu \[00:19:42\]:** I mean, most of the databases out there, they
+don't really put a lot of accent on make it easy to configure. In my opinion, if
+you have to write a SQL query, that's not a good developer experience, even if
+you are a developer, right? Having something to visually manage your data, your
+configuration is much more pleasant.
+
+So in my opinion, just writing SQL queries, I think it's problematic and, for
+example, for this reason, right? So I've seen this at Elastic when I was working
+in Elastic. Even more senior engineers, they're struggling in building the query
+tools to fetch specific type of data. Elasticsearch was not a SQL that they have
+to write. For this reason, we have a spreadsheet-like UI where you can basically
+filter the data visually, the data that you are interested in. Then you have an
+option and get \[inaudible 00:20:42\], and then basically gives you the code
+that you need in multiple programming languages, the code that you need to use
+in your application. So this way, it hopefully, makes it faster for UI
+developers to build their application.
+
+**Jean Yang \[00:20:58\]:** Well, yes, that makes a lot of sense that a UI
+developer would want a different interface for their developer experience.
+
+**David Mytton \[00:21:05\]:** To what extent have you looked at how things
+change as the database scales? My experience, a lot of things are different when
+you go from maybe executing 10 or 20 queries every couple of minutes to 200,000
+or 300,000 writes a second. That's when databases start breaking and you've got
+to get into the docs and understand how to tweak it. How are you thinking about
+that so that developers just don't have to think about it?
+
+**Monica Sarbu \[00:21:31\]:** Our goal is to abstract this to the user, so they
+don't have to worry about how to optimize the queries and things like this.
+We're not doing anything at the moment in this direction, but I think that's our
+value proposition.
+
+So from the types of customers that we are targeting, at least for now, is we
+are not targeting enterprise companies, we are more targeting, of course,
+individual contributors, medium-sized type of companies, companies that don't
+have enough resources that they want to spend in building the data platform
+themselves, big enterprises like eBay or so. They don't want to have a solution
+in the cloud, first of all. But also, they have different requirements. So we
+are concentrating on in terms of user more medium-sized type of companies.
+Someone said, "for the rest of us”.
+
+**David Mytton \[00:22:29\]:** Yes. Databases for the rest of us.
+
+**Jean Yang \[00:22:33\]:** Databases for the 99% of developers.
+
+**Monica Sarbu \[00:22:35\]:** Yes.
+
+**David Mytton \[00:22:37\]:** I suppose that's why you've got your spreadsheet
+UI so that non-technical users can explore the database.
+
+**Monica Sarbu \[00:22:43\]:** Even if you are a developer, you would like to
+visualize the data and interact with your data over a spreadsheet-like UI. But
+also, I know there are a few developers, for example, they will prefer to
+interact over a command-line interface over SDK. So that's why we provide
+multiple ways.
+
+Our goal is that our persona that we have in mind at the beginning is to have
+developers and from that category, we are concentrating on UI developers because
+we think that we can have a bigger impact, and we can give superpowers to UI
+developers to build end-to-end applications that they were not able to build
+before.
+
+Then also longer term, we are also thinking to open this to non-technical
+people. For example, imagine a support team that would like, for example, to
+change a coupon of a user. They will have a different view. Probably they will
+be able to access only a few columns, and exchange a coupon or something like
+that.
+
+So different personas require different types of features, and that's why we
+decided to do them step by step. Our idea is that we’re going to concentrate
+first on developers, whose idea that developers will convince non-technical
+people from the same organizations to use us for other use cases.
+
+**Jean Yang \[00:24:11\]:** Cool. That makes a lot of sense. So, Monica, I
+really like your story of discovering when you're building this mentoring
+network that there are this database needs that people have when spinning up a
+project. How did you know that there were other software teams with the same
+problems? Was this the first time you came upon this problem? Or you had seen it
+before? You had heard about it before?
+
+**Monica Sarbu \[00:24:33\]:** Yes. I think it's worth saying a bit of
+background. So my entire career before that, I was building monitoring solution
+first. I was building a monitoring solution for telecom, then more generic for
+developers. Then when I started this nonprofit organization, we realized there
+isn't a database solution that can fulfill all our needs.
+
+Then we decided to build a platform on top of Airtable. Why Airtable? Because it
+was just easier to use, because it provided us with a spreadsheet-like UI that
+we can use to do the matching in a visual way because you don't want a command
+line interface to do the matching between a mentor and mentee.
+
+Then I've seen that there are so many companies out there that are building
+their data platform on top of Airtable, and they are developers. The reason
+behind that was that it's easier to use, and they had – while I was speaking
+with so many companies, I've seen so many hacks because they had hundreds of
+Airtables. They were synchronizing between them because you cannot really store
+a lot of data in one Airtable.
+
+My idea is — especially with serverless applications — that when you're building
+a web application, you have most of your logic in a lambda function. So you
+cannot really use any of these databases and services that are out there, right?
+So Airtable was an easy-to-use approach.
+
+But Airtable was not really meant to be built as a database. I've seen that
+there is a huge opportunity to build something that is as easy to use as
+Airtable but as scalable as a traditional database and also powerful as a
+traditional database. So this was the initial motivation. I didn't really have
+in mind to start the second company, but I've seen there is a huge opportunity
+on the market and then decided to start a new company.
+
+**Jean Yang \[00:26:29\]:** That makes sense. I guess the question I have is how
+did you get the conviction that Airtable wouldn't subsume you?
+
+**Monica Sarbu \[00:26:37\]:** I mean, it depends on the project, right? For us
+is the mentorship platform that we are building, we are not very successful,
+right? So we didn't really reach the limitation of Airtables. But other
+companies, any other product that you are building that has a low usage of
+users, you basically immediately reach the limitation of Airtable.
+
+**Jean Yang \[00:27:01\]:** That makes a lot of sense.
+
+**David Mytton \[00:27:03\]:** Well, before we wrap up then, I have two
+lightning questions for you. So the first is what interesting DevTools or tools,
+in general, are you playing around with at the moment?
+
+**Monica Sarbu \[00:27:12\]:** Yes. So we are experienced with OpenAI. Recently,
+we launched this integration with OpenAI and the use case that we are very
+excited about. It looks like many of our customers as well that we can provide
+the search functionality and ChatGPT on top of your documentation, which makes
+it easier for you to find in your documentation without just crawling and
+looking and just ask the chat what you're looking for. So I think other
+companies approach us because they want to have the same approach with their
+documentation.
+
+**David Mytton \[00:27:49\]:** Right. Then what is your current tech setup? What
+hardware and software do you use every day?**Monica Sarbu \[00:27:55\]:** In
+terms of the software, so we are building a solution. So on the backend, it’s
+written in Go and front end is React, Next.js, TypeScript. Then we also use
+Chakra UI.
+
+**Jean Yang \[00:28:09\]:** Cool.
+
+**David Mytton \[00:28:09\]:** Okay. Then you personally, what's your computer
+setup or your laptop? Are you on Mac, Windows, Linux?
+
+**Monica Sarbu \[00:28:17\]:** Yes. I used to be on Linux until 15 years ago
+when I moved to Mac. Since then, I'm only on Mac.
+
+**David Mytton \[00:28:26\]:** Awesome. Well, unfortunately, that's all we've
+got time for. Thanks for joining us, Monica.
+
+**Monica Sarbu \[00:28:30\]:** Yes. Thanks for having me.
+
+**David Mytton \[00:28:32\]:** Thanks for listening to the Console DevTools
+Podcast. Please let us know what you think on Twitter. I'm @davidmytton and you
+can follow @consoledotdev. Don't forget to subscribe and rate us in your podcast
+player. If you're playing around with or building any interesting DevTools,
+please get in touch. Our email is in the show notes. See you next time.
+
+\[END\]
+
+</BoxCollapsible>
