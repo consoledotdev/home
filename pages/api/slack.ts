@@ -27,7 +27,7 @@ export default async function handler(request: NextApiRequest, response: NextApi
     const token = process.env.SLACK_TOKEN;
     const web = new WebClient(token);
 
-    const channelId = "C05F0H5D7K7";
+    const channelId = "C026B4FKAAE";
 
     const result = await web.chat.postMessage({
         channel: channelId,
