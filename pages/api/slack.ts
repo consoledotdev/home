@@ -1,9 +1,7 @@
-import { NextResponse } from "next/server";
+import type { NextApiRequest, NextApiResponse } from "next";
 import { WebClient } from "@slack/web-api";
 
-const dynamic = "force-dynamic";
-
-export async function GET(request: Request) {
+export default async function handler(request: NextApiRequest, response: NextApiResponse) {
     // Get stats from Mailchimp
     const mc = require("@mailchimp/mailchimp_marketing");
 
@@ -18,11 +16,8 @@ export async function GET(request: Request) {
     const segment = await mc.lists.getSegment(listId, segmentId);
 
     if (!segment) {
-        return NextResponse.json({
-            status: 500,
-            body: {
-                error: "Mailchimp segment not found",
-            },
+        response.status(500).json({
+            error: "Mailchimp segment not found",
         });
     }
 
@@ -52,7 +47,5 @@ export async function GET(request: Request) {
 
     console.log(result);
 
-    return NextResponse.json({
-        status: 200,
-    });
+    response.status(200).json({ success: true });
 }
