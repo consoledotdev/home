@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { WebClient } from "@slack/web-api";
 
+const dynamic = "force-dynamic";
+
 export async function GET(request: Request) {
     // Get stats from Mailchimp
     const mc = require("@mailchimp/mailchimp_marketing");
