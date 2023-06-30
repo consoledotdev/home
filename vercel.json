@@ -28,5 +28,11 @@
                 }
             ]
         }
+    ],
+    "crons": [
+        {
+            "path": "/api/slack",
+            "schedule": "0 7 * * 1"
+        }
     ]
 }
