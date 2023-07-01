@@ -1,6 +1,6 @@
 ---
 title: "Sourcegraph"
-date: 2022-04-04T12:00:00+00:00
+date: 2023-07-01T06:00:00+00:00
 draft: false
 summary: Universal code search for every developer.
 metaTitle: Working at Sourcegraph - Console profile
@@ -26,15 +26,23 @@ companyInfo:
         - url: /img/profiles/sourcegraph-profile-3.jpg
     product:
         name: "Sourcegraph"
-        description: "Sourcegraph is building universal code search for every developer and
-            company so they can innovate faster on the software we use every day.
-            Sourcegraph lets you onboard to a new codebase quickly, make large-scale
-            refactors, find and reuse code, increase dev efficiency, address security
-            risks, root-cause incidents, and find and fix issues across all your code."
+        description: "Sourcegraph is building a code AI platform for developers
+        and companies of all sizes, with the mission of making it so everyone
+        can code. Coding is too complex for most people to get started, and
+        it’s only getting worse as consumers demand more from software and
+        code piles up. We’re making it less complex. The code AI platform
+        includes 2 products: Code Search and Cody. Code Search makes it easy
+        for developers to onboard to codebases quickly, make large scale
+        refactors, and find and reuse code. Cody, our AI coding assistant,
+        writes code and answers developers’ questions using their code graph
+        as context, making it easy to learn about a codebase and start
+        contributing."
     techStack:
         - Go
-        - JS
-        - Typescript (React)
+        - Typescript
+        - React
+        - Rust
+        - Postgres
     meta:
         - label: "Founded"
           value: 2013
@@ -82,7 +90,7 @@ companyInfo:
               essential that these changes are done correctly, as mistakes can stop
               the operation of the CERN accelerators and waste precious time for
               physics research."
-    type: "On-prem / SaaS"
+    type: "SaaS"
     category: "Developer Tools - Code search"
     topCategory: "Developer Tools"
     subCategory: "Code search"
@@ -100,17 +108,17 @@ podcast: s01e07-sourcegraph-hoppscotch
 
 #### How are the teams structured?
 
-Teams are split into different groups, including Engineering, Product, Customer
-Support, Customer Engineering, Tech Ops and others. The org chart is
-[available on the Sourcegraph website](https://handbook.sourcegraph.com/team/org_chart/).
+The Engineering department at Sourcegraph consists of: Development, Product
+Management and Design. The org chart is [available on the Sourcegraph
+website](https://handbook.sourcegraph.com/team/org_chart/).
 
 #### What tools do engineers use?
 
 -   **Design:** Figma
 -   **Source Control:** git & GitHub
--   **Issue tracking:** GitHub + Jira
+-   **Issue tracking:** GitHub
 -   **Docs:** Sourcegraph
--   **Devops:** Sentry, Honeycomb, Datadog, Incident.io
+-   **Devops:** Sentry, Honeycomb, Incident.io
 -   **Comms:** Slack, Twitter, Blog
 
 #### Can developers pick their own tools?
@@ -126,12 +134,13 @@ bias toward our existing set of languages.
 
 #### How does the development process work? What's the process for working through bugs, features and tech debt?
 
-Fast-paced, but structured. Most teams are on a 2-week or monthly cycle. We do
-quarterly planning for big projects/features. We have a lightweight process for
-planning and getting approval from key stakeholders that typically involves
-writing up an RFC and tagging the requisite stakeholders. We generally use
-GitHub Issues and Projects as the roadmap source of truth. We have a monthly
-product demo day for features and fixes that are shipping.
+Sourcegraph assigns work using a Job Fair system, treating all engineering work
+as projects with business champions, tied to KPIs, and allowing the organization
+to work as a single, flexible labor pool of freelancers, simultaneously
+optimizing for business impact, velocity, and engineering career growth.
+
+We generally use GitHub Issues and Projects as the roadmap source of truth. We
+have a biweekly product demo day for features and fixes that are shipping.
 
 #### How does code get reviewed, merged, and deployed?
 
@@ -201,9 +210,48 @@ The process typically looks like this:
 
 #### What is the career progression framework? How are promotions and performance reviews managed?
 
-Our handbook documents
-[our career development framework](https://handbook.sourcegraph.com/departments/product-engineering/engineering/career-development/framework/)
-and
-[how performance reviews are managed](https://handbook.sourcegraph.com/departments/product-engineering/engineering/career-development/talent-review-process/).
+Our Career Frameworks help us define the responsibility level and expectations
+of each role. Each level is defined by impact, seniority, knowledge, skills, and
+job title, and is associated with a specific pay band. There are currently six
+levels for software engineers at Sourcegraph. A level is composed of three
+categories These categories are:
+
+Proficiency: This is the demonstrated expertise in the skills relevant to the
+role and level. Execution: This is knowing how and acting on what it takes to be
+productive and achieve the right outcomes for Sourcegraph. Teamwork: This is how
+you collaborate with others to make both them and yourself more effective.
+
+More details on our Engineering Career Framework can be found
+[here](https://handbook.sourcegraph.com/departments/engineering/dev/career-development/framework/).
+
+Our promotion philosophy is to support the growth & advancement of Teammates, in
+alignment with our values. Sourcegraph’s success is fueled by our incredible
+Teammates, which is why we foster a culture of continuous growth and accelerate
+opportunities to level up.
+
+Promotion decisions are calibrated based on a Teammate’s achievements, execution
+at a higher job scope, and values alignment. The People Partner and Leadership
+Team are responsible for calibrating promotion nominations in alignment with our
+Impact Review process and bi-annual promotion cadence.
+
+Our Teammates can pursue promotion opportunities in two ways:
+
+-   Through our promotion process to move up their specific Career Framework or
+    Leadership track.
+-   By applying and interviewing for open positions that are approved in our
+    headcount plan. This type of promotion may occur outside of a review cycle, but
+    eligibility is determined by prior Impact Assessment.
+
+The following criteria support promotions:
+
+-   A Teammate is already performing at the next level or job scope prior to
+    promotion.
+-   The business need exists for the role to increase in job scope, or capacity
+    requirements show additional headcount at a higher job scope is required
+    (IC5+ and M4+).
+-   The promotion decision is occurring at a justified and fair rate.
+
+More details on our talent assessment framework can be found
+[here](https://handbook.sourcegraph.com/departments/people-talent/people-ops/process/teammate-sentiment/impact-reviews/).
 
 {/* {{< div--close >}} */}
