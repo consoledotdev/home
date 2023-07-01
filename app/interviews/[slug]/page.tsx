@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
     return {
         alternates: {
-            canonical: "https://console.dev/profiles/" + slug,
+            canonical: "https://console.dev/interviews/" + slug,
         },
     };
 }

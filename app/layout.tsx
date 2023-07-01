@@ -64,6 +64,7 @@ export const metadata = {
         creator: "@consoledotdev",
     },
     alternates: {
+        canonical: "https://console.dev",
         types: {
             "application/rss+xml": [
                 {
