@@ -1,0 +1,46 @@
+### How were developers solving this before Sourcegraph?
+
+With a lot of duct tape or using a lot of command line tools like
+[Grep](https://www.gnu.org/software/grep/) and modern variants like
+[ripgrep](https://github.com/BurntSushi/ripgrep). Maybe the search in your
+editor. The issue with those is that it's searching all over your local machine.
+You have to clone the code, and that's enough friction that most people don't
+want to do that. Even after you've cloned it, in order to get the navigational
+primitives you have to set up code intelligence and the development environment.
+It's got a little bit easier with cloud IDEs now, but oftentimes you still don't
+have code intelligence. If you want to cross a dependency boundary or search
+over a larger set of code, those don't really help with that.
+
+Some people use GitHub but I don't think they've really prioritized search, at
+least in the sort of depth that I think it deserves. There's some organizations
+that have built internal code search engines and there’s some open source
+projects too.
+
+Facebook has an internal code search engine. Mozilla has one for all the Firefox
+and related code bases. There's one for the Debian and Linux community that a
+friend of mine, [Michael Stapelberg](https://michael.stapelberg.ch/) built.
+These are all precursors that demonstrate the need, especially as organizations
+and projects expand in scale, both in terms of human head count and the amount
+of code that they deal with. Google has one that people swear by. In fact, one
+of our biggest sources of new users and customers is people leaving Google.
+
+We think it's time to take all the lessons learned from those, roll it into
+something that just works well universally for every language, for every code
+host, for every sort of development org. We’re building it into this
+comprehensive, Google-like search engine, not just a search engine that's
+targeted at one particular corpus of code, but the worldwide, global human
+knowledge graph that is built into code.
+
+We want to make it so that you have a single search box that lets you jump
+anywhere in the world of code, that understands what code is relevant to you and
+allows you just to walk that knowledge web the same way you do using the
+combination of Google and hyperlinks on the internet.
+
+I think that is the next stage. The next big thing in software development is
+getting it to the point where search is kind of a basic starting point for a lot
+of developers when they go and understand code. Right now, I think we're still
+in the Yahoo era of code, where a lot spreads through word of mouth or, maybe
+there's blogs you follow, or you're searching for stuff using Google search, or
+just finding it on GitHub. There's not really a direct discovery mechanism that
+shows you relevant matches for a specific thing that you want to take a look at
+in the moment.
