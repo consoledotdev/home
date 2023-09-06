@@ -144,7 +144,7 @@ export default function Page({ page, toolItems, betaItems, ...props }: Props) {
                                     <p>
                                         <b>What we don&apos;t like:</b> {item.dislike}
                                     </p>
-                                    {item.sponsored && <SponsorDisclosure />}
+                                    {item.sponsored && <SponsorDisclosure onItem={true} />}
                                     <Button
                                         appearance="text"
                                         cnslColor="triad-01"

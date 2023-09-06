@@ -125,6 +125,10 @@ export default async function Page() {
             tools += `<p><strong>✦ <em style="font-size:14px; font-style:italic">Sponsored:</em></strong> <em style="font-size:14px; font-style:italic">All reviews are editorially independent, and partners must meet our <a href="https://console.dev/selection-criteria/">selection criteria</a>.</em></p>`;
         }
 
+        if (tool.investment) {
+            tools += `<p><strong>✦ <em style="font-size:14px; font-style:italic">Investment:</em></strong> <em style="font-size:14px; font-style:italic">Console is an investor ${tool.name}, but all reviews are editorially independent and we only invest in products that meet our <a href="https://console.dev/selection-criteria/">selection criteria</a>.</em></p>`;
+        }
+
         // If this is the last item we add a rule with more padding
         if (tool === sortedToolItems[sortedToolItems.length - 1]) {
             tools += `<hr style="border: none; border-top: none; padding-top: 6px; padding-bottom: 12px;" />`;
@@ -148,6 +152,8 @@ export default async function Page() {
 
         if (beta.sponsored) {
             betas += `, ✦ Sponsored</span>`;
+        } else if (beta.investment) {
+            betas += `, ✦ Investment</span>`;
         } else {
             betas += `</span>`;
         }
