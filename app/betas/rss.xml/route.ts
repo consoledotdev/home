@@ -1,5 +1,6 @@
-import rss from "rss";
 import { getItems } from "@/app/lib/betas";
+import { NextResponse } from "next/server";
+import rss from "rss";
 
 // https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#revalidate
 export const revalidate = 3600; // 1 hour
@@ -20,7 +21,7 @@ export async function GET() {
     const items = await getItems();
 
     if (!items) {
-        return null;
+        return NextResponse.json({ message: "Unable to generate RSS." }, { status: 500 });
     }
 
     const sortedItems = items
