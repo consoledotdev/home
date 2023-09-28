@@ -9,6 +9,9 @@ import { getLatestItems as getLatestBetasItems } from "@/app/lib/betas";
 
 import ClientPage from "./client-page";
 
+// https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#revalidate
+export const revalidate = 86400; // 24 hours
+
 export const metadata = {
     title: "Latest Console newsletter",
     description: "The latest edition of the Console Newsletter. A free weekly email digest of the best tools and beta releases for developers.",
