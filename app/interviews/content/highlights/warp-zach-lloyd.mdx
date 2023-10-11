@@ -1,0 +1,37 @@
+### What is Warp? Why did you build it?
+
+[Warp](https://warp.dev/) is a reinvention of the terminal.
+
+I was really interested in building something that could potentially impact all
+developers. The terminal is one of the two tools where if you walk by a
+developer's desk, you're likely to see it open alongside a code editor. For some
+developers, the terminal still is their code editor. It's a ubiquitous tool, but
+from a product perspective there are a number of issues with it.
+
+Firstly, it is a tool that's hard to learn and hard to configure. It’s hard to
+get really good at it. On the flip side, if you do manage to get really good at
+it, you unlock a lot of productivity. I've worked with engineers throughout my
+career who were good at it, and who have been able to do things that I just
+couldn't do as an average user.
+
+One of our product ideas was can you make that power accessible to all
+developers?
+
+The second idea on the product side really stemmed from my time being as a
+Principal engineer on Google Docs. I used to be the tech lead for that project
+and helped build a lot of Google Sheets in particular. That experience made me
+realize how if you take an app that has traditionally been desktop, single-user,
+non-collaborative software, and make it cloud-native and collaborative, that
+always unlocks significant productivity gains.
+
+The idea was to do something like that for the terminal, which is one of the
+last apps I can think of that's both very widely used, but remains
+non-collaborative and not oriented towards teams.
+
+Warp needs to be a very fast app, so we built it in Rust. It's GPU accelerated.
+Today, it's Mac only and is in public beta, so anyone can go download it and
+start using it.
+
+We plan on supporting more platforms by taking that same Rust codebase and using
+it for Linux, Windows, and also for the web where we would do WebAssembly and
+WebGL rendering of Warp.
