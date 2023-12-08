@@ -10,7 +10,6 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "@arcjet/next": "1.0.0-alpha.1",
         "@mailchimp/mailchimp_marketing": "3.0.80",
         "@mdx-js/react": "3.0.0",
         "@next/mdx": "14.0.1",
