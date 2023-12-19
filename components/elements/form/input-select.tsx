@@ -17,6 +17,7 @@ export interface Props extends React.SelectHTMLAttributes<HTMLSelectElement> {
     label?: string;
     layout?: InputLayout;
     options: SelectOption[];
+    placeholder?: boolean;
 }
 
 /**
