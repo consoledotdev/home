@@ -15,7 +15,7 @@
         "@mdx-js/react": "3.0.0",
         "@next/mdx": "14.0.4",
         "@notionhq/client": "2.2.7",
-        "@slack/web-api": "6.11.2",
+        "@slack/web-api": "7.0.0",
         "@vercel/analytics": "1.1.1",
         "@vercel/og": "0.6.2",
         "dotenv": "16.3.1",
