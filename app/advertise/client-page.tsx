@@ -398,9 +398,6 @@ export default function Page({ page, ...props }: Props) {
                                         <RichTitle tag="h5" icon={{ group: "generic", name: "console-mini-filled" }} text="Schedule" />
                                         <p className="small">Schedule when your product review appears in the Console Weekly newsletter.</p>
 
-                                        <RichTitle tag="h5" icon={{ group: "generic", name: "console-interview" }} text="Interview" />
-                                        <p className="small">Supporting Q&A interview to tell the story of your product.</p>
-
                                         <RichTitle tag="h5" icon={{ group: "generic", name: "link" }} text="Context" />
                                         <p className="small">Include a link to a blog post or technical article to go deeper into your release.</p>
                                     </div>
