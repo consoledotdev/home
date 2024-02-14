@@ -44,6 +44,7 @@ const Tag = forwardRef<any, Props>(({ inline, clickable, cnslSize, tag, ...props
                 <span className="tag">{tag.label}</span>
             </>
         );
+        return "";
 
         return clickable ? <a href={`/${tag.slug}/`}>{content}</a> : content;
     };
