@@ -9,6 +9,7 @@ import { Suspense } from "react";
 import { Organization, Product, Rating, Review, WithContext } from "schema-dts";
 
 import ClientPage from "./client-page";
+import { redirect } from "next/navigation";
 
 // https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#revalidate
 export const revalidate = 3600; // 1 hour
@@ -73,6 +74,12 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
     if (!tool) {
         notFound();
+    }
+
+    // For the modal review the page fails to render. No idea why, so just
+    // redirect to their website.
+    if (tool.slug === "modal") {
+        return redirect("https://modal.com/?ref=console.dev");
     }
 
     // https://beta.nextjs.org/docs/guides/seo#json-ld
