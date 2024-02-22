@@ -42,7 +42,7 @@
         "eslint-config-next": "14.1.0",
         "react-markdown": "9.0.1",
         "react-svg": "16.1.33",
-        "sass": "1.70.0",
+        "sass": "1.71.1",
         "typescript": "5.3.3"
     }
 }
