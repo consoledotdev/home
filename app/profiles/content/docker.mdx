@@ -1,0 +1,189 @@
+---
+title: "Docker"
+date: 2024-04-24T00:00:00+00:00
+draft: false
+summary: Containers.
+metaTitle: Working at Docker - Console profile
+metaDescription: What is it like to work at Docker? Console profile behind the scenes at Docker -
+    containers.
+headerType: fixed
+hideLines: true
+hidePlanes: true
+isSubpage: company-profile
+pageType: company-profile
+customPageStyle: true
+xlViewport:
+    largeText: true
+companyInfo:
+    favicon: /img/favicons/www.docker.com.png
+    URL: https://www.docker.com
+    jobsURL: https://www.docker.com/careers/
+    description: Build, share, run, and verify applications anywhere.
+    product:
+        name: "Docker"
+        description: "Docker drives modern software development by making it 
+        easy to adopt container technology to radically boost productivity, 
+        security, testing, and collaboration at every step of the developer 
+        experience. Embraced by more than 20 million developers worldwide, 
+        Docker's unmatched flexibility and choice make it the preferred tool 
+        for developers seeking efficiency and innovation for creating modern 
+        applications."
+    techStack:
+        - Go
+        - Clojure
+        - TypeScript
+        - JavaScript
+        - Swift
+        - C#
+    meta:
+        - label: "Founded"
+          value: 2013
+        - label: "CEO"
+          value:
+              links:
+                  - href: "https://www.linkedin.com/in/scottcjohnston"
+                    text: "Scott Johnston"
+                    iconRight: "external-link"
+        - label: "Employees"
+          value: "600+"
+        - label: "Stage"
+          value: "Series C"
+        - label: "Social"
+          value:
+              links:
+                  - href: "https://twitter.com/docker"
+                    text: "Twitter"
+                    iconLeft: "twitter"
+                  - href: "https://www.linkedin.com/company/docker/"
+                    text: "LinkedIn"
+                    iconLeft: "linkedin"
+    type: "Cloud"
+    category: "DevOps - Containers"
+    topCategory: "DevOps"
+    subCategory: "Containers"
+    filterTaxonomy: "devops, cloud, node, go"
+---
+
+<span id="wrapper-1" className="nav-anchor" anchor-name="how-engineering-works"></span>
+
+<RichTitle tag="h3" icon={{ group: "generic", name: "checklist" }} id="how-engineering-works" text="How engineering works at Docker" />
+
+#### How are the teams structured?
+
+We follow the methodologies outlined in [Team
+Topologies](https://teamtopologies.com). Most of the teams are stream-aligned
+and autonomous, including an engineering manager, product manager, product
+designer, and a group of engineers. We also have supporting teams that serve our
+engineering organization to ensure everyone is working on the problems they like
+to solve.
+
+#### What tools do engineers use?
+
+-   Docker!
+-   **Source Control:** GitHub
+-   **Coding:** IDEs - vary by project and personal preference
+-   **Coding AI:** Copilot
+-   **Chat:** Slack
+-   **Wiki and Knowledge Sharing:** Notion
+
+#### Can developers pick their own tools?
+
+Yes! We're a company that builds tools for developers, so we are very aware of
+how your toolchain helps or hinders the development experience.
+
+#### How does the development process work? What's the process for working through bugs, features and tech debt?
+
+Teams are given high-level goals that are refined into OKRs and focus areas. The
+teams are designed to be autonomous so that they can solve all kinds of
+problems, from tech debt to product discovery work. What is prioritized is
+determined as a group effort between both product and engineering team members.
+
+Teams are agile and follow a rough sprint process using either weekly or
+bi-weekly sprints. We don't have formal rules for how much time is spent on tech
+debt vs. other work. Instead, we rely on the team leads to work this out.
+Feature work can come externally from higher-level goals, learnings or ideas
+that the team has, and from end users.
+
+#### How does code get reviewed, merged, and deployed?
+
+Development is done in Git branches. Once the code is complete, a PR is opened
+which triggers CI and it's then reviewed by peers. In open source, this means
+maintainers of the project and not necessarily someone at Docker.
+
+Deployments depend on the project, but most can be deployed to a staging
+environment from a feature branch or the main branch. Once the code has been
+merged, production deployments can be triggered.
+
+For projects like Desktop, there is a lot of custom code to do this as there
+aren't really off-the-shelf tools for desktop applications.
+
+#### What is the QA process?
+
+Teams are responsible for their own QA, which is mostly handled by automation.
+The team that developed the functionality does manual testing to validate new
+changes and features. We also release early to our own developers so that they
+can use the latest features and report if they encounter any issues.
+
+#### What are some recent examples of interesting development challenges solved by internal teams as part of building the product?
+
+We have heard from users that their builds are slower than they'd like and that
+they find building for multiple architectures (ARM64 and AMD64) difficult. This
+led us to build the Docker Build Cloud product which hosts BuildKit builders for
+both architectures in the cloud that can be used either from Docker Desktop or
+with the Docker CLI anywhere that you use it (GitHub Actions, Jenkins, etc.). It
+was an interesting challenge because Build Cloud needed to be fast and secure.
+To make it fast, we needed to get lots of compute very quickly. Meanwhile,
+Security needed to consider that users can run their own untrusted code on our
+platform and isolate it from other customers. We put a lot of effort into making
+it as seamless as possible for users to adopt: It doesn't require big changes to
+existing tools or pipelines, only a login and setup before the rest of the
+process runs.
+
+Docker Desktop's testing and deployment tools are quite unique. We support
+multiple versions of Windows, macOS, and Linux which means that we have a large
+test matrix. As Docker Desktop runs a VM, we need to test on bare metal or using
+nested virtualization which makes this much more complicated. We also had to
+write a lot of our own tools to handle rollouts of Docker Desktop to our users,
+as there aren't tools available off the shelf to do this.
+
+Docker Hub's scale makes it a continuing engineering challenge. We host over
+[60PB of images](https://twitter.com/scottcjohnston/status/1753041815559631270)
+and handle billions of requests per day. It is also a core part of lots of
+developer and CI workflows which means that its uptime is really important.
+
+#### How does on-call work?
+
+We have a general tier 1 rotation that includes engineers across the company.
+We're lucky to be distributed across Europe and the US, giving us wide working
+hours coverage. If a major incident occurs, we involve the team that owns the
+service. Newer services have the team that built them on tier 1 on-call.
+
+<span id="wrapper-2" className="nav-anchor" anchor-name="hiring-process"></span>
+
+<RichTitle tag="h3" icon={{ group: "generic", name: "checklist" }} id="key-features" text="Hiring process at Docker" />
+
+#### How does the application process work? What are the stages and what is the timeline?
+
+This applies to developers who apply to Docker. When we have a new opening, we
+add it to https://docker.com/careers. Our recruiters also look for candidates
+through channels like LinkedIn and GitHub.
+
+A recruiter first screens the candidate to ensure that the role is a good fit
+for them, that they are in the right location, etc. If they pass this screening,
+the hiring manager speaks to them to determine if they are a cultural fit for
+Docker and if the role is aligned with their interests. Passing this leads to
+two technical interviews: one focused on coding and the other on architecture.
+Finally, a senior engineering leader interviews the candidate to check fit.
+
+You can find more information about the
+application and hiring process [here](https://www.docker.com/careers/hiring-onboarding/).
+
+#### What is the career progression framework? How are promotions and performance reviews managed?
+
+We have two parallel tracks: Technical and Management. While we have two
+official review/promo cycles per year, we are constantly having conversations
+about career growth and goals and strive to promote employees as they meet their
+goals. We use a career ladder for each track so both the employee and their
+manager are aware of expectations and goals.
+
+{/* {{< div--close >}} */}

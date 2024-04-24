@@ -1,0 +1,26 @@
+### What are some recent examples of interesting development challenges?
+
+We have heard from users that their builds are slower than they'd like and that
+they find building for multiple architectures (ARM64 and AMD64) difficult. This
+led us to build the Docker Build Cloud product which hosts BuildKit builders for
+both architectures in the cloud that can be used either from Docker Desktop or
+with the Docker CLI anywhere that you use it (GitHub Actions, Jenkins, etc.). It
+was an interesting challenge because Build Cloud needed to be fast and secure.
+To make it fast, we needed to get lots of compute very quickly. Meanwhile,
+Security needed to consider that users can run their own untrusted code on our
+platform and isolate it from other customers. We put a lot of effort into making
+it as seamless as possible for users to adopt: It doesn't require big changes to
+existing tools or pipelines, only a login and setup before the rest of the
+process runs.
+
+Docker Desktop's testing and deployment tools are quite unique. We support
+multiple versions of Windows, macOS, and Linux which means that we have a large
+test matrix. As Docker Desktop runs a VM, we need to test on bare metal or using
+nested virtualization which makes this much more complicated. We also had to
+write a lot of our own tools to handle rollouts of Docker Desktop to our users,
+as there aren't tools available off the shelf to do this.
+
+Docker Hub's scale makes it a continuing engineering challenge. We host over
+[60PB of images](https://twitter.com/scottcjohnston/status/1753041815559631270)
+and handle billions of requests per day. It is also a core part of lots of
+developer and CI workflows which means that its uptime is really important.
