@@ -53,7 +53,13 @@ export default function Page({ page, toolItems, betaItems, ...props }: Props) {
 
     useLayoutEffect(scrollAppearance, []);
 
-    const latestNewsletterDate = toolItems[0].date;
+    var latestNewsletterDate: string | Date | boolean;
+
+    if (!toolItems[0] || !toolItems[0].date) {
+        latestNewsletterDate = false;
+    } else {
+        latestNewsletterDate = toolItems[0].date;
+    }
 
     return (
         <>
@@ -191,7 +197,7 @@ export default function Page({ page, toolItems, betaItems, ...props }: Props) {
                                     This was the content of the newsletter sent on {settings.forceNewsletterDate}. We&apos;ll be back on {settings.returnNewsletterDate}.
                                 </>
                             ) : (
-                                <>This is the content of the newsletter sent on {consoleISODate(latestNewsletterDate)}.</>
+                                <>This is the content of the most recent newsletter{latestNewsletterDate ? <> sent on {consoleISODate(latestNewsletterDate)}</> : <></>}.</>
                             )}
                         </p>
 
