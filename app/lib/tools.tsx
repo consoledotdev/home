@@ -137,6 +137,11 @@ async function createItem(id: string, properties: any) {
         item.newsletter = item.newsletter.toString();
     }
 
+    if (!item.date) {
+        console.warn("Tool without date: %s", item.name);
+        return;
+    }
+
     // Date - For display sorting/filtering.
     item.date = item.newsletter;
 
