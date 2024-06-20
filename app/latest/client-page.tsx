@@ -53,13 +53,7 @@ export default function Page({ page, toolItems, betaItems, ...props }: Props) {
         undefAtInit: true, // avoids flash of header on mobile nav
     });
 
-    var latestNewsletterDate: string | Date | boolean;
-
-    if (!toolItems[0] || !toolItems[0].date) {
-        latestNewsletterDate = false;
-    } else {
-        latestNewsletterDate = toolItems[0].date;
-    }
+    const latestNewsletterDate = toolItems[0].date;
 
     return (
         <>
@@ -88,51 +82,44 @@ export default function Page({ page, toolItems, betaItems, ...props }: Props) {
             <PageSplit classes={["newsletter-split"]} layout="aside">
                 <div>
                     <PageSection classes={["latest-newsletter page-section-plane"]}>
-                        {latestNewsletterDate ? (
-                            <>
-                                <h3 className="title title-2">Latest newsletter</h3>
+                        <h3 className="title title-2">Latest newsletter</h3>
+                        <p className="small date">
+                            {settings.forceNewsletterDate ? (
+                                <>
+                                    We&apos;re currently taking a short break over the holidays.
+                                    <br />
+                                    This was the content of the newsletter sent on {settings.forceNewsletterDate}. We&apos;ll be back on {settings.returnNewsletterDate}.
+                                </>
+                            ) : (
+                                <>This is the content of the newsletter sent on {consoleISODate(latestNewsletterDate)}.</>
+                            )}
+                        </p>
 
-                                <p className="small date">
-                                    {settings.forceNewsletterDate ? (
-                                        <>
-                                            We&apos;re currently taking a short break over the holidays.
-                                            <br />
-                                            This was the content of the newsletter sent on {settings.forceNewsletterDate}. We&apos;ll be back on {settings.returnNewsletterDate}.
-                                        </>
-                                    ) : (
-                                        <>This is the content of latest newsletter sent on {consoleISODate(latestNewsletterDate)}.</>
-                                    )}
-                                </p>
-
-                                <h4 className="title title-3">Contents</h4>
-                                <div className="latest-newsletter-list">
-                                    {toolItems.map((item: Tool, idx: number) => {
-                                        return (
-                                            <p key={"summary-tool-item-" + idx}>
-                                                <IconProvider group="generic" name="tool" />
-                                                <a href={item.url} className="link" target="_blank" rel={"noreferrer noopener" + (item.sponsored ? " sponsored" : "")}>
-                                                    {item.name}
-                                                </a>{" "}
-                                                – {item.description}
-                                            </p>
-                                        );
-                                    })}
-                                    {betaItems.map((item: Beta, idx: number) => {
-                                        return (
-                                            <p key={"summary-beta-item-" + idx}>
-                                                <IconProvider group="generic" name="beta" />
-                                                <a href={item.url} className="link" target="_blank" rel="noreferrer noopener">
-                                                    {item.name}
-                                                </a>{" "}
-                                                – {item.description}
-                                            </p>
-                                        );
-                                    })}
-                                </div>
-                            </>
-                        ) : (
-                            <></>
-                        )}
+                        <h4 className="title title-3">Contents</h4>
+                        <div className="latest-newsletter-list">
+                            {toolItems.map((item: Tool, idx: number) => {
+                                return (
+                                    <p key={"summary-tool-item-" + idx}>
+                                        <IconProvider group="generic" name="tool" />
+                                        <a href={item.url} className="link" target="_blank" rel={"noreferrer noopener" + (item.sponsored ? " sponsored" : "")}>
+                                            {item.name}
+                                        </a>{" "}
+                                        – {item.description}
+                                    </p>
+                                );
+                            })}
+                            {betaItems.map((item: Beta, idx: number) => {
+                                return (
+                                    <p key={"summary-beta-item-" + idx}>
+                                        <IconProvider group="generic" name="beta" />
+                                        <a href={item.url} className="link" target="_blank" rel="noreferrer noopener">
+                                            {item.name}
+                                        </a>{" "}
+                                        – {item.description}
+                                    </p>
+                                );
+                            })}
+                        </div>
 
                         <h3 className="title title-2">Interesting tools</h3>
                         <p>
@@ -221,7 +208,7 @@ export default function Page({ page, toolItems, betaItems, ...props }: Props) {
                             </>
                         ) : (
                             <p>
-                                Nothing of note this week. We only feature the most interesting beta releases you should actually check out. In the meantime, have a look at{" "}
+                                Nothing of note this week. We only feature the most interesting beta releases you should actually check out. In the meantime, have a look at
                                 <Link href="/betas" className="link">
                                     Beta Console
                                 </Link>{" "}
