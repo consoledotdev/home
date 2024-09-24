@@ -1,7 +1,6 @@
 import React, { forwardRef, useImperativeHandle, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { usePlausible } from "next-plausible";
-import va from "@vercel/analytics";
 
 import InputText from "@/components/elements/form/input-text";
 import Button from "@/components/elements/button";
@@ -60,9 +59,6 @@ const FormSubscribe = forwardRef<HTMLFormElement, Props>(({ classes, cnslSize, l
                 title="Sign Up"
                 type="submit"
                 cnslSize={cnslSize ? cnslSize : undefined}
-                onClick={() => {
-                    va.track("Newsletter Subscribe", { path: path || "/" });
-                }}
             >
                 Sign Up
             </Button>

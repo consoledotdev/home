@@ -12,6 +12,6 @@ export const settings: Settings = {
      * newsletter date of the year and the returnNewsletterDate to the first
      * newsletter date of the next year. Comment out when not in use.
      */
-    forceNewsletterDate: null,
+    forceNewsletterDate: "2024-09-19",
     returnNewsletterDate: null,
 };

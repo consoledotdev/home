@@ -13,7 +13,6 @@ import "@/styles/logo.scss";
 import "@/styles/main.scss";
 import "@/styles/normalize.css";
 import "@/styles/vars.scss";
-import { Analytics } from "@vercel/analytics/react";
 import PlausibleProvider from "next-plausible";
 import { ServerThemeProvider } from "next-themes";
 import { Rubik } from "next/font/google";
@@ -133,7 +132,6 @@ export default function RootLayout({
                             </OriginProvider>
                         </ThemeProvider>
                     </StyledJsxRegistry>
-                    <Analytics />
                 </body>
             </html>
         </ServerThemeProvider>

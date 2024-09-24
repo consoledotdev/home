@@ -187,7 +187,7 @@ export default async function Page() {
     // Set the date to today + the number of days until next Thursday.
     nextThursday.setDate(now.getDate() + daysUntilNextThursday);
 
-    const mcCreate = await client.campaigns.create({
+    /*const mcCreate = await client.campaigns.create({
         type: "regular",
         recipients: {
             list_id: "267911a165", // Main list
@@ -220,7 +220,7 @@ export default async function Page() {
         return notFound();
     }
 
-    const mcUrl = `https://${process.env.MC_SERVER}.admin.mailchimp.com/campaigns/show/?id=${mcCreate.web_id}`;
+    const mcUrl = `https://${process.env.MC_SERVER}.admin.mailchimp.com/campaigns/show/?id=${mcCreate.web_id}`;*/
 
     // This doesn't work for non custom HTML templates
     /*const mcContent = await client.campaigns.setContent(mcCreate.id, {
@@ -237,13 +237,6 @@ export default async function Page() {
     return (
         <>
             <h1>Newsletter generator</h1>
-            <p>
-                Newsletter{" "}
-                <a href={mcUrl} className="link">
-                    {mcCreate.web_id}
-                </a>{" "}
-                generated in Mailchimp. Past in the contents below:
-            </p>
             <h2>Preview</h2>
             <textarea rows={2} cols={100} value={preview} spellCheck={false} />
             <h2>Contents</h2>

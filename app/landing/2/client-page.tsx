@@ -186,7 +186,7 @@ export default function Page({ page, toolItems, betaItems, ...props }: Props) {
                         <p className="small date">
                             {settings.forceNewsletterDate ? (
                                 <>
-                                    We&apos;re currently taking a short break over the holidays.
+                                    We&apos;re currently taking a short break.
                                     <br />
                                     This was the content of the newsletter sent on {settings.forceNewsletterDate}. We&apos;ll be back on {settings.returnNewsletterDate}.
                                 </>
