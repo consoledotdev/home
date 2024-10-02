@@ -28,7 +28,7 @@ export default async function middleware(request: NextRequest) {
     ) {
         return NextResponse.json({ error: "Bots forbidden" }, { status: 403 });
     } else if (decision.isErrored()) {
-        if (decision.reason.message.includes("requires user-agent header")) {
+        if (decision.reason.message.includes("missing User-Agent header")) {
             console.error("Arcjet user-agent warning", decision.reason.message);
             return NextResponse.json({ error: "Bad request - missing user-agent" }, { status: 400 });
         } else {
