@@ -1,26 +1,23 @@
 "use client";
 
-import React, { useEffect, useLayoutEffect } from "react";
+import React, { useLayoutEffect } from "react";
 
 import { settings } from "@/app/lib/settings";
-
-import { useMediaQuery } from "@/components/effects/use-media-query";
 
 import { GetTheme } from "@/components/providers/theme-provider";
 
 import FadeOutGrid from "@/app/advertise/fade-out-grid";
 import scrollAppearance from "@/app/advertise/scroll-appearance";
 
-import PageSection from "@/components/elements/page-section";
+import PodcastLinks from "@/components/compositions/podcast-links";
 import Button from "@/components/elements/button";
+import FramedSection from "@/components/elements/framed-section";
 import IconProvider from "@/components/elements/icon-provider";
 import ImageProvider from "@/components/elements/image-provider";
-import RichTitle from "@/components/elements/rich-title";
 import NeonPlanes from "@/components/elements/neon-planes";
-import PodcastLinks from "@/components/compositions/podcast-links";
-import FramedSection from "@/components/elements/framed-section";
+import PageSection from "@/components/elements/page-section";
+import RichTitle from "@/components/elements/rich-title";
 import { Illustration as ConsoleSponsorIllustration } from "@/components/illustrations/console-sponsor";
-import { Illustration as ConsoleWelcome2Illustration } from "@/components/illustrations/console-welcome-2";
 //import { Illustration as ConsoleSponsoredJobsIllustration } from "@/components/illustrations/console-sponsored-jobs";
 
 import styles from "@/app/advertise/client-page.scss";
@@ -167,7 +164,7 @@ export default function Page({ page, ...props }: Props) {
                         {theme == "light" && <ImageProvider src="/img/advertise/ui-tools-light.png" alt="Developer tools reviews" />}
                     </div>
                 </div>
-                <div className="advertise-site-item advertise-site-interviews">
+                {/*<div className="advertise-site-item advertise-site-interviews">
                     <div className="top">
                         <RichTitle tag="h4" icon={{ group: "generic", name: "console-interview" }} text="Developer interviews" />
                         <p className="intro">Tell your story in our series of interviews with leading founders and CTOs.</p>
@@ -189,7 +186,7 @@ export default function Page({ page, ...props }: Props) {
                         {theme == "dark" && <ImageProvider src="/img/advertise/ui-interviews-dark.png" alt="Developer interviews" />}
                         {theme == "light" && <ImageProvider src="/img/advertise/ui-interviews-light.png" alt="Developer interviews" />}
                     </div>
-                </div>
+                </div>*/}
                 <div className="advertise-site-item advertise-site-betas">
                     <div className="top">
                         <RichTitle tag="h4" icon={{ group: "generic", name: "beta" }} text="Beta Console" />
@@ -213,7 +210,7 @@ export default function Page({ page, ...props }: Props) {
                         {theme == "light" && <ImageProvider src="/img/advertise/ui-betas-light.png" alt="Beta Console" />}
                     </div>
                 </div>
-                <div className="advertise-site-item advertise-site-jobs">
+                {/*<div className="advertise-site-item advertise-site-jobs">
                     <div className="top">
                         <RichTitle tag="h4" icon={{ group: "generic", name: "jobs" }} text="DevTools company profiles" />
                         <p className="intro">Profiles of the best devtool companies currently hiring.</p>
@@ -236,7 +233,7 @@ export default function Page({ page, ...props }: Props) {
                         {theme == "dark" && <ImageProvider src="/img/advertise/ui-jobs-dark.png" alt="DevTools company profiles" />}
                         {theme == "light" && <ImageProvider src="/img/advertise/ui-jobs-light.png" alt="DevTools company profiles" />}
                     </div>
-                </div>
+                </div>*/}
             </PageSection>
 
             <span data-checkpoint-podcast></span>
@@ -357,7 +354,7 @@ export default function Page({ page, ...props }: Props) {
                     How to work <br />
                     with us
                 </h2>
-                <p className="intro">Planning a new release or product launch? Looking to reach new customers? We put you in front of experienced developers specifically looking to try new tools. We can help increase signups by coordinating a campaign to meet your goals.</p>
+                <p className="intro">Planning a new release or product launch? Looking to reach new customers? We put you in front of experienced developers specifically looking to try new tools..</p>
                 <div className="work-with-us-packages">
                     <FramedSection
                         appearance="triad-01"
@@ -365,31 +362,23 @@ export default function Page({ page, ...props }: Props) {
                             <React.Fragment key="work-with-us-packages-top-1">
                                 <div className="left">
                                     <h3 className="title title-2">
-                                        <span>Console review sponsor</span>
+                                        <span>Console sponsor</span>
                                         <ConsoleSponsorIllustration />
                                     </h3>
                                     <p>
-                                        We only feature 3 tools each week, and our audience knows that only the best tools make it into our newsletter. We feature just one sponsored tool in each newsletter and sponsored reviews appear at the top of the email as the lead review. Partners must meet our{" "}
+                                        Sponsor one or more editions of the weekly newsletter to promote your product, tool, release, or announcement. We'll help you write the right ad text (max 2 lines) which appears underneath the issue contents before the main reviews. Partners must meet our{" "}
                                         <a href="/selection-criteria/" className="link">
                                             selection criteria
-                                        </a>{" "}
-                                        before we work with them on a sponsored review.
+                                        </a>
+                                        .
                                     </p>
                                 </div>
                                 <ConsoleSponsorIllustration />
                             </React.Fragment>,
-                            <React.Fragment key="work-with-us-packages-top-2">
-                                <div className="left">
-                                    <h4 className="title title-3">
-                                        <span>Reach & engagement</span>
-                                    </h4>
-                                    <p>Console is a privacy-first company so we do not track opens, but we do track clicks. In 2022 sponsored partners have averaged 1,320 high intent clicks per campaign within 7 days of launch. Expected conversion will vary by tool type. Partners typically see conversion rates of 5-10%, although we have seen as high as 20%.</p>
-                                </div>
-                            </React.Fragment>,
                         ]}
                         items={[
                             <React.Fragment key="work-with-us-packages-item-1">
-                                <p>The benefits of our sponsored package include:</p>
+                                {/*<p>The benefits of our sponsored package include:</p>
                                 <div className="benefits">
                                     <div>
                                         <RichTitle tag="h5" icon={{ group: "generic", name: "console-starred" }} text="Top spot" />
@@ -415,7 +404,7 @@ export default function Page({ page, ...props }: Props) {
                                         <p className="small">Access to custom badges for your website and marketing materials to showcase that you’ve been featured as a Console Developer Tool of the Week.</p>
                                     </div>
                                 </div>
-                                <p>Tell us about your tool and campaign goals.</p>
+                                <p>Tell us about your tool and campaign goals.</p>*/}
 
                                 <Button
                                     icon={{
@@ -433,156 +422,10 @@ export default function Page({ page, ...props }: Props) {
                             </React.Fragment>,
                         ]}
                     ></FramedSection>
-
-                    <FramedSection
-                        appearance="triad-01"
-                        top={
-                            <React.Fragment>
-                                <div className="left">
-                                    <h3 className="title title-2">
-                                        <span>Beta release promotion</span>
-                                        <ConsoleWelcome2Illustration />
-                                    </h3>
-                                    <p>Want experienced developers as early-adopters to try your next version? We can help you reach them with a sponsored beta listing in the weekly email. This works well to promote an early release ahead of a full review.</p>
-                                </div>
-                                <ConsoleWelcome2Illustration />
-                            </React.Fragment>
-                        }
-                    >
-                        <Button
-                            icon={{
-                                group: "generic",
-                                name: "send",
-                            }}
-                            iconPos="left"
-                            el="anchor"
-                            href="mailto:hello@console.dev"
-                            target="_blank"
-                            title="Get in touch"
-                        >
-                            Get in touch
-                        </Button>
-                    </FramedSection>
-
-                    {/*<FramedSection
-            appearance="triad-01"
-            top={[
-              <React.Fragment key="work-with-us-packages-top-3">
-                <div className="left">
-                  <h3 className="title title-2">
-                    <span>Jobs Console</span>
-                    <ConsoleSponsoredJobsIllustration />
-                  </h3>
-                  <p>
-                    The best developers rarely look for a new job. We can help
-                    you reach them.
-                  </p>
-                </div>
-                <ConsoleSponsoredJobsIllustration />
-              </React.Fragment>,
-              <React.Fragment key="work-with-us-packages-top-4">
-                <div className="left">
-                  <h4 className="title title-3">Devtools jobs board</h4>
-                  <p>
-                    Jobs Console is a devtools, cloud, and infra focused jobs
-                    board. Posting a job to the website is free and there is an
-                    optional paid upgrade to have your job listed in the Console
-                    devtools newsletter.
-                  </p>
-                </div>
-              </React.Fragment>,
-            ]}
-            items={[
-              <React.Fragment key="work-with-us-packages-item-2">
-                <p>
-                  Get your roles in front of hard to reach developers who want
-                  to work in devtools.
-                </p>
-                <Button
-                  icon={{
-                    group: "generic",
-                    name: "external-link",
-                  }}
-                  iconPos="left"
-                  el="anchor"
-                  href="https://jobs.console.dev/post"
-                  target="_blank"
-                  title="Post a job"
-                >
-                  Post a job
-                </Button>
-              </React.Fragment>,
-            ]}
-          />*/}
                 </div>
             </PageSection>
 
             <span data-checkpoint-campaigns></span>
-
-            <PageSection classes={["campaigns"]}>
-                <h3 className="title title-2">Recent campaigns</h3>
-                {page.meta.campaigns.map((campaign: any, idx: number) => {
-                    return (
-                        <FramedSection
-                            key={"campaign-" + idx}
-                            top={
-                                <>
-                                    <div className="heading">
-                                        <RichTitle
-                                            tag="h4"
-                                            customIconLeft={
-                                                campaign.img ? (
-                                                    <div className="case-study-thumbnail aspect-ratio aspect-ratio-1-1">
-                                                        <ImageProvider src={campaign.img} alt={campaign.name} />
-                                                    </div>
-                                                ) : undefined
-                                            }
-                                        >
-                                            <span>{campaign.name}</span>
-                                        </RichTitle>
-                                        <span data-checkpoint-campaigns></span>
-                                        <Button
-                                            cnslSize="small"
-                                            icon={{
-                                                group: "generic",
-                                                name: "external-link",
-                                            }}
-                                            iconPos="right"
-                                            el="anchor"
-                                            href={campaign.url}
-                                            target="_blank"
-                                            title={campaign.url}
-                                        >
-                                            Visit
-                                        </Button>
-                                    </div>
-                                    {campaign.intro.map((introItem: any, idx: number) => (
-                                        <p key={"campaign-intro-item-" + idx} className="intro">
-                                            {introItem}
-                                        </p>
-                                    ))}
-                                    <p className="quote">
-                                        <span>{campaign.quote}</span>
-                                    </p>
-                                </>
-                            }
-                            items={[
-                                <React.Fragment key={"campaigns-item-1"}>
-                                    <h5 className="title title-4">How it worked?</h5>
-                                    <div>
-                                        {campaign.howItWorked.map((hows: any, idx: number) => (
-                                            <React.Fragment key={"campaign-how-it-worked-" + idx}>
-                                                {hows.icon && <RichTitle tag="h5" icon={{ group: "generic", name: hows.icon }} iconRight={hows.plus ? { group: "generic", name: "plus" } : undefined} text={hows.name} />}
-                                                {hows.text && <p>{hows.text}</p>}
-                                            </React.Fragment>
-                                        ))}
-                                    </div>
-                                </React.Fragment>,
-                            ]}
-                        />
-                    );
-                })}
-            </PageSection>
 
             <PageSection classes={["sponsors"]} fullWidth>
                 <div className="page-section-heading">
@@ -842,24 +685,6 @@ export default function Page({ page, ...props }: Props) {
                     >
                         Get in touch
                     </Button>
-                    <p>
-                        <Button
-                            appearance="text"
-                            icon={{
-                                group: "generic",
-                                name: "arrow-down",
-                            }}
-                            iconPos="left"
-                            el="anchor"
-                            rel="nofollow"
-                            href="https://drive.google.com/file/d/1D90GoBFBjydhe2fCkXW473mOeeFb6m1d/view?usp=sharing"
-                            target="_blank"
-                            title="Download advertiser kit"
-                        >
-                            Download
-                        </Button>{" "}
-                        our advertiser kit in .pdf.
-                    </p>
                 </div>
             </PageSection>
 
