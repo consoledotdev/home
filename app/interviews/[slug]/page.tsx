@@ -1,5 +1,5 @@
 import fs from "fs";
-import { serialize } from "next-mdx-remote/serialize";
+import { serialize } from "next-mdx-remote-client/serialize";
 import { notFound } from "next/navigation";
 
 import { directory, getItem } from "@/app/lib/interviews";
@@ -37,7 +37,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
     const interview = {
         meta: meta,
-        content: await serialize(content),
+        content: await serialize({ source: content }),
     };
 
     return <ClientPage interview={interview} />;

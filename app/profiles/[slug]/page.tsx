@@ -1,5 +1,5 @@
 import fs from "fs";
-import { serialize } from "next-mdx-remote/serialize";
+import { serialize } from "next-mdx-remote-client/serialize";
 import { notFound } from "next/navigation";
 
 import { directory, getItem as getProfileItem } from "@/app/lib/profiles";
@@ -39,7 +39,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
     const profile = {
         meta: meta,
-        content: await serialize(content),
+        content: await serialize({ source: content }),
     };
 
     // Get podcast data
@@ -49,7 +49,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
         podcast = {
             meta: meta,
-            highlights: await serialize(highlights),
+            highlights: await serialize({ source: highlights }),
         };
     }
 
@@ -60,7 +60,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
         interview = {
             meta: meta,
-            highlights: await serialize(highlights),
+            highlights: await serialize({ source: highlights }),
         };
     }
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { hydrate } from "next-mdx-remote-client";
 import { customMDXComponents } from "@/mdx-components";
 
 import { InterviewMeta } from "@/app/lib/interviews";
@@ -20,7 +20,7 @@ import Link from "next/link";
 interface Props extends React.HTMLAttributes<HTMLElement> {
     interview: {
         meta: InterviewMeta;
-        content: MDXRemoteSerializeResult;
+        content: any;
     };
 }
 
@@ -29,6 +29,8 @@ export default function Page({ interview, ...props }: Props) {
         ...customMDXComponents,
         ImageProvider,
     };
+
+    const { content, mod, error } = hydrate({ ...interview.content, components });
 
     const max1024 = useMediaQuery({
         w: 1024,
@@ -109,17 +111,7 @@ export default function Page({ interview, ...props }: Props) {
 
             <PageSplit classes={["interview-split"]} layout="aside">
                 <div>
-                    <PageSection classes={["markdown-body"]}>
-                        <MDXRemote
-                            {...interview.content}
-                            // @ts-ignore
-                            components={{
-                                ...components,
-                                h3: (props: any) => <h3 className="title title-2" {...props} />,
-                                h4: (props: any) => <h4 className="title title-3" {...props} />,
-                            }}
-                        />
-                    </PageSection>
+                    <PageSection classes={["markdown-body"]}>{content}</PageSection>
 
                     <PageSection classes={["signup"]}>
                         <LaunchSubscribe

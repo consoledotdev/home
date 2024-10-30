@@ -2,33 +2,30 @@
 
 import { createRef, useRef } from "react";
 
-import type { Tool } from "@/app/lib/tools";
-import type { PodcastMeta } from "@/app/lib/podcasts";
 import type { InterviewMeta } from "@/app/lib/interviews";
+import type { PodcastMeta } from "@/app/lib/podcasts";
 import { ProfileMeta } from "@/app/lib/profiles";
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import { customMDXComponents, h5 } from "@/mdx-components";
+import type { Tool } from "@/app/lib/tools";
 import { GetTheme } from "@/components/providers/theme-provider";
+import { customMDXComponents } from "@/mdx-components";
 
-import { consoleISODate, extractHostname, extractTwitterHandle, formatPodcastSeasonEpisode, getRandomBadgeColor } from "@/components/effects/utils";
+import { consoleISODate, extractHostname, extractTwitterHandle, getRandomBadgeColor } from "@/components/effects/utils";
 
-import Link from "next/link";
-import ImageProvider from "@/components/elements/image-provider";
-import PageSection from "@/components/elements/page-section";
-import Button from "@/components/elements/button";
-import IconProvider from "@/components/elements/icon-provider";
-import Category from "@/components/elements/category";
-import Tag from "@/components/elements/tag";
-import PageSplit from "@/components/elements/page-split";
-import SponsorDisclosure from "@/components/compositions/sponsor-disclosure";
-import Badge from "@/components/elements/badge";
-import Tooltip from "@/components/elements/tooltip";
-import FramedSection from "@/components/elements/framed-section";
 import AboutConsole from "@/components/compositions/about-console";
-import TOC from "@/components/compositions/toc";
 import LaunchSubscribe from "@/components/compositions/launch-subscribe";
+import SponsorDisclosure from "@/components/compositions/sponsor-disclosure";
+import TOC from "@/components/compositions/toc";
 import VendorThumbnail from "@/components/compositions/vendor-thumbnail";
+import Badge from "@/components/elements/badge";
+import Button from "@/components/elements/button";
+import Category from "@/components/elements/category";
+import IconProvider from "@/components/elements/icon-provider";
+import PageSection from "@/components/elements/page-section";
+import PageSplit from "@/components/elements/page-split";
 import RichTitle from "@/components/elements/rich-title";
+import Tag from "@/components/elements/tag";
+import Tooltip from "@/components/elements/tooltip";
+import Link from "next/link";
 
 import styles from "@/app/tools/[slug]/client-page.scss";
 
@@ -36,15 +33,15 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
     tool: Tool;
     podcast?: {
         meta: PodcastMeta;
-        highlights: MDXRemoteSerializeResult;
+        highlights: any;
     };
     interview?: {
         meta: InterviewMeta;
-        highlights: MDXRemoteSerializeResult;
+        highlights: any;
     };
     profile?: {
         meta: ProfileMeta;
-        highlights: MDXRemoteSerializeResult;
+        highlights: any;
     };
 }
 
@@ -83,6 +80,8 @@ export default function Page({ tool, podcast, interview, profile, ...props }: Pr
     const tocHook = createRef<HTMLDivElement>();
     const tocContentStartRef = createRef<HTMLDivElement>();
     const tocContentEndRef = createRef<HTMLElement>();
+
+    const components = { ...customMDXComponents };
 
     return (
         <>
@@ -199,7 +198,7 @@ export default function Page({ tool, podcast, interview, profile, ...props }: Pr
                 <div className="content-max-width">
                     <span ref={tocContentStartRef}></span>
 
-                    {podcast && (
+                    {/*                 {podcast && (
                         <PageSection classes={["podcast"]} inPageAnchor="devtools-podcast">
                             <Button
                                 appearance="text"
@@ -387,7 +386,7 @@ export default function Page({ tool, podcast, interview, profile, ...props }: Pr
                             </div>
                         </PageSection>
                     )}
-
+ */}
                     <PageSection classes={["about"]}>
                         <span className="toc-content-end-ref" ref={tocContentEndRef}></span>
                         <AboutConsole after={<SponsorDisclosure />} />

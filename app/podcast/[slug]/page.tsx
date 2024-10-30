@@ -1,7 +1,7 @@
 import { directory, getItem, getItems } from "@/app/lib/podcasts";
 import fs from "fs";
 import type { Metadata } from "next";
-import { serialize } from "next-mdx-remote/serialize";
+import { serialize } from "next-mdx-remote-client/serialize";
 import { notFound } from "next/navigation";
 import ClientPage from "./client-page";
 
@@ -74,7 +74,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
     const podcast = {
         meta: meta,
-        content: await serialize(content),
+        content: await serialize({ source: content }),
     };
 
     // All other podcasts
@@ -92,7 +92,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
     const serializedItems = [];
     for (const item of sortedItems) {
-        const serializedContent = await serialize(item.content);
+        const serializedContent = await serialize({ source: item.content });
         serializedItems.push({
             meta: item.meta,
             content: serializedContent,

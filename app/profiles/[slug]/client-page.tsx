@@ -4,7 +4,7 @@ import React, { createRef } from "react";
 
 import { useMediaQuery } from "@/components/effects/use-media-query";
 
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { hydrate } from "next-mdx-remote-client";
 import { customMDXComponents } from "@/mdx-components";
 
 import { ProfileMeta } from "@/app/lib/profiles";
@@ -32,20 +32,21 @@ import styles from "@/app/profiles/[slug]/client-page.scss";
 interface Props extends React.HTMLAttributes<HTMLElement> {
     profile: {
         meta: ProfileMeta;
-        content: MDXRemoteSerializeResult;
+        content: any;
     };
     podcast?: {
         meta: PodcastMeta;
-        highlights: MDXRemoteSerializeResult;
+        highlights: any;
     };
     interview?: {
         meta: InterviewMeta;
-        highlights: MDXRemoteSerializeResult;
+        highlights: any;
     };
 }
 
 export default function Page({ profile, podcast, interview, ...props }: Props) {
     const components = { ...customMDXComponents, ImageProvider, RichTitle };
+    const { content, mod, error } = hydrate({ ...profile.content, components });
 
     let rel = "noopener noreferrer";
 
@@ -322,7 +323,7 @@ export default function Page({ profile, podcast, interview, ...props }: Props) {
                                                     <span>{c.client}</span> {c.text}
                                                 </p>
                                             ))}
-                                        </>
+                                        </>,
                                     );
                                 }
 
@@ -334,14 +335,7 @@ export default function Page({ profile, podcast, interview, ...props }: Props) {
                     <PageSection classes={["markdown-body"]}>
                         <span ref={tocContentStartRef}></span>
 
-                        <MDXRemote
-                            {...profile.content}
-                            // @ts-ignore
-                            components={{
-                                ...components,
-                                h4: (props: any) => <h4 className="title title-3" {...props} />,
-                            }}
-                        />
+                        {content}
                     </PageSection>
 
                     <PageSection classes={["jobs-link"]} inPageAnchor="jobs">
