@@ -3,7 +3,7 @@ import { getItem as getPodcastItem } from "@/app/lib/podcasts";
 import { getItem as getProfileItem } from "@/app/lib/profiles";
 import { getItem as getToolItem, getItems as getToolItems } from "@/app/lib/tools";
 import type { Metadata } from "next";
-import { serialize } from "next-mdx-remote/serialize";
+import { serialize } from "next-mdx-remote-client/serialize";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { Organization, Product, Rating, Review, WithContext } from "schema-dts";
@@ -130,7 +130,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
         podcast = {
             meta: meta,
-            highlights: await serialize(highlights),
+            highlights: await serialize({ source: highlights }),
         };
     }
 
@@ -141,7 +141,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
         interview = {
             meta: meta,
-            highlights: await serialize(highlights),
+            highlights: await serialize({ source: highlights }),
         };
     }
 
@@ -152,7 +152,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
         profile = {
             meta: meta,
-            highlights: await serialize(highlights),
+            highlights: await serialize({ source: highlights }),
         };
     }
 
