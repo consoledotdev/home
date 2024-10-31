@@ -13,7 +13,7 @@
         "@arcjet/next": "1.0.0-alpha.28",
         "@mailchimp/mailchimp_marketing": "3.0.80",
         "@mdx-js/react": "3.0.1",
-        "@next/mdx": "14.2.15",
+        "@next/mdx": "15.0.2",
         "@notionhq/client": "2.2.7",
         "@slack/web-api": "7.5.0",
         "@vercel/og": "0.6.3",
