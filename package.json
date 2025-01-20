@@ -19,7 +19,7 @@
         "@vercel/og": "0.6.4",
         "dotenv": "16.4.7",
         "gray-matter": "4.0.3",
-        "next": "14.2.23",
+        "next": "15.1.5",
         "next-mdx-remote-client": "1.0.3",
         "next-plausible": "3.12.4",
         "next-sitemap": "4.2.3",
