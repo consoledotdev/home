@@ -1,8 +1,7 @@
 # console.dev
 
 The [console.dev](https://console.dev) web site implemented using HTML +
-Tailwind and hosted using a Go server using only the stdlib. The only dependency
-is Tailwind.
+Tailwind and hosted using a static Go server.
 
 ## Development
 
@@ -10,7 +9,6 @@ Start the development server which will watch for changes and rebuild the site
 automatically.
 
 ```sh
-npm ci
 make dev
 ```
 
