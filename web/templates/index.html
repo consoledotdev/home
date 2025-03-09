@@ -5,7 +5,7 @@
     {{template "header"}}
     <main>
       <div
-        class="my-16 max-w-7xl mx-auto px-8 py-16 flex flex-col lg:flex-row items-center lg:items-start space-y-12 lg:space-y-0 lg:space-x-16"
+        class="md:my-16 max-w-7xl mx-auto px-8 py-8 md:py-16 flex flex-col lg:flex-row items-center lg:items-start space-y-12 lg:space-y-0 lg:space-x-16"
       >
         <div class="text-left lg:text-left lg:w-1/2">
           <h1 class="text-5xl mb-4 leading-tight">
@@ -39,9 +39,9 @@
           <div>
             <form
               name="console-subscribe"
-              action="https://dev.us7.list-manage.com/subscribe/post?u=f8c3cd14ee8d63c53d0986a48&amp;id=267911a165"
+              action="https://dev.us7.list-manage.com/subscribe/post?u=f8c3cd14ee8d63c53d0986a48&id=267911a165"
               method="post"
-              class="flex items-center space-x-4"
+              class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4"
             >
               <input
                 type="email"
@@ -50,7 +50,8 @@
                 required
                 placeholder="totoro@example.com"
                 aria-label="Enter your email address"
-                class="grow px-4 py-3 rounded-lg bg-black border border-gray-600 text-white focus:ring-2 focus:ring-indigo-500 placeholder-gray-500"
+                class="w-full sm:grow sm:w-auto px-4 py-3 rounded-lg bg-black border border-gray-600 text-white focus:ring-2 focus:ring-indigo-500 placeholder-gray-500"
+                autocomplete="email"
               />
               <label for="email-subscribe" class="sr-only">Email address</label>
               <input
@@ -63,7 +64,7 @@
               <button
                 type="submit"
                 aria-label="Sign up for the newsletter"
-                class="plausible-event-name=Newsletter+Subscribe flex items-center space-x-2 bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700"
+                class="w-full sm:w-auto plausible-event-name=Newsletter+Subscribe flex items-center justify-center space-x-2 bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700"
               >
                 <svg
                   class="w-5 h-5"
@@ -82,35 +83,37 @@
               </button>
             </form>
           </div>
-          <p class="mt-4 text-sm text-gray-400 flex items-center space-x-1">
-            <span>Every Thursday.</span>
-            <a
-              href="#latest"
-              class="underline hover:text-gray-300"
-              aria-label="See latest email"
-              >See latest email.</a
-            >
+          <p
+            class="mt-4 text-sm text-gray-400 flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-1"
+          >
             <span
-              >Also available
+              >Every Thursday.
+              <a
+                href="#latest"
+                class="underline hover:text-gray-300"
+                aria-label="See latest email"
+                >See latest email.</a
+              ></span
+            >
+            <span class="flex items-center"
+              >Also available&nbsp;
               <a
                 href="/rss.xml"
                 class="underline hover:text-gray-300"
                 aria-label="Subscribe via RSS"
                 >via RSS</a
-              ></span
-            >
-            <sup>
+              >
               <svg
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
-                class="w-4 h-4"
+                class="w-4 h-4 ml-1"
               >
                 <path
                   d="M 5 5 L 5 9 C 14.93 9 23 17.07 23 27 L 27 27 C 27 14.85 17.15 5 5 5 z M 5 12 L 5 16 C 11.07 16 16 20.93 16 27 L 20 27 C 20 18.72 13.28 12 5 12 z M 8 21 A 3 3 0 0 0 8 27 A 3 3 0 0 0 8 21 z"
                 />
               </svg>
-            </sup>
+            </span>
           </p>
         </div>
       </div>

@@ -1,10 +1,10 @@
 {{define "header"}}
 <header
-  class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center"
+  class="max-w-7xl mx-auto px-8 py-6 flex flex-col sm:flex-row justify-between items-center"
   role="banner"
   aria-label="Site header"
 >
-  <div class="flex items-center space-x-4" id="logo-wrapper">
+  <div class="flex items-center space-x-4 mb-2 sm:mb-0" id="logo-wrapper">
     <a href="/" class="flex items-center" aria-label="Home">
       <svg
         class="logo logo-svg-animated-explode"
@@ -52,7 +52,11 @@
       >
     </a>
   </div>
-  <nav class="flex space-x-6" role="navigation" aria-label="Main navigation">
+  <nav
+    class="flex flex-row space-x-4 sm:space-x-6"
+    role="navigation"
+    aria-label="Main navigation"
+  >
     <a href="/advertise" class="hover:underline" aria-label="Advertise"
       >Advertise</a
     >
