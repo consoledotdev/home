@@ -1,47 +1,10 @@
 {
-    "name": "console-home",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "op --account consoledotdev.1password.com run --env-file=\".env.dev\" -- next dev",
-        "build": "next build",
-        "postbuild": "next-sitemap",
-        "start": "next start",
-        "lint": "next lint"
-    },
-    "dependencies": {
-        "@arcjet/next": "1.0.0-alpha.34",
-        "@mailchimp/mailchimp_marketing": "3.0.80",
-        "@mdx-js/react": "3.1.0",
-        "@next/mdx": "14.2.23",
-        "@notionhq/client": "2.2.7",
-        "@slack/web-api": "7.8.0",
-        "@vercel/og": "0.6.4",
-        "dotenv": "16.4.7",
-        "gray-matter": "4.0.3",
-        "next": "14.2.23",
-        "next-mdx-remote-client": "1.0.3",
-        "next-plausible": "3.12.4",
-        "next-sitemap": "4.2.3",
-        "next-themes": "npm:@wits/next-themes@0.2.16",
-        "react": "18.3.1",
-        "react-dom": "18.3.1",
-        "rss": "1.2.2",
-        "schema-dts": "1.1.2",
-        "server-only": "0.0.1"
-    },
-    "devDependencies": {
-        "@types/mdx": "2.0.13",
-        "@types/node": "22.10.2",
-        "@types/react": "18.3.8",
-        "@types/react-dom": "18.3.0",
-        "@types/rss": "0.0.32",
-        "encoding": "0.1.13",
-        "eslint": "8.57.0",
-        "eslint-config-next": "14.2.23",
-        "react-markdown": "9.0.1",
-        "react-svg": "16.2.0",
-        "sass": "1.83.0",
-        "typescript": "5.7.2"
-    }
+  "name": "console.dev",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npx @tailwindcss/cli@4.0.12 -i web/static/css/input.css -o web/static/css/output.css"
+  },
+  "dependencies": {
+    "tailwindcss": "4.0.12"
+  }
 }

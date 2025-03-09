@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="h-screen">
+  {{template "head" "Newsletter Generate"}}
+  <body class="bg-black text-white">
+    {{template "header"}}
+    <main>
+      <div class="container mx-auto max-w-7xl px-4 lg:px-8 py-8">
+        <h1 class="text-3xl lg:text-4xl">Newsletter {{.NewsletterDate}}</h1>
+        <div class="mt-8">
+          <h2 class="text-2xl lg:text-3xl">Preview</h2>
+          <input
+            class="w-full bg-gray-800 text-white p-4 mt-4 font-mono"
+            readonly
+            value="{{.Preview}}"
+          />
+        </div>
+        <div class="mt-8">
+          <h2 class="text-2xl lg:text-3xl">Contents</h2>
+          <textarea
+            class="h-64 w-full bg-gray-800 text-white p-4 mt-4 font-mono"
+            readonly
+          >
+            <table style="line-height: 150%; border-collapse:separate; border-spacing: 0 6px">
+                <tbody>
+                {{- range $index, $item := .Tools -}}                
+                        <tr>
+                            <td style="vertical-align: top; width: 12px;">
+                                <strong style="display:block; font-size:12px; font-weight:bold; margin-right:4px; margin-top:1px; width:12px">＋</strong>
+                            </td>
+                            <td>
+                                <a href="{{ .URL }}"><strong>{{ .Name }}</strong></a> &ndash; {{ .Description }}
+                            </td>
+                        </tr>
+                {{- end -}}
+                {{- range $index, $item := .Betas -}}
+                <tr>
+                    <td style="vertical-align: top; width: 12px;">
+                        <span style="display:block; font-size:15px; margin-left:2px; margin-right:4px; width:12px"><em>&beta;</em></span></td>
+                    <td>
+                        <a href="{{ .URL }}" target="_blank"><strong>{{ .Name }}</strong></a> &ndash; {{ .Description }}
+                    </td>
+                </tr>
+                {{- end -}}
+                </tbody>
+            </table>
+            <hr style="border: none; border-top: none; padding-top: 6px; padding-bottom: 12px;" />
+                </textarea
+          >
+        </div>
+        <div class="mt-8">
+          <h2 class="text-2xl lg:text-3xl">Tools</h2>
+          {{$lenTools := len .Tools}}
+          <textarea
+            class="h-64 w-full bg-gray-800 text-white p-4 mt-4 font-mono"
+            readonly
+          >
+              {{- range $index, $item := .Tools -}}
+              {{- template "generate_tools" . -}}
+              {{- if (isLast $index $lenTools) -}}
+              <hr style="border: none; border-top: none; padding-top: 6px; padding-bottom: 12px;" />
+              {{- else -}}
+              <hr style="border: none; border-top: none; padding-top: 6px;" />
+              {{- end}}{{end -}}
+              </textarea
+          >
+        </div>
+        <div class="mt-8">
+          <h2 class="text-2xl lg:text-3xl">Betas</h2>
+          {{$lenBetas := len .Betas}}
+          <textarea
+            class="h-64 w-full bg-gray-800 text-white p-4 mt-4 font-mono"
+            readonly
+          >
+            {{- range $index, $item := .Betas -}}
+            {{- template "generate_betas" . -}}
+            {{- if (isLast $index $lenBetas) -}}
+            <hr style="border: none; border-top: none; padding-top: 6px; padding-bottom: 12px;" />
+            {{- else -}}
+            <hr style="border: none; border-top: none; padding-top: 6px;" />
+            {{- end}}{{end -}}
+            </textarea
+          >
+        </div>
+      </div>
+    </main>
+    {{template "footer"}}
+  </body>
+</html>

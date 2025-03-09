@@ -1,0 +1,13 @@
+{{- define "generate_betas" -}}
+<h2>
+  <a href="{{ .URL }}" target="_blank"><strong>{{.Name}}</strong></a>
+</h2>
+<h4>{{ .Description }}</h4>
+<span
+  style="
+    font-family: courier new, courier, lucida sans typewriter, lucida typewriter,
+      monospace;
+  "
+  >{{.Category}}, {{.Type}}, {{.Access}} access
+</span>
+{{end}}

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" class="h-screen">
+  {{template "head" "console.dev - a free weekly devtools newsletter"}}
+  <body class="bg-black text-white">
+    {{template "header"}}
+    <main>
+      <div
+        class="my-16 max-w-7xl mx-auto px-8 py-16 flex flex-col lg:flex-row items-center lg:items-start space-y-12 lg:space-y-0 lg:space-x-16"
+      >
+        <div class="text-left lg:text-left lg:w-1/2">
+          <h1 class="text-5xl mb-4 leading-tight">
+            A free weekly devtools <br class="hidden lg:block" />newsletter
+          </h1>
+          <p class="text-lg font-light text-gray-300">
+            Reviews of the most interesting devtools and latest beta releases.
+          </p>
+        </div>
+        <div class="p-6 rounded-lg shadow-lg w-full lg:w-1/2">
+          <div class="flex items-center space-x-2 text-gray-400 text-sm mb-4">
+            <svg
+              class="w-5 h-5"
+              viewBox="0 0 128 128"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M117.266 28.0007L43.6941 28.0055L10.7338 94.666L84.3059 94.6613L117.266 28.0007ZM61.148 59.4079L39.8902 69.122L34.319 80.1925L75.5032 61.3727L53.2519 42.571L49.6627 49.7032L61.148 59.4079Z"
+              ></path>
+              <path
+                class="alt-prompt"
+                d="M39.8902 69.122L61.148 59.4079L49.6627 49.7032L53.2519 42.571L75.5032 61.3727L34.319 80.1925L39.8902 69.122Z"
+                fill="none"
+              ></path>
+            </svg>
+            <span class="uppercase">30k+ subscribers</span>
+          </div>
+          <div>
+            <form
+              name="console-subscribe"
+              action="https://dev.us7.list-manage.com/subscribe/post?u=f8c3cd14ee8d63c53d0986a48&amp;id=267911a165"
+              method="post"
+              class="flex items-center space-x-4"
+            >
+              <input
+                type="email"
+                name="EMAIL"
+                id="email-subscribe"
+                required
+                placeholder="totoro@example.com"
+                aria-label="Enter your email address"
+                class="grow px-4 py-3 rounded-lg bg-black border border-gray-600 text-white focus:ring-2 focus:ring-indigo-500 placeholder-gray-500"
+              />
+              <label for="email-subscribe" class="sr-only">Email address</label>
+              <input
+                type="text"
+                tabindex="-1"
+                name="b_f8c3cd14ee8d63c53d0986a48_267911a165"
+                value=""
+                class="hidden"
+              />
+              <button
+                type="submit"
+                aria-label="Sign up for the newsletter"
+                class="plausible-event-name=Newsletter+Subscribe flex items-center space-x-2 bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700"
+              >
+                <svg
+                  class="w-5 h-5"
+                  viewBox="0 0 128 128"
+                  fill="white"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M125 17L3 56.8507L43.75 68.1418M125 17L93.1739 106L64.8963 84.3397M125 17L43.75 68.1418M125 17L64.8963 84.3397M43.75 68.1418L64.8963 84.3397M43.75 68.1418L49.7065 101.358L64.8963 84.3397"
+                      vector-effect="non-scaling-stroke"
+                    ></path>
+                  </g>
+                </svg>
+                <span>Sign Up</span>
+              </button>
+            </form>
+          </div>
+          <p class="mt-4 text-sm text-gray-400 flex items-center space-x-1">
+            <span>Every Thursday.</span>
+            <a
+              href="#latest"
+              class="underline hover:text-gray-300"
+              aria-label="See latest email"
+              >See latest email.</a
+            >
+            <span
+              >Also available
+              <a
+                href="/rss.xml"
+                class="underline hover:text-gray-300"
+                aria-label="Subscribe via RSS"
+                >via RSS</a
+              ></span
+            >
+            <sup>
+              <svg
+                viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="w-4 h-4"
+              >
+                <path
+                  d="M 5 5 L 5 9 C 14.93 9 23 17.07 23 27 L 27 27 C 27 14.85 17.15 5 5 5 z M 5 12 L 5 16 C 11.07 16 16 20.93 16 27 L 20 27 C 20 18.72 13.28 12 5 12 z M 8 21 A 3 3 0 0 0 8 27 A 3 3 0 0 0 8 21 z"
+                />
+              </svg>
+            </sup>
+          </p>
+        </div>
+      </div>
+      {{if and .Tools .Betas}}
+      <section class="max-w-7xl mx-auto px-8 py-12">
+        <h2 class="text-2xl fmb-2 mb-6" id="latest">Latest newsletter</h2>
+        <p class="text-gray-400 mb-4">
+          Here&apos;s the latest newsletter sent on {{.NewsletterDate}}.
+        </p>
+        <h3 class="text-lg font-semibold mb-4">Contents</h3>
+        <ul class="space-y-6 text-md">
+          {{range .Tools}}
+          <li class="flex items-center space-x-2">
+            <svg class="w-4 h-4 text-white shrink-0" viewBox="0 0 128 128">
+              <circle
+                cx="64"
+                cy="64"
+                r="59.5"
+                vector-effect="non-scaling-stroke"
+                class="stroke-current"
+              ></circle>
+              <path
+                d="M72.428 30.75L55.4221 97.4667"
+                vector-effect="non-scaling-stroke"
+                class="stroke-current"
+              ></path>
+              <path
+                d="M98.35 64.1084L29.5 64.1084"
+                vector-effect="non-scaling-stroke"
+                class="stroke-current"
+              ></path>
+            </svg>
+            <div>
+              <a
+                href="{{.URL}}"
+                referrerpolicy="strict-origin"
+                class="text-white underline"
+                aria-label="{{.Name}}"
+                >{{.Name}}</a
+              >
+              &mdash; {{.Description}}
+            </div>
+          </li>
+          {{end}} {{range .Betas}}
+          <li class="flex items-center space-x-2">
+            <svg class="w-4 h-4 text-white shrink-0" viewBox="0 0 128 128">
+              <circle
+                cx="64"
+                cy="64"
+                r="59.5"
+                vector-effect="non-scaling-stroke"
+                class="stroke-current"
+              ></circle>
+              <path
+                d="M51.885 41.7158L33 116M51.8845 41.7173C53.6787 34.4153 60.2515 29 68.0853 29C77.3 29 84.77 36.4928 84.77 45.7356C84.77 53.6032 77.5238 59.9524 71.3946 61.784C76.6508 64.3175 80.3391 70.9999 80.3391 76.0878C80.3391 87.3112 71.2684 94.4095 60.0791 94.4095C52.5173 94.4095 45.9232 90.2543 42.4423 84.096"
+                vector-effect="non-scaling-stroke"
+                class="stroke-current"
+              ></path>
+            </svg>
+            <div>
+              <a
+                href="{{.URL}}"
+                referrerpolicy="strict-origin"
+                class="text-white underline"
+                aria-label="{{.Name}}"
+                >{{.Name}}</a
+              >
+              &mdash; {{.Description}}
+            </div>
+          </li>
+          {{end}}
+        </ul>
+      </section>
+      <section class="max-w-7xl mx-auto px-8 py-12">
+        <div class="max-w-3xl space-y-8">
+          <header>
+            <h2 class="text-2xl fmb-2">Interesting tools</h2>
+            <p class="text-gray-400 mb-4">
+              Each week we review 2&mdash;3 of the most interesting developer
+              tools. Here&apos;s what we featured this week.
+            </p>
+          </header>
+
+          {{range .Tools}}
+          <article>
+            <h3 class="text-xl font-semibold mb-1">
+              <a
+                href="{{.URL}}"
+                referrerpolicy="strict-origin"
+                class="underline"
+                aria-label="{{.Name}}"
+                >{{.Name}}</a
+              >
+            </h3>
+            <p class="text-sm uppercase text-gray-400 mb-4">{{.Description}}</p>
+            <div class="space-y-6">
+              <div>
+                <h4 class="font-semibold mb-1">What we like</h4>
+                <p class="text-gray-300 leading-relaxed">{{.Like}}</p>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-1">What we don&apos;t like</h4>
+                <p class="text-gray-300 leading-relaxed">{{.Dislike}}</p>
+              </div>
+            </div>
+          </article>
+          {{end}}
+        </div>
+      </section>
+      <section class="max-w-7xl mx-auto px-8 py-12">
+        <div class="max-w-3xl space-y-8">
+          <header>
+            <h2 class="text-2xl fmb-2">Betas and previews</h2>
+            <p class="text-gray-400 mb-4">
+              Here&apos;s the interesting beta and early access releases we
+              featured this week.
+            </p>
+          </header>
+
+          <ul class="space-y-8 mt-8">
+            {{range .Betas}}
+            <li>
+              <h3 class="text-xl font-light mb-1">
+                <a
+                  href=""
+                  referrerpolicy="strict-origin"
+                  class="underline"
+                  aria-label="{{.Name}}"
+                  >{{.Name}}</a
+                >
+              </h3>
+              <p class="text-sm uppercase mb-2 text-gray-400">
+                {{.Description}}
+              </p>
+              <div
+                class="flex items-center mt-2 text-xs text-gray-500 space-x-2"
+              >
+                {{if eq .Category "API"}}
+                <svg
+                  class="w-4 h-4 text-console-category fill-current"
+                  viewBox="0 0 128 128"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    fill="currentColor"
+                    d="M125.478 42.97C113.79 49.7383 109.752 64.6399 116.463 76.271C118.682 80.1102 121.781 83.0962 125.365 85.2006L112.795 106.984C101.078 100.273 86.2053 104.254 79.4939 115.857C77.2757 119.696 76.2519 123.876 76.2519 128H51.1126C51.0273 114.52 40.164 103.629 26.7696 103.629C22.3333 103.629 18.1813 104.823 14.5981 106.899L2.02844 85.1153C13.6881 78.3186 17.6978 63.4455 10.9864 51.8427C8.76827 47.9751 5.61164 44.9607 2 42.9131L14.5696 21.1295C26.2862 27.8694 41.2162 23.9165 47.9276 12.2853C50.1742 8.41768 51.198 4.1804 51.1695 0H76.3373C76.3373 13.5081 87.2575 24.4852 100.68 24.4852C105.145 24.4852 109.325 23.2908 112.909 21.1864L125.478 42.97ZM64 84C75.0457 84 84 75.0457 84 64C84 52.9543 75.0457 44 64 44C52.9543 44 44 52.9543 44 64C44 75.0457 52.9543 84 64 84Z"
+                  />
+                </svg>
+                {{else if eq .Category "Developer Tools"}}
+                <svg
+                  class="w-4 h-4 text-console-category fill-current"
+                  viewBox="0 0 128 128"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    fill="currentColor"
+                    d="M128 0H0V128H128V0ZM53.9556 49.7424C55.0684 49.0005 55.7368 47.7516 55.7368 46.4142V34.7953C55.7368 32.7986 53.5115 31.6076 51.8501 32.7152L12.7812 58.7611C11.6684 59.503 11 60.7519 11 62.0893V66.1587C11 67.4961 11.6684 68.7451 12.7812 69.4869L51.8501 95.5329C53.5114 96.6404 55.7368 95.4495 55.7368 93.4527V81.8339C55.7368 80.4964 55.0684 79.2475 53.9556 78.5057L32.3832 64.124L53.9556 49.7424ZM73.7812 49.7424C72.6684 49.0005 72 47.7516 72 46.4142V34.7953C72 32.7986 74.2254 31.6076 75.8867 32.7152L114.956 58.7611C116.068 59.503 116.737 60.7519 116.737 62.0893V66.1587C116.737 67.4961 116.068 68.7451 114.956 69.4869L75.8868 95.5329C74.2254 96.6404 72 95.4495 72 93.4527V81.8339C72 80.4964 72.6684 79.2475 73.7812 78.5057L95.3536 64.124L73.7812 49.7424Z"
+                  />
+                </svg>
+                {{else if eq .Category "Cloud"}}
+                <svg
+                  class="w-4 h-4 text-console-category fill-current"
+                  viewBox="0 0 128 128"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    fill="currentColor"
+                    d="M106.888 58.824C105 34 89.3653 18 68 18C49 18 33 32.5 30.112 50.824C10.5 53 0 68 0 83.6667C0 99.3333 13.136 111 29.3333 111H98.6667C114.864 111 128 100.864 128 84.6667C128 70.256 118.5 61.5 106.888 58.824Z"
+                  />
+                </svg>
+                {{else if eq .Category "Data Science"}}
+                <svg
+                  class="w-4 h-4 text-console-category fill-current"
+                  viewBox="0 0 128 128"
+                >
+                  <circle cx="14" cy="39" r="14" />
+                  <circle cx="114" cy="64" r="14" />
+                  <circle cx="64" cy="14" r="14" />
+                  <circle cx="14" cy="89" r="14" />
+                  <circle cx="64" cy="64" r="14" />
+                  <circle cx="64" cy="114" r="14" />
+                  <path
+                    d="M14 39L64 14"
+                    strokeWidth="0.5"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                  <path
+                    d="M14 89L64 64"
+                    strokeWidth="0.5"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                  <path
+                    d="M14 89L64 14"
+                    strokeWidth="0.5"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                  <path
+                    d="M14 89L64 114"
+                    strokeWidth="0.5"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                  <path
+                    d="M14 39L64 64"
+                    strokeWidth="0.5"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                  <path
+                    d="M14 39L64 114"
+                    strokeWidth="0.5"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                  <path
+                    d="M114 64H64"
+                    strokeWidth="0.5"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                  <path
+                    d="M114 64L64 14"
+                    strokeWidth="0.5"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                  <path
+                    d="M114 64L64 114"
+                    strokeWidth="0.5"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                </svg>
+                {{else if eq .Category "Database"}}
+                <svg
+                  class="w-4 h-4 text-console-category fill-current"
+                  viewBox="0 0 128 128"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M64 95C94.9279 95 120 85.598 120 74V100.25C120 111.848 94.9279 121.25 64 121.25C33.0721 121.25 8 111.848 8 100.25V74C8 85.598 33.0721 95 64 95Z"
+                  />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M64 59C94.9279 59 120 49.598 120 38V64.25C120 75.848 94.9279 85.25 64 85.25C33.0721 85.25 8 75.848 8 64.25V38C8 49.598 33.0721 59 64 59Z"
+                  />
+                  <ellipse cx="64" cy="28" rx="56" ry="21" />
+                </svg>
+                {{else if eq .Category "DevOps"}}
+                <svg
+                  class="w-4 h-4 text-console-category fill-current"
+                  viewBox="0 0 128 128"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    fill="currentColor"
+                    d="M128 0H0V128H128V0ZM26 38.5825C26 39.9199 26.6684 41.1689 27.7812 41.9107L52.1011 58.124L27.7812 74.3373C26.6684 75.0792 26 76.3281 26 77.6655V91.4527C26 93.4495 28.2254 94.6404 29.8867 93.5329L74.2188 63.9782C75.3316 63.2363 76 61.9874 76 60.65V55.5981C76 54.2607 75.3316 53.0118 74.2188 52.2699L29.8867 22.7152C28.2254 21.6076 26 22.7986 26 24.7953V38.5825Z"
+                  />
+                </svg>
+                {{else if eq .Category "Security"}}
+                <svg
+                  class="w-4 h-4 text-console-category fill-current"
+                  viewBox="0 0 128 128"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    fill="currentColor"
+                    d="M64 15.5294C79.6218 15.5294 90.3721 26.212 90.3721 41.7353V62H37.6279V41.7353C37.6279 26.212 48.3782 15.5294 64 15.5294ZM22 62V41.7353C22 18.6855 40.804 0 64 0C87.196 0 106 18.6855 106 41.7353V62H112C114.209 62 116 63.7909 116 66V124C116 126.209 114.209 128 112 128H16C13.7909 128 12 126.209 12 124V66C12 63.7909 13.7909 62 16 62H22Z"
+                  />
+                </svg>
+                {{else}}
+                <svg
+                  class="w-4 h-4 text-console-category fill-current"
+                  viewBox="0 0 128 128"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    fill="currentColor"
+                    d="M64 128C99.3462 128 128 99.3462 128 64C128 28.6538 99.3462 0 64 0C28.6538 0 0 28.6538 0 64C0 99.3462 28.6538 128 64 128ZM64 108C88.3005 108 108 88.3005 108 64C108 39.6995 88.3005 20 64 20C39.6995 20 20 39.6995 20 64C20 88.3005 39.6995 108 64 108Z"
+                  />
+                </svg>
+                {{end}}
+                <span class="uppercase tracking-wide">{{.Category}}</span>
+              </div>
+            </li>
+            {{end}}
+          </ul>
+        </div>
+      </section>
+      {{end}}
+      <section class="max-w-7xl mx-auto px-8 py-12">
+        <header>
+          <h2 class="text-2xl fmb-2">Devtools podcast</h2>
+          <p class="text-gray-400 mb-4">
+            Discussions with the people behind the most interesting devtools.
+          </p>
+        </header>
+        <div class="max-w-3xl space-y-8">
+          <iframe
+            height="450"
+            width="100%"
+            title="Media player"
+            src="https://embed.podcasts.apple.com/us/podcast/console-devtools/id1572448316?itscg=30200&amp;itsct=podcast_box_player&amp;ls=1&amp;mttnsubad=1572448316&amp;theme=auto"
+            id="embedPlayer"
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+            allow="autoplay *; encrypted-media *; clipboard-write"
+            style="
+              border: 0px;
+              border-radius: 12px;
+              width: 100%;
+              height: 450px;
+              max-width: 660px;
+            "
+          ></iframe>
+        </div>
+      </section>
+    </main>
+    {{template "footer"}}
+  </body>
+</html>

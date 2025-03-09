@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" class="h-screen">
+  {{template "head" "console.dev Selection Criteria"}}
+  <body class="bg-black text-white">
+    {{template "header"}}
+    <main>
+      <div class="container mx-auto max-w-7xl px-4 lg:px-8 py-8">
+        <h1 class="text-3xl lg:text-4xl">console.dev Selection Criteria</h1>
+
+        <p class="text-lg lg:text-xl text-gray-300 mt-4">
+          Console is the place to discover the best tools and beta releases for
+          developers. We're always trying out new tools - whether brand new
+          releases, updates, or things we've rediscovered - but we only feature
+          the most interesting. This page explains our selection criteria for
+          how we choose.
+        </p>
+
+        <div class="mt-8">
+          <h2 class="text-2xl lg:text-3xl">Interesting tools</h2>
+          <p class="text-base lg:text-lg text-gray-400 mt-4">
+            Each week we feature and review 2-3 interesting developer tools in
+            the Console newsletter and on our website.
+          </p>
+          <p class="text-base lg:text-lg text-gray-400 mt-4">
+            Our selection criteria are explained below. The more of these
+            questions we can answer positively, the more likely a tool is to be
+            featured. We try to be objective but there is always a subjective
+            element to deciding what we think is the best, most interesting set
+            of tools each week:
+          </p>
+          <ul
+            class="list-disc list-inside text-base lg:text-lg text-gray-400 mt-4"
+          >
+            <li>Is this interesting and useful to developers?</li>
+            <li>
+              Is the primary user a developer? A developer might use it, but is
+              it built specifically with developers in mind?
+            </li>
+            <li>
+              Is there a self-service signup? A demo or speaking to sales may be
+              an option, but an individual developer should be able to try it
+              themselves without speaking to anyone.
+            </li>
+            <li>
+              Would this form part of a regular-use set of developer tools? Does
+              it fit into the development cycle? Is it a part of the development
+              flow?
+            </li>
+            <li>
+              Does it make me a better developer? Does it help me reduce/manage
+              bugs, improve build times, get code to production faster,
+              reduce/manage errors, etc?
+            </li>
+            <li>
+              Would this be used by advanced power-users? Does it support dark
+              mode, is there an API and/or CLI, are there keyboard shortcuts,
+              what about accessibility?
+            </li>
+            <li>
+              Is the tool high quality? Does it work on multiple platforms
+              and/or browsers? Is it easy to install/deploy? Does it do the job
+              it claims?
+            </li>
+            <li>
+              Is it being actively maintained with regular bug fixes and
+              updates?
+            </li>
+            <li>Does it have good documentation?</li>
+            <li>Is it fast?</li>
+            <li>Does it have any negative impact on security or privacy?</li>
+            <li>
+              How would I feel recommending this to my friends? Would I share a
+              link to it?
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-8">
+          <h2 class="text-2xl lg:text-3xl">Betas</h2>
+          <p class="text-base lg:text-lg text-gray-400 mt-4">
+            We only list early access, alpha, or beta releases of tools where
+            developers are the primary user.
+          </p>
+          <p class="text-base lg:text-lg text-gray-400 mt-4">
+            To determine whether something falls under this definition, we use
+            Semver version numbers i.e. the release must be pre 1.0 and/or have
+            an appropriate label in the version number e.g. 1.0.0-beta.
+            Alternatively, the word "beta", "preview" or similar should appear
+            somewhere easily discoverable on the website, release notes, and/or
+            documentation. Any GA or stable releases are not eligible.
+          </p>
+        </div>
+
+        <div class="mt-8">
+          <h2 class="text-2xl lg:text-3xl">Sponsors</h2>
+          <p class="text-base lg:text-lg text-gray-400 mt-4">
+            Console works with
+            <a href="/advertise" class="underline hover:text-gray-200"
+              >advertisers</a
+            >
+            who want to reach our audience of experienced developers. These are
+            run as a sponsored text ad clearly marked in the newsletter. We do
+            not do sponsored reviews.
+          </p>
+        </div>
+
+        <div class="mt-8">
+          <h2 class="text-2xl lg:text-3xl">Submit a tool</h2>
+          <p class="text-base lg:text-lg text-gray-400 mt-4">
+            Email
+            <a
+              href="mailto:hello@console.dev"
+              class="underline hover:text-gray-200"
+              >hello@console.dev</a
+            >
+            with the details and we&apos;ll happily take a look.
+          </p>
+        </div>
+      </div>
+    </main>
+    {{template "footer"}}
+  </body>
+</html>

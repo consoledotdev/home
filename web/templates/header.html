@@ -1,0 +1,73 @@
+{{define "header"}}
+<header
+  class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center"
+  role="banner"
+  aria-label="Site header"
+>
+  <div class="flex items-center space-x-4" id="logo-wrapper">
+    <a href="/" class="flex items-center" aria-label="Home">
+      <svg
+        class="logo logo-svg-animated-explode"
+        viewBox="-100 -80 200 160"
+        fill="none"
+        preserveAspectRatio="xMinYMin slice"
+        role="img"
+        aria-labelledby="console-dev-logo-title"
+      >
+        <!-- Plane One (Blue) -->
+        <title id="console-dev-logo-title">console.dev Logo</title>
+        <path
+          id="plane-one"
+          class="plane plane-one"
+          transform="skewX(-26.56) translate(17.53 0)"
+          d=" M -50 -44.725 L 50 -44.725 L 50 44.725 L -50 44.725 L -50 -44.725 Z"
+          stroke="#5269FF"
+        ></path>
+        <!-- Plane Two (Pink) -->
+        <path
+          id="plane-two"
+          class="plane plane-two"
+          transform="skewX(-26.56) translate(0 17.53)"
+          d=" M 50 44.725 L -50 44.725 L -50 -44.725 L 50 -44.725 L 50 44.725 Z"
+          stroke="#F561F5"
+        ></path>
+        <!-- Plane Three (Green) -->
+        <path
+          id="plane-three"
+          class="plane plane-three"
+          transform="skewX(-26.56) translate(-17.53 -17.53)"
+          d=" M 50 44.725 L -50 44.725 L -50 -44.725 L 50 -44.725 L 50 44.725 Z"
+          stroke="#01BC90"
+        ></path>
+        <!-- Prompt Icon > -->
+        <path
+          class="prompt prompt-normal"
+          transform="translate(-86 -63)"
+          d="M65.3609 69.4288L81.14 62.17L72.6147 54.9183L75.2789 49.589L91.7954 63.6382L61.2256 77.701L65.3609 69.4288Z"
+          fill="#ffffff"
+        ></path>
+      </svg>
+      <span class="text-white font-medium text-3xl italic lowercase ml-1"
+        >console</span
+      >
+    </a>
+  </div>
+  <nav class="flex space-x-6" role="navigation" aria-label="Main navigation">
+    <a href="/advertise" class="hover:underline" aria-label="Advertise"
+      >Advertise</a
+    >
+    <a
+      href="https://podcasts.apple.com/us/podcast/console-devtools/id1572448316"
+      class="hover:underline"
+      aria-label="Podcast"
+      >Podcast</a
+    >
+    <a
+      href="mailto:hello@console.dev"
+      class="hover:underline"
+      aria-label="Contact"
+      >Contact</a
+    >
+  </nav>
+</header>
+{{end}}
