@@ -4,7 +4,6 @@ package handlers
 import (
 	"fmt"
 	"net/http"
-	"net/url"
 	"strings"
 
 	"log/slog"
@@ -41,35 +40,11 @@ func GenerateHandler(notionClient *notion.NotionClient) http.Handler {
 		for i := range tools {
 			// Append name for preview text
 			names = append(names, tools[i].Name)
-
-			// Append ?ref=console.dev to each tool URL
-			parsedUrl, err := url.Parse(tools[i].URL)
-			if err != nil {
-				slog.Error("Error parsing URL", "error", err)
-				http.Error(w, err.Error(), http.StatusInternalServerError)
-				return
-			}
-			query := parsedUrl.Query()
-			query.Set("ref", "console.dev")
-			parsedUrl.RawQuery = query.Encode()
-			tools[i].URL = parsedUrl.String()
 		}
 
 		for i := range betas {
 			// Append name for preview text
 			names = append(names, betas[i].Name)
-
-			// Append ?ref=console.dev to each beta URL
-			parsedUrl, err := url.Parse(betas[i].URL)
-			if err != nil {
-				slog.Error("Error parsing URL", "error", err)
-				http.Error(w, err.Error(), http.StatusInternalServerError)
-				return
-			}
-			query := parsedUrl.Query()
-			query.Set("ref", "console.dev")
-			parsedUrl.RawQuery = query.Encode()
-			betas[i].URL = parsedUrl.String()
 		}
 
 		data := GenerateData{

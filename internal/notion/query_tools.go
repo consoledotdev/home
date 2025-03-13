@@ -77,10 +77,15 @@ func parseToolResult(r NotionToolsResult) (Tool, error) {
 
 	if len(r.Properties.URL.URL) > 0 {
 		u = r.Properties.URL.URL
-
-		if _, err := url.Parse(u); err != nil {
+		parsedUrl, err := url.Parse(u)
+		if err != nil {
 			return Tool{}, fmt.Errorf("invalid URL for tool %s: %w", r.ID, err)
 		}
+
+		query := parsedUrl.Query()
+		query.Add("ref", "console.dev")
+		parsedUrl.RawQuery = query.Encode()
+		u = parsedUrl.String()
 	} else {
 		return Tool{}, fmt.Errorf("missing URL for tool %s", r.ID)
 	}
@@ -104,7 +109,7 @@ func parseToolResult(r NotionToolsResult) (Tool, error) {
 		Name:           html.EscapeString(name),
 		Description:    html.EscapeString(desc),
 		Position:       position,
-		URL:            r.Properties.URL.URL,
+		URL:            u,
 		Like:           html.EscapeString(like),
 		Dislike:        html.EscapeString(dislike),
 	}, nil

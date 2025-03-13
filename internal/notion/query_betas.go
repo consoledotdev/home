@@ -90,10 +90,15 @@ func parseBetaResult(r NotionBetasResult) (Beta, error) {
 
 	if len(r.Properties.URL.URL) > 0 {
 		u = r.Properties.URL.URL
-
-		if _, err := url.Parse(u); err != nil {
+		parsedUrl, err := url.Parse(u)
+		if err != nil {
 			return Beta{}, fmt.Errorf("invalid URL for beta %s: %w", r.ID, err)
 		}
+
+		query := parsedUrl.Query()
+		query.Add("ref", "console.dev")
+		parsedUrl.RawQuery = query.Encode()
+		u = parsedUrl.String()
 	} else {
 		return Beta{}, fmt.Errorf("missing URL for beta %s", r.ID)
 	}
