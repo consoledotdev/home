@@ -16,9 +16,11 @@ dev:
 			exit 1; \
 		fi; \
 	fi; \
-	echo "Setting NOTION_SECRET..."; \
-	export NOTION_SECRET=$$(op --account consoledotdev.1password.com \
-		read "op://Home/Notion API Key/credential"); \
+	if [ -z "$$NOTION_SECRET" ]; then \
+		echo "Setting NOTION_SECRET..."; \
+		export NOTION_SECRET=$$(op --account consoledotdev.1password.com \
+			read "op://Home/Notion API Key/credential"); \
+	fi; \
 	export DEBUG=true; \
 	echo "Starting Air..."; \
 	$$AIR_CMD
