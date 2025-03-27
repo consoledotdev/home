@@ -3,7 +3,6 @@ package notion
 import (
 	"encoding/json"
 	"fmt"
-	"html"
 	"log/slog"
 	"net/url"
 	"time"
@@ -117,9 +116,9 @@ func parseBetaResult(r NotionBetasResult) (Beta, error) {
 		ID:             r.ID,
 		CreatedTime:    r.CreatedTime,
 		LastEditedTime: r.LastEditedTime,
-		Name:           html.EscapeString(name),
+		Name:           name,
 		Announced:      announced,
-		Description:    html.EscapeString(desc),
+		Description:    desc,
 		Category:       category,
 		Access:         access,
 		Type:           betaType,

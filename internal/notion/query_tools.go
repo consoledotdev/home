@@ -3,7 +3,6 @@ package notion
 import (
 	"encoding/json"
 	"fmt"
-	"html"
 	"log/slog"
 	"net/url"
 	"sort"
@@ -106,12 +105,12 @@ func parseToolResult(r NotionToolsResult) (Tool, error) {
 		ID:             r.ID,
 		CreatedTime:    r.CreatedTime,
 		LastEditedTime: r.LastEditedTime,
-		Name:           html.EscapeString(name),
-		Description:    html.EscapeString(desc),
+		Name:           name,
+		Description:    desc,
 		Position:       position,
 		URL:            u,
-		Like:           html.EscapeString(like),
-		Dislike:        html.EscapeString(dislike),
+		Like:           like,
+		Dislike:        dislike,
 	}, nil
 }
 

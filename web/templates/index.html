@@ -154,7 +154,7 @@
                 aria-label="{{.Name}}"
                 >{{.Name}}</a
               >
-              &mdash; {{.Description}}
+              &mdash; {{.Description | html}}
             </div>
           </li>
           {{end}} {{range .Betas}}
@@ -181,7 +181,7 @@
                 aria-label="{{.Name}}"
                 >{{.Name}}</a
               >
-              &mdash; {{.Description}}
+              &mdash; {{.Description | html}}
             </div>
           </li>
           {{end}}
@@ -208,15 +208,15 @@
                 >{{.Name}}</a
               >
             </h3>
-            <p class="text-sm uppercase text-gray-400 mb-4">{{.Description}}</p>
+            <p class="text-sm uppercase text-gray-400 mb-4">{{.Description | html}}</p>
             <div class="space-y-6">
               <div>
                 <h4 class="font-semibold mb-1">What we like</h4>
-                <p class="text-gray-300 leading-relaxed">{{.Like}}</p>
+                <p class="text-gray-300 leading-relaxed">{{.Like | html}}</p>
               </div>
               <div>
                 <h4 class="font-semibold mb-1">What we don&apos;t like</h4>
-                <p class="text-gray-300 leading-relaxed">{{.Dislike}}</p>
+                <p class="text-gray-300 leading-relaxed">{{.Dislike | html}}</p>
               </div>
             </div>
           </article>
@@ -246,7 +246,7 @@
                 >
               </h3>
               <p class="text-sm uppercase mb-2 text-gray-400">
-                {{.Description}}
+                {{.Description | html}}
               </p>
               <div
                 class="flex items-center mt-2 text-xs text-gray-500 space-x-2"

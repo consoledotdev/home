@@ -28,7 +28,7 @@
                                 <strong style="display:block; font-size:12px; font-weight:bold; margin-right:4px; margin-top:1px; width:12px">＋</strong>
                             </td>
                             <td>
-                                <a href="{{ .URL }}"><strong>{{ .Name }}</strong></a> &ndash; {{ .Description }}
+                                <a href="{{ .URL }}"><strong>{{ .Name }}</strong></a> &ndash; {{ .Description | html }}
                             </td>
                         </tr>
                 {{- end -}}
@@ -37,7 +37,7 @@
                     <td style="vertical-align: top; width: 12px;">
                         <span style="display:block; font-size:15px; margin-left:2px; margin-right:4px; width:12px"><em>&beta;</em></span></td>
                     <td>
-                        <a href="{{ .URL }}" target="_blank"><strong>{{ .Name }}</strong></a> &ndash; {{ .Description }}
+                        <a href="{{ .URL }}" target="_blank"><strong>{{ .Name }}</strong></a> &ndash; {{ .Description | html }}
                     </td>
                 </tr>
                 {{- end -}}
