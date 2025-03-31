@@ -2,9 +2,9 @@
   "name": "console.dev",
   "version": "1.0.0",
   "scripts": {
-    "build": "npx @tailwindcss/cli@4.0.12 -i web/static/css/input.css -o web/static/css/output.css"
+    "build": "npx @tailwindcss/cli@4.0.17 -i web/static/css/input.css -o web/static/css/output.css"
   },
   "dependencies": {
-    "tailwindcss": "4.0.12"
+    "tailwindcss": "4.0.17"
   }
 }
