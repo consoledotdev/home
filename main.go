@@ -125,6 +125,7 @@ func main() {
 	mux.Handle("GET /tools/rss.xml", chain.Then(handlers.RssToolsHandler(swrCache)))
 	mux.Handle("GET /advertise", chain.Then(handlers.AdvertiseHandler()))
 	mux.Handle("GET /privacy", chain.Then(handlers.PrivacyHandler()))
+	mux.Handle("GET /confirm", chain.Then(handlers.ConfirmHandler()))
 	mux.Handle("GET /selection-criteria", chain.Then(handlers.SelectionCriteriaHandler()))
 
 	// Only available when running locally
