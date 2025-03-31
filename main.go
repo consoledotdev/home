@@ -126,6 +126,8 @@ func main() {
 	mux.Handle("GET /advertise", chain.Then(handlers.AdvertiseHandler()))
 	mux.Handle("GET /privacy", chain.Then(handlers.PrivacyHandler()))
 	mux.Handle("GET /confirm", chain.Then(handlers.ConfirmHandler()))
+	// Mailchimp doesn't support removing the trailing slash from links
+	mux.Handle("GET /confirm/", chain.Then(handlers.ConfirmHandler()))
 	mux.Handle("GET /selection-criteria", chain.Then(handlers.SelectionCriteriaHandler()))
 
 	// Only available when running locally
