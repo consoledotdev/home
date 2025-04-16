@@ -64,7 +64,7 @@
               <button
                 type="submit"
                 aria-label="Sign up for the newsletter"
-                class="w-full sm:w-auto plausible-event-name=Newsletter+Subscribe flex items-center justify-center space-x-2 bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700"
+                class="w-full sm:w-auto plausible-event-name=Newsletter+Subscribe flex items-center justify-center space-x-2 bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700 cursor-pointer"
               >
                 <svg
                   class="w-5 h-5"
@@ -208,7 +208,9 @@
                 >{{.Name}}</a
               >
             </h3>
-            <p class="text-sm uppercase text-gray-400 mb-4">{{.Description | html}}</p>
+            <p class="text-sm uppercase text-gray-400 mb-4">
+              {{.Description | html}}
+            </p>
             <div class="space-y-6">
               <div>
                 <h4 class="font-semibold mb-1">What we like</h4>
