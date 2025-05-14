@@ -7,6 +7,9 @@
 	"features": {
 		"ghcr.io/devcontainers/features/node:1": {}
 	},
+	"remoteEnv": {
+		"NOTION_SECRET": "${localEnv:NOTION_SECRET}"
+	},
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside "?|"nd' to run commands after the container is created.

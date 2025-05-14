@@ -5,6 +5,19 @@ Tailwind and hosted using a static Go server.
 
 ## Development
 
+### Devcontainer
+
+Launch with this command to inject the secret:
+
+```sh
+export NOTION_SECRET="op://Home/Notion API Key/credential" && op run -- code .
+```
+
+This will start VS Code with the secret set. You can reopen in the devcontainer
+and it will be available in the environment.
+
+### Dev server
+
 Start the development server which will watch for changes and rebuild the site
 automatically.
 
