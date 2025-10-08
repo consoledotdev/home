@@ -18,8 +18,8 @@ dev:
 	fi; \
 	if [ -z "$$NOTION_SECRET" ]; then \
 		echo "Setting NOTION_SECRET..."; \
-		export NOTION_SECRET=$$(op --account consoledotdev.1password.com \
-			read "op://Home/Notion API Key/credential"); \
+		export NOTION_SECRET=$$(op --account my.1password.com \
+			read "op://Console/Notion API Key/credential"); \
 	fi; \
 	export DEBUG=true; \
 	echo "Starting Air..."; \
