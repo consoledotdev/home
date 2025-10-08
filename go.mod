@@ -1,3 +1,3 @@
 module github.com/consoledotdev/home
 
-go 1.24.0
+go 1.25.2
