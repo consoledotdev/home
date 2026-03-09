@@ -2,6 +2,7 @@ package web
 
 import (
 	"bytes"
+	"crypto/sha256"
 	"embed"
 	"fmt"
 	"html/template"
@@ -24,7 +25,10 @@ var fns = template.FuncMap{
 	},
 }
 
-func NewTemplates(resources embed.FS) {
+func NewTemplates(resources embed.FS, staticResources embed.FS) {
+	cssHash := computeCSSHash(staticResources)
+	fns["cssVersion"] = func() string { return cssHash }
+
 	var paths []string
 	fs.WalkDir(resources, ".", func(path string, d fs.DirEntry, err error) error {
 		if strings.Contains(d.Name(), ".html") {
@@ -34,6 +38,15 @@ func NewTemplates(resources embed.FS) {
 	})
 
 	tmpl = template.Must(template.New("").Funcs(fns).ParseFS(resources, paths...))
+}
+
+func computeCSSHash(staticResources embed.FS) string {
+	data, err := staticResources.ReadFile("web/static/css/output.css")
+	if err != nil {
+		return "0"
+	}
+	sum := sha256.Sum256(data)
+	return fmt.Sprintf("%x", sum[:4])
 }
 
 func Render(w http.ResponseWriter, name string, data interface{}) {

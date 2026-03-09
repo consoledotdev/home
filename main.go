@@ -60,7 +60,7 @@ func main() {
 
 	c := cache.NewMemoryCache()
 
-	web.NewTemplates(templates)
+	web.NewTemplates(templates, static)
 
 	// StaleCache that revalidates after midnight
 	swrCache := &cache.SwrCache{
