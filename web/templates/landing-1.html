@@ -139,72 +139,57 @@
               &mdash; We keep track of everything - dev tools, devops, cloud,
               and APIs - so you don&apos;t have to.
             </p>
-            <p class="font-semibold text-white mb-2">Contents</p>
+            <p class="font-semibold text-white mb-2">
+              Contents {{.NewsletterDate}}
+            </p>
             <ul class="space-y-1.5 text-xs text-gray-300">
+              {{range .Tools}}
               <li class="flex items-start gap-2">
-                <span class="text-console-category mt-0.5">+</span>
-                <span
-                  ><span class="text-indigo-400 underline">Sourcegraph</span>
-                  &ndash; Code search engine.</span
+                <span class="text-console-category mt-0.5 flex-shrink-0"
+                  >+</span
                 >
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-console-category mt-0.5">+</span>
                 <span
-                  ><span class="text-indigo-400 underline">Hoppscotch</span>
-                  &ndash; Test UI for API requests.</span
-                >
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-console-category mt-0.5">+</span>
-                <span
-                  ><span class="text-indigo-400 underline">ESLint v8</span>
-                  &ndash; Find and fix problems in your JavaScript code.</span
-                >
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-gray-500 mt-0.5">β</span>
-                <span
-                  ><span class="text-indigo-400 underline">React Router</span>
-                  &ndash; Declarative routing for React.</span
-                >
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-gray-500 mt-0.5">β</span>
-                <span
-                  ><span class="text-indigo-400 underline">EdgeDB</span> &ndash;
-                  Relational database built on top of PostgreSQL.</span
-                >
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-gray-500 mt-0.5">β</span>
-                <span
-                  ><span class="text-indigo-400 underline">GCToolKit</span>
-                  &ndash; Tool for parsing Java GC logs.</span
-                >
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-indigo-400 mt-0.5">🎙</span>
-                <span
-                  ><span class="text-indigo-400 underline"
-                    >Console Podcast EP7</span
+                  ><a class="text-indigo-400 underline" href="{{.URL}}"
+                    >{{.Name}}</a
                   >
-                  &ndash; Code search, dev flow &amp; testing.</span
+                  &ndash; {{.Description | html}}</span
                 >
               </li>
+              {{end}} {{range .Betas}}
+              <li class="flex items-start gap-2">
+                <span class="text-gray-500 mt-0.5 flex-shrink-0">β</span>
+                <span
+                  ><a class="text-indigo-400 underline" href="{{.URL}}"
+                    >{{.Name}}</a
+                  >
+                  &ndash; {{.Description | html}}</span
+                >
+              </li>
+              {{end}}
             </ul>
+            {{with index .Tools 0}}
             <div class="mt-4 pt-4 border-t border-gray-700">
               <p class="text-console-category font-semibold text-xs">
                 + Interesting tools
               </p>
-              <p class="text-indigo-400 underline text-xs mt-2">Sourcegraph</p>
-              <p class="text-gray-400 text-xs">Code search engine.</p>
-              <p class="text-gray-400 text-xs mt-2 leading-relaxed">
-                <strong class="text-white">What we like:</strong> Code structure
-                search on syntax e.g. function arguments, multi-line blocks,
-                JSON structures. Can scope to repos
+              <p class="mt-2">
+                <a class="text-indigo-400 underline text-xs" href="{{.URL}}"
+                  >{{.Name}}</a
+                >
               </p>
+              <p class="text-gray-400 text-xs">{{.Description | html}}</p>
+              <p class="text-gray-400 text-xs mt-2 leading-relaxed">
+                <strong class="text-white">What we like:</strong> {{.Like |
+                html}}
+              </p>
+              <div
+                class="mt-3 pt-2 border-t border-gray-800 flex items-center gap-1.5 text-gray-600 text-xs"
+              >
+                <span>· · ·</span>
+                <span class="text-gray-500">Continues in the real email</span>
+              </div>
             </div>
+            {{end}}
           </div>
         </div>
       </section>
