@@ -366,6 +366,9 @@
   .h-screen {
     height: 100vh;
   }
+  .\!w-5 {
+    width: calc(var(--spacing) * 5) !important;
+  }
   .w-1\.5 {
     width: calc(var(--spacing) * 1.5);
   }
