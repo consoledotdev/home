@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Console Newsletter - The best tools for developers</title>
+    <link href="/static/css/output.css" rel="stylesheet" />
+    <meta name="robots" content="noindex" />
+    <meta
+      name="description"
+      content="A free weekly email digest of the best tools and beta releases for developers."
+    />
+    <meta
+      property="og:title"
+      content="Console Newsletter - The best tools for developers"
+    />
+    <meta
+      property="og:description"
+      content="A free weekly email digest of the best tools and beta releases for developers."
+    />
+    <meta property="og:url" content="https://console.dev/landing/1" />
+    <meta property="og:site_name" content="console.dev" />
+    <meta
+      property="og:image"
+      content="https://console.dev/static/img/console-mark.png"
+    />
+    <meta property="og:type" content="website" />
+    <link
+      rel="icon"
+      href="/static/img/favicon.ico"
+      type="image/x-icon"
+      sizes="192x192"
+    />
+    <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml" />
+    <script
+      defer
+      data-domain="console.dev"
+      src="https://plausible.io/js/script.outbound-links.tagged-events.js"
+    ></script>
+  </head>
+  <body class="bg-black text-white">
+    {{template "header"}}
+
+    <main>
+      <!-- Section 1: Hero -->
+      <section
+        class="max-w-7xl mx-auto px-8 py-16 flex flex-col lg:flex-row items-center lg:items-start gap-12"
+      >
+        <div class="lg:w-1/2 space-y-6">
+          <h1 class="text-5xl lg:text-6xl font-light leading-tight">
+            Discover the best tools for developers
+          </h1>
+          <p class="text-lg text-gray-300 font-light">
+            A free weekly email with the best tools and beta releases for
+            developers.
+          </p>
+          <form
+            name="console-subscribe"
+            action="https://dev.us7.list-manage.com/subscribe/post?u=f8c3cd14ee8d63c53d0986a48&amp;id=267911a165"
+            method="post"
+            class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3"
+          >
+            <input
+              type="email"
+              name="EMAIL"
+              id="email-subscribe-hero"
+              required
+              placeholder="Your email"
+              aria-label="Enter your email address"
+              class="flex-1 px-4 py-3 rounded-lg bg-black border border-gray-600 text-white focus:ring-2 focus:ring-indigo-500 placeholder-gray-500"
+              autocomplete="email"
+            />
+            <input
+              type="text"
+              tabindex="-1"
+              name="b_f8c3cd14ee8d63c53d0986a48_267911a165"
+              value=""
+              class="hidden"
+            />
+            <button
+              type="submit"
+              aria-label="Sign up for the newsletter"
+              class="plausible-event-name=Newsletter+Subscribe flex items-center justify-center gap-2 bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700 cursor-pointer whitespace-nowrap"
+            >
+              <!-- send icon -->
+              <svg
+                class="w-5 h-5"
+                viewBox="0 0 128 128"
+                fill="white"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <path
+                    d="M125 17L3 56.8507L43.75 68.1418M125 17L93.1739 106L64.8963 84.3397M125 17L43.75 68.1418M125 17L64.8963 84.3397M43.75 68.1418L64.8963 84.3397M43.75 68.1418L49.7065 101.358L64.8963 84.3397"
+                    vector-effect="non-scaling-stroke"
+                  ></path>
+                </g>
+              </svg>
+              <span>Sign Up</span>
+            </button>
+          </form>
+          <p class="text-sm text-gray-400">Every Thursday.</p>
+        </div>
+
+        <!-- Newsletter preview card -->
+        <div class="lg:w-1/2 flex justify-center lg:justify-end">
+          <div
+            class="w-full max-w-sm bg-gray-900 rounded-2xl p-6 text-sm shadow-2xl border border-gray-800"
+          >
+            <div class="flex items-center gap-2 mb-3">
+              <svg class="w-5 h-5" viewBox="-100 -80 200 160" fill="none">
+                <path
+                  transform="skewX(-26.56) translate(17.53 0)"
+                  d="M -50 -44.725 L 50 -44.725 L 50 44.725 L -50 44.725 L -50 -44.725 Z"
+                  stroke="#5269FF"
+                ></path>
+                <path
+                  transform="skewX(-26.56) translate(0 17.53)"
+                  d="M 50 44.725 L -50 44.725 L -50 -44.725 L 50 -44.725 L 50 44.725 Z"
+                  stroke="#F561F5"
+                ></path>
+                <path
+                  transform="skewX(-26.56) translate(-17.53 -17.53)"
+                  d="M 50 44.725 L -50 44.725 L -50 -44.725 L 50 -44.725 L 50 44.725 Z"
+                  stroke="#01BC90"
+                ></path>
+                <path
+                  transform="translate(-86 -63)"
+                  d="M65.3609 69.4288L81.14 62.17L72.6147 54.9183L75.2789 49.589L91.7954 63.6382L61.2256 77.701L65.3609 69.4288Z"
+                  fill="#ffffff"
+                ></path>
+              </svg>
+              <span class="font-medium italic">console</span>
+            </div>
+            <p class="text-gray-400 text-xs leading-relaxed mb-4">
+              <strong class="text-white"
+                >A weekly digest of the best developer tools</strong
+              >
+              &mdash; We keep track of everything - dev tools, devops, cloud,
+              and APIs - so you don&apos;t have to.
+            </p>
+            <p class="font-semibold text-white mb-2">Contents</p>
+            <ul class="space-y-1.5 text-xs text-gray-300">
+              <li class="flex items-start gap-2">
+                <span class="text-console-category mt-0.5">+</span>
+                <span
+                  ><span class="text-indigo-400 underline">Sourcegraph</span>
+                  &ndash; Code search engine.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-console-category mt-0.5">+</span>
+                <span
+                  ><span class="text-indigo-400 underline">Hoppscotch</span>
+                  &ndash; Test UI for API requests.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-console-category mt-0.5">+</span>
+                <span
+                  ><span class="text-indigo-400 underline">ESLint v8</span>
+                  &ndash; Find and fix problems in your JavaScript code.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-gray-500 mt-0.5">β</span>
+                <span
+                  ><span class="text-indigo-400 underline">React Router</span>
+                  &ndash; Declarative routing for React.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-gray-500 mt-0.5">β</span>
+                <span
+                  ><span class="text-indigo-400 underline">EdgeDB</span> &ndash;
+                  Relational database built on top of PostgreSQL.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-gray-500 mt-0.5">β</span>
+                <span
+                  ><span class="text-indigo-400 underline">GCToolKit</span>
+                  &ndash; Tool for parsing Java GC logs.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-indigo-400 mt-0.5">🎙</span>
+                <span
+                  ><span class="text-indigo-400 underline"
+                    >Console Podcast EP7</span
+                  >
+                  &ndash; Code search, dev flow &amp; testing.</span
+                >
+              </li>
+            </ul>
+            <div class="mt-4 pt-4 border-t border-gray-700">
+              <p class="text-console-category font-semibold text-xs">
+                + Interesting tools
+              </p>
+              <p class="text-indigo-400 underline text-xs mt-2">Sourcegraph</p>
+              <p class="text-gray-400 text-xs">Code search engine.</p>
+              <p class="text-gray-400 text-xs mt-2 leading-relaxed">
+                <strong class="text-white">What we like:</strong> Code structure
+                search on syntax e.g. function arguments, multi-line blocks,
+                JSON structures. Can scope to repos
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Trust signals -->
+      <section
+        class="max-w-7xl mx-auto px-8 py-16 flex flex-col lg:flex-row gap-16 items-start"
+      >
+        <div class="lg:w-1/2 space-y-6">
+          <h2 class="text-4xl font-light">Trusted by 30k+ developers</h2>
+          <p class="text-gray-300 italic leading-relaxed">
+            &ldquo;If you&apos;re interested in cool new developer tools check
+            out Console it&apos;s a great, short and sharp roundup newsletter,
+            well worth a follow&rdquo;
+            <span class="not-italic text-gray-400"
+              >&nbsp;James Governor, Co-founder, RedMonk</span
+            >
+          </p>
+        </div>
+        <div class="lg:w-1/2 space-y-6">
+          <p class="text-gray-400 text-sm">Join subscribers from:</p>
+          <div class="relative">
+            <div class="grid grid-cols-3 gap-x-8 gap-y-6 items-center">
+              <!-- GitHub -->
+              <div class="flex items-center gap-2 text-white">
+                <svg
+                  class="w-5 h-5 fill-current"
+                  viewBox="0 0 24 24"
+                  aria-label="GitHub"
+                >
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                  />
+                </svg>
+                <span class="font-semibold tracking-wide">GitHub</span>
+              </div>
+              <!-- Atlassian -->
+              <div class="flex items-center gap-2 text-white">
+                <svg
+                  class="w-5 h-5 fill-current"
+                  viewBox="0 0 24 24"
+                  aria-label="Atlassian"
+                >
+                  <path
+                    d="M.68 11.9a.45.45 0 0 0-.45.55l2.2 13.35a.6.6 0 0 0 .58.46h14.44a.45.45 0 0 0 .45-.38l2.2-13.43a.45.45 0 0 0-.45-.55Zm8.37 8.9a3.43 3.43 0 1 1 3.43-3.43 3.43 3.43 0 0 1-3.43 3.43ZM9.09.76a.45.45 0 0 0-.45.55l.76 4.61a5.22 5.22 0 1 1 0 10.44l-.76 4.61a.45.45 0 0 0 .45.55h5.79a.45.45 0 0 0 .45-.38l2.2-13.43a.45.45 0 0 0-.45-.55Z"
+                  />
+                </svg>
+                <span class="font-semibold tracking-widest uppercase text-sm"
+                  >Atlassian</span
+                >
+              </div>
+              <!-- Microsoft -->
+              <div class="flex items-center gap-2 text-white">
+                <svg
+                  class="w-5 h-5 fill-current"
+                  viewBox="0 0 24 24"
+                  aria-label="Microsoft"
+                >
+                  <path
+                    d="M11.4 24H0V12.6h11.4V24zM24 24H12.6V12.6H24V24zM11.4 11.4H0V0h11.4v11.4zM24 11.4H12.6V0H24v11.4z"
+                  />
+                </svg>
+                <span class="font-semibold tracking-wide">Microsoft</span>
+              </div>
+              <!-- Cloudflare -->
+              <div class="flex items-center gap-2 text-white">
+                <svg
+                  class="w-6 h-6 fill-current"
+                  viewBox="0 0 128 128"
+                  aria-label="Cloudflare"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M106.888 58.824C105 34 89.3653 18 68 18C49 18 33 32.5 30.112 50.824C10.5 53 0 68 0 83.6667C0 99.3333 13.136 111 29.3333 111H98.6667C114.864 111 128 100.864 128 84.6667C128 70.256 118.5 61.5 106.888 58.824Z"
+                  />
+                </svg>
+                <span class="font-semibold tracking-widest uppercase text-sm"
+                  >Cloudflare</span
+                >
+              </div>
+              <!-- Adobe -->
+              <div class="flex items-center gap-2 text-white">
+                <svg
+                  class="w-5 h-5 fill-current"
+                  viewBox="0 0 24 24"
+                  aria-label="Adobe"
+                >
+                  <path
+                    d="M13.966 22.624l-1.69-4.281H7.487l-1.69 4.281H2.889l7.304-18.31h1.837l7.303 18.31h-3.367zm-6.971-6.619h4.762l-2.38-6.094-2.382 6.094zM0 0h7.197l-7.197 18.31V0zm24 0v18.31L16.803 0H24z"
+                  />
+                </svg>
+                <span class="font-semibold tracking-wide">Adobe</span>
+              </div>
+              <!-- Twilio -->
+              <div class="flex items-center gap-2 text-white">
+                <svg
+                  class="w-5 h-5 fill-current"
+                  viewBox="0 0 24 24"
+                  aria-label="Twilio"
+                >
+                  <path
+                    d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 22.5C6.2 22.5 1.5 17.8 1.5 12S6.2 1.5 12 1.5 22.5 6.2 22.5 12 17.8 22.5 12 22.5zm3.4-14.5c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm0 8c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm-8 0c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm0-8c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2z"
+                  />
+                </svg>
+                <span class="font-semibold tracking-wide">twilio</span>
+              </div>
+            </div>
+            <!-- vapor globe decoration -->
+            <div
+              class="absolute -right-4 top-0 w-24 h-24 rounded-full bg-indigo-900 opacity-60 blur-xl pointer-events-none"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Separator -->
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="border-t border-gray-800"></div>
+      </div>
+
+      <!-- Section 3: Interesting tools & new betas -->
+      <section
+        class="max-w-7xl mx-auto px-8 py-16 flex flex-col lg:flex-row gap-16 items-start"
+      >
+        <div class="lg:w-1/2 space-y-6">
+          <h2 class="text-3xl font-light">Interesting tools &amp; new betas</h2>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-center gap-3">
+              <span
+                class="w-1.5 h-1.5 rounded-full bg-console-category flex-shrink-0"
+              ></span>
+              2-3 developer tool recommendations.
+            </li>
+            <li class="flex items-center gap-3">
+              <span
+                class="w-1.5 h-1.5 rounded-full bg-console-category flex-shrink-0"
+              ></span>
+              3-5 interesting new beta releases.
+            </li>
+            <li class="flex items-center gap-3">
+              <span
+                class="w-1.5 h-1.5 rounded-full bg-console-category flex-shrink-0"
+              ></span>
+              Interviews with the people behind the tools.
+            </li>
+          </ul>
+        </div>
+        <div class="lg:w-1/2">
+          <!-- Neon planes decoration (CSS-based) -->
+          <div class="relative mb-8 h-32 overflow-hidden">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div
+                class="w-40 h-24 border border-purple-600 opacity-50 skew-x-6 -translate-x-4"
+              ></div>
+              <div
+                class="absolute w-40 h-24 border border-indigo-600 opacity-50 skew-x-6 translate-x-4 translate-y-4"
+              ></div>
+              <div
+                class="absolute w-40 h-24 border border-green-600 opacity-50 skew-x-6 -translate-x-2 -translate-y-4"
+              ></div>
+            </div>
+          </div>
+          <!-- Category pills -->
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="/tools?category=api"
+              class="flex items-center gap-2 px-3 py-2 border border-gray-700 rounded-lg text-sm text-gray-300 hover:border-gray-500 hover:text-white transition-colors"
+            >
+              <svg
+                class="w-4 h-4 text-console-category fill-current"
+                viewBox="0 0 128 128"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M125.478 42.97C113.79 49.7383 109.752 64.6399 116.463 76.271C118.682 80.1102 121.781 83.0962 125.365 85.2006L112.795 106.984C101.078 100.273 86.2053 104.254 79.4939 115.857C77.2757 119.696 76.2519 123.876 76.2519 128H51.1126C51.0273 114.52 40.164 103.629 26.7696 103.629C22.3333 103.629 18.1813 104.823 14.5981 106.899L2.02844 85.1153C13.6881 78.3186 17.6978 63.4455 10.9864 51.8427C8.76827 47.9751 5.61164 44.9607 2 42.9131L14.5696 21.1295C26.2862 27.8694 41.2162 23.9165 47.9276 12.2853C50.1742 8.41768 51.198 4.1804 51.1695 0H76.3373C76.3373 13.5081 87.2575 24.4852 100.68 24.4852C105.145 24.4852 109.325 23.2908 112.909 21.1864L125.478 42.97ZM64 84C75.0457 84 84 75.0457 84 64C84 52.9543 75.0457 44 64 44C52.9543 44 44 52.9543 44 64C44 75.0457 52.9543 84 64 84Z"
+                />
+              </svg>
+              API
+            </a>
+            <a
+              href="/tools?category=cloud"
+              class="flex items-center gap-2 px-3 py-2 border border-gray-700 rounded-lg text-sm text-gray-300 hover:border-gray-500 hover:text-white transition-colors"
+            >
+              <svg
+                class="w-4 h-4 text-console-category fill-current"
+                viewBox="0 0 128 128"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M106.888 58.824C105 34 89.3653 18 68 18C49 18 33 32.5 30.112 50.824C10.5 53 0 68 0 83.6667C0 99.3333 13.136 111 29.3333 111H98.6667C114.864 111 128 100.864 128 84.6667C128 70.256 118.5 61.5 106.888 58.824Z"
+                />
+              </svg>
+              Cloud
+            </a>
+            <a
+              href="/tools?category=database"
+              class="flex items-center gap-2 px-3 py-2 border border-gray-700 rounded-lg text-sm text-gray-300 hover:border-gray-500 hover:text-white transition-colors"
+            >
+              <svg
+                class="w-4 h-4 text-console-category fill-current"
+                viewBox="0 0 128 128"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M64 95C94.9279 95 120 85.598 120 74V100.25C120 111.848 94.9279 121.25 64 121.25C33.0721 121.25 8 111.848 8 100.25V74C8 85.598 33.0721 95 64 95Z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M64 59C94.9279 59 120 49.598 120 38V64.25C120 75.848 94.9279 85.25 64 85.25C33.0721 85.25 8 75.848 8 64.25V38C8 49.598 33.0721 59 64 59Z"
+                />
+                <ellipse cx="64" cy="28" rx="56" ry="21" />
+              </svg>
+              Database
+            </a>
+            <a
+              href="/tools?category=data-science"
+              class="flex items-center gap-2 px-3 py-2 border border-gray-700 rounded-lg text-sm text-gray-300 hover:border-gray-500 hover:text-white transition-colors"
+            >
+              <svg
+                class="w-4 h-4 text-console-category fill-current"
+                viewBox="0 0 128 128"
+              >
+                <circle cx="14" cy="39" r="14" />
+                <circle cx="114" cy="64" r="14" />
+                <circle cx="64" cy="14" r="14" />
+                <circle cx="14" cy="89" r="14" />
+                <circle cx="64" cy="64" r="14" />
+                <circle cx="64" cy="114" r="14" />
+              </svg>
+              Data Science
+            </a>
+            <a
+              href="/tools?category=developer-tools"
+              class="flex items-center gap-2 px-3 py-2 border border-gray-700 rounded-lg text-sm text-gray-300 hover:border-gray-500 hover:text-white transition-colors"
+            >
+              <svg
+                class="w-4 h-4 text-console-category fill-current"
+                viewBox="0 0 128 128"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M128 0H0V128H128V0ZM53.9556 49.7424C55.0684 49.0005 55.7368 47.7516 55.7368 46.4142V34.7953C55.7368 32.7986 53.5115 31.6076 51.8501 32.7152L12.7812 58.7611C11.6684 59.503 11 60.7519 11 62.0893V66.1587C11 67.4961 11.6684 68.7451 12.7812 69.4869L51.8501 95.5329C53.5114 96.6404 55.7368 95.4495 55.7368 93.4527V81.8339C55.7368 80.4964 55.0684 79.2475 53.9556 78.5057L32.3832 64.124L53.9556 49.7424ZM73.7812 49.7424C72.6684 49.0005 72 47.7516 72 46.4142V34.7953C72 32.7986 74.2254 31.6076 75.8867 32.7152L114.956 58.7611C116.068 59.503 116.737 60.7519 116.737 62.0893V66.1587C116.737 67.4961 116.068 68.7451 114.956 69.4869L75.8868 95.5329C74.2254 96.6404 72 95.4495 72 93.4527V81.8339C72 80.4964 72.6684 79.2475 73.7812 78.5057L95.3536 64.124L73.7812 49.7424Z"
+                />
+              </svg>
+              Developer Tools
+            </a>
+            <a
+              href="/tools?category=devops"
+              class="flex items-center gap-2 px-3 py-2 border border-gray-700 rounded-lg text-sm text-gray-300 hover:border-gray-500 hover:text-white transition-colors"
+            >
+              <svg
+                class="w-4 h-4 text-console-category fill-current"
+                viewBox="0 0 128 128"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M128 0H0V128H128V0ZM26 38.5825C26 39.9199 26.6684 41.1689 27.7812 41.9107L52.1011 58.124L27.7812 74.3373C26.6684 75.0792 26 76.3281 26 77.6655V91.4527C26 93.4495 28.2254 94.6404 29.8867 93.5329L74.2188 63.9782C75.3316 63.2363 76 61.9874 76 60.65V55.5981C76 54.2607 75.3316 53.0118 74.2188 52.2699L29.8867 22.7152C28.2254 21.6076 26 22.7986 26 24.7953V38.5825Z"
+                />
+              </svg>
+              DevOps
+            </a>
+            <a
+              href="/tools?category=misc"
+              class="flex items-center gap-2 px-3 py-2 border border-gray-700 rounded-lg text-sm text-gray-300 hover:border-gray-500 hover:text-white transition-colors"
+            >
+              <svg
+                class="w-4 h-4 text-console-category fill-current"
+                viewBox="0 0 128 128"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M64 128C99.3462 128 128 99.3462 128 64C128 28.6538 99.3462 0 64 0C28.6538 0 0 28.6538 0 64C0 99.3462 28.6538 128 64 128ZM64 108C88.3005 108 108 88.3005 108 64C108 39.6995 88.3005 20 64 20C39.6995 20 20 39.6995 20 64C20 88.3005 39.6995 108 64 108Z"
+                />
+              </svg>
+              Misc
+            </a>
+            <a
+              href="/tools?category=security"
+              class="flex items-center gap-2 px-3 py-2 border border-gray-700 rounded-lg text-sm text-gray-300 hover:border-gray-500 hover:text-white transition-colors"
+            >
+              <svg
+                class="w-4 h-4 text-console-category fill-current"
+                viewBox="0 0 128 128"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M64 15.5294C79.6218 15.5294 90.3721 26.212 90.3721 41.7353V62H37.6279V41.7353C37.6279 26.212 48.3782 15.5294 64 15.5294ZM22 62V41.7353C22 18.6855 40.804 0 64 0C87.196 0 106 18.6855 106 41.7353V62H112C114.209 62 116 63.7909 116 66V124C116 126.209 114.209 128 112 128H16C13.7909 128 12 126.209 12 124V66C12 63.7909 13.7909 62 16 62H22Z"
+                />
+              </svg>
+              Security
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Separator -->
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="border-t border-gray-800"></div>
+      </div>
+
+      <!-- Section 4: Three feature columns -->
+      <section
+        class="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-3 gap-12"
+      >
+        <div class="space-y-4">
+          <div
+            class="w-14 h-14 rounded-full border border-gray-600 flex items-center justify-center text-xl text-gray-300"
+          >
+            +
+          </div>
+          <h3 class="text-xl font-semibold">
+            Only the most interesting new tools
+          </h3>
+          <p class="text-gray-400 leading-relaxed">
+            We use our years of development experience to review and recommend
+            the best tools.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div
+            class="w-14 h-14 rounded-full border border-gray-600 flex items-center justify-center text-xl text-gray-300 font-serif italic"
+          >
+            &beta;
+          </div>
+          <h3 class="text-xl font-semibold">Access the latest beta releases</h3>
+          <p class="text-gray-400 leading-relaxed">
+            We keep track of all the latest news and releases, highlighting the
+            most interesting announcements.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div
+            class="w-14 h-14 border border-gray-600 flex items-center justify-center text-gray-300"
+          >
+            <svg
+              class="w-6 h-6"
+              viewBox="0 0 128 128"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path d="M0 0 L128 0 L128 128 L0 128 Z" />
+              <path d="M32 64 L64 32 L96 64" stroke-width="8" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold">
+            All tools must meet our selection criteria
+          </h3>
+          <p class="text-gray-400 leading-relaxed">
+            All reviews are independently assessed against our strict
+            <a href="/selection-criteria" class="underline hover:text-white"
+              >selection criteria</a
+            >.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 5: CTA -->
+      <section class="relative overflow-hidden">
+        <div
+          class="bg-gradient-to-br from-purple-950 via-indigo-950 to-black py-20 px-8"
+        >
+          <!-- Decorative neon planes -->
+          <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div
+              class="absolute top-8 left-8 w-64 h-40 border border-purple-700 opacity-30 skew-x-6"
+            ></div>
+            <div
+              class="absolute top-16 left-20 w-64 h-40 border border-indigo-700 opacity-30 skew-x-6"
+            ></div>
+            <div
+              class="absolute top-4 left-36 w-64 h-40 border border-green-700 opacity-20 skew-x-6"
+            ></div>
+          </div>
+          <div
+            class="relative max-w-7xl mx-auto flex flex-col sm:flex-row items-center gap-6 sm:gap-12"
+          >
+            <h2
+              class="text-2xl font-semibold text-white sm:w-1/3 text-center sm:text-left"
+            >
+              Discover the best tools for developers
+            </h2>
+            <form
+              name="console-subscribe-cta"
+              action="https://dev.us7.list-manage.com/subscribe/post?u=f8c3cd14ee8d63c53d0986a48&amp;id=267911a165"
+              method="post"
+              class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 flex-1"
+            >
+              <input
+                type="email"
+                name="EMAIL"
+                id="email-subscribe-cta"
+                required
+                placeholder="Your email"
+                aria-label="Enter your email address"
+                class="flex-1 px-4 py-3 rounded-lg bg-black border border-gray-600 text-white focus:ring-2 focus:ring-indigo-500 placeholder-gray-500"
+                autocomplete="email"
+              />
+              <input
+                type="text"
+                tabindex="-1"
+                name="b_f8c3cd14ee8d63c53d0986a48_267911a165"
+                value=""
+                class="hidden"
+              />
+              <button
+                type="submit"
+                aria-label="Sign up for the newsletter"
+                class="plausible-event-name=Newsletter+Subscribe flex items-center justify-center gap-2 bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700 cursor-pointer whitespace-nowrap"
+              >
+                <svg
+                  class="w-5 h-5"
+                  viewBox="0 0 128 128"
+                  fill="white"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M125 17L3 56.8507L43.75 68.1418M125 17L93.1739 106L64.8963 84.3397M125 17L43.75 68.1418M125 17L64.8963 84.3397M43.75 68.1418L64.8963 84.3397M43.75 68.1418L49.7065 101.358L64.8963 84.3397"
+                    vector-effect="non-scaling-stroke"
+                  ></path>
+                </svg>
+                <span>Sign Up</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    {{template "footer"}}
+  </body>
+</html>
