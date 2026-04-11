@@ -16,6 +16,12 @@ func (w *wrappedWriter) WriteHeader(statusCode int) {
 	w.statusCode = statusCode
 }
 
+func (w *wrappedWriter) Flush() {
+	if flusher, ok := w.ResponseWriter.(http.Flusher); ok {
+		flusher.Flush()
+	}
+}
+
 func LoggerMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		start := time.Now()
@@ -27,18 +33,13 @@ func LoggerMiddleware(next http.Handler) http.Handler {
 
 		next.ServeHTTP(wrapped, r)
 
-		var duration time.Duration
-		if startTime, ok := r.Context().Value(startTimeKey).(time.Time); ok {
-			duration = time.Since(startTime)
-		} else {
-			duration = time.Since(start)
+		if r.URL.Path != "/health" {
+			slog.Debug("request",
+				slog.Int("status", wrapped.statusCode),
+				slog.String("method", r.Method),
+				slog.String("path", r.URL.Path),
+				slog.Duration("duration", time.Since(start)),
+			)
 		}
-
-		slog.Debug("request",
-			slog.Int("status", wrapped.statusCode),
-			slog.String("method", r.Method),
-			slog.String("path", r.URL.Path),
-			slog.Duration("duration", duration),
-		)
 	})
 }

@@ -80,9 +80,10 @@ func main() {
 	}
 	addr := ":" + port
 
-	chain := &middleware.Chain{}
-	chain.Use(middleware.RecoverMiddleware) // First middleware (innermost)
-	chain.Use(middleware.LoggerMiddleware)  // Last middleware (outermost)
+	chain := middleware.Chain{
+		middleware.RecoverMiddleware, // First middleware (innermost)
+		middleware.LoggerMiddleware,  // Last middleware (outermost)
+	}
 
 	mux := http.NewServeMux()
 
