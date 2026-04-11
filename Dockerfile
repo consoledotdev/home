@@ -12,6 +12,6 @@ RUN go build -o server main.go
 FROM gcr.io/distroless/static-debian12:nonroot
 COPY --from=builder /app/server /
 
-CMD ["/server"]
-
 USER nonroot
+
+CMD ["/server"]

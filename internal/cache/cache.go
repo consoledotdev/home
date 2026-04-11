@@ -6,15 +6,18 @@ import (
 	"github.com/consoledotdev/home/internal/notion"
 )
 
-// Cache is an interface for caching tools and betas. This could use generics,
-// but it was simpler to duplicate the methods for now.
+// Snapshot holds all cached data returned atomically.
+type Snapshot struct {
+	Tools          []notion.Tool
+	Betas          []notion.Beta
+	NewsletterDate time.Time
+	Expires        time.Time
+}
+
+// Cache is an interface for caching tools and betas.
 type Cache interface {
-	GetTools() ([]notion.Tool, error)        // Returns cached tools
-	GetBetas() ([]notion.Beta, error)        // Returns cached betas
-	GetNewsletterDate() (time.Time, error)   // Returns cached newsletter date
-	SaveTools(tools []notion.Tool) error     // Saves or updates tools in cache
-	SaveBetas(betas []notion.Beta) error     // Saves or updates betas in cache
-	SaveNewsletterDate(date time.Time) error // Saves or updates newsletter date in cache
-	Expires() (time.Time, error)             // Returns the time of the next expiration
-	SetExpires(ts time.Time) error           // Sets the time of the next expiration
+	// Snapshot returns all cached data under a single lock.
+	Snapshot() Snapshot
+	// SaveAll atomically replaces all cached data and sets the expiry.
+	SaveAll(tools []notion.Tool, betas []notion.Beta, newsletterDate time.Time, expires time.Time)
 }

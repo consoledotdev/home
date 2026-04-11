@@ -23,47 +23,20 @@ func midnightTonight() time.Time {
 	return time.Date(now.Year(), now.Month(), now.Day()+1, 0, 0, 0, 0, now.Location())
 }
 
-// GetTools returns the latest tools and betas with SWR logic.
+// GetToolsAndBetas returns the latest tools and betas with SWR logic.
 func (s *SwrCache) GetToolsAndBetas() ([]notion.Tool, []notion.Beta, *time.Time, error) {
 	slog.Debug("Fetching from cache")
 
-	tools, err := s.Cache.GetTools()
-	if err != nil {
-		slog.Error("Failed to load tools from cache", "error", err)
-		// Return empty if cache load fails
-		return nil, nil, nil, err
-	}
+	snap := s.Cache.Snapshot()
 
-	betas, err := s.Cache.GetBetas()
-	if err != nil {
-		slog.Error("Failed to load betas from cache", "error", err)
-		// Return empty if cache load fails
-		return nil, nil, nil, err
-	}
-
-	newsletterDate, err := s.Cache.GetNewsletterDate()
-	if err != nil {
-		slog.Error("Failed to load newsletter date from cache", "error", err)
-		// Return empty if cache load fails
-		return nil, nil, nil, err
-	}
-
-	// Check last update time
-	expires, _ := s.Cache.Expires()
-
-	// If it's stale (past midnight) => revalidate
-	if time.Now().After(expires) {
+	// If it's stale (past expiry) => revalidate
+	if time.Now().After(snap.Expires) {
 		slog.Info("Cache is stale, revalidating")
 		// Kick off a background refresh
 		go func() {
-			// Both return the newsletter date, but only use it from the betas
 			newTools, _, ferr := s.FetchToolsFunc()
 			if ferr != nil {
 				slog.Error("Failed to fetch new tools", "error", ferr)
-				return
-			}
-			if err := s.Cache.SaveTools(newTools); err != nil {
-				slog.Error("Failed to save tools to cache", "error", err)
 				return
 			}
 
@@ -73,21 +46,13 @@ func (s *SwrCache) GetToolsAndBetas() ([]notion.Tool, []notion.Beta, *time.Time,
 				return
 			}
 
-			if err := s.Cache.SaveBetas(newBetas); err != nil {
-				slog.Error("Failed to save betas to cache", "error", err)
-				return
-			}
-
+			var nd time.Time
 			if newsletterDate != nil {
-				if err := s.Cache.SaveNewsletterDate(*newsletterDate); err != nil {
-					slog.Error("Failed to save newsletter date to cache", "error", err)
-					return
-				}
+				nd = *newsletterDate
 			}
 
-			// Set next TTL to midnight
 			nextMidnight := midnightTonight()
-			_ = s.Cache.SetExpires(nextMidnight)
+			s.Cache.SaveAll(newTools, newBetas, nd, nextMidnight)
 
 			slog.Info("Cache successfully revalidated",
 				slog.Time("expires", nextMidnight),
@@ -96,6 +61,7 @@ func (s *SwrCache) GetToolsAndBetas() ([]notion.Tool, []notion.Beta, *time.Time,
 	}
 
 	// Return old (possibly stale) data immediately
-	slog.Debug("Returning from cache", slog.Time("expires", expires))
-	return tools, betas, &newsletterDate, nil
+	slog.Debug("Returning from cache", slog.Time("expires", snap.Expires))
+	newsletterDate := snap.NewsletterDate
+	return snap.Tools, snap.Betas, &newsletterDate, nil
 }

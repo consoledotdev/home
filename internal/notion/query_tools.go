@@ -147,7 +147,7 @@ func (nc *NotionClient) GetLatestTools() ([]Tool, *time.Time, error) {
 	var newsletterDate time.Time
 
 	for attempts := 0; attempts < 2; attempts++ {
-		newsletterDate := lastThursday(getPreviousWeek)
+		newsletterDate = lastThursday(getPreviousWeek)
 
 		filters := Filter{
 			And: []Condition{

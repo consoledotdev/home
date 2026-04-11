@@ -12,61 +12,29 @@ type MemoryCache struct {
 	tools          []notion.Tool
 	betas          []notion.Beta
 	newsletterDate time.Time
-	expires        int64
+	expires        time.Time
 }
 
 func NewMemoryCache() *MemoryCache {
 	return &MemoryCache{}
 }
 
-func (m *MemoryCache) GetTools() ([]notion.Tool, error) {
+func (m *MemoryCache) Snapshot() Snapshot {
 	m.mu.RLock()
 	defer m.mu.RUnlock()
-	return m.tools, nil
+	return Snapshot{
+		Tools:          m.tools,
+		Betas:          m.betas,
+		NewsletterDate: m.newsletterDate,
+		Expires:        m.expires,
+	}
 }
 
-func (m *MemoryCache) GetBetas() ([]notion.Beta, error) {
-	m.mu.RLock()
-	defer m.mu.RUnlock()
-	return m.betas, nil
-}
-
-func (m *MemoryCache) GetNewsletterDate() (time.Time, error) {
-	m.mu.RLock()
-	defer m.mu.RUnlock()
-	return m.newsletterDate, nil
-}
-
-func (m *MemoryCache) SaveTools(tools []notion.Tool) error {
+func (m *MemoryCache) SaveAll(tools []notion.Tool, betas []notion.Beta, newsletterDate time.Time, expires time.Time) {
 	m.mu.Lock()
 	defer m.mu.Unlock()
 	m.tools = tools
-	return nil
-}
-
-func (m *MemoryCache) SaveBetas(betas []notion.Beta) error {
-	m.mu.Lock()
-	defer m.mu.Unlock()
 	m.betas = betas
-	return nil
-}
-
-func (m *MemoryCache) SaveNewsletterDate(date time.Time) error {
-	m.mu.Lock()
-	defer m.mu.Unlock()
-	m.newsletterDate = date
-	return nil
-}
-
-func (m *MemoryCache) Expires() (time.Time, error) {
-	m.mu.RLock()
-	defer m.mu.RUnlock()
-	return time.Unix(m.expires, 0), nil
-}
-
-func (m *MemoryCache) SetExpires(ts time.Time) error {
-	m.mu.Lock()
-	defer m.mu.Unlock()
-	m.expires = ts.Unix()
-	return nil
+	m.newsletterDate = newsletterDate
+	m.expires = expires
 }
