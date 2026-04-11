@@ -81,8 +81,9 @@ func main() {
 	addr := ":" + port
 
 	chain := middleware.Chain{
-		middleware.RecoverMiddleware, // First middleware (innermost)
-		middleware.LoggerMiddleware,  // Last middleware (outermost)
+		middleware.SecurityHeadersMiddleware, // Set security headers
+		middleware.RecoverMiddleware,         // Handle panics
+		middleware.LoggerMiddleware,          // Log and time requests
 	}
 
 	mux := http.NewServeMux()
