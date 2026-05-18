@@ -10,6 +10,8 @@ import (
 	"log/slog"
 	"net/http"
 	"strings"
+
+	"github.com/consoledotdev/home/internal/middleware"
 )
 
 //go:embed templates
@@ -23,6 +25,8 @@ var fns = template.FuncMap{
 	"isLast": func(index int, len int) bool {
 		return index+1 == len
 	},
+	// Placeholder; overridden per-request in Render with the CSP nonce.
+	"nonce": func() string { return "" },
 }
 
 func NewTemplates(resources embed.FS, staticResources embed.FS) {
@@ -49,11 +53,24 @@ func computeCSSHash(staticResources embed.FS) string {
 	return fmt.Sprintf("%x", sum[:4])
 }
 
-func Render(w http.ResponseWriter, name string, data interface{}) {
+func Render(w http.ResponseWriter, r *http.Request, name string, data interface{}) {
 	var buffer bytes.Buffer
 
-	err := tmpl.ExecuteTemplate(&buffer, name, data)
+	// Clone the parsed template set so we can register a per-request `nonce`
+	// function that returns this request's CSP nonce. Cloning is required
+	// because html/template func maps are shared across executions.
+	perReq, err := tmpl.Clone()
 	if err != nil {
+		slog.Error("failed to clone template", slog.Any("error", err))
+		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
+		return
+	}
+	nonce := middleware.GetNonce(r)
+	perReq = perReq.Funcs(template.FuncMap{
+		"nonce": func() string { return nonce },
+	})
+
+	if err := perReq.ExecuteTemplate(&buffer, name, data); err != nil {
 		err = fmt.Errorf("error executing template: %w", err)
 		slog.Error("failed to render template", slog.Any("error", err))
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)

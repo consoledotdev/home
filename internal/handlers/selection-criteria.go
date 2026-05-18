@@ -12,6 +12,6 @@ type SelectionCriteriaData struct {
 
 func SelectionCriteriaHandler() http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		web.Render(w, "selection-criteria.html", SelectionCriteriaData{})
+		web.Render(w, r, "selection-criteria.html", SelectionCriteriaData{})
 	})
 }

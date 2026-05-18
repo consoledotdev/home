@@ -53,6 +53,6 @@ func GenerateHandler(notionClient *notion.NotionClient) http.Handler {
 			Preview:        fmt.Sprintf("%s - the best tools for developers", strings.Join(names, ", ")),
 			NewsletterDate: newsletterDate.Format("2006-01-02"),
 		}
-		web.Render(w, "generate.html", data)
+		web.Render(w, r, "generate.html", data)
 	})
 }

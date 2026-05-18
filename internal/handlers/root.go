@@ -31,6 +31,6 @@ func RootHandler(swrCache *cache.SwrCache) http.Handler {
 			Betas:          betas,
 			NewsletterDate: newsletterDate.Format("2006-01-02"),
 		}
-		web.Render(w, "index.html", data)
+		web.Render(w, r, "index.html", data)
 	})
 }

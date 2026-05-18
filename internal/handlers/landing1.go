@@ -23,6 +23,6 @@ func Landing1Handler(swrCache *cache.SwrCache) http.Handler {
 			Betas:          betas,
 			NewsletterDate: newsletterDate.Format("2 January 2006"),
 		}
-		web.Render(w, "landing-1.html", data)
+		web.Render(w, r, "landing-1.html", data)
 	})
 }

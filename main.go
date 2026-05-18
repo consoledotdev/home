@@ -141,7 +141,7 @@ func main() {
 	// Catch-all 404 handler - must be last
 	mux.Handle("GET /", chain.ThenFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusNotFound)
-		web.Render(w, "404.html", nil)
+		web.Render(w, r, "404.html", nil)
 	}))
 
 	server := &http.Server{

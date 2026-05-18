@@ -12,6 +12,6 @@ type AdvertiseData struct {
 
 func AdvertiseHandler() http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		web.Render(w, "advertise.html", AdvertiseData{})
+		web.Render(w, r, "advertise.html", AdvertiseData{})
 	})
 }
