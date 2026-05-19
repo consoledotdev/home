@@ -21,7 +21,7 @@ func ArcjetMiddleware(aj *arcjet.Client) func(http.Handler) http.Handler {
 					slog.Any("error", err),
 				)
 			} else if decision.IsDenied() {
-				slog.Warn("arcjet would deny request (log-only)",
+				slog.Warn("arcjet would deny request",
 					slog.String("path", r.URL.Path),
 					slog.String("method", r.Method),
 					slog.Any("reason", decision.Reason.Type),
