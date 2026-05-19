@@ -28,31 +28,6 @@ var static embed.FS
 
 var debug bool
 
-var arcjetKey = func() string {
-	key := os.Getenv("ARCJET_KEY")
-	if key == "" {
-		slog.Error("ARCJET_KEY is required")
-	}
-	return key
-}()
-
-var aj = must(arcjet.NewClient(arcjet.Config{
-	Key: arcjetKey,
-	Rules: []arcjet.Rule{
-		arcjet.DetectBot(arcjet.BotOptions{
-			Mode: arcjet.ModeLive,
-			Allow: []string{
-				arcjet.BotCategoryAI,
-				arcjet.BotCategoryFeedFetcher,
-				arcjet.BotCategorySearchEngine,
-				arcjet.BotCategoryPreview,
-			},
-		}),
-		// Protect against common web attacks (SQLi, XSS, etc.).
-		arcjet.Shield(arcjet.ShieldOptions{Mode: arcjet.ModeLive}),
-	},
-}))
-
 func init() {
 	_, jsonLogger := os.LookupEnv("JSON_LOGGER")
 	_, debug = os.LookupEnv("DEBUG")
@@ -82,6 +57,22 @@ func main() {
 	mcClient, err := mailchimp.NewClient(os.Getenv("MAILCHIMP_KEY"))
 	if err != nil {
 		slog.Error("Failed to create Mailchimp client", "error", err)
+		return
+	}
+
+	// Shared Arcjet client — Shield is the base rule applied to all routes.
+	ajBase, err := arcjet.NewClient(arcjet.Config{
+		Key: os.Getenv("ARCJET_KEY"),
+		Rules: []arcjet.Rule{
+			arcjet.Shield(arcjet.ShieldOptions{Mode: arcjet.ModeLive}),
+			arcjet.Filter(arcjet.FilterOptions{
+				Mode: arcjet.ModeLive,
+				Deny: []string{`len(http.request.headers["user-agent"]) eq 0`},
+			}),
+		},
+	})
+	if err != nil {
+		slog.Error("Failed to create Arcjet client", "error", err)
 		return
 	}
 
@@ -118,7 +109,6 @@ func main() {
 		middleware.SecurityHeadersMiddleware, // Set security headers
 		middleware.RecoverMiddleware,         // Handle panics
 		middleware.LoggerMiddleware,          // Log and time requests
-		middleware.ArcjetMiddleware(aj),      // Evaluate Arcjet rules (log-only, non-blocking)
 	}
 
 	mux := http.NewServeMux()
@@ -167,7 +157,7 @@ func main() {
 	mux.Handle("GET /confirm/", chain.Then(handlers.ConfirmHandler()))
 	mux.Handle("GET /selection-criteria", chain.Then(handlers.SelectionCriteriaHandler()))
 	mux.Handle("GET /landing/1", chain.Then(handlers.Landing1Handler(swrCache)))
-	mux.Handle("POST /subscribe", chain.Then(handlers.SubscribeHandler(mcClient)))
+	mux.Handle("POST /subscribe", chain.Then(must(handlers.SubscribeHandler(ajBase, mcClient))))
 
 	// Only available when running locally
 	if debug {
