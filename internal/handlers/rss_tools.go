@@ -9,12 +9,33 @@ import (
 
 	"log/slog"
 
+	"github.com/arcjet/arcjet-go"
 	"github.com/consoledotdev/home/internal/cache"
 	"github.com/consoledotdev/home/internal/rss"
 )
 
-func RssToolsHandler(swrCache *cache.SwrCache) http.Handler {
+func RssToolsHandler(aj *arcjet.Client, swrCache *cache.SwrCache) (http.Handler, error) {
+	aj, err := aj.WithRule(arcjet.DetectBot(arcjet.BotOptions{
+		Mode: arcjet.ModeLive,
+		Allow: []string{
+			arcjet.BotCategoryAI,
+			arcjet.BotCategoryFeedFetcher,
+			arcjet.BotCategorySearchEngine,
+			arcjet.BotCategoryPreview,
+			arcjet.BotCategoryProgrammatic,
+		},
+	}))
+	if err != nil {
+		return nil, err
+	}
+
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		decision, err := aj.Protect(r.Context(), r)
+		if err == nil && decision.IsDenied() {
+			http.Error(w, "Forbidden", http.StatusForbidden)
+			return
+		}
+
 		tools, _, newsletterDateTime, err := swrCache.GetToolsAndBetas()
 		if err != nil {
 			http.Error(w, "Internal Server Error", http.StatusInternalServerError)
@@ -70,5 +91,5 @@ func RssToolsHandler(swrCache *cache.SwrCache) http.Handler {
 
 		w.Header().Set("Content-Type", "application/rss+xml; charset=UTF-8")
 		w.Write(x)
-	})
+	}), nil
 }

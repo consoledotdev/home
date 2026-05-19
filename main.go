@@ -146,22 +146,22 @@ func main() {
 		w.Write([]byte(`OK`))
 	}))
 
-	mux.Handle("GET /{$}", chain.Then(handlers.RootHandler(swrCache)))
-	mux.Handle("GET /rss.xml", chain.Then(handlers.RssEverythingHandler(swrCache)))
-	mux.Handle("GET /betas/rss.xml", chain.Then(handlers.RssBetasHandler(swrCache)))
-	mux.Handle("GET /tools/rss.xml", chain.Then(handlers.RssToolsHandler(swrCache)))
-	mux.Handle("GET /advertise", chain.Then(handlers.AdvertiseHandler()))
-	mux.Handle("GET /privacy", chain.Then(handlers.PrivacyHandler()))
-	mux.Handle("GET /confirm", chain.Then(handlers.ConfirmHandler()))
+	mux.Handle("GET /{$}", chain.Then(must(handlers.RootHandler(ajBase, swrCache))))
+	mux.Handle("GET /rss.xml", chain.Then(must(handlers.RssEverythingHandler(ajBase, swrCache))))
+	mux.Handle("GET /betas/rss.xml", chain.Then(must(handlers.RssBetasHandler(ajBase, swrCache))))
+	mux.Handle("GET /tools/rss.xml", chain.Then(must(handlers.RssToolsHandler(ajBase, swrCache))))
+	mux.Handle("GET /advertise", chain.Then(must(handlers.AdvertiseHandler(ajBase))))
+	mux.Handle("GET /privacy", chain.Then(must(handlers.PrivacyHandler(ajBase))))
+	mux.Handle("GET /confirm", chain.Then(must(handlers.ConfirmHandler(ajBase))))
 	// Mailchimp doesn't support removing the trailing slash from links
-	mux.Handle("GET /confirm/", chain.Then(handlers.ConfirmHandler()))
-	mux.Handle("GET /selection-criteria", chain.Then(handlers.SelectionCriteriaHandler()))
-	mux.Handle("GET /landing/1", chain.Then(handlers.Landing1Handler(swrCache)))
+	mux.Handle("GET /confirm/", chain.Then(must(handlers.ConfirmHandler(ajBase))))
+	mux.Handle("GET /selection-criteria", chain.Then(must(handlers.SelectionCriteriaHandler(ajBase))))
+	mux.Handle("GET /landing/1", chain.Then(must(handlers.Landing1Handler(ajBase, swrCache))))
 	mux.Handle("POST /subscribe", chain.Then(must(handlers.SubscribeHandler(ajBase, mcClient))))
 
 	// Only available when running locally
 	if debug {
-		mux.Handle("GET /generate", chain.Then(handlers.GenerateHandler(notionClient)))
+		mux.Handle("GET /generate", chain.Then(must(handlers.GenerateHandler(ajBase, notionClient))))
 	}
 
 	// Catch-all 404 handler - must be last

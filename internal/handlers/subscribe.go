@@ -61,7 +61,6 @@ func SubscribeHandler(aj *arcjet.Client, mc *mailchimp.Client) (http.Handler, er
 			// Log denied request with IP details for analysis
 			slog.Warn("subscribe request denied",
 				slog.String("reason", string(decision.Reason.Type)),
-				slog.String("email", email),
 				slog.String("country", decision.IP.Country),
 				slog.String("city", decision.IP.City),
 				slog.String("asn", decision.IP.ASNName),
@@ -92,6 +91,22 @@ func SubscribeHandler(aj *arcjet.Client, mc *mailchimp.Client) (http.Handler, er
 				})
 			}
 			return
+		} else if decision.IsSpoofedBot() {
+			slog.Warn("subscribe request flagged as spoofed bot",
+				slog.String("country", decision.IP.Country),
+				slog.String("city", decision.IP.City),
+				slog.String("asn", decision.IP.ASNName),
+				slog.Bool("is_vpn", decision.IP.IsVPN),
+				slog.Bool("is_proxy", decision.IP.IsProxy),
+				slog.Bool("is_tor", decision.IP.IsTor),
+				slog.Bool("is_hosting", decision.IP.IsHosting),
+				slog.String("id", decision.ID),
+			)
+			w.WriteHeader(http.StatusForbidden)
+			web.Render(w, r, "subscribe-error.html", subscribeErrorData{
+				Heading: "Request blocked",
+				Message: "Your request was blocked. If you think this is a mistake, please contact us with request ID: " + decision.ID,
+			})
 		} else {
 			slog.Info("subscribe request allowed", slog.String("id", decision.ID))
 		}
