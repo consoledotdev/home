@@ -22,7 +22,7 @@ func SecurityHeadersMiddleware(next http.Handler) http.Handler {
 		}
 
 		w.Header().Set("Content-Security-Policy",
-			"default-src 'self'; script-src 'self' 'nonce-"+nonce+"' https://plausible.io; connect-src 'self' https://plausible.io; frame-src https://embed.podcasts.apple.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'")
+			"default-src 'self'; script-src 'self' 'nonce-"+nonce+"' https://plausible.io https://signals-cdn.arcjet.com 'wasm-unsafe-eval'; connect-src 'self' https://plausible.io https://signals-cdn.arcjet.com https://signals.arcjet.com; frame-src https://embed.podcasts.apple.com https://signals-cdn.arcjet.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'")
 		w.Header().Set("X-Frame-Options", "DENY")
 		w.Header().Set("X-Content-Type-Options", "nosniff")
 		w.Header().Set("Strict-Transport-Security", "max-age=63072000; includeSubDomains")
