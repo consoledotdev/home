@@ -10,7 +10,10 @@ Tailwind and hosted using a static Go server.
 Launch with this command to inject the secret:
 
 ```sh
-export NOTION_SECRET="op://Home/Notion API Key/credential" && op run -- code .
+export NOTION_SECRET="op://Console/Notion API Key/credential"
+export ARCJET_KEY="op://Console/Console Arcjet Key/credential"
+export MAILCHIMP_KEY="op://Console/Console Mailchimp API Key/credential"
+op run -- code .
 ```
 
 This will start VS Code with the secret set. You can reopen in the devcontainer

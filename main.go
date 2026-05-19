@@ -12,6 +12,7 @@ import (
 	"github.com/arcjet/arcjet-go"
 	"github.com/consoledotdev/home/internal/cache"
 	"github.com/consoledotdev/home/internal/handlers"
+	"github.com/consoledotdev/home/internal/mailchimp"
 	"github.com/consoledotdev/home/internal/middleware"
 	"github.com/consoledotdev/home/internal/notion"
 	"github.com/consoledotdev/home/web"
@@ -77,6 +78,13 @@ func init() {
 }
 
 func main() {
+	// Mailchimp client
+	mcClient, err := mailchimp.NewClient(os.Getenv("MAILCHIMP_KEY"))
+	if err != nil {
+		slog.Error("Failed to create Mailchimp client", "error", err)
+		return
+	}
+
 	// Notion client
 	notionClient, err := notion.NewNotionClient(os.Getenv("NOTION_SECRET"))
 	if err != nil {
@@ -159,6 +167,7 @@ func main() {
 	mux.Handle("GET /confirm/", chain.Then(handlers.ConfirmHandler()))
 	mux.Handle("GET /selection-criteria", chain.Then(handlers.SelectionCriteriaHandler()))
 	mux.Handle("GET /landing/1", chain.Then(handlers.Landing1Handler(swrCache)))
+	mux.Handle("POST /subscribe", chain.Then(handlers.SubscribeHandler(mcClient)))
 
 	// Only available when running locally
 	if debug {
