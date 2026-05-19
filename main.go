@@ -9,6 +9,7 @@ import (
 	"os"
 	"time"
 
+	"github.com/arcjet/arcjet-go"
 	"github.com/consoledotdev/home/internal/cache"
 	"github.com/consoledotdev/home/internal/handlers"
 	"github.com/consoledotdev/home/internal/middleware"
@@ -25,6 +26,31 @@ var templates embed.FS
 var static embed.FS
 
 var debug bool
+
+var arcjetKey = func() string {
+	key := os.Getenv("ARCJET_KEY")
+	if key == "" {
+		slog.Error("ARCJET_KEY is required")
+	}
+	return key
+}()
+
+var aj = must(arcjet.NewClient(arcjet.Config{
+	Key: arcjetKey,
+	Rules: []arcjet.Rule{
+		arcjet.DetectBot(arcjet.BotOptions{
+			Mode: arcjet.ModeLive,
+			Allow: []string{
+				arcjet.BotCategoryAI,
+				arcjet.BotCategoryFeedFetcher,
+				arcjet.BotCategorySearchEngine,
+				arcjet.BotCategoryPreview,
+			},
+		}),
+		// Protect against common web attacks (SQLi, XSS, etc.).
+		arcjet.Shield(arcjet.ShieldOptions{Mode: arcjet.ModeLive}),
+	},
+}))
 
 func init() {
 	_, jsonLogger := os.LookupEnv("JSON_LOGGER")
@@ -84,6 +110,7 @@ func main() {
 		middleware.SecurityHeadersMiddleware, // Set security headers
 		middleware.RecoverMiddleware,         // Handle panics
 		middleware.LoggerMiddleware,          // Log and time requests
+		middleware.ArcjetMiddleware(aj),      // Evaluate Arcjet rules (log-only, non-blocking)
 	}
 
 	mux := http.NewServeMux()
@@ -165,4 +192,11 @@ func main() {
 func initCache(staleCache *cache.SwrCache) error {
 	_, _, _, err := staleCache.GetToolsAndBetas()
 	return err
+}
+
+func must[T any](v T, err error) T {
+	if err != nil {
+		panic(err)
+	}
+	return v
 }
