@@ -21,7 +21,7 @@ func SubscribeHandler(aj *arcjet.Client, mc *mailchimp.Client) (http.Handler, er
 	// WithRule is called here (at startup) so misconfigured rules fail fast.
 	aj, err := aj.WithRule(arcjet.DetectBot(arcjet.BotOptions{
 		Mode:  arcjet.ModeLive,
-		Allow: []string{"ARCJET_SIGNALS"},
+		Allow: []string{},
 	}))
 	if err != nil {
 		return nil, err
