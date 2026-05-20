@@ -4,7 +4,6 @@ import (
 	"errors"
 	"log/slog"
 	"net/http"
-	"time"
 
 	"github.com/arcjet/arcjet-go"
 	"github.com/consoledotdev/home/internal/mailchimp"
@@ -37,10 +36,17 @@ func SubscribeHandler(aj *arcjet.Client, mc *mailchimp.Client) (http.Handler, er
 	if err != nil {
 		return nil, err
 	}
-	aj, err = aj.WithRule(arcjet.SlidingWindow(arcjet.SlidingWindowOptions{
+	/*aj, err = aj.WithRule(arcjet.SlidingWindow(arcjet.SlidingWindowOptions{
 		Mode:        arcjet.ModeLive,
-		Interval:    time.Hour,
+		Interval:    time.Hour * 6,
 		MaxRequests: 5,
+	}))
+	if err != nil {
+		return nil, err
+	}*/
+	aj, err = aj.WithRule(arcjet.Filter(arcjet.FilterOptions{
+		Mode: arcjet.ModeLive,
+		Deny: []string{`len(http.request.cookie["aj_signals"]) eq 0`},
 	}))
 	if err != nil {
 		return nil, err
@@ -82,6 +88,12 @@ func SubscribeHandler(aj *arcjet.Client, mc *mailchimp.Client) (http.Handler, er
 				web.Render(w, r, "subscribe-error.html", subscribeErrorData{
 					Heading: "Invalid email address",
 					Message: "That doesn't look like a valid email address. Please check and try again.",
+				})
+			case decision.Reason.IsFilter():
+				w.WriteHeader(http.StatusBadRequest)
+				web.Render(w, r, "subscribe-error.html", subscribeErrorData{
+					Heading: "Request blocked",
+					Message: "Cookies are required to subscribe.",
 				})
 			default:
 				w.WriteHeader(http.StatusForbidden)
