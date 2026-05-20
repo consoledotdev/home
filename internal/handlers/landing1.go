@@ -22,7 +22,7 @@ func Landing1Handler(aj *arcjet.Client, swrCache *cache.SwrCache) (http.Handler,
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		decision, err := aj.Protect(r.Context(), r)
 		if err == nil && decision.IsDenied() {
-			http.Error(w, "Forbidden", http.StatusForbidden)
+			renderDenied(w, r, decision)
 			return
 		}
 

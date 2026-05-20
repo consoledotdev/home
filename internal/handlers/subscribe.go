@@ -87,7 +87,7 @@ func SubscribeHandler(aj *arcjet.Client, mc *mailchimp.Client) (http.Handler, er
 				w.WriteHeader(http.StatusForbidden)
 				web.Render(w, r, "subscribe-error.html", subscribeErrorData{
 					Heading: "Request blocked",
-					Message: "Your request was blocked. If you think this is a mistake, please contact us with request ID: " + decision.ID,
+					Message: "Your request was blocked. If you think this is a mistake, please contact hello@console.dev with request ID: " + decision.ID,
 				})
 			}
 			return
