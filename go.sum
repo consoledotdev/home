@@ -4,6 +4,8 @@ github.com/arcjet/arcjet-go v0.0.0-20260519145343-cc24c4af98ca h1:l7iDPsSiKZVdms
 github.com/arcjet/arcjet-go v0.0.0-20260519145343-cc24c4af98ca/go.mod h1:BF9GzXTwL/o8pp/CgK8UK1I4k/nU86TsjIt5QDqaehc=
 github.com/arcjet/arcjet-go v0.0.0-20260519152245-873725d1144e h1:7mO4Ty4Z64IxiSBhj0Zm4DDwA1jFR6Dc66u0S923uiA=
 github.com/arcjet/arcjet-go v0.0.0-20260519152245-873725d1144e/go.mod h1:BF9GzXTwL/o8pp/CgK8UK1I4k/nU86TsjIt5QDqaehc=
+github.com/arcjet/arcjet-go v0.0.0-20260521170351-7f29a747e508 h1:BAn0DvbZN1X5fd5HWKzA2jxcs3ShRmbdNiUzNtOoTTY=
+github.com/arcjet/arcjet-go v0.0.0-20260521170351-7f29a747e508/go.mod h1:BF9GzXTwL/o8pp/CgK8UK1I4k/nU86TsjIt5QDqaehc=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/gofrs/uuid/v5 v5.2.0 h1:qw1GMx6/y8vhVsx626ImfKMuS5CvJmhIKKtuyvfajMM=
