@@ -73,11 +73,23 @@
     href="https://feeds.simplecast.com/T80CJwln"
   />
   <script
-    defer
+    async
     nonce="{{nonce}}"
-    data-domain="console.dev"
-    src="https://plausible.io/js/script.outbound-links.tagged-events.js"
+    src="https://plausible.io/js/pa-BsJuVNNLTKfqzAncMo6B0.js"
   ></script>
+  <script nonce="{{nonce}}">
+    ((window.plausible =
+      window.plausible ||
+      function () {
+        (plausible.q = plausible.q || []).push(arguments);
+      }),
+      (plausible.init =
+        plausible.init ||
+        function (i) {
+          plausible.o = i || {};
+        }));
+    plausible.init();
+  </script>
   <script
     id="arcjet-signals"
     nonce="{{nonce}}"
