@@ -2,7 +2,7 @@ module github.com/consoledotdev/home
 
 go 1.25.2
 
-require github.com/arcjet/arcjet-go v0.0.0-20260521170351-7f29a747e508
+require github.com/arcjet/arcjet-go v0.0.0-20260602194256-13efd805028c
 
 require (
 	connectrpc.com/connect v1.19.2 // indirect
