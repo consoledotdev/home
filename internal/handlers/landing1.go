@@ -7,6 +7,7 @@ import (
 
 	"github.com/arcjet/arcjet-go"
 	"github.com/consoledotdev/home/internal/cache"
+	"github.com/consoledotdev/home/internal/middleware"
 	"github.com/consoledotdev/home/web"
 )
 
@@ -38,6 +39,7 @@ func Landing1Handler(aj *arcjet.Client, swrCache *cache.SwrCache) (http.Handler,
 			Betas:          betas,
 			NewsletterDate: newsletterDate.Format("2 January 2006"),
 		}
+		middleware.SetNewsletterCacheHeaders(w)
 		web.Render(w, r, "landing-1.html", data)
 	}), nil
 }

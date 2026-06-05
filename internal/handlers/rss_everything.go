@@ -11,6 +11,7 @@ import (
 
 	"github.com/arcjet/arcjet-go"
 	"github.com/consoledotdev/home/internal/cache"
+	"github.com/consoledotdev/home/internal/middleware"
 	"github.com/consoledotdev/home/internal/rss"
 )
 
@@ -104,6 +105,7 @@ func RssEverythingHandler(aj *arcjet.Client, swrCache *cache.SwrCache) (http.Han
 			return
 		}
 
+		middleware.SetNewsletterCacheHeaders(w)
 		w.Header().Set("Content-Type", "application/rss+xml; charset=UTF-8")
 		w.Write(x)
 	}), nil

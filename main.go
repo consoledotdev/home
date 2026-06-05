@@ -122,7 +122,10 @@ func main() {
 
 	// Serve files from the embedded /web/static directory at /static
 	fileServer := http.FileServer(http.FS(fs))
-	mux.Handle("GET /static/", chain.Then(http.StripPrefix("/static/", fileServer)))
+	mux.Handle("GET /static/", chain.Then(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		middleware.SetStaticAssetCacheHeaders(w)
+		http.StripPrefix("/static/", fileServer).ServeHTTP(w, r)
+	})))
 
 	// Serve favicon.ico and robots.txt
 	mux.Handle("GET /favicon.ico", chain.ThenFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -131,6 +134,7 @@ func main() {
 			http.NotFound(w, r)
 			return
 		}
+		middleware.SetStaticAssetCacheHeaders(w)
 		w.Write(data)
 	}))
 	mux.Handle("GET /robots.txt", chain.ThenFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -139,10 +143,12 @@ func main() {
 			http.NotFound(w, r)
 			return
 		}
+		middleware.SetStaticAssetCacheHeaders(w)
 		w.Write(data)
 	}))
 
 	mux.Handle("GET /health", chain.ThenFunc(func(w http.ResponseWriter, r *http.Request) {
+		middleware.SetNoStoreCacheHeaders(w)
 		w.Write([]byte(`OK`))
 	}))
 
@@ -166,6 +172,7 @@ func main() {
 
 	// Catch-all 404 handler - must be last
 	mux.Handle("GET /", chain.ThenFunc(func(w http.ResponseWriter, r *http.Request) {
+		middleware.SetNoStoreCacheHeaders(w)
 		w.WriteHeader(http.StatusNotFound)
 		web.Render(w, r, "404.html", nil)
 	}))

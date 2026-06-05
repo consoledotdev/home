@@ -8,6 +8,7 @@ import (
 
 	"github.com/arcjet/arcjet-go"
 	"github.com/consoledotdev/home/internal/cache"
+	"github.com/consoledotdev/home/internal/middleware"
 	"github.com/consoledotdev/home/internal/notion"
 	"github.com/consoledotdev/home/web"
 )
@@ -51,6 +52,7 @@ func RootHandler(aj *arcjet.Client, swrCache *cache.SwrCache) (http.Handler, err
 			Betas:          betas,
 			NewsletterDate: newsletterDate.Format("2006-01-02"),
 		}
+		middleware.SetNewsletterCacheHeaders(w)
 		web.Render(w, r, "index.html", data)
 	}), nil
 }

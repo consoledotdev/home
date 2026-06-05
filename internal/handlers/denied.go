@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"github.com/arcjet/arcjet-go"
+	"github.com/consoledotdev/home/internal/middleware"
 	"github.com/consoledotdev/home/internal/rss"
 	"github.com/consoledotdev/home/web"
 )
@@ -43,6 +44,7 @@ func deniedMessage(decision arcjet.Decision) string {
 func renderDenied(w http.ResponseWriter, r *http.Request, decision arcjet.Decision) {
 	logDenied(r, decision)
 
+	middleware.SetNoStoreCacheHeaders(w)
 	w.WriteHeader(http.StatusForbidden)
 	web.Render(w, r, "denied.html", deniedData{
 		Heading: "Request blocked",
@@ -76,6 +78,7 @@ func renderDeniedRSS(w http.ResponseWriter, r *http.Request, decision arcjet.Dec
 		return
 	}
 
+	middleware.SetNoStoreCacheHeaders(w)
 	w.Header().Set("Content-Type", "application/rss+xml; charset=UTF-8")
 	w.WriteHeader(http.StatusForbidden)
 	w.Write([]byte(xml.Header))

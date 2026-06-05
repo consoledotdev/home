@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	"github.com/arcjet/arcjet-go"
+	"github.com/consoledotdev/home/internal/middleware"
 	"github.com/consoledotdev/home/web"
 )
 
@@ -30,6 +31,7 @@ func SelectionCriteriaHandler(aj *arcjet.Client) (http.Handler, error) {
 			renderDenied(w, r, decision)
 			return
 		}
+		middleware.SetNewsletterCacheHeaders(w)
 		web.Render(w, r, "selection-criteria.html", SelectionCriteriaData{})
 	}), nil
 }

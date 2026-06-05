@@ -8,6 +8,7 @@ import (
 
 	"github.com/arcjet/arcjet-go"
 	"github.com/consoledotdev/home/internal/mailchimp"
+	"github.com/consoledotdev/home/internal/middleware"
 	"github.com/consoledotdev/home/web"
 )
 
@@ -54,6 +55,8 @@ func SubscribeHandler(aj *arcjet.Client, mc *mailchimp.Client) (http.Handler, er
 	}
 
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		middleware.SetNoStoreCacheHeaders(w)
+
 		email := r.FormValue("email")
 		if email == "" {
 			http.Error(w, "email is required", http.StatusBadRequest)

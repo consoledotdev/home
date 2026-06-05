@@ -9,6 +9,7 @@ import (
 	"log/slog"
 
 	"github.com/arcjet/arcjet-go"
+	"github.com/consoledotdev/home/internal/middleware"
 	"github.com/consoledotdev/home/internal/notion"
 	"github.com/consoledotdev/home/web"
 )
@@ -60,6 +61,7 @@ func GenerateHandler(aj *arcjet.Client, notionClient *notion.NotionClient) (http
 			Preview:        fmt.Sprintf("%s - the best tools for developers", strings.Join(names, ", ")),
 			NewsletterDate: newsletterDate.Format("2006-01-02"),
 		}
+		middleware.SetNoStoreCacheHeaders(w)
 		web.Render(w, r, "generate.html", data)
 	}), nil
 }

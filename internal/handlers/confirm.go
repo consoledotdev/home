@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/arcjet/arcjet-go"
+	"github.com/consoledotdev/home/internal/middleware"
 	"github.com/consoledotdev/home/web"
 )
 
@@ -25,6 +26,7 @@ func ConfirmHandler(aj *arcjet.Client) (http.Handler, error) {
 			renderDenied(w, r, decision)
 			return
 		}
+		middleware.SetNoStoreCacheHeaders(w)
 		web.Render(w, r, "confirm.html", PrivacyData{})
 	}), nil
 }
