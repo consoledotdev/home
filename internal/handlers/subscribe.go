@@ -48,7 +48,10 @@ func SubscribeHandler(aj *arcjet.Client, mc *mailchimp.Client) (http.Handler, er
 	}
 	aj, err = aj.WithRule(arcjet.Filter(arcjet.FilterOptions{
 		Mode: arcjet.ModeLive,
-		Deny: []string{`len(http.request.cookie["aj_signals"]) eq 0`},
+		Deny: []string{
+			`len(http.request.cookie["aj_signals"]) eq 0`,
+			`ip.src.hosting`,
+		},
 	}))
 	if err != nil {
 		return nil, err
