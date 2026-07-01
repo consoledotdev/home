@@ -50,7 +50,7 @@ func SubscribeHandler(aj *arcjet.Client, mc *mailchimp.Client) (http.Handler, er
 		Mode: arcjet.ModeLive,
 		Deny: []string{
 			`len(http.request.cookie["aj_signals"]) eq 0`,
-			`ip.src.hosting`,
+			`not ip.src.relay and ip.src.hosting`,
 		},
 	}))
 	if err != nil {
