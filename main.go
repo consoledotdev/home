@@ -62,8 +62,8 @@ func main() {
 
 	// Shared Arcjet client — Shield is the base rule applied to all routes.
 	ajBase, err := arcjet.NewClient(arcjet.Config{
-		BaseURL: "https://guard.arcjet.workers.dev",
-		Key:     os.Getenv("ARCJET_KEY"),
+		//BaseURL: "https://guard.arcjet.workers.dev",
+		Key: os.Getenv("ARCJET_KEY"),
 		Rules: []arcjet.Rule{
 			arcjet.Shield(arcjet.ShieldOptions{Mode: arcjet.ModeLive}),
 			arcjet.Filter(arcjet.FilterOptions{
