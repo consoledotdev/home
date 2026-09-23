@@ -1,7 +1,7 @@
 connectrpc.com/connect v1.20.0 h1:6TNDAB+WeNd2uolWNlYczB5E0KNNaVMNUEx8JEUsPmQ=
 connectrpc.com/connect v1.20.0/go.mod h1:A2ygJrukXwWy32vkCAAHNVguZrqZ+jeZ9rGRnGR4dN4=
-github.com/arcjet/arcjet-go v0.1.0 h1:SDL8NgYxFdZrYQw3Ov/gUCG6Mxmae+vHZXgXvRJKqs4=
-github.com/arcjet/arcjet-go v0.1.0/go.mod h1:oORn3zxc1qPSKVUQ1cCpzZpqOdDZo4MzKWQA+FgBZLM=
+github.com/arcjet/arcjet-go v1.0.0 h1:Ie4uIYqsDOKEBUASO5KGhWGSJNE8psqM/XKZDEHUpic=
+github.com/arcjet/arcjet-go v1.0.0/go.mod h1:oORn3zxc1qPSKVUQ1cCpzZpqOdDZo4MzKWQA+FgBZLM=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/gofrs/uuid/v5 v5.4.0 h1:EfbpCTjqMuGyq5ZJwxqzn3Cbr2d0rUZU7v5ycAk/e/0=
