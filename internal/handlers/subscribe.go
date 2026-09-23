@@ -1,9 +1,13 @@
 package handlers
 
 import (
+	"crypto/sha256"
+	"encoding/hex"
 	"errors"
 	"log/slog"
 	"net/http"
+	"regexp"
+	"strings"
 	"time"
 
 	"github.com/arcjet/arcjet-go"
@@ -11,6 +15,26 @@ import (
 	"github.com/consoledotdev/home/internal/middleware"
 	"github.com/consoledotdev/home/web"
 )
+
+var emailNonAlnumRe = regexp.MustCompile(`[^a-z0-9]`)
+
+// hashEmailForReddit canonicalizes and hashes an email for the Reddit Pixel's
+// advanced matching, per:
+// https://business.reddithelp.com/s/article/advanced-matching-for-developers
+func hashEmailForReddit(email string) string {
+	email = strings.ToLower(strings.TrimSpace(email))
+	username, domain, hasDomain := strings.Cut(email, "@")
+	if i := strings.IndexByte(username, '+'); i != -1 {
+		username = username[:i]
+	}
+	username = emailNonAlnumRe.ReplaceAllString(username, "")
+	canonical := username
+	if hasDomain {
+		canonical += "@" + domain
+	}
+	sum := sha256.Sum256([]byte(canonical))
+	return hex.EncodeToString(sum[:])
+}
 
 type subscribeErrorData struct {
 	Heading string
@@ -148,6 +172,6 @@ func SubscribeHandler(aj *arcjet.Client, mc *mailchimp.Client) (http.Handler, er
 			return
 		}
 
-		http.Redirect(w, r, "/confirm", http.StatusSeeOther)
+		web.Render(w, r, "confirm.html", ConfirmData{HashedEmail: hashEmailForReddit(email)})
 	}), nil
 }

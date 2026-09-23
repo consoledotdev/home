@@ -8,7 +8,10 @@ import (
 	"github.com/consoledotdev/home/web"
 )
 
+// ConfirmData carries the Reddit Pixel advanced matching value for the
+// confirmation page. HashedEmail is only set immediately after a signup.
 type ConfirmData struct {
+	HashedEmail string
 }
 
 func ConfirmHandler(aj *arcjet.Client) (http.Handler, error) {
@@ -27,6 +30,6 @@ func ConfirmHandler(aj *arcjet.Client) (http.Handler, error) {
 			return
 		}
 		middleware.SetNoStoreCacheHeaders(w)
-		web.Render(w, r, "confirm.html", PrivacyData{})
+		web.Render(w, r, "confirm.html", ConfirmData{})
 	}), nil
 }

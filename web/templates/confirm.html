@@ -13,6 +13,13 @@
         </p>
       </div>
     </main>
+    {{if .HashedEmail}}
+    <!-- Reddit Pixel: advanced matching and SignUp conversion event -->
+    <script nonce="{{nonce}}">
+      rdt('init', 't2_gmwfttts', { email: '{{.HashedEmail}}' });
+      rdt('track', 'SignUp');
+    </script>
+    {{end}}
     {{template "footer"}}
   </body>
 </html>

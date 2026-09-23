@@ -96,5 +96,11 @@
     src="https://signals-cdn.arcjet.com/aj-sig.js"
     defer
   ></script>
+  <!-- Reddit Pixel -->
+  <script nonce="{{nonce}}">
+    !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js?pixel_id=t2_gmwfttts",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','t2_gmwfttts');rdt('track', 'PageVisit');
+  </script>
+  <!-- DO NOT MODIFY UNLESS TO REPLACE A USER IDENTIFIER -->
+  <!-- End Reddit Pixel -->
 </head>
 {{end}}
