@@ -1,20 +1,8 @@
-{{define "head"}}
-<head>
+{{define "head-base"}}
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>{{.}}</title>
-  <link href="/static/css/output.css?v={{cssVersion}}" rel="stylesheet" />
-  <meta
-    name="description"
-    content="A free weekly devtools newsletter. Reviews of the most interesting devtools and latest beta releases."
-  />
-  <link rel="canonical" href="https://console.dev" />
   <meta property="og:title" content="{{.}}" />
-  <meta
-    property="og:description"
-    content="A free weekly devtools newsletter. Reviews of the most interesting devtools and latest beta releases."
-  />
-  <meta property="og:url" content="https://console.dev" />
   <meta property="og:site_name" content="console.dev" />
   <meta
     property="og:image"
@@ -24,21 +12,7 @@
   <meta property="og:image:height" content="200" />
   <meta property="og:image:alt" content="console.dev" />
   <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@consoledotdev" />
-  <meta name="twitter:creator" content="@consoledotdev" />
-  <meta name="twitter:title" content="{{.}}" />
-  <meta
-    name="twitter:description"
-    content="A free weekly devtools newsletter. Reviews of the most interesting devtools and latest beta releases."
-  />
-  <meta
-    name="twitter:image"
-    content="https://console.dev/static/img/console-mark.png"
-  />
-  <meta name="twitter:image:width" content="200" />
-  <meta name="twitter:image:height" content="200" />
-  <meta name="twitter:image:alt" content="console.dev" />
+  <link href="/static/css/output.css?v={{cssVersion}}" rel="stylesheet" />
   <link
     rel="icon"
     href="/static/img/favicon.ico"
@@ -47,31 +21,6 @@
   />
   <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="/static/img/favicon.png" type="image/png" />
-
-  <link
-    rel="alternate"
-    type="application/rss+xml"
-    title="Console - Full feed"
-    href="https://console.dev/rss.xml"
-  />
-  <link
-    rel="alternate"
-    type="application/rss+xml"
-    title="Console - Betas feed"
-    href="https://console.dev/betas/rss.xml"
-  />
-  <link
-    rel="alternate"
-    type="application/rss+xml"
-    title="Console - Tools feed"
-    href="https://console.dev/tools/rss.xml"
-  />
-  <link
-    rel="alternate"
-    type="application/rss+xml"
-    title="Console - Podcast"
-    href="https://feeds.simplecast.com/T80CJwln"
-  />
   <script
     async
     nonce="{{nonce}}"
@@ -102,5 +51,59 @@
   </script>
   <!-- DO NOT MODIFY UNLESS TO REPLACE A USER IDENTIFIER -->
   <!-- End Reddit Pixel -->
+{{end}}
+
+{{define "head"}}
+<head>
+  {{template "head-base" .}}
+  <meta
+    name="description"
+    content="A free weekly devtools newsletter. Reviews of the most interesting devtools and latest beta releases."
+  />
+  <link rel="canonical" href="https://console.dev" />
+  <meta
+    property="og:description"
+    content="A free weekly devtools newsletter. Reviews of the most interesting devtools and latest beta releases."
+  />
+  <meta property="og:url" content="https://console.dev" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@consoledotdev" />
+  <meta name="twitter:creator" content="@consoledotdev" />
+  <meta name="twitter:title" content="{{.}}" />
+  <meta
+    name="twitter:description"
+    content="A free weekly devtools newsletter. Reviews of the most interesting devtools and latest beta releases."
+  />
+  <meta
+    name="twitter:image"
+    content="https://console.dev/static/img/console-mark.png"
+  />
+  <meta name="twitter:image:width" content="200" />
+  <meta name="twitter:image:height" content="200" />
+  <meta name="twitter:image:alt" content="console.dev" />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Console - Full feed"
+    href="https://console.dev/rss.xml"
+  />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Console - Betas feed"
+    href="https://console.dev/betas/rss.xml"
+  />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Console - Tools feed"
+    href="https://console.dev/tools/rss.xml"
+  />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Console - Podcast"
+    href="https://feeds.simplecast.com/T80CJwln"
+  />
 </head>
 {{end}}

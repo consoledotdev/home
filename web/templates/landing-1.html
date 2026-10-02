@@ -1,55 +1,17 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Console Newsletter - The best tools for developers</title>
-    <link href="/static/css/output.css?v={{cssVersion}}" rel="stylesheet" />
+    {{template "head-base" "Console Newsletter - The best tools for developers"}}
     <meta name="robots" content="noindex" />
     <meta
       name="description"
       content="A free weekly email digest of the best tools and beta releases for developers."
     />
     <meta
-      property="og:title"
-      content="Console Newsletter - The best tools for developers"
-    />
-    <meta
       property="og:description"
       content="A free weekly email digest of the best tools and beta releases for developers."
     />
     <meta property="og:url" content="https://console.dev/landing/1" />
-    <meta property="og:site_name" content="console.dev" />
-    <meta
-      property="og:image"
-      content="https://console.dev/static/img/console-mark.png"
-    />
-    <meta property="og:type" content="website" />
-    <link
-      rel="icon"
-      href="/static/img/favicon.ico"
-      type="image/x-icon"
-      sizes="192x192"
-    />
-    <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml" />
-    <script
-      async
-      nonce="{{nonce}}"
-      src="https://plausible.io/js/pa-BsJuVNNLTKfqzAncMo6B0.js"
-    ></script>
-    <script nonce="{{nonce}}">
-      ((window.plausible =
-        window.plausible ||
-        function () {
-          (plausible.q = plausible.q || []).push(arguments);
-        }),
-        (plausible.init =
-          plausible.init ||
-          function (i) {
-            plausible.o = i || {};
-          }));
-      plausible.init();
-    </script>
   </head>
   <body class="bg-black text-white">
     {{template "header"}}
